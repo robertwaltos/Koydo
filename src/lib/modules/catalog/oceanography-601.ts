@@ -1,9 +1,9 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const Oceanography601Module: LearningModule = {
+export const oceanography_601_Module: LearningModule = {
   "id": "oceanography-601",
   "title": "Oceanography Research and Leadership",
-  "description": "Post-401 specialization in Oceanography, focused on ocean system diagnostics, marine risk forecasting, resource-climate tradeoff analysis, and stewardship governance through advanced casework, simulation, and defense-based checkpoints.",
+  "description": "A post-401 specialization in Oceanography focused on diagnosing ocean systems, forecasting marine risks, analyzing resource-climate tradeoffs, and implementing stewardship governance through advanced case studies, simulations, and defense-based checkpoints.",
   "subject": "Earth Science",
   "tags": [
     "core",
@@ -14,97 +14,97 @@ export const Oceanography601Module: LearningModule = {
   ],
   "minAge": 17,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en",
     "es"
   ],
   "learningObjectives": [
-    "Apply advanced methods for ocean system diagnostics in high-constraint environments",
-    "Design robust systems for marine risk forecasting with measurable control gates",
-    "Evaluate interventions in resource-climate tradeoff analysis with research-grade rigor",
-    "Operationalize stewardship governance with accountable governance and escalation pathways",
-    "Lead cross-functional decision reviews with explicit tradeoff communication",
-    "Defend recommendations under expert critique using evidence and uncertainty bounds"
+    "Apply advanced diagnostic methods to analyze complex ocean systems.",
+    "Design robust forecasting systems for marine risks with measurable quality controls.",
+    "Evaluate resource-climate tradeoff interventions with research-grade rigor.",
+    "Implement stewardship policies with clear accountability and escalation pathways.",
+    "Lead cross-functional decision reviews, communicating tradeoffs and uncertainty effectively.",
+    "Defend research recommendations under expert critique using evidence and uncertainty analysis."
   ],
   "lessons": [
     {
       "id": "oceanography-601-l01",
-      "title": "Oceanography Advanced Foundations",
+      "title": "Advanced Foundations in Ocean Systems",
       "type": "video",
       "duration": 14,
       "learningAids": [
         {
           "id": "oceanography-601-l01-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Ocean System Interconnections",
+          "content": "A diagram showing the interconnectedness of physical, chemical, and biological systems in the ocean, highlighting key variables for diagnostic analysis."
         }
       ],
       "chunks": [
         {
           "id": "oceanography-601-l01-c1",
           "kind": "concept",
-          "title": "Scope and Boundary Design",
-          "content": "In this lesson, we will delve into the advanced scope and boundaries of Oceanography, a fascinating field that studies our oceans. We will learn how to effectively diagnose ocean systems, which means understanding their current conditions and how they function. Additionally, we will focus on forecasting potential risks to marine environments, such as pollution or climate change impacts. This knowledge is essential for protecting the health of our oceans and the diverse creatures that call them home. By the end of this lesson, you will appreciate the importance of these skills in maintaining the balance of marine ecosystems and ensuring their sustainability for future generations.\nContext recap: In this lesson, we will delve into the advanced scope and boundaries of Oceanography, a fascinating field that studies our oceans. We will learn how to effectively diagnose ocean systems, which means understanding their current conditions and how they function. Additionally, we will focus on forecasting potential risks to marine environments, such as pollution or climate change impacts. This knowledge is essential for protecting the health of our oceans and the diverse creatures that call them home."
+          "title": "Defining Scope and Boundaries",
+          "content": "This lesson introduces the advanced scope of modern oceanography. We will learn to diagnose the health of complex ocean systems by defining clear analytical boundaries and understanding their core functions. We will also explore methods for forecasting marine risks, such as pollution events or climate change impacts, which is essential for protecting marine ecosystems and ensuring their sustainability."
         },
         {
           "id": "oceanography-601-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different factors in ocean systems. They will also identify uncertainty ranges and system dependencies, which are important for planning effective interventions. This process helps us understand how different elements interact and how we can best address challenges in oceanography.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different factors in ocean systems. They will also identify uncertainty ranges and system dependencies, which are important for planning effective interventions. This process helps us understand how different elements interact and how we can best address challenges in oceanography."
+          "content": "Effective intervention requires understanding the connections between different factors in an ocean system. We will practice mapping these causal pathways, identifying system dependencies, and quantifying ranges of uncertainty. This modeling process is critical for planning robust and effective management strategies in a constantly changing environment."
         },
         {
           "id": "oceanography-601-l01-c3",
           "kind": "recap",
-          "title": "Evidence Thresholds",
-          "content": "In our recap, we emphasize that all claims made in our studies must be supported by measurable indicators. This means we need to establish confidence bounds and set up review checkpoints to ensure our findings are reliable and accurate. This practice is essential for maintaining the integrity of our research.\nContext recap: In our recap, we emphasize that all claims made in our studies must be supported by measurable indicators. This means we need to establish confidence bounds and set up review checkpoints to ensure our findings are reliable and accurate. This practice is essential for maintaining the integrity of our research."
+          "title": "Establishing Evidence Thresholds",
+          "content": "In advanced research, all claims must be supported by verifiable evidence. We will recap the importance of using measurable indicators, establishing statistical confidence bounds for our findings, and implementing review checkpoints to ensure all conclusions are reliable, accurate, and defensible."
         }
       ],
       "flashcards": [
         {
           "id": "oceanography-601-l01-f1",
-          "front": "ocean system diagnostics",
-          "back": "A specialization axis requiring explicit assumptions and measurable constraints."
+          "front": "Ocean System Diagnostics",
+          "back": "The systematic analysis of an ocean environment's condition by defining explicit assumptions, constraints, and measurable indicators."
         },
         {
           "id": "oceanography-601-l01-f2",
-          "front": "marine risk forecasting",
-          "back": "Execution architecture that determines reliability under stress."
+          "front": "Marine Risk Forecasting",
+          "back": "The process of predicting future threats to marine ecosystems, such as harmful algal blooms or deoxygenation events, using data-driven models."
         },
         {
           "id": "oceanography-601-l01-f3",
-          "front": "resource-climate tradeoff analysis",
-          "back": "Evaluation discipline for identifying true gains and hidden costs."
+          "front": "Resource-Climate Tradeoff Analysis",
+          "back": "A structured evaluation method for identifying the benefits, costs, and side effects of interventions that affect both natural resources and climate outcomes."
         }
       ]
     },
     {
       "id": "oceanography-601-l02",
-      "title": "Oceanography Specialist Methods Lab",
+      "title": "Specialist Methods Lab",
       "type": "interactive",
       "duration": 17,
       "learningAids": [
         {
           "id": "oceanography-601-l02-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Workflow Design Template",
+          "content": "An interactive template for designing a research workflow, including stages for data intake, analysis, quality control checkpoints, and reporting."
         }
       ],
       "chunks": [
         {
           "id": "oceanography-601-l02-c1",
           "kind": "practice",
-          "title": "Method Design and Stress Test",
-          "content": "In this interactive lab, learners will have the opportunity to design specialized workflows that are tailored to specific oceanographic challenges. They will also conduct stress tests on these workflows by simulating adverse scenarios, which helps them understand how their designs can withstand real-world challenges.\nContext recap: In this interactive lab, learners will have the opportunity to design specialized workflows that are tailored to specific oceanographic challenges. They will also conduct stress tests on these workflows by simulating adverse scenarios, which helps them understand how their designs can withstand real-world challenges."
+          "title": "Method Design and Stress Testing",
+          "content": "In this interactive lab, you will design a specialized workflow to address a specific oceanographic challenge, such as monitoring coastal erosion. You will then conduct stress tests by simulating adverse scenarios, like equipment failure or unexpected storm surges, to evaluate the resilience and reliability of your design."
         },
         {
           "id": "oceanography-601-l02-c2",
           "kind": "recap",
-          "title": "Control Gate Architecture",
-          "content": "In our recap, we will discuss the importance of integrating control gates into our workflows. These gates include checkpoints, rollback criteria, and threshold-based escalation processes. This structure ensures that we can effectively manage our workflows and respond appropriately to any issues that arise.\nContext recap: In our recap, we will discuss the importance of integrating control gates into our workflows. These gates include checkpoints, rollback criteria, and threshold-based escalation processes. This structure ensures that we can effectively manage our workflows and respond appropriately to any issues that arise."
+          "title": "Workflow Management and Quality Control",
+          "content": "We will recap the importance of integrating quality control gates into any research workflow. These include predefined checkpoints for peer review, clear criteria for halting or rolling back a process if data is flawed, and threshold-based escalation procedures to alert leadership when significant anomalies are detected."
         }
       ],
       "interactiveActivities": [
@@ -112,23 +112,23 @@ export const Oceanography601Module: LearningModule = {
           "id": "oceanography-601-l02-act1",
           "type": "matching_pairs",
           "title": "Control-to-Outcome Mapping",
-          "description": "Match specialist controls with their strongest reliability and governance effects.",
+          "description": "Match each quality control mechanism with its primary benefit for research reliability and governance.",
           "pairs": [
             {
-              "left": "Pre-commit gate",
-              "right": "Prevents avoidable downstream failures"
+              "left": "Initial Review Gate",
+              "right": "Prevents avoidable downstream failures by catching errors early."
             },
             {
-              "left": "Rollback trigger",
-              "right": "Limits blast radius under adverse outcomes"
+              "left": "Rollback Trigger",
+              "right": "Limits the impact of unforeseen negative outcomes."
             },
             {
-              "left": "Baseline dashboard",
-              "right": "Supports defensible impact attribution"
+              "left": "Baseline Data Dashboard",
+              "right": "Supports defensible attribution of an intervention's impact."
             },
             {
-              "left": "Retrospective loop",
-              "right": "Improves next-cycle decision quality"
+              "left": "Post-Project Retrospective",
+              "right": "Improves the quality of future project planning and execution."
             }
           ]
         }
@@ -143,60 +143,60 @@ export const Oceanography601Module: LearningModule = {
         {
           "id": "oceanography-601-l03-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Key Concepts Review",
+          "content": "A one-page summary of key terms and concepts from Lessons 1 and 2, including causal modeling, evidence thresholds, and workflow controls."
         }
       ],
       "questions": [
         {
           "id": "oceanography-601-l03-q1",
-          "text": "Which practice most improves ocean system diagnostics decision quality?",
+          "text": "Which practice most improves the quality of ocean system diagnostics?",
           "skillId": "oceanography-601-skill-core",
           "options": [
             {
               "id": "a",
-              "text": "Proceed without baseline or assumptions"
+              "text": "Proceeding without a baseline or stated assumptions"
             },
             {
               "id": "b",
-              "text": "Define assumptions, constraints, and measurable indicators"
+              "text": "Defining assumptions, constraints, and measurable indicators upfront"
             },
             {
               "id": "c",
-              "text": "Optimize only for speed in every context"
+              "text": "Optimizing only for speed in every context"
             },
             {
               "id": "d",
-              "text": "Ignore uncertainty and edge conditions"
+              "text": "Ignoring uncertainty and potential edge cases"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Advanced decisions improve when assumptions, constraints, and metrics are explicit."
+          "explanation": "Advanced analytical quality improves when assumptions, constraints, and metrics are made explicit from the start."
         },
         {
           "id": "oceanography-601-l03-q2",
-          "text": "At level 601, strong execution for marine risk forecasting requires:",
+          "text": "A robust operational framework for marine risk forecasting requires:",
           "skillId": "oceanography-601-skill-execution",
           "options": [
             {
               "id": "a",
-              "text": "Owner mapping, checkpoint cadence, and escalation thresholds"
+              "text": "Clear ownership, a regular checkpoint cadence, and defined escalation thresholds"
             },
             {
               "id": "b",
-              "text": "No role clarity and ad-hoc process changes"
+              "text": "Vague role clarity and frequent, undocumented process changes"
             },
             {
               "id": "c",
-              "text": "No retrospective or post-run review"
+              "text": "Eliminating retrospectives or post-project reviews"
             },
             {
               "id": "d",
-              "text": "No rollback or fallback conditions"
+              "text": "No pre-planned conditions for rolling back a flawed process"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Reliable advanced execution needs ownership clarity and threshold-driven governance."
+          "explanation": "Reliable advanced operations require clear ownership and threshold-driven governance to manage complexity and risk."
         },
         {
           "id": "oceanography-601-l03-q3",
@@ -205,162 +205,62 @@ export const Oceanography601Module: LearningModule = {
           "options": [
             {
               "id": "a",
-              "text": "Anecdotes without comparison"
+              "text": "Relying on anecdotes without systematic comparison"
             },
             {
               "id": "b",
-              "text": "Baseline comparisons, side-effect analysis, and uncertainty bounds"
+              "text": "Baseline comparisons, side-effect analysis, and explicit uncertainty bounds"
             },
             {
               "id": "c",
-              "text": "Changing success criteria after outcomes"
+              "text": "Changing the success criteria after the results are known"
             },
             {
               "id": "d",
-              "text": "Excluding difficult scenarios from analysis"
+              "text": "Excluding difficult or inconvenient scenarios from the analysis"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible analysis combines comparative baselines, side-effect checks, and uncertainty disclosure."
+          "explanation": "Defensible analysis combines comparative baselines, a thorough check for unintended side effects, and honest disclosure of uncertainty."
         },
         {
           "id": "oceanography-601-l03-q4",
-          "text": "Mature stewardship governance systems connect:",
+          "text": "Mature stewardship governance systems effectively connect:",
           "skillId": "oceanography-601-skill-governance",
           "options": [
             {
               "id": "a",
-              "text": "Policy intent, measurable controls, and remediation pathways"
+              "text": "Policy goals, measurable controls, and clear corrective action pathways"
             },
             {
               "id": "b",
-              "text": "Policy language with no measurable enforcement"
+              "text": "Policy language that has no measurable enforcement mechanism"
             },
             {
               "id": "c",
-              "text": "Targets without ownership or escalation design"
+              "text": "Ambitious targets without clear ownership or an escalation plan"
             },
             {
               "id": "d",
-              "text": "Operations without transparent accountability"
+              "text": "Operational activities that lack transparent accountability"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Governance maturity is the operational link between intent, measurement, and corrective action."
-        },
-        {
-          "id": "oceanography-601-l03-q5",
-          "text": "What is the best way to compare competing interventions in advanced Earth Science?",
-          "skillId": "oceanography-601-skill-advanced-5",
-          "options": [
-            {
-              "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
-            },
-            {
-              "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
-            },
-            {
-              "id": "c",
-              "text": "Switch metrics after results arrive"
-            },
-            {
-              "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
-        },
-        {
-          "id": "oceanography-601-l03-q6",
-          "text": "In high-stakes Oceanography Research and Leadership execution, which communication protocol is strongest?",
-          "skillId": "oceanography-601-skill-advanced-6",
-          "options": [
-            {
-              "id": "a",
-              "text": "Broadcast conclusions without assumptions"
-            },
-            {
-              "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
-            },
-            {
-              "id": "c",
-              "text": "Share only final outcomes after completion"
-            },
-            {
-              "id": "d",
-              "text": "Limit updates to a single informal channel"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
-        },
-        {
-          "id": "oceanography-601-l03-q7",
-          "text": "A mature remediation loop in advanced Earth Science should prioritize:",
-          "skillId": "oceanography-601-skill-advanced-7",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blame assignment without system updates"
-            },
-            {
-              "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
-            },
-            {
-              "id": "c",
-              "text": "One-time fixes without retesting"
-            },
-            {
-              "id": "d",
-              "text": "Issue closure based on elapsed time"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
-        },
-        {
-          "id": "oceanography-601-l03-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Oceanography Research and Leadership?",
-          "skillId": "oceanography-601-skill-advanced-8",
-          "options": [
-            {
-              "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
-            },
-            {
-              "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
-            },
-            {
-              "id": "c",
-              "text": "Ignore correlated failure modes"
-            },
-            {
-              "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "explanation": "Mature governance creates an operational link between the stated intent of a policy, how it is measured, and what happens when it fails."
         }
       ]
     },
     {
       "id": "oceanography-601-l04",
-      "title": "Oceanography Advanced Case Analysis",
+      "title": "Advanced Case Analysis: Coastal Zone Management",
       "type": "video",
       "duration": 14,
       "learningAids": [
         {
           "id": "oceanography-601-l04-a1",
-          "type": "mnemonic",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "image",
+          "title": "Stakeholder Map",
+          "content": "A visual map of a coastal community showing different stakeholders (fisheries, tourism, conservation groups, residents) and their primary interests and concerns."
         }
       ],
       "chunks": [
@@ -368,50 +268,50 @@ export const Oceanography601Module: LearningModule = {
           "id": "oceanography-601-l04-c1",
           "kind": "example",
           "title": "Case Context and Stakes",
-          "content": "In this engaging case study, we will explore the important work of a coastal governance council. This council is tasked with the challenging job of ensuring that local fisheries can thrive while also addressing the effects of warming ocean temperatures and preparing for potential disasters. As part of this lesson, learners will actively participate by mapping out the various constraints that the council faces. They will also identify different classes of risk that could impact the community and gain a deeper understanding of the governance boundaries that shape their decision-making processes. This analysis will help learners appreciate the complexities involved in managing coastal resources responsibly.\nContext recap: In this engaging case study, we will explore the important work of a coastal governance council. This council is tasked with the challenging job of ensuring that local fisheries can thrive while also addressing the effects of warming ocean temperatures and preparing for potential disasters. As part of this lesson, learners will actively participate by mapping out the various constraints that the council faces. They will also identify different classes of risk that could impact the community and gain a deeper understanding of the governance boundaries that shape their decision-making processes."
+          "content": "We will analyze the case of a coastal governance council tasked with balancing the economic viability of local fisheries against the ecological threats of ocean warming and disaster preparedness. As we explore this case, we will map the council's operational constraints, identify different classes of risk, and define the governance boundaries that shape their decision-making."
         },
         {
           "id": "oceanography-601-l04-c2",
           "kind": "concept",
-          "title": "Tradeoff Matrix",
-          "content": "In this section, we will introduce the concept of a tradeoff matrix. Alternatives will be scored based on various criteria, including effectiveness, feasibility, risk, equity, and implementation cost. This scoring system helps us evaluate different options and make informed decisions.\nContext recap: In this section, we will introduce the concept of a tradeoff matrix. Alternatives will be scored based on various criteria, including effectiveness, feasibility, risk, equity, and implementation cost. This scoring system helps us evaluate different options and make informed decisions.\nContext recap: In this section, we will introduce the concept of a tradeoff matrix. Alternatives will be scored based on various criteria, including effectiveness, feasibility, risk, equity, and implementation cost. This scoring system helps us evaluate different options and make informed decisions. Context recap: In this section, we will introduce the concept of a tradeoff matrix.\nWhy this matters: Tradeoff Matrix helps learners in Earth Science connect ideas from Oceanography Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "Using a Tradeoff Matrix",
+          "content": "To structure the council's decision, we will use a tradeoff matrix. This tool helps compare different policy alternatives by scoring them against a common set of criteria, such as ecological effectiveness, economic feasibility, social equity, and implementation cost. This systematic comparison allows for a more transparent and defensible final recommendation."
         },
         {
           "id": "oceanography-601-l04-c3",
           "kind": "recap",
-          "title": "Recovery and Adaptation Design",
-          "content": "In our recap, we will discuss how to map failure signatures to appropriate remediation actions. We will also identify measurable recovery triggers that indicate when an intervention has been successful. This process is vital for ensuring that we can effectively respond to challenges in ocean governance.\nContext recap: In our recap, we will discuss how to map failure signatures to appropriate remediation actions. We will also identify measurable recovery triggers that indicate when an intervention has been successful. This process is vital for ensuring that we can effectively respond to challenges in ocean governance."
+          "title": "Designing for Recovery and Adaptation",
+          "content": "In our recap, we will discuss how to design policies that can adapt to failure. This involves linking predictable problems (e.g., a sudden fish stock decline) to pre-planned corrective actions. We will also identify measurable recovery triggers—clear signals that indicate whether an intervention has succeeded or if a new approach is needed."
         }
       ],
       "flashcards": [
         {
           "id": "oceanography-601-l04-f1",
-          "front": "Tradeoff matrix",
-          "back": "A structured model for comparing alternatives under competing priorities."
+          "front": "Tradeoff Matrix",
+          "back": "A structured decision-making tool for comparing multiple options across a range of competing priorities and criteria."
         },
         {
           "id": "oceanography-601-l04-f2",
-          "front": "Failure signature",
-          "back": "A recurring indicator of a predictable risk class."
+          "front": "Failure Signature",
+          "back": "A pattern of data or a specific indicator that signals a known type of system failure, such as the chemical signature of an industrial pollutant."
         },
         {
           "id": "oceanography-601-l04-f3",
-          "front": "Recovery trigger",
-          "back": "A measurable threshold that initiates corrective action."
+          "front": "Recovery Trigger",
+          "back": "A measurable threshold that, when met, initiates a pre-planned corrective action or confirms that a system has returned to a stable state."
         }
       ]
     },
     {
       "id": "oceanography-601-l05",
-      "title": "Oceanography Simulation and Defense Studio",
+      "title": "Simulation and Defense Studio",
       "type": "interactive",
       "duration": 17,
       "learningAids": [
         {
           "id": "oceanography-601-l05-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "image",
+          "title": "Simulation Interface",
+          "content": "A screenshot of a simulation tool's dashboard, showing adjustable parameters for a coastal management scenario (e.g., fishing quotas, sea wall height, MPA size)."
         }
       ],
       "chunks": [
@@ -419,13 +319,13 @@ export const Oceanography601Module: LearningModule = {
           "id": "oceanography-601-l05-c1",
           "kind": "practice",
           "title": "Scenario Simulation",
-          "content": "In this interactive session, learners will configure various interventions, constraints, and escalation logic for high-stakes tests. This hands-on experience allows them to apply their knowledge in real-world scenarios and understand the complexities involved in oceanographic decision-making.\nContext recap: In this interactive session, learners will configure various interventions, constraints, and escalation logic for high-stakes tests. This hands-on experience allows them to apply their knowledge in real-world scenarios and understand the complexities involved in oceanographic decision-making.\nContext recap: In this interactive session, learners will configure various interventions, constraints, and escalation logic for high-stakes tests. This hands-on experience allows them to apply their knowledge in real-world scenarios and understand the complexities involved in oceanographic decision-making. Context recap: In this interactive session, learners will configure various interventions, constraints, and escalation logic for high-stakes tests. This hands-on experience allows them to apply their knowledge in real-world scenarios and understand the complexities involved in oceanographic decision-making."
+          "content": "In this interactive session, you will use a simulation tool to test different policy interventions for the coastal governance case study. You will configure variables, set constraints based on the case, and define the escalation logic for high-stakes scenarios, applying your knowledge in a dynamic, hands-on environment."
         },
         {
           "id": "oceanography-601-l05-c2",
           "kind": "recap",
           "title": "Debrief and Adaptation",
-          "content": "In our recap, we will review the outcomes of our simulations. We will analyze the gains achieved, any side effects that occurred, and identify gaps in governance compliance. This reflection is crucial for improving our approaches and ensuring responsible ocean management.\nContext recap: In our recap, we will review the outcomes of our simulations. We will analyze the gains achieved, any side effects that occurred, and identify gaps in governance compliance. This reflection is crucial for improving our approaches and ensuring responsible ocean management.\nContext recap: In our recap, we will review the outcomes of our simulations. We will analyze the gains achieved, any side effects that occurred, and identify gaps in governance compliance. This reflection is crucial for improving our approaches and ensuring responsible ocean management. Context recap: In our recap, we will review the outcomes of our simulations.\nWhy this matters: Debrief and Adaptation helps learners in Earth Science connect ideas from Oceanography Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "After running the simulations, we will debrief the outcomes as a group. We will analyze the projected benefits, unintended side effects, and any gaps in governance that the simulation revealed. This reflective practice is crucial for refining recommendations and improving real-world ocean management strategies."
         }
       ],
       "interactiveActivities": [
@@ -433,11 +333,11 @@ export const Oceanography601Module: LearningModule = {
           "id": "oceanography-601-l05-act1",
           "type": "scenario_practice",
           "title": "High-Stakes Intervention Simulation",
-          "description": "Evaluate intervention options across ocean system diagnostics and stewardship governance priorities.",
+          "description": "Evaluate intervention options for the coastal zone case study, balancing ocean system health and stewardship governance priorities.",
           "instructions": [
-            "Define objective and boundary conditions first.",
-            "Document short- and long-term tradeoffs.",
-            "Specify metrics and triggers that validate your recommendation."
+            "First, define your primary objective and boundary conditions.",
+            "Document the short-term and long-term tradeoffs of your chosen intervention.",
+            "Specify the key metrics and triggers you would use to validate your recommendation's success."
           ]
         }
       ]
@@ -451,289 +351,189 @@ export const Oceanography601Module: LearningModule = {
         {
           "id": "oceanography-601-l06-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Case Study Decision Framework",
+          "content": "A summary of the decision-making framework used in the case analysis and simulation, including the tradeoff matrix and recovery triggers."
         }
       ],
       "questions": [
         {
           "id": "oceanography-601-l06-q1",
-          "text": "Which practice most improves ocean system diagnostics decision quality?",
-          "skillId": "oceanography-601-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "Proceed without baseline or assumptions"
-            },
-            {
-              "id": "b",
-              "text": "Define assumptions, constraints, and measurable indicators"
-            },
-            {
-              "id": "c",
-              "text": "Optimize only for speed in every context"
-            },
-            {
-              "id": "d",
-              "text": "Ignore uncertainty and edge conditions"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Advanced decisions improve when assumptions, constraints, and metrics are explicit."
-        },
-        {
-          "id": "oceanography-601-l06-q2",
-          "text": "At level 601, strong execution for marine risk forecasting requires:",
-          "skillId": "oceanography-601-skill-execution",
-          "options": [
-            {
-              "id": "a",
-              "text": "Owner mapping, checkpoint cadence, and escalation thresholds"
-            },
-            {
-              "id": "b",
-              "text": "No role clarity and ad-hoc process changes"
-            },
-            {
-              "id": "c",
-              "text": "No retrospective or post-run review"
-            },
-            {
-              "id": "d",
-              "text": "No rollback or fallback conditions"
-            }
-          ],
-          "correctOptionId": "a",
-          "explanation": "Reliable advanced execution needs ownership clarity and threshold-driven governance."
-        },
-        {
-          "id": "oceanography-601-l06-q3",
-          "text": "A defensible approach to resource-climate tradeoff analysis includes:",
+          "text": "When using a tradeoff matrix to evaluate policy options, what is the primary goal?",
           "skillId": "oceanography-601-skill-eval",
           "options": [
             {
               "id": "a",
-              "text": "Anecdotes without comparison"
+              "text": "To prove one option is perfect in all categories"
             },
             {
               "id": "b",
-              "text": "Baseline comparisons, side-effect analysis, and uncertainty bounds"
+              "text": "To systematically compare alternatives across shared, explicit criteria"
             },
             {
               "id": "c",
-              "text": "Changing success criteria after outcomes"
+              "text": "To select the option that is cheapest, regardless of other factors"
             },
             {
               "id": "d",
-              "text": "Excluding difficult scenarios from analysis"
+              "text": "To create a complex model that is difficult for stakeholders to understand"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible analysis combines comparative baselines, side-effect checks, and uncertainty disclosure."
+          "explanation": "A tradeoff matrix is designed for transparent, systematic comparison of options against a consistent set of criteria, making the rationale for a decision clear."
         },
         {
-          "id": "oceanography-601-l06-q4",
-          "text": "Mature stewardship governance systems connect:",
-          "skillId": "oceanography-601-skill-governance",
+          "id": "oceanography-601-l06-q2",
+          "text": "In the coastal management case study, identifying a 'failure signature' like rising water toxicity would be most useful for:",
+          "skillId": "oceanography-601-skill-core",
           "options": [
             {
               "id": "a",
-              "text": "Policy intent, measurable controls, and remediation pathways"
+              "text": "Assigning blame after a disaster has already occurred"
             },
             {
               "id": "b",
-              "text": "Policy language with no measurable enforcement"
+              "text": "Ignoring the problem until it becomes a crisis"
             },
             {
               "id": "c",
-              "text": "Targets without ownership or escalation design"
+              "text": "Activating a pre-planned remediation response quickly"
             },
             {
               "id": "d",
-              "text": "Operations without transparent accountability"
+              "text": "Proving that the initial policy was flawless"
             }
           ],
-          "correctOptionId": "a",
-          "explanation": "Governance maturity is the operational link between intent, measurement, and corrective action."
+          "correctOptionId": "c",
+          "explanation": "A failure signature is a pre-identified indicator that allows for a rapid, planned response to a known risk, rather than a reactive, ad-hoc one."
         },
         {
-          "id": "oceanography-601-l06-q5",
-          "text": "What is the best way to compare competing interventions in advanced Earth Science?",
+          "id": "oceanography-601-l06-q3",
+          "text": "A key lesson from running policy simulations is that:",
           "skillId": "oceanography-601-skill-advanced-5",
           "options": [
             {
               "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
+              "text": "Simulations can perfectly predict the future with no uncertainty"
             },
             {
               "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
+              "text": "Well-intentioned interventions can have unexpected negative side effects"
             },
             {
               "id": "c",
-              "text": "Switch metrics after results arrive"
+              "text": "The simplest policy is always the most effective one"
             },
             {
               "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
+              "text": "Stakeholder concerns are irrelevant if the model works"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
+          "explanation": "Simulations are powerful tools for exploring potential unintended consequences and side effects that may not be obvious without dynamic modeling."
         },
         {
-          "id": "oceanography-601-l06-q6",
-          "text": "In high-stakes Oceanography Research and Leadership execution, which communication protocol is strongest?",
-          "skillId": "oceanography-601-skill-advanced-6",
+          "id": "oceanography-601-l06-q4",
+          "text": "When presenting a recommendation from a case analysis, what is the most critical element to communicate to stakeholders?",
+          "skillId": "oceanography-601-skill-governance",
           "options": [
             {
               "id": "a",
-              "text": "Broadcast conclusions without assumptions"
+              "text": "Only the positive outcomes, omitting all risks and tradeoffs"
             },
             {
               "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
+              "text": "The technical data in a way that only experts can understand"
             },
             {
               "id": "c",
-              "text": "Share only final outcomes after completion"
+              "text": "The key tradeoffs, underlying assumptions, and range of uncertainty"
             },
             {
               "id": "d",
-              "text": "Limit updates to a single informal channel"
+              "text": "A single, confident conclusion without any supporting evidence"
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
-        },
-        {
-          "id": "oceanography-601-l06-q7",
-          "text": "A mature remediation loop in advanced Earth Science should prioritize:",
-          "skillId": "oceanography-601-skill-advanced-7",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blame assignment without system updates"
-            },
-            {
-              "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
-            },
-            {
-              "id": "c",
-              "text": "One-time fixes without retesting"
-            },
-            {
-              "id": "d",
-              "text": "Issue closure based on elapsed time"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
-        },
-        {
-          "id": "oceanography-601-l06-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Oceanography Research and Leadership?",
-          "skillId": "oceanography-601-skill-advanced-8",
-          "options": [
-            {
-              "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
-            },
-            {
-              "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
-            },
-            {
-              "id": "c",
-              "text": "Ignore correlated failure modes"
-            },
-            {
-              "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "correctOptionId": "c",
+          "explanation": "For responsible governance and leadership, it is crucial to communicate not just the recommendation, but also the tradeoffs considered, the assumptions made, and the uncertainty involved."
         }
       ]
     },
     {
       "id": "oceanography-601-l07",
-      "title": "Oceanography Governance and Public Impact",
+      "title": "Governance and Public Impact",
       "type": "video",
       "duration": 13,
       "learningAids": [
         {
           "id": "oceanography-601-l07-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Accountability Framework",
+          "content": "A flowchart illustrating a governance structure with clear lines of accountability, including points for stakeholder review, public comment, and formal remediation requests."
         }
       ],
       "chunks": [
         {
           "id": "oceanography-601-l07-c1",
           "kind": "concept",
-          "title": "Stakeholder Impact Distribution",
-          "content": "In this section, learners will map out the distribution of impacts among different stakeholders. They will analyze the benefits, burdens, and any delayed effects that may arise from decisions made in ocean governance. Understanding these dynamics is essential for promoting fairness and equity.\nContext recap: In this section, learners will map out the distribution of impacts among different stakeholders. They will analyze the benefits, burdens, and any delayed effects that may arise from decisions made in ocean governance. Understanding these dynamics is essential for promoting fairness and equity.\nContext recap: In this section, learners will map out the distribution of impacts among different stakeholders. They will analyze the benefits, burdens, and any delayed effects that may arise from decisions made in ocean governance. Understanding these dynamics is essential for promoting fairness and equity. Context recap: In this section, learners will map out the distribution of impacts among different stakeholders.\nWhy this matters: Stakeholder Impact Distribution helps learners in Earth Science connect ideas from Oceanography Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "Analyzing Stakeholder Impact Distribution",
+          "content": "Responsible governance requires understanding how decisions affect different groups. We will learn to map the distribution of impacts—including benefits, burdens, and delayed effects—across all relevant stakeholders. This analysis is essential for promoting equitable outcomes and building public trust."
         },
         {
           "id": "oceanography-601-l07-c2",
           "kind": "concept",
-          "title": "Accountability Architecture",
-          "content": "In this section, we will explore the concept of accountability architecture. This includes ensuring that decision-making processes are traceable, that stakeholders have review rights, and that there are clear obligations for remediation when necessary. These elements are vital for maintaining trust and responsibility in ocean governance.\nContext recap: In this section, we will explore the concept of accountability architecture. This includes ensuring that decision-making processes are traceable, that stakeholders have review rights, and that there are clear obligations for remediation when necessary. These elements are vital for maintaining trust and responsibility in ocean governance."
+          "title": "Frameworks for Accountability",
+          "content": "This section explores the architecture of accountability in governance. Key components include making decision-making processes traceable, ensuring stakeholders have rights to review and appeal, and defining clear obligations for remediation when policies cause harm. These elements are vital for maintaining institutional legitimacy."
         },
         {
           "id": "oceanography-601-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "At the end of our lesson, we will use a helpful checklist that connects important outcomes, ethical considerations, adherence to policies, and the ability to adapt to changes. This checklist will guide us in making responsible decisions in ocean governance.\nContext recap: At the end of our lesson, we will use a helpful checklist that connects important outcomes, ethical considerations, adherence to policies, and the ability to adapt to changes. This checklist will guide us in making responsible decisions in ocean governance.\nContext recap: At the end of our lesson, we will use a helpful checklist that connects important outcomes, ethical considerations, adherence to policies, and the ability to adapt to changes. This checklist will guide us in making responsible decisions in ocean governance. Context recap: At the end of our lesson, we will use a helpful checklist that connects important outcomes, ethical considerations, adherence to policies, and the ability to adapt to changes. This checklist will guide us in making responsible decisions in ocean governance."
+          "content": "We will conclude with a practical checklist for responsible leadership. This tool helps decision-makers connect desired outcomes with ethical considerations, ensure compliance with governance policies, and maintain the flexibility to adapt to new information or changing circumstances."
         }
       ],
       "flashcards": [
         {
           "id": "oceanography-601-l07-f1",
-          "front": "Impact distribution",
-          "back": "How outcomes are allocated across populations and timescales."
+          "front": "Impact Distribution",
+          "back": "The analysis of how the positive and negative outcomes of a decision are allocated across different populations and over various timescales."
         },
         {
           "id": "oceanography-601-l07-f2",
-          "front": "Decision traceability",
-          "back": "An auditable record of evidence, ownership, and rationale."
+          "front": "Decision Traceability",
+          "back": "An auditable record of a decision-making process, documenting the evidence used, who was responsible, and the rationale behind the final choice."
         },
         {
           "id": "oceanography-601-l07-f3",
-          "front": "Responsible leadership",
-          "back": "Decision behavior balancing performance, accountability, and ethics."
+          "front": "Responsible Leadership",
+          "back": "A decision-making approach that balances performance goals with accountability to stakeholders and core ethical principles."
         }
       ]
     },
     {
       "id": "oceanography-601-l08",
-      "title": "Oceanography Capstone Defense Lab",
+      "title": "Capstone Defense Lab",
       "type": "interactive",
       "duration": 16,
       "learningAids": [
         {
           "id": "oceanography-601-l08-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Defense Brief Template",
+          "content": "A structured slide deck template for the capstone defense, with sections for the research claim, supporting evidence, uncertainty analysis, and proposed remediation pathways."
         }
       ],
       "chunks": [
         {
           "id": "oceanography-601-l08-c1",
           "kind": "practice",
-          "title": "Defense Brief Assembly",
-          "content": "In this interactive activity, you will work together to create a comprehensive brief. This brief will include your claims, supporting evidence, the limits of uncertainty in your findings, and suggested pathways for remediation. This exercise will help you practice organizing your thoughts and presenting your ideas clearly.\nContext recap: In this interactive activity, you will work together to create a comprehensive brief. This brief will include your claims, supporting evidence, the limits of uncertainty in your findings, and suggested pathways for remediation. This exercise will help you practice organizing your thoughts and presenting your ideas clearly."
+          "title": "Assembling the Defense Brief",
+          "content": "In this interactive workshop, you will assemble a comprehensive defense brief for your capstone recommendation. This brief must clearly state your claims, present the supporting evidence, define the bounds of uncertainty, and propose pathways for remediation if your intervention fails to perform as expected."
         },
         {
           "id": "oceanography-601-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "During this session, you will have the opportunity to practice your responses to questions and critiques from experts in the field. You will prepare for discussions about technical aspects, governance issues, and the perspectives of various stakeholders. This rehearsal will help you feel more confident and ready for your upcoming presentations.\nContext recap: During this session, you will have the opportunity to practice your responses to questions and critiques from experts in the field. You will prepare for discussions about technical aspects, governance issues, and the perspectives of various stakeholders. This rehearsal will help you feel more confident and ready for your upcoming presentations."
+          "content": "To conclude, you will rehearse defending your brief against critiques from an expert panel. This session prepares you to answer challenging questions related to your technical methods, your governance proposal, and the diverse perspectives of affected stakeholders, building confidence for your final presentation."
         }
       ],
       "interactiveActivities": [
@@ -741,7 +541,7 @@ export const Oceanography601Module: LearningModule = {
           "id": "oceanography-601-l08-act1",
           "type": "debate_simulator",
           "title": "Expert Defense Panel",
-          "description": "Defend specialization recommendations under adversarial cross-examination."
+          "description": "Defend your capstone recommendation against adversarial cross-examination from a simulated panel of scientific, economic, and community experts."
         }
       ]
     }

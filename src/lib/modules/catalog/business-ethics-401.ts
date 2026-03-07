@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const BusinessEthics401Module: LearningModule = {
+export const business_ethics_401_Module: LearningModule = {
   "id": "business-ethics-401",
   "title": "Ethical Leadership & Sustainable Business",
   "description": "Master the principles of ethical leadership and sustainable business models. Explore how leaders build ethical cultures, the stakeholder vs shareholder capitalism debate, B Corps, triple bottom line thinking, circular economy models, and the emerging ethics of AI and technology in business.",
@@ -14,7 +14,7 @@ export const BusinessEthics401Module: LearningModule = {
   ],
   "minAge": 18,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en",
@@ -36,6 +36,8 @@ export const BusinessEthics401Module: LearningModule = {
       "title": "Ethical Leadership Models",
       "type": "video",
       "duration": 14,
+      "lessonImagePrompt": "A diverse group of modern corporate executives sitting around a sleek glass boardroom table, illuminated by warm, natural light. One leader is speaking thoughtfully, projecting integrity and empathy. High-quality, cinematic lighting, photorealistic, 8k.",
+      "conceptVideoPrompt": "Cinematic tracking shot of a confident, diverse business leader walking through a modern, bustling open-plan office. Employees look up and smile, demonstrating a positive, ethical workplace culture. Soft, professional lighting, 4k resolution, smooth motion.",
       "objectives": [
         "Define ethical leadership and distinguish it from other leadership styles",
         "Compare servant leadership, authentic leadership, and transformational leadership",
@@ -45,23 +47,23 @@ export const BusinessEthics401Module: LearningModule = {
         {
           "id": "business-ethics-401-l01-c1",
           "title": "What Makes Leadership Ethical?",
-          "content": "Ethical leadership is all about demonstrating the right behaviors in our actions and how we interact with others. It means being a role model for positive conduct and encouraging these behaviors in our teams. This can be achieved through clear communication, providing support, and making thoughtful decisions that reflect our values. According to research by scholars like Brown, Trevino, and Harrison, there are two main aspects of ethical leadership that are essential to understand. The first aspect is being a moral person. This means having important qualities such as integrity, which is about being honest and having strong moral principles; trustworthiness, which involves being reliable and dependable; and fairness, which means treating everyone equally and justly. The second aspect is being a moral manager. This involves actively promoting ethical behavior within the organization. Leaders can do this by taking visible actions that demonstrate their commitment to ethics, rewarding ethical behavior in their teams, and applying appropriate consequences when ethical standards are not met. When leaders are moral individuals but do not actively manage ethics, it can create confusion within the organization. Their ethical standards may not be clear or visible to everyone, leading to misunderstandings about what is expected. Therefore, it is crucial for leaders to embody both aspects of ethical leadership to create a positive and ethical workplace culture.\nContext recap: Ethical leadership is all about demonstrating the right behaviors in our actions and how we interact with others. It means being a role model for positive conduct and encouraging these behaviors in our teams. This can be achieved through clear communication, providing support, and making thoughtful decisions that reflect our values. According to research by scholars like Brown, Trevino, and Harrison, there are two main aspects of ethical leadership that are essential to understand.\nWhy this matters: What Makes Leadership Ethical? helps learners in Business connect ideas from Ethical Leadership & Sustainable Business to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "Ethical leadership is defined by demonstrating normative, appropriate conduct through personal actions and interpersonal relationships, and promoting such conduct to followers through two-way communication, reinforcement, and decision-making. According to seminal research by scholars Brown, Treviño, and Harrison, ethical leadership rests on two essential pillars. The first is being a 'moral person.' This requires possessing traits like integrity, honesty, and trustworthiness, and making fair, principled decisions. The second pillar is being a 'moral manager.' This involves actively promoting ethical behavior within the organization by making ethics a visible part of the leadership agenda, rewarding ethical conduct, and disciplining unethical behavior. When leaders are moral individuals but fail to actively manage ethics, they become 'ethically neutral' in the eyes of their employees. Their ethical standards remain invisible, leading to ambiguity about organizational expectations. Therefore, embodying both the moral person and moral manager roles is critical for establishing a definitive ethical tone at the top."
         },
         {
           "id": "business-ethics-401-l01-c2",
           "title": "Servant, Authentic, and Transformational Leadership",
-          "content": "Servant leadership, a concept introduced by Robert Greenleaf, emphasizes the importance of serving others. This style of leadership focuses on meeting the needs of followers and the community first, rather than putting the leader's own interests at the forefront. A servant leader often reflects on questions such as: 'Are the people I serve growing as individuals? Are they becoming healthier, wiser, and more independent?' This approach fosters a supportive environment where everyone can thrive.\nIn contrast, authentic leadership is centered around being true to oneself and transparent in relationships. Authentic leaders are self-aware and strive to process information fairly, ensuring that their decisions are guided by a strong internal moral compass. This type of leadership builds trust and encourages open communication among team members.\nTransformational leadership, on the other hand, aims to inspire followers to look beyond their own interests and work towards shared goals. This is achieved through four key components: idealized influence, which means being a role model; inspirational motivation, which involves encouraging and uplifting others; intellectual stimulation, which encourages creativity and innovation; and individualized consideration, which focuses on the personal development of each team member.\nEach of these leadership styles highlights the critical role of ethics in effective leadership, showing that good leaders not only guide their teams but also cultivate an environment where everyone can succeed together.\nContext recap: Servant leadership, a concept introduced by Robert Greenleaf, emphasizes the importance of serving others. This style of leadership focuses on meeting the needs of followers and the community first, rather than putting the leader's own interests at the forefront. A servant leader often reflects on questions such as: 'Are the people I serve growing as individuals? Are they becoming healthier, wiser, and more independent?' This approach fosters a supportive environment where everyone can thrive.\nWhy this matters: Servant, Authentic, and Transformational Leadership helps learners in Business connect ideas from Ethical Leadership & Sustainable Business to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "Several distinct leadership models emphasize ethical dimensions, each with a unique focus. Servant leadership, introduced by Robert Greenleaf, flips the traditional hierarchy by prioritizing the needs of followers and the community over the leader's self-interest. The ultimate test of a servant leader is whether those served grow as individuals, becoming healthier, wiser, and more autonomous. Authentic leadership centers on self-awareness, relational transparency, and an internalized moral perspective. Authentic leaders process information objectively and build deep trust by aligning their actions strictly with their core values. Transformational leadership aims to elevate followers' motivation and morality by inspiring them to transcend their own self-interest for the sake of the team or organization. This is achieved through idealized influence (acting as a strong role model), inspirational motivation, intellectual stimulation, and individualized consideration. While distinct, each model underscores that effective leadership is inextricably linked to ethical responsibility and the holistic development of stakeholders."
         },
         {
           "id": "business-ethics-401-l01-c3",
           "title": "The Influence Mechanism",
-          "content": "Ethical leaders play a crucial role in shaping the behavior of their teams through a process known as social learning. This concept suggests that employees are likely to observe and imitate the actions of leaders they view as credible and admirable role models. Research has shown that when leaders demonstrate ethical behavior, it leads to a variety of positive outcomes within the organization. For instance, there tends to be a decrease in misconduct among employees, as they are less likely to engage in negative behaviors when they see their leaders acting ethically. Additionally, ethical leadership fosters a greater willingness among employees to assist their colleagues, which enhances teamwork and collaboration. Employees also report higher levels of job satisfaction when they work under ethical leaders, feeling more committed to their organization and its goals. This influence of ethical leadership is not confined to just one level of the organization; it has a cascading effect. Leaders at the top can inspire middle managers, who then influence the behavior of frontline employees. This 'trickle-down' effect highlights the importance of ethical leadership, as its presence or absence can resonate throughout the entire organization, affecting everyone from the highest executives to the newest hires. Therefore, fostering ethical leadership is essential for creating a positive and productive workplace culture.\nContext recap: Ethical leaders play a crucial role in shaping the behavior of their teams through a process known as social learning. This concept suggests that employees are likely to observe and imitate the actions of leaders they view as credible and admirable role models. Research has shown that when leaders demonstrate ethical behavior, it leads to a variety of positive outcomes within the organization. For instance, there tends to be a decrease in misconduct among employees, as they are less likely to engage in negative behaviors when they see their leaders acting ethically.\nWhy this matters: The Influence Mechanism helps learners in Business connect ideas from Ethical Leadership & Sustainable Business to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "Ethical leaders shape organizational behavior primarily through social learning theory. This psychological framework posits that employees observe and emulate the behaviors of credible, attractive role models in positions of power. Empirical research demonstrates that visible ethical leadership yields significant organizational benefits: it drastically reduces workplace misconduct, enhances organizational citizenship behaviors (such as employees voluntarily assisting colleagues), and increases overall job satisfaction and commitment. Furthermore, ethical leadership operates through a 'trickle-down' effect. Top executives set the ethical baseline, which influences the behavior of middle managers, who in turn shape the daily conduct of frontline employees. This cascading influence means that the presence—or absence—of ethical leadership at the executive level permeates the entire organizational structure, making it a foundational element of corporate risk management and long-term sustainability."
         }
       ],
       "flashcards": [
         {
           "id": "business-ethics-401-l01-f1",
-          "front": "Two pillars of ethical leadership (Brown, Trevino, Harrison)",
+          "front": "Two pillars of ethical leadership (Brown, Treviño, Harrison)",
           "back": "Being a moral person (integrity, trustworthiness, fairness) AND being a moral manager (actively promoting ethics through visible actions, rewards, and discipline)"
         },
         {
@@ -79,16 +81,19 @@ export const BusinessEthics401Module: LearningModule = {
         {
           "id": "business-ethics-401-l01-a1",
           "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary of the lesson's main concept."
+          "title": "The Pillars of Ethical Leadership",
+          "content": "A diagram showing 'Moral Person' and 'Moral Manager' combining to create 'Ethical Leadership', leading to positive organizational outcomes."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/business-ethics-401-l01.png"
     },
     {
       "id": "business-ethics-401-l02",
       "title": "Building Ethical Organizational Culture",
       "type": "video",
       "duration": 13,
+      "lessonImagePrompt": "A conceptual illustration of a corporate building cross-section, showing interconnected gears representing formal and informal ethical systems. Warm corporate colors, modern flat design style with 3D depth, high resolution.",
+      "conceptVideoPrompt": "Time-lapse of a diverse team collaborating around a whiteboard filled with core values and ethical decision-making flowcharts. The camera slowly pans around the group as they engage in earnest discussion. Professional office setting, 4k, realistic.",
       "objectives": [
         "Identify the components of an ethical organizational culture",
         "Explain how formal and informal systems shape ethical behavior",
@@ -98,50 +103,53 @@ export const BusinessEthics401Module: LearningModule = {
         {
           "id": "business-ethics-401-l02-c1",
           "title": "Ethical Culture vs. Ethical Climate",
-          "content": "An ethical culture in an organization is made up of both formal and informal systems that encourage everyone to act in a fair and responsible manner. This includes important elements like codes of conduct, which are written guidelines that explain what is expected of employees, and reward systems that recognize and celebrate ethical behavior. Additionally, the authority structures within the organization, such as who makes decisions and how they are made, play a crucial role in shaping this culture. Training programs help employees understand the importance of ethics, while rituals and shared stories create a sense of community and shared values among team members.\nOn the other hand, the ethical climate of an organization refers to the collective understanding of how ethical issues are addressed in the workplace. It reflects the day-to-day reality of how ethical behavior is perceived and practiced. Research conducted by Linda Trevino highlights that a strong ethical culture is a more reliable indicator of how employees will behave than merely having formal compliance programs in place. For instance, an organization may have a well-crafted code of ethics, but if leaders consistently ignore or even reward unethical actions, the overall ethical climate can become harmful and toxic. This shows that it is not enough to just have rules; the way those rules are enforced and the behavior of leaders are equally important in fostering a positive ethical environment.\nContext recap: An ethical culture in an organization is made up of both formal and informal systems that encourage everyone to act in a fair and responsible manner. This includes important elements like codes of conduct, which are written guidelines that explain what is expected of employees, and reward systems that recognize and celebrate ethical behavior. Additionally, the authority structures within the organization, such as who makes decisions and how they are made, play a crucial role in shaping this culture. Training programs help employees understand the importance of ethics, while rituals and shared stories create a sense of community and shared values among team members.\nWhy this matters: Ethical Culture vs. Ethical Climate helps learners in Business connect ideas from Ethical Leadership & Sustainable Business to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "An organization's ethical culture comprises the complex interplay of formal and informal systems that guide employee behavior toward fair and responsible actions. Formal systems include written codes of conduct, compliance training, performance management, and authority structures. Informal systems encompass peer norms, organizational rituals, and the unwritten stories shared among employees. Conversely, the 'ethical climate' refers to the collective psychological perception of how ethical issues are actually handled day-to-day—essentially, 'how things are really done around here.' Research by Linda Treviño indicates that a robust, aligned ethical culture is a far more reliable predictor of employee behavior than the mere existence of a compliance program. If a company boasts a comprehensive code of ethics (formal culture) but leadership routinely promotes top performers who violate those rules (informal culture), the resulting ethical climate becomes cynical and toxic. Alignment between what is stated and what is practiced is paramount."
         },
         {
           "id": "business-ethics-401-l02-c2",
           "title": "Formal Systems: Codes, Training, and Incentives",
-          "content": "In organizations, formal ethics programs play a crucial role in promoting ethical behavior among employees. These programs typically include several key components: codes of conduct, which outline the expected behaviors and values; ethics training, which educates employees on ethical decision-making; hotlines that allow employees to report unethical behavior confidentially; designated ethics officers who oversee ethical practices; and regular compliance audits to ensure adherence to ethical standards.\nResearch shows that the effectiveness of these programs greatly depends on their foundation. Programs that are rooted in values rather than merely compliance with rules tend to be more successful. A values-based approach helps employees grasp the significance of ethical conduct and equips them with the tools to navigate complex ethical dilemmas they may encounter in their work.\nOn the other hand, programs that focus solely on compliance—emphasizing rules and the consequences of breaking them—can inadvertently lead to increased unethical behavior. This occurs because employees may feel compelled to play a game of avoiding detection rather than genuinely engaging in ethical practices.\nMoreover, it is essential for incentive systems within the organization to align with ethical behavior. If the rewards offered encourage aggressive or unethical actions, then no code of conduct will be able to effectively counteract that negative influence. Therefore, organizations must ensure that their ethical programs and incentive structures work together to foster a culture of integrity and accountability.\nContext recap: In organizations, formal ethics programs play a crucial role in promoting ethical behavior among employees. These programs typically include several key components: codes of conduct, which outline the expected behaviors and values; ethics training, which educates employees on ethical decision-making; hotlines that allow employees to report unethical behavior confidentially; designated ethics officers who oversee ethical practices; and regular compliance audits to ensure adherence to ethical standards. Research shows that the effectiveness of these programs greatly depends on their foundation. Programs that are rooted in values rather than merely compliance with rules tend to be more successful.\nWhy this matters: Formal Systems: Codes, Training, and Incentives helps learners in Business connect ideas from Ethical Leadership & Sustainable Business to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "Formal ethics programs are the structural foundation of corporate integrity. They typically feature codes of conduct, specialized ethics training, confidential reporting hotlines, designated ethics officers, and compliance audits. However, the efficacy of these systems depends heavily on their underlying philosophy. Programs rooted in a 'values-based' approach—which emphasize shared organizational ideals and equip employees with moral reasoning skills—are significantly more effective than 'compliance-based' programs. Compliance-only approaches, which focus strictly on rules and punitive measures, can inadvertently increase unethical behavior by encouraging employees to find loopholes or play a game of avoiding detection. Furthermore, incentive structures must be meticulously aligned with ethical goals. If compensation systems heavily reward aggressive, short-term financial targets without regard for how those targets are met, no amount of ethics training will prevent misconduct. The formal systems must collectively reinforce the message that ethical conduct is a non-negotiable metric of performance."
         },
         {
           "id": "business-ethics-401-l02-c3",
           "title": "Informal Systems: Norms, Heroes, and Stories",
-          "content": "Informal cultural elements often play a more significant role than formal programs in shaping the behavior of individuals within an organization. The stories that employees tell about what actions are rewarded or punished can have a profound influence on their choices, often more than any written policy could. For instance, when employees share tales of their colleagues who acted with integrity or faced challenges with ethical courage, these narratives become powerful motivators for others. These organizational heroes, the individuals who are celebrated and admired within the workplace, send a clear message about what the organization truly values and aspires to uphold. Furthermore, peer norms create a strong pressure to conform; when everyone seems to be engaging in a particular behavior, individuals may feel compelled to justify unethical actions, thinking, 'If everyone is doing it, it must be okay.' To cultivate a strong ethical culture, leaders must be intentional about these informal elements. This means actively sharing stories that highlight ethical courage, celebrating acts of integrity, and addressing any misconduct openly and transparently. It is also crucial for leaders to ensure that ethical behavior is recognized and rewarded, rather than punished, creating an environment where doing the right thing is encouraged and valued. By focusing on these aspects, leaders can help build a workplace culture that prioritizes ethics and integrity, ultimately leading to a more sustainable and positive organizational environment.\nContext recap: Informal cultural elements often play a more significant role than formal programs in shaping the behavior of individuals within an organization. The stories that employees tell about what actions are rewarded or punished can have a profound influence on their choices, often more than any written policy could. For instance, when employees share tales of their colleagues who acted with integrity or faced challenges with ethical courage, these narratives become powerful motivators for others. These organizational heroes, the individuals who are celebrated and admired within the workplace, send a clear message about what the organization truly values and aspires to uphold.\nWhy this matters: Informal Systems: Norms, Heroes, and Stories helps learners in Business connect ideas from Ethical Leadership & Sustainable Business to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "While formal systems provide the framework, informal cultural elements often exert a more profound influence on daily decision-making. The narratives employees share about who gets promoted, who gets fired, and what actions are truly celebrated dictate the unwritten rules of the organization. 'Organizational heroes'—individuals who are publicly recognized and admired—serve as powerful behavioral templates. If the celebrated heroes are those who cut corners to close deals, the informal culture will quickly erode formal ethical standards. Peer norms also create immense pressure to conform; the rationalization that 'everyone else is doing it' is a primary driver of corporate misconduct. To cultivate a resilient ethical culture, leaders must actively manage these informal systems. This requires transparently addressing ethical breaches, publicly celebrating acts of moral courage, and ensuring that the stories circulating within the organization align with its stated values. When formal policies and informal norms are in harmony, ethical behavior becomes the default organizational reflex."
         }
       ],
       "flashcards": [
         {
           "id": "business-ethics-401-l02-f1",
           "front": "Ethical culture vs. ethical climate",
-          "back": "Culture: formal and informal systems promoting ethics (codes, rewards, stories). Climate: shared perception of 'how things are done around here' — climate can contradict formal culture"
+          "back": "Culture: formal and informal systems promoting ethics (codes, rewards, stories). Climate: shared perception of 'how things are done around here' — climate can contradict formal culture."
         },
         {
           "id": "business-ethics-401-l02-f2",
           "front": "Values-based vs. compliance-based ethics programs",
-          "back": "Values-based: helps employees understand why ethics matters and reason through dilemmas. Compliance-only: focuses on rules and punishment, can increase unethical behavior by creating avoidance games"
+          "back": "Values-based: helps employees understand why ethics matters and reason through dilemmas. Compliance-only: focuses on rules and punishment, can increase unethical behavior by creating avoidance games."
         },
         {
           "id": "business-ethics-401-l02-f3",
           "front": "Most powerful informal culture shapers",
-          "back": "Stories about what gets rewarded/punished, organizational heroes who are celebrated, and peer norms — often more influential than written codes of conduct"
+          "back": "Stories about what gets rewarded/punished, organizational heroes who are celebrated, and peer norms — often more influential than written codes of conduct."
         }
       ],
       "learningAids": [
         {
           "id": "business-ethics-401-l02-a1",
           "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary of the lesson's main concept."
+          "title": "Formal vs. Informal Systems",
+          "content": "A comparative chart listing Formal Systems (Policies, Training, Metrics) against Informal Systems (Norms, Rituals, Myths/Stories)."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/business-ethics-401-l02.png"
     },
     {
       "id": "business-ethics-401-l03",
       "title": "Stakeholder Capitalism vs. Shareholder Capitalism",
       "type": "interactive",
       "duration": 15,
+      "lessonImagePrompt": "A split-screen conceptual image. On the left, a traditional stock ticker and gold coins representing shareholder capitalism. On the right, a thriving community, green trees, and diverse people representing stakeholder capitalism. High contrast, photorealistic, 8k.",
+      "conceptVideoPrompt": "A dynamic motion graphics animation showing a central corporate building. Lines connect the building to various icons representing shareholders, employees, the environment, and the community, glowing to show balanced energy flow. 4k, modern corporate aesthetic.",
       "objectives": [
         "Trace the historical evolution from shareholder to stakeholder capitalism",
         "Analyze the arguments for and against each model",
@@ -151,50 +159,53 @@ export const BusinessEthics401Module: LearningModule = {
         {
           "id": "business-ethics-401-l03-c1",
           "title": "The Shareholder Primacy Era",
-          "content": "From the 1970s until the 2010s, the concept of shareholder capitalism became the leading approach in the business world. This model was significantly shaped by the ideas of economist Milton Friedman and the agency theory introduced by scholars Jensen and Meckling. At its core, shareholder capitalism emphasizes that the primary responsibility of a corporation is to maximize the value for its shareholders, or the people who own shares in the company. This focus on shareholder value led to several key practices in the business environment. For instance, executive compensation often became closely tied to the performance of stock prices, meaning that the pay of top executives could increase significantly if the company's stock did well. Additionally, companies sometimes engaged in hostile takeovers, which is when one company tries to buy another company against the wishes of its management, as a way to replace underperforming leaders. Another common practice was share buybacks, where companies would purchase their own shares to return money to their owners. Supporters of shareholder capitalism argue that this model fosters accountability and ensures that resources are allocated efficiently. However, critics of this approach raise concerns that it encourages short-term thinking, contributes to stagnant wages for workers, harms the environment, and played a role in the financial crisis of 2008, highlighting the need for a more balanced approach to business that considers the interests of all stakeholders, not just shareholders.\nContext recap: From the 1970s until the 2010s, the concept of shareholder capitalism became the leading approach in the business world. This model was significantly shaped by the ideas of economist Milton Friedman and the agency theory introduced by scholars Jensen and Meckling. At its core, shareholder capitalism emphasizes that the primary responsibility of a corporation is to maximize the value for its shareholders, or the people who own shares in the company. This focus on shareholder value led to several key practices in the business environment.\nWhy this matters: The Shareholder Primacy Era helps learners in Business connect ideas from Ethical Leadership & Sustainable Business to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "From the 1970s through the 2010s, shareholder primacy dominated corporate governance. Championed by economist Milton Friedman and formalized by Jensen and Meckling's agency theory, this model asserts that a corporation's sole social responsibility is to maximize financial returns for its owners—the shareholders. This philosophy fundamentally reshaped global business practices. It led to the alignment of executive compensation with stock price performance, the rise of hostile takeovers to oust 'underperforming' management, and the proliferation of share buybacks to return capital to investors. Proponents argue that shareholder capitalism provides a clear, measurable metric for success, ensuring efficient capital allocation and managerial accountability. However, critics contend that this relentless focus on short-term stock prices has driven systemic negative externalities, including wage stagnation, environmental degradation, underinvestment in long-term innovation, and the excessive risk-taking that culminated in the 2008 financial crisis."
         },
         {
           "id": "business-ethics-401-l03-c2",
           "title": "The Stakeholder Capitalism Movement",
-          "content": "In 2019, a pivotal statement was made by the Business Roundtable, along with the Davos Manifesto from the World Economic Forum, which highlighted a major change in how we think about business. This change is known as stakeholder capitalism. It emphasizes that companies should not only focus on making profits for their shareholders but also consider the needs and interests of all their stakeholders. Stakeholders include a variety of groups such as employees, customers, suppliers, communities, and shareholders themselves. Klaus Schwab, a prominent figure in this discussion, believes that stakeholder capitalism can lead to better outcomes in the long run. He argues that when companies prioritize the well-being of all stakeholders, they can build trust within their communities, lower the risks associated with regulations, attract talented individuals who want to work for responsible companies, and create business models that are more resilient to challenges. Additionally, the European Union has taken significant steps to promote this approach by requiring companies to ensure due diligence in their supply chains, disclose information related to environmental, social, and governance (ESG) factors, and include worker representation on boards in certain member states. This movement towards stakeholder capitalism is reshaping the way businesses operate and interact with the world around them, encouraging a more responsible and inclusive approach to business practices.\nContext recap: In 2019, a pivotal statement was made by the Business Roundtable, along with the Davos Manifesto from the World Economic Forum, which highlighted a major change in how we think about business. This change is known as stakeholder capitalism. It emphasizes that companies should not only focus on making profits for their shareholders but also consider the needs and interests of all their stakeholders. Stakeholders include a variety of groups such as employees, customers, suppliers, communities, and shareholders themselves.\nWhy this matters: The Stakeholder Capitalism Movement helps learners in Business connect ideas from Ethical Leadership & Sustainable Business to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "In response to the critiques of shareholder primacy, a paradigm shift toward 'stakeholder capitalism' has gained significant momentum. This shift was punctuated in 2019 when the Business Roundtable redefined the purpose of a corporation, committing to lead their companies for the benefit of all stakeholders—customers, employees, suppliers, communities, and shareholders. Concurrently, the World Economic Forum's Davos Manifesto championed this inclusive model. Advocates, including Klaus Schwab, argue that stakeholder capitalism is not just an ethical imperative but a strategic advantage. By prioritizing the holistic well-being of the ecosystem in which they operate, companies can build deeper consumer trust, mitigate regulatory risks, attract top-tier talent, and foster long-term resilience. Regulatory bodies are also institutionalizing this shift; for example, the European Union's Corporate Sustainability Reporting Directive (CSRD) mandates rigorous disclosures on environmental, social, and governance (ESG) impacts, moving stakeholder consideration from voluntary rhetoric to legal compliance."
         },
         {
           "id": "business-ethics-401-l03-c3",
           "title": "The Practical Tension",
-          "content": "The concept of stakeholder capitalism, which emphasizes the importance of considering the interests of all parties involved in a business, faces some real challenges when put into practice. For instance, there are times when the needs of different groups conflict with one another. Imagine a situation where a company decides to lay off some employees to increase profits for its shareholders. While this decision might please the shareholders, it can cause significant harm to the employees who lose their jobs. Similarly, if a company chooses to invest in environmentally friendly practices, it might reduce its profits in the short term, which could upset shareholders who are looking for immediate financial returns. In these scenarios, it can be quite challenging to determine whose interests should take precedence.\nMoreover, without clear and specific ways to measure how well a company is serving its stakeholders, managers might have too much freedom to make choices that benefit themselves rather than the broader group. This concern has been voiced by critics like Lucian Bebchuk and Roberto Tallarita, who suggest that many leaders who advocate for stakeholder capitalism may not genuinely implement changes in their governance practices. For example, after the Business Roundtable statement was released, many CEOs who signed it did not actually change how they ran their companies. One possible way to address these challenges is to establish clear, measurable commitments for each stakeholder group. This approach would provide a more concrete framework for decision-making, moving beyond vague statements of purpose and ensuring that all stakeholders are genuinely considered in business decisions.\nContext recap: The concept of stakeholder capitalism, which emphasizes the importance of considering the interests of all parties involved in a business, faces some real challenges when put into practice. For instance, there are times when the needs of different groups conflict with one another. Imagine a situation where a company decides to lay off some employees to increase profits for its shareholders. While this decision might please the shareholders, it can cause significant harm to the employees who lose their jobs.\nWhy this matters: The Practical Tension helps learners in Business connect ideas from Ethical Leadership & Sustainable Business to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "Despite its broad appeal, operationalizing stakeholder capitalism presents profound practical challenges. The primary issue is navigating zero-sum trade-offs. When a company faces an economic downturn, should it protect employee jobs at the expense of shareholder dividends, or execute layoffs to preserve financial margins? Without a single optimizing metric (like stock price), decision-making becomes highly complex. Furthermore, critics like legal scholars Lucian Bebchuk and Roberto Tallarita warn of the 'illusory promise' of stakeholderism. They argue that without enforceable, measurable commitments, stakeholder capitalism merely provides corporate executives with vague rhetoric to shield themselves from accountability. If a CEO can justify poor financial performance by citing unquantifiable 'community investments,' they gain unchecked discretion that may ultimately serve their own interests rather than those of any stakeholder group. To resolve this tension, organizations must move beyond purpose statements and implement rigorous, transparent ESG metrics tied directly to executive compensation and board oversight."
         }
       ],
       "flashcards": [
         {
           "id": "business-ethics-401-l03-f1",
           "front": "Shareholder capitalism criticism",
-          "back": "Drove short-termism through stock-price-linked pay, encouraged share buybacks over investment, contributed to wage stagnation, environmental harm, and the 2008 financial crisis"
+          "back": "Drove short-termism through stock-price-linked pay, encouraged share buybacks over investment, contributed to wage stagnation, environmental harm, and the 2008 financial crisis."
         },
         {
           "id": "business-ethics-401-l03-f2",
           "front": "Stakeholder capitalism (Schwab/Davos)",
-          "back": "Corporations serve all stakeholders — builds trust, reduces regulatory risk, attracts talent, and creates resilient models; but faces criticism as potentially vague and unaccountable"
+          "back": "Corporations serve all stakeholders — builds trust, reduces regulatory risk, attracts talent, and creates resilient models; but faces criticism as potentially vague and unaccountable."
         },
         {
           "id": "business-ethics-401-l03-f3",
           "front": "Bebchuk and Tallarita's critique of stakeholderism",
-          "back": "Business Roundtable signatory CEOs made few actual governance changes — stakeholderism may be rhetoric that gives managers discretion to shield self-serving behavior without clear metrics"
+          "back": "Business Roundtable signatory CEOs made few actual governance changes — stakeholderism may be rhetoric that gives managers discretion to shield self-serving behavior without clear metrics."
         }
       ],
       "learningAids": [
         {
           "id": "business-ethics-401-l03-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Follow the prompt sequence and document your reasoning."
+          "title": "Trade-off Analysis",
+          "content": "Analyze a case study where a company must choose between closing a polluting plant (harming local employment) or keeping it open (harming the environment). Document your reasoning using both shareholder and stakeholder frameworks."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/business-ethics-401-l03.png"
     },
     {
       "id": "business-ethics-401-l04",
       "title": "B Corps, Social Enterprises & Triple Bottom Line",
       "type": "video",
       "duration": 14,
+      "lessonImagePrompt": "A modern, eco-friendly product packaging with a prominent 'B Corp' style certification stamp. The background features a lush green wall and a sleek wooden desk, symbolizing sustainable business. Photorealistic, macro photography, 8k.",
+      "conceptVideoPrompt": "A smooth pan over a bustling, sustainable coffee roastery. Workers are happily sorting fair-trade beans, and eco-friendly packaging is being sealed. The lighting is warm and inviting, highlighting the social enterprise model. 4k, cinematic.",
       "objectives": [
         "Explain the B Corp certification process and its significance",
         "Distinguish between social enterprises and traditional businesses",
@@ -204,50 +215,53 @@ export const BusinessEthics401Module: LearningModule = {
         {
           "id": "business-ethics-401-l04-c1",
           "title": "Certified B Corporations",
-          "content": "Certified B Corporations, commonly referred to as B Corps, are unique for-profit companies that have earned a special certification from an organization called B Lab. This certification is awarded to businesses that meet strict standards in several important areas, including social responsibility and environmental sustainability. To become a B Corp, a company must score at least 80 points out of a possible 200 on something called the B Impact Assessment. This assessment looks at various aspects of the business, such as how it governs itself, how it treats its employees, how it engages with the community, its environmental practices, and how it interacts with customers.\nMoreover, B Corps take an extra step by changing their legal governing documents. This means they commit to considering the interests of all stakeholders involved with the company, not just the shareholders who own the business. This approach encourages a more inclusive and responsible way of doing business.\nAs of 2025, there are over 8,000 companies around the world that have achieved B Corp certification, spanning across 90 different countries. Some well-known examples of these companies include Patagonia, which is famous for its environmental activism, Ben & Jerry's, known for its social justice initiatives, and Danone North America, which focuses on health and sustainability. These companies demonstrate that it is possible to be successful while also making a positive impact on society and the planet.\nContext recap: Certified B Corporations, commonly referred to as B Corps, are unique for-profit companies that have earned a special certification from an organization called B Lab. This certification is awarded to businesses that meet strict standards in several important areas, including social responsibility and environmental sustainability. To become a B Corp, a company must score at least 80 points out of a possible 200 on something called the B Impact Assessment. This assessment looks at various aspects of the business, such as how it governs itself, how it treats its employees, how it engages with the community, its environmental practices, and how it interacts with customers.\nWhy this matters: Certified B Corporations helps learners in Business connect ideas from Ethical Leadership & Sustainable Business to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "Certified B Corporations (B Corps) represent a rigorous, institutionalized approach to stakeholder capitalism. Administered by the nonprofit B Lab, this certification is awarded to for-profit companies that meet the highest standards of verified social and environmental performance, public transparency, and legal accountability. To achieve certification, a company must score a minimum of 80 out of 200 points on the B Impact Assessment, which meticulously evaluates operations across five pillars: governance, workers, community, environment, and customers. Crucially, B Corps must also amend their legal governing documents to require their board of directors to balance profit with the purpose of creating a material positive impact on society and the environment. This legal shift protects the company's mission through capital raises and leadership changes. With thousands of certified companies globally—including prominent brands like Patagonia, Ben & Jerry's, and Danone North America—the B Corp movement proves that rigorous impact measurement can coexist with commercial success."
         },
         {
           "id": "business-ethics-401-l04-c2",
           "title": "Social Enterprises",
-          "content": "Social enterprises are unique organizations that blend business practices with a mission to create positive social or environmental change. They aim to make a difference in the world while also earning money. These organizations can be found on a spectrum, which means they come in different forms. On one end, you have nonprofits that generate income through various activities, allowing them to support their causes. In the middle, there are hybrid organizations like L3Cs, which are designed to balance profit-making with social goals. On the other end, you find for-profit companies that have a strong commitment to social missions, meaning they prioritize making a positive impact alongside earning profits. A famous example of a social enterprise is the Grameen Bank, founded by Muhammad Yunus, which introduced the concept of microfinance. This model helps people in need access small loans to start businesses and improve their lives. What sets social enterprises apart is their focus on measuring success not just by how much money they make, but by the positive changes they bring to society. However, it is still crucial for them to be financially sustainable so they can continue their important work over time.\nContext recap: Social enterprises are unique organizations that blend business practices with a mission to create positive social or environmental change. They aim to make a difference in the world while also earning money. These organizations can be found on a spectrum, which means they come in different forms. On one end, you have nonprofits that generate income through various activities, allowing them to support their causes.\nWhy this matters: Social Enterprises helps learners in Business connect ideas from Ethical Leadership & Sustainable Business to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "Social enterprises operate at the dynamic intersection of traditional business and philanthropy. They are organizations that apply commercial strategies to maximize improvements in financial, social, and environmental well-being. Unlike traditional businesses, where social impact is often a secondary byproduct of corporate social responsibility (CSR) initiatives, a social enterprise's primary mission is to solve a societal problem. They exist on a spectrum: from revenue-generating nonprofits to hybrid structures like Low-Profit Limited Liability Companies (L3Cs) and Benefit Corporations, to mission-driven for-profits. A classic example is Grameen Bank, founded by Nobel Laureate Muhammad Yunus, which pioneered microfinance to alleviate poverty while remaining financially self-sustaining. The defining characteristic of a social enterprise is its dual mandate: it must generate sufficient commercial revenue to sustain its operations while measuring its ultimate success by the scale of the social or environmental impact it delivers."
         },
         {
           "id": "business-ethics-401-l04-c3",
           "title": "The Triple Bottom Line",
-          "content": "The 'triple bottom line' (TBL) is an important concept that was introduced by John Elkington in 1994. This idea encourages businesses to look beyond just making money and to consider their impact on three key areas: profit, people, and the planet. Profit refers to the economic value that a business generates, which is often the primary focus for many companies. However, TBL suggests that businesses should also think about their social impact on people and communities, as well as their environmental impact on the planet. This approach challenges the traditional belief that the only goal of a business is to maximize financial returns. In 2018, Elkington revisited his original idea and expressed concern that TBL had become more of an accounting tool rather than a framework for meaningful change. He emphasized that true TBL thinking involves integrating social and environmental factors into the core strategy of a business. This means that companies should not treat these considerations as separate tasks or reports, but rather as essential components of their overall mission and operations. By adopting a triple bottom line approach, businesses can contribute to a more sustainable and equitable world while still achieving their financial goals.\nContext recap: The 'triple bottom line' (TBL) is an important concept that was introduced by John Elkington in 1994. This idea encourages businesses to look beyond just making money and to consider their impact on three key areas: profit, people, and the planet. Profit refers to the economic value that a business generates, which is often the primary focus for many companies. However, TBL suggests that businesses should also think about their social impact on people and communities, as well as their environmental impact on the planet.\nWhy this matters: The Triple Bottom Line helps learners in Business connect ideas from Ethical Leadership & Sustainable Business to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "The 'Triple Bottom Line' (TBL) is an accounting and sustainability framework coined by John Elkington in 1994. It posits that companies should commit to measuring their social and environmental impact alongside their financial performance—often summarized as the 'Three Ps': Profit, People, and Planet. 'Profit' represents traditional economic value; 'People' measures the company's commitment to fair labor practices and community well-being; and 'Planet' assesses environmental stewardship and ecological footprint reduction. The TBL framework was revolutionary in challenging the monolithic focus on financial metrics. However, in 2018, Elkington famously 'recalled' the concept in a Harvard Business Review article. He argued that TBL had been diluted into a mere accounting tool used by companies to generate sustainability reports without fundamentally changing their underlying business models. Elkington's critique serves as a vital reminder: true sustainable business requires systemic transformation and the integration of social and environmental costs into core strategic decision-making, not just end-of-year reporting."
         }
       ],
       "flashcards": [
         {
           "id": "business-ethics-401-l04-f1",
           "front": "B Corp certification",
-          "back": "Certified by B Lab; requires 80+ on B Impact Assessment (governance, workers, community, environment, customers) plus legal amendments to consider all stakeholders"
+          "back": "Certified by B Lab; requires 80+ on B Impact Assessment (governance, workers, community, environment, customers) plus legal amendments to consider all stakeholders."
         },
         {
           "id": "business-ethics-401-l04-f2",
           "front": "Social enterprise",
-          "back": "Organization applying commercial strategies to maximize social/environmental impact alongside financial returns — measures success by impact delivered, not just profit"
+          "back": "Organization applying commercial strategies to maximize social/environmental impact alongside financial returns — measures success by impact delivered, not just profit."
         },
         {
           "id": "business-ethics-401-l04-f3",
           "front": "Triple bottom line (Elkington, 1994)",
-          "back": "Profit, People, Planet — measuring success across economic, social, and environmental dimensions; Elkington recalled the concept in 2018, arguing it became a mere accounting tool rather than driving systemic change"
+          "back": "Profit, People, Planet — measuring success across economic, social, and environmental dimensions; Elkington recalled the concept in 2018, arguing it became a mere accounting tool rather than driving systemic change."
         }
       ],
       "learningAids": [
         {
           "id": "business-ethics-401-l04-a1",
           "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary of the lesson's main concept."
+          "title": "The Triple Bottom Line",
+          "content": "A Venn diagram showing Profit, People, and Planet intersecting to create 'Sustainability' in the center."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/business-ethics-401-l04.png"
     },
     {
       "id": "business-ethics-401-l05",
       "title": "Checkpoint: Ethical Leadership & Sustainable Models",
       "type": "quiz",
       "duration": 12,
+      "lessonImagePrompt": "A sleek, modern digital tablet resting on a wooden desk, displaying a stylized interactive quiz interface with a checkmark. Soft focus background of a corporate office. Photorealistic, 8k.",
+      "conceptVideoPrompt": "A slow, focused zoom on a person's hand tapping the correct answer on a glowing digital screen, followed by a subtle green pulse indicating success. 4k, shallow depth of field.",
       "questions": [
         {
           "id": "business-ethics-401-l05-q1",
@@ -271,7 +285,7 @@ export const BusinessEthics401Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Brown, Trevino, and Harrison's research identifies two pillars: being a moral person AND being a moral manager. A leader who is ethical personally but passive about promoting ethics is invisible as an ethical role model — the organization receives ambiguous signals."
+          "explanation": "Brown, Treviño, and Harrison's research identifies two pillars: being a moral person AND being a moral manager. A leader who is ethical personally but passive about promoting ethics is invisible as an ethical role model — the organization receives ambiguous signals."
         },
         {
           "id": "business-ethics-401-l05-q2",
@@ -344,14 +358,41 @@ export const BusinessEthics401Module: LearningModule = {
           ],
           "correctOptionId": "b",
           "explanation": "B Corp certification requires scoring at least 80 out of 200 on B Lab's B Impact Assessment and amending corporate legal documents to require consideration of all stakeholders. Companies remain for-profit and can be based anywhere in the world."
+        },
+        {
+          "id": "business-ethics-401-l05-q5",
+          "text": "Which of the following is an example of an 'informal system' within an ethical organizational culture?",
+          "options": [
+            {
+              "id": "a",
+              "text": "The official corporate code of conduct"
+            },
+            {
+              "id": "b",
+              "text": "The annual compliance training module"
+            },
+            {
+              "id": "c",
+              "text": "The stories employees share about a manager who was fired for cutting corners"
+            },
+            {
+              "id": "d",
+              "text": "The confidential whistleblower hotline"
+            }
+          ],
+          "correctOptionId": "c",
+          "explanation": "Informal systems include peer norms, rituals, and the unwritten stories and myths shared among employees. Codes, training, and hotlines are all formal systems designed by management."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/business-ethics-401-l05.png"
     },
     {
       "id": "business-ethics-401-l06",
       "title": "Circular Economy Business Models",
       "type": "video",
       "duration": 13,
+      "lessonImagePrompt": "A high-tech, futuristic manufacturing facility where robotic arms are carefully disassembling electronics for recycling. A glowing circular arrow motif is subtly integrated into the factory design. Cinematic lighting, photorealistic, 8k.",
+      "conceptVideoPrompt": "A seamless looping animation showing a product's lifecycle: from raw material to a sleek gadget, then being disassembled, and the materials morphing back into a new gadget. Clean, modern 3D motion graphics, 4k.",
       "objectives": [
         "Define the circular economy and contrast it with the linear model",
         "Identify circular business model strategies",
@@ -361,42 +402,45 @@ export const BusinessEthics401Module: LearningModule = {
         {
           "id": "business-ethics-401-l06-c1",
           "title": "Linear vs. Circular Economy",
-          "content": "In our daily lives, we often follow a straightforward pattern called the linear economy. This pattern can be summed up with the phrase 'take-make-dispose.' What this means is that we take raw materials from the earth, create products from those materials, sell those products to people, and then, when we no longer need them, we simply throw them away. This way of thinking assumes that we have endless resources available to us and that the earth can handle all the waste we produce. However, this is not the case. We are running out of resources, and our planet is struggling to cope with the amount of waste we generate.\nOn the other hand, there is a different approach called the circular economy, which has been popularized by the Ellen MacArthur Foundation. The circular economy encourages us to rethink how we use materials and products. Instead of just throwing things away, the goal is to keep materials in use for as long as possible. This idea is inspired by nature itself, where one creature's waste can become another creature's food, creating a cycle of life.\nThe circular economy is based on three important principles. First, we should design products in a way that eliminates waste and pollution right from the start. This means thinking carefully about how products are made and what happens to them after we use them. Second, we should aim to circulate products and materials at their highest value, ensuring that they are used to their fullest potential. Lastly, we should focus on regenerating natural systems, which means taking steps to restore and support the environment so that it can continue to thrive. By adopting these principles, we can create a more sustainable future for ourselves and the planet.\nContext recap: In our daily lives, we often follow a straightforward pattern called the linear economy. This pattern can be summed up with the phrase 'take-make-dispose.' What this means is that we take raw materials from the earth, create products from those materials, sell those products to people, and then, when we no longer need them, we simply throw them away. This way of thinking assumes that we have endless resources available to us and that the earth can handle all the waste we produce. However, this is not the case.\nWhy this matters: Linear vs. Circular Economy helps learners in Business connect ideas from Ethical Leadership & Sustainable Business to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "The traditional industrial economy operates on a linear 'take-make-dispose' model. In this paradigm, companies extract raw materials, manufacture products, sell them to consumers, and ultimately, the products are discarded as waste at the end of their lifecycle. This model assumes infinite resource availability and infinite environmental capacity to absorb waste—assumptions that are ecologically unsustainable. In contrast, the circular economy, heavily championed by the Ellen MacArthur Foundation, represents a systemic shift aimed at decoupling economic growth from the consumption of finite resources. The circular economy is built on three foundational principles: first, eliminate waste and pollution by design; second, circulate products and materials at their highest utility and value for as long as possible; and third, regenerate natural systems. By mimicking biological cycles where waste becomes food for another process, the circular economy transforms how value is created and preserved."
         },
         {
           "id": "business-ethics-401-l06-c2",
           "title": "Circular Business Model Strategies",
-          "content": "To fully embrace the concept of a circular economy, companies can implement a variety of innovative strategies that not only benefit their business but also help the environment. One popular approach is known as 'product-as-a-service.' In this model, instead of customers purchasing and owning a product outright, they pay for access to it. A great example of this is Philips, which offers lighting as a service. This means that instead of selling light bulbs, Philips leases the lighting systems to customers while retaining ownership. This allows Philips to take responsibility for the entire lifecycle of the product, ensuring that it is maintained and eventually recycled properly.\nAnother effective strategy is designing products for easy disassembly and remanufacturing. Caterpillar, a well-known company that manufactures heavy machinery, uses this approach by remanufacturing engines. This process allows them to rebuild engines at about 60% of the cost of new ones, making it a cost-effective and sustainable option.\nAdditionally, closed-loop recycling is a method where materials are recovered and reused, minimizing waste. For instance, Interface, a company that produces carpet tiles, creates their products from recycled fishing nets, turning waste into valuable resources.\nLastly, sharing platforms, such as car-sharing services, promote circularity by reducing the need for individuals to own their own vehicles. This not only helps decrease the number of cars on the road but also encourages more efficient use of resources. Each of these business models allows companies to generate revenue while minimizing their reliance on new resources from the earth, contributing to a more sustainable future.\nContext recap: To fully embrace the concept of a circular economy, companies can implement a variety of innovative strategies that not only benefit their business but also help the environment. One popular approach is known as 'product-as-a-service.' In this model, instead of customers purchasing and owning a product outright, they pay for access to it. A great example of this is Philips, which offers lighting as a service. This means that instead of selling light bulbs, Philips leases the lighting systems to customers while retaining ownership.\nWhy this matters: Circular Business Model Strategies helps learners in Business connect ideas from Ethical Leadership & Sustainable Business to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "Transitioning to a circular economy requires innovative business models that fundamentally alter the relationship between producers and consumers. One prominent strategy is the 'Product-as-a-Service' (PaaS) model. Instead of selling ownership of a product, companies sell access or performance. For example, Philips offers 'Light as a Service,' retaining ownership of the lighting equipment and taking responsibility for its maintenance, upgrading, and eventual recycling. This incentivizes the manufacturer to build durable, easily repairable products. Another strategy is 'Remanufacturing,' where companies like Caterpillar disassemble used heavy machinery, restore the components to like-new condition, and reassemble them at a fraction of the cost and energy of producing new engines. 'Closed-loop recycling' involves recovering materials to create new products, such as Interface manufacturing carpet tiles from discarded fishing nets. Finally, 'Sharing platforms' (like car-sharing networks) maximize the utilization rate of idle assets, reducing the overall demand for new manufacturing."
         },
         {
           "id": "business-ethics-401-l06-c3",
           "title": "The Business Case and Challenges",
-          "content": "The circular economy is an exciting concept that offers numerous economic advantages for businesses. One of the key benefits is the potential for lower costs when it comes to raw materials. By reusing and recycling materials, companies can save money and reduce their dependence on new resources. Additionally, the circular economy opens up new revenue opportunities through remanufacturing, which means taking used products and turning them into new ones. This not only helps the environment but also allows businesses to build stronger relationships with their customers by offering services rather than just selling products. For example, a company might provide a service to maintain and repair products, which encourages customers to return to them for future needs.\nMoreover, adopting circular economy practices can make businesses more resilient. This means they are better prepared to handle disruptions in supply chains or sudden changes in resource prices. According to the Ellen MacArthur Foundation, the circular economy could represent an incredible opportunity worth $4.5 trillion by the year 2030! However, there are challenges that businesses must face. Redesigning products to fit into a circular model often requires a significant upfront investment, which can be a barrier for many companies. Additionally, the systems needed to manage the return and recycling of products are still being developed, and it can take time for consumers to change their habits and embrace these new practices. Furthermore, many existing laws and regulations tend to favor the traditional linear economy, providing financial incentives for using new materials instead of recycled ones. Addressing these challenges is essential for realizing the full potential of the circular economy.\nContext recap: The circular economy is an exciting concept that offers numerous economic advantages for businesses. One of the key benefits is the potential for lower costs when it comes to raw materials. By reusing and recycling materials, companies can save money and reduce their dependence on new resources. Additionally, the circular economy opens up new revenue opportunities through remanufacturing, which means taking used products and turning them into new ones.\nWhy this matters: The Business Case and Challenges helps learners in Business connect ideas from Ethical Leadership & Sustainable Business to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "The transition to a circular economy presents a compelling business case. It offers significant cost reductions by mitigating exposure to volatile raw material prices and supply chain disruptions. It also unlocks new revenue streams through secondary markets, remanufacturing, and service-based contracts, fostering deeper, ongoing relationships with customers. The Ellen MacArthur Foundation estimates the circular economy could unlock $4.5 trillion in economic value by 2030. However, the barriers to adoption are substantial. Transitioning requires significant upfront capital investment to redesign products and retool manufacturing processes. Furthermore, establishing 'reverse logistics'—the infrastructure required to efficiently collect and process used products from consumers—is complex and costly. Consumer behavior must also shift from a preference for ownership to a comfort with access and refurbished goods. Finally, current regulatory frameworks and tax structures often subsidize the extraction of virgin materials, placing recycled materials at a competitive disadvantage. Overcoming these hurdles requires coordinated action between businesses, policymakers, and consumers."
         }
       ],
       "flashcards": [
         {
           "id": "business-ethics-401-l06-f1",
           "front": "Circular economy (three principles)",
-          "back": "Eliminate waste and pollution by design, circulate products and materials at highest value, regenerate natural systems — contrasts with linear take-make-dispose model"
+          "back": "Eliminate waste and pollution by design, circulate products and materials at highest value, regenerate natural systems — contrasts with linear take-make-dispose model."
         },
         {
           "id": "business-ethics-401-l06-f2",
           "front": "Product-as-a-service model",
-          "back": "Replaces ownership with access — the manufacturer retains ownership and lifecycle responsibility (e.g., Philips leasing lighting), decoupling revenue from virgin resource consumption"
+          "back": "Replaces ownership with access — the manufacturer retains ownership and lifecycle responsibility (e.g., Philips leasing lighting), decoupling revenue from virgin resource consumption."
         },
         {
           "id": "business-ethics-401-l06-f3",
           "front": "Key challenge for circular economy adoption",
-          "back": "Significant upfront product redesign investment, underdeveloped reverse logistics, slow consumer behavior change, and regulatory frameworks that subsidize virgin materials over recycled ones"
+          "back": "Significant upfront product redesign investment, underdeveloped reverse logistics, slow consumer behavior change, and regulatory frameworks that subsidize virgin materials over recycled ones."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/business-ethics-401-l06.png"
     },
     {
       "id": "business-ethics-401-l07",
       "title": "Final Assessment: Ethical Leadership & Sustainable Business",
       "type": "quiz",
       "duration": 15,
+      "lessonImagePrompt": "A prestigious MBA diploma resting next to a small, thriving potted plant and a modern laptop on a clean marble desk, symbolizing mastery of sustainable business ethics. Photorealistic, 8k.",
+      "conceptVideoPrompt": "A cinematic shot of a professional closing a laptop with a satisfied smile, looking out a large window at a green, futuristic cityscape. Warm sunset lighting, 4k, slow motion.",
       "questions": [
         {
           "id": "business-ethics-401-l07-q1",
@@ -493,8 +537,33 @@ export const BusinessEthics401Module: LearningModule = {
           ],
           "correctOptionId": "b",
           "explanation": "The trickle-down effect shows that ethical leadership cascades through organizational levels: ethical top leaders influence middle managers' behavior, who in turn shape how frontline employees act — making leadership ethics pervasive throughout the organization."
+        },
+        {
+          "id": "business-ethics-401-l07-q5",
+          "text": "What is the primary difference between the 'moral person' and 'moral manager' dimensions of ethical leadership?",
+          "options": [
+            {
+              "id": "a",
+              "text": "A moral person focuses on compliance, while a moral manager focuses on values."
+            },
+            {
+              "id": "b",
+              "text": "A moral person possesses personal integrity, while a moral manager actively promotes and rewards ethical behavior in others."
+            },
+            {
+              "id": "c",
+              "text": "A moral person is a frontline employee, while a moral manager is an executive."
+            },
+            {
+              "id": "d",
+              "text": "There is no difference; the terms are used interchangeably in leadership research."
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Being a moral person involves personal traits like honesty and fairness. Being a moral manager involves taking proactive steps to influence followers' behavior through communication, rewards, and discipline."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/business-ethics-401-l07.png"
     }
   ]
 };

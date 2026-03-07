@@ -47,20 +47,20 @@ export default function PinGate({ portalType, onVerified, onCancel }: PinGatePro
   useEffect(() => {
     const checkExisting = async () => {
       try {
-        const response = await fetch("/api/account/pin/verify", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ portalType, pin: "000000" }),
-        });
-        if (response.status === 404) {
-          setMode("set");
-        } else {
-          setMode("verify");
+        const params = new URLSearchParams({ portalType });
+        const response = await fetch(`/api/account/pin/verify?${params.toString()}`);
+        if (!response.ok) {
+          throw new Error("Failed to load PIN status");
         }
+
+        const data = (await response.json()) as { hasPin?: boolean };
+        setMode(data.hasPin ? "verify" : "set");
       } catch {
-        setMode("set");
+        setError("Unable to load PIN status. Please try again.");
+        setMode("verify");
       }
     };
+
     void checkExisting();
   }, [portalType]);
 
@@ -91,24 +91,39 @@ export default function PinGate({ portalType, onVerified, onCancel }: PinGatePro
           setBusy(false);
           return;
         }
+
         storePinVerified(portalType);
         onVerified();
-      } else {
-        const response = await fetch("/api/account/pin/verify", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ portalType, pin }),
-        });
-        const data = (await response.json()) as { verified?: boolean };
-        if (data.verified) {
-          storePinVerified(portalType);
-          onVerified();
-        } else {
-          setError("Incorrect PIN. Try again.");
-          setPin("");
-          setBusy(false);
-        }
+        return;
       }
+
+      const response = await fetch("/api/account/pin/verify", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ portalType, pin }),
+      });
+      const data = (await response.json()) as {
+        verified?: boolean;
+        error?: string;
+        needsSetup?: boolean;
+      };
+
+      if (response.status === 404 || data.needsSetup) {
+        setMode("set");
+        setPin("");
+        setBusy(false);
+        return;
+      }
+
+      if (data.verified) {
+        storePinVerified(portalType);
+        onVerified();
+        return;
+      }
+
+      setError(data.error ?? "Incorrect PIN. Try again.");
+      setPin("");
+      setBusy(false);
     } catch {
       setError("Network error. Try again.");
       setBusy(false);

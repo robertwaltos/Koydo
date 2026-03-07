@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const Philosophy601Module: LearningModule = {
+export const philosophy_601_Module: LearningModule = {
   "id": "philosophy-601",
   "title": "Philosophy Research and Leadership",
   "description": "Post-401 specialization in Philosophy, focused on humanities systems diagnostics, humanities operations and execution design, humanities impact and tradeoff analysis, and humanities governance and leadership through advanced casework, simulation, and defense-based checkpoints.",
@@ -14,19 +14,19 @@ export const Philosophy601Module: LearningModule = {
   ],
   "minAge": 17,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en",
     "es"
   ],
   "learningObjectives": [
-    "Apply advanced methods for humanities systems diagnostics in high-constraint environments",
-    "Design robust systems for humanities operations and execution design with measurable control gates",
-    "Evaluate interventions in humanities impact and tradeoff analysis with research-grade rigor",
-    "Operationalize humanities governance and leadership with accountable governance and escalation pathways",
-    "Lead cross-functional decision reviews with explicit tradeoff communication",
-    "Defend recommendations under expert critique using evidence and uncertainty bounds"
+    "Diagnose complex humanities systems by identifying core assumptions, constraints, and measurable indicators.",
+    "Design operational workflows for humanities projects, including checkpoints, risk mitigation, and clear accountability.",
+    "Analyze the impact and tradeoffs of different interventions using comparative baselines and uncertainty modeling.",
+    "Develop governance frameworks that connect policy intent to measurable outcomes and transparent remediation processes.",
+    "Lead decision-making processes by clearly communicating tradeoffs, evidence, and risk factors to diverse stakeholders.",
+    "Construct and defend evidence-based recommendations against rigorous expert critique."
   ],
   "lessons": [
     {
@@ -38,8 +38,8 @@ export const Philosophy601Module: LearningModule = {
         {
           "id": "philosophy-601-l01-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Conceptual Model of a Humanities System",
+          "content": "A diagram illustrating the interconnected components of a complex social or cultural system, showing inputs, processes, outputs, and feedback loops."
         }
       ],
       "chunks": [
@@ -47,36 +47,36 @@ export const Philosophy601Module: LearningModule = {
           "id": "philosophy-601-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "In this lesson, we will explore the advanced boundaries of philosophy. We will focus on understanding how to analyze and diagnose systems within the humanities. This includes examining how we can design and execute operations effectively in various contexts. By defining these boundaries, we can better understand the complexities of philosophical inquiry and its applications in real-world scenarios.\nContext recap: In this lesson, we will explore the advanced boundaries of philosophy. We will focus on understanding how to analyze and diagnose systems within the humanities. This includes examining how we can design and execute operations effectively in various contexts. By defining these boundaries, we can better understand the complexities of philosophical inquiry and its applications in real-world scenarios.\nContext recap: In this lesson, we will explore the advanced boundaries of philosophy. We will focus on understanding how to analyze and diagnose systems within the humanities. This includes examining how we can design and execute operations effectively in various contexts. By defining these boundaries, we can better understand the complexities of philosophical inquiry and its applications in real-world scenarios.\nWhy this matters: Scope and Boundary Design helps learners in Humanities connect ideas from Philosophy Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "In this lesson, we will explore the advanced application of philosophy to analyze and diagnose complex systems within the humanities. We will learn to define the scope and boundaries of a problem, a critical first step for designing effective operations and interventions. Understanding these boundaries helps manage the inherent complexity of philosophical inquiry in real-world scenarios."
         },
         {
           "id": "philosophy-601-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different events or actions. They will also identify ranges of uncertainty and understand how various systems depend on one another. This foundational knowledge is crucial for planning effective interventions in philosophical research and practice, allowing learners to anticipate potential outcomes and challenges.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different events or actions. They will also identify ranges of uncertainty and understand how various systems depend on one another. This foundational knowledge is crucial for planning effective interventions in philosophical research and practice, allowing learners to anticipate potential outcomes and challenges."
+          "content": "Here, you will learn to map causal pathways—the chains of cause and effect—within a system. We will also practice identifying and quantifying uncertainty. This foundational knowledge is crucial for planning effective interventions, allowing you to anticipate potential outcomes and challenges."
         },
         {
           "id": "philosophy-601-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "In our recap, we emphasize that all claims made in philosophical discussions should be linked to measurable indicators. This means that learners will learn to establish confidence bounds and set up review checkpoints to ensure that their arguments are well-supported and credible. This practice helps in maintaining the integrity of philosophical inquiry and encourages critical thinking.\nContext recap: In our recap, we emphasize that all claims made in philosophical discussions should be linked to measurable indicators. This means that learners will learn to establish confidence bounds and set up review checkpoints to ensure that their arguments are well-supported and credible. This practice helps in maintaining the integrity of philosophical inquiry and encourages critical thinking."
+          "content": "This recap emphasizes a core principle: all claims must be linked to measurable evidence. You will learn to establish confidence levels for your conclusions and set up review checkpoints to ensure your arguments are well-supported, credible, and maintain intellectual integrity."
         }
       ],
       "flashcards": [
         {
           "id": "philosophy-601-l01-f1",
-          "front": "humanities systems diagnostics",
-          "back": "A specialization axis requiring explicit assumptions and measurable constraints."
+          "front": "Humanities Systems Diagnostics",
+          "back": "The discipline of analyzing complex social or cultural systems by making assumptions explicit and defining measurable constraints."
         },
         {
           "id": "philosophy-601-l01-f2",
-          "front": "humanities operations and execution design",
-          "back": "Execution architecture that determines reliability under stress."
+          "front": "Humanities Operations Design",
+          "back": "The architectural design of a project or intervention that determines its reliability and effectiveness under stress."
         },
         {
           "id": "philosophy-601-l01-f3",
-          "front": "humanities impact and tradeoff analysis",
-          "back": "Evaluation discipline for identifying true gains and hidden costs."
+          "front": "Humanities Tradeoff Analysis",
+          "back": "The evaluation discipline for systematically identifying the true gains and hidden costs of a decision across competing values."
         }
       ]
     },
@@ -88,9 +88,9 @@ export const Philosophy601Module: LearningModule = {
       "learningAids": [
         {
           "id": "philosophy-601-l02-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "image",
+          "title": "Workflow with Control Gates",
+          "content": "A flowchart diagram showing a project workflow with clear checkpoints (gates), decision points, and escalation paths for when things go wrong."
         }
       ],
       "chunks": [
@@ -98,13 +98,13 @@ export const Philosophy601Module: LearningModule = {
           "id": "philosophy-601-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "In this interactive practice, learners will have the opportunity to design specialized workflows that reflect their understanding of philosophical methods. They will also conduct stress tests on these workflows by simulating adverse scenarios. This hands-on experience will help them understand how to adapt their methods under pressure and improve their problem-solving skills.\nContext recap: In this interactive practice, learners will have the opportunity to design specialized workflows that reflect their understanding of philosophical methods. They will also conduct stress tests on these workflows by simulating adverse scenarios. This hands-on experience will help them understand how to adapt their methods under pressure and improve their problem-solving skills."
+          "content": "In this interactive lab, you will design a specialized workflow for a philosophical research project. You will then stress-test your design by simulating adverse scenarios, such as data loss or stakeholder disagreement. This hands-on experience will help you build adaptable and resilient problem-solving methods."
         },
         {
           "id": "philosophy-601-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "In our recap, we will discuss how workflows can be structured to include important checkpoints, rollback criteria, and escalation thresholds. This means that learners will understand how to create systems that can respond effectively to challenges, ensuring that they can maintain control and make informed decisions throughout their philosophical inquiries.\nContext recap: In our recap, we will discuss how workflows can be structured to include important checkpoints, rollback criteria, and escalation thresholds. This means that learners will understand how to create systems that can respond effectively to challenges, ensuring that they can maintain control and make informed decisions throughout their philosophical inquiries."
+          "content": "This recap focuses on structuring workflows with built-in safeguards. We will review how to design checkpoints, criteria for rolling back a decision, and thresholds for escalating a problem. This architecture ensures you can maintain control and make informed decisions even when facing unexpected challenges."
         }
       ],
       "interactiveActivities": [
@@ -112,7 +112,7 @@ export const Philosophy601Module: LearningModule = {
           "id": "philosophy-601-l02-act1",
           "type": "matching_pairs",
           "title": "Control-to-Outcome Mapping",
-          "description": "Match specialist controls with their strongest reliability and governance effects.",
+          "description": "Match key governance controls to their primary function in ensuring a project's reliability and accountability.",
           "pairs": [
             {
               "left": "Pre-commit gate",
@@ -120,7 +120,7 @@ export const Philosophy601Module: LearningModule = {
             },
             {
               "left": "Rollback trigger",
-              "right": "Limits blast radius under adverse outcomes"
+              "right": "Limits damage from adverse outcomes"
             },
             {
               "left": "Baseline dashboard",
@@ -150,12 +150,12 @@ export const Philosophy601Module: LearningModule = {
       "questions": [
         {
           "id": "philosophy-601-l03-q1",
-          "text": "Which practice most improves humanities systems diagnostics decision quality?",
+          "text": "Which practice most improves the decision quality of humanities systems diagnostics?",
           "skillId": "philosophy-601-skill-core",
           "options": [
             {
               "id": "a",
-              "text": "Proceed without baseline or assumptions"
+              "text": "Proceed without a baseline or assumptions"
             },
             {
               "id": "b",
@@ -171,16 +171,16 @@ export const Philosophy601Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Advanced decisions improve when assumptions, constraints, and metrics are explicit."
+          "explanation": "Advanced decisions improve when assumptions, constraints, and metrics are made explicit from the start."
         },
         {
           "id": "philosophy-601-l03-q2",
-          "text": "At level 601, strong execution for humanities operations and execution design requires:",
+          "text": "At an advanced level, strong execution for humanities operations requires:",
           "skillId": "philosophy-601-skill-execution",
           "options": [
             {
               "id": "a",
-              "text": "Owner mapping, checkpoint cadence, and escalation thresholds"
+              "text": "Clear ownership, regular checkpoints, and defined escalation thresholds"
             },
             {
               "id": "b",
@@ -188,7 +188,7 @@ export const Philosophy601Module: LearningModule = {
             },
             {
               "id": "c",
-              "text": "No retrospective or post-run review"
+              "text": "No retrospective or post-project review"
             },
             {
               "id": "d",
@@ -196,7 +196,7 @@ export const Philosophy601Module: LearningModule = {
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Reliable advanced execution needs ownership clarity and threshold-driven governance."
+          "explanation": "Reliable advanced execution needs ownership clarity and threshold-driven governance to manage complexity."
         },
         {
           "id": "philosophy-601-l03-q3",
@@ -213,19 +213,19 @@ export const Philosophy601Module: LearningModule = {
             },
             {
               "id": "c",
-              "text": "Changing success criteria after outcomes"
+              "text": "Changing success criteria after seeing the outcomes"
             },
             {
               "id": "d",
-              "text": "Excluding difficult scenarios from analysis"
+              "text": "Excluding difficult scenarios from the analysis"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible analysis combines comparative baselines, side-effect checks, and uncertainty disclosure."
+          "explanation": "Defensible analysis combines comparative baselines, checks for unintended consequences, and honest disclosure of uncertainty."
         },
         {
           "id": "philosophy-601-l03-q4",
-          "text": "Mature governance systems connect:",
+          "text": "Mature governance systems effectively connect:",
           "skillId": "philosophy-601-skill-governance",
           "options": [
             {
@@ -238,7 +238,7 @@ export const Philosophy601Module: LearningModule = {
             },
             {
               "id": "c",
-              "text": "Targets without ownership or escalation design"
+              "text": "Targets without ownership or an escalation plan"
             },
             {
               "id": "d",
@@ -247,106 +247,6 @@ export const Philosophy601Module: LearningModule = {
           ],
           "correctOptionId": "a",
           "explanation": "Governance maturity is the operational link between intent, measurement, and corrective action."
-        },
-        {
-          "id": "philosophy-601-l03-q5",
-          "text": "What is the best way to compare competing interventions in advanced Humanities?",
-          "skillId": "philosophy-601-skill-advanced-5",
-          "options": [
-            {
-              "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
-            },
-            {
-              "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
-            },
-            {
-              "id": "c",
-              "text": "Switch metrics after results arrive"
-            },
-            {
-              "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
-        },
-        {
-          "id": "philosophy-601-l03-q6",
-          "text": "In high-stakes Philosophy Research and Leadership execution, which communication protocol is strongest?",
-          "skillId": "philosophy-601-skill-advanced-6",
-          "options": [
-            {
-              "id": "a",
-              "text": "Broadcast conclusions without assumptions"
-            },
-            {
-              "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
-            },
-            {
-              "id": "c",
-              "text": "Share only final outcomes after completion"
-            },
-            {
-              "id": "d",
-              "text": "Limit updates to a single informal channel"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
-        },
-        {
-          "id": "philosophy-601-l03-q7",
-          "text": "A mature remediation loop in advanced Humanities should prioritize:",
-          "skillId": "philosophy-601-skill-advanced-7",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blame assignment without system updates"
-            },
-            {
-              "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
-            },
-            {
-              "id": "c",
-              "text": "One-time fixes without retesting"
-            },
-            {
-              "id": "d",
-              "text": "Issue closure based on elapsed time"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
-        },
-        {
-          "id": "philosophy-601-l03-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Philosophy Research and Leadership?",
-          "skillId": "philosophy-601-skill-advanced-8",
-          "options": [
-            {
-              "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
-            },
-            {
-              "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
-            },
-            {
-              "id": "c",
-              "text": "Ignore correlated failure modes"
-            },
-            {
-              "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
         }
       ]
     },
@@ -359,8 +259,8 @@ export const Philosophy601Module: LearningModule = {
         {
           "id": "philosophy-601-l04-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Tradeoff Analysis Matrix",
+          "content": "A table comparing three different policy options across multiple criteria like cost, equity, safety, and reliability, with color-coded scores."
         }
       ],
       "chunks": [
@@ -368,19 +268,19 @@ export const Philosophy601Module: LearningModule = {
           "id": "philosophy-601-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "In this lesson, we will frame cases that highlight the competing constraints found in humanities systems diagnostics. We will analyze the impacts and trade-offs involved in various philosophical scenarios. This will help learners appreciate the complexity of decision-making in the humanities and understand how different factors can influence outcomes.\nContext recap: In this lesson, we will frame cases that highlight the competing constraints found in humanities systems diagnostics. We will analyze the impacts and trade-offs involved in various philosophical scenarios. This will help learners appreciate the complexity of decision-making in the humanities and understand how different factors can influence outcomes."
+          "content": "This lesson introduces case studies that highlight the competing constraints often found in humanities-related problems. We will deconstruct complex scenarios to analyze the impacts and trade-offs of potential decisions, appreciating the complexity of real-world ethical and philosophical challenges."
         },
         {
           "id": "philosophy-601-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "In this practice session, learners will compare different options based on several important dimensions, including safety, reliability, cost, equity, and governance. This exercise will encourage critical thinking and help learners understand the multifaceted nature of decision-making in philosophy, as they weigh the pros and cons of each option.\nContext recap: In this practice session, learners will compare different options based on several important dimensions, including safety, reliability, cost, equity, and governance. This exercise will encourage critical thinking and help learners understand the multifaceted nature of decision-making in philosophy, as they weigh the pros and cons of each option."
+          "content": "In this practice session, you will formally compare different options using a structured framework. You will weigh each option against key dimensions like safety, reliability, cost, equity, and governance, honing your critical thinking and multi-faceted decision-making skills."
         },
         {
           "id": "philosophy-601-l04-c3",
           "kind": "recap",
           "title": "Decision Memo Pattern",
-          "content": "In our recap, we will outline the essential components of a decision memo. Each recommendation should include the underlying assumptions, supporting evidence, risk controls, and fallback plans. This structured approach will help learners articulate their thoughts clearly and ensure that their decisions are well-informed and accountable.\nContext recap: In our recap, we will outline the essential components of a decision memo. Each recommendation should include the underlying assumptions, supporting evidence, risk controls, and fallback plans. This structured approach will help learners articulate their thoughts clearly and ensure that their decisions are well-informed and accountable."
+          "content": "We will recap by introducing a standard pattern for a decision memo. A strong recommendation must clearly state its underlying assumptions, present supporting evidence, outline risk controls, and include fallback plans. This structure ensures your proposals are well-reasoned, transparent, and accountable."
         }
       ]
     },
@@ -392,9 +292,9 @@ export const Philosophy601Module: LearningModule = {
       "learningAids": [
         {
           "id": "philosophy-601-l05-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "image",
+          "title": "Interactive Simulation Dashboard",
+          "content": "A user interface for a simulation showing adjustable control levers, real-time data feedback, and performance metrics."
         }
       ],
       "chunks": [
@@ -402,13 +302,13 @@ export const Philosophy601Module: LearningModule = {
           "id": "philosophy-601-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "In this interactive practice, learners will operate scenario controls while considering both performance and governance constraints. This experience will help them understand the balance required in managing complex philosophical scenarios, where they must navigate various limitations while striving for optimal outcomes.\nContext recap: In this interactive practice, learners will operate scenario controls while considering both performance and governance constraints. This experience will help them understand the balance required in managing complex philosophical scenarios, where they must navigate various limitations while striving for optimal outcomes.\nContext recap: In this interactive practice, learners will operate scenario controls while considering both performance and governance constraints. This experience will help them understand the balance required in managing complex philosophical scenarios, where they must navigate various limitations while striving for optimal outcomes. Context recap: In this interactive practice, learners will operate scenario controls while considering both performance and governance constraints. This experience will help them understand the balance required in managing complex philosophical scenarios, where they must navigate various limitations while striving for optimal outcomes."
+          "content": "In this interactive simulation, you will take control of a complex scenario in real-time. Your task is to make decisions that balance performance goals with governance constraints, navigating unexpected events and resource limitations."
         },
         {
           "id": "philosophy-601-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "In our recap, we will discuss how effective responses can be designed to update control gates without losing traceability or accountability. This means that learners will learn the importance of maintaining clear records and ensuring that their actions can be tracked, which is vital in philosophical research and practice.\nContext recap: In our recap, we will discuss how effective responses can be designed to update control gates without losing traceability or accountability. This means that learners will learn the importance of maintaining clear records and ensuring that their actions can be tracked, which is vital in philosophical research and practice."
+          "content": "This recap focuses on designing adaptive responses. We will discuss how to update your strategy and controls during a live scenario without losing traceability or accountability. This is a key skill for effective leadership in dynamic environments."
         }
       ],
       "interactiveActivities": [
@@ -416,7 +316,7 @@ export const Philosophy601Module: LearningModule = {
           "id": "philosophy-601-l05-act1",
           "type": "scenario",
           "title": "Adverse-Condition Decision Run",
-          "description": "Run a high-pressure philosophy scenario and tune controls under uncertainty."
+          "description": "Navigate a high-pressure simulation of a humanities crisis, making real-time decisions to manage outcomes while adhering to ethical and operational constraints."
         }
       ]
     },
@@ -436,203 +336,103 @@ export const Philosophy601Module: LearningModule = {
       "questions": [
         {
           "id": "philosophy-601-l06-q1",
-          "text": "In advanced casework, the first requirement for defensible recommendations is:",
-          "skillId": "philosophy-601-skill-case1",
+          "text": "When analyzing a case study, what is the most critical first step before comparing options?",
+          "skillId": "philosophy-601-skill-case-analysis",
           "options": [
             {
               "id": "a",
-              "text": "A preferred option without explicit assumptions"
+              "text": "Choosing the easiest solution"
             },
             {
               "id": "b",
-              "text": "A clear baseline, explicit constraints, and success criteria"
+              "text": "Establishing a clear baseline and defining success criteria"
             },
             {
               "id": "c",
-              "text": "High confidence without evidence logs"
+              "text": "Writing the final report"
             },
             {
               "id": "d",
-              "text": "Single-metric optimization only"
+              "text": "Ignoring stakeholder perspectives"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible recommendations begin with explicit assumptions, constraints, and measurable targets."
+          "explanation": "A clear baseline and success criteria are essential for objectively evaluating the impact of any proposed solution."
         },
         {
           "id": "philosophy-601-l06-q2",
-          "text": "A resilient strategy for humanities operations and execution design should include:",
-          "skillId": "philosophy-601-skill-case2",
+          "text": "In a simulation, an unexpected negative event occurs. What does a resilient operational design prioritize?",
+          "skillId": "philosophy-601-skill-simulation-response",
           "options": [
             {
               "id": "a",
-              "text": "Checkpointed execution with fallback and escalation criteria"
+              "text": "Continuing the original plan without changes"
             },
             {
               "id": "b",
-              "text": "One-way execution with no rollback capability"
+              "text": "Executing a pre-defined fallback plan and escalating to leadership"
             },
             {
               "id": "c",
-              "text": "No ownership mapping across teams"
+              "text": "Assigning blame to a team member"
             },
             {
               "id": "d",
-              "text": "Hidden assumptions and undocumented decisions"
+              "text": "Hiding the negative event from stakeholders"
             }
           ],
-          "correctOptionId": "a",
-          "explanation": "Resilience depends on checkpoints, fallback options, and explicit escalation design."
+          "correctOptionId": "b",
+          "explanation": "Resilience requires having pre-planned contingencies and clear communication channels for when things go wrong."
         },
         {
           "id": "philosophy-601-l06-q3",
-          "text": "When evaluating humanities impact and tradeoff analysis, which method is most rigorous?",
-          "skillId": "philosophy-601-skill-case3",
+          "text": "A 'tradeoff analysis' in a humanities context primarily involves:",
+          "skillId": "philosophy-601-skill-tradeoff-analysis",
           "options": [
             {
               "id": "a",
-              "text": "Single success story without controls"
+              "text": "Proving one option is perfect"
             },
             {
               "id": "b",
-              "text": "Comparative baselines plus side-effect and uncertainty analysis"
+              "text": "Only considering the financial costs"
             },
             {
               "id": "c",
-              "text": "Outcome-only narrative without process evidence"
+              "text": "Systematically comparing how different options perform across multiple competing values (e.g., equity vs. efficiency)"
             },
             {
               "id": "d",
-              "text": "Retrospective scope changes to fit outcomes"
+              "text": "Choosing the most popular option"
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "Rigorous evaluation requires comparisons, side-effect analysis, and uncertainty disclosure."
+          "correctOptionId": "c",
+          "explanation": "Rigorous tradeoff analysis requires evaluating options against a range of important, and often conflicting, criteria."
         },
         {
           "id": "philosophy-601-l06-q4",
-          "text": "Advanced governance is strongest when it:",
-          "skillId": "philosophy-601-skill-case4",
+          "text": "What is the purpose of a 'decision memo' as outlined in the case analysis lesson?",
+          "skillId": "philosophy-601-skill-decision-memo",
           "options": [
             {
               "id": "a",
-              "text": "Aligns authority, measurement, and remediation obligations"
+              "text": "To hide the real reasons for a decision"
             },
             {
               "id": "b",
-              "text": "Separates policy from operational controls"
+              "text": "To create a formal, auditable record of the recommendation, evidence, risks, and assumptions"
             },
             {
               "id": "c",
-              "text": "Avoids external review and transparency"
+              "text": "To informally share opinions with a small group"
             },
             {
               "id": "d",
-              "text": "Treats accountability as optional under pressure"
-            }
-          ],
-          "correctOptionId": "a",
-          "explanation": "Mature governance links authority, measurable controls, and corrective action."
-        },
-        {
-          "id": "philosophy-601-l06-q5",
-          "text": "What is the best way to compare competing interventions in advanced Humanities?",
-          "skillId": "philosophy-601-skill-advanced-5",
-          "options": [
-            {
-              "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
-            },
-            {
-              "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
-            },
-            {
-              "id": "c",
-              "text": "Switch metrics after results arrive"
-            },
-            {
-              "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
+              "text": "To be written only after a project is successful"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
-        },
-        {
-          "id": "philosophy-601-l06-q6",
-          "text": "In high-stakes Philosophy Research and Leadership execution, which communication protocol is strongest?",
-          "skillId": "philosophy-601-skill-advanced-6",
-          "options": [
-            {
-              "id": "a",
-              "text": "Broadcast conclusions without assumptions"
-            },
-            {
-              "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
-            },
-            {
-              "id": "c",
-              "text": "Share only final outcomes after completion"
-            },
-            {
-              "id": "d",
-              "text": "Limit updates to a single informal channel"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
-        },
-        {
-          "id": "philosophy-601-l06-q7",
-          "text": "A mature remediation loop in advanced Humanities should prioritize:",
-          "skillId": "philosophy-601-skill-advanced-7",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blame assignment without system updates"
-            },
-            {
-              "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
-            },
-            {
-              "id": "c",
-              "text": "One-time fixes without retesting"
-            },
-            {
-              "id": "d",
-              "text": "Issue closure based on elapsed time"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
-        },
-        {
-          "id": "philosophy-601-l06-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Philosophy Research and Leadership?",
-          "skillId": "philosophy-601-skill-advanced-8",
-          "options": [
-            {
-              "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
-            },
-            {
-              "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
-            },
-            {
-              "id": "c",
-              "text": "Ignore correlated failure modes"
-            },
-            {
-              "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "explanation": "A decision memo provides a transparent and accountable record, making the reasoning behind a choice clear to all stakeholders."
         }
       ]
     },
@@ -645,8 +445,8 @@ export const Philosophy601Module: LearningModule = {
         {
           "id": "philosophy-601-l07-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Stakeholder Impact Map",
+          "content": "An infographic visualizing how a single policy decision creates different positive and negative impacts on various community groups over time."
         }
       ],
       "chunks": [
@@ -654,36 +454,36 @@ export const Philosophy601Module: LearningModule = {
           "id": "philosophy-601-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. This exercise will help them understand the broader implications of philosophical decisions and how they can impact various communities, fostering a sense of responsibility and ethical consideration.\nContext recap: In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. This exercise will help them understand the broader implications of philosophical decisions and how they can impact various communities, fostering a sense of responsibility and ethical consideration."
+          "content": "In this lesson, you will learn to map the distribution of benefits, burdens, and long-term effects of a decision across different stakeholder groups. This ethical analysis helps foster a deeper sense of responsibility by revealing the broader human implications of philosophical and policy choices."
         },
         {
           "id": "philosophy-601-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "In this section, we will explore the concept of accountability architecture. This includes understanding how decision traceability, review rights, and remediation obligations are integrated into philosophical practices. By grasping these concepts, learners will appreciate the importance of transparency and responsibility in their philosophical endeavors.\nContext recap: In this section, we will explore the concept of accountability architecture. This includes understanding how decision traceability, review rights, and remediation obligations are integrated into philosophical practices. By grasping these concepts, learners will appreciate the importance of transparency and responsibility in their philosophical endeavors."
+          "content": "Here, we will explore 'accountability architecture'—the formal systems that ensure transparency and responsibility. This includes practices for decision traceability, defining stakeholder review rights, and establishing clear obligations for fixing problems when they arise."
         },
         {
           "id": "philosophy-601-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "At the end of our lesson, we will review a comprehensive checklist that connects important outcomes with ethical considerations, adherence to policies, and the ability to adapt and recover from challenges. This checklist will help ensure that leaders are responsible and effective in their roles.\nContext recap: At the end of our lesson, we will review a comprehensive checklist that connects important outcomes with ethical considerations, adherence to policies, and the ability to adapt and recover from challenges. This checklist will help ensure that leaders are responsible and effective in their roles."
+          "content": "We will conclude with a responsible leadership checklist. This tool connects project outcomes with ethical principles, policy adherence, and system resilience, serving as a practical guide for ensuring that leadership is both effective and accountable."
         }
       ],
       "flashcards": [
         {
           "id": "philosophy-601-l07-f1",
-          "front": "Impact distribution",
-          "back": "How outcomes are allocated across populations and timescales."
+          "front": "Impact Distribution",
+          "back": "The analysis of how outcomes (benefits, costs, risks) are allocated across different populations and timescales."
         },
         {
           "id": "philosophy-601-l07-f2",
-          "front": "Decision traceability",
-          "back": "An auditable record of evidence, ownership, and rationale."
+          "front": "Decision Traceability",
+          "back": "An auditable record connecting a decision to its underlying evidence, ownership, and rationale."
         },
         {
           "id": "philosophy-601-l07-f3",
-          "front": "Responsible leadership",
-          "back": "Decision behavior balancing performance, accountability, and ethics."
+          "front": "Responsible Leadership",
+          "back": "A mode of decision-making that balances performance goals with accountability and ethical considerations."
         }
       ]
     },
@@ -695,9 +495,9 @@ export const Philosophy601Module: LearningModule = {
       "learningAids": [
         {
           "id": "philosophy-601-l08-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "image",
+          "title": "Argument Structure Diagram",
+          "content": "A visual breakdown of a defensible argument, showing the core claim supported by evidence, with explicit acknowledgment of limitations and risks."
         }
       ],
       "chunks": [
@@ -705,13 +505,13 @@ export const Philosophy601Module: LearningModule = {
           "id": "philosophy-601-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "In this interactive activity, students will work together to create a detailed brief. This brief will include well-supported claims, relevant evidence, an understanding of the limits of uncertainty, and suggested pathways for addressing any issues that may arise. This exercise is designed to enhance critical thinking and collaborative skills.\nContext recap: In this interactive activity, students will work together to create a detailed brief. This brief will include well-supported claims, relevant evidence, an understanding of the limits of uncertainty, and suggested pathways for addressing any issues that may arise. This exercise is designed to enhance critical thinking and collaborative skills."
+          "content": "In this interactive lab, you will assemble a capstone defense brief for a complex scenario. Your brief must integrate a well-supported claim, verifiable evidence, a clear articulation of uncertainty, and concrete remediation pathways for potential risks. This exercise hones your synthesis and critical thinking skills."
         },
         {
           "id": "philosophy-601-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "During this session, learners will practice their responses to various critiques that may come from experts in the field. They will prepare for questions related to technical aspects, governance issues, and the perspectives of different stakeholders. This rehearsal will help build confidence and improve their ability to communicate effectively.\nContext recap: During this session, learners will practice their responses to various critiques that may come from experts in the field. They will prepare for questions related to technical aspects, governance issues, and the perspectives of different stakeholders. This rehearsal will help build confidence and improve their ability to communicate effectively."
+          "content": "Here, you will rehearse your defense in front of a simulated expert panel. This involves preparing responses to sharp critiques about your technical methods, governance structures, and stakeholder considerations. This rehearsal builds confidence and sharpens your communication skills under pressure."
         }
       ],
       "interactiveActivities": [
@@ -719,7 +519,123 @@ export const Philosophy601Module: LearningModule = {
           "id": "philosophy-601-l08-act1",
           "type": "debate_simulator",
           "title": "Expert Defense Panel",
-          "description": "Defend specialization recommendations under adversarial cross-examination."
+          "description": "Present and defend your policy recommendation for a complex humanities problem against adversarial questioning from a simulated expert panel."
+        }
+      ]
+    },
+    {
+      "id": "philosophy-601-l09",
+      "title": "Final Checkpoint: Capstone Defense",
+      "type": "quiz",
+      "duration": 15,
+      "learningAids": [
+        {
+          "id": "philosophy-601-l09-a1",
+          "type": "practice",
+          "title": "Self-Review Checklist",
+          "content": "Review the core principles of the course: structured methods, explicit assumptions, measurable evidence, and accountable governance."
+        }
+      ],
+      "questions": [
+        {
+          "id": "philosophy-601-l09-q1",
+          "text": "In a capstone defense, what is the strongest way to handle a question about the potential negative side effects of your proposal?",
+          "skillId": "philosophy-601-skill-defense-risk",
+          "options": [
+            {
+              "id": "a",
+              "text": "Deny that any negative side effects are possible."
+            },
+            {
+              "id": "b",
+              "text": "Acknowledge the risk, present your mitigation plan, and explain the residual uncertainty."
+            },
+            {
+              "id": "c",
+              "text": "Change the subject to a strength of your proposal."
+            },
+            {
+              "id": "d",
+              "text": "State that side effects are not your responsibility."
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "A strong defense demonstrates foresight by acknowledging risks and presenting a clear plan to manage them."
+        },
+        {
+          "id": "philosophy-601-l09-q2",
+          "text": "A mature governance model, as discussed in the course, must link policy intent with:",
+          "skillId": "philosophy-601-skill-governance-synthesis",
+          "options": [
+            {
+              "id": "a",
+              "text": "Vague aspirations and no oversight."
+            },
+            {
+              "id": "b",
+              "text": "The personal opinions of the leader."
+            },
+            {
+              "id": "c",
+              "text": "Measurable controls, clear accountability, and a process for remediation."
+            },
+            {
+              "id": "d",
+              "text": "A one-time report that is never updated."
+            }
+          ],
+          "correctOptionId": "c",
+          "explanation": "Effective governance translates high-level intent into concrete, measurable, and accountable operations."
+        },
+        {
+          "id": "philosophy-601-l09-q3",
+          "text": "When presenting a complex tradeoff analysis, effective leadership communication involves:",
+          "skillId": "philosophy-601-skill-leadership-communication",
+          "options": [
+            {
+              "id": "a",
+              "text": "Hiding the tradeoffs to make the decision seem easy."
+            },
+            {
+              "id": "b",
+              "text": "Explicitly stating the competing values and explaining why one path was chosen over others."
+            },
+            {
+              "id": "c",
+              "text": "Using jargon to confuse the audience."
+            },
+            {
+              "id": "d",
+              "text": "Presenting only the data that supports your preferred option."
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Transparent leadership involves clearly articulating the difficult choices and justifying the final recommendation in the face of competing options."
+        },
+        {
+          "id": "philosophy-601-l09-q4",
+          "text": "What is the primary purpose of mapping stakeholder impact distribution?",
+          "skillId": "philosophy-601-skill-stakeholder-analysis",
+          "options": [
+            {
+              "id": "a",
+              "text": "To identify which groups can be safely ignored."
+            },
+            {
+              "id": "b",
+              "text": "To ensure that all benefits go to a single group."
+            },
+            {
+              "id": "c",
+              "text": "To fulfill a bureaucratic requirement."
+            },
+            {
+              "id": "d",
+              "text": "To ethically evaluate how benefits and burdens are allocated and identify potential inequities."
+            }
+          ],
+          "correctOptionId": "d",
+          "explanation": "Mapping impact distribution is a core ethical practice for ensuring fairness and anticipating the full human consequences of a decision."
         }
       ]
     }

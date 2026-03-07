@@ -22,6 +22,9 @@ export default function PreviewLayout({ children }: { children: ReactNode }) {
           <Link href="/preview/parent-dashboard" className="text-xs text-amber-600 hover:underline dark:text-amber-400">
             Dashboard
           </Link>
+          <Link href="/preview/junior" className="text-xs text-amber-600 hover:underline dark:text-amber-400">
+            Junior
+          </Link>
         </div>
       </div>
       {children}

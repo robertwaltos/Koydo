@@ -212,7 +212,7 @@ export default function GamesHubPage() {
           Game Zone
         </h1>
         <p className="mt-1 text-sm text-stone-500">
-          {GAME_CATALOG.length} games live: core learning titles + Gemini legacy missions + immersive 4K-ready arcade experiences.
+          {GAME_CATALOG.length} games: core learning titles, legacy missions, classic games, arcade experiences, and zone adventures.
         </p>
       </header>
 

@@ -20,6 +20,8 @@ import {
 } from "@/lib/i18n/translations";
 import type { StudentProfile } from "@/lib/profiles/types";
 import { loadSupportRuntimeConfig } from "@/lib/support/config";
+import { PauseStreakButton } from "./components/pause-streak-button";
+import { ShareBragSheetButton } from "./components/share-brag-sheet-button";
 
 export const dynamic = "force-dynamic";
 
@@ -285,11 +287,16 @@ export default async function ParentDashboardPage() {
         </div>
         <div className="flex flex-wrap gap-2">
           <Link
+            href="/parent/device"
+            className="ui-focus-ring inline-flex items-center justify-center rounded-md border border-[#c4cdd8] bg-white px-4 py-2 text-[13px] font-semibold text-[#1a1f36] shadow-sm transition hover:bg-[#f6f9fc]"
+          >
+            Approve Device Log In
+          </Link>
+          <Link
             href="/student/onboarding"
             className="ui-focus-ring inline-flex items-center justify-center rounded-md bg-[#635bff] px-4 py-2 text-[13px] font-semibold text-white shadow-sm transition hover:bg-[#5a52f0]"
           >
-            {t("parent_dashboard_add_learner")}
-          </Link>
+            {t("parent_dashboard_add_learner")}          </Link>
           <Link
             href="/who-is-learning"
             className="ui-focus-ring inline-flex items-center justify-center rounded-md border border-[#e3e8ee] bg-white px-4 py-2 text-[13px] font-semibold text-[#3c4257] shadow-sm transition hover:bg-[#f6f9fc]"
@@ -463,7 +470,7 @@ export default async function ParentDashboardPage() {
                     })}
                   </p>
 
-                  <div className="mt-3 flex flex-wrap gap-2">
+                  <div className="mt-3 flex flex-wrap gap-2 items-center">
                     <Link
                       href="/who-is-learning"
                       className="ui-focus-ring rounded-md border border-[#e3e8ee] bg-[#f6f9fc] px-3 py-1.5 text-[12px] font-semibold text-[#3c4257] hover:bg-[#edf0f7]"
@@ -476,6 +483,9 @@ export default async function ParentDashboardPage() {
                     >
                       {t("parent_dashboard_report")}
                     </Link>
+                    <div className="ml-auto">
+                      <PauseStreakButton studentId={profile.id} studentName={profile.display_name} />
+                    </div>
                   </div>
                 </article>
               );

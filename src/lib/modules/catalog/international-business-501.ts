@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const InternationalBusiness501Module: LearningModule = {
+export const international_business_501_Module: LearningModule = {
   "id": "international-business-501",
   "title": "International Business Specialization Studio",
   "description": "Post-401 specialization in International Business, focused on business systems diagnostics, business operations and execution design, business impact and tradeoff analysis, and business governance and leadership through advanced casework, simulation, and defense-based checkpoints.",
@@ -14,7 +14,7 @@ export const InternationalBusiness501Module: LearningModule = {
   ],
   "minAge": 17,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en",
@@ -34,11 +34,16 @@ export const InternationalBusiness501Module: LearningModule = {
       "title": "International Business Advanced Foundations",
       "type": "video",
       "duration": 14,
+      "visualPrompts": [
+        "Diagram of a complex business system with interconnected components and external factors.",
+        "Causal loop diagram illustrating feedback effects between marketing spend, sales, and production capacity.",
+        "Graph showing a business forecast with confidence interval bands to visualize uncertainty."
+      ],
       "learningAids": [
         {
           "id": "international-business-501-l01-a1",
           "type": "image",
-          "title": "Guided Practice",
+          "title": "Diagnostic Framework Example",
           "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
         }
       ],
@@ -47,35 +52,35 @@ export const InternationalBusiness501Module: LearningModule = {
           "id": "international-business-501-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "In this lesson, we will dive deep into the advanced boundaries of scope in the field of International Business. We will learn how to effectively diagnose business systems, which means understanding how different parts of a business work together. Additionally, we will focus on designing operations and execution strategies that are not only efficient but also effective. By mastering these concepts, you will be better equipped to navigate the complexities of international business environments, making informed decisions that can lead to success in global markets.\nContext recap: In this lesson, we will dive deep into the advanced boundaries of scope in the field of International Business. We will learn how to effectively diagnose business systems, which means understanding how different parts of a business work together. Additionally, we will focus on designing operations and execution strategies that are not only efficient but also effective. By mastering these concepts, you will be better equipped to navigate the complexities of international business environments, making informed decisions that can lead to success in global markets."
+          "content": "Defines the advanced principles of scoping international business problems. Covers methods for diagnosing complex business systems and designing efficient, robust operations and execution strategies for global markets."
         },
         {
           "id": "international-business-501-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different factors in a business. They will also identify ranges of uncertainty and understand how various systems depend on one another. This foundational knowledge is crucial for planning effective interventions in business scenarios.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different factors in a business. They will also identify ranges of uncertainty and understand how various systems depend on one another. This foundational knowledge is crucial for planning effective interventions in business scenarios."
+          "content": "Introduces techniques for mapping causal pathways between business variables, identifying and quantifying ranges of uncertainty, and analyzing system interdependencies. This modeling is foundational for planning effective interventions."
         },
         {
           "id": "international-business-501-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "In our recap, we emphasize that all claims made in business must be linked to measurable indicators. This means that we need to establish confidence bounds and set up review checkpoints to ensure that our decisions are based on solid evidence. This practice helps maintain accountability and transparency in business operations.\nContext recap: In our recap, we emphasize that all claims made in business must be linked to measurable indicators. This means that we need to establish confidence bounds and set up review checkpoints to ensure that our decisions are based on solid evidence. This practice helps maintain accountability and transparency in business operations."
+          "content": "Establishes the requirement for linking all strategic claims to measurable indicators. This includes defining confidence bounds for forecasts and implementing review checkpoints to ensure decisions are evidence-based."
         }
       ],
       "flashcards": [
         {
           "id": "international-business-501-l01-f1",
-          "front": "business systems diagnostics",
+          "front": "Business Systems Diagnostics",
           "back": "A specialization axis requiring explicit assumptions and measurable constraints."
         },
         {
           "id": "international-business-501-l01-f2",
-          "front": "business operations and execution design",
+          "front": "Business Operations and Execution Design",
           "back": "Execution architecture that determines reliability under stress."
         },
         {
           "id": "international-business-501-l01-f3",
-          "front": "business impact and tradeoff analysis",
+          "front": "Business Impact and Tradeoff Analysis",
           "back": "Evaluation discipline for identifying true gains and hidden costs."
         }
       ]
@@ -85,6 +90,11 @@ export const InternationalBusiness501Module: LearningModule = {
       "title": "International Business Specialist Methods Lab",
       "type": "interactive",
       "duration": 17,
+      "visualPrompts": [
+        "Flowchart of a business workflow with decision gates, feedback loops, and rollback paths.",
+        "Dashboard showing key performance indicators (KPIs) changing in real-time during a stress test simulation.",
+        "Diagram of an escalation pathway, from an operational team alert to executive-level review."
+      ],
       "learningAids": [
         {
           "id": "international-business-501-l02-a1",
@@ -98,13 +108,13 @@ export const InternationalBusiness501Module: LearningModule = {
           "id": "international-business-501-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "In this interactive practice, learners will have the opportunity to design specialized workflows tailored to specific business needs. They will also conduct stress tests on these workflows by simulating adverse scenarios to see how well they hold up under pressure. This hands-on experience is essential for understanding real-world business challenges.\nContext recap: In this interactive practice, learners will have the opportunity to design specialized workflows tailored to specific business needs. They will also conduct stress tests on these workflows by simulating adverse scenarios to see how well they hold up under pressure. This hands-on experience is essential for understanding real-world business challenges."
+          "content": "Learners design specialized business workflows and then stress-test them by simulating adverse scenarios, such as supply chain disruptions or sudden market shifts, to evaluate their resilience and identify failure points."
         },
         {
           "id": "international-business-501-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "In our recap, we will discuss the importance of integrating control gates within workflows. These gates serve as checkpoints that help monitor progress and ensure that any necessary adjustments can be made. Additionally, we will cover rollback criteria and how to escalate issues based on specific thresholds to maintain smooth operations.\nContext recap: In our recap, we will discuss the importance of integrating control gates within workflows. These gates serve as checkpoints that help monitor progress and ensure that any necessary adjustments can be made. Additionally, we will cover rollback criteria and how to escalate issues based on specific thresholds to maintain smooth operations."
+          "content": "Summarizes the principles of integrating control gates into workflows to monitor progress and quality. Covers the design of clear rollback criteria and threshold-based escalation protocols to manage deviations from the plan."
         }
       ],
       "interactiveActivities": [
@@ -247,106 +257,6 @@ export const InternationalBusiness501Module: LearningModule = {
           ],
           "correctOptionId": "a",
           "explanation": "Governance maturity is the operational link between intent, measurement, and corrective action."
-        },
-        {
-          "id": "international-business-501-l03-q5",
-          "text": "What is the best way to compare competing interventions in advanced Business?",
-          "skillId": "international-business-501-skill-advanced-5",
-          "options": [
-            {
-              "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
-            },
-            {
-              "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
-            },
-            {
-              "id": "c",
-              "text": "Switch metrics after results arrive"
-            },
-            {
-              "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
-        },
-        {
-          "id": "international-business-501-l03-q6",
-          "text": "In high-stakes International Business Specialization Studio execution, which communication protocol is strongest?",
-          "skillId": "international-business-501-skill-advanced-6",
-          "options": [
-            {
-              "id": "a",
-              "text": "Broadcast conclusions without assumptions"
-            },
-            {
-              "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
-            },
-            {
-              "id": "c",
-              "text": "Share only final outcomes after completion"
-            },
-            {
-              "id": "d",
-              "text": "Limit updates to a single informal channel"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
-        },
-        {
-          "id": "international-business-501-l03-q7",
-          "text": "A mature remediation loop in advanced Business should prioritize:",
-          "skillId": "international-business-501-skill-advanced-7",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blame assignment without system updates"
-            },
-            {
-              "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
-            },
-            {
-              "id": "c",
-              "text": "One-time fixes without retesting"
-            },
-            {
-              "id": "d",
-              "text": "Issue closure based on elapsed time"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
-        },
-        {
-          "id": "international-business-501-l03-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in International Business Specialization Studio?",
-          "skillId": "international-business-501-skill-advanced-8",
-          "options": [
-            {
-              "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
-            },
-            {
-              "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
-            },
-            {
-              "id": "c",
-              "text": "Ignore correlated failure modes"
-            },
-            {
-              "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
         }
       ]
     },
@@ -355,11 +265,16 @@ export const InternationalBusiness501Module: LearningModule = {
       "title": "International Business Advanced Case Analysis",
       "type": "video",
       "duration": 14,
+      "visualPrompts": [
+        "A complex case study mind map showing interconnected challenges across finance, logistics, and marketing.",
+        "A multi-axis spider chart comparing three strategic options across cost, risk, speed, and market share.",
+        "Template of a structured one-page decision memorandum, highlighting sections for assumptions, evidence, and risks."
+      ],
       "learningAids": [
         {
           "id": "international-business-501-l04-a1",
           "type": "image",
-          "title": "Guided Practice",
+          "title": "Tradeoff Analysis Matrix",
           "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
         }
       ],
@@ -368,19 +283,19 @@ export const InternationalBusiness501Module: LearningModule = {
           "id": "international-business-501-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "In this lesson, we will frame a case study that highlights the competing constraints found in business systems diagnostics. We will analyze the impacts of various business decisions and the trade-offs that must be considered. Understanding these dynamics is crucial for making informed decisions in international business.\nContext recap: In this lesson, we will frame a case study that highlights the competing constraints found in business systems diagnostics. We will analyze the impacts of various business decisions and the trade-offs that must be considered. Understanding these dynamics is crucial for making informed decisions in international business."
+          "content": "Frames a multi-faceted case study highlighting competing constraints in international business. The analysis focuses on the cascading impacts of strategic decisions and the trade-offs required to navigate them."
         },
         {
           "id": "international-business-501-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "In this practice session, learners will compare different options available to them across several important dimensions, including safety, reliability, cost, equity, and governance. This comparison will help them understand the trade-offs involved in decision-making and the importance of balancing these factors.\nContext recap: In this practice session, learners will compare different options available to them across several important dimensions, including safety, reliability, cost, equity, and governance. This comparison will help them understand the trade-offs involved in decision-making and the importance of balancing these factors."
+          "content": "Learners compare strategic options across critical dimensions, including safety, reliability, cost, equity, and governance. This exercise hones the ability to identify and articulate the core trade-offs in any complex decision."
         },
         {
           "id": "international-business-501-l04-c3",
           "kind": "recap",
           "title": "Decision Memo Pattern",
-          "content": "In our recap, we will discuss the structure of a decision memo. Each recommendation made should include clear assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that decisions are well thought out and can be justified when necessary.\nContext recap: In our recap, we will discuss the structure of a decision memo. Each recommendation made should include clear assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that decisions are well thought out and can be justified when necessary."
+          "content": "Outlines a professional structure for a decision memo. Each recommendation must be supported by explicit assumptions, verifiable evidence, pre-defined risk controls, and viable fallback plans."
         }
       ]
     },
@@ -389,6 +304,11 @@ export const InternationalBusiness501Module: LearningModule = {
       "title": "International Business Simulation Clinic",
       "type": "interactive",
       "duration": 18,
+      "visualPrompts": [
+        "Screenshot of a simulation dashboard with adjustable levers (e.g., pricing, inventory) and real-time data feeds.",
+        "An animated graph showing the impact of a decision on multiple KPIs (e.g., profit, market share, CO2 emissions) over time.",
+        "A decision tree interface showing adaptive response options after an unexpected event in the simulation."
+      ],
       "learningAids": [
         {
           "id": "international-business-501-l05-a1",
@@ -402,20 +322,20 @@ export const InternationalBusiness501Module: LearningModule = {
           "id": "international-business-501-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "In this interactive practice, learners will operate scenario controls while balancing performance with governance constraints. This exercise will help them understand how to make decisions that not only achieve business goals but also adhere to ethical and regulatory standards.\nContext recap: In this interactive practice, learners will operate scenario controls while balancing performance with governance constraints. This exercise will help them understand how to make decisions that not only achieve business goals but also adhere to ethical and regulatory standards."
+          "content": "Learners operate controls within a dynamic business simulation, tasked with balancing performance metrics (like profit and growth) against critical governance constraints (like regulatory compliance and ethical standards)."
         },
         {
           "id": "international-business-501-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "In our recap, we will explore how effective responses to business challenges can update control gates without losing traceability or accountability. This ensures that all actions taken are documented and can be reviewed later, which is essential for maintaining trust and integrity in business practices.\nContext recap: In our recap, we will explore how effective responses to business challenges can update control gates without losing traceability or accountability. This ensures that all actions taken are documented and can be reviewed later, which is essential for maintaining trust and integrity in business practices."
+          "content": "Explores how effective leaders adapt to changing conditions by updating control gates and operational plans in real-time, while maintaining full traceability and accountability for every decision made under pressure."
         }
       ],
       "interactiveActivities": [
         {
           "id": "international-business-501-l05-act1",
           "type": "scenario",
-          "title": "Adverse-Condition Decision Run",
+          "title": "High-Stakes Simulation: Managing a Global Supply Chain Crisis",
           "description": "Run a high-pressure international business scenario and tune controls under uncertainty."
         }
       ]
@@ -533,106 +453,6 @@ export const InternationalBusiness501Module: LearningModule = {
           ],
           "correctOptionId": "a",
           "explanation": "Mature governance links authority, measurable controls, and corrective action."
-        },
-        {
-          "id": "international-business-501-l06-q5",
-          "text": "What is the best way to compare competing interventions in advanced Business?",
-          "skillId": "international-business-501-skill-advanced-5",
-          "options": [
-            {
-              "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
-            },
-            {
-              "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
-            },
-            {
-              "id": "c",
-              "text": "Switch metrics after results arrive"
-            },
-            {
-              "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
-        },
-        {
-          "id": "international-business-501-l06-q6",
-          "text": "In high-stakes International Business Specialization Studio execution, which communication protocol is strongest?",
-          "skillId": "international-business-501-skill-advanced-6",
-          "options": [
-            {
-              "id": "a",
-              "text": "Broadcast conclusions without assumptions"
-            },
-            {
-              "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
-            },
-            {
-              "id": "c",
-              "text": "Share only final outcomes after completion"
-            },
-            {
-              "id": "d",
-              "text": "Limit updates to a single informal channel"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
-        },
-        {
-          "id": "international-business-501-l06-q7",
-          "text": "A mature remediation loop in advanced Business should prioritize:",
-          "skillId": "international-business-501-skill-advanced-7",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blame assignment without system updates"
-            },
-            {
-              "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
-            },
-            {
-              "id": "c",
-              "text": "One-time fixes without retesting"
-            },
-            {
-              "id": "d",
-              "text": "Issue closure based on elapsed time"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
-        },
-        {
-          "id": "international-business-501-l06-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in International Business Specialization Studio?",
-          "skillId": "international-business-501-skill-advanced-8",
-          "options": [
-            {
-              "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
-            },
-            {
-              "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
-            },
-            {
-              "id": "c",
-              "text": "Ignore correlated failure modes"
-            },
-            {
-              "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
         }
       ]
     },
@@ -641,11 +461,16 @@ export const InternationalBusiness501Module: LearningModule = {
       "title": "International Business Governance and Public Impact",
       "type": "video",
       "duration": 13,
+      "visualPrompts": [
+        "Infographic showing the ripple effects of a corporate decision on different communities, the environment, and the economy.",
+        "Flowchart of an accountability process, from incident detection through investigation, remediation, and verification.",
+        "A checklist graphic for responsible leadership, with items for ethics, compliance, and resilience."
+      ],
       "learningAids": [
         {
           "id": "international-business-501-l07-a1",
           "type": "image",
-          "title": "Guided Practice",
+          "title": "Stakeholder Impact Map",
           "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
         }
       ],
@@ -654,35 +479,35 @@ export const InternationalBusiness501Module: LearningModule = {
           "id": "international-business-501-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. This understanding is vital for recognizing how business decisions impact various parties and for fostering responsible business practices.\nContext recap: In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. This understanding is vital for recognizing how business decisions impact various parties and for fostering responsible business practices.\nWhy this matters: Stakeholder Impact Distribution helps learners in Business connect ideas from International Business Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "Focuses on mapping the distribution of benefits, burdens, and delayed effects of business decisions across various stakeholder groups. This analysis is vital for responsible and sustainable business practices."
         },
         {
           "id": "international-business-501-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "In this section, we will discuss the architecture of accountability in decision-making. This includes ensuring that there is traceability for decisions made, rights for reviews, and obligations for remediation. These elements are crucial for maintaining ethical standards in business governance.\nContext recap: In this section, we will discuss the architecture of accountability in decision-making. This includes ensuring that there is traceability for decisions made, rights for reviews, and obligations for remediation. These elements are crucial for maintaining ethical standards in business governance."
+          "content": "Details the architecture of robust accountability systems. This includes ensuring end-to-end traceability for decisions, establishing rights for independent review, and defining clear obligations for remediation."
         },
         {
           "id": "international-business-501-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "At the end of our lesson, we will provide a comprehensive checklist that connects important outcomes with ethical considerations, ensures compliance with relevant policies, and emphasizes the importance of resilience in leadership. This checklist will help you reflect on how these elements work together to create responsible leadership in international business.\nContext recap: At the end of our lesson, we will provide a comprehensive checklist that connects important outcomes with ethical considerations, ensures compliance with relevant policies, and emphasizes the importance of resilience in leadership. This checklist will help you reflect on how these elements work together to create responsible leadership in international business."
+          "content": "Provides a comprehensive checklist that connects performance outcomes with ethical guardrails, policy compliance, and system resilience. This tool helps integrate these elements into a coherent leadership framework."
         }
       ],
       "flashcards": [
         {
           "id": "international-business-501-l07-f1",
-          "front": "Impact distribution",
+          "front": "Impact Distribution",
           "back": "How outcomes are allocated across populations and timescales."
         },
         {
           "id": "international-business-501-l07-f2",
-          "front": "Decision traceability",
+          "front": "Decision Traceability",
           "back": "An auditable record of evidence, ownership, and rationale."
         },
         {
           "id": "international-business-501-l07-f3",
-          "front": "Responsible leadership",
+          "front": "Responsible Leadership",
           "back": "Decision behavior balancing performance, accountability, and ethics."
         }
       ]
@@ -692,6 +517,11 @@ export const InternationalBusiness501Module: LearningModule = {
       "title": "International Business Capstone Defense Lab",
       "type": "interactive",
       "duration": 16,
+      "visualPrompts": [
+        "A structured template for a defense brief document, with clearly marked sections for claims, evidence, and risks.",
+        "Video clips of simulated expert cross-examination, with on-screen text highlighting the type of critique (e.g., technical, ethical).",
+        "An interface showing a 'critique' from a simulated panelist and a timer for the user's response."
+      ],
       "learningAids": [
         {
           "id": "international-business-501-l08-a1",
@@ -705,21 +535,137 @@ export const InternationalBusiness501Module: LearningModule = {
           "id": "international-business-501-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "In this interactive activity, you will work on creating a detailed brief. This brief will include your main claims, supporting evidence, the boundaries of uncertainty related to your claims, and potential pathways for remediation. This exercise will help you practice organizing your thoughts and presenting your ideas clearly and effectively.\nContext recap: In this interactive activity, you will work on creating a detailed brief. This brief will include your main claims, supporting evidence, the boundaries of uncertainty related to your claims, and potential pathways for remediation. This exercise will help you practice organizing your thoughts and presenting your ideas clearly and effectively."
+          "content": "Learners assemble a capstone defense brief, synthesizing their primary claims, supporting evidence, boundaries of uncertainty, and potential remediation pathways into a clear and persuasive document."
         },
         {
           "id": "international-business-501-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "During this session, you will have the opportunity to rehearse your responses to various critiques that may come from experts in the field. You will prepare for questions related to technical aspects, governance issues, and stakeholder concerns. This practice will help you build confidence and improve your ability to communicate effectively in front of an audience.\nContext recap: During this session, you will have the opportunity to rehearse your responses to various critiques that may come from experts in the field. You will prepare for questions related to technical aspects, governance issues, and stakeholder concerns. This practice will help you build confidence and improve your ability to communicate effectively in front of an audience."
+          "content": "Learners rehearse responses to a range of expert critiques, preparing for questions related to technical feasibility, governance implications, and stakeholder concerns to build confidence and sharpen communication."
         }
       ],
       "interactiveActivities": [
         {
           "id": "international-business-501-l08-act1",
           "type": "debate_simulator",
-          "title": "Expert Defense Panel",
+          "title": "Capstone Defense Simulation: Expert Panel Review",
           "description": "Defend specialization recommendations under adversarial cross-examination."
+        }
+      ]
+    },
+    {
+      "id": "international-business-501-l09",
+      "title": "Checkpoint 3: Capstone Defense & Synthesis",
+      "type": "quiz",
+      "duration": 12,
+      "learningAids": [
+        {
+          "id": "international-business-501-l09-a1",
+          "type": "practice",
+          "title": "Guided Practice",
+          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+        }
+      ],
+      "questions": [
+        {
+          "id": "international-business-501-l09-q1",
+          "text": "During a capstone defense, an expert panelist questions the negative impact of your proposal on a local community. What is the strongest response?",
+          "skillId": "international-business-501-skill-defense-stakeholder",
+          "options": [
+            {
+              "id": "a",
+              "text": "Dismiss the concern as out of scope for a business decision."
+            },
+            {
+              "id": "b",
+              "text": "Acknowledge the impact, present the mitigation plan included in your analysis, and explain the trade-offs."
+            },
+            {
+              "id": "c",
+              "text": "State that all business decisions have winners and losers."
+            },
+            {
+              "id": "d",
+              "text": "Pivot to discussing the financial benefits of the proposal."
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "A strong defense acknowledges stakeholder impacts, demonstrates foresight with a mitigation plan, and transparently discusses trade-offs."
+        },
+        {
+          "id": "international-business-501-l09-q2",
+          "text": "Your recommendation relies on a forecast with high uncertainty. How should you present this in your defense?",
+          "skillId": "international-business-501-skill-defense-uncertainty",
+          "options": [
+            {
+              "id": "a",
+              "text": "Present the forecast as a certainty to appear more confident."
+            },
+            {
+              "id": "b",
+              "text": "Avoid mentioning the forecast and focus on other areas."
+            },
+            {
+              "id": "c",
+              "text": "Explicitly state the uncertainty bounds, explain the contingency plans, and define the monitoring thresholds."
+            },
+            {
+              "id": "d",
+              "text": "Suggest delaying the decision indefinitely until the uncertainty is resolved."
+            }
+          ],
+          "correctOptionId": "c",
+          "explanation": "Mature leadership involves transparently communicating uncertainty and demonstrating preparedness with contingency plans and monitoring."
+        },
+        {
+          "id": "international-business-501-l09-q3",
+          "text": "What is the primary function of an accountability architecture in a defended business proposal?",
+          "skillId": "international-business-501-skill-defense-governance",
+          "options": [
+            {
+              "id": "a",
+              "text": "To assign blame if the project fails."
+            },
+            {
+              "id": "b",
+              "text": "To ensure that decisions are traceable, reviewable, and that there are clear obligations for remediation."
+            },
+            {
+              "id": "c",
+              "text": "To increase bureaucracy and slow down execution."
+            },
+            {
+              "id": "d",
+              "text": "To satisfy a legal requirement with no operational impact."
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Accountability architecture is a proactive governance system for ensuring transparency, review, and corrective action, not a punitive tool."
+        },
+        {
+          "id": "international-business-501-l09-q4",
+          "text": "Which statement best synthesizes the core principles of this International Business Specialization Studio?",
+          "skillId": "international-business-501-skill-synthesis",
+          "options": [
+            {
+              "id": "a",
+              "text": "Success in international business is solely about maximizing quarterly profits."
+            },
+            {
+              "id": "b",
+              "text": "The best strategy is always the one with the most advanced technology."
+            },
+            {
+              "id": "c",
+              "text": "Effective international business leadership requires defending evidence-based decisions within a resilient, accountable, and ethical framework."
+            },
+            {
+              "id": "d",
+              "text": "Following a rigid, unchanging plan is the key to reliable execution."
+            }
+          ],
+          "correctOptionId": "c",
+          "explanation": "This course synthesizes evidence-based analysis, resilient design, accountable governance, and ethical considerations as the pillars of advanced international business leadership."
         }
       ]
     }

@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const UxDesign201Module: LearningModule = {
+export const ux_design_201_Module: LearningModule = {
   "id": "ux-design-201",
   "title": "UX Design Applied Practice",
   "description": "Level 201 curriculum in UX Design, emphasizing user research, interaction modeling, accessibility, product experimentation, and real-world decision quality through structured practice and assessment.",
@@ -14,7 +14,7 @@ export const UxDesign201Module: LearningModule = {
   ],
   "minAge": 14,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "intermediate",
   "localeSupport": [
     "en"
@@ -37,8 +37,8 @@ export const UxDesign201Module: LearningModule = {
         {
           "id": "ux-design-201-l01-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use the structured prompt and write your reasoning before finalizing answers."
+          "title": "Visual Prompt: The UX Intersection",
+          "content": "Visual: A Venn diagram showing the intersection of User Needs, Business Goals, and Technical Constraints, with 'Optimal UX' in the center."
         }
       ],
       "chunks": [
@@ -46,19 +46,19 @@ export const UxDesign201Module: LearningModule = {
           "id": "ux-design-201-l01-c1",
           "kind": "concept",
           "title": "Operating Vocabulary and Scope",
-          "content": "In UX Design at level 201, using clear and specific language is super important! This means we need to learn how to set clear boundaries for our projects, which helps us understand what we are focusing on. We will also identify the specific things we are analyzing, like user behavior or design elements. Additionally, it's crucial that everyone on our team understands the terms we are using. When everyone is on the same page, it helps us make better decisions and allows us to compare our work effectively with other teams. This way, we can all work together more smoothly and create amazing user experiences!\nContext recap: In UX Design at level 201, using clear and specific language is super important! This means we need to learn how to set clear boundaries for our projects, which helps us understand what we are focusing on. We will also identify the specific things we are analyzing, like user behavior or design elements. Additionally, it's crucial that everyone on our team understands the terms we are using.\nWhy this matters: Operating Vocabulary and Scope helps learners in UX Design connect ideas from UX Design Applied Practice to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "In UX Design, using precise language is essential. This means setting clear boundaries for our projects to define our exact focus. We will identify specific units of analysis, such as user behaviors or interface elements. When the entire team shares a common vocabulary, it streamlines decision-making and allows us to compare our work effectively with other teams, ultimately leading to more cohesive user experiences.\nContext recap: Using precise language and setting clear boundaries helps teams understand their focus and identify specific units of analysis. A shared vocabulary improves decision-making and cross-team collaboration.\nWhy this matters: Operating Vocabulary and Scope helps learners connect ideas from UX Design Applied Practice to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "ux-design-201-l01-c2",
           "kind": "concept",
           "title": "Causal Thinking and Constraints",
-          "content": "To become really good at UX Design, it's important to look deeper than just the results we see. We need to understand why things happen in the first place. In this lesson, we will learn how to identify our assumptions—what we think is true, our dependencies—how different elements rely on each other, and our constraints—what limits us in our designs. By doing this, we can create better solutions that tackle the real problems at their source, rather than just fixing the surface issues that we notice. This approach helps us design experiences that truly meet the needs of users and improve their overall satisfaction.\nContext recap: To become really good at UX Design, it's important to look deeper than just the results we see. We need to understand why things happen in the first place. In this lesson, we will learn how to identify our assumptions—what we think is true, our dependencies—how different elements rely on each other, and our constraints—what limits us in our designs. By doing this, we can create better solutions that tackle the real problems at their source, rather than just fixing the surface issues that we notice."
+          "content": "To excel in UX Design, we must look beyond surface-level results and understand root causes. In this lesson, we will learn how to identify our assumptions (what we believe to be true), our dependencies (how different elements rely on each other), and our constraints (what limits our designs). By doing this, we can create robust solutions that tackle real problems at their source, rather than just patching visible symptoms.\nContext recap: Identifying assumptions, dependencies, and constraints allows designers to address root causes rather than just surface-level symptoms, leading to more effective and realistic solutions."
         },
         {
           "id": "ux-design-201-l01-c3",
           "kind": "recap",
           "title": "Evidence and Accountability",
-          "content": "In this section, we will introduce some important practices that are essential for successful execution in UX Design. We will discuss the importance of having clear evidence standards, maintaining a disciplined approach to logging our work, and establishing accountability loops. These practices help ensure that our projects are reliable and effective.\nContext recap: In this section, we will introduce some important practices that are essential for successful execution in UX Design. We will discuss the importance of having clear evidence standards, maintaining a disciplined approach to logging our work, and establishing accountability loops. These practices help ensure that our projects are reliable and effective."
+          "content": "In this section, we introduce practices essential for successful execution in UX Design. We will discuss the importance of establishing clear evidence standards, maintaining a disciplined approach to logging our design decisions, and creating accountability loops. These practices ensure that our projects remain reliable, defensible, and effective.\nContext recap: Establishing evidence standards, logging decisions, and creating accountability loops are critical practices that ensure design projects are reliable and effective."
         }
       ],
       "flashcards": [
@@ -88,8 +88,8 @@ export const UxDesign201Module: LearningModule = {
         {
           "id": "ux-design-201-l02-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use the structured prompt and write your reasoning before finalizing answers."
+          "title": "Visual Prompt: Workflow Timeline",
+          "content": "Visual: A step-by-step timeline graphic illustrating a UX research workflow, starting from 'Input Audit' and ending at 'Retrospective Log'."
         }
       ],
       "chunks": [
@@ -97,13 +97,13 @@ export const UxDesign201Module: LearningModule = {
           "id": "ux-design-201-l02-c1",
           "kind": "practice",
           "title": "Workflow Construction",
-          "content": "In this hands-on activity, you will create a complete workflow for conducting user research and modeling interactions. This will include identifying the necessary inputs, setting up checkpoints to monitor progress, defining the expected outputs, and establishing rollback triggers in case we need to revert to a previous step. This exercise will help you understand how to structure your design process effectively.\nContext recap: In this hands-on activity, you will create a complete workflow for conducting user research and modeling interactions. This will include identifying the necessary inputs, setting up checkpoints to monitor progress, defining the expected outputs, and establishing rollback triggers in case we need to revert to a previous step. This exercise will help you understand how to structure your design process effectively."
+          "content": "In this hands-on activity, you will construct a comprehensive workflow for conducting user research and modeling interactions. This includes identifying necessary inputs, setting up checkpoints to monitor progress, defining expected outputs, and establishing rollback triggers in case a previous step needs revisiting. This exercise builds your capacity to structure the design process effectively.\nContext recap: Constructing a comprehensive workflow involves identifying inputs, setting checkpoints, defining outputs, and establishing rollback triggers to structure the design process effectively."
         },
         {
           "id": "ux-design-201-l02-c2",
           "kind": "recap",
           "title": "Decision Logging",
-          "content": "In this recap, we will emphasize the importance of logging every decision made during the design process. Each decision should be accompanied by a clear rationale, an expected effect, and a point for verification. This practice allows us to analyze our decisions after the project is completed, helping us learn and improve for future projects.\nContext recap: In this recap, we will emphasize the importance of logging every decision made during the design process. Each decision should be accompanied by a clear rationale, an expected effect, and a point for verification. This practice allows us to analyze our decisions after the project is completed, helping us learn and improve for future projects."
+          "content": "Logging every decision made during the design process is a cornerstone of mature UX practice. Each decision should be accompanied by a clear rationale, an expected effect, and a specific point for verification. This practice allows teams to analyze decisions post-implementation, fostering continuous learning and improvement for future projects.\nContext recap: Documenting decisions with clear rationale, expected effects, and verification points enables post-project analysis and continuous improvement."
         }
       ],
       "interactiveActivities": [
@@ -171,8 +171,8 @@ export const UxDesign201Module: LearningModule = {
         {
           "id": "ux-design-201-l03-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use the structured prompt and write your reasoning before finalizing answers."
+          "title": "Visual Prompt: Evaluation Icon",
+          "content": "Visual: An icon of a magnifying glass hovering over a digital wireframe, symbolizing evaluation and checkpoints."
         }
       ],
       "questions": [
@@ -287,8 +287,8 @@ export const UxDesign201Module: LearningModule = {
         {
           "id": "ux-design-201-l04-a1",
           "type": "mnemonic",
-          "title": "Guided Practice",
-          "content": "Use the structured prompt and write your reasoning before finalizing answers."
+          "title": "Visual Prompt: Metrics Dashboard",
+          "content": "Visual: A dashboard mockup showing leading indicators (e.g., task success rate) on the left and lagging outcomes (e.g., user retention) on the right."
         }
       ],
       "chunks": [
@@ -296,19 +296,19 @@ export const UxDesign201Module: LearningModule = {
           "id": "ux-design-201-l04-c1",
           "kind": "concept",
           "title": "Method Selection",
-          "content": "When we choose methods for UX Design, it's important to think about several key factors. First, we need to look at any constraints we might have, such as time or resources. Next, we should evaluate the quality of the information we have; is it reliable and useful? Finally, we must consider the potential cost of making mistakes—what could go wrong if we choose the wrong method? In this lesson, you will practice comparing different methods and explaining why a specific one is the best choice for certain UX Design situations. Developing this skill is essential for making smart and informed decisions in your design projects.\nContext recap: When we choose methods for UX Design, it's important to think about several key factors. First, we need to look at any constraints we might have, such as time or resources. Next, we should evaluate the quality of the information we have; is it reliable and useful? Finally, we must consider the potential cost of making mistakes—what could go wrong if we choose the wrong method?\nWhy this matters: Method Selection helps learners in UX Design connect ideas from UX Design Applied Practice to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "When selecting methods for UX Design, it is critical to evaluate several key factors. First, assess any constraints, such as time, budget, or technical limitations. Next, evaluate the quality and reliability of the available information. Finally, consider the 'cost of error'—the potential negative impact if the chosen method yields incorrect insights. In this lesson, you will practice comparing different research methods and justifying your selections based on these contextual factors.\nContext recap: Selecting the right UX method requires evaluating constraints, information quality, and the potential cost of error to ensure accurate and actionable insights.\nWhy this matters: Method Selection helps learners connect theoretical UX concepts to practical, risk-aware decisions made during real-world projects."
         },
         {
           "id": "ux-design-201-l04-c2",
           "kind": "example",
           "title": "Metric Architecture",
-          "content": "A well-organized metric architecture is like a roadmap for teams working in UX Design. It connects three important types of measurements: leading indicators, which help us predict future success; lagging outcomes, which show us the results of our past actions; and diagnostic measures, which help us understand why things are happening. By using this framework, teams can spot any changes or problems early on and make informed decisions to stay on track. In this lesson, we will learn how to build a strong metric architecture that can improve our UX Design processes and help us achieve our goals more effectively.\nContext recap: A well-organized metric architecture is like a roadmap for teams working in UX Design. It connects three important types of measurements: leading indicators, which help us predict future success; lagging outcomes, which show us the results of our past actions; and diagnostic measures, which help us understand why things are happening. By using this framework, teams can spot any changes or problems early on and make informed decisions to stay on track. In this lesson, we will learn how to build a strong metric architecture that can improve our UX Design processes and help us achieve our goals more effectively.\nContext recap: A well-organized metric architecture is like a roadmap for teams working in UX Design. It connects three important types of measurements: leading indicators, which help us predict future success; lagging outcomes, which show us the results of our past actions; and diagnostic measures, which help us understand why things are happening. By using this framework, teams can spot any changes or problems early on and make informed decisions to stay on track. In this lesson, we will learn how to build a strong metric architecture that can improve our UX Design processes and help us achieve our goals more effectively.\nWhy this matters: Metric Architecture helps learners in UX Design connect ideas from UX Design Applied Practice to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "A well-organized metric architecture acts as a roadmap for UX teams. It connects three crucial types of measurements: leading indicators (which predict future success), lagging outcomes (which show the results of past actions), and diagnostic measures (which explain why certain behaviors are happening). By utilizing this framework, teams can spot trends early and make informed adjustments to stay on track. In this lesson, we will build a robust metric architecture to elevate our design processes.\nContext recap: Metric architecture connects leading indicators, lagging outcomes, and diagnostic measures, allowing teams to predict success, measure past results, and understand user behaviors.\nWhy this matters: Understanding Metric Architecture enables designers to prove the value of their work and make data-informed adjustments before final outcomes are locked in."
         },
         {
           "id": "ux-design-201-l04-c3",
           "kind": "recap",
           "title": "Failure Taxonomy",
-          "content": "In this recap, we will categorize different types of failures that can occur in UX Design. These failures can be related to data, processes, execution, or governance. By grouping them this way, we can create specific plans to address each type of failure, making our approach to problem-solving more effective and tailored.\nContext recap: In this recap, we will categorize different types of failures that can occur in UX Design. These failures can be related to data, processes, execution, or governance. By grouping them this way, we can create specific plans to address each type of failure, making our approach to problem-solving more effective and tailored."
+          "content": "In this recap, we categorize the different types of failures that can occur in UX Design. These failures typically stem from data inaccuracies, process breakdowns, execution errors, or governance gaps. By classifying failures into a structured taxonomy, we can design specific, targeted interventions to address each type, making our problem-solving approach highly systematic.\nContext recap: Categorizing failures into data, process, execution, or governance issues allows teams to create targeted and systematic interventions."
         }
       ],
       "flashcards": [
@@ -338,8 +338,8 @@ export const UxDesign201Module: LearningModule = {
         {
           "id": "ux-design-201-l05-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use the structured prompt and write your reasoning before finalizing answers."
+          "title": "Visual Prompt: Before and After",
+          "content": "Visual: A split-screen graphic showing a 'Before' state of a chaotic design system and an 'After' state of a streamlined, accessible design system."
         }
       ],
       "chunks": [
@@ -347,13 +347,13 @@ export const UxDesign201Module: LearningModule = {
           "id": "ux-design-201-l05-c1",
           "kind": "practice",
           "title": "Case Decomposition",
-          "content": "In this interactive case study, you will break down a realistic scenario into its key components, including the objective, context, constraints, and possible intervention options. You will also note the trade-offs involved in each option. This exercise will help you develop critical thinking skills and understand the complexities of UX Design.\nContext recap: In this interactive case study, you will break down a realistic scenario into its key components, including the objective, context, constraints, and possible intervention options. You will also note the trade-offs involved in each option. This exercise will help you develop critical thinking skills and understand the complexities of UX Design."
+          "content": "In this interactive case study, you will break down a realistic UX scenario into its core components: the primary objective, the business context, technical constraints, and potential intervention options. You will also document the trade-offs associated with each option. This exercise sharpens your critical thinking and prepares you to navigate the complexities of enterprise-level UX Design.\nContext recap: Breaking down a scenario into objectives, context, constraints, and interventions helps designers navigate complex trade-offs and make informed decisions."
         },
         {
           "id": "ux-design-201-l05-c2",
           "kind": "recap",
           "title": "Improvement Proposal",
-          "content": "In this recap, you will present a staged improvement proposal based on the case study you worked on. Your proposal should include clear success criteria, a mapping of who will be responsible for each part of the project, and a timeline for follow-up actions. This will help you practice how to communicate your ideas effectively and plan for successful implementation.\nContext recap: In this recap, you will present a staged improvement proposal based on the case study you worked on. Your proposal should include clear success criteria, a mapping of who will be responsible for each part of the project, and a timeline for follow-up actions. This will help you practice how to communicate your ideas effectively and plan for successful implementation."
+          "content": "Following the case decomposition, you will draft a staged improvement proposal. Your proposal must include clear success criteria, a responsibility matrix detailing who owns each part of the project, and a timeline for follow-up actions. This practice bridges the gap between identifying a problem and successfully implementing a structured solution.\nContext recap: A staged improvement proposal requires clear success criteria, a responsibility matrix, and a timeline to ensure successful implementation of design solutions."
         }
       ],
       "interactiveActivities": [
@@ -403,110 +403,110 @@ export const UxDesign201Module: LearningModule = {
         {
           "id": "ux-design-201-l06-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use the structured prompt and write your reasoning before finalizing answers."
+          "title": "Visual Prompt: The Balance Scale",
+          "content": "Visual: A balanced scale representing the careful weighing of trade-offs, constraints, and user needs in UX decision-making."
         }
       ],
       "questions": [
         {
           "id": "ux-design-201-l06-q1",
-          "text": "Which action best improves decisions in user research work?",
-          "skillId": "ux-design-201-skill-core",
+          "text": "Which type of metric is best used to predict future success before final results are fully realized?",
+          "skillId": "ux-design-201-skill-metrics",
           "options": [
             {
               "id": "a",
-              "text": "Rely on one unverified example"
+              "text": "Lagging outcome"
             },
             {
               "id": "b",
-              "text": "Define criteria, compare alternatives, and test assumptions"
+              "text": "Leading indicator"
             },
             {
               "id": "c",
-              "text": "Skip metrics and move directly to execution"
+              "text": "Diagnostic measure"
             },
             {
               "id": "d",
-              "text": "Avoid documenting rationale"
+              "text": "Vanity metric"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Explicit criteria and testable assumptions improve reliability and transferability."
+          "explanation": "Leading indicators signal probable future outcomes, allowing teams to adjust strategies proactively."
         },
         {
           "id": "ux-design-201-l06-q2",
-          "text": "In interaction modeling, what is the strongest indicator of process quality?",
+          "text": "Why is establishing a failure taxonomy important in UX Design?",
           "skillId": "ux-design-201-skill-process",
           "options": [
             {
               "id": "a",
-              "text": "Output speed only"
+              "text": "It guarantees that no errors will ever occur again."
             },
             {
               "id": "b",
-              "text": "Traceable steps, checkpoints, and measurable outcomes"
+              "text": "It provides a structured way to classify errors and design targeted fixes."
             },
             {
               "id": "c",
-              "text": "Unstructured iteration without logs"
+              "text": "It is primarily used to assign blame to specific team members."
             },
             {
               "id": "d",
-              "text": "One-time performance anecdotes"
+              "text": "It replaces the need for user testing."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Quality processes are observable, repeatable, and measurable."
+          "explanation": "A failure taxonomy categorizes issues (e.g., data, process, execution) so teams can implement specific, effective interventions."
         },
         {
           "id": "ux-design-201-l06-q3",
-          "text": "When evaluating accessibility, which practice supports trustworthy conclusions?",
+          "text": "When selecting a UX research method, what does 'cost of error' refer to?",
           "skillId": "ux-design-201-skill-eval",
           "options": [
             {
               "id": "a",
-              "text": "Ignore edge cases"
+              "text": "The financial budget allocated for the research software."
             },
             {
               "id": "b",
-              "text": "Use baseline comparisons and failure analysis"
+              "text": "The operational, financial, or social impact caused by an incorrect decision."
             },
             {
               "id": "c",
-              "text": "Change targets after results are known"
+              "text": "The time it takes to recruit participants."
             },
             {
               "id": "d",
-              "text": "Remove context from findings"
+              "text": "The number of bugs found in the final product."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Baselines and failure analysis prevent overclaiming and improve design quality."
+          "explanation": "Cost of error evaluates the potential negative consequences if the chosen method yields incorrect or misleading insights."
         },
         {
           "id": "ux-design-201-l06-q4",
-          "text": "A mature product experimentation strategy should prioritize:",
+          "text": "During a case decomposition, why is it critical to document trade-offs for each intervention?",
           "skillId": "ux-design-201-skill-strategy",
           "options": [
             {
               "id": "a",
-              "text": "Single-metric optimization at any cost"
+              "text": "To ensure that both short-term benefits and long-term consequences are balanced."
             },
             {
               "id": "b",
-              "text": "Balanced outcomes across quality, risk, and sustainability"
+              "text": "To prove that only one perfect solution exists."
             },
             {
               "id": "c",
-              "text": "Decisions based only on intuition"
+              "text": "To delay the project timeline intentionally."
             },
             {
               "id": "d",
-              "text": "No post-implementation review"
+              "text": "To avoid having to set success criteria."
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "Balanced scorecards align long-term performance with accountability."
+          "correctOptionId": "a",
+          "explanation": "Documenting trade-offs acknowledges that every design decision has pros and cons, ensuring a balanced and realistic approach."
         }
       ]
     }

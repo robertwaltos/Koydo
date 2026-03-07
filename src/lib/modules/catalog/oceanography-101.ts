@@ -1,9 +1,9 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const Oceanography101Module: LearningModule = {
+export const oceanography_101_Module: LearningModule = {
   "id": "oceanography-101",
   "title": "Oceanography Foundations",
-  "description": "Level 101 curriculum in Oceanography, focused on ocean circulation dynamics, marine ecosystem interactions, observation and measurement methods, and climate-ocean coupling through case analysis, simulation practice, and mastery checkpoints.",
+  "description": "An introductory curriculum in Oceanography for beginners. Explore the fundamentals of ocean systems, from global currents and marine ecosystems to the methods scientists use to study them. This module uses interactive labs, case studies, and simulations to build a foundational understanding of our planet's oceans and their connection to the global climate.",
   "subject": "Earth Science",
   "tags": [
     "core",
@@ -14,150 +14,149 @@ export const Oceanography101Module: LearningModule = {
   ],
   "minAge": 14,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "beginner",
   "localeSupport": [
     "en",
     "es"
   ],
   "learningObjectives": [
-    "Apply ocean circulation dynamics using explicit assumptions and constraints",
-    "Design and execute workflows for marine ecosystem interactions with reliable control points",
-    "Evaluate observation and measurement methods decisions using baseline and side-effect analysis",
-    "Strengthen climate-ocean coupling with accountable governance mechanisms",
-    "Communicate uncertainty and tradeoffs across stakeholder groups",
-    "Build defensible recommendations resilient to critical review"
+    "Describe the four main branches of oceanography and their areas of study.",
+    "Explain how temperature, salinity, and wind drive ocean circulation.",
+    "Identify the key components of a marine food web, including producers, consumers, and decomposers.",
+    "Compare different methods and tools used for ocean observation, such as satellites, sonar, and ROVs.",
+    "Analyze the relationship between the ocean and Earth's climate, including its role as a carbon sink.",
+    "Develop a basic research plan to investigate a specific oceanographic question."
   ],
   "lessons": [
     {
       "id": "oceanography-101-l01",
-      "title": "Oceanography Core Foundations",
+      "title": "Introduction to Our Oceans",
       "type": "video",
       "duration": 13,
       "learningAids": [
         {
           "id": "oceanography-101-l01-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Document assumptions, show your reasoning chain, and verify your conclusions before submission."
+          "title": "The World's Oceans",
+          "content": "A map highlighting the five major oceans: Pacific, Atlantic, Indian, Southern, and Arctic."
         }
       ],
       "chunks": [
         {
           "id": "oceanography-101-l01-c1",
           "kind": "concept",
-          "title": "Scope and Shared Vocabulary",
-          "content": "In this lesson, we will dive into the exciting world of Oceanography! First, we will define what Oceanography is and why it is important for understanding our oceans. Next, we will introduce some key vocabulary that scientists use when studying the ocean. Finally, we will discuss how ocean circulation, which is the movement of water in the ocean, interacts with marine ecosystems, the communities of plants and animals living in the ocean. By exploring these concepts, we will gain a deeper appreciation for the complexity of ocean systems and their vital role in supporting life on Earth.\nContext recap: In this lesson, we will dive into the exciting world of Oceanography! First, we will define what Oceanography is and why it is important for understanding our oceans. Next, we will introduce some key vocabulary that scientists use when studying the ocean. Finally, we will discuss how ocean circulation, which is the movement of water in the ocean, interacts with marine ecosystems, the communities of plants and animals living in the ocean."
+          "title": "What is Oceanography?",
+          "content": "Welcome to the study of our planet's oceans! In this lesson, we'll define Oceanography and explore its four main branches: Physical (how water moves), Chemical (the composition of seawater), Geological (the shape of the ocean floor), and Biological (the life within it). We'll introduce key vocabulary like salinity, density, and currents to build our foundation."
         },
         {
           "id": "oceanography-101-l01-c2",
           "kind": "concept",
-          "title": "Causal Structure and Constraints",
-          "content": "In this part of the lesson, students will learn how to identify and map out causal pathways. This means understanding how different factors influence one another. Before making decisions about interventions, learners will also examine any hidden assumptions they might have. This critical thinking process is essential for making informed choices in Oceanography and beyond.\nContext recap: In this part of the lesson, students will learn how to identify and map out causal pathways. This means understanding how different factors influence one another. Before making decisions about interventions, learners will also examine any hidden assumptions they might have. This critical thinking process is essential for making informed choices in Oceanography and beyond.\nContext recap: In this part of the lesson, students will learn how to identify and map out causal pathways. This means understanding how different factors influence one another. Before making decisions about interventions, learners will also examine any hidden assumptions they might have. This critical thinking process is essential for making informed choices in Oceanography and beyond.\nWhy this matters: Causal Structure and Constraints helps learners in Earth Science connect ideas from Oceanography Foundations to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "Cause and Effect in the Ocean",
+          "content": "The ocean is a dynamic system of causes and effects. We will explore how different factors are connected. For example, we'll learn how energy from the sun and wind blowing across the surface create the powerful movements of water known as surface currents. Understanding these connections is the first step to understanding the ocean as a whole."
         },
         {
           "id": "oceanography-101-l01-c3",
           "kind": "recap",
-          "title": "Evidence Discipline",
-          "content": "In this recap, we will emphasize the importance of grounding our claims in observable evidence. This means that any statements we make should be supported by clear indicators that we can see or measure. Additionally, we will discuss how to note uncertainties and establish review checkpoints to ensure our findings are reliable and accurate.\nContext recap: In this recap, we will emphasize the importance of grounding our claims in observable evidence. This means that any statements we make should be supported by clear indicators that we can see or measure. Additionally, we will discuss how to note uncertainties and establish review checkpoints to ensure our findings are reliable and accurate."
+          "title": "The Scientific Method in Oceanography",
+          "content": "In this recap, we'll review how scientists study the ocean. We'll discuss the importance of making observations, forming a testable hypothesis, and collecting data to draw conclusions. This process ensures that our understanding of the ocean is based on evidence."
         }
       ],
       "flashcards": [
         {
           "id": "oceanography-101-l01-f1",
-          "front": "ocean circulation dynamics",
-          "back": "A core analytical lens in Oceanography requiring careful assumption control."
+          "front": "Salinity",
+          "back": "The measure of the amount of dissolved salts in seawater."
         },
         {
           "id": "oceanography-101-l01-f2",
-          "front": "marine ecosystem interactions",
-          "back": "Operational design practices that determine system reliability and execution quality."
+          "front": "Density",
+          "back": "The mass of a substance per unit volume. In the ocean, it's mainly affected by temperature and salinity."
         },
         {
           "id": "oceanography-101-l01-f3",
-          "front": "observation and measurement methods",
-          "back": "The evaluation framework used to validate outcomes and detect hidden costs."
+          "front": "Thermocline",
+          "back": "A layer in the ocean where temperature changes rapidly with depth."
         }
       ]
     },
     {
       "id": "oceanography-101-l02",
-      "title": "Oceanography Workflow Lab",
+      "title": "Ocean Currents in Motion",
       "type": "interactive",
       "duration": 15,
       "learningAids": [
         {
           "id": "oceanography-101-l02-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Document assumptions, show your reasoning chain, and verify your conclusions before submission."
+          "type": "image",
+          "title": "Global Conveyor Belt",
+          "content": "A diagram illustrating the path of thermohaline circulation that moves water around the globe."
         }
       ],
       "chunks": [
         {
           "id": "oceanography-101-l02-c1",
           "kind": "practice",
-          "title": "Workflow Construction and Test",
-          "content": "In this interactive activity, learners will have the opportunity to design their own workflow. This will involve using foundational vocabulary, understanding mechanisms, and interpreting basic scenarios related to Oceanography. After creating their workflows, students will test their designs to see how reliable they are when faced with uncertainty. This hands-on experience will deepen their understanding of the subject.\nContext recap: In this interactive activity, learners will have the opportunity to design their own workflow. This will involve using foundational vocabulary, understanding mechanisms, and interpreting basic scenarios related to Oceanography. After creating their workflows, students will test their designs to see how reliable they are when faced with uncertainty. This hands-on experience will deepen their understanding of the subject.\nContext recap: In this interactive activity, learners will have the opportunity to design their own workflow. This will involve using foundational vocabulary, understanding mechanisms, and interpreting basic scenarios related to Oceanography. After creating their workflows, students will test their designs to see how reliable they are when faced with uncertainty. This hands-on experience will deepen their understanding of the subject.\nWhy this matters: Workflow Construction and Test helps learners in Earth Science connect ideas from Oceanography Foundations to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "Modeling Ocean Circulation",
+          "content": "In this interactive lab, you'll build a simple model of ocean circulation. You will adjust variables like temperature and salinity to see how they create density differences that drive deep ocean currents. This hands-on experience will show you the forces behind the 'global conveyor belt' that moves water around the planet."
         },
         {
           "id": "oceanography-101-l02-c2",
           "kind": "recap",
-          "title": "Control Gates and Readiness",
-          "content": "In this recap, we will discuss the importance of readiness in our workflows. This includes mapping out who is responsible for each part, defining criteria for control gates, understanding rollback conditions, and identifying verification signals. These elements are crucial for ensuring that our workflows are effective and can adapt to changing circumstances.\nContext recap: In this recap, we will discuss the importance of readiness in our workflows. This includes mapping out who is responsible for each part, defining criteria for control gates, understanding rollback conditions, and identifying verification signals. These elements are crucial for ensuring that our workflows are effective and can adapt to changing circumstances."
+          "title": "Drivers of Circulation",
+          "content": "In this recap, we will summarize the key drivers of ocean currents. We'll review how wind powers surface currents, while differences in temperature and salinity (thermohaline circulation) drive the slow, deep currents that mix the ocean over long timescales."
         }
       ],
       "interactiveActivities": [
         {
           "id": "oceanography-101-l02-act1",
           "type": "matching_pairs",
-          "title": "Control Mapping",
-          "description": "Match controls to the strongest expected reliability or governance effect.",
+          "title": "Matching Ocean Drivers",
+          "description": "Match each driver to its primary effect on the ocean.",
           "pairs": [
             {
-              "left": "Pre-release gate",
-              "right": "Reduces preventable failures"
+              "left": "Wind",
+              "right": "Creates surface currents"
             },
             {
-              "left": "Rollback threshold",
-              "right": "Contains blast radius quickly"
+              "left": "Sun's Heat",
+              "right": "Warms the surface layer, causing stratification"
             },
             {
-              "left": "Baseline monitor",
-              "right": "Supports impact attribution"
+              "left": "Evaporation in the tropics",
+              "right": "Increases surface water salinity"
             },
             {
-              "left": "Retrospective cycle",
-              "right": "Improves future decision quality"
+              "left": "Formation of sea ice",
+              "right": "Makes nearby water saltier and denser, causing it to sink"
             }
           ]
         },
         {
           "id": "oceanography-101-l02-act2",
           "type": "sorting_buckets",
-          "title": "Constraint Sorting",
-          "description": "Sort constraint types into technical, policy, and stakeholder-impact categories.",
+          "title": "Classifying Currents",
+          "description": "Sort these examples into the correct category of ocean current.",
           "buckets": [
-            "Technical",
-            "Policy",
-            "Stakeholder Impact"
+            "Surface Current",
+            "Deep Current"
           ],
           "items": [
             {
-              "text": "Throughput budget",
-              "bucket": "Technical"
+              "text": "The Gulf Stream",
+              "bucket": "Surface Current"
             },
             {
-              "text": "Regulatory retention requirement",
-              "bucket": "Policy"
+              "text": "Thermohaline Circulation",
+              "bucket": "Deep Current"
             },
             {
-              "text": "Public trust erosion risk",
-              "bucket": "Stakeholder Impact"
+              "text": "North Atlantic Deep Water",
+              "bucket": "Deep Current"
             },
             {
-              "text": "Audit evidence requirement",
-              "bucket": "Policy"
+              "text": "California Current",
+              "bucket": "Surface Current"
             }
           ]
         }
@@ -165,256 +164,206 @@ export const Oceanography101Module: LearningModule = {
     },
     {
       "id": "oceanography-101-l03",
-      "title": "Checkpoint 1: Concepts and Methods",
+      "title": "Checkpoint: Ocean Basics",
       "type": "quiz",
       "duration": 10,
       "learningAids": [
         {
           "id": "oceanography-101-l03-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Document assumptions, show your reasoning chain, and verify your conclusions before submission."
+          "title": "Review Your Notes",
+          "content": "Before you begin, quickly review the key terms from the first two lessons, such as salinity, density, and the main drivers of currents."
         }
       ],
       "questions": [
         {
           "id": "oceanography-101-l03-q1",
-          "text": "Which approach most improves decisions in ocean circulation dynamics?",
-          "skillId": "oceanography-101-skill-core",
+          "text": "A scientist studying how waves shape a coastline is working in which branch of oceanography?",
+          "skillId": "oceanography-101-skill-branches",
           "options": [
             {
               "id": "a",
-              "text": "Rely on assumptions that are never tested"
+              "text": "Chemical Oceanography"
             },
             {
               "id": "b",
-              "text": "Define constraints, test failure modes, and monitor indicators"
+              "text": "Biological Oceanography"
             },
             {
               "id": "c",
-              "text": "Treat all contexts as identical"
+              "text": "Geological Oceanography"
             },
             {
               "id": "d",
-              "text": "Avoid uncertainty analysis"
+              "text": "Physical Oceanography"
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "Reliable decisions require explicit constraints, failure tests, and measured signals."
+          "correctOptionId": "d",
+          "explanation": "Physical oceanography studies the movement of ocean water, including waves, currents, and tides, and their interaction with the physical environment."
         },
         {
           "id": "oceanography-101-l03-q2",
-          "text": "The 101 level should emphasize:",
-          "skillId": "oceanography-101-skill-level",
+          "text": "What happens to seawater density as temperature decreases and salinity increases?",
+          "skillId": "oceanography-101-skill-density",
           "options": [
             {
               "id": "a",
-              "text": "foundational vocabulary, mechanism comprehension, and basic scenario interpretation"
+              "text": "Density increases"
             },
             {
               "id": "b",
-              "text": "Execution speed without review"
+              "text": "Density decreases"
             },
             {
               "id": "c",
-              "text": "No baselines or controls"
+              "text": "Density stays the same"
             },
             {
               "id": "d",
-              "text": "Single perspective decision-making"
+              "text": "Density becomes zero"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "This level is explicitly structured around foundational vocabulary, mechanism comprehension, and basic scenario interpretation."
+          "explanation": "Colder, saltier water is denser, which causes it to sink. This is a key driver of deep ocean circulation."
         },
         {
           "id": "oceanography-101-l03-q3",
-          "text": "What best strengthens marine ecosystem interactions reliability?",
-          "skillId": "oceanography-101-skill-reliability",
+          "text": "The 'global conveyor belt' is another name for what process?",
+          "skillId": "oceanography-101-skill-circulation",
           "options": [
             {
               "id": "a",
-              "text": "Unowned workflows and unclear escalation"
+              "text": "Surface currents caused by wind"
             },
             {
               "id": "b",
-              "text": "Control checkpoints, ownership mapping, and response thresholds"
+              "text": "The daily cycle of tides"
             },
             {
               "id": "c",
-              "text": "Untracked changes"
+              "text": "Thermohaline circulation"
             },
             {
               "id": "d",
-              "text": "No incident review"
+              "text": "The Coriolis effect"
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "Reliability depends on clear controls, owners, and threshold-driven responses."
-        },
-        {
-          "id": "oceanography-101-l03-q4",
-          "text": "For observation and measurement methods, which practice is most defensible?",
-          "skillId": "oceanography-101-skill-eval",
-          "options": [
-            {
-              "id": "a",
-              "text": "Use anecdotal wins only"
-            },
-            {
-              "id": "b",
-              "text": "Compare against baselines and include side-effect checks"
-            },
-            {
-              "id": "c",
-              "text": "Ignore difficult scenarios"
-            },
-            {
-              "id": "d",
-              "text": "Adjust criteria after results"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Baseline and side-effect analysis prevents biased or incomplete conclusions."
-        },
-        {
-          "id": "oceanography-101-l03-q5",
-          "text": "A mature climate-ocean coupling model should include:",
-          "skillId": "oceanography-101-skill-governance",
-          "options": [
-            {
-              "id": "a",
-              "text": "Policy disconnected from measurement"
-            },
-            {
-              "id": "b",
-              "text": "Policy links, measurable thresholds, and corrective pathways"
-            },
-            {
-              "id": "c",
-              "text": "No transparency obligations"
-            },
-            {
-              "id": "d",
-              "text": "No remediation expectations"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Governance maturity connects intention, measurement, and corrective response."
+          "correctOptionId": "c",
+          "explanation": "Thermohaline circulation is the large-scale movement of ocean water driven by differences in density, which acts like a global conveyor belt."
         }
       ]
     },
     {
       "id": "oceanography-101-l04",
-      "title": "Oceanography Case Analysis",
+      "title": "Life in the Ocean: Marine Ecosystems",
       "type": "video",
       "duration": 14,
       "learningAids": [
         {
           "id": "oceanography-101-l04-a1",
-          "type": "mnemonic",
-          "title": "Guided Practice",
-          "content": "Document assumptions, show your reasoning chain, and verify your conclusions before submission."
+          "type": "image",
+          "title": "Coral Reef Food Web",
+          "content": "A diagram showing the relationships between producers (algae), primary consumers (herbivorous fish), and higher-level consumers (sharks, barracuda) in a coral reef."
         }
       ],
       "chunks": [
         {
           "id": "oceanography-101-l04-c1",
           "kind": "example",
-          "title": "Case Context and Decision Stakes",
-          "content": "In this engaging case study, we will explore a coastal ecosystem, which is a vital area where land meets the ocean. Our focus will be on understanding how fisheries, which provide food and jobs, are affected by warming trends caused by climate change, as well as the various policy interventions that can be implemented to protect these resources. As learners, you will have the opportunity to identify significant risks that could impact this ecosystem and recognize the competing constraints that decision-makers face. This analysis will deepen your understanding of the complexities involved in managing marine resources sustainably and the importance of making informed choices for the future of our oceans.\nContext recap: In this engaging case study, we will explore a coastal ecosystem, which is a vital area where land meets the ocean. Our focus will be on understanding how fisheries, which provide food and jobs, are affected by warming trends caused by climate change, as well as the various policy interventions that can be implemented to protect these resources. As learners, you will have the opportunity to identify significant risks that could impact this ecosystem and recognize the competing constraints that decision-makers face. This analysis will deepen your understanding of the complexities involved in managing marine resources sustainably and the importance of making informed choices for the future of our oceans.\nContext recap: In this engaging case study, we will explore a coastal ecosystem, which is a vital area where land meets the ocean. Our focus will be on understanding how fisheries, which provide food and jobs, are affected by warming trends caused by climate change, as well as the various policy interventions that can be implemented to protect these resources. As learners, you will have the opportunity to identify significant risks that could impact this ecosystem and recognize the competing constraints that decision-makers face. This analysis will deepen your understanding of the complexities involved in managing marine resources sustainably and the importance of making informed choices for the future of our oceans.\nWhy this matters: Case Context and Decision Stakes helps learners in Earth Science connect ideas from Oceanography Foundations to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "Case Study: The Coral Reef",
+          "content": "In this case study, we'll dive into one of the most vibrant marine ecosystems: the coral reef. We will identify its key inhabitants, from the tiny algae (producers) that create food from sunlight, to the fish that eat them (consumers), and the bacteria that break down waste (decomposers). We'll explore the delicate balance of factors like water temperature and clarity that these communities depend on to survive."
         },
         {
           "id": "oceanography-101-l04-c2",
           "kind": "concept",
-          "title": "Tradeoff Matrix",
-          "content": "In this section, we will introduce the concept of a tradeoff matrix. This tool will help learners evaluate different intervention options by scoring them based on their effectiveness, reliability, fairness, and how feasible they are to implement. Understanding these tradeoffs is essential for making informed decisions in Oceanography.\nContext recap: In this section, we will introduce the concept of a tradeoff matrix. This tool will help learners evaluate different intervention options by scoring them based on their effectiveness, reliability, fairness, and how feasible they are to implement. Understanding these tradeoffs is essential for making informed decisions in Oceanography."
+          "title": "Analyzing Environmental Impacts",
+          "content": "Marine ecosystems face many challenges. We will analyze how a single environmental change, like rising ocean temperatures, can have wide-ranging effects. For example, warmer water can cause corals to expel their algae, a process called 'coral bleaching,' which can lead to the collapse of the entire reef ecosystem. Understanding these impacts is critical for conservation."
         },
         {
           "id": "oceanography-101-l04-c3",
           "kind": "recap",
-          "title": "Failure Learning and Recovery",
-          "content": "In this recap, we will discuss how to learn from failures in our projects. Instead of seeing failures as setbacks, we will transform them into valuable lessons. This includes creating safeguards, developing response playbooks, and updating our monitoring processes. By doing so, we can improve our future efforts and enhance our understanding of Oceanography.\nContext recap: In this recap, we will discuss how to learn from failures in our projects. Instead of seeing failures as setbacks, we will transform them into valuable lessons. This includes creating safeguards, developing response playbooks, and updating our monitoring processes. By doing so, we can improve our future efforts and enhance our understanding of Oceanography.\nContext recap: In this recap, we will discuss how to learn from failures in our projects. Instead of seeing failures as setbacks, we will transform them into valuable lessons. This includes creating safeguards, developing response playbooks, and updating our monitoring processes. By doing so, we can improve our future efforts and enhance our understanding of Oceanography.\nWhy this matters: Failure Learning and Recovery helps learners in Earth Science connect ideas from Oceanography Foundations to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "Ecosystem Resilience",
+          "content": "In this recap, we'll discuss ecosystem resilience—the ability of an ecosystem to resist or recover from disturbances. We'll explore what makes some ecosystems, like a healthy mangrove forest, more resilient than others and discuss how human actions can either weaken or strengthen this natural resilience."
         }
       ],
       "flashcards": [
         {
           "id": "oceanography-101-l04-f1",
-          "front": "Tradeoff matrix",
-          "back": "A structured comparison of alternatives under competing priorities."
+          "front": "Producer",
+          "back": "An organism, like phytoplankton, that produces its own food, usually through photosynthesis."
         },
         {
           "id": "oceanography-101-l04-f2",
-          "front": "Failure pattern",
-          "back": "A recurring risk signature used to design targeted mitigations."
+          "front": "Food Web",
+          "back": "A diagram showing the complex network of feeding relationships within an ecosystem."
         },
         {
           "id": "oceanography-101-l04-f3",
-          "front": "Response playbook",
-          "back": "A predefined action sequence for safe and timely recovery."
+          "front": "Coral Bleaching",
+          "back": "The process where corals under stress (like high temperatures) expel the symbiotic algae living in their tissues, causing them to turn white."
         }
       ]
     },
     {
       "id": "oceanography-101-l05",
-      "title": "Oceanography Simulation Studio",
+      "title": "Exploring the Ocean: Tools & Techniques",
       "type": "interactive",
       "duration": 16,
       "learningAids": [
         {
           "id": "oceanography-101-l05-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Document assumptions, show your reasoning chain, and verify your conclusions before submission."
+          "type": "image",
+          "title": "Oceanographic Research Tools",
+          "content": "An illustration of a research vessel deploying various instruments, including a CTD rosette, a multibeam sonar, and a remotely operated vehicle (ROV)."
         }
       ],
       "chunks": [
         {
           "id": "oceanography-101-l05-c1",
           "kind": "practice",
-          "title": "Simulation Setup",
-          "content": "In this interactive practice, learners will set up their own simulation scenarios. They will configure various parameters related to interventions, uncertainties, and measurable success thresholds. This hands-on experience will allow students to experiment with different variables and understand their impact on oceanic systems.\nContext recap: In this interactive practice, learners will set up their own simulation scenarios. They will configure various parameters related to interventions, uncertainties, and measurable success thresholds. This hands-on experience will allow students to experiment with different variables and understand their impact on oceanic systems."
+          "title": "Virtual Ocean Expedition",
+          "content": "In this simulation, you will lead a virtual expedition to explore a newly discovered underwater volcano. You must choose the right tools for the job. Will you use satellite data to measure sea surface temperature, multibeam sonar to map the volcano's shape, or an ROV to collect biological samples from its hydrothermal vents? Your choices will determine the success of your mission."
         },
         {
           "id": "oceanography-101-l05-c2",
           "kind": "recap",
-          "title": "Simulation Debrief",
-          "content": "After running their simulations, students will participate in a debriefing session. During this time, they will evaluate the outcomes of their scenarios, discuss any side effects that occurred, and assess how well their results align with governance constraints. This reflective practice is crucial for understanding the implications of their decisions.\nContext recap: After running their simulations, students will participate in a debriefing session. During this time, they will evaluate the outcomes of their scenarios, discuss any side effects that occurred, and assess how well their results align with governance constraints. This reflective practice is crucial for understanding the implications of their decisions."
+          "title": "Analyzing Your Data",
+          "content": "After your expedition, we'll debrief. You will analyze the data you collected and evaluate the strengths and weaknesses of the tools you chose. This reflective practice highlights how oceanographers combine different technologies to build a complete picture of the complex and mysterious deep sea."
         }
       ],
       "interactiveActivities": [
         {
           "id": "oceanography-101-l05-act1",
           "type": "scenario_practice",
-          "title": "Intervention Simulation",
-          "description": "Evaluate three strategies and justify which best advances ocean circulation dynamics and climate-ocean coupling.",
+          "title": "Plan Your Expedition",
+          "description": "Your mission is to study a potential new coral reef habitat. Choose your tools and justify your plan.",
           "instructions": [
-            "Define objective and guardrails before selecting interventions.",
-            "Record near-term and long-term tradeoffs for each option.",
-            "Select confirmation metrics and escalation triggers."
+            "Define your primary objective: Is it to map the area, identify species, or measure water quality?",
+            "Select a primary tool (e.g., Sonar, ROV, Satellite) and explain why it's the best choice for your objective.",
+            "Identify a potential limitation of your chosen tool and how you might address it."
           ]
         },
         {
           "id": "oceanography-101-l05-act2",
           "type": "matching_pairs",
-          "title": "Mitigation Alignment",
-          "description": "Match risk conditions to the strongest mitigation responses.",
+          "title": "Tool for the Job",
+          "description": "Match the scientific question to the best oceanographic tool to answer it.",
           "pairs": [
             {
-              "left": "Ambiguous ownership",
-              "right": "Define role map and escalation authority"
+              "left": "What is the shape of the seafloor?",
+              "right": "Multibeam Sonar"
             },
             {
-              "left": "Weak signal quality",
-              "right": "Strengthen intake validation and monitoring"
+              "left": "What is the temperature and salinity of the water column?",
+              "right": "CTD Rosette"
             },
             {
-              "left": "Policy drift",
-              "right": "Re-anchor controls to explicit standards"
+              "left": "What species are living on this shipwreck?",
+              "right": "Remotely Operated Vehicle (ROV)"
             },
             {
-              "left": "Stakeholder opposition",
-              "right": "Increase transparency and feedback channels"
+              "left": "How large is the seasonal phytoplankton bloom?",
+              "right": "Satellite with Ocean Color Sensor"
             }
           ]
         }
@@ -422,240 +371,190 @@ export const Oceanography101Module: LearningModule = {
     },
     {
       "id": "oceanography-101-l06",
-      "title": "Checkpoint 2: Systems Decisions",
+      "title": "Checkpoint: Ecosystems and Exploration",
       "type": "quiz",
       "duration": 10,
       "learningAids": [
         {
           "id": "oceanography-101-l06-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Document assumptions, show your reasoning chain, and verify your conclusions before submission."
+          "title": "Review Your Notes",
+          "content": "Before you begin, quickly review the key concepts from the lessons on marine ecosystems and ocean exploration tools."
         }
       ],
       "questions": [
         {
           "id": "oceanography-101-l06-q1",
-          "text": "Which approach most improves decisions in ocean circulation dynamics?",
-          "skillId": "oceanography-101-skill-core",
+          "text": "In a marine food web, phytoplankton are considered:",
+          "skillId": "oceanography-101-skill-foodweb",
           "options": [
             {
               "id": "a",
-              "text": "Rely on assumptions that are never tested"
+              "text": "Primary consumers"
             },
             {
               "id": "b",
-              "text": "Define constraints, test failure modes, and monitor indicators"
+              "text": "Producers"
             },
             {
               "id": "c",
-              "text": "Treat all contexts as identical"
+              "text": "Decomposers"
             },
             {
               "id": "d",
-              "text": "Avoid uncertainty analysis"
+              "text": "Apex predators"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Reliable decisions require explicit constraints, failure tests, and measured signals."
+          "explanation": "Producers, like phytoplankton, create their own food through photosynthesis and form the base of most marine food webs."
         },
         {
           "id": "oceanography-101-l06-q2",
-          "text": "The 101 level should emphasize:",
-          "skillId": "oceanography-101-skill-level",
+          "text": "Which tool would be most effective for creating a detailed, 3D map of a large area of the ocean floor?",
+          "skillId": "oceanography-101-skill-tools",
           "options": [
             {
               "id": "a",
-              "text": "foundational vocabulary, mechanism comprehension, and basic scenario interpretation"
+              "text": "A water sample bottle"
             },
             {
               "id": "b",
-              "text": "Execution speed without review"
+              "text": "A plankton net"
             },
             {
               "id": "c",
-              "text": "No baselines or controls"
+              "text": "A multibeam sonar system"
             },
             {
               "id": "d",
-              "text": "Single perspective decision-making"
+              "text": "A satellite altimeter"
             }
           ],
-          "correctOptionId": "a",
-          "explanation": "This level is explicitly structured around foundational vocabulary, mechanism comprehension, and basic scenario interpretation."
+          "correctOptionId": "c",
+          "explanation": "Multibeam sonar, typically mounted on a ship, sends out sound waves to create high-resolution maps of the seafloor topography."
         },
         {
           "id": "oceanography-101-l06-q3",
-          "text": "What best strengthens marine ecosystem interactions reliability?",
-          "skillId": "oceanography-101-skill-reliability",
+          "text": "The primary cause of coral bleaching is:",
+          "skillId": "oceanography-101-skill-ecosystems",
           "options": [
             {
               "id": "a",
-              "text": "Unowned workflows and unclear escalation"
+              "text": "Overfishing of sharks"
             },
             {
               "id": "b",
-              "text": "Control checkpoints, ownership mapping, and response thresholds"
+              "text": "Plastic pollution"
             },
             {
               "id": "c",
-              "text": "Untracked changes"
+              "text": "Unusually high water temperatures"
             },
             {
               "id": "d",
-              "text": "No incident review"
+              "text": "Loud noises from ships"
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "Reliability depends on clear controls, owners, and threshold-driven responses."
-        },
-        {
-          "id": "oceanography-101-l06-q4",
-          "text": "For observation and measurement methods, which practice is most defensible?",
-          "skillId": "oceanography-101-skill-eval",
-          "options": [
-            {
-              "id": "a",
-              "text": "Use anecdotal wins only"
-            },
-            {
-              "id": "b",
-              "text": "Compare against baselines and include side-effect checks"
-            },
-            {
-              "id": "c",
-              "text": "Ignore difficult scenarios"
-            },
-            {
-              "id": "d",
-              "text": "Adjust criteria after results"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Baseline and side-effect analysis prevents biased or incomplete conclusions."
-        },
-        {
-          "id": "oceanography-101-l06-q5",
-          "text": "A mature climate-ocean coupling model should include:",
-          "skillId": "oceanography-101-skill-governance",
-          "options": [
-            {
-              "id": "a",
-              "text": "Policy disconnected from measurement"
-            },
-            {
-              "id": "b",
-              "text": "Policy links, measurable thresholds, and corrective pathways"
-            },
-            {
-              "id": "c",
-              "text": "No transparency obligations"
-            },
-            {
-              "id": "d",
-              "text": "No remediation expectations"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Governance maturity connects intention, measurement, and corrective response."
+          "correctOptionId": "c",
+          "explanation": "When water temperatures get too high, corals become stressed and expel the symbiotic algae that provide them with food and color, leading to bleaching."
         }
       ]
     },
     {
       "id": "oceanography-101-l07",
-      "title": "Oceanography Policy and Ethics Integration",
+      "title": "Our Ocean and a Changing Climate",
       "type": "video",
       "duration": 12,
       "learningAids": [
         {
           "id": "oceanography-101-l07-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Document assumptions, show your reasoning chain, and verify your conclusions before submission."
+          "title": "The Ocean Carbon Cycle",
+          "content": "A diagram showing how the ocean absorbs carbon dioxide (CO2) from the atmosphere and the resulting chemical changes that lead to ocean acidification."
         }
       ],
       "chunks": [
         {
           "id": "oceanography-101-l07-c1",
           "kind": "concept",
-          "title": "Stakeholder Impact Mapping",
-          "content": "In this lesson, learners will examine how the benefits and burdens of ocean policies are distributed among different stakeholders. This includes considering how these impacts vary over time. Understanding stakeholder perspectives is essential for making fair and effective decisions in Oceanography.\nContext recap: In this lesson, learners will examine how the benefits and burdens of ocean policies are distributed among different stakeholders. This includes considering how these impacts vary over time. Understanding stakeholder perspectives is essential for making fair and effective decisions in Oceanography.\nContext recap: In this lesson, learners will examine how the benefits and burdens of ocean policies are distributed among different stakeholders. This includes considering how these impacts vary over time. Understanding stakeholder perspectives is essential for making fair and effective decisions in Oceanography. Context recap: In this lesson, learners will examine how the benefits and burdens of ocean policies are distributed among different stakeholders."
+          "title": "The Ocean's Role in Climate",
+          "content": "The ocean is a major player in Earth's climate system. It acts like a giant sponge, absorbing over 90% of the excess heat and about 25% of the carbon dioxide (CO2) from human activities. We'll explore how this service helps regulate the climate but also leads to problems like sea-level rise and ocean acidification."
         },
         {
           "id": "oceanography-101-l07-c2",
           "kind": "concept",
-          "title": "Accountability Architecture",
-          "content": "In this section, we will explore the concept of accountability in Oceanography. This involves understanding how actions can be traced back to their sources, the rights of individuals to review decisions, and the obligations to correct any issues that arise. Establishing a strong accountability framework is vital for ethical decision-making in this field.\nContext recap: In this section, we will explore the concept of accountability in Oceanography. This involves understanding how actions can be traced back to their sources, the rights of individuals to review decisions, and the obligations to correct any issues that arise. Establishing a strong accountability framework is vital for ethical decision-making in this field."
+          "title": "Climate Solutions and Ocean Health",
+          "content": "In this section, we will discuss actions we can take to protect the ocean. This includes global solutions like reducing CO2 emissions, as well as local actions like creating Marine Protected Areas (MPAs) to help ecosystems recover, practicing sustainable fishing, and preventing pollution. We'll discuss how governments, communities, and individuals all have a role to play."
         },
         {
           "id": "oceanography-101-l07-c3",
           "kind": "recap",
-          "title": "Responsible Execution Checklist",
-          "content": "At the end of our lesson, we will create a helpful checklist that connects how well we perform technical tasks with important ideas about policy, ethics, and the trust of people who have a stake in our work. This checklist will guide us in making responsible decisions that consider the impact of our actions on the ocean and the community.\nContext recap: At the end of our lesson, we will create a helpful checklist that connects how well we perform technical tasks with important ideas about policy, ethics, and the trust of people who have a stake in our work. This checklist will guide us in making responsible decisions that consider the impact of our actions on the ocean and the community."
+          "title": "Our Role in Protecting the Ocean",
+          "content": "This lesson concludes with a recap of the deep connection between the ocean and our climate. We will review the major challenges—warming, acidification, and sea-level rise—and emphasize the importance of science-informed solutions and collective action for a healthy ocean and a stable climate."
         }
       ],
       "flashcards": [
         {
           "id": "oceanography-101-l07-f1",
-          "front": "Impact distribution",
-          "back": "How outcomes differ across stakeholder groups and timescales."
+          "front": "Carbon Sink",
+          "back": "A natural reservoir, like the ocean or a forest, that absorbs more carbon than it releases."
         },
         {
           "id": "oceanography-101-l07-f2",
-          "front": "Decision traceability",
-          "back": "The evidence chain showing how and why a decision was made."
+          "front": "Ocean Acidification",
+          "back": "The ongoing decrease in the pH of the Earth's oceans, caused by the uptake of carbon dioxide (CO2) from the atmosphere."
         },
         {
           "id": "oceanography-101-l07-f3",
-          "front": "Responsible execution",
-          "back": "Delivery behavior that balances effectiveness with ethical and policy safeguards."
+          "front": "Sea-Level Rise",
+          "back": "The increase in the average level of Earth's oceans, primarily caused by thermal expansion of seawater as it warms and melting of land-based ice."
         }
       ]
     },
     {
       "id": "oceanography-101-l08",
-      "title": "Oceanography Capstone Planning Lab",
+      "title": "Oceanography in Action: Capstone Project",
       "type": "interactive",
       "duration": 15,
       "learningAids": [
         {
           "id": "oceanography-101-l08-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Document assumptions, show your reasoning chain, and verify your conclusions before submission."
+          "type": "image",
+          "title": "Scientific Poster Template",
+          "content": "A visual guide showing the standard sections of a scientific poster: Title, Introduction, Methods, Results, Conclusion, and References."
         }
       ],
       "chunks": [
         {
           "id": "oceanography-101-l08-c1",
           "kind": "practice",
-          "title": "Capstone Charter",
-          "content": "In this interactive activity, you will have the opportunity to draft a charter for your capstone project. This charter will include your main objective, any limitations you might face, the metrics you will use to measure success, and the governance gates that will help guide your decisions. This is a crucial step in planning your project effectively.\nContext recap: In this interactive activity, you will have the opportunity to draft a charter for your capstone project. This charter will include your main objective, any limitations you might face, the metrics you will use to measure success, and the governance gates that will help guide your decisions. This is a crucial step in planning your project effectively."
+          "title": "Planning Your Research Project",
+          "content": "In this interactive activity, you will draft a plan for your own mini-research project. You'll choose a topic that interests you, such as the impact of plastic pollution on local sea turtles or how sea-level rise might affect your community. You will then formulate a research question, outline your methods, and define what success would look like."
         },
         {
           "id": "oceanography-101-l08-c2",
           "kind": "recap",
-          "title": "Defense Readiness",
-          "content": "As part of our preparation, you will gather evidence to support your project and be ready to defend it against critiques related to technical aspects, policy considerations, and stakeholder opinions. This practice will help you build confidence in your work and ensure that you can communicate your ideas effectively.\nContext recap: As part of our preparation, you will gather evidence to support your project and be ready to defend it against critiques related to technical aspects, policy considerations, and stakeholder opinions. This practice will help you build confidence in your work and ensure that you can communicate your ideas effectively."
+          "title": "Presenting Your Findings",
+          "content": "To conclude, we'll review how scientists share their work. You will learn how to structure a scientific presentation or poster, focusing on clearly communicating your research question, the evidence you gathered, and your final conclusions. This prepares you to share your knowledge with others effectively."
         }
       ],
       "interactiveActivities": [
         {
           "id": "oceanography-101-l08-act1",
           "type": "project_builder",
-          "title": "Capstone Charter Builder",
-          "description": "Build a capstone charter with objectives, metrics, risks, and remediation pathways.",
+          "title": "Research Proposal Builder",
+          "description": "Use this tool to build a simple research proposal for your chosen topic.",
           "instructions": [
-            "Define objective and boundary conditions.",
-            "List at least three measurable success indicators.",
-            "Define escalation and corrective action criteria."
+            "State your research question clearly.",
+            "List the methods you would use to collect data (e.g., literature review, field observation, data analysis).",
+            "Describe what kind of results you expect to find."
           ]
         },
         {
           "id": "oceanography-101-l08-act2",
           "type": "debate_simulator",
-          "title": "Decision Defense Panel",
-          "description": "Defend your capstone decisions against technical, policy, and stakeholder objections."
+          "title": "Peer Review Simulator",
+          "description": "Present your research proposal and respond to questions from a simulated peer review panel."
         }
       ]
     }

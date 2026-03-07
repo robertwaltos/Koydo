@@ -1,9 +1,9 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const SportsScience101Module: LearningModule = {
+export const sports_science_101_Module: LearningModule = {
   "id": "sports-science-101",
   "title": "Sports Science Foundations",
-  "description": "Level 101 curriculum in Sports Science, focused on performance physiology, training periodization, biomechanics and movement analysis, and injury prevention governance through case analysis, simulation practice, and mastery checkpoints.",
+  "description": "An introductory curriculum in Sports Science, focusing on how the body performs, planning effective training, analyzing movement, and preventing injuries. Learn through real-world case studies, interactive simulations, and knowledge checkpoints.",
   "subject": "Health Science",
   "tags": [
     "core",
@@ -14,74 +14,74 @@ export const SportsScience101Module: LearningModule = {
   ],
   "minAge": 14,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "beginner",
   "localeSupport": [
     "en"
   ],
   "learningObjectives": [
-    "Apply performance physiology using explicit assumptions and constraints",
-    "Design and execute workflows for training periodization with reliable control points",
-    "Evaluate biomechanics and movement analysis decisions using baseline and side-effect analysis",
-    "Strengthen injury prevention governance with accountable governance mechanisms",
-    "Communicate uncertainty and tradeoffs across stakeholder groups",
-    "Build defensible recommendations resilient to critical review"
+    "Explain how the body responds to exercise using fundamental principles of physiology.",
+    "Design a basic training plan with clear phases and goals.",
+    "Analyze athletic movements to identify areas for improvement and potential injury risks.",
+    "Develop strategies to prevent common sports injuries.",
+    "Communicate training plans and risks clearly to athletes, coaches, or parents.",
+    "Create and defend a sports science recommendation based on evidence."
   ],
   "lessons": [
     {
       "id": "sports-science-101-l01",
-      "title": "Sports Science Core Foundations",
+      "title": "Introduction to Sports Science",
       "type": "video",
       "duration": 13,
       "learningAids": [
         {
           "id": "sports-science-101-l01-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Document assumptions, show your reasoning chain, and verify your conclusions before submission."
+          "title": "Key Concepts Map",
+          "content": "A visual diagram showing how Performance Physiology, Training Periodization, and Biomechanics are interconnected."
         }
       ],
       "chunks": [
         {
           "id": "sports-science-101-l01-c1",
           "kind": "concept",
-          "title": "Scope and Shared Vocabulary",
-          "content": "In this lesson, we will explore the exciting world of Sports Science. We will define what Sports Science encompasses, introduce important terms that are commonly used in the field, and discuss how performance physiology—the study of how our bodies perform during sports—works together with training periodization, which is the planning of training over time. Understanding these concepts will help us see how they apply in real-life situations, such as training for a competition or improving athletic performance.\nContext recap: In this lesson, we will explore the exciting world of Sports Science. We will define what Sports Science encompasses, introduce important terms that are commonly used in the field, and discuss how performance physiology—the study of how our bodies perform during sports—works together with training periodization, which is the planning of training over time. Understanding these concepts will help us see how they apply in real-life situations, such as training for a competition or improving athletic performance."
+          "title": "What is Sports Science?",
+          "content": "Welcome to the exciting world of Sports Science! In this lesson, we'll define what Sports Science is and introduce key terms you'll hear throughout this course. We'll explore how 'performance physiology' (how our bodies work during exercise) and 'training periodization' (planning training over time) are the building blocks for helping any athlete improve. Visual prompt: An animation showing a runner's heart rate, muscle engagement, and breathing, linked to a calendar showing different training phases (easy, hard, rest)."
         },
         {
           "id": "sports-science-101-l01-c2",
           "kind": "concept",
-          "title": "Causal Structure and Constraints",
-          "content": "In this part of the lesson, learners will engage in mapping out causal pathways. This means they will identify the relationships between different factors that influence sports performance. Additionally, they will test their hidden assumptions—those beliefs we might not even realize we have—before deciding on the best interventions or actions to take. This process encourages critical thinking and helps students understand the complexities of sports science.\nContext recap: In this part of the lesson, learners will engage in mapping out causal pathways. This means they will identify the relationships between different factors that influence sports performance. Additionally, they will test their hidden assumptions—those beliefs we might not even realize we have—before deciding on the best interventions or actions to take. This process encourages critical thinking and helps students understand the complexities of sports science.\nContext recap: In this part of the lesson, learners will engage in mapping out causal pathways. This means they will identify the relationships between different factors that influence sports performance. Additionally, they will test their hidden assumptions—those beliefs we might not even realize we have—before deciding on the best interventions or actions to take. This process encourages critical thinking and helps students understand the complexities of sports science.\nWhy this matters: Causal Structure and Constraints helps learners in Health Science connect ideas from Sports Science Foundations to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "title": "Connecting Cause and Effect",
+          "content": "In sports, every action has a reaction. We'll learn to map out these connections, like how a specific drill improves reaction time, or how too much training can lead to fatigue. This helps us understand the 'why' behind a training plan. We'll also practice questioning our assumptions. For example, is 'more training' always better? Thinking critically helps us choose the best and safest path for an athlete."
         },
         {
           "id": "sports-science-101-l01-c3",
           "kind": "recap",
-          "title": "Evidence Discipline",
-          "content": "In this recap, we will emphasize the importance of grounding our claims in observable indicators. This means that any statements we make about sports performance should be backed up by measurable evidence. We will also discuss how to note uncertainties in our findings and the importance of having review checkpoints. These practices ensure that we are making informed decisions based on reliable data.\nContext recap: In this recap, we will emphasize the importance of grounding our claims in observable indicators. This means that any statements we make about sports performance should be backed up by measurable evidence. We will also discuss how to note uncertainties in our findings and the importance of having review checkpoints. These practices ensure that we are making informed decisions based on reliable data.\nContext recap: In this recap, we will emphasize the importance of grounding our claims in observable indicators. This means that any statements we make about sports performance should be backed up by measurable evidence. We will also discuss how to note uncertainties in our findings and the importance of having review checkpoints. These practices ensure that we are making informed decisions based on reliable data.\nWhy this matters: Evidence Discipline helps learners in Health Science connect ideas from Sports Science Foundations to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "title": "Using Evidence to Make Decisions",
+          "content": "In this recap, we'll stress the importance of using observable evidence—like heart rate data, sprint times, or jump height—to support our claims. Making decisions based on data helps us track progress accurately and make adjustments when needed. We'll also discuss why it's important to acknowledge what we don't know and to have regular check-ins to review our plan."
         }
       ],
       "flashcards": [
         {
           "id": "sports-science-101-l01-f1",
-          "front": "performance physiology",
-          "back": "A core analytical lens in Sports Science requiring careful assumption control."
+          "front": "Performance Physiology",
+          "back": "The study of how the body responds and adapts to exercise and training."
         },
         {
           "id": "sports-science-101-l01-f2",
-          "front": "training periodization",
-          "back": "Operational design practices that determine system reliability and execution quality."
+          "front": "Training Periodization",
+          "back": "The strategic planning of training into cycles to manage fatigue and peak for competition."
         },
         {
           "id": "sports-science-101-l01-f3",
-          "front": "biomechanics and movement analysis",
-          "back": "The evaluation framework used to validate outcomes and detect hidden costs."
+          "front": "Biomechanics",
+          "back": "The study of how forces affect human movement, used to improve technique and prevent injury."
         }
       ]
     },
     {
       "id": "sports-science-101-l02",
-      "title": "Sports Science Workflow Lab",
+      "title": "Building a Training Plan",
       "type": "interactive",
       "duration": 15,
       "learningAids": [
@@ -89,74 +89,74 @@ export const SportsScience101Module: LearningModule = {
           "id": "sports-science-101-l02-a1",
           "type": "practice",
           "title": "Guided Practice",
-          "content": "Document assumptions, show your reasoning chain, and verify your conclusions before submission."
+          "content": "For your training plan, clearly state your goals, explain your reasoning for each phase, and describe how you'll measure success."
         }
       ],
       "chunks": [
         {
           "id": "sports-science-101-l02-c1",
           "kind": "practice",
-          "title": "Workflow Construction and Test",
-          "content": "In this interactive lab, learners will have the opportunity to design their own workflow. This activity will focus on using foundational vocabulary, understanding mechanisms, and interpreting basic scenarios related to sports science. After creating their workflows, students will stress-test them to see how reliable they are when faced with uncertainty. This hands-on experience will deepen their understanding of the concepts we have learned.\nContext recap: In this interactive lab, learners will have the opportunity to design their own workflow. This activity will focus on using foundational vocabulary, understanding mechanisms, and interpreting basic scenarios related to sports science. After creating their workflows, students will stress-test them to see how reliable they are when faced with uncertainty. This hands-on experience will deepen their understanding of the concepts we have learned.\nContext recap: In this interactive lab, learners will have the opportunity to design their own workflow. This activity will focus on using foundational vocabulary, understanding mechanisms, and interpreting basic scenarios related to sports science. After creating their workflows, students will stress-test them to see how reliable they are when faced with uncertainty. This hands-on experience will deepen their understanding of the concepts we have learned.\nWhy this matters: Workflow Construction and Test helps learners in Health Science connect ideas from Sports Science Foundations to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "title": "Design Your First Workflow",
+          "content": "In this interactive lab, you'll design a simple training workflow for a specific scenario, like preparing a soccer player for the upcoming season. You'll use the key terms we've learned to structure your plan. Then, you'll test your plan by considering potential challenges, like an unexpected injury or a change in the game schedule. This hands-on experience will bring the concepts to life."
         },
         {
           "id": "sports-science-101-l02-c2",
           "kind": "recap",
-          "title": "Control Gates and Readiness",
-          "content": "In this recap, we will discuss the concept of readiness in the context of sports science. Learners will understand that being ready involves mapping out who is responsible for different aspects, establishing criteria for control gates, identifying rollback conditions, and recognizing verification signals. This knowledge is crucial for ensuring that all elements of a training program are aligned and functioning effectively.\nContext recap: In this recap, we will discuss the concept of readiness in the context of sports science. Learners will understand that being ready involves mapping out who is responsible for different aspects, establishing criteria for control gates, identifying rollback conditions, and recognizing verification signals. This knowledge is crucial for ensuring that all elements of a training program are aligned and functioning effectively."
+          "title": "Planning for Success and Setbacks",
+          "content": "A good plan is flexible. In this recap, we'll discuss how to build checkpoints into your training schedule. This includes defining who is responsible for what, setting clear criteria for moving to the next training phase, and knowing when to scale back if an athlete is showing signs of overtraining. These steps are crucial for keeping a training program safe and effective."
         }
       ],
       "interactiveActivities": [
         {
           "id": "sports-science-101-l02-act1",
           "type": "matching_pairs",
-          "title": "Control Mapping",
-          "description": "Match controls to the strongest expected reliability or governance effect.",
+          "title": "Matching Plans to Outcomes",
+          "description": "Match the planning action to its most likely positive outcome.",
           "pairs": [
             {
-              "left": "Pre-release gate",
-              "right": "Reduces preventable failures"
+              "left": "Pre-competition check-in",
+              "right": "Reduces preventable mistakes on game day"
             },
             {
-              "left": "Rollback threshold",
-              "right": "Contains blast radius quickly"
+              "left": "Setting a 'rest day' rule",
+              "right": "Limits the risk of burnout and overtraining"
             },
             {
-              "left": "Baseline monitor",
-              "right": "Supports impact attribution"
+              "left": "Tracking daily performance",
+              "right": "Helps connect training activities to results"
             },
             {
-              "left": "Retrospective cycle",
-              "right": "Improves future decision quality"
+              "left": "Post-season review",
+              "right": "Improves the training plan for next year"
             }
           ]
         },
         {
           "id": "sports-science-101-l02-act2",
           "type": "sorting_buckets",
-          "title": "Constraint Sorting",
-          "description": "Sort constraint types into technical, policy, and stakeholder-impact categories.",
+          "title": "Sorting Training Factors",
+          "description": "Sort these factors into the correct categories: Physical, Tactical, or Lifestyle.",
           "buckets": [
-            "Technical",
-            "Policy",
-            "Stakeholder Impact"
+            "Physical",
+            "Tactical",
+            "Lifestyle"
           ],
           "items": [
             {
-              "text": "Throughput budget",
-              "bucket": "Technical"
+              "text": "Maximum sprint speed",
+              "bucket": "Physical"
             },
             {
-              "text": "Regulatory retention requirement",
-              "bucket": "Policy"
+              "text": "Understanding team plays",
+              "bucket": "Tactical"
             },
             {
-              "text": "Public trust erosion risk",
-              "bucket": "Stakeholder Impact"
+              "text": "Getting 8 hours of sleep",
+              "bucket": "Lifestyle"
             },
             {
-              "text": "Audit evidence requirement",
-              "bucket": "Policy"
+              "text": "Proper nutrition and hydration",
+              "bucket": "Lifestyle"
             }
           ]
         }
@@ -171,149 +171,149 @@ export const SportsScience101Module: LearningModule = {
         {
           "id": "sports-science-101-l03-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Document assumptions, show your reasoning chain, and verify your conclusions before submission."
+          "title": "Review Your Notes",
+          "content": "Before starting, quickly review the flashcards and key concepts from the first two lessons."
         }
       ],
       "questions": [
         {
           "id": "sports-science-101-l03-q1",
-          "text": "Which approach most improves decisions in performance physiology?",
+          "text": "When studying performance physiology, what is the most reliable approach?",
           "skillId": "sports-science-101-skill-core",
           "options": [
             {
               "id": "a",
-              "text": "Rely on assumptions that are never tested"
+              "text": "Assume what works for one athlete works for all"
             },
             {
               "id": "b",
-              "text": "Define constraints, test failure modes, and monitor indicators"
+              "text": "Set clear goals, plan for potential problems, and track progress with data"
             },
             {
               "id": "c",
-              "text": "Treat all contexts as identical"
+              "text": "Focus only on strengths and ignore weaknesses"
             },
             {
               "id": "d",
-              "text": "Avoid uncertainty analysis"
+              "text": "Avoid changing the plan once it's made"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Reliable decisions require explicit constraints, failure tests, and measured signals."
+          "explanation": "Reliable decisions require clear goals, planning for challenges, and using data to monitor progress."
         },
         {
           "id": "sports-science-101-l03-q2",
-          "text": "The 101 level should emphasize:",
+          "text": "This introductory course should help you learn to:",
           "skillId": "sports-science-101-skill-level",
           "options": [
             {
               "id": "a",
-              "text": "foundational vocabulary, mechanism comprehension, and basic scenario interpretation"
+              "text": "Use basic terms, understand how training works, and apply concepts to simple scenarios"
             },
             {
               "id": "b",
-              "text": "Execution speed without review"
+              "text": "Coach a professional team immediately"
             },
             {
               "id": "c",
-              "text": "No baselines or controls"
+              "text": "Make decisions without needing to see any data"
             },
             {
               "id": "d",
-              "text": "Single perspective decision-making"
+              "text": "Focus on only one aspect of sports science, like nutrition"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "This level is explicitly structured around foundational vocabulary, mechanism comprehension, and basic scenario interpretation."
+          "explanation": "This course is designed to build a foundation with key vocabulary, understanding of mechanisms, and interpretation of basic scenarios."
         },
         {
           "id": "sports-science-101-l03-q3",
-          "text": "What best strengthens training periodization reliability?",
+          "text": "What is the best way to make a training plan more reliable?",
           "skillId": "sports-science-101-skill-reliability",
           "options": [
             {
               "id": "a",
-              "text": "Unowned workflows and unclear escalation"
+              "text": "Have no one in charge of the overall plan"
             },
             {
               "id": "b",
-              "text": "Control checkpoints, ownership mapping, and response thresholds"
+              "text": "Include regular check-ins, clear roles, and rules for when to rest or push harder"
             },
             {
               "id": "c",
-              "text": "Untracked changes"
+              "text": "Never write down any changes made to the plan"
             },
             {
               "id": "d",
-              "text": "No incident review"
+              "text": "Avoid reviewing what went wrong after a bad performance"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Reliability depends on clear controls, owners, and threshold-driven responses."
+          "explanation": "Reliability in training comes from having clear checkpoints, defined responsibilities, and clear guidelines for making decisions."
         },
         {
           "id": "sports-science-101-l03-q4",
-          "text": "For biomechanics and movement analysis, which practice is most defensible?",
+          "text": "When analyzing an athlete's movement, what is the most defensible practice?",
           "skillId": "sports-science-101-skill-eval",
           "options": [
             {
               "id": "a",
-              "text": "Use anecdotal wins only"
+              "text": "Only use stories of success as evidence"
             },
             {
               "id": "b",
-              "text": "Compare against baselines and include side-effect checks"
+              "text": "Compare current performance to a starting point and watch for negative side effects"
             },
             {
               "id": "c",
-              "text": "Ignore difficult scenarios"
+              "text": "Ignore movements that are difficult to analyze"
             },
             {
               "id": "d",
-              "text": "Adjust criteria after results"
+              "text": "Change your success criteria after you see the results"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Baseline and side-effect analysis prevents biased or incomplete conclusions."
+          "explanation": "A fair evaluation requires comparing against a baseline and checking for unintended negative consequences, like poor form or pain."
         },
         {
           "id": "sports-science-101-l03-q5",
-          "text": "A mature injury prevention governance model should include:",
+          "text": "A good injury prevention plan should include:",
           "skillId": "sports-science-101-skill-governance",
           "options": [
             {
               "id": "a",
-              "text": "Policy disconnected from measurement"
+              "text": "Rules that are not connected to how you measure athlete health"
             },
             {
               "id": "b",
-              "text": "Policy links, measurable thresholds, and corrective pathways"
+              "text": "Clear safety rules, measurable limits, and a plan for what to do if an issue arises"
             },
             {
               "id": "c",
-              "text": "No transparency obligations"
+              "text": "A lack of transparency about why decisions are made"
             },
             {
               "id": "d",
-              "text": "No remediation expectations"
+              "text": "No plan for how to help an athlete recover from an injury"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Governance maturity connects intention, measurement, and corrective response."
+          "explanation": "A mature safety plan connects rules to measurement and includes a clear response plan for when things go wrong."
         }
       ]
     },
     {
       "id": "sports-science-101-l04",
-      "title": "Sports Science Case Analysis",
+      "title": "Case Study: The Marathon Runner",
       "type": "video",
       "duration": 14,
       "learningAids": [
         {
           "id": "sports-science-101-l04-a1",
-          "type": "mnemonic",
-          "title": "Guided Practice",
-          "content": "Document assumptions, show your reasoning chain, and verify your conclusions before submission."
+          "type": "image",
+          "title": "Tradeoff Matrix Example",
+          "content": "A sample 2x2 grid comparing four training options, rated on 'Performance Gain' (Y-axis) and 'Injury Risk' (X-axis)."
         }
       ],
       "chunks": [
@@ -321,42 +321,42 @@ export const SportsScience101Module: LearningModule = {
           "id": "sports-science-101-l04-c1",
           "kind": "example",
           "title": "Case Context and Decision Stakes",
-          "content": "In this case analysis, we will focus on a high-performance training program that aims to balance performance gains with recovery and the risk of injury. Learners will map out the high-impact risks associated with the program and identify the competing constraints that must be managed. This exercise will help students understand the complexities involved in designing effective training programs.\nContext recap: In this case analysis, we will focus on a high-performance training program that aims to balance performance gains with recovery and the risk of injury. Learners will map out the high-impact risks associated with the program and identify the competing constraints that must be managed. This exercise will help students understand the complexities involved in designing effective training programs."
+          "content": "In this case study, we'll analyze a training program for a marathon runner. The goal is to improve their race time while managing recovery and avoiding injury. We will map out the biggest risks (like shin splints or burnout) and identify the competing demands on the athlete (like training time vs. work/school)."
         },
         {
           "id": "sports-science-101-l04-c2",
           "kind": "concept",
-          "title": "Tradeoff Matrix",
-          "content": "In this section, we will introduce the concept of a tradeoff matrix. Learners will learn how to score different intervention options based on their effectiveness, reliability, equity, and feasibility of implementation. This matrix will help students visualize the pros and cons of each option, making it easier to make informed decisions in sports science.\nContext recap: In this section, we will introduce the concept of a tradeoff matrix. Learners will learn how to score different intervention options based on their effectiveness, reliability, equity, and feasibility of implementation. This matrix will help students visualize the pros and cons of each option, making it easier to make informed decisions in sports science."
+          "title": "Weighing the Options",
+          "content": "We'll introduce a tool called a 'tradeoff matrix' to compare different training choices. For example, we could compare 'adding hill sprints' vs. 'increasing long run distance'. We'll score each option based on factors like how much it could improve performance, the risk of injury, and how practical it is for the athlete. This helps us visualize the pros and cons of each decision."
         },
         {
           "id": "sports-science-101-l04-c3",
           "kind": "recap",
-          "title": "Failure Learning and Recovery",
-          "content": "In this recap, we will discuss how to turn patterns of failure into valuable learning experiences. Students will learn how to create safeguards, develop response playbooks, and implement monitoring updates. This approach encourages a growth mindset, where failures are seen as opportunities for improvement rather than setbacks.\nContext recap: In this recap, we will discuss how to turn patterns of failure into valuable learning experiences. Students will learn how to create safeguards, develop response playbooks, and implement monitoring updates. This approach encourages a growth mindset, where failures are seen as opportunities for improvement rather than setbacks."
+          "title": "Learning from Setbacks",
+          "content": "In this recap, we'll discuss how to turn setbacks into learning opportunities. If our marathon runner develops knee pain, how do we analyze the cause? We'll learn how to create safety rules (e.g., 'stop running if pain exceeds 3/10'), develop a response plan (e.g., 'cross-train for 1 week'), and adjust our monitoring to prevent it from happening again. This encourages a mindset of continuous improvement."
         }
       ],
       "flashcards": [
         {
           "id": "sports-science-101-l04-f1",
-          "front": "Tradeoff matrix",
-          "back": "A structured comparison of alternatives under competing priorities."
+          "front": "Tradeoff Matrix",
+          "back": "A tool for comparing different options by weighing their pros and cons across key factors."
         },
         {
           "id": "sports-science-101-l04-f2",
-          "front": "Failure pattern",
-          "back": "A recurring risk signature used to design targeted mitigations."
+          "front": "Risk Mitigation",
+          "back": "The process of identifying potential problems and creating a plan to reduce their impact."
         },
         {
           "id": "sports-science-101-l04-f3",
-          "front": "Response playbook",
-          "back": "A predefined action sequence for safe and timely recovery."
+          "front": "Response Plan",
+          "back": "A pre-defined set of actions to take when a specific problem, like an injury, occurs."
         }
       ]
     },
     {
       "id": "sports-science-101-l05",
-      "title": "Sports Science Simulation Studio",
+      "title": "Simulation: In-Season Adjustments",
       "type": "interactive",
       "duration": 16,
       "learningAids": [
@@ -364,7 +364,7 @@ export const SportsScience101Module: LearningModule = {
           "id": "sports-science-101-l05-a1",
           "type": "practice",
           "title": "Guided Practice",
-          "content": "Document assumptions, show your reasoning chain, and verify your conclusions before submission."
+          "content": "In the simulation, clearly state your goal for the adjustment. Record the expected benefits and potential risks of your choice."
         }
       ],
       "chunks": [
@@ -372,48 +372,48 @@ export const SportsScience101Module: LearningModule = {
           "id": "sports-science-101-l05-c1",
           "kind": "practice",
           "title": "Simulation Setup",
-          "content": "In this interactive practice, learners will configure their own intervention scenarios. They will set parameters for uncertainty and establish measurable success thresholds. This activity will allow students to apply what they have learned in a practical setting, enhancing their understanding of how to design effective sports science interventions.\nContext recap: In this interactive practice, learners will configure their own intervention scenarios. They will set parameters for uncertainty and establish measurable success thresholds. This activity will allow students to apply what they have learned in a practical setting, enhancing their understanding of how to design effective sports science interventions."
+          "content": "Time to put your skills to the test! In this interactive simulation, you are the sports scientist for a basketball team mid-season. You'll be presented with a scenario, like a key player showing signs of fatigue. You will choose from several interventions, set your goals for the intervention, and define what success looks like."
         },
         {
           "id": "sports-science-101-l05-c2",
           "kind": "recap",
           "title": "Simulation Debrief",
-          "content": "In this recap, we will conduct a post-run review of the simulation outcomes. Learners will evaluate the results, identify any side effects, and assess how well the outcomes align with governance constraints. This reflective practice is essential for understanding the implications of their decisions and improving future simulations.\nContext recap: In this recap, we will conduct a post-run review of the simulation outcomes. Learners will evaluate the results, identify any side effects, and assess how well the outcomes align with governance constraints. This reflective practice is essential for understanding the implications of their decisions and improving future simulations."
+          "content": "After the simulation runs, we'll review the outcomes. Did your chosen intervention work? Were there any unexpected side effects? Did your decision align with the team's overall safety rules and goals? This debrief is essential for learning how to adapt your plans in a dynamic, real-world environment."
         }
       ],
       "interactiveActivities": [
         {
           "id": "sports-science-101-l05-act1",
           "type": "scenario_practice",
-          "title": "Intervention Simulation",
-          "description": "Evaluate three strategies and justify which best advances performance physiology and injury prevention governance.",
+          "title": "Mid-Season Intervention",
+          "description": "Your team's star player is in a shooting slump. Evaluate three strategies and justify which one you'll implement.",
           "instructions": [
-            "Define objective and guardrails before selecting interventions.",
-            "Record near-term and long-term tradeoffs for each option.",
-            "Select confirmation metrics and escalation triggers."
+            "Define your main objective (e.g., improve shooting percentage) and your safety limits (e.g., do not increase weekly training time).",
+            "For each option, list the potential short-term and long-term effects.",
+            "Choose the metrics you will use to confirm if your plan is working (e.g., practice stats, player feedback)."
           ]
         },
         {
           "id": "sports-science-101-l05-act2",
           "type": "matching_pairs",
-          "title": "Mitigation Alignment",
-          "description": "Match risk conditions to the strongest mitigation responses.",
+          "title": "Matching Problems to Solutions",
+          "description": "Match the common coaching problem to the best sports science solution.",
           "pairs": [
             {
-              "left": "Ambiguous ownership",
-              "right": "Define role map and escalation authority"
+              "left": "Unclear who decides if a player is ready to return from injury",
+              "right": "Create a clear protocol with input from medical staff"
             },
             {
-              "left": "Weak signal quality",
-              "right": "Strengthen intake validation and monitoring"
+              "left": "Player feedback isn't being used to adjust training",
+              "right": "Schedule regular, brief check-ins with athletes"
             },
             {
-              "left": "Policy drift",
-              "right": "Re-anchor controls to explicit standards"
+              "left": "The team seems to be fading late in the season",
+              "right": "Review the periodization plan to ensure adequate recovery phases"
             },
             {
-              "left": "Stakeholder opposition",
-              "right": "Increase transparency and feedback channels"
+              "left": "A new training drill is causing minor muscle strains",
+              "right": "Pause the drill and analyze the biomechanics of the movement"
             }
           ]
         }
@@ -421,199 +421,199 @@ export const SportsScience101Module: LearningModule = {
     },
     {
       "id": "sports-science-101-l06",
-      "title": "Checkpoint 2: Systems Decisions",
+      "title": "Checkpoint 2: Application and Analysis",
       "type": "quiz",
       "duration": 10,
       "learningAids": [
         {
           "id": "sports-science-101-l06-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Document assumptions, show your reasoning chain, and verify your conclusions before submission."
+          "title": "Review Your Notes",
+          "content": "Before starting, think about the marathon runner case study and the mid-season simulation."
         }
       ],
       "questions": [
         {
           "id": "sports-science-101-l06-q1",
-          "text": "Which approach most improves decisions in performance physiology?",
+          "text": "In a case study about a weightlifter who is not getting stronger, what is the best first step?",
           "skillId": "sports-science-101-skill-core",
           "options": [
             {
               "id": "a",
-              "text": "Rely on assumptions that are never tested"
+              "text": "Immediately tell them to lift heavier weights"
             },
             {
               "id": "b",
-              "text": "Define constraints, test failure modes, and monitor indicators"
+              "text": "Analyze their training log, nutrition, and recovery data to find patterns"
             },
             {
               "id": "c",
-              "text": "Treat all contexts as identical"
+              "text": "Assume they are not trying hard enough"
             },
             {
               "id": "d",
-              "text": "Avoid uncertainty analysis"
+              "text": "Compare them to a world-record holder"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Reliable decisions require explicit constraints, failure tests, and measured signals."
+          "explanation": "A data-driven approach is crucial. Analyzing existing information helps identify the root cause of a problem before prescribing a solution."
         },
         {
           "id": "sports-science-101-l06-q2",
-          "text": "The 101 level should emphasize:",
-          "skillId": "sports-science-101-skill-level",
-          "options": [
-            {
-              "id": "a",
-              "text": "foundational vocabulary, mechanism comprehension, and basic scenario interpretation"
-            },
-            {
-              "id": "b",
-              "text": "Execution speed without review"
-            },
-            {
-              "id": "c",
-              "text": "No baselines or controls"
-            },
-            {
-              "id": "d",
-              "text": "Single perspective decision-making"
-            }
-          ],
-          "correctOptionId": "a",
-          "explanation": "This level is explicitly structured around foundational vocabulary, mechanism comprehension, and basic scenario interpretation."
-        },
-        {
-          "id": "sports-science-101-l06-q3",
-          "text": "What best strengthens training periodization reliability?",
-          "skillId": "sports-science-101-skill-reliability",
-          "options": [
-            {
-              "id": "a",
-              "text": "Unowned workflows and unclear escalation"
-            },
-            {
-              "id": "b",
-              "text": "Control checkpoints, ownership mapping, and response thresholds"
-            },
-            {
-              "id": "c",
-              "text": "Untracked changes"
-            },
-            {
-              "id": "d",
-              "text": "No incident review"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Reliability depends on clear controls, owners, and threshold-driven responses."
-        },
-        {
-          "id": "sports-science-101-l06-q4",
-          "text": "For biomechanics and movement analysis, which practice is most defensible?",
+          "text": "A 'tradeoff matrix' is most useful for:",
           "skillId": "sports-science-101-skill-eval",
           "options": [
             {
               "id": "a",
-              "text": "Use anecdotal wins only"
+              "text": "Creating a workout schedule with no flexibility"
             },
             {
               "id": "b",
-              "text": "Compare against baselines and include side-effect checks"
+              "text": "Visually comparing the pros and cons of different decisions"
             },
             {
               "id": "c",
-              "text": "Ignore difficult scenarios"
+              "text": "Proving that one single training method is always the best"
             },
             {
               "id": "d",
-              "text": "Adjust criteria after results"
+              "text": "Tracking an athlete's heart rate during a game"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Baseline and side-effect analysis prevents biased or incomplete conclusions."
+          "explanation": "Its primary purpose is to help decision-makers understand the tradeoffs between different options, such as risk versus reward."
         },
         {
-          "id": "sports-science-101-l06-q5",
-          "text": "A mature injury prevention governance model should include:",
+          "id": "sports-science-101-l06-q3",
+          "text": "During a simulation, you choose an intervention that leads to an unexpected negative side effect. What is the best response?",
+          "skillId": "sports-science-101-skill-reliability",
+          "options": [
+            {
+              "id": "a",
+              "text": "Ignore the side effect and focus only on the positive results"
+            },
+            {
+              "id": "b",
+              "text": "Debrief what happened to understand the cause and improve future decisions"
+            },
+            {
+              "id": "c",
+              "text": "Blame the simulation for being unrealistic"
+            },
+            {
+              "id": "d",
+              "text": "Decide to never use that type of intervention again, no matter the context"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Learning from both expected and unexpected outcomes is key to improving decision-making skills in complex situations."
+        },
+        {
+          "id": "sports-science-101-l06-q4",
+          "text": "What does 'risk mitigation' in a training plan mean?",
           "skillId": "sports-science-101-skill-governance",
           "options": [
             {
               "id": "a",
-              "text": "Policy disconnected from measurement"
+              "text": "Avoiding any training that has any level of risk"
             },
             {
               "id": "b",
-              "text": "Policy links, measurable thresholds, and corrective pathways"
+              "text": "Identifying potential problems (like injury) and having a plan to reduce their likelihood or impact"
             },
             {
               "id": "c",
-              "text": "No transparency obligations"
+              "text": "Only focusing on an athlete's physical health and not their mental health"
             },
             {
               "id": "d",
-              "text": "No remediation expectations"
+              "text": "Waiting for an injury to happen before thinking about how to treat it"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Governance maturity connects intention, measurement, and corrective response."
+          "explanation": "Mitigation is about being proactive—identifying risks ahead of time and planning ways to manage them."
+        },
+        {
+          "id": "sports-science-101-l06-q5",
+          "text": "When analyzing a complex sports scenario, it's most important to:",
+          "skillId": "sports-science-101-skill-level",
+          "options": [
+            {
+              "id": "a",
+              "text": "Find a quick and easy answer"
+            },
+            {
+              "id": "b",
+              "text": "Consider how different factors (physiology, psychology, tactics) are interconnected"
+            },
+            {
+              "id": "c",
+              "text": "Listen to only one person's opinion"
+            },
+            {
+              "id": "d",
+              "text": "Apply the same solution to every problem"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Sports science involves understanding systems. The best analysis considers the interplay between multiple factors."
         }
       ]
     },
     {
       "id": "sports-science-101-l07",
-      "title": "Sports Science Policy and Ethics Integration",
+      "title": "Ethics and Responsibility in Sports",
       "type": "video",
       "duration": 12,
       "learningAids": [
         {
           "id": "sports-science-101-l07-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Document assumptions, show your reasoning chain, and verify your conclusions before submission."
+          "title": "Stakeholder Map",
+          "content": "A diagram with the athlete at the center, surrounded by connected stakeholders like coaches, parents, teammates, medical staff, and fans."
         }
       ],
       "chunks": [
         {
           "id": "sports-science-101-l07-c1",
           "kind": "concept",
-          "title": "Stakeholder Impact Mapping",
-          "content": "In this lesson, learners will examine how the benefits and burdens of sports science practices are distributed among different stakeholders. They will consider how these impacts vary over time and across different groups. This understanding is crucial for making ethical decisions in sports science and ensuring that all voices are heard.\nContext recap: In this lesson, learners will examine how the benefits and burdens of sports science practices are distributed among different stakeholders. They will consider how these impacts vary over time and across different groups. This understanding is crucial for making ethical decisions in sports science and ensuring that all voices are heard."
+          "title": "Who is Affected?",
+          "content": "Sports science decisions don't just affect the athlete. In this lesson, we'll map out all the 'stakeholders'—coaches, parents, teammates, and even fans—and consider how our choices impact them. For example, a decision to push an athlete to play through a minor injury might help the team win but could have long-term health consequences. Understanding these impacts is key to making ethical choices."
         },
         {
           "id": "sports-science-101-l07-c2",
           "kind": "concept",
-          "title": "Accountability Architecture",
-          "content": "In this section, we will explore the concept of accountability in sports science. Learners will understand how accountability can be framed through traceability, which means being able to track decisions and actions, review rights, which allow stakeholders to assess outcomes, and remediation obligations, which ensure that any issues are addressed. This knowledge is vital for fostering trust and responsibility in the field.\nContext recap: In this section, we will explore the concept of accountability in sports science. Learners will understand how accountability can be framed through traceability, which means being able to track decisions and actions, review rights, which allow stakeholders to assess outcomes, and remediation obligations, which ensure that any issues are addressed. This knowledge is vital for fostering trust and responsibility in the field."
+          "title": "Ensuring Responsibility and Trust",
+          "content": "How do we build trust? By being accountable. This means keeping a clear record of why decisions were made, giving stakeholders (like the athlete and their parents) the right to review the plan, and having a clear process for fixing problems if they arise. This framework ensures that decisions are made transparently and responsibly."
         },
         {
           "id": "sports-science-101-l07-c3",
           "kind": "recap",
-          "title": "Responsible Execution Checklist",
-          "content": "At the end of our lesson, we have a helpful checklist that connects how well we perform in sports with important ideas about policies, ethics, and the trust of everyone involved, including fans, players, and coaches. This checklist helps us remember that our actions in sports should always consider these important factors.\nContext recap: At the end of our lesson, we have a helpful checklist that connects how well we perform in sports with important ideas about policies, ethics, and the trust of everyone involved, including fans, players, and coaches. This checklist helps us remember that our actions in sports should always consider these important factors."
+          "title": "A Checklist for Responsible Practice",
+          "content": "We'll conclude with a simple checklist to guide ethical decision-making. It includes questions like: 'Have I considered the long-term health of the athlete?', 'Is this decision transparent to everyone involved?', and 'Is there a plan in place if something goes wrong?'. This checklist connects our scientific work to the well-being and trust of the people we work with."
         }
       ],
       "flashcards": [
         {
           "id": "sports-science-101-l07-f1",
-          "front": "Impact distribution",
-          "back": "How outcomes differ across stakeholder groups and timescales."
+          "front": "Stakeholder",
+          "back": "Any person or group who is affected by a decision, such as athletes, coaches, and parents."
         },
         {
           "id": "sports-science-101-l07-f2",
-          "front": "Decision traceability",
-          "back": "The evidence chain showing how and why a decision was made."
+          "front": "Accountability",
+          "back": "Taking responsibility for decisions and their outcomes, often through transparency and clear procedures."
         },
         {
           "id": "sports-science-101-l07-f3",
-          "front": "Responsible execution",
-          "back": "Delivery behavior that balances effectiveness with ethical and policy safeguards."
+          "front": "Ethical Practice",
+          "back": "Making decisions that prioritize the well-being, safety, and trust of all stakeholders."
         }
       ]
     },
     {
       "id": "sports-science-101-l08",
-      "title": "Sports Science Capstone Planning Lab",
+      "title": "Capstone Project: Build a Proposal",
       "type": "interactive",
       "duration": 15,
       "learningAids": [
@@ -621,40 +621,40 @@ export const SportsScience101Module: LearningModule = {
           "id": "sports-science-101-l08-a1",
           "type": "practice",
           "title": "Guided Practice",
-          "content": "Document assumptions, show your reasoning chain, and verify your conclusions before submission."
+          "content": "Use the provided template to structure your proposal. Be clear, concise, and use evidence from the course to support your plan."
         }
       ],
       "chunks": [
         {
           "id": "sports-science-101-l08-c1",
           "kind": "practice",
-          "title": "Capstone Charter",
-          "content": "In this activity, you will create a detailed plan for your capstone project. This plan will include your main goal, any limitations you might face, how you will measure success, and the rules you will follow to keep everything on track. This decision charter will help guide your project and ensure you stay focused on what is important.\nContext recap: In this activity, you will create a detailed plan for your capstone project. This plan will include your main goal, any limitations you might face, how you will measure success, and the rules you will follow to keep everything on track. This decision charter will help guide your project and ensure you stay focused on what is important."
+          "title": "Your Capstone Plan",
+          "content": "In this final lab, you'll bring everything together by creating a proposal for a sports science project. You'll choose a scenario (e.g., designing an off-season program for a youth swim team) and create a detailed plan. Your plan will include your main goal, any limitations, how you'll measure success, and the ethical guidelines you'll follow."
         },
         {
           "id": "sports-science-101-l08-c2",
           "kind": "recap",
-          "title": "Defense Readiness",
-          "content": "As part of your preparation, you will gather strong evidence to support your ideas and plans. This means you will think about possible questions or challenges from others regarding your technical choices, policies, and how you engage with stakeholders. Being ready with well-researched answers will help you confidently defend your project.\nContext recap: As part of your preparation, you will gather strong evidence to support your ideas and plans. This means you will think about possible questions or challenges from others regarding your technical choices, policies, and how you engage with stakeholders. Being ready with well-researched answers will help you confidently defend your project."
+          "title": "Preparing to Defend Your Plan",
+          "content": "A good plan can stand up to tough questions. As you build your proposal, think about the challenges you might face. What questions would a skeptical coach or a concerned parent ask? Preparing evidence-based answers for your technical, safety, and ethical choices will make your proposal stronger and more convincing."
         }
       ],
       "interactiveActivities": [
         {
           "id": "sports-science-101-l08-act1",
           "type": "project_builder",
-          "title": "Capstone Charter Builder",
-          "description": "Build a capstone charter with objectives, metrics, risks, and remediation pathways.",
+          "title": "Capstone Proposal Builder",
+          "description": "Build a complete capstone proposal with objectives, metrics, risks, and ethical considerations.",
           "instructions": [
-            "Define objective and boundary conditions.",
-            "List at least three measurable success indicators.",
-            "Define escalation and corrective action criteria."
+            "Define your project's main goal and any important constraints (e.g., budget, time).",
+            "List at least three measurable indicators of success.",
+            "Identify two potential risks and describe your plan to mitigate them."
           ]
         },
         {
           "id": "sports-science-101-l08-act2",
           "type": "debate_simulator",
-          "title": "Decision Defense Panel",
-          "description": "Defend your capstone decisions against technical, policy, and stakeholder objections."
+          "title": "Present and Defend Your Plan",
+          "description": "Defend your capstone proposal against questions from a simulated panel of a coach, an athlete, and a parent."
         }
       ]
     }

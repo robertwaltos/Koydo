@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const HumanResourceManagement501Module: LearningModule = {
+export const human_resource_management_501_Module: LearningModule = {
   "id": "human-resource-management-501",
   "title": "Human Resource Management Specialization Studio",
   "description": "Post-401 specialization in Human Resource Management, focused on business systems diagnostics, business operations and execution design, business impact and tradeoff analysis, and business governance and leadership through advanced casework, simulation, and defense-based checkpoints.",
@@ -14,7 +14,7 @@ export const HumanResourceManagement501Module: LearningModule = {
   ],
   "minAge": 17,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en",
@@ -38,8 +38,9 @@ export const HumanResourceManagement501Module: LearningModule = {
         {
           "id": "human-resource-management-501-l01-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Structured Decision-Making",
+          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence.",
+          "prompt": "A flowchart illustrating a structured decision-making process: 1. Define Scope, 2. State Assumptions, 3. Gather Evidence, 4. Analyze Tradeoffs, 5. Defend Recommendation."
         }
       ],
       "chunks": [
@@ -47,36 +48,36 @@ export const HumanResourceManagement501Module: LearningModule = {
           "id": "human-resource-management-501-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "In this lesson, we will dive into the advanced ideas surrounding scope boundaries in Human Resource Management. Understanding these boundaries is crucial as they help us pinpoint where Human Resource practices can truly influence a company's success. We will learn how to effectively diagnose business systems, which means figuring out what is working well and what needs improvement. Additionally, we will discuss how to design business operations that not only run smoothly but also enhance overall execution. By clearly defining these boundaries, we can ensure that Human Resource Management plays a vital role in driving business achievements."
+          "content": "This lesson introduces the core challenge in advanced HRM: defining the scope of your influence. We'll learn to diagnose business systems to find opportunities for impact and design operational processes that improve performance. By setting clear boundaries, we can focus HR efforts where they matter most."
         },
         {
           "id": "human-resource-management-501-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different events or actions. They will also explore uncertainty ranges, which help us understand the possible variations in outcomes, and system dependencies, which show how different parts of a system rely on each other. This foundational knowledge is essential for planning effective interventions in Human Resource Management.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different events or actions. They will also explore uncertainty ranges, which help us understand the possible variations in outcomes, and system dependencies, which show how different parts of a system rely on each other. This foundational knowledge is essential for planning effective interventions in Human Resource Management."
+          "content": "We'll explore how to map cause-and-effect relationships within an organization. You'll learn to model uncertainty and identify key system dependencies. This is the foundation for predicting the outcomes of HR initiatives and planning effective interventions."
         },
         {
           "id": "human-resource-management-501-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "In our recap, we emphasize that all claims made in Human Resource Management must be supported by measurable indicators. This means that we need to have clear evidence to back up our statements. Additionally, we will discuss the importance of confidence bounds and review checkpoints, which help ensure that our assessments are reliable and can be verified.\nContext recap: In our recap, we emphasize that all claims made in Human Resource Management must be supported by measurable indicators. This means that we need to have clear evidence to back up our statements. Additionally, we will discuss the importance of confidence bounds and review checkpoints, which help ensure that our assessments are reliable and can be verified."
+          "content": "This recap emphasizes a critical rule: all claims must be backed by measurable evidence. We'll review the importance of using confidence intervals and checkpoints to ensure our analyses are credible and our conclusions are sound."
         }
       ],
       "flashcards": [
         {
           "id": "human-resource-management-501-l01-f1",
-          "front": "business systems diagnostics",
-          "back": "A specialization axis requiring explicit assumptions and measurable constraints."
+          "front": "Business Systems Diagnostics",
+          "back": "The structured process of analyzing a business's people, processes, and technology, based on explicit assumptions and measurable data."
         },
         {
           "id": "human-resource-management-501-l01-f2",
-          "front": "business operations and execution design",
-          "back": "Execution architecture that determines reliability under stress."
+          "front": "Business Operations and Execution Design",
+          "back": "The design of business processes that ensures they function reliably, especially under pressure."
         },
         {
           "id": "human-resource-management-501-l01-f3",
-          "front": "business impact and tradeoff analysis",
-          "back": "Evaluation discipline for identifying true gains and hidden costs."
+          "front": "Business Impact and Tradeoff Analysis",
+          "back": "A disciplined method for evaluating the full effects of a decision, including both intended benefits and unintended costs."
         }
       ]
     },
@@ -89,8 +90,8 @@ export const HumanResourceManagement501Module: LearningModule = {
         {
           "id": "human-resource-management-501-l02-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Guided Practice: Workflow Design",
+          "content": "Practice designing a workflow with at least two control gates. Define the criteria for passing each gate and the escalation path if criteria are not met."
         }
       ],
       "chunks": [
@@ -98,13 +99,13 @@ export const HumanResourceManagement501Module: LearningModule = {
           "id": "human-resource-management-501-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "In this interactive practice session, learners will have the opportunity to design specialized workflows that are tailored to specific Human Resource Management tasks. They will also conduct stress tests on these workflows by simulating adverse scenarios to see how well they hold up under pressure. This hands-on experience is crucial for understanding the practical applications of theoretical concepts.\nContext recap: In this interactive practice session, learners will have the opportunity to design specialized workflows that are tailored to specific Human Resource Management tasks. They will also conduct stress tests on these workflows by simulating adverse scenarios to see how well they hold up under pressure. This hands-on experience is crucial for understanding the practical applications of theoretical concepts."
+          "content": "In this hands-on lab, you will design HR workflows for specific challenges. You'll then stress-test these designs by running simulations of adverse events, like a sudden budget cut or a key team member's departure, to assess their resilience."
         },
         {
           "id": "human-resource-management-501-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "In our recap, we will discuss the architecture of control gates within workflows. These control gates are essential as they integrate various checkpoints, rollback criteria, and threshold-based escalation processes. This ensures that workflows can be monitored effectively and adjusted as needed to maintain quality and compliance.\nContext recap: In our recap, we will discuss the architecture of control gates within workflows. These control gates are essential as they integrate various checkpoints, rollback criteria, and threshold-based escalation processes. This ensures that workflows can be monitored effectively and adjusted as needed to maintain quality and compliance."
+          "content": "We'll recap the concept of 'control gates'—critical checkpoints within a workflow. We will examine how to build them with clear criteria for review, rollback triggers for when things go wrong, and escalation paths for major issues."
         }
       ],
       "interactiveActivities": [
@@ -120,7 +121,7 @@ export const HumanResourceManagement501Module: LearningModule = {
             },
             {
               "left": "Rollback trigger",
-              "right": "Limits blast radius under adverse outcomes"
+              "right": "Minimizes negative impact when a process fails"
             },
             {
               "left": "Baseline dashboard",
@@ -150,12 +151,12 @@ export const HumanResourceManagement501Module: LearningModule = {
       "questions": [
         {
           "id": "human-resource-management-501-l03-q1",
-          "text": "Which practice most improves business systems diagnostics decision quality?",
+          "text": "Which practice most improves the quality of business systems diagnostics?",
           "skillId": "human-resource-management-501-skill-core",
           "options": [
             {
               "id": "a",
-              "text": "Proceed without baseline or assumptions"
+              "text": "Proceed without a baseline or assumptions"
             },
             {
               "id": "b",
@@ -175,7 +176,7 @@ export const HumanResourceManagement501Module: LearningModule = {
         },
         {
           "id": "human-resource-management-501-l03-q2",
-          "text": "At level 501, strong execution for business operations and execution design requires:",
+          "text": "At an advanced level, strong business operations and execution design requires:",
           "skillId": "human-resource-management-501-skill-execution",
           "options": [
             {
@@ -247,106 +248,6 @@ export const HumanResourceManagement501Module: LearningModule = {
           ],
           "correctOptionId": "a",
           "explanation": "Governance maturity is the operational link between intent, measurement, and corrective action."
-        },
-        {
-          "id": "human-resource-management-501-l03-q5",
-          "text": "What is the best way to compare competing interventions in advanced Business?",
-          "skillId": "human-resource-management-501-skill-advanced-5",
-          "options": [
-            {
-              "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
-            },
-            {
-              "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
-            },
-            {
-              "id": "c",
-              "text": "Switch metrics after results arrive"
-            },
-            {
-              "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
-        },
-        {
-          "id": "human-resource-management-501-l03-q6",
-          "text": "In high-stakes Human Resource Management Specialization Studio execution, which communication protocol is strongest?",
-          "skillId": "human-resource-management-501-skill-advanced-6",
-          "options": [
-            {
-              "id": "a",
-              "text": "Broadcast conclusions without assumptions"
-            },
-            {
-              "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
-            },
-            {
-              "id": "c",
-              "text": "Share only final outcomes after completion"
-            },
-            {
-              "id": "d",
-              "text": "Limit updates to a single informal channel"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
-        },
-        {
-          "id": "human-resource-management-501-l03-q7",
-          "text": "A mature remediation loop in advanced Business should prioritize:",
-          "skillId": "human-resource-management-501-skill-advanced-7",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blame assignment without system updates"
-            },
-            {
-              "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
-            },
-            {
-              "id": "c",
-              "text": "One-time fixes without retesting"
-            },
-            {
-              "id": "d",
-              "text": "Issue closure based on elapsed time"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
-        },
-        {
-          "id": "human-resource-management-501-l03-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Human Resource Management Specialization Studio?",
-          "skillId": "human-resource-management-501-skill-advanced-8",
-          "options": [
-            {
-              "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
-            },
-            {
-              "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
-            },
-            {
-              "id": "c",
-              "text": "Ignore correlated failure modes"
-            },
-            {
-              "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
         }
       ]
     },
@@ -359,8 +260,9 @@ export const HumanResourceManagement501Module: LearningModule = {
         {
           "id": "human-resource-management-501-l04-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Tradeoff Analysis Matrix",
+          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence.",
+          "prompt": "A visual matrix comparing three different HR solutions across five criteria (e.g., Cost, Reliability, Equity, Speed, Governance), with cells color-coded to show positive, neutral, or negative impact."
         }
       ],
       "chunks": [
@@ -368,19 +270,19 @@ export const HumanResourceManagement501Module: LearningModule = {
           "id": "human-resource-management-501-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "In this lesson, we will frame a case that highlights the competing constraints present in business systems diagnostics. We will analyze the impacts of different business decisions and the trade-offs that must be considered. Understanding these dynamics is vital for making informed decisions that balance various business needs.\nContext recap: In this lesson, we will frame a case that highlights the competing constraints present in business systems diagnostics. We will analyze the impacts of different business decisions and the trade-offs that must be considered. Understanding these dynamics is vital for making informed decisions that balance various business needs."
+          "content": "This lesson introduces a complex case study involving competing business priorities. We will dissect the scenario to understand the constraints and analyze how different HR strategies create different impacts and tradeoffs."
         },
         {
           "id": "human-resource-management-501-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "During this practice session, learners will compare different options available to them across several important dimensions, including safety, reliability, cost, equity, and governance. This comparative analysis will help them understand how to weigh the pros and cons of each option effectively.\nContext recap: During this practice session, learners will compare different options available to them across several important dimensions, including safety, reliability, cost, equity, and governance. This comparative analysis will help them understand how to weigh the pros and cons of each option effectively."
+          "content": "In this practice, you will evaluate several potential solutions to the case study. You'll compare them across key dimensions like cost, employee morale, operational reliability, and legal compliance to frame the central tradeoffs."
         },
         {
           "id": "human-resource-management-501-l04-c3",
           "kind": "recap",
           "title": "Decision Memo Pattern",
-          "content": "In our recap, we will outline the pattern for creating decision memos. Each recommendation made should include key components such as the underlying assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that decisions are well-informed and can be revisited if necessary.\nContext recap: In our recap, we will outline the pattern for creating decision memos. Each recommendation made should include key components such as the underlying assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that decisions are well-informed and can be revisited if necessary."
+          "content": "We'll conclude by introducing a standard format for a decision memo. This structure ensures every recommendation is presented clearly with its underlying assumptions, supporting evidence, risk mitigation plans, and fallback options."
         }
       ]
     },
@@ -393,8 +295,8 @@ export const HumanResourceManagement501Module: LearningModule = {
         {
           "id": "human-resource-management-501-l05-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Guided Practice: Simulation Goals",
+          "content": "In the upcoming simulation, your goal is to maintain system stability above 80% while responding to at least three unexpected 'shock' events. Document your decisions and their rationale."
         }
       ],
       "chunks": [
@@ -402,13 +304,13 @@ export const HumanResourceManagement501Module: LearningModule = {
           "id": "human-resource-management-501-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "In this interactive practice, learners will take on the role of operators managing scenario controls. They will need to balance performance with governance constraints, ensuring that all actions taken align with established rules and standards. This experience will help them understand the complexities involved in real-world Human Resource Management.\nContext recap: In this interactive practice, learners will take on the role of operators managing scenario controls. They will need to balance performance with governance constraints, ensuring that all actions taken align with established rules and standards. This experience will help them understand the complexities involved in real-world Human Resource Management."
+          "content": "In this live simulation, you will manage an HR system under changing conditions. Your task is to make real-time decisions to balance performance targets with governance rules, responding to unexpected events as they unfold."
         },
         {
           "id": "human-resource-management-501-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "In our recap, we will discuss the importance of effective response design. Learners will understand how to update control gates in a way that maintains traceability and accountability. This ensures that all changes made are documented and can be tracked back to their origins.\nContext recap: In our recap, we will discuss the importance of effective response design. Learners will understand how to update control gates in a way that maintains traceability and accountability. This ensures that all changes made are documented and can be tracked back to their origins."
+          "content": "This recap focuses on adaptive response. We'll review how to modify your operational controls and decision gates during a crisis while maintaining clear documentation and accountability for every change."
         }
       ],
       "interactiveActivities": [
@@ -536,103 +438,103 @@ export const HumanResourceManagement501Module: LearningModule = {
         },
         {
           "id": "human-resource-management-501-l06-q5",
-          "text": "What is the best way to compare competing interventions in advanced Business?",
-          "skillId": "human-resource-management-501-skill-advanced-5",
+          "text": "In a simulation where a key project is falling behind schedule, what is the most effective first step for an HR leader?",
+          "skillId": "human-resource-management-501-skill-sim1",
           "options": [
             {
               "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
+              "text": "Immediately replace the project manager."
             },
             {
               "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
+              "text": "Analyze the system data to identify the root cause of the delay."
             },
             {
               "id": "c",
-              "text": "Switch metrics after results arrive"
+              "text": "Cancel the project to avoid further losses."
             },
             {
               "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
+              "text": "Ask the team to work overtime until the project is back on track."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
+          "explanation": "Effective intervention starts with diagnosis, not immediate action. Analyzing data helps identify the true problem before implementing a solution."
         },
         {
           "id": "human-resource-management-501-l06-q6",
-          "text": "In high-stakes Human Resource Management Specialization Studio execution, which communication protocol is strongest?",
-          "skillId": "human-resource-management-501-skill-advanced-6",
+          "text": "When presenting a case analysis, what does a 'fallback plan' demonstrate?",
+          "skillId": "human-resource-management-501-skill-case5",
           "options": [
             {
               "id": "a",
-              "text": "Broadcast conclusions without assumptions"
+              "text": "A lack of confidence in the primary recommendation."
             },
             {
               "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
+              "text": "A complete analysis of all possible outcomes."
             },
             {
               "id": "c",
-              "text": "Share only final outcomes after completion"
+              "text": "Responsible planning for potential risks and failures."
             },
             {
               "id": "d",
-              "text": "Limit updates to a single informal channel"
+              "text": "An alternative solution that is equally good."
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
+          "correctOptionId": "c",
+          "explanation": "A fallback plan shows foresight and prepares the organization to pivot if the primary strategy encounters unforeseen obstacles, which is a hallmark of resilient planning."
         },
         {
           "id": "human-resource-management-501-l06-q7",
-          "text": "A mature remediation loop in advanced Business should prioritize:",
-          "skillId": "human-resource-management-501-skill-advanced-7",
+          "text": "During a simulation, you notice a control gate is consistently causing bottlenecks. What is the most appropriate adaptive response?",
+          "skillId": "human-resource-management-501-skill-sim2",
           "options": [
             {
               "id": "a",
-              "text": "Blame assignment without system updates"
+              "text": "Remove the control gate entirely to speed things up."
             },
             {
               "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
+              "text": "Adjust the gate's thresholds and criteria, documenting the change and its rationale."
             },
             {
               "id": "c",
-              "text": "One-time fixes without retesting"
+              "text": "Ignore the bottleneck as it is part of the simulation's challenge."
             },
             {
               "id": "d",
-              "text": "Issue closure based on elapsed time"
+              "text": "Blame the team for not meeting the gate's criteria."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
+          "explanation": "Adaptive response involves tuning controls based on performance data. Adjusting the gate and documenting the change maintains governance while improving flow."
         },
         {
           "id": "human-resource-management-501-l06-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Human Resource Management Specialization Studio?",
-          "skillId": "human-resource-management-501-skill-advanced-8",
+          "text": "What is the primary purpose of comparing multiple options in a tradeoff analysis?",
+          "skillId": "human-resource-management-501-skill-case6",
           "options": [
             {
               "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
+              "text": "To prove that your preferred option is the best."
             },
             {
               "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
+              "text": "To make the decision-making process more complex."
             },
             {
               "id": "c",
-              "text": "Ignore correlated failure modes"
+              "text": "To create more work for the analysis team."
             },
             {
               "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
+              "text": "To make the costs and benefits of different choices explicit and transparent."
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "correctOptionId": "d",
+          "explanation": "Tradeoff analysis is designed to illuminate the pros and cons of each viable path, enabling a more informed and defensible final decision."
         }
       ]
     },
@@ -645,8 +547,9 @@ export const HumanResourceManagement501Module: LearningModule = {
         {
           "id": "human-resource-management-501-l07-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Stakeholder Impact Map",
+          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence.",
+          "prompt": "An infographic showing a decision's ripple effect, starting from the core decision and branching out to show impacts on employees, managers, customers, and the wider community over time."
         }
       ],
       "chunks": [
@@ -654,36 +557,36 @@ export const HumanResourceManagement501Module: LearningModule = {
           "id": "human-resource-management-501-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "In this lesson, learners will explore how to map the distribution of impacts among various stakeholders. They will identify the benefits, burdens, and any delayed effects that different groups may experience as a result of business decisions. This understanding is crucial for ensuring that all voices are considered in the decision-making process.\nContext recap: In this lesson, learners will explore how to map the distribution of impacts among various stakeholders. They will identify the benefits, burdens, and any delayed effects that different groups may experience as a result of business decisions. This understanding is crucial for ensuring that all voices are considered in the decision-making process."
+          "content": "This lesson focuses on the people impacted by HR decisions. You will learn to map how outcomes—both positive and negative—are distributed across different stakeholder groups, such as employees, customers, and the community, considering both immediate and long-term effects."
         },
         {
           "id": "human-resource-management-501-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "In this section, we will delve into the architecture of accountability within decision-making processes. Learners will learn about the importance of decision traceability, review rights, and remediation obligations. These elements work together to create a transparent and responsible governance structure.\nContext recap: In this section, we will delve into the architecture of accountability within decision-making processes. Learners will learn about the importance of decision traceability, review rights, and remediation obligations. These elements work together to create a transparent and responsible governance structure."
+          "content": "Here, we examine the architecture of accountability. You'll learn how to design systems that ensure every major decision is traceable, subject to review, and includes clear obligations for fixing any negative consequences."
         },
         {
           "id": "human-resource-management-501-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "At the end of our lesson, we have a helpful checklist that connects important outcomes, ethical considerations, adherence to policies, and the ability to bounce back from challenges. This checklist serves as a guide to ensure responsible leadership in human resource management.\nContext recap: At the end of our lesson, we have a helpful checklist that connects important outcomes, ethical considerations, adherence to policies, and the ability to bounce back from challenges. This checklist serves as a guide to ensure responsible leadership in human resource management."
+          "content": "We'll conclude with a practical checklist for responsible leadership. This tool helps you evaluate decisions by linking them to key business outcomes, ethical principles, company policies, and organizational resilience."
         }
       ],
       "flashcards": [
         {
           "id": "human-resource-management-501-l07-f1",
-          "front": "Impact distribution",
-          "back": "How outcomes are allocated across populations and timescales."
+          "front": "Impact Distribution",
+          "back": "The analysis of how the benefits and costs of a decision are spread across different groups of people and over time."
         },
         {
           "id": "human-resource-management-501-l07-f2",
-          "front": "Decision traceability",
-          "back": "An auditable record of evidence, ownership, and rationale."
+          "front": "Decision Traceability",
+          "back": "A clear, auditable record showing who made a decision, when, and based on what evidence and rationale."
         },
         {
           "id": "human-resource-management-501-l07-f3",
-          "front": "Responsible leadership",
-          "back": "Decision behavior balancing performance, accountability, and ethics."
+          "front": "Responsible Leadership",
+          "back": "A leadership approach that balances achieving performance goals with ethical conduct and accountability for outcomes."
         }
       ]
     },
@@ -705,13 +608,13 @@ export const HumanResourceManagement501Module: LearningModule = {
           "id": "human-resource-management-501-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "In this interactive activity, learners will work together to create a comprehensive brief. This brief will include clear claims, supporting evidence, an understanding of uncertainties, and suggested pathways for addressing any issues that may arise. This exercise helps develop critical thinking and problem-solving skills.\nContext recap: In this interactive activity, learners will work together to create a comprehensive brief. This brief will include clear claims, supporting evidence, an understanding of uncertainties, and suggested pathways for addressing any issues that may arise. This exercise helps develop critical thinking and problem-solving skills."
+          "content": "In this final lab, you will synthesize your work into a capstone defense brief. You will construct a clear, evidence-based recommendation, explicitly state your assumptions and uncertainty, and propose remediation plans for potential risks."
         },
         {
           "id": "human-resource-management-501-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "During this rehearsal session, learners will practice their responses to various critiques that may come from experts, governance bodies, and stakeholders. This preparation is essential for building confidence and ensuring that learners can effectively communicate their ideas and defend their positions.\nContext recap: During this rehearsal session, learners will practice their responses to various critiques that may come from experts, governance bodies, and stakeholders. This preparation is essential for building confidence and ensuring that learners can effectively communicate their ideas and defend their positions."
+          "content": "To prepare for your final defense, you will rehearse presenting your brief and responding to challenging questions from a panel simulating experts, executives, and other stakeholders. This practice builds confidence and sharpens your arguments."
         }
       ],
       "interactiveActivities": [
@@ -719,7 +622,7 @@ export const HumanResourceManagement501Module: LearningModule = {
           "id": "human-resource-management-501-l08-act1",
           "type": "debate_simulator",
           "title": "Expert Defense Panel",
-          "description": "Defend specialization recommendations under adversarial cross-examination."
+          "description": "Present and defend your capstone recommendation to a panel of experts in a simulated high-stakes review meeting."
         }
       ]
     }

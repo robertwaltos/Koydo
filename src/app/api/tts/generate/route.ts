@@ -2,7 +2,7 @@
  * POST /api/tts/generate
  *
  * Generates or retrieves cached TTS audio for the given text.
- * Falls back through provider chain: OpenAI → ElevenLabs.
+ * Falls back through provider chain: Gemini → OpenAI.
  * If all fail, returns { fallback: "browser" } so the client
  * uses the browser SpeechSynthesis API.
  *

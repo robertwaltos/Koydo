@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const MusicProduction301Module: LearningModule = {
+export const music_production_301_Module: LearningModule = {
   "id": "music-production-301",
   "title": "Music Production Systems and Analysis",
   "description": "Level 301 curriculum in Music Production, emphasizing DAW workflows, sound design, mix engineering, release quality, and real-world decision quality through structured practice and assessment.",
@@ -14,7 +14,7 @@ export const MusicProduction301Module: LearningModule = {
   ],
   "minAge": 15,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en"
@@ -37,45 +37,45 @@ export const MusicProduction301Module: LearningModule = {
         {
           "id": "music-production-301-l01-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use the structured prompt and write your reasoning before finalizing answers."
+          "title": "Causal Chain Diagram",
+          "content": "A visual diagram showing how an initial action in music production (e.g., poor gain staging) leads to a series of effects, culminating in a final outcome (e.g., digital clipping in the mix)."
         }
       ],
       "chunks": [
         {
           "id": "music-production-301-l01-c1",
           "kind": "concept",
-          "title": "Operating Vocabulary and Scope",
-          "content": "In Music Production 301, using clear and precise language is crucial for our success. We will learn how to define the boundaries of our projects, which helps us understand what is included and what is not. Additionally, we will identify the specific units we will analyze, such as different elements of music or production techniques. By ensuring that everyone uses the same terminology, we create a common understanding that allows us to communicate effectively. This consistency is important because it enables us to make informed decisions and compare our work across different teams, leading to better collaboration and improved outcomes."
+          "title": "Building a Common Language",
+          "content": "In professional music production, clear and precise language is essential. We'll start by defining the scope of our projects—what's included and what's not. We will also identify our 'unit of analysis,' which could be a single snare track, a vocal bus, or an entire mix. Using consistent terms ensures everyone on a team understands each other, which is critical for making smart decisions and collaborating effectively."
         },
         {
           "id": "music-production-301-l01-c2",
           "kind": "concept",
           "title": "Causal Thinking and Constraints",
-          "content": "To truly excel in Music Production, it's important to look beyond just the results we observe; we need to understand the reasons behind those results. In this lesson, we will explore how to identify our assumptions—what we believe to be true—and recognize dependencies, which are the relationships between different elements in music production. Additionally, we will discuss constraints, or the limitations we face in our creative process. By gaining this understanding, we can better focus on addressing the root causes of any challenges we encounter, rather than just treating the symptoms. This approach will empower us to create more effective solutions and improve our overall music production skills."
+          "content": "To solve problems effectively, we must understand their root causes. This lesson explores how to identify our assumptions, recognize dependencies between production steps, and map our constraints, such as a tight deadline or limited computing power. For example, understanding that improper gain staging (the cause) leads to digital clipping (the effect) allows us to fix the source of the problem. This approach empowers us to create better, more reliable solutions."
         },
         {
           "id": "music-production-301-l01-c3",
           "kind": "recap",
           "title": "Evidence and Accountability",
-          "content": "In this section, we will introduce important practices that ensure our work is reliable and effective. We will discuss the importance of maintaining high standards for evidence, keeping accurate logs of our activities, and establishing clear accountability. These practices are essential for achieving consistent results in our music production efforts.\nContext recap: In this section, we will introduce important practices that ensure our work is reliable and effective. We will discuss the importance of maintaining high standards for evidence, keeping accurate logs of our activities, and establishing clear accountability. These practices are essential for achieving consistent results in our music production efforts."
+          "content": "This section introduces practices that ensure our work is reliable and effective. We will cover the importance of using high-quality evidence (like reference tracks), keeping accurate logs of our production decisions, and establishing clear accountability for project outcomes. These habits are the foundation for achieving consistent, professional results in music production."
         }
       ],
       "flashcards": [
         {
           "id": "music-production-301-l01-f1",
-          "front": "Unit of analysis",
-          "back": "The specific entity or process you evaluate to make defensible decisions."
+          "front": "Unit of Analysis",
+          "back": "The specific element or process you are evaluating to make a decision, such as a single audio track or a mastering chain."
         },
         {
           "id": "music-production-301-l01-f2",
-          "front": "Constraint mapping",
-          "back": "A method for identifying boundaries that shape feasible options."
+          "front": "Constraint Mapping",
+          "back": "A method for identifying the limitations (e.g., time, budget, technology) that define your available options."
         },
         {
           "id": "music-production-301-l01-f3",
-          "front": "Evidence standard",
-          "back": "The minimum quality threshold data must meet before action is taken."
+          "front": "Evidence Standard",
+          "back": "The quality threshold that information must meet before you use it to make a decision, like using a calibrated meter instead of just your ears."
         }
       ]
     },
@@ -87,9 +87,9 @@ export const MusicProduction301Module: LearningModule = {
       "learningAids": [
         {
           "id": "music-production-301-l02-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use the structured prompt and write your reasoning before finalizing answers."
+          "type": "image",
+          "title": "DAW Workflow Flowchart",
+          "content": "A flowchart illustrating a complete production workflow, from initial inputs (raw audio files) through process checkpoints (gain staging, editing) to final outputs (mixed stereo file)."
         }
       ],
       "chunks": [
@@ -97,37 +97,37 @@ export const MusicProduction301Module: LearningModule = {
           "id": "music-production-301-l02-c1",
           "kind": "practice",
           "title": "Workflow Construction",
-          "content": "In this interactive lab, you will have the opportunity to create a complete workflow for using Digital Audio Workstations (DAWs) and sound design. This includes identifying the inputs you will need, setting up checkpoints to monitor progress, determining the outputs you expect, and establishing rollback triggers to revert changes if necessary. This hands-on experience will help you understand the entire process of music production.\nContext recap: In this interactive lab, you will have the opportunity to create a complete workflow for using Digital Audio Workstations (DAWs) and sound design. This includes identifying the inputs you will need, setting up checkpoints to monitor progress, determining the outputs you expect, and establishing rollback triggers to revert changes if necessary. This hands-on experience will help you understand the entire process of music production."
+          "content": "In this interactive lab, you will design a complete workflow for a music production task. This involves defining your inputs (e.g., raw vocal tracks, MIDI files), setting up quality checkpoints (e.g., checking for phase alignment), specifying your desired outputs (e.g., a print of the final vocal bus), and establishing rollback triggers to undo changes if a problem occurs. This hands-on exercise will solidify your understanding of structured production processes."
         },
         {
           "id": "music-production-301-l02-c2",
           "kind": "recap",
           "title": "Decision Logging",
-          "content": "In this recap, we will emphasize the importance of logging every decision you make during the music production process. Each decision should be accompanied by a clear rationale, an explanation of the expected effects, and a point for verification. This practice will enable you to analyze your work after completion and learn from your experiences.\nContext recap: In this recap, we will emphasize the importance of logging every decision you make during the music production process. Each decision should be accompanied by a clear rationale, an explanation of the expected effects, and a point for verification. This practice will enable you to analyze your work after completion and learn from your experiences."
+          "content": "We'll recap the importance of logging every key decision. A good log entry includes the decision, the rationale, the expected effect, and how you'll verify the result. For example: 'Decision: Applied a high-pass filter at 100Hz to the acoustic guitar. Rationale: To remove low-end rumble and create space for the bass. Verification: A/B test with and without the filter.' This practice is crucial for analyzing and learning from your work."
         }
       ],
       "interactiveActivities": [
         {
           "id": "music-production-301-l02-act1",
           "type": "matching_pairs",
-          "title": "Workflow Match",
-          "description": "Match each workflow component to its strongest governance function.",
+          "title": "Workflow Component Match",
+          "description": "Match each workflow component to its primary purpose.",
           "pairs": [
             {
-              "left": "Input audit",
-              "right": "Prevents low-quality data from entering the system"
+              "left": "Input Audit",
+              "right": "Prevents low-quality audio from entering the mix stage"
             },
             {
-              "left": "Checkpoint gate",
-              "right": "Stops propagation of known defects"
+              "left": "Checkpoint Gate",
+              "right": "Stops the propagation of known issues, like clipping"
             },
             {
-              "left": "Outcome metric",
-              "right": "Measures whether the objective was met"
+              "left": "Outcome Metric",
+              "right": "Measures whether the objective (e.g., target loudness) was met"
             },
             {
-              "left": "Retrospective log",
-              "right": "Captures lessons for next iteration"
+              "left": "Retrospective Log",
+              "right": "Captures lessons to improve the next project"
             }
           ]
         },
@@ -135,7 +135,7 @@ export const MusicProduction301Module: LearningModule = {
           "id": "music-production-301-l02-act2",
           "type": "sorting_buckets",
           "title": "Risk Classification",
-          "description": "Sort items into strategic, operational, and quality-risk groups.",
+          "description": "Sort each production risk into the correct category.",
           "buckets": [
             "Strategic",
             "Operational",
@@ -143,19 +143,19 @@ export const MusicProduction301Module: LearningModule = {
           ],
           "items": [
             {
-              "text": "Misaligned goals",
+              "text": "The artist's vision is misaligned with the genre",
               "bucket": "Strategic"
             },
             {
-              "text": "Unclear handoff timing",
+              "text": "File handoff between editing and mixing is unclear",
               "bucket": "Operational"
             },
             {
-              "text": "Inconsistent acceptance criteria",
+              "text": "Inconsistent criteria for an 'acceptable' vocal take",
               "bucket": "Quality"
             },
             {
-              "text": "No benchmark baseline",
+              "text": "No reference track for loudness and tone",
               "bucket": "Quality"
             }
           ]
@@ -178,12 +178,12 @@ export const MusicProduction301Module: LearningModule = {
       "questions": [
         {
           "id": "music-production-301-l03-q1",
-          "text": "Which action best improves decisions in DAW workflows work?",
-          "skillId": "music-production-301-skill-core",
+          "text": "Which action best improves decision-making in a DAW workflow?",
+          "skillId": "music-production-301-skill-decision-making",
           "options": [
             {
               "id": "a",
-              "text": "Rely on one unverified example"
+              "text": "Rely on one unverified example from a forum"
             },
             {
               "id": "b",
@@ -191,104 +191,104 @@ export const MusicProduction301Module: LearningModule = {
             },
             {
               "id": "c",
-              "text": "Skip metrics and move directly to execution"
+              "text": "Skip using meters and move directly to printing the mix"
             },
             {
               "id": "d",
-              "text": "Avoid documenting rationale"
+              "text": "Avoid documenting your settings and rationale"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Explicit criteria and testable assumptions improve reliability and transferability."
+          "explanation": "Explicit criteria and testable assumptions improve the reliability and transferability of your production skills."
         },
         {
           "id": "music-production-301-l03-q2",
-          "text": "In sound design, what is the strongest indicator of process quality?",
-          "skillId": "music-production-301-skill-process",
+          "text": "In sound design, what is the strongest indicator of a high-quality process?",
+          "skillId": "music-production-301-skill-process-quality",
           "options": [
             {
               "id": "a",
-              "text": "Output speed only"
+              "text": "How fast you can create a sound"
             },
             {
               "id": "b",
-              "text": "Traceable steps, checkpoints, and measurable outcomes"
+              "text": "Traceable steps, quality checkpoints, and measurable outcomes"
             },
             {
               "id": "c",
-              "text": "Unstructured iteration without logs"
+              "text": "Unstructured experimentation without saving presets or logs"
             },
             {
               "id": "d",
-              "text": "One-time performance anecdotes"
+              "text": "Anecdotes about a time it worked well once"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Quality processes are observable, repeatable, and measurable."
+          "explanation": "High-quality processes are observable, repeatable, and measurable, leading to consistent results."
         },
         {
           "id": "music-production-301-l03-q3",
-          "text": "When evaluating mix engineering, which practice supports trustworthy conclusions?",
-          "skillId": "music-production-301-skill-eval",
+          "text": "When evaluating a mix, which practice supports a trustworthy conclusion?",
+          "skillId": "music-production-301-skill-evaluation",
           "options": [
             {
               "id": "a",
-              "text": "Ignore edge cases"
+              "text": "Only listening on high-end studio monitors"
             },
             {
               "id": "b",
-              "text": "Use baseline comparisons and failure analysis"
+              "text": "Using baseline comparisons (A/B testing) and failure analysis"
             },
             {
               "id": "c",
-              "text": "Change targets after results are known"
+              "text": "Changing your reference track after your mix is done"
             },
             {
               "id": "d",
-              "text": "Remove context from findings"
+              "text": "Removing all context from your listening notes"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Baselines and failure analysis prevent overclaiming and improve design quality."
+          "explanation": "Baselines and failure analysis prevent biased conclusions and improve the quality of your mix decisions."
         },
         {
           "id": "music-production-301-l03-q4",
-          "text": "A mature release quality strategy should prioritize:",
+          "text": "A mature strategy for achieving release-quality audio should prioritize:",
           "skillId": "music-production-301-skill-strategy",
           "options": [
             {
               "id": "a",
-              "text": "Single-metric optimization at any cost"
+              "text": "Maximizing loudness at any cost"
             },
             {
               "id": "b",
-              "text": "Balanced outcomes across quality, risk, and sustainability"
+              "text": "Balancing loudness, dynamic range, and translation across systems"
             },
             {
               "id": "c",
-              "text": "Decisions based only on intuition"
+              "text": "Decisions based only on intuition without using meters"
             },
             {
               "id": "d",
-              "text": "No post-implementation review"
+              "text": "No review of the master on different playback systems"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Balanced scorecards align long-term performance with accountability."
+          "explanation": "A balanced approach ensures the final product sounds good everywhere, aligning long-term performance with professional accountability."
         }
       ]
     },
     {
       "id": "music-production-301-l04",
-      "title": "Methods, Metrics, and Failure Modes in Music Production",
+      "title": "Methods, Metrics, and Failure Modes",
       "type": "video",
       "duration": 14,
       "learningAids": [
         {
           "id": "music-production-301-l04-a1",
-          "type": "mnemonic",
-          "title": "Guided Practice",
-          "content": "Use the structured prompt and write your reasoning before finalizing answers."
+          "type": "image",
+          "title": "Metrics Dashboard",
+          "content": "A mock-up of a music production dashboard showing leading indicators (e.g., short-term LUFS), lagging outcomes (e.g., final integrated LUFS), and diagnostic tools (e.g., a spectrum analyzer)."
         }
       ],
       "chunks": [
@@ -296,50 +296,50 @@ export const MusicProduction301Module: LearningModule = {
           "id": "music-production-301-l04-c1",
           "kind": "concept",
           "title": "Method Selection",
-          "content": "When choosing methods for music production, there are several important factors to think about. First, you need to consider any constraints you might face, such as time limits or available resources. Next, think about the quality of the information you have; is it reliable and accurate? Finally, consider the potential cost of making mistakes—what could go wrong if you choose the wrong method? In this lesson, you will practice comparing different options and explaining why you think a particular method is the best fit for specific music production situations. This exercise will help you develop your critical thinking and decision-making skills, which are essential for success in music production."
+          "content": "When choosing a production technique, you must weigh several factors. Consider your constraints (e.g., CPU power), the quality of your source audio, and the 'cost of error'—what happens if you make the wrong choice? For example, choosing between subtractive EQ and dynamic EQ to fix a harsh cymbal involves a trade-off between precision and CPU usage. We'll practice comparing options and justifying our choices for specific scenarios."
         },
         {
           "id": "music-production-301-l04-c2",
           "kind": "example",
-          "title": "Metric Architecture",
-          "content": "In this example, we will delve into the concept of metric architecture, which serves as a vital framework in music production. This architecture connects three important components: leading indicators, which are proactive measures that help predict future performance; lagging outcomes, which reflect the results of past actions; and diagnostic measures, which provide insights into the effectiveness of the processes used. By understanding how these elements interact, teams can identify any deviations from their intended goals early on. This early detection allows for thoughtful and deliberate responses, ensuring that the music production process remains on track and meets its objectives. Grasping this architecture is essential for anyone involved in music production, as it helps maintain control and fosters a successful creative environment."
+          "title": "Understanding Metrics",
+          "content": "Effective metrics help us stay on track. We'll connect leading indicators (which predict future outcomes, like a high short-term LUFS reading) with lagging outcomes (the final result, like the integrated LUFS of the master). We also use diagnostic measures (like a spectrum analyzer) to understand why something is happening. This framework allows teams to spot problems early and respond deliberately, rather than reacting after it's too late."
         },
         {
           "id": "music-production-301-l04-c3",
           "kind": "recap",
-          "title": "Failure Taxonomy",
-          "content": "In this recap, we will categorize different types of failures that can occur in music production. These failures can be grouped by data issues, process problems, execution errors, and governance challenges. By understanding these categories, we can create specific plans to mitigate each type of failure, making our approach more effective.\nContext recap: In this recap, we will categorize different types of failures that can occur in music production. These failures can be grouped by data issues, process problems, execution errors, and governance challenges. By understanding these categories, we can create specific plans to mitigate each type of failure, making our approach more effective."
+          "title": "Common Failure Types",
+          "content": "We will categorize common failures in music production. These include data issues (a corrupted audio file), process problems (forgetting to check phase alignment), execution errors (applying the wrong compressor setting), and communication breakdowns (the artist and engineer have different goals). By classifying failures, we can design specific, targeted plans to prevent them in the future."
         }
       ],
       "flashcards": [
         {
           "id": "music-production-301-l04-f1",
-          "front": "Leading indicator",
-          "back": "A metric that signals probable future outcomes before final results appear."
+          "front": "Leading Indicator",
+          "back": "A metric that signals a probable future outcome. Example: A channel meter flashing red indicates likely clipping in the final bounce."
         },
         {
           "id": "music-production-301-l04-f2",
-          "front": "Failure taxonomy",
-          "back": "A structured classification of failure types used to design targeted fixes."
+          "front": "Failure Taxonomy",
+          "back": "A structured classification of failure types (e.g., process, execution) used to design targeted solutions."
         },
         {
           "id": "music-production-301-l04-f3",
-          "front": "Cost of error",
-          "back": "The operational, financial, or social impact caused by an incorrect decision."
+          "front": "Cost of Error",
+          "back": "The negative impact of a wrong decision, such as the time lost from having to re-record a part or recall a mix."
         }
       ]
     },
     {
       "id": "music-production-301-l05",
-      "title": "Case Studio: Improve a Music Production System",
+      "title": "Case Studio: Improving a Production System",
       "type": "interactive",
       "duration": 16,
       "learningAids": [
         {
           "id": "music-production-301-l05-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use the structured prompt and write your reasoning before finalizing answers."
+          "type": "image",
+          "title": "Decision Tree",
+          "content": "A visual decision tree for a mix scenario. It starts with a problem ('muddy mix') and branches into different intervention options, each showing potential trade-offs and outcomes."
         }
       ],
       "chunks": [
@@ -347,13 +347,13 @@ export const MusicProduction301Module: LearningModule = {
           "id": "music-production-301-l05-c1",
           "kind": "practice",
           "title": "Case Decomposition",
-          "content": "In this interactive case study, you will break down a realistic music production scenario into its key components. This includes identifying the objectives, understanding the context, recognizing constraints, and exploring various intervention options. You will also note the trade-offs involved in each option, which will help you make informed decisions.\nContext recap: In this interactive case study, you will break down a realistic music production scenario into its key components. This includes identifying the objectives, understanding the context, recognizing constraints, and exploring various intervention options. You will also note the trade-offs involved in each option, which will help you make informed decisions."
+          "content": "In this interactive case study, you'll analyze a realistic production scenario. Imagine a client has rejected a mix for being 'muddy.' Your task is to break down the problem by identifying the objectives (a clear, powerful mix), context (a dense arrangement), constraints (a 24-hour deadline), and potential interventions (e.g., strategic EQ, arrangement changes). You will document the trade-offs for each option to inform your final decision."
         },
         {
           "id": "music-production-301-l05-c2",
           "kind": "recap",
-          "title": "Improvement Proposal",
-          "content": "In this recap, you will present a structured improvement proposal based on the case study. Your proposal should include clear success criteria, identify who will be responsible for each part of the plan, and outline a timeline for follow-up actions. This exercise will help you practice how to communicate your ideas effectively and ensure accountability.\nContext recap: In this recap, you will present a structured improvement proposal based on the case study. Your proposal should include clear success criteria, identify who will be responsible for each part of the plan, and outline a timeline for follow-up actions. This exercise will help you practice how to communicate your ideas effectively and ensure accountability."
+          "title": "The Improvement Proposal",
+          "content": "Based on your case analysis, you will draft a structured improvement proposal. This includes clear success criteria (e.g., client approval, passing an A/B test against a reference), assigning responsibility for each action, and setting a timeline for follow-up. This exercise simulates how professionals diagnose problems and implement reliable solutions."
         }
       ],
       "interactiveActivities": [
@@ -372,23 +372,23 @@ export const MusicProduction301Module: LearningModule = {
           "id": "music-production-301-l05-act2",
           "type": "matching_pairs",
           "title": "Intervention to Outcome Mapping",
-          "description": "Connect interventions with the most likely system-level effects.",
+          "description": "Connect each intervention with its most likely system-level effect.",
           "pairs": [
             {
-              "left": "Tighter intake criteria",
-              "right": "Higher signal quality and lower downstream rework"
+              "left": "Stricter criteria for 'comping' vocals",
+              "right": "Higher quality source tracks and less downstream editing"
             },
             {
-              "left": "Checkpoint automation",
-              "right": "Faster detection of preventable defects"
+              "left": "Automated alerts for channel clipping",
+              "right": "Faster detection of gain staging errors"
             },
             {
-              "left": "Post-run retrospective",
-              "right": "Improved adaptation in later cycles"
+              "left": "Post-project retrospective meeting",
+              "right": "Improved teamwork and process in future projects"
             },
             {
-              "left": "Cross-team briefing",
-              "right": "Reduced ambiguity at handoff boundaries"
+              "left": "Standardized track naming and color coding",
+              "right": "Reduced ambiguity and faster navigation in large sessions"
             }
           ]
         }
@@ -410,103 +410,103 @@ export const MusicProduction301Module: LearningModule = {
       "questions": [
         {
           "id": "music-production-301-l06-q1",
-          "text": "Which action best improves decisions in DAW workflows work?",
-          "skillId": "music-production-301-skill-core",
+          "text": "A vocal track is very dynamic, but your computer's CPU is low. Which method is the most resource-efficient choice for controlling its level?",
+          "skillId": "music-production-301-skill-method-selection",
           "options": [
             {
               "id": "a",
-              "text": "Rely on one unverified example"
+              "text": "A complex multi-band compressor with a linear phase filter"
             },
             {
               "id": "b",
-              "text": "Define criteria, compare alternatives, and test assumptions"
+              "text": "Manually editing the clip gain of the audio file"
             },
             {
               "id": "c",
-              "text": "Skip metrics and move directly to execution"
+              "text": "Using four different compressors in series"
             },
             {
               "id": "d",
-              "text": "Avoid documenting rationale"
+              "text": "Applying pitch correction to the entire track"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Explicit criteria and testable assumptions improve reliability and transferability."
+          "explanation": "Manual clip gain adjustment is a highly effective way to control dynamics that consumes almost no CPU, making it the best choice under a tight constraint."
         },
         {
           "id": "music-production-301-l06-q2",
-          "text": "In sound design, what is the strongest indicator of process quality?",
-          "skillId": "music-production-301-skill-process",
+          "text": "In the context of preventing a 'muddy' mix, what is the best example of a 'leading indicator'?",
+          "skillId": "music-production-301-skill-metrics",
           "options": [
             {
               "id": "a",
-              "text": "Output speed only"
+              "text": "The final integrated LUFS of the mastered song"
             },
             {
               "id": "b",
-              "text": "Traceable steps, checkpoints, and measurable outcomes"
+              "text": "The client's feedback after hearing the final mix"
             },
             {
               "id": "c",
-              "text": "Unstructured iteration without logs"
+              "text": "A spectrum analyzer showing frequency buildup in the low-mids during mixing"
             },
             {
               "id": "d",
-              "text": "One-time performance anecdotes"
+              "text": "The total number of tracks in the project"
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "Quality processes are observable, repeatable, and measurable."
+          "correctOptionId": "c",
+          "explanation": "A spectrum analyzer provides real-time data that predicts a future outcome (muddiness), allowing you to fix it before it becomes a problem. The other options are lagging indicators."
         },
         {
           "id": "music-production-301-l06-q3",
-          "text": "When evaluating mix engineering, which practice supports trustworthy conclusions?",
-          "skillId": "music-production-301-skill-eval",
+          "text": "A final master sounds distorted on streaming services, but the WAV file sounds clean. This is most likely what type of failure?",
+          "skillId": "music-production-301-skill-failure-analysis",
           "options": [
             {
               "id": "a",
-              "text": "Ignore edge cases"
+              "text": "An execution error, where the mix engineer applied too much saturation"
             },
             {
               "id": "b",
-              "text": "Use baseline comparisons and failure analysis"
+              "text": "A data error, where the original recordings were corrupted"
             },
             {
               "id": "c",
-              "text": "Change targets after results are known"
+              "text": "A process failure, where inter-sample peaks were not controlled for"
             },
             {
               "id": "d",
-              "text": "Remove context from findings"
+              "text": "A strategic failure, where the wrong genre was chosen"
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "Baselines and failure analysis prevent overclaiming and improve design quality."
+          "correctOptionId": "c",
+          "explanation": "Loud masters can have inter-sample peaks that cause distortion after data compression (e.g., for streaming). Failing to check for this with a True Peak meter is a process failure."
         },
         {
           "id": "music-production-301-l06-q4",
-          "text": "A mature release quality strategy should prioritize:",
-          "skillId": "music-production-301-skill-strategy",
+          "text": "You've identified that inconsistent track labeling slowed down your last project. What is the most effective system-level improvement?",
+          "skillId": "music-production-301-skill-system-improvement",
           "options": [
             {
               "id": "a",
-              "text": "Single-metric optimization at any cost"
+              "text": "Ask everyone to try harder next time"
             },
             {
               "id": "b",
-              "text": "Balanced outcomes across quality, risk, and sustainability"
+              "text": "Create a mandatory track template with pre-named and colored tracks"
             },
             {
               "id": "c",
-              "text": "Decisions based only on intuition"
+              "text": "Buy a faster computer to open projects more quickly"
             },
             {
               "id": "d",
-              "text": "No post-implementation review"
+              "text": "Blame the tracking engineer for the poor labeling"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Balanced scorecards align long-term performance with accountability."
+          "explanation": "A template is a system-level fix that makes the correct process the easiest one to follow, preventing the problem from recurring without relying on memory or effort."
         }
       ]
     }

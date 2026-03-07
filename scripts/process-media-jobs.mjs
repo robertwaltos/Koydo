@@ -170,6 +170,9 @@ const WAN_I2V_WORKFLOW_TEMPLATE = {
 
 const GROK_API_BASE = "https://api.x.ai/v1";
 const OPENAI_API_BASE = "https://api.openai.com/v1";
+const GOOGLE_GEMINI_BASE = "https://generativelanguage.googleapis.com/v1beta";
+const GOOGLE_IMAGEN_MODEL_DEFAULT = "imagen-4.0-generate-001";
+const GOOGLE_VEO_MODEL_DEFAULT = "veo-3.1-fast-generate-preview";
 
 /**
  * Extract a human-readable topic label from the raw job prompt.
@@ -485,6 +488,138 @@ function saveAuroraImage(imageBuffer, job, config) {
   };
 }
 
+function saveGeneratedMediaFile(buffer, job, mediaType) {
+  const ts = Date.now();
+  const safeLessonId = (job.lesson_id ?? job.module_id ?? "ef")
+    .replace(/[^a-zA-Z0-9_-]/g, "_")
+    .slice(0, 40);
+
+  if (mediaType === "video") {
+    const filename = `${safeLessonId}_${ts}.mp4`;
+    const outputDir = path.resolve("public/generated-videos");
+    ensureDir(outputDir);
+    fs.writeFileSync(path.join(outputDir, filename), buffer);
+    return {
+      publicUrl: `/generated-videos/${filename}`,
+      filename,
+    };
+  }
+
+  const filename = `${safeLessonId}_${ts}.png`;
+  const outputDir = path.resolve("public/generated-images");
+  ensureDir(outputDir);
+  fs.writeFileSync(path.join(outputDir, filename), buffer);
+  return {
+    publicUrl: `/generated-images/${filename}`,
+    filename,
+  };
+}
+
+async function callGoogleModel(modelPath, apiKey, body) {
+  const url = `${GOOGLE_GEMINI_BASE}${modelPath}${modelPath.includes("?") ? "&" : "?"}key=${apiKey}`;
+  const res = await fetch(url, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(body),
+  });
+
+  if (!res.ok) {
+    const text = await res.text().catch(() => "");
+    throw new Error(`Google API ${res.status}: ${text.slice(0, 600)}`);
+  }
+
+  return res.json();
+}
+
+async function generateWithGoogleImagen(visualPrompt, config) {
+  if (!config.googleApiKey) throw new Error("Missing GOOGLE_API_KEY");
+
+  const model = config.googleImagenModel || GOOGLE_IMAGEN_MODEL_DEFAULT;
+  const data = await callGoogleModel(`/models/${model}:predict`, config.googleApiKey, {
+    instances: [{ prompt: visualPrompt }],
+    parameters: {
+      sampleCount: 1,
+      aspectRatio: "4:3",
+      personGeneration: "allow_all",
+      outputOptions: { mimeType: "image/png" },
+    },
+  });
+
+  const b64 = data?.predictions?.[0]?.bytesBase64Encoded;
+  if (!b64) throw new Error("Google Imagen returned no image bytes");
+  return Buffer.from(b64, "base64");
+}
+
+async function startGoogleVeoGeneration(visualPrompt, config) {
+  if (!config.googleApiKey) throw new Error("Missing GOOGLE_API_KEY");
+
+  const model = config.googleVeoModel || GOOGLE_VEO_MODEL_DEFAULT;
+  const durationSeconds = [4, 6, 8].includes(config.googleVeoDurationSeconds)
+    ? config.googleVeoDurationSeconds
+    : 6;
+
+  const data = await callGoogleModel(`/models/${model}:predictLongRunning`, config.googleApiKey, {
+    instances: [{ prompt: visualPrompt }],
+    parameters: {
+      aspectRatio: "16:9",
+      personGeneration: "allow_all",
+      durationSeconds,
+      sampleCount: 1,
+    },
+  });
+
+  if (!data?.name) throw new Error("Google Veo did not return an operation name");
+  return String(data.name);
+}
+
+async function pollGoogleVeoOperation(operationName, config) {
+  if (!config.googleApiKey) throw new Error("Missing GOOGLE_API_KEY");
+  const timeoutMs = 10 * 60 * 1000;
+  const pollEveryMs = 12_000;
+  const started = Date.now();
+
+  while (Date.now() - started < timeoutMs) {
+    const url = `${GOOGLE_GEMINI_BASE}/${operationName}?key=${config.googleApiKey}`;
+    const res = await fetch(url);
+    if (!res.ok) {
+      const text = await res.text().catch(() => "");
+      throw new Error(`Google Veo poll ${res.status}: ${text.slice(0, 600)}`);
+    }
+
+    const data = await res.json();
+    if (data?.done) {
+      const sampleVideo = data?.response?.generateVideoResponse?.generatedSamples?.[0]?.video;
+      const b64 = sampleVideo?.bytesBase64Encoded;
+      if (b64) {
+        return Buffer.from(b64, "base64");
+      }
+
+      const videoUri = sampleVideo?.uri;
+      if (videoUri) {
+        let mediaRes = await fetch(videoUri);
+        if (!mediaRes.ok && config.googleApiKey && !videoUri.includes("key=")) {
+          const separator = videoUri.includes("?") ? "&" : "?";
+          mediaRes = await fetch(`${videoUri}${separator}key=${config.googleApiKey}`);
+        }
+
+        if (!mediaRes.ok) {
+          const text = await mediaRes.text().catch(() => "");
+          throw new Error(`Google Veo download ${mediaRes.status}: ${text.slice(0, 600)}`);
+        }
+
+        const arrayBuffer = await mediaRes.arrayBuffer();
+        return Buffer.from(arrayBuffer);
+      }
+
+      throw new Error("Google Veo operation completed without downloadable video output");
+    }
+
+    await new Promise((resolve) => setTimeout(resolve, pollEveryMs));
+  }
+
+  throw new Error(`Google Veo operation timed out after ${timeoutMs}ms`);
+}
+
 // ---------------------------------------------------------------------------
 
 function parseArgs(argv) {
@@ -726,7 +861,57 @@ async function processBaseImageStage(supabase, job, config, isVideoJob) {
     : await buildVisualPromptWithGrok(job, config.grokApiKey, config.grokModel);
   const metadata = getJobMetadata(job);
 
-  // Step 2: try Grok Aurora image generation (Super Grok / xAI API)
+  // Step 2: Google Imagen / Veo path (preferred when GOOGLE_API_KEY is configured)
+  if (config.googleApiKey) {
+    try {
+      if (isVideoJob) {
+        console.log(`[job ${job.id}] generating video with Google Veo (${config.googleVeoModel || GOOGLE_VEO_MODEL_DEFAULT})...`);
+        const operationName = await startGoogleVeoGeneration(visualPrompt, config);
+        console.log(`[job ${job.id}] Google Veo operation ${operationName}`);
+        const videoBuffer = await pollGoogleVeoOperation(operationName, config);
+        const { publicUrl } = saveGeneratedMediaFile(videoBuffer, job, "video");
+
+        await updateJob(supabase, job.id, {
+          status: "completed",
+          output_url: publicUrl,
+          completed_at: new Date().toISOString(),
+          metadata: {
+            ...metadata,
+            stage: "complete",
+            visual_prompt: visualPrompt,
+            video_provider: "google_veo",
+            video_model: config.googleVeoModel || GOOGLE_VEO_MODEL_DEFAULT,
+            video_operation_name: operationName,
+          },
+        });
+        console.log(`[job ${job.id}] video complete (Google Veo)`);
+        return;
+      }
+
+      console.log(`[job ${job.id}] generating image with Google Imagen (${config.googleImagenModel || GOOGLE_IMAGEN_MODEL_DEFAULT})...`);
+      const imageBuffer = await generateWithGoogleImagen(visualPrompt, config);
+      const { publicUrl } = saveGeneratedMediaFile(imageBuffer, job, "image");
+
+      await updateJob(supabase, job.id, {
+        status: "completed",
+        output_url: publicUrl,
+        completed_at: new Date().toISOString(),
+        metadata: {
+          ...metadata,
+          visual_prompt: visualPrompt,
+          image_provider: "google_imagen",
+          image_model: config.googleImagenModel || GOOGLE_IMAGEN_MODEL_DEFAULT,
+        },
+      });
+      console.log(`[job ${job.id}] image complete (Google Imagen)`);
+      return;
+    } catch (googleErr) {
+      const reason = getErrorMessage(googleErr);
+      console.warn(`[job ${job.id}] Google generation failed (${reason}), falling back to Grok/ComfyUI`);
+    }
+  }
+
+  // Step 3: try Grok Aurora image generation (Super Grok / xAI API)
   if (config.grokApiKey) {
     try {
       console.log(`[job ${job.id}] generating image with Grok Aurora (${config.grokImageModel || GROK_IMAGE_MODEL_DEFAULT})...`);
@@ -768,7 +953,7 @@ async function processBaseImageStage(supabase, job, config, isVideoJob) {
     }
   }
 
-  // Step 3 (fallback): ComfyUI Flux
+  // Step 4 (fallback): ComfyUI Flux
   const workflow = cloneWorkflow(FLUX_WORKFLOW_TEMPLATE);
   workflow["6"].inputs.text = visualPrompt;
   workflow["3"].inputs.seed = Math.floor(Math.random() * 1_000_000_000);
@@ -822,6 +1007,12 @@ async function processBaseImageStage(supabase, job, config, isVideoJob) {
 }
 
 async function processVideoMotionStage(supabase, job, config) {
+  if (config.googleApiKey) {
+    console.log(`[job ${job.id}] Google provider active; using Veo path for motion stage`);
+    await processBaseImageStage(supabase, job, config, true);
+    return;
+  }
+
   const metadata = getJobMetadata(job);
   const baseFilename = metadata.base_image_filename;
   const baseImageRef =
@@ -930,6 +1121,23 @@ async function main() {
   const grokApiKey = envValues.GROK_API_KEY || process.env.GROK_API_KEY || "";
   const grokModel = envValues.GROK_MODEL || process.env.GROK_MODEL || "grok-3-fast";
   const grokImageModel = envValues.GROK_IMAGE_MODEL || process.env.GROK_IMAGE_MODEL || GROK_IMAGE_MODEL_DEFAULT;
+  const googleApiKey = envValues.GOOGLE_API_KEY || process.env.GOOGLE_API_KEY || "";
+  const googleImagenModel =
+    envValues.GOOGLE_IMAGEN_MODEL ||
+    process.env.GOOGLE_IMAGEN_MODEL ||
+    GOOGLE_IMAGEN_MODEL_DEFAULT;
+  const googleVeoModel =
+    envValues.GOOGLE_VEO_MODEL ||
+    process.env.GOOGLE_VEO_MODEL ||
+    GOOGLE_VEO_MODEL_DEFAULT;
+  const googleVeoDurationCandidate = Number(
+    envValues.GOOGLE_VEO_DURATION_SECONDS ||
+    process.env.GOOGLE_VEO_DURATION_SECONDS ||
+    "6",
+  );
+  const googleVeoDurationSeconds = [4, 6, 8].includes(googleVeoDurationCandidate)
+    ? googleVeoDurationCandidate
+    : 6;
   const openaiApiKey = envValues.OPENAI_API_KEY || process.env.OPENAI_API_KEY || "";
   const openaiModel = envValues.OPENAI_MODEL || process.env.OPENAI_MODEL || "gpt-4o-mini";
   // ComfyUI output dir — needed so Aurora images can be placed where LoadImage (Wan I2V) finds them
@@ -988,7 +1196,11 @@ async function main() {
   } else {
     console.log(`  Prompt engine: rule-based fallback (set OPENAI_API_KEY in .env for AI prompts)`);
   }
-  if (grokApiKey) {
+  if (googleApiKey) {
+    console.log(
+      `  Media provider: Google Imagen (${googleImagenModel}) + Google Veo (${googleVeoModel}, ${googleVeoDurationSeconds}s)`,
+    );
+  } else if (grokApiKey) {
     console.log(`  Image provider: Grok Aurora (${grokImageModel}) → ComfyUI Flux fallback`);
   } else {
     console.log(`  Image provider: ComfyUI Flux`);
@@ -1016,7 +1228,19 @@ async function main() {
     }
 
     claimedCount += 1;
-    await processJob(supabase, job, { comfyUiBaseUrl, grokApiKey, grokModel, grokImageModel, openaiApiKey, openaiModel, comfyUiOutputDir });
+    await processJob(supabase, job, {
+      comfyUiBaseUrl,
+      grokApiKey,
+      grokModel,
+      grokImageModel,
+      googleApiKey,
+      googleImagenModel,
+      googleVeoModel,
+      googleVeoDurationSeconds,
+      openaiApiKey,
+      openaiModel,
+      comfyUiOutputDir,
+    });
   }
 
   console.log(`Batch complete. Claimed: ${claimedCount}. Skipped claim: ${skippedClaimCount}.`);

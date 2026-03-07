@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const AccountingFinance601Module: LearningModule = {
+export const accounting_finance_601_Module: LearningModule = {
   "id": "accounting-finance-601",
   "title": "Accounting Finance Research and Leadership",
   "description": "Post-401 specialization in Accounting Finance, focused on accounting and finance systems diagnostics, accounting and finance operations and execution design, accounting and finance impact and tradeoff analysis, and accounting and finance governance and leadership through advanced casework, simulation, and defense-based checkpoints.",
@@ -14,7 +14,7 @@ export const AccountingFinance601Module: LearningModule = {
   ],
   "minAge": 17,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en",
@@ -34,12 +34,14 @@ export const AccountingFinance601Module: LearningModule = {
       "title": "Accounting Finance Advanced Foundations",
       "type": "video",
       "duration": 14,
+      "lessonImagePrompt": "Imagen 4 prompt: A sleek, modern financial command center with glowing holographic data visualizations and complex causal maps floating above a glass table, cinematic lighting, photorealistic, 8k resolution, highly detailed.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: Smooth tracking shot of a financial architect analyzing a complex digital network of financial nodes on a large interactive display. The nodes pulse with data, illustrating causal pathways and uncertainty models. Cinematic lighting, highly detailed, 4k, photorealistic.",
       "learningAids": [
         {
           "id": "accounting-finance-601-l01-a1",
-          "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "concept",
+          "title": "System Diagnostics Framework",
+          "content": "Map causal pathways and define strict operational boundaries before diagnosing financial anomalies to ensure accurate isolation of systemic risks."
         }
       ],
       "chunks": [
@@ -47,36 +49,36 @@ export const AccountingFinance601Module: LearningModule = {
           "id": "accounting-finance-601-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "In this lesson, we will dive into the important concept of advanced scope boundaries within the realm of Accounting and Finance. We will learn how to effectively diagnose accounting and finance systems, which is crucial for identifying any issues that may arise. Furthermore, we will discuss the design of operations and execution processes in accounting and finance. By understanding these boundaries, we can develop better systems that are capable of adapting to various challenges, ultimately leading to improved efficiency and effectiveness in our financial practices. This knowledge is essential for anyone looking to excel in the field of accounting and finance."
+          "content": "Advanced scope boundaries in Accounting and Finance define the operational limits of system diagnostics. By establishing precise parameters, financial architects can isolate anomalies, stress-test execution processes, and design highly adaptive financial systems capable of withstanding volatile market constraints. Mastery of these boundaries is essential for executing high-level financial operations."
         },
         {
           "id": "accounting-finance-601-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different events or actions. They will also identify ranges of uncertainty and understand how various systems depend on each other. This foundational knowledge is crucial before planning any interventions, as it allows learners to anticipate potential outcomes and make informed decisions.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different events or actions. They will also identify ranges of uncertainty and understand how various systems depend on each other. This foundational knowledge is crucial before planning any interventions, as it allows learners to anticipate potential outcomes and make informed decisions."
+          "content": "Effective financial leadership requires mapping complex causal pathways—the intricate connections between disparate financial events and operational actions. By identifying ranges of uncertainty and mapping system interdependencies, leaders can anticipate cascading effects, mitigate risks, and make highly informed decisions before deploying capital or structural interventions."
         },
         {
           "id": "accounting-finance-601-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "In our recap, we emphasize that all claims made in our analyses should be linked to measurable indicators. This means we need to establish confidence bounds, which help us understand the reliability of our data. Additionally, we will set up review checkpoints to ensure that our findings are accurate and can be verified. This structured approach is essential for maintaining integrity in our work.\nContext recap: In our recap, we emphasize that all claims made in our analyses should be linked to measurable indicators. This means we need to establish confidence bounds, which help us understand the reliability of our data. Additionally, we will set up review checkpoints to ensure that our findings are accurate and can be verified. This structured approach is essential for maintaining integrity in our work."
+          "content": "All analytical claims must be anchored to measurable indicators. Establishing strict confidence bounds ensures data reliability and operational integrity. By integrating rigorous review checkpoints into the financial architecture, organizations can verify findings, maintain compliance, and ensure that strategic decisions are backed by empirical evidence."
         }
       ],
       "flashcards": [
         {
           "id": "accounting-finance-601-l01-f1",
-          "front": "accounting and finance systems diagnostics",
-          "back": "A specialization axis requiring explicit assumptions and measurable constraints."
+          "front": "Accounting and Finance Systems Diagnostics",
+          "back": "A specialization axis requiring explicit assumptions and measurable constraints to isolate system anomalies."
         },
         {
           "id": "accounting-finance-601-l01-f2",
-          "front": "accounting and finance operations and execution design",
-          "back": "Execution architecture that determines reliability under stress."
+          "front": "Operations and Execution Design",
+          "back": "The execution architecture that determines a financial system's reliability and adaptability under stress."
         },
         {
           "id": "accounting-finance-601-l01-f3",
-          "front": "accounting and finance impact and tradeoff analysis",
-          "back": "Evaluation discipline for identifying true gains and hidden costs."
+          "front": "Impact and Tradeoff Analysis",
+          "back": "An evaluation discipline used for identifying true operational gains and exposing hidden systemic costs."
         }
       ]
     },
@@ -85,12 +87,14 @@ export const AccountingFinance601Module: LearningModule = {
       "title": "Accounting Finance Specialist Methods Lab",
       "type": "interactive",
       "duration": 17,
+      "lessonImagePrompt": "Imagen 4 prompt: A high-tech laboratory setting where financial analysts are interacting with a glowing digital dashboard showing stress-test simulations, deep blue and amber lighting, photorealistic, 8k.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: Time-lapse of a team of financial specialists collaborating around a digital smartboard, mapping out control gates and rollback triggers. The camera slowly pans around the table, capturing the dynamic environment. 4k, cinematic, professional.",
       "learningAids": [
         {
           "id": "accounting-finance-601-l02-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Control Gate Matrix",
+          "content": "Implement pre-commit gates, rollback triggers, and baseline dashboards to ensure system reliability under extreme financial stress."
         }
       ],
       "chunks": [
@@ -98,13 +102,13 @@ export const AccountingFinance601Module: LearningModule = {
           "id": "accounting-finance-601-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "In this interactive practice, learners will have the opportunity to design specialized workflows tailored to specific tasks within accounting and finance. They will also conduct stress tests on these workflows by simulating adverse scenarios. This hands-on experience is vital for understanding how to prepare for unexpected challenges and ensuring that systems can withstand pressure.\nContext recap: In this interactive practice, learners will have the opportunity to design specialized workflows tailored to specific tasks within accounting and finance. They will also conduct stress tests on these workflows by simulating adverse scenarios. This hands-on experience is vital for understanding how to prepare for unexpected challenges and ensuring that systems can withstand pressure."
+          "content": "In this interactive lab, you will design specialized workflows tailored to complex accounting and finance tasks. You will subject these workflows to rigorous stress tests by simulating adverse market scenarios and operational failures. This hands-on application is critical for understanding system vulnerabilities and engineering resilient financial architectures."
         },
         {
           "id": "accounting-finance-601-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "In our recap, we will discuss the importance of integrating control gate architecture into workflows. This includes establishing checkpoints that allow for monitoring progress, defining rollback criteria to revert to previous states if necessary, and implementing threshold-based escalation procedures. These elements work together to create a robust system that can adapt to changes while maintaining control.\nContext recap: In our recap, we will discuss the importance of integrating control gate architecture into workflows. This includes establishing checkpoints that allow for monitoring progress, defining rollback criteria to revert to previous states if necessary, and implementing threshold-based escalation procedures. These elements work together to create a robust system that can adapt to changes while maintaining control."
+          "content": "Integrating control gate architecture into financial workflows is non-negotiable for advanced operations. This involves establishing hard checkpoints for progress monitoring, defining strict rollback criteria to revert to stable states during failures, and implementing threshold-based escalation procedures to maintain governance under pressure."
         }
       ],
       "interactiveActivities": [
@@ -132,19 +136,22 @@ export const AccountingFinance601Module: LearningModule = {
             }
           ]
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/accounting-finance-601-l02.png"
     },
     {
       "id": "accounting-finance-601-l03",
       "title": "Checkpoint 1: Specialist Methods",
       "type": "quiz",
       "duration": 10,
+      "lessonImagePrompt": "Imagen 4 prompt: A minimalist, brightly lit modern testing center with a single glowing computer terminal displaying a complex financial quiz, shallow depth of field, photorealistic, 8k.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A slow push-in shot on a computer screen displaying a high-stakes financial assessment. The screen illuminates the dark room with a soft blue glow. Cinematic, 4k resolution, highly detailed.",
       "learningAids": [
         {
           "id": "accounting-finance-601-l03-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Checkpoint Strategy",
+          "content": "Review explicit assumptions, escalation thresholds, and uncertainty bounds before answering. Remember that defensible analysis requires comparative baselines."
         }
       ],
       "questions": [
@@ -348,19 +355,22 @@ export const AccountingFinance601Module: LearningModule = {
           "correctOptionId": "b",
           "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/accounting-finance-601-l03.png"
     },
     {
       "id": "accounting-finance-601-l04",
       "title": "Accounting Finance Advanced Case Analysis",
       "type": "video",
       "duration": 14,
+      "lessonImagePrompt": "Imagen 4 prompt: A sophisticated corporate boardroom with a large screen displaying a complex financial case study, documents scattered on a polished mahogany table, dramatic lighting, photorealistic, 8k.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A dynamic montage of a financial executive reviewing case files, cross-referencing data on a tablet, and presenting findings to a board. Fast-paced editing, cinematic lighting, 4k resolution.",
       "learningAids": [
         {
           "id": "accounting-finance-601-l04-a1",
-          "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "concept",
+          "title": "Decision Memo Blueprint",
+          "content": "Structure your memos with clear assumptions, empirical evidence, risk controls, and actionable fallback plans to ensure executive accountability."
         }
       ],
       "chunks": [
@@ -368,19 +378,19 @@ export const AccountingFinance601Module: LearningModule = {
           "id": "accounting-finance-601-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "In this lesson, we will frame a case that highlights the competing constraints faced in accounting and finance systems. We will analyze how diagnostics are conducted and explore the impacts and trade-offs involved in decision-making. By understanding these dynamics, learners will be better equipped to navigate complex situations in the field.\nContext recap: In this lesson, we will frame a case that highlights the competing constraints faced in accounting and finance systems. We will analyze how diagnostics are conducted and explore the impacts and trade-offs involved in decision-making. By understanding these dynamics, learners will be better equipped to navigate complex situations in the field."
+          "content": "Advanced case analysis requires framing scenarios that highlight competing constraints within financial systems. By dissecting how diagnostics are conducted under pressure, you will explore the cascading impacts and necessary trade-offs involved in executive decision-making. This architectural view equips leaders to navigate multifaceted financial crises."
         },
         {
           "id": "accounting-finance-601-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "In this practice session, learners will compare various options available to them across several important dimensions. These include safety, reliability, cost, equity, and governance. By evaluating these factors, learners will gain insights into how to make balanced and informed decisions that consider multiple perspectives.\nContext recap: In this practice session, learners will compare various options available to them across several important dimensions. These include safety, reliability, cost, equity, and governance. By evaluating these factors, learners will gain insights into how to make balanced and informed decisions that consider multiple perspectives."
+          "content": "In this module, you will systematically compare strategic options across critical dimensions: safety, reliability, cost, equity, and governance. Evaluating these competing factors allows financial leaders to construct balanced, defensible strategies that account for diverse stakeholder perspectives and systemic risks."
         },
         {
           "id": "accounting-finance-601-l04-c3",
           "kind": "recap",
           "title": "Decision Memo Pattern",
-          "content": "In our recap, we will outline the essential components of a decision memo. Each recommendation made should include clear assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that decision-making is transparent and that all potential risks are accounted for, fostering a culture of accountability.\nContext recap: In our recap, we will outline the essential components of a decision memo. Each recommendation made should include clear assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that decision-making is transparent and that all potential risks are accounted for, fostering a culture of accountability."
+          "content": "The decision memo is the ultimate artifact of financial leadership. Every recommendation must articulate clear assumptions, cite empirical evidence, define risk controls, and establish actionable fallback plans. This structured documentation ensures transparency, enforces accountability, and provides a clear audit trail for high-stakes decisions."
         }
       ]
     },
@@ -389,12 +399,14 @@ export const AccountingFinance601Module: LearningModule = {
       "title": "Accounting Finance Simulation Clinic",
       "type": "interactive",
       "duration": 18,
+      "lessonImagePrompt": "Imagen 4 prompt: A virtual reality simulation room where a user is interacting with floating financial data streams, futuristic interface, neon blue and green accents, highly detailed, photorealistic, 8k.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: First-person perspective of navigating a complex digital financial dashboard during a simulated market crash. Red warning lights flash as the user rapidly adjusts control gates and stabilizes the system. High tension, cinematic, 4k.",
       "learningAids": [
         {
           "id": "accounting-finance-601-l05-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Adaptive Response Protocol",
+          "content": "Dynamically adjust control gates during volatile events while maintaining an immutable audit trail for post-crisis review."
         }
       ],
       "chunks": [
@@ -402,13 +414,13 @@ export const AccountingFinance601Module: LearningModule = {
           "id": "accounting-finance-601-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "In this interactive practice, learners will operate scenario controls, which are tools that help manage different situations in real-time. They will learn how to balance performance with governance constraints, ensuring that their actions align with ethical standards and organizational policies. This experience is crucial for developing responsible decision-making skills.\nContext recap: In this interactive practice, learners will operate scenario controls, which are tools that help manage different situations in real-time. They will learn how to balance performance with governance constraints, ensuring that their actions align with ethical standards and organizational policies. This experience is crucial for developing responsible decision-making skills."
+          "content": "During this simulation, you will operate live scenario controls to manage volatile financial events in real-time. The objective is to balance aggressive performance targets with strict governance constraints. Mastering this balance ensures that rapid interventions remain aligned with ethical standards and overarching organizational risk policies."
         },
         {
           "id": "accounting-finance-601-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "In our recap, we will discuss the importance of designing effective responses that can adapt to changing circumstances. These responses should update control gates without losing traceability or accountability. This means that even as situations evolve, it is essential to maintain a clear record of decisions and actions taken.\nContext recap: In our recap, we will discuss the importance of designing effective responses that can adapt to changing circumstances. These responses should update control gates without losing traceability or accountability. This means that even as situations evolve, it is essential to maintain a clear record of decisions and actions taken."
+          "content": "Effective crisis management relies on adaptive response design. As market conditions shift, financial leaders must dynamically update control gates without sacrificing traceability or accountability. Maintaining an immutable record of real-time decisions ensures that post-crisis audits can accurately reconstruct the rationale behind emergency interventions."
         }
       ],
       "interactiveActivities": [
@@ -425,12 +437,14 @@ export const AccountingFinance601Module: LearningModule = {
       "title": "Checkpoint 2: Case and Simulation Mastery",
       "type": "quiz",
       "duration": 11,
+      "lessonImagePrompt": "Imagen 4 prompt: A close-up of a sleek digital tablet displaying a complex financial quiz, resting on a dark marble desk next to a cup of black coffee, photorealistic, dramatic lighting, 8k.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A slow pan across a modern office desk. A digital tablet displays a financial simulation summary, highlighting key performance metrics and governance scores. Soft natural light filtering through a window. 4k resolution.",
       "learningAids": [
         {
           "id": "accounting-finance-601-l06-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Mastery Review",
+          "content": "Focus on the balance between aggressive performance targets and strict governance constraints when evaluating case scenarios."
         }
       ],
       "questions": [
@@ -536,103 +550,103 @@ export const AccountingFinance601Module: LearningModule = {
         },
         {
           "id": "accounting-finance-601-l06-q5",
-          "text": "What is the best way to compare competing interventions in advanced Accounting and Finance?",
-          "skillId": "accounting-finance-601-skill-advanced-5",
+          "text": "When framing tradeoffs in a high-stakes financial scenario, how should a leader balance safety and cost?",
+          "skillId": "accounting-finance-601-skill-tradeoff",
           "options": [
             {
               "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
+              "text": "Always minimize cost regardless of the impact on system safety"
             },
             {
               "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
+              "text": "Establish a non-negotiable safety baseline, then optimize cost within those bounds"
             },
             {
               "id": "c",
-              "text": "Switch metrics after results arrive"
+              "text": "Ignore cost entirely to ensure absolute safety"
             },
             {
               "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
+              "text": "Rely on intuition to balance the two during execution"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
+          "explanation": "Defensible tradeoff framing requires establishing hard safety baselines before optimizing for cost or performance."
         },
         {
           "id": "accounting-finance-601-l06-q6",
-          "text": "In high-stakes Accounting Finance Research and Leadership execution, which communication protocol is strongest?",
-          "skillId": "accounting-finance-601-skill-advanced-6",
+          "text": "What is the primary function of the Decision Memo Pattern in advanced financial leadership?",
+          "skillId": "accounting-finance-601-skill-memo",
           "options": [
             {
               "id": "a",
-              "text": "Broadcast conclusions without assumptions"
+              "text": "To provide a legally binding contract for external vendors"
             },
             {
               "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
+              "text": "To document assumptions, evidence, risk controls, and fallbacks for accountability"
             },
             {
               "id": "c",
-              "text": "Share only final outcomes after completion"
+              "text": "To summarize financial data without offering a specific recommendation"
             },
             {
               "id": "d",
-              "text": "Limit updates to a single informal channel"
+              "text": "To obscure the risks involved in a strategic decision"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
+          "explanation": "The decision memo ensures transparency and accountability by explicitly documenting assumptions, evidence, and risk controls."
         },
         {
           "id": "accounting-finance-601-l06-q7",
-          "text": "A mature remediation loop in advanced Accounting and Finance should prioritize:",
-          "skillId": "accounting-finance-601-skill-advanced-7",
+          "text": "During a live financial simulation, what is the purpose of operating scenario controls?",
+          "skillId": "accounting-finance-601-skill-sim",
           "options": [
             {
               "id": "a",
-              "text": "Blame assignment without system updates"
+              "text": "To bypass governance constraints to achieve maximum performance"
             },
             {
               "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
+              "text": "To balance real-time performance targets with strict risk and governance policies"
             },
             {
               "id": "c",
-              "text": "One-time fixes without retesting"
+              "text": "To automate all decision-making without human oversight"
             },
             {
               "id": "d",
-              "text": "Issue closure based on elapsed time"
+              "text": "To permanently alter the core financial architecture"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
+          "explanation": "Scenario controls allow leaders to dynamically balance aggressive performance goals with necessary governance and risk constraints."
         },
         {
           "id": "accounting-finance-601-l06-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Accounting Finance Research and Leadership?",
-          "skillId": "accounting-finance-601-skill-advanced-8",
+          "text": "Why is adaptive response design critical during a financial crisis?",
+          "skillId": "accounting-finance-601-skill-adaptive",
           "options": [
             {
               "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
+              "text": "It allows leaders to dynamically update control gates while maintaining traceability"
             },
             {
               "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
+              "text": "It permits the deletion of audit logs to protect the organization from liability"
             },
             {
               "id": "c",
-              "text": "Ignore correlated failure modes"
+              "text": "It freezes all financial operations until the crisis resolves naturally"
             },
             {
               "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
+              "text": "It shifts accountability from the leadership team to automated systems"
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "correctOptionId": "a",
+          "explanation": "Adaptive response design ensures that systems can evolve during a crisis without losing the auditability and traceability of decisions."
         }
       ]
     },
@@ -641,12 +655,14 @@ export const AccountingFinance601Module: LearningModule = {
       "title": "Accounting Finance Governance and Public Impact",
       "type": "video",
       "duration": 13,
+      "lessonImagePrompt": "Imagen 4 prompt: A diverse group of executives sitting around a circular table in a modern, glass-walled office overlooking a city skyline, engaged in a serious discussion, photorealistic, cinematic lighting, 8k.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A time-lapse of a city skyline transitioning from day to night, overlaid with glowing data nodes representing public impact and stakeholder distribution. The nodes connect and pulse, illustrating the far-reaching effects of financial governance. 4k, cinematic.",
       "learningAids": [
         {
           "id": "accounting-finance-601-l07-a1",
-          "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "concept",
+          "title": "Accountability Architecture",
+          "content": "Trace every executive decision to its stakeholder impact, ensuring equitable distribution of benefits and burdens across all affected populations."
         }
       ],
       "chunks": [
@@ -654,36 +670,36 @@ export const AccountingFinance601Module: LearningModule = {
           "id": "accounting-finance-601-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "In this lesson, learners will explore how to map the distribution of impacts among various stakeholders. This includes identifying the benefits, burdens, and any delayed effects that may arise from decisions made in accounting and finance. Understanding these dynamics is crucial for ensuring that all voices are considered in the decision-making process.\nContext recap: In this lesson, learners will explore how to map the distribution of impacts among various stakeholders. This includes identifying the benefits, burdens, and any delayed effects that may arise from decisions made in accounting and finance. Understanding these dynamics is crucial for ensuring that all voices are considered in the decision-making process."
+          "content": "Financial decisions rarely occur in a vacuum. This module explores how to map the distribution of impacts across diverse stakeholder groups. By identifying immediate benefits, systemic burdens, and delayed macroeconomic effects, leaders can ensure that financial strategies are equitable and that all critical voices are factored into the risk calculus."
         },
         {
           "id": "accounting-finance-601-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "In this section, we will focus on the architecture of accountability within decision-making processes. This includes ensuring that there is traceability for decisions made, rights for review, and obligations for remediation if issues arise. By integrating these elements, we can create a system that promotes transparency and responsibility.\nContext recap: In this section, we will focus on the architecture of accountability within decision-making processes. This includes ensuring that there is traceability for decisions made, rights for review, and obligations for remediation if issues arise. By integrating these elements, we can create a system that promotes transparency and responsibility."
+          "content": "Robust accountability architecture is the backbone of ethical financial governance. This framework guarantees traceability for all executive decisions, establishes formal rights for independent review, and mandates strict obligations for remediation when systems fail. Integrating these elements fosters a culture of radical transparency and institutional responsibility."
         },
         {
           "id": "accounting-finance-601-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "At the end of our lesson, we have a helpful checklist that connects important outcomes with ethical considerations, ensures that we are following policies correctly, and emphasizes the importance of resilience in leadership. This checklist serves as a guide to remind us of our responsibilities as leaders in the field of accounting and finance.\nContext recap: At the end of our lesson, we have a helpful checklist that connects important outcomes with ethical considerations, ensures that we are following policies correctly, and emphasizes the importance of resilience in leadership. This checklist serves as a guide to remind us of our responsibilities as leaders in the field of accounting and finance."
+          "content": "The Responsible Leadership Checklist serves as a final operational safeguard. It systematically connects strategic outcomes with ethical considerations, verifies strict adherence to regulatory policies, and reinforces systemic resilience. This tool ensures that financial leaders consistently balance aggressive growth with their fiduciary and ethical obligations."
         }
       ],
       "flashcards": [
         {
           "id": "accounting-finance-601-l07-f1",
           "front": "Impact distribution",
-          "back": "How outcomes are allocated across populations and timescales."
+          "back": "The analytical mapping of how financial outcomes, benefits, and burdens are allocated across populations and timescales."
         },
         {
           "id": "accounting-finance-601-l07-f2",
           "front": "Decision traceability",
-          "back": "An auditable record of evidence, ownership, and rationale."
+          "back": "An immutable, auditable record detailing the evidence, ownership, and rationale behind a financial decision."
         },
         {
           "id": "accounting-finance-601-l07-f3",
           "front": "Responsible leadership",
-          "back": "Decision behavior balancing performance, accountability, and ethics."
+          "back": "Executive behavior that rigorously balances financial performance, institutional accountability, and ethical governance."
         }
       ]
     },
@@ -692,12 +708,14 @@ export const AccountingFinance601Module: LearningModule = {
       "title": "Accounting Finance Capstone Defense Lab",
       "type": "interactive",
       "duration": 16,
+      "lessonImagePrompt": "Imagen 4 prompt: A tense, professional defense panel setting. A candidate stands before a large digital screen presenting financial data to a row of shadowed experts. High contrast, cinematic lighting, photorealistic, 8k.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: Over-the-shoulder shot of a candidate presenting a financial defense brief to a panel of experts. The camera slowly pushes in on the candidate as they confidently point to a complex data visualization on the screen. 4k, dramatic lighting.",
       "learningAids": [
         {
           "id": "accounting-finance-601-l08-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Defense Brief Checklist",
+          "content": "Synthesize empirical evidence, define uncertainty boundaries, and prepare robust counter-arguments for adversarial cross-examination."
         }
       ],
       "chunks": [
@@ -705,13 +723,13 @@ export const AccountingFinance601Module: LearningModule = {
           "id": "accounting-finance-601-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "In this interactive activity, learners will work together to create a comprehensive brief. This brief will include well-supported claims, solid evidence, clear boundaries of uncertainty, and proposed pathways for remediation. This exercise helps students practice critical thinking and effective communication skills, which are essential in the field of accounting and finance.\nContext recap: In this interactive activity, learners will work together to create a comprehensive brief. This brief will include well-supported claims, solid evidence, clear boundaries of uncertainty, and proposed pathways for remediation. This exercise helps students practice critical thinking and effective communication skills, which are essential in the field of accounting and finance."
+          "content": "In this capstone activity, you will synthesize your knowledge to construct a comprehensive defense brief. This document must feature well-supported analytical claims, irrefutable empirical evidence, explicitly defined boundaries of uncertainty, and robust pathways for remediation. This exercise hones the critical communication skills required at the highest levels of finance."
         },
         {
           "id": "accounting-finance-601-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "During this session, learners will practice their responses to various critiques that may come from experts in the field. This includes addressing technical questions, governance issues, and concerns from stakeholders. Rehearsing these responses helps build confidence and prepares students for real-world scenarios where they must defend their ideas and decisions.\nContext recap: During this session, learners will practice their responses to various critiques that may come from experts in the field. This includes addressing technical questions, governance issues, and concerns from stakeholders. Rehearsing these responses helps build confidence and prepares students for real-world scenarios where they must defend their ideas and decisions."
+          "content": "The final phase involves defending your brief against adversarial cross-examination. You will practice responding to rigorous critiques from industry experts, addressing deep technical flaws, governance vulnerabilities, and stakeholder concerns. This high-pressure rehearsal builds the executive presence necessary to defend complex financial strategies in the real world."
         }
       ],
       "interactiveActivities": [
@@ -721,7 +739,8 @@ export const AccountingFinance601Module: LearningModule = {
           "title": "Expert Defense Panel",
           "description": "Defend specialization recommendations under adversarial cross-examination."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/accounting-finance-601-l08.png"
     }
   ]
 };

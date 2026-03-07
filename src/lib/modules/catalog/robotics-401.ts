@@ -1,17 +1,19 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const Robotics401Module: LearningModule = {
+export const robotics_401_Module: LearningModule = {
   "id": "robotics-401",
   "title": "Robotics Systems Engineering",
-  "description": "Senior robotics systems engineering with platform architecture, reliability, and deployment governance.",
+  "description": "An advanced course on designing, verifying, and deploying robust robotic systems, covering system architecture, reliability engineering, and lifecycle governance.",
   "subject": "Robotics",
   "tags": [
-    "curriculum",
-    "interactive"
+    "systems engineering",
+    "robotics",
+    "advanced",
+    "curriculum"
   ],
   "minAge": 17,
   "maxAge": 99,
-  "version": "1.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en",
@@ -25,489 +27,203 @@ export const Robotics401Module: LearningModule = {
     "ko",
     "ru"
   ],
-  "thumbnail": "/placeholders/lesson-robot.svg",
+  "thumbnail": "/placeholders/lesson-robot-system-architecture.svg",
   "learningObjectives": [
-    "Understand core concepts in Robotics",
-    "Apply Robotics skills through guided practice",
-    "Demonstrate mastery through checkpoint quizzes"
+    "Design a complete system architecture for a complex robotic application.",
+    "Analyze system reliability and safety using standard engineering methods like FMEA and FTA.",
+    "Develop a governance and deployment strategy for robotic fleets."
   ],
   "lessons": [
     {
       "id": "robotics-401-l01",
-      "title": "Robotics Concepts 1",
+      "title": "Foundations of Robotic Systems",
       "type": "video",
-      "duration": 9,
+      "duration": 15,
+      "description": "Introduction to the V-model for development, requirements engineering, and defining system architecture for complex robotic platforms.",
       "learningAids": [
         {
           "id": "robotics-401-l01-a1",
           "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary for Robotics."
+          "title": "V-Model for Robotics Development",
+          "content": "A diagram illustrating the V-model, showing the decomposition and requirements flow on the left side and the integration and verification flow on the right."
         },
         {
           "id": "robotics-401-l01-a2",
           "type": "animation",
-          "title": "Animated Example",
-          "content": "Step-by-step walkthrough for Robotics."
+          "title": "System Architecture Decomposition",
+          "content": "An animated breakdown of a delivery drone's architecture into subsystems: perception, planning, control, and hardware."
         }
       ]
     },
     {
       "id": "robotics-401-l02",
-      "title": "Robotics Practice 2",
+      "title": "Lab: System Requirements Specification",
       "type": "interactive",
-      "duration": 12,
+      "duration": 20,
+      "description": "Practice defining and documenting system-level requirements for an autonomous warehouse robot.",
       "metadata": {
         "prompts": [
-          "State the key concept in one sentence.",
-          "Apply it to one example.",
-          "Explain your improvement step for next time."
+          "Define three functional requirements for the robot's navigation system.",
+          "Specify a key non-functional requirement related to operational uptime.",
+          "Explain how you would verify that the payload capacity requirement is met."
         ]
       },
       "learningAids": [
         {
           "id": "robotics-401-l02-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Follow the challenge flow and record your approach."
+          "title": "Guided Practice: Writing Requirements",
+          "content": "Use a provided template to write clear, testable, and unambiguous system requirements."
+        },
+        {
+          "id": "robotics-401-l02-a2",
+          "type": "visualPrompt",
+          "title": "Warehouse Environment",
+          "content": "An isometric view of a warehouse with aisles, shelves, and charging stations to contextualize the robot's operational domain."
         }
       ]
     },
     {
       "id": "robotics-401-l03",
-      "title": "Checkpoint 1: Robotics",
+      "title": "Checkpoint 1: System Design Principles",
       "type": "quiz",
       "duration": 10,
+      "description": "Assess understanding of system architecture, requirements engineering, and the V-model.",
       "questions": [
         {
           "id": "robotics-401-l03-q1",
-          "text": "Which choice best matches the main idea of Robotics?",
-          "skillId": "robotics-401-skill-core",
+          "text": "In the V-model for systems engineering, what does the right side of the 'V' primarily represent?",
+          "skillId": "robotics-401-skill-systems-model",
           "options": [
             {
               "id": "a",
-              "text": "A complete, evidence-based explanation"
+              "text": "System decomposition and requirements definition"
             },
             {
               "id": "b",
-              "text": "An unrelated claim"
+              "text": "Integration, verification, and validation"
             },
             {
               "id": "c",
-              "text": "A random guess"
+              "text": "Project management and cost analysis"
             },
             {
               "id": "d",
-              "text": "A conflicting idea"
+              "text": "Conceptual design and simulation"
             }
           ],
-          "correctOptionId": "a"
+          "correctOptionId": "b",
+          "explanation": "The right side of the V-model focuses on putting the components back together (integration) and testing them against the requirements defined on the left side (verification and validation)."
         },
         {
           "id": "robotics-401-l03-q2",
-          "text": "What should a learner do after getting an answer wrong?",
-          "skillId": "robotics-401-skill-review",
+          "text": "Which of the following is the best example of a verifiable, non-functional requirement for a robotic arm?",
+          "skillId": "robotics-401-skill-requirements",
           "options": [
             {
               "id": "a",
-              "text": "Review error cause and retry with strategy"
+              "text": "The robot should be easy to use."
             },
             {
               "id": "b",
-              "text": "Skip all corrections"
+              "text": "The robot must be safe."
             },
             {
               "id": "c",
-              "text": "Memorize only the answer letter"
+              "text": "The robot shall achieve a positioning repeatability of ±0.05mm."
             },
             {
               "id": "d",
-              "text": "Stop practicing"
+              "text": "The robot will pick up parts."
             }
           ],
-          "correctOptionId": "a"
-        },
-        {
-          "id": "robotics-401-l03-q3",
-          "text": "Which strategy most improves long-term retention for Robotics Systems Engineering?",
-          "skillId": "robotics-401-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "Use spaced retrieval and mixed practice over multiple sessions."
-            },
-            {
-              "id": "b",
-              "text": "Cram once and avoid later practice."
-            },
-            {
-              "id": "c",
-              "text": "Read notes passively without self-testing."
-            },
-            {
-              "id": "d",
-              "text": "Rely on confidence alone instead of evidence."
-            }
-          ],
-          "correctOptionId": "a",
-          "explanation": "Spaced retrieval with varied practice strengthens durable memory and flexible application."
-        }
-      ],
-      "learningAids": [
-        {
-          "id": "robotics-401-l03-a1",
-          "type": "mnemonic",
-          "title": "Memory Cue",
-          "content": "Use Plan, Solve, Explain to structure each response."
+          "correctOptionId": "c",
+          "explanation": "Repeatability is a specific, measurable, and verifiable performance characteristic, which is a hallmark of a well-written non-functional requirement. The other options are either ambiguous or functional."
         }
       ]
     },
     {
       "id": "robotics-401-l04",
-      "title": "Robotics Practice 4",
-      "type": "interactive",
-      "duration": 12,
-      "metadata": {
-        "prompts": [
-          "State the key concept in one sentence.",
-          "Apply it to one example.",
-          "Explain your improvement step for next time."
-        ]
-      },
+      "title": "System Reliability and Functional Safety",
+      "type": "video",
+      "duration": 18,
+      "description": "Analyzing system reliability using Failure Mode and Effects Analysis (FMEA) and Fault Tree Analysis (FTA). Introduction to functional safety standards like ISO 13482.",
       "learningAids": [
         {
           "id": "robotics-401-l04-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Follow the challenge flow and record your approach."
+          "type": "image",
+          "title": "FMEA Table Example",
+          "content": "A sample FMEA table for a robotic gripper, detailing potential failure modes, their effects, severity, and mitigation strategies."
+        },
+        {
+          "id": "robotics-401-l04-a2",
+          "type": "animation",
+          "title": "Building a Fault Tree",
+          "content": "An animation constructing a Fault Tree for a mobile robot's braking system failure, showing the relationship between basic events and the top-level failure."
         }
       ]
     },
     {
       "id": "robotics-401-l05",
-      "title": "Robotics Concepts 5",
-      "type": "video",
-      "duration": 9,
+      "title": "Lab: Failure Mode Analysis",
+      "type": "interactive",
+      "duration": 25,
+      "description": "Perform a simplified FMEA on a robot's perception subsystem, identifying potential failures and their impact.",
+      "metadata": {
+        "prompts": [
+          "Identify a potential failure mode for a LiDAR sensor.",
+          "Describe the potential effect of this failure on the overall robotic system.",
+          "Propose a detection method and a mitigation strategy for this failure."
+        ]
+      },
       "learningAids": [
         {
           "id": "robotics-401-l05-a1",
-          "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary for Robotics."
+          "type": "practice",
+          "title": "Guided FMEA Worksheet",
+          "content": "Fill out an interactive worksheet to analyze the failure modes of a perception system comprising a camera, LiDAR, and IMU."
         },
         {
           "id": "robotics-401-l05-a2",
-          "type": "animation",
-          "title": "Animated Example",
-          "content": "Step-by-step walkthrough for Robotics."
+          "type": "visualPrompt",
+          "title": "Perception Subsystem Diagram",
+          "content": "A block diagram showing the data flow from sensors (Camera, LiDAR, IMU) through a sensor fusion module to the planning system."
         }
       ]
     },
     {
       "id": "robotics-401-l06",
-      "title": "Checkpoint 2: Robotics",
-      "type": "quiz",
-      "duration": 10,
-      "questions": [
-        {
-          "id": "robotics-401-l06-q1",
-          "text": "Which choice best matches the main idea of Robotics?",
-          "skillId": "robotics-401-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "A complete, evidence-based explanation"
-            },
-            {
-              "id": "b",
-              "text": "An unrelated claim"
-            },
-            {
-              "id": "c",
-              "text": "A random guess"
-            },
-            {
-              "id": "d",
-              "text": "A conflicting idea"
-            }
-          ],
-          "correctOptionId": "a"
-        },
-        {
-          "id": "robotics-401-l06-q2",
-          "text": "What should a learner do after getting an answer wrong?",
-          "skillId": "robotics-401-skill-review",
-          "options": [
-            {
-              "id": "a",
-              "text": "Review error cause and retry with strategy"
-            },
-            {
-              "id": "b",
-              "text": "Skip all corrections"
-            },
-            {
-              "id": "c",
-              "text": "Memorize only the answer letter"
-            },
-            {
-              "id": "d",
-              "text": "Stop practicing"
-            }
-          ],
-          "correctOptionId": "a"
-        },
-        {
-          "id": "robotics-401-l06-q3",
-          "text": "Which strategy most improves long-term retention for Robotics Systems Engineering?",
-          "skillId": "robotics-401-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "Use spaced retrieval and mixed practice over multiple sessions."
-            },
-            {
-              "id": "b",
-              "text": "Cram once and avoid later practice."
-            },
-            {
-              "id": "c",
-              "text": "Read notes passively without self-testing."
-            },
-            {
-              "id": "d",
-              "text": "Rely on confidence alone instead of evidence."
-            }
-          ],
-          "correctOptionId": "a",
-          "explanation": "Spaced retrieval with varied practice strengthens durable memory and flexible application."
-        }
-      ],
+      "title": "Deployment and Lifecycle Governance",
+      "type": "video",
+      "duration": 15,
+      "description": "Explore strategies for deploying robotic fleets, including remote monitoring, over-the-air (OTA) updates, and end-of-life (EOL) management.",
       "learningAids": [
         {
           "id": "robotics-401-l06-a1",
-          "type": "mnemonic",
-          "title": "Memory Cue",
-          "content": "Use Plan, Solve, Explain to structure each response."
+          "type": "image",
+          "title": "Fleet Management Dashboard",
+          "content": "A mockup of a dashboard for monitoring a fleet of robots, showing status, battery levels, error logs, and geographic locations."
         }
       ]
     },
     {
       "id": "robotics-401-l07",
-      "title": "Robotics Concepts 7",
-      "type": "video",
-      "duration": 9,
+      "title": "Final Project: System Design Brief",
+      "type": "project",
+      "duration": 120,
+      "description": "Design a complete system architecture for an autonomous UV-C disinfection robot for hospitals. The submission must include a requirements document, a component block diagram, an FMEA, and a deployment plan.",
       "learningAids": [
         {
           "id": "robotics-401-l07-a1",
-          "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary for Robotics."
+          "type": "template",
+          "title": "System Design Document Template",
+          "content": "A pre-formatted document to guide the creation of the final project submission."
         },
         {
           "id": "robotics-401-l07-a2",
-          "type": "animation",
-          "title": "Animated Example",
-          "content": "Step-by-step walkthrough for Robotics."
-        }
-      ]
-    },
-    {
-      "id": "robotics-401-l08",
-      "title": "Robotics Practice 8",
-      "type": "interactive",
-      "duration": 12,
-      "metadata": {
-        "prompts": [
-          "State the key concept in one sentence.",
-          "Apply it to one example.",
-          "Explain your improvement step for next time."
-        ]
-      },
-      "learningAids": [
-        {
-          "id": "robotics-401-l08-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Follow the challenge flow and record your approach."
-        }
-      ]
-    },
-    {
-      "id": "robotics-401-l09",
-      "title": "Checkpoint 3: Robotics",
-      "type": "quiz",
-      "duration": 10,
-      "questions": [
-        {
-          "id": "robotics-401-l09-q1",
-          "text": "Which choice best matches the main idea of Robotics?",
-          "skillId": "robotics-401-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "A complete, evidence-based explanation"
-            },
-            {
-              "id": "b",
-              "text": "An unrelated claim"
-            },
-            {
-              "id": "c",
-              "text": "A random guess"
-            },
-            {
-              "id": "d",
-              "text": "A conflicting idea"
-            }
-          ],
-          "correctOptionId": "a"
-        },
-        {
-          "id": "robotics-401-l09-q2",
-          "text": "What should a learner do after getting an answer wrong?",
-          "skillId": "robotics-401-skill-review",
-          "options": [
-            {
-              "id": "a",
-              "text": "Review error cause and retry with strategy"
-            },
-            {
-              "id": "b",
-              "text": "Skip all corrections"
-            },
-            {
-              "id": "c",
-              "text": "Memorize only the answer letter"
-            },
-            {
-              "id": "d",
-              "text": "Stop practicing"
-            }
-          ],
-          "correctOptionId": "a"
-        },
-        {
-          "id": "robotics-401-l09-q3",
-          "text": "Which strategy most improves long-term retention for Robotics Systems Engineering?",
-          "skillId": "robotics-401-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "Use spaced retrieval and mixed practice over multiple sessions."
-            },
-            {
-              "id": "b",
-              "text": "Cram once and avoid later practice."
-            },
-            {
-              "id": "c",
-              "text": "Read notes passively without self-testing."
-            },
-            {
-              "id": "d",
-              "text": "Rely on confidence alone instead of evidence."
-            }
-          ],
-          "correctOptionId": "a",
-          "explanation": "Spaced retrieval with varied practice strengthens durable memory and flexible application."
-        }
-      ],
-      "learningAids": [
-        {
-          "id": "robotics-401-l09-a1",
-          "type": "mnemonic",
-          "title": "Memory Cue",
-          "content": "Use Plan, Solve, Explain to structure each response."
-        }
-      ]
-    },
-    {
-      "id": "robotics-401-l10",
-      "title": "Checkpoint 4: Robotics",
-      "type": "quiz",
-      "duration": 10,
-      "questions": [
-        {
-          "id": "robotics-401-l10-q1",
-          "text": "Which choice best matches the main idea of Robotics?",
-          "skillId": "robotics-401-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "A complete, evidence-based explanation"
-            },
-            {
-              "id": "b",
-              "text": "An unrelated claim"
-            },
-            {
-              "id": "c",
-              "text": "A random guess"
-            },
-            {
-              "id": "d",
-              "text": "A conflicting idea"
-            }
-          ],
-          "correctOptionId": "a"
-        },
-        {
-          "id": "robotics-401-l10-q2",
-          "text": "What should a learner do after getting an answer wrong?",
-          "skillId": "robotics-401-skill-review",
-          "options": [
-            {
-              "id": "a",
-              "text": "Review error cause and retry with strategy"
-            },
-            {
-              "id": "b",
-              "text": "Skip all corrections"
-            },
-            {
-              "id": "c",
-              "text": "Memorize only the answer letter"
-            },
-            {
-              "id": "d",
-              "text": "Stop practicing"
-            }
-          ],
-          "correctOptionId": "a"
-        },
-        {
-          "id": "robotics-401-l10-q3",
-          "text": "Which strategy most improves long-term retention for Robotics Systems Engineering?",
-          "skillId": "robotics-401-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "Use spaced retrieval and mixed practice over multiple sessions."
-            },
-            {
-              "id": "b",
-              "text": "Cram once and avoid later practice."
-            },
-            {
-              "id": "c",
-              "text": "Read notes passively without self-testing."
-            },
-            {
-              "id": "d",
-              "text": "Rely on confidence alone instead of evidence."
-            }
-          ],
-          "correctOptionId": "a",
-          "explanation": "Spaced retrieval with varied practice strengthens durable memory and flexible application."
-        }
-      ],
-      "learningAids": [
-        {
-          "id": "robotics-401-l10-a1",
-          "type": "mnemonic",
-          "title": "Memory Cue",
-          "content": "Use Plan, Solve, Explain to structure each response."
+          "type": "datasheet",
+          "title": "Sample Component Datasheets",
+          "content": "A collection of datasheets for common components like LiDAR sensors, motors, and single-board computers to inform design choices."
         }
       ]
     }

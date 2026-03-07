@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const PreKAstronomy101Module: LearningModule = {
+export const pre_k_astronomy_101_Module: LearningModule = {
   "id": "pre-k-astronomy-101",
   "title": "Pre-K Sky & Space Explorers",
   "description": "Blast off on a space adventure for ages 3-5! Discover why the Sun lights up our day, why the Moon changes shape, what makes stars twinkle, and which planets are our neighbors — all through stories, songs, and hands-on play.",
@@ -8,94 +8,138 @@ export const PreKAstronomy101Module: LearningModule = {
   "tags": [
     "pre-k",
     "curriculum",
-    "interactive"
+    "interactive",
+    "space"
   ],
   "minAge": 3,
   "maxAge": 5,
-  "version": "4.0.0",
+  "version": "1.1.0",
   "difficultyBand": "beginner",
   "localeSupport": [
     "en",
     "es"
   ],
-  "thumbnail": "/placeholders/lesson-robot.svg",
+  "thumbnail": "/placeholders/lesson-rocket.svg",
   "learningObjectives": [
-    "Describe the Sun as a star that gives us light and warmth",
-    "Explain why we have daytime and nighttime",
-    "Name the phases of the Moon: new, crescent, half, full",
-    "Identify stars as faraway suns that twinkle in the night sky",
-    "Name the eight planets in our solar system in order",
-    "Describe one fun fact about Earth, Mars, Jupiter, and Saturn"
+    "Describe the Sun as a star that gives us light and warmth.",
+    "Explain that Earth's spinning causes daytime and nighttime.",
+    "Name the four main phases of the Moon: new, crescent, half, and full.",
+    "Identify stars as faraway suns that twinkle in the night sky.",
+    "Name the eight planets in our solar system.",
+    "Describe one fun fact about Earth, Mars, Jupiter, and Saturn.",
+    "Describe what an astronaut does and why they float in space."
   ],
   "lessons": [
     {
+      "id": "prek-astro-l00",
+      "title": "Welcome, Space Explorers!",
+      "type": "video",
+      "duration": 5,
+      "objectives": [
+        "Get excited about learning about the sky and space.",
+        "Identify the Sun, Moon, and stars as things we see in the sky."
+      ],
+      "chunks": [
+        {
+          "id": "prek-astro-l00-c1",
+          "title": "Let's Look Up!",
+          "content": "Hello, space explorers! Are you ready for an adventure? Our adventure is all about looking up! What do you see when you look up at the sky during the day? That's right, the big, bright Sun! ☀️ And what about at night? You might see the beautiful Moon and lots of sparkly stars! In our adventure, we're going to learn all about these amazing things. We'll learn about our planet Earth, meet its neighbors, and even see what it's like to be an astronaut! Let's get ready to blast off! 3... 2... 1... Liftoff! 🚀",
+          "visualPrompts": [
+            "A friendly animated host (e.g., a robot or an animal in a spacesuit) waves hello.",
+            "Animation of a child looking up at a bright, sunny sky.",
+            "The sky transitions to night, showing a friendly Moon and twinkling stars.",
+            "A fun, animated rocket ship blasts off into space."
+          ]
+        }
+      ],
+      "learningAids": [
+        {
+          "id": "prek-astro-l00-a1",
+          "type": "activity",
+          "title": "Sky Drawing",
+          "content": "Ask your little explorer to draw a picture of the daytime sky and the nighttime sky."
+        }
+      ]
+    },
+    {
       "id": "prek-astro-l01",
-      "title": "The Sun: Our Very Own Star!",
+      "title": "The Sun: Our Daytime Star!",
       "type": "video",
       "duration": 8,
       "objectives": [
-        "Explain that the Sun is a giant ball of hot, glowing gas",
-        "Describe two things the Sun gives us: light and warmth",
-        "State that we should never look directly at the Sun"
+        "Explain that the Sun is a star.",
+        "Describe two things the Sun gives us: light and warmth.",
+        "State that we should never look directly at the Sun."
       ],
       "chunks": [
         {
           "id": "prek-astro-l01-c1",
           "title": "Meet the Sun",
-          "content": "Let's talk about the Sun, our very own star! The Sun is a gigantic ball of super-hot glowing gas, and it's so big that you could fit a million Earths inside it! ☀️ It sits right in the center of our solar system, and everything else, like planets, moons, and comets, spins around it, just like dancers twirling around a campfire. The Sun is special because it gives us light and helps everything grow, like plants and flowers. Without the Sun, our world would be dark and cold. Isn't that amazing? The Sun also keeps us warm and brightens our days. So, next time you see the Sun shining in the sky, remember how important it is for all of us! Let's give a big cheer for our wonderful Sun! Yay! 🌞\nContext recap: Let's talk about the Sun, our very own star! The Sun is a gigantic ball of super-hot glowing gas, and it's so big that you could fit a million Earths inside it! ☀️ It sits right in the center of our solar system, and everything else, like planets, moons, and comets, spins around it, just like dancers twirling around a campfire. The Sun is special because it gives us light and helps everything grow, like plants and flowers.\nWhy this matters: Meet the Sun helps learners in Astronomy connect ideas from Pre-K Sky & Space Explorers to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "Let's meet the star of our daytime sky: the Sun! ☀️ The Sun is a giant, hot, glowing star. It's the center of our space family, called the solar system. All the planets, including our Earth, dance around the big, bright Sun. The Sun is so important because it gives us light to see and helps plants and flowers grow. Without our Sun, our world would be very dark and very cold. Let's give a big 'hooray' for the Sun!",
+          "visualPrompts": [
+            "A friendly, smiling Sun character appears in the center of the screen.",
+            "Animation of Earth and other planets happily spinning around the Sun.",
+            "Simple animation showing flowers drooping in the dark, then perking up when the Sun shines on them."
+          ]
         },
         {
           "id": "prek-astro-l01-c2",
-          "title": "Light and Warmth",
-          "content": "The Sun is like a big, bright friend in the sky that gives us two very special gifts every single day: LIGHT and WARMTH! 🌞 Light is super important because it helps us see everything around us, from the colorful flowers to our friends playing. When the Sun shines, it makes everything bright and cheerful! Warmth is just as important because it keeps us cozy and comfortable, especially on chilly days. Plants, like flowers and trees, need sunlight to grow big and strong, just like you need good food to grow! Animals also need warmth to stay healthy and happy. And guess what? You need both light and warmth to have fun playing outside! Without the Sun, our Earth would be a dark and frozen ice ball floating in space — brrr! So, let’s take a moment to appreciate the Sun for all the amazing things it does for us every day! It helps us play, grow, and enjoy the beautiful world around us!\nContext recap: The Sun is like a big, bright friend in the sky that gives us two very special gifts every single day: LIGHT and WARMTH! 🌞 Light is super important because it helps us see everything around us, from the colorful flowers to our friends playing. When the Sun shines, it makes everything bright and cheerful! Warmth is just as important because it keeps us cozy and comfortable, especially on chilly days.\nWhy this matters: Light and Warmth helps learners in Astronomy connect ideas from Pre-K Sky & Space Explorers to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "title": "A Gift of Light and Warmth",
+          "content": "The Sun gives us two very special gifts every day: light and warmth! The light helps us see all the colors of the world and lets us play outside. The warmth feels so nice on our skin and keeps our whole planet cozy. Plants need the Sun's light and warmth to grow big and strong, and so do we! So when you feel the warm sunshine, you can say, 'Thank you, Sun!' for helping us play and grow.",
+          "visualPrompts": [
+            "Split screen showing a dark room vs. a brightly lit room.",
+            "Animation of kids playing happily in a sunny park.",
+            "A time-lapse animation of a small seed sprouting and growing into a big sunflower, always facing the Sun."
+          ]
         },
         {
           "id": "prek-astro-l01-c3",
-          "title": "Sun Safety",
-          "content": "The Sun is a fantastic friend to all of us! It shines brightly in the sky and helps plants grow, keeps us warm, and lights up our days. But we need to remember that the Sun is very bright and powerful, so we must be careful around it. You should NEVER look directly at the Sun because it can hurt your eyes! 😎 To stay safe and enjoy the sunshine, here are some important things to do: First, wear your favorite sunglasses to protect your eyes from the bright light. Second, put on sunscreen to keep your skin safe from getting too hot or sunburned. Lastly, don’t forget to drink plenty of water to stay cool and hydrated while you play outside. The Sun is our friend, but we must always take care of ourselves when we are outside enjoying its warm and wonderful light! So let’s have fun in the sun while being safe!\nContext recap: The Sun is a fantastic friend to all of us! It shines brightly in the sky and helps plants grow, keeps us warm, and lights up our days. But we need to remember that the Sun is very bright and powerful, so we must be careful around it. You should NEVER look directly at the Sun because it can hurt your eyes!\nWhy this matters: Sun Safety helps learners in Astronomy connect ideas from Pre-K Sky & Space Explorers to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "title": "Sun Safety!",
+          "content": "The Sun is our friend, but it is very, very bright and powerful. We have to be safe in the sun. The most important rule is to NEVER look right at the Sun. It can hurt your eyes! To stay safe while you play, you can wear cool sunglasses, a shady hat, and ask a grown-up to help you with sunscreen. Playing in the sun is lots of fun when we remember to be safe!",
+          "visualPrompts": [
+            "Animation of eyes looking at the Sun with a big red 'X' over it.",
+            "Cartoon kids happily putting on sunglasses and fun hats.",
+            "An animation showing sunscreen creating a sparkly, protective shield on a child's arm."
+          ]
         }
       ],
       "flashcards": [
         {
           "id": "prek-astro-l01-f1",
           "front": "What is the Sun?",
-          "back": "A giant ball of super-hot glowing gas — it is actually a star! ☀️"
+          "back": "A big, hot, glowing star! ☀️"
         },
         {
           "id": "prek-astro-l01-f2",
-          "front": "What two things does the Sun give us?",
-          "back": "Light and warmth! Plants, animals, and people all need both."
+          "front": "What two gifts does the Sun give us?",
+          "back": "Light and warmth!"
         },
         {
           "id": "prek-astro-l01-f3",
-          "front": "Should you look directly at the Sun?",
-          "back": "NEVER! It is so bright it can hurt your eyes. Wear sunglasses instead! 😎"
+          "front": "Is it safe to look right at the Sun?",
+          "back": "NEVER! It's too bright and can hurt your eyes. 😎"
         }
       ],
       "questions": [
         {
           "id": "prek-astro-l01-q1",
-          "text": "The Sun is a giant ball of...",
+          "text": "The Sun is a giant, glowing...",
           "options": [
             {
               "id": "a",
-              "text": "Ice cream"
+              "text": "Ball"
             },
             {
               "id": "b",
-              "text": "Hot glowing gas"
+              "text": "Star"
             },
             {
               "id": "c",
-              "text": "Cheese"
-            },
-            {
-              "id": "d",
-              "text": "Water"
+              "text": "Lightbulb"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "The Sun is made of super-hot glowing gas — it is a star!"
+          "explanation": "That's right! The Sun is our very own star."
         },
         {
           "id": "prek-astro-l01-q2",
@@ -111,68 +155,76 @@ export const PreKAstronomy101Module: LearningModule = {
             },
             {
               "id": "c",
-              "text": "Candy and toys"
-            },
-            {
-              "id": "d",
               "text": "Rain and snow"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "The Sun gives us light so we can see, and warmth so we stay cozy!"
+          "explanation": "The Sun gives us light so we can see, and warmth to keep us cozy!"
         }
       ],
       "learningAids": [
         {
           "id": "prek-astro-l01-a1",
-          "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary of the lesson's main concept."
+          "type": "printable",
+          "title": "Sun Safety Coloring Page",
+          "content": "A printable coloring sheet showing kids wearing hats and sunglasses while playing in the sun."
         }
       ]
     },
     {
       "id": "prek-astro-l02",
-      "title": "Day and Night: Why Does It Get Dark?",
+      "title": "Day and Night",
       "type": "video",
       "duration": 8,
       "objectives": [
-        "Explain that Earth spins like a top, causing day and night",
-        "Describe that the side facing the Sun has daytime",
-        "State that one full spin takes about 24 hours"
+        "Explain that Earth spins, causing day and night.",
+        "Describe that the side of Earth facing the Sun has daytime.",
+        "State that one full spin is one full day."
       ],
       "chunks": [
         {
           "id": "prek-astro-l02-c1",
-          "title": "Earth Is Spinning!",
-          "content": "Guess what? Right now, you are standing on a SPINNING planet! 🌍 Earth turns around and around like a slow top. You can't feel it spinning because everything around you — including you, your house, and the air — is spinning together. It takes 24 hours, which is one whole day and night, for Earth to make one complete spin. Isn't that cool? So, every day, we get to experience both daytime and nighttime! When the side of Earth you are on faces the Sun, it is daytime, and we can see the bright light. But when we turn away from the Sun, it becomes nighttime, and we can see the stars and the moon shining in the dark sky. This spinning is what makes our days and nights happen! So, every time you wake up, remember that Earth is still spinning, bringing us new adventures in the sunlight and the moonlight!\nContext recap: Guess what? Right now, you are standing on a SPINNING planet! 🌍 Earth turns around and around like a slow top. You can't feel it spinning because everything around you — including you, your house, and the air — is spinning together.\nWhy this matters: Earth Is Spinning! helps learners in Astronomy connect ideas from Pre-K Sky & Space Explorers to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "title": "Earth is a Spinner!",
+          "content": "Did you know that our planet, Earth, is always spinning? It turns around and around, like a slow-motion spinning top! 🌍 You can't feel it because everything—you, your house, the trees—is all spinning together. It takes one whole day and one whole night for Earth to spin all the way around one time. This spinning is what gives us our days and our nights!",
+          "visualPrompts": [
+            "Animation of the Earth spinning gently in space.",
+            "A visual comparison of the Earth spinning next to a toy top spinning."
+          ]
         },
         {
           "id": "prek-astro-l02-c2",
-          "title": "Sunshine Side, Shadow Side",
-          "content": "Imagine you are in a dark room and you have a flashlight. When you shine the flashlight on a ball, one side of the ball lights up and becomes bright — that side is like daytime! The other side of the ball stays dark, and that side is like nighttime! Now, think about how the Earth works. The Earth is like that ball, and it spins around. When our side of the Earth is facing the Sun, we get to enjoy the warm sunshine and it is daytime! But when our side of the Earth turns away from the Sun, it gets dark, and that is when we have nighttime. So, every time the Earth spins around, we get to experience both the bright sunshine and the twinkling stars in the night sky! Isn’t it amazing how we have both day and night because of the Earth’s spin? We can play and explore in the sunlight, and then we can look up at the stars when it gets dark. What do you like to do during the day and at night?\nContext recap: Imagine you are in a dark room and you have a flashlight. When you shine the flashlight on a ball, one side of the ball lights up and becomes bright — that side is like daytime! The other side of the ball stays dark, and that side is like nighttime! Now, think about how the Earth works.\nWhy this matters: Sunshine Side, Shadow Side helps learners in Astronomy connect ideas from Pre-K Sky & Space Explorers to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "title": "Sunshine and Shadows",
+          "content": "Let's pretend the Sun is a big flashlight. When the flashlight shines on one side of our spinning Earth, it's bright! That's daytime, when we can play outside. But the other side of Earth is in the dark shadow. That's nighttime, when we sleep and see the stars. As Earth spins, your home moves from the sunshine into the shadow, and back again. Day, then night, then day again!",
+          "visualPrompts": [
+            "A simple animation showing a flashlight (labeled 'Sun') shining on a spinning globe.",
+            "The animation clearly shows one side lit up (day) and the other side dark (night).",
+            "A little house icon is shown moving from the light side to the dark side as the globe spins."
+          ]
         },
         {
           "id": "prek-astro-l02-c3",
-          "title": "While You Sleep...",
-          "content": "Here’s a fun thought to imagine: while you are snuggled up in your cozy bed at night, kids on the OTHER side of the Earth are just waking up and getting ready to eat their yummy breakfast! 🌅 Isn’t that cool? When you are sitting down to enjoy your dinner, those kids are looking up at the twinkling stars in the night sky. This happens because day and night are different all around our big, beautiful world. Earth is like a giant spinning top, always turning and turning! So, no matter where you are, there’s always someone else somewhere else who is having day or night at the same time as you! Isn’t it amazing to think about how we all share the same sky, even if we are far apart?\nContext recap: Here’s a fun thought to imagine: while you are snuggled up in your cozy bed at night, kids on the OTHER side of the Earth are just waking up and getting ready to eat their yummy breakfast! 🌅 Isn’t that cool? When you are sitting down to enjoy your dinner, those kids are looking up at the twinkling stars in the night sky. This happens because day and night are different all around our big, beautiful world.\nWhy this matters: While You Sleep... helps learners in Astronomy connect ideas from Pre-K Sky & Space Explorers to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "title": "Hello, Other Side!",
+          "content": "Here's a fun secret: when it's nighttime for you and you're getting into bed, kids on the other side of the Earth are just waking up! 🌅 Their side of the Earth is spinning into the sunshine. So, while you're dreaming, they are eating breakfast and getting ready to play. We all share the same Sun, just at different times. Isn't that neat?",
+          "visualPrompts": [
+            "A split-screen animation. On one side, a child in pajamas looks at the Moon through a window. On the other side, a child eats breakfast as the Sun rises."
+          ]
         }
       ],
       "flashcards": [
         {
           "id": "prek-astro-l02-f1",
           "front": "Why do we have day and night?",
-          "back": "Earth spins! The side facing the Sun has day, the other side has night. 🌍"
+          "back": "Because our Earth spins around! 🌍"
         },
         {
           "id": "prek-astro-l02-f2",
-          "front": "How long is one full spin of Earth?",
-          "back": "About 24 hours — one day and one night!"
+          "front": "When it's daytime, which way is our part of Earth facing?",
+          "back": "It's facing the Sun!"
         },
         {
           "id": "prek-astro-l02-f3",
-          "front": "When it is night here, what is it on the other side?",
-          "back": "Daytime! Kids on the other side are awake while you sleep."
+          "front": "When it is night here, what is it on the other side of Earth?",
+          "back": "Daytime! Kids there are waking up!"
         }
       ],
       "questions": [
@@ -182,7 +234,7 @@ export const PreKAstronomy101Module: LearningModule = {
           "options": [
             {
               "id": "a",
-              "text": "Spins around like a top"
+              "text": "Spins around"
             },
             {
               "id": "b",
@@ -190,68 +242,76 @@ export const PreKAstronomy101Module: LearningModule = {
             },
             {
               "id": "c",
-              "text": "Stays perfectly still"
-            },
-            {
-              "id": "d",
-              "text": "Is flat like a pancake"
+              "text": "Stays still"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Earth spins! The side facing the Sun gets light (day), the other side is dark (night)."
+          "explanation": "Earth spins around and around, which gives us daytime and nighttime."
         }
       ],
       "learningAids": [
         {
           "id": "prek-astro-l02-a1",
-          "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary of the lesson's main concept."
+          "type": "activity",
+          "title": "Day & Night with a Globe",
+          "content": "Use a globe (or any ball) and a flashlight to show your child how one side is lit (day) while the other is dark (night) as you spin it."
         }
       ]
     },
     {
       "id": "prek-astro-l03",
-      "title": "The Moon: Why Does It Change Shape?",
+      "title": "The Moon: Our Nightlight",
       "type": "video",
       "duration": 8,
       "objectives": [
-        "Name four Moon phases: new moon, crescent, half, full",
-        "Explain that the Moon does not make its own light",
-        "Describe that the Moon goes around Earth once a month"
+        "Name four Moon phases: new moon, crescent, half, full.",
+        "Explain that the Moon reflects the Sun's light.",
+        "Describe that the Moon travels around the Earth."
       ],
       "chunks": [
         {
           "id": "prek-astro-l03-c1",
-          "title": "The Moon's Trick",
-          "content": "When you look up at the night sky, you might see the Moon shining bright and round, or maybe it looks like a thin slice, just like a banana! 🍌 Sometimes, you might not see it at all! 🌙 But guess what? The Moon isn’t really changing its shape! It’s always a round ball, just like a basketball! The reason we see it looking different is because of the way the Sun shines on it. As the Moon travels around our Earth, we get to see different parts of the Moon that are lit up by the Sun. It’s like a fun little magic trick that the Moon plays with us! Isn’t that amazing? So, next time you look up at the Moon, remember that it’s always round, and it’s just showing us different parts of itself. Keep watching, and you’ll see the Moon’s magic every night! 🌟\nContext recap: When you look up at the night sky, you might see the Moon shining bright and round, or maybe it looks like a thin slice, just like a banana! 🍌 Sometimes, you might not see it at all! 🌙 But guess what? The Moon isn’t really changing its shape!\nWhy this matters: The Moon's Trick helps learners in Astronomy connect ideas from Pre-K Sky & Space Explorers to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "title": "The Moon's Magic Trick",
+          "content": "Look, it's the Moon! Sometimes the Moon is a big, bright circle. Other times, it's just a tiny sliver, like a banana. 🍌 And sometimes, you can't see it at all! Is the Moon changing its shape? Nope! It's a magic trick! The Moon is always a big round ball. We just see different parts of it lit up by the Sun as the Moon travels around our Earth.",
+          "visualPrompts": [
+            "Animation showing the Moon changing through its phases in the night sky.",
+            "The animation reveals the Moon is always a round ball, but a 'spotlight' from the Sun is only lighting up parts of it."
+          ]
         },
         {
           "id": "prek-astro-l03-c2",
-          "title": "Moon Phases",
-          "content": "The Moon is a special part of our sky that changes shape! It goes through different phases, which are like its own little costume changes. 🌑 First, we have the New Moon. During this time, we can't see the Moon at all because the dark side is facing us. It's like the Moon is hiding! Next, we see the Crescent Moon, which looks like a tiny sliver, just like a fingernail. Then comes the Half Moon, where we can see half of it lit up and half of it dark. Finally, we have the Full Moon, which is when the whole Moon shines bright and beautiful in the night sky! After the Full Moon, the Moon starts to shrink back down through the Half Moon, then the Crescent, and back to the New Moon. This whole cycle happens about every 29 days! Isn’t it exciting to watch the Moon change and see what shape it will be next? Let's look up at the sky and see if we can spot the Moon in its different phases together!\nContext recap: The Moon is a special part of our sky that changes shape! It goes through different phases, which are like its own little costume changes. 🌑 First, we have the New Moon. During this time, we can't see the Moon at all because the dark side is facing us.\nWhy this matters: Moon Phases helps learners in Astronomy connect ideas from Pre-K Sky & Space Explorers to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "title": "The Moon's Many Faces",
+          "content": "The different shapes we see are called phases. When the Moon is hiding and all dark, that's a New Moon. 🌑 When it's a little sliver, it's a Crescent Moon. 🌙 When we see exactly half, it's a Half Moon. 🌓 And when the whole thing is bright and round, that's a Full Moon! 🌕 It's fun to look for the Moon each night and see which face it's showing you.",
+          "visualPrompts": [
+            "Clear, simple graphics appear for each phase as it's named: New, Crescent, Half, and Full.",
+            "An animation of a child looking out their window each night and pointing to the different Moon shapes."
+          ]
         },
         {
           "id": "prek-astro-l03-c3",
-          "title": "The Moon Has No Light of Its Own",
-          "content": "Here’s a surprising fact: the Moon does NOT shine by itself! It is actually a big gray rock, just like the stones you might find in your backyard. 🪨 The Moon shines brightly in the night sky because it reflects the light from the Sun, just like a shiny mirror reflects your image when you look into it. Imagine holding a flashlight and shining it on a wall; the wall lights up because it is reflecting the light! When you see a bright full Moon, you are actually seeing sunlight bouncing off the Moon's surface and coming right into your eyes! So, every time you admire the Moon, remember that it’s the Sun’s light that makes it glow! Isn’t that amazing? The next time you look up at the night sky, think about how the Moon is like a big mirror, shining with the Sun's beautiful light!\nContext recap: Here’s a surprising fact: the Moon does NOT shine by itself! It is actually a big gray rock, just like the stones you might find in your backyard. 🪨 The Moon shines brightly in the night sky because it reflects the light from the Sun, just like a shiny mirror reflects your image when you look into it. Imagine holding a flashlight and shining it on a wall; the wall lights up because it is reflecting the light!\nWhy this matters: The Moon Has No Light of Its Own helps learners in Astronomy connect ideas from Pre-K Sky & Space Explorers to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "title": "The Moon is a Mirror",
+          "content": "Here’s another secret: the Moon doesn't make its own light! It's actually a big, dark rock. So why does it glow? It works like a mirror! The Moon borrows its light from our bright Sun. The sunlight shines on the Moon, and the Moon reflects that light down to us on Earth. So when you see the Moon shining, you're really seeing sunshine bouncing off the Moon!",
+          "visualPrompts": [
+            "Animation showing the Moon as a dark, gray rock.",
+            "Beams of light travel from the Sun, hit the Moon, and then bounce down to Earth, making the Moon appear to glow."
+          ]
         }
       ],
       "flashcards": [
         {
           "id": "prek-astro-l03-f1",
-          "front": "Name the four main Moon phases",
-          "back": "New Moon 🌑, Crescent 🌙, Half Moon 🌓, Full Moon 🌕"
+          "front": "Name four shapes, or phases, of the Moon.",
+          "back": "New Moon 🌑, Crescent 🌙, Half Moon 🌓, and Full Moon 🌕."
         },
         {
           "id": "prek-astro-l03-f2",
           "front": "Does the Moon make its own light?",
-          "back": "No! The Moon reflects the Sun's light like a mirror. It is actually a big gray rock."
+          "back": "No! It reflects light from the Sun, like a mirror."
         },
         {
           "id": "prek-astro-l03-f3",
-          "front": "How long does a full cycle of Moon phases take?",
-          "back": "About 29 days — almost one month!"
+          "front": "Is the Moon really changing its shape?",
+          "back": "No, it's always a round ball. We just see different parts lit by the Sun."
         }
       ],
       "questions": [
@@ -270,10 +330,6 @@ export const PreKAstronomy101Module: LearningModule = {
             {
               "id": "c",
               "text": "Full Moon"
-            },
-            {
-              "id": "d",
-              "text": "Crescent Moon"
             }
           ],
           "correctOptionId": "c",
@@ -285,7 +341,7 @@ export const PreKAstronomy101Module: LearningModule = {
           "options": [
             {
               "id": "a",
-              "text": "It is on fire"
+              "text": "It has a lightbulb inside"
             },
             {
               "id": "b",
@@ -293,23 +349,19 @@ export const PreKAstronomy101Module: LearningModule = {
             },
             {
               "id": "c",
-              "text": "It has a lightbulb inside"
-            },
-            {
-              "id": "d",
               "text": "It is made of glitter"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "The Moon is a rock that reflects sunlight — like a big mirror in the sky!"
+          "explanation": "The Moon is like a big mirror in the sky, reflecting sunlight!"
         }
       ],
       "learningAids": [
         {
           "id": "prek-astro-l03-a1",
-          "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary of the lesson's main concept."
+          "type": "activity",
+          "title": "Oreo Moon Phases",
+          "content": "Use Oreo cookies to show the Moon phases. A full cookie is a Full Moon. Scrape off the filling to make a Half Moon and a Crescent Moon. A cookie with no filling is a New Moon."
         }
       ]
     },
@@ -319,15 +371,15 @@ export const PreKAstronomy101Module: LearningModule = {
       "type": "interactive",
       "duration": 10,
       "objectives": [
-        "Match each Moon phase name to its appearance",
-        "Order the Moon phases from new to full"
+        "Match each Moon phase name to its appearance.",
+        "Practice identifying the four main Moon phases."
       ],
       "interactiveActivities": [
         {
           "id": "prek-astro-l04-ia1",
           "type": "matching_pairs",
-          "title": "Match the Moon Shape!",
-          "description": "Connect each name to the right Moon shape.",
+          "title": "Match the Moon's Face!",
+          "description": "Drag the name to the right Moon shape.",
           "estimatedMinutes": 5,
           "difficultyLevel": "easy",
           "data": {
@@ -338,7 +390,7 @@ export const PreKAstronomy101Module: LearningModule = {
               },
               {
                 "id": "l2",
-                "label": "Crescent"
+                "label": "Crescent Moon"
               },
               {
                 "id": "l3",
@@ -391,9 +443,9 @@ export const PreKAstronomy101Module: LearningModule = {
       "learningAids": [
         {
           "id": "prek-astro-l04-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Follow the prompt sequence and document your reasoning."
+          "type": "printable",
+          "title": "Moon Phase Matching Game",
+          "content": "A printable worksheet with pictures of Moon phases to cut out and paste next to the correct name."
         }
       ]
     },
@@ -418,10 +470,6 @@ export const PreKAstronomy101Module: LearningModule = {
             {
               "id": "c",
               "text": "Moon"
-            },
-            {
-              "id": "d",
-              "text": "Cloud"
             }
           ],
           "correctOptionId": "b",
@@ -442,10 +490,6 @@ export const PreKAstronomy101Module: LearningModule = {
             {
               "id": "c",
               "text": "Sun"
-            },
-            {
-              "id": "d",
-              "text": "Ground"
             }
           ],
           "correctOptionId": "c",
@@ -466,197 +510,161 @@ export const PreKAstronomy101Module: LearningModule = {
             {
               "id": "c",
               "text": "New Moon"
-            },
-            {
-              "id": "d",
-              "text": "Half Moon"
             }
           ],
           "correctOptionId": "b",
           "explanation": "A crescent Moon is a thin sliver — it looks like a banana! 🌙"
-        },
-        {
-          "id": "prek-astro-l05-q4",
-          "text": "The Moon shines by...",
-          "options": [
-            {
-              "id": "a",
-              "text": "Making its own fire"
-            },
-            {
-              "id": "b",
-              "text": "Reflecting the Sun's light"
-            },
-            {
-              "id": "c",
-              "text": "Using batteries"
-            },
-            {
-              "id": "d",
-              "text": "Being made of diamonds"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "The Moon reflects sunlight like a mirror!"
-        }
-      ],
-      "learningAids": [
-        {
-          "id": "prek-astro-l05-a1",
-          "type": "mnemonic",
-          "title": "Memory Cue",
-          "content": "Use Plan, Solve, Explain to structure each response."
         }
       ]
     },
     {
       "id": "prek-astro-l06",
-      "title": "Stars: Tiny Lights, Giant Suns!",
+      "title": "Twinkle, Twinkle, Giant Star",
       "type": "video",
       "duration": 8,
       "objectives": [
-        "Explain that stars are faraway suns",
-        "Describe why stars twinkle",
-        "State that we can only see stars at night because the Sun is too bright during the day"
+        "Explain that stars are faraway suns.",
+        "Describe why stars appear to twinkle.",
+        "State that stars are in the sky during the day, but we can't see them."
       ],
       "chunks": [
         {
           "id": "prek-astro-l06-c1",
-          "title": "Stars Are Suns!",
-          "content": "When you look up at the night sky, you see lots of tiny sparkles, right? Well, guess what? Those sparkles are actually giant balls of hot gas, just like our very own Sun! ⭐ Isn't that amazing? Stars look small to us because they are super, super far away. Imagine you have a friend standing at the very end of a really, really, REALLY long field. From where you are, your friend looks tiny, doesn't he? That's because of the distance! Stars are even farther away than that — they are a million times farther! So, when you see those twinkling stars, remember that they are enormous suns, just like the one that shines down on us during the day! Each star has its own special light, and they all come together to make our night sky beautiful. Next time you see a star, think about how big and bright it really is, even if it looks small from where we are!\nContext recap: When you look up at the night sky, you see lots of tiny sparkles, right? Well, guess what? Those sparkles are actually giant balls of hot gas, just like our very own Sun! ⭐ Isn't that amazing?\nWhy this matters: Stars Are Suns! helps learners in Astronomy connect ideas from Pre-K Sky & Space Explorers to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "title": "Stars are Faraway Suns",
+          "content": "When you look up at the night sky, you see lots of tiny, sparkly lights. Those are stars! And here's a secret: every star is actually a giant, hot, glowing sun, just like our Sun! ⭐ They look so tiny because they are very, very, VERY far away. It's like seeing an airplane high up in the sky. You know it's really big, but it looks tiny because it's so far away. Stars are the same way!",
+          "visualPrompts": [
+            "A beautiful, dark night sky filled with twinkling stars.",
+            "Animation zooms in on one star, which grows bigger and bigger until it looks like our Sun.",
+            "A simple animation comparing a star to an airplane looking small in the distance."
+          ]
         },
         {
           "id": "prek-astro-l06-c2",
-          "title": "Why Stars Twinkle",
-          "content": "Did you know that stars are like tiny lights in the sky? They shine brightly and steadily, just like a flashlight! But sometimes, when we look at them, they seem to twinkle or blink. This happens because the air around us is always moving and changing. As the light from the stars travels through the air, it gets wiggled and wobbled, which makes it look like the stars are playing peek-a-boo! ✨ Imagine looking at a shiny coin at the bottom of a swimming pool. The water makes the coin sparkle and shimmer, right? Well, the same thing happens with stars! So, when you see those twinkling stars, remember that it’s just the air having fun with their light. Isn’t that amazing? Next time you gaze up at the night sky, you can share this fun fact with your friends and family! They will be so impressed that you know why stars twinkle! 🌟\nContext recap: Did you know that stars are like tiny lights in the sky? They shine brightly and steadily, just like a flashlight! But sometimes, when we look at them, they seem to twinkle or blink. This happens because the air around us is always moving and changing.\nWhy this matters: Why Stars Twinkle helps learners in Astronomy connect ideas from Pre-K Sky & Space Explorers to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "title": "Why Do Stars Twinkle?",
+          "content": "Have you ever sung 'Twinkle, twinkle, little star'? Stars look like they are blinking or twinkling, but it's another magic trick! The stars themselves are shining with a steady light. They seem to twinkle because their light has to travel through all of Earth's air to reach our eyes. The air wiggles and jiggles, and that makes the starlight look like it's wiggling and twinkling, too! ✨",
+          "visualPrompts": [
+            "Animation of a star shining a straight, steady beam of light.",
+            "A wavy, transparent layer labeled 'Air' appears around Earth. The light beam wiggles as it passes through the air.",
+            "A child on Earth looks up and sees the wiggling light as a twinkle."
+          ]
         },
         {
           "id": "prek-astro-l06-c3",
-          "title": "Where Do Stars Go During the Day?",
-          "content": "Did you know that stars are ALWAYS shining, even when we can't see them? 🌟 During the day, the Sun is super bright, and it makes it hard for us to see the stars in the sky. Imagine you have a flashlight in a dark room, but then someone turns on a really bright light. You wouldn't be able to see your flashlight beam, right? That's what happens with the stars during the day! The Sun is like that bright light, and it washes out the twinkling lights of the stars. But guess what? When the Sun goes down and shines on the other side of the Earth, the sky becomes dark enough for us to see the stars again! So, even if you can't see them right now, always remember that the stars are up there, shining brightly in the universe, waiting for us to look up at night and enjoy their beauty! Isn't that amazing? 🌌\nContext recap: Did you know that stars are ALWAYS shining, even when we can't see them? 🌟 During the day, the Sun is super bright, and it makes it hard for us to see the stars in the sky. Imagine you have a flashlight in a dark room, but then someone turns on a really bright light. You wouldn't be able to see your flashlight beam, right?\nWhy this matters: Where Do Stars Go During the Day? helps learners in Astronomy connect ideas from Pre-K Sky & Space Explorers to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "title": "Where Do Stars Go in the Day?",
+          "content": "Where do the stars go when the Sun comes up? They don't go anywhere! The stars are always in the sky, day and night. But during the day, our Sun is so bright that it lights up the whole sky. The Sun's light is much closer and brighter than the faraway starlight, so we can't see the stars until the Sun sets and the sky gets dark again. They were hiding in the bright blue sky all along!",
+          "visualPrompts": [
+            "Animation of a night sky full of stars.",
+            "The Sun rises, and its bright light fills the screen, making the stars fade from view.",
+            "The Sun sets, the sky darkens, and the stars reappear."
+          ]
         }
       ],
       "flashcards": [
         {
           "id": "prek-astro-l06-f1",
           "front": "What are stars?",
-          "back": "Giant balls of hot gas far, far away — they are suns just like ours! ⭐"
+          "back": "Giant suns that are very, very far away! ⭐"
         },
         {
           "id": "prek-astro-l06-f2",
-          "front": "Why do stars twinkle?",
-          "back": "Earth's air wiggles their light! Stars actually shine steadily."
+          "front": "Why do stars look like they twinkle?",
+          "back": "Because their light has to wiggle through Earth's air to reach us."
         },
         {
           "id": "prek-astro-l06-f3",
-          "front": "Where do stars go during the day?",
-          "back": "Nowhere! They are still there, but the Sun is too bright to see them."
+          "front": "Are stars in the sky during the day?",
+          "back": "Yes! But the Sun is so bright we can't see them."
         }
       ],
       "questions": [
         {
           "id": "prek-astro-l06-q1",
-          "text": "Stars are really...",
+          "text": "Stars look tiny because they are...",
           "options": [
             {
               "id": "a",
-              "text": "Stickers on the sky"
+              "text": "Actually very small"
             },
             {
               "id": "b",
-              "text": "Faraway suns made of hot gas"
+              "text": "Very, very far away"
             },
             {
               "id": "c",
-              "text": "Fireflies"
-            },
-            {
-              "id": "d",
-              "text": "Tiny diamonds"
+              "text": "Hiding"
             }
           ],
           "correctOptionId": "b",
           "explanation": "Every star is a giant sun — they just look tiny because they are so far away!"
         }
+      ],
+      "learningAids": [
+        {
+          "id": "prek-astro-l06-a1",
+          "type": "craft",
+          "title": "Glitter Star Constellations",
+          "content": "Use black construction paper, glue, and glitter to make your own sparkly star pictures."
+        }
       ]
     },
     {
       "id": "prek-astro-l07",
-      "title": "Meet the Planets!",
+      "title": "Meet Our Planet Family",
       "type": "video",
       "duration": 10,
       "objectives": [
-        "Name all eight planets in order from the Sun",
-        "Describe one fun fact about Earth, Mars, Jupiter, and Saturn",
-        "Explain that all planets orbit (go around) the Sun"
+        "Name the eight planets that orbit the Sun.",
+        "Describe one fun fact about Earth, Mars, Jupiter, and Saturn."
       ],
       "chunks": [
         {
           "id": "prek-astro-l07-c1",
           "title": "The Planet Parade",
-          "content": "Did you know that there are eight amazing planets that travel around our Sun? 🌞 Let's learn about them together in a fun way! We can remember their names in order by using a silly sentence: \"My Very Excited Mother Just Served Us Nachos!\" 🌮 This helps us remember: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, and Neptune. Can you say it with me? Let's count them! One, two, three, four, five, six, seven, eight! Mercury is the planet that is closest to the Sun, while Neptune is the farthest away. Each planet is unique and has its own special features! For example, did you know that Jupiter is the biggest planet? And Saturn has beautiful rings! How cool is that? Let's keep exploring the sky and learn more about our wonderful planets together!\nContext recap: Did you know that there are eight amazing planets that travel around our Sun? 🌞 Let's learn about them together in a fun way! We can remember their names in order by using a silly sentence: \"My Very Excited Mother Just Served Us Nachos!\" 🌮 This helps us remember: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, and Neptune. Can you say it with me?\nWhy this matters: The Planet Parade helps learners in Astronomy connect ideas from Pre-K Sky & Space Explorers to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "Our Sun has a big family of planets that travel around it. There are eight of them! Let's say their names: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, and Neptune. They are all different sizes and colors, and they all follow their own path around the Sun. Let's meet a few of our planet neighbors!",
+          "visualPrompts": [
+            "An animation of the solar system with all eight planets orbiting the Sun.",
+            "Each planet is shown with a friendly, smiling face.",
+            "As each planet's name is said, it wiggles and glows."
+          ]
         },
         {
           "id": "prek-astro-l07-c2",
-          "title": "Rocky Planets: The Inner Four",
-          "content": "The first four planets in our solar system are small and rocky, and they are so interesting to learn about! Let's take a closer look at each one! Mercury is the tiniest planet, and it has many craters on its surface, which are like little holes made by space rocks crashing into it. Can you imagine how bumpy it must be? Venus is super hot, even hotter than your oven at home! It’s like a giant oven in space! 🔥 Now, Earth is our beautiful blue planet where we all live. It has water, air, and all kinds of amazing life, like plants, animals, and people! Isn’t it wonderful? Mars is known as the red planet because of its rusty red soil. It has giant volcanoes that are much bigger than any we have on Earth! Who knows? Maybe one day, brave astronauts will visit Mars and discover its secrets! They might even find out if there was ever life there! 🚀\nContext recap: The first four planets in our solar system are small and rocky, and they are so interesting to learn about! Let's take a closer look at each one! Mercury is the tiniest planet, and it has many craters on its surface, which are like little holes made by space rocks crashing into it. Can you imagine how bumpy it must be?\nWhy this matters: Rocky Planets: The Inner Four helps learners in Astronomy connect ideas from Pre-K Sky & Space Explorers to decisions they make during practice and assessment. Keep the explanation friendly and practical."
-        },
-        {
-          "id": "prek-astro-l07-c3",
-          "title": "Giant Planets: The Outer Four",
-          "content": "Now, let's explore the outer four planets of our solar system! These planets are super big and are known as gas giants. First up is Jupiter, the largest planet of them all! Can you imagine that more than 1,000 Earths could fit inside Jupiter? That's like having a giant balloon that can hold so many of our homes! 🌍 Jupiter also has a gigantic storm called the Great Red Spot. This storm is so big that it is even larger than our whole planet! Isn't that amazing? 🌪️\nNext, we have Saturn, which is famous for its stunning rings. These rings are made of tiny pieces of ice and rock that sparkle and shine in the sunlight. They look like a beautiful necklace around the planet!\nThen there's Uranus. This planet is quite unique because it spins on its side, almost like a rolling ball! Imagine if you tried to roll a ball down a hill — that's how Uranus moves in space!\nFinally, we have Neptune, which is a deep blue color, like the ocean. Neptune is known for having the fastest winds in our solar system, blowing at an incredible speed of over 1,200 miles per hour! That's faster than a race car! Wow!\nThese four planets are truly special and show us just how diverse and exciting our universe is! Let's keep exploring and learning more about the wonders of space together!\nContext recap: Now, let's explore the outer four planets of our solar system! These planets are super big and are known as gas giants. First up is Jupiter, the largest planet of them all! Can you imagine that more than 1,000 Earths could fit inside Jupiter?\nWhy this matters: Giant Planets: The Outer Four helps learners in Astronomy connect ideas from Pre-K Sky & Space Explorers to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "title": "A Few Planet Friends",
+          "content": "First, let's visit Earth! This is our home. It's a beautiful blue and green planet with water, land, and lots of amazing animals and people. 🌍 Next is Mars. Mars is called the Red Planet because it's covered in reddish, rusty dust. 🔴 Now look at this one—it's Jupiter! Jupiter is the biggest planet of all. It's a giant, stormy planet. And here is Saturn. Saturn is famous for its beautiful rings. The rings are made of ice and rock, and they spin around the planet like a hula hoop! 🪐",
+          "visualPrompts": [
+            "The animation zooms in on a beautiful, spinning Earth.",
+            "The animation moves to Mars, highlighting its red color.",
+            "The animation shows Jupiter, emphasizing its huge size compared to Earth.",
+            "The animation focuses on Saturn, with its sparkly rings spinning around it."
+          ]
         }
       ],
       "flashcards": [
         {
           "id": "prek-astro-l07-f1",
-          "front": "Name the 8 planets in order",
-          "back": "Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune! (My Very Excited Mother Just Served Us Nachos) 🌮"
+          "front": "Which planet is our home?",
+          "back": "Earth! It's the beautiful blue and green one. 🌍"
         },
         {
           "id": "prek-astro-l07-f2",
-          "front": "Which planet is biggest?",
-          "back": "Jupiter! Over 1,000 Earths could fit inside it. It has a Great Red Spot storm."
+          "front": "Which planet is called the Red Planet?",
+          "back": "Mars! It's covered in red dust. 🔴"
         },
         {
           "id": "prek-astro-l07-f3",
-          "front": "Which planet has rings?",
-          "back": "Saturn! Its rings are made of ice and rock chunks spinning around it. 💍"
+          "front": "Which planet is the biggest?",
+          "back": "Jupiter! It's a giant, stormy gas planet."
         },
         {
           "id": "prek-astro-l07-f4",
-          "front": "Why is Mars called the Red Planet?",
-          "back": "Its surface is covered in rusty red dust that makes the whole planet look red! 🔴"
+          "front": "Which planet has beautiful rings?",
+          "back": "Saturn! The rings are made of ice and rock. 🪐"
         }
       ],
       "questions": [
         {
           "id": "prek-astro-l07-q1",
-          "text": "Which planet is closest to the Sun?",
-          "options": [
-            {
-              "id": "a",
-              "text": "Earth"
-            },
-            {
-              "id": "b",
-              "text": "Mercury"
-            },
-            {
-              "id": "c",
-              "text": "Jupiter"
-            },
-            {
-              "id": "d",
-              "text": "Neptune"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mercury is the first planet — closest to the Sun!"
-        },
-        {
-          "id": "prek-astro-l07-q2",
-          "text": "Which planet has beautiful rings?",
+          "text": "Which planet is famous for its beautiful rings?",
           "options": [
             {
               "id": "a",
@@ -664,48 +672,72 @@ export const PreKAstronomy101Module: LearningModule = {
             },
             {
               "id": "b",
-              "text": "Venus"
+              "text": "Earth"
             },
             {
               "id": "c",
               "text": "Saturn"
-            },
-            {
-              "id": "d",
-              "text": "Earth"
             }
           ],
           "correctOptionId": "c",
           "explanation": "Saturn is famous for its gorgeous rings made of ice and rock!"
+        },
+        {
+          "id": "prek-astro-l07-q2",
+          "text": "Our home, the blue and green planet, is called...",
+          "options": [
+            {
+              "id": "a",
+              "text": "Jupiter"
+            },
+            {
+              "id": "b",
+              "text": "Earth"
+            },
+            {
+              "id": "c",
+              "text": "Mars"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "We live on the beautiful planet Earth!"
+        }
+      ],
+      "learningAids": [
+        {
+          "id": "prek-astro-l07-a1",
+          "type": "song",
+          "title": "The Planet Song",
+          "content": "Sing a simple song about the planets to help remember their names and a fun fact about each."
         }
       ]
     },
     {
       "id": "prek-astro-l08",
-      "title": "Planet Sort: Rocky or Gassy?",
+      "title": "Planet Sort: Small or Giant?",
       "type": "interactive",
       "duration": 10,
       "objectives": [
-        "Sort the eight planets into rocky and gas giant groups",
-        "Recall which planets are inner vs. outer"
+        "Sort the eight planets into two groups: small and rocky or big and gassy.",
+        "Recall which planets are inner vs. outer."
       ],
       "interactiveActivities": [
         {
           "id": "prek-astro-l08-ia1",
           "type": "sorting_buckets",
-          "title": "Rocky Planet or Gas Giant?",
-          "description": "Sort each planet into the right group!",
+          "title": "Small Planet or Giant Planet?",
+          "description": "Drag each planet into the right group!",
           "estimatedMinutes": 5,
           "difficultyLevel": "easy",
           "data": {
             "buckets": [
               {
                 "id": "rocky",
-                "label": "Rocky Planets (small & hard)"
+                "label": "Small & Rocky"
               },
               {
                 "id": "gas",
-                "label": "Gas Giants (huge & fluffy)"
+                "label": "Big & Gassy"
               }
             ],
             "items": [
@@ -756,46 +788,61 @@ export const PreKAstronomy101Module: LearningModule = {
     },
     {
       "id": "prek-astro-l09",
-      "title": "Astronauts: Heroes in Space!",
+      "title": "Astronauts: Space Explorers!",
       "type": "video",
       "duration": 8,
       "objectives": [
-        "Describe what an astronaut does",
-        "Explain that astronauts float in space because of microgravity",
-        "Name one thing astronauts must bring to survive in space"
+        "Describe what an astronaut does.",
+        "Explain that astronauts float in space because there is very little gravity.",
+        "Name one thing astronauts need to survive in space."
       ],
       "chunks": [
         {
           "id": "prek-astro-l09-c1",
-          "title": "What Do Astronauts Do?",
-          "content": "Astronauts are incredible explorers who travel high up into the vastness of space! 🧑‍🚀 They ride in powerful rockets that zoom through the sky to reach their special destination. Once they arrive, they live on the International Space Station (ISS), which is like a big house floating in space! Here, astronauts get to do all sorts of exciting science experiments that help us learn more about the universe. Some brave astronauts have even walked on the Moon, leaving their footprints on its dusty surface! They study how things work in space, like how to grow plants or how to float in zero gravity. This important work helps scientists understand what we need to know so that one day, people might be able to live on Mars or even explore places that are even farther away. Isn't that amazing? Just think about all the adventures waiting for us in space! 🌌\nContext recap: Astronauts are incredible explorers who travel high up into the vastness of space! 🧑‍🚀 They ride in powerful rockets that zoom through the sky to reach their special destination. Once they arrive, they live on the International Space Station (ISS), which is like a big house floating in space! Here, astronauts get to do all sorts of exciting science experiments that help us learn more about the universe.\nWhy this matters: What Do Astronauts Do? helps learners in Astronomy connect ideas from Pre-K Sky & Space Explorers to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "title": "What is an Astronaut?",
+          "content": "Who flies in rockets and explores space? Astronauts! 🧑‍🚀 Astronauts are brave explorers who travel far away from Earth. They live and work in a special house that floats in space called a space station. On the space station, they do important science experiments to help us learn more about our amazing universe. Some astronauts have even walked on the Moon!",
+          "visualPrompts": [
+            "Animation of a friendly astronaut waving from inside a rocket.",
+            "The rocket docks with the International Space Station (ISS).",
+            "The astronaut is shown inside the ISS, looking at plants growing in a special container."
+          ]
         },
         {
           "id": "prek-astro-l09-c2",
-          "title": "Floating in Space!",
-          "content": "In space, astronauts get to experience something super exciting: they FLOAT! Imagine being able to float around like a balloon! Everything around them floats too — their yummy food, their drinks, and even their tears turn into little bubbles that dance in the air! 🫧 This amazing floating happens because of something called microgravity. You see, the space station is zooming around Earth really fast, and because of that, everything inside feels weightless, just like when you jump high and feel like you’re flying for a moment! To make sure they don’t float away while they are sleeping, astronauts have to strap themselves into their cozy beds. Isn’t that fun and different? It’s like a big adventure in the sky! Can you imagine what it would be like to float in space? What would you want to do first? Maybe play with your floating food or chase after your floating toys? The possibilities are endless in the wonderful world of space!\nContext recap: In space, astronauts get to experience something super exciting: they FLOAT! Imagine being able to float around like a balloon! Everything around them floats too — their yummy food, their drinks, and even their tears turn into little bubbles that dance in the air! 🫧 This amazing floating happens because of something called microgravity.\nWhy this matters: Floating in Space! helps learners in Astronomy connect ideas from Pre-K Sky & Space Explorers to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "title": "Floating is Fun!",
+          "content": "One of the coolest things about being in space is that you can float! Astronauts float around inside their space station. Their food floats, their tools float, and even their drinks float in little bubbles! 🫧 This happens because in space, there is almost no gravity to hold you down. To keep from floating away when they sleep, astronauts have to snuggle into special sleeping bags attached to the wall. How silly is that?",
+          "visualPrompts": [
+            "Fun animation of an astronaut doing a slow-motion somersault inside the space station.",
+            "An astronaut chases a floating blob of orange juice.",
+            "An astronaut zips into a sleeping bag that is attached to a wall."
+          ]
         },
         {
           "id": "prek-astro-l09-c3",
-          "title": "Packing for Space",
-          "content": "Space is a very special place that is different from Earth. In space, there is no air to breathe, no water to drink, and no grocery stores to buy food! 🌌 Because of this, astronauts have to be very smart and pack everything they will need for their journey. They bring oxygen, which is the air we need to breathe, so they can stay healthy while floating among the stars. They also pack water to drink, which is super important for staying strong and energetic. Astronauts eat food that comes in special pouches, which helps keep it fresh and safe to eat in space. When astronauts go outside their spaceship, they wear a special outfit called a spacesuit. A spacesuit is like a mini-spaceship that you can wear! It gives astronauts the air they need to breathe, keeps them warm in the coldness of space, and protects them from the bright rays of the Sun. Isn't that amazing? Astronauts are like heroes exploring the wonders of the universe! 🌟\nContext recap: Space is a very special place that is different from Earth. In space, there is no air to breathe, no water to drink, and no grocery stores to buy food! 🌌 Because of this, astronauts have to be very smart and pack everything they will need for their journey. They bring oxygen, which is the air we need to breathe, so they can stay healthy while floating among the stars.\nWhy this matters: Packing for Space helps learners in Astronomy connect ideas from Pre-K Sky & Space Explorers to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "title": "What to Pack for Space",
+          "content": "You can't just open the door and go outside in space. There is no air to breathe! So when astronauts go for a 'spacewalk' outside, they have to wear a special spacesuit. A spacesuit is like your very own mini-spaceship. It gives the astronaut air to breathe, keeps them warm, and protects them from the Sun's bright light. It has a helmet to see out of and gloves for working. It's the perfect outfit for a space explorer!",
+          "visualPrompts": [
+            "An astronaut is shown inside the space station, looking out a window at empty space.",
+            "Animation shows the different parts of a spacesuit being put on a cartoon astronaut.",
+            "The fully-suited astronaut floats outside the space station, waving."
+          ]
         }
       ],
       "flashcards": [
         {
           "id": "prek-astro-l09-f1",
           "front": "Why do astronauts float in space?",
-          "back": "Microgravity! The space station is falling around Earth so fast that everything feels weightless. 🫧"
+          "back": "Because there is almost no gravity to hold them down! 🫧"
         },
         {
           "id": "prek-astro-l09-f2",
           "front": "What is a spacesuit?",
-          "back": "A mini-spaceship you wear! It gives air, warmth, and protection outside the station. 🧑‍🚀"
+          "back": "A special suit that gives astronauts air and keeps them safe in space. 🧑‍🚀"
         },
         {
           "id": "prek-astro-l09-f3",
-          "front": "What do astronauts study?",
-          "back": "How things work in space! They do science experiments on the International Space Station."
+          "front": "Where do astronauts live and work in space?",
+          "back": "On a space station!"
         }
       ],
       "questions": [
@@ -805,79 +852,75 @@ export const PreKAstronomy101Module: LearningModule = {
           "options": [
             {
               "id": "a",
-              "text": "Sink to the floor"
+              "text": "Walk on the ceiling"
             },
             {
               "id": "b",
-              "text": "Float because of microgravity"
+              "text": "Float around"
             },
             {
               "id": "c",
-              "text": "Walk normally"
-            },
-            {
-              "id": "d",
-              "text": "Fly with wings"
+              "text": "Swim in the air"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Microgravity makes astronauts float — even their food floats!"
+          "explanation": "Because there is very little gravity, astronauts float around in their space station!"
+        }
+      ],
+      "learningAids": [
+        {
+          "id": "prek-astro-l09-a1",
+          "type": "activity",
+          "title": "Build a Rocket Ship",
+          "content": "Use a large cardboard box, paper plates, and crayons to build your own rocket ship and pretend to be an astronaut."
         }
       ]
     },
     {
       "id": "prek-astro-l10",
-      "title": "Celebration Quiz: Space Superstar!",
+      "title": "Final Quiz: You're a Space Superstar!",
       "type": "quiz",
       "duration": 10,
       "questions": [
         {
           "id": "prek-astro-l10-q1",
-          "text": "The Sun is made of...",
+          "text": "The Sun is a giant, hot...",
           "options": [
             {
               "id": "a",
-              "text": "Hot glowing gas"
+              "text": "Star"
             },
             {
               "id": "b",
-              "text": "Ice"
+              "text": "Planet"
             },
             {
               "id": "c",
-              "text": "Chocolate"
-            },
-            {
-              "id": "d",
-              "text": "Wood"
+              "text": "Rock"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "The Sun is a giant ball of super-hot glowing gas!"
+          "explanation": "The Sun is our very own star!"
         },
         {
           "id": "prek-astro-l10-q2",
-          "text": "Earth spins once every...",
+          "text": "Why do we have day and night?",
           "options": [
             {
               "id": "a",
-              "text": "1 hour"
+              "text": "The Sun turns on and off."
             },
             {
               "id": "b",
-              "text": "24 hours"
+              "text": "The Earth spins around."
             },
             {
               "id": "c",
-              "text": "1 year"
-            },
-            {
-              "id": "d",
-              "text": "10 seconds"
+              "text": "The Moon covers the Sun."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "One full spin of Earth takes 24 hours — one day and one night!"
+          "explanation": "Our Earth spins around, giving us daytime when we face the Sun and nighttime when we face away."
         },
         {
           "id": "prek-astro-l10-q3",
@@ -894,10 +937,6 @@ export const PreKAstronomy101Module: LearningModule = {
             {
               "id": "c",
               "text": "Full Moon"
-            },
-            {
-              "id": "d",
-              "text": "Half Moon"
             }
           ],
           "correctOptionId": "c",
@@ -909,7 +948,7 @@ export const PreKAstronomy101Module: LearningModule = {
           "options": [
             {
               "id": "a",
-              "text": "Actually very small"
+              "text": "Baby suns"
             },
             {
               "id": "b",
@@ -918,10 +957,6 @@ export const PreKAstronomy101Module: LearningModule = {
             {
               "id": "c",
               "text": "Hiding behind clouds"
-            },
-            {
-              "id": "d",
-              "text": "Scared of us"
             }
           ],
           "correctOptionId": "b",
@@ -929,51 +964,74 @@ export const PreKAstronomy101Module: LearningModule = {
         },
         {
           "id": "prek-astro-l10-q5",
-          "text": "Which planet has rings?",
+          "text": "Which planet is famous for its rings?",
           "options": [
             {
               "id": "a",
-              "text": "Mercury"
-            },
-            {
-              "id": "b",
               "text": "Earth"
             },
             {
-              "id": "c",
+              "id": "b",
               "text": "Saturn"
             },
             {
-              "id": "d",
+              "id": "c",
               "text": "Mars"
             }
           ],
-          "correctOptionId": "c",
+          "correctOptionId": "b",
           "explanation": "Saturn is famous for its beautiful rings made of ice and rock!"
         },
         {
           "id": "prek-astro-l10-q6",
-          "text": "Why do astronauts float on the space station?",
+          "text": "Why do astronauts wear a special spacesuit?",
           "options": [
             {
               "id": "a",
-              "text": "They have jetpacks"
+              "text": "Because it looks cool"
             },
             {
               "id": "b",
-              "text": "Microgravity"
+              "text": "To give them air and keep them safe"
             },
             {
               "id": "c",
-              "text": "The floor is bouncy"
-            },
-            {
-              "id": "d",
-              "text": "They eat special food"
+              "text": "So they can fly faster"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Microgravity makes everything on the space station feel weightless!"
+          "explanation": "A spacesuit gives an astronaut air to breathe and protects them in space!"
+        }
+      ]
+    },
+    {
+      "id": "prek-astro-l11",
+      "title": "Keep Looking Up!",
+      "type": "video",
+      "duration": 5,
+      "objectives": [
+        "Review the main topics: Sun, Earth's spin, Moon, stars, planets, and astronauts.",
+        "Encourage continued curiosity about the sky and space."
+      ],
+      "chunks": [
+        {
+          "id": "prek-astro-l11-c1",
+          "title": "You're a Space Superstar!",
+          "content": "Wow, you did it! You are now an official Sky and Space Explorer! You learned that the Sun is our daytime star, that our Earth is always spinning, and that the Moon has many different faces. You know that stars are faraway suns, you've met our planet family, and you know all about brave astronauts. The universe is a huge and wonderful place with so much to discover. So remember to always be curious, ask big questions, and never stop looking up! Goodbye for now, space superstars!",
+          "visualPrompts": [
+            "A fun, upbeat montage of clips and animations from all the previous lessons.",
+            "The friendly host character appears and gives a thumbs-up.",
+            "A certificate appears on screen that says 'Official Sky & Space Explorer' with the child's name.",
+            "The animated rocket ship from the first lesson waves goodbye and flies off across the screen."
+          ]
+        }
+      ],
+      "learningAids": [
+        {
+          "id": "prek-astro-l11-a1",
+          "type": "printable",
+          "title": "Space Explorer Certificate",
+          "content": "A printable certificate to celebrate completing the module."
         }
       ]
     }

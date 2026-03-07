@@ -1,9 +1,9 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const Medicine501Module: LearningModule = {
+export const medicine_501_Module: LearningModule = {
   "id": "medicine-501",
   "title": "Medicine Specialization Studio",
-  "description": "Post-401 specialization in Medicine, focused on medicine systems diagnostics, medicine operations and execution design, medicine impact and tradeoff analysis, and medicine governance and leadership through advanced casework, simulation, and defense-based checkpoints.",
+  "description": "Post-401 specialization in Medicine, focused on complex systems diagnostics, clinical operations design, impact and tradeoff analysis, and medical governance and leadership through advanced casework, simulation, and defense-based checkpoints.",
   "subject": "Medicine",
   "tags": [
     "core",
@@ -14,32 +14,32 @@ export const Medicine501Module: LearningModule = {
   ],
   "minAge": 17,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en",
     "es"
   ],
   "learningObjectives": [
-    "Apply advanced methods for medicine systems diagnostics in high-constraint environments",
-    "Design robust systems for medicine operations and execution design with measurable control gates",
-    "Evaluate interventions in medicine impact and tradeoff analysis with research-grade rigor",
-    "Operationalize medicine governance and leadership with accountable governance and escalation pathways",
-    "Lead cross-functional decision reviews with explicit tradeoff communication",
-    "Defend recommendations under expert critique using evidence and uncertainty bounds"
+    "Apply advanced methods for diagnosing complex medical systems in high-constraint environments.",
+    "Design robust systems for clinical operations and execution with measurable control gates.",
+    "Evaluate medical interventions, analyzing their impact and tradeoffs with research-grade rigor.",
+    "Operationalize medical governance and leadership with accountable oversight and clear escalation pathways.",
+    "Lead cross-functional decision reviews, communicating explicit tradeoffs to all stakeholders.",
+    "Defend clinical and policy recommendations under expert critique using evidence and uncertainty bounds."
   ],
   "lessons": [
     {
       "id": "medicine-501-l01",
-      "title": "Medicine Advanced Foundations",
+      "title": "Advanced Foundations in Medical Systems",
       "type": "video",
-      "duration": 14,
+      "duration": 15,
       "learningAids": [
         {
           "id": "medicine-501-l01-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "The Four Axes of Medical Specialization",
+          "content": "A diagram illustrating the four core topics of the course: 1. Systems Diagnostics, 2. Operations Design, 3. Impact Analysis, and 4. Governance & Leadership, showing how they interconnect."
         }
       ],
       "chunks": [
@@ -47,64 +47,64 @@ export const Medicine501Module: LearningModule = {
           "id": "medicine-501-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "In this lesson, we will delve into the advanced boundaries of medical practice. We will examine how to accurately diagnose medical systems and design effective operations for carrying out medical procedures. By understanding these boundaries, medical professionals can ensure they deliver the highest quality of care while following established guidelines and protocols. This knowledge is essential for maintaining patient safety and improving health outcomes.\nContext recap: In this lesson, we will delve into the advanced boundaries of medical practice. We will examine how to accurately diagnose medical systems and design effective operations for carrying out medical procedures. By understanding these boundaries, medical professionals can ensure they deliver the highest quality of care while following established guidelines and protocols. This knowledge is essential for maintaining patient safety and improving health outcomes."
+          "content": "Learn to define the boundaries of a complex medical problem, from a single patient with multi-organ failure to a community-wide public health crisis. We will explore how to accurately scope diagnostic systems and design effective operational plans to deliver care within established protocols and constraints."
         },
         {
           "id": "medicine-501-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different factors that can lead to health outcomes. Additionally, we will examine uncertainty ranges and the dependencies within medical systems. This foundational knowledge is essential for planning effective interventions in healthcare.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different factors that can lead to health outcomes. Additionally, we will examine uncertainty ranges and the dependencies within medical systems. This foundational knowledge is essential for planning effective interventions in healthcare."
+          "content": "This section focuses on mapping causal pathways that connect interventions to health outcomes. We will also model uncertainty, identifying key variables and dependencies within medical systems. This foundational knowledge is essential for planning effective and resilient healthcare interventions."
         },
         {
           "id": "medicine-501-l01-c3",
           "kind": "recap",
-          "title": "Evidence Thresholds",
-          "content": "In our recap, we will emphasize that all claims made in medical practice must be linked to measurable indicators. This includes establishing confidence bounds and setting up review checkpoints to ensure that the information is reliable and can be verified. This practice is crucial for maintaining high standards in healthcare.\nContext recap: In our recap, we will emphasize that all claims made in medical practice must be linked to measurable indicators. This includes establishing confidence bounds and setting up review checkpoints to ensure that the information is reliable and can be verified. This practice is crucial for maintaining high standards in healthcare."
+          "title": "Evidence Thresholds and Confidence",
+          "content": "In this recap, we emphasize that all clinical and policy claims must be linked to measurable indicators. This includes establishing confidence bounds for data and setting up review checkpoints to ensure that all information is reliable, verifiable, and meets rigorous standards."
         }
       ],
       "flashcards": [
         {
           "id": "medicine-501-l01-f1",
-          "front": "medicine systems diagnostics",
-          "back": "A specialization axis requiring explicit assumptions and measurable constraints."
+          "front": "Medical Systems Diagnostics",
+          "back": "A specialization axis requiring explicit assumptions, measurable constraints, and clear system boundaries."
         },
         {
           "id": "medicine-501-l01-f2",
-          "front": "medicine operations and execution design",
-          "back": "Execution architecture that determines reliability under stress."
+          "front": "Clinical Operations Design",
+          "back": "The architecture of care delivery that determines its reliability and quality under stress."
         },
         {
           "id": "medicine-501-l01-f3",
-          "front": "medicine impact and tradeoff analysis",
-          "back": "Evaluation discipline for identifying true gains and hidden costs."
+          "front": "Impact and Tradeoff Analysis",
+          "back": "The discipline of evaluating interventions to identify both their intended benefits and unintended consequences."
         }
       ]
     },
     {
       "id": "medicine-501-l02",
-      "title": "Medicine Specialist Methods Lab",
+      "title": "Specialist Methods Lab",
       "type": "interactive",
       "duration": 17,
       "learningAids": [
         {
           "id": "medicine-501-l02-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "image",
+          "title": "Clinical Workflow Diagram",
+          "content": "A flowchart of a complex treatment protocol, highlighting decision points, escalation paths, and quality control checkpoints (control gates)."
         }
       ],
       "chunks": [
         {
           "id": "medicine-501-l02-c1",
           "kind": "practice",
-          "title": "Method Design and Stress Test",
-          "content": "In this interactive segment, learners will have the opportunity to design specialized workflows that are essential for medical practice. They will also conduct stress tests on these workflows by simulating adverse scenarios. This hands-on experience will help learners understand how to prepare for unexpected challenges in healthcare settings.\nContext recap: In this interactive segment, learners will have the opportunity to design specialized workflows that are essential for medical practice. They will also conduct stress tests on these workflows by simulating adverse scenarios. This hands-on experience will help learners understand how to prepare for unexpected challenges in healthcare settings."
+          "title": "Method Design and Stress Testing",
+          "content": "In this interactive lab, you will design a specialized clinical workflow for a hypothetical scenario. You will then conduct stress tests on your design by simulating adverse events, such as a sudden equipment failure or unexpected patient complication, to identify and mitigate weaknesses."
         },
         {
           "id": "medicine-501-l02-c2",
           "kind": "recap",
-          "title": "Control Gate Architecture",
-          "content": "In our recap, we will discuss how workflows should incorporate various checkpoints, rollback criteria, and escalation thresholds. These elements are vital for ensuring that medical processes are efficient and can adapt to changing circumstances while maintaining safety and quality.\nContext recap: In our recap, we will discuss how workflows should incorporate various checkpoints, rollback criteria, and escalation thresholds. These elements are vital for ensuring that medical processes are efficient and can adapt to changing circumstances while maintaining safety and quality."
+          "title": "Clinical Governance Checkpoints",
+          "content": "We will recap how robust workflows must incorporate checkpoints, criteria for halting or reversing a procedure (rollback criteria), and clear escalation thresholds. These elements are vital for ensuring medical processes are safe, adaptable, and maintain high quality of care."
         }
       ],
       "interactiveActivities": [
@@ -112,23 +112,23 @@ export const Medicine501Module: LearningModule = {
           "id": "medicine-501-l02-act1",
           "type": "matching_pairs",
           "title": "Control-to-Outcome Mapping",
-          "description": "Match specialist controls with their strongest reliability and governance effects.",
+          "description": "Match the clinical governance control with its primary effect on reliability and patient safety.",
           "pairs": [
             {
-              "left": "Pre-commit gate",
+              "left": "Pre-treatment peer review",
               "right": "Prevents avoidable downstream failures"
             },
             {
-              "left": "Rollback trigger",
-              "right": "Limits blast radius under adverse outcomes"
+              "left": "Adverse event protocol",
+              "right": "Limits harm during an unexpected outcome"
             },
             {
-              "left": "Baseline dashboard",
-              "right": "Supports defensible impact attribution"
+              "left": "Patient monitoring dashboard",
+              "right": "Supports defensible analysis of an intervention's impact"
             },
             {
-              "left": "Retrospective loop",
-              "right": "Improves next-cycle decision quality"
+              "left": "Morbidity & Mortality (M&M) review",
+              "right": "Improves future decision quality by learning from past cases"
             }
           ]
         }
@@ -142,273 +142,173 @@ export const Medicine501Module: LearningModule = {
       "learningAids": [
         {
           "id": "medicine-501-l03-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "image",
+          "title": "Key Concepts Review",
+          "content": "A one-page summary sheet with key terms and definitions from Lessons 1 and 2, such as 'Causal Modeling,' 'Evidence Thresholds,' and 'Clinical Governance Checkpoints.'"
         }
       ],
       "questions": [
         {
           "id": "medicine-501-l03-q1",
-          "text": "Which practice most improves medicine systems diagnostics decision quality?",
-          "skillId": "medicine-501-skill-core",
+          "text": "Which practice most improves the quality of a complex medical diagnosis?",
+          "skillId": "medicine-501-skill-diagnostics",
           "options": [
             {
               "id": "a",
-              "text": "Proceed without baseline or assumptions"
+              "text": "Relying solely on initial intuition"
             },
             {
               "id": "b",
-              "text": "Define assumptions, constraints, and measurable indicators"
+              "text": "Defining assumptions, constraints, and measurable indicators"
             },
             {
               "id": "c",
-              "text": "Optimize only for speed in every context"
+              "text": "Optimizing only for speed in every context"
             },
             {
               "id": "d",
-              "text": "Ignore uncertainty and edge conditions"
+              "text": "Ignoring uncertainty and edge cases"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Advanced decisions improve when assumptions, constraints, and metrics are explicit."
+          "explanation": "Advanced diagnostic decisions improve when assumptions, constraints, and metrics are made explicit and transparent."
         },
         {
           "id": "medicine-501-l03-q2",
-          "text": "At level 501, strong execution for medicine operations and execution design requires:",
+          "text": "A robust clinical operations plan requires:",
           "skillId": "medicine-501-skill-execution",
           "options": [
             {
               "id": "a",
-              "text": "Owner mapping, checkpoint cadence, and escalation thresholds"
+              "text": "Clear role assignments, scheduled checkpoints, and defined escalation thresholds"
             },
             {
               "id": "b",
-              "text": "No role clarity and ad-hoc process changes"
+              "text": "Vague role clarity and ad-hoc process changes"
             },
             {
               "id": "c",
-              "text": "No retrospective or post-run review"
+              "text": "No retrospective or post-procedure review"
             },
             {
               "id": "d",
-              "text": "No rollback or fallback conditions"
+              "text": "No protocols for handling adverse events"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Reliable advanced execution needs ownership clarity and threshold-driven governance."
+          "explanation": "Reliable execution in a medical setting depends on ownership clarity, process controls, and threshold-driven governance."
         },
         {
           "id": "medicine-501-l03-q3",
-          "text": "A defensible approach to medicine impact and tradeoff analysis includes:",
-          "skillId": "medicine-501-skill-eval",
+          "text": "What is the primary purpose of modeling uncertainty in a clinical plan?",
+          "skillId": "medicine-501-skill-modeling",
           "options": [
             {
               "id": "a",
-              "text": "Anecdotes without comparison"
+              "text": "To prove the plan is perfect"
             },
             {
               "id": "b",
-              "text": "Baseline comparisons, side-effect analysis, and uncertainty bounds"
+              "text": "To identify potential points of failure and prepare contingency plans"
             },
             {
               "id": "c",
-              "text": "Changing success criteria after outcomes"
+              "text": "To make the plan seem more complex"
             },
             {
               "id": "d",
-              "text": "Excluding difficult scenarios from analysis"
+              "text": "To eliminate the need for expert judgment"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible analysis combines comparative baselines, side-effect checks, and uncertainty disclosure."
+          "explanation": "Modeling uncertainty helps in creating more resilient plans by anticipating and preparing for potential challenges."
         },
         {
           "id": "medicine-501-l03-q4",
-          "text": "Mature governance systems connect:",
+          "text": "A 'control gate' in a clinical workflow is best described as:",
           "skillId": "medicine-501-skill-governance",
           "options": [
             {
               "id": "a",
-              "text": "Policy intent, measurable controls, and remediation pathways"
+              "text": "An unnecessary delay in patient care"
             },
             {
               "id": "b",
-              "text": "Policy language with no measurable enforcement"
+              "text": "A planned checkpoint to verify safety and quality before proceeding"
             },
             {
               "id": "c",
-              "text": "Targets without ownership or escalation design"
+              "text": "A way to assign blame after a negative outcome"
             },
             {
               "id": "d",
-              "text": "Operations without transparent accountability"
-            }
-          ],
-          "correctOptionId": "a",
-          "explanation": "Governance maturity is the operational link between intent, measurement, and corrective action."
-        },
-        {
-          "id": "medicine-501-l03-q5",
-          "text": "What is the best way to compare competing interventions in advanced Medicine?",
-          "skillId": "medicine-501-skill-advanced-5",
-          "options": [
-            {
-              "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
-            },
-            {
-              "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
-            },
-            {
-              "id": "c",
-              "text": "Switch metrics after results arrive"
-            },
-            {
-              "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
+              "text": "A physical barrier in a hospital"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
-        },
-        {
-          "id": "medicine-501-l03-q6",
-          "text": "In high-stakes Medicine Specialization Studio execution, which communication protocol is strongest?",
-          "skillId": "medicine-501-skill-advanced-6",
-          "options": [
-            {
-              "id": "a",
-              "text": "Broadcast conclusions without assumptions"
-            },
-            {
-              "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
-            },
-            {
-              "id": "c",
-              "text": "Share only final outcomes after completion"
-            },
-            {
-              "id": "d",
-              "text": "Limit updates to a single informal channel"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
-        },
-        {
-          "id": "medicine-501-l03-q7",
-          "text": "A mature remediation loop in advanced Medicine should prioritize:",
-          "skillId": "medicine-501-skill-advanced-7",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blame assignment without system updates"
-            },
-            {
-              "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
-            },
-            {
-              "id": "c",
-              "text": "One-time fixes without retesting"
-            },
-            {
-              "id": "d",
-              "text": "Issue closure based on elapsed time"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
-        },
-        {
-          "id": "medicine-501-l03-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Medicine Specialization Studio?",
-          "skillId": "medicine-501-skill-advanced-8",
-          "options": [
-            {
-              "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
-            },
-            {
-              "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
-            },
-            {
-              "id": "c",
-              "text": "Ignore correlated failure modes"
-            },
-            {
-              "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "explanation": "Control gates are essential for governance, ensuring that standards are met at critical stages of a medical process."
         }
       ]
     },
     {
       "id": "medicine-501-l04",
-      "title": "Medicine Advanced Case Analysis",
+      "title": "Advanced Case Analysis",
       "type": "video",
       "duration": 14,
       "learningAids": [
         {
           "id": "medicine-501-l04-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Tradeoff Analysis Matrix",
+          "content": "A table comparing three different treatment options for a patient. The rows are evaluation criteria (Efficacy, Safety, Cost, Equity) and the columns are the options, with cells filled in to show the tradeoffs."
         }
       ],
       "chunks": [
         {
           "id": "medicine-501-l04-c1",
           "kind": "concept",
-          "title": "Scenario Architecture",
-          "content": "In this lesson, we will frame cases that highlight the competing constraints faced in medical systems diagnostics. We will analyze the impacts and trade-offs involved in making medical decisions. Understanding these complexities is essential for developing effective solutions in healthcare.\nContext recap: In this lesson, we will frame cases that highlight the competing constraints faced in medical systems diagnostics. We will analyze the impacts and trade-offs involved in making medical decisions. Understanding these complexities is essential for developing effective solutions in healthcare."
+          "title": "Complex Case Deconstruction",
+          "content": "In this lesson, we will deconstruct complex cases that highlight competing constraints in medical diagnostics and treatment. We will analyze the impacts and tradeoffs involved in making high-stakes medical decisions, developing a structured approach to managing complexity."
         },
         {
           "id": "medicine-501-l04-c2",
           "kind": "practice",
-          "title": "Tradeoff Framing",
-          "content": "In this practice segment, learners will compare different options available in medical decision-making. They will evaluate these options based on various dimensions, including safety, reliability, cost, equity, and governance. This comparative analysis is crucial for making informed and balanced healthcare decisions.\nContext recap: In this practice segment, learners will compare different options available in medical decision-making. They will evaluate these options based on various dimensions, including safety, reliability, cost, equity, and governance. This comparative analysis is crucial for making informed and balanced healthcare decisions."
+          "title": "Tradeoff Framing and Evaluation",
+          "content": "Learners will compare different intervention options for a given case. They will evaluate these options across multiple dimensions, including clinical efficacy, patient safety, cost, equity, and governance. This comparative analysis is crucial for making informed and balanced healthcare decisions."
         },
         {
           "id": "medicine-501-l04-c3",
           "kind": "recap",
-          "title": "Decision Memo Pattern",
-          "content": "In our recap, we will review the importance of including assumptions, evidence, risk controls, and fallback plans in each recommendation made in medical practice. This structured approach ensures that decisions are well-informed and prepared for potential challenges.\nContext recap: In our recap, we will review the importance of including assumptions, evidence, risk controls, and fallback plans in each recommendation made in medical practice. This structured approach ensures that decisions are well-informed and prepared for potential challenges."
+          "title": "The Clinical Recommendation Framework",
+          "content": "We will review the key components of a defensible recommendation. This includes stating assumptions, presenting evidence, outlining risk controls, and defining fallback plans. This structured approach ensures that decisions are well-reasoned, transparent, and prepared for potential challenges."
         }
       ]
     },
     {
       "id": "medicine-501-l05",
-      "title": "Medicine Simulation Clinic",
+      "title": "Simulation Clinic",
       "type": "interactive",
       "duration": 18,
       "learningAids": [
         {
           "id": "medicine-501-l05-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "image",
+          "title": "Simulated Patient Monitor",
+          "content": "An interactive mock-up of a hospital patient monitor, showing fluctuating vital signs (heart rate, blood pressure, oxygen saturation) that the learner must respond to."
         }
       ],
       "chunks": [
         {
           "id": "medicine-501-l05-c1",
           "kind": "practice",
-          "title": "Live Scenario Controls",
-          "content": "In this interactive practice, learners will operate scenario controls while balancing performance with governance constraints. This experience will help them understand the importance of maintaining high standards while effectively managing healthcare scenarios.\nContext recap: In this interactive practice, learners will operate scenario controls while balancing performance with governance constraints. This experience will help them understand the importance of maintaining high standards while effectively managing healthcare scenarios.\nWhy this matters: Live Scenario Controls helps learners in Medicine connect ideas from Medicine Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "Live Scenario Decision-Making",
+          "content": "In this interactive simulation, learners will manage a dynamically evolving clinical scenario. They must make real-time decisions, balancing treatment efficacy with patient safety and resource constraints, responding to new information as it becomes available."
         },
         {
           "id": "medicine-501-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "In our recap, we will discuss how effective responses to medical scenarios should update control gates without losing traceability or accountability. This principle is vital for ensuring that all actions taken in healthcare are transparent and can be tracked.\nContext recap: In our recap, we will discuss how effective responses to medical scenarios should update control gates without losing traceability or accountability. This principle is vital for ensuring that all actions taken in healthcare are transparent and can be tracked."
+          "content": "In our recap, we will discuss how effective responses in dynamic scenarios require updating plans and controls without losing traceability or accountability. This principle is vital for ensuring that all actions taken in a crisis are transparent, justified, and auditable."
         }
       ],
       "interactiveActivities": [
@@ -416,7 +316,7 @@ export const Medicine501Module: LearningModule = {
           "id": "medicine-501-l05-act1",
           "type": "scenario",
           "title": "Adverse-Condition Decision Run",
-          "description": "Run a high-pressure medicine scenario and tune controls under uncertainty."
+          "description": "Manage a high-pressure clinical scenario where a patient's condition unexpectedly deteriorates. You must diagnose the new problem and adjust the treatment plan under time pressure and uncertainty."
         }
       ]
     },
@@ -428,16 +328,16 @@ export const Medicine501Module: LearningModule = {
       "learningAids": [
         {
           "id": "medicine-501-l06-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "image",
+          "title": "Case Analysis Checklist",
+          "content": "A graphic checklist summarizing the key steps for a rigorous case analysis: 1. Define Baseline & Constraints, 2. Identify Options, 3. Analyze Tradeoffs, 4. Formulate Recommendation, 5. Specify Controls."
         }
       ],
       "questions": [
         {
           "id": "medicine-501-l06-q1",
-          "text": "In advanced casework, the first requirement for defensible recommendations is:",
-          "skillId": "medicine-501-skill-case1",
+          "text": "In advanced casework, the first requirement for a defensible recommendation is:",
+          "skillId": "medicine-501-skill-case-analysis",
           "options": [
             {
               "id": "a",
@@ -445,208 +345,108 @@ export const Medicine501Module: LearningModule = {
             },
             {
               "id": "b",
-              "text": "A clear baseline, explicit constraints, and success criteria"
+              "text": "A clear baseline, explicit constraints, and measurable success criteria"
             },
             {
               "id": "c",
-              "text": "High confidence without evidence logs"
+              "text": "High confidence without supporting evidence"
             },
             {
               "id": "d",
-              "text": "Single-metric optimization only"
+              "text": "Optimization based on a single metric only"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible recommendations begin with explicit assumptions, constraints, and measurable targets."
+          "explanation": "Defensible recommendations begin with an explicit definition of the problem, including assumptions, constraints, and measurable targets."
         },
         {
           "id": "medicine-501-l06-q2",
-          "text": "A resilient strategy for medicine operations and execution design should include:",
-          "skillId": "medicine-501-skill-case2",
+          "text": "A resilient strategy for a complex medical intervention should include:",
+          "skillId": "medicine-501-skill-resilience",
           "options": [
             {
               "id": "a",
-              "text": "Checkpointed execution with fallback and escalation criteria"
+              "text": "Checkpointed execution with fallback options and escalation criteria"
             },
             {
               "id": "b",
-              "text": "One-way execution with no rollback capability"
+              "text": "A rigid plan that cannot be changed once started"
             },
             {
               "id": "c",
-              "text": "No ownership mapping across teams"
+              "text": "No clear ownership mapping across the clinical team"
             },
             {
               "id": "d",
-              "text": "Hidden assumptions and undocumented decisions"
+              "text": "Undocumented decisions made during the procedure"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Resilience depends on checkpoints, fallback options, and explicit escalation design."
+          "explanation": "Resilience in complex operations depends on planned checkpoints, fallback options, and explicit escalation design."
         },
         {
           "id": "medicine-501-l06-q3",
-          "text": "When evaluating medicine impact and tradeoff analysis, which method is most rigorous?",
-          "skillId": "medicine-501-skill-case3",
+          "text": "When evaluating a new treatment's impact, which method is most rigorous?",
+          "skillId": "medicine-501-skill-evaluation",
           "options": [
             {
               "id": "a",
-              "text": "Single success story without controls"
+              "text": "A single success story without a control group"
             },
             {
               "id": "b",
-              "text": "Comparative baselines plus side-effect and uncertainty analysis"
+              "text": "Comparative baselines plus analysis of side effects and uncertainty"
             },
             {
               "id": "c",
-              "text": "Outcome-only narrative without process evidence"
+              "text": "An outcome-only narrative without process evidence"
             },
             {
               "id": "d",
-              "text": "Retrospective scope changes to fit outcomes"
+              "text": "Changing the success criteria after seeing the outcomes"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Rigorous evaluation requires comparisons, side-effect analysis, and uncertainty disclosure."
+          "explanation": "Rigorous evaluation requires comparisons against a baseline, a full analysis of side effects, and a transparent disclosure of uncertainty."
         },
         {
           "id": "medicine-501-l06-q4",
-          "text": "Advanced governance is strongest when it:",
-          "skillId": "medicine-501-skill-case4",
+          "text": "During a simulation of a patient crisis, 'adaptive response' means:",
+          "skillId": "medicine-501-skill-simulation",
           "options": [
             {
               "id": "a",
-              "text": "Aligns authority, measurement, and remediation obligations"
+              "text": "Sticking to the original plan no matter what"
             },
             {
               "id": "b",
-              "text": "Separates policy from operational controls"
+              "text": "Updating the treatment plan based on new data while maintaining accountability"
             },
             {
               "id": "c",
-              "text": "Avoids external review and transparency"
+              "text": "Waiting for the crisis to resolve on its own"
             },
             {
               "id": "d",
-              "text": "Treats accountability as optional under pressure"
-            }
-          ],
-          "correctOptionId": "a",
-          "explanation": "Mature governance links authority, measurable controls, and corrective action."
-        },
-        {
-          "id": "medicine-501-l06-q5",
-          "text": "What is the best way to compare competing interventions in advanced Medicine?",
-          "skillId": "medicine-501-skill-advanced-5",
-          "options": [
-            {
-              "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
-            },
-            {
-              "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
-            },
-            {
-              "id": "c",
-              "text": "Switch metrics after results arrive"
-            },
-            {
-              "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
+              "text": "Trying random interventions until one works"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
-        },
-        {
-          "id": "medicine-501-l06-q6",
-          "text": "In high-stakes Medicine Specialization Studio execution, which communication protocol is strongest?",
-          "skillId": "medicine-501-skill-advanced-6",
-          "options": [
-            {
-              "id": "a",
-              "text": "Broadcast conclusions without assumptions"
-            },
-            {
-              "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
-            },
-            {
-              "id": "c",
-              "text": "Share only final outcomes after completion"
-            },
-            {
-              "id": "d",
-              "text": "Limit updates to a single informal channel"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
-        },
-        {
-          "id": "medicine-501-l06-q7",
-          "text": "A mature remediation loop in advanced Medicine should prioritize:",
-          "skillId": "medicine-501-skill-advanced-7",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blame assignment without system updates"
-            },
-            {
-              "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
-            },
-            {
-              "id": "c",
-              "text": "One-time fixes without retesting"
-            },
-            {
-              "id": "d",
-              "text": "Issue closure based on elapsed time"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
-        },
-        {
-          "id": "medicine-501-l06-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Medicine Specialization Studio?",
-          "skillId": "medicine-501-skill-advanced-8",
-          "options": [
-            {
-              "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
-            },
-            {
-              "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
-            },
-            {
-              "id": "c",
-              "text": "Ignore correlated failure modes"
-            },
-            {
-              "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "explanation": "Adaptive response is the ability to adjust to changing conditions in a structured, traceable, and accountable manner."
         }
       ]
     },
     {
       "id": "medicine-501-l07",
-      "title": "Medicine Governance and Public Impact",
+      "title": "Governance and Public Impact",
       "type": "video",
       "duration": 13,
       "learningAids": [
         {
           "id": "medicine-501-l07-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Stakeholder Impact Map",
+          "content": "An infographic showing how a public health decision (e.g., a new vaccine policy) affects various stakeholders: patients, healthcare providers, public health agencies, and the community, highlighting benefits and burdens for each."
         }
       ],
       "chunks": [
@@ -654,50 +454,50 @@ export const Medicine501Module: LearningModule = {
           "id": "medicine-501-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups in healthcare. Understanding these dynamics is essential for ensuring that all voices are considered in medical decision-making.\nContext recap: In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups in healthcare. Understanding these dynamics is essential for ensuring that all voices are considered in medical decision-making.\nWhy this matters: Stakeholder Impact Distribution helps learners in Medicine connect ideas from Medicine Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "Learners will map the distribution of benefits, burdens, and delayed effects of medical decisions across different stakeholder groups. Understanding these dynamics is essential for equitable and ethical decision-making in both clinical practice and public health."
         },
         {
           "id": "medicine-501-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "In this section, we will explore the architecture of accountability in medical decision-making. This includes understanding how decision traceability, review rights, and remediation obligations are integrated into healthcare practices. These elements are crucial for maintaining trust and integrity in medical systems.\nContext recap: In this section, we will explore the architecture of accountability in medical decision-making. This includes understanding how decision traceability, review rights, and remediation obligations are integrated into healthcare practices. These elements are crucial for maintaining trust and integrity in medical systems."
+          "content": "This section explores the architecture of accountability in medicine. This includes ensuring decision traceability, defining review rights for stakeholders, and establishing clear remediation obligations when outcomes are poor. These elements are crucial for maintaining trust and integrity."
         },
         {
           "id": "medicine-501-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "At the end of our lesson, we have a helpful checklist that connects important outcomes with ethical considerations, ensures we follow policies correctly, and promotes resilience in our leadership practices. This checklist serves as a guide to help us reflect on our responsibilities as leaders in the medical field.\nContext recap: At the end of our lesson, we have a helpful checklist that connects important outcomes with ethical considerations, ensures we follow policies correctly, and promotes resilience in our leadership practices. This checklist serves as a guide to help us reflect on our responsibilities as leaders in the medical field."
+          "content": "We conclude with a checklist for responsible leadership. It connects clinical and policy outcomes with ethical duties, policy compliance, and system resilience. This serves as a practical guide for leaders navigating the complex responsibilities of the medical field."
         }
       ],
       "flashcards": [
         {
           "id": "medicine-501-l07-f1",
-          "front": "Impact distribution",
-          "back": "How outcomes are allocated across populations and timescales."
+          "front": "Impact Distribution",
+          "back": "How the positive and negative outcomes of a decision are allocated across different populations and over time."
         },
         {
           "id": "medicine-501-l07-f2",
-          "front": "Decision traceability",
-          "back": "An auditable record of evidence, ownership, and rationale."
+          "front": "Decision Traceability",
+          "back": "An auditable record of the evidence, ownership, and rationale behind a significant decision."
         },
         {
           "id": "medicine-501-l07-f3",
-          "front": "Responsible leadership",
-          "back": "Decision behavior balancing performance, accountability, and ethics."
+          "front": "Responsible Leadership",
+          "back": "Decision-making that balances performance, accountability, and ethical considerations."
         }
       ]
     },
     {
       "id": "medicine-501-l08",
-      "title": "Medicine Capstone Defense Lab",
+      "title": "Capstone Defense Lab",
       "type": "interactive",
       "duration": 16,
       "learningAids": [
         {
           "id": "medicine-501-l08-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "image",
+          "title": "Capstone Defense Presentation Template",
+          "content": "A slide deck template with pre-formatted slides for: 1. Problem Statement, 2. Proposed Intervention, 3. Evidence & Analysis, 4. Risk & Mitigation, 5. Recommendation."
         }
       ],
       "chunks": [
@@ -705,13 +505,13 @@ export const Medicine501Module: LearningModule = {
           "id": "medicine-501-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "In this interactive activity, learners will work together to create a comprehensive brief. This brief will include well-supported claims, relevant evidence, an understanding of uncertainty, and clear pathways for remediation. This exercise helps develop critical thinking and communication skills essential for defending medical decisions.\nContext recap: In this interactive activity, learners will work together to create a comprehensive brief. This brief will include well-supported claims, relevant evidence, an understanding of uncertainty, and clear pathways for remediation. This exercise helps develop critical thinking and communication skills essential for defending medical decisions."
+          "content": "In this interactive lab, learners will assemble a comprehensive defense brief for their capstone recommendation. The brief must include evidence-backed claims, an analysis of uncertainty, and clear pathways for remediation, preparing them to communicate their reasoning effectively."
         },
         {
           "id": "medicine-501-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "During this session, learners will practice their responses to various critiques that may arise from technical experts, governance bodies, and stakeholders. This rehearsal is crucial for building confidence and ensuring that learners can effectively communicate their ideas and defend their positions in a professional setting.\nContext recap: During this session, learners will practice their responses to various critiques that may arise from technical experts, governance bodies, and stakeholders. This rehearsal is crucial for building confidence and ensuring that learners can effectively communicate their ideas and defend their positions in a professional setting."
+          "content": "During this session, learners will rehearse their defense by responding to critiques from simulated expert panels, representing technical experts, governance bodies, and patient advocates. This rehearsal builds confidence and sharpens their ability to defend their position professionally."
         }
       ],
       "interactiveActivities": [
@@ -719,7 +519,7 @@ export const Medicine501Module: LearningModule = {
           "id": "medicine-501-l08-act1",
           "type": "debate_simulator",
           "title": "Expert Defense Panel",
-          "description": "Defend specialization recommendations under adversarial cross-examination."
+          "description": "Present and defend your capstone recommendation to a simulated expert panel. Respond to adversarial cross-examination on your data, assumptions, and ethical considerations."
         }
       ]
     }

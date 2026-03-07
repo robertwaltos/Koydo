@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const OperationsManagement601Module: LearningModule = {
+export const operations_management_601_Module: LearningModule = {
   "id": "operations-management-601",
   "title": "Operations Management Research and Leadership",
   "description": "Post-401 specialization in Operations Management, focused on business systems diagnostics, business operations and execution design, business impact and tradeoff analysis, and business governance and leadership through advanced casework, simulation, and defense-based checkpoints.",
@@ -14,7 +14,7 @@ export const OperationsManagement601Module: LearningModule = {
   ],
   "minAge": 17,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en",
@@ -31,15 +31,15 @@ export const OperationsManagement601Module: LearningModule = {
   "lessons": [
     {
       "id": "operations-management-601-l01",
-      "title": "Operations Management Advanced Foundations",
+      "title": "Advanced Foundations in Operations Management",
       "type": "video",
       "duration": 14,
       "learningAids": [
         {
           "id": "operations-management-601-l01-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "System Boundaries",
+          "content": "A flowchart of a business process with clearly defined scope boundaries, inputs, and outputs, highlighting dependencies on other systems."
         }
       ],
       "chunks": [
@@ -47,64 +47,64 @@ export const OperationsManagement601Module: LearningModule = {
           "id": "operations-management-601-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "In this lesson, we will delve into the advanced concepts of scope boundaries in Operations Management. Understanding these boundaries is crucial for diagnosing business systems effectively. We will also learn how to design operations that improve execution. By clearly defining these boundaries, we can analyze and enhance the way businesses operate, ensuring that all components work together harmoniously. This knowledge will empower us to identify areas for improvement and implement strategies that lead to more efficient business practices.\nContext recap: In this lesson, we will delve into the advanced concepts of scope boundaries in Operations Management. Understanding these boundaries is crucial for diagnosing business systems effectively. We will also learn how to design operations that improve execution. By clearly defining these boundaries, we can analyze and enhance the way businesses operate, ensuring that all components work together harmoniously."
+          "content": "This lesson introduces the advanced concept of scope boundaries in Operations Management. Defining these boundaries is the first step in diagnosing complex business systems. We will learn to design operations with clear perimeters to improve execution, ensuring all components work together harmoniously and enabling targeted analysis for performance improvement."
         },
         {
           "id": "operations-management-601-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different factors that lead to certain outcomes. Additionally, we will explore uncertainty ranges and system dependencies. This foundational knowledge is crucial for planning effective interventions in business operations, allowing us to anticipate challenges and develop strategies to address them.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different factors that lead to certain outcomes. Additionally, we will explore uncertainty ranges and system dependencies. This foundational knowledge is crucial for planning effective interventions in business operations, allowing us to anticipate challenges and develop strategies to address them."
+          "content": "Here, you will learn to map causal pathways—the chain of events and dependencies that lead to specific outcomes. We will also explore how to model uncertainty ranges for key variables. This foundational knowledge is crucial for planning effective interventions, allowing you to anticipate challenges and develop robust strategies."
         },
         {
           "id": "operations-management-601-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "In our recap, we emphasize that all claims made in our analysis must be linked to measurable indicators. This means we will establish confidence bounds and set up review checkpoints to ensure that our findings are reliable and valid. By doing this, we can maintain a high standard of evidence in our operations management practices.\nContext recap: In our recap, we emphasize that all claims made in our analysis must be linked to measurable indicators. This means we will establish confidence bounds and set up review checkpoints to ensure that our findings are reliable and valid. By doing this, we can maintain a high standard of evidence in our operations management practices."
+          "content": "In this recap, we emphasize a core principle: all analytical claims must be linked to measurable indicators. We will establish methods for setting confidence bounds and implementing review checkpoints to ensure our findings are reliable and valid, maintaining a high standard of evidence in all operational analysis."
         }
       ],
       "flashcards": [
         {
           "id": "operations-management-601-l01-f1",
-          "front": "business systems diagnostics",
-          "back": "A specialization axis requiring explicit assumptions and measurable constraints."
+          "front": "Business Systems Diagnostics",
+          "back": "The discipline of analyzing a business system by defining explicit assumptions, measurable constraints, and performance indicators."
         },
         {
           "id": "operations-management-601-l01-f2",
-          "front": "business operations and execution design",
-          "back": "Execution architecture that determines reliability under stress."
+          "front": "Execution Design",
+          "back": "The architecture of an operational plan, including roles, checkpoints, and contingencies, that determines its reliability under stress."
         },
         {
           "id": "operations-management-601-l01-f3",
-          "front": "business impact and tradeoff analysis",
-          "back": "Evaluation discipline for identifying true gains and hidden costs."
+          "front": "Tradeoff Analysis",
+          "back": "A structured evaluation method for identifying the true gains and hidden costs of a decision by comparing it against alternatives."
         }
       ]
     },
     {
       "id": "operations-management-601-l02",
-      "title": "Operations Management Specialist Methods Lab",
+      "title": "Specialist Methods Lab",
       "type": "interactive",
       "duration": 17,
       "learningAids": [
         {
           "id": "operations-management-601-l02-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Workflow Stress Test",
+          "content": "An animated diagram of a workflow being 'stress-tested,' showing bottlenecks and failure points appearing in red under high load."
         }
       ],
       "chunks": [
         {
           "id": "operations-management-601-l02-c1",
           "kind": "practice",
-          "title": "Method Design and Stress Test",
-          "content": "In this interactive lab, learners will have the opportunity to design specialized workflows tailored to specific business needs. After creating these workflows, we will conduct stress tests to evaluate their performance under challenging scenarios. This hands-on experience will help learners understand how to create resilient systems that can withstand various pressures.\nContext recap: In this interactive lab, learners will have the opportunity to design specialized workflows tailored to specific business needs. After creating these workflows, we will conduct stress tests to evaluate their performance under challenging scenarios. This hands-on experience will help learners understand how to create resilient systems that can withstand various pressures."
+          "title": "Method Design and Stress Testing",
+          "content": "In this interactive lab, you will design a specialized workflow for a given business scenario. After designing the process, you will conduct a stress test to evaluate its performance under challenging conditions. This hands-on experience will teach you how to build resilient systems that can withstand operational pressures."
         },
         {
           "id": "operations-management-601-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "In our recap, we will discuss the importance of integrating control gate architecture into workflows. This includes establishing checkpoints, criteria for rolling back decisions, and thresholds for escalating issues. By incorporating these elements, we can ensure that our workflows are not only efficient but also equipped to handle unexpected challenges effectively.\nContext recap: In our recap, we will discuss the importance of integrating control gate architecture into workflows. This includes establishing checkpoints, criteria for rolling back decisions, and thresholds for escalating issues. By incorporating these elements, we can ensure that our workflows are not only efficient but also equipped to handle unexpected challenges effectively."
+          "content": "This recap covers the importance of integrating a control gate architecture into any workflow. This includes establishing clear checkpoints, defining criteria for rolling back decisions, and setting thresholds for escalating issues. By embedding these controls, we ensure workflows are both efficient and robust."
         }
       ],
       "interactiveActivities": [
@@ -112,22 +112,22 @@ export const OperationsManagement601Module: LearningModule = {
           "id": "operations-management-601-l02-act1",
           "type": "matching_pairs",
           "title": "Control-to-Outcome Mapping",
-          "description": "Match specialist controls with their strongest reliability and governance effects.",
+          "description": "Match specialist controls with their primary reliability and governance effects.",
           "pairs": [
             {
-              "left": "Pre-commit gate",
+              "left": "Pre-commit Gate",
               "right": "Prevents avoidable downstream failures"
             },
             {
-              "left": "Rollback trigger",
-              "right": "Limits blast radius under adverse outcomes"
+              "left": "Rollback Trigger",
+              "right": "Limits the blast radius of an adverse outcome"
             },
             {
-              "left": "Baseline dashboard",
+              "left": "Baseline Dashboard",
               "right": "Supports defensible impact attribution"
             },
             {
-              "left": "Retrospective loop",
+              "left": "Retrospective Loop",
               "right": "Improves next-cycle decision quality"
             }
           ]
@@ -143,19 +143,19 @@ export const OperationsManagement601Module: LearningModule = {
         {
           "id": "operations-management-601-l03-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Knowledge Check",
+          "content": "Review your notes on scope, causality, and control gates before you begin this assessment."
         }
       ],
       "questions": [
         {
           "id": "operations-management-601-l03-q1",
-          "text": "Which practice most improves business systems diagnostics decision quality?",
+          "text": "Which practice most improves the decision quality of business systems diagnostics?",
           "skillId": "operations-management-601-skill-core",
           "options": [
             {
               "id": "a",
-              "text": "Proceed without baseline or assumptions"
+              "text": "Proceed without a baseline or assumptions"
             },
             {
               "id": "b",
@@ -171,11 +171,11 @@ export const OperationsManagement601Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Advanced decisions improve when assumptions, constraints, and metrics are explicit."
+          "explanation": "Advanced decisions improve when assumptions, constraints, and metrics are made explicit."
         },
         {
           "id": "operations-management-601-l03-q2",
-          "text": "At level 601, strong execution for business operations and execution design requires:",
+          "text": "At an advanced level, strong execution design requires:",
           "skillId": "operations-management-601-skill-execution",
           "options": [
             {
@@ -213,11 +213,11 @@ export const OperationsManagement601Module: LearningModule = {
             },
             {
               "id": "c",
-              "text": "Changing success criteria after outcomes"
+              "text": "Changing success criteria after outcomes are known"
             },
             {
               "id": "d",
-              "text": "Excluding difficult scenarios from analysis"
+              "text": "Excluding difficult scenarios from the analysis"
             }
           ],
           "correctOptionId": "b",
@@ -225,7 +225,7 @@ export const OperationsManagement601Module: LearningModule = {
         },
         {
           "id": "operations-management-601-l03-q4",
-          "text": "Mature governance systems connect:",
+          "text": "Mature governance systems effectively connect:",
           "skillId": "operations-management-601-skill-governance",
           "options": [
             {
@@ -247,120 +247,20 @@ export const OperationsManagement601Module: LearningModule = {
           ],
           "correctOptionId": "a",
           "explanation": "Governance maturity is the operational link between intent, measurement, and corrective action."
-        },
-        {
-          "id": "operations-management-601-l03-q5",
-          "text": "What is the best way to compare competing interventions in advanced Business?",
-          "skillId": "operations-management-601-skill-advanced-5",
-          "options": [
-            {
-              "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
-            },
-            {
-              "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
-            },
-            {
-              "id": "c",
-              "text": "Switch metrics after results arrive"
-            },
-            {
-              "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
-        },
-        {
-          "id": "operations-management-601-l03-q6",
-          "text": "In high-stakes Operations Management Research and Leadership execution, which communication protocol is strongest?",
-          "skillId": "operations-management-601-skill-advanced-6",
-          "options": [
-            {
-              "id": "a",
-              "text": "Broadcast conclusions without assumptions"
-            },
-            {
-              "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
-            },
-            {
-              "id": "c",
-              "text": "Share only final outcomes after completion"
-            },
-            {
-              "id": "d",
-              "text": "Limit updates to a single informal channel"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
-        },
-        {
-          "id": "operations-management-601-l03-q7",
-          "text": "A mature remediation loop in advanced Business should prioritize:",
-          "skillId": "operations-management-601-skill-advanced-7",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blame assignment without system updates"
-            },
-            {
-              "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
-            },
-            {
-              "id": "c",
-              "text": "One-time fixes without retesting"
-            },
-            {
-              "id": "d",
-              "text": "Issue closure based on elapsed time"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
-        },
-        {
-          "id": "operations-management-601-l03-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Operations Management Research and Leadership?",
-          "skillId": "operations-management-601-skill-advanced-8",
-          "options": [
-            {
-              "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
-            },
-            {
-              "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
-            },
-            {
-              "id": "c",
-              "text": "Ignore correlated failure modes"
-            },
-            {
-              "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
         }
       ]
     },
     {
       "id": "operations-management-601-l04",
-      "title": "Operations Management Advanced Case Analysis",
+      "title": "Advanced Case Analysis",
       "type": "video",
       "duration": 14,
       "learningAids": [
         {
           "id": "operations-management-601-l04-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Decision Tree",
+          "content": "A decision tree diagram illustrating multiple strategic pathways and their potential outcomes for a sample case, with risks highlighted."
         }
       ],
       "chunks": [
@@ -368,47 +268,47 @@ export const OperationsManagement601Module: LearningModule = {
           "id": "operations-management-601-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "In this lesson, we will frame a case study that highlights the competing constraints found in business systems diagnostics. We will analyze the impacts of various business decisions and the trade-offs that must be considered. Understanding these dynamics is essential for making informed decisions that balance multiple factors.\nContext recap: In this lesson, we will frame a case study that highlights the competing constraints found in business systems diagnostics. We will analyze the impacts of various business decisions and the trade-offs that must be considered. Understanding these dynamics is essential for making informed decisions that balance multiple factors."
+          "content": "In this lesson, we will deconstruct a complex case study that highlights the competing constraints common in business systems. We will analyze the cascading impacts of key decisions and the tradeoffs that leaders must navigate. Understanding these dynamics is essential for making informed strategic choices."
         },
         {
           "id": "operations-management-601-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "In this practice session, learners will compare different options available to them, focusing on key dimensions such as safety, reliability, cost, equity, and governance. This comparative analysis will help learners understand the complexities involved in decision-making and the importance of considering multiple perspectives.\nContext recap: In this practice session, learners will compare different options available to them, focusing on key dimensions such as safety, reliability, cost, equity, and governance. This comparative analysis will help learners understand the complexities involved in decision-making and the importance of considering multiple perspectives."
+          "content": "You will now practice comparing different strategic options from the case study. This comparative analysis will focus on key dimensions such as safety, reliability, cost, and governance, helping you understand the complexities of multi-objective decision-making."
         },
         {
           "id": "operations-management-601-l04-c3",
           "kind": "recap",
-          "title": "Decision Memo Pattern",
-          "content": "In our recap, we will outline the essential components of a decision memo. Each recommendation made should include the underlying assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that all aspects of a decision are carefully considered and documented.\nContext recap: In our recap, we will outline the essential components of a decision memo. Each recommendation made should include the underlying assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that all aspects of a decision are carefully considered and documented.\nContext recap: In our recap, we will outline the essential components of a decision memo. Each recommendation made should include the underlying assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that all aspects of a decision are carefully considered and documented. Context recap: In our recap, we will outline the essential components of a decision memo.\nWhy this matters: Decision Memo Pattern helps learners in Business connect ideas from Operations Management Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "The Decision Memo Pattern",
+          "content": "We conclude by outlining the essential components of a professional decision memo. This pattern helps you structure a defensible recommendation by requiring you to state the underlying assumptions, present supporting evidence, define risk controls, and prepare fallback plans. This ensures all facets of a decision are carefully considered and documented."
         }
       ]
     },
     {
       "id": "operations-management-601-l05",
-      "title": "Operations Management Simulation Clinic",
+      "title": "Simulation Clinic",
       "type": "interactive",
       "duration": 18,
       "learningAids": [
         {
           "id": "operations-management-601-l05-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Simulation Dashboard",
+          "content": "A screenshot of the simulation interface, showing a dashboard with real-time performance metrics (KPIs) and risk alerts."
         }
       ],
       "chunks": [
         {
           "id": "operations-management-601-l05-c1",
           "kind": "practice",
-          "title": "Live Scenario Controls",
-          "content": "In this interactive clinic, learners will take on the role of operators managing scenario controls. They will learn how to balance performance metrics with governance constraints, ensuring that their decisions align with both operational goals and regulatory requirements. This experience will enhance their ability to make sound decisions in real-time.\nContext recap: In this interactive clinic, learners will take on the role of operators managing scenario controls. They will learn how to balance performance metrics with governance constraints, ensuring that their decisions align with both operational goals and regulatory requirements. This experience will enhance their ability to make sound decisions in real-time."
+          "title": "Live Scenario Management",
+          "content": "In this interactive clinic, you will act as an operations manager navigating a live scenario. You will be responsible for tuning system controls to balance performance metrics with governance constraints, making sound decisions in real-time as conditions change."
         },
         {
           "id": "operations-management-601-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "In our recap, we will discuss the importance of designing adaptive responses in operations management. Effective responses should update control gates while maintaining traceability and accountability. This ensures that all changes are documented and that the integrity of the decision-making process is preserved.\nContext recap: In our recap, we will discuss the importance of designing adaptive responses in operations management. Effective responses should update control gates while maintaining traceability and accountability. This ensures that all changes are documented and that the integrity of the decision-making process is preserved."
+          "content": "This recap focuses on designing adaptive responses in dynamic environments. Effective responses require updating control gates based on new information while maintaining full traceability and accountability for every decision, preserving the integrity of the process."
         }
       ],
       "interactiveActivities": [
@@ -416,7 +316,7 @@ export const OperationsManagement601Module: LearningModule = {
           "id": "operations-management-601-l05-act1",
           "type": "scenario",
           "title": "Adverse-Condition Decision Run",
-          "description": "Run a high-pressure operations management scenario and tune controls under uncertainty."
+          "description": "Manage a high-pressure operations scenario by tuning controls under uncertainty and responding to unexpected events."
         }
       ]
     },
@@ -429,14 +329,14 @@ export const OperationsManagement601Module: LearningModule = {
         {
           "id": "operations-management-601-l06-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Knowledge Check",
+          "content": "Recall the case study and simulation. Focus on how you evaluated tradeoffs and adapted your strategy under pressure."
         }
       ],
       "questions": [
         {
           "id": "operations-management-601-l06-q1",
-          "text": "In advanced casework, the first requirement for defensible recommendations is:",
+          "text": "In advanced casework, the first requirement for a defensible recommendation is:",
           "skillId": "operations-management-601-skill-case1",
           "options": [
             {
@@ -457,196 +357,96 @@ export const OperationsManagement601Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible recommendations begin with explicit assumptions, constraints, and measurable targets."
+          "explanation": "Defensible recommendations begin with an explicit problem frame, including baselines, constraints, and measurable targets."
         },
         {
           "id": "operations-management-601-l06-q2",
-          "text": "A resilient strategy for business operations and execution design should include:",
+          "text": "During a live simulation, an unexpected external event causes a key metric to drop. What is the most resilient response?",
           "skillId": "operations-management-601-skill-case2",
           "options": [
             {
               "id": "a",
-              "text": "Checkpointed execution with fallback and escalation criteria"
+              "text": "Immediately commit to a single, large-scale correction"
             },
             {
               "id": "b",
-              "text": "One-way execution with no rollback capability"
+              "text": "Wait for the system to self-correct without intervention"
             },
             {
               "id": "c",
-              "text": "No ownership mapping across teams"
+              "text": "Analyze the event, consider activating a pre-planned fallback, and communicate the change"
             },
             {
               "id": "d",
-              "text": "Hidden assumptions and undocumented decisions"
+              "text": "Change the success metric to make the current performance look better"
             }
           ],
-          "correctOptionId": "a",
-          "explanation": "Resilience depends on checkpoints, fallback options, and explicit escalation design."
+          "correctOptionId": "c",
+          "explanation": "Resilience in simulations and real-world operations depends on analysis, use of contingency plans, and clear communication."
         },
         {
           "id": "operations-management-601-l06-q3",
-          "text": "When evaluating business impact and tradeoff analysis, which method is most rigorous?",
+          "text": "When evaluating tradeoffs between cost and safety in a case study, which method is most rigorous?",
           "skillId": "operations-management-601-skill-case3",
           "options": [
             {
               "id": "a",
-              "text": "Single success story without controls"
+              "text": "Choosing the lowest cost option regardless of safety data"
             },
             {
               "id": "b",
-              "text": "Comparative baselines plus side-effect and uncertainty analysis"
+              "text": "Quantifying the impact of each option on both metrics and analyzing the marginal benefit of increased spending on safety"
             },
             {
               "id": "c",
-              "text": "Outcome-only narrative without process evidence"
+              "text": "Relying solely on anecdotal evidence about safety"
             },
             {
               "id": "d",
-              "text": "Retrospective scope changes to fit outcomes"
+              "text": "Prioritizing the option with the most persuasive narrative"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Rigorous evaluation requires comparisons, side-effect analysis, and uncertainty disclosure."
+          "explanation": "Rigorous tradeoff analysis requires quantifying impacts on all critical dimensions to make an informed, evidence-based decision."
         },
         {
           "id": "operations-management-601-l06-q4",
-          "text": "Advanced governance is strongest when it:",
+          "text": "The 'Decision Memo Pattern' is designed to ensure that recommendations are:",
           "skillId": "operations-management-601-skill-case4",
           "options": [
             {
               "id": "a",
-              "text": "Aligns authority, measurement, and remediation obligations"
+              "text": "As brief as possible, omitting risks and assumptions"
             },
             {
               "id": "b",
-              "text": "Separates policy from operational controls"
+              "text": "Structured, evidence-based, and accountable"
             },
             {
               "id": "c",
-              "text": "Avoids external review and transparency"
+              "text": "Final and cannot be revisited"
             },
             {
               "id": "d",
-              "text": "Treats accountability as optional under pressure"
-            }
-          ],
-          "correctOptionId": "a",
-          "explanation": "Mature governance links authority, measurable controls, and corrective action."
-        },
-        {
-          "id": "operations-management-601-l06-q5",
-          "text": "What is the best way to compare competing interventions in advanced Business?",
-          "skillId": "operations-management-601-skill-advanced-5",
-          "options": [
-            {
-              "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
-            },
-            {
-              "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
-            },
-            {
-              "id": "c",
-              "text": "Switch metrics after results arrive"
-            },
-            {
-              "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
+              "text": "Focused only on the best-case scenario"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
-        },
-        {
-          "id": "operations-management-601-l06-q6",
-          "text": "In high-stakes Operations Management Research and Leadership execution, which communication protocol is strongest?",
-          "skillId": "operations-management-601-skill-advanced-6",
-          "options": [
-            {
-              "id": "a",
-              "text": "Broadcast conclusions without assumptions"
-            },
-            {
-              "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
-            },
-            {
-              "id": "c",
-              "text": "Share only final outcomes after completion"
-            },
-            {
-              "id": "d",
-              "text": "Limit updates to a single informal channel"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
-        },
-        {
-          "id": "operations-management-601-l06-q7",
-          "text": "A mature remediation loop in advanced Business should prioritize:",
-          "skillId": "operations-management-601-skill-advanced-7",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blame assignment without system updates"
-            },
-            {
-              "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
-            },
-            {
-              "id": "c",
-              "text": "One-time fixes without retesting"
-            },
-            {
-              "id": "d",
-              "text": "Issue closure based on elapsed time"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
-        },
-        {
-          "id": "operations-management-601-l06-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Operations Management Research and Leadership?",
-          "skillId": "operations-management-601-skill-advanced-8",
-          "options": [
-            {
-              "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
-            },
-            {
-              "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
-            },
-            {
-              "id": "c",
-              "text": "Ignore correlated failure modes"
-            },
-            {
-              "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "explanation": "The pattern enforces a structure that includes evidence, assumptions, risks, and fallbacks, promoting accountability."
         }
       ]
     },
     {
       "id": "operations-management-601-l07",
-      "title": "Operations Management Governance and Public Impact",
+      "title": "Governance and Public Impact",
       "type": "video",
       "duration": 13,
       "learningAids": [
         {
           "id": "operations-management-601-l07-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Stakeholder Impact Map",
+          "content": "An infographic mapping the ripple effects of a business decision on various stakeholder groups (employees, customers, community, environment)."
         }
       ],
       "chunks": [
@@ -654,50 +454,50 @@ export const OperationsManagement601Module: LearningModule = {
           "id": "operations-management-601-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "In this lesson, learners will explore how to map the distribution of impacts among various stakeholders. This includes identifying the benefits, burdens, and any delayed effects that decisions may have on different groups. Understanding these dynamics is crucial for responsible decision-making in operations management.\nContext recap: In this lesson, learners will explore how to map the distribution of impacts among various stakeholders. This includes identifying the benefits, burdens, and any delayed effects that decisions may have on different groups. Understanding these dynamics is crucial for responsible decision-making in operations management."
+          "content": "This lesson explores how to map the distribution of impacts across various stakeholders. This includes identifying the benefits, burdens, and any delayed or indirect effects that decisions may have on different groups. Understanding these dynamics is crucial for responsible and ethical decision-making."
         },
         {
           "id": "operations-management-601-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "In this section, we will focus on the architecture of accountability within decision-making processes. This includes ensuring that there is traceability for decisions made, rights for review, and obligations for remediation. By integrating these elements, we can foster a culture of responsibility and transparency in operations management.\nContext recap: In this section, we will focus on the architecture of accountability within decision-making processes. This includes ensuring that there is traceability for decisions made, rights for review, and obligations for remediation. By integrating these elements, we can foster a culture of responsibility and transparency in operations management."
+          "content": "Here, we focus on designing accountability into decision-making processes. This architecture includes ensuring traceability for every decision, establishing rights for review, and defining clear obligations for remediation. Integrating these elements fosters a culture of responsibility and transparency."
         },
         {
           "id": "operations-management-601-l07-c3",
           "kind": "recap",
-          "title": "Responsible Leadership Checklist",
-          "content": "The final checklist is an important tool that helps us connect the results we achieve with our ethical responsibilities, adherence to policies, and our ability to adapt to challenges. It ensures that we are not only meeting our goals but also doing so in a way that is responsible and sustainable.\nContext recap: The final checklist is an important tool that helps us connect the results we achieve with our ethical responsibilities, adherence to policies, and our ability to adapt to challenges. It ensures that we are not only meeting our goals but also doing so in a way that is responsible and sustainable."
+          "title": "The Responsible Leadership Checklist",
+          "content": "This final checklist is a practical tool that connects operational outcomes with ethical responsibilities, policy adherence, and adaptability. It ensures that we are not only meeting performance goals but also doing so in a way that is accountable, sustainable, and socially responsible."
         }
       ],
       "flashcards": [
         {
           "id": "operations-management-601-l07-f1",
-          "front": "Impact distribution",
-          "back": "How outcomes are allocated across populations and timescales."
+          "front": "Impact Distribution",
+          "back": "The analysis of how outcomes (both positive and negative) are allocated across different populations and over time."
         },
         {
           "id": "operations-management-601-l07-f2",
-          "front": "Decision traceability",
-          "back": "An auditable record of evidence, ownership, and rationale."
+          "front": "Decision Traceability",
+          "back": "An auditable record linking a decision to its evidence, ownership, rationale, and subsequent outcomes."
         },
         {
           "id": "operations-management-601-l07-f3",
-          "front": "Responsible leadership",
-          "back": "Decision behavior balancing performance, accountability, and ethics."
+          "front": "Responsible Leadership",
+          "back": "A decision-making approach that balances performance goals with accountability, ethical considerations, and stakeholder impact."
         }
       ]
     },
     {
       "id": "operations-management-601-l08",
-      "title": "Operations Management Capstone Defense Lab",
+      "title": "Capstone Defense Lab",
       "type": "interactive",
       "duration": 16,
       "learningAids": [
         {
           "id": "operations-management-601-l08-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Defense Brief Template",
+          "content": "A template for a defense brief, with clearly marked sections for claims, evidence, uncertainty analysis, and remediation plans."
         }
       ],
       "chunks": [
@@ -705,13 +505,13 @@ export const OperationsManagement601Module: LearningModule = {
           "id": "operations-management-601-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "In this activity, learners will work together to create a comprehensive brief. This brief will include important claims that support our ideas, evidence that backs up those claims, boundaries of uncertainty that highlight areas where we need more information, and pathways for remediation that outline how we can address any potential issues that arise.\nContext recap: In this activity, learners will work together to create a comprehensive brief. This brief will include important claims that support our ideas, evidence that backs up those claims, boundaries of uncertainty that highlight areas where we need more information, and pathways for remediation that outline how we can address any potential issues that arise."
+          "content": "In this capstone activity, you will assemble a comprehensive defense brief for a complex operational recommendation. This brief must integrate your core claims, the evidence backing them, the boundaries of uncertainty, and clear pathways for remediation if risks materialize."
         },
         {
           "id": "operations-management-601-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "During this practice session, learners will have the opportunity to rehearse their responses to various critiques. These critiques will come from experts in technical fields, governance, and stakeholder perspectives. This rehearsal is crucial for building confidence and ensuring that we can effectively communicate our ideas and respond to feedback.\nContext recap: During this practice session, learners will have the opportunity to rehearse their responses to various critiques. These critiques will come from experts in technical fields, governance, and stakeholder perspectives. This rehearsal is crucial for building confidence and ensuring that we can effectively communicate our ideas and respond to feedback."
+          "content": "This final practice session prepares you for the defense simulation. You will rehearse responses to critiques from multiple perspectives, including technical, governance, and stakeholder experts. This rehearsal is crucial for building confidence and communicating effectively under pressure."
         }
       ],
       "interactiveActivities": [
@@ -719,7 +519,7 @@ export const OperationsManagement601Module: LearningModule = {
           "id": "operations-management-601-l08-act1",
           "type": "debate_simulator",
           "title": "Expert Defense Panel",
-          "description": "Defend specialization recommendations under adversarial cross-examination."
+          "description": "Defend your capstone recommendation under adversarial cross-examination from a simulated panel of experts."
         }
       ]
     }

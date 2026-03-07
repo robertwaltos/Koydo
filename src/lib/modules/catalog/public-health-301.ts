@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const PublicHealth301Module: LearningModule = {
+export const public_health_301_Module: LearningModule = {
   "id": "public-health-301",
   "title": "Public Health Systems and Governance",
   "description": "Level 301 curriculum in Public Health, focused on population health metrics, epidemiologic reasoning, prevention strategy, and health equity governance through case-driven analysis, simulations, and assessment-backed mastery.",
@@ -14,7 +14,7 @@ export const PublicHealth301Module: LearningModule = {
   ],
   "minAge": 16,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en",
@@ -38,8 +38,8 @@ export const PublicHealth301Module: LearningModule = {
         {
           "id": "public-health-301-l01-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use the lesson structure, document assumptions, and validate your conclusions before final submission."
+          "title": "Causal Loop Diagram",
+          "content": "A visual prompt showing the interconnectedness of population health metrics, interventions, and outcomes, helping to frame epidemiologic reasoning."
         }
       ],
       "chunks": [
@@ -47,36 +47,36 @@ export const PublicHealth301Module: LearningModule = {
           "id": "public-health-301-l01-c1",
           "kind": "concept",
           "title": "Language, Scope, and Boundaries",
-          "content": "In this lesson, we will explore important concepts related to public health. We will define what we mean by operational language and discuss the boundaries of our scope. Additionally, we will learn how population health metrics, which are measurements that help us understand the health of a community, and epidemiologic reasoning, which is the study of how diseases spread and can be controlled, are interconnected in real-world public health systems.\nContext recap: In this lesson, we will explore important concepts related to public health. We will define what we mean by operational language and discuss the boundaries of our scope. Additionally, we will learn how population health metrics, which are measurements that help us understand the health of a community, and epidemiologic reasoning, which is the study of how diseases spread and can be controlled, are interconnected in real-world public health systems."
+          "content": "This lesson establishes the core concepts for the module. We will define key operational language and scope boundaries. We will also explore how population health metrics (measures of a community's health) and epidemiologic reasoning (the study of disease patterns) are interconnected in real-world public health systems."
         },
         {
           "id": "public-health-301-l01-c2",
           "kind": "concept",
           "title": "Causal Reasoning Under Constraints",
-          "content": "In this section, learners will engage in modeling cause-and-effect pathways. This means we will look at how certain actions can lead to specific outcomes in public health. We will also identify assumptions that may lead to mistakes or failures in our reasoning. Before we choose any interventions or actions to take, it is crucial to understand these pathways and assumptions to ensure we make informed decisions.\nContext recap: In this section, learners will engage in modeling cause-and-effect pathways. This means we will look at how certain actions can lead to specific outcomes in public health. We will also identify assumptions that may lead to mistakes or failures in our reasoning. Before we choose any interventions or actions to take, it is crucial to understand these pathways and assumptions to ensure we make informed decisions.\nContext recap: In this section, learners will engage in modeling cause-and-effect pathways. This means we will look at how certain actions can lead to specific outcomes in public health. We will also identify assumptions that may lead to mistakes or failures in our reasoning. Before we choose any interventions or actions to take, it is crucial to understand these pathways and assumptions to ensure we make informed decisions.\nWhy this matters: Causal Reasoning Under Constraints helps learners in Health Science connect ideas from Public Health Systems and Governance to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "Learners will model cause-and-effect pathways to understand how specific actions lead to public health outcomes. A key focus is identifying hidden assumptions that can lead to errors. Understanding these pathways is crucial for making informed decisions before selecting an intervention. This skill is essential for connecting theory to practice and highlighting the importance of tradeoffs, assumptions, and verification."
         },
         {
           "id": "public-health-301-l01-c3",
           "kind": "recap",
           "title": "Evidence Standards",
-          "content": "Throughout this module, it is essential that all claims we make are supported by observable indicators. These indicators are measurable signs that can help us understand the effectiveness of our public health strategies. We will also consider uncertainty bounds, which help us recognize the limits of our knowledge, and establish review checkpoints to ensure our findings are accurate and reliable.\nContext recap: Throughout this module, it is essential that all claims we make are supported by observable indicators. These indicators are measurable signs that can help us understand the effectiveness of our public health strategies. We will also consider uncertainty bounds, which help us recognize the limits of our knowledge, and establish review checkpoints to ensure our findings are accurate and reliable."
+          "content": "Throughout this module, all claims must be supported by observable, measurable indicators. We will also define uncertainty bounds to acknowledge the limits of our knowledge and establish review checkpoints to ensure our findings are accurate and reliable."
         }
       ],
       "flashcards": [
         {
           "id": "public-health-301-l01-f1",
-          "front": "population health metrics",
-          "back": "A central decision axis in Public Health requiring explicit tradeoff treatment."
+          "front": "Population Health Metrics",
+          "back": "Key measures of a community's health. Evaluating them requires clearly stating the pros and cons of any decision."
         },
         {
           "id": "public-health-301-l01-f2",
-          "front": "epidemiologic reasoning",
-          "back": "The reliability layer that determines whether plans survive real-world variability."
+          "front": "Epidemiologic Reasoning",
+          "back": "The systematic process of analyzing health data to ensure plans are robust enough to handle real-world variability."
         },
         {
           "id": "public-health-301-l01-f3",
-          "front": "prevention strategy",
-          "back": "The analytical process for assessing intervention quality and consequence spread."
+          "front": "Prevention Strategy",
+          "back": "The analytical process for assessing an intervention's quality, including its intended benefits and unintended consequences."
         }
       ]
     },
@@ -89,8 +89,8 @@ export const PublicHealth301Module: LearningModule = {
         {
           "id": "public-health-301-l02-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use the lesson structure, document assumptions, and validate your conclusions before final submission."
+          "title": "Workflow Design Canvas",
+          "content": "Use this canvas to map out your public health workflow, including decision points, metrics, and governance checks."
         }
       ],
       "chunks": [
@@ -98,13 +98,13 @@ export const PublicHealth301Module: LearningModule = {
           "id": "public-health-301-l02-c1",
           "kind": "practice",
           "title": "Workflow Construction",
-          "content": "In this interactive lab, learners will have the opportunity to design a workflow that emphasizes the analysis of system trade-offs. This means we will look at the pros and cons of different choices we can make. We will also integrate metrics, which are measurements that help us assess our progress, and governance, which refers to the rules and policies that guide our decisions. Finally, we will test the resilience of our workflow against uncertainties to see how well it can adapt to unexpected challenges.\nContext recap: In this interactive lab, learners will have the opportunity to design a workflow that emphasizes the analysis of system trade-offs. This means we will look at the pros and cons of different choices we can make. We will also integrate metrics, which are measurements that help us assess our progress, and governance, which refers to the rules and policies that guide our decisions. Finally, we will test the resilience of our workflow against uncertainties to see how well it can adapt to unexpected challenges.\nContext recap: In this interactive lab, learners will have the opportunity to design a workflow that emphasizes the analysis of system trade-offs. This means we will look at the pros and cons of different choices we can make. We will also integrate metrics, which are measurements that help us assess our progress, and governance, which refers to the rules and policies that guide our decisions. Finally, we will test the resilience of our workflow against uncertainties to see how well it can adapt to unexpected challenges.\nWhy this matters: Workflow Construction helps learners in Health Science connect ideas from Public Health Systems and Governance to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "In this interactive lab, you will design a decision-making workflow that emphasizes the analysis of system trade-offs. You will integrate metrics to assess progress and governance rules to guide decisions. Finally, you will test your workflow's resilience against uncertainty to see how well it adapts to unexpected challenges."
         },
         {
           "id": "public-health-301-l02-c2",
           "kind": "recap",
           "title": "Readiness and Control Gates",
-          "content": "To ensure our operations are ready for action, we need to focus on several key elements. This includes mapping out who is responsible for different tasks, establishing control gates that act as checkpoints, and creating verification hooks that allow us to confirm our decisions after they are made. These steps are crucial for maintaining operational readiness and ensuring that we can respond effectively to public health challenges.\nContext recap: To ensure our operations are ready for action, we need to focus on several key elements. This includes mapping out who is responsible for different tasks, establishing control gates that act as checkpoints, and creating verification hooks that allow us to confirm our decisions after they are made. These steps are crucial for maintaining operational readiness and ensuring that we can respond effectively to public health challenges."
+          "content": "To ensure operational readiness, we will map out responsibilities, establish control gates as checkpoints for quality, and create verification hooks to confirm decisions after they are made. These steps are crucial for responding effectively to public health challenges."
         }
       ],
       "interactiveActivities": [
@@ -144,19 +144,19 @@ export const PublicHealth301Module: LearningModule = {
           ],
           "items": [
             {
-              "text": "Service latency target",
+              "text": "Data processing latency target",
               "bucket": "Technical"
             },
             {
-              "text": "Compliance retention rule",
+              "text": "HIPAA compliance rule",
               "bucket": "Policy"
             },
             {
-              "text": "Community trust risk",
+              "text": "Risk to community trust",
               "bucket": "Stakeholder Impact"
             },
             {
-              "text": "Incident disclosure protocol",
+              "text": "Public incident disclosure protocol",
               "bucket": "Policy"
             }
           ]
@@ -172,14 +172,14 @@ export const PublicHealth301Module: LearningModule = {
         {
           "id": "public-health-301-l03-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use the lesson structure, document assumptions, and validate your conclusions before final submission."
+          "title": "Key Concepts Review Sheet",
+          "content": "A one-page summary of core concepts from Lessons 1 and 2 to help you prepare."
         }
       ],
       "questions": [
         {
           "id": "public-health-301-l03-q1",
-          "text": "Which action most improves population health metrics quality in practice?",
+          "text": "Which action most improves the quality of population health metrics in practice?",
           "skillId": "public-health-301-skill-core",
           "options": [
             {
@@ -204,12 +204,12 @@ export const PublicHealth301Module: LearningModule = {
         },
         {
           "id": "public-health-301-l03-q2",
-          "text": "At level 301, the strongest emphasis is:",
+          "text": "At the 301 level, what is the strongest emphasis?",
           "skillId": "public-health-301-skill-level",
           "options": [
             {
               "id": "a",
-              "text": "system tradeoff analysis, metrics and governance integration, and cross-team decision design"
+              "text": "System tradeoff analysis, metrics and governance integration, and cross-team decision design"
             },
             {
               "id": "b",
@@ -225,11 +225,11 @@ export const PublicHealth301Module: LearningModule = {
             }
           ],
           "correctOptionId": "a",
-          "explanation": "The 301 layer is explicitly designed around system tradeoff analysis, metrics and governance integration, and cross-team decision design."
+          "explanation": "The 301 level is explicitly designed around system tradeoff analysis, metrics and governance integration, and cross-team decision design."
         },
         {
           "id": "public-health-301-l03-q3",
-          "text": "What best strengthens epidemiologic reasoning reliability?",
+          "text": "What best strengthens the reliability of epidemiologic reasoning?",
           "skillId": "public-health-301-skill-reliability",
           "options": [
             {
@@ -251,56 +251,6 @@ export const PublicHealth301Module: LearningModule = {
           ],
           "correctOptionId": "b",
           "explanation": "Reliability improves when control, ownership, and escalation are explicit and repeatable."
-        },
-        {
-          "id": "public-health-301-l03-q4",
-          "text": "When evaluating prevention strategy, which approach is most defensible?",
-          "skillId": "public-health-301-skill-eval",
-          "options": [
-            {
-              "id": "a",
-              "text": "Use anecdotal examples only"
-            },
-            {
-              "id": "b",
-              "text": "Compare interventions against baseline and monitor side effects"
-            },
-            {
-              "id": "c",
-              "text": "Remove difficult scenarios from evaluation"
-            },
-            {
-              "id": "d",
-              "text": "Change target definitions after results are known"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Baseline comparison and side-effect monitoring reduce overclaiming and hidden risk."
-        },
-        {
-          "id": "public-health-301-l03-q5",
-          "text": "A mature health equity governance model should include:",
-          "skillId": "public-health-301-skill-governance",
-          "options": [
-            {
-              "id": "a",
-              "text": "One-time review with no corrective pathway"
-            },
-            {
-              "id": "b",
-              "text": "Policy links, measurable thresholds, and remediation triggers"
-            },
-            {
-              "id": "c",
-              "text": "No public or stakeholder transparency"
-            },
-            {
-              "id": "d",
-              "text": "Unbounded discretion without guardrails"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature governance connects policy goals to measurable thresholds and corrective pathways."
         }
       ]
     },
@@ -312,46 +262,46 @@ export const PublicHealth301Module: LearningModule = {
       "learningAids": [
         {
           "id": "public-health-301-l04-a1",
-          "type": "mnemonic",
-          "title": "Guided Practice",
-          "content": "Use the lesson structure, document assumptions, and validate your conclusions before final submission."
+          "type": "image",
+          "title": "Tradeoff Matrix Template",
+          "content": "A visual tool to structure your analysis of different intervention strategies, comparing them across effectiveness, equity, and feasibility."
         }
       ],
       "chunks": [
         {
           "id": "public-health-301-l04-c1",
           "kind": "example",
-          "title": "Case Context and Stakes",
-          "content": "In this case study, we will focus on a regional outbreak response. This involves balancing various elements such as surveillance, which is monitoring for signs of disease, communication, and the allocation of intervention resources. Learners will map out the stakes involved in decision-making and identify risks that may not be immediately obvious. This exercise will help us understand the complexities of managing public health crises.\nContext recap: In this case study, we will focus on a regional outbreak response. This involves balancing various elements such as surveillance, which is monitoring for signs of disease, communication, and the allocation of intervention resources. Learners will map out the stakes involved in decision-making and identify risks that may not be immediately obvious. This exercise will help us understand the complexities of managing public health crises.\nContext recap: In this case study, we will focus on a regional outbreak response. This involves balancing various elements such as surveillance, which is monitoring for signs of disease, communication, and the allocation of intervention resources. Learners will map out the stakes involved in decision-making and identify risks that may not be immediately obvious. This exercise will help us understand the complexities of managing public health crises.\nWhy this matters: Case Context and Stakes helps learners in Health Science connect ideas from Public Health Systems and Governance to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "Case Context: Regional Outbreak Response",
+          "content": "This case study focuses on a regional outbreak response, requiring a balance between surveillance, communication, and resource allocation. You will map the decision stakes and identify non-obvious risks to understand the complexities of managing a public health crisis."
         },
         {
           "id": "public-health-301-l04-c2",
           "kind": "concept",
           "title": "Tradeoff Matrix Construction",
-          "content": "In this section, we will construct a tradeoff matrix to compare different interventions. This matrix will allow us to evaluate each intervention based on several criteria, including its effectiveness, reliability, equity, which refers to fairness in health outcomes, and the feasibility of implementation. By analyzing these factors, we can make more informed decisions about which interventions to pursue.\nContext recap: In this section, we will construct a tradeoff matrix to compare different interventions. This matrix will allow us to evaluate each intervention based on several criteria, including its effectiveness, reliability, equity, which refers to fairness in health outcomes, and the feasibility of implementation. By analyzing these factors, we can make more informed decisions about which interventions to pursue."
+          "content": "We will construct a tradeoff matrix to systematically compare different interventions. This matrix will help evaluate each option against key criteria, including effectiveness, reliability, equity (fairness in outcomes), and implementation feasibility, leading to more informed decisions."
         },
         {
           "id": "public-health-301-l04-c3",
           "kind": "recap",
-          "title": "Failure Lessons and Recovery",
-          "content": "In this recap, we will discuss how to learn from failures in public health initiatives. We will convert what we call failure signatures, which are patterns that indicate where things went wrong, into safeguards that can help prevent similar issues in the future. Additionally, we will develop response playbooks, which are plans for how to react in various situations, and establish monitoring updates to keep track of our progress.\nContext recap: In this recap, we will discuss how to learn from failures in public health initiatives. We will convert what we call failure signatures, which are patterns that indicate where things went wrong, into safeguards that can help prevent similar issues in the future. Additionally, we will develop response playbooks, which are plans for how to react in various situations, and establish monitoring updates to keep track of our progress."
+          "title": "Learning from Failures",
+          "content": "In this recap, we discuss how to learn from failures. We will analyze 'failure signatures'—patterns indicating what went wrong—to develop safeguards against future issues. We will also introduce response playbooks and monitoring protocols to improve future performance."
         }
       ],
       "flashcards": [
         {
           "id": "public-health-301-l04-f1",
-          "front": "Tradeoff matrix",
-          "back": "A structured comparison of options under conflicting priorities."
+          "front": "Tradeoff Matrix",
+          "back": "A structured comparison of options across multiple, often conflicting, priorities."
         },
         {
           "id": "public-health-301-l04-f2",
-          "front": "Failure signature",
-          "back": "A recurring observable pattern indicating a class of system risk."
+          "front": "Failure Signature",
+          "back": "A recurring, observable pattern that indicates a specific type of system risk."
         },
         {
           "id": "public-health-301-l04-f3",
-          "front": "Recovery playbook",
-          "back": "A documented sequence for safe and timely response during adverse events."
+          "front": "Recovery Playbook",
+          "back": "A documented, step-by-step procedure for a safe and timely response to adverse events."
         }
       ]
     },
@@ -364,8 +314,8 @@ export const PublicHealth301Module: LearningModule = {
         {
           "id": "public-health-301-l05-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use the lesson structure, document assumptions, and validate your conclusions before final submission."
+          "title": "Simulation Parameter Checklist",
+          "content": "Use this checklist to define your intervention variables, uncertainty ranges, and success metrics before running the simulation."
         }
       ],
       "chunks": [
@@ -373,13 +323,13 @@ export const PublicHealth301Module: LearningModule = {
           "id": "public-health-301-l05-c1",
           "kind": "practice",
           "title": "Scenario Simulation Setup",
-          "content": "In this interactive simulation setup, learners will configure various interventions, which are actions taken to improve public health. We will also define uncertainty parameters, which are the limits of what we know about the situation, and set measurable success thresholds. These thresholds will help us determine what success looks like for each intervention we implement.\nContext recap: In this interactive simulation setup, learners will configure various interventions, which are actions taken to improve public health. We will also define uncertainty parameters, which are the limits of what we know about the situation, and set measurable success thresholds. These thresholds will help us determine what success looks like for each intervention we implement."
+          "content": "In this interactive simulation, you will configure public health interventions, define uncertainty parameters to represent real-world ambiguity, and set measurable thresholds to define success. This setup allows you to test your strategies in a controlled environment."
         },
         {
           "id": "public-health-301-l05-c2",
           "kind": "recap",
           "title": "Simulation Debrief",
-          "content": "After each simulation run, we will conduct a debriefing session to review the results. During this time, we will analyze the expected gains from our interventions, any side effects that may have occurred, and ensure that our actions comply with governance standards. This process is essential for understanding the impact of our decisions and improving future interventions.\nContext recap: After each simulation run, we will conduct a debriefing session to review the results. During this time, we will analyze the expected gains from our interventions, any side effects that may have occurred, and ensure that our actions comply with governance standards. This process is essential for understanding the impact of our decisions and improving future interventions."
+          "content": "After each simulation run, we will conduct a debrief to review the results. We will analyze the expected gains, unintended side effects, and compliance with governance standards. This process is essential for refining decision-making skills."
         }
       ],
       "interactiveActivities": [
@@ -389,9 +339,9 @@ export const PublicHealth301Module: LearningModule = {
           "title": "Intervention Simulation",
           "description": "Compare three intervention paths and justify which best advances population health metrics and health equity governance.",
           "instructions": [
-            "Define objective and guardrails before selecting interventions.",
+            "Define your primary objective and ethical guardrails before selecting an intervention.",
             "Record one near-term and one long-term tradeoff for each option.",
-            "Select metrics that confirm or falsify your choice."
+            "Select metrics that would confirm or falsify the success of your chosen path."
           ]
         },
         {
@@ -402,10 +352,10 @@ export const PublicHealth301Module: LearningModule = {
           "pairs": [
             {
               "left": "Ambiguous ownership",
-              "right": "Create explicit role and escalation map"
+              "right": "Create an explicit role and escalation map"
             },
             {
-              "left": "Weak signal quality",
+              "left": "Weak data signal",
               "right": "Strengthen intake validation and quality checks"
             },
             {
@@ -429,135 +379,85 @@ export const PublicHealth301Module: LearningModule = {
         {
           "id": "public-health-301-l06-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use the lesson structure, document assumptions, and validate your conclusions before final submission."
+          "title": "Case Study Debrief Guide",
+          "content": "Review key decision points from the case study and simulation to prepare for the checkpoint."
         }
       ],
       "questions": [
         {
           "id": "public-health-301-l06-q1",
-          "text": "Which action most improves population health metrics quality in practice?",
-          "skillId": "public-health-301-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "Skip explicit constraints and rely on intuition"
-            },
-            {
-              "id": "b",
-              "text": "Define assumptions, monitor indicators, and test failure cases"
-            },
-            {
-              "id": "c",
-              "text": "Treat all outcomes as equivalent"
-            },
-            {
-              "id": "d",
-              "text": "Ignore uncertainty and variance"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "High-quality decisions require explicit assumptions and measurable stress tests."
-        },
-        {
-          "id": "public-health-301-l06-q2",
-          "text": "At level 301, the strongest emphasis is:",
-          "skillId": "public-health-301-skill-level",
-          "options": [
-            {
-              "id": "a",
-              "text": "system tradeoff analysis, metrics and governance integration, and cross-team decision design"
-            },
-            {
-              "id": "b",
-              "text": "Fast execution with no review loops"
-            },
-            {
-              "id": "c",
-              "text": "Single stakeholder perspective only"
-            },
-            {
-              "id": "d",
-              "text": "Outcome claims without baselines"
-            }
-          ],
-          "correctOptionId": "a",
-          "explanation": "The 301 layer is explicitly designed around system tradeoff analysis, metrics and governance integration, and cross-team decision design."
-        },
-        {
-          "id": "public-health-301-l06-q3",
-          "text": "What best strengthens epidemiologic reasoning reliability?",
-          "skillId": "public-health-301-skill-reliability",
-          "options": [
-            {
-              "id": "a",
-              "text": "No ownership for incident response"
-            },
-            {
-              "id": "b",
-              "text": "Clear control points, owner mapping, and escalation thresholds"
-            },
-            {
-              "id": "c",
-              "text": "Ad-hoc changes without logs"
-            },
-            {
-              "id": "d",
-              "text": "No postmortem process"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Reliability improves when control, ownership, and escalation are explicit and repeatable."
-        },
-        {
-          "id": "public-health-301-l06-q4",
-          "text": "When evaluating prevention strategy, which approach is most defensible?",
+          "text": "In a case analysis, what is the primary purpose of a tradeoff matrix?",
           "skillId": "public-health-301-skill-eval",
           "options": [
             {
               "id": "a",
-              "text": "Use anecdotal examples only"
+              "text": "To prove one option is perfect"
             },
             {
               "id": "b",
-              "text": "Compare interventions against baseline and monitor side effects"
+              "text": "To systematically compare options across multiple, competing criteria"
             },
             {
               "id": "c",
-              "text": "Remove difficult scenarios from evaluation"
+              "text": "To list only the positive aspects of a preferred intervention"
             },
             {
               "id": "d",
-              "text": "Change target definitions after results are known"
+              "text": "To replace the need for stakeholder communication"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Baseline comparison and side-effect monitoring reduce overclaiming and hidden risk."
+          "explanation": "A tradeoff matrix is a tool for structured comparison, helping to make decision logic transparent and defensible, especially when no option is perfect."
         },
         {
-          "id": "public-health-301-l06-q5",
-          "text": "A mature health equity governance model should include:",
-          "skillId": "public-health-301-skill-governance",
+          "id": "public-health-301-l06-q2",
+          "text": "A 'failure signature' is identified during a post-incident review. What is the most productive next step?",
+          "skillId": "public-health-301-skill-reliability",
           "options": [
             {
               "id": "a",
-              "text": "One-time review with no corrective pathway"
+              "text": "Assigning blame to a single individual"
             },
             {
               "id": "b",
-              "text": "Policy links, measurable thresholds, and remediation triggers"
+              "text": "Ignoring the pattern as a one-time event"
             },
             {
               "id": "c",
-              "text": "No public or stakeholder transparency"
+              "text": "Developing a specific safeguard or control to prevent recurrence"
             },
             {
               "id": "d",
-              "text": "Unbounded discretion without guardrails"
+              "text": "Deleting the data related to the failure"
+            }
+          ],
+          "correctOptionId": "c",
+          "explanation": "The goal of identifying a failure signature is to learn from it and improve the system's resilience by creating targeted safeguards."
+        },
+        {
+          "id": "public-health-301-l06-q3",
+          "text": "When running a public health simulation, why is it critical to define 'uncertainty parameters'?",
+          "skillId": "public-health-301-skill-core",
+          "options": [
+            {
+              "id": "a",
+              "text": "To guarantee a successful outcome"
+            },
+            {
+              "id": "b",
+              "text": "To test how robust a strategy is against real-world variability and incomplete information"
+            },
+            {
+              "id": "c",
+              "text": "To make the simulation easier to complete"
+            },
+            {
+              "id": "d",
+              "text": "To eliminate the need for post-simulation analysis"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Mature governance connects policy goals to measurable thresholds and corrective pathways."
+          "explanation": "Uncertainty parameters are essential for stress-testing a strategy and understanding its potential performance under various realistic conditions, not just the best-case scenario."
         }
       ]
     },
@@ -570,8 +470,8 @@ export const PublicHealth301Module: LearningModule = {
         {
           "id": "public-health-301-l07-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use the lesson structure, document assumptions, and validate your conclusions before final submission."
+          "title": "Stakeholder Impact Map",
+          "content": "A visual diagram to map the potential positive and negative impacts of a policy on different community groups, highlighting equity considerations."
         }
       ],
       "chunks": [
@@ -579,36 +479,36 @@ export const PublicHealth301Module: LearningModule = {
           "id": "public-health-301-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Mapping",
-          "content": "In this lesson, we will identify how the impacts of public health decisions are distributed among different stakeholders. We will pay special attention to situations where the benefits and burdens of these decisions diverge across various groups. Understanding these dynamics is crucial for ensuring that public health policies are fair and equitable.\nContext recap: In this lesson, we will identify how the impacts of public health decisions are distributed among different stakeholders. We will pay special attention to situations where the benefits and burdens of these decisions diverge across various groups. Understanding these dynamics is crucial for ensuring that public health policies are fair and equitable."
+          "content": "This lesson focuses on identifying how the benefits and burdens of public health decisions are distributed among different stakeholder groups. We will pay special attention to ensuring that policies are designed to be fair and equitable, especially for vulnerable populations."
         },
         {
           "id": "public-health-301-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "In this section, we will discuss the concept of accountability in public health. This involves creating a clear structure for decision-making that allows us to trace back our choices. We will also establish review rights, which give stakeholders the ability to question decisions, and set remediation standards to address any issues that arise. These elements are vital for maintaining trust and integrity in public health governance.\nContext recap: In this section, we will discuss the concept of accountability in public health. This involves creating a clear structure for decision-making that allows us to trace back our choices. We will also establish review rights, which give stakeholders the ability to question decisions, and set remediation standards to address any issues that arise. These elements are vital for maintaining trust and integrity in public health governance.\nContext recap: In this section, we will discuss the concept of accountability in public health. This involves creating a clear structure for decision-making that allows us to trace back our choices. We will also establish review rights, which give stakeholders the ability to question decisions, and set remediation standards to address any issues that arise. These elements are vital for maintaining trust and integrity in public health governance.\nWhy this matters: Accountability Architecture helps learners in Health Science connect ideas from Public Health Systems and Governance to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "We will design an accountability structure for public health governance. This includes creating clear decision-making traceability, establishing review rights for stakeholders, and setting remediation standards to address issues. These elements are vital for maintaining public trust and integrity."
         },
         {
           "id": "public-health-301-l07-c3",
           "kind": "recap",
           "title": "Responsible Execution Checklist",
-          "content": "At the end of our lesson, we will create a comprehensive checklist that includes important elements such as public health policies, ethical considerations, the reliability of technical information, and the trust of all stakeholders involved. This checklist will help ensure that we are making responsible decisions in public health.\nContext recap: At the end of our lesson, we will create a comprehensive checklist that includes important elements such as public health policies, ethical considerations, the reliability of technical information, and the trust of all stakeholders involved. This checklist will help ensure that we are making responsible decisions in public health."
+          "content": "We will synthesize our learnings into a checklist for responsible execution. This tool will integrate policy compliance, ethical considerations, technical reliability, and stakeholder trust to ensure that public health decisions are made and implemented responsibly."
         }
       ],
       "flashcards": [
         {
           "id": "public-health-301-l07-f1",
-          "front": "Impact distribution",
-          "back": "How benefits and harms are allocated across stakeholders."
+          "front": "Impact Distribution",
+          "back": "The analysis of how benefits and harms of a policy are allocated across different stakeholder groups."
         },
         {
           "id": "public-health-301-l07-f2",
-          "front": "Decision traceability",
-          "back": "The ability to explain why a decision was made, by whom, and with what evidence."
+          "front": "Decision Traceability",
+          "back": "The ability to reconstruct and explain why a decision was made, by whom, and based on what evidence."
         },
         {
           "id": "public-health-301-l07-f3",
-          "front": "Responsible execution",
-          "back": "A delivery mode that combines effectiveness, fairness, and corrective capacity."
+          "front": "Responsible Execution",
+          "back": "A delivery model that balances effectiveness with fairness, transparency, and the capacity for correction."
         }
       ]
     },
@@ -621,8 +521,8 @@ export const PublicHealth301Module: LearningModule = {
         {
           "id": "public-health-301-l08-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use the lesson structure, document assumptions, and validate your conclusions before final submission."
+          "title": "Capstone Project Charter Template",
+          "content": "A structured document to help you define your project's scope, objectives, metrics, and governance plan."
         }
       ],
       "chunks": [
@@ -630,13 +530,13 @@ export const PublicHealth301Module: LearningModule = {
           "id": "public-health-301-l08-c1",
           "kind": "practice",
           "title": "Capstone Charter Drafting",
-          "content": "In this activity, you will work on drafting a detailed charter for your capstone project. This charter will outline the scope of your project, identify any constraints you might face, establish metrics for measuring success, and set governance checkpoints to guide your work. This process will help you think critically about your project and plan effectively.\nContext recap: In this activity, you will work on drafting a detailed charter for your capstone project. This charter will outline the scope of your project, identify any constraints you might face, establish metrics for measuring success, and set governance checkpoints to guide your work. This process will help you think critically about your project and plan effectively."
+          "content": "In this activity, you will draft a detailed charter for your capstone project. This charter will outline the project's scope, constraints, success metrics, and governance checkpoints. This structured planning process is essential for a successful project."
         },
         {
           "id": "public-health-301-l08-c2",
           "kind": "recap",
           "title": "Defense Readiness",
-          "content": "As we prepare for the final stages of our project, we will focus on ensuring that our arguments are backed by solid evidence. We will also practice how to respond effectively to critical feedback. This preparation is essential for demonstrating the strength of our work and being ready for any questions or challenges that may arise.\nContext recap: As we prepare for the final stages of our project, we will focus on ensuring that our arguments are backed by solid evidence. We will also practice how to respond effectively to critical feedback. This preparation is essential for demonstrating the strength of our work and being ready for any questions or challenges that may arise."
+          "content": "As we prepare for the capstone, we will focus on ensuring all arguments are backed by solid evidence and practice responding to critical feedback. This preparation is essential for defending your work against technical, policy, and ethical challenges."
         }
       ],
       "interactiveActivities": [
@@ -646,16 +546,44 @@ export const PublicHealth301Module: LearningModule = {
           "title": "Capstone Charter Builder",
           "description": "Build a capstone charter with measurable objectives, risks, and remediation plans.",
           "instructions": [
-            "State objective and boundary conditions.",
+            "State your project objective and boundary conditions in one clear sentence.",
             "Define at least three measurable success indicators.",
-            "Document a governance escalation pathway for critical failures."
+            "Document a governance escalation pathway for critical failures or ethical concerns."
           ]
         },
         {
           "id": "public-health-301-l08-act2",
           "type": "debate_simulator",
           "title": "Decision Defense Panel",
-          "description": "Defend your capstone approach against technical, policy, and stakeholder critiques."
+          "description": "Defend your proposed capstone approach against a simulated panel of technical, policy, and stakeholder experts."
+        }
+      ]
+    },
+    {
+      "id": "public-health-301-l09",
+      "title": "Capstone Project: Defensible Recommendation",
+      "type": "project",
+      "duration": 60,
+      "learningAids": [
+        {
+          "id": "public-health-301-l09-a1",
+          "type": "rubric",
+          "title": "Capstone Assessment Rubric",
+          "content": "Details the evaluation criteria for your final project, including evidence quality, tradeoff analysis, ethical considerations, and communication clarity."
+        }
+      ],
+      "chunks": [
+        {
+          "id": "public-health-301-l09-c1",
+          "kind": "project",
+          "title": "Project Submission",
+          "content": "Synthesize your learnings from the entire module to produce a defensible public health recommendation for a complex, real-world scenario. Your submission must include a detailed analysis, a tradeoff matrix, an ethical impact assessment, and a clear communication plan for diverse stakeholders."
+        },
+        {
+          "id": "public-health-301-l09-c2",
+          "kind": "recap",
+          "title": "Module Synthesis",
+          "content": "This capstone project integrates all core concepts: applying population health metrics, using epidemiologic reasoning, evaluating prevention strategies, and embedding health equity governance into your final recommendation. It is the ultimate test of your ability to make sound, defensible public health decisions."
         }
       ]
     }

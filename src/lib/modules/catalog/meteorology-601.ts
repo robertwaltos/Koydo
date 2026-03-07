@@ -1,9 +1,9 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const Meteorology601Module: LearningModule = {
+export const meteorology_601_Module: LearningModule = {
   "id": "meteorology-601",
   "title": "Meteorology Research and Leadership",
-  "description": "Post-401 specialization in Meteorology, focused on meteorology systems diagnostics, meteorology operations and execution design, meteorology impact and tradeoff analysis, and meteorology governance and leadership through advanced casework, simulation, and defense-based checkpoints.",
+  "description": "Post-401 specialization in Meteorology, focused on diagnosing complex atmospheric systems, designing operational forecast processes, analyzing meteorological impacts and tradeoffs, and exercising governance and leadership through advanced casework, simulation, and defense-based checkpoints.",
   "subject": "Meteorology",
   "tags": [
     "core",
@@ -14,121 +14,121 @@ export const Meteorology601Module: LearningModule = {
   ],
   "minAge": 17,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en",
     "es"
   ],
   "learningObjectives": [
-    "Apply advanced methods for meteorology systems diagnostics in high-constraint environments",
-    "Design robust systems for meteorology operations and execution design with measurable control gates",
-    "Evaluate interventions in meteorology impact and tradeoff analysis with research-grade rigor",
-    "Operationalize meteorology governance and leadership with accountable governance and escalation pathways",
-    "Lead cross-functional decision reviews with explicit tradeoff communication",
-    "Defend recommendations under expert critique using evidence and uncertainty bounds"
+    "Apply advanced diagnostic methods to complex atmospheric phenomena in high-constraint environments.",
+    "Design robust operational forecasting systems with measurable verification gates and clear protocols.",
+    "Evaluate the societal and economic impacts of meteorological events and forecast interventions with research-grade rigor.",
+    "Implement accountable governance and leadership structures for meteorological operations and public communication.",
+    "Lead cross-functional decision reviews, clearly communicating tradeoffs and forecast uncertainty.",
+    "Defend meteorological analyses and recommendations against expert critique using evidence and uncertainty bounds."
   ],
   "lessons": [
     {
       "id": "meteorology-601-l01",
-      "title": "Meteorology Advanced Foundations",
+      "title": "Advanced Atmospheric Diagnostics",
       "type": "video",
       "duration": 14,
       "learningAids": [
         {
           "id": "meteorology-601-l01-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Ensemble Forecast Spaghetti Plot",
+          "content": "An image displaying multiple forecast tracks for a hurricane from an ensemble model. Each line represents a different model run, and the spread of the lines visually represents the forecast uncertainty."
         }
       ],
       "chunks": [
         {
           "id": "meteorology-601-l01-c1",
           "kind": "concept",
-          "title": "Scope and Boundary Design",
-          "content": "In this lesson, we will delve into the advanced boundaries of meteorology, which is the study of the atmosphere and weather patterns. We will focus on how meteorological systems are diagnosed, which means understanding how to analyze and interpret weather data to predict conditions accurately. Additionally, we will discuss how operations and execution designs are created, which involves planning and implementing strategies to monitor and respond to weather events effectively. Grasping these concepts is crucial for anyone who wants to enhance their understanding of meteorology and its real-world applications in fields like climate science, aviation, and disaster management."
+          "title": "Diagnosing Synoptic and Mesoscale Systems",
+          "content": "We will delve into the advanced analysis of atmospheric systems, from synoptic-scale patterns like atmospheric rivers to mesoscale phenomena like supercell thunderstorms. This involves integrating diverse data sources—satellite, radar, and numerical weather prediction (NWP) models—to build a coherent understanding of the atmospheric dynamics at play. Mastering these diagnostic skills is the foundation for creating accurate and reliable forecasts in complex situations."
         },
         {
           "id": "meteorology-601-l01-c2",
           "kind": "concept",
-          "title": "Causal and Uncertainty Modeling",
-          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different meteorological factors. They will also identify uncertainty ranges and understand how various systems depend on each other. This foundational knowledge is crucial before planning any interventions in meteorological practices.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different meteorological factors. They will also identify uncertainty ranges and understand how various systems depend on each other. This foundational knowledge is crucial before planning any interventions in meteorological practices."
+          "title": "Modeling Causality and Uncertainty",
+          "content": "This section focuses on mapping the causal chains within weather events, such as the sequence of conditions leading to cyclogenesis. We will learn to quantify forecast uncertainty using tools like ensemble prediction systems and probabilistic forecasting. Understanding the sources and magnitudes of uncertainty is critical for communicating forecast confidence and potential risks to stakeholders and the public."
         },
         {
           "id": "meteorology-601-l01-c3",
           "kind": "recap",
-          "title": "Evidence Thresholds",
-          "content": "It is important to ensure that all claims made in meteorology are supported by measurable indicators. This lesson emphasizes the significance of establishing confidence bounds and setting up review checkpoints to validate our findings. By doing so, we can ensure that our conclusions are reliable and well-supported.\nContext recap: It is important to ensure that all claims made in meteorology are supported by measurable indicators. This lesson emphasizes the significance of establishing confidence bounds and setting up review checkpoints to validate our findings. By doing so, we can ensure that our conclusions are reliable and well-supported."
+          "title": "Establishing Evidence Thresholds",
+          "content": "A credible forecast is supported by verifiable evidence. This lesson emphasizes establishing clear thresholds for action, such as the specific wind shear and instability values that warrant a severe thunderstorm watch. We will also cover model verification statistics and the importance of review checkpoints to ensure forecast quality and continuous improvement."
         }
       ],
       "flashcards": [
         {
           "id": "meteorology-601-l01-f1",
-          "front": "meteorology systems diagnostics",
-          "back": "A specialization axis requiring explicit assumptions and measurable constraints."
+          "front": "Atmospheric Diagnostics",
+          "back": "The process of analyzing atmospheric data (e.g., satellite, radar, soundings) to identify the physical mechanisms driving a specific weather event."
         },
         {
           "id": "meteorology-601-l01-f2",
-          "front": "meteorology operations and execution design",
-          "back": "Execution architecture that determines reliability under stress."
+          "front": "Operational Forecast Design",
+          "back": "The architecture of an end-to-end forecast process, from data ingestion and model runs to forecast dissemination and public warnings."
         },
         {
           "id": "meteorology-601-l01-f3",
-          "front": "meteorology impact and tradeoff analysis",
-          "back": "Evaluation discipline for identifying true gains and hidden costs."
+          "front": "Impact and Tradeoff Analysis",
+          "back": "Evaluating the societal and economic consequences of different forecast scenarios, such as the tradeoff between an early evacuation order (potential for false alarm) versus a late one (potential for greater harm)."
         }
       ]
     },
     {
       "id": "meteorology-601-l02",
-      "title": "Meteorology Specialist Methods Lab",
+      "title": "Operational Forecasting Methods Lab",
       "type": "interactive",
       "duration": 17,
       "learningAids": [
         {
           "id": "meteorology-601-l02-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Decision Flowchart for Severe Weather Warnings",
+          "content": "A flowchart illustrating the step-by-step process a meteorologist follows, including data checkpoints (e.g., radar signatures) and decision gates, before issuing a public alert for a tornado."
         }
       ],
       "chunks": [
         {
           "id": "meteorology-601-l02-c1",
           "kind": "practice",
-          "title": "Method Design and Stress Test",
-          "content": "In this interactive lab, learners will have the opportunity to design specialized workflows that are tailored for meteorological tasks. They will also conduct stress tests on these workflows to see how they perform under challenging scenarios. This hands-on experience is vital for understanding the practical aspects of meteorology.\nContext recap: In this interactive lab, learners will have the opportunity to design specialized workflows that are tailored for meteorological tasks. They will also conduct stress tests on these workflows to see how they perform under challenging scenarios. This hands-on experience is vital for understanding the practical aspects of meteorology."
+          "title": "Workflow Design and Stress Testing",
+          "content": "In this interactive lab, you will design a specialized operational workflow for issuing flash flood warnings. You will then stress-test this workflow by simulating extreme rainfall rates and equipment failures to identify potential points of failure and improve its resilience. This hands-on experience is vital for building robust operational systems."
         },
         {
           "id": "meteorology-601-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "In this recap, we will discuss how workflows can be structured to include important checkpoints, rollback criteria, and escalation processes based on specific thresholds. This architecture is essential for ensuring that meteorological operations are conducted smoothly and effectively.\nContext recap: In this recap, we will discuss how workflows can be structured to include important checkpoints, rollback criteria, and escalation processes based on specific thresholds. This architecture is essential for ensuring that meteorological operations are conducted smoothly and effectively."
+          "content": "We will recap how to structure forecast workflows with explicit control gates. This includes defining the specific data thresholds that trigger an action (e.g., issuing a watch), criteria for retracting a warning (rollback), and clear protocols for escalating communication to emergency managers and the public."
         }
       ],
       "interactiveActivities": [
         {
           "id": "meteorology-601-l02-act1",
           "type": "matching_pairs",
-          "title": "Control-to-Outcome Mapping",
-          "description": "Match specialist controls with their strongest reliability and governance effects.",
+          "title": "Forecast Control to Public Safety Outcome",
+          "description": "Match the operational control with its most direct impact on forecast reliability and public safety.",
           "pairs": [
             {
-              "left": "Pre-commit gate",
-              "right": "Prevents avoidable downstream failures"
+              "left": "Doppler velocity threshold met",
+              "right": "Improves timeliness of tornado warning"
             },
             {
-              "left": "Rollback trigger",
-              "right": "Limits blast radius under adverse outcomes"
+              "left": "Wide ensemble model spread",
+              "right": "Lowers confidence level in hurricane track"
             },
             {
-              "left": "Baseline dashboard",
-              "right": "Supports defensible impact attribution"
+              "left": "Public alert system test",
+              "right": "Verifies effectiveness of warning dissemination"
             },
             {
-              "left": "Retrospective loop",
-              "right": "Improves next-cycle decision quality"
+              "left": "Post-storm damage survey",
+              "right": "Provides ground truth for forecast verification"
             }
           ]
         }
@@ -136,287 +136,173 @@ export const Meteorology601Module: LearningModule = {
     },
     {
       "id": "meteorology-601-l03",
-      "title": "Checkpoint 1: Specialist Methods",
+      "title": "Checkpoint 1: Diagnostics and Methods",
       "type": "quiz",
       "duration": 10,
-      "learningAids": [
-        {
-          "id": "meteorology-601-l03-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
-        }
-      ],
+      "learningAids": [],
       "questions": [
         {
           "id": "meteorology-601-l03-q1",
-          "text": "Which practice most improves meteorology systems diagnostics decision quality?",
+          "text": "When diagnosing a rapidly intensifying winter storm, what is the most critical first step for ensuring decision quality?",
           "skillId": "meteorology-601-skill-core",
           "options": [
             {
               "id": "a",
-              "text": "Proceed without baseline or assumptions"
+              "text": "Immediately issue a warning based on a single model run."
             },
             {
               "id": "b",
-              "text": "Define assumptions, constraints, and measurable indicators"
+              "text": "Define key dynamical factors, data constraints, and measurable forecast indicators (e.g., pressure drop rate)."
             },
             {
               "id": "c",
-              "text": "Optimize only for speed in every context"
+              "text": "Focus only on satellite imagery and ignore numerical model data."
             },
             {
               "id": "d",
-              "text": "Ignore uncertainty and edge conditions"
+              "text": "Wait for public reports before analyzing any data."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Advanced decisions improve when assumptions, constraints, and metrics are explicit."
+          "explanation": "Advanced diagnostics require defining the physical problem, understanding data limitations, and setting measurable indicators before making a forecast decision."
         },
         {
           "id": "meteorology-601-l03-q2",
-          "text": "At level 601, strong execution for meteorology operations and execution design requires:",
+          "text": "A robust operational design for a national forecast office requires:",
           "skillId": "meteorology-601-skill-execution",
           "options": [
             {
               "id": "a",
-              "text": "Owner mapping, checkpoint cadence, and escalation thresholds"
+              "text": "Clear forecaster roles, a defined forecast issuance schedule, and pre-set thresholds for issuing public alerts."
             },
             {
               "id": "b",
-              "text": "No role clarity and ad-hoc process changes"
+              "text": "Allowing any forecaster to change the official forecast at any time without review."
             },
             {
               "id": "c",
-              "text": "No retrospective or post-run review"
+              "text": "Skipping post-event analysis to save time for the next forecast."
             },
             {
               "id": "d",
-              "text": "No rollback or fallback conditions"
+              "text": "Having no pre-planned procedure for communicating with emergency managers."
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Reliable advanced execution needs ownership clarity and threshold-driven governance."
+          "explanation": "Reliable forecast operations depend on clear roles, predictable processes, and threshold-driven governance for alerts and warnings."
         },
         {
           "id": "meteorology-601-l03-q3",
-          "text": "A defensible approach to meteorology impact and tradeoff analysis includes:",
+          "text": "To defensibly analyze the impact of a new satellite data stream on forecast accuracy, you must include:",
           "skillId": "meteorology-601-skill-eval",
           "options": [
             {
               "id": "a",
-              "text": "Anecdotes without comparison"
+              "text": "A single anecdote where the new data seemed to help."
             },
             {
               "id": "b",
-              "text": "Baseline comparisons, side-effect analysis, and uncertainty bounds"
+              "text": "Verification statistics against a baseline (forecasts without the new data), analysis of potential negative impacts, and bounds on the uncertainty of the improvement."
             },
             {
               "id": "c",
-              "text": "Changing success criteria after outcomes"
+              "text": "Only showing cases where the new data improved the forecast."
             },
             {
               "id": "d",
-              "text": "Excluding difficult scenarios from analysis"
+              "text": "A claim of improvement without any quantitative data."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible analysis combines comparative baselines, side-effect checks, and uncertainty disclosure."
+          "explanation": "Defensible analysis requires a controlled comparison against a baseline, a full accounting of side effects, and a clear statement of uncertainty."
         },
         {
           "id": "meteorology-601-l03-q4",
-          "text": "Mature governance systems connect:",
+          "text": "Mature governance of international climate data sharing connects:",
           "skillId": "meteorology-601-skill-governance",
           "options": [
             {
               "id": "a",
-              "text": "Policy intent, measurable controls, and remediation pathways"
+              "text": "The policy goal of open data, measurable controls on data quality, and clear pathways for resolving data disputes."
             },
             {
               "id": "b",
-              "text": "Policy language with no measurable enforcement"
+              "text": "A policy statement with no technical means of enforcement or quality control."
             },
             {
               "id": "c",
-              "text": "Targets without ownership or escalation design"
+              "text": "Data sharing targets without assigning responsibility for data stewardship."
             },
             {
               "id": "d",
-              "text": "Operations without transparent accountability"
+              "text": "Operational data exchange without transparent accountability for data accuracy."
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Governance maturity is the operational link between intent, measurement, and corrective action."
-        },
-        {
-          "id": "meteorology-601-l03-q5",
-          "text": "What is the best way to compare competing interventions in advanced Meteorology?",
-          "skillId": "meteorology-601-skill-advanced-5",
-          "options": [
-            {
-              "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
-            },
-            {
-              "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
-            },
-            {
-              "id": "c",
-              "text": "Switch metrics after results arrive"
-            },
-            {
-              "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
-        },
-        {
-          "id": "meteorology-601-l03-q6",
-          "text": "In high-stakes Meteorology Research and Leadership execution, which communication protocol is strongest?",
-          "skillId": "meteorology-601-skill-advanced-6",
-          "options": [
-            {
-              "id": "a",
-              "text": "Broadcast conclusions without assumptions"
-            },
-            {
-              "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
-            },
-            {
-              "id": "c",
-              "text": "Share only final outcomes after completion"
-            },
-            {
-              "id": "d",
-              "text": "Limit updates to a single informal channel"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
-        },
-        {
-          "id": "meteorology-601-l03-q7",
-          "text": "A mature remediation loop in advanced Meteorology should prioritize:",
-          "skillId": "meteorology-601-skill-advanced-7",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blame assignment without system updates"
-            },
-            {
-              "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
-            },
-            {
-              "id": "c",
-              "text": "One-time fixes without retesting"
-            },
-            {
-              "id": "d",
-              "text": "Issue closure based on elapsed time"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
-        },
-        {
-          "id": "meteorology-601-l03-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Meteorology Research and Leadership?",
-          "skillId": "meteorology-601-skill-advanced-8",
-          "options": [
-            {
-              "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
-            },
-            {
-              "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
-            },
-            {
-              "id": "c",
-              "text": "Ignore correlated failure modes"
-            },
-            {
-              "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "explanation": "Mature governance operationally links the policy's intent with measurable controls and clear processes for remediation and accountability."
         }
       ]
     },
     {
       "id": "meteorology-601-l04",
-      "title": "Meteorology Advanced Case Analysis",
+      "title": "Advanced Case Analysis: Hurricane Landfall",
       "type": "video",
       "duration": 14,
       "learningAids": [
         {
           "id": "meteorology-601-l04-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Comparative Model Output",
+          "content": "A side-by-side comparison of the GFS and ECMWF model forecasts for a major hurricane, highlighting critical differences in predicted track, intensity, and landfall location."
         }
       ],
       "chunks": [
         {
           "id": "meteorology-601-l04-c1",
           "kind": "concept",
-          "title": "Scenario Architecture",
-          "content": "This lesson introduces the concept of scenario architecture, which involves framing the competing constraints that exist within meteorological systems diagnostics. We will also explore how to analyze the impacts and trade-offs that arise in different meteorological situations. Understanding these elements is crucial for effective decision-making.\nContext recap: This lesson introduces the concept of scenario architecture, which involves framing the competing constraints that exist within meteorological systems diagnostics. We will also explore how to analyze the impacts and trade-offs that arise in different meteorological situations. Understanding these elements is crucial for effective decision-making."
+          "title": "Case Study: Deconstructing a High-Impact Event",
+          "content": "This lesson deconstructs a historical hurricane event, focusing on the competing constraints faced by forecasters, such as conflicting model guidance and the pressure to issue timely warnings. We will analyze the impacts and tradeoffs of key decisions made during the event, providing a framework for analysis in future high-stakes situations."
         },
         {
           "id": "meteorology-601-l04-c2",
           "kind": "practice",
-          "title": "Tradeoff Framing",
-          "content": "In this practice section, learners will compare various options based on several important dimensions, including safety, reliability, cost, equity, and governance. This comparative analysis will help them understand the trade-offs involved in making decisions in meteorology.\nContext recap: In this practice section, learners will compare various options based on several important dimensions, including safety, reliability, cost, equity, and governance. This comparative analysis will help them understand the trade-offs involved in making decisions in meteorology.\nWhy this matters: Tradeoff Framing helps learners in Meteorology connect ideas from Meteorology Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "Tradeoff Framing in Evacuation Decisions",
+          "content": "Using the case study, we will compare the potential outcomes of different evacuation order timings. This involves weighing the tradeoffs between public safety, economic disruption, forecast certainty, and public trust. This comparative analysis is a critical skill for leadership roles in operational meteorology."
         },
         {
           "id": "meteorology-601-l04-c3",
           "kind": "recap",
-          "title": "Decision Memo Pattern",
-          "content": "In this recap, we will summarize the key components of a decision memo. Each recommendation made should include the underlying assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that decisions are well-informed and accountable.\nContext recap: In this recap, we will summarize the key components of a decision memo. Each recommendation made should include the underlying assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that decisions are well-informed and accountable."
+          "title": "The Forecast Discussion Memo",
+          "content": "We will summarize the key components of a professional Forecast Discussion memo. This document serves as a formal record of a forecast, articulating the recommendation, underlying assumptions, supporting evidence from data and models, key uncertainties and risks, and contingency plans."
         }
       ]
     },
     {
       "id": "meteorology-601-l05",
-      "title": "Meteorology Simulation Clinic",
+      "title": "Severe Weather Simulation Clinic",
       "type": "interactive",
       "duration": 18,
-      "learningAids": [
-        {
-          "id": "meteorology-601-l05-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
-        }
-      ],
+      "learningAids": [],
       "chunks": [
         {
           "id": "meteorology-601-l05-c1",
           "kind": "practice",
-          "title": "Live Scenario Controls",
-          "content": "In this interactive session, learners will operate scenario controls while considering the balance between performance and governance constraints. This experience will help them understand how to manage different factors effectively in real-time meteorological scenarios.\nContext recap: In this interactive session, learners will operate scenario controls while considering the balance between performance and governance constraints. This experience will help them understand how to manage different factors effectively in real-time meteorological scenarios.\nWhy this matters: Live Scenario Controls helps learners in Meteorology connect ideas from Meteorology Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "Live Severe Weather Outbreak Simulation",
+          "content": "In a simulated forecast office environment, you will take the lead role during a rapidly developing severe weather outbreak. You will be responsible for analyzing real-time data, issuing watches and warnings, and communicating with the public and emergency managers, all under significant time pressure."
         },
         {
           "id": "meteorology-601-l05-c2",
           "kind": "recap",
-          "title": "Adaptive Response Design",
-          "content": "In this recap, we will discuss the importance of effective responses that update control gates while maintaining traceability and accountability. This ensures that all actions taken during meteorological operations are transparent and can be reviewed if necessary.\nContext recap: In this recap, we will discuss the importance of effective responses that update control gates while maintaining traceability and accountability. This ensures that all actions taken during meteorological operations are transparent and can be reviewed if necessary.\nWhy this matters: Adaptive Response Design helps learners in Meteorology connect ideas from Meteorology Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "Adaptive Forecasting and Communication",
+          "content": "Following the simulation, we will recap the principles of adaptive forecasting. This involves updating public forecasts and warnings as new, sometimes conflicting, data arrives from storm spotters or radar scans. We will emphasize the importance of maintaining a clear, traceable log of all decisions and communicating changes transparently to maintain public trust."
         }
       ],
       "interactiveActivities": [
         {
           "id": "meteorology-601-l05-act1",
           "type": "scenario",
-          "title": "Adverse-Condition Decision Run",
-          "description": "Run a high-pressure meteorology scenario and tune controls under uncertainty."
+          "title": "Tornado Outbreak Simulation",
+          "description": "Manage a simulated forecast desk during a high-pressure tornado outbreak. Make critical decisions on warning issuance, storm-spotter coordination, and public messaging with evolving, uncertain data."
         }
       ]
     },
@@ -425,214 +311,107 @@ export const Meteorology601Module: LearningModule = {
       "title": "Checkpoint 2: Case and Simulation Mastery",
       "type": "quiz",
       "duration": 11,
-      "learningAids": [
-        {
-          "id": "meteorology-601-l06-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
-        }
-      ],
+      "learningAids": [],
       "questions": [
         {
           "id": "meteorology-601-l06-q1",
-          "text": "In advanced casework, the first requirement for defensible recommendations is:",
+          "text": "In analyzing a historical forecast failure, the most crucial element for a defensible recommendation is:",
           "skillId": "meteorology-601-skill-case1",
           "options": [
             {
               "id": "a",
-              "text": "A preferred option without explicit assumptions"
+              "text": "Identifying a single person to blame for the error."
             },
             {
               "id": "b",
-              "text": "A clear baseline, explicit constraints, and success criteria"
+              "text": "Establishing a clear baseline of what was known at the time, the constraints on the forecasters, and the success criteria they were operating under."
             },
             {
               "id": "c",
-              "text": "High confidence without evidence logs"
+              "text": "Using hindsight to state what the forecast should have been."
             },
             {
               "id": "d",
-              "text": "Single-metric optimization only"
+              "text": "Focusing only on the final outcome without analyzing the decision-making process."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible recommendations begin with explicit assumptions, constraints, and measurable targets."
+          "explanation": "Defensible case analysis requires understanding the context, constraints, and goals that existed at the time of the event, not just judging the outcome in hindsight."
         },
         {
           "id": "meteorology-601-l06-q2",
-          "text": "A resilient strategy for meteorology operations and execution design should include:",
+          "text": "A key lesson from running a severe weather simulation is that resilient operational plans must include:",
           "skillId": "meteorology-601-skill-case2",
           "options": [
             {
               "id": "a",
-              "text": "Checkpointed execution with fallback and escalation criteria"
+              "text": "Checkpointed decision-making with clear criteria for issuing, canceling, and escalating warnings."
             },
             {
               "id": "b",
-              "text": "One-way execution with no rollback capability"
+              "text": "A rigid plan that cannot be adapted when new data arrives."
             },
             {
               "id": "c",
-              "text": "No ownership mapping across teams"
+              "text": "No designated lead forecaster, allowing for conflicting public messages."
             },
             {
               "id": "d",
-              "text": "Hidden assumptions and undocumented decisions"
+              "text": "Undocumented decisions to avoid future scrutiny."
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Resilience depends on checkpoints, fallback options, and explicit escalation design."
+          "explanation": "Simulations highlight the need for resilience, which is achieved through structured checkpoints, fallback options, and explicit escalation protocols."
         },
         {
           "id": "meteorology-601-l06-q3",
-          "text": "When evaluating meteorology impact and tradeoff analysis, which method is most rigorous?",
+          "text": "When evaluating the impact of a decision made during the simulation (e.g., the timing of a tornado warning), the most rigorous method is to:",
           "skillId": "meteorology-601-skill-case3",
           "options": [
             {
               "id": "a",
-              "text": "Single success story without controls"
+              "text": "Assume the decision was correct if the outcome was good."
             },
             {
               "id": "b",
-              "text": "Comparative baselines plus side-effect and uncertainty analysis"
+              "text": "Compare the decision's outcome to a baseline (e.g., what would have happened with an earlier/later warning) and analyze unintended consequences."
             },
             {
               "id": "c",
-              "text": "Outcome-only narrative without process evidence"
+              "text": "Only consider the positive impacts of the decision."
             },
             {
               "id": "d",
-              "text": "Retrospective scope changes to fit outcomes"
+              "text": "Change the evaluation criteria after seeing the outcome."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Rigorous evaluation requires comparisons, side-effect analysis, and uncertainty disclosure."
+          "explanation": "Rigorous evaluation requires comparing outcomes against a clear baseline and accounting for all significant impacts, including unintended side effects."
         },
         {
           "id": "meteorology-601-l06-q4",
-          "text": "Advanced governance is strongest when it:",
+          "text": "Advanced governance of a forecast office, as practiced in the simulation, is strongest when it:",
           "skillId": "meteorology-601-skill-case4",
           "options": [
             {
               "id": "a",
-              "text": "Aligns authority, measurement, and remediation obligations"
+              "text": "Aligns the authority to issue a warning with the accountability for its verification and the obligation to conduct a post-event review."
             },
             {
               "id": "b",
-              "text": "Separates policy from operational controls"
+              "text": "Separates the forecast process from any form of quality control or review."
             },
             {
               "id": "c",
-              "text": "Avoids external review and transparency"
+              "text": "Avoids transparency in how forecast decisions are made."
             },
             {
               "id": "d",
-              "text": "Treats accountability as optional under pressure"
+              "text": "Treats accountability as optional during high-pressure events."
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Mature governance links authority, measurable controls, and corrective action."
-        },
-        {
-          "id": "meteorology-601-l06-q5",
-          "text": "What is the best way to compare competing interventions in advanced Meteorology?",
-          "skillId": "meteorology-601-skill-advanced-5",
-          "options": [
-            {
-              "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
-            },
-            {
-              "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
-            },
-            {
-              "id": "c",
-              "text": "Switch metrics after results arrive"
-            },
-            {
-              "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
-        },
-        {
-          "id": "meteorology-601-l06-q6",
-          "text": "In high-stakes Meteorology Research and Leadership execution, which communication protocol is strongest?",
-          "skillId": "meteorology-601-skill-advanced-6",
-          "options": [
-            {
-              "id": "a",
-              "text": "Broadcast conclusions without assumptions"
-            },
-            {
-              "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
-            },
-            {
-              "id": "c",
-              "text": "Share only final outcomes after completion"
-            },
-            {
-              "id": "d",
-              "text": "Limit updates to a single informal channel"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
-        },
-        {
-          "id": "meteorology-601-l06-q7",
-          "text": "A mature remediation loop in advanced Meteorology should prioritize:",
-          "skillId": "meteorology-601-skill-advanced-7",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blame assignment without system updates"
-            },
-            {
-              "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
-            },
-            {
-              "id": "c",
-              "text": "One-time fixes without retesting"
-            },
-            {
-              "id": "d",
-              "text": "Issue closure based on elapsed time"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
-        },
-        {
-          "id": "meteorology-601-l06-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Meteorology Research and Leadership?",
-          "skillId": "meteorology-601-skill-advanced-8",
-          "options": [
-            {
-              "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
-            },
-            {
-              "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
-            },
-            {
-              "id": "c",
-              "text": "Ignore correlated failure modes"
-            },
-            {
-              "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "explanation": "Mature governance links the authority to act with measurable controls and a commitment to corrective action and accountability."
         }
       ]
     },
@@ -645,45 +424,45 @@ export const Meteorology601Module: LearningModule = {
         {
           "id": "meteorology-601-l07-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Heatwave Vulnerability Map",
+          "content": "A map of a city showing areas with the highest social vulnerability to heatwaves, overlaid with temperature anomaly data. This visualizes how a single weather event has a disproportionate impact."
         }
       ],
       "chunks": [
         {
           "id": "meteorology-601-l07-c1",
           "kind": "concept",
-          "title": "Stakeholder Impact Distribution",
-          "content": "In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups in meteorology. Understanding these impacts is essential for ensuring that all voices are considered in decision-making processes.\nContext recap: In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups in meteorology. Understanding these impacts is essential for ensuring that all voices are considered in decision-making processes.\nWhy this matters: Stakeholder Impact Distribution helps learners in Meteorology connect ideas from Meteorology Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "Distribution of Weather and Climate Impacts",
+          "content": "Meteorological events do not affect all people equally. In this lesson, we will analyze how the benefits (e.g., rain for agriculture) and burdens (e.g., urban flooding) of weather are distributed across different communities. Understanding these disparate impacts is essential for equitable and ethical public service."
         },
         {
           "id": "meteorology-601-l07-c2",
           "kind": "concept",
-          "title": "Accountability Architecture",
-          "content": "This section focuses on the architecture of accountability in meteorology. We will explore how decision traceability, review rights, and remediation obligations are integrated into the decision-making process. This framework is crucial for ensuring responsible governance in meteorological practices.\nContext recap: This section focuses on the architecture of accountability in meteorology. We will explore how decision traceability, review rights, and remediation obligations are integrated into the decision-making process. This framework is crucial for ensuring responsible governance in meteorological practices."
+          "title": "Architecture of Accountability",
+          "content": "This section examines the architecture of accountability in public weather services. We will explore how decision traceability (logging forecast rationale), public review processes, and formal post-event service assessments create a framework for responsible governance and continuous improvement."
         },
         {
           "id": "meteorology-601-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "This checklist serves as a helpful guide to ensure that we consider important aspects such as the outcomes of our actions, ethical responsibilities, adherence to policies, and the ability to recover from challenges. It encourages responsible leadership in meteorology by linking these key elements together.\nContext recap: This checklist serves as a helpful guide to ensure that we consider important aspects such as the outcomes of our actions, ethical responsibilities, adherence to policies, and the ability to recover from challenges. It encourages responsible leadership in meteorology by linking these key elements together."
+          "content": "This checklist synthesizes the lesson's concepts for practical application. It guides lead meteorologists to consider the equity of impacts, their ethical duties in communication, adherence to operational policy, and the resilience of their decisions before finalizing a high-impact forecast."
         }
       ],
       "flashcards": [
         {
           "id": "meteorology-601-l07-f1",
-          "front": "Impact distribution",
-          "back": "How outcomes are allocated across populations and timescales."
+          "front": "Impact Distribution",
+          "back": "Analyzing how a single weather event, like a heatwave, disproportionately affects different populations, such as the elderly or those in neighborhoods with less green space."
         },
         {
           "id": "meteorology-601-l07-f2",
-          "front": "Decision traceability",
-          "back": "An auditable record of evidence, ownership, and rationale."
+          "front": "Decision Traceability",
+          "back": "The requirement for a forecast office to maintain an auditable log of the data, model runs, and internal discussions leading to a specific warning issuance."
         },
         {
           "id": "meteorology-601-l07-f3",
-          "front": "Responsible leadership",
-          "back": "Decision behavior balancing performance, accountability, and ethics."
+          "front": "Responsible Leadership",
+          "back": "A lead forecaster's duty to clearly communicate forecast uncertainty to the public, enabling better public decision-making, even if it makes the forecast seem less confident."
         }
       ]
     },
@@ -692,34 +471,27 @@ export const Meteorology601Module: LearningModule = {
       "title": "Meteorology Capstone Defense Lab",
       "type": "interactive",
       "duration": 16,
-      "learningAids": [
-        {
-          "id": "meteorology-601-l08-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
-        }
-      ],
+      "learningAids": [],
       "chunks": [
         {
           "id": "meteorology-601-l08-c1",
           "kind": "practice",
-          "title": "Defense Brief Assembly",
-          "content": "In this activity, learners will work together to create a comprehensive brief. This brief will include well-supported claims, evidence to back those claims, an understanding of the uncertainties involved, and potential pathways for remediation. This practice helps learners develop critical thinking and communication skills.\nContext recap: In this activity, learners will work together to create a comprehensive brief. This brief will include well-supported claims, evidence to back those claims, an understanding of the uncertainties involved, and potential pathways for remediation. This practice helps learners develop critical thinking and communication skills."
+          "title": "Policy Brief Assembly",
+          "content": "In this capstone activity, you will assemble a policy brief recommending a specific, major upgrade to the nation's weather observation network (e.g., a new satellite or radar system). Your brief must justify the cost with evidence of improved forecast skill, quantify the uncertainty in these improvements, and propose a phased, equitable rollout plan."
         },
         {
           "id": "meteorology-601-l08-c2",
           "kind": "recap",
-          "title": "Expert Panel Rehearsal",
-          "content": "During this rehearsal, learners will practice their responses to various critiques that may come from experts, governance representatives, and stakeholders. This preparation is essential for building confidence and ensuring that they can effectively communicate their ideas and defend their positions.\nContext recap: During this rehearsal, learners will practice their responses to various critiques that may come from experts, governance representatives, and stakeholders. This preparation is essential for building confidence and ensuring that they can effectively communicate their ideas and defend their positions."
+          "title": "Expert Panel Defense Rehearsal",
+          "content": "You will rehearse defending your policy brief against critiques from a panel role-playing as experts, government officials, and community stakeholders. This prepares you to respond to challenges regarding budget, scientific skepticism, and social equity, honing your ability to defend complex recommendations."
         }
       ],
       "interactiveActivities": [
         {
           "id": "meteorology-601-l08-act1",
           "type": "debate_simulator",
-          "title": "Expert Defense Panel",
-          "description": "Defend specialization recommendations under adversarial cross-examination."
+          "title": "Climate Adaptation Policy Defense",
+          "description": "Present and defend a comprehensive climate adaptation strategy for a coastal city to a simulated city council. Field critical questions about cost, scientific uncertainty, and social equity from council members with conflicting priorities."
         }
       ]
     }

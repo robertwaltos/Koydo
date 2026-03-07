@@ -1,32 +1,33 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const Windows501Module: LearningModule = {
+export const windows_501_Module: LearningModule = {
   "id": "windows-501",
   "title": "Windows Specialization Studio",
-  "description": "Post-401 specialization in Windows, focused on windows systems diagnostics, windows operations and execution design, windows impact and tradeoff analysis, and windows governance and leadership through advanced casework, simulation, and defense-based checkpoints.",
+  "description": "Post-401 specialization in Windows, focused on advanced systems diagnostics, operations and execution design, impact and tradeoff analysis, and governance leadership through complex casework, simulation, and defense-based checkpoints.",
   "subject": "Windows",
   "tags": [
     "core",
     "curriculum",
     "interactive",
     "windows",
-    "specialization"
+    "specialization",
+    "advanced"
   ],
   "minAge": 17,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en",
     "es"
   ],
   "learningObjectives": [
-    "Apply advanced methods for windows systems diagnostics in high-constraint environments",
-    "Design robust systems for windows operations and execution design with measurable control gates",
-    "Evaluate interventions in windows impact and tradeoff analysis with research-grade rigor",
-    "Operationalize windows governance and leadership with accountable governance and escalation pathways",
-    "Lead cross-functional decision reviews with explicit tradeoff communication",
-    "Defend recommendations under expert critique using evidence and uncertainty bounds"
+    "Apply advanced methods for Windows systems diagnostics in high-constraint environments.",
+    "Design robust systems for Windows operations and execution with measurable control gates.",
+    "Evaluate interventions using impact and tradeoff analysis with research-grade rigor.",
+    "Operationalize Windows governance and leadership with accountable escalation pathways.",
+    "Lead cross-functional decision reviews with explicit tradeoff communication.",
+    "Defend architectural recommendations under expert critique using evidence and uncertainty bounds."
   ],
   "lessons": [
     {
@@ -38,8 +39,9 @@ export const Windows501Module: LearningModule = {
         {
           "id": "windows-501-l01-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Guided Practice: Diagnostic Framework",
+          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence.",
+          "visualPrompt": "A high-tech digital blueprint showing a Windows system diagnostic framework, highlighting explicit assumptions, measurable constraints, and evidence validation nodes in a sleek dark-mode interface."
         }
       ],
       "chunks": [
@@ -47,36 +49,36 @@ export const Windows501Module: LearningModule = {
           "id": "windows-501-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "In this lesson, we will explore the concept of advanced scope boundaries specifically for Windows systems. We will focus on understanding how to diagnose issues within Windows and how to design operations and execution processes effectively. This knowledge will help you to identify and manage the limits of what Windows can do, ensuring that you can troubleshoot and optimize its performance.\nContext recap: In this lesson, we will explore the concept of advanced scope boundaries specifically for Windows systems. We will focus on understanding how to diagnose issues within Windows and how to design operations and execution processes effectively. This knowledge will help you to identify and manage the limits of what Windows can do, ensuring that you can troubleshoot and optimize its performance."
+          "content": "Explore advanced scope boundaries for Windows systems. Focus on high-level diagnostics and execution process design to identify system limits, manage constraints, and optimize architectural performance."
         },
         {
           "id": "windows-501-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different events or actions. We will also explore uncertainty ranges and system dependencies, which are crucial for planning interventions. By understanding these elements, you will be better prepared to make informed decisions when addressing challenges in Windows systems.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different events or actions. We will also explore uncertainty ranges and system dependencies, which are crucial for planning interventions. By understanding these elements, you will be better prepared to make informed decisions when addressing challenges in Windows systems."
+          "content": "Map causal pathways and system dependencies. Analyze uncertainty ranges to plan robust interventions and make informed, data-driven decisions during complex Windows system challenges."
         },
         {
           "id": "windows-501-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "In our recap, we will emphasize that all claims made during our analysis must be linked to measurable indicators. This means that we will establish confidence bounds and set up review checkpoints to ensure that our findings are reliable and can be verified. This process is essential for maintaining the integrity of our assessments.\nContext recap: In our recap, we will emphasize that all claims made during our analysis must be linked to measurable indicators. This means that we will establish confidence bounds and set up review checkpoints to ensure that our findings are reliable and can be verified. This process is essential for maintaining the integrity of our assessments."
+          "content": "Establish strict evidence thresholds. Link all analytical claims to measurable indicators, set confidence bounds, and define review checkpoints to ensure reliable, verifiable findings."
         }
       ],
       "flashcards": [
         {
           "id": "windows-501-l01-f1",
-          "front": "windows systems diagnostics",
+          "front": "Windows Systems Diagnostics",
           "back": "A specialization axis requiring explicit assumptions and measurable constraints."
         },
         {
           "id": "windows-501-l01-f2",
-          "front": "windows operations and execution design",
-          "back": "Execution architecture that determines reliability under stress."
+          "front": "Operations and Execution Design",
+          "back": "Execution architecture that determines system reliability under stress."
         },
         {
           "id": "windows-501-l01-f3",
-          "front": "windows impact and tradeoff analysis",
-          "back": "Evaluation discipline for identifying true gains and hidden costs."
+          "front": "Impact and Tradeoff Analysis",
+          "back": "Evaluation discipline for identifying true performance gains and hidden architectural costs."
         }
       ]
     },
@@ -89,8 +91,9 @@ export const Windows501Module: LearningModule = {
         {
           "id": "windows-501-l02-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Guided Practice: Workflow Stress Testing",
+          "content": "Design specialized workflows and validate them against high-pressure edge cases.",
+          "visualPrompt": "An interactive dashboard displaying a Windows workflow undergoing a stress test, with real-time metrics showing CPU load, memory spikes, and control gate triggers."
         }
       ],
       "chunks": [
@@ -98,13 +101,13 @@ export const Windows501Module: LearningModule = {
           "id": "windows-501-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "In this interactive lab, learners will have the opportunity to design specialized workflows tailored to specific tasks. Additionally, you will stress-test these workflows by putting them through challenging scenarios to see how they perform under pressure. This hands-on experience will help you understand the importance of resilience in system design.\nContext recap: In this interactive lab, learners will have the opportunity to design specialized workflows tailored to specific tasks. Additionally, you will stress-test these workflows by putting them through challenging scenarios to see how they perform under pressure. This hands-on experience will help you understand the importance of resilience in system design."
+          "content": "Design specialized workflows tailored to complex administrative tasks. Subject these workflows to rigorous stress tests, evaluating their performance under high-pressure scenarios to build resilience into your system architecture."
         },
         {
           "id": "windows-501-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "As we recap, we will discuss how workflows should integrate various checkpoints, rollback criteria, and threshold-based escalation processes. This means that during the execution of a workflow, there are built-in points where we can assess progress and make necessary adjustments to ensure everything runs smoothly.\nContext recap: As we recap, we will discuss how workflows should integrate various checkpoints, rollback criteria, and threshold-based escalation processes. This means that during the execution of a workflow, there are built-in points where we can assess progress and make necessary adjustments to ensure everything runs smoothly."
+          "content": "Integrate control gate architecture into your workflows. Implement strategic checkpoints, rollback criteria, and threshold-based escalations to assess progress and adjust execution dynamically."
         }
       ],
       "interactiveActivities": [
@@ -143,14 +146,15 @@ export const Windows501Module: LearningModule = {
         {
           "id": "windows-501-l03-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Knowledge Check: Foundations",
+          "content": "Review causal modeling, control gates, and evidence thresholds before proceeding.",
+          "visualPrompt": "A stylized checkpoint graphic featuring a glowing lock unlocking as diagnostic criteria are met."
         }
       ],
       "questions": [
         {
           "id": "windows-501-l03-q1",
-          "text": "Which practice most improves windows systems diagnostics decision quality?",
+          "text": "Which practice most improves Windows systems diagnostics decision quality?",
           "skillId": "windows-501-skill-core",
           "options": [
             {
@@ -175,7 +179,7 @@ export const Windows501Module: LearningModule = {
         },
         {
           "id": "windows-501-l03-q2",
-          "text": "At level 501, strong execution for windows operations and execution design requires:",
+          "text": "At level 501, strong execution for Windows operations and execution design requires:",
           "skillId": "windows-501-skill-execution",
           "options": [
             {
@@ -200,7 +204,7 @@ export const Windows501Module: LearningModule = {
         },
         {
           "id": "windows-501-l03-q3",
-          "text": "A defensible approach to windows impact and tradeoff analysis includes:",
+          "text": "A defensible approach to Windows impact and tradeoff analysis includes:",
           "skillId": "windows-501-skill-eval",
           "options": [
             {
@@ -250,103 +254,103 @@ export const Windows501Module: LearningModule = {
         },
         {
           "id": "windows-501-l03-q5",
-          "text": "What is the best way to compare competing interventions in advanced Windows?",
-          "skillId": "windows-501-skill-advanced-5",
+          "text": "In causal and uncertainty modeling, what is the primary purpose of defining uncertainty ranges?",
+          "skillId": "windows-501-skill-modeling",
           "options": [
             {
               "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
+              "text": "To guarantee a single outcome"
             },
             {
               "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
+              "text": "To plan robust interventions despite unknown variables"
             },
             {
               "id": "c",
-              "text": "Switch metrics after results arrive"
+              "text": "To eliminate the need for control gates"
             },
             {
               "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
+              "text": "To bypass governance reviews"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
+          "explanation": "Uncertainty ranges allow architects to plan robust interventions that succeed even when variables fluctuate."
         },
         {
           "id": "windows-501-l03-q6",
-          "text": "In high-stakes Windows Specialization Studio execution, which communication protocol is strongest?",
-          "skillId": "windows-501-skill-advanced-6",
+          "text": "During a method stress test, what is the most critical metric to evaluate?",
+          "skillId": "windows-501-skill-stresstest",
           "options": [
             {
               "id": "a",
-              "text": "Broadcast conclusions without assumptions"
+              "text": "The aesthetic design of the workflow"
             },
             {
               "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
+              "text": "The system's resilience and performance under high-pressure edge cases"
             },
             {
               "id": "c",
-              "text": "Share only final outcomes after completion"
+              "text": "The speed of execution under normal conditions only"
             },
             {
               "id": "d",
-              "text": "Limit updates to a single informal channel"
+              "text": "The number of users logged in"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
+          "explanation": "Stress tests are designed specifically to evaluate resilience and performance under extreme or edge-case conditions."
         },
         {
           "id": "windows-501-l03-q7",
-          "text": "A mature remediation loop in advanced Windows should prioritize:",
-          "skillId": "windows-501-skill-advanced-7",
+          "text": "What role does a rollback trigger play in control gate architecture?",
+          "skillId": "windows-501-skill-controlgates",
           "options": [
             {
               "id": "a",
-              "text": "Blame assignment without system updates"
+              "text": "It accelerates deployment speed"
             },
             {
               "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
+              "text": "It automatically approves pending changes"
             },
             {
               "id": "c",
-              "text": "One-time fixes without retesting"
+              "text": "It limits the blast radius by reverting the system if adverse outcomes occur"
             },
             {
               "id": "d",
-              "text": "Issue closure based on elapsed time"
+              "text": "It disables system logging to save space"
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
+          "correctOptionId": "c",
+          "explanation": "Rollback triggers are safety mechanisms that revert changes to limit damage (blast radius) when adverse outcomes are detected."
         },
         {
           "id": "windows-501-l03-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Windows Specialization Studio?",
-          "skillId": "windows-501-skill-advanced-8",
+          "text": "Why are evidence thresholds critical in advanced Windows diagnostics?",
+          "skillId": "windows-501-skill-evidence",
           "options": [
             {
               "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
+              "text": "They ensure all analytical claims are linked to measurable, verifiable indicators"
             },
             {
               "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
+              "text": "They allow engineers to rely on intuition"
             },
             {
               "id": "c",
-              "text": "Ignore correlated failure modes"
+              "text": "They replace the need for causal modeling"
             },
             {
               "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
+              "text": "They reduce the amount of documentation required"
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "correctOptionId": "a",
+          "explanation": "Evidence thresholds mandate that claims be backed by measurable data, ensuring reliability and verifiability."
         }
       ]
     },
@@ -359,8 +363,9 @@ export const Windows501Module: LearningModule = {
         {
           "id": "windows-501-l04-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Guided Practice: Tradeoff Framing",
+          "content": "Compare architectural options across safety, reliability, cost, equity, and governance.",
+          "visualPrompt": "A radar chart comparing multiple Windows architectural options across five axes: Safety, Reliability, Cost, Equity, and Governance."
         }
       ],
       "chunks": [
@@ -368,19 +373,19 @@ export const Windows501Module: LearningModule = {
           "id": "windows-501-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "In this lesson, we will frame a case that highlights the competing constraints involved in Windows systems diagnostics. We will analyze the impacts and trade-offs that come with different decisions, helping you to understand how to balance various factors when working with Windows systems.\nContext recap: In this lesson, we will frame a case that highlights the competing constraints involved in Windows systems diagnostics. We will analyze the impacts and trade-offs that come with different decisions, helping you to understand how to balance various factors when working with Windows systems."
+          "content": "Analyze a complex case study highlighting competing constraints in Windows systems diagnostics. Evaluate the impacts and trade-offs of architectural decisions to balance performance with system stability."
         },
         {
           "id": "windows-501-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "During this practice session, learners will compare different options based on several important dimensions, including safety, reliability, cost, equity, and governance. This comparison will help you to make well-rounded decisions that consider all aspects of a situation.\nContext recap: During this practice session, learners will compare different options based on several important dimensions, including safety, reliability, cost, equity, and governance. This comparison will help you to make well-rounded decisions that consider all aspects of a situation.\nContext recap: During this practice session, learners will compare different options based on several important dimensions, including safety, reliability, cost, equity, and governance. This comparison will help you to make well-rounded decisions that consider all aspects of a situation. Context recap: During this practice session, learners will compare different options based on several important dimensions, including safety, reliability, cost, equity, and governance. This comparison will help you to make well-rounded decisions that consider all aspects of a situation."
+          "content": "Compare architectural options across critical dimensions: safety, reliability, cost, equity, and governance. Develop a holistic approach to tradeoff framing that ensures well-rounded, defensible decisions."
         },
         {
           "id": "windows-501-l04-c3",
           "kind": "recap",
           "title": "Decision Memo Pattern",
-          "content": "In our recap, we will highlight that each recommendation made in our analysis should include key components such as assumptions, evidence, risk controls, and fallback plans. This structured approach ensures that our decisions are well-supported and that we have strategies in place to address potential issues.\nContext recap: In our recap, we will highlight that each recommendation made in our analysis should include key components such as assumptions, evidence, risk controls, and fallback plans. This structured approach ensures that our decisions are well-supported and that we have strategies in place to address potential issues."
+          "content": "Structure a formal decision memo. Ensure every recommendation includes explicit assumptions, supporting empirical evidence, risk controls, and actionable fallback plans to address potential failures."
         }
       ]
     },
@@ -393,8 +398,9 @@ export const Windows501Module: LearningModule = {
         {
           "id": "windows-501-l05-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Guided Practice: Live Scenario Controls",
+          "content": "Operate scenario controls while balancing performance and governance constraints.",
+          "visualPrompt": "A simulated command center interface showing live server loads, governance compliance meters, and active incident response prompts."
         }
       ],
       "chunks": [
@@ -402,13 +408,13 @@ export const Windows501Module: LearningModule = {
           "id": "windows-501-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "In this interactive clinic, learners will operate scenario controls while carefully balancing performance and governance constraints. This means you will practice managing the demands of achieving high performance while also adhering to rules and regulations that ensure responsible use of technology.\nContext recap: In this interactive clinic, learners will operate scenario controls while carefully balancing performance and governance constraints. This means you will practice managing the demands of achieving high performance while also adhering to rules and regulations that ensure responsible use of technology.\nContext recap: In this interactive clinic, learners will operate scenario controls while carefully balancing performance and governance constraints. This means you will practice managing the demands of achieving high performance while also adhering to rules and regulations that ensure responsible use of technology. Context recap: In this interactive clinic, learners will operate scenario controls while carefully balancing performance and governance constraints. This means you will practice managing the demands of achieving high performance while also adhering to rules and regulations that ensure responsible use of technology."
+          "content": "Operate live scenario controls, balancing peak performance demands against strict governance constraints in a simulated high-stakes environment. Practice managing complex variables under time pressure."
         },
         {
           "id": "windows-501-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "In our recap, we will discuss how effective responses to challenges should update control gates without losing traceability or accountability. This means that as we adapt to new situations, we must ensure that we can track changes and remain responsible for our actions.\nContext recap: In our recap, we will discuss how effective responses to challenges should update control gates without losing traceability or accountability. This means that as we adapt to new situations, we must ensure that we can track changes and remain responsible for our actions.\nContext recap: In our recap, we will discuss how effective responses to challenges should update control gates without losing traceability or accountability. This means that as we adapt to new situations, we must ensure that we can track changes and remain responsible for our actions. Context recap: In our recap, we will discuss how effective responses to challenges should update control gates without losing traceability or accountability. This means that as we adapt to new situations, we must ensure that we can track changes and remain responsible for our actions."
+          "content": "Design adaptive responses to emerging system challenges. Update control gates dynamically without sacrificing traceability or accountability, ensuring the system remains secure and compliant during crises."
         }
       ],
       "interactiveActivities": [
@@ -416,7 +422,7 @@ export const Windows501Module: LearningModule = {
           "id": "windows-501-l05-act1",
           "type": "scenario",
           "title": "Adverse-Condition Decision Run",
-          "description": "Run a high-pressure windows scenario and tune controls under uncertainty."
+          "description": "Run a high-pressure Windows scenario and tune controls under uncertainty."
         }
       ]
     },
@@ -429,8 +435,9 @@ export const Windows501Module: LearningModule = {
         {
           "id": "windows-501-l06-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Knowledge Check: Simulation Mastery",
+          "content": "Validate your understanding of tradeoff framing, decision memos, and adaptive responses.",
+          "visualPrompt": "An icon of a balanced scale representing tradeoff analysis, next to a glowing checkmark indicating mastery."
         }
       ],
       "questions": [
@@ -461,7 +468,7 @@ export const Windows501Module: LearningModule = {
         },
         {
           "id": "windows-501-l06-q2",
-          "text": "A resilient strategy for windows operations and execution design should include:",
+          "text": "A resilient strategy for Windows operations and execution design should include:",
           "skillId": "windows-501-skill-case2",
           "options": [
             {
@@ -486,7 +493,7 @@ export const Windows501Module: LearningModule = {
         },
         {
           "id": "windows-501-l06-q3",
-          "text": "When evaluating windows impact and tradeoff analysis, which method is most rigorous?",
+          "text": "When evaluating Windows impact and tradeoff analysis, which method is most rigorous?",
           "skillId": "windows-501-skill-case3",
           "options": [
             {
@@ -536,103 +543,103 @@ export const Windows501Module: LearningModule = {
         },
         {
           "id": "windows-501-l06-q5",
-          "text": "What is the best way to compare competing interventions in advanced Windows?",
-          "skillId": "windows-501-skill-advanced-5",
+          "text": "When framing tradeoffs in a complex Windows scenario, which dimensions must be balanced?",
+          "skillId": "windows-501-skill-tradeoffs",
           "options": [
             {
               "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
+              "text": "Only cost and speed"
             },
             {
               "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
+              "text": "Safety, reliability, cost, equity, and governance"
             },
             {
               "id": "c",
-              "text": "Switch metrics after results arrive"
+              "text": "Hardware aesthetics and software licensing"
             },
             {
               "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
+              "text": "User preference and marketing trends"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
+          "explanation": "A holistic tradeoff framing requires balancing safety, reliability, cost, equity, and governance."
         },
         {
           "id": "windows-501-l06-q6",
-          "text": "In high-stakes Windows Specialization Studio execution, which communication protocol is strongest?",
-          "skillId": "windows-501-skill-advanced-6",
+          "text": "A formal decision memo for Windows architecture must explicitly include:",
+          "skillId": "windows-501-skill-memos",
           "options": [
             {
               "id": "a",
-              "text": "Broadcast conclusions without assumptions"
+              "text": "Assumptions, supporting evidence, risk controls, and fallback plans"
             },
             {
               "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
+              "text": "Only the final recommendation"
             },
             {
               "id": "c",
-              "text": "Share only final outcomes after completion"
+              "text": "A list of team members and their titles"
             },
             {
               "id": "d",
-              "text": "Limit updates to a single informal channel"
+              "text": "Anecdotal evidence from past projects"
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
+          "correctOptionId": "a",
+          "explanation": "Decision memos must be comprehensive, detailing assumptions, evidence, controls, and fallbacks to be defensible."
         },
         {
           "id": "windows-501-l06-q7",
-          "text": "A mature remediation loop in advanced Windows should prioritize:",
-          "skillId": "windows-501-skill-advanced-7",
+          "text": "In a live simulation clinic, balancing performance and governance requires:",
+          "skillId": "windows-501-skill-simulation",
           "options": [
             {
               "id": "a",
-              "text": "Blame assignment without system updates"
+              "text": "Ignoring governance to achieve peak performance"
             },
             {
               "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
+              "text": "Operating scenario controls to meet performance demands while strictly adhering to compliance rules"
             },
             {
               "id": "c",
-              "text": "One-time fixes without retesting"
+              "text": "Pausing the simulation whenever a constraint is met"
             },
             {
               "id": "d",
-              "text": "Issue closure based on elapsed time"
+              "text": "Delegating all governance decisions to external teams"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
+          "explanation": "True mastery involves achieving high performance without violating governance and compliance constraints."
         },
         {
           "id": "windows-501-l06-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Windows Specialization Studio?",
-          "skillId": "windows-501-skill-advanced-8",
+          "text": "What is the key characteristic of an adaptive response design?",
+          "skillId": "windows-501-skill-adaptive",
           "options": [
             {
               "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
+              "text": "It rigidly adheres to the original plan regardless of new data"
             },
             {
               "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
+              "text": "It updates control gates dynamically without losing traceability or accountability"
             },
             {
               "id": "c",
-              "text": "Ignore correlated failure modes"
+              "text": "It removes all checkpoints to speed up recovery"
             },
             {
               "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
+              "text": "It shifts blame to third-party vendors"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "explanation": "Adaptive responses must be flexible enough to update controls dynamically while maintaining strict traceability."
         }
       ]
     },
@@ -645,8 +652,9 @@ export const Windows501Module: LearningModule = {
         {
           "id": "windows-501-l07-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Guided Practice: Accountability Architecture",
+          "content": "Establish decision traceability, review rights, and remediation obligations.",
+          "visualPrompt": "A flowchart illustrating the architecture of accountability, connecting decision nodes to stakeholder impact and remediation pathways."
         }
       ],
       "chunks": [
@@ -654,36 +662,36 @@ export const Windows501Module: LearningModule = {
           "id": "windows-501-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. This activity will help you understand how decisions impact various individuals and organizations, fostering a sense of responsibility in your work.\nContext recap: In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. This activity will help you understand how decisions impact various individuals and organizations, fostering a sense of responsibility in your work.\nContext recap: In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. This activity will help you understand how decisions impact various individuals and organizations, fostering a sense of responsibility in your work. Context recap: In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. This activity will help you understand how decisions impact various individuals and organizations, fostering a sense of responsibility in your work."
+          "content": "Map the distribution of benefits, burdens, and delayed effects across stakeholder groups. Evaluate the broader organizational and public impact of Windows infrastructure decisions to foster responsible engineering."
         },
         {
           "id": "windows-501-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "In this section, we will explore the architecture of accountability, which includes decision traceability, review rights, and remediation obligations. Understanding these concepts is crucial for ensuring that decisions made in Windows systems are transparent and that there are processes in place to address any issues that arise.\nContext recap: In this section, we will explore the architecture of accountability, which includes decision traceability, review rights, and remediation obligations. Understanding these concepts is crucial for ensuring that decisions made in Windows systems are transparent and that there are processes in place to address any issues that arise."
+          "content": "Examine accountability architecture. Establish decision traceability, define review rights, and enforce remediation obligations to ensure transparent governance and rapid issue resolution."
         },
         {
           "id": "windows-501-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "At the end of our lesson, we will provide a comprehensive checklist that connects important outcomes with ethical considerations, ensures compliance with policies, and promotes resilience in leadership. This checklist will help you reflect on how to be a responsible leader in various situations.\nContext recap: At the end of our lesson, we will provide a comprehensive checklist that connects important outcomes with ethical considerations, ensures compliance with policies, and promotes resilience in leadership. This checklist will help you reflect on how to be a responsible leader in various situations."
+          "content": "Apply the responsible leadership checklist. Align operational outcomes with ethical considerations, policy compliance, and long-term system resilience to lead effectively in high-stakes environments."
         }
       ],
       "flashcards": [
         {
           "id": "windows-501-l07-f1",
-          "front": "Impact distribution",
-          "back": "How outcomes are allocated across populations and timescales."
+          "front": "Impact Distribution",
+          "back": "How outcomes, benefits, and burdens are allocated across populations and timescales."
         },
         {
           "id": "windows-501-l07-f2",
-          "front": "Decision traceability",
-          "back": "An auditable record of evidence, ownership, and rationale."
+          "front": "Decision Traceability",
+          "back": "An auditable record of evidence, ownership, and rationale for architectural choices."
         },
         {
           "id": "windows-501-l07-f3",
-          "front": "Responsible leadership",
-          "back": "Decision behavior balancing performance, accountability, and ethics."
+          "front": "Responsible Leadership",
+          "back": "Decision behavior balancing system performance, strict accountability, and ethical impact."
         }
       ]
     },
@@ -696,8 +704,9 @@ export const Windows501Module: LearningModule = {
         {
           "id": "windows-501-l08-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Guided Practice: Defense Brief Assembly",
+          "content": "Synthesize claims, evidence, uncertainty boundaries, and remediation pathways.",
+          "visualPrompt": "A virtual boardroom interface displaying a comprehensive defense brief, complete with evidence logs, uncertainty graphs, and a panel of virtual expert avatars."
         }
       ],
       "chunks": [
@@ -705,13 +714,13 @@ export const Windows501Module: LearningModule = {
           "id": "windows-501-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "In this interactive activity, you will work on assembling a detailed brief. This brief will include your claims, supporting evidence, the boundaries of uncertainty, and potential pathways for remediation. This exercise is designed to enhance your critical thinking and analytical skills as you prepare to defend your ideas.\nContext recap: In this interactive activity, you will work on assembling a detailed brief. This brief will include your claims, supporting evidence, the boundaries of uncertainty, and potential pathways for remediation. This exercise is designed to enhance your critical thinking and analytical skills as you prepare to defend your ideas."
+          "content": "Assemble a comprehensive defense brief. Synthesize your claims, empirical evidence, uncertainty boundaries, and remediation pathways into a cohesive, defensible architectural argument."
         },
         {
           "id": "windows-501-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "During this rehearsal session, you will practice responding to various critiques that may come from technical experts, governance representatives, and stakeholders. This activity will help you build confidence in your ability to articulate your thoughts and defend your position effectively.\nContext recap: During this rehearsal session, you will practice responding to various critiques that may come from technical experts, governance representatives, and stakeholders. This activity will help you build confidence in your ability to articulate your thoughts and defend your position effectively.\nContext recap: During this rehearsal session, you will practice responding to various critiques that may come from technical experts, governance representatives, and stakeholders. This activity will help you build confidence in your ability to articulate your thoughts and defend your position effectively. Context recap: During this rehearsal session, you will practice responding to various critiques that may come from technical experts, governance representatives, and stakeholders. This activity will help you build confidence in your ability to articulate your thoughts and defend your position effectively."
+          "content": "Participate in an expert panel rehearsal. Defend your architectural decisions against rigorous critiques from technical experts and governance stakeholders, refining your ability to articulate complex trade-offs."
         }
       ],
       "interactiveActivities": [
@@ -719,7 +728,7 @@ export const Windows501Module: LearningModule = {
           "id": "windows-501-l08-act1",
           "type": "debate_simulator",
           "title": "Expert Defense Panel",
-          "description": "Defend specialization recommendations under adversarial cross-examination."
+          "description": "Defend specialization recommendations under adversarial cross-examination from simulated technical and governance experts."
         }
       ]
     }

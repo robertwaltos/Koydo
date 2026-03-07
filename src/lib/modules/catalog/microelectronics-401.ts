@@ -1,17 +1,19 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const Microelectronics401Module: LearningModule = {
+export const microelectronics_401_Module: LearningModule = {
   "id": "microelectronics-401",
   "title": "Microelectronics IV",
-  "description": "Advanced semiconductor device modeling, fabrication-aware design, verification, and production readiness.",
+  "description": "An advanced exploration of modern microelectronics, covering second-order semiconductor device effects, fabrication-aware IC layout, design for manufacturability (DFM), and advanced verification for production readiness.",
   "subject": "Microelectronics",
   "tags": [
-    "curriculum",
-    "interactive"
+    "semiconductors",
+    "VLSI",
+    "IC design",
+    "advanced engineering"
   ],
   "minAge": 18,
   "maxAge": 99,
-  "version": "1.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en",
@@ -25,489 +27,332 @@ export const Microelectronics401Module: LearningModule = {
     "ko",
     "ru"
   ],
-  "thumbnail": "/placeholders/lesson-robot.svg",
+  "thumbnail": "/thumbnails/microelectronics-401.svg",
   "learningObjectives": [
-    "Understand core concepts in Microelectronics",
-    "Apply Microelectronics skills through guided practice",
-    "Demonstrate mastery through checkpoint quizzes"
+    "Model and analyze second-order effects in modern MOSFET devices.",
+    "Apply Design for Manufacturability (DFM) principles to create robust IC layouts.",
+    "Perform and interpret results from physical verification (DRC/LVS) and reliability checks.",
+    "Synthesize knowledge to design, layout, and verify a basic digital logic cell."
   ],
   "lessons": [
     {
       "id": "microelectronics-401-l01",
-      "title": "Microelectronics Concepts 1",
+      "title": "Advanced MOSFET Modeling: Second-Order Effects",
       "type": "video",
-      "duration": 9,
+      "duration": 15,
       "learningAids": [
         {
           "id": "microelectronics-401-l01-a1",
-          "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary for Microelectronics."
+          "type": "animation",
+          "title": "Channel Length Modulation",
+          "content": "Animated visualization of the depletion region widening and its effect on channel length (the Early effect in MOSFETs)."
         },
         {
           "id": "microelectronics-401-l01-a2",
-          "type": "animation",
-          "title": "Animated Example",
-          "content": "Step-by-step walkthrough for Microelectronics."
+          "type": "image",
+          "title": "DIBL Diagram",
+          "content": "Cross-section diagram illustrating Drain-Induced Barrier Lowering (DIBL) and its impact on the threshold voltage."
         }
       ]
     },
     {
       "id": "microelectronics-401-l02",
-      "title": "Microelectronics Practice 2",
+      "title": "Practice: SPICE Modeling of Short-Channel Effects",
       "type": "interactive",
-      "duration": 12,
+      "duration": 20,
       "metadata": {
         "prompts": [
-          "State the key concept in one sentence.",
-          "Apply it to one example.",
-          "Explain your improvement step for next time."
+          "Observe the I-V curve for the baseline short-channel device.",
+          "Modify the doping concentration (N_sub) and explain its effect on V_T rolloff.",
+          "Propose a halo implant strategy to mitigate the observed effect."
         ]
       },
       "learningAids": [
         {
           "id": "microelectronics-401-l02-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Follow the challenge flow and record your approach."
+          "title": "Interactive SPICE Simulator",
+          "content": "Adjust device model parameters in a SPICE environment and observe real-time changes to the I-V characteristic curves."
         }
       ]
     },
     {
       "id": "microelectronics-401-l03",
-      "title": "Checkpoint 1: Microelectronics",
+      "title": "Checkpoint 1: Advanced Device Physics",
       "type": "quiz",
       "duration": 10,
       "questions": [
         {
           "id": "microelectronics-401-l03-q1",
-          "text": "Which choice best matches the main idea of Microelectronics?",
-          "skillId": "microelectronics-401-skill-core",
+          "text": "In a short-channel MOSFET, what is the primary cause of Drain-Induced Barrier Lowering (DIBL)?",
+          "skillId": "microelectronics-401-skill-modeling",
           "options": [
             {
               "id": "a",
-              "text": "A complete, evidence-based explanation"
+              "text": "The drain's electric field influencing the source-channel potential barrier."
             },
             {
               "id": "b",
-              "text": "An unrelated claim"
+              "text": "Increased carrier mobility due to a shorter channel."
             },
             {
               "id": "c",
-              "text": "A random guess"
+              "text": "Quantum mechanical tunneling through the gate oxide."
             },
             {
               "id": "d",
-              "text": "A conflicting idea"
-            }
-          ],
-          "correctOptionId": "a"
-        },
-        {
-          "id": "microelectronics-401-l03-q2",
-          "text": "What should a learner do after getting an answer wrong?",
-          "skillId": "microelectronics-401-skill-review",
-          "options": [
-            {
-              "id": "a",
-              "text": "Review error cause and retry with strategy"
-            },
-            {
-              "id": "b",
-              "text": "Skip all corrections"
-            },
-            {
-              "id": "c",
-              "text": "Memorize only the answer letter"
-            },
-            {
-              "id": "d",
-              "text": "Stop practicing"
-            }
-          ],
-          "correctOptionId": "a"
-        },
-        {
-          "id": "microelectronics-401-l03-q3",
-          "text": "Which strategy most improves long-term retention for Microelectronics IV?",
-          "skillId": "microelectronics-401-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "Use spaced retrieval and mixed practice over multiple sessions."
-            },
-            {
-              "id": "b",
-              "text": "Cram once and avoid later practice."
-            },
-            {
-              "id": "c",
-              "text": "Read notes passively without self-testing."
-            },
-            {
-              "id": "d",
-              "text": "Rely on confidence alone instead of evidence."
+              "text": "Hot-carrier injection into the gate dielectric."
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Spaced retrieval with varied practice strengthens durable memory and flexible application."
+          "explanation": "DIBL occurs when the drain voltage is high enough to lower the potential barrier at the source, allowing for increased subthreshold leakage current."
+        },
+        {
+          "id": "microelectronics-401-l03-q2",
+          "text": "Velocity saturation in a MOSFET limits the drain current primarily by:",
+          "skillId": "microelectronics-401-skill-modeling",
+          "options": [
+            {
+              "id": "a",
+              "text": "Causing the carrier drift velocity to become constant, no longer increasing with the electric field."
+            },
+            {
+              "id": "b",
+              "text": "Reducing the effective gate-source voltage."
+            },
+            {
+              "id": "c",
+              "text": "Increasing the device's parasitic capacitance."
+            },
+            {
+              "id": "d",
+              "text": "Inducing avalanche breakdown in the channel."
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation": "At high electric fields, carrier velocity stops increasing linearly and saturates at a maximum value, making the drain current less dependent on V_ds."
         }
       ],
-      "learningAids": [
-        {
-          "id": "microelectronics-401-l03-a1",
-          "type": "mnemonic",
-          "title": "Memory Cue",
-          "content": "Use Plan, Solve, Explain to structure each response."
-        }
-      ]
+      "learningAids": []
     },
     {
       "id": "microelectronics-401-l04",
-      "title": "Microelectronics Practice 4",
-      "type": "interactive",
-      "duration": 12,
-      "metadata": {
-        "prompts": [
-          "State the key concept in one sentence.",
-          "Apply it to one example.",
-          "Explain your improvement step for next time."
-        ]
-      },
+      "title": "Fabrication-Aware Design: DFM and Layout",
+      "type": "video",
+      "duration": 18,
       "learningAids": [
         {
           "id": "microelectronics-401-l04-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Follow the challenge flow and record your approach."
+          "type": "image",
+          "title": "Ideal vs. Fabricated Layout",
+          "content": "Visual comparison of an ideal CAD layout versus an SEM image of the fabricated silicon, showing effects like corner rounding and line edge roughness."
+        },
+        {
+          "id": "microelectronics-401-l04-a2",
+          "type": "animation",
+          "title": "Chemical-Mechanical Polishing (CMP)",
+          "content": "Animation showing how CMP planarizes a wafer surface and how layout density rules (e.g., metal fill) are used to ensure a uniform result."
         }
       ]
     },
     {
       "id": "microelectronics-401-l05",
-      "title": "Microelectronics Concepts 5",
-      "type": "video",
-      "duration": 9,
+      "title": "Practice: Layout Parasitic Extraction",
+      "type": "interactive",
+      "duration": 25,
+      "metadata": {
+        "prompts": [
+          "Identify the three largest parasitic capacitances in the provided inverter layout.",
+          "Propose a layout modification to reduce the Miller capacitance (C_gd).",
+          "Quantify the expected performance improvement in terms of propagation delay."
+        ]
+      },
       "learningAids": [
         {
           "id": "microelectronics-401-l05-a1",
-          "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary for Microelectronics."
-        },
-        {
-          "id": "microelectronics-401-l05-a2",
-          "type": "animation",
-          "title": "Animated Example",
-          "content": "Step-by-step walkthrough for Microelectronics."
+          "type": "practice",
+          "title": "Virtual IC Layout Editor",
+          "content": "Use a simplified layout tool with an integrated parasitic extraction feature to analyze and optimize a standard logic cell."
         }
       ]
     },
     {
       "id": "microelectronics-401-l06",
-      "title": "Checkpoint 2: Microelectronics",
+      "title": "Checkpoint 2: DFM and Layout Effects",
       "type": "quiz",
-      "duration": 10,
+      "duration": 12,
       "questions": [
         {
           "id": "microelectronics-401-l06-q1",
-          "text": "Which choice best matches the main idea of Microelectronics?",
-          "skillId": "microelectronics-401-skill-core",
+          "text": "What is the primary purpose of inserting 'dummy fill' metal in an IC layout?",
+          "skillId": "microelectronics-401-skill-dfm",
           "options": [
             {
               "id": "a",
-              "text": "A complete, evidence-based explanation"
+              "text": "To improve planarity during Chemical-Mechanical Polishing (CMP) by maintaining uniform metal density."
             },
             {
               "id": "b",
-              "text": "An unrelated claim"
+              "text": "To provide extra power routing for high-current devices."
             },
             {
               "id": "c",
-              "text": "A random guess"
+              "text": "To act as a heat sink for thermally sensitive analog circuits."
             },
             {
               "id": "d",
-              "text": "A conflicting idea"
-            }
-          ],
-          "correctOptionId": "a"
-        },
-        {
-          "id": "microelectronics-401-l06-q2",
-          "text": "What should a learner do after getting an answer wrong?",
-          "skillId": "microelectronics-401-skill-review",
-          "options": [
-            {
-              "id": "a",
-              "text": "Review error cause and retry with strategy"
-            },
-            {
-              "id": "b",
-              "text": "Skip all corrections"
-            },
-            {
-              "id": "c",
-              "text": "Memorize only the answer letter"
-            },
-            {
-              "id": "d",
-              "text": "Stop practicing"
-            }
-          ],
-          "correctOptionId": "a"
-        },
-        {
-          "id": "microelectronics-401-l06-q3",
-          "text": "Which strategy most improves long-term retention for Microelectronics IV?",
-          "skillId": "microelectronics-401-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "Use spaced retrieval and mixed practice over multiple sessions."
-            },
-            {
-              "id": "b",
-              "text": "Cram once and avoid later practice."
-            },
-            {
-              "id": "c",
-              "text": "Read notes passively without self-testing."
-            },
-            {
-              "id": "d",
-              "text": "Rely on confidence alone instead of evidence."
+              "text": "To shield sensitive signals from electromagnetic interference (EMI)."
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Spaced retrieval with varied practice strengthens durable memory and flexible application."
+          "explanation": "Dummy fill ensures that the metal density is consistent across the die, which is critical for achieving a flat, uniform surface during the CMP process, preventing dishing and erosion."
+        },
+        {
+          "id": "microelectronics-401-l06-q2",
+          "text": "The 'antenna effect' during fabrication refers to damage caused by:",
+          "skillId": "microelectronics-401-skill-dfm",
+          "options": [
+            {
+              "id": "a",
+              "text": "Charge accumulation on a long metal interconnect during plasma etching, which can damage a connected gate oxide."
+            },
+            {
+              "id": "b",
+              "text": "Crosstalk between adjacent signal lines acting as antennas."
+            },
+            {
+              "id": "c",
+              "text": "Radio frequency interference from external sources coupling into the chip."
+            },
+            {
+              "id": "d",
+              "text": "Physical stress on the silicon lattice due to mismatched metal layers."
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Long metal traces act like antennas during plasma processes, collecting charge that can create a large voltage and rupture the thin gate oxide of a connected transistor if not properly discharged."
         }
       ],
-      "learningAids": [
-        {
-          "id": "microelectronics-401-l06-a1",
-          "type": "mnemonic",
-          "title": "Memory Cue",
-          "content": "Use Plan, Solve, Explain to structure each response."
-        }
-      ]
+      "learningAids": []
     },
     {
       "id": "microelectronics-401-l07",
-      "title": "Microelectronics Concepts 7",
+      "title": "IC Verification and Production Readiness",
       "type": "video",
-      "duration": 9,
+      "duration": 15,
       "learningAids": [
         {
           "id": "microelectronics-401-l07-a1",
           "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary for Microelectronics."
+          "title": "Verification Flowchart",
+          "content": "A flowchart of the complete IC physical verification cycle, showing the inputs and outputs for DRC, LVS, and ERC."
         },
         {
           "id": "microelectronics-401-l07-a2",
-          "type": "animation",
-          "title": "Animated Example",
-          "content": "Step-by-step walkthrough for Microelectronics."
+          "type": "diagram",
+          "title": "ESD Protection Circuit",
+          "content": "Schematic diagram of a diode-based electrostatic discharge (ESD) protection clamp circuit on an I/O pad."
         }
       ]
     },
     {
       "id": "microelectronics-401-l08",
-      "title": "Microelectronics Practice 8",
+      "title": "Challenge: Debugging DRC and LVS Errors",
       "type": "interactive",
-      "duration": 12,
+      "duration": 20,
       "metadata": {
         "prompts": [
-          "State the key concept in one sentence.",
-          "Apply it to one example.",
-          "Explain your improvement step for next time."
+          "Run the Design Rule Check (DRC) and identify the metal spacing violation.",
+          "Correct the layout to resolve the DRC error.",
+          "Run Layout vs. Schematic (LVS) and identify the netlist mismatch caused by a shorted connection."
         ]
       },
       "learningAids": [
         {
           "id": "microelectronics-401-l08-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Follow the challenge flow and record your approach."
+          "title": "Simulated Verification Environment",
+          "content": "A pre-made layout containing common DRC and LVS errors for the user to find and fix using simulated verification tools."
         }
       ]
     },
     {
       "id": "microelectronics-401-l09",
-      "title": "Checkpoint 3: Microelectronics",
+      "title": "Checkpoint 3: Verification and Reliability",
       "type": "quiz",
-      "duration": 10,
+      "duration": 12,
       "questions": [
         {
           "id": "microelectronics-401-l09-q1",
-          "text": "Which choice best matches the main idea of Microelectronics?",
-          "skillId": "microelectronics-401-skill-core",
+          "text": "What does a successful Layout vs. Schematic (LVS) check primarily confirm?",
+          "skillId": "microelectronics-401-skill-verification",
           "options": [
             {
               "id": "a",
-              "text": "A complete, evidence-based explanation"
+              "text": "That the circuit extracted from the layout is electrically equivalent to the original schematic."
             },
             {
               "id": "b",
-              "text": "An unrelated claim"
+              "text": "That the layout adheres to all geometric rules required for manufacturing."
             },
             {
               "id": "c",
-              "text": "A random guess"
+              "text": "That the circuit will operate at the target clock frequency."
             },
             {
               "id": "d",
-              "text": "A conflicting idea"
+              "text": "That the circuit is protected against electrostatic discharge."
             }
           ],
-          "correctOptionId": "a"
+          "correctOptionId": "a",
+          "explanation": "LVS compares the netlist extracted from the physical layout against the source schematic netlist to ensure they match, confirming that the layout correctly implements the intended circuit."
         },
         {
           "id": "microelectronics-401-l09-q2",
-          "text": "What should a learner do after getting an answer wrong?",
-          "skillId": "microelectronics-401-skill-review",
+          "text": "CMOS latch-up is a condition caused by the triggering of a parasitic structure equivalent to a:",
+          "skillId": "microelectronics-401-skill-verification",
           "options": [
             {
               "id": "a",
-              "text": "Review error cause and retry with strategy"
+              "text": "Silicon-Controlled Rectifier (SCR)."
             },
             {
               "id": "b",
-              "text": "Skip all corrections"
+              "text": "Zener Diode."
             },
             {
               "id": "c",
-              "text": "Memorize only the answer letter"
+              "text": "Tunnel Diode."
             },
             {
               "id": "d",
-              "text": "Stop practicing"
-            }
-          ],
-          "correctOptionId": "a"
-        },
-        {
-          "id": "microelectronics-401-l09-q3",
-          "text": "Which strategy most improves long-term retention for Microelectronics IV?",
-          "skillId": "microelectronics-401-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "Use spaced retrieval and mixed practice over multiple sessions."
-            },
-            {
-              "id": "b",
-              "text": "Cram once and avoid later practice."
-            },
-            {
-              "id": "c",
-              "text": "Read notes passively without self-testing."
-            },
-            {
-              "id": "d",
-              "text": "Rely on confidence alone instead of evidence."
+              "text": "Junction Field-Effect Transistor (JFET)."
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Spaced retrieval with varied practice strengthens durable memory and flexible application."
+          "explanation": "The combination of parasitic NPN and PNP bipolar transistors in a CMOS structure forms a parasitic SCR, which, if triggered, can create a low-impedance path from VDD to VSS, causing a short circuit."
         }
       ],
-      "learningAids": [
-        {
-          "id": "microelectronics-401-l09-a1",
-          "type": "mnemonic",
-          "title": "Memory Cue",
-          "content": "Use Plan, Solve, Explain to structure each response."
-        }
-      ]
+      "learningAids": []
     },
     {
       "id": "microelectronics-401-l10",
-      "title": "Checkpoint 4: Microelectronics",
-      "type": "quiz",
-      "duration": 10,
-      "questions": [
-        {
-          "id": "microelectronics-401-l10-q1",
-          "text": "Which choice best matches the main idea of Microelectronics?",
-          "skillId": "microelectronics-401-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "A complete, evidence-based explanation"
-            },
-            {
-              "id": "b",
-              "text": "An unrelated claim"
-            },
-            {
-              "id": "c",
-              "text": "A random guess"
-            },
-            {
-              "id": "d",
-              "text": "A conflicting idea"
-            }
-          ],
-          "correctOptionId": "a"
-        },
-        {
-          "id": "microelectronics-401-l10-q2",
-          "text": "What should a learner do after getting an answer wrong?",
-          "skillId": "microelectronics-401-skill-review",
-          "options": [
-            {
-              "id": "a",
-              "text": "Review error cause and retry with strategy"
-            },
-            {
-              "id": "b",
-              "text": "Skip all corrections"
-            },
-            {
-              "id": "c",
-              "text": "Memorize only the answer letter"
-            },
-            {
-              "id": "d",
-              "text": "Stop practicing"
-            }
-          ],
-          "correctOptionId": "a"
-        },
-        {
-          "id": "microelectronics-401-l10-q3",
-          "text": "Which strategy most improves long-term retention for Microelectronics IV?",
-          "skillId": "microelectronics-401-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "Use spaced retrieval and mixed practice over multiple sessions."
-            },
-            {
-              "id": "b",
-              "text": "Cram once and avoid later practice."
-            },
-            {
-              "id": "c",
-              "text": "Read notes passively without self-testing."
-            },
-            {
-              "id": "d",
-              "text": "Rely on confidence alone instead of evidence."
-            }
-          ],
-          "correctOptionId": "a",
-          "explanation": "Spaced retrieval with varied practice strengthens durable memory and flexible application."
-        }
-      ],
+      "title": "Capstone: Design and Verify a 2-Input NAND Gate",
+      "type": "project",
+      "duration": 60,
+      "metadata": {
+        "prompts": [
+          "Design the schematic for a CMOS 2-input NAND gate.",
+          "Create a DRC-clean and LVS-correct layout for your design.",
+          "Simulate the transient response to verify its logical function and measure propagation delays."
+        ]
+      },
       "learningAids": [
         {
           "id": "microelectronics-401-l10-a1",
-          "type": "mnemonic",
-          "title": "Memory Cue",
-          "content": "Use Plan, Solve, Explain to structure each response."
+          "type": "practice",
+          "title": "Integrated Design Suite",
+          "content": "Full access to a simplified schematic editor, layout editor, and SPICE simulator to complete the capstone project from concept to verification."
         }
       ]
     }

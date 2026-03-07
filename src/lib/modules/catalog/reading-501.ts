@@ -1,9 +1,9 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const Reading501Module: LearningModule = {
+export const reading_501_Module: LearningModule = {
   "id": "reading-501",
   "title": "Reading Specialization Studio",
-  "description": "Post-401 specialization in Reading, focused on reading systems diagnostics, reading operations and execution design, reading impact and tradeoff analysis, and reading governance and leadership through advanced casework, simulation, and defense-based checkpoints.",
+  "description": "An advanced specialization module focusing on the diagnosis, design, and governance of complex reading systems. Learners will engage with high-stakes casework, dynamic simulations, and defense-based checkpoints to master systems-level analysis and leadership in reading education.",
   "subject": "Reading",
   "tags": [
     "core",
@@ -14,32 +14,38 @@ export const Reading501Module: LearningModule = {
   ],
   "minAge": 17,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en",
     "es"
   ],
   "learningObjectives": [
-    "Apply advanced methods for reading systems diagnostics in high-constraint environments",
-    "Design robust systems for reading operations and execution design with measurable control gates",
-    "Evaluate interventions in reading impact and tradeoff analysis with research-grade rigor",
-    "Operationalize reading governance and leadership with accountable governance and escalation pathways",
-    "Lead cross-functional decision reviews with explicit tradeoff communication",
-    "Defend recommendations under expert critique using evidence and uncertainty bounds"
+    "Diagnose reading system failures in high-constraint environments using advanced analytical methods.",
+    "Design robust operational systems for reading interventions, including measurable control gates and escalation pathways.",
+    "Conduct research-grade analysis of reading program impacts, including explicit tradeoff evaluations.",
+    "Develop and implement accountable governance frameworks for reading leadership.",
+    "Lead cross-functional decision reviews, clearly communicating complex tradeoffs and uncertainties.",
+    "Defend strategic recommendations against expert critique using evidence-based arguments."
   ],
   "lessons": [
     {
       "id": "reading-501-l01",
-      "title": "Reading Advanced Foundations",
+      "title": "Advanced Foundations in Reading Systems",
       "type": "video",
-      "duration": 14,
+      "duration": 15,
       "learningAids": [
         {
           "id": "reading-501-l01-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Causal Loop Diagram",
+          "content": "A visual diagram illustrating the interconnected factors within a reading system, showing feedback loops and dependencies."
+        },
+        {
+          "id": "reading-501-l01-a2",
+          "type": "downloadable",
+          "title": "Diagnostic Framework",
+          "content": "A structured PDF guide for defining goals, identifying evidence, analyzing conclusions, and verifying recommendations."
         }
       ],
       "chunks": [
@@ -47,36 +53,36 @@ export const Reading501Module: LearningModule = {
           "id": "reading-501-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "In this lesson, we will dive deep into the advanced boundaries of reading systems. We will learn how to effectively diagnose reading systems, which means figuring out what works well and what needs improvement. Additionally, we will focus on designing operations that enhance how reading is executed. By understanding these important concepts, we can create better and more engaging reading experiences for all learners, helping them to enjoy and succeed in their reading journeys.\nContext recap: In this lesson, we will dive deep into the advanced boundaries of reading systems. We will learn how to effectively diagnose reading systems, which means figuring out what works well and what needs improvement. Additionally, we will focus on designing operations that enhance how reading is executed. By understanding these important concepts, we can create better and more engaging reading experiences for all learners, helping them to enjoy and succeed in their reading journeys.\nContext recap: In this lesson, we will dive deep into the advanced boundaries of reading systems. We will learn how to effectively diagnose reading systems, which means figuring out what works well and what needs improvement. Additionally, we will focus on designing operations that enhance how reading is executed. By understanding these important concepts, we can create better and more engaging reading experiences for all learners, helping them to enjoy and succeed in their reading journeys.\nWhy this matters: Scope and Boundary Design helps learners in Reading connect ideas from Reading Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "This section introduces the critical skill of defining the scope and boundaries of a reading system analysis. We will learn to diagnose system strengths and weaknesses and design effective operational improvements. Mastering this helps connect high-level strategy to practical decisions, ensuring all assumptions, tradeoffs, and verification methods are explicit."
         },
         {
           "id": "reading-501-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "In this section, learners will learn how to identify and map out causal pathways, which are the connections between different factors that influence reading. We will also look at uncertainty ranges and how various system dependencies can affect our planning for interventions. This understanding is crucial for making informed decisions in reading education.\nContext recap: In this section, learners will learn how to identify and map out causal pathways, which are the connections between different factors that influence reading. We will also look at uncertainty ranges and how various system dependencies can affect our planning for interventions. This understanding is crucial for making informed decisions in reading education."
+          "content": "Learners will explore how to map causal pathways that influence reading outcomes. We will also model uncertainty ranges and system dependencies to create more realistic and resilient intervention plans. This is crucial for making informed decisions in complex educational environments."
         },
         {
           "id": "reading-501-l01-c3",
           "kind": "recap",
-          "title": "Evidence Thresholds",
-          "content": "In our recap, we will emphasize that all claims made in our reading assessments should be linked to measurable indicators. This means we will establish confidence bounds and set up review checkpoints to ensure that our evaluations are accurate and reliable.\nContext recap: In our recap, we will emphasize that all claims made in our reading assessments should be linked to measurable indicators. This means we will establish confidence bounds and set up review checkpoints to ensure that our evaluations are accurate and reliable.\nContext recap: In our recap, we will emphasize that all claims made in our reading assessments should be linked to measurable indicators. This means we will establish confidence bounds and set up review checkpoints to ensure that our evaluations are accurate and reliable. Context recap: In our recap, we will emphasize that all claims made in our reading assessments should be linked to measurable indicators. This means we will establish confidence bounds and set up review checkpoints to ensure that our evaluations are accurate and reliable."
+          "title": "Establishing Evidence Thresholds",
+          "content": "This recap emphasizes a core principle: all claims must be linked to measurable indicators. We will review how to establish confidence bounds and design review checkpoints to ensure assessments are both accurate and reliable."
         }
       ],
       "flashcards": [
         {
           "id": "reading-501-l01-f1",
-          "front": "reading systems diagnostics",
-          "back": "A specialization axis requiring explicit assumptions and measurable constraints."
+          "front": "Reading Systems Diagnostics",
+          "back": "A specialization axis requiring explicit assumptions and measurable constraints to analyze system performance."
         },
         {
           "id": "reading-501-l01-f2",
-          "front": "reading operations and execution design",
-          "back": "Execution architecture that determines reliability under stress."
+          "front": "Reading Operations Design",
+          "back": "The architecture of execution that determines a system's reliability and effectiveness under stress."
         },
         {
           "id": "reading-501-l01-f3",
-          "front": "reading impact and tradeoff analysis",
-          "back": "Evaluation discipline for identifying true gains and hidden costs."
+          "front": "Tradeoff Analysis",
+          "back": "An evaluation discipline for identifying the true gains and hidden costs of an intervention."
         }
       ]
     },
@@ -88,9 +94,9 @@ export const Reading501Module: LearningModule = {
       "learningAids": [
         {
           "id": "reading-501-l02-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "downloadable",
+          "title": "Workflow Design Canvas",
+          "content": "A template for designing and stress-testing specialized workflows for reading interventions, including control gates and rollback criteria."
         }
       ],
       "chunks": [
@@ -98,13 +104,13 @@ export const Reading501Module: LearningModule = {
           "id": "reading-501-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "In this interactive practice, learners will have the opportunity to design specialized workflows for reading interventions. They will also conduct stress tests to see how these workflows perform under challenging scenarios, helping them to understand the importance of resilience in educational methods.\nContext recap: In this interactive practice, learners will have the opportunity to design specialized workflows for reading interventions. They will also conduct stress tests to see how these workflows perform under challenging scenarios, helping them to understand the importance of resilience in educational methods.\nContext recap: In this interactive practice, learners will have the opportunity to design specialized workflows for reading interventions. They will also conduct stress tests to see how these workflows perform under challenging scenarios, helping them to understand the importance of resilience in educational methods. Context recap: In this interactive practice, learners will have the opportunity to design specialized workflows for reading interventions. They will also conduct stress tests to see how these workflows perform under challenging scenarios, helping them to understand the importance of resilience in educational methods."
+          "content": "In this interactive lab, learners will design a specialized workflow for a reading intervention. They will then conduct a stress test to evaluate its performance under challenging scenarios, highlighting the importance of building resilient educational methods."
         },
         {
           "id": "reading-501-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "In this recap, we will discuss how workflows should include various checkpoints, criteria for rolling back decisions, and escalation procedures based on thresholds. This structure ensures that we can manage our reading interventions effectively and respond to any issues that arise.\nContext recap: In this recap, we will discuss how workflows should include various checkpoints, criteria for rolling back decisions, and escalation procedures based on thresholds. This structure ensures that we can manage our reading interventions effectively and respond to any issues that arise.\nContext recap: In this recap, we will discuss how workflows should include various checkpoints, criteria for rolling back decisions, and escalation procedures based on thresholds. This structure ensures that we can manage our reading interventions effectively and respond to any issues that arise. Context recap: In this recap, we will discuss how workflows should include various checkpoints, criteria for rolling back decisions, and escalation procedures based on thresholds. This structure ensures that we can manage our reading interventions effectively and respond to any issues that arise."
+          "content": "We will recap the key components of a robust workflow: decision checkpoints, criteria for rolling back failed interventions, and threshold-based escalation procedures. This structure ensures effective management and rapid response to emerging issues."
         }
       ],
       "interactiveActivities": [
@@ -142,20 +148,20 @@ export const Reading501Module: LearningModule = {
       "learningAids": [
         {
           "id": "reading-501-l03-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "downloadable",
+          "title": "Key Concepts Review Sheet",
+          "content": "A one-page summary of core concepts from Lessons 1 and 2, including key terms and frameworks."
         }
       ],
       "questions": [
         {
           "id": "reading-501-l03-q1",
-          "text": "Which practice most improves reading systems diagnostics decision quality?",
+          "text": "Which practice most improves the quality of reading systems diagnostics?",
           "skillId": "reading-501-skill-core",
           "options": [
             {
               "id": "a",
-              "text": "Proceed without baseline or assumptions"
+              "text": "Proceed without a baseline or assumptions"
             },
             {
               "id": "b",
@@ -171,11 +177,11 @@ export const Reading501Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Advanced decisions improve when assumptions, constraints, and metrics are explicit."
+          "explanation": "Advanced decisions improve when assumptions, constraints, and metrics are made explicit."
         },
         {
           "id": "reading-501-l03-q2",
-          "text": "At level 501, strong execution for reading operations and execution design requires:",
+          "text": "At an advanced level, strong execution design for reading operations requires:",
           "skillId": "reading-501-skill-execution",
           "options": [
             {
@@ -225,7 +231,7 @@ export const Reading501Module: LearningModule = {
         },
         {
           "id": "reading-501-l03-q4",
-          "text": "Mature governance systems connect:",
+          "text": "Mature governance systems effectively connect:",
           "skillId": "reading-501-skill-governance",
           "options": [
             {
@@ -247,120 +253,26 @@ export const Reading501Module: LearningModule = {
           ],
           "correctOptionId": "a",
           "explanation": "Governance maturity is the operational link between intent, measurement, and corrective action."
-        },
-        {
-          "id": "reading-501-l03-q5",
-          "text": "What is the best way to compare competing interventions in advanced Reading?",
-          "skillId": "reading-501-skill-advanced-5",
-          "options": [
-            {
-              "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
-            },
-            {
-              "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
-            },
-            {
-              "id": "c",
-              "text": "Switch metrics after results arrive"
-            },
-            {
-              "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
-        },
-        {
-          "id": "reading-501-l03-q6",
-          "text": "In high-stakes Reading Specialization Studio execution, which communication protocol is strongest?",
-          "skillId": "reading-501-skill-advanced-6",
-          "options": [
-            {
-              "id": "a",
-              "text": "Broadcast conclusions without assumptions"
-            },
-            {
-              "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
-            },
-            {
-              "id": "c",
-              "text": "Share only final outcomes after completion"
-            },
-            {
-              "id": "d",
-              "text": "Limit updates to a single informal channel"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
-        },
-        {
-          "id": "reading-501-l03-q7",
-          "text": "A mature remediation loop in advanced Reading should prioritize:",
-          "skillId": "reading-501-skill-advanced-7",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blame assignment without system updates"
-            },
-            {
-              "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
-            },
-            {
-              "id": "c",
-              "text": "One-time fixes without retesting"
-            },
-            {
-              "id": "d",
-              "text": "Issue closure based on elapsed time"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
-        },
-        {
-          "id": "reading-501-l03-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Reading Specialization Studio?",
-          "skillId": "reading-501-skill-advanced-8",
-          "options": [
-            {
-              "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
-            },
-            {
-              "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
-            },
-            {
-              "id": "c",
-              "text": "Ignore correlated failure modes"
-            },
-            {
-              "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
         }
       ]
     },
     {
       "id": "reading-501-l04",
-      "title": "Reading Advanced Case Analysis",
+      "title": "Advanced Case Analysis",
       "type": "video",
       "duration": 14,
       "learningAids": [
         {
           "id": "reading-501-l04-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Tradeoff Matrix Diagram",
+          "content": "A visual matrix for comparing multiple intervention options across dimensions like cost, equity, reliability, and safety."
+        },
+        {
+          "id": "reading-501-l04-a2",
+          "type": "downloadable",
+          "title": "Case Study Brief Template",
+          "content": "A structured document for analyzing a case, outlining the problem, constraints, options, and recommended course of action."
         }
       ],
       "chunks": [
@@ -368,33 +280,39 @@ export const Reading501Module: LearningModule = {
           "id": "reading-501-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "In this lesson, we will frame cases that highlight the competing constraints found in reading systems diagnostics. We will analyze how reading impacts and trade-offs can be understood through structured scenarios, allowing us to make better decisions in educational settings.\nContext recap: In this lesson, we will frame cases that highlight the competing constraints found in reading systems diagnostics. We will analyze how reading impacts and trade-offs can be understood through structured scenarios, allowing us to make better decisions in educational settings.\nContext recap: In this lesson, we will frame cases that highlight the competing constraints found in reading systems diagnostics. We will analyze how reading impacts and trade-offs can be understood through structured scenarios, allowing us to make better decisions in educational settings. Context recap: In this lesson, we will frame cases that highlight the competing constraints found in reading systems diagnostics. We will analyze how reading impacts and trade-offs can be understood through structured scenarios, allowing us to make better decisions in educational settings."
+          "content": "This lesson deconstructs complex cases to reveal competing constraints within reading systems. We will analyze how structured scenarios can illuminate impacts and tradeoffs, enabling more sophisticated decision-making in real-world educational settings."
         },
         {
           "id": "reading-501-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "In this practice session, learners will compare different options available to them across various dimensions such as safety, reliability, cost, equity, and governance. This comparison will help them understand the complexities involved in making decisions related to reading interventions.\nContext recap: In this practice session, learners will compare different options available to them across various dimensions such as safety, reliability, cost, equity, and governance. This comparison will help them understand the complexities involved in making decisions related to reading interventions.\nContext recap: In this practice session, learners will compare different options available to them across various dimensions such as safety, reliability, cost, equity, and governance. This comparison will help them understand the complexities involved in making decisions related to reading interventions. Context recap: In this practice session, learners will compare different options available to them across various dimensions such as safety, reliability, cost, equity, and governance. This comparison will help them understand the complexities involved in making decisions related to reading interventions."
+          "content": "In this practice segment, we will systematically compare different intervention options across multiple dimensions: safety, reliability, cost, equity, and governance. This exercise builds the skill of multi-criteria decision analysis."
         },
         {
           "id": "reading-501-l04-c3",
           "kind": "recap",
-          "title": "Decision Memo Pattern",
-          "content": "In our recap, we will highlight that each recommendation made in our decision memos should clearly outline the assumptions, evidence, risk controls, and fallback plans. This structured approach ensures that we are prepared for any challenges that may arise.\nContext recap: In our recap, we will highlight that each recommendation made in our decision memos should clearly outline the assumptions, evidence, risk controls, and fallback plans. This structured approach ensures that we are prepared for any challenges that may arise.\nContext recap: In our recap, we will highlight that each recommendation made in our decision memos should clearly outline the assumptions, evidence, risk controls, and fallback plans. This structured approach ensures that we are prepared for any challenges that may arise. Context recap: In our recap, we will highlight that each recommendation made in our decision memos should clearly outline the assumptions, evidence, risk controls, and fallback plans. This structured approach ensures that we are prepared for any challenges that may arise."
+          "title": "The Decision Memo Pattern",
+          "content": "We conclude by reviewing a standard pattern for decision memos. Each recommendation must be supported by explicit assumptions, clear evidence, defined risk controls, and viable fallback plans to ensure comprehensive and defensible proposals."
         }
       ]
     },
     {
       "id": "reading-501-l05",
-      "title": "Reading Simulation Clinic",
+      "title": "Simulation Clinic",
       "type": "interactive",
       "duration": 18,
       "learningAids": [
         {
           "id": "reading-501-l05-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "image",
+          "title": "Simulation Dashboard",
+          "content": "A screenshot of the interactive simulation interface, showing key performance indicators, control levers, and event logs."
+        },
+        {
+          "id": "reading-501-l05-a2",
+          "type": "downloadable",
+          "title": "Simulation Pre-briefing Document",
+          "content": "A guide outlining the scenario, objectives, constraints, and available controls for the upcoming simulation."
         }
       ],
       "chunks": [
@@ -402,13 +320,13 @@ export const Reading501Module: LearningModule = {
           "id": "reading-501-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "In this interactive practice, learners will operate scenario controls while balancing performance and governance constraints. This hands-on experience will help them understand how to manage different aspects of reading interventions effectively.\nContext recap: In this interactive practice, learners will operate scenario controls while balancing performance and governance constraints. This hands-on experience will help them understand how to manage different aspects of reading interventions effectively.\nWhy this matters: Live Scenario Controls helps learners in Reading connect ideas from Reading Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "In this hands-on simulation, learners will operate scenario controls to manage a reading intervention program in real-time. The objective is to balance performance targets with governance constraints, providing practical experience in dynamic system management."
         },
         {
           "id": "reading-501-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "In our recap, we will discuss how effective responses to challenges should update control gates without losing traceability or accountability. This ensures that all actions taken are transparent and can be reviewed later.\nContext recap: In our recap, we will discuss how effective responses to challenges should update control gates without losing traceability or accountability. This ensures that all actions taken are transparent and can be reviewed later.\nWhy this matters: Adaptive Response Design helps learners in Reading connect ideas from Reading Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "This recap focuses on how to respond effectively to unexpected events during the simulation. A key principle is to update control gates and strategies adaptively, without losing traceability or accountability for decisions made under pressure."
         }
       ],
       "interactiveActivities": [
@@ -416,7 +334,7 @@ export const Reading501Module: LearningModule = {
           "id": "reading-501-l05-act1",
           "type": "scenario",
           "title": "Adverse-Condition Decision Run",
-          "description": "Run a high-pressure reading scenario and tune controls under uncertainty."
+          "description": "Manage a high-pressure reading intervention scenario, tuning system controls in real-time to mitigate risks and achieve objectives under uncertainty."
         }
       ]
     },
@@ -428,15 +346,15 @@ export const Reading501Module: LearningModule = {
       "learningAids": [
         {
           "id": "reading-501-l06-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "downloadable",
+          "title": "Case & Simulation Debrief Guide",
+          "content": "A structured guide with questions to facilitate reflection on the case analysis and simulation exercises."
         }
       ],
       "questions": [
         {
           "id": "reading-501-l06-q1",
-          "text": "In advanced casework, the first requirement for defensible recommendations is:",
+          "text": "In advanced casework, the first requirement for a defensible recommendation is:",
           "skillId": "reading-501-skill-case1",
           "options": [
             {
@@ -461,7 +379,7 @@ export const Reading501Module: LearningModule = {
         },
         {
           "id": "reading-501-l06-q2",
-          "text": "A resilient strategy for reading operations and execution design should include:",
+          "text": "A resilient strategy for reading operations should always include:",
           "skillId": "reading-501-skill-case2",
           "options": [
             {
@@ -486,12 +404,12 @@ export const Reading501Module: LearningModule = {
         },
         {
           "id": "reading-501-l06-q3",
-          "text": "When evaluating reading impact and tradeoff analysis, which method is most rigorous?",
+          "text": "When evaluating reading program impact, which method is most rigorous?",
           "skillId": "reading-501-skill-case3",
           "options": [
             {
               "id": "a",
-              "text": "Single success story without controls"
+              "text": "A single success story without controls"
             },
             {
               "id": "b",
@@ -499,7 +417,7 @@ export const Reading501Module: LearningModule = {
             },
             {
               "id": "c",
-              "text": "Outcome-only narrative without process evidence"
+              "text": "An outcome-only narrative without process evidence"
             },
             {
               "id": "d",
@@ -536,117 +454,73 @@ export const Reading501Module: LearningModule = {
         },
         {
           "id": "reading-501-l06-q5",
-          "text": "What is the best way to compare competing interventions in advanced Reading?",
+          "text": "During a case analysis, you must compare three viable interventions. What is the most defensible approach?",
           "skillId": "reading-501-skill-advanced-5",
           "options": [
             {
               "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
+              "text": "Select the one with the most compelling narrative."
             },
             {
               "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
+              "text": "Create a tradeoff matrix to score each option against shared criteria like cost, equity, and risk."
             },
             {
               "id": "c",
-              "text": "Switch metrics after results arrive"
+              "text": "Choose the intervention that is fastest to implement, ignoring other factors."
             },
             {
               "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
+              "text": "Ask stakeholders for their opinions without providing data."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
+          "explanation": "A structured comparison using a tradeoff matrix ensures all options are evaluated fairly against the same critical dimensions."
         },
         {
           "id": "reading-501-l06-q6",
-          "text": "In high-stakes Reading Specialization Studio execution, which communication protocol is strongest?",
+          "text": "In the simulation, a sudden budget cut impacts your program. What is the best immediate action?",
           "skillId": "reading-501-skill-advanced-6",
           "options": [
             {
               "id": "a",
-              "text": "Broadcast conclusions without assumptions"
+              "text": "Continue with the original plan and hope for the best."
             },
             {
               "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
+              "text": "Halt all activities immediately without a plan."
             },
             {
               "id": "c",
-              "text": "Share only final outcomes after completion"
+              "text": "Use the simulation controls to adjust resource allocation, evaluate the impact on KPIs, and document the decision."
             },
             {
               "id": "d",
-              "text": "Limit updates to a single informal channel"
+              "text": "Blame the external event for any negative outcomes."
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
-        },
-        {
-          "id": "reading-501-l06-q7",
-          "text": "A mature remediation loop in advanced Reading should prioritize:",
-          "skillId": "reading-501-skill-advanced-7",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blame assignment without system updates"
-            },
-            {
-              "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
-            },
-            {
-              "id": "c",
-              "text": "One-time fixes without retesting"
-            },
-            {
-              "id": "d",
-              "text": "Issue closure based on elapsed time"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
-        },
-        {
-          "id": "reading-501-l06-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Reading Specialization Studio?",
-          "skillId": "reading-501-skill-advanced-8",
-          "options": [
-            {
-              "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
-            },
-            {
-              "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
-            },
-            {
-              "id": "c",
-              "text": "Ignore correlated failure modes"
-            },
-            {
-              "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "correctOptionId": "c",
+          "explanation": "Effective adaptive response involves using available controls to mitigate impact and maintaining accountability through documentation."
         }
       ]
     },
     {
       "id": "reading-501-l07",
-      "title": "Reading Governance and Public Impact",
+      "title": "Governance and Public Impact",
       "type": "video",
       "duration": 13,
       "learningAids": [
         {
           "id": "reading-501-l07-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Accountability Flowchart",
+          "content": "A flowchart illustrating the paths of decision traceability, review rights, and remediation obligations within a governance structure."
+        },
+        {
+          "id": "reading-501-l07-a2",
+          "type": "downloadable",
+          "title": "Stakeholder Mapping Tool",
+          "content": "A worksheet to help identify and analyze the impact of a reading program on various stakeholder groups."
         }
       ],
       "chunks": [
@@ -654,50 +528,50 @@ export const Reading501Module: LearningModule = {
           "id": "reading-501-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. Understanding these impacts is essential for making informed decisions that consider everyone's needs.\nContext recap: In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. Understanding these impacts is essential for making informed decisions that consider everyone's needs.\nWhy this matters: Stakeholder Impact Distribution helps learners in Reading connect ideas from Reading Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "This lesson focuses on mapping the distribution of benefits, burdens, and delayed effects of a reading program across different stakeholder groups. Understanding these complex impacts is essential for equitable and responsible decision-making."
         },
         {
           "id": "reading-501-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "In this section, we will explore the architecture of accountability, which includes decision traceability, review rights, and obligations for remediation. This framework is important for ensuring that all decisions made in reading governance are responsible and can be tracked.\nContext recap: In this section, we will explore the architecture of accountability, which includes decision traceability, review rights, and obligations for remediation. This framework is important for ensuring that all decisions made in reading governance are responsible and can be tracked.\nContext recap: In this section, we will explore the architecture of accountability, which includes decision traceability, review rights, and obligations for remediation. This framework is important for ensuring that all decisions made in reading governance are responsible and can be tracked. Context recap: In this section, we will explore the architecture of accountability, which includes decision traceability, review rights, and obligations for remediation. This framework is important for ensuring that all decisions made in reading governance are responsible and can be tracked."
+          "content": "We will explore the architecture of accountability, defining its key components: decision traceability, stakeholder review rights, and clear obligations for remediation. This framework ensures that governance is transparent, responsible, and effective."
         },
         {
           "id": "reading-501-l07-c3",
           "kind": "recap",
-          "title": "Responsible Leadership Checklist",
-          "content": "This final checklist serves as a helpful tool that connects important outcomes with ethical considerations, ensures compliance with policies, and promotes resilience in leadership. It encourages leaders to reflect on their responsibilities and the impact of their decisions.\nContext recap: This final checklist serves as a helpful tool that connects important outcomes with ethical considerations, ensures compliance with policies, and promotes resilience in leadership. It encourages leaders to reflect on their responsibilities and the impact of their decisions.\nContext recap: This final checklist serves as a helpful tool that connects important outcomes with ethical considerations, ensures compliance with policies, and promotes resilience in leadership. It encourages leaders to reflect on their responsibilities and the impact of their decisions. Context recap: This final checklist serves as a helpful tool that connects important outcomes with ethical considerations, ensures compliance with policies, and promotes resilience in leadership. It encourages leaders to reflect on their responsibilities and the impact of their decisions."
+          "title": "The Responsible Leadership Checklist",
+          "content": "This final checklist synthesizes the lesson's concepts into a practical tool. It connects program outcomes with ethical duties, policy compliance, and system resilience, prompting leaders to reflect on the full impact of their decisions."
         }
       ],
       "flashcards": [
         {
           "id": "reading-501-l07-f1",
-          "front": "Impact distribution",
-          "back": "How outcomes are allocated across populations and timescales."
+          "front": "Impact Distribution",
+          "back": "The allocation of positive and negative outcomes across different populations and timescales."
         },
         {
           "id": "reading-501-l07-f2",
-          "front": "Decision traceability",
-          "back": "An auditable record of evidence, ownership, and rationale."
+          "front": "Decision Traceability",
+          "back": "An auditable record linking a decision to its evidence, ownership, and underlying rationale."
         },
         {
           "id": "reading-501-l07-f3",
-          "front": "Responsible leadership",
-          "back": "Decision behavior balancing performance, accountability, and ethics."
+          "front": "Responsible Leadership",
+          "back": "A mode of decision-making that balances performance goals with accountability and ethical considerations."
         }
       ]
     },
     {
       "id": "reading-501-l08",
-      "title": "Reading Capstone Defense Lab",
+      "title": "Capstone Defense Lab",
       "type": "interactive",
-      "duration": 16,
+      "duration": 20,
       "learningAids": [
         {
           "id": "reading-501-l08-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "downloadable",
+          "title": "Capstone Defense Rubric",
+          "content": "A detailed rubric outlining the evaluation criteria for the capstone defense, including claim strength, evidence quality, and handling of critiques."
         }
       ],
       "chunks": [
@@ -705,13 +579,13 @@ export const Reading501Module: LearningModule = {
           "id": "reading-501-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "In this activity, learners will work together to create a comprehensive brief. This brief will include well-supported claims, relevant evidence, an understanding of uncertainty, and clear pathways for remediation. This process helps learners develop critical thinking and communication skills.\nContext recap: In this activity, learners will work together to create a comprehensive brief. This brief will include well-supported claims, relevant evidence, an understanding of uncertainty, and clear pathways for remediation. This process helps learners develop critical thinking and communication skills.\nContext recap: In this activity, learners will work together to create a comprehensive brief. This brief will include well-supported claims, relevant evidence, an understanding of uncertainty, and clear pathways for remediation. This process helps learners develop critical thinking and communication skills. Context recap: In this activity, learners will work together to create a comprehensive brief.\nWhy this matters: Defense Brief Assembly helps learners in Reading connect ideas from Reading Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "In this culminating activity, learners will assemble a comprehensive defense brief for a complex reading intervention proposal. The brief must integrate evidence-backed claims, an analysis of uncertainty, and clear remediation pathways, synthesizing all skills from the module."
         },
         {
           "id": "reading-501-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "During this rehearsal, learners practice their responses to various critiques that may come from experts in technical fields, governance, and stakeholder perspectives. This exercise helps build confidence and prepares learners to effectively communicate their ideas and defend their positions.\nContext recap: During this rehearsal, learners practice their responses to various critiques that may come from experts in technical fields, governance, and stakeholder perspectives. This exercise helps build confidence and prepares learners to effectively communicate their ideas and defend their positions.\nContext recap: During this rehearsal, learners practice their responses to various critiques that may come from experts in technical fields, governance, and stakeholder perspectives. This exercise helps build confidence and prepares learners to effectively communicate their ideas and defend their positions. Context recap: During this rehearsal, learners practice their responses to various critiques that may come from experts in technical fields, governance, and stakeholder perspectives. This exercise helps build confidence and prepares learners to effectively communicate their ideas and defend their positions."
+          "content": "Learners will rehearse their defense by responding to critiques from simulated technical, governance, and stakeholder experts. This exercise builds confidence and prepares them to communicate their recommendations effectively under pressure."
         }
       ],
       "interactiveActivities": [
@@ -719,7 +593,7 @@ export const Reading501Module: LearningModule = {
           "id": "reading-501-l08-act1",
           "type": "debate_simulator",
           "title": "Expert Defense Panel",
-          "description": "Defend specialization recommendations under adversarial cross-examination."
+          "description": "Present and defend your capstone recommendations to a panel of virtual experts who will conduct an adversarial cross-examination."
         }
       ]
     }

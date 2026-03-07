@@ -2,7 +2,18 @@
 
 import { useEffect, useState } from "react";
 
-export type MascotMood = "idle" | "happy" | "thinking" | "sad" | "cheering" | "surprised" | "celebrate" | "encourage" | "confused";
+export type MascotMood =
+    | "idle"
+    | "happy"
+    | "thinking"
+    | "sad"
+    | "cheering"
+    | "surprised"
+    | "celebrate"
+    | "encourage"
+    | "encouraging"
+    | "excited"
+    | "confused";
 
 type KoydoMascotProps = {
     mood?: MascotMood;
@@ -40,6 +51,8 @@ export default function KoydoMascot({
         switch (mood) {
             case "happy":
                 return "M 35 45 Q 40 40 45 45 M 55 45 Q 60 40 65 45"; // Curved happy eyes
+            case "excited":
+                return "M 35 42 L 45 48 L 35 54 M 65 42 L 55 48 L 65 54"; // > < eyes
             case "thinking":
                 return "M 35 45 L 45 45 M 55 42 L 65 42"; // One eye higher
             case "sad":
@@ -48,6 +61,9 @@ export default function KoydoMascot({
                 return "M 40 45 A 3 3 0 1 1 34 45 A 3 3 0 1 1 40 45 M 60 45 A 3 3 0 1 1 54 45 A 3 3 0 1 1 60 45"; // Wide circles
             case "cheering":
                 return "M 35 42 L 45 48 L 35 54 M 65 42 L 55 48 L 65 54"; // > < eyes
+            case "encourage":
+            case "encouraging":
+                return "M 35 45 Q 40 40 45 45 M 55 45 Q 60 40 65 45"; // Soft smile
             default:
                 return "M 38 45 L 42 45 M 58 45 L 62 45"; // Neutral dashes
         }

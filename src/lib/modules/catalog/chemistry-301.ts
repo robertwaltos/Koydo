@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const Chemistry301Module: LearningModule = {
+export const chemistry_301_Module: LearningModule = {
   "id": "chemistry-301",
   "title": "Chemistry Quantitative Reasoning",
   "description": "Apply reaction, concentration, and equilibrium models to quantitative chemistry problems.",
@@ -10,13 +10,13 @@ export const Chemistry301Module: LearningModule = {
     "curriculum",
     "interactive"
   ],
-  "minAge": 7,
+  "minAge": 12,
   "maxAge": 18,
   "version": "1.1.0",
   "learningObjectives": [
-    "Understand core concepts in Chemistry",
-    "Apply Chemical System Analysis strategies through guided practice",
-    "Demonstrate mastery with subject-specific quizzes"
+    "Understand core quantitative concepts in Chemistry like stoichiometry and molarity.",
+    "Apply Chemical System Analysis strategies to equilibrium and kinetics.",
+    "Demonstrate mastery of reaction energetics and model validation through guided practice."
   ],
   "lessons": [
     {
@@ -24,115 +24,120 @@ export const Chemistry301Module: LearningModule = {
       "title": "Stoichiometric Reasoning Foundations",
       "type": "video",
       "duration": 10,
+      "lessonImagePrompt": "A vibrant, photorealistic image of a chemistry lab bench with colorful liquids in glowing beakers, surrounded by floating, glowing 3D chemical equations and a balanced scale representing stoichiometry. Imagen 4.",
+      "conceptVideoPrompt": "A high-quality educational 3D animation showing molecules of hydrogen and oxygen combining to form water. The animation visually counts the atoms to demonstrate the conservation of mass and mole ratios in a balanced chemical equation. Veo 3.1.",
       "chunks": [
         {
           "id": "chemistry-301-l01-c1",
-          "title": "Stoichiometric Reasoning Foundations Overview",
-          "content": "In this lesson, we will dive into the exciting world of stoichiometric relationships, which are key to understanding how different substances come together and react in chemical processes. Stoichiometry helps us figure out the amounts of reactants and products involved in a chemical reaction, making it a vital part of chemistry. Our main goal is to develop strong reasoning skills that will empower us to tackle and solve various chemistry problems effectively. By the end of this lesson, you will be equipped to apply these reasoning skills to different chemical scenarios, boosting your confidence and ability in quantitative reasoning within the field of chemistry."
+          "title": "The Recipe of Chemistry",
+          "content": "Welcome to the exciting world of stoichiometry! Think of stoichiometry as the ultimate recipe for chemistry. Just like baking a cake requires specific amounts of flour, sugar, and eggs, chemical reactions require exact amounts of reactants to create products. By understanding these relationships, we can predict exactly how much of a substance we need and how much we will produce. Our goal is to build strong reasoning skills to tackle any chemical recipe!"
         },
         {
           "id": "chemistry-301-l01-c2",
-          "title": "Core Concept",
-          "content": "In this section, we will discuss how stoichiometric relationships and solution behavior work together to help us understand chemical reactions better. First, we will identify the main target of our investigation, which is to understand how different quantities of reactants and products relate to each other. Then, we will outline the evidence or steps that support our understanding, ensuring we have a solid foundation for our reasoning.\nContext recap: In this section, we will discuss how stoichiometric relationships and solution behavior work together to help us understand chemical reactions better. First, we will identify the main target of our investigation, which is to understand how different quantities of reactants and products relate to each other. Then, we will outline the evidence or steps that support our understanding, ensuring we have a solid foundation for our reasoning."
+          "title": "Mole Ratios and Balanced Equations",
+          "content": "To understand how quantities relate in a reaction, we first need a balanced chemical equation. The coefficients (the big numbers in front of the molecules) tell us the 'mole ratio.' For example, in the reaction 2H2 + O2 -> 2H2O, the ratio of Hydrogen to Oxygen is 2:1. This ratio is our golden ticket to converting between different substances in a quantitative chemistry problem."
         },
         {
           "id": "chemistry-301-l01-c3",
-          "title": "Worked Example",
-          "content": "Let's walk through a guided example together! First, we will define the goal we want to achieve in our problem. Next, we will apply a strategy that helps us understand the behavior of the solution we are working with. Finally, we will verify our result with a quick check to ensure that our reasoning is correct. This step-by-step approach will help you gain confidence in solving similar problems on your own.\nContext recap: Let's walk through a guided example together! First, we will define the goal we want to achieve in our problem. Next, we will apply a strategy that helps us understand the behavior of the solution we are working with. Finally, we will verify our result with a quick check to ensure that our reasoning is correct."
+          "title": "Finding the Limiting Reactant",
+          "content": "Imagine making sandwiches: if you have 10 slices of bread but only 2 slices of cheese, you can only make 2 cheese sandwiches. The cheese 'limits' how many you can make! In chemistry, the Limiting Reactant is the substance that runs out first, stopping the reaction. We use our mole ratios to calculate which reactant will produce the least amount of product. That smallest amount is our theoretical yield."
         },
         {
           "id": "chemistry-301-l01-c4",
-          "title": "Transfer Prompt",
-          "content": "Now it's your turn to shine! Take the same reasoning process we talked about and use it to solve a new scenario. As you work through this new problem, remember to explain why your approach makes sense in just one clear sentence. This exercise is not only a fun challenge but also a great way to strengthen your understanding of the concepts we've learned. Show us how you can think critically and apply your knowledge!\nContext recap: Now it's your turn to shine! Take the same reasoning process we talked about and use it to solve a new scenario. As you work through this new problem, remember to explain why your approach makes sense in just one clear sentence. This exercise is not only a fun challenge but also a great way to strengthen your understanding of the concepts we've learned."
+          "title": "Percent Yield: Theory vs. Reality",
+          "content": "In a perfect world, we would get 100% of the product we calculated. But in real labs, spills happen, or reactions don't finish perfectly. The 'Actual Yield' is what you physically measure in the lab, while the 'Theoretical Yield' is what your math predicted. Percent Yield is simply (Actual / Theoretical) x 100. It tells us how efficient our chemical reaction really was!"
         }
       ],
       "flashcards": [
         {
           "id": "chemistry-301-l01-f1",
-          "front": "stoichiometric relationships",
-          "back": "A central target skill in this module. Name it before solving."
+          "front": "Stoichiometry",
+          "back": "The calculation of quantities of reactants and products in chemical reactions."
         },
         {
           "id": "chemistry-301-l01-f2",
-          "front": "solution behavior",
-          "back": "Use this as the method step after defining the goal."
+          "front": "Mole Ratio",
+          "back": "A conversion factor derived from the coefficients of a balanced chemical equation."
         },
         {
           "id": "chemistry-301-l01-f3",
-          "front": "Verification",
-          "back": "Check that your result matches the original goal and constraints."
+          "front": "Limiting Reactant",
+          "back": "The reactant that is completely consumed first, determining the maximum amount of product."
         },
         {
           "id": "chemistry-301-l01-f4",
-          "front": "Transfer",
-          "back": "Use the same strategy on a new item to confirm true mastery."
+          "front": "Percent Yield",
+          "back": "The ratio of the actual yield to the theoretical yield, multiplied by 100."
         }
       ],
       "learningAids": [
         {
           "id": "chemistry-301-l01-a1",
           "type": "image",
-          "title": "Concept Poster",
-          "content": "A colorful infographic about stoichiometric relationships and solution behavior."
+          "title": "Stoichiometry Map",
+          "content": "A colorful infographic showing the path from Grams of A -> Moles of A -> Moles of B -> Grams of B."
         },
         {
           "id": "chemistry-301-l01-a2",
           "type": "animation",
-          "title": "Warm-up Animation",
-          "content": "Short animation introducing Chemistry vocabulary."
+          "title": "Sandwich Analogy Animation",
+          "content": "Short animation comparing limiting reactants to making sandwiches with leftover ingredients."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/chemistry-301-l01.png"
     },
     {
       "id": "chemistry-301-l02",
       "title": "Concentration and Dilution Models",
       "type": "interactive",
       "duration": 12,
+      "lessonImagePrompt": "A bright, engaging 3D illustration of a volumetric flask being filled with a vibrant blue copper sulfate solution, with a glowing formula M1V1 = M2V2 floating nearby. Imagen 4.",
+      "conceptVideoPrompt": "A smooth, cinematic 3D animation showing a concentrated dark red liquid being diluted with clear water in a beaker. The color lightens, and a dynamic graph shows the molarity decreasing while the total moles remain constant. Veo 3.1.",
       "metadata": {
         "prompts": [
-          "Identify one core idea about stoichiometric relationships from this lesson.",
-          "Explain where solution behavior appears in real life.",
-          "Describe one question you still have about quantitative chemical reasoning."
+          "Explain the difference between a solute and a solvent.",
+          "How does adding more solvent change the molarity of a solution?",
+          "Describe a real-life example of dilution you see at home."
         ]
       },
       "interactiveActivities": [
         {
           "id": "chemistry-301-l02-ia1",
           "type": "drag_and_drop",
-          "title": "Practice Flow Builder",
-          "description": "Sort each action into Plan, Execute, or Reflect.",
+          "title": "Dilution Process Builder",
+          "description": "Sort each action into the correct phase of preparing a diluted solution.",
           "estimatedMinutes": 8,
           "difficultyLevel": "easy",
           "data": {
             "targets": [
               {
-                "id": "plan",
-                "label": "Plan"
+                "id": "calculate",
+                "label": "Calculate"
               },
               {
-                "id": "execute",
-                "label": "Execute"
+                "id": "measure",
+                "label": "Measure"
               },
               {
-                "id": "reflect",
-                "label": "Reflect"
+                "id": "mix",
+                "label": "Mix"
               }
             ],
             "draggables": [
               {
                 "id": "d1",
-                "label": "Set a goal for stoichiometric relationships",
-                "correctTargetId": "plan"
+                "label": "Use M1V1 = M2V2 to find required volume",
+                "correctTargetId": "calculate"
               },
               {
                 "id": "d2",
-                "label": "Try one strategy for solution behavior",
-                "correctTargetId": "execute"
+                "label": "Extract the exact volume of stock solution using a pipette",
+                "correctTargetId": "measure"
               },
               {
                 "id": "d3",
-                "label": "Record what worked and what to improve",
-                "correctTargetId": "reflect"
+                "label": "Add distilled water until the final volume is reached",
+                "correctTargetId": "mix"
               }
             ]
           }
@@ -142,109 +147,112 @@ export const Chemistry301Module: LearningModule = {
         {
           "id": "chemistry-301-l02-a1",
           "type": "practice",
-          "title": "Try It Board",
-          "content": "Complete a guided activity on solution behavior and write one reflection."
+          "title": "Molarity Try It Board",
+          "content": "Complete a guided calculation to find the molarity of a 500mL solution containing 2 moles of NaCl."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/chemistry-301-l02.png"
     },
     {
       "id": "chemistry-301-l03",
       "title": "Checkpoint: Quantitative Reactions",
       "type": "quiz",
       "duration": 10,
+      "lessonImagePrompt": "A futuristic digital interface showing a chemistry quiz with holographic checkmarks, glowing test tubes, and a progress bar reaching 100%. Imagen 4.",
+      "conceptVideoPrompt": "A fast-paced, engaging 3D motion graphic summarizing stoichiometry and molarity formulas, with puzzle pieces snapping together to represent problem-solving steps. Veo 3.1.",
       "questions": [
         {
           "id": "chemistry-301-l03-q1",
-          "text": "Which statement best explains stoichiometric relationships in Chemistry?",
+          "text": "What is the first essential step before using mole ratios in a stoichiometry problem?",
           "skillId": "chemistry-301-skill-core",
           "options": [
             {
               "id": "a",
-              "text": "It explains stoichiometric relationships using evidence from the lesson."
+              "text": "Ensure the chemical equation is balanced."
             },
             {
               "id": "b",
-              "text": "It ignores how stoichiometric relationships works in practice."
+              "text": "Calculate the percent yield."
             },
             {
               "id": "c",
-              "text": "It focuses on an unrelated topic outside Chemistry."
+              "text": "Find the molar mass of the products only."
             },
             {
               "id": "d",
-              "text": "It repeats terms without showing meaning."
+              "text": "Convert all volumes to liters."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "chemistry-301-l03-q2",
-          "text": "What is the best first step when analyzing solution behavior?",
+          "text": "If you have 2.0 moles of solute dissolved in 4.0 Liters of solution, what is the molarity?",
           "skillId": "chemistry-301-skill-process",
           "options": [
             {
               "id": "a",
-              "text": "Define the goal and examine evidence for solution behavior."
+              "text": "0.5 M"
             },
             {
               "id": "b",
-              "text": "Guess quickly without checking evidence."
+              "text": "2.0 M"
             },
             {
               "id": "c",
-              "text": "Use data unrelated to solution behavior."
+              "text": "8.0 M"
             },
             {
               "id": "d",
-              "text": "Skip the context and jump to a conclusion."
+              "text": "6.0 M"
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "chemistry-301-l03-q3",
-          "text": "Which option shows strong reasoning about quantitative chemical reasoning?",
+          "text": "Which statement best describes a limiting reactant?",
           "skillId": "chemistry-301-skill-reasoning",
           "options": [
             {
               "id": "a",
-              "text": "Use examples and verify assumptions step by step."
+              "text": "It is the reactant that is completely used up, stopping the reaction."
             },
             {
               "id": "b",
-              "text": "Ignore important details and edge cases."
+              "text": "It is the reactant left over after the reaction stops."
             },
             {
               "id": "c",
-              "text": "Use assumptions unrelated to quantitative chemical reasoning."
+              "text": "It is the product that weighs the least."
             },
             {
               "id": "d",
-              "text": "Change the topic when evidence gets hard."
+              "text": "It is the catalyst that slows down the reaction."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "chemistry-301-l03-q4",
-          "text": "Why is spaced review useful for Chemistry mastery?",
+          "text": "When diluting a solution, which of the following remains constant?",
           "skillId": "chemistry-301-skill-review",
           "options": [
             {
               "id": "a",
-              "text": "It strengthens memory and transfer over time"
+              "text": "The total number of moles of solute."
             },
             {
               "id": "b",
-              "text": "It creates confusion"
+              "text": "The total volume of the solution."
             },
             {
               "id": "c",
-              "text": "It removes key facts"
+              "text": "The molarity of the solution."
             },
             {
               "id": "d",
-              "text": "It has no value"
+              "text": "The color intensity of the solution."
             }
           ],
           "correctOptionId": "a"
@@ -254,42 +262,41 @@ export const Chemistry301Module: LearningModule = {
         {
           "id": "chemistry-301-l03-ia1",
           "type": "matching_pairs",
-          "title": "Reasoning Match: Checkpoint: Quantitative Reactions",
-          "description": "Match each error signal to the strongest correction strategy.",
+          "title": "Error Correction Match",
+          "description": "Match each common chemistry mistake to the best correction strategy.",
           "estimatedMinutes": 7,
           "difficultyLevel": "medium",
           "instructions": [
-            "Review each left-side signal.",
-            "Pick the best response on the right.",
-            "Use your matches to plan the next drill."
+            "Review the mistake on the left.",
+            "Pick the correct fix on the right."
           ],
           "data": {
             "left": [
               {
                 "id": "l1",
-                "label": "Confusion about stoichiometric relationships"
+                "label": "Used wrong mole ratio"
               },
               {
                 "id": "l2",
-                "label": "Inconsistent approach to solution behavior"
+                "label": "Molarity calculation is off by a factor of 1000"
               },
               {
                 "id": "l3",
-                "label": "Weak transfer of quantitative chemical reasoning under timing"
+                "label": "Calculated yield is higher than 100%"
               }
             ],
             "right": [
               {
                 "id": "r1",
-                "label": "Create a one-step concept summary with one worked example"
+                "label": "Check the coefficients in the balanced equation"
               },
               {
                 "id": "r2",
-                "label": "Use a checklist before choosing the final answer"
+                "label": "Ensure volume is converted from mL to Liters"
               },
               {
                 "id": "r3",
-                "label": "Retest the same target with a short timed sprint"
+                "label": "Verify you didn't swap Actual and Theoretical yield"
               }
             ],
             "pairs": [
@@ -340,65 +347,68 @@ export const Chemistry301Module: LearningModule = {
           "id": "chemistry-301-l03-a1",
           "type": "mnemonic",
           "title": "Memory Tip",
-          "content": "Use the phrase Plan, Check, Explain for each question."
+          "content": "For Dilutions, remember: M1V1 = M2V2. Moles before = Moles after!"
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/chemistry-301-l03.png"
     },
     {
       "id": "chemistry-301-l04",
       "title": "Energetics and Reaction Progress",
       "type": "video",
       "duration": 11,
+      "lessonImagePrompt": "A dramatic, high-contrast 3D illustration of a glowing energy profile graph. On one side, a bright orange flame represents exothermic reactions, and on the other, a glowing blue ice crystal represents endothermic reactions. Imagen 4.",
+      "conceptVideoPrompt": "A visually stunning 3D animation of a roller coaster representing an energy reaction pathway. The cart climbs a steep hill (activation energy) and drops down to a lower level, releasing a burst of glowing energy (exothermic). Veo 3.1.",
       "chunks": [
         {
           "id": "chemistry-301-l04-c1",
-          "title": "Energetics and Reaction Progress Focus",
-          "content": "In this lesson, we will deepen our understanding of reaction energetics by using structured reasoning. We will transition from simply understanding concepts to making informed decisions based on those concepts. By the end of this lesson, you will be able to apply your knowledge of energetics to analyze chemical reactions more effectively.\nContext recap: In this lesson, we will deepen our understanding of reaction energetics by using structured reasoning. We will transition from simply understanding concepts to making informed decisions based on those concepts. By the end of this lesson, you will be able to apply your knowledge of energetics to analyze chemical reactions more effectively."
+          "title": "The Energy of Reactions",
+          "content": "Every chemical reaction involves energy. Sometimes energy is absorbed, making things feel cold, and sometimes it's released, making things feel hot! In this lesson, we will explore reaction energetics. We will learn how to read energy diagrams and understand the 'cost' of starting a reaction, known as activation energy. By the end, you'll be able to predict whether a reaction will heat up your lab or cool it down."
         },
         {
           "id": "chemistry-301-l04-c2",
-          "title": "Method Steps",
-          "content": "To tackle problems related to reaction energetics, we will follow a series of methodical steps. Step 1: Identify what is being asked in the problem. Step 2: Choose a strategy that aligns with the principles of reaction energetics. Step 3: Justify your choice with evidence from your understanding of the topic. This structured approach will help you solve problems more efficiently.\nContext recap: To tackle problems related to reaction energetics, we will follow a series of methodical steps. Step 1: Identify what is being asked in the problem. Step 2: Choose a strategy that aligns with the principles of reaction energetics. Step 3: Justify your choice with evidence from your understanding of the topic."
+          "title": "Endothermic vs. Exothermic",
+          "content": "Let's break down the two main types of energy changes. 'Exothermic' reactions release energy into their surroundings (like a campfire). Their products have less energy than their reactants. 'Endothermic' reactions absorb energy from their surroundings (like a chemical cold pack). Their products have more stored energy than their reactants. The difference in energy is called Enthalpy (ΔH)."
         },
         {
           "id": "chemistry-301-l04-c3",
-          "title": "Common Mistakes",
-          "content": "As we work through reaction energetics, it's important to be aware of common mistakes that can occur. Some of these include skipping the initial setup of the problem, using assumptions that are not related to the topic, or failing to verify the final result. By recognizing these errors, you can improve your problem-solving skills and avoid making the same mistakes in the future.\nContext recap: As we work through reaction energetics, it's important to be aware of common mistakes that can occur. Some of these include skipping the initial setup of the problem, using assumptions that are not related to the topic, or failing to verify the final result. By recognizing these errors, you can improve your problem-solving skills and avoid making the same mistakes in the future."
+          "title": "Activation Energy: The Spark",
+          "content": "Even exothermic reactions that release a ton of energy usually need a little push to get started. Think of a match: it won't burst into flames until you strike it against the box. That initial friction provides the 'Activation Energy' (Ea). It's the minimum energy required to break the initial bonds and get the chemical party started!"
         },
         {
           "id": "chemistry-301-l04-c4",
-          "title": "Independent Try",
-          "content": "Now, I encourage you to solve a similar problem on your own. After you have completed it, take a moment to compare your process with the lesson sequence we discussed. This will help you identify any differences in your approach and reinforce your understanding of the material.\nContext recap: Now, I encourage you to solve a similar problem on your own. After you have completed it, take a moment to compare your process with the lesson sequence we discussed. This will help you identify any differences in your approach and reinforce your understanding of the material."
+          "title": "Reading Energy Diagrams",
+          "content": "An energy diagram is like a map of a reaction's journey. The y-axis is Potential Energy, and the x-axis is Reaction Progress. You start at the reactants' energy level, climb up a hill (Activation Energy), and finish at the products' energy level. If the finish line is lower than the start, it's exothermic. If it's higher, it's endothermic. Try drawing one yourself!"
         }
       ],
       "flashcards": [
         {
           "id": "chemistry-301-l04-f1",
-          "front": "reaction energetics",
-          "back": "State the target and pick a strategy before solving."
+          "front": "Exothermic Reaction",
+          "back": "A reaction that releases heat to the surroundings; ΔH is negative."
         },
         {
           "id": "chemistry-301-l04-f2",
-          "front": "Step Sequence",
-          "back": "Goal -> Strategy -> Evidence -> Check."
+          "front": "Endothermic Reaction",
+          "back": "A reaction that absorbs heat from the surroundings; ΔH is positive."
         },
         {
           "id": "chemistry-301-l04-f3",
-          "front": "Assumption Check",
-          "back": "Remove assumptions that are not supported by the prompt."
+          "front": "Activation Energy (Ea)",
+          "back": "The minimum energy required to initiate a chemical reaction."
         },
         {
           "id": "chemistry-301-l04-f4",
-          "front": "Process Match",
-          "back": "Your explanation should match the steps you actually used."
+          "front": "Enthalpy (ΔH)",
+          "back": "The heat content of a system; the difference in energy between products and reactants."
         }
       ],
       "learningAids": [
         {
           "id": "chemistry-301-l04-a1",
           "type": "image",
-          "title": "Worked Example Sheet",
-          "content": "Step-by-step visuals for reaction energetics scenarios."
+          "title": "Energy Diagram Cheat Sheet",
+          "content": "Visual comparison of Endothermic and Exothermic reaction coordinate diagrams."
         }
       ]
     },
@@ -407,51 +417,58 @@ export const Chemistry301Module: LearningModule = {
       "title": "Equilibrium and System Shifts",
       "type": "interactive",
       "duration": 13,
+      "lessonImagePrompt": "A stylized 3D illustration of a glowing seesaw perfectly balanced with colorful molecules on both sides, representing chemical equilibrium. Arrows point left and right to show dynamic movement. Imagen 4.",
+      "conceptVideoPrompt": "An engaging 3D animation showing a busy bridge with cars moving in both directions at the exact same rate. The scene transitions to molecules moving back and forth in a closed flask, illustrating dynamic equilibrium. Veo 3.1.",
       "metadata": {
         "prompts": [
-          "Pick one challenge and outline your approach.",
-          "Test your approach and record the result.",
-          "Revise your approach and explain the change."
+          "What does it mean for a reaction to be in 'dynamic equilibrium'?",
+          "How does adding more reactant affect the balance of the system?",
+          "Explain Le Chatelier's Principle in your own words."
         ]
       },
       "interactiveActivities": [
         {
           "id": "chemistry-301-l05-ia1",
           "type": "sorting_buckets",
-          "title": "Strategy Sort",
-          "description": "Sort study actions into Concept, Process, or Review lanes.",
+          "title": "Le Chatelier's Shift Sorter",
+          "description": "Sort each stress applied to a system into how the equilibrium will shift.",
           "estimatedMinutes": 9,
           "difficultyLevel": "medium",
           "data": {
             "buckets": [
               {
-                "id": "concept",
-                "label": "reaction energetics Concept"
+                "id": "shift_right",
+                "label": "Shifts Right (Towards Products)"
               },
               {
-                "id": "process",
-                "label": "model validation Process"
+                "id": "shift_left",
+                "label": "Shifts Left (Towards Reactants)"
               },
               {
-                "id": "review",
-                "label": "Review Loop"
+                "id": "no_shift",
+                "label": "No Shift"
               }
             ],
             "items": [
               {
                 "id": "i1",
-                "label": "Write one definition in your own words",
-                "correctBucketId": "concept"
+                "label": "Adding more of a reactant",
+                "correctBucketId": "shift_right"
               },
               {
                 "id": "i2",
-                "label": "Follow the step-by-step method on a new example",
-                "correctBucketId": "process"
+                "label": "Removing a product as it forms",
+                "correctBucketId": "shift_right"
               },
               {
                 "id": "i3",
-                "label": "Retest the same skill tomorrow",
-                "correctBucketId": "review"
+                "label": "Adding more of a product",
+                "correctBucketId": "shift_left"
+              },
+              {
+                "id": "i4",
+                "label": "Adding a catalyst",
+                "correctBucketId": "no_shift"
               }
             ]
           }
@@ -461,109 +478,112 @@ export const Chemistry301Module: LearningModule = {
         {
           "id": "chemistry-301-l05-a1",
           "type": "animation",
-          "title": "Challenge Walkthrough",
-          "content": "Animated sequence for solving a reaction energetics challenge."
+          "title": "The Seesaw of Chemistry",
+          "content": "Animated sequence showing how adding weight (concentration) to one side of a seesaw forces a shift to restore balance."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/chemistry-301-l05.png"
     },
     {
       "id": "chemistry-301-l06",
       "title": "Checkpoint: Chemical System Analysis",
       "type": "quiz",
       "duration": 10,
+      "lessonImagePrompt": "A sleek, modern digital tablet displaying a chemistry quiz with 3D models of molecules and energy graphs hovering above the screen. Imagen 4.",
+      "conceptVideoPrompt": "A dynamic 3D motion graphic summarizing energy diagrams and equilibrium shifts, with glowing arrows and checkmarks indicating correct analytical steps. Veo 3.1.",
       "questions": [
         {
           "id": "chemistry-301-l06-q1",
-          "text": "Which statement best explains reaction energetics in Chemistry?",
+          "text": "In an exothermic reaction, how does the energy of the products compare to the reactants?",
           "skillId": "chemistry-301-skill-core",
           "options": [
             {
               "id": "a",
-              "text": "It explains reaction energetics using evidence from the lesson."
+              "text": "The products have less energy than the reactants."
             },
             {
               "id": "b",
-              "text": "It ignores how reaction energetics works in practice."
+              "text": "The products have more energy than the reactants."
             },
             {
               "id": "c",
-              "text": "It focuses on an unrelated topic outside Chemistry."
+              "text": "The products and reactants have the exact same energy."
             },
             {
               "id": "d",
-              "text": "It repeats terms without showing meaning."
+              "text": "Energy is completely destroyed in the process."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "chemistry-301-l06-q2",
-          "text": "What is the best first step when analyzing model validation?",
+          "text": "According to Le Chatelier's Principle, what happens if you increase the pressure on a gas-phase system at equilibrium?",
           "skillId": "chemistry-301-skill-process",
           "options": [
             {
               "id": "a",
-              "text": "Define the goal and examine evidence for model validation."
+              "text": "The system shifts to the side with fewer moles of gas."
             },
             {
               "id": "b",
-              "text": "Guess quickly without checking evidence."
+              "text": "The system shifts to the side with more moles of gas."
             },
             {
               "id": "c",
-              "text": "Use data unrelated to model validation."
+              "text": "The system stops reacting entirely."
             },
             {
               "id": "d",
-              "text": "Skip the context and jump to a conclusion."
+              "text": "The equilibrium constant (K) becomes zero."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "chemistry-301-l06-q3",
-          "text": "Which option shows strong reasoning about quantitative chemical reasoning?",
+          "text": "What is the primary role of activation energy in a chemical reaction?",
           "skillId": "chemistry-301-skill-reasoning",
           "options": [
             {
               "id": "a",
-              "text": "Use examples and verify assumptions step by step."
+              "text": "It is the minimum energy required to break initial bonds and start the reaction."
             },
             {
               "id": "b",
-              "text": "Ignore important details and edge cases."
+              "text": "It is the total heat released by the reaction."
             },
             {
               "id": "c",
-              "text": "Use assumptions unrelated to quantitative chemical reasoning."
+              "text": "It determines the final concentration of the products."
             },
             {
               "id": "d",
-              "text": "Change the topic when evidence gets hard."
+              "text": "It cools down the surroundings."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "chemistry-301-l06-q4",
-          "text": "Why is spaced review useful for Chemistry mastery?",
+          "text": "If a reaction is at dynamic equilibrium, which statement is true?",
           "skillId": "chemistry-301-skill-review",
           "options": [
             {
               "id": "a",
-              "text": "It strengthens memory and transfer over time"
+              "text": "The rate of the forward reaction equals the rate of the reverse reaction."
             },
             {
               "id": "b",
-              "text": "It creates confusion"
+              "text": "The concentrations of reactants and products are exactly equal."
             },
             {
               "id": "c",
-              "text": "It removes key facts"
+              "text": "All chemical reactions have completely stopped."
             },
             {
               "id": "d",
-              "text": "It has no value"
+              "text": "The limiting reactant has been completely consumed."
             }
           ],
           "correctOptionId": "a"
@@ -573,42 +593,41 @@ export const Chemistry301Module: LearningModule = {
         {
           "id": "chemistry-301-l06-ia1",
           "type": "matching_pairs",
-          "title": "Reasoning Match: Checkpoint: Chemical System Analysis",
-          "description": "Match each error signal to the strongest correction strategy.",
+          "title": "System Analysis Match",
+          "description": "Match the system change to its resulting effect.",
           "estimatedMinutes": 7,
           "difficultyLevel": "medium",
           "instructions": [
-            "Review each left-side signal.",
-            "Pick the best response on the right.",
-            "Use your matches to plan the next drill."
+            "Review the action on the left.",
+            "Pick the correct system response on the right."
           ],
           "data": {
             "left": [
               {
                 "id": "l1",
-                "label": "Confusion about reaction energetics"
+                "label": "Add heat to an endothermic reaction"
               },
               {
                 "id": "l2",
-                "label": "Inconsistent approach to model validation"
+                "label": "Remove a product from the system"
               },
               {
                 "id": "l3",
-                "label": "Weak transfer of quantitative chemical reasoning under timing"
+                "label": "Add a catalyst to the system"
               }
             ],
             "right": [
               {
                 "id": "r1",
-                "label": "Create a one-step concept summary with one worked example"
+                "label": "Shifts right to consume the added heat"
               },
               {
                 "id": "r2",
-                "label": "Use a checklist before choosing the final answer"
+                "label": "Shifts right to replace what was lost"
               },
               {
                 "id": "r3",
-                "label": "Retest the same target with a short timed sprint"
+                "label": "Reaches equilibrium faster, but no shift"
               }
             ],
             "pairs": [
@@ -658,116 +677,122 @@ export const Chemistry301Module: LearningModule = {
         {
           "id": "chemistry-301-l06-a1",
           "type": "mnemonic",
-          "title": "Memory Tip",
-          "content": "Use the phrase Plan, Check, Explain for each question."
+          "title": "Le Chatelier's Rule of Thumb",
+          "content": "Add away, Take towards! (Add a chemical, shift away from it. Take a chemical, shift towards it)."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/chemistry-301-l06.png"
     },
     {
       "id": "chemistry-301-l07",
       "title": "Rates, Catalysts, and Evidence",
       "type": "video",
       "duration": 12,
+      "lessonImagePrompt": "A dynamic 3D illustration of two molecules colliding with a bright spark, while a glowing stopwatch hovers in the background to represent reaction rates. Imagen 4.",
+      "conceptVideoPrompt": "A high-speed 3D animation showing molecules bouncing around in a container. As temperature increases, they move faster and collide more often, resulting in more successful reactions. A catalyst is then introduced, providing a glowing 'shortcut' tunnel for the molecules. Veo 3.1.",
       "chunks": [
         {
           "id": "chemistry-301-l07-c1",
-          "title": "Rates, Catalysts, and Evidence Setup",
-          "content": "Before diving into your work, it's essential to use model validation to organize your approach. Planning your steps in advance can significantly improve both the quality and speed of your work. By taking the time to prepare, you set yourself up for success in understanding rates, catalysts, and evidence in chemical reactions.\nContext recap: Before diving into your work, it's essential to use model validation to organize your approach. Planning your steps in advance can significantly improve both the quality and speed of your work. By taking the time to prepare, you set yourself up for success in understanding rates, catalysts, and evidence in chemical reactions."
+          "title": "The Need for Speed: Kinetics",
+          "content": "Some chemical reactions, like explosions, happen in a fraction of a second. Others, like iron rusting, take years! The study of how fast reactions occur is called Chemical Kinetics. Understanding reaction rates allows us to control chemistry in the real world, from making medicines faster to preventing food from spoiling."
         },
         {
           "id": "chemistry-301-l07-c2",
-          "title": "Decision Rules",
-          "content": "When you have to make a decision and there are several options to choose from, it can be tricky! To make it easier, you can follow a simple rule: always choose the option that has the strongest evidence supporting it and the clearest connection to what you want to achieve. This approach will help you make smart choices, especially when you are studying chemical reactions and understanding how fast they happen.\nContext recap: When you have to make a decision and there are several options to choose from, it can be tricky! To make it easier, you can follow a simple rule: always choose the option that has the strongest evidence supporting it and the clearest connection to what you want to achieve. This approach will help you make smart choices, especially when you are studying chemical reactions and understanding how fast they happen."
+          "title": "Collision Theory",
+          "content": "For a reaction to happen, molecules must physically crash into each other! But not just any crash will do. According to Collision Theory, they must collide with enough energy (Activation Energy) and in the correct orientation. If they just bump gently or hit the wrong side, they bounce off unchanged. To speed up a reaction, we need more successful collisions!"
         },
         {
           "id": "chemistry-301-l07-c3",
-          "title": "Quality Control",
-          "content": "As you work through your problems, it's crucial to perform quality control checks. Make sure to evaluate three key aspects: accuracy, completeness, and alignment with the original objective. By doing this, you can ensure that your work meets the necessary standards and effectively addresses the problem at hand.\nContext recap: As you work through your problems, it's crucial to perform quality control checks. Make sure to evaluate three key aspects: accuracy, completeness, and alignment with the original objective. By doing this, you can ensure that your work meets the necessary standards and effectively addresses the problem at hand."
+          "title": "Factors Affecting Rate",
+          "content": "How do we get more successful collisions? We have a few tricks! 1) Increase Temperature: Molecules move faster and hit harder. 2) Increase Concentration: More molecules in a space means more chances to crash. 3) Increase Surface Area: Crushing a solid into powder exposes more particles to react. These are your primary tools for controlling reaction speed."
         },
         {
           "id": "chemistry-301-l07-c4",
-          "title": "Next-Step Plan",
-          "content": "After completing your practice, take a moment to write down one action you would like to repeat in your next round and one action you would like to improve. This reflection will help you focus on continuous improvement and enhance your skills in analyzing rates, catalysts, and evidence in chemistry.\nContext recap: After completing your practice, take a moment to write down one action you would like to repeat in your next round and one action you would like to improve. This reflection will help you focus on continuous improvement and enhance your skills in analyzing rates, catalysts, and evidence in chemistry."
+          "title": "Catalysts: The Ultimate Shortcut",
+          "content": "What if you want to speed up a reaction without turning up the heat? Enter the Catalyst! A catalyst is a substance that speeds up a reaction by providing an alternative pathway with a lower activation energy. It's like building a tunnel through a mountain instead of climbing over it. Best of all, the catalyst isn't consumed in the reaction, so it can be used over and over!"
         }
       ],
       "flashcards": [
         {
           "id": "chemistry-301-l07-f1",
-          "front": "model validation",
-          "back": "Use this as your organizing framework before execution."
+          "front": "Chemical Kinetics",
+          "back": "The area of chemistry concerned with the speeds, or rates, of reactions."
         },
         {
           "id": "chemistry-301-l07-f2",
-          "front": "Decision Rule",
-          "back": "Choose the option with strongest evidence-to-goal alignment."
+          "front": "Collision Theory",
+          "back": "Molecules must collide with sufficient energy and correct orientation to react."
         },
         {
           "id": "chemistry-301-l07-f3",
-          "front": "Quality Control",
-          "back": "Accuracy + completeness + objective match."
+          "front": "Catalyst",
+          "back": "A substance that increases reaction rate by lowering activation energy, without being consumed."
         },
         {
           "id": "chemistry-301-l07-f4",
-          "front": "Iteration",
-          "back": "Repeat what works; refine one weak step each cycle."
+          "front": "Surface Area",
+          "back": "Increasing this (e.g., by crushing a solid) increases the rate of reaction by exposing more particles."
         }
       ],
       "learningAids": [
         {
           "id": "chemistry-301-l07-a1",
           "type": "practice",
-          "title": "Project Planner",
-          "content": "Template for planning a mini project focused on model validation."
+          "title": "Rate Factor Checklist",
+          "content": "A quick reference guide: Temp up = Rate up. Concentration up = Rate up. Catalyst added = Rate up."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/chemistry-301-l07.png"
     },
     {
       "id": "chemistry-301-l08",
       "title": "Chemistry Problem Lab",
       "type": "interactive",
       "duration": 10,
+      "lessonImagePrompt": "A 3D illustration of a futuristic chemistry workbench with holographic blueprints, a glowing calculator, and floating chemical symbols waiting to be assembled. Imagen 4.",
+      "conceptVideoPrompt": "A first-person perspective 3D animation of a student's hands assembling a complex chemistry problem like a puzzle. Pieces labeled 'Stoichiometry', 'Molarity', and 'Kinetics' snap together to reveal a final solution. Veo 3.1.",
       "metadata": {
         "prompts": [
-          "What did you learn most clearly?",
-          "Where did you struggle and why?",
-          "What is your next improvement target?"
+          "Which quantitative chemistry skill do you feel most confident in?",
+          "Where do you usually get stuck in multi-step calculations?",
+          "What is your strategy for checking your work?"
         ]
       },
       "interactiveActivities": [
         {
           "id": "chemistry-301-l08-ia1",
           "type": "matching_pairs",
-          "title": "Reflection Match",
-          "description": "Match each reflection prompt with the best follow-up action.",
+          "title": "Problem-Solving Strategy Match",
+          "description": "Match the chemistry problem type with the best first step to solve it.",
           "estimatedMinutes": 7,
           "difficultyLevel": "easy",
           "data": {
             "left": [
               {
                 "id": "l1",
-                "label": "I keep missing one skill pattern"
+                "label": "Finding grams of product from grams of reactant"
               },
               {
                 "id": "l2",
-                "label": "I rush and make avoidable mistakes"
+                "label": "Preparing a diluted solution from a stock solution"
               },
               {
                 "id": "l3",
-                "label": "I understand in notes but miss in quizzes"
+                "label": "Determining how a system will shift when heated"
               }
             ],
             "right": [
               {
                 "id": "r1",
-                "label": "Do a focused drill on that exact pattern"
+                "label": "Convert starting grams to moles using molar mass"
               },
               {
                 "id": "r2",
-                "label": "Use a short checklist before submitting answers"
+                "label": "Identify M1, V1, and M2 to solve for V2"
               },
               {
                 "id": "r3",
-                "label": "Repeat the skill in a timed re-check"
+                "label": "Identify if the reaction is endothermic or exothermic"
               }
             ],
             "pairs": [
@@ -791,109 +816,112 @@ export const Chemistry301Module: LearningModule = {
         {
           "id": "chemistry-301-l08-a1",
           "type": "mnemonic",
-          "title": "Reflection Cycle",
-          "content": "Remember Observe, Adjust, Repeat while practicing."
+          "title": "The 3 C's of Chemistry Math",
+          "content": "Convert (to moles), Compare (mole ratio), Calculate (final unit)!"
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/chemistry-301-l08.png"
     },
     {
       "id": "chemistry-301-l09",
       "title": "Review: Chemical Quantitative Strategies",
       "type": "quiz",
       "duration": 10,
+      "lessonImagePrompt": "A glowing neon sign reading 'CHEM REVIEW' surrounded by 3D icons of a beaker, a thermometer, a stopwatch, and a balance scale. Imagen 4.",
+      "conceptVideoPrompt": "A fast-paced, energetic 3D montage reviewing key chemistry concepts: a scale balancing, a thermometer rising, and molecules colliding, ending with a glowing 'Ready for Quiz' button. Veo 3.1.",
       "questions": [
         {
           "id": "chemistry-301-l09-q1",
-          "text": "Which statement best explains solution behavior in Chemistry?",
+          "text": "How does a catalyst increase the rate of a chemical reaction?",
           "skillId": "chemistry-301-skill-core",
           "options": [
             {
               "id": "a",
-              "text": "It explains solution behavior using evidence from the lesson."
+              "text": "By providing an alternative pathway with a lower activation energy."
             },
             {
               "id": "b",
-              "text": "It ignores how solution behavior works in practice."
+              "text": "By increasing the temperature of the system."
             },
             {
               "id": "c",
-              "text": "It focuses on an unrelated topic outside Chemistry."
+              "text": "By increasing the concentration of the reactants."
             },
             {
               "id": "d",
-              "text": "It repeats terms without showing meaning."
+              "text": "By changing the endothermic reaction into an exothermic one."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "chemistry-301-l09-q2",
-          "text": "What is the best first step when analyzing model validation?",
+          "text": "Which of the following will NOT increase the rate of a reaction between a solid and a liquid?",
           "skillId": "chemistry-301-skill-process",
           "options": [
             {
               "id": "a",
-              "text": "Define the goal and examine evidence for model validation."
+              "text": "Increasing the volume of the container without changing concentration."
             },
             {
               "id": "b",
-              "text": "Guess quickly without checking evidence."
+              "text": "Crushing the solid into a fine powder."
             },
             {
               "id": "c",
-              "text": "Use data unrelated to model validation."
+              "text": "Increasing the temperature of the liquid."
             },
             {
               "id": "d",
-              "text": "Skip the context and jump to a conclusion."
+              "text": "Adding a suitable catalyst."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "chemistry-301-l09-q3",
-          "text": "Which option shows strong reasoning about quantitative chemical reasoning?",
+          "text": "If you calculate that a reaction should produce 50g of product, but you only get 40g in the lab, what is your percent yield?",
           "skillId": "chemistry-301-skill-reasoning",
           "options": [
             {
               "id": "a",
-              "text": "Use examples and verify assumptions step by step."
+              "text": "80%"
             },
             {
               "id": "b",
-              "text": "Ignore important details and edge cases."
+              "text": "125%"
             },
             {
               "id": "c",
-              "text": "Use assumptions unrelated to quantitative chemical reasoning."
+              "text": "10%"
             },
             {
               "id": "d",
-              "text": "Change the topic when evidence gets hard."
+              "text": "90%"
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "chemistry-301-l09-q4",
-          "text": "Why is spaced review useful for Chemistry mastery?",
+          "text": "Why is it important to identify the limiting reactant in a stoichiometry problem?",
           "skillId": "chemistry-301-skill-review",
           "options": [
             {
               "id": "a",
-              "text": "It strengthens memory and transfer over time"
+              "text": "Because it determines the maximum amount of product that can be formed."
             },
             {
               "id": "b",
-              "text": "It creates confusion"
+              "text": "Because it is always the reactant with the highest molar mass."
             },
             {
               "id": "c",
-              "text": "It removes key facts"
+              "text": "Because it speeds up the reaction rate."
             },
             {
               "id": "d",
-              "text": "It has no value"
+              "text": "Because it acts as a catalyst for the system."
             }
           ],
           "correctOptionId": "a"
@@ -903,42 +931,41 @@ export const Chemistry301Module: LearningModule = {
         {
           "id": "chemistry-301-l09-ia1",
           "type": "matching_pairs",
-          "title": "Reasoning Match: Review: Chemical Quantitative Strategies",
-          "description": "Match each error signal to the strongest correction strategy.",
+          "title": "Concept to Definition Match",
+          "description": "Match the quantitative chemistry term to its correct definition.",
           "estimatedMinutes": 7,
           "difficultyLevel": "medium",
           "instructions": [
-            "Review each left-side signal.",
-            "Pick the best response on the right.",
-            "Use your matches to plan the next drill."
+            "Review the term on the left.",
+            "Pick the correct definition on the right."
           ],
           "data": {
             "left": [
               {
                 "id": "l1",
-                "label": "Confusion about solution behavior"
+                "label": "Molarity"
               },
               {
                 "id": "l2",
-                "label": "Inconsistent approach to model validation"
+                "label": "Enthalpy (ΔH)"
               },
               {
                 "id": "l3",
-                "label": "Weak transfer of quantitative chemical reasoning under timing"
+                "label": "Dynamic Equilibrium"
               }
             ],
             "right": [
               {
                 "id": "r1",
-                "label": "Create a one-step concept summary with one worked example"
+                "label": "Moles of solute per liter of solution"
               },
               {
                 "id": "r2",
-                "label": "Use a checklist before choosing the final answer"
+                "label": "The heat energy absorbed or released in a reaction"
               },
               {
                 "id": "r3",
-                "label": "Retest the same target with a short timed sprint"
+                "label": "When forward and reverse reaction rates are equal"
               }
             ],
             "pairs": [
@@ -989,108 +1016,111 @@ export const Chemistry301Module: LearningModule = {
           "id": "chemistry-301-l09-a1",
           "type": "mnemonic",
           "title": "Memory Tip",
-          "content": "Use the phrase Plan, Check, Explain for each question."
+          "content": "Use the phrase Plan, Check, Explain for each quantitative question."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/chemistry-301-l09.png"
     },
     {
       "id": "chemistry-301-l10",
       "title": "Mastery: Chemistry III",
       "type": "quiz",
       "duration": 10,
+      "lessonImagePrompt": "A majestic 3D golden trophy shaped like an Erlenmeyer flask, glowing with a bright inner light, surrounded by floating chemistry symbols. Imagen 4.",
+      "conceptVideoPrompt": "A celebratory 3D animation showing a student's digital chemistry notebook filling with gold stars and checkmarks as complex equations solve themselves perfectly. Veo 3.1.",
       "questions": [
         {
           "id": "chemistry-301-l10-q1",
-          "text": "Which statement best explains stoichiometric relationships in Chemistry?",
+          "text": "Which of the following represents a correct mole ratio for the reaction: N2 + 3H2 -> 2NH3?",
           "skillId": "chemistry-301-skill-core",
           "options": [
             {
               "id": "a",
-              "text": "It explains stoichiometric relationships using evidence from the lesson."
+              "text": "1 mole N2 / 3 moles H2"
             },
             {
               "id": "b",
-              "text": "It ignores how stoichiometric relationships works in practice."
+              "text": "2 moles N2 / 3 moles NH3"
             },
             {
               "id": "c",
-              "text": "It focuses on an unrelated topic outside Chemistry."
+              "text": "3 moles H2 / 1 mole NH3"
             },
             {
               "id": "d",
-              "text": "It repeats terms without showing meaning."
+              "text": "1 mole N2 / 1 mole H2"
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "chemistry-301-l10-q2",
-          "text": "What is the best first step when analyzing reaction energetics?",
+          "text": "If an energy diagram shows the products at a higher energy level than the reactants, what type of reaction is it?",
           "skillId": "chemistry-301-skill-process",
           "options": [
             {
               "id": "a",
-              "text": "Define the goal and examine evidence for reaction energetics."
+              "text": "Endothermic"
             },
             {
               "id": "b",
-              "text": "Guess quickly without checking evidence."
+              "text": "Exothermic"
             },
             {
               "id": "c",
-              "text": "Use data unrelated to reaction energetics."
+              "text": "Catalyzed"
             },
             {
               "id": "d",
-              "text": "Skip the context and jump to a conclusion."
+              "text": "Spontaneous"
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "chemistry-301-l10-q3",
-          "text": "Which option shows strong reasoning about quantitative chemical reasoning?",
+          "text": "How does decreasing the volume of a gas-phase equilibrium system affect the reaction?",
           "skillId": "chemistry-301-skill-reasoning",
           "options": [
             {
               "id": "a",
-              "text": "Use examples and verify assumptions step by step."
+              "text": "It increases pressure, shifting the system to the side with fewer moles of gas."
             },
             {
               "id": "b",
-              "text": "Ignore important details and edge cases."
+              "text": "It decreases pressure, shifting the system to the side with more moles of gas."
             },
             {
               "id": "c",
-              "text": "Use assumptions unrelated to quantitative chemical reasoning."
+              "text": "It has no effect on the equilibrium position."
             },
             {
               "id": "d",
-              "text": "Change the topic when evidence gets hard."
+              "text": "It changes the value of the equilibrium constant (K)."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "chemistry-301-l10-q4",
-          "text": "Why is spaced review useful for Chemistry mastery?",
+          "text": "Which action will NOT increase the number of successful collisions in a chemical reaction?",
           "skillId": "chemistry-301-skill-review",
           "options": [
             {
               "id": "a",
-              "text": "It strengthens memory and transfer over time"
+              "text": "Decreasing the temperature of the reactants."
             },
             {
               "id": "b",
-              "text": "It creates confusion"
+              "text": "Increasing the concentration of the reactants."
             },
             {
               "id": "c",
-              "text": "It removes key facts"
+              "text": "Adding a catalyst."
             },
             {
               "id": "d",
-              "text": "It has no value"
+              "text": "Increasing the surface area of a solid reactant."
             }
           ],
           "correctOptionId": "a"
@@ -1100,42 +1130,41 @@ export const Chemistry301Module: LearningModule = {
         {
           "id": "chemistry-301-l10-ia1",
           "type": "matching_pairs",
-          "title": "Reasoning Match: Mastery: Chemistry III",
-          "description": "Match each error signal to the strongest correction strategy.",
+          "title": "Mastery Concept Match",
+          "description": "Match the core chemistry concept to its practical application.",
           "estimatedMinutes": 7,
           "difficultyLevel": "medium",
           "instructions": [
-            "Review each left-side signal.",
-            "Pick the best response on the right.",
-            "Use your matches to plan the next drill."
+            "Review the concept on the left.",
+            "Pick the correct application on the right."
           ],
           "data": {
             "left": [
               {
                 "id": "l1",
-                "label": "Confusion about stoichiometric relationships"
+                "label": "Stoichiometry"
               },
               {
                 "id": "l2",
-                "label": "Inconsistent approach to reaction energetics"
+                "label": "Kinetics"
               },
               {
                 "id": "l3",
-                "label": "Weak transfer of quantitative chemical reasoning under timing"
+                "label": "Equilibrium"
               }
             ],
             "right": [
               {
                 "id": "r1",
-                "label": "Create a one-step concept summary with one worked example"
+                "label": "Calculating how much product a factory will make"
               },
               {
                 "id": "r2",
-                "label": "Use a checklist before choosing the final answer"
+                "label": "Designing a catalytic converter for a car exhaust"
               },
               {
                 "id": "r3",
-                "label": "Retest the same target with a short timed sprint"
+                "label": "Adjusting pressure to maximize ammonia yield (Haber process)"
               }
             ],
             "pairs": [
@@ -1185,61 +1214,64 @@ export const Chemistry301Module: LearningModule = {
         {
           "id": "chemistry-301-l10-a1",
           "type": "mnemonic",
-          "title": "Memory Tip",
-          "content": "Use the phrase Plan, Check, Explain for each question."
+          "title": "Mastery Checklist",
+          "content": "Balance equation -> Convert to moles -> Apply concept (Ratio/Shift/Rate) -> Check units!"
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/chemistry-301-l10.png"
     },
     {
       "id": "chemistry-301-l11",
       "title": "Applied Chemistry Challenge Studio",
       "type": "interactive",
       "duration": 14,
+      "lessonImagePrompt": "A 3D illustration of a modern industrial chemical plant with glowing pipes, large reaction tanks, and digital screens showing molecular structures and graphs. Imagen 4.",
+      "conceptVideoPrompt": "A 3D animation zooming into an industrial chemical reactor. We see raw materials entering, reacting under high pressure and a catalyst, and the final product flowing out, demonstrating real-world applied chemistry. Veo 3.1.",
       "metadata": {
         "prompts": [
-          "Select one weak pattern from recent quizzes.",
-          "Apply a step-by-step correction using reaction energetics.",
-          "Document your transfer plan for the next timed check."
+          "How do industrial chemists use Le Chatelier's principle to make money?",
+          "Why is finding the limiting reactant important in manufacturing?",
+          "What role do catalysts play in green chemistry?"
         ]
       },
       "interactiveActivities": [
         {
           "id": "chemistry-301-l11-ia1",
           "type": "sorting_buckets",
-          "title": "Transfer Ladder",
-          "description": "Sort actions into Diagnose, Fix, and Transfer phases.",
+          "title": "Industrial Process Optimizer",
+          "description": "Sort actions into the correct phase of optimizing a chemical manufacturing process.",
           "estimatedMinutes": 9,
           "difficultyLevel": "medium",
           "data": {
             "buckets": [
               {
-                "id": "diagnose",
-                "label": "Diagnose"
+                "id": "yield",
+                "label": "Maximize Yield (Equilibrium)"
               },
               {
-                "id": "fix",
-                "label": "Fix"
+                "id": "speed",
+                "label": "Increase Speed (Kinetics)"
               },
               {
-                "id": "transfer",
-                "label": "Transfer"
+                "id": "cost",
+                "label": "Manage Cost (Stoichiometry)"
               }
             ],
             "items": [
               {
                 "id": "i1",
-                "label": "Tag repeated mistakes in solution behavior",
-                "correctBucketId": "diagnose"
+                "label": "Continuously remove product to shift reaction right",
+                "correctBucketId": "yield"
               },
               {
                 "id": "i2",
-                "label": "Rework one missed item with full reasoning",
-                "correctBucketId": "fix"
+                "label": "Add a transition metal catalyst to the reactor",
+                "correctBucketId": "speed"
               },
               {
                 "id": "i3",
-                "label": "Retest with a timed mini-check on model validation",
-                "correctBucketId": "transfer"
+                "label": "Calculate the exact amount of expensive limiting reactant needed",
+                "correctBucketId": "cost"
               }
             ]
           }
@@ -1249,8 +1281,8 @@ export const Chemistry301Module: LearningModule = {
         {
           "id": "chemistry-301-l11-a1",
           "type": "practice",
-          "title": "Correction Loop Card",
-          "content": "Use Diagnose, Fix, Transfer for each difficult problem."
+          "title": "Real-World Application Card",
+          "content": "Think like an engineer: Balance speed, yield, and cost to create the perfect chemical process."
         }
       ]
     },
@@ -1259,99 +1291,101 @@ export const Chemistry301Module: LearningModule = {
       "title": "Chemistry III Mastery Applied Retest",
       "type": "quiz",
       "duration": 10,
+      "lessonImagePrompt": "A sleek, high-tech digital exam interface with a glowing 'RETEST' badge, surrounded by 3D models of atoms and a balanced scale. Imagen 4.",
+      "conceptVideoPrompt": "A fast, encouraging 3D motion graphic showing a student overcoming a hurdle, with chemistry symbols transforming into a glowing checkmark. Veo 3.1.",
       "questions": [
         {
           "id": "chemistry-301-l12-q1",
-          "text": "Which statement best explains stoichiometric relationships in Chemistry?",
+          "text": "If you need to produce exactly 2.0 moles of H2O from the reaction 2H2 + O2 -> 2H2O, how many moles of O2 are required?",
           "skillId": "chemistry-301-skill-core",
           "options": [
             {
               "id": "a",
-              "text": "It explains stoichiometric relationships using evidence from the lesson."
+              "text": "1.0 mole"
             },
             {
               "id": "b",
-              "text": "It ignores how stoichiometric relationships works in practice."
+              "text": "2.0 moles"
             },
             {
               "id": "c",
-              "text": "It focuses on an unrelated topic outside Chemistry."
+              "text": "0.5 moles"
             },
             {
               "id": "d",
-              "text": "It repeats terms without showing meaning."
+              "text": "4.0 moles"
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "chemistry-301-l12-q2",
-          "text": "What is the best first step when analyzing model validation?",
+          "text": "Which of the following describes an exothermic reaction pathway?",
           "skillId": "chemistry-301-skill-process",
           "options": [
             {
               "id": "a",
-              "text": "Define the goal and examine evidence for model validation."
+              "text": "Reactants start high, go over an activation energy hill, and end lower than they started."
             },
             {
               "id": "b",
-              "text": "Guess quickly without checking evidence."
+              "text": "Reactants start low, go over an activation energy hill, and end higher than they started."
             },
             {
               "id": "c",
-              "text": "Use data unrelated to model validation."
+              "text": "Reactants and products are at the exact same energy level."
             },
             {
               "id": "d",
-              "text": "Skip the context and jump to a conclusion."
+              "text": "There is no activation energy hill at all."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "chemistry-301-l12-q3",
-          "text": "Which option shows strong reasoning about quantitative chemical reasoning?",
+          "text": "For the endothermic reaction A + B + Heat <-> C, what happens if you lower the temperature?",
           "skillId": "chemistry-301-skill-reasoning",
           "options": [
             {
               "id": "a",
-              "text": "Use examples and verify assumptions step by step."
+              "text": "The system shifts left to produce more heat."
             },
             {
               "id": "b",
-              "text": "Ignore important details and edge cases."
+              "text": "The system shifts right to consume the remaining heat."
             },
             {
               "id": "c",
-              "text": "Use assumptions unrelated to quantitative chemical reasoning."
+              "text": "The reaction rate increases."
             },
             {
               "id": "d",
-              "text": "Change the topic when evidence gets hard."
+              "text": "The equilibrium constant remains unchanged."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "chemistry-301-l12-q4",
-          "text": "Why is spaced review useful for Chemistry mastery?",
+          "text": "Why does crushing a solid reactant increase the rate of a chemical reaction?",
           "skillId": "chemistry-301-skill-review",
           "options": [
             {
               "id": "a",
-              "text": "It strengthens memory and transfer over time"
+              "text": "It increases the surface area, allowing for more frequent collisions."
             },
             {
               "id": "b",
-              "text": "It creates confusion"
+              "text": "It lowers the activation energy of the reaction."
             },
             {
               "id": "c",
-              "text": "It removes key facts"
+              "text": "It increases the temperature of the solid."
             },
             {
               "id": "d",
-              "text": "It has no value"
+              "text": "It changes the mole ratio of the balanced equation."
             }
           ],
           "correctOptionId": "a"
@@ -1361,42 +1395,41 @@ export const Chemistry301Module: LearningModule = {
         {
           "id": "chemistry-301-l12-ia1",
           "type": "matching_pairs",
-          "title": "Reasoning Match: Chemistry III Mastery Applied Retest",
-          "description": "Match each error signal to the strongest correction strategy.",
+          "title": "Applied Retest Match",
+          "description": "Match the chemistry scenario to the correct quantitative principle.",
           "estimatedMinutes": 7,
           "difficultyLevel": "medium",
           "instructions": [
-            "Review each left-side signal.",
-            "Pick the best response on the right.",
-            "Use your matches to plan the next drill."
+            "Review the scenario on the left.",
+            "Pick the correct principle on the right."
           ],
           "data": {
             "left": [
               {
                 "id": "l1",
-                "label": "Confusion about stoichiometric relationships"
+                "label": "Calculating how much medicine a factory can make from raw materials"
               },
               {
                 "id": "l2",
-                "label": "Inconsistent approach to model validation"
+                "label": "Using a cold pack to treat a sports injury"
               },
               {
                 "id": "l3",
-                "label": "Weak transfer of quantitative chemical reasoning under timing"
+                "label": "Storing food in a refrigerator to prevent spoiling"
               }
             ],
             "right": [
               {
                 "id": "r1",
-                "label": "Create a one-step concept summary with one worked example"
+                "label": "Stoichiometry and Limiting Reactants"
               },
               {
                 "id": "r2",
-                "label": "Use a checklist before choosing the final answer"
+                "label": "Endothermic Reaction Energetics"
               },
               {
                 "id": "r3",
-                "label": "Retest the same target with a short timed sprint"
+                "label": "Kinetics and Temperature Effects"
               }
             ],
             "pairs": [
@@ -1446,72 +1479,75 @@ export const Chemistry301Module: LearningModule = {
         {
           "id": "chemistry-301-l12-a1",
           "type": "mnemonic",
-          "title": "Memory Tip",
-          "content": "Use the phrase Plan, Check, Explain for each question."
+          "title": "Retest Focus",
+          "content": "Read carefully: Is it asking for speed (kinetics), amount (stoichiometry), or direction (equilibrium)?"
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/chemistry-301-l12.png"
     },
     {
       "id": "chemistry-301-l13",
       "title": "Chemistry Scenario Lab",
       "type": "video",
       "duration": 12,
+      "lessonImagePrompt": "A 3D illustration of a deployed car airbag with glowing chemical formulas (NaN3 -> Na + N2) floating around it, showing the real-world application of gas stoichiometry. Imagen 4.",
+      "conceptVideoPrompt": "A dramatic 3D animation of a car crash test dummy. As the car hits the barrier, a chemical reaction inside the steering wheel rapidly produces nitrogen gas, inflating the airbag in milliseconds. Veo 3.1.",
       "chunks": [
         {
           "id": "chemistry-301-l13-c1",
-          "title": "Scenario Brief",
-          "content": "In this exciting scenario, we will explore important concepts in chemistry, including stoichiometric relationships, which help us understand how different substances react with one another. We will also look at reaction energetics, which involves the energy changes that occur during chemical reactions. Finally, we will validate our models to ensure they accurately represent the real-world chemistry we are studying. This challenge will allow us to apply these concepts in a fun and engaging way!\nContext recap: In this exciting scenario, we will explore important concepts in chemistry, including stoichiometric relationships, which help us understand how different substances react with one another. We will also look at reaction energetics, which involves the energy changes that occur during chemical reactions. Finally, we will validate our models to ensure they accurately represent the real-world chemistry we are studying. This challenge will allow us to apply these concepts in a fun and engaging way!"
+          "title": "Scenario Brief: The Airbag Challenge",
+          "content": "Welcome to the Scenario Lab! Today, you are an automotive safety engineer. Your mission: design a chemical airbag. When a car crashes, a sensor triggers a chemical reaction that rapidly produces nitrogen gas to inflate the bag. If you use too little reactant, the bag won't fill, and the passenger gets hurt. If you use too much, the bag explodes! We need perfect stoichiometry, rapid kinetics, and precise energetics."
         },
         {
           "id": "chemistry-301-l13-c2",
-          "title": "Plan the Approach",
-          "content": "To tackle this scenario effectively, we should break it down into smaller, manageable decisions. This means identifying each step we need to take and thinking carefully about how to approach each one. For every decision point, we will assign a specific strategy that we believe will help us succeed. By organizing our thoughts and planning ahead, we can make the process smoother and more efficient!\nContext recap: To tackle this scenario effectively, we should break it down into smaller, manageable decisions. This means identifying each step we need to take and thinking carefully about how to approach each one. For every decision point, we will assign a specific strategy that we believe will help us succeed. By organizing our thoughts and planning ahead, we can make the process smoother and more efficient!"
+          "title": "Step 1: Stoichiometry (The Amount)",
+          "content": "First, we need to know exactly how much gas is required to fill a 60-Liter airbag. Using the Ideal Gas Law and Stoichiometry, we calculate the exact mass of Sodium Azide (NaN3) needed. This is a classic limiting reactant problem. We must ensure NaN3 is the limiting reactant so the reaction stops exactly when the bag is full."
         },
         {
           "id": "chemistry-301-l13-c3",
-          "title": "Execute and Justify",
-          "content": "Now it's time to put our plan into action! As we execute our strategies, we must explain each step we take. It's important to support our actions with solid evidence rather than just making guesses. This means using facts and data we have gathered to justify our decisions. By doing so, we not only strengthen our understanding of the chemistry involved but also build our critical thinking skills!\nContext recap: Now it's time to put our plan into action! As we execute our strategies, we must explain each step we take. It's important to support our actions with solid evidence rather than just making guesses. This means using facts and data we have gathered to justify our decisions.\nWhy this matters: Execute and Justify helps learners in Chemistry connect ideas from Chemistry Quantitative Reasoning to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "title": "Step 2: Kinetics (The Speed)",
+          "content": "An airbag must inflate in about 30 milliseconds. That's incredibly fast! To achieve this rate, the solid NaN3 is crushed into a fine powder to maximize surface area. We also use an electrical spark to provide the necessary Activation Energy instantly. This ensures the collision frequency is high enough to save a life."
         },
         {
           "id": "chemistry-301-l13-c4",
-          "title": "Evaluate Outcome",
-          "content": "After completing our experiment, we need to evaluate the outcome carefully. This involves comparing our results to the target we aimed for at the beginning. We should identify what aspects of our results were successful and which ones may need adjustments. This reflective process is crucial as it helps us learn from our experiences and improve our future experiments!\nContext recap: After completing our experiment, we need to evaluate the outcome carefully. This involves comparing our results to the target we aimed for at the beginning. We should identify what aspects of our results were successful and which ones may need adjustments. This reflective process is crucial as it helps us learn from our experiences and improve our future experiments!"
+          "title": "Step 3: Energetics (The Safety Check)",
+          "content": "Finally, we must evaluate the energetics. The decomposition of NaN3 is highly exothermic. It releases a lot of heat! As an engineer, you must validate this model to ensure the heat won't burn the passenger. We might need to add secondary chemicals to absorb some of that heat (an endothermic process) to keep the system safe."
         }
       ],
       "flashcards": [
         {
           "id": "chemistry-301-l13-f1",
           "front": "Scenario Planning",
-          "back": "Split a complex task into clear decision points."
+          "back": "Split a complex real-world task into clear chemical principles (Amount, Speed, Heat)."
         },
         {
           "id": "chemistry-301-l13-f2",
-          "front": "Evidence Link",
-          "back": "Each step should connect to evidence in the scenario."
+          "front": "Airbag Stoichiometry",
+          "back": "Calculating the exact mass of solid needed to produce a specific volume of gas."
         },
         {
           "id": "chemistry-301-l13-f3",
-          "front": "Adjustment Loop",
-          "back": "Use outcome checks to refine your next attempt."
+          "front": "Airbag Kinetics",
+          "back": "Using high surface area (powder) and a spark to achieve a 30-millisecond reaction rate."
         },
         {
           "id": "chemistry-301-l13-f4",
-          "front": "Applied Mastery",
-          "back": "Mastery means transferring the process to a new context."
+          "front": "Airbag Energetics",
+          "back": "Managing the highly exothermic heat release to ensure passenger safety."
         }
       ],
       "learningAids": [
         {
           "id": "chemistry-301-l13-a1",
           "type": "image",
-          "title": "Scenario Map",
-          "content": "A real-world scenario map connecting stoichiometric relationships, reaction energetics, and model validation."
+          "title": "Airbag Chemistry Map",
+          "content": "A visual breakdown connecting NaN3 decomposition to Stoichiometry, Kinetics, and Energetics."
         },
         {
           "id": "chemistry-301-l13-a2",
           "type": "practice",
           "title": "Mini Case Prompt",
-          "content": "Apply one strategy to a new case and explain your reasoning."
+          "content": "If you wanted the airbag to inflate slightly slower, what could you change about the solid reactant?"
         }
       ]
     },
@@ -1520,11 +1556,13 @@ export const Chemistry301Module: LearningModule = {
       "title": "Chemistry Coaching Clinic",
       "type": "interactive",
       "duration": 13,
+      "lessonImagePrompt": "A 3D illustration of a friendly robotic chemistry tutor pointing at a glowing digital whiteboard filled with corrected chemical equations and a big green checkmark. Imagen 4.",
+      "conceptVideoPrompt": "A 3D animation showing a student making a common math error in a stoichiometry problem. The screen rewinds, highlights the mistake in red, and shows the correct step in glowing green, demonstrating the learning process. Veo 3.1.",
       "metadata": {
         "prompts": [
-          "Identify one repeated error pattern from your recent work.",
-          "Choose the best correction routine for that pattern.",
-          "Write a transfer goal for your next timed check."
+          "Identify one repeated error pattern from your recent chemistry calculations.",
+          "How can writing out your units help prevent mistakes?",
+          "Write a specific goal for your final mastery check."
         ]
       },
       "interactiveActivities": [
@@ -1532,36 +1570,36 @@ export const Chemistry301Module: LearningModule = {
           "id": "chemistry-301-l14-ia1",
           "type": "matching_pairs",
           "title": "Error to Fix Match",
-          "description": "Match each error signal to the highest-impact correction action.",
+          "description": "Match each common calculation error to the highest-impact correction action.",
           "estimatedMinutes": 8,
           "difficultyLevel": "medium",
           "data": {
             "left": [
               {
                 "id": "l1",
-                "label": "Repeated miss on stoichiometric relationships setup"
+                "label": "Forgetting to use the mole ratio"
               },
               {
                 "id": "l2",
-                "label": "Losses due to rushed model validation decisions"
+                "label": "Mixing up endothermic and exothermic graphs"
               },
               {
                 "id": "l3",
-                "label": "Correct in notes but weak transfer in new tasks"
+                "label": "Shifting equilibrium the wrong way"
               }
             ],
             "right": [
               {
                 "id": "r1",
-                "label": "Rebuild setup steps and retest one parallel item"
+                "label": "Always write the balanced equation first and circle coefficients"
               },
               {
                 "id": "r2",
-                "label": "Use checkpoint pacing + verify before submit"
+                "label": "Remember: Exo ends LOW (releases), Endo ends HIGH (absorbs)"
               },
               {
                 "id": "r3",
-                "label": "Pair correction with one timed transfer item"
+                "label": "Use the 'Add away, Take towards' rule of thumb"
               }
             ],
             "pairs": [
@@ -1586,108 +1624,111 @@ export const Chemistry301Module: LearningModule = {
           "id": "chemistry-301-l14-a1",
           "type": "mnemonic",
           "title": "Clinic Loop",
-          "content": "Diagnose, Correct, Transfer."
+          "content": "Diagnose the error, Correct the step, Transfer to a new problem."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/chemistry-301-l14.png"
     },
     {
       "id": "chemistry-301-l15",
       "title": "Chemistry III Mastery Mastery Sprint",
       "type": "quiz",
       "duration": 10,
+      "lessonImagePrompt": "A dynamic 3D illustration of a glowing finish line ribbon being broken by a fast-moving molecule, with fireworks of chemical reactions in the background. Imagen 4.",
+      "conceptVideoPrompt": "A high-energy 3D motion graphic showing a rapid-fire sequence of chemistry concepts—balancing equations, shifting seesaws, and energy rollercoasters—culminating in a 'Course Complete' badge. Veo 3.1.",
       "questions": [
         {
           "id": "chemistry-301-l15-q1",
-          "text": "Which statement best explains solution behavior in Chemistry?",
+          "text": "What is the molarity of a solution containing 0.5 moles of NaCl in 2.0 Liters of water?",
           "skillId": "chemistry-301-skill-core",
           "options": [
             {
               "id": "a",
-              "text": "It explains solution behavior using evidence from the lesson."
+              "text": "0.25 M"
             },
             {
               "id": "b",
-              "text": "It ignores how solution behavior works in practice."
+              "text": "1.0 M"
             },
             {
               "id": "c",
-              "text": "It focuses on an unrelated topic outside Chemistry."
+              "text": "4.0 M"
             },
             {
               "id": "d",
-              "text": "It repeats terms without showing meaning."
+              "text": "0.5 M"
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "chemistry-301-l15-q2",
-          "text": "What is the best first step when analyzing reaction energetics?",
+          "text": "Which of the following is true about a catalyst?",
           "skillId": "chemistry-301-skill-process",
           "options": [
             {
               "id": "a",
-              "text": "Define the goal and examine evidence for reaction energetics."
+              "text": "It lowers the activation energy of the reaction."
             },
             {
               "id": "b",
-              "text": "Guess quickly without checking evidence."
+              "text": "It is consumed during the reaction."
             },
             {
               "id": "c",
-              "text": "Use data unrelated to reaction energetics."
+              "text": "It increases the enthalpy (ΔH) of the reaction."
             },
             {
               "id": "d",
-              "text": "Skip the context and jump to a conclusion."
+              "text": "It shifts the equilibrium to favor the products."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "chemistry-301-l15-q3",
-          "text": "Which option shows strong reasoning about quantitative chemical reasoning?",
+          "text": "In the reaction N2(g) + 3H2(g) <-> 2NH3(g) + Heat, what happens if you increase the temperature?",
           "skillId": "chemistry-301-skill-reasoning",
           "options": [
             {
               "id": "a",
-              "text": "Use examples and verify assumptions step by step."
+              "text": "The system shifts left, producing more N2 and H2."
             },
             {
               "id": "b",
-              "text": "Ignore important details and edge cases."
+              "text": "The system shifts right, producing more NH3."
             },
             {
               "id": "c",
-              "text": "Use assumptions unrelated to quantitative chemical reasoning."
+              "text": "The pressure of the system decreases."
             },
             {
               "id": "d",
-              "text": "Change the topic when evidence gets hard."
+              "text": "The reaction stops completely."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "chemistry-301-l15-q4",
-          "text": "Why is spaced review useful for Chemistry mastery?",
+          "text": "If you calculate a theoretical yield of 100g, but your actual yield is 85g, what is your percent yield?",
           "skillId": "chemistry-301-skill-review",
           "options": [
             {
               "id": "a",
-              "text": "It strengthens memory and transfer over time"
+              "text": "85%"
             },
             {
               "id": "b",
-              "text": "It creates confusion"
+              "text": "115%"
             },
             {
               "id": "c",
-              "text": "It removes key facts"
+              "text": "15%"
             },
             {
               "id": "d",
-              "text": "It has no value"
+              "text": "100%"
             }
           ],
           "correctOptionId": "a"
@@ -1697,42 +1738,41 @@ export const Chemistry301Module: LearningModule = {
         {
           "id": "chemistry-301-l15-ia1",
           "type": "matching_pairs",
-          "title": "Reasoning Match: Chemistry III Mastery Mastery Sprint",
-          "description": "Match each error signal to the strongest correction strategy.",
+          "title": "Final Sprint Match",
+          "description": "Match the final chemistry concepts to their core formulas or rules.",
           "estimatedMinutes": 7,
           "difficultyLevel": "medium",
           "instructions": [
-            "Review each left-side signal.",
-            "Pick the best response on the right.",
-            "Use your matches to plan the next drill."
+            "Review the concept on the left.",
+            "Pick the correct formula or rule on the right."
           ],
           "data": {
             "left": [
               {
                 "id": "l1",
-                "label": "Confusion about solution behavior"
+                "label": "Dilution Formula"
               },
               {
                 "id": "l2",
-                "label": "Inconsistent approach to reaction energetics"
+                "label": "Percent Yield Formula"
               },
               {
                 "id": "l3",
-                "label": "Weak transfer of quantitative chemical reasoning under timing"
+                "label": "Le Chatelier's Principle"
               }
             ],
             "right": [
               {
                 "id": "r1",
-                "label": "Create a one-step concept summary with one worked example"
+                "label": "M1V1 = M2V2"
               },
               {
                 "id": "r2",
-                "label": "Use a checklist before choosing the final answer"
+                "label": "(Actual / Theoretical) x 100"
               },
               {
                 "id": "r3",
-                "label": "Retest the same target with a short timed sprint"
+                "label": "Systems shift to relieve applied stress"
               }
             ],
             "pairs": [
@@ -1782,10 +1822,11 @@ export const Chemistry301Module: LearningModule = {
         {
           "id": "chemistry-301-l15-a1",
           "type": "mnemonic",
-          "title": "Memory Tip",
-          "content": "Use the phrase Plan, Check, Explain for each question."
+          "title": "Final Tip",
+          "content": "Trust your units! If the units cancel out correctly, your math is probably right."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/chemistry-301-l15.png"
     }
   ]
 };

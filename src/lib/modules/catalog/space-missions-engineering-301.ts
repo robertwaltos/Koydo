@@ -1,9 +1,9 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const SpaceMissionsEngineering301Module: LearningModule = {
+export const space_missions_engineering_301_Module: LearningModule = {
   "id": "space-missions-engineering-301",
-  "title": "Space Missions Engineering Systems and Governance",
-  "description": "Level 301 curriculum in Space Missions Engineering, focused on mission architecture, systems integration, risk and reliability modeling, and flight operations governance through case analysis, simulation practice, and mastery checkpoints.",
+  "title": "Space Missions Engineering: Systems and Governance",
+  "description": "An advanced curriculum in Space Missions Engineering, focused on mission architecture, systems integration, risk and reliability modeling, and flight operations governance through case analysis, simulation practice, and mastery checkpoints.",
   "subject": "Aerospace Engineering",
   "tags": [
     "core",
@@ -14,31 +14,31 @@ export const SpaceMissionsEngineering301Module: LearningModule = {
   ],
   "minAge": 16,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en"
   ],
   "learningObjectives": [
-    "Apply mission architecture using explicit assumptions and constraints",
-    "Design and execute workflows for systems integration with reliable control points",
-    "Evaluate risk and reliability modeling decisions using baseline and side-effect analysis",
-    "Strengthen flight operations governance with accountable governance mechanisms",
-    "Communicate uncertainty and tradeoffs across stakeholder groups",
-    "Build defensible recommendations resilient to critical review"
+    "Apply mission architecture principles using explicit assumptions and constraints.",
+    "Design and execute robust workflows for systems integration with reliable control points.",
+    "Evaluate risk and reliability modeling decisions using baseline and side-effect analysis.",
+    "Strengthen flight operations with accountable governance mechanisms.",
+    "Communicate uncertainty and tradeoffs effectively across stakeholder groups.",
+    "Build defensible recommendations resilient to critical review."
   ],
   "lessons": [
     {
       "id": "space-missions-engineering-301-l01",
-      "title": "Space Missions Engineering Core Foundations",
+      "title": "Core Foundations of Mission Engineering",
       "type": "video",
       "duration": 13,
       "learningAids": [
         {
           "id": "space-missions-engineering-301-l01-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Document assumptions, show your reasoning chain, and verify your conclusions before submission."
+          "title": "Mission Architecture Blueprint",
+          "content": "Visualize the key components of a space mission, from launch vehicle to payload and ground systems. Note the interfaces and dependencies."
         }
       ],
       "chunks": [
@@ -46,50 +46,50 @@ export const SpaceMissionsEngineering301Module: LearningModule = {
           "id": "space-missions-engineering-301-l01-c1",
           "kind": "concept",
           "title": "Scope and Shared Vocabulary",
-          "content": "In this lesson, we will dive into the fascinating world of Space Missions Engineering. This field is all about planning and executing missions that explore outer space. We will start by defining what Space Missions Engineering includes, which is crucial for anyone who wants to work in this area. Next, we will introduce some key vocabulary that professionals use, helping you become familiar with the language of space exploration. Finally, we will discuss how mission architecture, which is the overall design of a space mission, and systems integration, which involves making sure all the different parts of a mission work together smoothly, interact in real-world scenarios. Grasping these concepts is vital for anyone interested in the exciting challenges of designing and carrying out space missions.\nContext recap: In this lesson, we will dive into the fascinating world of Space Missions Engineering. This field is all about planning and executing missions that explore outer space. We will start by defining what Space Missions Engineering includes, which is crucial for anyone who wants to work in this area. Next, we will introduce some key vocabulary that professionals use, helping you become familiar with the language of space exploration.\nWhy this matters: Scope and Shared Vocabulary helps learners in Aerospace Engineering connect ideas from Space Missions Engineering Systems and Governance to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "This lesson introduces the core principles of Space Missions Engineering, the discipline of designing and operating missions to explore outer space. We will establish a shared vocabulary for key concepts, including mission architecture—the high-level design of a mission—and systems integration, the process of ensuring all components work together seamlessly. Understanding these fundamentals is the first step toward mastering the complexities of space exploration."
         },
         {
           "id": "space-missions-engineering-301-l01-c2",
           "kind": "concept",
           "title": "Causal Structure and Constraints",
-          "content": "In this section, learners will engage in mapping out causal pathways, which means identifying how different factors influence one another. They will also learn to test hidden assumptions that may affect their decisions. This process is crucial before choosing any interventions, as it helps ensure that the selected actions will lead to the desired outcomes.\nContext recap: In this section, learners will engage in mapping out causal pathways, which means identifying how different factors influence one another. They will also learn to test hidden assumptions that may affect their decisions. This process is crucial before choosing any interventions, as it helps ensure that the selected actions will lead to the desired outcomes."
+          "content": "Every mission is defined by its constraints, such as budget, schedule, and the laws of physics. Here, we will learn to map causal pathways to understand how different decisions and factors influence mission outcomes. This includes identifying and testing hidden assumptions before committing to a design, ensuring our plans are grounded in reality."
         },
         {
           "id": "space-missions-engineering-301-l01-c3",
           "kind": "recap",
-          "title": "Evidence Discipline",
-          "content": "In this recap, we emphasize the importance of grounding claims in observable indicators. This means that any statements made must be supported by evidence that can be seen or measured. Additionally, we will discuss the significance of noting uncertainties and establishing review checkpoints to ensure that the information remains accurate and reliable throughout the mission.\nContext recap: In this recap, we emphasize the importance of grounding claims in observable indicators. This means that any statements made must be supported by evidence that can be seen or measured. Additionally, we will discuss the significance of noting uncertainties and establishing review checkpoints to ensure that the information remains accurate and reliable throughout the mission."
+          "title": "Evidence and Discipline",
+          "content": "This recap emphasizes the importance of grounding all claims and decisions in observable, measurable evidence. We will discuss the necessity of quantifying uncertainty and establishing formal review checkpoints. This discipline ensures that the mission design remains robust, verifiable, and reliable throughout its lifecycle."
         }
       ],
       "flashcards": [
         {
           "id": "space-missions-engineering-301-l01-f1",
-          "front": "mission architecture",
-          "back": "A core analytical lens in Space Missions Engineering requiring careful assumption control."
+          "front": "Mission Architecture",
+          "back": "The conceptual design of a space mission, defining its objectives, components, and operational concepts under a clear set of assumptions."
         },
         {
           "id": "space-missions-engineering-301-l01-f2",
-          "front": "systems integration",
-          "back": "Operational design practices that determine system reliability and execution quality."
+          "front": "Systems Integration",
+          "back": "The process of combining subsystem components into a single, functioning system and ensuring they operate together to achieve mission goals."
         },
         {
           "id": "space-missions-engineering-301-l01-f3",
-          "front": "risk and reliability modeling",
-          "back": "The evaluation framework used to validate outcomes and detect hidden costs."
+          "front": "Risk and Reliability Modeling",
+          "back": "The analytical framework used to quantify the probability of failure, assess the impact of risks, and validate mission success criteria."
         }
       ]
     },
     {
       "id": "space-missions-engineering-301-l02",
-      "title": "Space Missions Engineering Workflow Lab",
+      "title": "Mission Engineering Workflow Lab",
       "type": "interactive",
       "duration": 15,
       "learningAids": [
         {
           "id": "space-missions-engineering-301-l02-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Document assumptions, show your reasoning chain, and verify your conclusions before submission."
+          "type": "image",
+          "title": "Workflow with Control Gates",
+          "content": "Map out a systems integration workflow, identifying key decision points (gates) where readiness is assessed before proceeding."
         }
       ],
       "chunks": [
@@ -97,13 +97,13 @@ export const SpaceMissionsEngineering301Module: LearningModule = {
           "id": "space-missions-engineering-301-l02-c1",
           "kind": "practice",
           "title": "Workflow Construction and Test",
-          "content": "In this interactive lab, learners will have the opportunity to design a workflow that focuses on analyzing system trade-offs. They will integrate metrics governance and ensure that different teams work together effectively. After creating their workflows, learners will put them to the test by stress-testing their designs to see how reliable they are under uncertain conditions.\nContext recap: In this interactive lab, learners will have the opportunity to design a workflow that focuses on analyzing system trade-offs. They will integrate metrics governance and ensure that different teams work together effectively. After creating their workflows, learners will put them to the test by stress-testing their designs to see how reliable they are under uncertain conditions."
+          "content": "In this interactive lab, you will design a systems integration workflow for a hypothetical mission. Your task is to define the process for analyzing system trade-offs, integrating metrics governance, and coordinating between engineering teams. Once designed, you will stress-test your workflow against scenarios involving uncertainty and component failures to evaluate its reliability."
         },
         {
           "id": "space-missions-engineering-301-l02-c2",
           "kind": "recap",
           "title": "Control Gates and Readiness",
-          "content": "In this recap, we will discuss the concept of readiness in project management. This involves mapping out who is responsible for what, establishing criteria for decision-making gates, understanding rollback conditions, and identifying verification signals. These elements are essential to ensure that the project is on track and ready for the next steps.\nContext recap: In this recap, we will discuss the concept of readiness in project management. This involves mapping out who is responsible for what, establishing criteria for decision-making gates, understanding rollback conditions, and identifying verification signals. These elements are essential to ensure that the project is on track and ready for the next steps."
+          "content": "This recap explores the concept of mission readiness. We will review how to implement effective control gates—formal decision points in a project—by defining clear ownership, entry and exit criteria, rollback conditions, and verification signals. These elements are essential for ensuring a project is truly ready to move to its next phase."
         }
       ],
       "interactiveActivities": [
@@ -143,11 +143,11 @@ export const SpaceMissionsEngineering301Module: LearningModule = {
           ],
           "items": [
             {
-              "text": "Throughput budget",
+              "text": "Maximum payload mass",
               "bucket": "Technical"
             },
             {
-              "text": "Regulatory retention requirement",
+              "text": "Orbital debris mitigation regulations",
               "bucket": "Policy"
             },
             {
@@ -155,8 +155,8 @@ export const SpaceMissionsEngineering301Module: LearningModule = {
               "bucket": "Stakeholder Impact"
             },
             {
-              "text": "Audit evidence requirement",
-              "bucket": "Policy"
+              "text": "Data downlink bandwidth",
+              "bucket": "Technical"
             }
           ]
         }
@@ -170,9 +170,9 @@ export const SpaceMissionsEngineering301Module: LearningModule = {
       "learningAids": [
         {
           "id": "space-missions-engineering-301-l03-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Document assumptions, show your reasoning chain, and verify your conclusions before submission."
+          "type": "image",
+          "title": "Knowledge Check",
+          "content": "Apply your understanding of core concepts like mission architecture, constraints, and workflow controls."
         }
       ],
       "questions": [
@@ -203,12 +203,12 @@ export const SpaceMissionsEngineering301Module: LearningModule = {
         },
         {
           "id": "space-missions-engineering-301-l03-q2",
-          "text": "The 301 level should emphasize:",
+          "text": "A robust systems integration workflow should emphasize:",
           "skillId": "space-missions-engineering-301-skill-level",
           "options": [
             {
               "id": "a",
-              "text": "system tradeoff analysis, metrics-governance integration, and cross-functional coordination"
+              "text": "System tradeoff analysis, metrics-governance integration, and cross-functional coordination"
             },
             {
               "id": "b",
@@ -250,70 +250,20 @@ export const SpaceMissionsEngineering301Module: LearningModule = {
           ],
           "correctOptionId": "b",
           "explanation": "Reliability depends on clear controls, owners, and threshold-driven responses."
-        },
-        {
-          "id": "space-missions-engineering-301-l03-q4",
-          "text": "For risk and reliability modeling, which practice is most defensible?",
-          "skillId": "space-missions-engineering-301-skill-eval",
-          "options": [
-            {
-              "id": "a",
-              "text": "Use anecdotal wins only"
-            },
-            {
-              "id": "b",
-              "text": "Compare against baselines and include side-effect checks"
-            },
-            {
-              "id": "c",
-              "text": "Ignore difficult scenarios"
-            },
-            {
-              "id": "d",
-              "text": "Adjust criteria after results"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Baseline and side-effect analysis prevents biased or incomplete conclusions."
-        },
-        {
-          "id": "space-missions-engineering-301-l03-q5",
-          "text": "A mature flight operations governance model should include:",
-          "skillId": "space-missions-engineering-301-skill-governance",
-          "options": [
-            {
-              "id": "a",
-              "text": "Policy disconnected from measurement"
-            },
-            {
-              "id": "b",
-              "text": "Policy links, measurable thresholds, and corrective pathways"
-            },
-            {
-              "id": "c",
-              "text": "No transparency obligations"
-            },
-            {
-              "id": "d",
-              "text": "No remediation expectations"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Governance maturity connects intention, measurement, and corrective response."
         }
       ]
     },
     {
       "id": "space-missions-engineering-301-l04",
-      "title": "Space Missions Engineering Case Analysis",
+      "title": "Case Analysis: The 'Odyssey' Mars Orbiter",
       "type": "video",
       "duration": 14,
       "learningAids": [
         {
           "id": "space-missions-engineering-301-l04-a1",
-          "type": "mnemonic",
-          "title": "Guided Practice",
-          "content": "Document assumptions, show your reasoning chain, and verify your conclusions before submission."
+          "type": "image",
+          "title": "Case Study Decision Tree",
+          "content": "Analyze a real-world mission scenario. Map out the critical decision points and potential outcomes based on competing constraints."
         }
       ],
       "chunks": [
@@ -321,50 +271,50 @@ export const SpaceMissionsEngineering301Module: LearningModule = {
           "id": "space-missions-engineering-301-l04-c1",
           "kind": "example",
           "title": "Case Context and Decision Stakes",
-          "content": "In this engaging case analysis, we will explore a multi-phase space mission that encounters several significant challenges. These challenges include limitations on the payload, which refers to the equipment and materials that can be carried, as well as specific launch windows that dictate when the mission can take off. Additionally, we will examine potential risks that may arise during the flight itself. Learners will have the important task of identifying high-impact risks and competing constraints that could influence the mission's success. This exercise is designed to deepen their understanding of the intricate complexities involved in planning and executing space missions, highlighting the importance of careful decision-making in aerospace engineering.\nContext recap: In this engaging case analysis, we will explore a multi-phase space mission that encounters several significant challenges. These challenges include limitations on the payload, which refers to the equipment and materials that can be carried, as well as specific launch windows that dictate when the mission can take off. Additionally, we will examine potential risks that may arise during the flight itself. Learners will have the important task of identifying high-impact risks and competing constraints that could influence the mission's success."
+          "content": "In this case analysis, we explore the 'Odyssey' Mars Orbiter, a multi-phase mission facing significant challenges. We will examine its payload limitations, narrow launch window, and critical in-flight risks. Your task is to identify the high-impact risks and competing constraints that influenced the mission's design and operational decisions."
         },
         {
           "id": "space-missions-engineering-301-l04-c2",
           "kind": "concept",
-          "title": "Tradeoff Matrix",
-          "content": "In this section, we will introduce the concept of a tradeoff matrix. Here, learners will evaluate different intervention options based on several criteria, including their effectiveness, reliability, fairness, and how feasible they are to implement. This scoring system will help learners make informed decisions when faced with multiple choices.\nContext recap: In this section, we will introduce the concept of a tradeoff matrix. Here, learners will evaluate different intervention options based on several criteria, including their effectiveness, reliability, fairness, and how feasible they are to implement. This scoring system will help learners make informed decisions when faced with multiple choices."
+          "title": "The Tradeoff Matrix",
+          "content": "We introduce the tradeoff matrix as a tool for structured decision-making. You will learn to evaluate different intervention options—such as altering a trajectory versus reducing scientific payload—against weighted criteria like cost, risk, schedule impact, and scientific return. This scoring system enables objective, defensible choices when faced with difficult compromises."
         },
         {
           "id": "space-missions-engineering-301-l04-c3",
           "kind": "recap",
           "title": "Failure Learning and Recovery",
-          "content": "In this recap, we will discuss how to learn from failures in a constructive way. The lesson will focus on transforming patterns of failure into proactive safeguards, creating response playbooks, and updating monitoring systems. This approach ensures that future missions can benefit from past experiences and improve overall success rates.\nContext recap: In this recap, we will discuss how to learn from failures in a constructive way. The lesson will focus on transforming patterns of failure into proactive safeguards, creating response playbooks, and updating monitoring systems. This approach ensures that future missions can benefit from past experiences and improve overall success rates."
+          "content": "This recap focuses on learning from mission failures and near-misses. We will analyze how patterns of failure can be transformed into proactive safeguards for future missions. This includes creating pre-defined response playbooks for common anomalies and updating monitoring systems to detect precursor signals, improving overall mission resilience."
         }
       ],
       "flashcards": [
         {
           "id": "space-missions-engineering-301-l04-f1",
-          "front": "Tradeoff matrix",
-          "back": "A structured comparison of alternatives under competing priorities."
+          "front": "Tradeoff Matrix",
+          "back": "A structured decision-making tool for comparing alternatives across multiple, often competing, criteria."
         },
         {
           "id": "space-missions-engineering-301-l04-f2",
-          "front": "Failure pattern",
-          "back": "A recurring risk signature used to design targeted mitigations."
+          "front": "Failure Pattern",
+          "back": "A recurring type of anomaly or risk signature, used to design targeted mitigations and preventative measures."
         },
         {
           "id": "space-missions-engineering-301-l04-f3",
-          "front": "Response playbook",
-          "back": "A predefined action sequence for safe and timely recovery."
+          "front": "Response Playbook",
+          "back": "A predefined sequence of actions and checklists designed to ensure a safe, timely, and effective recovery from a known anomaly."
         }
       ]
     },
     {
       "id": "space-missions-engineering-301-l05",
-      "title": "Space Missions Engineering Simulation Studio",
+      "title": "Mission Operations Simulation Studio",
       "type": "interactive",
       "duration": 16,
       "learningAids": [
         {
           "id": "space-missions-engineering-301-l05-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Document assumptions, show your reasoning chain, and verify your conclusions before submission."
+          "type": "image",
+          "title": "Mission Simulation Dashboard",
+          "content": "Interact with a dynamic simulation. Adjust parameters, run scenarios, and analyze the impact of your decisions on mission outcomes."
         }
       ],
       "chunks": [
@@ -372,13 +322,19 @@ export const SpaceMissionsEngineering301Module: LearningModule = {
           "id": "space-missions-engineering-301-l05-c1",
           "kind": "practice",
           "title": "Simulation Setup",
-          "content": "In this interactive practice session, learners will configure various intervention scenarios. They will set parameters for uncertainty and establish measurable thresholds for success. This hands-on experience will allow them to understand how to prepare for different outcomes in space missions.\nContext recap: In this interactive practice session, learners will configure various intervention scenarios. They will set parameters for uncertainty and establish measurable thresholds for success. This hands-on experience will allow them to understand how to prepare for different outcomes in space missions.\nContext recap: In this interactive practice session, learners will configure various intervention scenarios. They will set parameters for uncertainty and establish measurable thresholds for success. This hands-on experience will allow them to understand how to prepare for different outcomes in space missions. Context recap: In this interactive practice session, learners will configure various intervention scenarios.\nWhy this matters: Simulation Setup helps learners in Aerospace Engineering connect ideas from Space Missions Engineering Systems and Governance to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "In this interactive session, you will configure a simulated mission to Mars. Your task is to define intervention scenarios, such as contingency trajectory burns, set parameters for uncertainty like solar flare probability, and establish measurable thresholds for mission success, like orbital insertion accuracy."
         },
         {
           "id": "space-missions-engineering-301-l05-c2",
+          "kind": "practice",
+          "title": "Scenario Execution",
+          "content": "Run the configured simulation. Observe how the system responds to your chosen interventions and unexpected events. Monitor key telemetry data and watch for threshold breaches or cascading failures in real-time."
+        },
+        {
+          "id": "space-missions-engineering-301-l05-c3",
           "kind": "recap",
           "title": "Simulation Debrief",
-          "content": "In this recap, we will conduct a post-run review to evaluate the outcomes of the simulations. Learners will analyze any side effects that occurred and assess how well the results align with governance constraints. This reflective process is vital for understanding the implications of their decisions.\nContext recap: In this recap, we will conduct a post-run review to evaluate the outcomes of the simulations. Learners will analyze any side effects that occurred and assess how well the results align with governance constraints. This reflective process is vital for understanding the implications of their decisions."
+          "content": "In this post-run review, we will evaluate the outcomes of your simulation. You will analyze any unintended side effects, compare expected versus actual results, and assess how well your decisions aligned with the mission's governance constraints. This reflective process is vital for improving decision-making under pressure."
         }
       ],
       "interactiveActivities": [
@@ -388,7 +344,7 @@ export const SpaceMissionsEngineering301Module: LearningModule = {
           "title": "Intervention Simulation",
           "description": "Evaluate three strategies and justify which best advances mission architecture and flight operations governance.",
           "instructions": [
-            "Define objective and guardrails before selecting interventions.",
+            "Define mission objectives and safety guardrails before selecting interventions.",
             "Record near-term and long-term tradeoffs for each option.",
             "Select confirmation metrics and escalation triggers."
           ]
@@ -427,150 +383,125 @@ export const SpaceMissionsEngineering301Module: LearningModule = {
       "learningAids": [
         {
           "id": "space-missions-engineering-301-l06-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Document assumptions, show your reasoning chain, and verify your conclusions before submission."
+          "type": "image",
+          "title": "Application Check",
+          "content": "Demonstrate your ability to analyze complex scenarios, make trade-offs, and learn from simulated outcomes."
         }
       ],
       "questions": [
         {
           "id": "space-missions-engineering-301-l06-q1",
-          "text": "Which approach most improves decisions in mission architecture?",
-          "skillId": "space-missions-engineering-301-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "Rely on assumptions that are never tested"
-            },
-            {
-              "id": "b",
-              "text": "Define constraints, test failure modes, and monitor indicators"
-            },
-            {
-              "id": "c",
-              "text": "Treat all contexts as identical"
-            },
-            {
-              "id": "d",
-              "text": "Avoid uncertainty analysis"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Reliable decisions require explicit constraints, failure tests, and measured signals."
-        },
-        {
-          "id": "space-missions-engineering-301-l06-q2",
-          "text": "The 301 level should emphasize:",
-          "skillId": "space-missions-engineering-301-skill-level",
-          "options": [
-            {
-              "id": "a",
-              "text": "system tradeoff analysis, metrics-governance integration, and cross-functional coordination"
-            },
-            {
-              "id": "b",
-              "text": "Execution speed without review"
-            },
-            {
-              "id": "c",
-              "text": "No baselines or controls"
-            },
-            {
-              "id": "d",
-              "text": "Single perspective decision-making"
-            }
-          ],
-          "correctOptionId": "a",
-          "explanation": "This level is explicitly structured around system tradeoff analysis, metrics-governance integration, and cross-functional coordination."
-        },
-        {
-          "id": "space-missions-engineering-301-l06-q3",
-          "text": "What best strengthens systems integration reliability?",
-          "skillId": "space-missions-engineering-301-skill-reliability",
-          "options": [
-            {
-              "id": "a",
-              "text": "Unowned workflows and unclear escalation"
-            },
-            {
-              "id": "b",
-              "text": "Control checkpoints, ownership mapping, and response thresholds"
-            },
-            {
-              "id": "c",
-              "text": "Untracked changes"
-            },
-            {
-              "id": "d",
-              "text": "No incident review"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Reliability depends on clear controls, owners, and threshold-driven responses."
-        },
-        {
-          "id": "space-missions-engineering-301-l06-q4",
-          "text": "For risk and reliability modeling, which practice is most defensible?",
+          "text": "When using a tradeoff matrix to select a trajectory correction maneuver, what is the primary purpose of weighting criteria like 'fuel efficiency' and 'time-to-target'?",
           "skillId": "space-missions-engineering-301-skill-eval",
           "options": [
             {
               "id": "a",
-              "text": "Use anecdotal wins only"
+              "text": "To ensure all options are scored equally"
             },
             {
               "id": "b",
-              "text": "Compare against baselines and include side-effect checks"
+              "text": "To reflect the relative importance of each criterion to mission success"
             },
             {
               "id": "c",
-              "text": "Ignore difficult scenarios"
+              "text": "To complicate the decision-making process"
             },
             {
               "id": "d",
-              "text": "Adjust criteria after results"
+              "text": "To eliminate the need for engineering judgment"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Baseline and side-effect analysis prevents biased or incomplete conclusions."
+          "explanation": "Weighting allows the analysis to prioritize criteria that are more critical to achieving the overall mission objectives."
         },
         {
-          "id": "space-missions-engineering-301-l06-q5",
-          "text": "A mature flight operations governance model should include:",
+          "id": "space-missions-engineering-301-l06-q2",
+          "text": "A case study reveals a recurring software glitch during thermal vacuum testing. What is the most effective long-term response?",
+          "skillId": "space-missions-engineering-301-skill-reliability",
+          "options": [
+            {
+              "id": "a",
+              "text": "Restarting the test each time the glitch occurs"
+            },
+            {
+              "id": "b",
+              "text": "Performing a root cause analysis to create a permanent fix and updating test protocols"
+            },
+            {
+              "id": "c",
+              "text": "Noting the glitch in a report but proceeding with the mission timeline"
+            },
+            {
+              "id": "d",
+              "text": "Replacing the entire software system without investigation"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "A root cause analysis addresses the underlying problem, preventing recurrence and improving the reliability of future missions."
+        },
+        {
+          "id": "space-missions-engineering-301-l06-q3",
+          "text": "In a mission simulation, what is the value of introducing random uncertainty variables like 'micrometeoroid impact risk'?",
+          "skillId": "space-missions-engineering-301-skill-core",
+          "options": [
+            {
+              "id": "a",
+              "text": "To guarantee the mission will fail in the simulation"
+            },
+            {
+              "id": "b",
+              "text": "To test the resilience of the mission plan and the effectiveness of contingency procedures"
+            },
+            {
+              "id": "c",
+              "text": "To make the simulation less realistic"
+            },
+            {
+              "id": "d",
+              "text": "To prove that contingency planning is unnecessary"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Introducing uncertainty allows engineers to stress-test their plans against unpredictable, 'off-nominal' events and validate their response strategies."
+        },
+        {
+          "id": "space-missions-engineering-301-l06-q4",
+          "text": "What is a key characteristic of an effective 'response playbook' developed from a failure analysis?",
           "skillId": "space-missions-engineering-301-skill-governance",
           "options": [
             {
               "id": "a",
-              "text": "Policy disconnected from measurement"
+              "text": "It is highly theoretical and complex"
             },
             {
               "id": "b",
-              "text": "Policy links, measurable thresholds, and corrective pathways"
+              "text": "It is only accessible to senior management"
             },
             {
               "id": "c",
-              "text": "No transparency obligations"
+              "text": "It contains clear, actionable steps, decision authority, and communication protocols"
             },
             {
               "id": "d",
-              "text": "No remediation expectations"
+              "text": "It is written once and never updated"
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "Governance maturity connects intention, measurement, and corrective response."
+          "correctOptionId": "c",
+          "explanation": "An effective playbook must be practical and clear, enabling flight controllers to respond quickly and correctly during a real anomaly."
         }
       ]
     },
     {
       "id": "space-missions-engineering-301-l07",
-      "title": "Space Missions Engineering Policy and Ethics Integration",
+      "title": "Policy and Ethics Integration",
       "type": "video",
       "duration": 12,
       "learningAids": [
         {
           "id": "space-missions-engineering-301-l07-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Document assumptions, show your reasoning chain, and verify your conclusions before submission."
+          "title": "Stakeholder Impact Map",
+          "content": "Chart the potential positive and negative impacts of a mission on various groups, from the scientific community to the general public."
         }
       ],
       "chunks": [
@@ -578,50 +509,50 @@ export const SpaceMissionsEngineering301Module: LearningModule = {
           "id": "space-missions-engineering-301-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Mapping",
-          "content": "In this section, learners will explore how the benefits and burdens of space missions are distributed among different stakeholders. They will examine the impact of these missions over various time horizons, helping them understand the broader implications of their work in aerospace engineering.\nContext recap: In this section, learners will explore how the benefits and burdens of space missions are distributed among different stakeholders. They will examine the impact of these missions over various time horizons, helping them understand the broader implications of their work in aerospace engineering.\nContext recap: In this section, learners will explore how the benefits and burdens of space missions are distributed among different stakeholders. They will examine the impact of these missions over various time horizons, helping them understand the broader implications of their work in aerospace engineering. Context recap: In this section, learners will explore how the benefits and burdens of space missions are distributed among different stakeholders. They will examine the impact of these missions over various time horizons, helping them understand the broader implications of their work in aerospace engineering."
+          "content": "Space missions affect many groups differently. In this section, we will map the distribution of benefits (e.g., scientific data, technological advancement) and burdens (e.g., cost, space debris, ethical concerns) across various stakeholders. Analyzing these impacts over different time horizons is crucial for responsible mission design."
         },
         {
           "id": "space-missions-engineering-301-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "In this concept discussion, we will frame accountability in terms of traceability, review rights, and obligations for remediation. This framework is essential for ensuring that all stakeholders are held responsible for their roles and that there are clear paths for addressing any issues that arise during missions.\nContext recap: In this concept discussion, we will frame accountability in terms of traceability, review rights, and obligations for remediation. This framework is essential for ensuring that all stakeholders are held responsible for their roles and that there are clear paths for addressing any issues that arise during missions."
+          "content": "True accountability requires a formal structure. We will define an 'accountability architecture' with concrete components: clear documentation for decision traceability, defined review processes for independent oversight, and pre-agreed obligations for remediation when things go wrong. This framework ensures responsibility is clear and actionable."
         },
         {
           "id": "space-missions-engineering-301-l07-c3",
           "kind": "recap",
           "title": "Responsible Execution Checklist",
-          "content": "At the end of our lesson, we will use a comprehensive checklist that connects the technical aspects of our space missions with important elements like policy, ethics, and the trust of those involved. This checklist will help ensure that we are not only achieving our technical goals but also acting responsibly and ethically in our work.\nContext recap: At the end of our lesson, we will use a comprehensive checklist that connects the technical aspects of our space missions with important elements like policy, ethics, and the trust of those involved. This checklist will help ensure that we are not only achieving our technical goals but also acting responsibly and ethically in our work."
+          "content": "This recap introduces a practical tool: the Responsible Execution Checklist. This checklist integrates technical requirements with policy compliance, ethical considerations, and stakeholder trust. It serves as a final verification to ensure that mission execution is not only effective but also responsible."
         }
       ],
       "flashcards": [
         {
           "id": "space-missions-engineering-301-l07-f1",
-          "front": "Impact distribution",
-          "back": "How outcomes differ across stakeholder groups and timescales."
+          "front": "Impact Distribution",
+          "back": "The analysis of how mission outcomes—both positive and negative—are spread across different stakeholder groups and timescales."
         },
         {
           "id": "space-missions-engineering-301-l07-f2",
-          "front": "Decision traceability",
-          "back": "The evidence chain showing how and why a decision was made."
+          "front": "Decision Traceability",
+          "back": "The documented evidence chain showing how and why a decision was made, including the data, assumptions, and criteria used."
         },
         {
           "id": "space-missions-engineering-301-l07-f3",
-          "front": "Responsible execution",
-          "back": "Delivery behavior that balances effectiveness with ethical and policy safeguards."
+          "front": "Responsible Execution",
+          "back": "Mission delivery that balances technical effectiveness with ethical principles, policy compliance, and stakeholder safeguards."
         }
       ]
     },
     {
       "id": "space-missions-engineering-301-l08",
-      "title": "Space Missions Engineering Capstone Planning Lab",
+      "title": "Capstone Mission Planning Lab",
       "type": "interactive",
       "duration": 15,
       "learningAids": [
         {
           "id": "space-missions-engineering-301-l08-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Document assumptions, show your reasoning chain, and verify your conclusions before submission."
+          "type": "image",
+          "title": "Capstone Charter Template",
+          "content": "Structure your final project plan. Define your mission, set clear objectives, and establish the rules for governance and success."
         }
       ],
       "chunks": [
@@ -629,13 +560,13 @@ export const SpaceMissionsEngineering301Module: LearningModule = {
           "id": "space-missions-engineering-301-l08-c1",
           "kind": "practice",
           "title": "Capstone Charter",
-          "content": "In this interactive activity, you will have the opportunity to create a detailed capstone charter. This document will outline your project's main objectives, any constraints you might face, the metrics you will use to measure success, and the governance gates that will guide your decision-making process. This is a crucial step in planning your capstone project effectively.\nContext recap: In this interactive activity, you will have the opportunity to create a detailed capstone charter. This document will outline your project's main objectives, any constraints you might face, the metrics you will use to measure success, and the governance gates that will guide your decision-making process. This is a crucial step in planning your capstone project effectively."
+          "content": "In this lab, you will create a detailed charter for a capstone mission of your own design. This document will serve as your project's foundation, outlining its core objectives, constraints, key performance indicators, and the governance gates that will guide your decision-making process from concept to completion."
         },
         {
           "id": "space-missions-engineering-301-l08-c2",
           "kind": "recap",
           "title": "Defense Readiness",
-          "content": "As part of our recap, you will prepare well-researched and evidence-backed defenses for your project. This means you will think critically about potential critiques related to technical aspects, policy considerations, and stakeholder perspectives. Being ready to defend your work is essential in the field of aerospace engineering, as it demonstrates your understanding and commitment to your project.\nContext recap: As part of our recap, you will prepare well-researched and evidence-backed defenses for your project. This means you will think critically about potential critiques related to technical aspects, policy considerations, and stakeholder perspectives. Being ready to defend your work is essential in the field of aerospace engineering, as it demonstrates your understanding and commitment to your project."
+          "content": "This recap prepares you for a critical design review. You will learn to anticipate and prepare evidence-based defenses for your project choices. This involves building resilient arguments against potential critiques related to technical feasibility, policy compliance, and stakeholder impact, demonstrating mastery of the course material."
         }
       ],
       "interactiveActivities": [
@@ -645,9 +576,9 @@ export const SpaceMissionsEngineering301Module: LearningModule = {
           "title": "Capstone Charter Builder",
           "description": "Build a capstone charter with objectives, metrics, risks, and remediation pathways.",
           "instructions": [
-            "Define objective and boundary conditions.",
+            "Define the mission objective and boundary conditions.",
             "List at least three measurable success indicators.",
-            "Define escalation and corrective action criteria."
+            "Define escalation criteria and corrective action pathways."
           ]
         },
         {

@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const ClimateScience601Module: LearningModule = {
+export const climate_science_601_Module: LearningModule = {
   "id": "climate-science-601",
   "title": "Climate Science Research and Leadership",
   "description": "Post-401 specialization in Climate Science, focused on climate system attribution modeling, risk projection and adaptation planning, mitigation pathway and policy analysis, and justice-aware climate governance through advanced casework, simulation, and defense-based checkpoints.",
@@ -14,7 +14,7 @@ export const ClimateScience601Module: LearningModule = {
   ],
   "minAge": 17,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en",
@@ -34,6 +34,8 @@ export const ClimateScience601Module: LearningModule = {
       "title": "Climate Science Advanced Foundations",
       "type": "video",
       "duration": 14,
+      "lessonImagePrompt": "Imagen 4 prompt: A photorealistic, high-contrast image of a glowing holographic Earth globe hovering above a sleek, dark glass conference table. Complex data streams, weather patterns, and attribution models are projected in luminous blue and gold light around the globe. Cinematic lighting, 8k resolution, highly detailed.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A dynamic 3D animation showing a time-lapse of the Earth's atmosphere. The camera slowly zooms in as invisible greenhouse gases are highlighted in glowing neon colors, demonstrating causal pathways. The scene transitions to a high-tech control room where scientists analyze the data on massive curved screens. Smooth camera movements, cinematic depth of field.",
       "learningAids": [
         {
           "id": "climate-science-601-l01-a1",
@@ -47,44 +49,47 @@ export const ClimateScience601Module: LearningModule = {
           "id": "climate-science-601-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "In this lesson, we will explore the advanced boundaries of Climate Science. We will focus on important concepts such as climate system attribution modeling, which helps us understand how different factors contribute to climate change. Additionally, we will discuss risk projection and adaptation planning, which are essential for preparing for and responding to the impacts of climate change. By the end of this lesson, you will have a clearer understanding of how these elements work together to shape our approach to climate science.\nContext recap: In this lesson, we will explore the advanced boundaries of Climate Science. We will focus on important concepts such as climate system attribution modeling, which helps us understand how different factors contribute to climate change. Additionally, we will discuss risk projection and adaptation planning, which are essential for preparing for and responding to the impacts of climate change. By the end of this lesson, you will have a clearer understanding of how these elements work together to shape our approach to climate science."
+          "content": "Welcome to the advanced boundaries of Climate Science. In this module, we focus on climate system attribution modeling, a critical tool for isolating and quantifying how specific anthropogenic and natural factors drive climate anomalies. We will also examine risk projection and adaptation planning, essential frameworks for building systemic resilience. By mastering these elements, you will develop a rigorous, evidence-based approach to modern climate challenges."
         },
         {
           "id": "climate-science-601-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different factors that influence climate change. We will also look at uncertainty ranges, which help us understand the limits of our knowledge in climate science. Additionally, we will examine system dependencies, which are the ways in which different components of the climate system interact with each other. This foundational knowledge is crucial for effective intervention planning, allowing us to make informed decisions about how to address climate challenges.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different factors that influence climate change. We will also look at uncertainty ranges, which help us understand the limits of our knowledge in climate science. Additionally, we will examine system dependencies, which are the ways in which different components of the climate system interact with each other. This foundational knowledge is crucial for effective intervention planning, allowing us to make informed decisions about how to address climate challenges."
+          "content": "Effective climate intervention requires mapping complex causal pathways—the intricate connections between atmospheric, oceanic, and terrestrial factors. In this section, we analyze uncertainty ranges to understand the statistical limits of our predictive models. By examining system dependencies, we can identify how a shift in one climate component cascades through the entire system, allowing us to design interventions that account for both expected outcomes and unforeseen variables."
         },
         {
           "id": "climate-science-601-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "In this recap, we will emphasize the importance of evidence thresholds in climate science. Every claim we make must be supported by measurable indicators, which are specific data points that we can observe and analyze. We will also discuss confidence bounds, which indicate how certain we are about our findings. Lastly, we will highlight the need for review checkpoints, which are critical moments for evaluating our progress and ensuring that our conclusions are based on solid evidence. This approach helps maintain the integrity of our scientific work.\nContext recap: In this recap, we will emphasize the importance of evidence thresholds in climate science. Every claim we make must be supported by measurable indicators, which are specific data points that we can observe and analyze. We will also discuss confidence bounds, which indicate how certain we are about our findings. Lastly, we will highlight the need for review checkpoints, which are critical moments for evaluating our progress and ensuring that our conclusions are based on solid evidence."
+          "content": "Scientific integrity relies on strict evidence thresholds. Every claim must be anchored by measurable indicators—quantifiable data points that withstand rigorous analysis. We utilize confidence bounds to communicate the certainty of our findings transparently. Finally, establishing review checkpoints ensures that our methodologies are continuously evaluated, maintaining the defensibility of our research in high-stakes environments."
         }
       ],
       "flashcards": [
         {
           "id": "climate-science-601-l01-f1",
           "front": "Climate System Attribution Modeling",
-          "back": "A specialization axis requiring explicit assumptions and measurable constraints."
+          "back": "A specialization axis requiring explicit assumptions and measurable constraints to link climate events to specific drivers."
         },
         {
           "id": "climate-science-601-l01-f2",
           "front": "Risk Projection And Adaptation Planning",
-          "back": "Execution architecture that determines reliability under stress."
+          "back": "Execution architecture that determines systemic reliability and resilience under environmental stress."
         },
         {
           "id": "climate-science-601-l01-f3",
           "front": "Mitigation Pathway And Policy Analysis",
-          "back": "Evaluation discipline for identifying true gains and hidden costs."
+          "back": "An evaluation discipline for identifying true ecological gains and hidden socioeconomic costs."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/climate-science-601-l01.png"
     },
     {
       "id": "climate-science-601-l02",
       "title": "Climate Science Specialist Methods Lab",
       "type": "interactive",
       "duration": 17,
+      "lessonImagePrompt": "Imagen 4 prompt: A modern, brightly lit laboratory environment featuring a large interactive digital whiteboard displaying complex flowcharts and control gate architectures. A diverse group of adult professionals in smart-casual attire are actively discussing the diagrams. Photorealistic, sharp focus, professional atmosphere.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A sleek, fast-paced motion graphics sequence illustrating a workflow stress test. A glowing data packet moves through a digital pipeline, encountering 'stress' barriers (red alerts). The system dynamically reroutes the packet through a 'control gate' (green shield), demonstrating resilience. High-tech aesthetic, smooth transitions.",
       "learningAids": [
         {
           "id": "climate-science-601-l02-a1",
@@ -98,13 +103,13 @@ export const ClimateScience601Module: LearningModule = {
           "id": "climate-science-601-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "In this interactive segment, learners will have the opportunity to design specialized workflows that are tailored to specific climate science tasks. These workflows will be put to the test through stress-testing, where we will simulate adverse scenarios to see how well they perform under pressure. This hands-on experience is vital for understanding how to create effective strategies that can withstand real-world challenges in climate science.\nContext recap: In this interactive segment, learners will have the opportunity to design specialized workflows that are tailored to specific climate science tasks. These workflows will be put to the test through stress-testing, where we will simulate adverse scenarios to see how well they perform under pressure. This hands-on experience is vital for understanding how to create effective strategies that can withstand real-world challenges in climate science."
+          "content": "In this interactive lab, you will design specialized workflows tailored to complex climate science tasks, such as rapid attribution studies or localized risk assessments. These workflows will undergo rigorous stress-testing against simulated adverse scenarios—such as sudden data loss or extreme weather anomalies. This hands-on practice is vital for engineering robust strategies that remain functional and reliable under real-world pressures."
         },
         {
           "id": "climate-science-601-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "In this recap, we will discuss the architecture of control gates within our workflows. These control gates are essential for integrating various checkpoints, which are points where we assess our progress and make necessary adjustments. We will also cover rollback criteria, which allow us to revert to a previous state if something goes wrong. Additionally, we will explore threshold-based escalation, which helps us determine when to take further action based on specific indicators. Understanding these components is crucial for effective workflow management in climate science.\nContext recap: In this recap, we will discuss the architecture of control gates within our workflows. These control gates are essential for integrating various checkpoints, which are points where we assess our progress and make necessary adjustments. We will also cover rollback criteria, which allow us to revert to a previous state if something goes wrong. Additionally, we will explore threshold-based escalation, which helps us determine when to take further action based on specific indicators."
+          "content": "A resilient workflow relies on robust control gate architecture. Control gates act as mandatory checkpoints where progress is assessed against predefined metrics before proceeding. We will define rollback criteria, which dictate the exact conditions under which a system must revert to a safe baseline. Additionally, threshold-based escalation protocols ensure that when risk indicators exceed acceptable limits, the issue is immediately elevated to the appropriate governance level."
         }
       ],
       "interactiveActivities": [
@@ -132,13 +137,16 @@ export const ClimateScience601Module: LearningModule = {
             }
           ]
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/climate-science-601-l02.png"
     },
     {
       "id": "climate-science-601-l03",
       "title": "Checkpoint 1: Specialist Methods",
       "type": "quiz",
       "duration": 10,
+      "lessonImagePrompt": "Imagen 4 prompt: A close-up of a digital tablet resting on a wooden desk, displaying a sophisticated multiple-choice quiz interface with climate data charts in the background. A cup of black coffee sits nearby. Warm, inviting lighting, photorealistic, highly detailed.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A conceptual animation showing a series of glowing locks clicking open one by one as a progress bar fills up, symbolizing the successful completion of a knowledge checkpoint. The background features subtle, abstract climate data visualizations. Smooth, satisfying motion.",
       "learningAids": [
         {
           "id": "climate-science-601-l03-a1",
@@ -348,13 +356,16 @@ export const ClimateScience601Module: LearningModule = {
           "correctOptionId": "b",
           "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/climate-science-601-l03.png"
     },
     {
       "id": "climate-science-601-l04",
       "title": "Climate Science Advanced Case Analysis",
       "type": "video",
       "duration": 14,
+      "lessonImagePrompt": "Imagen 4 prompt: A split-screen visual showing a thriving, green urban cityscape on one side and a flooded, storm-damaged city on the other. In the center, a glowing scale balances a stack of policy documents and a globe. Cinematic lighting, highly detailed, photorealistic.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A dynamic camera pan over a 3D topographical map. As the camera moves, different policy decisions are simulated visually—sea walls rising, green energy grids lighting up, and carbon emissions dissipating. Text overlays briefly highlight 'Cost', 'Safety', and 'Equity'. Professional documentary style.",
       "learningAids": [
         {
           "id": "climate-science-601-l04-a1",
@@ -368,19 +379,19 @@ export const ClimateScience601Module: LearningModule = {
           "id": "climate-science-601-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "In this lesson, we will frame a case that highlights the competing constraints involved in climate system attribution modeling. This involves analyzing how different factors contribute to climate change and understanding the various mitigation pathways available. We will also delve into policy analysis, which is the examination of different strategies and their potential impacts on climate action. By exploring these complex interactions, learners will gain insights into the challenges and opportunities in addressing climate change.\nContext recap: In this lesson, we will frame a case that highlights the competing constraints involved in climate system attribution modeling. This involves analyzing how different factors contribute to climate change and understanding the various mitigation pathways available. We will also delve into policy analysis, which is the examination of different strategies and their potential impacts on climate action. By exploring these complex interactions, learners will gain insights into the challenges and opportunities in addressing climate change."
+          "content": "In this lesson, we frame complex cases that highlight the competing constraints inherent in climate system attribution and mitigation. You will analyze how varying anthropogenic factors contribute to climate anomalies and evaluate the viability of different mitigation pathways. By dissecting these multifaceted scenarios, you will gain a deeper understanding of the friction between rapid climate action and socioeconomic stability."
         },
         {
           "id": "climate-science-601-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "In this practice section, learners will engage in comparing different options across several important dimensions. These dimensions include safety, which ensures that our choices do not pose risks to people or the environment; reliability, which assesses how consistently our options perform; cost, which considers the financial implications; equity, which examines fairness in the distribution of benefits and burdens; and governance, which looks at how decisions are made and implemented. This comparative analysis is essential for making informed decisions in climate science.\nContext recap: In this practice section, learners will engage in comparing different options across several important dimensions. These dimensions include safety, which ensures that our choices do not pose risks to people or the environment; reliability, which assesses how consistently our options perform; cost, which considers the financial implications; equity, which examines fairness in the distribution of benefits and burdens; and governance, which looks at how decisions are made and implemented. This comparative analysis is essential for making informed decisions in climate science."
+          "content": "Effective policy analysis requires rigorous tradeoff framing. You will practice comparing competing interventions across five critical dimensions: safety (minimizing ecological and human risk), reliability (consistency of performance under stress), cost (financial feasibility and economic impact), equity (fair distribution of benefits and burdens), and governance (enforceability and oversight). This multidimensional analysis is the cornerstone of defensible climate strategy."
         },
         {
           "id": "climate-science-601-l04-c3",
           "kind": "recap",
           "title": "Decision Memo Pattern",
-          "content": "In this recap, we will outline the key components of a decision memo pattern. Each recommendation made in climate science must include several critical elements: assumptions, which are the underlying beliefs that inform our decisions; evidence, which is the data and information that support our claims; risk controls, which are strategies to mitigate potential negative outcomes; and fallback plans, which are alternative strategies to implement if the initial plan does not succeed. Understanding these components is vital for effective decision-making in climate science.\nContext recap: In this recap, we will outline the key components of a decision memo pattern. Each recommendation made in climate science must include several critical elements: assumptions, which are the underlying beliefs that inform our decisions; evidence, which is the data and information that support our claims; risk controls, which are strategies to mitigate potential negative outcomes; and fallback plans, which are alternative strategies to implement if the initial plan does not succeed. Understanding these components is vital for effective decision-making in climate science."
+          "content": "To formalize your recommendations, we utilize the decision memo pattern. A professional climate science memo must explicitly state its underlying assumptions, present verifiable evidence, outline robust risk controls, and detail actionable fallback plans. Mastering this format ensures your strategic recommendations are transparent, accountable, and prepared for intense scrutiny by stakeholders and policymakers."
         }
       ]
     },
@@ -389,6 +400,8 @@ export const ClimateScience601Module: LearningModule = {
       "title": "Climate Science Simulation Clinic",
       "type": "interactive",
       "duration": 18,
+      "lessonImagePrompt": "Imagen 4 prompt: A first-person perspective of a high-tech simulation dashboard. The screen displays global temperature heatmaps, resource allocation sliders, and real-time risk alerts in red and yellow. The environment is a dimly lit, modern command center. Photorealistic, 8k resolution.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A fast-paced montage of a digital simulation running through various climate scenarios. Years tick by rapidly on a digital clock as global temperatures fluctuate. The user interface shows sliders being adjusted, immediately altering the visual outcome of the simulated Earth. High tension, cinematic score visual style.",
       "learningAids": [
         {
           "id": "climate-science-601-l05-a1",
@@ -402,13 +415,13 @@ export const ClimateScience601Module: LearningModule = {
           "id": "climate-science-601-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "In this interactive practice, learners will operate scenario controls, which are tools that allow us to manage different climate scenarios. While doing this, it is important to balance performance, which refers to how well our strategies achieve desired outcomes, with governance constraints, which are the rules and guidelines that ensure our actions are responsible and ethical. This balance is crucial for effective climate management and decision-making.\nContext recap: In this interactive practice, learners will operate scenario controls, which are tools that allow us to manage different climate scenarios. While doing this, it is important to balance performance, which refers to how well our strategies achieve desired outcomes, with governance constraints, which are the rules and guidelines that ensure our actions are responsible and ethical. This balance is crucial for effective climate management and decision-making."
+          "content": "In this simulation clinic, you will take the helm of live scenario controls, managing dynamic climate crises in real-time. Your primary challenge will be balancing performance—achieving rapid emission reductions or adaptation milestones—with strict governance constraints. You must navigate budget limits, public resistance, and ecological side-effects, making split-second decisions that mirror the pressures of executive climate leadership."
         },
         {
           "id": "climate-science-601-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "In this recap, we will discuss the importance of adaptive response design in climate science. Effective responses to climate challenges must be able to update control gates, which are mechanisms that help us manage our strategies, without losing traceability or accountability. This means that we should be able to track our decisions and ensure that we are responsible for our actions. Understanding how to design adaptive responses is essential for navigating the complexities of climate science.\nContext recap: In this recap, we will discuss the importance of adaptive response design in climate science. Effective responses to climate challenges must be able to update control gates, which are mechanisms that help us manage our strategies, without losing traceability or accountability. This means that we should be able to track our decisions and ensure that we are responsible for our actions. Understanding how to design adaptive responses is essential for navigating the complexities of climate science."
+          "content": "A successful simulation run hinges on adaptive response design. As conditions evolve, you must dynamically update your control gates and intervention strategies without sacrificing traceability or accountability. This means maintaining a clear audit trail of why a strategy was pivoted mid-crisis. Mastering adaptive response ensures that your climate governance remains flexible yet entirely defensible."
         }
       ],
       "interactiveActivities": [
@@ -418,13 +431,16 @@ export const ClimateScience601Module: LearningModule = {
           "title": "Adverse-Condition Decision Run",
           "description": "Run a high-pressure climate science scenario and tune controls under uncertainty."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/climate-science-601-l05.png"
     },
     {
       "id": "climate-science-601-l06",
       "title": "Checkpoint 2: Case and Simulation Mastery",
       "type": "quiz",
       "duration": 11,
+      "lessonImagePrompt": "Imagen 4 prompt: A sleek, metallic vault door slightly ajar, revealing a glowing, futuristic server room inside. The image symbolizes unlocking advanced mastery and securing knowledge. Cinematic lighting, photorealistic, highly detailed.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A visual metaphor of a complex puzzle assembling itself in mid-air. The pieces feature snippets of climate data, policy documents, and simulation graphs. As the final piece clicks into place, the puzzle transforms into a glowing, unified globe. Smooth, elegant animation.",
       "learningAids": [
         {
           "id": "climate-science-601-l06-a1",
@@ -536,111 +552,114 @@ export const ClimateScience601Module: LearningModule = {
         },
         {
           "id": "climate-science-601-l06-q5",
-          "text": "What is the best way to compare competing interventions in advanced Earth Science?",
-          "skillId": "climate-science-601-skill-advanced-5",
+          "text": "During a high-pressure climate simulation, what is the primary purpose of a rollback trigger?",
+          "skillId": "climate-science-601-skill-sim1",
           "options": [
             {
               "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
+              "text": "To assign blame to specific stakeholders"
             },
             {
               "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
+              "text": "To limit the blast radius under adverse outcomes"
             },
             {
               "id": "c",
-              "text": "Switch metrics after results arrive"
+              "text": "To increase the speed of the simulation"
             },
             {
               "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
+              "text": "To bypass governance gates"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
+          "explanation": "A rollback trigger is designed to revert systems to a safe state, limiting damage when adverse outcomes occur."
         },
         {
           "id": "climate-science-601-l06-q6",
-          "text": "In high-stakes Climate Science Research and Leadership execution, which communication protocol is strongest?",
-          "skillId": "climate-science-601-skill-advanced-6",
+          "text": "When presenting a climate adaptation case to stakeholders, how should uncertainty be handled?",
+          "skillId": "climate-science-601-skill-sim2",
           "options": [
             {
               "id": "a",
-              "text": "Broadcast conclusions without assumptions"
+              "text": "Hide it to project absolute confidence"
             },
             {
               "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
+              "text": "Disclose uncertainty bounds alongside evidence and assumptions"
             },
             {
               "id": "c",
-              "text": "Share only final outcomes after completion"
+              "text": "Only mention it if explicitly asked by the panel"
             },
             {
               "id": "d",
-              "text": "Limit updates to a single informal channel"
+              "text": "Exaggerate it to lower expectations"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
+          "explanation": "Defensible presentations require transparent disclosure of uncertainty bounds to maintain scientific integrity."
         },
         {
           "id": "climate-science-601-l06-q7",
-          "text": "A mature remediation loop in advanced Earth Science should prioritize:",
-          "skillId": "climate-science-601-skill-advanced-7",
+          "text": "What defines an effective adaptive response design in climate governance?",
+          "skillId": "climate-science-601-skill-sim3",
           "options": [
             {
               "id": "a",
-              "text": "Blame assignment without system updates"
+              "text": "Rigid adherence to initial plans regardless of new data"
             },
             {
               "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
+              "text": "Updating control gates dynamically without losing traceability or accountability"
             },
             {
               "id": "c",
-              "text": "One-time fixes without retesting"
+              "text": "Removing all constraints during a crisis to speed up action"
             },
             {
               "id": "d",
-              "text": "Issue closure based on elapsed time"
+              "text": "Delegating all decisions to automated systems"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
+          "explanation": "Adaptive response requires flexibility to update strategies while maintaining a clear audit trail and accountability."
         },
         {
           "id": "climate-science-601-l06-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Climate Science Research and Leadership?",
-          "skillId": "climate-science-601-skill-advanced-8",
+          "text": "In tradeoff framing for climate policy, which dimension specifically evaluates the fairness of benefit and burden distribution?",
+          "skillId": "climate-science-601-skill-sim4",
           "options": [
             {
               "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
+              "text": "Reliability"
             },
             {
               "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
+              "text": "Cost"
             },
             {
               "id": "c",
-              "text": "Ignore correlated failure modes"
+              "text": "Equity"
             },
             {
               "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
+              "text": "Safety"
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "correctOptionId": "c",
+          "explanation": "Equity examines how the impacts (both positive and negative) of a climate intervention are distributed across different populations."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/climate-science-601-l06.png"
     },
     {
       "id": "climate-science-601-l07",
       "title": "Climate Science Governance and Public Impact",
       "type": "video",
       "duration": 13,
+      "lessonImagePrompt": "Imagen 4 prompt: A diverse group of community leaders and scientists sitting in a circle in a modern, sunlit community center, looking at a large projected map of local climate impacts. The atmosphere is collaborative and serious. Photorealistic, highly detailed, warm natural lighting.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A conceptual animation showing a ripple effect in a pool of water. As the ripples spread, they touch different floating icons representing various communities and ecosystems. The camera tracks the ripples, illustrating the concept of impact distribution and interconnectedness. Slow motion, highly cinematic.",
       "learningAids": [
         {
           "id": "climate-science-601-l07-a1",
@@ -654,44 +673,47 @@ export const ClimateScience601Module: LearningModule = {
           "id": "climate-science-601-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "In this lesson, learners will explore how to map the distribution of impacts among different stakeholders. This involves identifying the benefits that some groups may receive, the burdens that others may face, and any delayed effects that might occur over time. Understanding these dynamics is crucial for ensuring that climate actions are equitable and just, as it helps us recognize who is affected by our decisions and how.\nContext recap: In this lesson, learners will explore how to map the distribution of impacts among different stakeholders. This involves identifying the benefits that some groups may receive, the burdens that others may face, and any delayed effects that might occur over time. Understanding these dynamics is crucial for ensuring that climate actions are equitable and just, as it helps us recognize who is affected by our decisions and how."
+          "content": "Climate interventions rarely affect all populations equally. In this lesson, we map the distribution of impacts across diverse stakeholders. We will analyze how to identify the immediate benefits afforded to certain groups, the disproportionate burdens placed on marginalized communities, and the delayed ecological effects that manifest over decades. Mastering impact distribution is essential for engineering climate solutions that are not only effective, but fundamentally just."
         },
         {
           "id": "climate-science-601-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "In this section, we will delve into the concept of accountability architecture in climate science. This involves ensuring that there is clear traceability of decisions made, which means we can track who made what decision and why. We will also discuss review rights, which allow stakeholders to assess and challenge decisions, and remediation obligations, which are responsibilities to address any negative impacts caused by those decisions. Integrating these elements is essential for fostering trust and transparency in climate governance.\nContext recap: In this section, we will delve into the concept of accountability architecture in climate science. This involves ensuring that there is clear traceability of decisions made, which means we can track who made what decision and why. We will also discuss review rights, which allow stakeholders to assess and challenge decisions, and remediation obligations, which are responsibilities to address any negative impacts caused by those decisions. Integrating these elements is essential for fostering trust and transparency in climate governance."
+          "content": "Justice-aware climate governance requires a robust accountability architecture. This framework ensures absolute decision traceability—meaning every policy choice can be tracked back to its evidence base and the specific leader who authorized it. We will explore the implementation of review rights, empowering stakeholders to challenge decisions, and remediation obligations, which legally bind organizations to correct negative impacts caused by their interventions."
         },
         {
           "id": "climate-science-601-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "At the end of our lesson, we will review a comprehensive checklist that connects important outcomes, ethical considerations, adherence to policies, and strategies for building resilience in our communities. This checklist will help ensure that we are making responsible decisions in climate science governance.\nContext recap: At the end of our lesson, we will review a comprehensive checklist that connects important outcomes, ethical considerations, adherence to policies, and strategies for building resilience in our communities. This checklist will help ensure that we are making responsible decisions in climate science governance."
+          "content": "We conclude with the Responsible Leadership Checklist, a comprehensive tool that synthesizes performance outcomes, ethical considerations, and policy adherence. This checklist serves as your final operational gate, ensuring that your climate strategies build systemic resilience while maintaining unwavering accountability to the public and the environment."
         }
       ],
       "flashcards": [
         {
           "id": "climate-science-601-l07-f1",
           "front": "Impact distribution",
-          "back": "How outcomes are allocated across populations and timescales."
+          "back": "How outcomes, benefits, and burdens are allocated across populations and timescales."
         },
         {
           "id": "climate-science-601-l07-f2",
           "front": "Decision traceability",
-          "back": "An auditable record of evidence, ownership, and rationale."
+          "back": "An auditable record of evidence, ownership, and rationale for every policy choice."
         },
         {
           "id": "climate-science-601-l07-f3",
           "front": "Responsible leadership",
-          "back": "Decision behavior balancing performance, accountability, and ethics."
+          "back": "Decision behavior balancing performance, accountability, and ethical obligations to stakeholders."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/climate-science-601-l07.png"
     },
     {
       "id": "climate-science-601-l08",
       "title": "Climate Science Capstone Defense Lab",
       "type": "interactive",
       "duration": 16,
+      "lessonImagePrompt": "Imagen 4 prompt: A professional standing at a podium in a grand, modern auditorium, confidently presenting a climate strategy to a panel of experts seated at a long desk. Large screens display complex climate models behind the presenter. Dramatic, cinematic lighting, photorealistic.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A dynamic camera circles a presenter in a high-tech boardroom. As the presenter speaks, holographic data charts and evidence logs appear in the air around them, visually reinforcing their arguments. The panel of experts nods in agreement. Professional, high-stakes atmosphere.",
       "learningAids": [
         {
           "id": "climate-science-601-l08-a1",
@@ -705,13 +727,13 @@ export const ClimateScience601Module: LearningModule = {
           "id": "climate-science-601-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "In this interactive activity, you will work together to create a detailed brief. This brief will include your claims about climate science, the evidence that supports those claims, the uncertainties you recognize, and the pathways for remediation that you propose. This exercise will help you practice organizing your thoughts and presenting them clearly.\nContext recap: In this interactive activity, you will work together to create a detailed brief. This brief will include your claims about climate science, the evidence that supports those claims, the uncertainties you recognize, and the pathways for remediation that you propose. This exercise will help you practice organizing your thoughts and presenting them clearly."
+          "content": "In this capstone activity, you will synthesize your knowledge to assemble a comprehensive defense brief. This document must articulate your core climate science claims, the empirical evidence supporting them, the acknowledged uncertainty bounds, and your proposed remediation pathways. Constructing this brief will test your ability to organize complex, multidimensional data into a coherent, persuasive, and scientifically rigorous narrative."
         },
         {
           "id": "climate-science-601-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "During this session, you will have the opportunity to practice your responses to questions and critiques that may come from experts in the field, governance representatives, and various stakeholders. This rehearsal will prepare you to confidently defend your ideas and engage in meaningful discussions about climate science.\nContext recap: During this session, you will have the opportunity to practice your responses to questions and critiques that may come from experts in the field, governance representatives, and various stakeholders. This rehearsal will prepare you to confidently defend your ideas and engage in meaningful discussions about climate science."
+          "content": "The final phase of your specialization is the Expert Panel Rehearsal. You will face simulated cross-examination from a panel representing scientific experts, governance bodies, and community stakeholders. This high-pressure rehearsal is designed to test your ability to defend your methodologies, articulate tradeoffs clearly, and maintain composure and scientific integrity under intense adversarial critique."
         }
       ],
       "interactiveActivities": [
@@ -721,7 +743,8 @@ export const ClimateScience601Module: LearningModule = {
           "title": "Expert Defense Panel",
           "description": "Defend specialization recommendations under adversarial cross-examination."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/climate-science-601-l08.png"
     }
   ]
 };

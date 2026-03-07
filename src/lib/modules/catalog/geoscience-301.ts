@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const Geoscience301Module: LearningModule = {
+export const geoscience_301_Module: LearningModule = {
   "id": "geoscience-301",
   "title": "Geoscience Systems and Governance",
   "description": "Level 301 curriculum in Geoscience, centered on tectonic and surface processes, earth materials analysis, hazard and risk interpretation, and resource and stewardship governance through case analysis, simulation, and checkpoint-driven mastery.",
@@ -14,7 +14,7 @@ export const Geoscience301Module: LearningModule = {
   ],
   "minAge": 16,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en",
@@ -38,8 +38,8 @@ export const Geoscience301Module: LearningModule = {
         {
           "id": "geoscience-301-l01-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use structured reasoning, map tradeoffs, and verify outcomes with metrics before finalizing."
+          "title": "Core Concepts Diagram",
+          "content": "A visual map connecting tectonic processes, surface processes, and earth materials analysis."
         }
       ],
       "chunks": [
@@ -47,36 +47,36 @@ export const Geoscience301Module: LearningModule = {
           "id": "geoscience-301-l01-c1",
           "kind": "concept",
           "title": "Scope and Vocabulary",
-          "content": "In this lesson, we will work together to create a common vocabulary that is crucial for grasping the concepts of Geoscience. By defining key terms and phrases, we will ensure that everyone is on the same page. Additionally, we will outline the specific areas we will be studying, which include tectonic processes—how the Earth's plates move and interact—surface processes like erosion and sedimentation, and the analysis of various earth materials such as rocks and minerals. Establishing this shared language will not only enhance our communication but also deepen our understanding of the fundamental ideas in Geoscience, making our learning experience more effective and enjoyable."
+          "content": "We'll start by building a shared vocabulary for key concepts like tectonic plates, erosion, and rock analysis. This ensures we all understand the fundamental forces shaping our planet. Imagine a blueprint of Earth's systems—we're learning to read it."
         },
         {
           "id": "geoscience-301-l01-c2",
           "kind": "concept",
           "title": "Causal Reasoning",
-          "content": "In this section, learners will explore how to identify and map out causal relationships. This means understanding how different factors are connected and recognizing any assumptions or limitations that may exist. Before designing any interventions, it is crucial to analyze these relationships to ensure effective solutions.\nContext recap: In this section, learners will explore how to identify and map out causal relationships. This means understanding how different factors are connected and recognizing any assumptions or limitations that may exist. Before designing any interventions, it is crucial to analyze these relationships to ensure effective solutions."
+          "content": "We'll learn to trace cause-and-effect relationships in Earth systems. For example, how does volcanic activity in one area affect the climate in another? Understanding these connections is key to predicting outcomes and designing effective solutions."
         },
         {
           "id": "geoscience-301-l01-c3",
           "kind": "recap",
           "title": "Evidence Standards",
-          "content": "In Geoscience, it is important to base our claims on solid evidence. This means that our statements should be supported by measurable indicators, which help us assess the reliability of our findings. Additionally, we will discuss the importance of establishing confidence ranges and review checkpoints to ensure that our conclusions are well-founded.\nContext recap: In Geoscience, it is important to base our claims on solid evidence. This means that our statements should be supported by measurable indicators, which help us assess the reliability of our findings. Additionally, we will discuss the importance of establishing confidence ranges and review checkpoints to ensure that our conclusions are well-founded."
+          "content": "In science, claims require proof. We'll focus on using measurable data to support our conclusions. This includes defining confidence levels and setting up review checkpoints to ensure our work is reliable and accurate."
         }
       ],
       "flashcards": [
         {
           "id": "geoscience-301-l01-f1",
-          "front": "tectonic and surface processes",
-          "back": "A core decision lens in Geoscience requiring explicit assumption control."
+          "front": "Tectonic and Surface Processes",
+          "back": "The large-scale movements of Earth's crust and the resulting changes to its surface, like mountain building and erosion."
         },
         {
           "id": "geoscience-301-l01-f2",
-          "front": "earth materials analysis",
-          "back": "Execution systems that determine reliability and repeatability."
+          "front": "Earth Materials Analysis",
+          "back": "The systematic process of identifying and classifying rocks, minerals, and soils to understand their properties and history."
         },
         {
           "id": "geoscience-301-l01-f3",
-          "front": "hazard and risk interpretation",
-          "back": "Evaluation process for distinguishing real gains from superficial wins."
+          "front": "Hazard and Risk Interpretation",
+          "back": "The process of evaluating potential dangers (hazards) and their likelihood of causing harm (risk) to communities and ecosystems."
         }
       ]
     },
@@ -88,9 +88,9 @@ export const Geoscience301Module: LearningModule = {
       "learningAids": [
         {
           "id": "geoscience-301-l02-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use structured reasoning, map tradeoffs, and verify outcomes with metrics before finalizing."
+          "type": "image",
+          "title": "Workflow Template",
+          "content": "A visual guide for building a repeatable scientific workflow, including roles, checkpoints, and success metrics."
         }
       ],
       "chunks": [
@@ -98,13 +98,13 @@ export const Geoscience301Module: LearningModule = {
           "id": "geoscience-301-l02-c1",
           "kind": "practice",
           "title": "Workflow Build",
-          "content": "In this interactive activity, learners will have the opportunity to build a workflow. This involves mapping out ownership roles, setting control gates to monitor progress, and defining measurable outcomes to evaluate success. This hands-on experience will help learners understand the importance of structured processes in Geoscience.\nContext recap: In this interactive activity, learners will have the opportunity to build a workflow. This involves mapping out ownership roles, setting control gates to monitor progress, and defining measurable outcomes to evaluate success. This hands-on experience will help learners understand the importance of structured processes in Geoscience."
+          "content": "In this lab, you'll design a step-by-step workflow for a geoscience project. You will assign team roles, create quality-control checkpoints, and define clear, measurable goals to track your success."
         },
         {
           "id": "geoscience-301-l02-c2",
           "kind": "recap",
           "title": "Readiness and Rollback",
-          "content": "In this recap, we will discuss how systems can be tested for potential failures. This involves stress-testing the systems to identify any weaknesses and determining rollback decision thresholds. Understanding these concepts is essential for ensuring that we can respond effectively to any challenges that may arise.\nContext recap: In this recap, we will discuss how systems can be tested for potential failures. This involves stress-testing the systems to identify any weaknesses and determining rollback decision thresholds. Understanding these concepts is essential for ensuring that we can respond effectively to any challenges that may arise."
+          "content": "A good plan also prepares for problems. We'll discuss how to stress-test your workflow to find weak points and establish clear rules for when to pause or 'roll back' a project to prevent major failures."
         }
       ],
       "interactiveActivities": [
@@ -142,9 +142,9 @@ export const Geoscience301Module: LearningModule = {
       "learningAids": [
         {
           "id": "geoscience-301-l03-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use structured reasoning, map tradeoffs, and verify outcomes with metrics before finalizing."
+          "type": "image",
+          "title": "Review Checklist",
+          "content": "Key concepts to review before the quiz: core models, causal reasoning, evidence standards, and workflow components."
         }
       ],
       "questions": [
@@ -197,56 +197,6 @@ export const Geoscience301Module: LearningModule = {
           ],
           "correctOptionId": "a",
           "explanation": "Reliable execution needs clear ownership and threshold-driven control points."
-        },
-        {
-          "id": "geoscience-301-l03-q3",
-          "text": "A defensible approach to hazard and risk interpretation requires:",
-          "skillId": "geoscience-301-skill-eval",
-          "options": [
-            {
-              "id": "a",
-              "text": "Anecdotal wins without comparison"
-            },
-            {
-              "id": "b",
-              "text": "Baseline comparison and side-effect analysis"
-            },
-            {
-              "id": "c",
-              "text": "Changing criteria after seeing results"
-            },
-            {
-              "id": "d",
-              "text": "Ignoring difficult cases"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Comparison and side-effect analysis prevent biased conclusions."
-        },
-        {
-          "id": "geoscience-301-l03-q4",
-          "text": "Mature resource and stewardship governance systems connect:",
-          "skillId": "geoscience-301-skill-governance",
-          "options": [
-            {
-              "id": "a",
-              "text": "Policy intent, measurable controls, and remediation pathways"
-            },
-            {
-              "id": "b",
-              "text": "Policy statements without accountability"
-            },
-            {
-              "id": "c",
-              "text": "Performance targets with no risk controls"
-            },
-            {
-              "id": "d",
-              "text": "Governance with no transparency"
-            }
-          ],
-          "correctOptionId": "a",
-          "explanation": "Effective governance links policy intent to measurable controls and corrective action."
         }
       ]
     },
@@ -258,9 +208,9 @@ export const Geoscience301Module: LearningModule = {
       "learningAids": [
         {
           "id": "geoscience-301-l04-a1",
-          "type": "mnemonic",
-          "title": "Guided Practice",
-          "content": "Use structured reasoning, map tradeoffs, and verify outcomes with metrics before finalizing."
+          "type": "image",
+          "title": "Case Study Framework",
+          "content": "Follow the C-T-R framework: Analyze the Context, map the Tradeoffs, and design a Recovery plan."
         }
       ],
       "chunks": [
@@ -268,36 +218,36 @@ export const Geoscience301Module: LearningModule = {
           "id": "geoscience-301-l04-c1",
           "kind": "example",
           "title": "Case Context",
-          "content": "In this case analysis, we will explore a particular region that is experiencing significant challenges, including seismic activity, erosion, and pressures on groundwater resources. These complex issues necessitate thoughtful and integrated decisions in the field of geoscience. As learners, you will engage in identifying the various competing objectives that different stakeholders may have, as well as assessing the risks associated with the existing systems. This process will not only enhance your understanding of geoscience but also develop your critical thinking and problem-solving skills, which are essential for addressing real-world challenges."
+          "content": "We'll analyze a real-world case study of a region facing seismic risks, coastal erosion, and groundwater shortages. Your task is to identify the conflicting goals of different groups (e.g., industry, residents, environmental agencies) and assess the risks of the current situation."
         },
         {
           "id": "geoscience-301-l04-c2",
           "kind": "concept",
           "title": "Tradeoff Matrix",
-          "content": "In this section, we will introduce the concept of a tradeoff matrix. This tool allows us to evaluate different options based on various criteria, including effectiveness, feasibility, risk, and the impact on stakeholders. By scoring these options, learners will gain insights into making informed decisions in geoscience.\nContext recap: In this section, we will introduce the concept of a tradeoff matrix. This tool allows us to evaluate different options based on various criteria, including effectiveness, feasibility, risk, and the impact on stakeholders. By scoring these options, learners will gain insights into making informed decisions in geoscience."
+          "content": "A tradeoff matrix is a powerful tool for making tough decisions. We'll use one to compare potential solutions. You'll score each option against criteria like cost, effectiveness, and public acceptance to find the most balanced approach."
         },
         {
           "id": "geoscience-301-l04-c3",
           "kind": "recap",
           "title": "Recovery Design",
-          "content": "In this recap, we will discuss how we can learn from failure patterns. By analyzing these patterns, we can develop safeguards and create response playbooks that outline how to react in similar situations in the future. This proactive approach is essential for improving our strategies and ensuring better outcomes.\nContext recap: In this recap, we will discuss how we can learn from failure patterns. By analyzing these patterns, we can develop safeguards and create response playbooks that outline how to react in similar situations in the future. This proactive approach is essential for improving our strategies and ensuring better outcomes."
+          "content": "We learn the most from what goes wrong. We'll analyze common failure patterns in geoscience projects to develop better safeguards. You'll help create a 'response playbook'—a clear, pre-planned set of actions for managing emergencies effectively."
         }
       ],
       "flashcards": [
         {
           "id": "geoscience-301-l04-f1",
-          "front": "Tradeoff matrix",
-          "back": "A structured method to compare options under competing priorities."
+          "front": "Tradeoff Matrix",
+          "back": "A table used to compare different options by scoring them against a set of important criteria, helping to visualize pros and cons."
         },
         {
           "id": "geoscience-301-l04-f2",
-          "front": "Failure pattern",
-          "back": "A recurring signal indicating a predictable risk mode."
+          "front": "Failure Pattern",
+          "back": "A recurring type of problem or weakness in a system that can be identified and predicted."
         },
         {
           "id": "geoscience-301-l04-f3",
-          "front": "Response playbook",
-          "back": "A predefined action pathway for safe and timely recovery."
+          "front": "Response Playbook",
+          "back": "A step-by-step guide with pre-approved actions designed to respond quickly and effectively to a specific incident or failure."
         }
       ]
     },
@@ -309,9 +259,9 @@ export const Geoscience301Module: LearningModule = {
       "learningAids": [
         {
           "id": "geoscience-301-l05-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use structured reasoning, map tradeoffs, and verify outcomes with metrics before finalizing."
+          "type": "image",
+          "title": "Simulation Dashboard",
+          "content": "An example of a simulation interface showing input variables (interventions) and output metrics (outcomes)."
         }
       ],
       "chunks": [
@@ -319,13 +269,13 @@ export const Geoscience301Module: LearningModule = {
           "id": "geoscience-301-l05-c1",
           "kind": "practice",
           "title": "Scenario Simulation",
-          "content": "In this interactive simulation, learners will have the chance to run multiple intervention scenarios while considering uncertainty. By comparing the outcomes of these different scenarios, learners will develop a deeper understanding of how various factors can influence results in geoscience.\nContext recap: In this interactive simulation, learners will have the chance to run multiple intervention scenarios while considering uncertainty. By comparing the outcomes of these different scenarios, learners will develop a deeper understanding of how various factors can influence results in geoscience."
+          "content": "Welcome to the simulation lab. Here, you'll test your proposed solutions from the case study. You can change variables, introduce uncertainties like unexpected weather events, and run multiple scenarios to see the long-term consequences of your decisions on a virtual landscape."
         },
         {
           "id": "geoscience-301-l05-c2",
           "kind": "recap",
           "title": "Debrief",
-          "content": "In this debrief, we will evaluate each simulation run based on how well we achieved our targets, any side effects that occurred, and whether we complied with governance standards. This reflective process will help learners understand the importance of assessment and accountability in geoscience practices.\nContext recap: In this debrief, we will evaluate each simulation run based on how well we achieved our targets, any side effects that occurred, and whether we complied with governance standards. This reflective process will help learners understand the importance of assessment and accountability in geoscience practices."
+          "content": "After each simulation, we'll hold a debrief. We will analyze the results: Did you meet your goals? Were there any unintended side effects? Did your plan follow the established rules and ethical guidelines? This review is crucial for learning and improving."
         }
       ],
       "interactiveActivities": [
@@ -350,111 +300,111 @@ export const Geoscience301Module: LearningModule = {
       "learningAids": [
         {
           "id": "geoscience-301-l06-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use structured reasoning, map tradeoffs, and verify outcomes with metrics before finalizing."
+          "type": "image",
+          "title": "Review Checklist",
+          "content": "Key concepts to review: tradeoff matrices, simulation debriefs, failure patterns, and response playbooks."
         }
       ],
       "questions": [
         {
           "id": "geoscience-301-l06-q1",
-          "text": "Which practice most improves decision quality in tectonic and surface processes?",
-          "skillId": "geoscience-301-skill-core",
+          "text": "What is the primary purpose of using a tradeoff matrix in a case analysis?",
+          "skillId": "geoscience-301-skill-analysis",
           "options": [
             {
               "id": "a",
-              "text": "Use implicit assumptions and no baseline"
+              "text": "To prove one option is perfect"
             },
             {
               "id": "b",
-              "text": "Define assumptions, constraints, and measurable indicators"
+              "text": "To systematically compare multiple options against consistent criteria"
             },
             {
               "id": "c",
-              "text": "Prioritize speed over evidence in all cases"
+              "text": "To speed up the decision by ignoring complex factors"
             },
             {
               "id": "d",
-              "text": "Ignore uncertainty and edge cases"
+              "text": "To assign blame after a failure"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Decision quality improves when assumptions, constraints, and measurement are explicit."
+          "explanation": "A tradeoff matrix provides a structured way to evaluate options based on multiple, often competing, criteria."
         },
         {
           "id": "geoscience-301-l06-q2",
-          "text": "At level 301, high-quality execution in earth materials analysis should include:",
-          "skillId": "geoscience-301-skill-execution",
+          "text": "In the debrief phase of a simulation, what is a key question to ask about side effects?",
+          "skillId": "geoscience-301-skill-evaluation",
           "options": [
             {
               "id": "a",
-              "text": "Owner mapping, checkpoints, and escalation thresholds"
+              "text": "Did the simulation run fast enough?"
             },
             {
               "id": "b",
-              "text": "No role clarity and ad-hoc decisions"
+              "text": "Did our intervention cause any unexpected negative impacts on other systems?"
             },
             {
               "id": "c",
-              "text": "No post-implementation review"
+              "text": "Was the user interface visually appealing?"
             },
             {
               "id": "d",
-              "text": "Untracked process changes"
-            }
-          ],
-          "correctOptionId": "a",
-          "explanation": "Reliable execution needs clear ownership and threshold-driven control points."
-        },
-        {
-          "id": "geoscience-301-l06-q3",
-          "text": "A defensible approach to hazard and risk interpretation requires:",
-          "skillId": "geoscience-301-skill-eval",
-          "options": [
-            {
-              "id": "a",
-              "text": "Anecdotal wins without comparison"
-            },
-            {
-              "id": "b",
-              "text": "Baseline comparison and side-effect analysis"
-            },
-            {
-              "id": "c",
-              "text": "Changing criteria after seeing results"
-            },
-            {
-              "id": "d",
-              "text": "Ignoring difficult cases"
+              "text": "Can we ignore the side effects if the main goal was met?"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Comparison and side-effect analysis prevent biased conclusions."
+          "explanation": "A critical part of a debrief is analyzing unintended consequences to ensure a solution is holistically beneficial."
         },
         {
-          "id": "geoscience-301-l06-q4",
-          "text": "Mature resource and stewardship governance systems connect:",
-          "skillId": "geoscience-301-skill-governance",
+          "id": "geoscience-301-l06-q3",
+          "text": "Identifying a 'failure pattern' is valuable because it allows teams to:",
+          "skillId": "geoscience-301-skill-risk",
           "options": [
             {
               "id": "a",
-              "text": "Policy intent, measurable controls, and remediation pathways"
+              "text": "Ignore the problem since it has happened before"
             },
             {
               "id": "b",
-              "text": "Policy statements without accountability"
+              "text": "Blame the person who made the last mistake"
             },
             {
               "id": "c",
-              "text": "Performance targets with no risk controls"
+              "text": "Develop proactive safeguards and response playbooks"
             },
             {
               "id": "d",
-              "text": "Governance with no transparency"
+              "text": "Stop all future projects to avoid risk"
             }
           ],
-          "correctOptionId": "a",
-          "explanation": "Effective governance links policy intent to measurable controls and corrective action."
+          "correctOptionId": "c",
+          "explanation": "Recognizing recurring failure modes enables the creation of preventative measures and prepared responses."
+        },
+        {
+          "id": "geoscience-301-l06-q4",
+          "text": "A 'response playbook' is designed to:",
+          "skillId": "geoscience-301-skill-planning",
+          "options": [
+            {
+              "id": "a",
+              "text": "Be a long, academic report written after an incident"
+            },
+            {
+              "id": "b",
+              "text": "Document every possible thing that could ever go wrong"
+            },
+            {
+              "id": "c",
+              "text": "Provide a clear, pre-planned set of actions to manage a specific, known risk"
+            },
+            {
+              "id": "d",
+              "text": "Replace the need for expert judgment during a crisis"
+            }
+          ],
+          "correctOptionId": "c",
+          "explanation": "A playbook is a practical, actionable guide for responding to a foreseen type of incident efficiently and safely."
         }
       ]
     },
@@ -467,8 +417,8 @@ export const Geoscience301Module: LearningModule = {
         {
           "id": "geoscience-301-l07-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use structured reasoning, map tradeoffs, and verify outcomes with metrics before finalizing."
+          "title": "Stakeholder Impact Map",
+          "content": "A diagram showing how to map the positive and negative impacts of a project across different community groups."
         }
       ],
       "chunks": [
@@ -476,36 +426,36 @@ export const Geoscience301Module: LearningModule = {
           "id": "geoscience-301-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact",
-          "content": "In this section, learners will explore how to map the distribution of benefits and burdens among different stakeholder groups. Understanding the impact of decisions on various stakeholders is crucial for making informed and equitable choices in geoscience governance.\nContext recap: In this section, learners will explore how to map the distribution of benefits and burdens among different stakeholder groups. Understanding the impact of decisions on various stakeholders is crucial for making informed and equitable choices in geoscience governance."
+          "content": "Decisions in geoscience rarely affect everyone equally. We'll learn to map the 'impact distribution'—analyzing who benefits from a project and who bears the costs or risks. This is essential for making fair and equitable choices."
         },
         {
           "id": "geoscience-301-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "In this concept, we will discuss the importance of accountability in decision-making processes. This includes ensuring that decisions are traceable, that stakeholders have review rights, and that there are clear obligations for remediation if necessary. These elements are vital for maintaining trust and integrity in geoscience governance.\nContext recap: In this concept, we will discuss the importance of accountability in decision-making processes. This includes ensuring that decisions are traceable, that stakeholders have review rights, and that there are clear obligations for remediation if necessary. These elements are vital for maintaining trust and integrity in geoscience governance."
+          "content": "Good governance requires accountability. We'll design an 'accountability architecture' that ensures every major decision is traceable. This includes recording the evidence used, giving stakeholders a right to review, and defining who is responsible for fixing any negative outcomes."
         },
         {
           "id": "geoscience-301-l07-c3",
           "kind": "recap",
           "title": "Responsible Execution",
-          "content": "At the end of our project, we will use a final checklist to ensure that we have carefully considered our performance, managed any risks, and thought about the ethical impact of our actions. This checklist will help us make responsible decisions that benefit everyone involved.\nContext recap: At the end of our project, we will use a final checklist to ensure that we have carefully considered our performance, managed any risks, and thought about the ethical impact of our actions. This checklist will help us make responsible decisions that benefit everyone involved."
+          "content": "Responsible execution means combining effective results with ethical conduct. We'll use a final checklist to review our project's performance, risk management, and overall fairness, ensuring our work is both successful and principled."
         }
       ],
       "flashcards": [
         {
           "id": "geoscience-301-l07-f1",
-          "front": "Impact distribution",
-          "back": "How outcomes are allocated across people, systems, and time."
+          "front": "Impact Distribution",
+          "back": "An analysis of how the positive and negative consequences of a decision are spread across different groups and over time."
         },
         {
           "id": "geoscience-301-l07-f2",
-          "front": "Decision traceability",
-          "back": "An auditable explanation of evidence, ownership, and rationale."
+          "front": "Decision Traceability",
+          "back": "A clear, auditable record of how a decision was made, including the data, reasoning, and people involved."
         },
         {
           "id": "geoscience-301-l07-f3",
-          "front": "Responsible execution",
-          "back": "Delivery mode that combines effectiveness with accountability and fairness."
+          "front": "Responsible Execution",
+          "back": "Achieving project goals while upholding ethical standards, ensuring fairness, and being accountable for outcomes."
         }
       ]
     },
@@ -517,9 +467,9 @@ export const Geoscience301Module: LearningModule = {
       "learningAids": [
         {
           "id": "geoscience-301-l08-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use structured reasoning, map tradeoffs, and verify outcomes with metrics before finalizing."
+          "type": "image",
+          "title": "Capstone Charter Template",
+          "content": "A fillable template for your Capstone Charter, with sections for objectives, constraints, metrics, and governance."
         }
       ],
       "chunks": [
@@ -527,13 +477,13 @@ export const Geoscience301Module: LearningModule = {
           "id": "geoscience-301-l08-c1",
           "kind": "practice",
           "title": "Capstone Charter",
-          "content": "In this activity, you will create a Capstone Charter. This document will outline your project's objectives, the constraints you might face, the metrics you will use to measure success, and the governance triggers that will guide your decisions throughout the project.\nContext recap: In this activity, you will create a Capstone Charter. This document will outline your project's objectives, the constraints you might face, the metrics you will use to measure success, and the governance triggers that will guide your decisions throughout the project."
+          "content": "In this lab, you will draft a 'Capstone Charter' for your final project. This is your project's constitution. It will clearly define your goals, limitations (like budget or time), how you'll measure success, and the rules that will guide your decisions."
         },
         {
           "id": "geoscience-301-l08-c2",
           "kind": "recap",
           "title": "Defense Readiness",
-          "content": "As part of your preparation, you will get ready to defend your decisions. This means you will practice explaining your choices and how they align with technical standards and governance rules. Being able to articulate your reasoning is important for gaining support and understanding from others.\nContext recap: As part of your preparation, you will get ready to defend your decisions. This means you will practice explaining your choices and how they align with technical standards and governance rules. Being able to articulate your reasoning is important for gaining support and understanding from others."
+          "content": "A key part of your capstone is defending your plan. You will prepare to justify your choices with evidence and show how your project aligns with technical standards and ethical guidelines. This prepares you for presenting your work to stakeholders."
         }
       ],
       "interactiveActivities": [
@@ -547,6 +497,122 @@ export const Geoscience301Module: LearningModule = {
             "List at least three measurable success indicators.",
             "Define escalation and corrective-action criteria."
           ]
+        }
+      ]
+    },
+    {
+      "id": "geoscience-301-l09",
+      "title": "Checkpoint 3: Capstone Defense",
+      "type": "quiz",
+      "duration": 10,
+      "learningAids": [
+        {
+          "id": "geoscience-301-l09-a1",
+          "type": "image",
+          "title": "Defense Rubric",
+          "content": "Evaluation criteria for the capstone: clarity of objectives, strength of evidence, stakeholder consideration, and accountability plan."
+        }
+      ],
+      "questions": [
+        {
+          "id": "geoscience-301-l09-q1",
+          "text": "When defining 'impact distribution' for a capstone project, what are you primarily analyzing?",
+          "skillId": "geoscience-301-skill-governance",
+          "options": [
+            {
+              "id": "a",
+              "text": "The project's budget distribution"
+            },
+            {
+              "id": "b",
+              "text": "How the project's benefits and burdens are spread across different stakeholder groups"
+            },
+            {
+              "id": "c",
+              "text": "The geographic distribution of rock samples"
+            },
+            {
+              "id": "d",
+              "text": "The distribution of tasks among team members"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Impact distribution is about the equitable allocation of outcomes among people and communities."
+        },
+        {
+          "id": "geoscience-301-l09-q2",
+          "text": "A strong Capstone Charter must include 'governance triggers'. What is an example of such a trigger?",
+          "skillId": "geoscience-301-skill-accountability",
+          "options": [
+            {
+              "id": "a",
+              "text": "The project's start date"
+            },
+            {
+              "id": "b",
+              "text": "A rule that requires a formal review if the project exceeds its budget by 15%"
+            },
+            {
+              "id": "c",
+              "text": "The name of the project manager"
+            },
+            {
+              "id": "d",
+              "text": "The color scheme for the final presentation"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "A governance trigger is a predefined condition that requires a specific action or review, ensuring accountability."
+        },
+        {
+          "id": "geoscience-301-l09-q3",
+          "text": "'Decision traceability' is a key principle of accountability. What does it require you to do?",
+          "skillId": "geoscience-301-skill-communication",
+          "options": [
+            {
+              "id": "a",
+              "text": "Make all decisions by yourself to be efficient"
+            },
+            {
+              "id": "b",
+              "text": "Keep a clear record of the evidence, reasoning, and ownership behind each major decision"
+            },
+            {
+              "id": "c",
+              "text": "Only make decisions that are popular with all stakeholders"
+            },
+            {
+              "id": "d",
+              "text": "Erase records of decisions that lead to poor outcomes"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Traceability ensures that the decision-making process is transparent and can be audited or reviewed later."
+        },
+        {
+          "id": "geoscience-301-l09-q4",
+          "text": "What is the main purpose of the 'Defense Readiness' practice in the Capstone Planning Lab?",
+          "skillId": "geoscience-301-skill-planning",
+          "options": [
+            {
+              "id": "a",
+              "text": "To memorize scientific facts for the final exam"
+            },
+            {
+              "id": "b",
+              "text": "To create a complex visual presentation"
+            },
+            {
+              "id": "c",
+              "text": "To prepare to justify project decisions with evidence and align them with established standards"
+            },
+            {
+              "id": "d",
+              "text": "To ensure the project is completed ahead of schedule"
+            }
+          ],
+          "correctOptionId": "c",
+          "explanation": "Defense readiness is about being prepared to articulate and defend the rationale and integrity of your work."
         }
       ]
     }

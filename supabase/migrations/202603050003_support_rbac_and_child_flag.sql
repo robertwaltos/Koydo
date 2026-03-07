@@ -39,10 +39,8 @@ update public.user_profiles
 set is_child = (extract(year from age(current_date, birth_date)) < 13)
 where birth_date is not null;
 
--- Support provisions: allow provisioning support staff via admin_provisions
--- Extend access_level to include 'support' as a valid value
-comment on column public.admin_provisions.access_level is
-  'Access level: full_access, read_only, or support';
+-- Note: admin_provisions table is created separately if needed.
+-- The access_level column supports: full_access, read_only, or support.
 
 -- Index for efficient support staff lookups
 create index if not exists idx_user_profiles_is_support

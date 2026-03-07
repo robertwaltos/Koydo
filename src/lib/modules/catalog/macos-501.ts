@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const Macos501Module: LearningModule = {
+export const macos_501_Module: LearningModule = {
   "id": "macos-501",
   "title": "Macos Specialization Studio",
   "description": "Post-401 specialization in Macos, focused on macos systems diagnostics, macos operations and execution design, macos impact and tradeoff analysis, and macos governance and leadership through advanced casework, simulation, and defense-based checkpoints.",
@@ -14,7 +14,7 @@ export const Macos501Module: LearningModule = {
   ],
   "minAge": 17,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en",
@@ -38,8 +38,8 @@ export const Macos501Module: LearningModule = {
         {
           "id": "macos-501-l01-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "System Boundary Diagram",
+          "content": "A visual diagram showing a complex macOS environment with clearly demarcated system boundaries, inputs, outputs, and external dependencies. This illustrates the core concepts of scope design."
         }
       ],
       "chunks": [
@@ -47,19 +47,19 @@ export const Macos501Module: LearningModule = {
           "id": "macos-501-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "In this lesson, we will explore the concept of advanced scope boundaries in Macos. We will focus on how to diagnose Macos systems effectively and design operations and execution processes that are efficient and reliable. Understanding these boundaries is crucial for ensuring that our systems function optimally and can handle various tasks without issues.\nContext recap: In this lesson, we will explore the concept of advanced scope boundaries in Macos. We will focus on how to diagnose Macos systems effectively and design operations and execution processes that are efficient and reliable. Understanding these boundaries is crucial for ensuring that our systems function optimally and can handle various tasks without issues."
+          "content": "Defines the principles of scope and boundary design for complex macOS systems. This involves establishing clear parameters for diagnostics and operational design to ensure system integrity and performance under specified constraints."
         },
         {
           "id": "macos-501-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different events or actions. We will also look at uncertainty ranges, which help us understand the limits of our predictions, and identify system dependencies, which are the relationships between different components in a system. This foundational knowledge is essential for planning effective interventions.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different events or actions. We will also look at uncertainty ranges, which help us understand the limits of our predictions, and identify system dependencies, which are the relationships between different components in a system. This foundational knowledge is essential for planning effective interventions."
+          "content": "Introduces methods for mapping causal pathways and modeling uncertainty. Learners will identify critical system dependencies and quantify uncertainty ranges, forming a rigorous foundation for intervention planning and impact analysis."
         },
         {
           "id": "macos-501-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "In our recap, we emphasize that all claims made during our analysis should be linked to measurable indicators. This means we need to have clear evidence to support our statements. Additionally, we will discuss the importance of confidence bounds, which help us understand the reliability of our data, and review checkpoints to ensure we are on track with our objectives.\nContext recap: In our recap, we emphasize that all claims made during our analysis should be linked to measurable indicators. This means we need to have clear evidence to support our statements. Additionally, we will discuss the importance of confidence bounds, which help us understand the reliability of our data, and review checkpoints to ensure we are on track with our objectives."
+          "content": "Establishes the requirement for evidence-based analysis. All claims must be linked to measurable indicators with explicit confidence bounds. This section introduces review checkpoints as a mechanism for validating analytical rigor."
         }
       ],
       "flashcards": [
@@ -89,8 +89,8 @@ export const Macos501Module: LearningModule = {
         {
           "id": "macos-501-l02-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Workflow Design Canvas",
+          "content": "A structured template for designing a workflow, including sections for checkpoints, rollback triggers, escalation rules, and owner mapping."
         }
       ],
       "chunks": [
@@ -98,13 +98,13 @@ export const Macos501Module: LearningModule = {
           "id": "macos-501-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "In this interactive practice, learners will have the opportunity to design specialized workflows. These workflows will be tested under challenging scenarios to see how well they perform. This hands-on experience is vital for understanding how to create robust systems that can withstand various pressures and challenges.\nContext recap: In this interactive practice, learners will have the opportunity to design specialized workflows. These workflows will be tested under challenging scenarios to see how well they perform. This hands-on experience is vital for understanding how to create robust systems that can withstand various pressures and challenges."
+          "content": "Learners design and stress-test specialized operational workflows. This hands-on lab involves creating processes for macOS management that are then subjected to simulated high-load, fault, and edge-case scenarios to evaluate their resilience."
         },
         {
           "id": "macos-501-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "In our recap, we will discuss how workflows should include important elements like checkpoints, which are points where we can assess progress, rollback criteria that allow us to revert to previous states if needed, and threshold-based escalation, which helps us determine when to take further action based on specific criteria.\nContext recap: In our recap, we will discuss how workflows should include important elements like checkpoints, which are points where we can assess progress, rollback criteria that allow us to revert to previous states if needed, and threshold-based escalation, which helps us determine when to take further action based on specific criteria."
+          "content": "Recaps the principles of robust workflow design. Key architectural components include predefined checkpoints for progress validation, clear rollback criteria to mitigate failures, and threshold-based escalation pathways for incident management."
         }
       ],
       "interactiveActivities": [
@@ -247,106 +247,6 @@ export const Macos501Module: LearningModule = {
           ],
           "correctOptionId": "a",
           "explanation": "Governance maturity is the operational link between intent, measurement, and corrective action."
-        },
-        {
-          "id": "macos-501-l03-q5",
-          "text": "What is the best way to compare competing interventions in advanced Macos?",
-          "skillId": "macos-501-skill-advanced-5",
-          "options": [
-            {
-              "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
-            },
-            {
-              "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
-            },
-            {
-              "id": "c",
-              "text": "Switch metrics after results arrive"
-            },
-            {
-              "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
-        },
-        {
-          "id": "macos-501-l03-q6",
-          "text": "In high-stakes Macos Specialization Studio execution, which communication protocol is strongest?",
-          "skillId": "macos-501-skill-advanced-6",
-          "options": [
-            {
-              "id": "a",
-              "text": "Broadcast conclusions without assumptions"
-            },
-            {
-              "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
-            },
-            {
-              "id": "c",
-              "text": "Share only final outcomes after completion"
-            },
-            {
-              "id": "d",
-              "text": "Limit updates to a single informal channel"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
-        },
-        {
-          "id": "macos-501-l03-q7",
-          "text": "A mature remediation loop in advanced Macos should prioritize:",
-          "skillId": "macos-501-skill-advanced-7",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blame assignment without system updates"
-            },
-            {
-              "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
-            },
-            {
-              "id": "c",
-              "text": "One-time fixes without retesting"
-            },
-            {
-              "id": "d",
-              "text": "Issue closure based on elapsed time"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
-        },
-        {
-          "id": "macos-501-l03-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Macos Specialization Studio?",
-          "skillId": "macos-501-skill-advanced-8",
-          "options": [
-            {
-              "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
-            },
-            {
-              "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
-            },
-            {
-              "id": "c",
-              "text": "Ignore correlated failure modes"
-            },
-            {
-              "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
         }
       ]
     },
@@ -359,8 +259,8 @@ export const Macos501Module: LearningModule = {
         {
           "id": "macos-501-l04-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Tradeoff Analysis Matrix",
+          "content": "An example of a decision matrix comparing two potential system interventions across criteria like 'Cost', 'Security Posture', 'User Impact', and 'Implementation Time', with scores and justifications."
         }
       ],
       "chunks": [
@@ -368,19 +268,19 @@ export const Macos501Module: LearningModule = {
           "id": "macos-501-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "In this lesson, we will frame a case that highlights the competing constraints faced in Macos systems diagnostics. We will analyze the impacts and tradeoffs involved in making decisions within these systems. Understanding these constraints is essential for making informed choices that balance various factors effectively.\nContext recap: In this lesson, we will frame a case that highlights the competing constraints faced in Macos systems diagnostics. We will analyze the impacts and tradeoffs involved in making decisions within these systems. Understanding these constraints is essential for making informed choices that balance various factors effectively."
+          "content": "Frames a complex case study involving competing constraints in a macOS environment, such as performance vs. security or cost vs. reliability. The scenario is designed to challenge learners to perform nuanced impact and tradeoff analysis."
         },
         {
           "id": "macos-501-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "In this practice session, learners will compare different options based on several important dimensions, including safety, reliability, cost, equity, and governance. This comparison will help us understand the tradeoffs involved in each option and guide us in making the best decisions.\nContext recap: In this practice session, learners will compare different options based on several important dimensions, including safety, reliability, cost, equity, and governance. This comparison will help us understand the tradeoffs involved in each option and guide us in making the best decisions."
+          "content": "Learners practice comparing intervention options across multiple dimensions. This involves creating a decision matrix to evaluate choices based on safety, reliability, cost, equity, and governance compliance, making tradeoffs explicit."
         },
         {
           "id": "macos-501-l04-c3",
           "kind": "recap",
           "title": "Decision Memo Pattern",
-          "content": "In our recap, we will highlight that each recommendation made should include key components such as assumptions, which are the beliefs we hold to be true, evidence that supports our claims, risk controls to manage potential issues, and fallback plans that outline what to do if things do not go as expected.\nContext recap: In our recap, we will highlight that each recommendation made should include key components such as assumptions, which are the beliefs we hold to be true, evidence that supports our claims, risk controls to manage potential issues, and fallback plans that outline what to do if things do not go as expected."
+          "content": "Introduces a standardized pattern for a decision memo. This structure requires that every recommendation explicitly states its underlying assumptions, supporting evidence, risk controls, and contingency plans."
         }
       ]
     },
@@ -402,13 +302,13 @@ export const Macos501Module: LearningModule = {
           "id": "macos-501-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "In this interactive practice, learners will operate scenario controls, which are tools that help manage different situations. While doing this, they will need to balance performance, which is how well the system works, with governance constraints, which are the rules and regulations that must be followed. This balance is crucial for effective system management.\nContext recap: In this interactive practice, learners will operate scenario controls, which are tools that help manage different situations. While doing this, they will need to balance performance, which is how well the system works, with governance constraints, which are the rules and regulations that must be followed. This balance is crucial for effective system management."
+          "content": "In a live simulation, learners operate controls for a macOS system under dynamic conditions. The objective is to balance performance targets with evolving governance constraints, requiring real-time decision-making and adaptation."
         },
         {
           "id": "macos-501-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "In our recap, we will discuss how effective responses to challenges should update control gates, which are mechanisms that help manage system operations, without losing traceability or accountability. This means we need to ensure that all changes are documented and that we can track the decisions made throughout the process.\nContext recap: In our recap, we will discuss how effective responses to challenges should update control gates, which are mechanisms that help manage system operations, without losing traceability or accountability. This means we need to ensure that all changes are documented and that we can track the decisions made throughout the process."
+          "content": "Summarizes the principles of adaptive response. Effective strategies involve updating control gates and operational parameters in real-time while maintaining full traceability and accountability for every decision made during the simulation."
         }
       ],
       "interactiveActivities": [
@@ -416,7 +316,7 @@ export const Macos501Module: LearningModule = {
           "id": "macos-501-l05-act1",
           "type": "scenario",
           "title": "Adverse-Condition Decision Run",
-          "description": "Run a high-pressure macos scenario and tune controls under uncertainty."
+          "description": "Run a high-pressure macOS scenario involving a critical system failure. You must tune diagnostic, operational, and governance controls under uncertainty to restore stability while minimizing negative impact."
         }
       ]
     },
@@ -536,103 +436,103 @@ export const Macos501Module: LearningModule = {
         },
         {
           "id": "macos-501-l06-q5",
-          "text": "What is the best way to compare competing interventions in advanced Macos?",
-          "skillId": "macos-501-skill-advanced-5",
+          "text": "In the Tradeoff Framing practice, what is the primary purpose of using a multi-dimensional matrix (e.g., safety, cost, reliability)?",
+          "skillId": "macos-501-skill-case-tradeoff",
           "options": [
             {
               "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
+              "text": "To prove one option is universally superior"
             },
             {
               "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
+              "text": "To make the decision-making process more complex"
             },
             {
               "id": "c",
-              "text": "Switch metrics after results arrive"
+              "text": "To make tradeoffs explicit and ensure a balanced decision"
             },
             {
               "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
+              "text": "To focus solely on the financial cost of each option"
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
+          "correctOptionId": "c",
+          "explanation": "A tradeoff matrix is used to systematically evaluate options against multiple, often competing, criteria, making the rationale for the final decision transparent and defensible."
         },
         {
           "id": "macos-501-l06-q6",
-          "text": "In high-stakes Macos Specialization Studio execution, which communication protocol is strongest?",
-          "skillId": "macos-501-skill-advanced-6",
+          "text": "During the 'Live Scenario Controls' simulation, an unexpected system degradation occurs. What is the most appropriate adaptive response?",
+          "skillId": "macos-501-skill-sim-adaptive",
           "options": [
             {
               "id": "a",
-              "text": "Broadcast conclusions without assumptions"
+              "text": "Ignore the degradation and hope it resolves itself"
             },
             {
               "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
+              "text": "Immediately apply the most extreme control measure available"
             },
             {
               "id": "c",
-              "text": "Share only final outcomes after completion"
+              "text": "Analyze telemetry, apply a measured control update, and document the change and its rationale"
             },
             {
               "id": "d",
-              "text": "Limit updates to a single informal channel"
+              "text": "Disable all governance constraints to maximize performance"
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
+          "correctOptionId": "c",
+          "explanation": "Adaptive response requires analyzing data to inform a measured action while maintaining accountability through documentation, balancing recovery with control."
         },
         {
           "id": "macos-501-l06-q7",
-          "text": "A mature remediation loop in advanced Macos should prioritize:",
-          "skillId": "macos-501-skill-advanced-7",
+          "text": "According to the 'Decision Memo Pattern', which of these elements is essential for a defensible recommendation?",
+          "skillId": "macos-501-skill-case-memo",
           "options": [
             {
               "id": "a",
-              "text": "Blame assignment without system updates"
+              "text": "A guarantee of success with no risks"
             },
             {
               "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
+              "text": "A list of stakeholders who agree with the decision"
             },
             {
               "id": "c",
-              "text": "One-time fixes without retesting"
+              "text": "A detailed analysis of assumptions, evidence, and contingency plans"
             },
             {
               "id": "d",
-              "text": "Issue closure based on elapsed time"
+              "text": "A brief summary of the final choice without supporting rationale"
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
+          "correctOptionId": "c",
+          "explanation": "A strong decision memo defends its recommendation by transparently outlining the assumptions made, the evidence considered, and the plans for managing potential risks."
         },
         {
           "id": "macos-501-l06-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Macos Specialization Studio?",
-          "skillId": "macos-501-skill-advanced-8",
+          "text": "What core principle does the 'Adverse-Condition Decision Run' simulation reinforce?",
+          "skillId": "macos-501-skill-sim-pressure",
           "options": [
             {
               "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
+              "text": "That all problems can be solved by increasing system resources"
             },
             {
               "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
+              "text": "The importance of balancing performance goals with governance and risk management under pressure"
             },
             {
               "id": "c",
-              "text": "Ignore correlated failure modes"
+              "text": "That governance rules should always be bypassed in an emergency"
             },
             {
               "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
+              "text": "That decisions made under pressure do not require documentation"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "explanation": "The simulation is designed to teach that effective leadership in a crisis involves making difficult decisions that balance immediate performance needs with long-term stability, risk, and accountability."
         }
       ]
     },
@@ -645,8 +545,8 @@ export const Macos501Module: LearningModule = {
         {
           "id": "macos-501-l07-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Stakeholder Impact Map",
+          "content": "A visual map showing a central policy decision and its branching effects on various stakeholders (e.g., 'End Users', 'IT Admins', 'Public Community'), categorizing impacts as positive, negative, short-term, and long-term."
         }
       ],
       "chunks": [
@@ -654,19 +554,19 @@ export const Macos501Module: LearningModule = {
           "id": "macos-501-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. This mapping is important for understanding how various decisions impact different people and organizations, ensuring that we consider everyone's perspective.\nContext recap: In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. This mapping is important for understanding how various decisions impact different people and organizations, ensuring that we consider everyone's perspective."
+          "content": "Introduces stakeholder impact analysis. Learners will map the distribution of benefits, costs, and risks of a system intervention across different user groups, communities, and over time to identify potential inequities or unintended consequences."
         },
         {
           "id": "macos-501-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "In this section, we will explore the architecture of accountability, which includes the processes that ensure decisions are traceable, review rights that allow stakeholders to assess actions taken, and remediation obligations that outline responsibilities for addressing any issues that arise. This framework is essential for maintaining trust and transparency.\nContext recap: In this section, we will explore the architecture of accountability, which includes the processes that ensure decisions are traceable, review rights that allow stakeholders to assess actions taken, and remediation obligations that outline responsibilities for addressing any issues that arise. This framework is essential for maintaining trust and transparency."
+          "content": "Defines the components of a robust accountability architecture. This includes mechanisms for decision traceability, stakeholder review rights, and clear remediation obligations to ensure that governance is operational, not just theoretical."
         },
         {
           "id": "macos-501-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "To ensure effective leadership, it is important to have a final checklist that connects various important aspects. This checklist should include outcomes that reflect our goals, ethical considerations that guide our decisions, compliance with relevant policies, and strategies for resilience in the face of challenges. By using this checklist, leaders can make informed and responsible choices that positively impact their communities.\nContext recap: To ensure effective leadership, it is important to have a final checklist that connects various important aspects. This checklist should include outcomes that reflect our goals, ethical considerations that guide our decisions, compliance with relevant policies, and strategies for resilience in the face of challenges. By using this checklist, leaders can make informed and responsible choices that positively impact their communities."
+          "content": "Provides a final leadership checklist for responsible decision-making. This framework integrates mission outcomes, ethical principles, policy compliance, and system resilience, ensuring a holistic and accountable approach to governance."
         }
       ],
       "flashcards": [
@@ -705,13 +605,13 @@ export const Macos501Module: LearningModule = {
           "id": "macos-501-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "In this activity, learners will work together to create a comprehensive defense brief. This brief will include well-supported claims, evidence that backs up those claims, an understanding of the uncertainties involved, and clear pathways for remediation if issues arise. This practice helps learners develop critical thinking and communication skills that are essential for effective advocacy.\nContext recap: In this activity, learners will work together to create a comprehensive defense brief. This brief will include well-supported claims, evidence that backs up those claims, an understanding of the uncertainties involved, and clear pathways for remediation if issues arise. This practice helps learners develop critical thinking and communication skills that are essential for effective advocacy."
+          "content": "Learners collaboratively assemble a capstone defense brief. This involves synthesizing a complex recommendation supported by verifiable claims, empirical evidence, explicit uncertainty bounds, and robust remediation pathways."
         },
         {
           "id": "macos-501-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "During this session, learners will practice their responses to a variety of critiques that may come from experts in technical fields, governance, and stakeholder perspectives. This rehearsal is crucial for building confidence and ensuring that learners can articulate their ideas clearly and effectively. It prepares them for real-world discussions and helps them understand different viewpoints.\nContext recap: During this session, learners will practice their responses to a variety of critiques that may come from experts in technical fields, governance, and stakeholder perspectives. This rehearsal is crucial for building confidence and ensuring that learners can articulate their ideas clearly and effectively. It prepares them for real-world discussions and helps them understand different viewpoints."
+          "content": "Learners rehearse defending their brief against critiques from a simulated expert panel. This panel represents technical, governance, and stakeholder viewpoints, challenging the learners' analysis, assumptions, and conclusions."
         }
       ],
       "interactiveActivities": [
@@ -719,7 +619,7 @@ export const Macos501Module: LearningModule = {
           "id": "macos-501-l08-act1",
           "type": "debate_simulator",
           "title": "Expert Defense Panel",
-          "description": "Defend specialization recommendations under adversarial cross-examination."
+          "description": "Present and defend your capstone recommendations to a simulated expert panel. Respond to adversarial cross-examination on your technical methods, tradeoff analysis, and governance implications under a time limit."
         }
       ]
     }

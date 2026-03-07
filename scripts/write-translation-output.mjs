@@ -21,7 +21,10 @@ const ROOT = process.cwd();
 const DATA_DIR = path.join(ROOT, "data", "translations");
 const OUTPUT_BASE = path.join(ROOT, "public", "translations");
 
-const LOCALES = ["es", "zh", "pl", "fr", "de", "ar", "hi", "ja", "ko", "ru", "pt", "it", "tr", "vi", "th", "id", "uk"];
+const LOCALES = [
+  "es", "zh", "pl", "fr", "de", "ar", "hi", "ja", "ko", "ru",
+  "pt", "it", "tr", "vi", "th", "id", "uk", "bn", "ur"
+];
 
 // CLI
 const args = process.argv.slice(2);

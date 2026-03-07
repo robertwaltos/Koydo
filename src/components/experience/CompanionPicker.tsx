@@ -38,26 +38,6 @@ export default function CompanionPicker({ onSelect }: CompanionPickerProps) {
             </p>
           </div>
 
-          {/* Side-by-side comparison header */}
-          <div className="mb-5 flex justify-around">
-            {(["female", "male"] as CompanionGender[]).map((gender) => {
-              const companion = COMPANIONS[gender];
-              return (
-                <div key={gender} className="flex flex-col items-center gap-1.5">
-                  <CompanionAvatarSVG
-                    gender={gender}
-                    size={52}
-                    previewImageUrl={companion.previewImageUrl}
-                    avatarStyle={avatarStyle}
-                  />
-                  <span className={`text-xs font-bold ${gender === "female" ? "text-violet-700" : "text-cyan-700"}`}>
-                    {companion.name}
-                  </span>
-                </div>
-              );
-            })}
-          </div>
-
           {/* Choice cards */}
           <div className="flex flex-col gap-3">
             {(["female", "male"] as CompanionGender[]).map((gender) => {
@@ -78,7 +58,7 @@ export default function CompanionPicker({ onSelect }: CompanionPickerProps) {
                     gender={gender}
                     size={44}
                     previewImageUrl={companion.previewImageUrl}
-                    avatarStyle={avatarStyle}
+                    avatarStyle="human"
                   />
                   <div className="flex-1 min-w-0">
                     <p className={`text-sm font-black ${isViolet ? "text-violet-800" : "text-cyan-800"}`}>

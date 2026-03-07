@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const Arts201Module: LearningModule = {
+export const arts_201_Module: LearningModule = {
   "id": "arts-201",
   "title": "Creative Arts Studio II",
   "description": "Develop composition, visual storytelling, and critique routines across creative media.",
@@ -8,15 +8,16 @@ export const Arts201Module: LearningModule = {
   "tags": [
     "core",
     "curriculum",
-    "interactive"
+    "interactive",
+    "visual-arts"
   ],
   "minAge": 7,
   "maxAge": 18,
   "version": "1.1.0",
   "learningObjectives": [
-    "Understand core concepts in Arts",
-    "Apply Creative Communication strategies through guided practice",
-    "Demonstrate mastery with subject-specific quizzes"
+    "Understand core concepts in visual composition and color narrative.",
+    "Apply creative communication strategies through guided practice and iteration.",
+    "Demonstrate mastery of visual storytelling and critique with subject-specific quizzes."
   ],
   "lessons": [
     {
@@ -24,48 +25,50 @@ export const Arts201Module: LearningModule = {
       "title": "Composition and Visual Balance",
       "type": "video",
       "duration": 10,
+      "lessonImagePrompt": "Imagen 4 prompt: A vibrant, balanced flat-lay of art supplies including paintbrushes, palettes, and sketchbooks arranged symmetrically on a bright wooden table, soft natural lighting, high resolution, photorealistic.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A dynamic top-down view of a blank canvas where colorful geometric 3D shapes smoothly slide into a perfectly balanced composition, demonstrating visual weight, 4k resolution, smooth 60fps animation, bright educational style.",
       "chunks": [
         {
           "id": "arts-201-l01-c1",
           "title": "Composition and Visual Balance Overview",
-          "content": "In this lesson, we will dive into the exciting world of visual composition! We will discover how to create beautiful and balanced artwork by understanding the principles of creative composition and learning how to give helpful feedback to our peers. Our main goal is to recognize what makes a strong piece of art before we start creating our own masterpieces. By doing this, we will not only improve our artistic skills but also become better thinkers and collaborators. Let's get ready to unleash our creativity and explore the magic of art together!"
+          "content": "Welcome to the exciting world of visual composition! Whether you are sketching a comic book or painting a landscape, understanding how to arrange your artwork is key. We will discover how to create beautiful and balanced pieces by mastering the principles of creative composition. Let's get ready to level up our art skills!"
         },
         {
           "id": "arts-201-l01-c2",
-          "title": "Core Concept",
-          "content": "Visual composition and color narrative are two essential parts that come together to create beautiful artwork. First, we will choose the main focus of our piece, which is like the star of our show! This is the element that will draw the viewer's attention. Next, we will explore the evidence or steps that support our main idea. These could be colors, shapes, or patterns that help to tell our story and build a strong foundation for our artwork. By understanding how these elements work together, we can create pieces that are not only visually appealing but also meaningful and engaging."
+          "title": "Core Concept: Visual Weight",
+          "content": "Visual composition is how we arrange elements in our artwork. Think of it like a playground seesaw! If you put a giant, dark shape on one side, you need something on the other side to balance it out. This is called 'visual weight.' We use colors, shapes, and sizes to guide the viewer's eye and make the artwork feel stable and complete."
         },
         {
           "id": "arts-201-l01-c3",
-          "title": "Worked Example",
-          "content": "Let's walk through a guided example together! First, we will define our artistic goal, which is what we want to achieve with our artwork. Then, we will apply a strategy for using color to tell a story in our piece. Finally, we will verify our result with a quick check to see if we have achieved our goal. This practice will help us understand the process better!\nContext recap: Let's walk through a guided example together! First, we will define our artistic goal, which is what we want to achieve with our artwork. Then, we will apply a strategy for using color to tell a story in our piece. Finally, we will verify our result with a quick check to see if we have achieved our goal."
+          "title": "Worked Example: The Rule of Thirds",
+          "content": "Let's look at a famous pro-trick called the Rule of Thirds. Imagine a tic-tac-toe grid over your canvas. Instead of putting your main subject right in the dead center, try placing it where the lines cross! This simple shift makes your artwork look much more dynamic and interesting to the viewer."
         },
         {
           "id": "arts-201-l01-c4",
           "title": "Transfer Prompt",
-          "content": "Now it's your turn! Apply the same process we just learned to a new scenario. Think about how you would approach it and explain why your method is valid in one clear sentence. This will help you practice your reasoning skills and show how you can adapt what you've learned to different situations.\nContext recap: Now it's your turn! Apply the same process we just learned to a new scenario. Think about how you would approach it and explain why your method is valid in one clear sentence. This will help you practice your reasoning skills and show how you can adapt what you've learned to different situations."
+          "content": "Now it's your turn! Look around the room you are in right now. If you were going to take a photograph of this room, what would be your main focal point, and where would you place it using the Rule of Thirds? Explain your choice in one clear sentence."
         }
       ],
       "flashcards": [
         {
           "id": "arts-201-l01-f1",
-          "front": "visual composition",
-          "back": "A central target skill in this module. Name it before solving."
+          "front": "Visual Composition",
+          "back": "The arrangement of elements within an artwork."
         },
         {
           "id": "arts-201-l01-f2",
-          "front": "color narrative",
-          "back": "Use this as the method step after defining the goal."
+          "front": "Visual Weight",
+          "back": "How much an element attracts the viewer's eye based on size, color, or contrast."
         },
         {
           "id": "arts-201-l01-f3",
-          "front": "Verification",
-          "back": "Check that your result matches the original goal and constraints."
+          "front": "Rule of Thirds",
+          "back": "A grid system used to place subjects off-center for a more dynamic look."
         },
         {
           "id": "arts-201-l01-f4",
-          "front": "Transfer",
-          "back": "Use the same strategy on a new item to confirm true mastery."
+          "front": "Focal Point",
+          "back": "The main star of your artwork that draws the viewer's attention first."
         }
       ],
       "learningAids": [
@@ -73,66 +76,69 @@ export const Arts201Module: LearningModule = {
           "id": "arts-201-l01-a1",
           "type": "image",
           "title": "Concept Poster",
-          "content": "A colorful infographic about visual composition and color narrative."
+          "content": "A colorful infographic showing the Rule of Thirds grid over a landscape painting."
         },
         {
           "id": "arts-201-l01-a2",
           "type": "animation",
           "title": "Warm-up Animation",
-          "content": "Short animation introducing Arts vocabulary."
+          "content": "Short animation showing a seesaw balancing different colored shapes."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/arts-201-l01.png"
     },
     {
       "id": "arts-201-l02",
       "title": "Color Narrative and Mood",
       "type": "interactive",
       "duration": 12,
+      "lessonImagePrompt": "Imagen 4 prompt: A split-screen digital painting showing the exact same fantasy landscape in two different color palettes: one warm, sunny, and inviting, the other cool, dark, and mysterious, highly detailed, 8k.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A time-lapse of a digital painting where the mood completely changes as the artist shifts the color palette from bright yellows and oranges to deep blues and purples, cinematic lighting, smooth transitions.",
       "metadata": {
         "prompts": [
-          "Identify one core idea about visual composition from this lesson.",
-          "Explain where color narrative appears in real life.",
-          "Describe one question you still have about creative composition and critique."
+          "Identify how warm colors make you feel compared to cool colors.",
+          "Explain where color narrative appears in your favorite movie.",
+          "Describe one question you still have about mixing colors."
         ]
       },
       "interactiveActivities": [
         {
           "id": "arts-201-l02-ia1",
           "type": "drag_and_drop",
-          "title": "Practice Flow Builder",
-          "description": "Sort each action into Plan, Execute, or Reflect.",
+          "title": "Color Mood Match",
+          "description": "Sort each color palette into the mood it creates: Energetic, Calm, or Mysterious.",
           "estimatedMinutes": 8,
           "difficultyLevel": "easy",
           "data": {
             "targets": [
               {
-                "id": "plan",
-                "label": "Plan"
+                "id": "energetic",
+                "label": "Energetic"
               },
               {
-                "id": "execute",
-                "label": "Execute"
+                "id": "calm",
+                "label": "Calm"
               },
               {
-                "id": "reflect",
-                "label": "Reflect"
+                "id": "mysterious",
+                "label": "Mysterious"
               }
             ],
             "draggables": [
               {
                 "id": "d1",
-                "label": "Set a goal for visual composition",
-                "correctTargetId": "plan"
+                "label": "Bright Reds, Oranges, and Yellows",
+                "correctTargetId": "energetic"
               },
               {
                 "id": "d2",
-                "label": "Try one strategy for color narrative",
-                "correctTargetId": "execute"
+                "label": "Soft Blues, Greens, and Pastels",
+                "correctTargetId": "calm"
               },
               {
                 "id": "d3",
-                "label": "Record what worked and what to improve",
-                "correctTargetId": "reflect"
+                "label": "Dark Purples, Blacks, and Deep Blues",
+                "correctTargetId": "mysterious"
               }
             ]
           }
@@ -143,108 +149,111 @@ export const Arts201Module: LearningModule = {
           "id": "arts-201-l02-a1",
           "type": "practice",
           "title": "Try It Board",
-          "content": "Complete a guided activity on color narrative and write one reflection."
+          "content": "Complete a guided activity on choosing a color palette for a specific emotion."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/arts-201-l02.png"
     },
     {
       "id": "arts-201-l03",
       "title": "Checkpoint: Visual Composition",
       "type": "quiz",
       "duration": 10,
+      "lessonImagePrompt": "Imagen 4 prompt: A glowing neon question mark hovering over a beautifully composed still life painting of fruit and a vase, 3d render, vibrant colors, studio lighting.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A quick, engaging 3D animation showing a golden scale balancing different sized colorful shapes, representing visual balance, bright and educational, 4k.",
       "questions": [
         {
           "id": "arts-201-l03-q1",
-          "text": "Which statement best explains visual composition in Arts?",
+          "text": "What does 'visual weight' refer to in an artwork?",
           "skillId": "arts-201-skill-core",
           "options": [
             {
               "id": "a",
-              "text": "It explains visual composition using evidence from the lesson."
+              "text": "How much an element attracts the viewer's eye."
             },
             {
               "id": "b",
-              "text": "It ignores how visual composition works in practice."
+              "text": "The actual physical weight of the canvas."
             },
             {
               "id": "c",
-              "text": "It focuses on an unrelated topic outside Arts."
+              "text": "The amount of paint used on the brush."
             },
             {
               "id": "d",
-              "text": "It repeats terms without showing meaning."
+              "text": "The price of the artwork in a gallery."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "arts-201-l03-q2",
-          "text": "What is the best first step when analyzing color narrative?",
+          "text": "If you want to make a painting feel calm and peaceful, which color palette is best?",
           "skillId": "arts-201-skill-process",
           "options": [
             {
               "id": "a",
-              "text": "Define the goal and examine evidence for color narrative."
+              "text": "Soft blues and greens."
             },
             {
               "id": "b",
-              "text": "Guess quickly without checking evidence."
+              "text": "Bright neon reds and yellows."
             },
             {
               "id": "c",
-              "text": "Use data unrelated to color narrative."
+              "text": "Harsh blacks and stark whites."
             },
             {
               "id": "d",
-              "text": "Skip the context and jump to a conclusion."
+              "text": "Vibrant oranges and purples."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "arts-201-l03-q3",
-          "text": "Which option shows strong reasoning about creative composition and critique?",
+          "text": "How does the Rule of Thirds help an artist?",
           "skillId": "arts-201-skill-reasoning",
           "options": [
             {
               "id": "a",
-              "text": "Use examples and verify assumptions step by step."
+              "text": "It helps place the subject off-center to make the image more dynamic."
             },
             {
               "id": "b",
-              "text": "Ignore important details and edge cases."
+              "text": "It forces the artist to only use three colors."
             },
             {
               "id": "c",
-              "text": "Use assumptions unrelated to creative composition and critique."
+              "text": "It requires the canvas to be cut into three pieces."
             },
             {
               "id": "d",
-              "text": "Change the topic when evidence gets hard."
+              "text": "It ensures the main subject is always perfectly in the middle."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "arts-201-l03-q4",
-          "text": "Why is spaced review useful for Arts mastery?",
+          "text": "Why is having a focal point important in visual composition?",
           "skillId": "arts-201-skill-review",
           "options": [
             {
               "id": "a",
-              "text": "It strengthens memory and transfer over time"
+              "text": "It gives the viewer's eye a specific place to look first."
             },
             {
               "id": "b",
-              "text": "It creates confusion"
+              "text": "It makes the artwork harder to understand."
             },
             {
               "id": "c",
-              "text": "It removes key facts"
+              "text": "It hides the mistakes in the background."
             },
             {
               "id": "d",
-              "text": "It has no value"
+              "text": "It removes the need for any other colors."
             }
           ],
           "correctOptionId": "a"
@@ -254,42 +263,41 @@ export const Arts201Module: LearningModule = {
         {
           "id": "arts-201-l03-ia1",
           "type": "matching_pairs",
-          "title": "Reasoning Match: Checkpoint: Visual Composition",
-          "description": "Match each error signal to the strongest correction strategy.",
+          "title": "Concept Match: Visual Composition",
+          "description": "Match the art term to its correct definition.",
           "estimatedMinutes": 7,
           "difficultyLevel": "medium",
           "instructions": [
-            "Review each left-side signal.",
-            "Pick the best response on the right.",
-            "Use your matches to plan the next drill."
+            "Review each term on the left.",
+            "Pick the best definition on the right."
           ],
           "data": {
             "left": [
               {
                 "id": "l1",
-                "label": "Confusion about visual composition"
+                "label": "Focal Point"
               },
               {
                 "id": "l2",
-                "label": "Inconsistent approach to color narrative"
+                "label": "Visual Weight"
               },
               {
                 "id": "l3",
-                "label": "Weak transfer of creative composition and critique under timing"
+                "label": "Rule of Thirds"
               }
             ],
             "right": [
               {
                 "id": "r1",
-                "label": "Create a one-step concept summary with one worked example"
+                "label": "The main star of the artwork"
               },
               {
                 "id": "r2",
-                "label": "Use a checklist before choosing the final answer"
+                "label": "How much an element attracts the eye"
               },
               {
                 "id": "r3",
-                "label": "Retest the same target with a short timed sprint"
+                "label": "A grid used for dynamic placement"
               }
             ],
             "pairs": [
@@ -340,118 +348,124 @@ export const Arts201Module: LearningModule = {
           "id": "arts-201-l03-a1",
           "type": "mnemonic",
           "title": "Memory Tip",
-          "content": "Use the phrase Plan, Check, Explain for each question."
+          "content": "Remember 'W.T.F.' for composition: Weight, Thirds, Focal point!"
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/arts-201-l03.png"
     },
     {
       "id": "arts-201-l04",
       "title": "Design Iteration Cycle",
       "type": "video",
       "duration": 11,
+      "lessonImagePrompt": "Imagen 4 prompt: Three side-by-side sketches of a cool sci-fi character design, showing the progression from a rough pencil outline to a fully colored and detailed final digital version, high quality.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A fast-paced stop-motion animation of a clay sculpture being molded, adjusted, and refined multiple times until it becomes a perfect, highly detailed little dragon, studio lighting.",
       "chunks": [
         {
           "id": "arts-201-l04-c1",
-          "title": "Design Iteration Cycle Focus",
-          "content": "In this lesson, we will explore the design iteration cycle in a fun and engaging way! We will learn how to use structured reasoning to think carefully about our designs. Instead of just understanding the ideas, we will practice making smart decisions that can improve our creative projects. This will help us become more thoughtful and effective creators, allowing our imaginations to shine even brighter!\nContext recap: In this lesson, we will explore the design iteration cycle in a fun and engaging way! We will learn how to use structured reasoning to think carefully about our designs. Instead of just understanding the ideas, we will practice making smart decisions that can improve our creative projects. This will help us become more thoughtful and effective creators, allowing our imaginations to shine even brighter!"
+          "title": "What is Iteration?",
+          "content": "In this lesson, we will explore the design iteration cycle! 'Iteration' is just a fancy word for drafting, testing, and improving. Great art rarely happens on the first try. Instead of expecting perfection immediately, we will practice making rough drafts, getting feedback, and making smart changes to improve our creative projects."
         },
         {
           "id": "arts-201-l04-c2",
-          "title": "Method Steps",
-          "content": "Let's break down the method steps for our design iteration cycle! Step 1: Identify what is being asked in the design challenge. Step 2: Choose a strategy that aligns with the principles of design iteration. Step 3: Justify your choices with evidence to support your decisions. Following these steps will guide you toward successful design outcomes.\nContext recap: Let's break down the method steps for our design iteration cycle! Step 1: Identify what is being asked in the design challenge. Step 2: Choose a strategy that aligns with the principles of design iteration. Step 3: Justify your choices with evidence to support your decisions."
+          "title": "The Iteration Steps",
+          "content": "Let's break down the steps for our design iteration cycle! Step 1: Brainstorm and sketch your initial idea. Step 2: Review your sketch and ask, 'Does this communicate my goal?' Step 3: Revise and refine based on your review. Following these steps takes the pressure off being perfect right away!"
         },
         {
           "id": "arts-201-l04-c3",
-          "title": "Common Mistakes",
-          "content": "It's important to be aware of common mistakes that can happen during the design process. These include skipping the setup phase, using assumptions that are not related to the task, or failing to verify the final result. By recognizing these pitfalls, we can avoid them and improve our designs!\nContext recap: It's important to be aware of common mistakes that can happen during the design process. These include skipping the setup phase, using assumptions that are not related to the task, or failing to verify the final result. By recognizing these pitfalls, we can avoid them and improve our designs!"
+          "title": "Common Mistakes in Iteration",
+          "content": "It's important to be aware of common mistakes during the design process. The biggest mistake is falling in love with your first draft and refusing to change it! Another mistake is skipping the brainstorming phase and jumping straight to final details. By staying flexible, we can create much stronger artwork."
         },
         {
           "id": "arts-201-l04-c4",
           "title": "Independent Try",
-          "content": "Now, it's time for you to try solving a similar design challenge on your own! After you complete it, compare your process to the lesson sequence we discussed. This reflection will help you understand what worked well and what you might want to improve in your approach.\nContext recap: Now, it's time for you to try solving a similar design challenge on your own! After you complete it, compare your process to the lesson sequence we discussed. This reflection will help you understand what worked well and what you might want to improve in your approach."
+          "content": "Now, it's time for you to try! Take a piece of paper and draw a quick 30-second sketch of a tree. Then, look at it, figure out one thing you want to improve, and draw it again in 60 seconds. Notice how much better the second version is? That's the power of iteration!"
         }
       ],
       "flashcards": [
         {
           "id": "arts-201-l04-f1",
-          "front": "design iteration",
-          "back": "State the target and pick a strategy before solving."
+          "front": "Iteration",
+          "back": "The process of drafting, reviewing, and improving an artwork."
         },
         {
           "id": "arts-201-l04-f2",
-          "front": "Step Sequence",
-          "back": "Goal -> Strategy -> Evidence -> Check."
+          "front": "Brainstorming",
+          "back": "Generating many rough ideas before choosing one to develop."
         },
         {
           "id": "arts-201-l04-f3",
-          "front": "Assumption Check",
-          "back": "Remove assumptions that are not supported by the prompt."
+          "front": "Revision",
+          "back": "Making changes to an artwork to improve its composition or message."
         },
         {
           "id": "arts-201-l04-f4",
-          "front": "Process Match",
-          "back": "Your explanation should match the steps you actually used."
+          "front": "First Draft",
+          "back": "The initial, rough version of an artwork, meant to be improved upon."
         }
       ],
       "learningAids": [
         {
           "id": "arts-201-l04-a1",
           "type": "image",
-          "title": "Worked Example Sheet",
-          "content": "Step-by-step visuals for design iteration scenarios."
+          "title": "Iteration Example",
+          "content": "An image showing a character design evolving over three distinct drafts."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/arts-201-l04.png"
     },
     {
       "id": "arts-201-l05",
       "title": "Symbolism and Visual Storytelling",
       "type": "interactive",
       "duration": 13,
+      "lessonImagePrompt": "Imagen 4 prompt: An open magical storybook where glowing 3D symbols like a heart, an antique key, and a bright star float out of the pages, rich fantasy lighting, highly detailed.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A cinematic pan across a classic oil painting, zooming in on specific symbolic details like a wilting flower and a bright flickering candle, with soft glowing highlights emphasizing the symbols.",
       "metadata": {
         "prompts": [
-          "Pick one challenge and outline your approach.",
-          "Test your approach and record the result.",
-          "Revise your approach and explain the change."
+          "Pick one symbol you see every day and explain what it means.",
+          "How can weather in a painting tell a story?",
+          "Create your own symbol for 'adventure'."
         ]
       },
       "interactiveActivities": [
         {
           "id": "arts-201-l05-ia1",
           "type": "sorting_buckets",
-          "title": "Strategy Sort",
-          "description": "Sort study actions into Concept, Process, or Review lanes.",
+          "title": "Symbol Sorter",
+          "description": "Sort the visual symbols into the emotion or idea they usually represent.",
           "estimatedMinutes": 9,
           "difficultyLevel": "medium",
           "data": {
             "buckets": [
               {
-                "id": "concept",
-                "label": "design iteration Concept"
+                "id": "danger",
+                "label": "Danger / Conflict"
               },
               {
-                "id": "process",
-                "label": "critique language Process"
+                "id": "peace",
+                "label": "Peace / Hope"
               },
               {
-                "id": "review",
-                "label": "Review Loop"
+                "id": "mystery",
+                "label": "Mystery / Unknown"
               }
             ],
             "items": [
               {
                 "id": "i1",
-                "label": "Write one definition in your own words",
-                "correctBucketId": "concept"
+                "label": "Dark storm clouds",
+                "correctBucketId": "danger"
               },
               {
                 "id": "i2",
-                "label": "Follow the step-by-step method on a new example",
-                "correctBucketId": "process"
+                "label": "A white dove flying",
+                "correctBucketId": "peace"
               },
               {
                 "id": "i3",
-                "label": "Retest the same skill tomorrow",
-                "correctBucketId": "review"
+                "label": "A locked door in a dark hallway",
+                "correctBucketId": "mystery"
               }
             ]
           }
@@ -461,109 +475,112 @@ export const Arts201Module: LearningModule = {
         {
           "id": "arts-201-l05-a1",
           "type": "animation",
-          "title": "Challenge Walkthrough",
-          "content": "Animated sequence for solving a design iteration challenge."
+          "title": "Storytelling Walkthrough",
+          "content": "Animated sequence showing how adding a single prop (like a broken clock) changes the story of a painting."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/arts-201-l05.png"
     },
     {
       "id": "arts-201-l06",
       "title": "Checkpoint: Creative Communication",
       "type": "quiz",
       "duration": 10,
+      "lessonImagePrompt": "Imagen 4 prompt: A glowing checkpoint flag planted on a colorful wooden artist's palette covered in wet paint, 3d rendered, bright and encouraging, soft focus background.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: An animated sequence showing a rough pencil sketch transforming into a polished, fully colored artwork as glowing feedback notes appear, get checked off, and disappear.",
       "questions": [
         {
           "id": "arts-201-l06-q1",
-          "text": "Which statement best explains design iteration in Arts?",
+          "text": "What is the main purpose of design iteration?",
           "skillId": "arts-201-skill-core",
           "options": [
             {
               "id": "a",
-              "text": "It explains design iteration using evidence from the lesson."
+              "text": "To improve artwork through drafting, reviewing, and revising."
             },
             {
               "id": "b",
-              "text": "It ignores how design iteration works in practice."
+              "text": "To finish an artwork as fast as possible on the first try."
             },
             {
               "id": "c",
-              "text": "It focuses on an unrelated topic outside Arts."
+              "text": "To copy another artist's work exactly."
             },
             {
               "id": "d",
-              "text": "It repeats terms without showing meaning."
+              "text": "To avoid getting any feedback from others."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "arts-201-l06-q2",
-          "text": "What is the best first step when analyzing critique language?",
+          "text": "What does a dark, stormy sky usually symbolize in visual storytelling?",
           "skillId": "arts-201-skill-process",
           "options": [
             {
               "id": "a",
-              "text": "Define the goal and examine evidence for critique language."
+              "text": "Danger, conflict, or sadness."
             },
             {
               "id": "b",
-              "text": "Guess quickly without checking evidence."
+              "text": "Happiness and celebration."
             },
             {
               "id": "c",
-              "text": "Use data unrelated to critique language."
+              "text": "A calm and peaceful morning."
             },
             {
               "id": "d",
-              "text": "Skip the context and jump to a conclusion."
+              "text": "Wealth and success."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "arts-201-l06-q3",
-          "text": "Which option shows strong reasoning about creative composition and critique?",
+          "text": "Why is it a mistake to fall in love with your very first draft?",
           "skillId": "arts-201-skill-reasoning",
           "options": [
             {
               "id": "a",
-              "text": "Use examples and verify assumptions step by step."
+              "text": "Because it prevents you from making changes that could improve the artwork."
             },
             {
               "id": "b",
-              "text": "Ignore important details and edge cases."
+              "text": "Because first drafts are always perfect."
             },
             {
               "id": "c",
-              "text": "Use assumptions unrelated to creative composition and critique."
+              "text": "Because you will run out of paper."
             },
             {
               "id": "d",
-              "text": "Change the topic when evidence gets hard."
+              "text": "Because other people will steal your idea."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "arts-201-l06-q4",
-          "text": "Why is spaced review useful for Arts mastery?",
+          "text": "Which of the following is an example of visual storytelling?",
           "skillId": "arts-201-skill-review",
           "options": [
             {
               "id": "a",
-              "text": "It strengthens memory and transfer over time"
+              "text": "Using a wilting flower to show that time is passing."
             },
             {
               "id": "b",
-              "text": "It creates confusion"
+              "text": "Writing a long paragraph on the back of the canvas."
             },
             {
               "id": "c",
-              "text": "It removes key facts"
+              "text": "Buying expensive paint brushes."
             },
             {
               "id": "d",
-              "text": "It has no value"
+              "text": "Signing your name at the bottom of the painting."
             }
           ],
           "correctOptionId": "a"
@@ -573,42 +590,41 @@ export const Arts201Module: LearningModule = {
         {
           "id": "arts-201-l06-ia1",
           "type": "matching_pairs",
-          "title": "Reasoning Match: Checkpoint: Creative Communication",
-          "description": "Match each error signal to the strongest correction strategy.",
+          "title": "Iteration Match",
+          "description": "Match the iteration step to its description.",
           "estimatedMinutes": 7,
           "difficultyLevel": "medium",
           "instructions": [
-            "Review each left-side signal.",
-            "Pick the best response on the right.",
-            "Use your matches to plan the next drill."
+            "Review each step on the left.",
+            "Pick the best description on the right."
           ],
           "data": {
             "left": [
               {
                 "id": "l1",
-                "label": "Confusion about design iteration"
+                "label": "Brainstorming"
               },
               {
                 "id": "l2",
-                "label": "Inconsistent approach to critique language"
+                "label": "Drafting"
               },
               {
                 "id": "l3",
-                "label": "Weak transfer of creative composition and critique under timing"
+                "label": "Revising"
               }
             ],
             "right": [
               {
                 "id": "r1",
-                "label": "Create a one-step concept summary with one worked example"
+                "label": "Coming up with many rough ideas"
               },
               {
                 "id": "r2",
-                "label": "Use a checklist before choosing the final answer"
+                "label": "Creating the first rough version"
               },
               {
                 "id": "r3",
-                "label": "Retest the same target with a short timed sprint"
+                "label": "Making changes to improve the work"
               }
             ],
             "pairs": [
@@ -659,115 +675,121 @@ export const Arts201Module: LearningModule = {
           "id": "arts-201-l06-a1",
           "type": "mnemonic",
           "title": "Memory Tip",
-          "content": "Use the phrase Plan, Check, Explain for each question."
+          "content": "Draft, Review, Revise!"
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/arts-201-l06.png"
     },
     {
       "id": "arts-201-l07",
       "title": "Comparative Art Analysis",
       "type": "video",
       "duration": 12,
+      "lessonImagePrompt": "Imagen 4 prompt: Two distinct paintings displayed side-by-side in a modern art gallery, one abstract and colorful, the other realistic and muted, with a glowing 3D magnifying glass hovering between them.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A split-screen video smoothly panning across a classic Renaissance painting and a bold Modernist painting, highlighting contrasting brushstrokes and color choices with glowing outlines.",
       "chunks": [
         {
           "id": "arts-201-l07-c1",
-          "title": "Comparative Art Analysis Setup",
-          "content": "Before starting your comparative art analysis, it's helpful to use critique language to organize your thoughts. Planning your approach in advance can significantly improve both the quality and speed of your analysis. This way, you will have a clear direction as you begin your work!\nContext recap: Before starting your comparative art analysis, it's helpful to use critique language to organize your thoughts. Planning your approach in advance can significantly improve both the quality and speed of your analysis. This way, you will have a clear direction as you begin your work!"
+          "title": "What is Comparative Analysis?",
+          "content": "Comparative art analysis sounds complicated, but it just means looking at two artworks side-by-side and finding what is similar and what is different. By comparing two pieces, we can learn a lot about the choices each artist made regarding color, composition, and mood."
         },
         {
           "id": "arts-201-l07-c2",
-          "title": "Decision Rules",
-          "content": "When you are looking at different choices in your art analysis, it can sometimes be tricky to decide which one to pick. To help you make a good choice, follow this simple rule: always choose the option that has the strongest evidence supporting it and the clearest connection to what you want to achieve. This way, you can make thoughtful and informed decisions that will enhance your understanding and appreciation of art.\nContext recap: When you are looking at different choices in your art analysis, it can sometimes be tricky to decide which one to pick. To help you make a good choice, follow this simple rule: always choose the option that has the strongest evidence supporting it and the clearest connection to what you want to achieve. This way, you can make thoughtful and informed decisions that will enhance your understanding and appreciation of art."
+          "title": "Using Critique Language",
+          "content": "When comparing art, we use 'critique language.' Instead of just saying 'I like this one better,' we use specific words. For example, 'Painting A uses warm colors to feel energetic, while Painting B uses cool colors to feel calm.' This helps us explain our thoughts clearly and professionally."
         },
         {
           "id": "arts-201-l07-c3",
-          "title": "Quality Control",
-          "content": "As you review your work, check for three important things: accuracy, completeness, and alignment with your original objective. This quality control step ensures that your analysis is thorough and meets the standards you set for yourself.\nContext recap: As you review your work, check for three important things: accuracy, completeness, and alignment with your original objective. This quality control step ensures that your analysis is thorough and meets the standards you set for yourself.\nWhy this matters: Quality Control helps learners in Arts connect ideas from Creative Arts Studio II to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "title": "The Three Pillars of Comparison",
+          "content": "When you compare two artworks, look at three main pillars: 1) Subject Matter (What is it a picture of?), 2) Technique (How was it made? Are the brushstrokes smooth or messy?), and 3) Mood (How does it make you feel?). Checking these three things ensures your analysis is thorough."
         },
         {
           "id": "arts-201-l07-c4",
           "title": "Next-Step Plan",
-          "content": "After completing your analysis, write down one action that you would like to repeat in your next practice round, and one action that you want to improve. This next-step plan will help you focus on your growth and development as an artist!\nContext recap: After completing your analysis, write down one action that you would like to repeat in your next practice round, and one action that you want to improve. This next-step plan will help you focus on your growth and development as an artist!"
+          "content": "After completing your analysis, write down one thing you noticed that you want to try in your own art! Maybe you loved how one artist used shadows, or how another used bright outlines. Analyzing other people's art is one of the best ways to improve your own."
         }
       ],
       "flashcards": [
         {
           "id": "arts-201-l07-f1",
-          "front": "critique language",
-          "back": "Use this as your organizing framework before execution."
+          "front": "Comparative Analysis",
+          "back": "Looking at two artworks to find similarities and differences."
         },
         {
           "id": "arts-201-l07-f2",
-          "front": "Decision Rule",
-          "back": "Choose the option with strongest evidence-to-goal alignment."
+          "front": "Critique Language",
+          "back": "Using specific art vocabulary to explain your thoughts clearly."
         },
         {
           "id": "arts-201-l07-f3",
-          "front": "Quality Control",
-          "back": "Accuracy + completeness + objective match."
+          "front": "Subject Matter",
+          "back": "What the artwork is actually showing (e.g., a bowl of fruit, a landscape)."
         },
         {
           "id": "arts-201-l07-f4",
-          "front": "Iteration",
-          "back": "Repeat what works; refine one weak step each cycle."
+          "front": "Technique",
+          "back": "The method the artist used to create the work (e.g., thick brushstrokes, smooth blending)."
         }
       ],
       "learningAids": [
         {
           "id": "arts-201-l07-a1",
           "type": "practice",
-          "title": "Project Planner",
-          "content": "Template for planning a mini project focused on critique language."
+          "title": "Comparison Planner",
+          "content": "A Venn diagram template for comparing two artworks."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/arts-201-l07.png"
     },
     {
       "id": "arts-201-l08",
       "title": "Portfolio Revision Session",
       "type": "interactive",
       "duration": 10,
+      "lessonImagePrompt": "Imagen 4 prompt: A neat wooden desk with an open professional portfolio book, scattered pencil sketches, and a glowing digital drawing tablet, warm cozy study lighting.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A top-down view of an artist's hands organizing and swapping out different vibrant art prints in a sleek black portfolio book, professional, satisfying, and highly detailed.",
       "metadata": {
         "prompts": [
-          "What did you learn most clearly?",
-          "Where did you struggle and why?",
-          "What is your next improvement target?"
+          "Look at your past work. What is one thing you have improved at?",
+          "Which piece in your portfolio needs the most revision and why?",
+          "What is your next artistic goal?"
         ]
       },
       "interactiveActivities": [
         {
           "id": "arts-201-l08-ia1",
           "type": "matching_pairs",
-          "title": "Reflection Match",
-          "description": "Match each reflection prompt with the best follow-up action.",
+          "title": "Feedback to Action Match",
+          "description": "Match the critique feedback with the best revision action.",
           "estimatedMinutes": 7,
           "difficultyLevel": "easy",
           "data": {
             "left": [
               {
                 "id": "l1",
-                "label": "I keep missing one skill pattern"
+                "label": "Feedback: 'The main character blends into the background.'"
               },
               {
                 "id": "l2",
-                "label": "I rush and make avoidable mistakes"
+                "label": "Feedback: 'The mood feels too happy for a sad scene.'"
               },
               {
                 "id": "l3",
-                "label": "I understand in notes but miss in quizzes"
+                "label": "Feedback: 'The composition feels unbalanced on the left.'"
               }
             ],
             "right": [
               {
                 "id": "r1",
-                "label": "Do a focused drill on that exact pattern"
+                "label": "Action: Increase contrast or add a bright outline to the character."
               },
               {
                 "id": "r2",
-                "label": "Use a short checklist before submitting answers"
+                "label": "Action: Change the color palette to cooler, muted tones."
               },
               {
                 "id": "r3",
-                "label": "Repeat the skill in a timed re-check"
+                "label": "Action: Add visual weight to the right side of the canvas."
               }
             ],
             "pairs": [
@@ -791,109 +813,112 @@ export const Arts201Module: LearningModule = {
         {
           "id": "arts-201-l08-a1",
           "type": "mnemonic",
-          "title": "Reflection Cycle",
-          "content": "Remember Observe, Adjust, Repeat while practicing."
+          "title": "Revision Cycle",
+          "content": "Listen, Plan, Revise!"
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/arts-201-l08.png"
     },
     {
       "id": "arts-201-l09",
       "title": "Review: Artistic Decisions",
       "type": "quiz",
       "duration": 10,
+      "lessonImagePrompt": "Imagen 4 prompt: A glowing human brain made entirely of colorful, textured paint splatters, representing artistic decision making, 3d render, dark background.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: An animated flowchart showing different artistic choices (color, composition, medium) branching out into different beautiful artworks, dynamic camera movements.",
       "questions": [
         {
           "id": "arts-201-l09-q1",
-          "text": "Which statement best explains color narrative in Arts?",
+          "text": "When comparing two artworks, what does 'technique' refer to?",
           "skillId": "arts-201-skill-core",
           "options": [
             {
               "id": "a",
-              "text": "It explains color narrative using evidence from the lesson."
+              "text": "How the artist applied the materials, like brushstrokes or blending."
             },
             {
               "id": "b",
-              "text": "It ignores how color narrative works in practice."
+              "text": "The price the artwork sold for."
             },
             {
               "id": "c",
-              "text": "It focuses on an unrelated topic outside Arts."
+              "text": "The emotion the viewer feels."
             },
             {
               "id": "d",
-              "text": "It repeats terms without showing meaning."
+              "text": "The frame around the painting."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "arts-201-l09-q2",
-          "text": "What is the best first step when analyzing critique language?",
+          "text": "If a peer says your painting 'lacks a focal point,' what is the best revision action?",
           "skillId": "arts-201-skill-process",
           "options": [
             {
               "id": "a",
-              "text": "Define the goal and examine evidence for critique language."
+              "text": "Make one specific element stand out using bright color or high contrast."
             },
             {
               "id": "b",
-              "text": "Guess quickly without checking evidence."
+              "text": "Paint over the entire canvas with black."
             },
             {
               "id": "c",
-              "text": "Use data unrelated to critique language."
+              "text": "Add fifty more tiny details everywhere."
             },
             {
               "id": "d",
-              "text": "Skip the context and jump to a conclusion."
+              "text": "Ignore the feedback because art is subjective."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "arts-201-l09-q3",
-          "text": "Which option shows strong reasoning about creative composition and critique?",
+          "text": "Why is it important to use 'critique language' instead of just saying 'I like it'?",
           "skillId": "arts-201-skill-reasoning",
           "options": [
             {
               "id": "a",
-              "text": "Use examples and verify assumptions step by step."
+              "text": "It helps explain exactly *why* something works or doesn't work."
             },
             {
               "id": "b",
-              "text": "Ignore important details and edge cases."
+              "text": "It makes you sound smarter than the artist."
             },
             {
               "id": "c",
-              "text": "Use assumptions unrelated to creative composition and critique."
+              "text": "It is a rule required by all art galleries."
             },
             {
               "id": "d",
-              "text": "Change the topic when evidence gets hard."
+              "text": "It guarantees the artwork will win an award."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "arts-201-l09-q4",
-          "text": "Why is spaced review useful for Arts mastery?",
+          "text": "What is the main goal of a portfolio revision session?",
           "skillId": "arts-201-skill-review",
           "options": [
             {
               "id": "a",
-              "text": "It strengthens memory and transfer over time"
+              "text": "To look back at past work, identify weaknesses, and plan improvements."
             },
             {
               "id": "b",
-              "text": "It creates confusion"
+              "text": "To throw away all your old art."
             },
             {
               "id": "c",
-              "text": "It removes key facts"
+              "text": "To show off to your friends."
             },
             {
               "id": "d",
-              "text": "It has no value"
+              "text": "To copy someone else's portfolio."
             }
           ],
           "correctOptionId": "a"
@@ -903,42 +928,41 @@ export const Arts201Module: LearningModule = {
         {
           "id": "arts-201-l09-ia1",
           "type": "matching_pairs",
-          "title": "Reasoning Match: Review: Artistic Decisions",
-          "description": "Match each error signal to the strongest correction strategy.",
+          "title": "Critique Match",
+          "description": "Match the casual statement to the professional critique language.",
           "estimatedMinutes": 7,
           "difficultyLevel": "medium",
           "instructions": [
-            "Review each left-side signal.",
-            "Pick the best response on the right.",
-            "Use your matches to plan the next drill."
+            "Review each casual statement on the left.",
+            "Pick the professional translation on the right."
           ],
           "data": {
             "left": [
               {
                 "id": "l1",
-                "label": "Confusion about color narrative"
+                "label": "'It looks too messy.'"
               },
               {
                 "id": "l2",
-                "label": "Inconsistent approach to critique language"
+                "label": "'My eyes don't know where to look.'"
               },
               {
                 "id": "l3",
-                "label": "Weak transfer of creative composition and critique under timing"
+                "label": "'It feels sad.'"
               }
             ],
             "right": [
               {
                 "id": "r1",
-                "label": "Create a one-step concept summary with one worked example"
+                "label": "'The technique uses chaotic, unrefined brushstrokes.'"
               },
               {
                 "id": "r2",
-                "label": "Use a checklist before choosing the final answer"
+                "label": "'The composition lacks a clear focal point.'"
               },
               {
                 "id": "r3",
-                "label": "Retest the same target with a short timed sprint"
+                "label": "'The cool color palette creates a somber mood.'"
               }
             ],
             "pairs": [
@@ -988,109 +1012,112 @@ export const Arts201Module: LearningModule = {
         {
           "id": "arts-201-l09-a1",
           "type": "mnemonic",
-          "title": "Memory Tip",
-          "content": "Use the phrase Plan, Check, Explain for each question."
+          "title": "Critique Tip",
+          "content": "Be Specific, Be Kind, Be Helpful."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/arts-201-l09.png"
     },
     {
       "id": "arts-201-l10",
       "title": "Mastery: Creative Arts II",
       "type": "quiz",
       "duration": 10,
+      "lessonImagePrompt": "Imagen 4 prompt: A golden trophy shaped like a paintbrush and artist's palette, sparkling under a dramatic spotlight, 3d render, highly detailed.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A celebratory montage of various art styles and techniques blending together in a colorful, dynamic swirl, ending with a burst of golden confetti.",
       "questions": [
         {
           "id": "arts-201-l10-q1",
-          "text": "Which statement best explains visual composition in Arts?",
+          "text": "Which of the following best describes 'visual balance'?",
           "skillId": "arts-201-skill-core",
           "options": [
             {
               "id": "a",
-              "text": "It explains visual composition using evidence from the lesson."
+              "text": "Distributing visual weight evenly across the canvas."
             },
             {
               "id": "b",
-              "text": "It ignores how visual composition works in practice."
+              "text": "Using only black and white paint."
             },
             {
               "id": "c",
-              "text": "It focuses on an unrelated topic outside Arts."
+              "text": "Drawing everything exactly in the center."
             },
             {
               "id": "d",
-              "text": "It repeats terms without showing meaning."
+              "text": "Making sure the canvas doesn't fall off the easel."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "arts-201-l10-q2",
-          "text": "What is the best first step when analyzing design iteration?",
+          "text": "What is the first step in the design iteration cycle?",
           "skillId": "arts-201-skill-process",
           "options": [
             {
               "id": "a",
-              "text": "Define the goal and examine evidence for design iteration."
+              "text": "Brainstorming and sketching rough ideas."
             },
             {
               "id": "b",
-              "text": "Guess quickly without checking evidence."
+              "text": "Adding the final highlights and signature."
             },
             {
               "id": "c",
-              "text": "Use data unrelated to design iteration."
+              "text": "Framing the artwork."
             },
             {
               "id": "d",
-              "text": "Skip the context and jump to a conclusion."
+              "text": "Selling the artwork."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "arts-201-l10-q3",
-          "text": "Which option shows strong reasoning about creative composition and critique?",
+          "text": "If an artist uses a bright red stop sign in a painting of a quiet forest, what are they likely trying to do?",
           "skillId": "arts-201-skill-reasoning",
           "options": [
             {
               "id": "a",
-              "text": "Use examples and verify assumptions step by step."
+              "text": "Create a strong focal point and symbolize a warning."
             },
             {
               "id": "b",
-              "text": "Ignore important details and edge cases."
+              "text": "Blend the sign into the background."
             },
             {
               "id": "c",
-              "text": "Use assumptions unrelated to creative composition and critique."
+              "text": "Make the forest look more natural."
             },
             {
               "id": "d",
-              "text": "Change the topic when evidence gets hard."
+              "text": "Show that they ran out of green paint."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "arts-201-l10-q4",
-          "text": "Why is spaced review useful for Arts mastery?",
+          "text": "Why is it helpful to compare two different artworks?",
           "skillId": "arts-201-skill-review",
           "options": [
             {
               "id": "a",
-              "text": "It strengthens memory and transfer over time"
+              "text": "It highlights the unique choices each artist made regarding technique and mood."
             },
             {
               "id": "b",
-              "text": "It creates confusion"
+              "text": "It proves which artist is objectively better."
             },
             {
               "id": "c",
-              "text": "It removes key facts"
+              "text": "It allows you to combine them into one painting."
             },
             {
               "id": "d",
-              "text": "It has no value"
+              "text": "It is the only way to learn how to paint."
             }
           ],
           "correctOptionId": "a"
@@ -1100,42 +1127,41 @@ export const Arts201Module: LearningModule = {
         {
           "id": "arts-201-l10-ia1",
           "type": "matching_pairs",
-          "title": "Reasoning Match: Mastery: Creative Arts II",
-          "description": "Match each error signal to the strongest correction strategy.",
+          "title": "Mastery Match",
+          "description": "Match the core concept to its practical application.",
           "estimatedMinutes": 7,
           "difficultyLevel": "medium",
           "instructions": [
-            "Review each left-side signal.",
-            "Pick the best response on the right.",
-            "Use your matches to plan the next drill."
+            "Review each concept on the left.",
+            "Pick the best application on the right."
           ],
           "data": {
             "left": [
               {
                 "id": "l1",
-                "label": "Confusion about visual composition"
+                "label": "Rule of Thirds"
               },
               {
                 "id": "l2",
-                "label": "Inconsistent approach to design iteration"
+                "label": "Color Narrative"
               },
               {
                 "id": "l3",
-                "label": "Weak transfer of creative composition and critique under timing"
+                "label": "Iteration"
               }
             ],
             "right": [
               {
                 "id": "r1",
-                "label": "Create a one-step concept summary with one worked example"
+                "label": "Placing a character off-center for dynamic effect"
               },
               {
                 "id": "r2",
-                "label": "Use a checklist before choosing the final answer"
+                "label": "Using dark blues to show a character is sad"
               },
               {
                 "id": "r3",
-                "label": "Retest the same target with a short timed sprint"
+                "label": "Redrawing a hand three times until it looks right"
               }
             ],
             "pairs": [
@@ -1185,61 +1211,64 @@ export const Arts201Module: LearningModule = {
         {
           "id": "arts-201-l10-a1",
           "type": "mnemonic",
-          "title": "Memory Tip",
-          "content": "Use the phrase Plan, Check, Explain for each question."
+          "title": "Mastery Checklist",
+          "content": "Composition, Color, Story, Iteration!"
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/arts-201-l10.png"
     },
     {
       "id": "arts-201-l11",
       "title": "Applied Arts Challenge Studio",
       "type": "interactive",
       "duration": 14,
+      "lessonImagePrompt": "Imagen 4 prompt: A bustling, brightly lit art studio with wooden easels, blank canvases, and colorful paint splatters on the floor, inspiring and creative atmosphere, photorealistic.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A fast-paced time-lapse of a collaborative mural being painted on a large brick wall by multiple artists, showing teamwork, creative process, and vibrant colors.",
       "metadata": {
         "prompts": [
-          "Select one weak pattern from recent quizzes.",
-          "Apply a step-by-step correction using design iteration.",
-          "Document your transfer plan for the next timed check."
+          "What is the first step you take when starting a new art project?",
+          "How do you decide when an artwork is 'finished'?",
+          "Describe a time you had to change your artwork based on feedback."
         ]
       },
       "interactiveActivities": [
         {
           "id": "arts-201-l11-ia1",
           "type": "sorting_buckets",
-          "title": "Transfer Ladder",
-          "description": "Sort actions into Diagnose, Fix, and Transfer phases.",
+          "title": "Project Workflow",
+          "description": "Sort the actions into the correct phase of an art project: Planning, Creating, or Refining.",
           "estimatedMinutes": 9,
           "difficultyLevel": "medium",
           "data": {
             "buckets": [
               {
-                "id": "diagnose",
-                "label": "Diagnose"
+                "id": "planning",
+                "label": "Planning"
               },
               {
-                "id": "fix",
-                "label": "Fix"
+                "id": "creating",
+                "label": "Creating"
               },
               {
-                "id": "transfer",
-                "label": "Transfer"
+                "id": "refining",
+                "label": "Refining"
               }
             ],
             "items": [
               {
                 "id": "i1",
-                "label": "Tag repeated mistakes in color narrative",
-                "correctBucketId": "diagnose"
+                "label": "Sketching thumbnails and picking colors",
+                "correctBucketId": "planning"
               },
               {
                 "id": "i2",
-                "label": "Rework one missed item with full reasoning",
-                "correctBucketId": "fix"
+                "label": "Applying the main layers of paint",
+                "correctBucketId": "creating"
               },
               {
                 "id": "i3",
-                "label": "Retest with a timed mini-check on critique language",
-                "correctBucketId": "transfer"
+                "label": "Asking for a critique and fixing details",
+                "correctBucketId": "refining"
               }
             ]
           }
@@ -1249,109 +1278,112 @@ export const Arts201Module: LearningModule = {
         {
           "id": "arts-201-l11-a1",
           "type": "practice",
-          "title": "Correction Loop Card",
-          "content": "Use Diagnose, Fix, Transfer for each difficult problem."
+          "title": "Workflow Card",
+          "content": "Plan -> Create -> Refine -> Finalize."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/arts-201-l11.png"
     },
     {
       "id": "arts-201-l12",
       "title": "Creative Arts II Mastery Applied Retest",
       "type": "quiz",
       "duration": 10,
+      "lessonImagePrompt": "Imagen 4 prompt: A glowing neon 'Level Up' sign surrounded by floating art supplies like markers, brushes, and digital pens, vibrant colors, 3d render.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A fast-paced, energetic animation of a blank canvas rapidly filling up with a masterpiece, symbolizing applied mastery, dynamic camera angles.",
       "questions": [
         {
           "id": "arts-201-l12-q1",
-          "text": "Which statement best explains visual composition in Arts?",
+          "text": "Which of the following is the best example of visual storytelling?",
           "skillId": "arts-201-skill-core",
           "options": [
             {
               "id": "a",
-              "text": "It explains visual composition using evidence from the lesson."
+              "text": "A painting of a broken crown lying in the mud to symbolize a fallen king."
             },
             {
               "id": "b",
-              "text": "It ignores how visual composition works in practice."
+              "text": "A perfectly symmetrical drawing of a square."
             },
             {
               "id": "c",
-              "text": "It focuses on an unrelated topic outside Arts."
+              "text": "A blank canvas with a title card."
             },
             {
               "id": "d",
-              "text": "It repeats terms without showing meaning."
+              "text": "A random splash of paint with no intended meaning."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "arts-201-l12-q2",
-          "text": "What is the best first step when analyzing critique language?",
+          "text": "When giving a critique, what is the most helpful approach?",
           "skillId": "arts-201-skill-process",
           "options": [
             {
               "id": "a",
-              "text": "Define the goal and examine evidence for critique language."
+              "text": "Point out specific areas for improvement and suggest actionable changes."
             },
             {
               "id": "b",
-              "text": "Guess quickly without checking evidence."
+              "text": "Just say 'it looks bad' without explaining why."
             },
             {
               "id": "c",
-              "text": "Use data unrelated to critique language."
+              "text": "Only give compliments so the artist doesn't feel bad."
             },
             {
               "id": "d",
-              "text": "Skip the context and jump to a conclusion."
+              "text": "Redraw the artwork for them."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "arts-201-l12-q3",
-          "text": "Which option shows strong reasoning about creative composition and critique?",
+          "text": "If an artwork feels 'unbalanced,' what is likely the problem?",
           "skillId": "arts-201-skill-reasoning",
           "options": [
             {
               "id": "a",
-              "text": "Use examples and verify assumptions step by step."
+              "text": "All the heavy visual elements are crowded on one side of the canvas."
             },
             {
               "id": "b",
-              "text": "Ignore important details and edge cases."
+              "text": "The artist used too many warm colors."
             },
             {
               "id": "c",
-              "text": "Use assumptions unrelated to creative composition and critique."
+              "text": "The canvas is not a perfect square."
             },
             {
               "id": "d",
-              "text": "Change the topic when evidence gets hard."
+              "text": "The paint hasn't dried yet."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "arts-201-l12-q4",
-          "text": "Why is spaced review useful for Arts mastery?",
+          "text": "Why do artists create multiple drafts (iterate)?",
           "skillId": "arts-201-skill-review",
           "options": [
             {
               "id": "a",
-              "text": "It strengthens memory and transfer over time"
+              "text": "To test different ideas and refine their composition before the final piece."
             },
             {
               "id": "b",
-              "text": "It creates confusion"
+              "text": "Because they keep losing their first drawing."
             },
             {
               "id": "c",
-              "text": "It removes key facts"
+              "text": "To waste time in the studio."
             },
             {
               "id": "d",
-              "text": "It has no value"
+              "text": "Because art teachers force them to."
             }
           ],
           "correctOptionId": "a"
@@ -1361,42 +1393,41 @@ export const Arts201Module: LearningModule = {
         {
           "id": "arts-201-l12-ia1",
           "type": "matching_pairs",
-          "title": "Reasoning Match: Creative Arts II Mastery Applied Retest",
-          "description": "Match each error signal to the strongest correction strategy.",
+          "title": "Applied Knowledge Match",
+          "description": "Match the artistic problem to the best solution.",
           "estimatedMinutes": 7,
           "difficultyLevel": "medium",
           "instructions": [
-            "Review each left-side signal.",
-            "Pick the best response on the right.",
-            "Use your matches to plan the next drill."
+            "Review each problem on the left.",
+            "Pick the best solution on the right."
           ],
           "data": {
             "left": [
               {
                 "id": "l1",
-                "label": "Confusion about visual composition"
+                "label": "The painting feels too chaotic."
               },
               {
                 "id": "l2",
-                "label": "Inconsistent approach to critique language"
+                "label": "The viewer doesn't know where to look."
               },
               {
                 "id": "l3",
-                "label": "Weak transfer of creative composition and critique under timing"
+                "label": "The mood feels wrong for a scary scene."
               }
             ],
             "right": [
               {
                 "id": "r1",
-                "label": "Create a one-step concept summary with one worked example"
+                "label": "Simplify the background and remove clutter."
               },
               {
                 "id": "r2",
-                "label": "Use a checklist before choosing the final answer"
+                "label": "Create a strong focal point using contrast."
               },
               {
                 "id": "r3",
-                "label": "Retest the same target with a short timed sprint"
+                "label": "Change the colors to dark, cool tones."
               }
             ],
             "pairs": [
@@ -1446,58 +1477,61 @@ export const Arts201Module: LearningModule = {
         {
           "id": "arts-201-l12-a1",
           "type": "mnemonic",
-          "title": "Memory Tip",
-          "content": "Use the phrase Plan, Check, Explain for each question."
+          "title": "Problem Solving Tip",
+          "content": "Identify the issue, pick a strategy, execute the fix!"
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/arts-201-l12.png"
     },
     {
       "id": "arts-201-l13",
       "title": "Arts Scenario Lab",
       "type": "video",
       "duration": 12,
+      "lessonImagePrompt": "Imagen 4 prompt: A digital drawing tablet showing a half-finished poster design for a school play, surrounded by colorful sticky notes and reference photos on a wooden desk.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: An animated sequence showing the step-by-step creation of a theater poster, from initial rough thumbnail sketches to the final vibrant, high-resolution print.",
       "chunks": [
         {
           "id": "arts-201-l13-c1",
-          "title": "Scenario Brief",
-          "content": "In this exciting scenario, you will explore how to create beautiful visual compositions. You will also learn about the importance of design iterations, which means making changes and improvements to your work. Additionally, you will practice using critique language, which helps you discuss and evaluate art in a thoughtful way. This challenge will help you apply all these skills together in a fun and creative way!\nContext recap: In this exciting scenario, you will explore how to create beautiful visual compositions. You will also learn about the importance of design iterations, which means making changes and improvements to your work. Additionally, you will practice using critique language, which helps you discuss and evaluate art in a thoughtful way. This challenge will help you apply all these skills together in a fun and creative way!"
+          "title": "Scenario Brief: The School Play Poster",
+          "content": "In this exciting scenario, you have been hired to design a poster for the school's new mystery play! You need to use visual composition to make the title stand out, color narrative to make it look mysterious, and design iteration to get it approved by the drama teacher. Let's apply all our skills to this real-world challenge!"
         },
         {
           "id": "arts-201-l13-c2",
           "title": "Plan the Approach",
-          "content": "To tackle this scenario effectively, start by breaking it down into smaller, manageable decisions. Think about each part of the project and what choices you need to make. For every decision point, choose a specific strategy that will guide you. This approach will help you stay organized and focused as you work through your creative process.\nContext recap: To tackle this scenario effectively, start by breaking it down into smaller, manageable decisions. Think about each part of the project and what choices you need to make. For every decision point, choose a specific strategy that will guide you. This approach will help you stay organized and focused as you work through your creative process."
+          "content": "To tackle this poster, start by breaking it down. First, what is the focal point? (The title of the play). Second, what is the color palette? (Dark purples and greens for mystery). Third, what symbols can we use? (A magnifying glass or a shadow). Planning these choices in advance makes the actual drawing much easier."
         },
         {
           "id": "arts-201-l13-c3",
           "title": "Execute and Justify",
-          "content": "Now it's time to put your plan into action! As you execute your ideas, make sure to explain each step you take. Use evidence from your research or previous experiences to support your choices, rather than making guesses. This will help you build a strong foundation for your work and show that you have thought carefully about your decisions.\nContext recap: Now it's time to put your plan into action! As you execute your ideas, make sure to explain each step you take. Use evidence from your research or previous experiences to support your choices, rather than making guesses. This will help you build a strong foundation for your work and show that you have thought carefully about your decisions."
+          "content": "Now it's time to put your plan into action! As you sketch, you decide to place the title using the Rule of Thirds so it catches the eye. You use dark colors to set the mood. If the drama teacher asks why you made these choices, you can use critique language to justify them: 'I used dark tones to establish a mysterious narrative.'"
         },
         {
           "id": "arts-201-l13-c4",
           "title": "Evaluate Outcome",
-          "content": "After completing your project, take a moment to evaluate the outcome. Compare what you created to the original goals you set for yourself. Identify which elements of your work are successful and should be kept, and think about what aspects might need some adjustments. This reflection will help you grow as an artist and improve your future projects.\nContext recap: After completing your project, take a moment to evaluate the outcome. Compare what you created to the original goals you set for yourself. Identify which elements of your work are successful and should be kept, and think about what aspects might need some adjustments. This reflection will help you grow as an artist and improve your future projects."
+          "content": "After finishing the first draft, you step back and evaluate. Is the title easy to read? Does it feel mysterious? You notice the title blends into the background a bit, so you iterate: you add a bright yellow outline to the text to increase contrast. Now it's perfect!"
         }
       ],
       "flashcards": [
         {
           "id": "arts-201-l13-f1",
           "front": "Scenario Planning",
-          "back": "Split a complex task into clear decision points."
+          "back": "Breaking a large project into smaller choices like color, composition, and symbols."
         },
         {
           "id": "arts-201-l13-f2",
-          "front": "Evidence Link",
-          "back": "Each step should connect to evidence in the scenario."
+          "front": "Justification",
+          "back": "Explaining *why* you made an artistic choice using proper vocabulary."
         },
         {
           "id": "arts-201-l13-f3",
-          "front": "Adjustment Loop",
-          "back": "Use outcome checks to refine your next attempt."
+          "front": "Contrast",
+          "back": "Using opposite colors or values (light vs dark) to make something stand out."
         },
         {
           "id": "arts-201-l13-f4",
           "front": "Applied Mastery",
-          "back": "Mastery means transferring the process to a new context."
+          "back": "Using all your learned skills together to solve a real-world art problem."
         }
       ],
       "learningAids": [
@@ -1505,26 +1539,29 @@ export const Arts201Module: LearningModule = {
           "id": "arts-201-l13-a1",
           "type": "image",
           "title": "Scenario Map",
-          "content": "A real-world scenario map connecting visual composition, design iteration, and critique language."
+          "content": "A flowchart showing the steps from receiving the poster assignment to the final printed design."
         },
         {
           "id": "arts-201-l13-a2",
           "type": "practice",
           "title": "Mini Case Prompt",
-          "content": "Apply one strategy to a new case and explain your reasoning."
+          "content": "Design a quick thumbnail sketch for a 'Comedy Night' poster. What colors will you use?"
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/arts-201-l13.png"
     },
     {
       "id": "arts-201-l14",
       "title": "Arts Coaching Clinic",
       "type": "interactive",
       "duration": 13,
+      "lessonImagePrompt": "Imagen 4 prompt: A friendly, stylized 3D character of an art teacher pointing to a glowing high-tech whiteboard displaying a color wheel and composition grids.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A smooth animation showing a 'mistake' in a painting (like muddy colors) being magically corrected with a wave of a glowing paintbrush, leaving vibrant, clean colors behind.",
       "metadata": {
         "prompts": [
-          "Identify one repeated error pattern from your recent work.",
-          "Choose the best correction routine for that pattern.",
-          "Write a transfer goal for your next timed check."
+          "Identify one thing you often struggle with in your art.",
+          "Choose the best way to practice fixing that struggle.",
+          "Write a goal for your next art project."
         ]
       },
       "interactiveActivities": [
@@ -1532,36 +1569,36 @@ export const Arts201Module: LearningModule = {
           "id": "arts-201-l14-ia1",
           "type": "matching_pairs",
           "title": "Error to Fix Match",
-          "description": "Match each error signal to the highest-impact correction action.",
+          "description": "Match the common art mistake to the best way to fix it.",
           "estimatedMinutes": 8,
           "difficultyLevel": "medium",
           "data": {
             "left": [
               {
                 "id": "l1",
-                "label": "Repeated miss on visual composition setup"
+                "label": "My colors look muddy and gray."
               },
               {
                 "id": "l2",
-                "label": "Losses due to rushed critique language decisions"
+                "label": "My drawing looks stiff and unnatural."
               },
               {
                 "id": "l3",
-                "label": "Correct in notes but weak transfer in new tasks"
+                "label": "I never finish my projects."
               }
             ],
             "right": [
               {
                 "id": "r1",
-                "label": "Rebuild setup steps and retest one parallel item"
+                "label": "Clean your brush more often and study color theory."
               },
               {
                 "id": "r2",
-                "label": "Use checkpoint pacing + verify before submit"
+                "label": "Do quick 30-second gesture sketches to loosen up."
               },
               {
                 "id": "r3",
-                "label": "Pair correction with one timed transfer item"
+                "label": "Break the project into smaller, manageable steps."
               }
             ],
             "pairs": [
@@ -1586,108 +1623,111 @@ export const Arts201Module: LearningModule = {
           "id": "arts-201-l14-a1",
           "type": "mnemonic",
           "title": "Clinic Loop",
-          "content": "Diagnose, Correct, Transfer."
+          "content": "Identify the mistake, find the tool, practice the fix."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/arts-201-l14.png"
     },
     {
       "id": "arts-201-l15",
-      "title": "Creative Arts II Mastery Mastery Sprint",
+      "title": "Creative Arts II Mastery Sprint",
       "type": "quiz",
       "duration": 10,
+      "lessonImagePrompt": "Imagen 4 prompt: A glowing finish line ribbon being broken by a flying paintbrush, dynamic and celebratory, 3d render, bright confetti background.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A high-energy, colorful particle animation forming the words 'Art Mastery' in a bold, creative font, 4k resolution, 60fps.",
       "questions": [
         {
           "id": "arts-201-l15-q1",
-          "text": "Which statement best explains color narrative in Arts?",
+          "text": "What is the primary benefit of using the Rule of Thirds?",
           "skillId": "arts-201-skill-core",
           "options": [
             {
               "id": "a",
-              "text": "It explains color narrative using evidence from the lesson."
+              "text": "It creates a more engaging and dynamic composition than centering the subject."
             },
             {
               "id": "b",
-              "text": "It ignores how color narrative works in practice."
+              "text": "It ensures you use exactly three colors."
             },
             {
               "id": "c",
-              "text": "It focuses on an unrelated topic outside Arts."
+              "text": "It makes the painting dry faster."
             },
             {
               "id": "d",
-              "text": "It repeats terms without showing meaning."
+              "text": "It is required for all professional artwork."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "arts-201-l15-q2",
-          "text": "What is the best first step when analyzing design iteration?",
+          "text": "If you want to tell a story of hope and peace, which visual symbols and colors should you use?",
           "skillId": "arts-201-skill-process",
           "options": [
             {
               "id": "a",
-              "text": "Define the goal and examine evidence for design iteration."
+              "text": "Soft pastels, bright lighting, and symbols like doves or sunrises."
             },
             {
               "id": "b",
-              "text": "Guess quickly without checking evidence."
+              "text": "Dark reds, heavy shadows, and symbols like broken glass."
             },
             {
               "id": "c",
-              "text": "Use data unrelated to design iteration."
+              "text": "Neon greens and chaotic, messy brushstrokes."
             },
             {
               "id": "d",
-              "text": "Skip the context and jump to a conclusion."
+              "text": "Only black and white with no symbols."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "arts-201-l15-q3",
-          "text": "Which option shows strong reasoning about creative composition and critique?",
+          "text": "During a critique, someone says your artwork 'lacks visual weight on the right side.' How do you fix this?",
           "skillId": "arts-201-skill-reasoning",
           "options": [
             {
               "id": "a",
-              "text": "Use examples and verify assumptions step by step."
+              "text": "Add a darker color, a larger shape, or more detail to the right side."
             },
             {
               "id": "b",
-              "text": "Ignore important details and edge cases."
+              "text": "Erase everything on the left side."
             },
             {
               "id": "c",
-              "text": "Use assumptions unrelated to creative composition and critique."
+              "text": "Turn the canvas upside down."
             },
             {
               "id": "d",
-              "text": "Change the topic when evidence gets hard."
+              "text": "Tell them they are wrong."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "arts-201-l15-q4",
-          "text": "Why is spaced review useful for Arts mastery?",
+          "text": "What is the ultimate goal of the design iteration cycle?",
           "skillId": "arts-201-skill-review",
           "options": [
             {
               "id": "a",
-              "text": "It strengthens memory and transfer over time"
+              "text": "To continuously refine and improve an artwork until it successfully communicates its intended message."
             },
             {
               "id": "b",
-              "text": "It creates confusion"
+              "text": "To make as many mistakes as possible."
             },
             {
               "id": "c",
-              "text": "It removes key facts"
+              "text": "To avoid ever finishing a project."
             },
             {
               "id": "d",
-              "text": "It has no value"
+              "text": "To copy a photograph perfectly."
             }
           ],
           "correctOptionId": "a"
@@ -1697,42 +1737,41 @@ export const Arts201Module: LearningModule = {
         {
           "id": "arts-201-l15-ia1",
           "type": "matching_pairs",
-          "title": "Reasoning Match: Creative Arts II Mastery Mastery Sprint",
-          "description": "Match each error signal to the strongest correction strategy.",
+          "title": "Final Sprint Match",
+          "description": "Match the art term to its final definition.",
           "estimatedMinutes": 7,
           "difficultyLevel": "medium",
           "instructions": [
-            "Review each left-side signal.",
-            "Pick the best response on the right.",
-            "Use your matches to plan the next drill."
+            "Review each term on the left.",
+            "Pick the best definition on the right."
           ],
           "data": {
             "left": [
               {
                 "id": "l1",
-                "label": "Confusion about color narrative"
+                "label": "Visual Storytelling"
               },
               {
                 "id": "l2",
-                "label": "Inconsistent approach to design iteration"
+                "label": "Iteration"
               },
               {
                 "id": "l3",
-                "label": "Weak transfer of creative composition and critique under timing"
+                "label": "Critique"
               }
             ],
             "right": [
               {
                 "id": "r1",
-                "label": "Create a one-step concept summary with one worked example"
+                "label": "Using symbols and colors to convey a narrative"
               },
               {
                 "id": "r2",
-                "label": "Use a checklist before choosing the final answer"
+                "label": "The process of drafting and revising"
               },
               {
                 "id": "r3",
-                "label": "Retest the same target with a short timed sprint"
+                "label": "Analyzing and providing feedback on art"
               }
             ],
             "pairs": [
@@ -1782,10 +1821,11 @@ export const Arts201Module: LearningModule = {
         {
           "id": "arts-201-l15-a1",
           "type": "mnemonic",
-          "title": "Memory Tip",
-          "content": "Use the phrase Plan, Check, Explain for each question."
+          "title": "You Did It!",
+          "content": "Keep creating, keep iterating, keep growing!"
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/arts-201-l15.png"
     }
   ]
 };

@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const Chemistry101Module: LearningModule = {
+export const chemistry_101_Module: LearningModule = {
   "id": "chemistry-101",
   "title": "Chemistry Essentials",
   "description": "Learn matter, reactions, mixtures, and lab safety through guided lessons.",
@@ -12,7 +12,7 @@ export const Chemistry101Module: LearningModule = {
   ],
   "minAge": 7,
   "maxAge": 18,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "learningObjectives": [
     "Describe the three states of matter and how particles behave in each",
     "Identify the parts of an atom and read basic information from the periodic table",
@@ -26,6 +26,8 @@ export const Chemistry101Module: LearningModule = {
       "title": "States of Matter",
       "type": "video",
       "duration": 10,
+      "lessonImagePrompt": "A vibrant, split-screen illustration showing ice cubes (solid), a flowing river (liquid), and steam rising from a geyser (gas), with glowing magnifying glasses revealing the particle arrangements in each state, 3d render style.",
+      "conceptVideoPrompt": "A high-quality 3D animation zooming into an ice cube to show tightly packed vibrating molecules, then melting into a fluid dynamic simulation of liquid water molecules sliding past each other, and finally boiling into fast-moving gas particles bouncing around the screen.",
       "objectives": [
         "Describe solids, liquids, and gases at the particle level",
         "Explain how temperature affects the state of matter"
@@ -41,7 +43,7 @@ export const Chemistry101Module: LearningModule = {
           "id": "chemistry-101-l01-c2",
           "title": "Particle Behavior",
           "kind": "concept",
-          "content": "Let's explore how particles behave in different states of matter! In solids, the particles are packed closely together in a specific arrangement. This means they can only vibrate in place, which is why solids have a definite shape and volume. Think of ice or a rock; they hold their shape no matter where you put them!\nNow, when we look at liquids, the particles are still close together, but they have more freedom to move around. They can slide past each other, which allows liquids to take the shape of their container. For example, when you pour water into a glass, it takes the shape of the glass while still keeping the same amount of water inside.\nFinally, we have gases. In gases, the particles are much farther apart and move around freely. This is why gases do not have a definite shape or volume. If you blow up a balloon, the air inside spreads out to fill the entire balloon, no matter how big or small it is.\nUnderstanding how particles behave in solids, liquids, and gases helps us learn about the properties of matter and how they interact with each other in our world! Isn't that fascinating?"
+          "content": "Let's explore how particles behave in different states of matter! In solids, the particles are packed closely together in a specific arrangement. This means they can only vibrate in place, which is why solids have a definite shape and volume. Think of ice or a rock; they hold their shape no matter where you put them!\nNow, when we look at liquids, the particles are still close together, but they have more freedom to move around. They can slide past each other, which allows liquids to take the shape of their container. For example, when you pour water into a glass, it takes the shape of the glass while still keeping the same amount of water inside.\nFinally, we have gases. In gases, the particles are much farther apart and move around freely. This is why gases do not have a definite shape or volume. If you blow up a balloon, the air inside spreads out to fill the entire balloon, no matter how big or small it is.\nUnderstanding how particles behave in solids, liquids, and gases helps us learn about the properties of matter and how they interact with each other in our world!"
         },
         {
           "id": "chemistry-101-l01-c3",
@@ -91,13 +93,16 @@ export const Chemistry101Module: LearningModule = {
           "title": "Heating Ice to Steam",
           "content": "Animation showing ice particles vibrating, then melting into flowing liquid particles, then boiling into fast-moving gas particles."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/chemistry-101-l01.png"
     },
     {
       "id": "chemistry-101-l02",
       "title": "Atoms and Molecules",
       "type": "interactive",
       "duration": 12,
+      "lessonImagePrompt": "A glowing, futuristic holographic projection of a carbon atom with a central nucleus of red and blue spheres, surrounded by bright yellow electrons orbiting in glowing rings.",
+      "conceptVideoPrompt": "A dynamic 3D animation showing individual glowing atoms floating in space, then magnetically snapping together to form a water molecule (H2O) with a satisfying visual pop and glowing chemical bonds.",
       "objectives": [
         "Identify protons, neutrons, and electrons in an atom",
         "Explain how atoms combine to form molecules"
@@ -181,13 +186,16 @@ export const Chemistry101Module: LearningModule = {
           "title": "Atom Builder",
           "content": "Build a carbon atom: place 6 protons and 6 neutrons in the nucleus, and arrange 6 electrons in shells (2 in the first shell, 4 in the second)."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/chemistry-101-l02.png"
     },
     {
       "id": "chemistry-101-l03",
       "title": "Checkpoint: Matter Basics",
       "type": "quiz",
       "duration": 10,
+      "lessonImagePrompt": "A fun, colorful quiz show stage with floating 3D icons of atoms, water droplets, and ice cubes, with a glowing 'Checkpoint' sign in the background.",
+      "conceptVideoPrompt": "A fast-paced, engaging motion graphics recap showing a solid melting to liquid, an atom's nucleus, and a molecule forming, ending with a glowing question mark.",
       "questions": [
         {
           "id": "chemistry-101-l03-q1",
@@ -389,13 +397,16 @@ export const Chemistry101Module: LearningModule = {
           "title": "State Change Memory",
           "content": "Heat adds energy: Melt → Evaporate (solid→liquid→gas). Cold removes energy: Condense → Freeze (gas→liquid→solid)."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/chemistry-101-l03.png"
     },
     {
       "id": "chemistry-101-l04",
       "title": "The Periodic Table",
       "type": "video",
       "duration": 11,
+      "lessonImagePrompt": "A glowing, interactive periodic table floating in a high-tech laboratory, with the element Carbon highlighted and popping out in 3D.",
+      "conceptVideoPrompt": "A sweeping camera move across a massive, glowing periodic table. The camera zooms into the 'Alkali Metals' column, which bursts into safe, colorful sparks, then pans to the 'Noble Gases' glowing with neon lights.",
       "objectives": [
         "Read an element's atomic number, symbol, and atomic mass from the periodic table",
         "Explain how elements are organized into groups and periods"
@@ -455,13 +466,16 @@ export const Chemistry101Module: LearningModule = {
           "title": "Periodic Table Map",
           "content": "Color-coded periodic table highlighting metals (blue), nonmetals (orange), metalloids (green), with element tile anatomy callout."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/chemistry-101-l04.png"
     },
     {
       "id": "chemistry-101-l05",
       "title": "Elements, Compounds, and Mixtures",
       "type": "interactive",
       "duration": 13,
+      "lessonImagePrompt": "A split-screen visual showing a shiny gold bar (element), a glass of pure water (compound), and a colorful bowl of trail mix (mixture), all beautifully lit.",
+      "conceptVideoPrompt": "A visually satisfying animation showing pure gold atoms, then hydrogen and oxygen atoms bonding to form water, and finally a physical mixing of colorful sand and iron filings being separated by a magnet.",
       "objectives": [
         "Distinguish between elements, compounds, and mixtures",
         "Classify common substances"
@@ -545,13 +559,16 @@ export const Chemistry101Module: LearningModule = {
           "title": "Separating Salt Water",
           "content": "Animation showing evaporation: salt water heated, water evaporates as steam, salt crystals remain in the dish."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/chemistry-101-l05.png"
     },
     {
       "id": "chemistry-101-l06",
-      "title": "Checkpoint: Reaction Evidence",
+      "title": "Checkpoint: Classifying Matter",
       "type": "quiz",
       "duration": 10,
+      "lessonImagePrompt": "A colorful laboratory desk with a magnet pulling iron out of sand, a beaker of water, and a shiny piece of metal, representing mixtures, compounds, and elements.",
+      "conceptVideoPrompt": "A quick motion graphics loop showing a magnet separating iron from sand, followed by a glowing checkmark, summarizing the physical separation of mixtures.",
       "questions": [
         {
           "id": "chemistry-101-l06-q1",
@@ -741,13 +758,16 @@ export const Chemistry101Module: LearningModule = {
           "title": "Element vs Compound vs Mixture",
           "content": "Element = one type of atom. Compound = different atoms bonded (fixed formula). Mixture = combined but not bonded (variable proportions)."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/chemistry-101-l06.png"
     },
     {
       "id": "chemistry-101-l07",
       "title": "Chemical Reactions",
       "type": "video",
       "duration": 12,
+      "lessonImagePrompt": "A dramatic, colorful chemical reaction in a glass flask, with glowing green liquid, bright orange bubbles, and a small puff of sparkling smoke.",
+      "conceptVideoPrompt": "A cinematic slow-motion video of two clear liquids being poured together into a beaker, instantly turning bright pink and fizzing with bubbles, demonstrating a chemical reaction.",
       "objectives": [
         "Identify signs of a chemical reaction",
         "Understand reactants, products, and conservation of mass"
@@ -807,13 +827,16 @@ export const Chemistry101Module: LearningModule = {
           "title": "Reaction Spotting",
           "content": "For each scenario, identify if a chemical reaction occurred and which sign(s) you observed: 1) Baking soda + vinegar → fizzing. 2) Ice melting in the sun. 3) A nail left outside turns reddish-brown."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/chemistry-101-l07.png"
     },
     {
       "id": "chemistry-101-l08",
       "title": "Lab Safety and Measurement",
       "type": "interactive",
       "duration": 10,
+      "lessonImagePrompt": "A cool, modern illustration of a student wearing stylish safety goggles and a white lab coat, giving a thumbs up next to a glowing green beaker.",
+      "conceptVideoPrompt": "An engaging, fast-paced animated guide showing a character putting on safety goggles, tying back hair, and carefully measuring a glowing blue liquid in a graduated cylinder.",
       "objectives": [
         "Identify key lab safety rules and equipment",
         "Make accurate measurements using appropriate tools"
@@ -887,13 +910,16 @@ export const Chemistry101Module: LearningModule = {
           "title": "SAFE in the Lab",
           "content": "Safety goggles on, Ask before you touch, Follow all instructions, Exit plan known."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/chemistry-101-l08.png"
     },
     {
       "id": "chemistry-101-l09",
       "title": "Review: Chemistry Concepts",
       "type": "quiz",
       "duration": 10,
+      "lessonImagePrompt": "A vibrant collage of chemistry concepts: a bubbling flask, a glowing atom, a periodic table tile, and safety goggles, all floating in a dynamic 3D space.",
+      "conceptVideoPrompt": "A high-energy montage of previous chemistry animations: melting ice, snapping molecules, bubbling reactions, and a glowing periodic table, ending with a 'Review Time' title.",
       "questions": [
         {
           "id": "chemistry-101-l09-q1",
@@ -1073,13 +1099,16 @@ export const Chemistry101Module: LearningModule = {
           "title": "Chemical vs Physical",
           "content": "Chemical = new substance formed (can't easily undo). Physical = same substance, different form (can usually undo)."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/chemistry-101-l09.png"
     },
     {
       "id": "chemistry-101-l10",
       "title": "Mastery: Chemistry",
       "type": "quiz",
       "duration": 10,
+      "lessonImagePrompt": "A golden trophy shaped like an atom, glowing with bright energy, sitting on a high-tech laboratory desk surrounded by colorful chemistry equipment.",
+      "conceptVideoPrompt": "A celebratory motion graphics animation showing a glowing atom expanding into a burst of colorful particles, with the words 'Chemistry Mastery' shining in the center.",
       "questions": [
         {
           "id": "chemistry-101-l10-q1",
@@ -1273,13 +1302,16 @@ export const Chemistry101Module: LearningModule = {
           "title": "Conservation Law",
           "content": "Atoms in = Atoms out. Nothing appears or vanishes — they just rearrange."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/chemistry-101-l10.png"
     },
     {
       "id": "chemistry-101-l11",
       "title": "Applied Chemistry Challenge Studio",
       "type": "interactive",
       "duration": 14,
+      "lessonImagePrompt": "A split scene showing a modern kitchen on one side with a cake baking in the oven, and a chemistry lab on the other side with bubbling flasks, showing the connection between cooking and science.",
+      "conceptVideoPrompt": "A time-lapse video of bread dough rising and baking in an oven, with glowing animated overlays showing the chemical formulas of the gases expanding inside the dough.",
       "objectives": [
         "Apply classification and reaction concepts to real-world scenarios",
         "Predict products and identify reaction types"
@@ -1368,6 +1400,8 @@ export const Chemistry101Module: LearningModule = {
       "title": "Chemistry Mastery Applied Retest",
       "type": "quiz",
       "duration": 10,
+      "lessonImagePrompt": "A glowing, futuristic digital tablet displaying a balanced chemical equation, surrounded by floating 3D icons of atoms and molecules.",
+      "conceptVideoPrompt": "A sleek, animated sequence showing a chemical equation balancing itself like a puzzle, with atoms flying across the screen to find their perfect spots.",
       "questions": [
         {
           "id": "chemistry-101-l12-q1",
@@ -1557,13 +1591,16 @@ export const Chemistry101Module: LearningModule = {
           "title": "Equation Balancing",
           "content": "Count atoms on each side. Adjust coefficients (never subscripts!) until both sides match. Check your work."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/chemistry-101-l12.png"
     },
     {
       "id": "chemistry-101-l13",
       "title": "Chemistry Scenario Lab",
       "type": "video",
       "duration": 12,
+      "lessonImagePrompt": "A detailed 3D cross-section of a water filtration system, showing muddy water at the top passing through layers of sand, gravel, and charcoal to become crystal clear at the bottom.",
+      "conceptVideoPrompt": "A realistic 3D animation of muddy river water being poured into a filter. The camera follows a water droplet down through the sand and gravel, emerging clear, then glowing as a drop of chlorine is added to purify it.",
       "objectives": [
         "Apply chemistry knowledge to a real-world water purification scenario",
         "Connect multiple chemistry concepts to solve a practical problem"
@@ -1629,13 +1666,16 @@ export const Chemistry101Module: LearningModule = {
           "title": "Design Your Own Filter",
           "content": "If you had muddy water, gravel, sand, cotton cloth, and a plastic bottle, how would you build a filter? Draw your design and explain which particles each layer removes."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/chemistry-101-l13.png"
     },
     {
       "id": "chemistry-101-l14",
       "title": "Chemistry Coaching Clinic",
       "type": "interactive",
       "duration": 13,
+      "lessonImagePrompt": "A friendly, animated robot teacher pointing to a glowing chalkboard that shows a sugar cube dissolving in water with a big green checkmark, clearing up a common misconception.",
+      "conceptVideoPrompt": "A fun, myth-busting animation showing a piece of wood burning, with glowing atoms floating up into the air as carbon dioxide and water vapor, proving that atoms are never destroyed.",
       "objectives": [
         "Identify and correct common chemistry misconceptions",
         "Apply targeted review strategies"
@@ -1721,13 +1761,16 @@ export const Chemistry101Module: LearningModule = {
           "title": "Physical vs Chemical Test",
           "content": "Ask: 'Is a new substance formed?' Yes = chemical. No = physical. Can I undo it easily? If yes, probably physical."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/chemistry-101-l14.png"
     },
     {
       "id": "chemistry-101-l15",
       "title": "Chemistry Mastery Sprint",
       "type": "quiz",
       "duration": 10,
+      "lessonImagePrompt": "A dynamic, high-speed racing track made of glowing chemical bonds, with a glowing atom speeding across the finish line.",
+      "conceptVideoPrompt": "A fast-paced, energetic countdown animation featuring quick flashes of chemical reactions, periodic table elements, and balancing equations, building up to a final 'Sprint' title.",
       "questions": [
         {
           "id": "chemistry-101-l15-q1",
@@ -1906,7 +1949,8 @@ export const Chemistry101Module: LearningModule = {
           "title": "Atom Number Rule",
           "content": "Atomic number = protons = electrons (in a neutral atom). Mass number ≈ protons + neutrons."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/chemistry-101-l15.png"
     }
   ]
 };

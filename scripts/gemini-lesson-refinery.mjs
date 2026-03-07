@@ -32,7 +32,7 @@ loadEnv();
 
 const GOOGLE_API_KEY = process.env.GOOGLE_API_KEY;
 const GEMINI_BASE_URL = "https://generativelanguage.googleapis.com/v1beta";
-const PRO_MODEL = "gemini-2.5-pro";
+const PRO_MODEL = "gemini-3.1-pro-preview";
 
 if (!GOOGLE_API_KEY) {
   console.error("❌ ERROR: GOOGLE_API_KEY is not set.");

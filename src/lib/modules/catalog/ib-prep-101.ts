@@ -1,693 +1,448 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const IbPrep101Module: LearningModule = {
-  id: "ib-prep-101",
-  title: "IB Diploma Prep Foundations",
-  description: "Build planning, IA/EE workflows, and exam strategy for the IB Diploma Programme.",
-  subject: "Exam Prep",
-  tags: ["exam-prep", "assessment", "advanced"],
-  minAge: 15,
-  maxAge: 19,
-  version: "2.0.0",
-  difficultyBand: "advanced",
-  localeSupport: ["en"],
-  thumbnail: "/placeholders/lesson-robot.svg",
-  learningObjectives: [
-    "Build structured IB Diploma readiness workflows",
-    "Improve speed and accuracy under timed constraints",
-    "Use analytics-based revision loops to close weak areas"
+export const ib_prep_101_Module: LearningModule = {
+  "id": "ib-prep-101",
+  "title": "IB Diploma Success: A Strategic Guide",
+  "description": "Master the core components, develop effective study workflows, and build winning exam strategies for the IB Diploma Programme.",
+  "subject": "Exam Prep",
+  "tags": [
+    "exam-prep",
+    "ib-diploma",
+    "study-skills",
+    "advanced"
   ],
-  quizBlueprint: {
-    frequency: "weekly_assessment",
-    questionsPerCheck: 20,
-    totalQuestions: 20,
-    timeLimitMinutes: 25,
-    questionTypes: [{ type: "mcq_single", percentage: 100, pointsEach: 1, bloomsLevels: [1, 2, 3, 4] }],
-    difficultyDistribution: { easy: 6, medium: 10, hard: 4 },
-    feedbackMode: "after_submit",
-    adaptive: false,
-    masteryThreshold: 0.8
+  "minAge": 15,
+  "maxAge": 19,
+  "version": "1.1.0",
+  "difficultyBand": "advanced",
+  "localeSupport": [
+    "en"
+  ],
+  "thumbnail": "/placeholders/lesson-robot.svg",
+  "learningObjectives": [
+    "Develop a strategic plan for subject selection and managing the core components (EE, TOK, CAS).",
+    "Master techniques for deconstructing exam questions and using markschemes effectively.",
+    "Implement a cycle of practice, analysis, and targeted revision to improve performance under timed conditions."
+  ],
+  "quizBlueprint": {
+    "frequency": "final_assessment",
+    "questionsPerCheck": 40,
+    "totalQuestions": 40,
+    "timeLimitMinutes": 50,
+    "questionTypes": [
+      {
+        "type": "mcq_single",
+        "percentage": 100,
+        "pointsEach": 1,
+        "bloomsLevels": [
+          2,
+          3,
+          4,
+          5
+        ]
+      }
+    ],
+    "difficultyDistribution": {
+      "easy": 8,
+      "medium": 20,
+      "hard": 12
+    },
+    "feedbackMode": "after_submit",
+    "adaptive": false,
+    "masteryThreshold": 0.8
   },
-  lessons: [
+  "lessons": [
     {
-      id: "ib-prep-101-l01",
-      title: "IB: IB Diploma Structure and Subject Planning",
-      type: "video",
-      duration: 11,
-      learningAids: [
+      "id": "ib-prep-101-l01",
+      "title": "Understanding the IB Diploma: Core Components & Subject Selection",
+      "type": "video",
+      "duration": 10,
+      "learningAids": [
         {
           "id": "ib-prep-101-l01-a1",
           "type": "image",
-          "title": "Hl Sl Planning Snapshot",
-          "content": "Visual anchor for IB: IB Diploma Structure and Subject Planning with emphasis on HL/SL planning within practice set planning."
+          "title": "The IB Diploma Hexagon",
+          "content": "A visual diagram showing the six subject groups surrounding the three core components: Extended Essay (EE), Theory of Knowledge (TOK), and Creativity, Activity, Service (CAS)."
         },
         {
           "id": "ib-prep-101-l01-a2",
           "type": "animation",
-          "title": "Tok Walkthrough",
-          "content": "Stepwise walkthrough for IB: IB Diploma Structure and Subject Planning showing TOK decisions and strategy log checks."
+          "title": "Subject Selection Pathways",
+          "content": "Animated flowchart showing how different HL/SL subject choices can lead to various university and career paths."
         }
       ]
     },
     {
-      id: "ib-prep-101-l02",
-      title: "IB: Higher Level and Standard Level Strategy",
-      type: "interactive",
-      duration: 14,
-      metadata: {
-        prompts: [
-          "Identify one HL/SL planning decision rule in IB: Higher Level and Standard Level Strategy.",
-          "Apply it in one practice set and show how it improves decision quality under constraints.",
-          "Set one next-step target for TOK before your next IB Diploma readiness session."
+      "id": "ib-prep-101-l02",
+      "title": "Strategic Subject Choices: Maximizing Your HL/SL Potential",
+      "type": "interactive",
+      "duration": 15,
+      "metadata": {
+        "prompts": [
+          "Based on the activity, identify one personal strength that makes a subject a good fit for you at HL.",
+          "Describe how your chosen HL subjects complement each other.",
+          "Set a goal to speak with a teacher or counselor about your proposed subject choices this week."
         ]
       },
-      interactiveActivities: [
+      "interactiveActivities": [
         {
           "id": "ib-prep-101-l02-ia1",
-          "type": "drag_and_drop",
-          "title": "IB: Higher Level and Standard Level Strategy Decision-Phase Mapping",
-          "description": "Map each decision cue to Plan, Execute, or Reflect.",
+          "type": "sorting_buckets",
+          "title": "HL vs. SL Decision Matrix",
+          "description": "Sort subject characteristics and personal strengths into 'Good fit for HL' or 'Good fit for SL' buckets to clarify your choices.",
           "estimatedMinutes": 8,
-          "difficultyLevel": "medium",
+          "difficultyLevel": "easy",
           "instructions": [
-            "Assign each decision cue to the best phase.",
-            "Check all mappings.",
-            "Capture one improvement target."
+            "Consider each characteristic or skill.",
+            "Drag it to the bucket where it is most critical.",
+            "Review your sort to identify patterns in your own strengths."
           ],
           "data": {
-            "targets": [
+            "buckets": [
               {
-                "id": "plan",
-                "label": "Programme Plan"
+                "id": "hl_fit",
+                "label": "Good Fit for HL"
               },
               {
-                "id": "execute",
-                "label": "Criterion Execution"
-              },
-              {
-                "id": "reflect",
-                "label": "Criterion Review"
+                "id": "sl_fit",
+                "label": "Good Fit for SL"
               }
             ],
-            "draggables": [
+            "items": [
               {
-                "id": "d1",
-                "label": "Balance HL/SL demands with IA, TOK, and EE milestones",
-                "correctTargetId": "plan"
+                "id": "i1",
+                "label": "Deep passion for the subject",
+                "correctBucketId": "hl_fit"
               },
               {
-                "id": "d2",
-                "label": "Answer using command terms aligned to IB markscheme criteria",
-                "correctTargetId": "execute"
+                "id": "i2",
+                "label": "Required for university major",
+                "correctBucketId": "hl_fit"
               },
               {
-                "id": "d3",
-                "label": "Review each response against criterion language and evidence quality",
-                "correctTargetId": "reflect"
+                "id": "i3",
+                "label": "Provides breadth to your diploma",
+                "correctBucketId": "sl_fit"
+              },
+              {
+                "id": "i4",
+                "label": "Strong foundational knowledge",
+                "correctBucketId": "sl_fit"
+              },
+              {
+                "id": "i5",
+                "label": "Willingness to do independent research",
+                "correctBucketId": "hl_fit"
               }
             ]
           }
         }
       ],
-      learningAids: [
+      "learningAids": [
         {
           "id": "ib-prep-101-l02-a1",
           "type": "image",
-          "title": "Hl Sl Planning Snapshot",
-          "content": "Visual anchor for IB: Higher Level and Standard Level Strategy with emphasis on HL/SL planning within practice set planning."
-        },
-        {
-          "id": "ib-prep-101-l02-a2",
-          "type": "animation",
-          "title": "Tok Walkthrough",
-          "content": "Stepwise walkthrough for IB: Higher Level and Standard Level Strategy showing TOK decisions and strategy log checks."
+          "title": "Sample Student Timetable",
+          "content": "A visual example of a balanced weekly schedule for an IB student with 3 HL and 3 SL subjects, showing dedicated time for core components."
         }
       ]
     },
     {
-      id: "ib-prep-101-l03",
-      title: "IB: Theory of Knowledge Reasoning Skills",
-      type: "quiz",
-      duration: 12,
-      questions: [
+      "id": "ib-prep-101-l03",
+      "title": "Mastering Theory of Knowledge (TOK): Crafting Cogent Arguments",
+      "type": "quiz",
+      "duration": 12,
+      "questions": [
         {
           "id": "ib-prep-101-l03-q1",
-          "text": "In IB: Theory of Knowledge Reasoning Skills, a learner keeps missing HL/SL planning items during IB practice. Which adjustment should happen before the next timed practice set?",
-          "skillId": "ib-prep-101-skill-hl-sl-planning-workflow",
+          "text": "What is the primary purpose of a Knowledge Question (KQ) in TOK?",
+          "skillId": "ib-prep-skill-tok-foundations",
           "options": [
             {
               "id": "a",
-              "text": "Skip review and jump directly to harder questions."
+              "text": "To ask a question with a simple 'yes' or 'no' answer."
             },
             {
               "id": "b",
-              "text": "Track only total score with no error categories."
+              "text": "To explore how we know what we claim to know, focusing on concepts of knowledge."
             },
             {
               "id": "c",
-              "text": "Run a short HL/SL planning checkpoint routine and annotate why each miss occurred in a strategy log before retesting."
+              "text": "To test factual recall about a specific subject."
             },
             {
               "id": "d",
-              "text": "Switch topics even if HL/SL planning is still the dominant weakness."
-            }
-          ],
-          "correctOptionId": "c",
-          "hint": "Choose the action that creates a repeatable feedback loop for HL/SL planning.",
-          "explanation": "Fast targeted feedback plus immediate correction is the most reliable way to improve HL/SL planning."
-        },
-        {
-          "id": "ib-prep-101-l03-q2",
-          "text": "A IB IB: Theory of Knowledge Reasoning Skills session ends with unstable timing. What should be diagnosed first?",
-          "skillId": "ib-prep-101-skill-tok-diagnosis",
-          "options": [
-            {
-              "id": "a",
-              "text": "Retake the session immediately without diagnostics."
-            },
-            {
-              "id": "b",
-              "text": "Increase total question count and keep the same attempt order."
-            },
-            {
-              "id": "c",
-              "text": "Use one pacing rule for all sections regardless of load."
-            },
-            {
-              "id": "d",
-              "text": "Locate the exact TOK decision point where time spikes, then set micro-checkpoints for that phase."
-            }
-          ],
-          "correctOptionId": "d",
-          "hint": "Find the answer that isolates a measurable bottleneck.",
-          "explanation": "Pacing stabilizes when the highest-cost decision point is measured and corrected directly."
-        },
-        {
-          "id": "ib-prep-101-l03-q3",
-          "text": "IB practice shows correction is happening but not sticking in IB: Theory of Knowledge Reasoning Skills. What plan fixes this fastest?",
-          "skillId": "ib-prep-101-skill-extended-essay-transfer",
-          "options": [
-            {
-              "id": "a",
-              "text": "Pair each corrected extended essay error with a near-transfer item in the next timed block and track it in a strategy log."
-            },
-            {
-              "id": "b",
-              "text": "Keep reviewing notes and avoid new timed attempts."
-            },
-            {
-              "id": "c",
-              "text": "Increase difficulty only, without targeted rematches."
-            },
-            {
-              "id": "d",
-              "text": "Rewatch lesson content without logging applied changes."
-            }
-          ],
-          "correctOptionId": "a",
-          "hint": "The strongest option forces immediate transfer testing.",
-          "explanation": "Correction becomes durable when each fix is tested on a similar item during the next constrained attempt."
-        },
-        {
-          "id": "ib-prep-101-l03-q4",
-          "text": "During post-drill review for IB: Theory of Knowledge Reasoning Skills, which fix should be prioritized first for score impact in IB?",
-          "skillId": "ib-prep-101-skill-internal-assessment-priority",
-          "options": [
-            {
-              "id": "a",
-              "text": "Polish already-mastered question types first."
-            },
-            {
-              "id": "b",
-              "text": "Address repeated internal assessment and pacing errors first because they affect many questions in one run."
-            },
-            {
-              "id": "c",
-              "text": "Ignore pacing and focus only on confidence items."
-            },
-            {
-              "id": "d",
-              "text": "Rewrite notes without validating changes in timed practice."
+              "text": "To summarize a real-life situation without analysis."
             }
           ],
           "correctOptionId": "b",
-          "hint": "Prioritize changes that influence the largest question set.",
-          "explanation": "Highest-impact remediation usually targets repeated timing and process breakdowns before edge-case content gaps."
+          "hint": "Think about the 'Theory of Knowledge' itself. What is it about?",
+          "explanation": "A Knowledge Question is open-ended and contested, focusing on the methods and concepts of knowledge construction, not just on facts."
         },
         {
-          "id": "ib-prep-101-l03-q5",
-          "text": "In IB criterion-marked response, criterion language omission appears during IB: Theory of Knowledge Reasoning Skills. What is the strongest immediate correction?",
-          "skillId": "ib-prep-101-skill-hl-sl-planning-section-application",
+          "id": "ib-prep-101-l03-q2",
+          "text": "In a TOK essay, what is the role of a 'counterclaim'?",
+          "skillId": "ib-prep-skill-tok-argument",
           "options": [
             {
               "id": "a",
-              "text": "Ignore criterion-marked response diagnostics and continue for volume."
+              "text": "To prove the main claim is wrong."
             },
             {
               "id": "b",
-              "text": "Re-read notes without running a corrected attempt."
+              "text": "To introduce an irrelevant idea to fill space."
             },
             {
               "id": "c",
-              "text": "Map each paragraph to the targeted criterion descriptor."
+              "text": "To present an alternative perspective or argument, adding nuance and depth."
             },
             {
               "id": "d",
-              "text": "Delay correction until after several unrelated drills."
+              "text": "To repeat the main claim in different words."
             }
           ],
           "correctOptionId": "c",
-          "hint": "Choose the option that directly fixes criterion language omission.",
-          "explanation": "Immediate correction inside criterion-marked response improves transfer to the next timed practice set."
-        },
-        {
-          "id": "ib-prep-101-l03-q6",
-          "text": "During IB command-term question, command-term mismatch repeats in IB: Theory of Knowledge Reasoning Skills. Which plan should be applied before the next retest?",
-          "skillId": "ib-prep-101-skill-tok-section-application",
-          "options": [
-            {
-              "id": "a",
-              "text": "Switch to new content before validating the fix."
-            },
-            {
-              "id": "b",
-              "text": "Increase speed without updating process controls."
-            },
-            {
-              "id": "c",
-              "text": "Retake the section with no checkpoint changes."
-            },
-            {
-              "id": "d",
-              "text": "Translate command terms into required response moves before drafting. Track outcomes in a criterion alignment sheet and retest the same pattern."
-            }
-          ],
-          "correctOptionId": "d",
-          "hint": "Best plans combine targeted correction with measurable tracking.",
-          "explanation": "A logged correction cycle in criterion alignment sheet makes the pacing fix visible and repeatable."
+          "hint": "Strong arguments consider multiple viewpoints.",
+          "explanation": "A counterclaim demonstrates critical thinking by acknowledging and exploring other valid perspectives, which strengthens the overall analysis."
         }
       ],
-      interactiveActivities: [
-        {
-          "id": "ib-prep-101-l03-ia1",
-          "type": "matching_pairs",
-          "title": "IB: Theory of Knowledge Reasoning Skills Correction Alignment",
-          "description": "Align each recurring signal with the strongest correction action for decision quality under constraints.",
-          "estimatedMinutes": 8,
-          "difficultyLevel": "medium",
-          "instructions": [
-            "Align each pair.",
-            "Check your result.",
-            "Apply one correction in the next drill."
-          ],
-          "data": {
-            "left": [
-              {
-                "id": "l1",
-                "label": "Response ignores command term nuance"
-              },
-              {
-                "id": "l2",
-                "label": "IA draft has evidence but weak methodological justification"
-              },
-              {
-                "id": "l3",
-                "label": "TOK reasoning lacks clear claim-counterclaim structure"
-              }
-            ],
-            "right": [
-              {
-                "id": "r1",
-                "label": "Translate command term into explicit response requirement before writing"
-              },
-              {
-                "id": "r2",
-                "label": "Add criterion-linked method rationale with reliability discussion"
-              },
-              {
-                "id": "r3",
-                "label": "Use claim/counterclaim/evaluation scaffold for each TOK paragraph"
-              }
-            ],
-            "pairs": [
-              {
-                "leftId": "l1",
-                "rightId": "r1"
-              },
-              {
-                "leftId": "l2",
-                "rightId": "r2"
-              },
-              {
-                "leftId": "l3",
-                "rightId": "r3"
-              }
-            ]
-          }
-        }
-      ],
-      quizBlueprint: {
+      "quizBlueprint": {
         "frequency": "lesson_assessment",
-        "questionsPerCheck": 6,
-        "totalQuestions": 6,
-        "timeLimitMinutes": 12,
+        "questionsPerCheck": 2,
+        "totalQuestions": 2,
+        "timeLimitMinutes": 5,
         "questionTypes": [
           {
             "type": "mcq_single",
-            "count": 6,
+            "count": 2,
             "pointsEach": 1,
             "bloomsLevels": [
-              1,
               2,
               3
             ]
           }
         ],
         "difficultyDistribution": {
-          "easy": 2,
-          "medium": 3,
-          "hard": 1
+          "easy": 1,
+          "medium": 1,
+          "hard": 0
         },
         "feedbackMode": "after_submit",
         "adaptive": false,
-        "masteryThreshold": 0.75
+        "masteryThreshold": 1
       },
-      metadata: {
-        examDrill: "lesson_drill"
-      },
-      learningAids: [
+      "learningAids": [
         {
           "id": "ib-prep-101-l03-a1",
           "type": "image",
-          "title": "Hl Sl Planning Snapshot",
-          "content": "Visual anchor for IB: Theory of Knowledge Reasoning Skills with emphasis on HL/SL planning within practice set planning."
+          "title": "TOK Argument Structure",
+          "content": "A diagram illustrating the relationship between a knowledge question, claims, counterclaims, and evidence from Areas of Knowledge (AOKs) and Ways of Knowing (WOKs)."
         },
         {
           "id": "ib-prep-101-l03-a2",
           "type": "animation",
-          "title": "Tok Walkthrough",
-          "content": "Stepwise walkthrough for IB: Theory of Knowledge Reasoning Skills showing TOK decisions and strategy log checks."
+          "title": "Deconstructing a TOK Prompt",
+          "content": "An animation that breaks down a sample TOK essay prompt, highlighting key terms and underlying assumptions to explore."
         }
       ]
     },
     {
-      id: "ib-prep-101-l04",
-      title: "IB: Extended Essay Research Workflow",
-      type: "interactive",
-      duration: 14,
-      metadata: {
-        prompts: [
-          "Identify one extended essay decision rule in IB: Extended Essay Research Workflow.",
-          "Apply it in one passage set and show how it improves evidence and language precision.",
-          "Set one next-step target for HL/SL planning before your next IB Diploma readiness session."
+      "id": "ib-prep-101-l04",
+      "title": "The Extended Essay (EE): A Step-by-Step Research Workflow",
+      "type": "interactive",
+      "duration": 15,
+      "metadata": {
+        "prompts": [
+          "Identify one key milestone from your EE timeline that you need to focus on next.",
+          "What is a potential challenge you might face in meeting that milestone?",
+          "List one action you can take this week to move forward on your EE."
         ]
       },
-      interactiveActivities: [
+      "interactiveActivities": [
         {
           "id": "ib-prep-101-l04-ia1",
           "type": "drag_and_drop",
-          "title": "IB: Extended Essay Research Workflow Decision-Phase Mapping",
-          "description": "Map each decision cue to Plan, Execute, or Reflect.",
-          "estimatedMinutes": 8,
+          "title": "Build Your EE Timeline",
+          "description": "Drag key milestones onto a timeline to create a realistic project plan for your 4,000-word essay.",
+          "estimatedMinutes": 10,
           "difficultyLevel": "medium",
           "instructions": [
-            "Assign each decision cue to the best phase.",
-            "Check all mappings.",
-            "Capture one improvement target."
+            "Drag each EE stage to its logical place on the timeline.",
+            "Ensure the sequence creates a manageable workflow.",
+            "Use this model to plan your own EE schedule."
           ],
           "data": {
             "targets": [
               {
-                "id": "plan",
-                "label": "Programme Plan"
+                "id": "month1",
+                "label": "Months 1-2"
               },
               {
-                "id": "execute",
-                "label": "Criterion Execution"
+                "id": "month3",
+                "label": "Months 3-4"
               },
               {
-                "id": "reflect",
-                "label": "Criterion Review"
+                "id": "month5",
+                "label": "Months 5-6"
+              },
+              {
+                "id": "month7",
+                "label": "Months 7-8"
               }
             ],
             "draggables": [
               {
                 "id": "d1",
-                "label": "Balance HL/SL demands with IA, TOK, and EE milestones",
-                "correctTargetId": "plan"
+                "label": "Explore Topics & Finalize Research Question",
+                "correctTargetId": "month1"
               },
               {
                 "id": "d2",
-                "label": "Answer using command terms aligned to IB markscheme criteria",
-                "correctTargetId": "execute"
+                "label": "Conduct Research & Create Detailed Outline",
+                "correctTargetId": "month3"
               },
               {
                 "id": "d3",
-                "label": "Review each response against criterion language and evidence quality",
-                "correctTargetId": "reflect"
+                "label": "Write Full First Draft",
+                "correctTargetId": "month5"
+              },
+              {
+                "id": "d4",
+                "label": "Edit, Finalize, and Prepare for Viva Voce",
+                "correctTargetId": "month7"
               }
             ]
           }
         }
       ],
-      learningAids: [
+      "learningAids": [
         {
           "id": "ib-prep-101-l04-a1",
           "type": "image",
-          "title": "Extended Essay Snapshot",
-          "content": "Visual anchor for IB: Extended Essay Research Workflow with emphasis on extended essay within passage set planning."
-        },
-        {
-          "id": "ib-prep-101-l04-a2",
-          "type": "animation",
-          "title": "Hl Sl Planning Walkthrough",
-          "content": "Stepwise walkthrough for IB: Extended Essay Research Workflow showing HL/SL planning decisions and annotation map checks."
+          "title": "Research Question Funnel",
+          "content": "A graphic showing the process of narrowing a broad topic (e.g., 'World War II') down to a focused, arguable EE research question."
         }
       ]
     },
     {
-      id: "ib-prep-101-l05",
-      title: "IB: Internal Assessment Quality Standards",
-      type: "video",
-      duration: 11,
-      learningAids: [
+      "id": "ib-prep-101-l05",
+      "title": "Excelling in Internal Assessments (IAs): From Planning to Submission",
+      "type": "video",
+      "duration": 11,
+      "learningAids": [
         {
           "id": "ib-prep-101-l05-a1",
           "type": "image",
-          "title": "Internal Assessment Snapshot",
-          "content": "Visual anchor for IB: Internal Assessment Quality Standards with emphasis on internal assessment within practice set planning."
+          "title": "IA Criterion Checklist (Science)",
+          "content": "A visual checklist summarizing the key criteria for a high-scoring science IA: Personal Engagement, Exploration, Analysis, Evaluation, and Communication."
         },
         {
           "id": "ib-prep-101-l05-a2",
           "type": "animation",
-          "title": "Hl Sl Planning Walkthrough",
-          "content": "Stepwise walkthrough for IB: Internal Assessment Quality Standards showing HL/SL planning decisions and strategy log checks."
+          "title": "Anatomy of a History IA",
+          "content": "An animated breakdown of a sample History IA, showing how the Identification and Evaluation of Sources, Investigation, and Reflection sections work together."
         }
       ]
     },
     {
-      id: "ib-prep-101-l06",
-      title: "IB: Command Terms and Markscheme Use",
-      type: "quiz",
-      duration: 12,
-      questions: [
+      "id": "ib-prep-101-l06",
+      "title": "Decoding the Exam: Command Terms and Markscheme Mastery",
+      "type": "quiz",
+      "duration": 12,
+      "questions": [
         {
           "id": "ib-prep-101-l06-q1",
-          "text": "During IB: Command Terms and Markscheme Use, early guesses are causing HL/SL planning losses. Which intervention should happen first?",
-          "skillId": "ib-prep-101-skill-hl-sl-planning-workflow",
+          "text": "The command term 'Evaluate' requires you to do which of the following?",
+          "skillId": "ib-prep-skill-command-terms",
           "options": [
             {
               "id": "a",
-              "text": "Keep the same pace and hope accuracy normalizes later."
+              "text": "Simply list the pros and cons of a topic."
             },
             {
               "id": "b",
-              "text": "Use a short verification pass and log decision triggers in an error taxonomy before restarting the drill."
+              "text": "Describe a topic in detail."
             },
             {
               "id": "c",
-              "text": "Memorize answer patterns instead of checking reasoning."
+              "text": "Make an appraisal by weighing the strengths and limitations, and provide a concluding judgment."
             },
             {
               "id": "d",
-              "text": "Delay all correction until the weekend review session."
+              "text": "Give a brief summary of the main points."
             }
           ],
-          "correctOptionId": "b",
-          "hint": "Pick the option that creates immediate corrective feedback.",
-          "explanation": "Quick structured verification catches repeatable process errors before they spread across the next set."
+          "correctOptionId": "c",
+          "hint": "Evaluation involves making a judgment.",
+          "explanation": "'Evaluate' is a higher-order command term that requires you to assess the value or success of something, supported by evidence, and come to a clear conclusion."
         },
         {
           "id": "ib-prep-101-l06-q2",
-          "text": "A IB drill on IB: Command Terms and Markscheme Use ends with unstable pacing. What should be diagnosed first?",
-          "skillId": "ib-prep-101-skill-tok-diagnosis",
+          "text": "How does a response to 'Discuss' differ from a response to 'Explain'?",
+          "skillId": "ib-prep-skill-command-terms",
           "options": [
             {
               "id": "a",
-              "text": "Retake the same drill immediately without analysis."
+              "text": "They are identical in meaning."
             },
             {
               "id": "b",
-              "text": "Memorize answer keys without tracking timing behavior."
+              "text": "'Explain' requires a detailed account, while 'Discuss' requires a balanced review including a range of arguments and perspectives."
             },
             {
               "id": "c",
-              "text": "Pinpoint where TOK decisions consume extra time, then redesign attempt order with checkpoints."
+              "text": "'Discuss' is for essays, while 'Explain' is for short-answer questions."
             },
             {
               "id": "d",
-              "text": "Increase question volume while keeping the same pacing errors."
-            }
-          ],
-          "correctOptionId": "c",
-          "hint": "Look for the answer that isolates a measurable timing bottleneck.",
-          "explanation": "Pacing issues usually come from specific TOK decision points, not from total question count alone."
-        },
-        {
-          "id": "ib-prep-101-l06-q3",
-          "text": "Which one-week sprint most improves extended essay transfer for IB: Command Terms and Markscheme Use in IB?",
-          "skillId": "ib-prep-101-skill-extended-essay-transfer",
-          "options": [
-            {
-              "id": "a",
-              "text": "Use only untimed review until confidence feels high."
-            },
-            {
-              "id": "b",
-              "text": "Rotate random topics daily with no retest queue."
-            },
-            {
-              "id": "c",
-              "text": "Delay all error correction until the final day."
-            },
-            {
-              "id": "d",
-              "text": "Run two targeted correction blocks, one mixed timed review cycle, and one retest focused on the same extended essay objective."
-            }
-          ],
-          "correctOptionId": "d",
-          "hint": "Best plans combine remediation and timed validation.",
-          "explanation": "Transfer improves when learners re-encounter corrected skills under realistic constraints."
-        },
-        {
-          "id": "ib-prep-101-l06-q4",
-          "text": "In IB IB: Command Terms and Markscheme Use, there are both content misses and pacing slips. What should the learner fix first?",
-          "skillId": "ib-prep-101-skill-internal-assessment-priority",
-          "options": [
-            {
-              "id": "a",
-              "text": "Prioritize the repeated internal assessment process issue, then apply the same correction across the next timed block."
-            },
-            {
-              "id": "b",
-              "text": "Tackle the rarest concept gap first for variety."
-            },
-            {
-              "id": "c",
-              "text": "Review only confidence items and skip timing analysis."
-            },
-            {
-              "id": "d",
-              "text": "Change resources without identifying what failed."
-            }
-          ],
-          "correctOptionId": "a",
-          "hint": "Look for the answer that addresses recurrence.",
-          "explanation": "Recurring process errors compound quickly, so fixing them first creates cleaner conditions for content correction."
-        },
-        {
-          "id": "ib-prep-101-l06-q5",
-          "text": "In IB criterion-marked response, criterion language omission appears during IB: Command Terms and Markscheme Use. What is the strongest immediate correction?",
-          "skillId": "ib-prep-101-skill-hl-sl-planning-section-application",
-          "options": [
-            {
-              "id": "a",
-              "text": "Ignore criterion-marked response diagnostics and continue for volume."
-            },
-            {
-              "id": "b",
-              "text": "Map each paragraph to the targeted criterion descriptor."
-            },
-            {
-              "id": "c",
-              "text": "Re-read notes without running a corrected attempt."
-            },
-            {
-              "id": "d",
-              "text": "Delay correction until after several unrelated drills."
+              "text": "'Explain' requires opinions, while 'Discuss' requires only facts."
             }
           ],
           "correctOptionId": "b",
-          "hint": "Choose the option that directly fixes criterion language omission.",
-          "explanation": "Immediate correction inside criterion-marked response improves transfer to the next timed review cycle."
-        },
-        {
-          "id": "ib-prep-101-l06-q6",
-          "text": "During IB command-term question, command-term mismatch repeats in IB: Command Terms and Markscheme Use. Which plan should be applied before the next retest?",
-          "skillId": "ib-prep-101-skill-tok-section-application",
-          "options": [
-            {
-              "id": "a",
-              "text": "Switch to new content before validating the fix."
-            },
-            {
-              "id": "b",
-              "text": "Increase speed without updating process controls."
-            },
-            {
-              "id": "c",
-              "text": "Translate command terms into required response moves before drafting. Track outcomes in a criterion alignment sheet and retest the same pattern."
-            },
-            {
-              "id": "d",
-              "text": "Retake the section with no checkpoint changes."
-            }
-          ],
-          "correctOptionId": "c",
-          "hint": "Best plans combine targeted correction with measurable tracking.",
-          "explanation": "A logged correction cycle in criterion alignment sheet makes the pacing fix visible and repeatable."
+          "hint": "Think about a conversation versus a lecture.",
+          "explanation": "'Explain' focuses on making something clear (how/why). 'Discuss' requires you to consider the topic from multiple angles and present a reasoned argument that explores various viewpoints."
         }
       ],
-      interactiveActivities: [
+      "interactiveActivities": [
         {
           "id": "ib-prep-101-l06-ia1",
           "type": "matching_pairs",
-          "title": "IB: Command Terms and Markscheme Use Root-Cause Match",
-          "description": "Match each repeated error signal to the correction with highest score impact.",
-          "estimatedMinutes": 8,
+          "title": "Command Term Match-Up",
+          "description": "Match each IB command term to its precise definition and required action.",
+          "estimatedMinutes": 5,
           "difficultyLevel": "medium",
           "instructions": [
-            "Match each pair.",
-            "Check your result.",
-            "Apply one correction in your next drill."
+            "Read the command term on the left.",
+            "Find its correct definition on the right.",
+            "Match all pairs to complete the activity."
           ],
           "data": {
             "left": [
               {
                 "id": "l1",
-                "label": "Response ignores command term nuance"
+                "label": "Analyse"
               },
               {
                 "id": "l2",
-                "label": "IA draft has evidence but weak methodological justification"
+                "label": "Compare and contrast"
               },
               {
                 "id": "l3",
-                "label": "TOK reasoning lacks clear claim-counterclaim structure"
+                "label": "To what extent"
               }
             ],
             "right": [
               {
                 "id": "r1",
-                "label": "Translate command term into explicit response requirement before writing"
+                "label": "Break down in order to bring out the essential elements or structure."
               },
               {
                 "id": "r2",
-                "label": "Add criterion-linked method rationale with reliability discussion"
+                "label": "Give an account of the similarities and differences between two (or more) items."
               },
               {
                 "id": "r3",
-                "label": "Use claim/counterclaim/evaluation scaffold for each TOK paragraph"
+                "label": "Consider the merits or otherwise of an argument or concept."
               }
             ],
             "pairs": [
@@ -707,1235 +462,543 @@ export const IbPrep101Module: LearningModule = {
           }
         }
       ],
-      quizBlueprint: {
+      "quizBlueprint": {
         "frequency": "lesson_assessment",
-        "questionsPerCheck": 6,
-        "totalQuestions": 6,
-        "timeLimitMinutes": 12,
+        "questionsPerCheck": 2,
+        "totalQuestions": 2,
+        "timeLimitMinutes": 5,
         "questionTypes": [
           {
             "type": "mcq_single",
-            "count": 6,
+            "count": 2,
             "pointsEach": 1,
             "bloomsLevels": [
-              1,
               2,
-              3
+              4
             ]
           }
         ],
         "difficultyDistribution": {
-          "easy": 2,
-          "medium": 3,
-          "hard": 1
+          "easy": 1,
+          "medium": 1,
+          "hard": 0
         },
         "feedbackMode": "after_submit",
         "adaptive": false,
-        "masteryThreshold": 0.75
-      },
-      metadata: {
-        examDrill: "lesson_drill"
-      },
-      learningAids: [
-        {
-          "id": "ib-prep-101-l06-a1",
-          "type": "image",
-          "title": "Hl Sl Planning Snapshot",
-          "content": "Visual anchor for IB: Command Terms and Markscheme Use with emphasis on HL/SL planning within review cycle planning."
-        },
-        {
-          "id": "ib-prep-101-l06-a2",
-          "type": "animation",
-          "title": "Tok Walkthrough",
-          "content": "Stepwise walkthrough for IB: Command Terms and Markscheme Use showing TOK decisions and error taxonomy checks."
-        }
-      ]
+        "masteryThreshold": 1
+      }
     },
     {
-      id: "ib-prep-101-l07",
-      title: "IB: Time Management Across Components",
-      type: "video",
-      duration: 11,
-      learningAids: [
-        {
-          "id": "ib-prep-101-l07-a1",
-          "type": "image",
-          "title": "Hl Sl Planning Snapshot",
-          "content": "Visual anchor for IB: Time Management Across Components with emphasis on HL/SL planning within timed block planning."
-        },
-        {
-          "id": "ib-prep-101-l07-a2",
-          "type": "animation",
-          "title": "Tok Walkthrough",
-          "content": "Stepwise walkthrough for IB: Time Management Across Components showing TOK decisions and checkpoint log checks."
-        }
-      ]
-    },
-    {
-      id: "ib-prep-101-l08",
-      title: "IB: Past Paper Analysis Loop",
-      type: "interactive",
-      duration: 14,
-      metadata: {
-        prompts: [
-          "Identify one HL/SL planning decision rule in IB: Past Paper Analysis Loop.",
-          "Apply it in one review cycle and show how it improves root-cause and correction quality.",
-          "Set one next-step target for TOK before your next IB Diploma readiness session."
+      "id": "ib-prep-101-l07",
+      "title": "Strategic Time Management: Balancing Deadlines and Study",
+      "type": "interactive",
+      "duration": 13,
+      "metadata": {
+        "prompts": [
+          "Identify one task you often procrastinate on that falls into the 'Important, Not Urgent' quadrant.",
+          "What is the first small step you can take to start that task?",
+          "Schedule a 25-minute Pomodoro session in your calendar this week for that specific task."
         ]
       },
-      interactiveActivities: [
+      "interactiveActivities": [
         {
-          "id": "ib-prep-101-l08-ia1",
-          "type": "matching_pairs",
-          "title": "IB: Past Paper Analysis Loop Diagnostic Match",
-          "description": "Match recurring error signals to the highest-impact correction routine.",
-          "estimatedMinutes": 8,
+          "id": "ib-prep-101-l07-ia1",
+          "type": "drag_and_drop",
+          "title": "The Eisenhower Matrix for IB",
+          "description": "Categorize typical IB tasks into Urgent/Important quadrants to prioritize your workload effectively.",
+          "estimatedMinutes": 7,
           "difficultyLevel": "medium",
           "instructions": [
-            "Match each error signal.",
-            "Verify all pairings.",
-            "Use one correction in your next attempt."
+            "Drag each task to the quadrant that best describes it.",
+            "Focus on tasks in the 'Important, Not Urgent' quadrant for long-term success."
           ],
           "data": {
-            "left": [
+            "targets": [
               {
-                "id": "l1",
-                "label": "Response ignores command term nuance"
+                "id": "q1",
+                "label": "Urgent & Important (Do First)"
               },
               {
-                "id": "l2",
-                "label": "IA draft has evidence but weak methodological justification"
+                "id": "q2",
+                "label": "Important, Not Urgent (Schedule)"
               },
               {
-                "id": "l3",
-                "label": "TOK reasoning lacks clear claim-counterclaim structure"
+                "id": "q3",
+                "label": "Urgent, Not Important (Delegate/Minimize)"
+              },
+              {
+                "id": "q4",
+                "label": "Not Urgent, Not Important (Eliminate)"
               }
             ],
-            "right": [
+            "draggables": [
               {
-                "id": "r1",
-                "label": "Translate command term into explicit response requirement before writing"
+                "id": "d1",
+                "label": "IA draft due tomorrow",
+                "correctTargetId": "q1"
               },
               {
-                "id": "r2",
-                "label": "Add criterion-linked method rationale with reliability discussion"
+                "id": "d2",
+                "label": "Start research for Extended Essay",
+                "correctTargetId": "q2"
               },
               {
-                "id": "r3",
-                "label": "Use claim/counterclaim/evaluation scaffold for each TOK paragraph"
-              }
-            ],
-            "pairs": [
-              {
-                "leftId": "l1",
-                "rightId": "r1"
+                "id": "d3",
+                "label": "Reply to a non-essential group chat message",
+                "correctTargetId": "q3"
               },
               {
-                "leftId": "l2",
-                "rightId": "r2"
-              },
-              {
-                "leftId": "l3",
-                "rightId": "r3"
+                "id": "d4",
+                "label": "Mindlessly scrolling social media",
+                "correctTargetId": "q4"
               }
             ]
           }
         }
       ],
-      learningAids: [
+      "learningAids": [
+        {
+          "id": "ib-prep-101-l07-a1",
+          "type": "image",
+          "title": "Pomodoro Technique for IB",
+          "content": "A graphic explaining how to use the Pomodoro Technique (25 min focus, 5 min break) for sustained study sessions on major projects like the EE and IAs."
+        }
+      ]
+    },
+    {
+      "id": "ib-prep-101-l08",
+      "title": "Learning from the Past: Creating an Effective Past Paper Analysis Loop",
+      "type": "video",
+      "duration": 12,
+      "learningAids": [
         {
           "id": "ib-prep-101-l08-a1",
           "type": "image",
-          "title": "Hl Sl Planning Snapshot",
-          "content": "Visual anchor for IB: Past Paper Analysis Loop with emphasis on HL/SL planning within review cycle planning."
+          "title": "The Error Analysis Log",
+          "content": "A sample template for an error log, with columns for Question, My Answer, Correct Answer, and Type of Error (e.g., Concept Gap, Misread Question, Careless Mistake, Time Pressure)."
         },
         {
           "id": "ib-prep-101-l08-a2",
           "type": "animation",
-          "title": "Tok Walkthrough",
-          "content": "Stepwise walkthrough for IB: Past Paper Analysis Loop showing TOK decisions and error taxonomy checks."
+          "title": "The Practice-Analyze-Revise Cycle",
+          "content": "An animated loop showing the process: 1. Complete a past paper under timed conditions. 2. Mark the paper and log errors. 3. Focus revision on the weakest areas. 4. Repeat."
         }
       ]
     },
     {
-      id: "ib-prep-101-l09",
-      title: "IB: Exam Session Simulation",
-      type: "quiz",
-      duration: 12,
-      questions: [
-        {
-          "id": "ib-prep-101-l09-q1",
-          "text": "In IB: Exam Session Simulation, a learner keeps missing HL/SL planning items during IB practice. Which adjustment should happen before the next timed section simulation?",
-          "skillId": "ib-prep-101-skill-hl-sl-planning-workflow",
-          "options": [
-            {
-              "id": "a",
-              "text": "Run a short HL/SL planning checkpoint routine and annotate why each miss occurred in an attempt-order sheet before retesting."
-            },
-            {
-              "id": "b",
-              "text": "Skip review and jump directly to harder questions."
-            },
-            {
-              "id": "c",
-              "text": "Track only total score with no error categories."
-            },
-            {
-              "id": "d",
-              "text": "Switch topics even if HL/SL planning is still the dominant weakness."
-            }
-          ],
-          "correctOptionId": "a",
-          "hint": "Choose the action that creates a repeatable feedback loop for HL/SL planning.",
-          "explanation": "Fast targeted feedback plus immediate correction is the most reliable way to improve HL/SL planning."
-        },
-        {
-          "id": "ib-prep-101-l09-q2",
-          "text": "A IB IB: Exam Session Simulation session ends with unstable timing. What should be diagnosed first?",
-          "skillId": "ib-prep-101-skill-tok-diagnosis",
-          "options": [
-            {
-              "id": "a",
-              "text": "Retake the session immediately without diagnostics."
-            },
-            {
-              "id": "b",
-              "text": "Locate the exact TOK decision point where time spikes, then set micro-checkpoints for that phase."
-            },
-            {
-              "id": "c",
-              "text": "Increase total question count and keep the same attempt order."
-            },
-            {
-              "id": "d",
-              "text": "Use one pacing rule for all sections regardless of load."
-            }
-          ],
-          "correctOptionId": "b",
-          "hint": "Find the answer that isolates a measurable bottleneck.",
-          "explanation": "Pacing stabilizes when the highest-cost decision point is measured and corrected directly."
-        },
-        {
-          "id": "ib-prep-101-l09-q3",
-          "text": "IB practice shows correction is happening but not sticking in IB: Exam Session Simulation. What plan fixes this fastest?",
-          "skillId": "ib-prep-101-skill-extended-essay-transfer",
-          "options": [
-            {
-              "id": "a",
-              "text": "Keep reviewing notes and avoid new timed attempts."
-            },
-            {
-              "id": "b",
-              "text": "Increase difficulty only, without targeted rematches."
-            },
-            {
-              "id": "c",
-              "text": "Pair each corrected extended essay error with a near-transfer item in the next timed block and track it in an attempt-order sheet."
-            },
-            {
-              "id": "d",
-              "text": "Rewatch lesson content without logging applied changes."
-            }
-          ],
-          "correctOptionId": "c",
-          "hint": "The strongest option forces immediate transfer testing.",
-          "explanation": "Correction becomes durable when each fix is tested on a similar item during the next constrained attempt."
-        },
-        {
-          "id": "ib-prep-101-l09-q4",
-          "text": "During post-drill review for IB: Exam Session Simulation, which fix should be prioritized first for score impact in IB?",
-          "skillId": "ib-prep-101-skill-internal-assessment-priority",
-          "options": [
-            {
-              "id": "a",
-              "text": "Polish already-mastered question types first."
-            },
-            {
-              "id": "b",
-              "text": "Ignore pacing and focus only on confidence items."
-            },
-            {
-              "id": "c",
-              "text": "Rewrite notes without validating changes in timed practice."
-            },
-            {
-              "id": "d",
-              "text": "Address repeated internal assessment and pacing errors first because they affect many questions in one run."
-            }
-          ],
-          "correctOptionId": "d",
-          "hint": "Prioritize changes that influence the largest question set.",
-          "explanation": "Highest-impact remediation usually targets repeated timing and process breakdowns before edge-case content gaps."
-        },
-        {
-          "id": "ib-prep-101-l09-q5",
-          "text": "In IB criterion-marked response, criterion language omission appears during IB: Exam Session Simulation. What is the strongest immediate correction?",
-          "skillId": "ib-prep-101-skill-hl-sl-planning-section-application",
-          "options": [
-            {
-              "id": "a",
-              "text": "Map each paragraph to the targeted criterion descriptor."
-            },
-            {
-              "id": "b",
-              "text": "Ignore criterion-marked response diagnostics and continue for volume."
-            },
-            {
-              "id": "c",
-              "text": "Re-read notes without running a corrected attempt."
-            },
-            {
-              "id": "d",
-              "text": "Delay correction until after several unrelated drills."
-            }
-          ],
-          "correctOptionId": "a",
-          "hint": "Choose the option that directly fixes criterion language omission.",
-          "explanation": "Immediate correction inside criterion-marked response improves transfer to the next timed section simulation."
-        },
-        {
-          "id": "ib-prep-101-l09-q6",
-          "text": "During IB command-term question, command-term mismatch repeats in IB: Exam Session Simulation. Which plan should be applied before the next retest?",
-          "skillId": "ib-prep-101-skill-tok-section-application",
-          "options": [
-            {
-              "id": "a",
-              "text": "Switch to new content before validating the fix."
-            },
-            {
-              "id": "b",
-              "text": "Translate command terms into required response moves before drafting. Track outcomes in a criterion alignment sheet and retest the same pattern."
-            },
-            {
-              "id": "c",
-              "text": "Increase speed without updating process controls."
-            },
-            {
-              "id": "d",
-              "text": "Retake the section with no checkpoint changes."
-            }
-          ],
-          "correctOptionId": "b",
-          "hint": "Best plans combine targeted correction with measurable tracking.",
-          "explanation": "A logged correction cycle in criterion alignment sheet makes the pacing fix visible and repeatable."
-        }
-      ],
-      interactiveActivities: [
+      "id": "ib-prep-101-l09",
+      "title": "Targeted Revision: Identifying and Closing Knowledge Gaps",
+      "type": "interactive",
+      "duration": 14,
+      "metadata": {
+        "prompts": [
+          "Based on your self-assessment, what is your top priority topic for revision?",
+          "What specific revision activity (e.g., practice questions, concept mapping) will you use for this topic?",
+          "How will you check if you have successfully closed this knowledge gap?"
+        ]
+      },
+      "interactiveActivities": [
         {
           "id": "ib-prep-101-l09-ia1",
-          "type": "sorting_buckets",
-          "title": "IB: Exam Session Simulation Attempt-Order Sort",
-          "description": "Sort each scenario into first-pass, flag, or deep-review lanes.",
+          "type": "self_assessment",
+          "title": "My Revision Priority Planner",
+          "description": "Rate your confidence level for different topics within a subject to generate a prioritized revision list.",
           "estimatedMinutes": 9,
-          "difficultyLevel": "adaptive",
+          "difficultyLevel": "easy",
           "instructions": [
-            "Read each scenario.",
-            "Sort into the best execution lane.",
-            "Use the result to set your next section workflow."
+            "For each topic in your chosen subject, select your current confidence level.",
+            "The tool will highlight the topics rated 'Low Confidence' as your top priorities.",
+            "Use this list to structure your study plan."
           ],
           "data": {
-            "buckets": [
-              {
-                "id": "first_pass",
-                "label": "First Pass"
-              },
-              {
-                "id": "flag",
-                "label": "Flag and Return"
-              },
-              {
-                "id": "deep_review",
-                "label": "Deep Review"
-              }
+            "subject": "IB Biology HL",
+            "topics": [
+              "Cell Biology",
+              "Molecular Biology",
+              "Genetics",
+              "Ecology",
+              "Evolution and Biodiversity",
+              "Human Physiology"
             ],
-            "items": [
-              {
-                "id": "i1",
-                "label": "Final section left unreviewed in timed paper",
-                "correctBucketId": "flag"
-              },
-              {
-                "id": "i2",
-                "label": "Command term treated as summary instead of evaluation",
-                "correctBucketId": "flag"
-              },
-              {
-                "id": "i3",
-                "label": "Criterion descriptor missed in subject response",
-                "correctBucketId": "deep_review"
-              },
-              {
-                "id": "i4",
-                "label": "High-confidence medium-difficulty cluster",
-                "correctBucketId": "first_pass"
-              }
+            "confidenceLevels": [
+              "Low",
+              "Medium",
+              "High"
             ]
           }
         }
+      ]
+    },
+    {
+      "id": "ib-prep-101-l10",
+      "title": "Practice Under Pressure: Timed Drills for Core Skills",
+      "type": "quiz",
+      "duration": 15,
+      "questions": [
+        {
+          "id": "ib-prep-101-l10-q1",
+          "text": "In a 90-minute exam worth 60 marks, approximately how much time should you allocate per mark?",
+          "skillId": "ib-prep-skill-pacing",
+          "options": [
+            {
+              "id": "a",
+              "text": "30 seconds per mark"
+            },
+            {
+              "id": "b",
+              "text": "1 minute per mark"
+            },
+            {
+              "id": "c",
+              "text": "1.5 minutes per mark"
+            },
+            {
+              "id": "d",
+              "text": "2 minutes per mark"
+            }
+          ],
+          "correctOptionId": "c",
+          "hint": "Divide the total minutes by the total marks.",
+          "explanation": "90 minutes / 60 marks = 1.5 minutes per mark. This is a useful guideline for pacing yourself during the exam."
+        },
+        {
+          "id": "ib-prep-101-l10-q2",
+          "text": "You have 10 minutes left and two questions remaining. One is a 4-mark question you know how to do. The other is an 8-mark question you are unsure about. What is the best strategy?",
+          "skillId": "ib-prep-skill-exam-strategy",
+          "options": [
+            {
+              "id": "a",
+              "text": "Spend all 10 minutes on the 8-mark question to maximize potential points."
+            },
+            {
+              "id": "b",
+              "text": "Secure the 4 marks on the question you know, then use the remaining time on the harder one."
+            },
+            {
+              "id": "c",
+              "text": "Guess randomly on both and hope for the best."
+            },
+            {
+              "id": "d",
+              "text": "Leave both blank to avoid losing marks."
+            }
+          ],
+          "correctOptionId": "b",
+          "hint": "Bank the points you are sure of first.",
+          "explanation": "It's better to guarantee some points than to risk getting zero on both. Securing the 4 marks first is the most efficient use of your limited time."
+        }
       ],
-      quizBlueprint: {
+      "quizBlueprint": {
         "frequency": "lesson_assessment",
-        "questionsPerCheck": 6,
-        "totalQuestions": 6,
-        "timeLimitMinutes": 12,
+        "questionsPerCheck": 2,
+        "totalQuestions": 2,
+        "timeLimitMinutes": 5,
         "questionTypes": [
           {
             "type": "mcq_single",
-            "count": 6,
+            "count": 2,
             "pointsEach": 1,
             "bloomsLevels": [
-              1,
-              2,
-              3
+              3,
+              5
             ]
           }
         ],
         "difficultyDistribution": {
-          "easy": 2,
-          "medium": 3,
-          "hard": 1
+          "easy": 0,
+          "medium": 2,
+          "hard": 0
         },
         "feedbackMode": "after_submit",
         "adaptive": false,
-        "masteryThreshold": 0.75
+        "masteryThreshold": 1
       },
-      metadata: {
-        examDrill: "lesson_drill"
-      },
-      learningAids: [
-        {
-          "id": "ib-prep-101-l09-a1",
-          "type": "image",
-          "title": "Hl Sl Planning Snapshot",
-          "content": "Visual anchor for IB: Exam Session Simulation with emphasis on HL/SL planning within section simulation planning."
-        },
-        {
-          "id": "ib-prep-101-l09-a2",
-          "type": "animation",
-          "title": "Tok Walkthrough",
-          "content": "Stepwise walkthrough for IB: Exam Session Simulation showing TOK decisions and attempt-order sheet checks."
-        }
-      ]
-    },
-    {
-      id: "ib-prep-101-l10",
-      title: "IB: Targeted Hl Sl Planning Remediation",
-      type: "interactive",
-      duration: 14,
-      metadata: {
-        prompts: [
-          "Identify one HL/SL planning decision rule in IB: Targeted Hl Sl Planning Remediation.",
-          "Apply it in one practice set and show how it improves decision quality under constraints.",
-          "Set one next-step target for TOK before your next IB Diploma readiness session."
-        ]
-      },
-      interactiveActivities: [
-        {
-          "id": "ib-prep-101-l10-ia1",
-          "type": "drag_and_drop",
-          "title": "IB: Targeted Hl Sl Planning Remediation Decision-Phase Mapping",
-          "description": "Map each decision cue to Plan, Execute, or Reflect.",
-          "estimatedMinutes": 8,
-          "difficultyLevel": "medium",
-          "instructions": [
-            "Assign each decision cue to the best phase.",
-            "Check all mappings.",
-            "Capture one improvement target."
-          ],
-          "data": {
-            "targets": [
-              {
-                "id": "plan",
-                "label": "Programme Plan"
-              },
-              {
-                "id": "execute",
-                "label": "Criterion Execution"
-              },
-              {
-                "id": "reflect",
-                "label": "Criterion Review"
-              }
-            ],
-            "draggables": [
-              {
-                "id": "d1",
-                "label": "Balance HL/SL demands with IA, TOK, and EE milestones",
-                "correctTargetId": "plan"
-              },
-              {
-                "id": "d2",
-                "label": "Answer using command terms aligned to IB markscheme criteria",
-                "correctTargetId": "execute"
-              },
-              {
-                "id": "d3",
-                "label": "Review each response against criterion language and evidence quality",
-                "correctTargetId": "reflect"
-              }
-            ]
-          }
-        }
-      ],
-      learningAids: [
+      "learningAids": [
         {
           "id": "ib-prep-101-l10-a1",
           "type": "image",
-          "title": "Hl Sl Planning Snapshot",
-          "content": "Visual anchor for IB: Targeted Hl Sl Planning Remediation with emphasis on HL/SL planning within practice set planning."
-        },
-        {
-          "id": "ib-prep-101-l10-a2",
-          "type": "animation",
-          "title": "Tok Walkthrough",
-          "content": "Stepwise walkthrough for IB: Targeted Hl Sl Planning Remediation showing TOK decisions and strategy log checks."
+          "title": "Pacing Chart",
+          "content": "A sample chart showing how to allocate time per mark in a typical IB exam paper, including built-in time for planning and review."
         }
       ]
     },
     {
-      id: "ib-prep-101-l11",
-      title: "IB: Timed Tok Sprint",
-      type: "video",
-      duration: 11,
-      learningAids: [
+      "id": "ib-prep-101-l11",
+      "title": "Integrated Practice: Simulating Mixed-Component Challenges",
+      "type": "video",
+      "duration": 10,
+      "learningAids": [
         {
           "id": "ib-prep-101-l11-a1",
           "type": "image",
-          "title": "Tok Snapshot",
-          "content": "Visual anchor for IB: Timed Tok Sprint with emphasis on TOK within passage set planning."
+          "title": "Interleaving Study Schedule",
+          "content": "A visual schedule showing how to mix practice from different subjects (e.g., Math, Biology, TOK) in one study session to improve long-term retention and mental flexibility."
         },
         {
           "id": "ib-prep-101-l11-a2",
           "type": "animation",
-          "title": "Extended Essay Walkthrough",
-          "content": "Stepwise walkthrough for IB: Timed Tok Sprint showing extended essay decisions and annotation map checks."
+          "title": "Connecting the Core",
+          "content": "An animation showing how a concept from a subject (e.g., ethics in science) can be explored in a TOK discussion and potentially become the focus of an Extended Essay."
         }
       ]
     },
     {
-      id: "ib-prep-101-l12",
-      title: "IB: Mixed-Section Decision Drill",
-      type: "quiz",
-      duration: 12,
-      questions: [
+      "id": "ib-prep-101-l12",
+      "title": "Full-Scale Exam Simulation: Replicating Test Day Conditions",
+      "type": "quiz",
+      "duration": 25,
+      "questions": [
         {
           "id": "ib-prep-101-l12-q1",
-          "text": "In IB: Mixed-Section Decision Drill, a learner keeps missing HL/SL planning items during IB practice. Which adjustment should happen before the next timed practice set?",
-          "skillId": "ib-prep-101-skill-hl-sl-planning-workflow",
+          "text": "Which of the following is a key feature of a command term like 'Justify'?",
+          "skillId": "ib-prep-skill-command-terms",
           "options": [
             {
               "id": "a",
-              "text": "Skip review and jump directly to harder questions."
+              "text": "Give a sequence of events."
             },
             {
               "id": "b",
-              "text": "Track only total score with no error categories."
+              "text": "Provide evidence and reasoning to support an argument or conclusion."
             },
             {
               "id": "c",
-              "text": "Switch topics even if HL/SL planning is still the dominant weakness."
+              "text": "State the main features."
             },
             {
               "id": "d",
-              "text": "Run a short HL/SL planning checkpoint routine and annotate why each miss occurred in a strategy log before retesting."
-            }
-          ],
-          "correctOptionId": "d",
-          "hint": "Choose the action that creates a repeatable feedback loop for HL/SL planning.",
-          "explanation": "Fast targeted feedback plus immediate correction is the most reliable way to improve HL/SL planning."
-        },
-        {
-          "id": "ib-prep-101-l12-q2",
-          "text": "A IB IB: Mixed-Section Decision Drill session ends with unstable timing. What should be diagnosed first?",
-          "skillId": "ib-prep-101-skill-tok-diagnosis",
-          "options": [
-            {
-              "id": "a",
-              "text": "Locate the exact TOK decision point where time spikes, then set micro-checkpoints for that phase."
-            },
-            {
-              "id": "b",
-              "text": "Retake the session immediately without diagnostics."
-            },
-            {
-              "id": "c",
-              "text": "Increase total question count and keep the same attempt order."
-            },
-            {
-              "id": "d",
-              "text": "Use one pacing rule for all sections regardless of load."
-            }
-          ],
-          "correctOptionId": "a",
-          "hint": "Find the answer that isolates a measurable bottleneck.",
-          "explanation": "Pacing stabilizes when the highest-cost decision point is measured and corrected directly."
-        },
-        {
-          "id": "ib-prep-101-l12-q3",
-          "text": "IB practice shows correction is happening but not sticking in IB: Mixed-Section Decision Drill. What plan fixes this fastest?",
-          "skillId": "ib-prep-101-skill-extended-essay-transfer",
-          "options": [
-            {
-              "id": "a",
-              "text": "Keep reviewing notes and avoid new timed attempts."
-            },
-            {
-              "id": "b",
-              "text": "Pair each corrected extended essay error with a near-transfer item in the next timed block and track it in a strategy log."
-            },
-            {
-              "id": "c",
-              "text": "Increase difficulty only, without targeted rematches."
-            },
-            {
-              "id": "d",
-              "text": "Rewatch lesson content without logging applied changes."
+              "text": "Draw a diagram."
             }
           ],
           "correctOptionId": "b",
-          "hint": "The strongest option forces immediate transfer testing.",
-          "explanation": "Correction becomes durable when each fix is tested on a similar item during the next constrained attempt."
+          "hint": "Justification requires proof.",
+          "explanation": "To 'Justify' means you must provide valid reasons or evidence to support an answer or conclusion, going beyond a simple description."
         },
         {
-          "id": "ib-prep-101-l12-q4",
-          "text": "During post-drill review for IB: Mixed-Section Decision Drill, which fix should be prioritized first for score impact in IB?",
-          "skillId": "ib-prep-101-skill-internal-assessment-priority",
+          "id": "ib-prep-101-l12-q2",
+          "text": "When analyzing a data-based question in science, what should be your first step?",
+          "skillId": "ib-prep-skill-data-analysis",
           "options": [
             {
               "id": "a",
-              "text": "Polish already-mastered question types first."
+              "text": "Immediately start writing your answer."
             },
             {
               "id": "b",
-              "text": "Ignore pacing and focus only on confidence items."
+              "text": "Read the question carefully, then examine the graph/table, paying attention to titles, axes, and units."
             },
             {
               "id": "c",
-              "text": "Address repeated internal assessment and pacing errors first because they affect many questions in one run."
+              "text": "Look for the most complex data point and focus only on that."
             },
             {
               "id": "d",
-              "text": "Rewrite notes without validating changes in timed practice."
+              "text": "Guess the trend without looking at the data."
             }
           ],
-          "correctOptionId": "c",
-          "hint": "Prioritize changes that influence the largest question set.",
-          "explanation": "Highest-impact remediation usually targets repeated timing and process breakdowns before edge-case content gaps."
+          "correctOptionId": "b",
+          "hint": "Understand the context before you interpret.",
+          "explanation": "A systematic approach is crucial. Understanding what the data represents by reading all labels and context is the essential first step before any analysis or conclusion."
         },
         {
-          "id": "ib-prep-101-l12-q5",
-          "text": "In IB criterion-marked response, criterion language omission appears during IB: Mixed-Section Decision Drill. What is the strongest immediate correction?",
-          "skillId": "ib-prep-101-skill-hl-sl-planning-section-application",
+          "id": "ib-prep-101-l12-q3",
+          "text": "In a history essay, what is the most effective way to use historical evidence?",
+          "skillId": "ib-prep-skill-evidence-use",
           "options": [
             {
               "id": "a",
-              "text": "Ignore criterion-marked response diagnostics and continue for volume."
+              "text": "List as many facts as possible without connection."
             },
             {
               "id": "b",
-              "text": "Re-read notes without running a corrected attempt."
+              "text": "Integrate specific, relevant evidence directly into your argument to support your claims."
             },
             {
               "id": "c",
-              "text": "Delay correction until after several unrelated drills."
+              "text": "Mention a historian's name without explaining their viewpoint."
             },
             {
               "id": "d",
-              "text": "Map each paragraph to the targeted criterion descriptor."
+              "text": "Use only primary sources and ignore secondary sources."
             }
           ],
-          "correctOptionId": "d",
-          "hint": "Choose the option that directly fixes criterion language omission.",
-          "explanation": "Immediate correction inside criterion-marked response improves transfer to the next timed practice set."
-        },
-        {
-          "id": "ib-prep-101-l12-q6",
-          "text": "During IB command-term question, command-term mismatch repeats in IB: Mixed-Section Decision Drill. Which plan should be applied before the next retest?",
-          "skillId": "ib-prep-101-skill-tok-section-application",
-          "options": [
-            {
-              "id": "a",
-              "text": "Translate command terms into required response moves before drafting. Track outcomes in a criterion alignment sheet and retest the same pattern."
-            },
-            {
-              "id": "b",
-              "text": "Switch to new content before validating the fix."
-            },
-            {
-              "id": "c",
-              "text": "Increase speed without updating process controls."
-            },
-            {
-              "id": "d",
-              "text": "Retake the section with no checkpoint changes."
-            }
-          ],
-          "correctOptionId": "a",
-          "hint": "Best plans combine targeted correction with measurable tracking.",
-          "explanation": "A logged correction cycle in criterion alignment sheet makes the pacing fix visible and repeatable."
+          "correctOptionId": "b",
+          "hint": "Evidence should serve your argument, not just exist on the page.",
+          "explanation": "Effective essays weave evidence seamlessly into the analytical framework, using it to substantiate the points being made in each paragraph."
         }
       ],
-      interactiveActivities: [
-        {
-          "id": "ib-prep-101-l12-ia1",
-          "type": "matching_pairs",
-          "title": "IB: Mixed-Section Decision Drill Correction Alignment",
-          "description": "Align each recurring signal with the strongest correction action for decision quality under constraints.",
-          "estimatedMinutes": 8,
-          "difficultyLevel": "medium",
-          "instructions": [
-            "Align each pair.",
-            "Check your result.",
-            "Apply one correction in the next drill."
-          ],
-          "data": {
-            "left": [
-              {
-                "id": "l1",
-                "label": "Response ignores command term nuance"
-              },
-              {
-                "id": "l2",
-                "label": "IA draft has evidence but weak methodological justification"
-              },
-              {
-                "id": "l3",
-                "label": "TOK reasoning lacks clear claim-counterclaim structure"
-              }
-            ],
-            "right": [
-              {
-                "id": "r1",
-                "label": "Translate command term into explicit response requirement before writing"
-              },
-              {
-                "id": "r2",
-                "label": "Add criterion-linked method rationale with reliability discussion"
-              },
-              {
-                "id": "r3",
-                "label": "Use claim/counterclaim/evaluation scaffold for each TOK paragraph"
-              }
-            ],
-            "pairs": [
-              {
-                "leftId": "l1",
-                "rightId": "r1"
-              },
-              {
-                "leftId": "l2",
-                "rightId": "r2"
-              },
-              {
-                "leftId": "l3",
-                "rightId": "r3"
-              }
-            ]
-          }
-        }
-      ],
-      quizBlueprint: {
+      "quizBlueprint": {
         "frequency": "lesson_assessment",
-        "questionsPerCheck": 6,
-        "totalQuestions": 6,
-        "timeLimitMinutes": 12,
+        "questionsPerCheck": 3,
+        "totalQuestions": 3,
+        "timeLimitMinutes": 10,
         "questionTypes": [
           {
             "type": "mcq_single",
-            "count": 6,
+            "count": 3,
             "pointsEach": 1,
             "bloomsLevels": [
-              1,
               2,
-              3
+              3,
+              4
             ]
           }
         ],
         "difficultyDistribution": {
-          "easy": 2,
-          "medium": 3,
+          "easy": 1,
+          "medium": 1,
           "hard": 1
         },
         "feedbackMode": "after_submit",
         "adaptive": false,
-        "masteryThreshold": 0.75
-      },
-      metadata: {
-        examDrill: "lesson_drill"
-      },
-      learningAids: [
-        {
-          "id": "ib-prep-101-l12-a1",
-          "type": "image",
-          "title": "Hl Sl Planning Snapshot",
-          "content": "Visual anchor for IB: Mixed-Section Decision Drill with emphasis on HL/SL planning within practice set planning."
-        },
-        {
-          "id": "ib-prep-101-l12-a2",
-          "type": "animation",
-          "title": "Tok Walkthrough",
-          "content": "Stepwise walkthrough for IB: Mixed-Section Decision Drill showing TOK decisions and strategy log checks."
-        }
-      ]
+        "masteryThreshold": 0.67
+      }
     },
     {
-      id: "ib-prep-101-l13",
-      title: "IB: Adaptive Retry and Transfer Check",
-      type: "video",
-      duration: 11,
-      learningAids: [
-        {
-          "id": "ib-prep-101-l13-a1",
-          "type": "image",
-          "title": "Hl Sl Planning Snapshot",
-          "content": "Visual anchor for IB: Adaptive Retry and Transfer Check with emphasis on HL/SL planning within practice set planning."
-        },
-        {
-          "id": "ib-prep-101-l13-a2",
-          "type": "animation",
-          "title": "Tok Walkthrough",
-          "content": "Stepwise walkthrough for IB: Adaptive Retry and Transfer Check showing TOK decisions and strategy log checks."
-        }
-      ]
-    },
-    {
-      id: "ib-prep-101-l14",
-      title: "IB: Ib Diploma Readiness Stability Checkpoint",
-      type: "interactive",
-      duration: 14,
-      metadata: {
-        prompts: [
-          "Identify one HL/SL planning decision rule in IB: Ib Diploma Readiness Stability Checkpoint.",
-          "Apply it in one practice set and show how it improves decision quality under constraints.",
-          "Set one next-step target for TOK before your next IB Diploma readiness session."
+      "id": "ib-prep-101-l13",
+      "title": "Post-Simulation Debrief: Analyzing Performance and Adapting Your Strategy",
+      "type": "interactive",
+      "duration": 15,
+      "metadata": {
+        "prompts": [
+          "Think of one mistake you made in your last practice test. Apply the '5 Whys' to find its root cause.",
+          "What is one specific, actionable change you can make to your process to prevent this error in the future?",
+          "Schedule a short, focused practice session to implement and test this new strategy."
         ]
       },
-      interactiveActivities: [
+      "interactiveActivities": [
         {
-          "id": "ib-prep-101-l14-ia1",
-          "type": "drag_and_drop",
-          "title": "IB: Ib Diploma Readiness Stability Checkpoint Decision-Phase Mapping",
-          "description": "Map each decision cue to Plan, Execute, or Reflect.",
-          "estimatedMinutes": 8,
-          "difficultyLevel": "medium",
+          "id": "ib-prep-101-l13-ia1",
+          "type": "text_input",
+          "title": "5 Whys: Uncovering Exam Errors",
+          "description": "For a sample exam error, ask 'Why?' five times to drill down from the surface mistake to the root cause. Example: 'I ran out of time on the last question.'",
+          "estimatedMinutes": 10,
+          "difficultyLevel": "hard",
           "instructions": [
-            "Assign each decision cue to the best phase.",
-            "Check all mappings.",
-            "Capture one improvement target."
+            "Start with an error you made (e.g., 'I got a calculation wrong').",
+            "Ask 'Why did that happen?' and write the answer.",
+            "Ask 'Why?' of that answer, and repeat five times.",
+            "The final 'Why' often reveals the true process or concept issue to fix."
           ],
           "data": {
-            "targets": [
-              {
-                "id": "plan",
-                "label": "Programme Plan"
-              },
-              {
-                "id": "execute",
-                "label": "Criterion Execution"
-              },
-              {
-                "id": "reflect",
-                "label": "Criterion Review"
-              }
-            ],
-            "draggables": [
-              {
-                "id": "d1",
-                "label": "Balance HL/SL demands with IA, TOK, and EE milestones",
-                "correctTargetId": "plan"
-              },
-              {
-                "id": "d2",
-                "label": "Answer using command terms aligned to IB markscheme criteria",
-                "correctTargetId": "execute"
-              },
-              {
-                "id": "d3",
-                "label": "Review each response against criterion language and evidence quality",
-                "correctTargetId": "reflect"
-              }
+            "prompts": [
+              "1. Why did I run out of time?",
+              "2. Why did I spend too much time on other questions?",
+              "3. Why did I get stuck on the essay?",
+              "4. Why didn't I have a clear plan for the essay?",
+              "5. Why didn't I practice planning essays under timed conditions?"
             ]
           }
         }
       ],
-      learningAids: [
+      "learningAids": [
+        {
+          "id": "ib-prep-101-l13-a1",
+          "type": "image",
+          "title": "Performance Analytics Dashboard",
+          "content": "A mock-up of a dashboard showing a student's performance breakdown by topic, question type, and time spent, helping to visually identify areas for improvement."
+        }
+      ]
+    },
+    {
+      "id": "ib-prep-101-l14",
+      "title": "Final Readiness Checkpoint: Consolidating Skills and Knowledge",
+      "type": "video",
+      "duration": 8,
+      "learningAids": [
         {
           "id": "ib-prep-101-l14-a1",
           "type": "image",
-          "title": "Hl Sl Planning Snapshot",
-          "content": "Visual anchor for IB: Ib Diploma Readiness Stability Checkpoint with emphasis on HL/SL planning within practice set planning."
+          "title": "Pre-Exam Checklist",
+          "content": "A simple, visual checklist of things to do the day before and the morning of the exam: pack your bag (pens, calculator, ID), check the venue/time, get a good night's sleep, eat a healthy breakfast."
         },
         {
           "id": "ib-prep-101-l14-a2",
           "type": "animation",
-          "title": "Tok Walkthrough",
-          "content": "Stepwise walkthrough for IB: Ib Diploma Readiness Stability Checkpoint showing TOK decisions and strategy log checks."
+          "title": "Mindful Minute",
+          "content": "A short, calming animation guiding students through a one-minute breathing exercise to manage exam-day anxiety."
         }
       ]
     },
     {
-      id: "ib-prep-101-l15",
-      title: "IB: Final IB Sprint and Reflection",
-      type: "quiz",
-      duration: 20,
-      questions: [
+      "id": "ib-prep-101-l15",
+      "title": "The Final Sprint: Pre-Exam Strategies and Reflective Practice",
+      "type": "quiz",
+      "duration": 20,
+      "questions": [
         {
           "id": "ib-prep-101-l15-q1",
-          "text": "In IB: Final IB Sprint and Reflection, a learner keeps missing HL/SL planning items during IB practice. Which adjustment should happen before the next timed timed block?",
-          "skillId": "ib-prep-101-skill-hl-sl-planning-workflow",
+          "text": "On exam day, you open the paper and feel overwhelmed. What is the best first action to take?",
+          "skillId": "ib-prep-skill-mindset",
           "options": [
             {
               "id": "a",
-              "text": "Skip review and jump directly to harder questions."
+              "text": "Start with the hardest question to get it over with."
             },
             {
               "id": "b",
-              "text": "Track only total score with no error categories."
+              "text": "Close your eyes, take three slow, deep breaths, then read the instructions carefully."
             },
             {
               "id": "c",
-              "text": "Run a short HL/SL planning checkpoint routine and annotate why each miss occurred in a checkpoint log before retesting."
+              "text": "Immediately start writing anything to get going."
             },
             {
               "id": "d",
-              "text": "Switch topics even if HL/SL planning is still the dominant weakness."
-            }
-          ],
-          "correctOptionId": "c",
-          "hint": "Choose the action that creates a repeatable feedback loop for HL/SL planning.",
-          "explanation": "Fast targeted feedback plus immediate correction is the most reliable way to improve HL/SL planning."
-        },
-        {
-          "id": "ib-prep-101-l15-q2",
-          "text": "A IB IB: Final IB Sprint and Reflection session ends with unstable timing. What should be diagnosed first?",
-          "skillId": "ib-prep-101-skill-tok-diagnosis",
-          "options": [
-            {
-              "id": "a",
-              "text": "Retake the session immediately without diagnostics."
-            },
-            {
-              "id": "b",
-              "text": "Increase total question count and keep the same attempt order."
-            },
-            {
-              "id": "c",
-              "text": "Use one pacing rule for all sections regardless of load."
-            },
-            {
-              "id": "d",
-              "text": "Locate the exact TOK decision point where time spikes, then set micro-checkpoints for that phase."
-            }
-          ],
-          "correctOptionId": "d",
-          "hint": "Find the answer that isolates a measurable bottleneck.",
-          "explanation": "Pacing stabilizes when the highest-cost decision point is measured and corrected directly."
-        },
-        {
-          "id": "ib-prep-101-l15-q3",
-          "text": "IB practice shows correction is happening but not sticking in IB: Final IB Sprint and Reflection. What plan fixes this fastest?",
-          "skillId": "ib-prep-101-skill-extended-essay-transfer",
-          "options": [
-            {
-              "id": "a",
-              "text": "Pair each corrected extended essay error with a near-transfer item in the next timed block and track it in a checkpoint log."
-            },
-            {
-              "id": "b",
-              "text": "Keep reviewing notes and avoid new timed attempts."
-            },
-            {
-              "id": "c",
-              "text": "Increase difficulty only, without targeted rematches."
-            },
-            {
-              "id": "d",
-              "text": "Rewatch lesson content without logging applied changes."
-            }
-          ],
-          "correctOptionId": "a",
-          "hint": "The strongest option forces immediate transfer testing.",
-          "explanation": "Correction becomes durable when each fix is tested on a similar item during the next constrained attempt."
-        },
-        {
-          "id": "ib-prep-101-l15-q4",
-          "text": "During post-drill review for IB: Final IB Sprint and Reflection, which fix should be prioritized first for score impact in IB?",
-          "skillId": "ib-prep-101-skill-internal-assessment-priority",
-          "options": [
-            {
-              "id": "a",
-              "text": "Polish already-mastered question types first."
-            },
-            {
-              "id": "b",
-              "text": "Address repeated internal assessment and pacing errors first because they affect many questions in one run."
-            },
-            {
-              "id": "c",
-              "text": "Ignore pacing and focus only on confidence items."
-            },
-            {
-              "id": "d",
-              "text": "Rewrite notes without validating changes in timed practice."
+              "text": "Look at what other students are doing."
             }
           ],
           "correctOptionId": "b",
-          "hint": "Prioritize changes that influence the largest question set.",
-          "explanation": "Highest-impact remediation usually targets repeated timing and process breakdowns before edge-case content gaps."
-        },
-        {
-          "id": "ib-prep-101-l15-q5",
-          "text": "In IB criterion-marked response, criterion language omission appears during IB: Final IB Sprint and Reflection. What is the strongest immediate correction?",
-          "skillId": "ib-prep-101-skill-hl-sl-planning-section-application",
-          "options": [
-            {
-              "id": "a",
-              "text": "Ignore criterion-marked response diagnostics and continue for volume."
-            },
-            {
-              "id": "b",
-              "text": "Re-read notes without running a corrected attempt."
-            },
-            {
-              "id": "c",
-              "text": "Map each paragraph to the targeted criterion descriptor."
-            },
-            {
-              "id": "d",
-              "text": "Delay correction until after several unrelated drills."
-            }
-          ],
-          "correctOptionId": "c",
-          "hint": "Choose the option that directly fixes criterion language omission.",
-          "explanation": "Immediate correction inside criterion-marked response improves transfer to the next timed timed block."
-        },
-        {
-          "id": "ib-prep-101-l15-q6",
-          "text": "During IB command-term question, command-term mismatch repeats in IB: Final IB Sprint and Reflection. Which plan should be applied before the next retest?",
-          "skillId": "ib-prep-101-skill-tok-section-application",
-          "options": [
-            {
-              "id": "a",
-              "text": "Switch to new content before validating the fix."
-            },
-            {
-              "id": "b",
-              "text": "Increase speed without updating process controls."
-            },
-            {
-              "id": "c",
-              "text": "Retake the section with no checkpoint changes."
-            },
-            {
-              "id": "d",
-              "text": "Translate command terms into required response moves before drafting. Track outcomes in a criterion alignment sheet and retest the same pattern."
-            }
-          ],
-          "correctOptionId": "d",
-          "hint": "Best plans combine targeted correction with measurable tracking.",
-          "explanation": "A logged correction cycle in criterion alignment sheet makes the pacing fix visible and repeatable."
-        },
-        {
-          "id": "ib-prep-101-l15-q7",
-          "text": "In a full IB mock, misses appear across multiple strands. What triage order is strongest?",
-          "skillId": "ib-prep-101-skill-mock-triage",
-          "options": [
-            {
-              "id": "a",
-              "text": "Group misses by concept, strategy, and timing first, then sequence fixes by expected score gain."
-            },
-            {
-              "id": "b",
-              "text": "Review only the most recent mistakes."
-            },
-            {
-              "id": "c",
-              "text": "Retake the full mock without a remediation plan."
-            },
-            {
-              "id": "d",
-              "text": "Choose revision topics only by preference."
-            }
-          ],
-          "correctOptionId": "a",
-          "hint": "The right choice creates a stable remediation queue.",
-          "explanation": "Process-level triage finds leverage points that improve many future items."
-        },
-        {
-          "id": "ib-prep-101-l15-q8",
-          "text": "A learner finishes one section early but times out on another in IB. What is the best pacing fix?",
-          "skillId": "ib-prep-101-skill-section-pacing",
-          "options": [
-            {
-              "id": "a",
-              "text": "Use the same checkpoint target for every section."
-            },
-            {
-              "id": "b",
-              "text": "Set section-specific checkpoints and rehearse transitions so pace remains stable end-to-end."
-            },
-            {
-              "id": "c",
-              "text": "Speed up all sections equally without checking accuracy."
-            },
-            {
-              "id": "d",
-              "text": "Add extra questions without tracking section pace."
-            }
-          ],
-          "correctOptionId": "b",
-          "hint": "Section load differences require section-level pacing plans.",
-          "explanation": "One-size pacing causes uneven performance; section-specific pacing is more reliable."
-        },
-        {
-          "id": "ib-prep-101-l15-q9",
-          "text": "Before submitting a high-stakes IB section, which quality-control habit is most reliable?",
-          "skillId": "ib-prep-101-skill-quality-control",
-          "options": [
-            {
-              "id": "a",
-              "text": "Change random answers to distribute letters evenly."
-            },
-            {
-              "id": "b",
-              "text": "Skip verification to preserve confidence."
-            },
-            {
-              "id": "c",
-              "text": "Run a brief targeted verification pass on flagged items and known error patterns."
-            },
-            {
-              "id": "d",
-              "text": "Review only the first third of the section."
-            }
-          ],
-          "correctOptionId": "c",
-          "hint": "Targeted verification beats random checking.",
-          "explanation": "Focused verification catches preventable mistakes without excessive time cost."
-        },
-        {
-          "id": "ib-prep-101-l15-q10",
-          "text": "After full-mock review in IB, which next-step plan yields the best one-week improvement?",
-          "skillId": "ib-prep-101-skill-remediation-loop",
-          "options": [
-            {
-              "id": "a",
-              "text": "Repeat the same mock daily with no targeted fixes."
-            },
-            {
-              "id": "b",
-              "text": "Study only easiest content to boost confidence."
-            },
-            {
-              "id": "c",
-              "text": "Pause all timed practice until every concept feels perfect."
-            },
-            {
-              "id": "d",
-              "text": "Build a remediation sprint with two top weak strands, one pacing drill, and one timed re-check."
-            }
-          ],
-          "correctOptionId": "d",
-          "hint": "The strongest plan includes targeted fixes plus timed validation.",
-          "explanation": "Improvement requires focused remediation and a timed checkpoint to verify transfer."
+          "hint": "Manage your state before you manage the test.",
+          "explanation": "Taking a moment to calm your nervous system allows you to think more clearly. It prevents panic and helps you approach the exam with a strategic, focused mindset."
         }
       ],
-      interactiveActivities: [
+      "interactiveActivities": [
         {
           "id": "ib-prep-101-l15-ia1",
-          "type": "sorting_buckets",
-          "title": "IB: Final IB Sprint and Reflection Error Taxonomy Sort",
-          "description": "Sort mock errors into concept, strategy, or timing remediation lanes.",
-          "estimatedMinutes": 10,
-          "difficultyLevel": "adaptive",
+          "type": "text_input",
+          "title": "My IB Exam Day Game Plan",
+          "description": "Write down three key process goals for your exam (e.g., 'I will spend 2 minutes planning my essay,' 'I will check my work on flagged questions').",
+          "estimatedMinutes": 7,
+          "difficultyLevel": "easy",
           "instructions": [
-            "Review each error pattern.",
-            "Sort into best remediation lane.",
-            "Use output to plan your next practice sprint."
+            "Reflect on your practice and identify what works for you.",
+            "Write three simple, actionable goals for how you will approach the exam.",
+            "Review these goals just before you go into the exam hall."
           ],
           "data": {
-            "buckets": [
-              {
-                "id": "concept",
-                "label": "Criterion Knowledge Gap"
-              },
-              {
-                "id": "strategy",
-                "label": "Command-Term Strategy Gap"
-              },
-              {
-                "id": "timing",
-                "label": "Assessment Timing Gap"
-              }
-            ],
-            "items": [
-              {
-                "id": "i1",
-                "label": "Criterion descriptor missed in subject response",
-                "correctBucketId": "concept"
-              },
-              {
-                "id": "i2",
-                "label": "Command term treated as summary instead of evaluation",
-                "correctBucketId": "strategy"
-              },
-              {
-                "id": "i3",
-                "label": "Final section left unreviewed in timed paper",
-                "correctBucketId": "timing"
-              },
-              {
-                "id": "i4",
-                "label": "Criterion feedback not integrated in next attempt",
-                "correctBucketId": "timing"
-              }
+            "prompts": [
+              "Process Goal 1:",
+              "Process Goal 2:",
+              "Process Goal 3:"
             ]
           }
         }
       ],
-      quizBlueprint: {
-        "frequency": "mock_assessment",
-        "questionsPerCheck": 10,
-        "totalQuestions": 10,
-        "timeLimitMinutes": 24,
+      "quizBlueprint": {
+        "frequency": "lesson_assessment",
+        "questionsPerCheck": 1,
+        "totalQuestions": 1,
+        "timeLimitMinutes": 5,
         "questionTypes": [
           {
             "type": "mcq_single",
-            "count": 10,
+            "count": 1,
             "pointsEach": 1,
             "bloomsLevels": [
-              1,
-              2,
-              3
+              5
             ]
           }
         ],
         "difficultyDistribution": {
-          "easy": 2,
-          "medium": 5,
-          "hard": 3
+          "easy": 0,
+          "medium": 1,
+          "hard": 0
         },
         "feedbackMode": "after_submit",
         "adaptive": false,
-        "masteryThreshold": 0.82
-      },
-      metadata: {
-        examDrill: "full_mock"
-      },
-      learningAids: [
-        {
-          "id": "ib-prep-101-l15-a1",
-          "type": "image",
-          "title": "Hl Sl Planning Snapshot",
-          "content": "Visual anchor for IB: Final IB Sprint and Reflection with emphasis on HL/SL planning within timed block planning."
-        },
-        {
-          "id": "ib-prep-101-l15-a2",
-          "type": "animation",
-          "title": "Tok Walkthrough",
-          "content": "Stepwise walkthrough for IB: Final IB Sprint and Reflection showing TOK decisions and checkpoint log checks."
-        }
-      ]
+        "masteryThreshold": 1
+      }
     }
-  ],
+  ]
 };

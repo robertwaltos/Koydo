@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const DistributedSystems501Module: LearningModule = {
+export const distributed_systems_501_Module: LearningModule = {
   "id": "distributed-systems-501",
   "title": "Distributed Systems Specialization Studio",
   "description": "Post-401 specialization in Distributed Systems, focused on distributed consistency strategy, reliability and fault-domain design, performance-observability analytics, and operational governance through advanced casework, simulation, and defense-based checkpoints.",
@@ -14,7 +14,7 @@ export const DistributedSystems501Module: LearningModule = {
   ],
   "minAge": 17,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en"
@@ -38,7 +38,8 @@ export const DistributedSystems501Module: LearningModule = {
           "id": "distributed-systems-501-l01-a1",
           "type": "image",
           "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence.",
+          "visualPrompt": "A high-tech blueprint showing interconnected server nodes with clear boundary lines, data flow arrows, and highlighted fault domains."
         }
       ],
       "chunks": [
@@ -46,36 +47,36 @@ export const DistributedSystems501Module: LearningModule = {
           "id": "distributed-systems-501-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "In this lesson, we will explore the advanced concepts of scope and boundaries in Distributed Systems. We will focus on understanding how to create strategies for maintaining consistency across distributed systems, ensuring reliability, and designing for fault domains. This means learning how to set clear limits on what our systems can do and how they interact with each other, which is crucial for building effective and resilient systems.\nContext recap: In this lesson, we will explore the advanced concepts of scope and boundaries in Distributed Systems. We will focus on understanding how to create strategies for maintaining consistency across distributed systems, ensuring reliability, and designing for fault domains. This means learning how to set clear limits on what our systems can do and how they interact with each other, which is crucial for building effective and resilient systems."
+          "content": "This lesson establishes the advanced architectural boundaries of Distributed Systems. We will formulate strategies for maintaining distributed consistency, engineering fault-tolerant domains, and ensuring high reliability. Setting explicit operational limits and defining inter-service interactions are foundational for resilient system design."
         },
         {
           "id": "distributed-systems-501-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different events or actions in a system. They will also identify ranges of uncertainty and understand how different parts of the system depend on one another. This preparation is essential for planning interventions effectively, as it helps us visualize how changes can impact the overall system.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different events or actions in a system. They will also identify ranges of uncertainty and understand how different parts of the system depend on one another. This preparation is essential for planning interventions effectively, as it helps us visualize how changes can impact the overall system."
+          "content": "Learners will map causal pathways—the intricate dependencies between system events. By identifying ranges of uncertainty and cross-component dependencies, you will learn to anticipate how localized interventions cascade through the broader architecture, which is essential for mitigating cascading failures."
         },
         {
           "id": "distributed-systems-501-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "In this recap, we emphasize that all claims made in our analysis must be linked to measurable indicators. This means that we should have clear confidence bounds and established review checkpoints to ensure our findings are reliable. By doing this, we can maintain a high standard of evidence in our work, which is crucial for making informed decisions.\nContext recap: In this recap, we emphasize that all claims made in our analysis must be linked to measurable indicators. This means that we should have clear confidence bounds and established review checkpoints to ensure our findings are reliable. By doing this, we can maintain a high standard of evidence in our work, which is crucial for making informed decisions."
+          "content": "All architectural claims must be anchored to empirical indicators. We will establish rigorous evidence thresholds, defining clear confidence bounds and review checkpoints to ensure that every design recommendation is defensible, data-driven, and reliable under scrutiny."
         }
       ],
       "flashcards": [
         {
           "id": "distributed-systems-501-l01-f1",
-          "front": "distributed consistency strategy",
-          "back": "A specialization axis requiring explicit assumptions and measurable constraints."
+          "front": "Distributed Consistency Strategy",
+          "back": "A specialization axis requiring explicit assumptions and measurable constraints to ensure data integrity across nodes."
         },
         {
           "id": "distributed-systems-501-l01-f2",
-          "front": "reliability and fault-domain design",
-          "back": "Execution architecture that determines reliability under stress."
+          "front": "Reliability and Fault-Domain Design",
+          "back": "Execution architecture that determines system resilience and reliability under stress or partial failure."
         },
         {
           "id": "distributed-systems-501-l01-f3",
-          "front": "performance-observability analytics",
-          "back": "Evaluation discipline for identifying true gains and hidden costs."
+          "front": "Performance-Observability Analytics",
+          "back": "The evaluation discipline for identifying true performance gains and uncovering hidden architectural costs."
         }
       ]
     },
@@ -89,7 +90,8 @@ export const DistributedSystems501Module: LearningModule = {
           "id": "distributed-systems-501-l02-a1",
           "type": "practice",
           "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence.",
+          "visualPrompt": "A split-screen interface showing a system architecture diagram on one side and a stress-test configuration panel on the other."
         }
       ],
       "chunks": [
@@ -97,13 +99,13 @@ export const DistributedSystems501Module: LearningModule = {
           "id": "distributed-systems-501-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "In this interactive practice, learners will have the opportunity to design specialized workflows. They will also conduct stress tests on these workflows by simulating adverse scenarios. This hands-on experience is vital for understanding how systems perform under pressure and helps learners develop skills to create robust solutions.\nContext recap: In this interactive practice, learners will have the opportunity to design specialized workflows. They will also conduct stress tests on these workflows by simulating adverse scenarios. This hands-on experience is vital for understanding how systems perform under pressure and helps learners develop skills to create robust solutions."
+          "content": "In this interactive lab, you will design specialized operational workflows and subject them to rigorous stress tests. By simulating adverse network partitions and node failures, you will observe how your architecture performs under pressure and refine your solutions for maximum robustness."
         },
         {
           "id": "distributed-systems-501-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "In this recap, we will discuss how workflows should incorporate various elements such as checkpoints, rollback criteria, and threshold-based escalation. This means that as we design our systems, we need to ensure they can handle unexpected issues by having clear procedures for monitoring and responding to problems.\nContext recap: In this recap, we will discuss how workflows should incorporate various elements such as checkpoints, rollback criteria, and threshold-based escalation. This means that as we design our systems, we need to ensure they can handle unexpected issues by having clear procedures for monitoring and responding to problems."
+          "content": "Robust workflows require embedded control gates, including pre-commit checkpoints, automated rollback criteria, and threshold-based escalation paths. Designing these mechanisms ensures your system can autonomously monitor its health and gracefully degrade or recover during unexpected anomalies."
         }
       ],
       "interactiveActivities": [
@@ -143,7 +145,8 @@ export const DistributedSystems501Module: LearningModule = {
           "id": "distributed-systems-501-l03-a1",
           "type": "practice",
           "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence.",
+          "visualPrompt": "A checklist graphic highlighting 'Method', 'Assumptions', and 'Evidence' with glowing green checkmarks."
         }
       ],
       "questions": [
@@ -170,7 +173,7 @@ export const DistributedSystems501Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Advanced decisions improve when assumptions, constraints, and metrics are explicit."
+          "explanation": "Advanced decisions improve significantly when assumptions, constraints, and metrics are made explicit prior to implementation."
         },
         {
           "id": "distributed-systems-501-l03-q2",
@@ -195,7 +198,7 @@ export const DistributedSystems501Module: LearningModule = {
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Reliable advanced execution needs ownership clarity and threshold-driven governance."
+          "explanation": "Reliable advanced execution necessitates ownership clarity and threshold-driven governance to manage complex failures."
         },
         {
           "id": "distributed-systems-501-l03-q3",
@@ -220,7 +223,7 @@ export const DistributedSystems501Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible analysis combines comparative baselines, side-effect checks, and uncertainty disclosure."
+          "explanation": "Defensible analysis combines comparative baselines, rigorous side-effect checks, and transparent uncertainty disclosure."
         },
         {
           "id": "distributed-systems-501-l03-q4",
@@ -245,7 +248,7 @@ export const DistributedSystems501Module: LearningModule = {
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Governance maturity is the operational link between intent, measurement, and corrective action."
+          "explanation": "Governance maturity is defined by the operational link between strategic intent, measurable enforcement, and corrective action."
         },
         {
           "id": "distributed-systems-501-l03-q5",
@@ -270,11 +273,11 @@ export const DistributedSystems501Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
+          "explanation": "Defensible comparisons require shared metrics, comprehensive side-effect accounting, and uncertainty disclosure."
         },
         {
           "id": "distributed-systems-501-l03-q6",
-          "text": "In high-stakes Distributed Systems Specialization Studio execution, which communication protocol is strongest?",
+          "text": "In high-stakes Distributed Systems execution, which communication protocol is strongest?",
           "skillId": "distributed-systems-501-skill-advanced-6",
           "options": [
             {
@@ -295,7 +298,7 @@ export const DistributedSystems501Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
+          "explanation": "High-stakes communication must expose underlying assumptions, confidence intervals, and critical checkpoints to maintain trust."
         },
         {
           "id": "distributed-systems-501-l03-q7",
@@ -320,11 +323,11 @@ export const DistributedSystems501Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
+          "explanation": "Mature remediation ties deep root-cause analysis directly to control redesign and subsequent verification."
         },
         {
           "id": "distributed-systems-501-l03-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Distributed Systems Specialization Studio?",
+          "text": "Which portfolio decision rule best balances performance and resilience in Distributed Systems?",
           "skillId": "distributed-systems-501-skill-advanced-8",
           "options": [
             {
@@ -345,7 +348,7 @@ export const DistributedSystems501Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and robust contingency options."
         }
       ]
     },
@@ -359,7 +362,8 @@ export const DistributedSystems501Module: LearningModule = {
           "id": "distributed-systems-501-l04-a1",
           "type": "mnemonic",
           "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence.",
+          "visualPrompt": "A stylized matrix graphic with icons representing Effectiveness, Feasibility, Risk, Equity, and Cost."
         }
       ],
       "chunks": [
@@ -367,36 +371,36 @@ export const DistributedSystems501Module: LearningModule = {
           "id": "distributed-systems-501-l04-c1",
           "kind": "example",
           "title": "Case Context and Stakes",
-          "content": "In this engaging case analysis, we will explore a global service architecture that faces various challenges, such as partial failures, delays in data consistency, and the necessity for incident escalation across a large network. Participants will actively engage in mapping out the constraints that these systems encounter, identifying different classes of risk that can arise, and understanding the governance boundaries that help manage these risks. This exercise is designed to deepen their appreciation for the complexities involved in effectively managing distributed systems, equipping them with valuable insights and skills for future challenges in the field."
+          "content": "In this advanced case analysis, we dissect a global service architecture facing partial failures, data consistency lag, and complex incident escalation. You will map the constraints of these systems, identify distinct risk classes, and define the governance boundaries required to manage them. This exercise bridges theoretical knowledge with the harsh realities of production environments."
         },
         {
           "id": "distributed-systems-501-l04-c2",
           "kind": "concept",
           "title": "Tradeoff Matrix",
-          "content": "In this section, we will introduce the concept of a tradeoff matrix. Here, alternatives will be evaluated based on several criteria, including effectiveness, feasibility, risk, equity, and implementation cost. This structured approach helps learners make informed decisions by weighing the pros and cons of different options.\nContext recap: In this section, we will introduce the concept of a tradeoff matrix. Here, alternatives will be evaluated based on several criteria, including effectiveness, feasibility, risk, equity, and implementation cost. This structured approach helps learners make informed decisions by weighing the pros and cons of different options."
+          "content": "We introduce the tradeoff matrix—a structured analytical tool for evaluating architectural alternatives. By scoring options against effectiveness, feasibility, risk, equity, and implementation cost, you will learn to make objective, defensible decisions when faced with competing system priorities."
         },
         {
           "id": "distributed-systems-501-l04-c3",
           "kind": "recap",
           "title": "Recovery and Adaptation Design",
-          "content": "In this recap, we will discuss how to map failure signatures to specific remediation actions and measurable recovery triggers. This means that when a failure occurs, we should have a clear plan for how to respond and recover, ensuring that we can return to normal operations as quickly as possible.\nContext recap: In this recap, we will discuss how to map failure signatures to specific remediation actions and measurable recovery triggers. This means that when a failure occurs, we should have a clear plan for how to respond and recover, ensuring that we can return to normal operations as quickly as possible."
+          "content": "Effective adaptation requires mapping specific failure signatures to predefined remediation actions and measurable recovery triggers. When an anomaly occurs, the system—and its operators—must have a deterministic plan to restore normal operations swiftly and securely."
         }
       ],
       "flashcards": [
         {
           "id": "distributed-systems-501-l04-f1",
-          "front": "Tradeoff matrix",
-          "back": "A structured model for comparing alternatives under competing priorities."
+          "front": "Tradeoff Matrix",
+          "back": "A structured model for comparing architectural alternatives under competing priorities and constraints."
         },
         {
           "id": "distributed-systems-501-l04-f2",
-          "front": "Failure signature",
-          "back": "A recurring indicator of a predictable risk class."
+          "front": "Failure Signature",
+          "back": "A recurring, identifiable indicator of a predictable risk class within a distributed system."
         },
         {
           "id": "distributed-systems-501-l04-f3",
-          "front": "Recovery trigger",
-          "back": "A measurable threshold that initiates corrective action."
+          "front": "Recovery Trigger",
+          "back": "A measurable threshold that automatically initiates corrective action or escalation."
         }
       ]
     },
@@ -410,7 +414,8 @@ export const DistributedSystems501Module: LearningModule = {
           "id": "distributed-systems-501-l05-a1",
           "type": "practice",
           "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence.",
+          "visualPrompt": "A dashboard showing real-time metrics, alert thresholds, and escalation pathways during a simulated system failure."
         }
       ],
       "chunks": [
@@ -418,13 +423,13 @@ export const DistributedSystems501Module: LearningModule = {
           "id": "distributed-systems-501-l05-c1",
           "kind": "practice",
           "title": "Scenario Simulation",
-          "content": "In this interactive practice, learners will configure various interventions, constraints, and escalation logic for high-stakes tests. This hands-on experience is crucial for understanding how to manage complex scenarios and ensure that systems respond appropriately under pressure.\nContext recap: In this interactive practice, learners will configure various interventions, constraints, and escalation logic for high-stakes tests. This hands-on experience is crucial for understanding how to manage complex scenarios and ensure that systems respond appropriately under pressure."
+          "content": "In this simulation, you will configure interventions, set constraints, and program escalation logic for high-stakes operational tests. This hands-on environment forces you to manage complex, cascading scenarios, ensuring your architectural designs respond predictably under extreme pressure."
         },
         {
           "id": "distributed-systems-501-l05-c2",
           "kind": "recap",
           "title": "Debrief and Adaptation",
-          "content": "In this recap, we will review the outcomes of our tests, focusing on the gains achieved, any side effects observed, and any gaps in governance compliance. This reflection is important for continuous improvement and helps learners understand the impact of their decisions.\nContext recap: In this recap, we will review the outcomes of our tests, focusing on the gains achieved, any side effects observed, and any gaps in governance compliance. This reflection is important for continuous improvement and helps learners understand the impact of their decisions."
+          "content": "Post-simulation, we will conduct a rigorous debrief. You will analyze the performance gains achieved, document any unintended side effects, and identify gaps in governance compliance. This reflective practice is critical for continuous architectural improvement."
         }
       ],
       "interactiveActivities": [
@@ -451,209 +456,210 @@ export const DistributedSystems501Module: LearningModule = {
           "id": "distributed-systems-501-l06-a1",
           "type": "practice",
           "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence.",
+          "visualPrompt": "An icon of a magnifying glass over a policy document, symbolizing research and governance."
         }
       ],
       "questions": [
         {
           "id": "distributed-systems-501-l06-q1",
-          "text": "Which practice most improves distributed consistency strategy decision quality?",
-          "skillId": "distributed-systems-501-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "Proceed without baseline or assumptions"
-            },
-            {
-              "id": "b",
-              "text": "Define assumptions, constraints, and measurable indicators"
-            },
-            {
-              "id": "c",
-              "text": "Optimize only for speed in every context"
-            },
-            {
-              "id": "d",
-              "text": "Ignore uncertainty and edge conditions"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Advanced decisions improve when assumptions, constraints, and metrics are explicit."
-        },
-        {
-          "id": "distributed-systems-501-l06-q2",
-          "text": "At level 501, strong execution for reliability and fault-domain design requires:",
-          "skillId": "distributed-systems-501-skill-execution",
-          "options": [
-            {
-              "id": "a",
-              "text": "Owner mapping, checkpoint cadence, and escalation thresholds"
-            },
-            {
-              "id": "b",
-              "text": "No role clarity and ad-hoc process changes"
-            },
-            {
-              "id": "c",
-              "text": "No retrospective or post-run review"
-            },
-            {
-              "id": "d",
-              "text": "No rollback or fallback conditions"
-            }
-          ],
-          "correctOptionId": "a",
-          "explanation": "Reliable advanced execution needs ownership clarity and threshold-driven governance."
-        },
-        {
-          "id": "distributed-systems-501-l06-q3",
-          "text": "A defensible approach to performance-observability analytics includes:",
-          "skillId": "distributed-systems-501-skill-eval",
-          "options": [
-            {
-              "id": "a",
-              "text": "Anecdotes without comparison"
-            },
-            {
-              "id": "b",
-              "text": "Baseline comparisons, side-effect analysis, and uncertainty bounds"
-            },
-            {
-              "id": "c",
-              "text": "Changing success criteria after outcomes"
-            },
-            {
-              "id": "d",
-              "text": "Excluding difficult scenarios from analysis"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Defensible analysis combines comparative baselines, side-effect checks, and uncertainty disclosure."
-        },
-        {
-          "id": "distributed-systems-501-l06-q4",
-          "text": "Mature operational governance systems connect:",
+          "text": "When evaluating the public impact of a distributed system, which factor is most critical for equitable governance?",
           "skillId": "distributed-systems-501-skill-governance",
           "options": [
             {
               "id": "a",
-              "text": "Policy intent, measurable controls, and remediation pathways"
+              "text": "Maximizing throughput regardless of user location"
             },
             {
               "id": "b",
-              "text": "Policy language with no measurable enforcement"
+              "text": "Mapping the distribution of benefits, burdens, and delayed effects across all stakeholder groups"
             },
             {
               "id": "c",
-              "text": "Targets without ownership or escalation design"
+              "text": "Ensuring the system is entirely open-source"
             },
             {
               "id": "d",
-              "text": "Operations without transparent accountability"
+              "text": "Hiding system latency metrics from end-users"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Equitable governance requires a transparent understanding of how system outcomes and burdens are distributed among all affected populations."
+        },
+        {
+          "id": "distributed-systems-501-l06-q2",
+          "text": "What is the primary purpose of an accountability architecture in distributed systems?",
+          "skillId": "distributed-systems-501-skill-accountability",
+          "options": [
+            {
+              "id": "a",
+              "text": "To ensure decision traceability, define review rights, and establish clear remediation obligations"
+            },
+            {
+              "id": "b",
+              "text": "To automatically scale server instances during peak loads"
+            },
+            {
+              "id": "c",
+              "text": "To encrypt data at rest and in transit"
+            },
+            {
+              "id": "d",
+              "text": "To eliminate the need for human operators"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Governance maturity is the operational link between intent, measurement, and corrective action."
+          "explanation": "Accountability architecture provides the framework for tracing decisions, assigning responsibility, and mandating corrective actions."
+        },
+        {
+          "id": "distributed-systems-501-l06-q3",
+          "text": "Which element is essential for maintaining decision traceability?",
+          "skillId": "distributed-systems-501-skill-traceability",
+          "options": [
+            {
+              "id": "a",
+              "text": "A single monolithic codebase"
+            },
+            {
+              "id": "b",
+              "text": "An auditable record linking empirical evidence, ownership, and the underlying rationale"
+            },
+            {
+              "id": "c",
+              "text": "Frequent, undocumented hotfixes"
+            },
+            {
+              "id": "d",
+              "text": "Relying solely on verbal agreements during stand-ups"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Traceability relies on persistent, auditable records that connect the 'why' and 'who' to the empirical data driving the decision."
+        },
+        {
+          "id": "distributed-systems-501-l06-q4",
+          "text": "In the context of responsible leadership, how should a tradeoff matrix be utilized?",
+          "skillId": "distributed-systems-501-skill-leadership",
+          "options": [
+            {
+              "id": "a",
+              "text": "To justify the cheapest option available"
+            },
+            {
+              "id": "b",
+              "text": "To systematically compare alternatives against competing priorities like feasibility, risk, and ethical impact"
+            },
+            {
+              "id": "c",
+              "text": "To obscure the risks associated with a preferred architecture"
+            },
+            {
+              "id": "d",
+              "text": "To delay decision-making indefinitely"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "A tradeoff matrix is a tool for transparently balancing competing priorities, ensuring ethical and risk factors are weighed alongside technical feasibility."
         },
         {
           "id": "distributed-systems-501-l06-q5",
-          "text": "What is the best way to compare competing interventions in advanced Computer Science?",
-          "skillId": "distributed-systems-501-skill-advanced-5",
+          "text": "What defines a mature remediation obligation within operational governance?",
+          "skillId": "distributed-systems-501-skill-remediation",
           "options": [
             {
               "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
+              "text": "A pre-defined, measurable commitment to correct specific failure signatures when recovery triggers are met"
             },
             {
               "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
+              "text": "A vague promise to look into issues when time permits"
             },
             {
               "id": "c",
-              "text": "Switch metrics after results arrive"
+              "text": "Firing the engineer responsible for the outage"
             },
             {
               "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
+              "text": "Refunding customers without fixing the underlying bug"
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
+          "correctOptionId": "a",
+          "explanation": "Mature remediation obligations are proactive, measurable commitments tied directly to specific, identifiable failure triggers."
         },
         {
           "id": "distributed-systems-501-l06-q6",
-          "text": "In high-stakes Distributed Systems Specialization Studio execution, which communication protocol is strongest?",
-          "skillId": "distributed-systems-501-skill-advanced-6",
+          "text": "Why is mapping delayed effects crucial in stakeholder impact distribution?",
+          "skillId": "distributed-systems-501-skill-impact",
           "options": [
             {
               "id": "a",
-              "text": "Broadcast conclusions without assumptions"
+              "text": "Because it speeds up the initial deployment phase"
             },
             {
               "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
+              "text": "Because architectural decisions often incur technical debt or societal costs that only manifest at scale over time"
             },
             {
               "id": "c",
-              "text": "Share only final outcomes after completion"
+              "text": "Because it reduces the need for immediate testing"
             },
             {
               "id": "d",
-              "text": "Limit updates to a single informal channel"
+              "text": "Because stakeholders prefer delayed gratification"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
+          "explanation": "Distributed systems operate at scales where the true cost of a decision (technical or societal) may take months or years to become apparent."
         },
         {
           "id": "distributed-systems-501-l06-q7",
-          "text": "A mature remediation loop in advanced Computer Science should prioritize:",
-          "skillId": "distributed-systems-501-skill-advanced-7",
+          "text": "During an expert panel defense, how should uncertainty bounds be communicated?",
+          "skillId": "distributed-systems-501-skill-defense",
           "options": [
             {
               "id": "a",
-              "text": "Blame assignment without system updates"
+              "text": "They should be hidden to project confidence"
             },
             {
               "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
+              "text": "Explicitly, alongside confidence intervals and the specific conditions under which the system might fail"
             },
             {
               "id": "c",
-              "text": "One-time fixes without retesting"
+              "text": "Only if directly asked by the panel"
             },
             {
               "id": "d",
-              "text": "Issue closure based on elapsed time"
+              "text": "Through complex jargon that obscures the actual risk"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
+          "explanation": "Professional defense requires transparent disclosure of uncertainty, demonstrating a deep understanding of the system's limits."
         },
         {
           "id": "distributed-systems-501-l06-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Distributed Systems Specialization Studio?",
-          "skillId": "distributed-systems-501-skill-advanced-8",
+          "text": "Which checklist item best ensures a distributed system aligns with responsible leadership principles?",
+          "skillId": "distributed-systems-501-skill-ethics",
           "options": [
             {
               "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
+              "text": "Verification that the system balances high-performance execution with strict accountability and ethical compliance"
             },
             {
               "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
+              "text": "Confirmation that the system uses the newest programming language"
             },
             {
               "id": "c",
-              "text": "Ignore correlated failure modes"
+              "text": "Ensuring the system has zero downtime, regardless of the human cost to operators"
             },
             {
               "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
+              "text": "Checking that all code is written by a single lead developer"
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "correctOptionId": "a",
+          "explanation": "Responsible leadership mandates a holistic view that balances technical performance with ethical impact and operational accountability."
         }
       ]
     },
@@ -667,7 +673,8 @@ export const DistributedSystems501Module: LearningModule = {
           "id": "distributed-systems-501-l07-a1",
           "type": "image",
           "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence.",
+          "visualPrompt": "A network graph illustrating the ripple effects of a system decision across various stakeholder groups, color-coded by impact level."
         }
       ],
       "chunks": [
@@ -675,36 +682,36 @@ export const DistributedSystems501Module: LearningModule = {
           "id": "distributed-systems-501-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "In this section, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. This analysis is essential for understanding how decisions impact various parties involved and ensuring that all voices are considered in the process.\nContext recap: In this section, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. This analysis is essential for understanding how decisions impact various parties involved and ensuring that all voices are considered in the process."
+          "content": "Architectural decisions rarely affect all users equally. You will map the distribution of benefits, operational burdens, and delayed effects across diverse stakeholder groups. This analysis is essential for equitable system design, ensuring that marginalized or edge-case users are not disproportionately penalized by optimization choices."
         },
         {
           "id": "distributed-systems-501-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "In this section, we will explore the concept of accountability architecture. This includes integrating elements such as decision traceability, review rights, and remediation obligations. Understanding these components is vital for ensuring that decisions are made transparently and that there are clear responsibilities for addressing any issues that arise.\nContext recap: In this section, we will explore the concept of accountability architecture. This includes integrating elements such as decision traceability, review rights, and remediation obligations. Understanding these components is vital for ensuring that decisions are made transparently and that there are clear responsibilities for addressing any issues that arise."
+          "content": "We will explore the framework of accountability architecture, which integrates decision traceability, review rights, and strict remediation obligations. Understanding these components ensures that technical decisions are transparent, auditable, and tied to clear operational responsibilities when failures occur."
         },
         {
           "id": "distributed-systems-501-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "To ensure responsible leadership in distributed systems, it is important to use a final checklist that connects various outcomes. This checklist should include considerations of ethics, adherence to policies, and the ability to remain resilient in the face of challenges. By following this checklist, leaders can make informed decisions that positively impact the community and uphold their responsibilities.\nContext recap: To ensure responsible leadership in distributed systems, it is important to use a final checklist that connects various outcomes. This checklist should include considerations of ethics, adherence to policies, and the ability to remain resilient in the face of challenges. By following this checklist, leaders can make informed decisions that positively impact the community and uphold their responsibilities."
+          "content": "Responsible leadership in distributed systems requires a holistic evaluation. We will utilize a final checklist that cross-references technical outcomes with ethical considerations, policy adherence, and long-term resilience. This ensures your architectural choices positively impact the broader community while upholding rigorous engineering standards."
         }
       ],
       "flashcards": [
         {
           "id": "distributed-systems-501-l07-f1",
-          "front": "Impact distribution",
-          "back": "How outcomes are allocated across populations and timescales."
+          "front": "Impact Distribution",
+          "back": "The analytical mapping of how system outcomes, benefits, and burdens are allocated across populations and timescales."
         },
         {
           "id": "distributed-systems-501-l07-f2",
-          "front": "Decision traceability",
-          "back": "An auditable record of evidence, ownership, and rationale."
+          "front": "Decision Traceability",
+          "back": "An auditable, persistent record linking empirical evidence, ownership, and the rationale behind architectural choices."
         },
         {
           "id": "distributed-systems-501-l07-f3",
-          "front": "Responsible leadership",
-          "back": "Decision behavior balancing performance, accountability, and ethics."
+          "front": "Responsible Leadership",
+          "back": "Decision-making behavior that explicitly balances technical performance with operational accountability and ethical impact."
         }
       ]
     },
@@ -718,7 +725,8 @@ export const DistributedSystems501Module: LearningModule = {
           "id": "distributed-systems-501-l08-a1",
           "type": "practice",
           "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence.",
+          "visualPrompt": "An illustration of a professional defense panel, with a presenter pointing to a data-driven chart while panel members review documentation."
         }
       ],
       "chunks": [
@@ -726,13 +734,13 @@ export const DistributedSystems501Module: LearningModule = {
           "id": "distributed-systems-501-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "In this interactive activity, learners will work together to create a comprehensive brief. This brief will include well-supported claims, relevant evidence, and an understanding of uncertainty bounds. Additionally, learners will outline potential remediation pathways to address any issues that may arise. This exercise helps develop critical thinking and problem-solving skills essential for effective communication in distributed systems.\nContext recap: In this interactive activity, learners will work together to create a comprehensive brief. This brief will include well-supported claims, relevant evidence, and an understanding of uncertainty bounds. Additionally, learners will outline potential remediation pathways to address any issues that may arise. This exercise helps develop critical thinking and problem-solving skills essential for effective communication in distributed systems."
+          "content": "In this capstone activity, you will synthesize your findings into a comprehensive defense brief. This document must articulate well-supported architectural claims, cite empirical evidence, and explicitly define uncertainty bounds. You will also outline concrete remediation pathways, demonstrating your readiness to manage the systems you design."
         },
         {
           "id": "distributed-systems-501-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "During the Expert Panel Rehearsal, learners will practice their responses to various critiques. These critiques will focus on technical aspects, governance issues, and the perspectives of different stakeholders. This rehearsal is crucial for building confidence and ensuring that learners can effectively articulate their ideas and defend their positions in a professional setting.\nContext recap: During the Expert Panel Rehearsal, learners will practice their responses to various critiques. These critiques will focus on technical aspects, governance issues, and the perspectives of different stakeholders. This rehearsal is crucial for building confidence and ensuring that learners can effectively articulate their ideas and defend their positions in a professional setting."
+          "content": "During the Expert Panel Rehearsal, you will defend your architectural decisions against adversarial cross-examination. Critiques will target technical viability, governance compliance, and stakeholder impact. This crucible is designed to build your confidence and refine your ability to articulate complex tradeoffs in high-stakes professional environments."
         }
       ],
       "interactiveActivities": [

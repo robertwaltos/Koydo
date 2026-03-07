@@ -66,6 +66,7 @@ import PhysicalButton from "@/components/experience/PhysicalButton";
 import { Sparkles, Brain, Flame, Rocket, ArrowLeft, Palette, ShieldCheck, Beaker, Zap, Cpu, Box, Search, Leaf, Atom, TrendingUp, Globe, TreePine, Music, Mountain, Bot, Wind, History as HistoryIcon, Microscope, Navigation, Grid3X3, Scale, Compass, Construction, Lock, BookOpen, CircuitBoard, Orbit, Dna, Languages, Clock, Binary, Heart, FlaskConical, Camera, Waves } from "lucide-react";
 import Link from "next/link";
 import { isLaunchFeaturePending } from "@/lib/platform/launch-readiness";
+import ComingSoonBanner from "@/app/components/coming-soon-banner";
 
 type GameId = "neural" | "fraction" | "vocabulary" | "artistic" | "ethical" | "synthesis" | "velocity" | "logic" | "canvas" | "chronicle" | "syntax" | "genetic" | "quantum" | "market" | "orbit" | "cipher" | "biome" | "rhythm" | "tectonic" | "flora" | "bot" | "eco" | "aero" | "histo" | "nano" | "quantum-quirk" | "star-steer" | "logic-labyrinth" | "bio-blast" | "ethos-engine" | "echo-expedition" | "terra-trek" | "spark-quest" | "pixel-path" | "luna-legend" | "circuit-crusader" | "gravity-goliath" | "protein-painter" | "linguist-lookout" | "fusion-founder" | "stellar-state" | "neural-net" | "climate-commander" | "history-hacker" | "nano-nexus" | "mars-colony" | "quantum-cascade" | "synthetic-architect" | "global-harmony" | "evolution-prime" | "word-woods" | "story-smith" | "alphabet-airship" | "sentence-safari" | "rhyme-river" | "count-constellations" | "fraction-factory";
 type GameCard = {
@@ -938,4 +939,3 @@ export default function NextGenGameGallery() {
         </MascotHost>
     );
 }
-

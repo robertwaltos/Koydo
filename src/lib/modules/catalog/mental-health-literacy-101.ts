@@ -1,133 +1,134 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const MentalHealthLiteracy101Module: LearningModule = {
+export const mental_health_literacy_101_Module: LearningModule = {
   "id": "mental-health-literacy-101",
   "title": "Mental Health Literacy Foundations",
-  "description": "Level 101 curriculum in Mental Health Literacy, centered on mental health foundations, early risk signal recognition, support pathway design, and ethical and systems governance through case analysis, simulation, and checkpoint-driven mastery.",
-  "subject": "Psychology",
+  "description": "A beginner's guide to understanding mental health. This course helps you learn the basics, recognize when someone might be struggling, find ways to help, and act ethically and responsibly. You'll learn through real-world examples, interactive activities, and building your own support project.",
+  "subject": "Health & Psychology",
   "tags": [
-    "core",
-    "curriculum",
-    "interactive",
     "mental-health",
-    "wellbeing"
+    "wellbeing",
+    "core-curriculum",
+    "interactive",
+    "beginner"
   ],
   "minAge": 14,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "beginner",
   "localeSupport": [
     "en"
   ],
   "learningObjectives": [
-    "Explain and apply mental health foundations under practical constraints",
-    "Build repeatable workflows for early risk signal recognition with measurable controls",
-    "Evaluate interventions in support pathway design using comparative evidence",
-    "Operationalize ethical and systems governance with transparent governance loops",
-    "Communicate uncertainty, risk, and tradeoffs clearly to mixed stakeholders",
-    "Defend decisions through evidence-backed reasoning and post-run review"
+    "Define mental health and identify key factors that influence it.",
+    "Recognize early signs of mental health challenges in yourself and others.",
+    "Create a simple, effective plan to support someone who is struggling.",
+    "Analyze the potential positive and negative impacts of different support actions.",
+    "Apply ethical principles like privacy and respect when offering help.",
+    "Communicate clearly and compassionately about mental health topics.",
+    "Develop a mental health resource for your community based on evidence and best practices."
   ],
   "lessons": [
     {
       "id": "mental-health-literacy-101-l01",
-      "title": "Mental Health Literacy Core Models",
+      "title": "Introduction to Mental Health",
       "type": "video",
-      "duration": 13,
+      "duration": 12,
       "learningAids": [
         {
           "id": "mental-health-literacy-101-l01-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use structured reasoning, map tradeoffs, and verify outcomes with metrics before finalizing."
+          "title": "The Mental Health Spectrum",
+          "content": "An infographic showing that mental health is a spectrum, ranging from thriving to struggling, and that everyone's position on it can change over time."
         }
       ],
       "chunks": [
         {
           "id": "mental-health-literacy-101-l01-c1",
           "kind": "concept",
-          "title": "Scope and Vocabulary",
-          "content": "In this lesson, we will work together to build a common language that helps us talk about Mental Health Literacy. This means we will define key terms and concepts that are essential for understanding mental health. We will also outline the important areas we will focus on, such as learning the basics of mental health and identifying early signs that someone might be facing challenges. By establishing this shared vocabulary, we can communicate more effectively about mental health topics, ensuring that everyone understands and feels included in the conversation. This is a crucial step in promoting awareness and support for mental health issues among our peers."
+          "title": "What is Mental Health?",
+          "content": "In this lesson, we'll build a shared understanding of mental health. We'll define key terms like 'mental health,' 'mental illness,' and 'wellbeing' so we can talk about these topics clearly and respectfully. This foundation helps us create a safe space for learning and discussion."
         },
         {
           "id": "mental-health-literacy-101-l01-c2",
           "kind": "concept",
-          "title": "Causal Reasoning",
-          "content": "In this part of the lesson, learners will explore how to identify and understand the relationships between different factors that can affect mental health. This includes examining our assumptions and recognizing any limitations we might face before we design any interventions. By mapping these causal relationships, we can create more effective strategies to support mental health.\nContext recap: In this part of the lesson, learners will explore how to identify and understand the relationships between different factors that can affect mental health. This includes examining our assumptions and recognizing any limitations we might face before we design any interventions. By mapping these causal relationships, we can create more effective strategies to support mental health."
+          "title": "Factors That Affect Our Mental Health",
+          "content": "We'll explore the different things that can impact our mental health, from daily stress and relationships to biology and environment. Understanding these causes and effects helps us see the bigger picture and find more effective ways to offer support."
         },
         {
           "id": "mental-health-literacy-101-l01-c3",
           "kind": "recap",
-          "title": "Evidence Standards",
-          "content": "In this recap, we will emphasize the importance of grounding our claims in solid evidence. This means that any statements we make should be supported by measurable indicators, which help us understand how confident we can be in our conclusions. We will also discuss the importance of having regular review checkpoints to ensure that our information remains accurate and reliable.\nContext recap: In this recap, we will emphasize the importance of grounding our claims in solid evidence. This means that any statements we make should be supported by measurable indicators, which help us understand how confident we can be in our conclusions. We will also discuss the importance of having regular review checkpoints to ensure that our information remains accurate and reliable."
+          "title": "Relying on Facts, Not Myths",
+          "content": "In this recap, we'll review why it's important to base our understanding of mental health on reliable evidence, not stereotypes or misinformation. We'll learn how to spot credible sources and why checking the facts is a key part of being a good ally."
         }
       ],
       "flashcards": [
         {
           "id": "mental-health-literacy-101-l01-f1",
-          "front": "mental health foundations",
-          "back": "A core decision lens in Mental Health Literacy requiring explicit assumption control."
+          "front": "Mental Health",
+          "back": "Our emotional, psychological, and social well-being. It affects how we think, feel, and act."
         },
         {
           "id": "mental-health-literacy-101-l01-f2",
-          "front": "early risk signal recognition",
-          "back": "Execution systems that determine reliability and repeatability."
+          "front": "Early Warning Signs",
+          "back": "Changes in a person's thoughts, feelings, or behaviors that might indicate a mental health challenge."
         },
         {
           "id": "mental-health-literacy-101-l01-f3",
-          "front": "support pathway design",
-          "back": "Evaluation process for distinguishing real gains from superficial wins."
+          "front": "Support Pathway",
+          "back": "A plan or series of steps to help someone access care, from talking to a friend to seeing a professional."
         }
       ]
     },
     {
       "id": "mental-health-literacy-101-l02",
-      "title": "Mental Health Literacy Workflow Lab",
+      "title": "Building a Support Plan",
       "type": "interactive",
       "duration": 15,
       "learningAids": [
         {
           "id": "mental-health-literacy-101-l02-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use structured reasoning, map tradeoffs, and verify outcomes with metrics before finalizing."
+          "type": "image",
+          "title": "Diagram: A Simple Support Plan",
+          "content": "A flowchart showing the key steps: Listen, Reassure, Encourage, and Check In."
         }
       ],
       "chunks": [
         {
           "id": "mental-health-literacy-101-l02-c1",
           "kind": "practice",
-          "title": "Workflow Build",
-          "content": "In this interactive activity, learners will work together to create a workflow. This involves mapping out who is responsible for different tasks, setting up control gates to monitor progress, and defining measurable outcomes to assess success. This hands-on experience will help learners understand how to structure their efforts effectively.\nContext recap: In this interactive activity, learners will work together to create a workflow. This involves mapping out who is responsible for different tasks, setting up control gates to monitor progress, and defining measurable outcomes to assess success. This hands-on experience will help learners understand how to structure their efforts effectively."
+          "title": "Creating a Step-by-Step Support Plan",
+          "content": "In this activity, you'll learn how to create a basic support plan. We'll map out who does what, when to check in, and how to know if the plan is helping. This hands-on practice will give you a clear framework for offering support to others."
         },
         {
           "id": "mental-health-literacy-101-l02-c2",
           "kind": "recap",
-          "title": "Readiness and Rollback",
-          "content": "In this recap, we will discuss how to prepare our systems for unexpected challenges. This includes stress-testing our plans to see how they hold up under pressure and determining the thresholds for making rollback decisions if things don’t go as planned. Understanding these concepts will help learners develop more resilient strategies.\nContext recap: In this recap, we will discuss how to prepare our systems for unexpected challenges. This includes stress-testing our plans to see how they hold up under pressure and determining the thresholds for making rollback decisions if things don’t go as planned. Understanding these concepts will help learners develop more resilient strategies."
+          "title": "What to Do When a Plan Isn't Working",
+          "content": "Sometimes, our first attempt to help doesn't work as expected. In this recap, we'll discuss how to recognize when a plan needs to change and the importance of being flexible. We'll also cover when it's time to encourage someone to seek professional help."
         }
       ],
       "interactiveActivities": [
         {
           "id": "mental-health-literacy-101-l02-act1",
           "type": "matching_pairs",
-          "title": "Control Mapping",
-          "description": "Match each control to its strongest reliability or governance effect.",
+          "title": "Matching Support Actions",
+          "description": "Match each supportive action to its main goal.",
           "pairs": [
             {
-              "left": "Pre-commit review",
-              "right": "Prevents avoidable defects"
+              "left": "Active Listening",
+              "right": "Helps the person feel heard and understood."
             },
             {
-              "left": "Rollback trigger",
-              "right": "Contains impact during failures"
+              "left": "Suggesting a walk",
+              "right": "Offers a healthy coping strategy."
             },
             {
-              "left": "Baseline monitor",
-              "right": "Supports defensible outcome claims"
+              "left": "Sharing a helpline number",
+              "right": "Connects them to professional support."
             },
             {
-              "left": "Retrospective cycle",
-              "right": "Improves future decisions"
+              "left": "Checking in later",
+              "right": "Shows you offer ongoing, reliable support."
             }
           ]
         }
@@ -135,417 +136,426 @@ export const MentalHealthLiteracy101Module: LearningModule = {
     },
     {
       "id": "mental-health-literacy-101-l03",
-      "title": "Checkpoint 1: Concepts and Workflow",
+      "title": "Checkpoint 1: Understanding the Basics",
       "type": "quiz",
       "duration": 10,
       "learningAids": [
         {
           "id": "mental-health-literacy-101-l03-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use structured reasoning, map tradeoffs, and verify outcomes with metrics before finalizing."
+          "type": "image",
+          "title": "Key Concepts Review",
+          "content": "A one-page graphic summarizing the core ideas from the first two lessons."
         }
       ],
       "questions": [
         {
           "id": "mental-health-literacy-101-l03-q1",
-          "text": "Which practice most improves decision quality in mental health foundations?",
+          "text": "What is the best definition of mental health?",
           "skillId": "mental-health-literacy-101-skill-core",
           "options": [
             {
               "id": "a",
-              "text": "Use implicit assumptions and no baseline"
+              "text": "Being happy all the time."
             },
             {
               "id": "b",
-              "text": "Define assumptions, constraints, and measurable indicators"
+              "text": "The absence of a mental illness."
             },
             {
               "id": "c",
-              "text": "Prioritize speed over evidence in all cases"
+              "text": "Our overall emotional, psychological, and social well-being."
             },
             {
               "id": "d",
-              "text": "Ignore uncertainty and edge cases"
+              "text": "Something that only doctors can understand."
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "Decision quality improves when assumptions, constraints, and measurement are explicit."
+          "correctOptionId": "c",
+          "explanation": "Mental health is a broad concept that includes our emotional, psychological, and social well-being, not just the absence of illness."
         },
         {
           "id": "mental-health-literacy-101-l03-q2",
-          "text": "At level 101, high-quality execution in early risk signal recognition should include:",
+          "text": "When creating a support plan, what is a crucial first step?",
           "skillId": "mental-health-literacy-101-skill-execution",
           "options": [
             {
               "id": "a",
-              "text": "Owner mapping, checkpoints, and escalation thresholds"
+              "text": "Listening to the person to understand their needs."
             },
             {
               "id": "b",
-              "text": "No role clarity and ad-hoc decisions"
+              "text": "Telling the person exactly what to do."
             },
             {
               "id": "c",
-              "text": "No post-implementation review"
+              "text": "Posting about their situation on social media."
             },
             {
               "id": "d",
-              "text": "Untracked process changes"
+              "text": "Ignoring the problem and hoping it goes away."
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Reliable execution needs clear ownership and threshold-driven control points."
-        },
-        {
-          "id": "mental-health-literacy-101-l03-q3",
-          "text": "A defensible approach to support pathway design requires:",
-          "skillId": "mental-health-literacy-101-skill-eval",
-          "options": [
-            {
-              "id": "a",
-              "text": "Anecdotal wins without comparison"
-            },
-            {
-              "id": "b",
-              "text": "Baseline comparison and side-effect analysis"
-            },
-            {
-              "id": "c",
-              "text": "Changing criteria after seeing results"
-            },
-            {
-              "id": "d",
-              "text": "Ignoring difficult cases"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Comparison and side-effect analysis prevent biased conclusions."
-        },
-        {
-          "id": "mental-health-literacy-101-l03-q4",
-          "text": "Mature ethical and systems governance systems connect:",
-          "skillId": "mental-health-literacy-101-skill-governance",
-          "options": [
-            {
-              "id": "a",
-              "text": "Policy intent, measurable controls, and remediation pathways"
-            },
-            {
-              "id": "b",
-              "text": "Policy statements without accountability"
-            },
-            {
-              "id": "c",
-              "text": "Performance targets with no risk controls"
-            },
-            {
-              "id": "d",
-              "text": "Governance with no transparency"
-            }
-          ],
-          "correctOptionId": "a",
-          "explanation": "Effective governance links policy intent to measurable controls and corrective action."
+          "explanation": "A reliable support plan starts with listening to understand the person's unique situation and what they feel they need."
         }
       ]
     },
     {
       "id": "mental-health-literacy-101-l04",
-      "title": "Mental Health Literacy Case Analysis",
+      "title": "Analyzing a Real-World Scenario",
       "type": "video",
       "duration": 14,
       "learningAids": [
         {
           "id": "mental-health-literacy-101-l04-a1",
-          "type": "mnemonic",
-          "title": "Guided Practice",
-          "content": "Use structured reasoning, map tradeoffs, and verify outcomes with metrics before finalizing."
+          "type": "image",
+          "title": "Decision Tree",
+          "content": "A visual diagram showing how different choices in a support scenario can lead to different outcomes."
         }
       ],
       "chunks": [
         {
           "id": "mental-health-literacy-101-l04-c1",
           "kind": "example",
-          "title": "Case Context",
-          "content": "In this case study, we will focus on a school-community network that is working to create early support pathways for students while ensuring their safety, dignity, and confidentiality. Learners will identify the different objectives that may compete with each other and the risks that the system might face. This will help them understand the complexities involved in supporting mental health in a community setting.\nContext recap: In this case study, we will focus on a school-community network that is working to create early support pathways for students while ensuring their safety, dignity, and confidentiality. Learners will identify the different objectives that may compete with each other and the risks that the system might face. This will help them understand the complexities involved in supporting mental health in a community setting."
+          "title": "Scenario: Supporting a Friend",
+          "content": "In this case study, we'll look at a common scenario: a student is worried about a friend who seems withdrawn and anxious. We'll analyze the situation, identify potential risks (like saying the wrong thing), and consider the importance of privacy and trust."
         },
         {
           "id": "mental-health-literacy-101-l04-c2",
           "kind": "concept",
-          "title": "Tradeoff Matrix",
-          "content": "In this section, we will introduce a tradeoff matrix where different options are evaluated based on their effectiveness, feasibility, potential risks, and the impact they have on stakeholders. This scoring system will help learners make informed decisions when considering various approaches to mental health interventions.\nContext recap: In this section, we will introduce a tradeoff matrix where different options are evaluated based on their effectiveness, feasibility, potential risks, and the impact they have on stakeholders. This scoring system will help learners make informed decisions when considering various approaches to mental health interventions."
+          "title": "Weighing the Pros and Cons",
+          "content": "We'll use a simple framework to evaluate different ways to help. For each option, we'll consider its potential benefits, possible downsides, and how it might make our friend feel. This helps us make more thoughtful and effective decisions."
         },
         {
           "id": "mental-health-literacy-101-l04-c3",
           "kind": "recap",
-          "title": "Recovery Design",
-          "content": "In this recap, we will discuss how to turn patterns of failure into proactive safeguards and response plans. By analyzing what went wrong in previous scenarios, learners will learn how to create playbooks that outline steps to take in case of similar issues in the future, enhancing their preparedness.\nContext recap: In this recap, we will discuss how to turn patterns of failure into proactive safeguards and response plans. By analyzing what went wrong in previous scenarios, learners will learn how to create playbooks that outline steps to take in case of similar issues in the future, enhancing their preparedness."
+          "title": "Learning from Mistakes",
+          "content": "In this recap, we'll discuss how to learn from situations that don't go perfectly. By reflecting on what happened, we can create better plans for the future and become more confident in our ability to help others safely and effectively."
         }
       ],
       "flashcards": [
         {
           "id": "mental-health-literacy-101-l04-f1",
-          "front": "Tradeoff matrix",
-          "back": "A structured method to compare options under competing priorities."
+          "front": "Tradeoff",
+          "back": "A situation where you have to choose between two or more options, each with its own benefits and drawbacks."
         },
         {
           "id": "mental-health-literacy-101-l04-f2",
-          "front": "Failure pattern",
-          "back": "A recurring signal indicating a predictable risk mode."
+          "front": "Stakeholder",
+          "back": "Anyone who is affected by a situation or a decision, such as the person needing support, their friends, family, and teachers."
         },
         {
           "id": "mental-health-literacy-101-l04-f3",
-          "front": "Response playbook",
-          "back": "A predefined action pathway for safe and timely recovery."
+          "front": "Confidentiality",
+          "back": "Respecting someone's privacy by not sharing their personal information without their permission, unless there is a risk of harm."
         }
       ]
     },
     {
       "id": "mental-health-literacy-101-l05",
-      "title": "Mental Health Literacy Simulation Studio",
+      "title": "Practicing Your Skills: A Simulation",
       "type": "interactive",
       "duration": 16,
       "learningAids": [
         {
           "id": "mental-health-literacy-101-l05-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use structured reasoning, map tradeoffs, and verify outcomes with metrics before finalizing."
+          "title": "Conversation Starters",
+          "content": "A list of helpful phrases to start a conversation about mental health, like 'I've noticed you seem down lately, is everything okay?' or 'I'm here for you if you want to talk.'"
         }
       ],
       "chunks": [
         {
           "id": "mental-health-literacy-101-l05-c1",
           "kind": "practice",
-          "title": "Scenario Simulation",
-          "content": "In this interactive simulation, learners will have the opportunity to run various intervention scenarios while facing uncertainty. They will compare the outcomes of these different approaches to understand which strategies work best in supporting mental health. This practical experience will deepen their understanding of real-world applications.\nContext recap: In this interactive simulation, learners will have the opportunity to run various intervention scenarios while facing uncertainty. They will compare the outcomes of these different approaches to understand which strategies work best in supporting mental health. This practical experience will deepen their understanding of real-world applications."
+          "title": "Role-Playing a Support Conversation",
+          "content": "In this interactive simulation, you'll choose how to respond in a conversation with someone who is struggling. You'll see how different choices can lead to different outcomes, helping you practice your communication skills in a safe environment."
         },
         {
           "id": "mental-health-literacy-101-l05-c2",
           "kind": "recap",
-          "title": "Debrief",
-          "content": "In this debriefing session, we will evaluate each simulation run by looking at how well we achieved our targets, any side effects that occurred, and whether we followed governance guidelines. This reflection will help learners understand the importance of accountability and continuous improvement in mental health interventions.\nContext recap: In this debriefing session, we will evaluate each simulation run by looking at how well we achieved our targets, any side effects that occurred, and whether we followed governance guidelines. This reflection will help learners understand the importance of accountability and continuous improvement in mental health interventions."
+          "title": "Reflecting on the Simulation",
+          "content": "After the simulation, we'll discuss what worked well and what could be improved. This reflection helps us understand the impact of our words and actions, and builds our confidence for real-life situations."
         }
       ],
       "interactiveActivities": [
         {
           "id": "mental-health-literacy-101-l05-act1",
           "type": "scenario_practice",
-          "title": "Intervention Simulation",
-          "description": "Compare intervention paths for mental health foundations and ethical and systems governance.",
+          "title": "Supportive Conversation Simulator",
+          "description": "Navigate a conversation with a friend who is showing signs of stress. Choose your responses and see the outcome.",
           "instructions": [
-            "Define objective and constraints before intervention selection.",
-            "Document near-term and long-term tradeoffs.",
-            "Specify metrics that validate your chosen path."
+            "Read the opening scenario carefully.",
+            "Choose the response you think is most helpful and respectful.",
+            "Observe the outcome and reflect on why it was or wasn't effective."
           ]
         }
       ]
     },
     {
       "id": "mental-health-literacy-101-l06",
-      "title": "Checkpoint 2: Systems Decisions",
+      "title": "Checkpoint 2: Applying Your Skills",
       "type": "quiz",
       "duration": 10,
       "learningAids": [
         {
           "id": "mental-health-literacy-101-l06-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use structured reasoning, map tradeoffs, and verify outcomes with metrics before finalizing."
+          "title": "Scenario Review",
+          "content": "A brief summary of the case study and simulation to refresh your memory before the quiz."
         }
       ],
       "questions": [
         {
           "id": "mental-health-literacy-101-l06-q1",
-          "text": "Which practice most improves decision quality in mental health foundations?",
-          "skillId": "mental-health-literacy-101-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "Use implicit assumptions and no baseline"
-            },
-            {
-              "id": "b",
-              "text": "Define assumptions, constraints, and measurable indicators"
-            },
-            {
-              "id": "c",
-              "text": "Prioritize speed over evidence in all cases"
-            },
-            {
-              "id": "d",
-              "text": "Ignore uncertainty and edge cases"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Decision quality improves when assumptions, constraints, and measurement are explicit."
-        },
-        {
-          "id": "mental-health-literacy-101-l06-q2",
-          "text": "At level 101, high-quality execution in early risk signal recognition should include:",
-          "skillId": "mental-health-literacy-101-skill-execution",
-          "options": [
-            {
-              "id": "a",
-              "text": "Owner mapping, checkpoints, and escalation thresholds"
-            },
-            {
-              "id": "b",
-              "text": "No role clarity and ad-hoc decisions"
-            },
-            {
-              "id": "c",
-              "text": "No post-implementation review"
-            },
-            {
-              "id": "d",
-              "text": "Untracked process changes"
-            }
-          ],
-          "correctOptionId": "a",
-          "explanation": "Reliable execution needs clear ownership and threshold-driven control points."
-        },
-        {
-          "id": "mental-health-literacy-101-l06-q3",
-          "text": "A defensible approach to support pathway design requires:",
+          "text": "In the case study of supporting a friend, what is a key ethical consideration?",
           "skillId": "mental-health-literacy-101-skill-eval",
           "options": [
             {
               "id": "a",
-              "text": "Anecdotal wins without comparison"
+              "text": "Telling all your other friends so they can help too."
             },
             {
               "id": "b",
-              "text": "Baseline comparison and side-effect analysis"
+              "text": "Respecting their privacy unless you believe they are in danger."
             },
             {
               "id": "c",
-              "text": "Changing criteria after seeing results"
+              "text": "Making decisions for them so they don't have to worry."
             },
             {
               "id": "d",
-              "text": "Ignoring difficult cases"
+              "text": "Only helping if they promise to do something for you in return."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Comparison and side-effect analysis prevent biased conclusions."
+          "explanation": "Ethical support involves respecting a person's confidentiality and autonomy, unless there's a serious risk of harm to themselves or others."
         },
         {
-          "id": "mental-health-literacy-101-l06-q4",
-          "text": "Mature ethical and systems governance systems connect:",
+          "id": "mental-health-literacy-101-l06-q2",
+          "text": "When weighing the pros and cons of an action, what is most important to consider?",
           "skillId": "mental-health-literacy-101-skill-governance",
           "options": [
             {
               "id": "a",
-              "text": "Policy intent, measurable controls, and remediation pathways"
+              "text": "How the action will make you look to others."
             },
             {
               "id": "b",
-              "text": "Policy statements without accountability"
+              "text": "Only the potential positive outcomes."
             },
             {
               "id": "c",
-              "text": "Performance targets with no risk controls"
+              "text": "The potential impact on the person's feelings, safety, and trust."
             },
             {
               "id": "d",
-              "text": "Governance with no transparency"
+              "text": "Which option is the quickest and easiest for you."
             }
           ],
-          "correctOptionId": "a",
-          "explanation": "Effective governance links policy intent to measurable controls and corrective action."
+          "correctOptionId": "c",
+          "explanation": "A thoughtful decision considers the full impact on the person you are trying to support, including their emotional well-being and your relationship with them."
         }
       ]
     },
     {
       "id": "mental-health-literacy-101-l07",
-      "title": "Mental Health Literacy Governance and Impact",
+      "title": "Ethics and Responsibility in Mental Health Support",
       "type": "video",
       "duration": 12,
       "learningAids": [
         {
           "id": "mental-health-literacy-101-l07-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use structured reasoning, map tradeoffs, and verify outcomes with metrics before finalizing."
+          "title": "Stakeholder Map",
+          "content": "A diagram showing how a person's mental health challenge can affect many people in their life, including family, friends, and teachers."
         }
       ],
       "chunks": [
         {
           "id": "mental-health-literacy-101-l07-c1",
           "kind": "concept",
-          "title": "Stakeholder Impact",
-          "content": "In this lesson, learners will explore how to map out the benefits and burdens that different stakeholder groups experience. By understanding how various decisions impact different people, learners will gain insight into the complexities of mental health governance and the importance of considering diverse perspectives.\nContext recap: In this lesson, learners will explore how to map out the benefits and burdens that different stakeholder groups experience. By understanding how various decisions impact different people, learners will gain insight into the complexities of mental health governance and the importance of considering diverse perspectives."
+          "title": "Considering Everyone Involved",
+          "content": "When we offer support, our actions can affect many people. We'll learn how to think about the impact on different 'stakeholders'—the person, their family, and the wider community—to ensure our help is truly helpful."
         },
         {
           "id": "mental-health-literacy-101-l07-c2",
           "kind": "concept",
-          "title": "Accountability Architecture",
-          "content": "In this section, we will discuss the concept of accountability architecture. This includes understanding how decisions are tracked, the rights of individuals to review those decisions, and the obligations to address any issues that arise. Learning about these structures will help learners appreciate the importance of transparency and responsibility in mental health governance.\nContext recap: In this section, we will discuss the concept of accountability architecture. This includes understanding how decisions are tracked, the rights of individuals to review those decisions, and the obligations to address any issues that arise. Learning about these structures will help learners appreciate the importance of transparency and responsibility in mental health governance."
+          "title": "Being Responsible and Fair",
+          "content": "This section covers the architecture of accountability. We'll discuss why it's important to be transparent about our actions, respect people's rights, and take responsibility for the support we offer. This builds trust and ensures fairness."
         },
         {
           "id": "mental-health-literacy-101-l07-c3",
           "kind": "recap",
-          "title": "Responsible Execution",
-          "content": "To ensure responsible execution of mental health initiatives, it is important to use a final checklist. This checklist should help balance how well the initiative performs, manage any risks involved, and consider the ethical impact on individuals and communities. By doing this, we can make informed decisions that positively affect mental health.\nContext recap: To ensure responsible execution of mental health initiatives, it is important to use a final checklist. This checklist should help balance how well the initiative performs, manage any risks involved, and consider the ethical impact on individuals and communities. By doing this, we can make informed decisions that positively affect mental health."
+          "title": "Putting It All Together: A Checklist for Helping",
+          "content": "We'll recap with a final checklist for responsible support. This tool will help you balance being effective, managing risks, and considering the ethical impact of your actions, so you can make good decisions when helping others."
         }
       ],
       "flashcards": [
         {
           "id": "mental-health-literacy-101-l07-f1",
-          "front": "Impact distribution",
-          "back": "How outcomes are allocated across people, systems, and time."
+          "front": "Accountability",
+          "back": "Taking responsibility for your actions and their outcomes, especially when offering support to others."
         },
         {
           "id": "mental-health-literacy-101-l07-f2",
-          "front": "Decision traceability",
-          "back": "An auditable explanation of evidence, ownership, and rationale."
+          "front": "Transparency",
+          "back": "Being open and honest about your intentions and actions, which helps build trust."
         },
         {
           "id": "mental-health-literacy-101-l07-f3",
-          "front": "Responsible execution",
-          "back": "Delivery mode that combines effectiveness with accountability and fairness."
+          "front": "Ethical Support",
+          "back": "Offering help in a way that is effective, respectful, fair, and protects the well-being of everyone involved."
         }
       ]
     },
     {
       "id": "mental-health-literacy-101-l08",
-      "title": "Mental Health Literacy Capstone Planning Lab",
+      "title": "Planning Your Capstone Project",
       "type": "interactive",
       "duration": 15,
       "learningAids": [
         {
           "id": "mental-health-literacy-101-l08-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use structured reasoning, map tradeoffs, and verify outcomes with metrics before finalizing."
+          "title": "Project Idea Bank",
+          "content": "A list of sample project ideas, such as creating a poster with mental health resources, writing a script for a school announcement, or designing a social media campaign."
         }
       ],
       "chunks": [
         {
           "id": "mental-health-literacy-101-l08-c1",
           "kind": "practice",
-          "title": "Capstone Charter",
-          "content": "In this activity, learners will work on creating a Capstone Charter. This involves drafting clear objectives that outline what they hope to achieve, identifying any constraints that may limit their project, establishing metrics to measure success, and determining governance triggers that will guide their decision-making process. This structured approach helps ensure that their projects are well-planned and effective.\nContext recap: In this activity, learners will work on creating a Capstone Charter. This involves drafting clear objectives that outline what they hope to achieve, identifying any constraints that may limit their project, establishing metrics to measure success, and determining governance triggers that will guide their decision-making process. This structured approach helps ensure that their projects are well-planned and effective."
+          "title": "Creating Your Project Outline",
+          "content": "In this activity, you'll start planning your final project. You'll define a clear goal, identify your target audience, and decide how you'll measure your project's success. This structured approach will set you up for a great final product."
         },
         {
           "id": "mental-health-literacy-101-l08-c2",
           "kind": "recap",
-          "title": "Defense Readiness",
-          "content": "As part of their preparation, learners will get ready to defend their decisions regarding their projects. This means they will practice explaining their choices and how they align with technical standards and governance rules. By preparing for critiques, they will build confidence and improve their ability to communicate their ideas effectively.\nContext recap: As part of their preparation, learners will get ready to defend their decisions regarding their projects. This means they will practice explaining their choices and how they align with technical standards and governance rules. By preparing for critiques, they will build confidence and improve their ability to communicate their ideas effectively."
+          "title": "Preparing to Share Your Project",
+          "content": "We'll discuss how to prepare to present your project. This includes thinking about how to explain your choices, connect them to what you've learned in the course, and answer questions about your work. This helps build your communication skills."
         }
       ],
       "interactiveActivities": [
         {
           "id": "mental-health-literacy-101-l08-act1",
           "type": "project_builder",
-          "title": "Capstone Charter Builder",
-          "description": "Build a capstone charter with measurable outcomes and remediation pathways.",
+          "title": "Capstone Project Planner",
+          "description": "Build an outline for a capstone project that creates a mental health resource for your community.",
           "instructions": [
-            "Define objective and operating boundaries.",
-            "List at least three measurable success indicators.",
-            "Define escalation and corrective-action criteria."
+            "Define your project's main goal and who it's for.",
+            "List at least two key messages you want to communicate.",
+            "Describe how you will know if your project is successful."
           ]
+        }
+      ]
+    },
+    {
+      "id": "mental-health-literacy-101-l09",
+      "title": "Capstone Project: Creating a Mental Health Resource",
+      "type": "interactive",
+      "duration": 30,
+      "learningAids": [
+        {
+          "id": "mental-health-literacy-101-l09-a1",
+          "type": "image",
+          "title": "Project Showcase",
+          "content": "Examples of finished capstone projects, like an infographic, a short animated video, and a resource wallet card."
+        }
+      ],
+      "chunks": [
+        {
+          "id": "mental-health-literacy-101-l09-c1",
+          "kind": "practice",
+          "title": "Build Your Resource",
+          "content": "It's time to bring your project plan to life! Use the tools and knowledge from this course to create a valuable mental health resource for your school or community. Focus on making it clear, helpful, and respectful."
+        }
+      ],
+      "interactiveActivities": [
+        {
+          "id": "mental-health-literacy-101-l09-act1",
+          "type": "project_builder",
+          "title": "Capstone Creation Studio",
+          "description": "Develop and submit your final capstone project.",
+          "instructions": [
+            "Use your project plan from the previous lesson as your guide.",
+            "Create your resource (e.g., write the text, design the visual, record the audio).",
+            "Write a brief reflection on what you learned during the creation process."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mental-health-literacy-101-l10",
+      "title": "Final Checkpoint & Course Wrap-Up",
+      "type": "quiz",
+      "duration": 10,
+      "learningAids": [
+        {
+          "id": "mental-health-literacy-101-l10-a1",
+          "type": "image",
+          "title": "Key Takeaways",
+          "content": "A summary graphic of the most important skills and concepts from the entire course."
+        }
+      ],
+      "chunks": [
+        {
+          "id": "mental-health-literacy-101-l10-c1",
+          "kind": "recap",
+          "title": "Course Wrap-Up",
+          "content": "Congratulations on completing the course! You've learned how to understand mental health, recognize signs of struggle, and offer support responsibly. Remember that being a mental health ally is an ongoing journey. Keep learning, keep listening, and keep supporting one another."
+        }
+      ],
+      "questions": [
+        {
+          "id": "mental-health-literacy-101-l10-q1",
+          "text": "Which of the following is the most responsible way to use social media when you're concerned about a friend?",
+          "skillId": "mental-health-literacy-101-skill-governance",
+          "options": [
+            {
+              "id": "a",
+              "text": "Post a vague status about them to see if they respond."
+            },
+            {
+              "id": "b",
+              "text": "Ask for advice in a large group chat that includes the friend."
+            },
+            {
+              "id": "c",
+              "text": "Send them a private message to check in and offer support."
+            },
+            {
+              "id": "d",
+              "text": "Share a photo of them and ask people to send good vibes."
+            }
+          ],
+          "correctOptionId": "c",
+          "explanation": "Contacting someone privately respects their confidentiality and is the most direct and supportive way to show you care."
+        },
+        {
+          "id": "mental-health-literacy-101-l10-q2",
+          "text": "What is the ultimate goal of mental health literacy?",
+          "skillId": "mental-health-literacy-101-skill-core",
+          "options": [
+            {
+              "id": "a",
+              "text": "To diagnose your friends with mental illnesses."
+            },
+            {
+              "id": "b",
+              "text": "To have all the answers and solve everyone's problems."
+            },
+            {
+              "id": "c",
+              "text": "To increase understanding, reduce stigma, and help people find support."
+            },
+            {
+              "id": "d",
+              "text": "To become a professional therapist after one course."
+            }
+          ],
+          "correctOptionId": "c",
+          "explanation": "Mental health literacy empowers us to create a more supportive community by increasing understanding, fighting stigma, and knowing how to connect people with the help they need."
         }
       ]
     }

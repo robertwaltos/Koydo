@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const UxDesign601Module: LearningModule = {
+export const ux_design_601_Module: LearningModule = {
   "id": "ux-design-601",
   "title": "UX Design Research and Leadership",
   "description": "Post-401 specialization in UX Design, focused on research synthesis, interaction strategy, experimentation systems, and design governance through advanced casework, simulation, and capstone-level defense.",
@@ -14,7 +14,7 @@ export const UxDesign601Module: LearningModule = {
   ],
   "minAge": 17,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en"
@@ -38,7 +38,8 @@ export const UxDesign601Module: LearningModule = {
           "id": "ux-design-601-l01-a1",
           "type": "image",
           "title": "Guided Practice",
-          "content": "Use a structured method, log assumptions, and verify conclusions against constraints and metrics."
+          "content": "Use a structured method, log assumptions, and verify conclusions against constraints and metrics.",
+          "visualPrompt": "A flowchart showing assumptions feeding into a decision matrix, filtered by constraints, and outputting a verified conclusion."
         }
       ],
       "chunks": [
@@ -46,35 +47,35 @@ export const UxDesign601Module: LearningModule = {
           "id": "ux-design-601-l01-c1",
           "kind": "concept",
           "title": "Advanced Scope and Decision Boundaries",
-          "content": "In this lesson, we will explore the advanced boundaries of UX Design. We will learn how research synthesis, which is the process of combining different research findings, interacts with interaction strategies in complex systems. Understanding these boundaries helps us create better user experiences by ensuring that our designs are informed by thorough research and strategic thinking.\nContext recap: In this lesson, we will explore the advanced boundaries of UX Design. We will learn how research synthesis, which is the process of combining different research findings, interacts with interaction strategies in complex systems. Understanding these boundaries helps us create better user experiences by ensuring that our designs are informed by thorough research and strategic thinking."
+          "content": "In this lesson, we explore the advanced boundaries of UX Design, focusing on how research synthesis interacts with interaction strategies in complex systems. Understanding these boundaries ensures our designs are informed by rigorous research and strategic foresight, allowing us to navigate high-constraint environments effectively."
         },
         {
           "id": "ux-design-601-l01-c2",
           "kind": "concept",
           "title": "Causal Structure Under Uncertainty",
-          "content": "In this section, learners will model causal pathways, which are the connections between different events or actions, along with the ranges of uncertainty that may affect these pathways. Additionally, we will identify hidden assumptions that could influence our design decisions before we create any interventions. This process is crucial for ensuring that our designs are based on sound reasoning and a clear understanding of potential outcomes.\nContext recap: In this section, learners will model causal pathways, which are the connections between different events or actions, along with the ranges of uncertainty that may affect these pathways. Additionally, we will identify hidden assumptions that could influence our design decisions before we create any interventions. This process is crucial for ensuring that our designs are based on sound reasoning and a clear understanding of potential outcomes."
+          "content": "Learners will model causal pathways—the connections between actions and outcomes—along with their inherent uncertainty ranges. We will also identify hidden assumptions that could skew design decisions before implementing interventions, ensuring our strategies are grounded in sound reasoning and risk awareness."
         },
         {
           "id": "ux-design-601-l01-c3",
           "kind": "recap",
           "title": "Evidence and Rigor Standards",
-          "content": "In advanced UX Design, it is essential that all claims we make are supported by measurable indicators. This means we need to have clear evidence that backs up our decisions. We will also establish confidence bounds, which help us understand the reliability of our findings, and set up review checkpoints to ensure that our work meets rigorous standards. This approach helps maintain the quality and integrity of our design processes.\nContext recap: In advanced UX Design, it is essential that all claims we make are supported by measurable indicators. This means we need to have clear evidence that backs up our decisions. We will also establish confidence bounds, which help us understand the reliability of our findings, and set up review checkpoints to ensure that our work meets rigorous standards. This approach helps maintain the quality and integrity of our design processes.\nContext recap: In advanced UX Design, it is essential that all claims we make are supported by measurable indicators. This means we need to have clear evidence that backs up our decisions. We will also establish confidence bounds, which help us understand the reliability of our findings, and set up review checkpoints to ensure that our work meets rigorous standards. This approach helps maintain the quality and integrity of our design processes.\nWhy this matters: Evidence and Rigor Standards helps learners in UX Design connect ideas from UX Design Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "In advanced UX Design, all claims must be supported by measurable indicators. We will establish confidence bounds to gauge reliability and set review checkpoints to enforce rigorous standards.\n\nStep-by-step approach:\n1. Define the goal concisely.\n2. Identify supporting evidence.\n3. Explain how evidence shapes the conclusion.\n4. Verify the final decision against constraints."
         }
       ],
       "flashcards": [
         {
           "id": "ux-design-601-l01-f1",
-          "front": "research synthesis",
+          "front": "Research synthesis",
           "back": "A specialization axis in UX Design requiring explicit assumptions and measured tradeoff choices."
         },
         {
           "id": "ux-design-601-l01-f2",
-          "front": "interaction strategy",
+          "front": "Interaction strategy",
           "back": "Operational design capability that governs whether complex workflows remain reliable."
         },
         {
           "id": "ux-design-601-l01-f3",
-          "front": "experimentation systems",
+          "front": "Experimentation systems",
           "back": "Evaluation practice for validating outcomes beyond headline metrics."
         }
       ]
@@ -89,7 +90,8 @@ export const UxDesign601Module: LearningModule = {
           "id": "ux-design-601-l02-a1",
           "type": "practice",
           "title": "Guided Practice",
-          "content": "Use a structured method, log assumptions, and verify conclusions against constraints and metrics."
+          "content": "Use a structured method, log assumptions, and verify conclusions against constraints and metrics.",
+          "visualPrompt": "A UI mockup of a dashboard displaying control gates, rollback thresholds, and system health metrics."
         }
       ],
       "chunks": [
@@ -97,13 +99,13 @@ export const UxDesign601Module: LearningModule = {
           "id": "ux-design-601-l02-c1",
           "kind": "practice",
           "title": "Method Sequence and Stress Test",
-          "content": "In this engaging interactive lab, you will have the opportunity to design a specialized workflow that highlights the significance of using research-grade reasoning and making high-quality leadership decisions. We will also dedicate time to developing a capstone project that is not only publishable but also capable of withstanding critical evaluation. Once your workflow is complete, we will put it to the test by simulating challenging scenarios or edge cases. This will help us ensure that your design is robust and effective for real-world applications, preparing you for future challenges in UX design.\nContext recap: In this engaging interactive lab, you will have the opportunity to design a specialized workflow that highlights the significance of using research-grade reasoning and making high-quality leadership decisions. We will also dedicate time to developing a capstone project that is not only publishable but also capable of withstanding critical evaluation. Once your workflow is complete, we will put it to the test by simulating challenging scenarios or edge cases. This will help us ensure that your design is robust and effective for real-world applications, preparing you for future challenges in UX design.\nContext recap: In this engaging interactive lab, you will have the opportunity to design a specialized workflow that highlights the significance of using research-grade reasoning and making high-quality leadership decisions. We will also dedicate time to developing a capstone project that is not only publishable but also capable of withstanding critical evaluation. Once your workflow is complete, we will put it to the test by simulating challenging scenarios or edge cases. This will help us ensure that your design is robust and effective for real-world applications, preparing you for future challenges in UX design.\nWhy this matters: Method Sequence and Stress Test helps learners in UX Design connect ideas from UX Design Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "In this interactive lab, you will design a specialized workflow emphasizing research-grade reasoning and high-quality leadership decisions. You will develop a capstone-level project designed to withstand critical evaluation. Finally, we will stress-test your workflow by simulating edge cases to ensure real-world robustness and adaptability."
         },
         {
           "id": "ux-design-601-l02-c2",
           "kind": "recap",
           "title": "Controls and Failure Gates",
-          "content": "To create a strong specialist workflow, it is crucial to implement control gates, which are checkpoints that help us monitor progress. We will also establish rollback criteria, which allow us to revert to previous versions if necessary, and accountability checkpoints to ensure that everyone involved is responsible for their contributions. These elements are vital for maintaining the quality and reliability of our design processes.\nContext recap: To create a strong specialist workflow, it is crucial to implement control gates, which are checkpoints that help us monitor progress. We will also establish rollback criteria, which allow us to revert to previous versions if necessary, and accountability checkpoints to ensure that everyone involved is responsible for their contributions. These elements are vital for maintaining the quality and reliability of our design processes."
+          "content": "To build a resilient workflow, it is crucial to implement control gates (progress monitors), rollback criteria (reversion triggers), and accountability checkpoints. These elements maintain the integrity and reliability of the design process under pressure, ensuring that failures are caught and mitigated early."
         }
       ],
       "interactiveActivities": [
@@ -172,7 +174,8 @@ export const UxDesign601Module: LearningModule = {
           "id": "ux-design-601-l03-a1",
           "type": "practice",
           "title": "Guided Practice",
-          "content": "Use a structured method, log assumptions, and verify conclusions against constraints and metrics."
+          "content": "Use a structured method, log assumptions, and verify conclusions against constraints and metrics.",
+          "visualPrompt": "An abstract illustration of a checklist being completed with precision instruments."
         }
       ],
       "questions": [
@@ -208,7 +211,7 @@ export const UxDesign601Module: LearningModule = {
           "options": [
             {
               "id": "a",
-              "text": "research-grade reasoning, leadership decision quality, and publishable capstone defense"
+              "text": "Research-grade reasoning, leadership decision quality, and publishable capstone defense"
             },
             {
               "id": "b",
@@ -300,81 +303,6 @@ export const UxDesign601Module: LearningModule = {
           ],
           "correctOptionId": "b",
           "explanation": "Governance quality comes from linking policy intent to measurable controls and action."
-        },
-        {
-          "id": "ux-design-601-l03-q6",
-          "text": "In high-stakes UX Design Research and Leadership execution, which communication protocol is strongest?",
-          "skillId": "ux-design-601-skill-advanced-6",
-          "options": [
-            {
-              "id": "a",
-              "text": "Broadcast conclusions without assumptions"
-            },
-            {
-              "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
-            },
-            {
-              "id": "c",
-              "text": "Share only final outcomes after completion"
-            },
-            {
-              "id": "d",
-              "text": "Limit updates to a single informal channel"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
-        },
-        {
-          "id": "ux-design-601-l03-q7",
-          "text": "A mature remediation loop in advanced UX Design should prioritize:",
-          "skillId": "ux-design-601-skill-advanced-7",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blame assignment without system updates"
-            },
-            {
-              "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
-            },
-            {
-              "id": "c",
-              "text": "One-time fixes without retesting"
-            },
-            {
-              "id": "d",
-              "text": "Issue closure based on elapsed time"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
-        },
-        {
-          "id": "ux-design-601-l03-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in UX Design Research and Leadership?",
-          "skillId": "ux-design-601-skill-advanced-8",
-          "options": [
-            {
-              "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
-            },
-            {
-              "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
-            },
-            {
-              "id": "c",
-              "text": "Ignore correlated failure modes"
-            },
-            {
-              "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
         }
       ]
     },
@@ -388,7 +316,8 @@ export const UxDesign601Module: LearningModule = {
           "id": "ux-design-601-l04-a1",
           "type": "mnemonic",
           "title": "Guided Practice",
-          "content": "Use a structured method, log assumptions, and verify conclusions against constraints and metrics."
+          "content": "Use a structured method, log assumptions, and verify conclusions against constraints and metrics.",
+          "visualPrompt": "A tradeoff matrix table comparing three design options across equity, feasibility, and reliability columns."
         }
       ],
       "chunks": [
@@ -396,19 +325,19 @@ export const UxDesign601Module: LearningModule = {
           "id": "ux-design-601-l04-c1",
           "kind": "example",
           "title": "Case Stakes and Competing Objectives",
-          "content": "In this engaging case study, we will explore the exciting challenge of redesigning a popular product that is frequently used by many people. However, we face a unique situation where different groups of users have conflicting opinions about how easy or difficult the product is to use. As part of our learning process, we will work together to outline our main goals for the redesign, pinpoint any risks that could lead to failure, and examine the rules and guidelines that we must follow during this project. By taking this thorough approach, we ensure that we consider every important detail before moving forward with our redesign efforts.\nContext recap: In this engaging case study, we will explore the exciting challenge of redesigning a popular product that is frequently used by many people. However, we face a unique situation where different groups of users have conflicting opinions about how easy or difficult the product is to use. As part of our learning process, we will work together to outline our main goals for the redesign, pinpoint any risks that could lead to failure, and examine the rules and guidelines that we must follow during this project. By taking this thorough approach, we ensure that we consider every important detail before moving forward with our redesign efforts.\nContext recap: In this engaging case study, we will explore the exciting challenge of redesigning a popular product that is frequently used by many people. However, we face a unique situation where different groups of users have conflicting opinions about how easy or difficult the product is to use. As part of our learning process, we will work together to outline our main goals for the redesign, pinpoint any risks that could lead to failure, and examine the rules and guidelines that we must follow during this project. By taking this thorough approach, we ensure that we consider every important detail before moving forward with our redesign efforts.\nWhy this matters: Case Stakes and Competing Objectives helps learners in UX Design connect ideas from UX Design Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "We will analyze a complex case study involving a widely-used product where diverse user segments have conflicting usability needs. We will outline primary redesign objectives, pinpoint failure risks, and examine the strict governance guidelines required for this scale of intervention."
         },
         {
           "id": "ux-design-601-l04-c2",
           "kind": "concept",
           "title": "Tradeoff Matrix and Option Scoring",
-          "content": "In this section, we will learn how to score different design options based on several important criteria. These criteria include effectiveness, which measures how well an option achieves its goals; reliability, which assesses how consistently it performs; equity, which evaluates fairness; feasibility, which considers practicality; and long-term maintainability, which looks at how easy it will be to keep the option functioning over time. Scoring options in this way helps us make informed decisions.\nContext recap: In this section, we will learn how to score different design options based on several important criteria. These criteria include effectiveness, which measures how well an option achieves its goals; reliability, which assesses how consistently it performs; equity, which evaluates fairness; feasibility, which considers practicality; and long-term maintainability, which looks at how easy it will be to keep the option functioning over time. Scoring options in this way helps us make informed decisions."
+          "content": "We will utilize a tradeoff matrix to score design options based on effectiveness, reliability, equity, feasibility, and long-term maintainability. This structured scoring prevents bias and ensures balanced, informed decision-making when evaluating competing solutions."
         },
         {
           "id": "ux-design-601-l04-c3",
           "kind": "recap",
           "title": "Recovery and Adaptation Design",
-          "content": "In this recap, we will discuss how to translate failure signatures, which are indicators of what went wrong, into effective safeguards. We will also create response playbooks, which are step-by-step guides for addressing issues, and measurable adaptation loops that allow us to continuously improve our designs based on feedback and results. This process is essential for ensuring that our designs can adapt and respond to challenges effectively.\nContext recap: In this recap, we will discuss how to translate failure signatures, which are indicators of what went wrong, into effective safeguards. We will also create response playbooks, which are step-by-step guides for addressing issues, and measurable adaptation loops that allow us to continuously improve our designs based on feedback and results. This process is essential for ensuring that our designs can adapt and respond to challenges effectively."
+          "content": "We will discuss translating failure signatures—predictable indicators of breakdown—into effective safeguards. You will create response playbooks and measurable adaptation loops to ensure your designs continuously improve based on live feedback and incident learnings."
         }
       ],
       "flashcards": [
@@ -439,7 +368,8 @@ export const UxDesign601Module: LearningModule = {
           "id": "ux-design-601-l05-a1",
           "type": "practice",
           "title": "Guided Practice",
-          "content": "Use a structured method, log assumptions, and verify conclusions against constraints and metrics."
+          "content": "Use a structured method, log assumptions, and verify conclusions against constraints and metrics.",
+          "visualPrompt": "A simulation timeline showing an intervention trigger, a system response curve, and a post-event debrief marker."
         }
       ],
       "chunks": [
@@ -447,13 +377,13 @@ export const UxDesign601Module: LearningModule = {
           "id": "ux-design-601-l05-c1",
           "kind": "practice",
           "title": "Scenario Modeling",
-          "content": "In this interactive practice session, learners will configure assumptions for simulations, set thresholds that define acceptable limits, and outline intervention pathways that guide our responses under high-stakes conditions. This hands-on experience will help us understand how to prepare for various scenarios and make informed decisions in critical situations.\nContext recap: In this interactive practice session, learners will configure assumptions for simulations, set thresholds that define acceptable limits, and outline intervention pathways that guide our responses under high-stakes conditions. This hands-on experience will help us understand how to prepare for various scenarios and make informed decisions in critical situations."
+          "content": "In this practice session, you will configure simulation assumptions, set acceptable performance thresholds, and outline intervention pathways. This hands-on modeling prepares you to execute decisive, informed responses under high-stakes conditions and systemic uncertainty."
         },
         {
           "id": "ux-design-601-l05-c2",
           "kind": "recap",
           "title": "Debrief and Decision Quality Review",
-          "content": "After each simulation run, teams will conduct a thorough review to assess how well they met their targets. We will also examine any side effects that occurred and identify gaps in governance compliance. This debriefing process is crucial for learning from our experiences and improving our decision-making in future simulations.\nContext recap: After each simulation run, teams will conduct a thorough review to assess how well they met their targets. We will also examine any side effects that occurred and identify gaps in governance compliance. This debriefing process is crucial for learning from our experiences and improving our decision-making in future simulations."
+          "content": "Following each simulation, teams will conduct a rigorous debrief to assess target adherence, examine unintended side effects, and identify governance gaps. This review loop is critical for refining decision quality and ensuring accountability in future iterations."
         }
       ],
       "interactiveActivities": [
@@ -504,209 +434,135 @@ export const UxDesign601Module: LearningModule = {
           "id": "ux-design-601-l06-a1",
           "type": "practice",
           "title": "Guided Practice",
-          "content": "Use a structured method, log assumptions, and verify conclusions against constraints and metrics."
+          "content": "Use a structured method, log assumptions, and verify conclusions against constraints and metrics.",
+          "visualPrompt": "An icon of a magnifying glass over a complex network graph, symbolizing deep system analysis."
         }
       ],
       "questions": [
         {
           "id": "ux-design-601-l06-q1",
-          "text": "Which practice most improves specialist performance in research synthesis?",
-          "skillId": "ux-design-601-skill-specialist",
+          "text": "What is the primary purpose of a tradeoff matrix in advanced UX design?",
+          "skillId": "ux-design-601-skill-tradeoffs",
           "options": [
             {
               "id": "a",
-              "text": "Rely on undocumented assumptions"
+              "text": "To eliminate all risks associated with a design choice"
             },
             {
               "id": "b",
-              "text": "Define constraints, monitor leading indicators, and test edge cases"
+              "text": "To objectively score competing options against constraints like equity and feasibility"
             },
             {
               "id": "c",
-              "text": "Avoid post-decision review"
+              "text": "To bypass stakeholder approval processes"
             },
             {
               "id": "d",
-              "text": "Optimize only for speed"
+              "text": "To focus solely on the aesthetic appeal of the interface"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Advanced performance depends on explicit constraints, monitoring, and stress testing."
+          "explanation": "A tradeoff matrix provides a structured, objective way to evaluate competing solutions against multiple real-world constraints."
         },
         {
           "id": "ux-design-601-l06-q2",
-          "text": "At level 601, the curriculum emphasizes:",
-          "skillId": "ux-design-601-skill-level",
+          "text": "How should a UX leader utilize a 'failure signature'?",
+          "skillId": "ux-design-601-skill-failure-analysis",
           "options": [
             {
               "id": "a",
-              "text": "research-grade reasoning, leadership decision quality, and publishable capstone defense"
+              "text": "As a predictable signal to proactively build safeguards before a full breakdown occurs"
             },
             {
               "id": "b",
-              "text": "Unbounded iteration with no controls"
+              "text": "As a metric to assign blame to specific team members"
             },
             {
               "id": "c",
-              "text": "Single-metric decision making"
+              "text": "As a reason to abandon the project entirely"
             },
             {
               "id": "d",
-              "text": "No uncertainty communication"
+              "text": "As an unavoidable cost of doing business"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "The 601 design is built around research-grade reasoning, leadership decision quality, and publishable capstone defense."
+          "explanation": "Failure signatures are recurrent signals that indicate a predictable class of breakdown risk, allowing leaders to implement safeguards proactively."
         },
         {
           "id": "ux-design-601-l06-q3",
-          "text": "What best strengthens interaction strategy execution quality?",
-          "skillId": "ux-design-601-skill-execution",
+          "text": "What defines a successful adaptation loop?",
+          "skillId": "ux-design-601-skill-adaptation",
           "options": [
             {
               "id": "a",
-              "text": "No owner mapping or escalation path"
+              "text": "Documenting an error without changing the underlying process"
             },
             {
               "id": "b",
-              "text": "Explicit ownership, checkpoints, and governance thresholds"
+              "text": "Converting incident learnings into measurable improvements in future design behavior"
             },
             {
               "id": "c",
-              "text": "Ad-hoc process changes without logs"
+              "text": "Increasing the frequency of user testing without analyzing the results"
             },
             {
               "id": "d",
-              "text": "Skipping retrospective review"
+              "text": "Reverting to the original design regardless of user feedback"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Quality execution needs ownership clarity, checkpoints, and threshold-driven governance."
+          "explanation": "An adaptation loop is only successful when it takes learnings from incidents and translates them into measurable, improved future actions."
         },
         {
           "id": "ux-design-601-l06-q4",
-          "text": "A rigorous approach to experimentation systems should include:",
-          "skillId": "ux-design-601-skill-evaluation",
+          "text": "During high-stakes scenario modeling, why is it critical to set explicit thresholds?",
+          "skillId": "ux-design-601-skill-simulation",
           "options": [
             {
               "id": "a",
-              "text": "Outcome claims without baselines"
+              "text": "To ensure the simulation runs as quickly as possible"
             },
             {
               "id": "b",
-              "text": "Baseline comparison, side-effect checks, and uncertainty bounds"
+              "text": "To define the exact boundaries where an intervention must be triggered"
             },
             {
               "id": "c",
-              "text": "Removal of difficult scenarios"
+              "text": "To limit the amount of data collected during the test"
             },
             {
               "id": "d",
-              "text": "Changing criteria after seeing results"
+              "text": "To guarantee that the design will never fail"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Baselines, side-effect checks, and uncertainty disclosure make results defensible."
+          "explanation": "Explicit thresholds define the acceptable limits of performance, dictating exactly when an intervention pathway must be activated."
         },
         {
           "id": "ux-design-601-l06-q5",
-          "text": "A mature design governance system should connect:",
-          "skillId": "ux-design-601-skill-governance",
+          "text": "In a post-simulation debrief, which of the following is the most critical to evaluate?",
+          "skillId": "ux-design-601-skill-debrief",
           "options": [
             {
               "id": "a",
-              "text": "Policy and practice without measurement"
+              "text": "The aesthetic preferences of the simulation facilitators"
             },
             {
               "id": "b",
-              "text": "Policy, measurable thresholds, and remediation pathways"
+              "text": "Unintended side effects and gaps in governance compliance"
             },
             {
               "id": "c",
-              "text": "Technical delivery with no accountability"
+              "text": "The speed at which the simulation was completed"
             },
             {
               "id": "d",
-              "text": "Performance targets with no risk controls"
+              "text": "Which team member spoke the most during the exercise"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Governance quality comes from linking policy intent to measurable controls and action."
-        },
-        {
-          "id": "ux-design-601-l06-q6",
-          "text": "In high-stakes UX Design Research and Leadership execution, which communication protocol is strongest?",
-          "skillId": "ux-design-601-skill-advanced-6",
-          "options": [
-            {
-              "id": "a",
-              "text": "Broadcast conclusions without assumptions"
-            },
-            {
-              "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
-            },
-            {
-              "id": "c",
-              "text": "Share only final outcomes after completion"
-            },
-            {
-              "id": "d",
-              "text": "Limit updates to a single informal channel"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
-        },
-        {
-          "id": "ux-design-601-l06-q7",
-          "text": "A mature remediation loop in advanced UX Design should prioritize:",
-          "skillId": "ux-design-601-skill-advanced-7",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blame assignment without system updates"
-            },
-            {
-              "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
-            },
-            {
-              "id": "c",
-              "text": "One-time fixes without retesting"
-            },
-            {
-              "id": "d",
-              "text": "Issue closure based on elapsed time"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
-        },
-        {
-          "id": "ux-design-601-l06-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in UX Design Research and Leadership?",
-          "skillId": "ux-design-601-skill-advanced-8",
-          "options": [
-            {
-              "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
-            },
-            {
-              "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
-            },
-            {
-              "id": "c",
-              "text": "Ignore correlated failure modes"
-            },
-            {
-              "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "explanation": "Evaluating unintended side effects and governance gaps ensures that the system is robust and compliant under pressure."
         }
       ]
     },
@@ -720,7 +576,8 @@ export const UxDesign601Module: LearningModule = {
           "id": "ux-design-601-l07-a1",
           "type": "image",
           "title": "Guided Practice",
-          "content": "Use a structured method, log assumptions, and verify conclusions against constraints and metrics."
+          "content": "Use a structured method, log assumptions, and verify conclusions against constraints and metrics.",
+          "visualPrompt": "A diagram showing the flow from a design decision to stakeholder impact, with accountability checkpoints along the way."
         }
       ],
       "chunks": [
@@ -728,19 +585,19 @@ export const UxDesign601Module: LearningModule = {
           "id": "ux-design-601-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "In this lesson, learners will evaluate how the outcomes of our designs are distributed among different stakeholders. We will consider not only the immediate effects but also any delayed or indirect impacts that may arise. Understanding this distribution is important for ensuring that our designs are equitable and beneficial to all parties involved.\nContext recap: In this lesson, learners will evaluate how the outcomes of our designs are distributed among different stakeholders. We will consider not only the immediate effects but also any delayed or indirect impacts that may arise. Understanding this distribution is important for ensuring that our designs are equitable and beneficial to all parties involved."
+          "content": "We will evaluate how design outcomes—both immediate and delayed—are distributed across different stakeholder groups. Analyzing this impact distribution is vital for ensuring equitable, ethical, and sustainable design solutions."
         },
         {
           "id": "ux-design-601-l07-c2",
           "kind": "concept",
           "title": "Accountability System Design",
-          "content": "In this section, we will explore how to design accountability systems that ensure transparency and responsibility in our processes. This includes implementing traceability standards, which allow us to track decisions and actions, establishing review rights for stakeholders, and defining remediation obligations that outline how we will address any issues that arise. These elements are essential for maintaining trust and integrity in our design practices.\nContext recap: In this section, we will explore how to design accountability systems that ensure transparency and responsibility in our processes. This includes implementing traceability standards, which allow us to track decisions and actions, establishing review rights for stakeholders, and defining remediation obligations that outline how we will address any issues that arise. These elements are essential for maintaining trust and integrity in our design practices."
+          "content": "We will design accountability systems that enforce transparency. This includes implementing traceability standards to track decisions, establishing stakeholder review rights, and defining remediation obligations to address systemic issues effectively."
         },
         {
           "id": "ux-design-601-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "A responsible leadership checklist is an important tool that helps connect various aspects of leadership, including strategy, ethics, policy, and operational controls. By reviewing these elements together, leaders can ensure they are making informed decisions that positively impact their teams and the community. This checklist serves as a guide to maintain accountability and integrity in leadership roles.\nContext recap: A responsible leadership checklist is an important tool that helps connect various aspects of leadership, including strategy, ethics, policy, and operational controls. By reviewing these elements together, leaders can ensure they are making informed decisions that positively impact their teams and the community. This checklist serves as a guide to maintain accountability and integrity in leadership roles."
+          "content": "The responsible leadership checklist bridges strategy, ethics, policy, and operational controls. By systematically reviewing these elements, design leaders ensure their decisions maintain integrity and positively impact both users and the broader community."
         }
       ],
       "flashcards": [
@@ -771,7 +628,8 @@ export const UxDesign601Module: LearningModule = {
           "id": "ux-design-601-l08-a1",
           "type": "practice",
           "title": "Guided Practice",
-          "content": "Use a structured method, log assumptions, and verify conclusions against constraints and metrics."
+          "content": "Use a structured method, log assumptions, and verify conclusions against constraints and metrics.",
+          "visualPrompt": "A split-screen illustration showing a designer presenting a data-backed charter on one side, and a panel of experts reviewing the metrics on the other."
         }
       ],
       "chunks": [
@@ -779,13 +637,13 @@ export const UxDesign601Module: LearningModule = {
           "id": "ux-design-601-l08-c1",
           "kind": "practice",
           "title": "Capstone Charter and Evidence Pack",
-          "content": "In this activity, learners will work together to create a capstone charter. This charter will outline important objectives, identify any constraints they may face, establish metrics for success, and define governance controls. Additionally, they will develop an evidence plan that will support their project. This process encourages critical thinking and collaboration, helping learners to prepare for real-world challenges in UX design.\nContext recap: In this activity, learners will work together to create a capstone charter. This charter will outline important objectives, identify any constraints they may face, establish metrics for success, and define governance controls. Additionally, they will develop an evidence plan that will support their project. This process encourages critical thinking and collaboration, helping learners to prepare for real-world challenges in UX design.\nContext recap: In this activity, learners will work together to create a capstone charter. This charter will outline important objectives, identify any constraints they may face, establish metrics for success, and define governance controls. Additionally, they will develop an evidence plan that will support their project. This process encourages critical thinking and collaboration, helping learners to prepare for real-world challenges in UX design.\nWhy this matters: Capstone Charter and Evidence Pack helps learners in UX Design connect ideas from UX Design Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "You will draft a comprehensive capstone charter outlining objectives, scope boundaries, success metrics, and governance controls. Alongside this, you will compile an evidence plan to substantiate your design rationale against expert scrutiny."
         },
         {
           "id": "ux-design-601-l08-c2",
           "kind": "recap",
           "title": "Defense Rehearsal",
-          "content": "During the final practice round, learners will engage in a defense rehearsal where they will practice presenting and defending their design decisions. This exercise prepares them to respond to critiques from technical experts, governance bodies, and stakeholders. By simulating these discussions, learners gain confidence and improve their ability to articulate their ideas clearly and effectively, which is crucial in the field of UX design.\nContext recap: During the final practice round, learners will engage in a defense rehearsal where they will practice presenting and defending their design decisions. This exercise prepares them to respond to critiques from technical experts, governance bodies, and stakeholders. By simulating these discussions, learners gain confidence and improve their ability to articulate their ideas clearly and effectively, which is crucial in the field of UX design."
+          "content": "In the final rehearsal, you will present and defend your design decisions against critiques from technical experts and governance bodies. This simulation builds the articulation and reasoning skills required for high-level UX leadership."
         }
       ],
       "interactiveActivities": [

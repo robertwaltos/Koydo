@@ -14,7 +14,11 @@ import LanguageSwitcher from "./language-switcher";
 import ThemeControls from "./theme-controls";
 import { ASSETS } from "@/lib/config/assets";
 import { isLaunchRouteLocked, resolveLaunchHref } from "@/lib/platform/launch-readiness";
+import { getAppId } from "@/lib/platform/app-manifest";
+import { getNavLayout } from "@/lib/platform/app-onboarding";
 import PinGate, { isPinVerified } from "@/components/pin-gate";
+import ParentGate from "@/app/components/parent-gate";
+import { useZenMode } from "@/lib/theme/zen-mode-context";
 
 type AuthContext = {
   isAuthenticated: boolean;
@@ -46,6 +50,8 @@ export default function TopNav() {
   const { typographyDensity, setTypographyDensity } = useTheme();
   const { isPreReaderMode, togglePreReaderMode } = usePreReaderMode();
   const { voice, setVoice } = useVoicePreference();
+  const { isZenMode, toggleZenMode } = useZenMode();
+  const appId = getAppId();
   const [authContext, setAuthContext] = useState<AuthContext>({
     isAuthenticated: false,
     isAdmin: false,
@@ -219,11 +225,12 @@ export default function TopNav() {
   const isHomePage = pathname === "/";
   const brandHref = authContext.isAuthenticated ? "/dashboard" : "/";
   const resolveNavHref = (href: string) => resolveLaunchHref(href);
-
-  // Admin and parent routes use DashShell for navigation — hide the student TopNav.
-  if (pathname?.startsWith("/admin") || pathname?.startsWith("/parent")) {
-    return null;
-  }
+  const navLayout = getNavLayout(appId);
+  const hideTopNavForDashboardLayouts = new Set(["icon_tabs", "sidebar", "exam_dashboard", "game_grid"]);
+  const hideTopNav =
+    pathname?.startsWith("/admin")
+    || pathname?.startsWith("/parent")
+    || (pathname === "/dashboard" && hideTopNavForDashboardLayouts.has(navLayout));
 
   const sharedLearnItems = [
     { href: "/explore", label: t("nav_explore"), icon: "🌍" },
@@ -284,6 +291,10 @@ export default function TopNav() {
 
   const menuItemClass = "ui-focus-ring inline-flex min-h-10 items-center gap-1.5 rounded-xl border border-zinc-200/70 bg-white px-3 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-50 transition-colors dark:border-border/40 dark:bg-surface-muted/55 dark:text-foreground/90 dark:hover:bg-surface-muted/70";
   const sectionLabelClass = "mb-1.5 px-1 text-[10px] font-bold uppercase tracking-widest text-slate-400/80 dark:text-foreground/40";
+
+  if (hideTopNav) {
+    return null;
+  }
 
   return (
     <>
@@ -469,6 +480,10 @@ export default function TopNav() {
                             <span aria-hidden="true">{typographyIcon}</span>
                             <span className="truncate">{typographyLabel}</span>
                           </button>
+                          <button type="button" onClick={toggleZenMode} className={menuItemClass}>
+                            <span aria-hidden="true">{isZenMode ? "🧘" : "🌙"}</span>
+                            <span className="truncate">{isZenMode ? "Zen Off" : "Zen Mode"}</span>
+                          </button>
                         </div>
                       </div>
                     </>
@@ -522,14 +537,15 @@ export default function TopNav() {
                       {authContext.isAuthenticated && (
                         <>
                           <div className="h-px bg-zinc-200/60 dark:bg-border/25" />
-                          <button
-                            type="button"
-                            onClick={handleSignOut}
-                            className="ui-focus-ring flex min-h-10 w-full items-center justify-center gap-2 px-3 py-2.5 text-sm font-semibold text-rose-600 hover:bg-rose-50 transition-colors dark:text-rose-300 dark:hover:bg-rose-900/20"
-                          >
-                            <span aria-hidden="true">↩️</span>
-                            {t("top_nav_log_out")}
-                          </button>
+                          <ParentGate onSuccess={handleSignOut} actionText="sign out">
+                            <button
+                              type="button"
+                              className="ui-focus-ring flex min-h-10 w-full items-center justify-center gap-2 px-3 py-2.5 text-sm font-semibold text-rose-600 hover:bg-rose-50 transition-colors dark:text-rose-300 dark:hover:bg-rose-900/20"
+                            >
+                              <span aria-hidden="true">↩️</span>
+                              {t("top_nav_log_out")}
+                            </button>
+                          </ParentGate>
                         </>
                       )}
                     </div>

@@ -20,6 +20,16 @@ export function getRevenueCatApiKey(): string | null {
     ?? null;
 
   const platform = getPlatform();
+  const appId = (process.env.NEXT_PUBLIC_APP_ID ?? 'koydo_main').toUpperCase();
+
+  // 1. Try per-app + per-platform key (e.g., NEXT_PUBLIC_REVENUECAT_IOS_KEY_KOYDO_JUNIOR)
+  if (platform === 'ios' || platform === 'android') {
+    const platformLabel = platform === 'ios' ? 'IOS' : 'ANDROID';
+    const perAppKey = process.env[`NEXT_PUBLIC_REVENUECAT_${platformLabel}_KEY_${appId}`];
+    if (perAppKey) return perAppKey;
+  }
+
+  // 2. Fall back to generic platform key
   if (platform === 'ios') {
     const key = process.env.NEXT_PUBLIC_REVENUECAT_APPLE_KEY ?? genericKey;
     if (!key) {

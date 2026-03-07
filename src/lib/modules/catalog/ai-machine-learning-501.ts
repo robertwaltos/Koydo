@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const AiMachineLearning501Module: LearningModule = {
+export const ai_machine_learning_501_Module: LearningModule = {
   "id": "ai-machine-learning-501",
   "title": "AI and Machine Learning Specialization Studio",
   "description": "Post-401 specialization in AI and Machine Learning, focused on model architecture tradeoffs, evaluation robustness, deployment reliability, and governance controls through advanced casework, simulation, and capstone-level defense.",
@@ -14,7 +14,7 @@ export const AiMachineLearning501Module: LearningModule = {
   ],
   "minAge": 17,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en"
@@ -33,12 +33,14 @@ export const AiMachineLearning501Module: LearningModule = {
       "title": "AI and Machine Learning Advanced Foundations",
       "type": "video",
       "duration": 14,
+      "lessonImagePrompt": "Imagen 4 prompt: A photorealistic, cinematic wide shot of a glowing, complex neural network floating above a sleek glass desk in a dark, modern tech laboratory. Soft blue and gold volumetric lighting highlights the decision boundaries within the data structure, 8k resolution, highly detailed.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A smooth, cinematic tracking shot moving through a 3D holographic projection of a machine learning model. The nodes pulse with light as data flows through them, illustrating complex causal pathways. High contrast, photorealistic, 4k resolution, 60fps.",
       "learningAids": [
         {
           "id": "ai-machine-learning-501-l01-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, log assumptions, and verify conclusions against constraints and metrics."
+          "title": "The Tradeoff Triangle",
+          "content": "Visualize the balance between Model Complexity, Interpretability, and Computational Cost. Optimizing one often constrains the others."
         }
       ],
       "chunks": [
@@ -46,36 +48,36 @@ export const AiMachineLearning501Module: LearningModule = {
           "id": "ai-machine-learning-501-l01-c1",
           "kind": "concept",
           "title": "Advanced Scope and Decision Boundaries",
-          "content": "In this lesson, we will explore the concept of advanced boundaries in the fields of Artificial Intelligence (AI) and Machine Learning (ML). We will discuss how the architecture of a model can affect its performance and how we can evaluate its robustness when applied to complex systems. Understanding these trade-offs is crucial for developing effective AI solutions that can adapt to various challenges.\nContext recap: In this lesson, we will explore the concept of advanced boundaries in the fields of Artificial Intelligence (AI) and Machine Learning (ML). We will discuss how the architecture of a model can affect its performance and how we can evaluate its robustness when applied to complex systems. Understanding these trade-offs is crucial for developing effective AI solutions that can adapt to various challenges."
+          "content": "In this lesson, we explore advanced decision boundaries in Artificial Intelligence and Machine Learning. We analyze how model architecture directly impacts performance and evaluate robustness when applied to complex, real-world systems. Mastering these trade-offs is essential for engineering adaptable, high-performing AI solutions that can withstand shifting constraints."
         },
         {
           "id": "ai-machine-learning-501-l01-c2",
           "kind": "concept",
           "title": "Causal Structure Under Uncertainty",
-          "content": "In this section, learners will focus on modeling causal pathways, which are the connections between causes and effects in a system. We will also examine how uncertainty can influence our decisions and the hidden assumptions that may exist before we design any interventions. This understanding is essential for creating effective strategies that can lead to positive outcomes.\nContext recap: In this section, learners will focus on modeling causal pathways, which are the connections between causes and effects in a system. We will also examine how uncertainty can influence our decisions and the hidden assumptions that may exist before we design any interventions. This understanding is essential for creating effective strategies that can lead to positive outcomes."
+          "content": "We focus on modeling causal pathways—the hidden connections between causes and effects within a system. By examining how uncertainty influences our decisions, we can uncover hidden assumptions before designing interventions. This rigorous approach is critical for creating resilient strategies that drive predictable, positive outcomes even when data is incomplete."
         },
         {
           "id": "ai-machine-learning-501-l01-c3",
           "kind": "recap",
           "title": "Evidence and Rigor Standards",
-          "content": "In our recap, we emphasize that all advanced claims made in AI and ML must be supported by measurable indicators. This means that we need to establish confidence bounds and set up review checkpoints to ensure that our findings are reliable. By doing so, we can maintain a high standard of rigor in our work and ensure that our conclusions are well-founded.\nContext recap: In our recap, we emphasize that all advanced claims made in AI and ML must be supported by measurable indicators. This means that we need to establish confidence bounds and set up review checkpoints to ensure that our findings are reliable. By doing so, we can maintain a high standard of rigor in our work and ensure that our conclusions are well-founded."
+          "content": "All advanced claims made in AI and ML must be supported by measurable indicators. Establishing strict confidence bounds and review checkpoints ensures that our findings are reliable. By maintaining a high standard of mathematical and logical rigor, we guarantee that our architectural conclusions are defensible and well-founded."
         }
       ],
       "flashcards": [
         {
           "id": "ai-machine-learning-501-l01-f1",
-          "front": "model architecture tradeoffs",
-          "back": "A specialization axis in AI and Machine Learning requiring explicit assumptions and measured tradeoff choices."
+          "front": "Model Architecture Tradeoffs",
+          "back": "A specialization axis in AI requiring explicit assumptions and measured choices between complexity, cost, and interpretability."
         },
         {
           "id": "ai-machine-learning-501-l01-f2",
-          "front": "evaluation robustness",
-          "back": "Operational design capability that governs whether complex workflows remain reliable."
+          "front": "Evaluation Robustness",
+          "back": "The operational design capability that governs whether complex ML workflows remain reliable under shifting data distributions."
         },
         {
           "id": "ai-machine-learning-501-l01-f3",
-          "front": "deployment reliability",
-          "back": "Evaluation practice for validating outcomes beyond headline metrics."
+          "front": "Deployment Reliability",
+          "back": "The evaluation practice for validating real-world outcomes and edge cases beyond standard headline metrics."
         }
       ]
     },
@@ -84,26 +86,34 @@ export const AiMachineLearning501Module: LearningModule = {
       "title": "AI and Machine Learning Specialist Methods Lab",
       "type": "interactive",
       "duration": 17,
+      "lessonImagePrompt": "Imagen 4 prompt: A futuristic control room with multiple curved monitors displaying complex ML workflows, code, and stress-test graphs. A warm amber light illuminates the keyboard, suggesting an intense, focused work environment, hyper-realistic, cinematic lighting.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: An over-the-shoulder time-lapse shot of a data scientist interacting with a visual programming interface. Nodes and connections are rapidly adjusted on screen, followed by a simulated stress test where the screen flashes red before stabilizing to green, 4k, realistic.",
       "learningAids": [
         {
           "id": "ai-machine-learning-501-l02-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, log assumptions, and verify conclusions against constraints and metrics."
+          "title": "Stress Test Protocol",
+          "content": "Always define your failure gates before running the model. If X drops below Y threshold, trigger the rollback criteria."
         }
       ],
       "chunks": [
         {
           "id": "ai-machine-learning-501-l02-c1",
-          "kind": "practice",
-          "title": "Method Sequence and Stress Test",
-          "content": "In this engaging interactive lab, students will have the opportunity to design and construct a specialized workflow that showcases the application of advanced methods in artificial intelligence and machine learning. This process will involve integrating insights and techniques from various fields to create a robust system. Once the workflows are built, learners will rigorously test them under challenging conditions, including adversarial scenarios and edge cases, to evaluate their performance and resilience. This hands-on experience will help students understand the importance of adaptability and problem-solving in real-world applications of AI and ML."
+          "kind": "concept",
+          "title": "Lab Briefing: High-Constraint Environments",
+          "content": "Before building our specialized workflow, we must define the operational constraints. In this lab, you will navigate strict latency budgets, compute limits, and governance rules. Understanding these boundaries is the first step to engineering a system that remains resilient under real-world pressure."
         },
         {
           "id": "ai-machine-learning-501-l02-c2",
+          "kind": "practice",
+          "title": "Method Sequence and Stress Test",
+          "content": "In this interactive lab, you will design and construct a specialized workflow that applies advanced ML methods. You will integrate techniques from various domains to create a robust system. Once built, you will rigorously stress-test your workflow under challenging conditions—including adversarial scenarios and edge cases—to evaluate its resilience and adaptability in production environments."
+        },
+        {
+          "id": "ai-machine-learning-501-l02-c3",
           "kind": "recap",
           "title": "Controls and Failure Gates",
-          "content": "In our recap, we discuss the importance of having robust workflows in specialized fields. These workflows should include control gates, which act as checkpoints to monitor progress, rollback criteria to revert to previous states if necessary, and accountability checkpoints to ensure that all actions are traceable and responsible. This structure helps maintain the integrity of our processes.\nContext recap: In our recap, we discuss the importance of having robust workflows in specialized fields. These workflows should include control gates, which act as checkpoints to monitor progress, rollback criteria to revert to previous states if necessary, and accountability checkpoints to ensure that all actions are traceable and responsible. This structure helps maintain the integrity of our processes."
+          "content": "Robust workflows require strict control gates. These act as checkpoints to monitor progress, enforce rollback criteria to revert to previous states during failures, and establish accountability. This structured governance ensures that all automated actions remain traceable, responsible, and aligned with system integrity."
         }
       ],
       "interactiveActivities": [
@@ -167,12 +177,14 @@ export const AiMachineLearning501Module: LearningModule = {
       "title": "Checkpoint 1: Specialist Methods",
       "type": "quiz",
       "duration": 11,
+      "lessonImagePrompt": "Imagen 4 prompt: A sleek, glowing digital lock icon hovering over a server rack in a high-tech data center. The lock emits a soft blue light, symbolizing security, checkpoints, and verified knowledge, photorealistic, depth of field.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A slow, dramatic zoom on a glowing digital checkmark emerging from a cascading stream of binary code. The background is a deep, cinematic blue with subtle bokeh effects, 4k resolution, smooth motion.",
       "learningAids": [
         {
           "id": "ai-machine-learning-501-l03-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, log assumptions, and verify conclusions against constraints and metrics."
+          "title": "Review Strategy",
+          "content": "Recall the connection between explicit constraints, stress testing, and evaluation robustness before answering."
         }
       ],
       "questions": [
@@ -183,198 +195,123 @@ export const AiMachineLearning501Module: LearningModule = {
           "options": [
             {
               "id": "a",
-              "text": "Rely on undocumented assumptions"
+              "text": "Relying on undocumented assumptions to speed up deployment"
             },
             {
               "id": "b",
-              "text": "Define constraints, monitor leading indicators, and test edge cases"
+              "text": "Defining constraints, monitoring leading indicators, and testing edge cases"
             },
             {
               "id": "c",
-              "text": "Avoid post-decision review"
+              "text": "Avoiding post-decision reviews to maintain forward momentum"
             },
             {
               "id": "d",
-              "text": "Optimize only for speed"
+              "text": "Optimizing solely for inference speed regardless of accuracy drops"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Advanced performance depends on explicit constraints, monitoring, and stress testing."
+          "explanation": "Advanced performance depends on making explicit constraints, continuous monitoring, and rigorous stress testing."
         },
         {
           "id": "ai-machine-learning-501-l03-q2",
-          "text": "At level 501, the curriculum emphasizes:",
-          "skillId": "ai-machine-learning-501-skill-level",
+          "text": "When modeling causal structures under uncertainty, what is the primary goal?",
+          "skillId": "ai-machine-learning-501-skill-causal",
           "options": [
             {
               "id": "a",
-              "text": "specialist method execution, cross-domain integration, and high-stakes scenario performance"
+              "text": "To eliminate all uncertainty before deploying a model"
             },
             {
               "id": "b",
-              "text": "Unbounded iteration with no controls"
+              "text": "To uncover hidden assumptions and map connections between causes and effects"
             },
             {
               "id": "c",
-              "text": "Single-metric decision making"
+              "text": "To guarantee that correlation equals causation in the dataset"
             },
             {
               "id": "d",
-              "text": "No uncertainty communication"
+              "text": "To bypass the need for confidence bounds"
             }
           ],
-          "correctOptionId": "a",
-          "explanation": "The 501 design is built around specialist method execution, cross-domain integration, and high-stakes scenario performance."
+          "correctOptionId": "b",
+          "explanation": "Modeling causal pathways helps identify hidden assumptions and understand how interventions will actually affect the system under uncertain conditions."
         },
         {
           "id": "ai-machine-learning-501-l03-q3",
-          "text": "What best strengthens evaluation robustness execution quality?",
+          "text": "What best strengthens evaluation robustness and execution quality in ML workflows?",
           "skillId": "ai-machine-learning-501-skill-execution",
           "options": [
             {
               "id": "a",
-              "text": "No owner mapping or escalation path"
+              "text": "Removing owner mapping to democratize the process"
             },
             {
               "id": "b",
-              "text": "Explicit ownership, checkpoints, and governance thresholds"
+              "text": "Establishing explicit ownership, checkpoints, and governance thresholds"
             },
             {
               "id": "c",
-              "text": "Ad-hoc process changes without logs"
+              "text": "Implementing ad-hoc process changes without logging them"
             },
             {
               "id": "d",
-              "text": "Skipping retrospective review"
+              "text": "Skipping retrospective reviews if the model performs well initially"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Quality execution needs ownership clarity, checkpoints, and threshold-driven governance."
+          "explanation": "Quality execution requires clarity of ownership, defined checkpoints, and threshold-driven governance to catch and manage failures."
         },
         {
           "id": "ai-machine-learning-501-l03-q4",
-          "text": "A rigorous approach to deployment reliability should include:",
+          "text": "A rigorous approach to deployment reliability must include:",
           "skillId": "ai-machine-learning-501-skill-evaluation",
           "options": [
             {
               "id": "a",
-              "text": "Outcome claims without baselines"
+              "text": "Outcome claims made without historical baselines"
             },
             {
               "id": "b",
-              "text": "Baseline comparison, side-effect checks, and uncertainty bounds"
+              "text": "Baseline comparisons, side-effect checks, and uncertainty bounds"
             },
             {
               "id": "c",
-              "text": "Removal of difficult scenarios"
+              "text": "The removal of difficult edge-case scenarios from the test set"
             },
             {
               "id": "d",
-              "text": "Changing criteria after seeing results"
+              "text": "Adjusting success criteria after observing the final results"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Baselines, side-effect checks, and uncertainty disclosure make results defensible."
+          "explanation": "To make results defensible, deployments must be compared against baselines, checked for unintended side-effects, and transparent about uncertainty."
         },
         {
           "id": "ai-machine-learning-501-l03-q5",
-          "text": "A mature governance controls system should connect:",
-          "skillId": "ai-machine-learning-501-skill-governance",
+          "text": "What is the primary function of a 'rollback threshold' in an ML workflow?",
+          "skillId": "ai-machine-learning-501-skill-gates",
           "options": [
             {
               "id": "a",
-              "text": "Policy and practice without measurement"
+              "text": "To automatically delete the training data"
             },
             {
               "id": "b",
-              "text": "Policy, measurable thresholds, and remediation pathways"
+              "text": "To contain impact quickly by reverting to a previous state when failures emerge"
             },
             {
               "id": "c",
-              "text": "Technical delivery with no accountability"
+              "text": "To increase the learning rate of the neural network"
             },
             {
               "id": "d",
-              "text": "Performance targets with no risk controls"
+              "text": "To bypass governance audits during an emergency"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Governance quality comes from linking policy intent to measurable controls and action."
-        },
-        {
-          "id": "ai-machine-learning-501-l03-q6",
-          "text": "In high-stakes AI and Machine Learning Specialization Studio execution, which communication protocol is strongest?",
-          "skillId": "ai-machine-learning-501-skill-advanced-6",
-          "options": [
-            {
-              "id": "a",
-              "text": "Broadcast conclusions without assumptions"
-            },
-            {
-              "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
-            },
-            {
-              "id": "c",
-              "text": "Share only final outcomes after completion"
-            },
-            {
-              "id": "d",
-              "text": "Limit updates to a single informal channel"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
-        },
-        {
-          "id": "ai-machine-learning-501-l03-q7",
-          "text": "A mature remediation loop in advanced AI and ML should prioritize:",
-          "skillId": "ai-machine-learning-501-skill-advanced-7",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blame assignment without system updates"
-            },
-            {
-              "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
-            },
-            {
-              "id": "c",
-              "text": "One-time fixes without retesting"
-            },
-            {
-              "id": "d",
-              "text": "Issue closure based on elapsed time"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
-        },
-        {
-          "id": "ai-machine-learning-501-l03-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in AI and Machine Learning Specialization Studio?",
-          "skillId": "ai-machine-learning-501-skill-advanced-8",
-          "options": [
-            {
-              "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
-            },
-            {
-              "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
-            },
-            {
-              "id": "c",
-              "text": "Ignore correlated failure modes"
-            },
-            {
-              "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "explanation": "Rollback thresholds act as a safety net, ensuring that if a model degrades in production, the system can quickly revert to a stable state to contain the impact."
         }
       ]
     },
@@ -383,12 +320,14 @@ export const AiMachineLearning501Module: LearningModule = {
       "title": "AI and Machine Learning Advanced Case Analysis",
       "type": "video",
       "duration": 14,
+      "lessonImagePrompt": "Imagen 4 prompt: A glowing, holographic matrix of data points being sorted into different categories. The background is a dark, sleek corporate boardroom, suggesting high-stakes strategic decision making, cinematic lighting, 8k.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A dynamic 3D matrix shifting and reorganizing in mid-air. The camera orbits the structure as different nodes light up in green and red, symbolizing a simulated AI making complex tradeoff decisions in real-time, 4k, photorealistic.",
       "learningAids": [
         {
           "id": "ai-machine-learning-501-l04-a1",
           "type": "mnemonic",
-          "title": "Guided Practice",
-          "content": "Use a structured method, log assumptions, and verify conclusions against constraints and metrics."
+          "title": "Tradeoff Matrix Dimensions",
+          "content": "Remember EREFM: Effectiveness, Reliability, Equity, Feasibility, Maintainability."
         }
       ],
       "chunks": [
@@ -396,36 +335,36 @@ export const AiMachineLearning501Module: LearningModule = {
           "id": "ai-machine-learning-501-l04-c1",
           "kind": "example",
           "title": "Case Stakes and Competing Objectives",
-          "content": "In this case analysis, we will explore a significant machine learning system that encounters evolving data distributions and has important accountability requirements. Participants will work together to outline the strategic objectives of the project, pinpoint possible risks that could lead to failure, and grasp the governance constraints that must be followed before proceeding with any actions. This thorough approach is essential for effective project management and ensures that we are prepared to handle challenges responsibly and ethically.\nContext recap: In this case analysis, we will explore a significant machine learning system that encounters evolving data distributions and has important accountability requirements. Participants will work together to outline the strategic objectives of the project, pinpoint possible risks that could lead to failure, and grasp the governance constraints that must be followed before proceeding with any actions. This thorough approach is essential for effective project management and ensures that we are prepared to handle challenges responsibly and ethically."
+          "content": "In this case analysis, we examine a high-stakes machine learning system facing evolving data distributions and strict accountability requirements. We will outline strategic objectives, pinpoint risks that could trigger catastrophic failure, and map the governance constraints required before deployment. This thorough approach is essential for managing competing objectives responsibly."
         },
         {
           "id": "ai-machine-learning-501-l04-c2",
           "kind": "concept",
           "title": "Tradeoff Matrix and Option Scoring",
-          "content": "In this section, we will introduce the concept of a tradeoff matrix, where different options are evaluated based on several criteria. These criteria include effectiveness, reliability, equity, feasibility, and long-term maintainability. By scoring options across these dimensions, learners can make informed decisions that balance various factors in their projects.\nContext recap: In this section, we will introduce the concept of a tradeoff matrix, where different options are evaluated based on several criteria. These criteria include effectiveness, reliability, equity, feasibility, and long-term maintainability. By scoring options across these dimensions, learners can make informed decisions that balance various factors in their projects."
+          "content": "We introduce the tradeoff matrix, a framework for evaluating competing architectural options. Criteria include effectiveness, reliability, equity, feasibility, and long-term maintainability. By rigorously scoring options across these dimensions, you can make defensible, evidence-based decisions that balance technical performance with business and ethical constraints."
         },
         {
           "id": "ai-machine-learning-501-l04-c3",
           "kind": "recap",
           "title": "Recovery and Adaptation Design",
-          "content": "In our recap, we will translate the signatures of failure into actionable safeguards. This includes creating response playbooks that outline steps to take in case of failure and establishing measurable adaptation loops that allow for continuous improvement. This proactive approach helps ensure that we are prepared for challenges and can adapt effectively.\nContext recap: In our recap, we will translate the signatures of failure into actionable safeguards. This includes creating response playbooks that outline steps to take in case of failure and establishing measurable adaptation loops that allow for continuous improvement. This proactive approach helps ensure that we are prepared for challenges and can adapt effectively."
+          "content": "Identifying the 'signatures of failure' allows us to build actionable safeguards. This involves creating response playbooks for specific failure modes and establishing measurable adaptation loops. These loops ensure that every incident generates data used to continuously improve the model's future behavior and resilience."
         }
       ],
       "flashcards": [
         {
           "id": "ai-machine-learning-501-l04-f1",
-          "front": "Tradeoff matrix",
-          "back": "A scoring framework for choosing among competing options under real constraints."
+          "front": "Tradeoff Matrix",
+          "back": "A scoring framework for choosing among competing architectural options under real-world constraints."
         },
         {
           "id": "ai-machine-learning-501-l04-f2",
-          "front": "Failure signature",
-          "back": "A recurrent signal indicating a predictable class of breakdown risk."
+          "front": "Failure Signature",
+          "back": "A recurrent, identifiable signal indicating a predictable class of breakdown risk in a model."
         },
         {
           "id": "ai-machine-learning-501-l04-f3",
-          "front": "Adaptation loop",
-          "back": "A measured process for converting incident learning into improved future behavior."
+          "front": "Adaptation Loop",
+          "back": "A measured process for converting incident learning and failure data into improved future model behavior."
         }
       ]
     },
@@ -434,26 +373,34 @@ export const AiMachineLearning501Module: LearningModule = {
       "title": "AI and Machine Learning Simulation and Response Studio",
       "type": "interactive",
       "duration": 17,
+      "lessonImagePrompt": "Imagen 4 prompt: A high-tech simulation dashboard on a large curved screen, displaying risk levels, intervention pathways, and predictive graphs in neon green and red against a dark background, hyper-detailed, 8k.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A fast-paced montage of data spikes on a digital monitor. The screen flashes a warning, followed by a stabilizing blue wave sweeping across the graph as an automated intervention is successfully applied, cinematic, 4k.",
       "learningAids": [
         {
           "id": "ai-machine-learning-501-l05-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, log assumptions, and verify conclusions against constraints and metrics."
+          "title": "Simulation Mindset",
+          "content": "Treat every simulation as a live environment. Log your assumptions, set strict thresholds, and document the exact trigger for your intervention."
         }
       ],
       "chunks": [
         {
           "id": "ai-machine-learning-501-l05-c1",
-          "kind": "practice",
-          "title": "Scenario Modeling",
-          "content": "In this interactive practice session, learners will configure various assumptions for simulations, set thresholds for acceptable outcomes, and design intervention pathways that will be used in high-stakes situations. This hands-on experience is crucial for understanding how to navigate complex scenarios and make effective decisions under pressure.\nContext recap: In this interactive practice session, learners will configure various assumptions for simulations, set thresholds for acceptable outcomes, and design intervention pathways that will be used in high-stakes situations. This hands-on experience is crucial for understanding how to navigate complex scenarios and make effective decisions under pressure."
+          "kind": "concept",
+          "title": "Simulation Briefing: Cascading Failures",
+          "content": "Welcome to the response studio. Here, you will face cascading failures where a single model degradation triggers downstream system alerts. Your objective is to identify the root cause amidst the noise and deploy targeted interventions before the failure breaches critical governance thresholds."
         },
         {
           "id": "ai-machine-learning-501-l05-c2",
+          "kind": "practice",
+          "title": "Scenario Modeling",
+          "content": "In this interactive session, you will configure assumptions for complex ML simulations, set strict thresholds for acceptable outcomes, and design intervention pathways for high-stakes situations. This hands-on modeling is crucial for learning how to navigate cascading failures and make rapid, effective decisions under pressure."
+        },
+        {
+          "id": "ai-machine-learning-501-l05-c3",
           "kind": "recap",
           "title": "Debrief and Decision Quality Review",
-          "content": "After each simulation run, teams will come together to review their performance. They will assess whether they met their targets, identify any side effects that occurred, and examine any gaps in governance compliance. This debriefing process is essential for learning from experiences and improving future decision-making.\nContext recap: After each simulation run, teams will come together to review their performance. They will assess whether they met their targets, identify any side effects that occurred, and examine any gaps in governance compliance. This debriefing process is essential for learning from experiences and improving future decision-making."
+          "content": "After each simulation, teams must conduct a rigorous debrief. You will assess whether targets were met, identify unintended side effects, and examine gaps in governance compliance. This retrospective process is the core mechanism for translating simulated crises into improved decision-making frameworks."
         }
       ],
       "interactiveActivities": [
@@ -499,173 +446,75 @@ export const AiMachineLearning501Module: LearningModule = {
       "title": "Checkpoint 2: Research and Systems Decisions",
       "type": "quiz",
       "duration": 11,
+      "lessonImagePrompt": "Imagen 4 prompt: A glowing, metallic shield icon surrounded by flowing streams of binary data. The shield radiates a protective aura, symbolizing robust systems and secure decision-making, photorealistic, dramatic lighting.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A cinematic camera orbits a glowing digital shield that is protecting a core of bright white light from incoming, fragmented red data streams. The red data dissolves upon hitting the shield, 4k, smooth animation.",
       "learningAids": [
         {
           "id": "ai-machine-learning-501-l06-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, log assumptions, and verify conclusions against constraints and metrics."
+          "title": "Decision Framework",
+          "content": "Always link your mitigation strategy directly to the specific failure signature observed in the simulation."
         }
       ],
       "questions": [
         {
           "id": "ai-machine-learning-501-l06-q1",
-          "text": "Which practice most improves specialist performance in model architecture tradeoffs?",
-          "skillId": "ai-machine-learning-501-skill-specialist",
+          "text": "What is the primary purpose of a Tradeoff Matrix in advanced ML case analysis?",
+          "skillId": "ai-machine-learning-501-skill-tradeoff",
           "options": [
             {
               "id": "a",
-              "text": "Rely on undocumented assumptions"
+              "text": "To automatically generate code for the model architecture"
             },
             {
               "id": "b",
-              "text": "Define constraints, monitor leading indicators, and test edge cases"
+              "text": "To score competing options across dimensions like reliability, equity, and feasibility"
             },
             {
               "id": "c",
-              "text": "Avoid post-decision review"
+              "text": "To hide the flaws of a chosen model from stakeholders"
             },
             {
               "id": "d",
-              "text": "Optimize only for speed"
+              "text": "To ensure the model only optimizes for a single metric"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Advanced performance depends on explicit constraints, monitoring, and stress testing."
+          "explanation": "A tradeoff matrix provides a structured, defensible way to score and compare competing options across multiple critical dimensions."
         },
         {
           "id": "ai-machine-learning-501-l06-q2",
-          "text": "At level 501, the curriculum emphasizes:",
-          "skillId": "ai-machine-learning-501-skill-level",
+          "text": "In the context of ML systems, what is a 'failure signature'?",
+          "skillId": "ai-machine-learning-501-skill-failure",
           "options": [
             {
               "id": "a",
-              "text": "specialist method execution, cross-domain integration, and high-stakes scenario performance"
+              "text": "A recurrent signal indicating a predictable class of breakdown risk"
             },
             {
               "id": "b",
-              "text": "Unbounded iteration with no controls"
+              "text": "The physical signature of the engineer who deployed the broken model"
             },
             {
               "id": "c",
-              "text": "Single-metric decision making"
+              "text": "A successful output that was misclassified by the user"
             },
             {
               "id": "d",
-              "text": "No uncertainty communication"
+              "text": "A random, unrepeatable error in the hardware"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "The 501 design is built around specialist method execution, cross-domain integration, and high-stakes scenario performance."
+          "explanation": "Failure signatures are identifiable patterns or signals that warn of a specific, predictable type of system breakdown."
         },
         {
           "id": "ai-machine-learning-501-l06-q3",
-          "text": "What best strengthens evaluation robustness execution quality?",
-          "skillId": "ai-machine-learning-501-skill-execution",
+          "text": "A mature remediation loop in advanced AI should prioritize:",
+          "skillId": "ai-machine-learning-501-skill-remediation",
           "options": [
             {
               "id": "a",
-              "text": "No owner mapping or escalation path"
-            },
-            {
-              "id": "b",
-              "text": "Explicit ownership, checkpoints, and governance thresholds"
-            },
-            {
-              "id": "c",
-              "text": "Ad-hoc process changes without logs"
-            },
-            {
-              "id": "d",
-              "text": "Skipping retrospective review"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Quality execution needs ownership clarity, checkpoints, and threshold-driven governance."
-        },
-        {
-          "id": "ai-machine-learning-501-l06-q4",
-          "text": "A rigorous approach to deployment reliability should include:",
-          "skillId": "ai-machine-learning-501-skill-evaluation",
-          "options": [
-            {
-              "id": "a",
-              "text": "Outcome claims without baselines"
-            },
-            {
-              "id": "b",
-              "text": "Baseline comparison, side-effect checks, and uncertainty bounds"
-            },
-            {
-              "id": "c",
-              "text": "Removal of difficult scenarios"
-            },
-            {
-              "id": "d",
-              "text": "Changing criteria after seeing results"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Baselines, side-effect checks, and uncertainty disclosure make results defensible."
-        },
-        {
-          "id": "ai-machine-learning-501-l06-q5",
-          "text": "A mature governance controls system should connect:",
-          "skillId": "ai-machine-learning-501-skill-governance",
-          "options": [
-            {
-              "id": "a",
-              "text": "Policy and practice without measurement"
-            },
-            {
-              "id": "b",
-              "text": "Policy, measurable thresholds, and remediation pathways"
-            },
-            {
-              "id": "c",
-              "text": "Technical delivery with no accountability"
-            },
-            {
-              "id": "d",
-              "text": "Performance targets with no risk controls"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Governance quality comes from linking policy intent to measurable controls and action."
-        },
-        {
-          "id": "ai-machine-learning-501-l06-q6",
-          "text": "In high-stakes AI and Machine Learning Specialization Studio execution, which communication protocol is strongest?",
-          "skillId": "ai-machine-learning-501-skill-advanced-6",
-          "options": [
-            {
-              "id": "a",
-              "text": "Broadcast conclusions without assumptions"
-            },
-            {
-              "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
-            },
-            {
-              "id": "c",
-              "text": "Share only final outcomes after completion"
-            },
-            {
-              "id": "d",
-              "text": "Limit updates to a single informal channel"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
-        },
-        {
-          "id": "ai-machine-learning-501-l06-q7",
-          "text": "A mature remediation loop in advanced AI and ML should prioritize:",
-          "skillId": "ai-machine-learning-501-skill-advanced-7",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blame assignment without system updates"
+              "text": "Assigning blame to individual developers without updating the system"
             },
             {
               "id": "b",
@@ -673,40 +522,65 @@ export const AiMachineLearning501Module: LearningModule = {
             },
             {
               "id": "c",
-              "text": "One-time fixes without retesting"
+              "text": "Applying one-time hotfixes without retesting the core architecture"
             },
             {
               "id": "d",
-              "text": "Issue closure based on elapsed time"
+              "text": "Closing the issue ticket based purely on elapsed time"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
+          "explanation": "Mature remediation ties root causes to systemic control redesign and verifies that the fix actually works through measurable follow-up."
         },
         {
-          "id": "ai-machine-learning-501-l06-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in AI and Machine Learning Specialization Studio?",
-          "skillId": "ai-machine-learning-501-skill-advanced-8",
+          "id": "ai-machine-learning-501-l06-q4",
+          "text": "During a high-stakes simulation debrief, which action is most critical for improving decision quality?",
+          "skillId": "ai-machine-learning-501-skill-debrief",
           "options": [
             {
               "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
+              "text": "Deleting the simulation logs to save storage space"
             },
             {
               "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
+              "text": "Assessing if targets were met, identifying side effects, and examining governance gaps"
             },
             {
               "id": "c",
-              "text": "Ignore correlated failure modes"
+              "text": "Praising the team for speed regardless of the outcome"
             },
             {
               "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
+              "text": "Ignoring unintended side effects if the primary metric was achieved"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "explanation": "A rigorous debrief must look holistically at targets, unintended side effects, and governance adherence to truly improve future decision-making."
+        },
+        {
+          "id": "ai-machine-learning-501-l06-q5",
+          "text": "If a simulation reveals 'Policy-execution drift', what is the strongest mitigation action?",
+          "skillId": "ai-machine-learning-501-skill-mitigation",
+          "options": [
+            {
+              "id": "a",
+              "text": "Re-align controls to explicit governance standards"
+            },
+            {
+              "id": "b",
+              "text": "Define an accountable owner map"
+            },
+            {
+              "id": "c",
+              "text": "Increase the learning rate of the model"
+            },
+            {
+              "id": "d",
+              "text": "Strengthen baseline instrumentation"
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation": "When execution drifts away from policy, the direct mitigation is to re-align operational controls back to the explicit governance standards."
         }
       ]
     },
@@ -715,12 +589,14 @@ export const AiMachineLearning501Module: LearningModule = {
       "title": "AI and Machine Learning Governance and Public Impact",
       "type": "video",
       "duration": 13,
+      "lessonImagePrompt": "Imagen 4 prompt: A glowing, translucent scale of justice made of digital light, hovering over a modern, illuminated city skyline at night. The image conveys balance, ethics, and widespread public impact, cinematic, 8k.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A sweeping aerial shot of a bustling modern city at night. Glowing, fiber-optic-like data connections overlay the streets and buildings, pulsing with light to represent the widespread distribution of AI impact across a population, 4k, photorealistic.",
       "learningAids": [
         {
           "id": "ai-machine-learning-501-l07-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, log assumptions, and verify conclusions against constraints and metrics."
+          "title": "The Accountability Chain",
+          "content": "Traceability -> Review Rights -> Remediation. A break in any link compromises governance."
         }
       ],
       "chunks": [
@@ -728,36 +604,36 @@ export const AiMachineLearning501Module: LearningModule = {
           "id": "ai-machine-learning-501-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "In this lesson, learners will evaluate how the outcomes of AI and ML projects are distributed among different stakeholders. This includes considering both the immediate and long-term effects, as well as any delayed or indirect impacts that may arise. Understanding these dynamics is important for ensuring that all voices are heard and that the benefits are shared fairly.\nContext recap: In this lesson, learners will evaluate how the outcomes of AI and ML projects are distributed among different stakeholders. This includes considering both the immediate and long-term effects, as well as any delayed or indirect impacts that may arise. Understanding these dynamics is important for ensuring that all voices are heard and that the benefits are shared fairly."
+          "content": "We evaluate how the outcomes of AI and ML projects are distributed across different stakeholder groups. This requires analyzing immediate benefits, long-term consequences, and delayed or indirect harms. Understanding these dynamics is critical for ensuring equitable outcomes and preventing marginalized groups from bearing the brunt of algorithmic failures."
         },
         {
           "id": "ai-machine-learning-501-l07-c2",
           "kind": "concept",
           "title": "Accountability System Design",
-          "content": "In this section, we will discuss how to design an accountability system that ensures responsible practices in AI and ML. This includes implementing traceability standards, which allow us to track decisions and actions, establishing review rights for stakeholders, and setting up remediation obligations to address any issues that arise. These measures help build trust and transparency in our work.\nContext recap: In this section, we will discuss how to design an accountability system that ensures responsible practices in AI and ML. This includes implementing traceability standards, which allow us to track decisions and actions, establishing review rights for stakeholders, and setting up remediation obligations to address any issues that arise. These measures help build trust and transparency in our work."
+          "content": "Designing an accountability system ensures responsible AI practices. This involves implementing strict traceability standards to track decisions back to their source data and human owners. It also requires establishing review rights for impacted stakeholders and setting up binding remediation obligations to address and correct any harm caused by the system."
         },
         {
           "id": "ai-machine-learning-501-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "A responsible leadership checklist is an important tool that helps leaders connect their strategies with ethical considerations, policy guidelines, and operational controls. This checklist serves as a comprehensive review document that ensures all aspects of leadership are aligned and accountable, promoting responsible decision-making in AI and machine learning.\nContext recap: A responsible leadership checklist is an important tool that helps leaders connect their strategies with ethical considerations, policy guidelines, and operational controls. This checklist serves as a comprehensive review document that ensures all aspects of leadership are aligned and accountable, promoting responsible decision-making in AI and machine learning."
+          "content": "A responsible leadership checklist connects strategic goals with ethical considerations, policy guidelines, and operational controls. This tool serves as a comprehensive review mechanism, ensuring that leaders remain accountable and that every deployment balances technical performance with risk management and public trust."
         }
       ],
       "flashcards": [
         {
           "id": "ai-machine-learning-501-l07-f1",
-          "front": "Impact distribution",
-          "back": "How benefits and harms are allocated across groups and timeframes."
+          "front": "Impact Distribution",
+          "back": "The analysis of how benefits and harms of an AI system are allocated across different demographic groups and timeframes."
         },
         {
           "id": "ai-machine-learning-501-l07-f2",
-          "front": "Decision traceability",
-          "back": "An auditable explanation of evidence, rationale, and ownership behind a decision."
+          "front": "Decision Traceability",
+          "back": "An auditable, transparent explanation of the evidence, rationale, and human ownership behind an algorithmic decision."
         },
         {
           "id": "ai-machine-learning-501-l07-f3",
-          "front": "Responsible leadership",
-          "back": "Decision practice that balances performance, risk, ethics, and accountability."
+          "front": "Responsible Leadership",
+          "back": "A decision-making practice that explicitly balances technical performance, risk mitigation, ethics, and public accountability."
         }
       ]
     },
@@ -766,26 +642,34 @@ export const AiMachineLearning501Module: LearningModule = {
       "title": "AI and Machine Learning Capstone Defense Lab",
       "type": "interactive",
       "duration": 16,
+      "lessonImagePrompt": "Imagen 4 prompt: A professional, dimly lit presentation stage. In the center, a large, highly detailed holographic display shows a completed, glowing neural network model. Empty chairs face the stage, awaiting the defense panel, photorealistic, 8k.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A slow, dramatic push-in shot on a glowing, intricate neural network model floating above a podium. The lighting shifts from cool blue to warm gold, symbolizing the successful completion and defense of a capstone project, 4k, cinematic.",
       "learningAids": [
         {
           "id": "ai-machine-learning-501-l08-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, log assumptions, and verify conclusions against constraints and metrics."
+          "title": "Defense Preparation",
+          "content": "Anticipate the weakest point in your architecture. Prepare a data-backed justification for why that specific tradeoff was necessary."
         }
       ],
       "chunks": [
         {
           "id": "ai-machine-learning-501-l08-c1",
-          "kind": "practice",
-          "title": "Capstone Charter and Evidence Pack",
-          "content": "In this activity, learners will create a detailed capstone charter. This document will outline the main objectives of their project, identify any constraints they might face, establish metrics for success, and define governance controls. Additionally, they will develop an evidence plan that will support their findings and conclusions, ensuring a thorough and well-organized presentation of their work.\nContext recap: In this activity, learners will create a detailed capstone charter. This document will outline the main objectives of their project, identify any constraints they might face, establish metrics for success, and define governance controls. Additionally, they will develop an evidence plan that will support their findings and conclusions, ensuring a thorough and well-organized presentation of their work."
+          "kind": "concept",
+          "title": "Capstone Briefing: The Final Crucible",
+          "content": "Your capstone defense is the culmination of this specialization. You are no longer just building models; you are architecting defensible, enterprise-grade AI systems. This lab requires you to synthesize tradeoff matrices, governance controls, and rigorous evaluation standards into a single, cohesive strategy."
         },
         {
           "id": "ai-machine-learning-501-l08-c2",
+          "kind": "practice",
+          "title": "Capstone Charter and Evidence Pack",
+          "content": "In this final activity, you will author a comprehensive capstone charter. This document must outline your project's core objectives, define strict scope boundaries, establish measurable success indicators, and detail governance controls. You will also compile an evidence pack that mathematically and logically supports your architectural choices, preparing you for expert scrutiny."
+        },
+        {
+          "id": "ai-machine-learning-501-l08-c3",
           "kind": "recap",
           "title": "Defense Rehearsal",
-          "content": "During the final practice round, learners will have the opportunity to prepare for their upcoming presentations. This rehearsal will focus on defending their decisions and project outcomes against critiques from technical experts, governance representatives, and stakeholders. This practice is essential for building confidence and ensuring that learners can effectively communicate their ideas and respond to questions.\nContext recap: During the final practice round, learners will have the opportunity to prepare for their upcoming presentations. This rehearsal will focus on defending their decisions and project outcomes against critiques from technical experts, governance representatives, and stakeholders. This practice is essential for building confidence and ensuring that learners can effectively communicate their ideas and respond to questions."
+          "content": "During the defense rehearsal, you will present your capstone to a simulated panel of technical experts, governance officers, and stakeholders. You must defend your tradeoff decisions, demonstrate the robustness of your evaluation methods, and prove your accountability systems are sound. This crucible ensures you are ready to lead high-stakes AI initiatives in the real world."
         }
       ],
       "interactiveActivities": [
@@ -804,7 +688,12 @@ export const AiMachineLearning501Module: LearningModule = {
           "id": "ai-machine-learning-501-l08-act2",
           "type": "debate_simulator",
           "title": "Capstone Defense Panel",
-          "description": "Defend your capstone against expert critique on rigor, risk, and accountability."
+          "description": "Defend your capstone against expert critique on rigor, risk, and accountability.",
+          "instructions": [
+            "Review the expert critique prompts regarding your model's rigor and risk.",
+            "Formulate a data-backed defense for your chosen architectural tradeoffs.",
+            "Address accountability concerns by referencing your governance controls and remediation pathways."
+          ]
         }
       ]
     }

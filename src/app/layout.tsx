@@ -10,6 +10,7 @@ import SiteFooter from "./components/site-footer";
 import GlobalCommandPalette from "./components/global-command-palette";
 import CookieConsentBanner from "./components/cookie-consent-banner";
 import SkipLinkKeyboardHelper from "./components/skip-link-keyboard-helper";
+import ContentTheftProtection from "./components/security/content-theft-protection";
 
 const nunitoSans = Nunito_Sans({
   variable: "--font-body-sans",
@@ -51,22 +52,24 @@ export const metadata: Metadata = {
     template: "%s | Koydo",
   },
   description:
-    "Free interactive learning platform for ages 3 to adult. Explore 200+ modules across math, science, language arts, coding, and career skills — in English and Spanish.",
+    "Free AI-powered learning platform for ages 3 to adult. Explore 800+ modules across 60+ subjects — math, science, coding, finance, and more — in 20 languages.",
   metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000"),
   openGraph: {
     type: "website",
     siteName: "Koydo",
     title: "Koydo — Learn Anything, Any Age, Any Language",
     description:
-      "Free interactive learning from Pre-K through College. Math, science, coding, career skills, and more — in English and Spanish.",
+      "Free AI-powered learning for ages 3 to adult. 800+ modules, 225+ games, 60+ subjects in 20 languages.",
     locale: "en_US",
-    alternateLocale: ["es_ES"],
+    alternateLocale: ["es_ES", "fr_FR", "de_DE", "pl_PL", "ja_JP", "ko_KR", "zh_CN", "ar_SA", "hi_IN", "ru_RU"],
+    images: [{ url: "/hero-home.png", width: 1200, height: 630, alt: "Koydo — Learn Anything, Any Age, Any Language" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Koydo — Learn Anything, Any Age, Any Language",
     description:
-      "Free interactive learning from Pre-K through College. 200+ modules in English and Spanish.",
+      "Free AI-powered learning for ages 3 to adult. 800+ modules, 225+ games, 60+ subjects in 20 languages.",
+    images: ["/hero-home.png"],
   },
   manifest: "/manifest.json",
   icons: {
@@ -141,7 +144,7 @@ export default async function RootLayout({
   return (
     <html lang={locale} dir={dir}>
       <head>
-        <link rel="preconnect" href="https://osnxbuusohdzzcrakavn.supabase.co" />
+        <link rel="preconnect" href={process.env.NEXT_PUBLIC_SUPABASE_URL} />
         <link rel="preconnect" href="https://js.stripe.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
         <script
@@ -150,7 +153,7 @@ export default async function RootLayout({
         />
       </head>
       <body
-        className={`${nunitoSans.variable} ${soraDisplay.variable} ${jetBrainsMono.variable} ${fredokaDisplay.variable} antialiased`}
+        className={`${nunitoSans.variable} ${soraDisplay.variable} ${jetBrainsMono.variable} ${fredokaDisplay.variable} antialiased app-no-select app-no-drag`}
       >
         <AppProviders>
           <SkipLinkKeyboardHelper />

@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const UxDesign401Module: LearningModule = {
+export const ux_design_401_Module: LearningModule = {
   "id": "ux-design-401",
   "title": "UX Design Mastery and Leadership",
   "description": "Level 401 curriculum in UX Design, emphasizing user research, interaction modeling, accessibility, product experimentation, and real-world decision quality through structured practice and assessment.",
@@ -14,7 +14,7 @@ export const UxDesign401Module: LearningModule = {
   ],
   "minAge": 16,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en"
@@ -37,8 +37,8 @@ export const UxDesign401Module: LearningModule = {
         {
           "id": "ux-design-401-l01-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use the structured prompt and write your reasoning before finalizing answers."
+          "title": "Visual Prompt: Scope and Vocabulary",
+          "content": "Imagine a Venn diagram overlapping 'User Needs', 'Business Goals', and 'Technical Constraints', with 'Project Scope' glowing in the center to represent the boundaries of design decisions."
         }
       ],
       "chunks": [
@@ -46,36 +46,39 @@ export const UxDesign401Module: LearningModule = {
           "id": "ux-design-401-l01-c1",
           "kind": "concept",
           "title": "Operating Vocabulary and Scope",
-          "content": "In advanced UX Design, using clear and precise language is crucial for effective collaboration and decision-making. This means we need to clearly define the boundaries of our project, which helps everyone understand what is included and what is not. Additionally, we must identify the specific unit we are analyzing, whether it's a user group, a feature, or a task. It's also important that everyone on the team uses the same terminology. When we all speak the same language, it allows us to compare our work across different teams more easily and make informed decisions. This clarity not only enhances our communication but also helps each team member understand their specific roles and responsibilities within the design process, leading to a more cohesive and successful project outcome.\nContext recap: In advanced UX Design, using clear and precise language is crucial for effective collaboration and decision-making. This means we need to clearly define the boundaries of our project, which helps everyone understand what is included and what is not. Additionally, we must identify the specific unit we are analyzing, whether it's a user group, a feature, or a task. It's also important that everyone on the team uses the same terminology.\nWhy this matters: Operating Vocabulary and Scope helps learners in UX Design connect ideas from UX Design Mastery and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "In advanced UX Design, precise language is the foundation of effective collaboration. Defining the exact boundaries of a project—its scope—ensures all stakeholders understand what is included and excluded. Furthermore, identifying the specific 'unit of analysis' (e.g., a user cohort, a specific feature, or a micro-interaction) focuses the team's efforts. When a team shares a standardized operating vocabulary, it eliminates ambiguity, streamlines cross-functional handoffs, and enables defensible, data-driven decisions.",
+          "contextRecap": "Precise terminology and clearly defined project boundaries (scope) are essential for aligning teams, eliminating ambiguity, and making defensible design decisions."
         },
         {
           "id": "ux-design-401-l01-c2",
           "kind": "concept",
           "title": "Causal Thinking and Constraints",
-          "content": "To truly excel in UX Design, it's essential to grasp the reasons behind specific outcomes, rather than merely observing those outcomes. In this lesson, we will delve into the process of mapping our assumptions, which are the beliefs we hold about users and their needs. We will also explore the dependencies that exist between different elements of our design and identify any constraints that may limit our options. By understanding these factors, we can develop interventions that tackle the root causes of problems instead of just addressing the symptoms. This comprehensive approach enables us to create solutions that are not only more effective but also sustainable in the long run, ensuring a better experience for users.\nContext recap: To truly excel in UX Design, it's essential to grasp the reasons behind specific outcomes, rather than merely observing those outcomes. In this lesson, we will delve into the process of mapping our assumptions, which are the beliefs we hold about users and their needs. We will also explore the dependencies that exist between different elements of our design and identify any constraints that may limit our options. By understanding these factors, we can develop interventions that tackle the root causes of problems instead of just addressing the symptoms."
+          "content": "Mastering UX requires moving beyond observing user behaviors to understanding the underlying causes of those behaviors. This involves mapping out assumptions—our untested beliefs about user needs—and identifying system constraints that limit feasible solutions. By applying causal thinking, designers can trace a user's friction point back to its root cause, allowing for targeted interventions rather than superficial fixes.",
+          "contextRecap": "Causal thinking shifts focus from treating symptoms to addressing root causes by mapping assumptions and identifying technical or business constraints."
         },
         {
           "id": "ux-design-401-l01-c3",
           "kind": "recap",
           "title": "Evidence and Accountability",
-          "content": "In this lesson, we introduce the importance of maintaining high standards of evidence, keeping a disciplined log of our activities, and establishing clear accountability loops. These practices are essential for ensuring that our execution is reliable and trustworthy. By adhering to these non-negotiable practices, we can create a solid foundation for our UX Design projects, leading to better outcomes and improved team collaboration.\nContext recap: In this lesson, we introduce the importance of maintaining high standards of evidence, keeping a disciplined log of our activities, and establishing clear accountability loops. These practices are essential for ensuring that our execution is reliable and trustworthy. By adhering to these non-negotiable practices, we can create a solid foundation for our UX Design projects, leading to better outcomes and improved team collaboration."
+          "content": "High-level design leadership demands rigorous standards of evidence. This means establishing a minimum quality threshold that data must meet before it influences a design choice. By maintaining a disciplined decision log and creating accountability loops, teams ensure their design execution remains reliable, transparent, and trustworthy over time.",
+          "contextRecap": "Setting strict evidence standards and maintaining decision logs creates transparency and ensures design choices are backed by reliable data."
         }
       ],
       "flashcards": [
         {
           "id": "ux-design-401-l01-f1",
           "front": "Unit of analysis",
-          "back": "The specific entity or process you evaluate to make defensible decisions."
+          "back": "The specific entity, user group, or process you evaluate to make defensible design decisions."
         },
         {
           "id": "ux-design-401-l01-f2",
           "front": "Constraint mapping",
-          "back": "A method for identifying boundaries that shape feasible options."
+          "back": "A method for identifying technical, business, or temporal boundaries that shape feasible design options."
         },
         {
           "id": "ux-design-401-l01-f3",
           "front": "Evidence standard",
-          "back": "The minimum quality threshold data must meet before action is taken."
+          "back": "The minimum quality threshold data must meet before a design action is taken."
         }
       ]
     },
@@ -88,8 +91,8 @@ export const UxDesign401Module: LearningModule = {
         {
           "id": "ux-design-401-l02-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use the structured prompt and write your reasoning before finalizing answers."
+          "title": "Visual Prompt: Workflow Pipeline",
+          "content": "Visualize a step-by-step pipeline diagram showing 'Input Audit' flowing into a 'Checkpoint Gate', leading to an 'Outcome Metric', with a red 'Rollback Trigger' loop returning to the start."
         }
       ],
       "chunks": [
@@ -97,13 +100,15 @@ export const UxDesign401Module: LearningModule = {
           "id": "ux-design-401-l02-c1",
           "kind": "practice",
           "title": "Workflow Construction",
-          "content": "In this interactive lab, learners will have the opportunity to construct a comprehensive workflow for user research and interaction modeling. This includes identifying all necessary inputs, setting up checkpoints to monitor progress, defining expected outputs, and establishing rollback triggers in case adjustments are needed. This hands-on experience will help learners understand the importance of a well-structured workflow in the UX Design process.\nContext recap: In this interactive lab, learners will have the opportunity to construct a comprehensive workflow for user research and interaction modeling. This includes identifying all necessary inputs, setting up checkpoints to monitor progress, defining expected outputs, and establishing rollback triggers in case adjustments are needed. This hands-on experience will help learners understand the importance of a well-structured workflow in the UX Design process."
+          "content": "A robust UX workflow acts as a safeguard against systemic errors. In this module, you will construct a comprehensive workflow for user research and interaction modeling. This requires defining strict input criteria, establishing checkpoint gates to evaluate progress, setting measurable expected outputs, and defining rollback triggers—specific conditions that require the team to halt and revert changes if critical metrics drop.",
+          "contextRecap": "Constructing a resilient workflow involves defining inputs, setting evaluation checkpoints, and establishing rollback triggers to mitigate project risks."
         },
         {
           "id": "ux-design-401-l02-c2",
           "kind": "recap",
           "title": "Decision Logging",
-          "content": "In this recap, we emphasize the importance of logging every decision made during the design process. Each decision should be accompanied by a clear rationale, an expected effect, and a verification point to facilitate analysis after the project is completed. This practice not only enhances accountability but also allows teams to learn from their experiences and improve future projects.\nContext recap: In this recap, we emphasize the importance of logging every decision made during the design process. Each decision should be accompanied by a clear rationale, an expected effect, and a verification point to facilitate analysis after the project is completed. This practice not only enhances accountability but also allows teams to learn from their experiences and improve future projects."
+          "content": "A decision log is a historical record of why a design choice was made. Every entry should detail the rationale, the expected user impact, and a specific verification point (how and when the decision will be evaluated). This practice transforms subjective design debates into objective, testable hypotheses, fostering a culture of continuous learning.",
+          "contextRecap": "Decision logging captures the rationale, expected impact, and verification methods for design choices, enabling objective post-launch analysis."
         }
       ],
       "interactiveActivities": [
@@ -143,19 +148,19 @@ export const UxDesign401Module: LearningModule = {
           ],
           "items": [
             {
-              "text": "Misaligned goals",
+              "text": "Misaligned business goals",
               "bucket": "Strategic"
             },
             {
-              "text": "Unclear handoff timing",
+              "text": "Unclear handoff timing to developers",
               "bucket": "Operational"
             },
             {
-              "text": "Inconsistent acceptance criteria",
+              "text": "Inconsistent accessibility acceptance criteria",
               "bucket": "Quality"
             },
             {
-              "text": "No benchmark baseline",
+              "text": "No benchmark baseline for usability testing",
               "bucket": "Quality"
             }
           ]
@@ -171,110 +176,110 @@ export const UxDesign401Module: LearningModule = {
         {
           "id": "ux-design-401-l03-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use the structured prompt and write your reasoning before finalizing answers."
+          "title": "Visual Prompt: Decision Tree",
+          "content": "Picture a decision tree where 'Explicit Criteria' branches out into 'Reliable Outcomes' and 'Transferable Knowledge', while 'Unverified Assumptions' leads to a dead end."
         }
       ],
       "questions": [
         {
           "id": "ux-design-401-l03-q1",
-          "text": "Which action best improves decisions in user research work?",
+          "text": "Which action best improves the reliability of decisions made during user research?",
           "skillId": "ux-design-401-skill-core",
           "options": [
             {
               "id": "a",
-              "text": "Rely on one unverified example"
+              "text": "Relying heavily on a single, highly detailed user anecdote"
             },
             {
               "id": "b",
-              "text": "Define criteria, compare alternatives, and test assumptions"
+              "text": "Defining explicit criteria, comparing alternatives, and testing assumptions"
             },
             {
               "id": "c",
-              "text": "Skip metrics and move directly to execution"
+              "text": "Bypassing metric definition to accelerate the execution phase"
             },
             {
               "id": "d",
-              "text": "Avoid documenting rationale"
+              "text": "Keeping rationale undocumented to maintain creative flexibility"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Explicit criteria and testable assumptions improve reliability and transferability."
+          "explanation": "Explicit criteria and testable assumptions remove bias, improving the reliability and transferability of research findings."
         },
         {
           "id": "ux-design-401-l03-q2",
-          "text": "In interaction modeling, what is the strongest indicator of process quality?",
+          "text": "In interaction modeling, what is the strongest indicator of a high-quality design process?",
           "skillId": "ux-design-401-skill-process",
           "options": [
             {
               "id": "a",
-              "text": "Output speed only"
+              "text": "The speed at which wireframes are produced"
             },
             {
               "id": "b",
-              "text": "Traceable steps, checkpoints, and measurable outcomes"
+              "text": "The presence of traceable steps, checkpoint gates, and measurable outcomes"
             },
             {
               "id": "c",
-              "text": "Unstructured iteration without logs"
+              "text": "Unstructured, rapid iteration without historical logging"
             },
             {
               "id": "d",
-              "text": "One-time performance anecdotes"
+              "text": "Positive feedback from a single stakeholder review"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Quality processes are observable, repeatable, and measurable."
+          "explanation": "Quality processes are observable, repeatable, and measurable, ensuring consistency across different projects."
         },
         {
           "id": "ux-design-401-l03-q3",
-          "text": "When evaluating accessibility, which practice supports trustworthy conclusions?",
+          "text": "When evaluating a product's accessibility, which practice best supports trustworthy and defensible conclusions?",
           "skillId": "ux-design-401-skill-eval",
           "options": [
             {
               "id": "a",
-              "text": "Ignore edge cases"
+              "text": "Designing exclusively for the average user and ignoring edge cases"
             },
             {
               "id": "b",
-              "text": "Use baseline comparisons and failure analysis"
+              "text": "Utilizing baseline comparisons and conducting thorough failure analysis"
             },
             {
               "id": "c",
-              "text": "Change targets after results are known"
+              "text": "Adjusting success targets retroactively after results are collected"
             },
             {
               "id": "d",
-              "text": "Remove context from findings"
+              "text": "Presenting statistical findings without their original context"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Baselines and failure analysis prevent overclaiming and improve design quality."
+          "explanation": "Establishing baselines and analyzing failures prevents teams from overclaiming success and highlights areas for genuine improvement."
         },
         {
           "id": "ux-design-401-l03-q4",
-          "text": "A mature product experimentation strategy should prioritize:",
+          "text": "A mature product experimentation strategy should primarily prioritize:",
           "skillId": "ux-design-401-skill-strategy",
           "options": [
             {
               "id": "a",
-              "text": "Single-metric optimization at any cost"
+              "text": "Optimizing a single metric, regardless of secondary impacts"
             },
             {
               "id": "b",
-              "text": "Balanced outcomes across quality, risk, and sustainability"
+              "text": "Balancing outcomes across quality, risk, and long-term sustainability"
             },
             {
               "id": "c",
-              "text": "Decisions based only on intuition"
+              "text": "Making rapid decisions based purely on designer intuition"
             },
             {
               "id": "d",
-              "text": "No post-implementation review"
+              "text": "Deploying features without post-implementation reviews"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Balanced scorecards align long-term performance with accountability."
+          "explanation": "A balanced scorecard approach ensures that short-term gains do not compromise long-term user trust or system stability."
         }
       ]
     },
@@ -287,8 +292,8 @@ export const UxDesign401Module: LearningModule = {
         {
           "id": "ux-design-401-l04-a1",
           "type": "mnemonic",
-          "title": "Guided Practice",
-          "content": "Use the structured prompt and write your reasoning before finalizing answers."
+          "title": "Visual Prompt: Metric Dashboard",
+          "content": "Visualize a dashboard interface. On the left, a speedometer represents 'Leading Indicators' (predictive). On the right, a finish line flag represents 'Lagging Outcomes' (historical results)."
         }
       ],
       "chunks": [
@@ -296,36 +301,39 @@ export const UxDesign401Module: LearningModule = {
           "id": "ux-design-401-l04-c1",
           "kind": "concept",
           "title": "Method Selection",
-          "content": "When selecting methods for UX Design, it is important to consider various factors such as constraints, the quality of information available, and the potential cost of errors. In this lesson, learners will compare different alternatives and justify their choices based on specific UX Design scenarios. This critical thinking exercise will help them understand how to choose the most appropriate methods for their projects.\nContext recap: When selecting methods for UX Design, it is important to consider various factors such as constraints, the quality of information available, and the potential cost of errors. In this lesson, learners will compare different alternatives and justify their choices based on specific UX Design scenarios. This critical thinking exercise will help them understand how to choose the most appropriate methods for their projects."
+          "content": "Choosing the right UX research or design method is a balancing act. Designers must weigh project constraints (time, budget) against the required quality of information and the 'cost of error'. If a design flaw will cause significant financial or operational damage, the cost of error is high, necessitating rigorous, high-fidelity methods. Conversely, low-risk features may only require lightweight heuristic evaluations.",
+          "contextRecap": "Method selection depends on balancing project constraints, the required fidelity of data, and the potential cost of making an incorrect design decision."
         },
         {
           "id": "ux-design-401-l04-c2",
           "kind": "example",
           "title": "Metric Architecture",
-          "content": "A well-structured metric architecture is essential for effective UX Design. It connects leading indicators, which predict future performance, with lagging outcomes, which reflect past results, and diagnostic measures that help teams identify issues. By establishing this architecture, teams can detect any drift from their goals early on and respond in a thoughtful and deliberate manner, ensuring that their projects stay on track.\nContext recap: A well-structured metric architecture is essential for effective UX Design. It connects leading indicators, which predict future performance, with lagging outcomes, which reflect past results, and diagnostic measures that help teams identify issues. By establishing this architecture, teams can detect any drift from their goals early on and respond in a thoughtful and deliberate manner, ensuring that their projects stay on track."
+          "content": "A well-structured metric architecture provides a holistic view of product health. It links 'leading indicators' (predictive metrics like task initiation rates) with 'lagging outcomes' (historical results like quarterly retention). By integrating diagnostic measures, teams can detect behavioral drift early and deploy deliberate interventions before lagging outcomes are negatively impacted.",
+          "contextRecap": "Metric architecture connects predictive leading indicators with historical lagging outcomes, enabling teams to detect and correct issues proactively."
         },
         {
           "id": "ux-design-401-l04-c3",
           "kind": "recap",
           "title": "Failure Taxonomy",
-          "content": "In this recap, we categorize failures into four main groups: data, process, execution, and governance. By organizing failures in this way, we can create specific mitigation plans tailored to each category rather than using generic solutions. This targeted approach allows teams to address issues more effectively and improve their overall performance in UX Design.\nContext recap: In this recap, we categorize failures into four main groups: data, process, execution, and governance. By organizing failures in this way, we can create specific mitigation plans tailored to each category rather than using generic solutions. This targeted approach allows teams to address issues more effectively and improve their overall performance in UX Design."
+          "content": "To improve systems, we must categorize failures accurately. A 'Failure Taxonomy' divides errors into four groups: Data (flawed research), Process (skipped steps), Execution (poor UI implementation), and Governance (lack of oversight/standards). Categorizing failures allows teams to design targeted, systemic fixes rather than relying on generic, ineffective band-aids.",
+          "contextRecap": "Categorizing errors into Data, Process, Execution, and Governance failures allows teams to implement precise, systemic improvements."
         }
       ],
       "flashcards": [
         {
           "id": "ux-design-401-l04-f1",
           "front": "Leading indicator",
-          "back": "A metric that signals probable future outcomes before final results appear."
+          "back": "A predictive metric that signals probable future outcomes before final results materialize."
         },
         {
           "id": "ux-design-401-l04-f2",
           "front": "Failure taxonomy",
-          "back": "A structured classification of failure types used to design targeted fixes."
+          "back": "A structured classification system for errors (Data, Process, Execution, Governance) used to design targeted fixes."
         },
         {
           "id": "ux-design-401-l04-f3",
           "front": "Cost of error",
-          "back": "The operational, financial, or social impact caused by an incorrect decision."
+          "back": "The operational, financial, or social impact caused by implementing an incorrect design decision."
         }
       ]
     },
@@ -338,8 +346,8 @@ export const UxDesign401Module: LearningModule = {
         {
           "id": "ux-design-401-l05-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use the structured prompt and write your reasoning before finalizing answers."
+          "title": "Visual Prompt: System Comparison",
+          "content": "Imagine a split-screen view: the left shows a failing UX system with red alert icons at handoff points; the right shows an optimized system with green checkmarks and automated checkpoints."
         }
       ],
       "chunks": [
@@ -347,13 +355,15 @@ export const UxDesign401Module: LearningModule = {
           "id": "ux-design-401-l05-c1",
           "kind": "practice",
           "title": "Case Decomposition",
-          "content": "In this interactive case study, learners will break down a realistic case into its essential components, including the objective, context, constraints, and possible intervention options. They will also take notes on the trade-offs involved in each option. This exercise will help learners develop critical analysis skills and understand the complexities involved in making design decisions.\nContext recap: In this interactive case study, learners will break down a realistic case into its essential components, including the objective, context, constraints, and possible intervention options. They will also take notes on the trade-offs involved in each option. This exercise will help learners develop critical analysis skills and understand the complexities involved in making design decisions."
+          "content": "In this studio exercise, you will deconstruct a complex, real-world UX scenario. You will identify the core objective, map out the environmental context, and list the constraints. From there, you will brainstorm potential interventions, explicitly documenting the trade-offs of each. This mirrors the critical analysis required of UX leaders when navigating ambiguous product challenges.",
+          "contextRecap": "Case decomposition involves breaking down a complex scenario into objectives, constraints, and interventions, while carefully weighing the trade-offs of each option."
         },
         {
           "id": "ux-design-401-l05-c2",
           "kind": "recap",
           "title": "Improvement Proposal",
-          "content": "In this recap, learners will present a structured improvement proposal based on their analysis of the case. This proposal will include clear success criteria, mapping out who is responsible for each part of the project, and a timeline for follow-up actions. This exercise will help learners practice their communication skills and understand the importance of planning for successful implementation.\nContext recap: In this recap, learners will present a structured improvement proposal based on their analysis of the case. This proposal will include clear success criteria, mapping out who is responsible for each part of the project, and a timeline for follow-up actions. This exercise will help learners practice their communication skills and understand the importance of planning for successful implementation."
+          "content": "After analyzing the case, you will synthesize your findings into a structured improvement proposal. A successful proposal defines clear success criteria, assigns accountability for specific deliverables, and establishes a timeline for post-launch evaluation. This ensures that design strategies are not just theoretical, but actionable and measurable.",
+          "contextRecap": "A structured improvement proposal translates analysis into action by defining success criteria, assigning accountability, and setting evaluation timelines."
         }
       ],
       "interactiveActivities": [
@@ -361,7 +371,7 @@ export const UxDesign401Module: LearningModule = {
           "id": "ux-design-401-l05-act1",
           "type": "scenario_practice",
           "title": "Decision Path Simulation",
-          "description": "Choose among three interventions to improve accessibility outcomes under time and quality constraints.",
+          "description": "Choose among three interventions to improve accessibility outcomes under strict time and quality constraints.",
           "instructions": [
             "Define success criteria before selecting an intervention.",
             "Document one short-term tradeoff and one long-term benefit.",
@@ -372,7 +382,7 @@ export const UxDesign401Module: LearningModule = {
           "id": "ux-design-401-l05-act2",
           "type": "matching_pairs",
           "title": "Intervention to Outcome Mapping",
-          "description": "Connect interventions with the most likely system-level effects.",
+          "description": "Connect strategic interventions with their most likely system-level effects.",
           "pairs": [
             {
               "left": "Tighter intake criteria",
@@ -403,110 +413,110 @@ export const UxDesign401Module: LearningModule = {
         {
           "id": "ux-design-401-l06-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use the structured prompt and write your reasoning before finalizing answers."
+          "title": "Visual Prompt: Risk Matrix",
+          "content": "Visualize a 2x2 matrix charting 'Cost of Error' on the Y-axis against 'Quality of Information' on the X-axis, used to determine the necessary rigor of UX methods."
         }
       ],
       "questions": [
         {
           "id": "ux-design-401-l06-q1",
-          "text": "Which action best improves decisions in user research work?",
-          "skillId": "ux-design-401-skill-core",
+          "text": "When establishing a metric architecture for a new UX feature, what is the primary purpose of a leading indicator?",
+          "skillId": "ux-design-401-skill-metrics",
           "options": [
             {
               "id": "a",
-              "text": "Rely on one unverified example"
+              "text": "To summarize the final financial impact of the project"
             },
             {
               "id": "b",
-              "text": "Define criteria, compare alternatives, and test assumptions"
+              "text": "To predict future performance and allow for early course correction"
             },
             {
               "id": "c",
-              "text": "Skip metrics and move directly to execution"
+              "text": "To replace qualitative user feedback entirely"
             },
             {
               "id": "d",
-              "text": "Avoid documenting rationale"
+              "text": "To document historical failures from previous quarters"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Explicit criteria and testable assumptions improve reliability and transferability."
+          "explanation": "Leading indicators are predictive. They allow teams to see behavioral trends early and adjust designs before lagging outcomes (like churn) occur."
         },
         {
           "id": "ux-design-401-l06-q2",
-          "text": "In interaction modeling, what is the strongest indicator of process quality?",
-          "skillId": "ux-design-401-skill-process",
+          "text": "If a UX team consistently ships designs that fail to meet accessibility standards due to a lack of clear organizational guidelines, which failure mode is occurring?",
+          "skillId": "ux-design-401-skill-taxonomy",
           "options": [
             {
               "id": "a",
-              "text": "Output speed only"
+              "text": "Data failure"
             },
             {
               "id": "b",
-              "text": "Traceable steps, checkpoints, and measurable outcomes"
+              "text": "Execution failure"
             },
             {
               "id": "c",
-              "text": "Unstructured iteration without logs"
+              "text": "Governance failure"
             },
             {
               "id": "d",
-              "text": "One-time performance anecdotes"
+              "text": "Process failure"
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "Quality processes are observable, repeatable, and measurable."
+          "correctOptionId": "c",
+          "explanation": "A lack of organizational guidelines, standards, or oversight points directly to a governance failure."
         },
         {
           "id": "ux-design-401-l06-q3",
-          "text": "When evaluating accessibility, which practice supports trustworthy conclusions?",
-          "skillId": "ux-design-401-skill-eval",
+          "text": "How should a high 'cost of error' influence a UX designer's method selection?",
+          "skillId": "ux-design-401-skill-methods",
           "options": [
             {
               "id": "a",
-              "text": "Ignore edge cases"
+              "text": "It requires more rigorous, high-fidelity research methods before implementation"
             },
             {
               "id": "b",
-              "text": "Use baseline comparisons and failure analysis"
+              "text": "It suggests the team should skip research and launch an MVP immediately"
             },
             {
               "id": "c",
-              "text": "Change targets after results are known"
+              "text": "It means the design should rely solely on internal stakeholder opinions"
             },
             {
               "id": "d",
-              "text": "Remove context from findings"
+              "text": "It indicates that heuristic evaluations are sufficient"
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "Baselines and failure analysis prevent overclaiming and improve design quality."
+          "correctOptionId": "a",
+          "explanation": "When the cost of making a mistake is high (e.g., financial loss, safety risks), designers must use rigorous, high-confidence research methods to mitigate risk."
         },
         {
           "id": "ux-design-401-l06-q4",
-          "text": "A mature product experimentation strategy should prioritize:",
-          "skillId": "ux-design-401-skill-strategy",
+          "text": "During a case studio analysis, why is it essential to document both short-term tradeoffs and long-term benefits?",
+          "skillId": "ux-design-401-skill-systems",
           "options": [
             {
               "id": "a",
-              "text": "Single-metric optimization at any cost"
+              "text": "To prove that the chosen intervention has zero negative consequences"
             },
             {
               "id": "b",
-              "text": "Balanced outcomes across quality, risk, and sustainability"
+              "text": "To ensure sustainable decision-making and manage stakeholder expectations"
             },
             {
               "id": "c",
-              "text": "Decisions based only on intuition"
+              "text": "To delay the project timeline intentionally"
             },
             {
               "id": "d",
-              "text": "No post-implementation review"
+              "text": "To confuse cross-functional teams during handoff"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Balanced scorecards align long-term performance with accountability."
+          "explanation": "Every design decision involves tradeoffs. Documenting them ensures stakeholders understand the immediate costs required to achieve long-term systemic benefits."
         }
       ]
     }

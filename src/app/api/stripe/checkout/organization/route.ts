@@ -393,7 +393,7 @@ export async function POST(request: Request) {
     ? "invoicing"
     : "checkout_created";
   const stripe = needsStripeCheckout
-    ? createStripeServerClient(serverEnv.STRIPE_SECRET_KEY)
+    ? createStripeServerClient(serverEnv.STRIPE_SECRET_KEY!)
     : null;
 
   let purchaseRow: PurchaseCheckoutRow | null = null;

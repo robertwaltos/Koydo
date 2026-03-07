@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const CloudComputing301Module: LearningModule = {
+export const cloud_computing_301_Module: LearningModule = {
   "id": "cloud-computing-301",
   "title": "Cloud Architecture and Resilience",
   "description": "Advanced cloud architecture for high-scale systems: multi-region design, distributed data patterns, secure platform boundaries, performance engineering, and resilience validation under failure.",
@@ -15,7 +15,7 @@ export const CloudComputing301Module: LearningModule = {
   ],
   "minAge": 16,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en"
@@ -35,6 +35,8 @@ export const CloudComputing301Module: LearningModule = {
       "title": "Multi-Region Architecture Patterns",
       "type": "video",
       "duration": 13,
+      "lessonImagePrompt": "A futuristic glowing map of the world showing interconnected data centers with pulsing light beams representing active-active cloud regions, high-tech, 3d render, dark background with neon blue and orange accents.",
+      "conceptVideoPrompt": "A dynamic 3D animation showing a digital globe. One data center in North America goes dark (simulated failure), and instantly, glowing data streams reroute seamlessly to a backup data center in Europe, keeping the network illuminated and active. High-tech, cinematic lighting.",
       "objectives": [
         "Differentiate active-active and active-passive regional strategies",
         "Define RTO and RPO targets from business requirements",
@@ -84,13 +86,16 @@ export const CloudComputing301Module: LearningModule = {
           "title": "Recovery Objective Grid",
           "content": "Architecture matrix mapping workload criticality to target RTO/RPO tiers."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/cloud-computing-301-l01.png"
     },
     {
       "id": "cloud-computing-301-l02",
       "title": "Distributed Data and Consistency Lab",
       "type": "interactive",
       "duration": 16,
+      "lessonImagePrompt": "A conceptual 3D illustration of three glowing databases syncing data. One database has a slight delay, represented by a loading ring, illustrating eventual consistency. Clean, modern tech aesthetic, isometric view.",
+      "conceptVideoPrompt": "An animated sequence showing data packets traveling between three server racks. A visual scale tips back and forth between 'Speed' and 'Accuracy', demonstrating the CAP theorem trade-offs in real-time. Sleek, modern motion graphics.",
       "objectives": [
         "Compare strong, eventual, and bounded-staleness consistency",
         "Select partitioning and replication strategies for different workloads",
@@ -160,13 +165,16 @@ export const CloudComputing301Module: LearningModule = {
           "title": "Consistency Decision Tree",
           "content": "Stepwise guide for selecting consistency model by correctness risk and latency target."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/cloud-computing-301-l02.png"
     },
     {
       "id": "cloud-computing-301-l03",
       "title": "Checkpoint 1: Architecture Decisions",
       "type": "quiz",
       "duration": 10,
+      "lessonImagePrompt": "A glowing digital checkpoint gate in a futuristic cyber environment, with floating holographic checkmarks and a glowing lock, symbolizing a knowledge test in cloud architecture.",
+      "conceptVideoPrompt": "A fast-paced montage of cloud architecture diagrams, server racks, and data streams, culminating in a glowing question mark that transforms into a checkmark. High-tech, energetic motion graphics.",
       "questions": [
         {
           "id": "cloud-computing-301-l03-q1",
@@ -276,13 +284,16 @@ export const CloudComputing301Module: LearningModule = {
           "title": "Recovery Trio",
           "content": "Targets, Tooling, Testing."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/cloud-computing-301-l03.png"
     },
     {
       "id": "cloud-computing-301-l04",
       "title": "Zero-Trust Cloud Security Architecture",
       "type": "video",
       "duration": 13,
+      "lessonImagePrompt": "A high-tech visualization of a glowing digital vault surrounded by multiple floating, translucent security shields. Laser scanners verify digital ID cards passing through the shields. Cyberpunk aesthetic, neon blue and purple.",
+      "conceptVideoPrompt": "A 3D animation of a network grid. A red 'untrusted' data packet tries to enter but is blocked by a glowing barrier. A green packet presents a digital token, the barrier opens just enough to let it through, and closes immediately. Cinematic, cybersecurity theme.",
       "objectives": [
         "Design identity-centric access boundaries",
         "Apply network segmentation and service-to-service auth",
@@ -332,13 +343,16 @@ export const CloudComputing301Module: LearningModule = {
           "title": "Zero-Trust Control Map",
           "content": "Control map linking identity, network, data, and audit layers to common cloud threats."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/cloud-computing-301-l04.png"
     },
     {
       "id": "cloud-computing-301-l05",
       "title": "Performance Engineering and Capacity Lab",
       "type": "interactive",
       "duration": 16,
+      "lessonImagePrompt": "A futuristic dashboard with glowing neon graphs and dials. One specific spike on a line graph is highlighted in bright red, representing tail latency, while the rest of the graph is stable blue. High-tech UI design.",
+      "conceptVideoPrompt": "An animation of a busy digital highway representing network traffic. Most cars (data packets) move smoothly, but a bottleneck forms in one lane. A digital dial appears, showing latency increasing, then a new lane opens up, resolving the traffic. Sleek motion graphics.",
       "objectives": [
         "Interpret saturation, throughput, and latency together",
         "Apply load-test insights to tuning decisions",
@@ -407,13 +421,16 @@ export const CloudComputing301Module: LearningModule = {
           "title": "Load Test Debrief Sheet",
           "content": "Template to capture hypothesis, bottleneck evidence, fix applied, and post-fix benchmark delta."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/cloud-computing-301-l05.png"
     },
     {
       "id": "cloud-computing-301-l06",
       "title": "Checkpoint 2: Security and Performance",
       "type": "quiz",
       "duration": 10,
+      "lessonImagePrompt": "A futuristic glowing shield intersecting with a high-speed speedometer dial, representing the intersection of security and performance. 3D render, dark background with neon green and blue lights.",
+      "conceptVideoPrompt": "A dynamic loop showing a padlock locking securely, followed immediately by a data stream accelerating to light speed, symbolizing the balance of zero-trust security and high performance. Cinematic tech animation.",
       "questions": [
         {
           "id": "cloud-computing-301-l06-q1",
@@ -523,13 +540,16 @@ export const CloudComputing301Module: LearningModule = {
           "title": "TAIL",
           "content": "Track averages less, inspect latency tails."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/cloud-computing-301-l06.png"
     },
     {
       "id": "cloud-computing-301-l07",
       "title": "Resilience Game Day Studio",
       "type": "interactive",
       "duration": 17,
+      "lessonImagePrompt": "A high-tech command center with multiple holographic screens showing simulated network failures and recovery metrics. A glowing red 'Inject Fault' button sits on the console. Cinematic lighting, sci-fi aesthetic.",
+      "conceptVideoPrompt": "A 3D animation of a team of digital avatars in a futuristic control room. They trigger a simulated earthquake on a holographic city grid. The grid flashes red, then quickly reroutes power (data) to stay illuminated, showing a successful resilience test.",
       "objectives": [
         "Design fault-injection experiments with safe boundaries",
         "Define success criteria for resilience drills",
@@ -549,6 +569,19 @@ export const CloudComputing301Module: LearningModule = {
           "content": "After every resilience game day, we should focus on creating clear and actionable results. This means we need to identify specific people who will take charge of fixing any issues we found with our detection systems, updating our runbooks, automating necessary tasks, and addressing any architectural debts we discovered. If we don’t assign clear responsibilities and set deadlines for these tasks, our exercises might just end up being performances that don’t actually help us reduce risks. By establishing accountability, we can ensure that the lessons we learn lead to real improvements in our resilience efforts, making our systems stronger and more reliable."
         }
       ],
+      "interactiveActivities": [
+        {
+          "id": "cloud-computing-301-l07-act1",
+          "type": "scenario_practice",
+          "title": "Design a Game Day",
+          "description": "Set up a safe fault injection experiment for a critical service.",
+          "instructions": [
+            "Define the failure hypothesis.",
+            "Establish blast-radius guardrails.",
+            "Set clear abort criteria."
+          ]
+        }
+      ],
       "metadata": {
         "prompts": [
           "Write one game-day hypothesis with measurable pass/fail criteria.",
@@ -563,7 +596,8 @@ export const CloudComputing301Module: LearningModule = {
           "title": "Game Day Runbook",
           "content": "Worksheet for hypothesis, blast radius, telemetry checkpoints, and post-drill action owners."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/cloud-computing-301-l07.png"
     }
   ]
 };

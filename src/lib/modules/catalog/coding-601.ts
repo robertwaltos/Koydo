@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const Coding601Module: LearningModule = {
+export const coding_601_Module: LearningModule = {
   "id": "coding-601",
   "title": "Coding Research and Leadership",
   "description": "Post-401 specialization in Coding, focused on coding systems diagnostics, coding operations and execution design, coding impact and tradeoff analysis, and coding governance and leadership through advanced casework, simulation, and defense-based checkpoints.",
@@ -14,7 +14,7 @@ export const Coding601Module: LearningModule = {
   ],
   "minAge": 17,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en",
@@ -34,6 +34,8 @@ export const Coding601Module: LearningModule = {
       "title": "Coding Advanced Foundations",
       "type": "video",
       "duration": 14,
+      "lessonImagePrompt": "Imagen 4 prompt: A sleek, futuristic digital command center with glowing holographic blueprints of software architecture. A diverse team of senior developers analyzing glowing nodes and causal pathways. Cinematic lighting, photorealistic, 8k resolution.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A dynamic tracking shot moving through a high-tech server room. Holographic data streams illuminate the faces of focused engineers. The camera pans to a large screen displaying complex causal modeling graphs that shift and adapt in real-time. Cinematic, 4k, smooth motion.",
       "learningAids": [
         {
           "id": "coding-601-l01-a1",
@@ -47,19 +49,19 @@ export const Coding601Module: LearningModule = {
           "id": "coding-601-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "In this lesson, we will explore the advanced concepts of scope boundaries in coding. We will focus on how to effectively diagnose coding systems and design coding operations and execution processes. Understanding these boundaries is crucial for ensuring that our coding practices are efficient and effective. By the end of this lesson, you will have a clearer picture of how to set these boundaries in your coding projects.\nContext recap: In this lesson, we will explore the advanced concepts of scope boundaries in coding. We will focus on how to effectively diagnose coding systems and design coding operations and execution processes. Understanding these boundaries is crucial for ensuring that our coding practices are efficient and effective. By the end of this lesson, you will have a clearer picture of how to set these boundaries in your coding projects."
+          "content": "Mastering scope boundaries is the first step in advanced coding systems diagnostics. In this section, we analyze how to define strict operational limits, ensuring execution processes remain efficient and secure under high-constraint environments. Clear boundaries prevent scope creep and mitigate cascading systemic failures."
         },
         {
           "id": "coding-601-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different events or actions. They will also identify ranges of uncertainty and understand how various systems depend on each other. This foundational knowledge is essential before planning any interventions or changes. By visualizing these relationships, learners will be better equipped to make informed decisions.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different events or actions. They will also identify ranges of uncertainty and understand how various systems depend on each other. This foundational knowledge is essential before planning any interventions or changes. By visualizing these relationships, learners will be better equipped to make informed decisions."
+          "content": "Before implementing systemic changes, architects must map causal pathways—the intricate dependencies between microservices, data pipelines, and user actions. We will explore how to quantify uncertainty ranges and model inter-system dependencies to predict the blast radius of potential failures."
         },
         {
           "id": "coding-601-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "In this recap, we emphasize that all claims made in our coding practices should be linked to measurable indicators. This means that we need to establish confidence bounds and set up review checkpoints to ensure that our coding processes are reliable. By doing this, we can maintain a high standard of quality and accountability in our work.\nContext recap: In this recap, we emphasize that all claims made in our coding practices should be linked to measurable indicators. This means that we need to establish confidence bounds and set up review checkpoints to ensure that our coding processes are reliable. By doing this, we can maintain a high standard of quality and accountability in our work."
+          "content": "Every architectural claim must be backed by measurable indicators. We establish rigorous evidence thresholds and confidence bounds to validate system reliability. By integrating strict review checkpoints, we ensure accountability and maintain enterprise-grade quality across all coding operations."
         }
       ],
       "flashcards": [
@@ -78,13 +80,16 @@ export const Coding601Module: LearningModule = {
           "front": "coding impact and tradeoff analysis",
           "back": "Evaluation discipline for identifying true gains and hidden costs."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/coding-601-l01.png"
     },
     {
       "id": "coding-601-l02",
       "title": "Coding Specialist Methods Lab",
       "type": "interactive",
       "duration": 17,
+      "lessonImagePrompt": "Imagen 4 prompt: A high-tech interactive lab environment where a software architect is manipulating a glowing 3D model of a network infrastructure. Red warning nodes indicate stress test simulations. Professional, highly detailed, cyberpunk aesthetic, 8k.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: Close-up of a developer's hands typing rapidly on a backlit keyboard, then cutting to a wide shot of a large monitor showing a system stress test in progress. Data bars fluctuate wildly before stabilizing as control gates activate. Fast-paced, dramatic lighting, 4k.",
       "learningAids": [
         {
           "id": "coding-601-l02-a1",
@@ -98,13 +103,13 @@ export const Coding601Module: LearningModule = {
           "id": "coding-601-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "In this interactive lab, learners will have the opportunity to design specialized workflows tailored to their coding needs. They will also conduct stress tests on these workflows by simulating adverse scenarios. This practice will help them understand how their designs hold up under pressure and identify areas for improvement, ensuring that their coding solutions are robust and effective.\nContext recap: In this interactive lab, learners will have the opportunity to design specialized workflows tailored to their coding needs. They will also conduct stress tests on these workflows by simulating adverse scenarios. This practice will help them understand how their designs hold up under pressure and identify areas for improvement, ensuring that their coding solutions are robust and effective."
+          "content": "Step into the interactive lab to design specialized, high-resilience workflows. You will subject your architectural designs to rigorous stress tests, simulating adverse conditions like traffic spikes and node failures. This practice exposes hidden vulnerabilities, allowing you to fortify your systems before deployment."
         },
         {
           "id": "coding-601-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "In this recap, we discuss the importance of integrating control gates within workflows. These gates serve as checkpoints that help monitor progress and ensure that any issues can be addressed promptly. Additionally, we will explore rollback criteria and threshold-based escalation, which are strategies to manage workflows effectively and maintain quality control.\nContext recap: In this recap, we discuss the importance of integrating control gates within workflows. These gates serve as checkpoints that help monitor progress and ensure that any issues can be addressed promptly. Additionally, we will explore rollback criteria and threshold-based escalation, which are strategies to manage workflows effectively and maintain quality control."
+          "content": "Robust workflows require strategically placed control gates. These automated checkpoints monitor system health and halt deployments if anomalies are detected. We will configure rollback criteria and threshold-based escalation pathways to guarantee quality control and rapid recovery during adverse events."
         }
       ],
       "interactiveActivities": [
@@ -132,13 +137,16 @@ export const Coding601Module: LearningModule = {
             }
           ]
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/coding-601-l02.png"
     },
     {
       "id": "coding-601-l03",
       "title": "Checkpoint 1: Specialist Methods",
       "type": "quiz",
       "duration": 10,
+      "lessonImagePrompt": "Imagen 4 prompt: A modern, minimalist examination room with a glowing digital interface displaying complex coding diagnostic questions. A professional in deep thought, interacting with the holographic quiz. Cinematic, sharp focus, 8k.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A slow, deliberate pan across a sleek digital dashboard displaying multiple-choice questions about system architecture. A cursor selects the correct answer, and the screen pulses with a soft green confirmation light. Smooth, professional, 4k.",
       "learningAids": [
         {
           "id": "coding-601-l03-a1",
@@ -250,111 +258,114 @@ export const Coding601Module: LearningModule = {
         },
         {
           "id": "coding-601-l03-q5",
-          "text": "What is the best way to compare competing interventions in advanced Coding?",
+          "text": "Why is causal modeling critical before implementing systemic coding interventions?",
           "skillId": "coding-601-skill-advanced-5",
           "options": [
             {
               "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
+              "text": "It guarantees that no bugs will be introduced."
             },
             {
               "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
+              "text": "It maps dependencies and predicts the blast radius of potential failures."
             },
             {
               "id": "c",
-              "text": "Switch metrics after results arrive"
+              "text": "It automatically writes the necessary test cases."
             },
             {
               "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
+              "text": "It bypasses the need for control gates."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
+          "explanation": "Causal modeling allows architects to understand inter-system dependencies and anticipate the widespread effects of localized changes."
         },
         {
           "id": "coding-601-l03-q6",
-          "text": "In high-stakes Coding Research and Leadership execution, which communication protocol is strongest?",
+          "text": "What is the primary purpose of establishing evidence thresholds in coding diagnostics?",
           "skillId": "coding-601-skill-advanced-6",
           "options": [
             {
               "id": "a",
-              "text": "Broadcast conclusions without assumptions"
+              "text": "To ensure all architectural claims are backed by measurable indicators and confidence bounds."
             },
             {
               "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
+              "text": "To delay deployment until 100% certainty is achieved."
             },
             {
               "id": "c",
-              "text": "Share only final outcomes after completion"
+              "text": "To replace automated testing with manual reviews."
             },
             {
               "id": "d",
-              "text": "Limit updates to a single informal channel"
+              "text": "To satisfy marketing requirements for product launches."
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
+          "correctOptionId": "a",
+          "explanation": "Evidence thresholds provide the empirical backing necessary to validate system reliability and maintain accountability."
         },
         {
           "id": "coding-601-l03-q7",
-          "text": "A mature remediation loop in advanced Coding should prioritize:",
+          "text": "During a workflow stress test, what is the most valuable outcome?",
           "skillId": "coding-601-skill-advanced-7",
           "options": [
             {
               "id": "a",
-              "text": "Blame assignment without system updates"
+              "text": "Proving that the system never fails under any load."
             },
             {
               "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
+              "text": "Identifying hidden vulnerabilities and understanding how the design degrades under pressure."
             },
             {
               "id": "c",
-              "text": "One-time fixes without retesting"
+              "text": "Generating a high volume of log data for storage."
             },
             {
               "id": "d",
-              "text": "Issue closure based on elapsed time"
+              "text": "Ensuring the UI remains responsive regardless of backend failures."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
+          "explanation": "Stress tests are designed to expose weaknesses so that systems can be fortified before real-world deployment."
         },
         {
           "id": "coding-601-l03-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Coding Research and Leadership?",
+          "text": "Which of the following best describes a robust rollback criterion?",
           "skillId": "coding-601-skill-advanced-8",
           "options": [
             {
               "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
+              "text": "A manual decision made by the CEO after a failure is reported by users."
             },
             {
               "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
+              "text": "A pre-defined, threshold-based trigger that automatically reverts changes when system health degrades."
             },
             {
               "id": "c",
-              "text": "Ignore correlated failure modes"
+              "text": "A suggestion to review the code if performance drops by more than 50%."
             },
             {
               "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
+              "text": "An alert that notifies the development team to start writing a fix."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "explanation": "Robust rollback criteria rely on automated, threshold-based triggers to ensure rapid recovery during adverse events."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/coding-601-l03.png"
     },
     {
       "id": "coding-601-l04",
       "title": "Coding Advanced Case Analysis",
       "type": "video",
       "duration": 14,
+      "lessonImagePrompt": "Imagen 4 prompt: A corporate boardroom with a large glowing table displaying a multidimensional tradeoff matrix. Senior tech leaders discussing safety, cost, and reliability metrics. Photorealistic, dramatic corporate lighting, 8k.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A time-lapse of a team of architects whiteboarding a complex scenario architecture. The camera circles the group as they draw connections between performance and governance constraints. Dynamic, engaging, 4k.",
       "learningAids": [
         {
           "id": "coding-601-l04-a1",
@@ -368,27 +379,30 @@ export const Coding601Module: LearningModule = {
           "id": "coding-601-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "In this lesson, we will frame a case that highlights the competing constraints found in coding systems diagnostics. We will analyze the impact of coding decisions and the trade-offs involved. Understanding these dynamics is crucial for making informed choices that balance various factors, such as efficiency and effectiveness in coding.\nContext recap: In this lesson, we will frame a case that highlights the competing constraints found in coding systems diagnostics. We will analyze the impact of coding decisions and the trade-offs involved. Understanding these dynamics is crucial for making informed choices that balance various factors, such as efficiency and effectiveness in coding."
+          "content": "Advanced diagnostics often involve competing constraints. We will frame complex architectural scenarios that pit performance against reliability. By dissecting these high-stakes environments, you will learn to navigate the intricate trade-offs required to maintain system integrity without sacrificing speed."
         },
         {
           "id": "coding-601-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "In this practice session, learners will compare different options based on several important dimensions: safety, reliability, cost, equity, and governance. By evaluating these factors, learners will gain insights into how to make balanced decisions that consider the broader implications of their coding choices.\nContext recap: In this practice session, learners will compare different options based on several important dimensions: safety, reliability, cost, equity, and governance. By evaluating these factors, learners will gain insights into how to make balanced decisions that consider the broader implications of their coding choices."
+          "content": "Evaluate competing architectural options across five critical dimensions: safety, reliability, cost, equity, and governance. This multidimensional analysis ensures that your technical decisions align with broader organizational goals and ethical standards, preventing localized optimizations that harm the global system."
         },
         {
           "id": "coding-601-l04-c3",
           "kind": "recap",
           "title": "Decision Memo Pattern",
-          "content": "In this recap, we will summarize the key elements that should be included in each recommendation. This includes outlining the assumptions made, presenting supporting evidence, identifying risk controls, and developing fallback plans. By following this structured approach, learners will be better prepared to present their coding decisions clearly and effectively.\nContext recap: In this recap, we will summarize the key elements that should be included in each recommendation. This includes outlining the assumptions made, presenting supporting evidence, identifying risk controls, and developing fallback plans. By following this structured approach, learners will be better prepared to present their coding decisions clearly and effectively."
+          "content": "Learn to articulate complex technical trade-offs using the Decision Memo Pattern. A defensible recommendation must explicitly state assumptions, provide empirical evidence, outline risk controls, and define fallback strategies. This structured communication is vital for securing stakeholder buy-in."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/coding-601-l04.png"
     },
     {
       "id": "coding-601-l05",
       "title": "Coding Simulation Clinic",
       "type": "interactive",
       "duration": 18,
+      "lessonImagePrompt": "Imagen 4 prompt: A tense, dimly lit operations center during a simulated cyber crisis. A lead engineer stands in front of a massive screen showing system degradation, making real-time adaptive response decisions. Cinematic, high contrast, 8k.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: Over-the-shoulder shot of an engineer adjusting live scenario controls on a complex dashboard. The screen flashes red, then transitions to a calm blue as the adaptive response stabilizes the system. Tense to calm pacing, 4k.",
       "learningAids": [
         {
           "id": "coding-601-l05-a1",
@@ -402,13 +416,13 @@ export const Coding601Module: LearningModule = {
           "id": "coding-601-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "In this interactive clinic, learners will operate scenario controls while balancing performance and governance constraints. This hands-on experience will allow them to apply their knowledge in real-time, making decisions that affect the outcome of the scenarios they are managing. This practice is essential for developing skills in managing complex coding environments.\nContext recap: In this interactive clinic, learners will operate scenario controls while balancing performance and governance constraints. This hands-on experience will allow them to apply their knowledge in real-time, making decisions that affect the outcome of the scenarios they are managing. This practice is essential for developing skills in managing complex coding environments."
+          "content": "Take command in our live simulation clinic. You will dynamically adjust scenario controls to balance performance metrics against strict governance constraints in real-time. This high-pressure environment hones your ability to make split-second, data-driven decisions during system degradation."
         },
         {
           "id": "coding-601-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "In this recap, we will discuss the importance of effective responses that update control gates without losing traceability or accountability. This means that as changes are made, it is crucial to maintain a clear record of what has been done and why. This practice ensures that all actions taken are transparent and can be reviewed if necessary.\nContext recap: In this recap, we will discuss the importance of effective responses that update control gates without losing traceability or accountability. This means that as changes are made, it is crucial to maintain a clear record of what has been done and why. This practice ensures that all actions taken are transparent and can be reviewed if necessary."
+          "content": "Effective incident response requires updating control gates on the fly without sacrificing traceability. We will practice adaptive response techniques that maintain a pristine audit trail of all interventions. This ensures that emergency fixes remain transparent, accountable, and reversible."
         }
       ],
       "interactiveActivities": [
@@ -418,13 +432,16 @@ export const Coding601Module: LearningModule = {
           "title": "Adverse-Condition Decision Run",
           "description": "Run a high-pressure coding scenario and tune controls under uncertainty."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/coding-601-l05.png"
     },
     {
       "id": "coding-601-l06",
       "title": "Checkpoint 2: Case and Simulation Mastery",
       "type": "quiz",
       "duration": 11,
+      "lessonImagePrompt": "Imagen 4 prompt: A futuristic holographic checkpoint gate in a digital landscape, symbolizing mastery of case and simulation. Glowing data streams pass through the gate, verifying system integrity. Abstract, highly detailed, 8k.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A visually striking abstract representation of data packets successfully navigating a complex maze of control gates. The camera follows a glowing blue packet as it reaches the center, triggering a burst of light. Smooth, conceptual, 4k.",
       "learningAids": [
         {
           "id": "coding-601-l06-a1",
@@ -536,111 +553,114 @@ export const Coding601Module: LearningModule = {
         },
         {
           "id": "coding-601-l06-q5",
-          "text": "What is the best way to compare competing interventions in advanced Coding?",
+          "text": "When framing a complex scenario architecture, what must a leader balance?",
           "skillId": "coding-601-skill-advanced-5",
           "options": [
             {
               "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
+              "text": "Only the immediate financial cost of the deployment."
             },
             {
               "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
+              "text": "Competing constraints such as performance, reliability, and governance."
             },
             {
               "id": "c",
-              "text": "Switch metrics after results arrive"
+              "text": "The preferences of the most vocal stakeholder."
             },
             {
               "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
+              "text": "Speed of delivery above all other metrics."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
+          "explanation": "Advanced scenario architecture requires navigating the intricate trade-offs between competing constraints to maintain system integrity."
         },
         {
           "id": "coding-601-l06-q6",
-          "text": "In high-stakes Coding Research and Leadership execution, which communication protocol is strongest?",
+          "text": "In tradeoff framing, why is it important to evaluate options across multiple dimensions like safety, cost, and equity?",
           "skillId": "coding-601-skill-advanced-6",
           "options": [
             {
               "id": "a",
-              "text": "Broadcast conclusions without assumptions"
+              "text": "To prevent localized optimizations that could harm the global system or stakeholders."
             },
             {
               "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
+              "text": "To make the decision-making process as long as possible."
             },
             {
               "id": "c",
-              "text": "Share only final outcomes after completion"
+              "text": "To ensure that every stakeholder gets exactly what they want."
             },
             {
               "id": "d",
-              "text": "Limit updates to a single informal channel"
+              "text": "To confuse the expert panel during the defense."
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
+          "correctOptionId": "a",
+          "explanation": "Multidimensional analysis ensures technical decisions align with broader organizational goals and prevent harmful localized optimizations."
         },
         {
           "id": "coding-601-l06-q7",
-          "text": "A mature remediation loop in advanced Coding should prioritize:",
+          "text": "What are the essential components of a defensible Decision Memo Pattern?",
           "skillId": "coding-601-skill-advanced-7",
           "options": [
             {
               "id": "a",
-              "text": "Blame assignment without system updates"
+              "text": "A strong opinion, a list of benefits, and a request for approval."
             },
             {
               "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
+              "text": "Explicit assumptions, empirical evidence, risk controls, and fallback strategies."
             },
             {
               "id": "c",
-              "text": "One-time fixes without retesting"
+              "text": "A detailed history of the project and a list of team members."
             },
             {
               "id": "d",
-              "text": "Issue closure based on elapsed time"
+              "text": "Code snippets and a link to the repository."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
+          "explanation": "A defensible recommendation must explicitly state assumptions, provide empirical evidence, outline risk controls, and define fallback strategies."
         },
         {
           "id": "coding-601-l06-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Coding Research and Leadership?",
+          "text": "What is the key requirement for an adaptive response during a live system incident?",
           "skillId": "coding-601-skill-advanced-8",
           "options": [
             {
               "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
+              "text": "Making changes as quickly as possible without documenting them."
             },
             {
               "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
+              "text": "Updating control gates dynamically while maintaining strict traceability and an audit trail."
             },
             {
               "id": "c",
-              "text": "Ignore correlated failure modes"
+              "text": "Shutting down the entire system to prevent any further issues."
             },
             {
               "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
+              "text": "Waiting for the next business day to implement a fix."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "explanation": "Effective incident response requires updating controls on the fly without sacrificing the traceability and accountability of the interventions."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/coding-601-l06.png"
     },
     {
       "id": "coding-601-l07",
       "title": "Coding Governance and Public Impact",
       "type": "video",
       "duration": 13,
+      "lessonImagePrompt": "Imagen 4 prompt: A diverse group of community stakeholders and tech leaders standing together, looking at a large transparent screen displaying the global impact distribution of a software deployment. Bright, optimistic lighting, photorealistic, 8k.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A sweeping drone shot over a modern, eco-friendly smart city, transitioning into a digital overlay showing how coding governance impacts urban infrastructure. Inspiring, grand scale, 4k.",
       "learningAids": [
         {
           "id": "coding-601-l07-a1",
@@ -654,19 +674,19 @@ export const Coding601Module: LearningModule = {
           "id": "coding-601-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. This exercise is important for understanding how coding decisions impact various individuals and communities. By recognizing these effects, learners can make more ethical and informed coding choices.\nContext recap: In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. This exercise is important for understanding how coding decisions impact various individuals and communities. By recognizing these effects, learners can make more ethical and informed coding choices."
+          "content": "Technical decisions ripple across organizations and user bases. We will map the distribution of benefits, operational burdens, and delayed systemic effects across diverse stakeholder groups. Recognizing these impacts is essential for ethical, sustainable, and equitable software architecture."
         },
         {
           "id": "coding-601-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "In this lesson, we will explore the architecture of accountability in coding. This includes understanding how decision traceability works, the rights of individuals to review decisions, and the obligations to remediate any issues that arise. By integrating these elements, learners will appreciate the importance of accountability in their coding practices.\nContext recap: In this lesson, we will explore the architecture of accountability in coding. This includes understanding how decision traceability works, the rights of individuals to review decisions, and the obligations to remediate any issues that arise. By integrating these elements, learners will appreciate the importance of accountability in their coding practices."
+          "content": "True leadership requires an architecture of accountability. We will design systems that guarantee decision traceability, enable peer review, and enforce remediation obligations. Embedding these principles ensures that governance is not just a policy, but a measurable operational reality."
         },
         {
           "id": "coding-601-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "At the end of our lesson, we will create a comprehensive checklist that connects important outcomes with ethical considerations, ensures we follow relevant policies, and promotes resilience in our coding practices. This checklist will help guide us in making responsible decisions as leaders in the coding field.\nContext recap: At the end of our lesson, we will create a comprehensive checklist that connects important outcomes with ethical considerations, ensures we follow relevant policies, and promotes resilience in our coding practices. This checklist will help guide us in making responsible decisions as leaders in the coding field."
+          "content": "Synthesize your governance strategy with the Responsible Leadership Checklist. This tool connects technical outcomes with ethical mandates, compliance policies, and system resilience. It serves as your final operational gate to ensure all architectural decisions meet the highest standards of professional integrity."
         }
       ],
       "flashcards": [
@@ -692,6 +712,8 @@ export const Coding601Module: LearningModule = {
       "title": "Coding Capstone Defense Lab",
       "type": "interactive",
       "duration": 16,
+      "lessonImagePrompt": "Imagen 4 prompt: A formal, high-tech auditorium where a software architect is confidently presenting a defense brief to a panel of shadowy expert judges. A large screen behind them shows robust uncertainty bounds and remediation pathways. Dramatic, cinematic, 8k.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A slow push-in on a confident speaker at a podium, gesturing towards a holographic projection of a system architecture. The camera cuts to the expert panel nodding in agreement. Professional, high-stakes atmosphere, 4k.",
       "learningAids": [
         {
           "id": "coding-601-l08-a1",
@@ -705,13 +727,13 @@ export const Coding601Module: LearningModule = {
           "id": "coding-601-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "In this activity, you will work on assembling a detailed brief that includes your main claims, supporting evidence, the boundaries of uncertainty in your arguments, and possible pathways for remediation. This exercise will help you practice organizing your thoughts and presenting them clearly, which is essential for effective communication in coding projects.\nContext recap: In this activity, you will work on assembling a detailed brief that includes your main claims, supporting evidence, the boundaries of uncertainty in your arguments, and possible pathways for remediation. This exercise will help you practice organizing your thoughts and presenting them clearly, which is essential for effective communication in coding projects."
+          "content": "Prepare for your capstone defense by assembling a comprehensive technical brief. You will synthesize your core architectural claims, back them with empirical evidence, define the boundaries of uncertainty, and map out remediation pathways. Clarity and rigor are your best tools for persuasion."
         },
         {
           "id": "coding-601-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "During this rehearsal, you will practice responding to questions and critiques from an expert panel. These questions will cover technical aspects, governance issues, and concerns from stakeholders. This preparation will help you build confidence and improve your ability to defend your ideas in front of others.\nContext recap: During this rehearsal, you will practice responding to questions and critiques from an expert panel. These questions will cover technical aspects, governance issues, and concerns from stakeholders. This preparation will help you build confidence and improve your ability to defend your ideas in front of others."
+          "content": "Face the crucible of an expert panel. In this rehearsal, you will defend your architectural decisions against rigorous cross-examination covering technical viability, governance compliance, and stakeholder impact. This adversarial simulation builds the resilience needed for executive-level technical leadership."
         }
       ],
       "interactiveActivities": [
@@ -721,7 +743,8 @@ export const Coding601Module: LearningModule = {
           "title": "Expert Defense Panel",
           "description": "Defend specialization recommendations under adversarial cross-examination."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/coding-601-l08.png"
     }
   ]
 };

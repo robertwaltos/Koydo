@@ -1,17 +1,20 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const Medicine401Module: LearningModule = {
+export const medicine_401_Module: LearningModule = {
   "id": "medicine-401",
-  "title": "Medicine IV",
-  "description": "Senior-level medical systems, safety governance, complex case synthesis, and clinical decision leadership.",
+  "title": "Medicine IV: Systems, Synthesis, and Leadership",
+  "description": "An advanced module for senior medical learners focusing on healthcare systems analysis, safety governance, complex clinical case synthesis, and leadership in high-stakes decision-making.",
   "subject": "Medicine",
   "tags": [
-    "curriculum",
+    "systems thinking",
+    "patient safety",
+    "clinical reasoning",
+    "leadership",
     "interactive"
   ],
   "minAge": 18,
   "maxAge": 99,
-  "version": "1.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en",
@@ -25,489 +28,391 @@ export const Medicine401Module: LearningModule = {
     "ko",
     "ru"
   ],
-  "thumbnail": "/placeholders/lesson-robot.svg",
+  "thumbnail": "/placeholders/lesson-caduceus.svg",
   "learningObjectives": [
-    "Understand core concepts in Medicine",
-    "Apply Medicine skills through guided practice",
-    "Demonstrate mastery through checkpoint quizzes"
+    "Analyze healthcare systems using established models (e.g., SEIPS 2.0) to identify sources of error.",
+    "Lead a root cause analysis (RCA) for a complex patient safety incident.",
+    "Synthesize multi-source data to formulate a differential diagnosis for complex, multi-morbidity patient cases.",
+    "Demonstrate leadership principles in clinical decision-making and team communication during high-stakes scenarios."
   ],
   "lessons": [
     {
       "id": "medicine-401-l01",
-      "title": "Medicine Concepts 1",
+      "title": "Clinical Systems & Safety Governance",
       "type": "video",
-      "duration": 9,
+      "duration": 15,
       "learningAids": [
         {
           "id": "medicine-401-l01-a1",
           "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary for Medicine."
+          "title": "Infographic: The SEIPS 2.0 Model",
+          "content": "A visual breakdown of the Systems Engineering Initiative for Patient Safety (SEIPS) model, illustrating the interaction between work system elements and patient outcomes."
         },
         {
           "id": "medicine-401-l01-a2",
           "type": "animation",
-          "title": "Animated Example",
-          "content": "Step-by-step walkthrough for Medicine."
+          "title": "Latent vs. Active Failures",
+          "content": "Animated scenario showing how a latent system failure (e.g., confusing medication labeling) leads to an active failure (e.g., incorrect dose administration)."
         }
       ]
     },
     {
       "id": "medicine-401-l02",
-      "title": "Medicine Practice 2",
+      "title": "Interactive Lab: Root Cause Analysis",
       "type": "interactive",
-      "duration": 12,
+      "duration": 20,
       "metadata": {
         "prompts": [
-          "State the key concept in one sentence.",
-          "Apply it to one example.",
-          "Explain your improvement step for next time."
+          "Review the provided sentinel event report involving a delayed diagnosis in the emergency department.",
+          "Using the '5 Whys' technique and a fishbone diagram, identify the contributing factors and root causes.",
+          "Propose three system-level interventions to prevent recurrence, distinguishing between weak, intermediate, and strong actions."
         ]
       },
       "learningAids": [
         {
           "id": "medicine-401-l02-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Follow the challenge flow and record your approach."
+          "title": "Guided RCA Simulation",
+          "content": "Follow the structured workflow to analyze the case, document your findings, and submit your proposed solutions."
         }
       ]
     },
     {
       "id": "medicine-401-l03",
-      "title": "Checkpoint 1: Medicine",
+      "title": "Checkpoint 1: Systems & Safety",
       "type": "quiz",
       "duration": 10,
       "questions": [
         {
           "id": "medicine-401-l03-q1",
-          "text": "Which choice best matches the main idea of Medicine?",
-          "skillId": "medicine-401-skill-core",
+          "text": "In a 'Just Culture' model, which of the following actions would most likely be subject to punitive measures?",
+          "skillId": "medicine-401-skill-safety-governance",
           "options": [
             {
               "id": "a",
-              "text": "A complete, evidence-based explanation"
+              "text": "A nurse makes a human error by grabbing the wrong concentration of a medication."
             },
             {
               "id": "b",
-              "text": "An unrelated claim"
+              "text": "A physician intentionally ignores a required safety protocol, believing it to be inefficient."
             },
             {
               "id": "c",
-              "text": "A random guess"
+              "text": "A resident, under pressure, makes a risky choice that was encouraged by the system's design."
             },
             {
               "id": "d",
-              "text": "A conflicting idea"
+              "text": "A pharmacist misreads a poorly written prescription, resulting in a dispensing error."
             }
           ],
-          "correctOptionId": "a"
+          "correctOptionId": "b",
+          "explanation": "A Just Culture distinguishes between human error, at-risk behavior, and reckless behavior. Intentionally ignoring a safety protocol constitutes reckless behavior and is subject to punitive action."
         },
         {
           "id": "medicine-401-l03-q2",
-          "text": "What should a learner do after getting an answer wrong?",
-          "skillId": "medicine-401-skill-review",
+          "text": "Which of the following is the best example of a latent system failure?",
+          "skillId": "medicine-401-skill-systems-thinking",
           "options": [
             {
               "id": "a",
-              "text": "Review error cause and retry with strategy"
+              "text": "A surgeon's hand slips during a delicate procedure."
             },
             {
               "id": "b",
-              "text": "Skip all corrections"
+              "text": "A hospital's electronic health record (EHR) system does not automatically flag dangerously high potassium levels."
             },
             {
               "id": "c",
-              "text": "Memorize only the answer letter"
+              "text": "A nurse forgets to administer a patient's 4 PM dose of antibiotics."
             },
             {
               "id": "d",
-              "text": "Stop practicing"
+              "text": "A patient falls while trying to get out of bed unassisted."
             }
           ],
-          "correctOptionId": "a"
-        },
-        {
-          "id": "medicine-401-l03-q3",
-          "text": "Which strategy most improves long-term retention for Medicine IV?",
-          "skillId": "medicine-401-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "Use spaced retrieval and mixed practice over multiple sessions."
-            },
-            {
-              "id": "b",
-              "text": "Cram once and avoid later practice."
-            },
-            {
-              "id": "c",
-              "text": "Read notes passively without self-testing."
-            },
-            {
-              "id": "d",
-              "text": "Rely on confidence alone instead of evidence."
-            }
-          ],
-          "correctOptionId": "a",
-          "explanation": "Spaced retrieval with varied practice strengthens durable memory and flexible application."
-        }
-      ],
-      "learningAids": [
-        {
-          "id": "medicine-401-l03-a1",
-          "type": "mnemonic",
-          "title": "Memory Cue",
-          "content": "Use Plan, Solve, Explain to structure each response."
+          "correctOptionId": "b",
+          "explanation": "Latent failures are hidden problems within systems (e.g., poor design, inadequate training) that only become apparent when they contribute to an active failure. The EHR's lack of a critical alert is a classic latent failure."
         }
       ]
     },
     {
       "id": "medicine-401-l04",
-      "title": "Medicine Practice 4",
-      "type": "interactive",
-      "duration": 12,
-      "metadata": {
-        "prompts": [
-          "State the key concept in one sentence.",
-          "Apply it to one example.",
-          "Explain your improvement step for next time."
-        ]
-      },
+      "title": "Synthesizing Complex Clinical Cases",
+      "type": "video",
+      "duration": 15,
       "learningAids": [
         {
           "id": "medicine-401-l04-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Follow the challenge flow and record your approach."
+          "type": "image",
+          "title": "Cognitive Biases in Diagnosis",
+          "content": "Concept card illustrating common diagnostic pitfalls like anchoring bias, availability heuristic, and premature closure."
+        },
+        {
+          "id": "medicine-401-l04-a2",
+          "type": "animation",
+          "title": "Building a Differential Diagnosis",
+          "content": "Step-by-step walkthrough of synthesizing history, exam, lab, and imaging data for a patient with undifferentiated shock."
         }
       ]
     },
     {
       "id": "medicine-401-l05",
-      "title": "Medicine Concepts 5",
-      "type": "video",
-      "duration": 9,
+      "title": "Interactive Case: Atypical Presentation",
+      "type": "interactive",
+      "duration": 20,
+      "metadata": {
+        "prompts": [
+          "A 78-year-old patient with dementia, COPD, and CKD presents with acute confusion and lethargy. Synthesize the provided clinical data.",
+          "Formulate your top three differential diagnoses, justifying your reasoning and explicitly stating which cognitive biases you are trying to avoid.",
+          "Outline your initial management plan, including both diagnostic tests and therapeutic interventions."
+        ]
+      },
       "learningAids": [
         {
           "id": "medicine-401-l05-a1",
-          "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary for Medicine."
-        },
-        {
-          "id": "medicine-401-l05-a2",
-          "type": "animation",
-          "title": "Animated Example",
-          "content": "Step-by-step walkthrough for Medicine."
+          "type": "practice",
+          "title": "Virtual Patient Encounter",
+          "content": "Navigate the case, order tests, review results, and document your clinical reasoning in a simulated EHR."
         }
       ]
     },
     {
       "id": "medicine-401-l06",
-      "title": "Checkpoint 2: Medicine",
+      "title": "Checkpoint 2: Complex Synthesis",
       "type": "quiz",
       "duration": 10,
       "questions": [
         {
           "id": "medicine-401-l06-q1",
-          "text": "Which choice best matches the main idea of Medicine?",
-          "skillId": "medicine-401-skill-core",
+          "text": "A patient with a known history of panic attacks presents to the ED with chest pain and shortness of breath. The initial EKG and troponin are normal. The team diagnoses another panic attack. This reasoning is most at risk for which cognitive bias?",
+          "skillId": "medicine-401-skill-clinical-reasoning",
           "options": [
             {
               "id": "a",
-              "text": "A complete, evidence-based explanation"
+              "text": "Availability Heuristic"
             },
             {
               "id": "b",
-              "text": "An unrelated claim"
+              "text": "Confirmation Bias"
             },
             {
               "id": "c",
-              "text": "A random guess"
+              "text": "Premature Closure"
             },
             {
               "id": "d",
-              "text": "A conflicting idea"
+              "text": "Base Rate Neglect"
             }
           ],
-          "correctOptionId": "a"
+          "correctOptionId": "c",
+          "explanation": "Premature closure is the tendency to stop the diagnostic process once a plausible explanation is found, failing to consider other reasonable alternatives. Attributing the symptoms to a panic attack without ruling out life-threatening causes like a pulmonary embolism is a classic example."
         },
         {
           "id": "medicine-401-l06-q2",
-          "text": "What should a learner do after getting an answer wrong?",
-          "skillId": "medicine-401-skill-review",
+          "text": "In managing a patient with sepsis, acute kidney injury, and decompensated heart failure, which principle is most critical?",
+          "skillId": "medicine-401-skill-case-synthesis",
           "options": [
             {
               "id": "a",
-              "text": "Review error cause and retry with strategy"
+              "text": "Treating each problem sequentially based on a standardized protocol."
             },
             {
               "id": "b",
-              "text": "Skip all corrections"
+              "text": "Prioritizing the most immediately life-threatening condition while considering the impact of interventions on other comorbidities."
             },
             {
               "id": "c",
-              "text": "Memorize only the answer letter"
+              "text": "Focusing solely on the primary diagnosis (sepsis) and addressing other issues after it resolves."
             },
             {
               "id": "d",
-              "text": "Stop practicing"
+              "text": "Consulting every possible subspecialty before initiating any treatment."
             }
           ],
-          "correctOptionId": "a"
-        },
-        {
-          "id": "medicine-401-l06-q3",
-          "text": "Which strategy most improves long-term retention for Medicine IV?",
-          "skillId": "medicine-401-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "Use spaced retrieval and mixed practice over multiple sessions."
-            },
-            {
-              "id": "b",
-              "text": "Cram once and avoid later practice."
-            },
-            {
-              "id": "c",
-              "text": "Read notes passively without self-testing."
-            },
-            {
-              "id": "d",
-              "text": "Rely on confidence alone instead of evidence."
-            }
-          ],
-          "correctOptionId": "a",
-          "explanation": "Spaced retrieval with varied practice strengthens durable memory and flexible application."
-        }
-      ],
-      "learningAids": [
-        {
-          "id": "medicine-401-l06-a1",
-          "type": "mnemonic",
-          "title": "Memory Cue",
-          "content": "Use Plan, Solve, Explain to structure each response."
+          "correctOptionId": "b",
+          "explanation": "In multi-morbidity cases, the key is to prioritize the most acute threat (e.g., shock from sepsis) while being mindful that treatments (like aggressive fluid resuscitation) can worsen other conditions (like heart failure)."
         }
       ]
     },
     {
       "id": "medicine-401-l07",
-      "title": "Medicine Concepts 7",
+      "title": "Leadership in Clinical Governance",
       "type": "video",
-      "duration": 9,
+      "duration": 15,
       "learningAids": [
         {
           "id": "medicine-401-l07-a1",
           "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary for Medicine."
+          "title": "Flowchart: M&M Conference Structure",
+          "content": "A visual guide to structuring a Morbidity & Mortality conference for systems-based learning rather than individual blame."
         },
         {
           "id": "medicine-401-l07-a2",
           "type": "animation",
-          "title": "Animated Example",
-          "content": "Step-by-step walkthrough for Medicine."
+          "title": "Closed-Loop Communication",
+          "content": "An animated scenario in a trauma bay demonstrating effective closed-loop communication to ensure orders are heard, understood, and confirmed."
         }
       ]
     },
     {
       "id": "medicine-401-l08",
-      "title": "Medicine Practice 8",
+      "title": "Simulation: Leading a Team Discussion",
       "type": "interactive",
-      "duration": 12,
+      "duration": 20,
       "metadata": {
         "prompts": [
-          "State the key concept in one sentence.",
-          "Apply it to one example.",
-          "Explain your improvement step for next time."
+          "You are the team leader. A junior colleague insists on a course of action you believe is unsafe. How do you open the conversation to challenge them respectfully?",
+          "Use the CUS (I am Concerned, I am Uncomfortable, this is a Safety issue) framework to articulate your position clearly and professionally.",
+          "Guide the team to a consensus on the safest path forward, ensuring all voices are heard and psychological safety is maintained."
         ]
       },
       "learningAids": [
         {
           "id": "medicine-401-l08-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Follow the challenge flow and record your approach."
+          "title": "Role-Play Scenario",
+          "content": "Engage with a branching-logic conversation simulator to practice difficult leadership conversations."
         }
       ]
     },
     {
       "id": "medicine-401-l09",
-      "title": "Checkpoint 3: Medicine",
+      "title": "Checkpoint 3: Clinical Leadership",
       "type": "quiz",
       "duration": 10,
       "questions": [
         {
           "id": "medicine-401-l09-q1",
-          "text": "Which choice best matches the main idea of Medicine?",
-          "skillId": "medicine-401-skill-core",
+          "text": "What is the primary, modern goal of a Morbidity & Mortality (M&M) conference?",
+          "skillId": "medicine-401-skill-leadership",
           "options": [
             {
               "id": "a",
-              "text": "A complete, evidence-based explanation"
+              "text": "To assign blame for adverse outcomes to specific individuals."
             },
             {
               "id": "b",
-              "text": "An unrelated claim"
+              "text": "To identify and correct system-level vulnerabilities to improve patient safety."
             },
             {
               "id": "c",
-              "text": "A random guess"
+              "text": "To fulfill a legal requirement for hospital accreditation."
             },
             {
               "id": "d",
-              "text": "A conflicting idea"
+              "text": "To educate junior staff by reviewing clinical mistakes."
             }
           ],
-          "correctOptionId": "a"
+          "correctOptionId": "b",
+          "explanation": "While education is a component, the primary modern focus of M&M conferences is on systems improvement, moving away from a culture of individual blame to one of collective learning and safety enhancement."
         },
         {
           "id": "medicine-401-l09-q2",
-          "text": "What should a learner do after getting an answer wrong?",
-          "skillId": "medicine-401-skill-review",
+          "text": "When disclosing a medical error to a patient and their family, which of the following is the most critical first step?",
+          "skillId": "medicine-401-skill-communication",
           "options": [
             {
               "id": "a",
-              "text": "Review error cause and retry with strategy"
+              "text": "Explaining in detail which team member was responsible."
             },
             {
               "id": "b",
-              "text": "Skip all corrections"
+              "text": "Clearly and compassionately stating that an error occurred, and taking responsibility on behalf of the system."
             },
             {
               "id": "c",
-              "text": "Memorize only the answer letter"
+              "text": "Waiting until a full root cause analysis is complete before saying anything."
             },
             {
               "id": "d",
-              "text": "Stop practicing"
+              "text": "Offering financial compensation immediately."
             }
           ],
-          "correctOptionId": "a"
-        },
-        {
-          "id": "medicine-401-l09-q3",
-          "text": "Which strategy most improves long-term retention for Medicine IV?",
-          "skillId": "medicine-401-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "Use spaced retrieval and mixed practice over multiple sessions."
-            },
-            {
-              "id": "b",
-              "text": "Cram once and avoid later practice."
-            },
-            {
-              "id": "c",
-              "text": "Read notes passively without self-testing."
-            },
-            {
-              "id": "d",
-              "text": "Rely on confidence alone instead of evidence."
-            }
-          ],
-          "correctOptionId": "a",
-          "explanation": "Spaced retrieval with varied practice strengthens durable memory and flexible application."
-        }
-      ],
-      "learningAids": [
-        {
-          "id": "medicine-401-l09-a1",
-          "type": "mnemonic",
-          "title": "Memory Cue",
-          "content": "Use Plan, Solve, Explain to structure each response."
+          "correctOptionId": "b",
+          "explanation": "Effective disclosure begins with a prompt, clear, and empathetic apology that takes ownership of the event on behalf of the care team and institution, without blaming individuals. This builds trust and is the foundation for subsequent steps."
         }
       ]
     },
     {
       "id": "medicine-401-l10",
-      "title": "Checkpoint 4: Medicine",
+      "title": "Capstone Assessment: Integrated Scenario",
       "type": "quiz",
-      "duration": 10,
+      "duration": 25,
       "questions": [
         {
           "id": "medicine-401-l10-q1",
-          "text": "Which choice best matches the main idea of Medicine?",
-          "skillId": "medicine-401-skill-core",
+          "text": "A patient on the surgical ward develops a fever, hypotension, and tachycardia 48 hours post-op. The covering intern, having recently seen several cases of pneumonia, diagnoses it as such and starts antibiotics. The patient worsens. What is the most likely cognitive error at play?",
+          "skillId": "medicine-401-skill-clinical-reasoning",
           "options": [
             {
               "id": "a",
-              "text": "A complete, evidence-based explanation"
+              "text": "Anchoring Bias"
             },
             {
               "id": "b",
-              "text": "An unrelated claim"
+              "text": "Availability Heuristic"
             },
             {
               "id": "c",
-              "text": "A random guess"
+              "text": "Bandwagon Effect"
             },
             {
               "id": "d",
-              "text": "A conflicting idea"
+              "text": "Zebra Retreat"
             }
           ],
-          "correctOptionId": "a"
+          "correctOptionId": "b",
+          "explanation": "The availability heuristic is a mental shortcut that relies on immediate examples that come to mind. Because the intern recently saw similar cases, they over-estimated the likelihood of that diagnosis, potentially missing other causes like an anastomotic leak."
         },
         {
           "id": "medicine-401-l10-q2",
-          "text": "What should a learner do after getting an answer wrong?",
-          "skillId": "medicine-401-skill-review",
+          "text": "It is later discovered the patient's worsening condition was due to a medication error where a decimal point was misplaced, resulting in a 10x overdose of a sedative. As the team leader, what is your most appropriate immediate action?",
+          "skillId": "medicine-401-skill-leadership",
           "options": [
             {
               "id": "a",
-              "text": "Review error cause and retry with strategy"
+              "text": "Immediately stabilize the patient and ensure their safety."
             },
             {
               "id": "b",
-              "text": "Skip all corrections"
+              "text": "Identify and reprimand the nurse who administered the medication."
             },
             {
               "id": "c",
-              "text": "Memorize only the answer letter"
+              "text": "Alert the hospital's legal department before taking any other action."
             },
             {
               "id": "d",
-              "text": "Stop practicing"
-            }
-          ],
-          "correctOptionId": "a"
-        },
-        {
-          "id": "medicine-401-l10-q3",
-          "text": "Which strategy most improves long-term retention for Medicine IV?",
-          "skillId": "medicine-401-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "Use spaced retrieval and mixed practice over multiple sessions."
-            },
-            {
-              "id": "b",
-              "text": "Cram once and avoid later practice."
-            },
-            {
-              "id": "c",
-              "text": "Read notes passively without self-testing."
-            },
-            {
-              "id": "d",
-              "text": "Rely on confidence alone instead of evidence."
+              "text": "Quietly correct the error in the chart to avoid a formal report."
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Spaced retrieval with varied practice strengthens durable memory and flexible application."
-        }
-      ],
-      "learningAids": [
+          "explanation": "The absolute first priority in any adverse event is the patient's immediate safety. All other actions—reporting, analysis, and disclosure—follow after the patient has been stabilized."
+        },
         {
-          "id": "medicine-401-l10-a1",
-          "type": "mnemonic",
-          "title": "Memory Cue",
-          "content": "Use Plan, Solve, Explain to structure each response."
+          "id": "medicine-401-l10-q3",
+          "text": "During the subsequent root cause analysis of the medication overdose, which finding would point toward a critical system-level failure requiring a high-leverage intervention?",
+          "skillId": "medicine-401-skill-systems-thinking",
+          "options": [
+            {
+              "id": "a",
+              "text": "The nurse who gave the dose was working a double shift and was fatigued."
+            },
+            {
+              "id": "b",
+              "text": "The pharmacy information system allows orders to be entered without a leading zero (e.g., '.5 mg' instead of '0.5 mg')."
+            },
+            {
+              "id": "c",
+              "text": "The ordering physician has a history of poor handwriting."
+            },
+            {
+              "id": "d",
+              "text": "The patient did not question the dose they were being given."
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "While fatigue and handwriting are contributing factors, the system design that allows ambiguous and dangerous orders is a major latent failure. A high-leverage intervention would be a forcing function in the software that requires a leading zero, making the system safer by design."
         }
       ]
     }

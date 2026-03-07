@@ -1,9 +1,9 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const InternationalRelations401Module: LearningModule = {
+export const international_relations_401_Module: LearningModule = {
   "id": "international-relations-401",
   "title": "International Relations Leadership and Capstone",
-  "description": "Level 401 curriculum in International Relations, focused on state and non-state actors, strategic bargaining, institutional governance, and conflict and cooperation analysis through case analysis, simulation practice, and mastery checkpoints.",
+  "description": "An advanced curriculum in International Relations focusing on state and non-state actors, strategic bargaining, institutional governance, and conflict analysis through case studies, simulations, and a capstone project.",
   "subject": "Social Studies",
   "tags": [
     "core",
@@ -14,32 +14,32 @@ export const InternationalRelations401Module: LearningModule = {
   ],
   "minAge": 16,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en",
     "es"
   ],
   "learningObjectives": [
-    "Apply state and non-state actors using explicit assumptions and constraints",
-    "Design and execute workflows for strategic bargaining with reliable control points",
-    "Evaluate institutional governance decisions using baseline and side-effect analysis",
-    "Strengthen conflict and cooperation analysis with accountable governance mechanisms",
-    "Communicate uncertainty and tradeoffs across stakeholder groups",
-    "Build defensible recommendations resilient to critical review"
+    "Analyze the roles of state and non-state actors using explicit assumptions and constraints.",
+    "Design and execute analytical workflows for strategic bargaining with defined control points.",
+    "Evaluate institutional governance decisions using baseline and side-effect analysis.",
+    "Strengthen conflict and cooperation analysis with accountable governance mechanisms.",
+    "Communicate uncertainty and tradeoffs effectively across diverse stakeholder groups.",
+    "Construct defensible policy recommendations resilient to critical review."
   ],
   "lessons": [
     {
       "id": "international-relations-401-l01",
-      "title": "International Relations Core Foundations",
+      "title": "Core Foundations of International Relations",
       "type": "video",
       "duration": 13,
       "learningAids": [
         {
           "id": "international-relations-401-l01-a1",
-          "type": "image",
-          "title": "Guided Practice",
-          "content": "Document assumptions, show your reasoning chain, and verify your conclusions before submission."
+          "type": "diagram",
+          "title": "Actors in International Relations",
+          "content": "A visual map illustrating the relationships between State Actors (countries), Intergovernmental Organizations (IGOs like the UN), Non-Governmental Organizations (NGOs like the Red Cross), and Multinational Corporations (MNCs)."
         }
       ],
       "chunks": [
@@ -47,64 +47,64 @@ export const InternationalRelations401Module: LearningModule = {
           "id": "international-relations-401-l01-c1",
           "kind": "concept",
           "title": "Scope and Shared Vocabulary",
-          "content": "In this lesson, we will explore the exciting field of International Relations. We will define what it means and discuss important terms that help us understand how countries and organizations interact. We will also look at the roles of different actors, both state and non-state, and how they engage in strategic bargaining. This means we will learn how these groups negotiate and make decisions in real-world situations, which is crucial for understanding global dynamics.\nContext recap: In this lesson, we will explore the exciting field of International Relations. We will define what it means and discuss important terms that help us understand how countries and organizations interact. We will also look at the roles of different actors, both state and non-state, and how they engage in strategic bargaining. This means we will learn how these groups negotiate and make decisions in real-world situations, which is crucial for understanding global dynamics."
+          "content": "International Relations (IR) is the study of interactions among various actors that participate in global politics. This lesson establishes a shared vocabulary for analyzing these interactions, defining key concepts like state and non-state actors, and introducing the framework of strategic bargaining—the process by which these actors negotiate to achieve their objectives."
         },
         {
           "id": "international-relations-401-l01-c2",
           "kind": "concept",
           "title": "Causal Structure and Constraints",
-          "content": "In this part of the lesson, learners will have the opportunity to map out causal pathways. This means they will identify the relationships between different events and decisions. Additionally, they will test hidden assumptions, which are beliefs that might not be obvious at first. Before choosing any interventions or actions, it is important to understand these pathways and assumptions to make informed decisions.\nContext recap: In this part of the lesson, learners will have the opportunity to map out causal pathways. This means they will identify the relationships between different events and decisions. Additionally, they will test hidden assumptions, which are beliefs that might not be obvious at first. Before choosing any interventions or actions, it is important to understand these pathways and assumptions to make informed decisions."
+          "content": "To understand global events, we must map causal pathways and identify the relationships between actions and outcomes. This involves testing hidden assumptions and recognizing the political, economic, and social constraints that shape decision-making. A clear understanding of these factors is essential before proposing any policy intervention."
         },
         {
           "id": "international-relations-401-l01-c3",
           "kind": "recap",
-          "title": "Evidence Discipline",
-          "content": "In this recap, we will emphasize the importance of evidence in making claims. Each claim we make should be supported by observable indicators, which are facts or data we can see and measure. We will also discuss the significance of noting uncertainties, which are things we are not completely sure about. Finally, we will introduce review checkpoints, which are moments when we pause to evaluate our progress and ensure we are on the right track.\nContext recap: In this recap, we will emphasize the importance of evidence in making claims. Each claim we make should be supported by observable indicators, which are facts or data we can see and measure. We will also discuss the significance of noting uncertainties, which are things we are not completely sure about. Finally, we will introduce review checkpoints, which are moments when we pause to evaluate our progress and ensure we are on the right track."
+          "title": "Evidence and Discipline",
+          "content": "This recap emphasizes the importance of evidence-based analysis. Every claim must be supported by observable indicators and data. We will also practice acknowledging uncertainty and establishing review checkpoints to ensure analytical rigor and accountability in our work."
         }
       ],
       "flashcards": [
         {
           "id": "international-relations-401-l01-f1",
-          "front": "state and non-state actors",
-          "back": "A core analytical lens in International Relations requiring careful assumption control."
+          "front": "State and Non-State Actors",
+          "back": "The primary entities in IR, including countries (states), IGOs, NGOs, and MNCs, whose interactions are analyzed based on their interests and capabilities."
         },
         {
           "id": "international-relations-401-l01-f2",
-          "front": "strategic bargaining",
-          "back": "Operational design practices that determine system reliability and execution quality."
+          "front": "Strategic Bargaining",
+          "back": "The process where actors negotiate outcomes, make concessions, and employ leverage to achieve their goals within a set of formal or informal rules."
         },
         {
           "id": "international-relations-401-l01-f3",
-          "front": "institutional governance",
-          "back": "The evaluation framework used to validate outcomes and detect hidden costs."
+          "front": "Institutional Governance",
+          "back": "The formal and informal rules, norms, and structures that constrain behavior and shape outcomes in the international system."
         }
       ]
     },
     {
       "id": "international-relations-401-l02",
-      "title": "International Relations Workflow Lab",
+      "title": "Analytical Workflow Lab",
       "type": "interactive",
       "duration": 15,
       "learningAids": [
         {
           "id": "international-relations-401-l02-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Document assumptions, show your reasoning chain, and verify your conclusions before submission."
+          "type": "flowchart",
+          "title": "Policy Analysis Workflow",
+          "content": "A template flowchart showing the key stages of policy analysis: Problem Definition, Evidence Gathering, Option Analysis, Recommendation, and Monitoring."
         }
       ],
       "chunks": [
         {
           "id": "international-relations-401-l02-c1",
           "kind": "practice",
-          "title": "Workflow Construction and Test",
-          "content": "In this interactive lab, learners will have the chance to design their own workflow. This workflow will focus on strategic leadership, which is about guiding and influencing others, and integrating policy with operations, meaning how plans are put into action. Additionally, they will prepare for a capstone defense, which is a final project presentation. After creating their workflows, learners will stress-test them, which means they will evaluate how reliable their plans are when faced with uncertainty.\nContext recap: In this interactive lab, learners will have the chance to design their own workflow. This workflow will focus on strategic leadership, which is about guiding and influencing others, and integrating policy with operations, meaning how plans are put into action. Additionally, they will prepare for a capstone defense, which is a final project presentation. After creating their workflows, learners will stress-test them, which means they will evaluate how reliable their plans are when faced with uncertainty."
+          "title": "Workflow Construction and Testing",
+          "content": "In this lab, you will design a structured workflow for analyzing a policy problem. This involves integrating strategic goals with operational realities and preparing for a capstone-level defense of your conclusions. You will then stress-test your workflow against potential uncertainties to evaluate its reliability."
         },
         {
           "id": "international-relations-401-l02-c2",
           "kind": "recap",
           "title": "Control Gates and Readiness",
-          "content": "In this recap, we will discuss the concept of readiness in our workflows. To be ready, it is essential to map out who is responsible for each part of the process. We will also define gate criteria, which are the standards that must be met before moving forward. Additionally, we will talk about rollback conditions, which are the steps to take if something goes wrong, and verification signals, which are indicators that show whether we are on the right path.\nContext recap: In this recap, we will discuss the concept of readiness in our workflows. To be ready, it is essential to map out who is responsible for each part of the process. We will also define gate criteria, which are the standards that must be met before moving forward. Additionally, we will talk about rollback conditions, which are the steps to take if something goes wrong, and verification signals, which are indicators that show whether we are on the right path."
+          "content": "A robust analytical workflow requires clear control gates. This recap covers how to map accountability, define criteria for advancing to the next stage, establish conditions for reassessment (rollback), and identify clear signals for verifying progress and success."
         }
       ],
       "interactiveActivities": [
@@ -112,22 +112,22 @@ export const InternationalRelations401Module: LearningModule = {
           "id": "international-relations-401-l02-act1",
           "type": "matching_pairs",
           "title": "Control Mapping",
-          "description": "Match controls to the strongest expected reliability or governance effect.",
+          "description": "Match controls to their primary governance effect.",
           "pairs": [
             {
-              "left": "Pre-release gate",
-              "right": "Reduces preventable failures"
+              "left": "Pre-analysis peer review",
+              "right": "Reduces preventable analytical errors"
             },
             {
-              "left": "Rollback threshold",
-              "right": "Contains blast radius quickly"
+              "left": "Risk escalation threshold",
+              "right": "Limits the scope of negative impacts"
             },
             {
-              "left": "Baseline monitor",
-              "right": "Supports impact attribution"
+              "left": "Baseline performance data",
+              "right": "Supports accurate impact attribution"
             },
             {
-              "left": "Retrospective cycle",
+              "left": "Post-mortem analysis cycle",
               "right": "Improves future decision quality"
             }
           ]
@@ -136,27 +136,27 @@ export const InternationalRelations401Module: LearningModule = {
           "id": "international-relations-401-l02-act2",
           "type": "sorting_buckets",
           "title": "Constraint Sorting",
-          "description": "Sort constraint types into technical, policy, and stakeholder-impact categories.",
+          "description": "Sort constraint types into analytical, policy, and stakeholder-impact categories.",
           "buckets": [
-            "Technical",
+            "Analytical",
             "Policy",
             "Stakeholder Impact"
           ],
           "items": [
             {
-              "text": "Throughput budget",
-              "bucket": "Technical"
+              "text": "Data availability budget",
+              "bucket": "Analytical"
             },
             {
-              "text": "Regulatory retention requirement",
+              "text": "Compliance with international law",
               "bucket": "Policy"
             },
             {
-              "text": "Public trust erosion risk",
+              "text": "Risk of eroding public trust",
               "bucket": "Stakeholder Impact"
             },
             {
-              "text": "Audit evidence requirement",
+              "text": "Requirement for auditable evidence",
               "bucket": "Policy"
             }
           ]
@@ -171,150 +171,150 @@ export const InternationalRelations401Module: LearningModule = {
       "learningAids": [
         {
           "id": "international-relations-401-l03-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Document assumptions, show your reasoning chain, and verify your conclusions before submission."
+          "type": "checklist",
+          "title": "Review Checklist",
+          "content": "Before starting, review: 1. Definitions of state/non-state actors. 2. Key components of strategic bargaining. 3. Purpose of analytical workflows and control gates."
         }
       ],
       "questions": [
         {
           "id": "international-relations-401-l03-q1",
-          "text": "Which approach most improves decisions in state and non-state actors?",
-          "skillId": "international-relations-401-skill-core",
+          "text": "Which approach most improves the analysis of state and non-state actors?",
+          "skillId": "international-relations-401-skill-actor-analysis",
           "options": [
             {
               "id": "a",
-              "text": "Rely on assumptions that are never tested"
+              "text": "Relying on untested assumptions"
             },
             {
               "id": "b",
-              "text": "Define constraints, test failure modes, and monitor indicators"
+              "text": "Defining constraints, testing for failure modes, and monitoring key indicators"
             },
             {
               "id": "c",
-              "text": "Treat all contexts as identical"
+              "text": "Treating all geopolitical contexts as identical"
             },
             {
               "id": "d",
-              "text": "Avoid uncertainty analysis"
+              "text": "Avoiding the analysis of uncertainty"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Reliable decisions require explicit constraints, failure tests, and measured signals."
+          "explanation": "Reliable analysis requires defining explicit constraints, testing for potential failures, and using measured signals to track outcomes."
         },
         {
           "id": "international-relations-401-l03-q2",
-          "text": "The 401 level should emphasize:",
-          "skillId": "international-relations-401-skill-level",
+          "text": "This advanced 401-level course emphasizes:",
+          "skillId": "international-relations-401-skill-course-focus",
           "options": [
             {
               "id": "a",
-              "text": "strategic leadership, policy and operations integration, and capstone defense"
+              "text": "Strategic leadership, policy and operations integration, and capstone defense"
             },
             {
               "id": "b",
-              "text": "Execution speed without review"
+              "text": "Speed of execution without critical review"
             },
             {
               "id": "c",
-              "text": "No baselines or controls"
+              "text": "Analysis without baselines or controls"
             },
             {
               "id": "d",
-              "text": "Single perspective decision-making"
+              "text": "Decision-making from a single perspective"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "This level is explicitly structured around strategic leadership, policy and operations integration, and capstone defense."
+          "explanation": "This course is structured around developing strategic leadership, integrating policy with operations, and defending a final capstone project."
         },
         {
           "id": "international-relations-401-l03-q3",
-          "text": "What best strengthens strategic bargaining reliability?",
-          "skillId": "international-relations-401-skill-reliability",
+          "text": "What best strengthens the reliability of a strategic bargaining analysis?",
+          "skillId": "international-relations-401-skill-bargaining-reliability",
           "options": [
             {
               "id": "a",
-              "text": "Unowned workflows and unclear escalation"
+              "text": "Undefined workflows and unclear escalation paths"
             },
             {
               "id": "b",
-              "text": "Control checkpoints, ownership mapping, and response thresholds"
+              "text": "Control checkpoints, clear ownership, and defined response thresholds"
             },
             {
               "id": "c",
-              "text": "Untracked changes"
+              "text": "Making untracked changes to the analysis"
             },
             {
               "id": "d",
-              "text": "No incident review"
+              "text": "Skipping post-incident reviews"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Reliability depends on clear controls, owners, and threshold-driven responses."
+          "explanation": "Reliability depends on clear controls, defined owners for each step, and threshold-driven responses to new information or events."
         },
         {
           "id": "international-relations-401-l03-q4",
           "text": "For institutional governance, which practice is most defensible?",
-          "skillId": "international-relations-401-skill-eval",
+          "skillId": "international-relations-401-skill-governance-evaluation",
           "options": [
             {
               "id": "a",
-              "text": "Use anecdotal wins only"
+              "text": "Using only anecdotal evidence of success"
             },
             {
               "id": "b",
-              "text": "Compare against baselines and include side-effect checks"
+              "text": "Comparing outcomes against baselines and checking for unintended side-effects"
             },
             {
               "id": "c",
-              "text": "Ignore difficult scenarios"
+              "text": "Ignoring difficult or inconvenient scenarios"
             },
             {
               "id": "d",
-              "text": "Adjust criteria after results"
+              "text": "Adjusting success criteria after seeing the results"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Baseline and side-effect analysis prevents biased or incomplete conclusions."
+          "explanation": "Defensible evaluation requires comparing results to a pre-defined baseline and analyzing for negative externalities to prevent biased conclusions."
         },
         {
           "id": "international-relations-401-l03-q5",
           "text": "A mature conflict and cooperation analysis model should include:",
-          "skillId": "international-relations-401-skill-governance",
+          "skillId": "international-relations-401-skill-analysis-maturity",
           "options": [
             {
               "id": "a",
-              "text": "Policy disconnected from measurement"
+              "text": "Policy goals disconnected from any measurement"
             },
             {
               "id": "b",
-              "text": "Policy links, measurable thresholds, and corrective pathways"
+              "text": "Clear links between policy and metrics, measurable thresholds, and corrective pathways"
             },
             {
               "id": "c",
-              "text": "No transparency obligations"
+              "text": "No obligations for transparency"
             },
             {
               "id": "d",
-              "text": "No remediation expectations"
+              "text": "No expectations for remediation of failures"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Governance maturity connects intention, measurement, and corrective response."
+          "explanation": "Mature governance connects policy intent with measurable outcomes and pre-defined pathways for corrective action."
         }
       ]
     },
     {
       "id": "international-relations-401-l04",
-      "title": "International Relations Case Analysis",
+      "title": "Case Analysis: The Caspian Sea Dispute",
       "type": "video",
       "duration": 14,
       "learningAids": [
         {
           "id": "international-relations-401-l04-a1",
-          "type": "mnemonic",
-          "title": "Guided Practice",
-          "content": "Document assumptions, show your reasoning chain, and verify your conclusions before submission."
+          "type": "decision_tree",
+          "title": "Crisis Decision Analysis",
+          "content": "A visual decision tree for analyzing a regional crisis, with branches for diplomatic, economic, and military options, and nodes for potential risks and outcomes."
         }
       ],
       "chunks": [
@@ -322,50 +322,50 @@ export const InternationalRelations401Module: LearningModule = {
           "id": "international-relations-401-l04-c1",
           "kind": "example",
           "title": "Case Context and Decision Stakes",
-          "content": "In this case analysis, we will focus on a regional crisis that requires careful diplomacy, which is the art of managing relationships between countries. We will also look at alliance management, which involves working with partners, and engaging with multilateral institutions, which are organizations that include multiple countries. Learners will map out high-impact risks, which are potential problems that could arise, and competing constraints, which are challenges that might limit our options.\nContext recap: In this case analysis, we will focus on a regional crisis that requires careful diplomacy, which is the art of managing relationships between countries. We will also look at alliance management, which involves working with partners, and engaging with multilateral institutions, which are organizations that include multiple countries. Learners will map out high-impact risks, which are potential problems that could arise, and competing constraints, which are challenges that might limit our options."
+          "content": "This case analysis examines the regional crisis over the legal and economic status of the Caspian Sea. It requires careful diplomacy, alliance management, and engagement with multilateral institutions. Learners will map high-impact risks and competing constraints facing the littoral states."
         },
         {
           "id": "international-relations-401-l04-c2",
           "kind": "concept",
           "title": "Tradeoff Matrix",
-          "content": "In this section, we will introduce the tradeoff matrix, a tool that helps us evaluate different intervention options. Each option will be scored based on four important criteria: effectiveness, which measures how well it works; reliability, which assesses how dependable it is; equity, which looks at fairness; and implementation feasibility, which considers how easy it is to put into action. This matrix will help learners make informed decisions.\nContext recap: In this section, we will introduce the tradeoff matrix, a tool that helps us evaluate different intervention options. Each option will be scored based on four important criteria: effectiveness, which measures how well it works; reliability, which assesses how dependable it is; equity, which looks at fairness; and implementation feasibility, which considers how easy it is to put into action. This matrix will help learners make informed decisions."
+          "content": "We introduce the tradeoff matrix as a tool for evaluating policy options. Each potential intervention is scored against key criteria: effectiveness (achieves goals), reliability (works as expected), equity (fair distribution of outcomes), and feasibility (practical to implement). This structured approach enables more rigorous decision-making."
         },
         {
           "id": "international-relations-401-l04-c3",
           "kind": "recap",
-          "title": "Failure Learning and Recovery",
-          "content": "In this recap, we will focus on learning from failures. Instead of seeing failures as setbacks, we will transform them into valuable lessons. This means creating safeguards, which are measures to prevent future mistakes, and response playbooks, which are plans for how to react when things don’t go as expected. Additionally, we will discuss the importance of monitoring updates, which are regular checks to ensure we are improving and adapting.\nContext recap: In this recap, we will focus on learning from failures. Instead of seeing failures as setbacks, we will transform them into valuable lessons. This means creating safeguards, which are measures to prevent future mistakes, and response playbooks, which are plans for how to react when things don’t go as expected. Additionally, we will discuss the importance of monitoring updates, which are regular checks to ensure we are improving and adapting."
+          "title": "Learning from Failure and Recovery",
+          "content": "Failures in foreign policy provide valuable lessons. This recap focuses on transforming setbacks into institutional knowledge by creating safeguards to prevent repeat mistakes, developing response playbooks for when things go wrong, and implementing continuous monitoring to adapt to changing conditions."
         }
       ],
       "flashcards": [
         {
           "id": "international-relations-401-l04-f1",
-          "front": "Tradeoff matrix",
-          "back": "A structured comparison of alternatives under competing priorities."
+          "front": "Tradeoff Matrix",
+          "back": "A structured tool for comparing policy alternatives across multiple, often competing, priorities and criteria."
         },
         {
           "id": "international-relations-401-l04-f2",
-          "front": "Failure pattern",
-          "back": "A recurring risk signature used to design targeted mitigations."
+          "front": "Failure Pattern",
+          "back": "A recurring type of risk or error that can be identified and used to design targeted mitigations and preventative measures."
         },
         {
           "id": "international-relations-401-l04-f3",
-          "front": "Response playbook",
-          "back": "A predefined action sequence for safe and timely recovery."
+          "front": "Response Playbook",
+          "back": "A predefined sequence of actions designed to ensure a safe, timely, and effective recovery from a crisis or operational failure."
         }
       ]
     },
     {
       "id": "international-relations-401-l05",
-      "title": "International Relations Simulation Studio",
+      "title": "Simulation Studio: Trade Sanctions",
       "type": "interactive",
       "duration": 16,
       "learningAids": [
         {
           "id": "international-relations-401-l05-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Document assumptions, show your reasoning chain, and verify your conclusions before submission."
+          "type": "dashboard_mockup",
+          "title": "Simulation Control Panel",
+          "content": "A visual mockup of a simulation dashboard, showing adjustable parameters for sanctions severity, international cooperation, and target country resilience, alongside output graphs for economic impact and policy effectiveness."
         }
       ],
       "chunks": [
@@ -373,13 +373,13 @@ export const InternationalRelations401Module: LearningModule = {
           "id": "international-relations-401-l05-c1",
           "kind": "practice",
           "title": "Simulation Setup",
-          "content": "In this interactive simulation studio, learners will configure their own intervention scenarios. This means they will set up different situations to test their ideas. They will also define uncertainty parameters, which are the unknown factors that could affect their plans, and measurable success thresholds, which are the specific goals they aim to achieve. This hands-on experience will help them understand the complexities of real-world decision-making.\nContext recap: In this interactive simulation studio, learners will configure their own intervention scenarios. This means they will set up different situations to test their ideas. They will also define uncertainty parameters, which are the unknown factors that could affect their plans, and measurable success thresholds, which are the specific goals they aim to achieve. This hands-on experience will help them understand the complexities of real-world decision-making."
+          "content": "In this simulation, you will configure and run a scenario involving the use of economic sanctions. You will define the intervention's goals, set uncertainty parameters (e.g., likelihood of third-party spoilers), and establish measurable thresholds for success. This provides hands-on experience with the complexities of policy implementation."
         },
         {
           "id": "international-relations-401-l05-c2",
           "kind": "recap",
           "title": "Simulation Debrief",
-          "content": "After running the simulation, we will conduct a debriefing session. This is a time for learners to evaluate the outcomes of their scenarios, including any side effects that may have occurred. We will also assess how well their actions aligned with governance constraints, which are the rules and guidelines that must be followed. This reflective process is essential for understanding the impact of their decisions.\nContext recap: After running the simulation, we will conduct a debriefing session. This is a time for learners to evaluate the outcomes of their scenarios, including any side effects that may have occurred. We will also assess how well their actions aligned with governance constraints, which are the rules and guidelines that must be followed. This reflective process is essential for understanding the impact of their decisions."
+          "content": "Following the simulation, we will conduct a debriefing session. This involves evaluating the outcomes, including unintended side effects, and assessing how well the chosen actions aligned with predefined governance constraints. This reflective process is essential for understanding the full impact of policy decisions."
         }
       ],
       "interactiveActivities": [
@@ -387,34 +387,34 @@ export const InternationalRelations401Module: LearningModule = {
           "id": "international-relations-401-l05-act1",
           "type": "scenario_practice",
           "title": "Intervention Simulation",
-          "description": "Evaluate three strategies and justify which best advances state and non-state actors and conflict and cooperation analysis.",
+          "description": "Evaluate three sanctions strategies and justify which one best achieves the stated objectives while managing risks.",
           "instructions": [
-            "Define objective and guardrails before selecting interventions.",
-            "Record near-term and long-term tradeoffs for each option.",
-            "Select confirmation metrics and escalation triggers."
+            "Define your primary objective and ethical guardrails before selecting an intervention.",
+            "Record the expected near-term and long-term tradeoffs for each option.",
+            "Select key metrics to confirm success and triggers for escalating or withdrawing the sanctions."
           ]
         },
         {
           "id": "international-relations-401-l05-act2",
           "type": "matching_pairs",
           "title": "Mitigation Alignment",
-          "description": "Match risk conditions to the strongest mitigation responses.",
+          "description": "Match risk conditions to the most effective mitigation responses.",
           "pairs": [
             {
-              "left": "Ambiguous ownership",
-              "right": "Define role map and escalation authority"
+              "left": "Ambiguous accountability",
+              "right": "Define a role map and clear escalation authority"
             },
             {
-              "left": "Weak signal quality",
-              "right": "Strengthen intake validation and monitoring"
+              "left": "Poor intelligence quality",
+              "right": "Strengthen data validation and source monitoring"
             },
             {
-              "left": "Policy drift",
-              "right": "Re-anchor controls to explicit standards"
+              "left": "Policy goals drifting over time",
+              "right": "Re-anchor actions to explicit, documented standards"
             },
             {
-              "left": "Stakeholder opposition",
-              "right": "Increase transparency and feedback channels"
+              "left": "Growing stakeholder opposition",
+              "right": "Increase transparency and create feedback channels"
             }
           ]
         }
@@ -422,156 +422,156 @@ export const InternationalRelations401Module: LearningModule = {
     },
     {
       "id": "international-relations-401-l06",
-      "title": "Checkpoint 2: Systems Decisions",
+      "title": "Checkpoint 2: Application and Analysis",
       "type": "quiz",
       "duration": 10,
       "learningAids": [
         {
           "id": "international-relations-401-l06-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Document assumptions, show your reasoning chain, and verify your conclusions before submission."
+          "type": "checklist",
+          "title": "Review Checklist",
+          "content": "Before starting, review: 1. The purpose of a tradeoff matrix. 2. Key elements of a simulation debrief. 3. Strategies for mitigating common policy risks."
         }
       ],
       "questions": [
         {
           "id": "international-relations-401-l06-q1",
-          "text": "Which approach most improves decisions in state and non-state actors?",
-          "skillId": "international-relations-401-skill-core",
+          "text": "When using a tradeoff matrix to evaluate policy options, what is the primary goal?",
+          "skillId": "international-relations-401-skill-tradeoff-analysis",
           "options": [
             {
               "id": "a",
-              "text": "Rely on assumptions that are never tested"
+              "text": "To find a perfect solution with no downsides"
             },
             {
               "id": "b",
-              "text": "Define constraints, test failure modes, and monitor indicators"
+              "text": "To systematically compare options across consistent, predefined criteria"
             },
             {
               "id": "c",
-              "text": "Treat all contexts as identical"
+              "text": "To select the option that is easiest to implement, regardless of effectiveness"
             },
             {
               "id": "d",
-              "text": "Avoid uncertainty analysis"
+              "text": "To confirm a pre-selected personal preference"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Reliable decisions require explicit constraints, failure tests, and measured signals."
+          "explanation": "A tradeoff matrix is a tool for structured, objective comparison of different options against the same set of important criteria, such as effectiveness, feasibility, and equity."
         },
         {
           "id": "international-relations-401-l06-q2",
-          "text": "The 401 level should emphasize:",
-          "skillId": "international-relations-401-skill-level",
+          "text": "In a policy simulation debrief, what is the most critical area of reflection?",
+          "skillId": "international-relations-401-skill-simulation-debrief",
           "options": [
             {
               "id": "a",
-              "text": "strategic leadership, policy and operations integration, and capstone defense"
+              "text": "Focusing only on whether the primary goal was achieved"
             },
             {
               "id": "b",
-              "text": "Execution speed without review"
+              "text": "Ignoring the initial assumptions to focus on the outcome"
             },
             {
               "id": "c",
-              "text": "No baselines or controls"
+              "text": "Analyzing both the intended outcomes and the unintended side effects"
             },
             {
               "id": "d",
-              "text": "Single perspective decision-making"
+              "text": "Determining who to blame if the simulation failed"
             }
           ],
-          "correctOptionId": "a",
-          "explanation": "This level is explicitly structured around strategic leadership, policy and operations integration, and capstone defense."
+          "correctOptionId": "c",
+          "explanation": "A thorough debrief requires evaluating the full spectrum of results, including unexpected consequences (side effects), to gain a complete understanding of the policy's impact."
         },
         {
           "id": "international-relations-401-l06-q3",
-          "text": "What best strengthens strategic bargaining reliability?",
-          "skillId": "international-relations-401-skill-reliability",
+          "text": "A 'response playbook' is designed to:",
+          "skillId": "international-relations-401-skill-risk-mitigation",
           "options": [
             {
               "id": "a",
-              "text": "Unowned workflows and unclear escalation"
+              "text": "Prevent any and all failures from ever occurring"
             },
             {
               "id": "b",
-              "text": "Control checkpoints, ownership mapping, and response thresholds"
+              "text": "Document a policy's success after the fact"
             },
             {
               "id": "c",
-              "text": "Untracked changes"
+              "text": "Provide a pre-planned set of actions to manage a crisis effectively"
             },
             {
               "id": "d",
-              "text": "No incident review"
+              "text": "Assign blame when an incident occurs"
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "Reliability depends on clear controls, owners, and threshold-driven responses."
+          "correctOptionId": "c",
+          "explanation": "A response playbook is a proactive tool that outlines steps to take during a crisis to ensure a timely, safe, and coordinated recovery."
         },
         {
           "id": "international-relations-401-l06-q4",
-          "text": "For institutional governance, which practice is most defensible?",
-          "skillId": "international-relations-401-skill-eval",
+          "text": "What is the best way to mitigate the risk of 'policy drift,' where actions no longer align with original goals?",
+          "skillId": "international-relations-401-skill-policy-governance",
           "options": [
             {
               "id": "a",
-              "text": "Use anecdotal wins only"
+              "text": "Hope that decision-makers have a good memory of the original goals"
             },
             {
               "id": "b",
-              "text": "Compare against baselines and include side-effect checks"
+              "text": "Periodically review actions against explicit, documented standards and metrics"
             },
             {
               "id": "c",
-              "text": "Ignore difficult scenarios"
+              "text": "Change the goals to match the current actions"
             },
             {
               "id": "d",
-              "text": "Adjust criteria after results"
+              "text": "Stop monitoring the policy's effects"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Baseline and side-effect analysis prevents biased or incomplete conclusions."
+          "explanation": "Policy drift is best managed through disciplined governance, which includes regular reviews to ensure that implementation remains anchored to the original, explicit standards."
         },
         {
           "id": "international-relations-401-l06-q5",
-          "text": "A mature conflict and cooperation analysis model should include:",
-          "skillId": "international-relations-401-skill-governance",
+          "text": "Setting 'uncertainty parameters' in a simulation helps an analyst to:",
+          "skillId": "international-relations-401-skill-uncertainty-analysis",
           "options": [
             {
               "id": "a",
-              "text": "Policy disconnected from measurement"
+              "text": "Guarantee a successful outcome"
             },
             {
               "id": "b",
-              "text": "Policy links, measurable thresholds, and corrective pathways"
+              "text": "Eliminate all variables from the scenario"
             },
             {
               "id": "c",
-              "text": "No transparency obligations"
+              "text": "Stress-test a policy against different potential real-world conditions"
             },
             {
               "id": "d",
-              "text": "No remediation expectations"
+              "text": "Prove that the policy is flawless"
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "Governance maturity connects intention, measurement, and corrective response."
+          "correctOptionId": "c",
+          "explanation": "Uncertainty parameters allow analysts to test how robust a policy is by simulating various conditions and external factors that are not fully predictable."
         }
       ]
     },
     {
       "id": "international-relations-401-l07",
-      "title": "International Relations Policy and Ethics Integration",
+      "title": "Policy and Ethics Integration",
       "type": "video",
       "duration": 12,
       "learningAids": [
         {
           "id": "international-relations-401-l07-a1",
-          "type": "image",
-          "title": "Guided Practice",
-          "content": "Document assumptions, show your reasoning chain, and verify your conclusions before submission."
+          "type": "matrix",
+          "title": "Stakeholder Impact Matrix",
+          "content": "A matrix with stakeholder groups on one axis and types of impact (economic, social, political) on the other, used to map the distribution of a policy's benefits and burdens."
         }
       ],
       "chunks": [
@@ -579,50 +579,50 @@ export const InternationalRelations401Module: LearningModule = {
           "id": "international-relations-401-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Mapping",
-          "content": "In this lesson, learners will examine how the benefits and burdens of decisions are distributed among different stakeholders. Stakeholders are individuals or groups that have an interest in the outcome of a decision. We will also consider how these impacts vary over time, which means looking at both short-term and long-term effects. This understanding is crucial for making ethical decisions in international relations.\nContext recap: In this lesson, learners will examine how the benefits and burdens of decisions are distributed among different stakeholders. Stakeholders are individuals or groups that have an interest in the outcome of a decision. We will also consider how these impacts vary over time, which means looking at both short-term and long-term effects. This understanding is crucial for making ethical decisions in international relations."
+          "content": "Ethical policy-making requires examining how benefits and burdens are distributed across different stakeholder groups. We will analyze how these impacts vary over short-term and long-term timescales, which is crucial for ensuring equity and justice in international relations."
         },
         {
           "id": "international-relations-401-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "In this section, we will discuss the concept of accountability in decision-making. Accountability is about ensuring that actions can be traced back to their sources. We will explore how this is framed through traceability, which is the ability to track decisions, review rights, which allow stakeholders to assess actions, and remediation obligations, which are responsibilities to correct any mistakes. Understanding accountability is vital for ethical governance.\nContext recap: In this section, we will discuss the concept of accountability in decision-making. Accountability is about ensuring that actions can be traced back to their sources. We will explore how this is framed through traceability, which is the ability to track decisions, review rights, which allow stakeholders to assess actions, and remediation obligations, which are responsibilities to correct any mistakes. Understanding accountability is vital for ethical governance."
+          "content": "Accountability ensures that actions can be traced and decision-makers can be held responsible. We will explore how to build an accountability architecture through decision traceability, stakeholder review rights, and clear remediation obligations for correcting negative outcomes. This is vital for maintaining trust and legitimacy."
         },
         {
           "id": "international-relations-401-l07-c3",
           "kind": "recap",
           "title": "Responsible Execution Checklist",
-          "content": "At the end of our lesson, we will use a helpful checklist that connects how well we perform technical tasks with important ideas about policy, ethics, and the trust of everyone involved. This checklist will guide us in ensuring that our actions align with our values and the expectations of our community.\nContext recap: At the end of our lesson, we will use a helpful checklist that connects how well we perform technical tasks with important ideas about policy, ethics, and the trust of everyone involved. This checklist will guide us in ensuring that our actions align with our values and the expectations of our community."
+          "content": "This recap introduces a checklist for responsible execution. It connects technical performance with policy objectives, ethical principles, and stakeholder trust. This tool helps ensure that actions are not only effective but also align with core values and maintain public confidence."
         }
       ],
       "flashcards": [
         {
           "id": "international-relations-401-l07-f1",
-          "front": "Impact distribution",
-          "back": "How outcomes differ across stakeholder groups and timescales."
+          "front": "Impact Distribution",
+          "back": "An analysis of how the positive and negative outcomes of a policy are spread across different stakeholder groups and timeframes."
         },
         {
           "id": "international-relations-401-l07-f2",
-          "front": "Decision traceability",
-          "back": "The evidence chain showing how and why a decision was made."
+          "front": "Decision Traceability",
+          "back": "The documented evidence chain showing how and why a decision was made, including the data, assumptions, and individuals involved."
         },
         {
           "id": "international-relations-401-l07-f3",
-          "front": "Responsible execution",
-          "back": "Delivery behavior that balances effectiveness with ethical and policy safeguards."
+          "front": "Responsible Execution",
+          "back": "The practice of implementing policy in a way that balances effectiveness with ethical safeguards and respect for stakeholder interests."
         }
       ]
     },
     {
       "id": "international-relations-401-l08",
-      "title": "International Relations Capstone Planning Lab",
+      "title": "Capstone Planning Lab",
       "type": "interactive",
       "duration": 15,
       "learningAids": [
         {
           "id": "international-relations-401-l08-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Document assumptions, show your reasoning chain, and verify your conclusions before submission."
+          "type": "template",
+          "title": "Capstone Project Charter Template",
+          "content": "A downloadable document template for the capstone charter, with sections for Objective, Scope, Key Metrics, Risks, and Governance Plan."
         }
       ],
       "chunks": [
@@ -630,13 +630,13 @@ export const InternationalRelations401Module: LearningModule = {
           "id": "international-relations-401-l08-c1",
           "kind": "practice",
           "title": "Capstone Charter",
-          "content": "In this activity, you will create a detailed capstone charter. This document will outline your main objective for the project, identify any constraints you might face, establish metrics for success, and set up governance gates to ensure everything stays on track. This is an important step in planning your capstone project effectively.\nContext recap: In this activity, you will create a detailed capstone charter. This document will outline your main objective for the project, identify any constraints you might face, establish metrics for success, and set up governance gates to ensure everything stays on track. This is an important step in planning your capstone project effectively."
+          "content": "In this lab, you will draft a detailed charter for your capstone project. This document will define your primary research question or objective, identify key constraints, establish measurable success metrics, and outline governance gates to ensure your project remains on track."
         },
         {
           "id": "international-relations-401-l08-c2",
           "kind": "recap",
           "title": "Defense Readiness",
-          "content": "As part of our preparation, you will gather evidence to support your arguments against critiques related to technical aspects, policy decisions, and the perspectives of stakeholders. This practice will help you build strong defenses that are backed by facts, ensuring that you can confidently address any challenges that arise.\nContext recap: As part of our preparation, you will gather evidence to support your arguments against critiques related to technical aspects, policy decisions, and the perspectives of stakeholders. This practice will help you build strong defenses that are backed by facts, ensuring that you can confidently address any challenges that arise."
+          "content": "Preparing for your capstone defense begins now. This recap focuses on gathering evidence to support your arguments against potential critiques related to your methodology, policy assumptions, and stakeholder analysis. This practice helps build a resilient, evidence-based defense."
         }
       ],
       "interactiveActivities": [
@@ -646,16 +646,61 @@ export const InternationalRelations401Module: LearningModule = {
           "title": "Capstone Charter Builder",
           "description": "Build a capstone charter with objectives, metrics, risks, and remediation pathways.",
           "instructions": [
-            "Define objective and boundary conditions.",
-            "List at least three measurable success indicators.",
-            "Define escalation and corrective action criteria."
+            "Define a clear, concise objective and the boundary conditions of your analysis.",
+            "List at least three measurable success indicators for your proposed policy.",
+            "Define criteria for escalating a risk and for taking corrective action."
           ]
         },
         {
           "id": "international-relations-401-l08-act2",
           "type": "debate_simulator",
           "title": "Decision Defense Panel",
-          "description": "Defend your capstone decisions against technical, policy, and stakeholder objections."
+          "description": "Defend your proposed capstone decisions against simulated technical, policy, and stakeholder objections.",
+          "instructions": []
+        }
+      ]
+    },
+    {
+      "id": "international-relations-401-l09",
+      "title": "Capstone Defense and Module Review",
+      "type": "interactive",
+      "duration": 20,
+      "learningAids": [
+        {
+          "id": "international-relations-401-l09-a1",
+          "type": "rubric",
+          "title": "Capstone Defense Evaluation Rubric",
+          "content": "A detailed rubric outlining the evaluation criteria for the capstone defense, including clarity of argument, strength of evidence, handling of critiques, and professionalism."
+        }
+      ],
+      "chunks": [
+        {
+          "id": "international-relations-401-l09-c1",
+          "kind": "practice",
+          "title": "Final Presentation and Defense",
+          "content": "You will present your capstone project, defending your analysis, methodology, and recommendations against critical review from peers and instructors. This simulates a professional policy briefing and is the culmination of the skills developed throughout the module."
+        },
+        {
+          "id": "international-relations-401-l09-c2",
+          "kind": "recap",
+          "title": "Course Synthesis and Future Applications",
+          "content": "A final review of the core concepts of the course, connecting foundational theories to the practical skills developed in case studies, simulations, and the capstone project. We will discuss how to apply these analytical skills in future academic and professional contexts."
+        }
+      ],
+      "interactiveActivities": [
+        {
+          "id": "international-relations-401-l09-act1",
+          "type": "peer_review",
+          "title": "Peer Feedback Forum",
+          "description": "Provide constructive feedback on two peers' capstone presentations using the provided evaluation rubric. Focus on the clarity of their argument and the quality of their evidence.",
+          "instructions": []
+        },
+        {
+          "id": "international-relations-401-l09-act2",
+          "type": "self_reflection",
+          "title": "Personal Learning Reflection",
+          "description": "Reflect on your learning journey through this module. Identify the most valuable skill you developed and one area you plan to focus on for future growth in the field of International Relations.",
+          "instructions": []
         }
       ]
     }

@@ -1,9 +1,9 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const EthicsOfTechnology101Module: LearningModule = {
+export const ethics_of_technology_101_Module: LearningModule = {
   "id": "ethics-of-technology-101",
-  "title": "Ethics of Technology Foundations",
-  "description": "Level 101 curriculum in Ethics of Technology, focused on normative frameworks, sociotechnical harms, responsible design practice, and governance and accountability through case-driven analysis, simulations, and assessment-backed mastery.",
+  "title": "Introduction to the Ethics of Technology",
+  "description": "A beginner's course on the ethics of technology. Learn to identify potential harms, use frameworks for fair decision-making, design technology responsibly, and understand the importance of rules and accountability. This course uses real-world case studies, interactive simulations, and project-based learning.",
   "subject": "Ethics",
   "tags": [
     "core",
@@ -14,148 +14,183 @@ export const EthicsOfTechnology101Module: LearningModule = {
   ],
   "minAge": 14,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "beginner",
   "localeSupport": [
     "en"
   ],
   "learningObjectives": [
-    "Apply normative frameworks with explicit assumptions and tradeoff framing",
-    "Build repeatable workflows for sociotechnical harms under realistic constraints",
-    "Evaluate responsible design practice decisions with baseline and side-effect analysis",
-    "Strengthen governance and accountability with transparent policies and escalation pathways",
-    "Communicate evidence and uncertainty to mixed stakeholder groups",
-    "Produce defensible recommendations that survive critical review"
+    "Apply ethical frameworks to technology-related decisions, clearly stating assumptions and tradeoffs.",
+    "Develop a step-by-step process for identifying and addressing potential harm caused by technology.",
+    "Evaluate the impact of design choices, considering both intended benefits and unintended side effects.",
+    "Propose clear rules and procedures to ensure technology is governed responsibly and people are held accountable.",
+    "Clearly communicate complex ethical issues, including evidence and uncertainties, to different audiences.",
+    "Create well-reasoned recommendations that can be defended against questions and criticism."
   ],
   "lessons": [
     {
+      "id": "ethics-of-technology-101-l00",
+      "title": "Welcome to the Ethics of Technology",
+      "type": "video",
+      "duration": 5,
+      "learningAids": [
+        {
+          "id": "ethics-of-technology-101-l00-a1",
+          "type": "glossary",
+          "title": "Key Terms",
+          "content": "A list of important terms and definitions that will be used throughout the course."
+        }
+      ],
+      "chunks": [
+        {
+          "id": "ethics-of-technology-101-l00-c1",
+          "kind": "concept",
+          "title": "Why Does Tech Ethics Matter?",
+          "content": "Technology is a powerful tool that shapes our world, from how we communicate to the jobs we do. In this introduction, we'll explore why it's crucial to think about the ethical side of technology and ask important questions about fairness, safety, and responsibility.",
+          "visualPrompt": "Animation showing technology connecting people globally, then morphing to show a question mark over a computer chip."
+        },
+        {
+          "id": "ethics-of-technology-101-l00-c2",
+          "kind": "concept",
+          "title": "What You Will Learn",
+          "content": "This course will give you the tools to analyze technology's impact on society. We will cover core concepts, work through real-world case studies, and build a final project to showcase your skills. Our goal is to help you become a more thoughtful and responsible user, creator, and citizen in a technological world.",
+          "visualPrompt": "A visual roadmap of the course, showing icons for 'Concepts', 'Case Study', 'Simulation', and 'Final Project'."
+        }
+      ]
+    },
+    {
       "id": "ethics-of-technology-101-l01",
-      "title": "Ethics of Technology Core Foundations",
+      "title": "What is Tech Ethics? Core Concepts",
       "type": "video",
       "duration": 13,
       "learningAids": [
         {
           "id": "ethics-of-technology-101-l01-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use the lesson structure, document assumptions, and validate your conclusions before final submission."
+          "title": "Concept Map",
+          "content": "A visual diagram connecting the core concepts of ethical frameworks, harms, and responsible design."
         }
       ],
       "chunks": [
         {
           "id": "ethics-of-technology-101-l01-c1",
           "kind": "concept",
-          "title": "Language, Scope, and Boundaries",
-          "content": "In this lesson, we will explore important concepts related to technology ethics. We will define what we mean by operational language, which helps us communicate clearly about technology. We will also discuss the boundaries of our discussions, known as scope boundaries, and how these relate to normative frameworks. Additionally, we will examine how sociotechnical harms can arise in real-world systems, helping us understand the ethical implications of technology use.\nContext recap: In this lesson, we will explore important concepts related to technology ethics. We will define what we mean by operational language, which helps us communicate clearly about technology. We will also discuss the boundaries of our discussions, known as scope boundaries, and how these relate to normative frameworks. Additionally, we will examine how sociotechnical harms can arise in real-world systems, helping us understand the ethical implications of technology use."
+          "title": "Setting the Stage: Key Ideas",
+          "content": "To talk about tech ethics, we need a shared vocabulary. We'll define key terms like 'ethical frameworks' (our guides for making fair decisions), 'stakeholders' (everyone affected by a technology), and 'sociotechnical harms' (the negative impacts that can arise when tech meets society).",
+          "visualPrompt": "Simple animated icons appearing on screen for 'Framework' (a compass), 'Stakeholders' (a group of diverse people), and 'Harm' (a cracked screen)."
         },
         {
           "id": "ethics-of-technology-101-l01-c2",
           "kind": "concept",
-          "title": "Causal Reasoning Under Constraints",
-          "content": "In this part of the lesson, learners will engage in modeling cause-and-effect pathways. This means we will look at how different actions can lead to specific outcomes. We will also identify assumptions that might lead to failures in our reasoning. By doing this, learners will be better prepared to select effective interventions that can help address the issues we identify.\nContext recap: In this part of the lesson, learners will engage in modeling cause-and-effect pathways. This means we will look at how different actions can lead to specific outcomes. We will also identify assumptions that might lead to failures in our reasoning. By doing this, learners will be better prepared to select effective interventions that can help address the issues we identify."
+          "title": "Thinking About Cause and Effect",
+          "content": "It's important to understand how a technology can lead to certain outcomes, both good and bad. We'll practice mapping out these cause-and-effect chains and learn to spot the hidden assumptions we might be making. This helps us choose better ways to solve problems.",
+          "visualPrompt": "An animated flowchart showing a technology (e.g., a food delivery app) leading to multiple outcomes (convenience, traffic, impact on local restaurants)."
         },
         {
           "id": "ethics-of-technology-101-l01-c3",
           "kind": "recap",
-          "title": "Evidence Standards",
-          "content": "Throughout this module, it is essential that all claims we make are supported by observable indicators. This means we need to have evidence that we can see or measure. We will also discuss the importance of understanding uncertainty bounds, which help us know the limits of our knowledge. Finally, we will establish review checkpoints to ensure that our findings are accurate and reliable.\nContext recap: Throughout this module, it is essential that all claims we make are supported by observable indicators. This means we need to have evidence that we can see or measure. We will also discuss the importance of understanding uncertainty bounds, which help us know the limits of our knowledge. Finally, we will establish review checkpoints to ensure that our findings are accurate and reliable."
+          "title": "Using Evidence to Make Claims",
+          "content": "In this course, every claim you make should be backed by evidence. We'll discuss what counts as good evidence, how to be honest about what we don't know (uncertainty), and why it's important to have checkpoints to review our work for accuracy.",
+          "visualPrompt": "A graphic of a magnifying glass over a data point, with a checklist icon nearby."
         }
       ],
       "flashcards": [
         {
           "id": "ethics-of-technology-101-l01-f1",
-          "front": "normative frameworks",
-          "back": "A central decision axis in Ethics of Technology requiring explicit tradeoff treatment."
+          "front": "Ethical Frameworks",
+          "back": "Guiding principles (like fairness or safety) that help us make decisions and evaluate tradeoffs."
         },
         {
           "id": "ethics-of-technology-101-l01-f2",
-          "front": "sociotechnical harms",
-          "back": "The reliability layer that determines whether plans survive real-world variability."
+          "front": "Sociotechnical Harms",
+          "back": "Negative impacts on people or society that arise from the interaction of technology and human behavior."
         },
         {
           "id": "ethics-of-technology-101-l01-f3",
-          "front": "responsible design practice",
-          "back": "The analytical process for assessing intervention quality and consequence spread."
+          "front": "Responsible Design",
+          "back": "The practice of creating technology while carefully considering its potential impacts and building in safeguards."
         }
       ]
     },
     {
       "id": "ethics-of-technology-101-l02",
-      "title": "Ethics of Technology Workflow Lab",
+      "title": "Building an Ethical Workflow",
       "type": "interactive",
       "duration": 15,
       "learningAids": [
         {
           "id": "ethics-of-technology-101-l02-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use the lesson structure, document assumptions, and validate your conclusions before final submission."
+          "type": "template",
+          "title": "Workflow Template",
+          "content": "A downloadable template to help you structure your own ethical workflow, including sections for goals, stakeholders, potential harms, and checkpoints."
         }
       ],
       "chunks": [
         {
           "id": "ethics-of-technology-101-l02-c1",
           "kind": "practice",
-          "title": "Workflow Construction",
-          "content": "In this interactive lab, learners will have the opportunity to design a workflow. This will involve using foundational vocabulary to communicate effectively, mapping out core mechanisms to understand how things work, and conducting basic scenario analyses to predict outcomes. After creating their workflows, learners will test their designs to see how resilient they are when faced with uncertainty.\nContext recap: In this interactive lab, learners will have the opportunity to design a workflow. This will involve using foundational vocabulary to communicate effectively, mapping out core mechanisms to understand how things work, and conducting basic scenario analyses to predict outcomes. After creating their workflows, learners will test their designs to see how resilient they are when faced with uncertainty."
+          "title": "Designing a Responsible Process",
+          "content": "In this lab, you'll design a step-by-step process (a workflow) for analyzing a new technology. You'll use the key terms we've learned, map out how the tech works, and think through a few possible scenarios. Then, you'll test your workflow to see if it holds up.",
+          "visualPrompt": "An interactive drag-and-drop interface where users can arrange blocks labeled 'Identify Stakeholders', 'Brainstorm Harms', 'Propose Solutions', and 'Review'."
         },
         {
           "id": "ethics-of-technology-101-l02-c2",
           "kind": "recap",
-          "title": "Readiness and Control Gates",
-          "content": "To ensure that our operations are ready to go, we need to focus on several key elements. This includes mapping out who is responsible for what, which we call owner mapping. We will also establish control gates, which are checkpoints that help us monitor progress. Finally, we will create post-decision verification hooks to confirm that our decisions are effective and appropriate.\nContext recap: To ensure that our operations are ready to go, we need to focus on several key elements. This includes mapping out who is responsible for what, which we call owner mapping. We will also establish control gates, which are checkpoints that help us monitor progress. Finally, we will create post-decision verification hooks to confirm that our decisions are effective and appropriate."
+          "title": "Checkpoints for Safety and Quality",
+          "content": "A good workflow has built-in safety checks. We'll learn how to define who is responsible for what, create 'control gates' or review points to monitor progress, and set up ways to verify that our decisions are having the intended effect after they're made.",
+          "visualPrompt": "An animation of a conveyor belt with products moving along it, passing through quality-check gates where a robotic arm gives a thumbs-up."
         }
       ],
       "interactiveActivities": [
         {
           "id": "ethics-of-technology-101-l02-act1",
           "type": "matching_pairs",
-          "title": "Control-to-Outcome Mapping",
-          "description": "Match each control mechanism to its strongest expected system benefit.",
+          "title": "Matching Actions to Benefits",
+          "description": "Match each safety check with the primary benefit it provides to a system.",
           "pairs": [
             {
-              "left": "Pre-commit review gate",
-              "right": "Reduces preventable defects"
+              "left": "Reviewing a plan before launch",
+              "right": "Reduces preventable mistakes"
             },
             {
-              "left": "Rollback trigger",
-              "right": "Limits blast radius during failures"
+              "left": "Having a quick 'undo' button",
+              "right": "Limits the damage when something goes wrong"
             },
             {
-              "left": "Baseline dashboard",
-              "right": "Supports defensible impact claims"
+              "left": "Tracking key metrics over time",
+              "right": "Helps prove if something is working"
             },
             {
-              "left": "Retrospective cycle",
-              "right": "Improves future decision quality"
+              "left": "Holding a 'lessons learned' meeting",
+              "right": "Improves the quality of future decisions"
             }
           ]
         },
         {
           "id": "ethics-of-technology-101-l02-act2",
           "type": "sorting_buckets",
-          "title": "Constraint Classification",
-          "description": "Sort constraints into technical, policy, and stakeholder-impact buckets.",
+          "title": "Classifying Constraints",
+          "description": "Sort these project limitations into the correct categories.",
           "buckets": [
             "Technical",
             "Policy",
-            "Stakeholder Impact"
+            "Human Impact"
           ],
           "items": [
             {
-              "text": "Service latency target",
+              "text": "The app must load in under 2 seconds",
               "bucket": "Technical"
             },
             {
-              "text": "Compliance retention rule",
+              "text": "User data must be deleted after 90 days",
               "bucket": "Policy"
             },
             {
-              "text": "Community trust risk",
-              "bucket": "Stakeholder Impact"
+              "text": "The community may lose trust in us",
+              "bucket": "Human Impact"
             },
             {
-              "text": "Incident disclosure protocol",
+              "text": "We must publicly report any data breaches",
               "bucket": "Policy"
             }
           ]
@@ -164,221 +199,176 @@ export const EthicsOfTechnology101Module: LearningModule = {
     },
     {
       "id": "ethics-of-technology-101-l03",
-      "title": "Checkpoint 1: Concepts and Methods",
+      "title": "Checkpoint 1: Core Concepts",
       "type": "quiz",
       "duration": 10,
       "learningAids": [
         {
           "id": "ethics-of-technology-101-l03-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use the lesson structure, document assumptions, and validate your conclusions before final submission."
+          "title": "Review Your Notes",
+          "content": "Before starting the quiz, take a moment to review the key concepts from the first two lessons."
         }
       ],
       "questions": [
         {
           "id": "ethics-of-technology-101-l03-q1",
-          "text": "Which action most improves normative frameworks quality in practice?",
+          "text": "When using an ethical framework, what is the most important first step?",
           "skillId": "ethics-of-technology-101-skill-core",
           "options": [
             {
               "id": "a",
-              "text": "Skip explicit constraints and rely on intuition"
+              "text": "Rely only on your gut feeling"
             },
             {
               "id": "b",
-              "text": "Define assumptions, monitor indicators, and test failure cases"
+              "text": "Clearly state your assumptions and the values you are prioritizing"
             },
             {
               "id": "c",
-              "text": "Treat all outcomes as equivalent"
+              "text": "Assume every possible outcome is equally good"
             },
             {
               "id": "d",
-              "text": "Ignore uncertainty and variance"
+              "text": "Ignore anyone who disagrees with you"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "High-quality decisions require explicit assumptions and measurable stress tests."
+          "explanation": "Good ethical decisions require being clear about your starting assumptions and what you are trying to achieve."
         },
         {
           "id": "ethics-of-technology-101-l03-q2",
-          "text": "At level 101, the strongest emphasis is:",
+          "text": "For a beginner's course, the strongest focus should be on:",
           "skillId": "ethics-of-technology-101-skill-level",
           "options": [
             {
               "id": "a",
-              "text": "foundational vocabulary, core mechanism mapping, and basic scenario analysis"
+              "text": "Understanding key terms, how systems work, and thinking through basic scenarios"
             },
             {
               "id": "b",
-              "text": "Fast execution with no review loops"
+              "text": "Moving as fast as possible without stopping to review your work"
             },
             {
               "id": "c",
-              "text": "Single stakeholder perspective only"
+              "text": "Only considering the perspective of the person who built the technology"
             },
             {
               "id": "d",
-              "text": "Outcome claims without baselines"
+              "text": "Making claims about success without any data to back them up"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "The 101 layer is explicitly designed around foundational vocabulary, core mechanism mapping, and basic scenario analysis."
+          "explanation": "A strong foundation is built on understanding the basics: vocabulary, system mechanics, and scenario analysis."
         },
         {
           "id": "ethics-of-technology-101-l03-q3",
-          "text": "What best strengthens sociotechnical harms reliability?",
+          "text": "What is the best way to reduce the risk of sociotechnical harms?",
           "skillId": "ethics-of-technology-101-skill-reliability",
           "options": [
             {
               "id": "a",
-              "text": "No ownership for incident response"
+              "text": "Hope that no one is responsible when something goes wrong"
             },
             {
               "id": "b",
-              "text": "Clear control points, owner mapping, and escalation thresholds"
+              "text": "Have clear checkpoints, owners for each task, and a plan for when to escalate problems"
             },
             {
               "id": "c",
-              "text": "Ad-hoc changes without logs"
+              "text": "Make changes to the system without telling anyone or writing it down"
             },
             {
               "id": "d",
-              "text": "No postmortem process"
+              "text": "Avoid learning from past mistakes"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Reliability improves when control, ownership, and escalation are explicit and repeatable."
-        },
-        {
-          "id": "ethics-of-technology-101-l03-q4",
-          "text": "When evaluating responsible design practice, which approach is most defensible?",
-          "skillId": "ethics-of-technology-101-skill-eval",
-          "options": [
-            {
-              "id": "a",
-              "text": "Use anecdotal examples only"
-            },
-            {
-              "id": "b",
-              "text": "Compare interventions against baseline and monitor side effects"
-            },
-            {
-              "id": "c",
-              "text": "Remove difficult scenarios from evaluation"
-            },
-            {
-              "id": "d",
-              "text": "Change target definitions after results are known"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Baseline comparison and side-effect monitoring reduce overclaiming and hidden risk."
-        },
-        {
-          "id": "ethics-of-technology-101-l03-q5",
-          "text": "A mature governance and accountability model should include:",
-          "skillId": "ethics-of-technology-101-skill-governance",
-          "options": [
-            {
-              "id": "a",
-              "text": "One-time review with no corrective pathway"
-            },
-            {
-              "id": "b",
-              "text": "Policy links, measurable thresholds, and remediation triggers"
-            },
-            {
-              "id": "c",
-              "text": "No public or stakeholder transparency"
-            },
-            {
-              "id": "d",
-              "text": "Unbounded discretion without guardrails"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature governance connects policy goals to measurable thresholds and corrective pathways."
+          "explanation": "Reliability and safety improve when responsibility, control, and escalation paths are clear and planned in advance."
         }
       ]
     },
     {
       "id": "ethics-of-technology-101-l04",
-      "title": "Ethics of Technology Case Analysis",
+      "title": "Case Study: The Recommendation Algorithm",
       "type": "video",
       "duration": 14,
       "learningAids": [
         {
           "id": "ethics-of-technology-101-l04-a1",
-          "type": "mnemonic",
-          "title": "Guided Practice",
-          "content": "Use the lesson structure, document assumptions, and validate your conclusions before final submission."
+          "type": "case_brief",
+          "title": "Case Study Brief",
+          "content": "A one-page summary of the case, outlining the technology, the stakeholders, and the central ethical dilemma."
         }
       ],
       "chunks": [
         {
           "id": "ethics-of-technology-101-l04-c1",
           "kind": "example",
-          "title": "Case Context and Stakes",
-          "content": "In this case analysis, we will explore a new technology that is being introduced, which offers users a lot of convenience and makes tasks easier. However, it is important to think about the potential problems that could arise, especially concerning fairness, privacy, and the freedom of individuals to make their own choices. As part of this lesson, learners will create a map that outlines the important factors involved in making decisions about this technology. They will also identify risks that might not be obvious at first glance. This exercise will encourage critical thinking about how technology affects our lives and the responsibilities that come with it."
+          "title": "The Case: A New Recommendation Algorithm",
+          "content": "A social media company introduces a new algorithm to recommend content to users. It's designed to maximize engagement, but soon, users report seeing more extreme and polarizing content. We'll map out the stakeholders (users, advertisers, the company) and identify the core tensions between engagement, user well-being, and fairness.",
+          "visualPrompt": "A split screen showing a happy user on one side and a frustrated user on the other, with the algorithm's code flowing between them."
         },
         {
           "id": "ethics-of-technology-101-l04-c2",
           "kind": "concept",
-          "title": "Tradeoff Matrix Construction",
-          "content": "In this section, we will construct a tradeoff matrix to compare different interventions. This matrix will help us evaluate each option based on several important criteria, including effectiveness, reliability, equity, and how feasible it is to implement. By analyzing these factors, learners will gain a clearer understanding of the trade-offs involved in making ethical decisions about technology.\nContext recap: In this section, we will construct a tradeoff matrix to compare different interventions. This matrix will help us evaluate each option based on several important criteria, including effectiveness, reliability, equity, and how feasible it is to implement. By analyzing these factors, learners will gain a clearer understanding of the trade-offs involved in making ethical decisions about technology."
+          "title": "Weighing the Pros and Cons",
+          "content": "We'll create a decision-making grid to compare different solutions. Should the company change the algorithm, give users more control, or do something else? We'll evaluate each option based on its effectiveness, fairness, and feasibility to understand the tradeoffs.",
+          "visualPrompt": "An animated grid appearing on screen with rows for 'Option 1', 'Option 2' and columns for 'Pros', 'Cons', and 'Risks'."
         },
         {
           "id": "ethics-of-technology-101-l04-c3",
           "kind": "recap",
-          "title": "Failure Lessons and Recovery",
-          "content": "In this recap, we will focus on how to learn from failures. We will convert what we call failure signatures—patterns that indicate where things went wrong—into actionable safeguards. Additionally, we will create response playbooks that outline steps to take in case of failure and establish monitoring updates to keep track of our progress and ensure we are learning from our experiences.\nContext recap: In this recap, we will focus on how to learn from failures. We will convert what we call failure signatures—patterns that indicate where things went wrong—into actionable safeguards. Additionally, we will create response playbooks that outline steps to take in case of failure and establish monitoring updates to keep track of our progress and ensure we are learning from our experiences."
+          "title": "Learning from Mistakes",
+          "content": "How can the company prevent this from happening again? We'll look for patterns that led to the problem and turn those insights into safeguards. We'll also outline a 'playbook' for what to do if a similar problem occurs in the future, including how to monitor the situation.",
+          "visualPrompt": "A graphic showing a 'warning sign' icon turning into a 'shield' icon, representing a lesson learned and a safeguard created."
         }
       ],
       "flashcards": [
         {
           "id": "ethics-of-technology-101-l04-f1",
-          "front": "Tradeoff matrix",
-          "back": "A structured comparison of options under conflicting priorities."
+          "front": "Tradeoff",
+          "back": "A situation where you must choose between two or more desirable but conflicting options, accepting a loss in one area to gain in another."
         },
         {
           "id": "ethics-of-technology-101-l04-f2",
-          "front": "Failure signature",
-          "back": "A recurring observable pattern indicating a class of system risk."
+          "front": "Failure Pattern",
+          "back": "A specific, repeatable set of conditions or events that indicate a likely risk or problem in a system."
         },
         {
           "id": "ethics-of-technology-101-l04-f3",
-          "front": "Recovery playbook",
-          "back": "A documented sequence for safe and timely response during adverse events."
+          "front": "Response Playbook",
+          "back": "A step-by-step guide for how to respond safely and quickly when a problem or crisis occurs."
         }
       ]
     },
     {
       "id": "ethics-of-technology-101-l05",
-      "title": "Ethics of Technology Simulation Studio",
+      "title": "Simulation Lab: Testing Your Decisions",
       "type": "interactive",
       "duration": 16,
       "learningAids": [
         {
           "id": "ethics-of-technology-101-l05-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use the lesson structure, document assumptions, and validate your conclusions before final submission."
+          "title": "Simulation Guide",
+          "content": "Follow the steps in this guide to set up your simulation, run the test, and interpret the results."
         }
       ],
       "chunks": [
         {
           "id": "ethics-of-technology-101-l05-c1",
           "kind": "practice",
-          "title": "Scenario Simulation Setup",
-          "content": "In this interactive practice session, learners will configure various interventions. This means they will set up different strategies to address the issues we have discussed. They will also define uncertainty parameters, which help us understand the limits of our predictions, and establish measurable success thresholds to determine whether our interventions are effective.\nContext recap: In this interactive practice session, learners will configure various interventions. This means they will set up different strategies to address the issues we have discussed. They will also define uncertainty parameters, which help us understand the limits of our predictions, and establish measurable success thresholds to determine whether our interventions are effective."
+          "title": "Setting Up the Simulation",
+          "content": "In this interactive lab, you'll be in the driver's seat. You will choose a strategy to fix the recommendation algorithm from our case study. You'll set parameters for your test and define what a 'successful' outcome looks like in measurable terms.",
+          "visualPrompt": "A dashboard interface with sliders and buttons that allow the user to 'tweak' the algorithm's priorities (e.g., 'Increase Diversity', 'Lower Polarization')."
         },
         {
           "id": "ethics-of-technology-101-l05-c2",
           "kind": "recap",
-          "title": "Simulation Debrief",
-          "content": "After each simulation run, we will conduct a debriefing session. During this time, we will review the results to see if we achieved the expected gains. We will also look for any side effects that may have occurred and check for compliance with governance standards. This process will help us learn from our experiences and improve future interventions.\nContext recap: After each simulation run, we will conduct a debriefing session. During this time, we will review the results to see if we achieved the expected gains. We will also look for any side effects that may have occurred and check for compliance with governance standards. This process will help us learn from our experiences and improve future interventions."
+          "title": "Reviewing the Results",
+          "content": "After running the simulation, we'll analyze the outcome. Did your chosen strategy work as expected? Were there any surprising side effects? Did your solution follow the company's ethical guidelines? This debrief helps us learn from the simulated experience.",
+          "visualPrompt": "A results screen showing charts and graphs of the simulation's outcome, with green checkmarks for met goals and red flags for negative side effects."
         }
       ],
       "interactiveActivities": [
@@ -386,34 +376,34 @@ export const EthicsOfTechnology101Module: LearningModule = {
           "id": "ethics-of-technology-101-l05-act1",
           "type": "scenario_practice",
           "title": "Intervention Simulation",
-          "description": "Compare three intervention paths and justify which best advances normative frameworks and governance and accountability.",
+          "description": "Choose one of three strategies to fix the algorithm. Run the simulation and write a short justification for your choice based on the results.",
           "instructions": [
-            "Define objective and guardrails before selecting interventions.",
-            "Record one near-term and one long-term tradeoff for each option.",
-            "Select metrics that confirm or falsify your choice."
+            "First, define your main goal and any 'do not cross' lines (guardrails).",
+            "For each of the three options, predict one short-term and one long-term consequence.",
+            "Run the simulation and use the data to explain why your chosen strategy was the best option."
           ]
         },
         {
           "id": "ethics-of-technology-101-l05-act2",
           "type": "matching_pairs",
-          "title": "Mitigation Alignment",
-          "description": "Match each risk condition with the strongest mitigation response.",
+          "title": "Matching Problems to Solutions",
+          "description": "Match each common risk with the most effective way to address it.",
           "pairs": [
             {
-              "left": "Ambiguous ownership",
-              "right": "Create explicit role and escalation map"
+              "left": "No one is sure who is in charge",
+              "right": "Create a clear chart of roles and responsibilities"
             },
             {
-              "left": "Weak signal quality",
-              "right": "Strengthen intake validation and quality checks"
+              "left": "The data we're using is unreliable",
+              "right": "Add better data validation and quality checks"
             },
             {
-              "left": "Policy drift",
-              "right": "Re-anchor controls to documented standards"
+              "left": "The rules are being ignored over time",
+              "right": "Schedule regular reviews to align with standards"
             },
             {
-              "left": "Stakeholder backlash",
-              "right": "Increase transparency and two-way communication"
+              "left": "Users are angry and feel ignored",
+              "right": "Increase transparency and create feedback channels"
             }
           ]
         }
@@ -421,240 +411,233 @@ export const EthicsOfTechnology101Module: LearningModule = {
     },
     {
       "id": "ethics-of-technology-101-l06",
-      "title": "Checkpoint 2: Systems Decisions",
+      "title": "Checkpoint 2: Applying Your Skills",
       "type": "quiz",
       "duration": 10,
       "learningAids": [
         {
           "id": "ethics-of-technology-101-l06-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use the lesson structure, document assumptions, and validate your conclusions before final submission."
+          "title": "Review the Case Study",
+          "content": "Refresh your memory of the recommendation algorithm case study before starting this quiz."
         }
       ],
       "questions": [
         {
           "id": "ethics-of-technology-101-l06-q1",
-          "text": "Which action most improves normative frameworks quality in practice?",
-          "skillId": "ethics-of-technology-101-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "Skip explicit constraints and rely on intuition"
-            },
-            {
-              "id": "b",
-              "text": "Define assumptions, monitor indicators, and test failure cases"
-            },
-            {
-              "id": "c",
-              "text": "Treat all outcomes as equivalent"
-            },
-            {
-              "id": "d",
-              "text": "Ignore uncertainty and variance"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "High-quality decisions require explicit assumptions and measurable stress tests."
-        },
-        {
-          "id": "ethics-of-technology-101-l06-q2",
-          "text": "At level 101, the strongest emphasis is:",
-          "skillId": "ethics-of-technology-101-skill-level",
-          "options": [
-            {
-              "id": "a",
-              "text": "foundational vocabulary, core mechanism mapping, and basic scenario analysis"
-            },
-            {
-              "id": "b",
-              "text": "Fast execution with no review loops"
-            },
-            {
-              "id": "c",
-              "text": "Single stakeholder perspective only"
-            },
-            {
-              "id": "d",
-              "text": "Outcome claims without baselines"
-            }
-          ],
-          "correctOptionId": "a",
-          "explanation": "The 101 layer is explicitly designed around foundational vocabulary, core mechanism mapping, and basic scenario analysis."
-        },
-        {
-          "id": "ethics-of-technology-101-l06-q3",
-          "text": "What best strengthens sociotechnical harms reliability?",
-          "skillId": "ethics-of-technology-101-skill-reliability",
-          "options": [
-            {
-              "id": "a",
-              "text": "No ownership for incident response"
-            },
-            {
-              "id": "b",
-              "text": "Clear control points, owner mapping, and escalation thresholds"
-            },
-            {
-              "id": "c",
-              "text": "Ad-hoc changes without logs"
-            },
-            {
-              "id": "d",
-              "text": "No postmortem process"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Reliability improves when control, ownership, and escalation are explicit and repeatable."
-        },
-        {
-          "id": "ethics-of-technology-101-l06-q4",
-          "text": "When evaluating responsible design practice, which approach is most defensible?",
+          "text": "When analyzing a case study, what is the purpose of a decision-making grid (or tradeoff matrix)?",
           "skillId": "ethics-of-technology-101-skill-eval",
           "options": [
             {
               "id": "a",
-              "text": "Use anecdotal examples only"
+              "text": "To prove that your first idea is always the best one"
             },
             {
               "id": "b",
-              "text": "Compare interventions against baseline and monitor side effects"
+              "text": "To hide the negative consequences of a preferred option"
             },
             {
               "id": "c",
-              "text": "Remove difficult scenarios from evaluation"
+              "text": "To systematically compare different options against important criteria like fairness and effectiveness"
             },
             {
               "id": "d",
-              "text": "Change target definitions after results are known"
+              "text": "To make the decision more complicated than it needs to be"
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "Baseline comparison and side-effect monitoring reduce overclaiming and hidden risk."
+          "correctOptionId": "c",
+          "explanation": "A decision-making grid is a tool for structured comparison, helping to make tradeoffs explicit and defensible."
         },
         {
-          "id": "ethics-of-technology-101-l06-q5",
-          "text": "A mature governance and accountability model should include:",
-          "skillId": "ethics-of-technology-101-skill-governance",
+          "id": "ethics-of-technology-101-l06-q2",
+          "text": "In a simulation, 'side effects' refer to:",
+          "skillId": "ethics-of-technology-101-skill-eval",
           "options": [
             {
               "id": "a",
-              "text": "One-time review with no corrective pathway"
+              "text": "The intended positive outcomes of your intervention"
             },
             {
               "id": "b",
-              "text": "Policy links, measurable thresholds, and remediation triggers"
+              "text": "Unintended consequences, which can be positive or negative, that result from your action"
             },
             {
               "id": "c",
-              "text": "No public or stakeholder transparency"
+              "text": "Results that should be ignored because they were not part of the original plan"
             },
             {
               "id": "d",
-              "text": "Unbounded discretion without guardrails"
+              "text": "Data errors in the simulation that make the results invalid"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Mature governance connects policy goals to measurable thresholds and corrective pathways."
+          "explanation": "Monitoring for side effects is crucial for responsible design, as it reveals the full impact of an intervention beyond its primary goal."
+        },
+        {
+          "id": "ethics-of-technology-101-l06-q3",
+          "text": "What is the main goal of creating a 'response playbook' after a problem occurs?",
+          "skillId": "ethics-of-technology-101-skill-reliability",
+          "options": [
+            {
+              "id": "a",
+              "text": "To blame a specific person for the failure"
+            },
+            {
+              "id": "b",
+              "text": "To ensure the exact same response is used every time, regardless of the situation"
+            },
+            {
+              "id": "c",
+              "text": "To have a pre-planned, effective procedure to follow, which allows for a faster and safer recovery"
+            },
+            {
+              "id": "d",
+              "text": "To create a secret document that is only shared with executives"
+            }
+          ],
+          "correctOptionId": "c",
+          "explanation": "A playbook is a proactive tool designed to make incident response more predictable, safe, and efficient."
         }
       ]
     },
     {
       "id": "ethics-of-technology-101-l07",
-      "title": "Ethics of Technology Ethics and Policy Integration",
+      "title": "Policy, People, and Accountability",
       "type": "video",
       "duration": 12,
       "learningAids": [
         {
           "id": "ethics-of-technology-101-l07-a1",
-          "type": "image",
-          "title": "Guided Practice",
-          "content": "Use the lesson structure, document assumptions, and validate your conclusions before final submission."
+          "type": "checklist",
+          "title": "Accountability Checklist",
+          "content": "A checklist with questions to ask to determine if a system has a strong accountability structure."
         }
       ],
       "chunks": [
         {
           "id": "ethics-of-technology-101-l07-c1",
           "kind": "concept",
-          "title": "Stakeholder Impact Mapping",
-          "content": "In this lesson, we will focus on mapping the impacts of technology on different stakeholders. This means we will identify how benefits and burdens are distributed among various groups. Understanding where these impacts diverge is crucial for ensuring that technology is used ethically and fairly, as it helps us recognize who may be disadvantaged or advantaged by certain technological decisions.\nContext recap: In this lesson, we will focus on mapping the impacts of technology on different stakeholders. This means we will identify how benefits and burdens are distributed among various groups. Understanding where these impacts diverge is crucial for ensuring that technology is used ethically and fairly, as it helps us recognize who may be disadvantaged or advantaged by certain technological decisions."
+          "title": "Who is Affected?",
+          "content": "Technology doesn't affect everyone in the same way. We'll learn how to map out the different groups of people (stakeholders) and analyze how the benefits and burdens of a technology are distributed among them. This is key to understanding issues of fairness and equity.",
+          "visualPrompt": "A diagram of a central technology with lines branching out to different groups of people (e.g., 'Children', 'Elderly Users', 'Employees'), with plus (+) and minus (-) signs next to each to show benefits and harms."
         },
         {
           "id": "ethics-of-technology-101-l07-c2",
           "kind": "concept",
-          "title": "Accountability Architecture",
-          "content": "In this section, we will discuss the importance of accountability in technology use. This requires us to have clear decision traceability, which means we can track how decisions were made. We will also explore the rights of individuals to review decisions that affect them and establish standards for remediation, ensuring that there are processes in place to address any issues that arise.\nContext recap: In this section, we will discuss the importance of accountability in technology use. This requires us to have clear decision traceability, which means we can track how decisions were made. We will also explore the rights of individuals to review decisions that affect them and establish standards for remediation, ensuring that there are processes in place to address any issues that arise."
+          "title": "Who is Responsible?",
+          "content": "When something goes wrong, who is accountable? A good system has clear accountability. This means we can trace why a decision was made, people have a right to appeal decisions that affect them, and there are clear processes for fixing mistakes.",
+          "visualPrompt": "An animation showing a 'decision' block, with arrows pointing to it labeled 'Who?', 'Why?', and 'With what data?'. An 'Appeal' button appears next to it."
         },
         {
           "id": "ethics-of-technology-101-l07-c3",
           "kind": "recap",
-          "title": "Responsible Execution Checklist",
-          "content": "To ensure responsible use of technology, we can create a final checklist. This checklist will include important elements such as policies that guide our actions, ethical considerations that reflect our values, the reliability of the technology we use, and the trust we build with everyone involved. By combining these criteria, we can make better decisions that benefit all stakeholders.\nContext recap: To ensure responsible use of technology, we can create a final checklist. This checklist will include important elements such as policies that guide our actions, ethical considerations that reflect our values, the reliability of the technology we use, and the trust we build with everyone involved. By combining these criteria, we can make better decisions that benefit all stakeholders."
+          "title": "A Checklist for Responsible Tech",
+          "content": "We can bring everything together into a final checklist for responsible technology. This includes checking our work against company policies, our ethical principles, reliability standards, and whether we are building trust with our users and society.",
+          "visualPrompt": "A clipboard with a checklist appears, with items like 'Fairness', 'Transparency', 'Safety', and 'Accountability' being checked off."
         }
       ],
       "flashcards": [
         {
           "id": "ethics-of-technology-101-l07-f1",
-          "front": "Impact distribution",
-          "back": "How benefits and harms are allocated across stakeholders."
+          "front": "Impact Distribution",
+          "back": "How the positive and negative effects of a technology are spread across different groups of people."
         },
         {
           "id": "ethics-of-technology-101-l07-f2",
-          "front": "Decision traceability",
-          "back": "The ability to explain why a decision was made, by whom, and with what evidence."
+          "front": "Decision Traceability",
+          "back": "The ability to look back and understand how and why a decision was made, who made it, and what information was used."
         },
         {
           "id": "ethics-of-technology-101-l07-f3",
-          "front": "Responsible execution",
-          "back": "A delivery mode that combines effectiveness, fairness, and corrective capacity."
+          "front": "Accountability",
+          "back": "Having clear responsibility for an outcome and being answerable for it, including an obligation to fix harms."
         }
       ]
     },
     {
       "id": "ethics-of-technology-101-l08",
-      "title": "Ethics of Technology Capstone Planning Lab",
+      "title": "Capstone Project: Planning Your Analysis",
       "type": "interactive",
       "duration": 15,
       "learningAids": [
         {
           "id": "ethics-of-technology-101-l08-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use the lesson structure, document assumptions, and validate your conclusions before final submission."
+          "type": "template",
+          "title": "Project Charter Template",
+          "content": "A fillable document to help you structure your capstone project plan, including sections for your objective, scope, metrics, and risks."
         }
       ],
       "chunks": [
         {
           "id": "ethics-of-technology-101-l08-c1",
           "kind": "practice",
-          "title": "Capstone Charter Drafting",
-          "content": "In this activity, you will have the opportunity to draft a charter for your capstone project. This charter will outline the scope of your project, the constraints you might face, the metrics you will use to measure success, and the governance checkpoints that will help keep your project on track. This is an important step in planning your project effectively.\nContext recap: In this activity, you will have the opportunity to draft a charter for your capstone project. This charter will outline the scope of your project, the constraints you might face, the metrics you will use to measure success, and the governance checkpoints that will help keep your project on track. This is an important step in planning your project effectively."
+          "title": "Creating Your Project Plan",
+          "content": "For your final project, you will analyze a technology of your choice. In this lab, you'll create a project plan, or 'charter'. You will define the scope of your analysis, the success metrics you'll use, and the checkpoints you'll have for review.",
+          "visualPrompt": "An interactive form on screen where the user fills in fields for 'Technology to Analyze', 'Key Questions', and 'Potential Harms to Investigate'."
         },
         {
           "id": "ethics-of-technology-101-l08-c2",
           "kind": "recap",
-          "title": "Defense Readiness",
-          "content": "As we prepare for the final presentation of our projects, it is crucial to focus on gathering strong evidence to support our ideas. This preparation will help us respond effectively to any critical feedback we might receive. By being ready to justify our decisions and defend our work, we can demonstrate the thoughtfulness and rigor behind our projects.\nContext recap: As we prepare for the final presentation of our projects, it is crucial to focus on gathering strong evidence to support our ideas. This preparation will help us respond effectively to any critical feedback we might receive. By being ready to justify our decisions and defend our work, we can demonstrate the thoughtfulness and rigor behind our projects."
+          "title": "Preparing to Share Your Findings",
+          "content": "A key part of ethical analysis is being able to defend your conclusions. We'll discuss how to gather strong evidence for your claims and anticipate tough questions. Being prepared to explain your reasoning is essential for building trust and making a real impact.",
+          "visualPrompt": "An animation of a person standing next to a presentation, with question marks flying towards them, which they catch and turn into checkmarks."
         }
       ],
       "interactiveActivities": [
         {
           "id": "ethics-of-technology-101-l08-act1",
           "type": "project_builder",
-          "title": "Capstone Charter Builder",
-          "description": "Build a capstone charter with measurable objectives, risks, and remediation plans.",
+          "title": "Project Plan Builder",
+          "description": "Use this tool to build a plan for your capstone project, including your main objective, risks, and how you'll measure success.",
           "instructions": [
-            "State objective and boundary conditions.",
-            "Define at least three measurable success indicators.",
-            "Document a governance escalation pathway for critical failures."
+            "State the technology you will analyze and the main ethical question you are asking.",
+            "Define at least three measurable indicators you will use to evaluate the technology's impact.",
+            "Describe what you would do if you discovered a critical risk during your analysis."
           ]
         },
         {
           "id": "ethics-of-technology-101-l08-act2",
           "type": "debate_simulator",
           "title": "Decision Defense Panel",
-          "description": "Defend your capstone approach against technical, policy, and stakeholder critiques."
+          "description": "Practice defending your project plan against critiques from different perspectives (technical, policy, and user impact)."
+        }
+      ]
+    },
+    {
+      "id": "ethics-of-technology-101-l09",
+      "title": "Capstone Project: Final Report",
+      "type": "project",
+      "duration": 60,
+      "learningAids": [
+        {
+          "id": "ethics-of-technology-101-l09-a1",
+          "type": "rubric",
+          "title": "Grading Rubric",
+          "content": "A detailed rubric showing how your final project will be evaluated, including criteria for analysis, evidence, clarity, and recommendations."
+        }
+      ],
+      "chunks": [
+        {
+          "id": "ethics-of-technology-101-l09-c1",
+          "kind": "practice",
+          "title": "Project Submission",
+          "content": "It's time to bring together everything you've learned. Using the plan you created in the previous lesson, conduct your analysis of your chosen technology. Compile your findings into a final report or presentation that outlines the context, your analysis, the evidence you gathered, and your final recommendations.",
+          "visualPrompt": "A montage of a student researching, typing, creating charts, and finally clicking a 'Submit' button on a project upload page."
+        },
+        {
+          "id": "ethics-of-technology-101-l09-c2",
+          "kind": "recap",
+          "title": "Course Wrap-Up and Next Steps",
+          "content": "Congratulations on completing the course! You now have a foundational toolkit for thinking critically about the ethics of technology. This is just the beginning of a lifelong learning journey. Continue to ask critical questions, seek out diverse perspectives, and advocate for a more responsible and equitable technological future.",
+          "visualPrompt": "An animation of a toolkit closing, then the learner walking towards a path that splits into multiple directions, symbolizing future learning and application."
+        }
+      ],
+      "interactiveActivities": [
+        {
+          "id": "ethics-of-technology-101-l09-act1",
+          "type": "project_submission",
+          "title": "Submit Your Capstone Project",
+          "description": "Upload your final report or presentation here. Ensure it meets all the requirements outlined in the project charter and grading rubric."
         }
       ]
     }

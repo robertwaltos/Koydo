@@ -21,7 +21,7 @@ function joinClasses(...parts: Array<string | undefined | false>) {
  * Hybrid TTS speak button.
  *
  * Priority chain:
- *  1. Cached/cloud audio via /api/tts/generate (OpenAI → ElevenLabs)
+ *  1. Cached/cloud audio via /api/tts/generate (Gemini → OpenAI)
  *  2. Browser SpeechSynthesis API (free fallback)
  */
 export default function SpeakButton({

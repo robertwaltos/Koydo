@@ -1,9 +1,9 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const DistributedSystems101Module: LearningModule = {
+export const distributed_systems_101_Module: LearningModule = {
   "id": "distributed-systems-101",
   "title": "Distributed Systems Foundations",
-  "description": "Level 101 curriculum in Distributed Systems, focused on consistency and availability, fault tolerance, distributed coordination, and observability and operations through case-driven analysis, simulations, and assessment-backed mastery.",
+  "description": "Level 101 curriculum in Distributed Systems. Learn how massive apps like streaming services and multiplayer games stay online, handle errors, and keep data synced across the globe. Features interactive simulations, case studies, and real-world problem solving.",
   "subject": "Computer Science",
   "tags": [
     "core",
@@ -14,18 +14,18 @@ export const DistributedSystems101Module: LearningModule = {
   ],
   "minAge": 14,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "beginner",
   "localeSupport": [
     "en"
   ],
   "learningObjectives": [
-    "Apply consistency and availability with explicit assumptions and tradeoff framing",
-    "Build repeatable workflows for fault tolerance under realistic constraints",
-    "Evaluate distributed coordination decisions with baseline and side-effect analysis",
-    "Strengthen observability and operations with transparent policies and escalation pathways",
-    "Communicate evidence and uncertainty to mixed stakeholder groups",
-    "Produce defensible recommendations that survive critical review"
+    "Apply consistency and availability concepts using real-world tradeoffs.",
+    "Build repeatable workflows to ensure fault tolerance under realistic constraints.",
+    "Evaluate distributed coordination decisions using baseline and side-effect analysis.",
+    "Strengthen system observability with transparent policies and escalation pathways.",
+    "Communicate technical evidence and uncertainty to mixed stakeholder groups.",
+    "Produce defensible system recommendations that survive critical review."
   ],
   "lessons": [
     {
@@ -37,8 +37,9 @@ export const DistributedSystems101Module: LearningModule = {
         {
           "id": "distributed-systems-101-l01-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use the lesson structure, document assumptions, and validate your conclusions before final submission."
+          "title": "The CAP Theorem Triangle",
+          "content": "A visual triangle showing Consistency, Availability, and Partition Tolerance, with a note that in a distributed system, you can only strongly guarantee two out of three during a network failure.",
+          "visualPrompt": "Illustration of three interconnected nodes. One connection breaks (Partition), forcing the system to choose between waiting for the data to sync (Consistency) or answering immediately with old data (Availability)."
         }
       ],
       "chunks": [
@@ -46,36 +47,39 @@ export const DistributedSystems101Module: LearningModule = {
           "id": "distributed-systems-101-l01-c1",
           "kind": "concept",
           "title": "Language, Scope, and Boundaries",
-          "content": "In this lesson, we will dive into some key ideas that are essential for understanding distributed systems. First, we will define what we mean by operational language, which is the way we communicate and describe the functions of these systems. Next, we will discuss scope boundaries, which help us understand the limits and areas of influence within a system. Additionally, we will explore how the concepts of consistency, availability, and fault tolerance are all connected. These principles are crucial for ensuring that distributed systems work smoothly and can handle problems effectively. By grasping these concepts, you will gain a better understanding of how these systems operate and why they are designed the way they are, especially when they encounter challenges in real-world scenarios."
+          "content": "Imagine playing a multiplayer game where your friend sees your character in one place, but you see yourself in another. That's a distributed system out of sync! In this lesson, we will define the operational language used to describe these systems. We'll explore scope boundaries—the limits of what a specific system controls—and introduce the core balancing act of distributed computing: consistency, availability, and fault tolerance.",
+          "visualPrompt": "Animation showing a user sending a message from a phone, which splits into multiple packets traveling across a glowing global network of servers."
         },
         {
           "id": "distributed-systems-101-l01-c2",
           "kind": "concept",
           "title": "Causal Reasoning Under Constraints",
-          "content": "In this part of the lesson, learners will practice modeling cause-and-effect pathways. This means they will identify what leads to certain outcomes and recognize assumptions that might lead to failures. Before deciding on solutions or interventions, it is crucial to understand these pathways to make informed choices.\nContext recap: In this part of the lesson, learners will practice modeling cause-and-effect pathways. This means they will identify what leads to certain outcomes and recognize assumptions that might lead to failures. Before deciding on solutions or interventions, it is crucial to understand these pathways to make informed choices."
+          "content": "Why do systems crash when too many people buy concert tickets at once? Here, we practice modeling cause-and-effect pathways. You will learn to identify the root causes of system bottlenecks and recognize the hidden assumptions that lead to failures. Understanding these pathways is the first step to designing systems that don't break under pressure.",
+          "visualPrompt": "A flowchart showing a 'Ticket Purchase' request hitting a bottleneck at a single database server, causing a traffic jam of data packets."
         },
         {
           "id": "distributed-systems-101-l01-c3",
           "kind": "recap",
           "title": "Evidence Standards",
-          "content": "Throughout this module, it is essential that all claims we make are supported by observable indicators. This means we need to have clear evidence that can be measured. Additionally, we will establish uncertainty bounds and create review checkpoints to ensure that our findings are reliable and valid.\nContext recap: Throughout this module, it is essential that all claims we make are supported by observable indicators. This means we need to have clear evidence that can be measured. Additionally, we will establish uncertainty bounds and create review checkpoints to ensure that our findings are reliable and valid."
+          "content": "In system engineering, guessing isn't good enough. Throughout this module, every claim we make must be supported by observable indicators—like server response times or error rates. We will establish 'uncertainty bounds' to acknowledge what we don't know and create review checkpoints to ensure our system designs are reliable.",
+          "visualPrompt": "A split screen: on the left, a developer shrugging with a question mark; on the right, a developer pointing to a dashboard full of clear, readable metrics and graphs."
         }
       ],
       "flashcards": [
         {
           "id": "distributed-systems-101-l01-f1",
-          "front": "consistency and availability",
-          "back": "A central decision axis in Distributed Systems requiring explicit tradeoff treatment."
+          "front": "Consistency vs. Availability",
+          "back": "The core tradeoff in distributed systems: choosing between giving the user the most up-to-date data (Consistency) or giving them an immediate, but potentially outdated, response (Availability)."
         },
         {
           "id": "distributed-systems-101-l01-f2",
-          "front": "fault tolerance",
-          "back": "The reliability layer that determines whether plans survive real-world variability."
+          "front": "Fault Tolerance",
+          "back": "A system's ability to continue operating properly even when one or more of its components fail."
         },
         {
           "id": "distributed-systems-101-l01-f3",
-          "front": "distributed coordination",
-          "back": "The analytical process for assessing intervention quality and consequence spread."
+          "front": "Distributed Coordination",
+          "back": "The methods and protocols used by multiple independent computers to work together as a single unified system."
         }
       ]
     },
@@ -88,8 +92,9 @@ export const DistributedSystems101Module: LearningModule = {
         {
           "id": "distributed-systems-101-l02-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use the lesson structure, document assumptions, and validate your conclusions before final submission."
+          "title": "Workflow Mapping Guide",
+          "content": "Always map your 'Happy Path' (when everything works) first, then branch out to map your 'Failure Paths' (what happens when a server goes down).",
+          "visualPrompt": "A branching diagram showing a successful data save in green, and a failed save routing to a backup server in orange."
         }
       ],
       "chunks": [
@@ -97,13 +102,15 @@ export const DistributedSystems101Module: LearningModule = {
           "id": "distributed-systems-101-l02-c1",
           "kind": "practice",
           "title": "Workflow Construction",
-          "content": "In this interactive lab, learners will design a workflow that emphasizes the use of foundational vocabulary and the mapping of core mechanisms. They will also conduct a basic analysis of different scenarios. After creating their workflows, they will test how resilient their designs are when faced with uncertainty, helping them understand the importance of adaptability.\nContext recap: In this interactive lab, learners will design a workflow that emphasizes the use of foundational vocabulary and the mapping of core mechanisms. They will also conduct a basic analysis of different scenarios. After creating their workflows, they will test how resilient their designs are when faced with uncertainty, helping them understand the importance of adaptability."
+          "content": "It's time to build! In this interactive lab, you will design a system workflow that connects multiple servers. You'll map out core mechanisms like data routing and load balancing. Once your workflow is built, we'll throw some simulated 'chaos' at it—like sudden traffic spikes—to test how resilient your design is when faced with uncertainty.",
+          "visualPrompt": "Interactive drag-and-drop interface where the user connects a 'Web Server' block to a 'Database' block, with a 'Load Balancer' in between."
         },
         {
           "id": "distributed-systems-101-l02-c2",
           "kind": "recap",
           "title": "Readiness and Control Gates",
-          "content": "To ensure operational readiness, it is important to map out who is responsible for different tasks, establish control gates, and create verification hooks that check decisions after they are made. This process helps maintain oversight and ensures that everything runs smoothly.\nContext recap: To ensure operational readiness, it is important to map out who is responsible for different tasks, establish control gates, and create verification hooks that check decisions after they are made. This process helps maintain oversight and ensures that everything runs smoothly."
+          "content": "A great system needs great supervision. To ensure operational readiness, you must establish 'control gates'—automated checks that verify a process is safe to continue. We will also map out human responsibilities, ensuring that when an automated gate fails, a specific engineer is alerted to take over.",
+          "visualPrompt": "A visual of a toll booth on a data highway. If the data packet is corrupted, the toll gate stays down and an alert flashes to an operator."
         }
       ],
       "interactiveActivities": [
@@ -111,23 +118,23 @@ export const DistributedSystems101Module: LearningModule = {
           "id": "distributed-systems-101-l02-act1",
           "type": "matching_pairs",
           "title": "Control-to-Outcome Mapping",
-          "description": "Match each control mechanism to its strongest expected system benefit.",
+          "description": "Match each system control mechanism to its strongest expected benefit.",
           "pairs": [
             {
               "left": "Pre-commit review gate",
-              "right": "Reduces preventable defects"
+              "right": "Reduces preventable defects before they go live"
             },
             {
               "left": "Rollback trigger",
-              "right": "Limits blast radius during failures"
+              "right": "Limits the blast radius during sudden failures"
             },
             {
               "left": "Baseline dashboard",
-              "right": "Supports defensible impact claims"
+              "right": "Supports defensible claims about system impact"
             },
             {
               "left": "Retrospective cycle",
-              "right": "Improves future decision quality"
+              "right": "Improves future decision quality after an incident"
             }
           ]
         },
@@ -135,7 +142,7 @@ export const DistributedSystems101Module: LearningModule = {
           "id": "distributed-systems-101-l02-act2",
           "type": "sorting_buckets",
           "title": "Constraint Classification",
-          "description": "Sort constraints into technical, policy, and stakeholder-impact buckets.",
+          "description": "Sort the following system constraints into Technical, Policy, and Stakeholder Impact buckets.",
           "buckets": [
             "Technical",
             "Policy",
@@ -143,19 +150,19 @@ export const DistributedSystems101Module: LearningModule = {
           ],
           "items": [
             {
-              "text": "Service latency target",
+              "text": "Service latency must be under 200ms",
               "bucket": "Technical"
             },
             {
-              "text": "Compliance retention rule",
+              "text": "User data must be deleted after 30 days",
               "bucket": "Policy"
             },
             {
-              "text": "Community trust risk",
+              "text": "Loss of community trust due to downtime",
               "bucket": "Stakeholder Impact"
             },
             {
-              "text": "Incident disclosure protocol",
+              "text": "Mandatory 24-hour incident disclosure",
               "bucket": "Policy"
             }
           ]
@@ -171,8 +178,9 @@ export const DistributedSystems101Module: LearningModule = {
         {
           "id": "distributed-systems-101-l03-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use the lesson structure, document assumptions, and validate your conclusions before final submission."
+          "title": "Quiz Strategy",
+          "content": "Remember the core theme: distributed systems require explicit tradeoffs. There is rarely a 'perfect' solution, only the best solution for a specific set of constraints.",
+          "visualPrompt": "An icon of a balancing scale weighing 'Speed' against 'Accuracy'."
         }
       ],
       "questions": [
@@ -183,57 +191,57 @@ export const DistributedSystems101Module: LearningModule = {
           "options": [
             {
               "id": "a",
-              "text": "Skip explicit constraints and rely on intuition"
+              "text": "Skipping explicit constraints and relying on developer intuition"
             },
             {
               "id": "b",
-              "text": "Define assumptions, monitor indicators, and test failure cases"
+              "text": "Defining assumptions, monitoring indicators, and testing failure cases"
             },
             {
               "id": "c",
-              "text": "Treat all outcomes as equivalent"
+              "text": "Treating all system outcomes as equally important"
             },
             {
               "id": "d",
-              "text": "Ignore uncertainty and variance"
+              "text": "Ignoring network uncertainty and variance"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "High-quality decisions require explicit assumptions and measurable stress tests."
+          "explanation": "High-quality decisions require explicit assumptions and measurable stress tests to see how the system actually behaves under pressure."
         },
         {
           "id": "distributed-systems-101-l03-q2",
-          "text": "At level 101, the strongest emphasis is:",
+          "text": "At the 101 level of distributed systems, the strongest emphasis is placed on:",
           "skillId": "distributed-systems-101-skill-level",
           "options": [
             {
               "id": "a",
-              "text": "foundational vocabulary, core mechanism mapping, and basic scenario analysis"
+              "text": "Foundational vocabulary, core mechanism mapping, and basic scenario analysis"
             },
             {
               "id": "b",
-              "text": "Fast execution with no review loops"
+              "text": "Fast code execution with no review loops"
             },
             {
               "id": "c",
-              "text": "Single stakeholder perspective only"
+              "text": "Viewing the system from a single stakeholder's perspective only"
             },
             {
               "id": "d",
-              "text": "Outcome claims without baselines"
+              "text": "Making outcome claims without establishing baselines"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "The 101 layer is explicitly designed around foundational vocabulary, core mechanism mapping, and basic scenario analysis."
+          "explanation": "Before building complex architectures, you must master the foundational vocabulary, understand how core mechanisms connect, and analyze basic scenarios."
         },
         {
           "id": "distributed-systems-101-l03-q3",
-          "text": "What best strengthens fault tolerance reliability?",
+          "text": "What best strengthens a system's fault tolerance and reliability?",
           "skillId": "distributed-systems-101-skill-reliability",
           "options": [
             {
               "id": "a",
-              "text": "No ownership for incident response"
+              "text": "Having no specific ownership for incident response"
             },
             {
               "id": "b",
@@ -241,15 +249,15 @@ export const DistributedSystems101Module: LearningModule = {
             },
             {
               "id": "c",
-              "text": "Ad-hoc changes without logs"
+              "text": "Making ad-hoc changes directly to production without logs"
             },
             {
               "id": "d",
-              "text": "No postmortem process"
+              "text": "Eliminating the postmortem review process"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Reliability improves when control, ownership, and escalation are explicit and repeatable."
+          "explanation": "Reliability improves dramatically when control gates, human ownership, and escalation rules are explicit and repeatable."
         },
         {
           "id": "distributed-systems-101-l03-q4",
@@ -258,23 +266,23 @@ export const DistributedSystems101Module: LearningModule = {
           "options": [
             {
               "id": "a",
-              "text": "Use anecdotal examples only"
+              "text": "Using anecdotal examples from past projects only"
             },
             {
               "id": "b",
-              "text": "Compare interventions against baseline and monitor side effects"
+              "text": "Comparing interventions against a baseline and monitoring side effects"
             },
             {
               "id": "c",
-              "text": "Remove difficult scenarios from evaluation"
+              "text": "Removing difficult edge-case scenarios from the evaluation"
             },
             {
               "id": "d",
-              "text": "Change target definitions after results are known"
+              "text": "Changing target definitions after the results are already known"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Baseline comparison and side-effect monitoring reduce overclaiming and hidden risk."
+          "explanation": "Baseline comparison and side-effect monitoring provide hard evidence, reducing the risk of overclaiming success and hiding new bugs."
         },
         {
           "id": "distributed-systems-101-l03-q5",
@@ -283,23 +291,23 @@ export const DistributedSystems101Module: LearningModule = {
           "options": [
             {
               "id": "a",
-              "text": "One-time review with no corrective pathway"
+              "text": "A one-time review with no corrective pathway"
             },
             {
               "id": "b",
-              "text": "Policy links, measurable thresholds, and remediation triggers"
+              "text": "Policy links, measurable thresholds, and automated remediation triggers"
             },
             {
               "id": "c",
-              "text": "No public or stakeholder transparency"
+              "text": "Zero public or stakeholder transparency"
             },
             {
               "id": "d",
-              "text": "Unbounded discretion without guardrails"
+              "text": "Unbounded developer discretion without guardrails"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Mature governance connects policy goals to measurable thresholds and corrective pathways."
+          "explanation": "Mature governance connects high-level policy goals to measurable system thresholds and clear pathways for fixing issues."
         }
       ]
     },
@@ -312,8 +320,9 @@ export const DistributedSystems101Module: LearningModule = {
         {
           "id": "distributed-systems-101-l04-a1",
           "type": "mnemonic",
-          "title": "Guided Practice",
-          "content": "Use the lesson structure, document assumptions, and validate your conclusions before final submission."
+          "title": "The 3 R's of Incident Response",
+          "content": "Recognize (see the failure signature), React (use the playbook), Recover (restore the baseline).",
+          "visualPrompt": "A graphic showing a magnifying glass (Recognize), a fire extinguisher (React), and a rising line graph (Recover)."
         }
       ],
       "chunks": [
@@ -321,36 +330,39 @@ export const DistributedSystems101Module: LearningModule = {
           "id": "distributed-systems-101-l04-c1",
           "kind": "example",
           "title": "Case Context and Stakes",
-          "content": "In this engaging case study, we will explore a global service that is encountering several significant challenges. These include experiencing partial outages, which means that some parts of the service are not working properly, and dealing with stale reads, where users receive outdated information instead of the most current data. Additionally, the service faces intense pressure to recover quickly during peak traffic times when many users are trying to access it at once. Throughout this lesson, learners will dive deep into the decision-making process, mapping out the stakes involved in each choice. They will also work on identifying risks that may not be immediately obvious, which will help sharpen their critical thinking and problem-solving skills. By the end of this lesson, students will have a better understanding of how to navigate complex situations in distributed systems and the importance of making informed decisions under pressure."
+          "content": "Let's look at a real-world scenario: a global streaming service is crashing during the premiere of a highly anticipated show. Some users can't log in (partial outages), while others see episode lists from yesterday (stale reads). In this case study, we will map out the high-stakes decisions the engineering team must make in real-time. You'll learn how to identify hidden risks and prioritize fixes when millions of users are waiting.",
+          "visualPrompt": "A mock dashboard of a streaming service showing red alert banners, spiking traffic graphs, and a map with offline servers."
         },
         {
           "id": "distributed-systems-101-l04-c2",
           "kind": "concept",
           "title": "Tradeoff Matrix Construction",
-          "content": "In this section, we will create a tradeoff matrix to compare different interventions. We will look at factors such as effectiveness, reliability, fairness, and how easy they are to implement. This comparison will help learners understand the complexities involved in making decisions in distributed systems.\nContext recap: In this section, we will create a tradeoff matrix to compare different interventions. We will look at factors such as effectiveness, reliability, fairness, and how easy they are to implement. This comparison will help learners understand the complexities involved in making decisions in distributed systems."
+          "content": "When everything is on fire, how do you choose what to fix first? We will create a 'Tradeoff Matrix' to compare different emergency interventions. We'll evaluate options based on effectiveness, reliability, fairness to users, and speed of implementation. This tool helps engineers make logical, defensible decisions rather than panicking under pressure.",
+          "visualPrompt": "A grid comparing 'Restart Database' vs 'Serve Cached Data', scoring them on Speed, Data Accuracy, and User Experience."
         },
         {
           "id": "distributed-systems-101-l04-c3",
           "kind": "recap",
           "title": "Failure Lessons and Recovery",
-          "content": "This lesson will teach us how to turn the lessons learned from failures into proactive measures. We will develop safeguards, create response playbooks, and implement monitoring updates to ensure that we can respond effectively to future challenges.\nContext recap: This lesson will teach us how to turn the lessons learned from failures into proactive measures. We will develop safeguards, create response playbooks, and implement monitoring updates to ensure that we can respond effectively to future challenges.\nWhy this matters: Failure Lessons and Recovery helps learners in Computer Science connect ideas from Distributed Systems Foundations to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "A system failure is only a total loss if you don't learn from it. We will explore how to turn the lessons learned from outages into proactive safeguards. You'll learn how to write a 'Recovery Playbook'—a step-by-step guide that ensures the next time this specific failure happens, the team can resolve it in minutes instead of hours.",
+          "visualPrompt": "An open digital manual titled 'Incident Playbook: Database Overload' with clear, highlighted steps."
         }
       ],
       "flashcards": [
         {
           "id": "distributed-systems-101-l04-f1",
-          "front": "Tradeoff matrix",
-          "back": "A structured comparison of options under conflicting priorities."
+          "front": "Tradeoff Matrix",
+          "back": "A structured grid used to objectively compare different solutions when system priorities (like speed vs. accuracy) conflict."
         },
         {
           "id": "distributed-systems-101-l04-f2",
-          "front": "Failure signature",
-          "back": "A recurring observable pattern indicating a class of system risk."
+          "front": "Failure Signature",
+          "back": "A recurring, observable pattern of metrics or errors that indicates a specific class of system risk or failure."
         },
         {
           "id": "distributed-systems-101-l04-f3",
-          "front": "Recovery playbook",
-          "back": "A documented sequence for safe and timely response during adverse events."
+          "front": "Recovery Playbook",
+          "back": "A documented, step-by-step sequence designed for safe and timely system restoration during adverse events."
         }
       ]
     },
@@ -363,8 +375,9 @@ export const DistributedSystems101Module: LearningModule = {
         {
           "id": "distributed-systems-101-l05-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use the lesson structure, document assumptions, and validate your conclusions before final submission."
+          "title": "Simulation Checklist",
+          "content": "Before running the simulation: 1. Define your goal. 2. Set your uncertainty parameters. 3. Establish what 'success' looks like.",
+          "visualPrompt": "A pilot's pre-flight checklist graphic, adapted for a software engineer launching a server."
         }
       ],
       "chunks": [
@@ -372,13 +385,15 @@ export const DistributedSystems101Module: LearningModule = {
           "id": "distributed-systems-101-l05-c1",
           "kind": "practice",
           "title": "Scenario Simulation Setup",
-          "content": "In this interactive simulation setup, learners will configure various interventions, define parameters of uncertainty, and establish measurable thresholds for success. This hands-on experience will help them understand how to set realistic goals and evaluate their effectiveness.\nContext recap: In this interactive simulation setup, learners will configure various interventions, define parameters of uncertainty, and establish measurable thresholds for success. This hands-on experience will help them understand how to set realistic goals and evaluate their effectiveness.\nWhy this matters: Scenario Simulation Setup helps learners in Computer Science connect ideas from Distributed Systems Foundations to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "Welcome to the Simulation Studio! Here, you are in the driver's seat. You will configure various system interventions, define parameters of uncertainty (like random network drops), and establish measurable thresholds for success. This hands-on experience will teach you how to set realistic operational goals and test if your architecture can actually survive the wild internet.",
+          "visualPrompt": "A control panel interface with sliders for 'Traffic Volume', 'Network Latency', and 'Server Capacity'."
         },
         {
           "id": "distributed-systems-101-l05-c2",
           "kind": "recap",
           "title": "Simulation Debrief",
-          "content": "After each simulation run, learners will review the results to assess whether they achieved the expected gains. They will also analyze any side effects that occurred and check for compliance with governance standards. This reflective process is crucial for continuous improvement.\nContext recap: After each simulation run, learners will review the results to assess whether they achieved the expected gains. They will also analyze any side effects that occurred and check for compliance with governance standards. This reflective process is crucial for continuous improvement."
+          "content": "Running the simulation is only half the job. After each run, you will review the logs to assess whether your interventions achieved the expected gains. Did fixing the database cause the load balancer to crash? We will analyze these side effects and check if your solution complied with our governance standards. Continuous reflection is the key to continuous improvement.",
+          "visualPrompt": "A post-simulation report card showing 'Expected Outcome' vs 'Actual Outcome' with a list of unexpected side effects."
         }
       ],
       "interactiveActivities": [
@@ -386,33 +401,33 @@ export const DistributedSystems101Module: LearningModule = {
           "id": "distributed-systems-101-l05-act1",
           "type": "scenario_practice",
           "title": "Intervention Simulation",
-          "description": "Compare three intervention paths and justify which best advances consistency and availability and observability and operations.",
+          "description": "Compare three intervention paths to handle a sudden 500% traffic spike. Justify which path best balances availability and operational safety.",
           "instructions": [
-            "Define objective and guardrails before selecting interventions.",
-            "Record one near-term and one long-term tradeoff for each option.",
-            "Select metrics that confirm or falsify your choice."
+            "Define your primary objective and safety guardrails before selecting an intervention.",
+            "Record one near-term benefit and one long-term tradeoff for each option.",
+            "Select the specific dashboard metrics that will confirm or falsify your choice."
           ]
         },
         {
           "id": "distributed-systems-101-l05-act2",
           "type": "matching_pairs",
           "title": "Mitigation Alignment",
-          "description": "Match each risk condition with the strongest mitigation response.",
+          "description": "Match each system risk condition with the strongest mitigation response.",
           "pairs": [
             {
-              "left": "Ambiguous ownership",
-              "right": "Create explicit role and escalation map"
+              "left": "Ambiguous ownership during an outage",
+              "right": "Create an explicit role and escalation map"
             },
             {
-              "left": "Weak signal quality",
-              "right": "Strengthen intake validation and quality checks"
+              "left": "Weak or noisy error signals",
+              "right": "Strengthen intake validation and metric quality checks"
             },
             {
-              "left": "Policy drift",
-              "right": "Re-anchor controls to documented standards"
+              "left": "Policy drift over time",
+              "right": "Re-anchor system controls to documented standards"
             },
             {
-              "left": "Stakeholder backlash",
+              "left": "Stakeholder backlash from downtime",
               "right": "Increase transparency and two-way communication"
             }
           ]
@@ -428,135 +443,136 @@ export const DistributedSystems101Module: LearningModule = {
         {
           "id": "distributed-systems-101-l06-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use the lesson structure, document assumptions, and validate your conclusions before final submission."
+          "title": "Reviewing Case Studies",
+          "content": "Think back to the streaming service case study and the simulation studio. Focus on how we measure success and handle unexpected side effects.",
+          "visualPrompt": "An icon of a magnifying glass over a line chart showing a sudden drop and recovery."
         }
       ],
       "questions": [
         {
           "id": "distributed-systems-101-l06-q1",
-          "text": "Which action most improves consistency and availability quality in practice?",
-          "skillId": "distributed-systems-101-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "Skip explicit constraints and rely on intuition"
-            },
-            {
-              "id": "b",
-              "text": "Define assumptions, monitor indicators, and test failure cases"
-            },
-            {
-              "id": "c",
-              "text": "Treat all outcomes as equivalent"
-            },
-            {
-              "id": "d",
-              "text": "Ignore uncertainty and variance"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "High-quality decisions require explicit assumptions and measurable stress tests."
-        },
-        {
-          "id": "distributed-systems-101-l06-q2",
-          "text": "At level 101, the strongest emphasis is:",
-          "skillId": "distributed-systems-101-skill-level",
-          "options": [
-            {
-              "id": "a",
-              "text": "foundational vocabulary, core mechanism mapping, and basic scenario analysis"
-            },
-            {
-              "id": "b",
-              "text": "Fast execution with no review loops"
-            },
-            {
-              "id": "c",
-              "text": "Single stakeholder perspective only"
-            },
-            {
-              "id": "d",
-              "text": "Outcome claims without baselines"
-            }
-          ],
-          "correctOptionId": "a",
-          "explanation": "The 101 layer is explicitly designed around foundational vocabulary, core mechanism mapping, and basic scenario analysis."
-        },
-        {
-          "id": "distributed-systems-101-l06-q3",
-          "text": "What best strengthens fault tolerance reliability?",
-          "skillId": "distributed-systems-101-skill-reliability",
-          "options": [
-            {
-              "id": "a",
-              "text": "No ownership for incident response"
-            },
-            {
-              "id": "b",
-              "text": "Clear control points, owner mapping, and escalation thresholds"
-            },
-            {
-              "id": "c",
-              "text": "Ad-hoc changes without logs"
-            },
-            {
-              "id": "d",
-              "text": "No postmortem process"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Reliability improves when control, ownership, and escalation are explicit and repeatable."
-        },
-        {
-          "id": "distributed-systems-101-l06-q4",
-          "text": "When evaluating distributed coordination, which approach is most defensible?",
+          "text": "What is the primary purpose of a tradeoff matrix in system design?",
           "skillId": "distributed-systems-101-skill-eval",
           "options": [
             {
               "id": "a",
-              "text": "Use anecdotal examples only"
+              "text": "To guarantee that a system will never experience downtime"
             },
             {
               "id": "b",
-              "text": "Compare interventions against baseline and monitor side effects"
+              "text": "To objectively compare different solutions when priorities conflict"
             },
             {
               "id": "c",
-              "text": "Remove difficult scenarios from evaluation"
+              "text": "To hide system flaws from stakeholders"
             },
             {
               "id": "d",
-              "text": "Change target definitions after results are known"
+              "text": "To automatically write code for load balancers"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Baseline comparison and side-effect monitoring reduce overclaiming and hidden risk."
+          "explanation": "A tradeoff matrix helps engineers make logical, defensible decisions by comparing options across multiple conflicting priorities, like speed versus accuracy."
+        },
+        {
+          "id": "distributed-systems-101-l06-q2",
+          "text": "If a streaming service shows users an outdated recommendation list but keeps the video player running during high traffic, which tradeoff did they likely make?",
+          "skillId": "distributed-systems-101-skill-core",
+          "options": [
+            {
+              "id": "a",
+              "text": "Prioritized strict consistency over availability"
+            },
+            {
+              "id": "b",
+              "text": "Prioritized availability over strict consistency"
+            },
+            {
+              "id": "c",
+              "text": "Ignored partition tolerance entirely"
+            },
+            {
+              "id": "d",
+              "text": "Failed to implement any fault tolerance"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "By showing outdated data (stale reads) to keep the app online and functional, the system prioritized availability over strict data consistency."
+        },
+        {
+          "id": "distributed-systems-101-l06-q3",
+          "text": "What is a 'failure signature'?",
+          "skillId": "distributed-systems-101-skill-reliability",
+          "options": [
+            {
+              "id": "a",
+              "text": "The digital signature of the engineer who caused the outage"
+            },
+            {
+              "id": "b",
+              "text": "A recognizable pattern of system behavior that indicates a specific type of problem"
+            },
+            {
+              "id": "c",
+              "text": "A legal document signed after a data breach"
+            },
+            {
+              "id": "d",
+              "text": "A random, unrepeatable error code"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "A failure signature is a recurring, observable pattern (like a specific spike in latency followed by memory errors) that helps engineers quickly identify a known issue."
+        },
+        {
+          "id": "distributed-systems-101-l06-q4",
+          "text": "Why is it important to establish a baseline before testing a new system intervention in a simulation?",
+          "skillId": "distributed-systems-101-skill-eval",
+          "options": [
+            {
+              "id": "a",
+              "text": "To accurately measure whether the intervention actually improved the system"
+            },
+            {
+              "id": "b",
+              "text": "To ensure the simulation runs as slowly as possible"
+            },
+            {
+              "id": "c",
+              "text": "To prevent any side effects from occurring"
+            },
+            {
+              "id": "d",
+              "text": "To satisfy legal compliance laws"
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Without a baseline (how the system performs normally), you cannot prove that your intervention made things better or worse."
         },
         {
           "id": "distributed-systems-101-l06-q5",
-          "text": "A mature observability and operations model should include:",
+          "text": "Which of the following is the best example of a recovery playbook action?",
           "skillId": "distributed-systems-101-skill-governance",
           "options": [
             {
               "id": "a",
-              "text": "One-time review with no corrective pathway"
+              "text": "Guessing which server to restart based on intuition"
             },
             {
               "id": "b",
-              "text": "Policy links, measurable thresholds, and remediation triggers"
+              "text": "A documented, step-by-step guide for safely routing traffic away from a crashed database"
             },
             {
               "id": "c",
-              "text": "No public or stakeholder transparency"
+              "text": "Waiting for the lead engineer to wake up and fix the issue"
             },
             {
               "id": "d",
-              "text": "Unbounded discretion without guardrails"
+              "text": "Deleting all error logs to save storage space"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Mature governance connects policy goals to measurable thresholds and corrective pathways."
+          "explanation": "A recovery playbook provides explicit, pre-approved steps to safely and quickly restore service during an incident."
         }
       ]
     },
@@ -569,8 +585,9 @@ export const DistributedSystems101Module: LearningModule = {
         {
           "id": "distributed-systems-101-l07-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use the lesson structure, document assumptions, and validate your conclusions before final submission."
+          "title": "Stakeholder Mapping",
+          "content": "Always ask: Who benefits from this system design, and who carries the burden if it fails?",
+          "visualPrompt": "A mind map placing 'The System' in the center, branching out to 'End Users', 'Developers', 'Business Owners', and 'Regulators'."
         }
       ],
       "chunks": [
@@ -578,36 +595,39 @@ export const DistributedSystems101Module: LearningModule = {
           "id": "distributed-systems-101-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Mapping",
-          "content": "In this lesson, we will identify how the impacts of decisions are distributed among different stakeholders. We will pay special attention to situations where the benefits and burdens are not shared equally across groups, fostering a deeper understanding of fairness and equity in distributed systems.\nContext recap: In this lesson, we will identify how the impacts of decisions are distributed among different stakeholders. We will pay special attention to situations where the benefits and burdens are not shared equally across groups, fostering a deeper understanding of fairness and equity in distributed systems."
+          "content": "Technology doesn't exist in a vacuum; it affects real people. In this lesson, we will map out how the impacts of our system decisions are distributed among different stakeholders. For example, if we choose to shut down a server for maintenance during the day, it might be great for our engineers, but terrible for our international users. We will focus on fairness and equity, ensuring that the benefits and burdens of our systems are balanced.",
+          "visualPrompt": "An animation showing a scale balancing 'Developer Convenience' on one side and 'User Accessibility' on the other."
         },
         {
           "id": "distributed-systems-101-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "To ensure accountability in decision-making, it is important to have a clear structure that allows us to trace decisions back to their origins. This includes establishing rights for review and setting standards for remediation when issues arise. This framework helps maintain trust and responsibility.\nContext recap: To ensure accountability in decision-making, it is important to have a clear structure that allows us to trace decisions back to their origins. This includes establishing rights for review and setting standards for remediation when issues arise. This framework helps maintain trust and responsibility."
+          "content": "When a system makes a mistake—like overcharging a customer—who is responsible? To ensure accountability, we must build structures that allow us to trace decisions back to their origins. This means keeping clear logs, establishing rights for review, and setting standards for how we fix things when they go wrong. Good architecture builds trust.",
+          "visualPrompt": "A digital footprint graphic showing a clear path from a user's click, through the code, to a specific database entry."
         },
         {
           "id": "distributed-systems-101-l07-c3",
           "kind": "recap",
           "title": "Responsible Execution Checklist",
-          "content": "At the end of our lesson, we will create a comprehensive checklist that includes important aspects such as policies, ethical considerations, technical reliability, and the trust of all stakeholders involved. This checklist will help ensure that we are making responsible decisions in our distributed systems projects.\nContext recap: At the end of our lesson, we will create a comprehensive checklist that includes important aspects such as policies, ethical considerations, technical reliability, and the trust of all stakeholders involved. This checklist will help ensure that we are making responsible decisions in our distributed systems projects."
+          "content": "Before launching any major distributed system, you need a final safety check. We will create a comprehensive 'Responsible Execution Checklist' that covers technical reliability, ethical considerations, data privacy policies, and stakeholder trust. This ensures that we aren't just building systems that work, but systems that are responsible and safe.",
+          "visualPrompt": "A clipboard with a checklist featuring items like 'Data Encrypted', 'Failover Tested', and 'User Privacy Protected', all getting green checkmarks."
         }
       ],
       "flashcards": [
         {
           "id": "distributed-systems-101-l07-f1",
-          "front": "Impact distribution",
-          "back": "How benefits and harms are allocated across stakeholders."
+          "front": "Impact Distribution",
+          "back": "The analysis of how the benefits and harms of a system decision are allocated across different groups of stakeholders."
         },
         {
           "id": "distributed-systems-101-l07-f2",
-          "front": "Decision traceability",
-          "back": "The ability to explain why a decision was made, by whom, and with what evidence."
+          "front": "Decision Traceability",
+          "back": "The ability to look at system logs and documentation to explain exactly why a decision was made, by whom, and with what evidence."
         },
         {
           "id": "distributed-systems-101-l07-f3",
-          "front": "Responsible execution",
-          "back": "A delivery mode that combines effectiveness, fairness, and corrective capacity."
+          "front": "Responsible Execution",
+          "back": "A method of deploying software that combines technical effectiveness with fairness, transparency, and the capacity to correct mistakes."
         }
       ]
     },
@@ -620,8 +640,9 @@ export const DistributedSystems101Module: LearningModule = {
         {
           "id": "distributed-systems-101-l08-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use the lesson structure, document assumptions, and validate your conclusions before final submission."
+          "title": "Capstone Blueprint",
+          "content": "Your charter is your blueprint. Be specific about your boundaries: what will your system do, and just as importantly, what will it NOT do?",
+          "visualPrompt": "An architectural blueprint of a server rack with clear boundary lines drawn around specific components."
         }
       ],
       "chunks": [
@@ -629,13 +650,15 @@ export const DistributedSystems101Module: LearningModule = {
           "id": "distributed-systems-101-l08-c1",
           "kind": "practice",
           "title": "Capstone Charter Drafting",
-          "content": "In this activity, you will work on drafting a detailed capstone charter. This document will outline the scope of your project, identify any constraints you might face, establish metrics for success, and set governance checkpoints to guide your work. This is an important step in ensuring that your project is well-planned and organized.\nContext recap: In this activity, you will work on drafting a detailed capstone charter. This document will outline the scope of your project, identify any constraints you might face, establish metrics for success, and set governance checkpoints to guide your work. This is an important step in ensuring that your project is well-planned and organized."
+          "content": "It's time to plan your final project! In this activity, you will draft a detailed Capstone Charter. This document will outline the scope of your distributed system, identify the technical constraints you expect to face, establish clear metrics for success, and set governance checkpoints. A well-planned charter is the foundation of a successful engineering project.",
+          "visualPrompt": "An interactive text editor template with sections for 'Project Scope', 'Success Metrics', and 'Risk Mitigation'."
         },
         {
           "id": "distributed-systems-101-l08-c2",
           "kind": "recap",
           "title": "Defense Readiness",
-          "content": "As we prepare for the final stages of our project, we will focus on gathering strong evidence to support our decisions. Additionally, we will develop a solid plan to respond to any critical reviews or feedback we receive. This preparation is crucial for demonstrating the validity of our work and ensuring we are ready for any challenges that may arise.\nContext recap: As we prepare for the final stages of our project, we will focus on gathering strong evidence to support our decisions. Additionally, we will develop a solid plan to respond to any critical reviews or feedback we receive. This preparation is crucial for demonstrating the validity of our work and ensuring we are ready for any challenges that may arise."
+          "content": "In the real world, engineers must defend their design choices to managers, clients, and peers. As we prepare for the final stages of your capstone, we will focus on gathering strong, data-backed evidence to support your architectural decisions. You will develop a solid plan to respond to critical reviews, ensuring you can confidently explain why your system is built the way it is.",
+          "visualPrompt": "An illustration of an engineer confidently presenting a system diagram to a panel of reviewers, pointing to a chart of performance metrics."
         }
       ],
       "interactiveActivities": [
@@ -643,18 +666,18 @@ export const DistributedSystems101Module: LearningModule = {
           "id": "distributed-systems-101-l08-act1",
           "type": "project_builder",
           "title": "Capstone Charter Builder",
-          "description": "Build a capstone charter with measurable objectives, risks, and remediation plans.",
+          "description": "Build a comprehensive capstone charter with measurable objectives, identified risks, and remediation plans.",
           "instructions": [
-            "State objective and boundary conditions.",
-            "Define at least three measurable success indicators.",
-            "Document a governance escalation pathway for critical failures."
+            "State your primary system objective and strict boundary conditions.",
+            "Define at least three measurable success indicators (e.g., 99.9% uptime).",
+            "Document a governance escalation pathway for critical system failures."
           ]
         },
         {
           "id": "distributed-systems-101-l08-act2",
           "type": "debate_simulator",
           "title": "Decision Defense Panel",
-          "description": "Defend your capstone approach against technical, policy, and stakeholder critiques."
+          "description": "Defend your capstone architecture approach against simulated technical, policy, and stakeholder critiques."
         }
       ]
     }

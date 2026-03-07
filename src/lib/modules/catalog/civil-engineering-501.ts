@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const CivilEngineering501Module: LearningModule = {
+export const civil_engineering_501_Module: LearningModule = {
   "id": "civil-engineering-501",
   "title": "Civil Engineering Specialization Studio",
   "description": "Post-401 specialization in Civil Engineering, focused on civil engineering systems diagnostics, civil engineering operations and execution design, civil engineering impact and tradeoff analysis, and civil engineering governance and leadership through advanced casework, simulation, and defense-based checkpoints.",
@@ -14,7 +14,7 @@ export const CivilEngineering501Module: LearningModule = {
   ],
   "minAge": 17,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en",
@@ -34,6 +34,8 @@ export const CivilEngineering501Module: LearningModule = {
       "title": "Civil Engineering Advanced Foundations",
       "type": "video",
       "duration": 14,
+      "lessonImagePrompt": "A photorealistic, cinematic shot of a high-tech civil engineering war room. A large glowing holographic city model sits on a central table, highlighting infrastructure stress points in neon blue and orange. Professional engineers in modern attire analyze the data. 8k resolution, dramatic lighting.",
+      "conceptVideoPrompt": "A dynamic 3D render sweeping over a modern metropolis. The camera transitions into a wireframe view of the city's infrastructure, highlighting causal pathways and structural dependencies with glowing pulses of light. Smooth, cinematic camera movement, high contrast, professional documentary style.",
       "learningAids": [
         {
           "id": "civil-engineering-501-l01-a1",
@@ -47,44 +49,47 @@ export const CivilEngineering501Module: LearningModule = {
           "id": "civil-engineering-501-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "In this lesson, we will delve into the concept of advanced scope boundaries within the field of Civil Engineering. Understanding these boundaries is crucial for the success of engineering projects. We will examine how to effectively diagnose civil engineering systems, which involves identifying any issues or inefficiencies within these systems. Additionally, we will learn how to design effective operations and execution strategies that ensure projects are not only well-defined but also successfully implemented. This foundational knowledge will empower you to contribute to the field of Civil Engineering with confidence and precision."
+          "content": "In this lesson, we delve into the concept of advanced scope boundaries within complex civil engineering systems. Defining precise boundaries is crucial for isolating variables and ensuring project viability. We will examine how to effectively diagnose systemic inefficiencies and design execution strategies that are both rigorously defined and highly adaptable to real-world constraints."
         },
         {
           "id": "civil-engineering-501-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different factors that can influence outcomes. They will also identify ranges of uncertainty and understand how various systems depend on each other. This foundational knowledge is crucial for planning effective interventions in engineering projects.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different factors that can influence outcomes. They will also identify ranges of uncertainty and understand how various systems depend on each other. This foundational knowledge is crucial for planning effective interventions in engineering projects."
+          "content": "Learners will engage in mapping causal pathways—the intricate connections between environmental, structural, and economic factors that influence project outcomes. By identifying ranges of uncertainty and understanding systemic interdependencies, engineers can proactively design interventions that mitigate cascading failures and optimize long-term resilience."
         },
         {
           "id": "civil-engineering-501-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "In our recap, we emphasize that all claims made in engineering projects should be linked to measurable indicators. This means that we need to establish confidence bounds and set up review checkpoints to ensure that our work is accurate and reliable. This practice helps maintain high standards in civil engineering.\nContext recap: In our recap, we emphasize that all claims made in engineering projects should be linked to measurable indicators. This means that we need to establish confidence bounds and set up review checkpoints to ensure that our work is accurate and reliable. This practice helps maintain high standards in civil engineering."
+          "content": "To conclude our foundation, we emphasize that all engineering claims must be anchored to measurable indicators. Establishing strict confidence bounds and mandatory review checkpoints ensures that our diagnostic models remain accurate and reliable under scrutiny. This rigorous approach is the bedrock of high-stakes civil engineering."
         }
       ],
       "flashcards": [
         {
           "id": "civil-engineering-501-l01-f1",
-          "front": "civil engineering systems diagnostics",
-          "back": "A specialization axis requiring explicit assumptions and measurable constraints."
+          "front": "Civil Engineering Systems Diagnostics",
+          "back": "A specialization axis requiring explicit assumptions, boundary definitions, and measurable constraints."
         },
         {
           "id": "civil-engineering-501-l01-f2",
-          "front": "civil engineering operations and execution design",
-          "back": "Execution architecture that determines reliability under stress."
+          "front": "Operations and Execution Design",
+          "back": "The execution architecture that determines a system's reliability and adaptability under stress."
         },
         {
           "id": "civil-engineering-501-l01-f3",
-          "front": "civil engineering impact and tradeoff analysis",
-          "back": "Evaluation discipline for identifying true gains and hidden costs."
+          "front": "Impact and Tradeoff Analysis",
+          "back": "An evaluation discipline focused on identifying true systemic gains and uncovering hidden costs."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/civil-engineering-501-l01.png"
     },
     {
       "id": "civil-engineering-501-l02",
       "title": "Civil Engineering Specialist Methods Lab",
       "type": "interactive",
       "duration": 17,
+      "lessonImagePrompt": "A close-up, highly detailed image of a civil engineer's multi-monitor workstation. The screens display complex stress-test simulations of a suspension bridge, with red warning indicators and green mitigation pathways. Soft ambient office lighting, photorealistic.",
+      "conceptVideoPrompt": "A screen-capture style animation seamlessly blending into a 3D environment. A digital workflow diagram is subjected to simulated adverse weather conditions. Red alert nodes pop up, triggering automated rollback protocols that stabilize the system. Fast-paced, technical, and visually engaging.",
       "learningAids": [
         {
           "id": "civil-engineering-501-l02-a1",
@@ -98,13 +103,13 @@ export const CivilEngineering501Module: LearningModule = {
           "id": "civil-engineering-501-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "In this interactive lab, learners will have the opportunity to design specialized workflows tailored to specific engineering tasks. They will also conduct stress tests on these workflows by simulating adverse scenarios to see how well they perform under pressure. This hands-on experience is vital for understanding real-world engineering challenges.\nContext recap: In this interactive lab, learners will have the opportunity to design specialized workflows tailored to specific engineering tasks. They will also conduct stress tests on these workflows by simulating adverse scenarios to see how well they perform under pressure. This hands-on experience is vital for understanding real-world engineering challenges."
+          "content": "In this interactive lab, you will design specialized workflows tailored to high-stakes engineering tasks. You will subject these workflows to rigorous stress tests by simulating adverse scenarios—such as extreme weather events or supply chain failures—to evaluate their performance and structural integrity under pressure."
         },
         {
           "id": "civil-engineering-501-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "In our recap, we will discuss how workflows should include important elements such as checkpoints, rollback criteria, and threshold-based escalation processes. These components ensure that projects can adapt to changes and challenges effectively, maintaining quality and safety throughout the engineering process.\nContext recap: In our recap, we will discuss how workflows should include important elements such as checkpoints, rollback criteria, and threshold-based escalation processes. These components ensure that projects can adapt to changes and challenges effectively, maintaining quality and safety throughout the engineering process."
+          "content": "Robust workflows require embedded control gates. We will explore how to implement critical checkpoints, define rollback criteria, and establish threshold-based escalation processes. These architectural components guarantee that projects can dynamically adapt to unforeseen challenges without compromising safety or quality."
         }
       ],
       "interactiveActivities": [
@@ -132,13 +137,16 @@ export const CivilEngineering501Module: LearningModule = {
             }
           ]
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/civil-engineering-501-l02.png"
     },
     {
       "id": "civil-engineering-501-l03",
       "title": "Checkpoint 1: Specialist Methods",
       "type": "quiz",
       "duration": 10,
+      "lessonImagePrompt": "A sleek, modern digital tablet resting on a wooden desk covered in architectural blueprints. The tablet displays a clean, minimalist quiz interface. A cup of black coffee and a silver drafting compass sit nearby. Cinematic lighting, shallow depth of field.",
+      "conceptVideoPrompt": "A slow, deliberate camera pan across a professional engineering workspace. The camera glides over complex schematics, a scientific calculator, and a glowing tablet displaying a checkpoint assessment. The lighting is warm and focused, conveying a quiet atmosphere of deep concentration.",
       "learningAids": [
         {
           "id": "civil-engineering-501-l03-a1",
@@ -348,13 +356,16 @@ export const CivilEngineering501Module: LearningModule = {
           "correctOptionId": "b",
           "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/civil-engineering-501-l03.png"
     },
     {
       "id": "civil-engineering-501-l04",
       "title": "Civil Engineering Advanced Case Analysis",
       "type": "video",
       "duration": 14,
+      "lessonImagePrompt": "A split-screen conceptual image. On the left, a pristine, modern suspension bridge bathed in golden hour sunlight. On the right, a wireframe digital twin of the same bridge showing stress fractures in bright red. High contrast, photorealistic, architectural visualization.",
+      "conceptVideoPrompt": "A cinematic sequence intercutting between a tense boardroom discussion among engineers and sweeping drone footage of massive infrastructure projects under construction. The camera movements are dynamic, emphasizing the scale of the projects and the gravity of the decisions being made.",
       "learningAids": [
         {
           "id": "civil-engineering-501-l04-a1",
@@ -368,27 +379,30 @@ export const CivilEngineering501Module: LearningModule = {
           "id": "civil-engineering-501-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "In this lesson, we will frame various competing constraints that exist within civil engineering systems. We will analyze how these constraints impact diagnostics and conduct tradeoff analyses to understand the implications of different engineering decisions. This knowledge is crucial for making informed choices in complex projects.\nContext recap: In this lesson, we will frame various competing constraints that exist within civil engineering systems. We will analyze how these constraints impact diagnostics and conduct tradeoff analyses to understand the implications of different engineering decisions. This knowledge is crucial for making informed choices in complex projects."
+          "content": "In this module, we frame the competing constraints inherent in large-scale civil engineering systems—balancing budget, safety, environmental impact, and public utility. We will analyze how these constraints complicate diagnostics and necessitate rigorous tradeoff analyses to navigate complex project landscapes successfully."
         },
         {
           "id": "civil-engineering-501-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "In this practice session, learners will compare different options available to them across several important dimensions, including safety, reliability, cost, equity, and governance. This comparative analysis is essential for understanding the tradeoffs involved in engineering decisions and ensuring that all factors are considered.\nContext recap: In this practice session, learners will compare different options available to them across several important dimensions, including safety, reliability, cost, equity, and governance. This comparative analysis is essential for understanding the tradeoffs involved in engineering decisions and ensuring that all factors are considered."
+          "content": "During this practice session, you will conduct multi-dimensional comparative analyses. You will evaluate competing engineering options across critical dimensions including structural reliability, cost-efficiency, social equity, and governance compliance. Mastering this framing is essential for defensible decision-making."
         },
         {
           "id": "civil-engineering-501-l04-c3",
           "kind": "recap",
           "title": "Decision Memo Pattern",
-          "content": "In our recap, we will highlight that each recommendation made in engineering projects should clearly outline the underlying assumptions, the evidence supporting the decision, the risk controls in place, and any fallback plans. This structured approach helps ensure transparency and accountability in engineering practices.\nContext recap: In our recap, we will highlight that each recommendation made in engineering projects should clearly outline the underlying assumptions, the evidence supporting the decision, the risk controls in place, and any fallback plans. This structured approach helps ensure transparency and accountability in engineering practices."
+          "content": "We conclude by formalizing the Decision Memo Pattern. Every engineering recommendation must explicitly outline its underlying assumptions, the empirical evidence supporting the decision, the embedded risk controls, and viable fallback plans. This structured documentation ensures total transparency and accountability."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/civil-engineering-501-l04.png"
     },
     {
       "id": "civil-engineering-501-l05",
       "title": "Civil Engineering Simulation Clinic",
       "type": "interactive",
       "duration": 18,
+      "lessonImagePrompt": "A first-person perspective of a complex digital dashboard used to control a city's water management system. The interface shows rising water levels during a simulated storm, with various dials, sliders, and emergency override buttons. High-tech, photorealistic, glowing UI elements.",
+      "conceptVideoPrompt": "A fast-paced montage of a digital twin city reacting to extreme weather conditions. As floodwaters rise in the simulation, the user interface overlays adjust dynamically, showing gates closing and pumps activating. The camera zooms in on critical data points updating in real-time.",
       "learningAids": [
         {
           "id": "civil-engineering-501-l05-a1",
@@ -402,13 +416,13 @@ export const CivilEngineering501Module: LearningModule = {
           "id": "civil-engineering-501-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "In this interactive clinic, learners will operate scenario controls while carefully balancing performance metrics and governance constraints. This exercise is designed to help them understand the complexities of managing engineering projects in real-time, ensuring that they can make informed decisions under pressure.\nContext recap: In this interactive clinic, learners will operate scenario controls while carefully balancing performance metrics and governance constraints. This exercise is designed to help them understand the complexities of managing engineering projects in real-time, ensuring that they can make informed decisions under pressure."
+          "content": "Welcome to the Simulation Clinic. Here, you will take the helm of live scenario controls, actively balancing performance metrics against strict governance constraints during simulated crises. This high-pressure exercise hones your ability to make rapid, evidence-based decisions when systemic integrity is on the line."
         },
         {
           "id": "civil-engineering-501-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "In our recap, we will discuss how effective responses to challenges in engineering should involve updating control gates while maintaining traceability and accountability. This practice is essential for ensuring that all changes are documented and that the integrity of the project is preserved.\nContext recap: In our recap, we will discuss how effective responses to challenges in engineering should involve updating control gates while maintaining traceability and accountability. This practice is essential for ensuring that all changes are documented and that the integrity of the project is preserved."
+          "content": "Effective crisis management requires adaptive response design. We will review how to dynamically update control gates in response to unfolding events while maintaining an unbroken chain of traceability and accountability. Documenting these real-time adjustments is critical for post-incident audits and continuous improvement."
         }
       ],
       "interactiveActivities": [
@@ -418,13 +432,16 @@ export const CivilEngineering501Module: LearningModule = {
           "title": "Adverse-Condition Decision Run",
           "description": "Run a high-pressure civil engineering scenario and tune controls under uncertainty."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/civil-engineering-501-l05.png"
     },
     {
       "id": "civil-engineering-501-l06",
       "title": "Checkpoint 2: Case and Simulation Mastery",
       "type": "quiz",
       "duration": 11,
+      "lessonImagePrompt": "A glowing, holographic green checkmark hovering over a complex, 3D-printed structural node. The background is a softly blurred engineering laboratory with testing equipment. Cinematic lighting, macro photography style.",
+      "conceptVideoPrompt": "A smooth tracking shot circling a 3D holographic model of a skyscraper's foundation. As the camera moves, red stress points on the model gradually turn green, accompanied by a subtle digital confirmation sound, symbolizing successful validation and mastery of the simulation.",
       "learningAids": [
         {
           "id": "civil-engineering-501-l06-a1",
@@ -536,111 +553,114 @@ export const CivilEngineering501Module: LearningModule = {
         },
         {
           "id": "civil-engineering-501-l06-q5",
-          "text": "What is the best way to compare competing interventions in advanced Civil Engineering?",
-          "skillId": "civil-engineering-501-skill-advanced-5",
+          "text": "When framing tradeoffs in advanced civil engineering scenarios, what is the primary goal?",
+          "skillId": "civil-engineering-501-skill-case5",
           "options": [
             {
               "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
+              "text": "To select the cheapest option regardless of long-term impact"
             },
             {
               "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
+              "text": "To conduct a multi-dimensional comparative analysis across safety, cost, equity, and governance"
             },
             {
               "id": "c",
-              "text": "Switch metrics after results arrive"
+              "text": "To eliminate all project risks entirely"
             },
             {
               "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
+              "text": "To justify a pre-determined conclusion using selective data"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
+          "explanation": "Tradeoff framing requires evaluating options across multiple critical dimensions to ensure balanced and defensible decisions."
         },
         {
           "id": "civil-engineering-501-l06-q6",
-          "text": "In high-stakes Civil Engineering Specialization Studio execution, which communication protocol is strongest?",
-          "skillId": "civil-engineering-501-skill-advanced-6",
+          "text": "A robust Decision Memo Pattern must explicitly include:",
+          "skillId": "civil-engineering-501-skill-case6",
           "options": [
             {
               "id": "a",
-              "text": "Broadcast conclusions without assumptions"
+              "text": "Only the final recommendation and budget"
             },
             {
               "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
+              "text": "Underlying assumptions, supporting evidence, risk controls, and fallback plans"
             },
             {
               "id": "c",
-              "text": "Share only final outcomes after completion"
+              "text": "A list of team members and their personal opinions"
             },
             {
               "id": "d",
-              "text": "Limit updates to a single informal channel"
+              "text": "Vague estimates to allow for future scope creep"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
+          "explanation": "The Decision Memo Pattern ensures transparency by documenting assumptions, evidence, controls, and fallbacks."
         },
         {
           "id": "civil-engineering-501-l06-q7",
-          "text": "A mature remediation loop in advanced Civil Engineering should prioritize:",
-          "skillId": "civil-engineering-501-skill-advanced-7",
+          "text": "During live scenario operations under uncertainty, an engineer's priority should be:",
+          "skillId": "civil-engineering-501-skill-case7",
           "options": [
             {
               "id": "a",
-              "text": "Blame assignment without system updates"
+              "text": "Ignoring governance constraints to maximize speed"
             },
             {
               "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
+              "text": "Balancing performance metrics with strict governance constraints and safety thresholds"
             },
             {
               "id": "c",
-              "text": "One-time fixes without retesting"
+              "text": "Delegating all decisions to automated systems without oversight"
             },
             {
               "id": "d",
-              "text": "Issue closure based on elapsed time"
+              "text": "Waiting for perfect information before taking any action"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
+          "explanation": "Live scenario control requires actively balancing performance with safety and governance constraints under pressure."
         },
         {
           "id": "civil-engineering-501-l06-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Civil Engineering Specialization Studio?",
-          "skillId": "civil-engineering-501-skill-advanced-8",
+          "text": "Adaptive response design in civil engineering requires:",
+          "skillId": "civil-engineering-501-skill-case8",
           "options": [
             {
               "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
+              "text": "Updating control gates dynamically while maintaining strict decision traceability and accountability"
             },
             {
               "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
+              "text": "Sticking to the original plan regardless of changing environmental factors"
             },
             {
               "id": "c",
-              "text": "Ignore correlated failure modes"
+              "text": "Erasing previous logs to avoid blame for early mistakes"
             },
             {
               "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
+              "text": "Implementing changes without notifying stakeholders"
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "correctOptionId": "a",
+          "explanation": "Adaptive responses must be dynamic but require an unbroken chain of traceability and accountability."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/civil-engineering-501-l06.png"
     },
     {
       "id": "civil-engineering-501-l07",
       "title": "Civil Engineering Governance and Public Impact",
       "type": "video",
       "duration": 13,
+      "lessonImagePrompt": "A diverse group of stakeholders, including engineers, city planners, and community representatives, gathered around a large, illuminated urban development map in a modern civic center. Professional, collaborative atmosphere, photorealistic, 8k.",
+      "conceptVideoPrompt": "A time-lapse video of a major public infrastructure project being built, overlaid with sleek, animated data visualizations showing community impact, resource distribution, and long-term economic benefits. The camera slowly pulls back to reveal the integrated city landscape.",
       "learningAids": [
         {
           "id": "civil-engineering-501-l07-a1",
@@ -654,36 +674,36 @@ export const CivilEngineering501Module: LearningModule = {
           "id": "civil-engineering-501-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "In this lesson, learners will map out how benefits, burdens, and delayed effects are distributed among different stakeholder groups. Understanding these dynamics is crucial for ensuring that all voices are heard and that the impacts of engineering decisions are fairly assessed.\nContext recap: In this lesson, learners will map out how benefits, burdens, and delayed effects are distributed among different stakeholder groups. Understanding these dynamics is crucial for ensuring that all voices are heard and that the impacts of engineering decisions are fairly assessed."
+          "content": "Engineering decisions do not exist in a vacuum. In this lesson, we map how the benefits, burdens, and delayed effects of infrastructure projects are distributed across diverse stakeholder groups. Understanding these socio-economic dynamics is vital for ensuring equitable development and securing public trust."
         },
         {
           "id": "civil-engineering-501-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "In this section, we will explore the concept of accountability architecture. This includes understanding how decision traceability, review rights, and remediation obligations are integrated into engineering practices. These elements are vital for ensuring that decisions are made responsibly and that there is a clear path for addressing any issues that arise.\nContext recap: In this section, we will explore the concept of accountability architecture. This includes understanding how decision traceability, review rights, and remediation obligations are integrated into engineering practices. These elements are vital for ensuring that decisions are made responsibly and that there is a clear path for addressing any issues that arise."
+          "content": "We will explore the framework of accountability architecture. This encompasses the integration of decision traceability, stakeholder review rights, and strict remediation obligations into daily engineering practices. A robust architecture ensures that decisions are transparent and that clear pathways exist for addressing systemic failures."
         },
         {
           "id": "civil-engineering-501-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "At the end of our lesson, we will use a helpful checklist that connects important outcomes with ethical considerations, ensures we follow policies, and promotes resilience in our projects. This checklist will guide us in making responsible decisions as future civil engineers.\nContext recap: At the end of our lesson, we will use a helpful checklist that connects important outcomes with ethical considerations, ensures we follow policies, and promotes resilience in our projects. This checklist will guide us in making responsible decisions as future civil engineers."
+          "content": "To operationalize these concepts, we introduce the Responsible Leadership Checklist. This tool connects performance outcomes with ethical considerations, ensuring strict policy adherence and promoting long-term project resilience. It serves as a definitive guide for making responsible, defensible decisions as a senior civil engineer."
         }
       ],
       "flashcards": [
         {
           "id": "civil-engineering-501-l07-f1",
-          "front": "Impact distribution",
-          "back": "How outcomes are allocated across populations and timescales."
+          "front": "Impact Distribution",
+          "back": "The analytical mapping of how project outcomes, benefits, and burdens are allocated across populations and timescales."
         },
         {
           "id": "civil-engineering-501-l07-f2",
-          "front": "Decision traceability",
-          "back": "An auditable record of evidence, ownership, and rationale."
+          "front": "Decision Traceability",
+          "back": "An auditable, transparent record of evidence, ownership, and rationale behind engineering choices."
         },
         {
           "id": "civil-engineering-501-l07-f3",
-          "front": "Responsible leadership",
-          "back": "Decision behavior balancing performance, accountability, and ethics."
+          "front": "Responsible Leadership",
+          "back": "Decision-making behavior that rigorously balances technical performance, public accountability, and ethical standards."
         }
       ]
     },
@@ -692,6 +712,8 @@ export const CivilEngineering501Module: LearningModule = {
       "title": "Civil Engineering Capstone Defense Lab",
       "type": "interactive",
       "duration": 16,
+      "lessonImagePrompt": "A professional civil engineer standing confidently at a podium in a modern, dimly lit auditorium, presenting a complex 3D infrastructure model on a massive screen behind them. A panel of experts sits in the foreground, taking notes. Cinematic, high tension, photorealistic.",
+      "conceptVideoPrompt": "A dynamic camera circles an engineer presenting to a board of directors. The engineer gestures toward a holographic projection of a bridge. The camera cuts to the intense, focused faces of the expert panel as they ask challenging questions, capturing the high-stakes atmosphere of a capstone defense.",
       "learningAids": [
         {
           "id": "civil-engineering-501-l08-a1",
@@ -705,13 +727,13 @@ export const CivilEngineering501Module: LearningModule = {
           "id": "civil-engineering-501-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "In this activity, you will work on creating a comprehensive brief. This brief will include your main claims, supporting evidence, the limits of uncertainty in your findings, and potential pathways for remediation. This exercise will help you practice how to present your ideas clearly and effectively.\nContext recap: In this activity, you will work on creating a comprehensive brief. This brief will include your main claims, supporting evidence, the limits of uncertainty in your findings, and potential pathways for remediation. This exercise will help you practice how to present your ideas clearly and effectively."
+          "content": "In this final capstone activity, you will synthesize your knowledge to assemble a comprehensive defense brief. This document must articulate your primary engineering claims, provide rigorous supporting evidence, define the limits of uncertainty, and outline concrete pathways for remediation. Precision and clarity are paramount."
         },
         {
           "id": "civil-engineering-501-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "During this session, you will practice your responses to various critiques that may come from technical experts, governance representatives, and stakeholders. This rehearsal will prepare you to confidently address questions and feedback, ensuring you can effectively communicate your project’s value and impact.\nContext recap: During this session, you will practice your responses to various critiques that may come from technical experts, governance representatives, and stakeholders. This rehearsal will prepare you to confidently address questions and feedback, ensuring you can effectively communicate your project’s value and impact."
+          "content": "You will now face a simulated expert panel rehearsal. Prepare to defend your brief against adversarial critiques from technical experts, governance representatives, and public stakeholders. This exercise will test your ability to communicate complex tradeoffs confidently and uphold the integrity of your engineering recommendations under fire."
         }
       ],
       "interactiveActivities": [
@@ -721,7 +743,8 @@ export const CivilEngineering501Module: LearningModule = {
           "title": "Expert Defense Panel",
           "description": "Defend specialization recommendations under adversarial cross-examination."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/civil-engineering-501-l08.png"
     }
   ]
 };

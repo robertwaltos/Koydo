@@ -26,13 +26,14 @@ export type Question = {
 
 export type LessonType = "video" | "quiz" | "interactive" | (string & {});
 
-export type LearningAidType = "image" | "animation" | "mnemonic" | "practice";
+export type LearningAidType = "image" | "animation" | "mnemonic" | "practice" | "document" | "visual_prompt" | "diagram" | "template" | "infographic" | "flowchart" | "checklist" | "rubric" | "summary" | "simulation" | (string & {});
 
 export type LearningAid = {
   id: string;
   type: LearningAidType;
   title: string;
   content: string;
+  visualPrompt?: string;
 };
 
 export type LessonChunk = {
@@ -40,7 +41,11 @@ export type LessonChunk = {
   title: string;
   content: string;
   kind?: "intro" | "concept" | "example" | "practice" | "recap" | (string & {});
+  type?: "text" | "interactive" | "multimedia" | "assessment" | "quiz" | (string & {});
   durationSeconds?: number;
+  duration?: number;
+  visualPrompt?: string;
+  imageUrl?: string;
 };
 
 export type Flashcard = {
@@ -85,6 +90,8 @@ export type InteractiveActivity = {
   instructions?: string[];
   udlEngagement?: string[];
   data?: Record<string, unknown>;
+  visualPrompt?: string;
+  steps?: string[];
   /** Sorting buckets activity: bucket labels */
   buckets?: string[];
   /** Sorting/drag-and-drop activity: items to sort (objects for buckets, strings for drag-and-drop) */
@@ -187,6 +194,7 @@ export type StandardsMapping = {
 export type Lesson = {
   id: string;
   title: string;
+  description?: string;
   type: LessonType;
   duration: number;
   questions?: Question[];
@@ -206,7 +214,10 @@ export type Lesson = {
     description?: LocalizedText;
   };
   external?: Record<string, unknown>;
+  imageUrl?: string;
+  imagePrompt?: string;
   lessonImagePrompt?: string;
+  conceptVideoPrompt?: string;
 };
 
 export type Subject =

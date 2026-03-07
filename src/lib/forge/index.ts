@@ -48,9 +48,11 @@ export interface ForgeCapability {
   /** API routes that expose this capability */
   apiRoutes?: string[];
   /** Current operational status */
-  status: "production" | "ready" | "partial" | "planned";
+  status: "production" | "ready" | "partial" | "planned" | "deprecated";
   /** Optional operational context note */
   notes?: string;
+  /** Optional migration note for deprecated capabilities */
+  deprecationNote?: string;
 }
 
 // ── Registry ───────────────────────────────────────────────────────────────

@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const Linux201Module: LearningModule = {
+export const linux_201_Module: LearningModule = {
   "id": "linux-201",
   "title": "Linux Administration and Automation II",
   "description": "Intermediate Linux operations curriculum on package lifecycle, identity and access control, service management, storage operations, logging, and practical automation.",
@@ -15,7 +15,7 @@ export const Linux201Module: LearningModule = {
   ],
   "minAge": 13,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "intermediate",
   "localeSupport": [
     "en"
@@ -39,37 +39,37 @@ export const Linux201Module: LearningModule = {
         {
           "id": "linux-201-l01-c1",
           "kind": "concept",
-          "title": "Package Ecosystem Models",
-          "content": "Linux distributions, which are different versions of the Linux operating system, each have their own methods for packaging software. However, they all share some key concepts that are important for managing software effectively. One of these concepts is the use of trusted repositories. These are secure places where software is stored and can be safely downloaded. Another important idea is refreshing metadata, which means updating the information about the software to ensure it is current and accurate. Additionally, resolving dependencies is crucial; this means making sure that all the necessary components for a piece of software are available before it can be installed. Version pinning is another concept, which helps keep software stable by locking it to a specific version, preventing unexpected changes. Finally, controlling updates is essential to avoid surprises when new software versions are released. For anyone managing a Linux system, it is vital to know which package management tool they are using, such as apt or dnf. Understanding how these tools categorize software into installed, available, and held versions is key to ensuring smooth software management and maintaining the reliability of the system."
+          "title": "Understanding Package Management",
+          "content": "Every Linux version, or 'distribution', has a tool called a package manager to install, update, and remove software. Think of it like an app store for your server. While tools like `apt` (for Debian/Ubuntu) and `dnf` (for Fedora/CentOS) are different, they share key ideas. They connect to trusted online 'repositories' to download software safely. They keep a local list, or 'metadata', of available software, which you must refresh to see new updates. They automatically figure out 'dependencies'—other software a program needs to run. You can also 'pin' a package to a specific version to prevent unwanted updates and maintain stability. Understanding these concepts is key to keeping your system's software healthy and secure."
         },
         {
           "id": "linux-201-l01-c2",
           "kind": "concept",
           "title": "Update Strategy and Risk",
-          "content": "When we update software, we need to be very careful, especially in places where everything needs to work perfectly, like in production environments. If we just update everything without thinking, it can cause big problems. To manage updates wisely, we should follow some important steps. First, we should test updates in a safe environment before applying them everywhere. Next, we should look at changelogs, which are like notes that tell us what changes are being made, so we know what to expect. After that, we need to check that all our services will still work after the update. It's also smart to have plans ready to go back to the old version or to take snapshots of our system, just in case something doesn’t work as planned. Finally, we must find a good balance between quickly applying security updates and keeping everything stable, choosing the right times for maintenance to avoid interrupting our work."
+          "content": "Updating software on a critical system isn't as simple as clicking 'update all'. In professional environments, a single bad update can cause major outages. A smart update strategy involves testing updates in a safe, non-production environment first. Always read the 'changelogs' to understand what's new or fixed. Before updating, verify that your applications will still work. It's also wise to have a rollback plan, like using system snapshots, in case something goes wrong. The goal is to balance applying important security patches quickly with keeping the system stable and predictable."
         },
         {
           "id": "linux-201-l01-c3",
           "kind": "recap",
           "title": "Repository Hygiene",
-          "content": "When we talk about keeping our computer systems safe, one of the most important things to consider is where we get our software from. This is known as repository trust. It’s essential to know exactly which sources you are using for your software. Always choose well-known and reliable sources, and be cautious about using unknown third-party channels, as they may not be safe. To ensure that the software you download is genuine, check that the proper signing practices are being followed. This means that the software has been verified and is safe to use. Additionally, it’s a good idea to regularly clean up your package caches and remove any software that you no longer need. This helps to minimize the risk of security issues and keeps your system running efficiently. By practicing good repository hygiene, you are taking important steps to protect your system from potential threats and ensuring that it operates smoothly."
+          "content": "Where you get your software from is critical for security. This is called 'repository trust'. Stick to official, well-maintained repositories from your Linux distribution. Be very cautious about adding third-party sources, as they could contain insecure or malicious software. Ensure your package manager is checking for digital signatures, which prove the software is authentic and hasn't been tampered with. Periodically, it's good practice to clean out old package files from your cache and remove software you no longer use. This 'repository hygiene' reduces security risks and keeps your system tidy."
         }
       ],
       "flashcards": [
         {
           "id": "linux-201-l01-f1",
           "front": "Dependency resolution",
-          "back": "Process of selecting compatible supporting packages required by a target installation."
+          "back": "The process of identifying and installing all supporting software required by a target package."
         },
         {
           "id": "linux-201-l01-f2",
           "front": "Version pinning",
-          "back": "Holding software to an approved version to avoid unplanned upgrades."
+          "back": "Locking a software package to a specific version to prevent automatic or unplanned upgrades."
         },
         {
           "id": "linux-201-l01-f3",
           "front": "Repository trust",
-          "back": "Confidence that package sources are authentic, signed, and maintained."
+          "back": "Confidence that software sources are authentic, secure, and well-maintained."
         }
       ],
       "learningAids": [
@@ -77,27 +77,27 @@ export const Linux201Module: LearningModule = {
           "id": "linux-201-l01-a1",
           "type": "image",
           "title": "Package Lifecycle Map",
-          "content": "Diagram of install, upgrade, hold, rollback, and cleanup workflows."
+          "content": "A visual flowchart showing the journey of a software package: from installation (`apt install`), upgrading (`apt upgrade`), being held at a specific version, and finally removed (`apt remove`). Includes key commands for each stage."
         }
       ]
     },
     {
       "id": "linux-201-l02",
-      "title": "Users, Groups, Sudo, and Access Control Lab",
+      "title": "Users, Groups, and Access Control Lab",
       "type": "interactive",
       "duration": 15,
       "chunks": [
         {
           "id": "linux-201-l02-c1",
           "kind": "concept",
-          "title": "Identity Model",
-          "content": "In Linux, managing who can access what is based on a system of users, groups, file ownership, and permission bits. This means that instead of giving individual users direct access to everything, it's safer to grant permissions based on roles through groups. This approach not only simplifies management but also enhances security by ensuring that users only have access to what they need to perform their tasks. Understanding this identity model is crucial for maintaining a secure and organized system.\nContext recap: In Linux, managing who can access what is based on a system of users, groups, file ownership, and permission bits. This means that instead of giving individual users direct access to everything, it's safer to grant permissions based on roles through groups. This approach not only simplifies management but also enhances security by ensuring that users only have access to what they need to perform their tasks. Understanding this identity model is crucial for maintaining a secure and organized system."
+          "title": "The Linux Identity Model",
+          "content": "In Linux, security starts with identity. Every file and process is owned by a 'user' and a 'group'. Permissions—who can read, write, or execute a file—are assigned based on this ownership. Instead of giving permissions to individual users one by one, it's much more efficient and secure to grant permissions to a group, and then add users to that group. This is called role-based access control. It makes managing permissions easier and helps enforce the principle of least privilege, where users only have access to what they absolutely need."
         },
         {
           "id": "linux-201-l02-c2",
           "kind": "practice",
-          "title": "Privilege Boundaries",
-          "content": "When using sudo, which allows users to run commands with elevated privileges, it's important to keep policies focused and manageable. This means that sudo permissions should be narrow, easy to audit, and tailored to specific tasks. Instead of granting unrestricted access, it's better to use command-scoped privileges and create separate service accounts for automation tasks. This practice helps minimize risks and ensures that users have only the permissions they need to perform their jobs effectively.\nContext recap: When using sudo, which allows users to run commands with elevated privileges, it's important to keep policies focused and manageable. This means that sudo permissions should be narrow, easy to audit, and tailored to specific tasks. Instead of granting unrestricted access, it's better to use command-scoped privileges and create separate service accounts for automation tasks. This practice helps minimize risks and ensures that users have only the permissions they need to perform their jobs effectively."
+          "title": "Safe Privilege Elevation with Sudo",
+          "content": "The `sudo` command is a powerful tool that lets a user run a command as another user, usually the 'root' superuser. However, giving out full `sudo` access is risky. A better practice is to define narrow, specific rules in the `sudoers` file. For example, allow a user to restart a specific web server service, but nothing else. For automated tasks, create dedicated 'service accounts' with limited permissions instead of using a person's account. This approach makes your system more secure, easier to audit, and reduces the potential damage from a mistake or a security breach."
         }
       ],
       "interactiveActivities": [
@@ -105,23 +105,23 @@ export const Linux201Module: LearningModule = {
           "id": "linux-201-l02-act1",
           "type": "matching_pairs",
           "title": "Access Model Match",
-          "description": "Match access control concept to its operational purpose.",
+          "description": "Match each access control concept to its operational purpose.",
           "pairs": [
             {
               "left": "Primary group",
-              "right": "Baseline collaboration and file ownership context"
+              "right": "Default context for collaboration and new file ownership"
             },
             {
               "left": "sudoers rule",
-              "right": "Controlled privilege elevation for approved commands"
+              "right": "Controlled privilege elevation for a specific, approved command"
             },
             {
-              "left": "service account",
-              "right": "Non-human identity for predictable automation"
+              "left": "Service account",
+              "right": "A non-human identity used for predictable, automated tasks"
             },
             {
-              "left": "least privilege",
-              "right": "Minimum required access to reduce blast radius"
+              "left": "Least privilege",
+              "right": "Granting only the minimum access required to perform a task"
             }
           ]
         },
@@ -131,8 +131,8 @@ export const Linux201Module: LearningModule = {
           "title": "Privilege Review Drill",
           "description": "Review a risky access request and define a safer policy.",
           "instructions": [
-            "Choose one scoped permission set instead of full admin.",
-            "State one logging control to monitor privileged use."
+            "Given a request for full admin access to restart a service, define a safer, single-command `sudo` rule.",
+            "Describe how you would audit the usage of this new, limited privilege."
           ]
         }
       ],
@@ -140,7 +140,7 @@ export const Linux201Module: LearningModule = {
         "prompts": [
           "What is the downside of granting broad sudo rights to all developers?",
           "When should a dedicated service account be created?",
-          "How do group-based permissions simplify audits?"
+          "How do group-based permissions simplify security audits?"
         ]
       },
       "learningAids": [
@@ -148,7 +148,7 @@ export const Linux201Module: LearningModule = {
           "id": "linux-201-l02-a1",
           "type": "practice",
           "title": "Access Review Checklist",
-          "content": "Checklist for role, scope, logging, expiration, and approval evidence."
+          "content": "A printable checklist formatted like a security audit form, with sections for Role, Scope, Logging, Expiration, and Approval Evidence. Helps ensure no step is missed when granting privileges."
         }
       ]
     },
@@ -160,20 +160,20 @@ export const Linux201Module: LearningModule = {
       "questions": [
         {
           "id": "linux-201-l03-q1",
-          "text": "Why use staged updates in Linux operations?",
+          "text": "Why is it important to test software updates in a staging environment before deploying to production?",
           "skillId": "linux-201-skill-packages",
           "options": [
             {
               "id": "a",
-              "text": "To reduce visibility into changes"
+              "text": "To make the update process take longer"
             },
             {
               "id": "b",
-              "text": "To detect regressions before broad production impact"
+              "text": "To find and fix any issues before they affect real users"
             },
             {
               "id": "c",
-              "text": "To avoid documenting updates"
+              "text": "To avoid reading the update's changelog"
             },
             {
               "id": "d",
@@ -181,82 +181,82 @@ export const Linux201Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Staging catches compatibility issues with lower blast radius."
+          "explanation": "A staging environment lets you safely test for compatibility issues or bugs with a limited 'blast radius', preventing production outages."
         },
         {
           "id": "linux-201-l03-q2",
-          "text": "Best principle for assigning sudo permissions is:",
+          "text": "What is the best principle for assigning `sudo` permissions?",
           "skillId": "linux-201-skill-access",
           "options": [
             {
               "id": "a",
-              "text": "Grant full root to all power users"
+              "text": "Grant full root access to all experienced users"
             },
             {
               "id": "b",
-              "text": "Use least privilege with command-scoped elevation"
+              "text": "Apply the principle of least privilege with command-specific rules"
             },
             {
               "id": "c",
-              "text": "Avoid all privilege logging"
+              "text": "Avoid logging any privileged commands to save disk space"
             },
             {
               "id": "d",
-              "text": "Store shared root password in chat"
+              "text": "Share the root password with the team in a private chat"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Scoped privilege and auditability reduce operational and security risk."
+          "explanation": "Granting only the specific permissions needed for a task (least privilege) and ensuring actions are auditable reduces both operational and security risks."
         },
         {
           "id": "linux-201-l03-q3",
-          "text": "A key reason to avoid untrusted repositories is:",
+          "text": "What is a key security risk of using untrusted software repositories?",
           "skillId": "linux-201-skill-packages",
           "options": [
             {
               "id": "a",
-              "text": "They improve deterministic builds"
+              "text": "They provide software that is always more stable"
             },
             {
               "id": "b",
-              "text": "They may introduce unsigned or compromised packages"
+              "text": "They may contain malicious or compromised software packages"
             },
             {
               "id": "c",
-              "text": "They always use fewer dependencies"
+              "text": "They use fewer dependencies"
             },
             {
               "id": "d",
-              "text": "They remove need for patching"
+              "text": "They eliminate the need for future patching"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Repository trust directly affects host integrity and supply-chain exposure."
+          "explanation": "Repository trust is a cornerstone of system security. Untrusted sources can compromise your entire system and expose you to supply-chain attacks."
         },
         {
           "id": "linux-201-l03-q4",
-          "text": "Why prefer group-based access over per-user permission sprawl?",
+          "text": "Why is it better to manage permissions using groups instead of assigning them to each user individually?",
           "skillId": "linux-201-skill-access",
           "options": [
             {
               "id": "a",
-              "text": "It makes audits and role changes easier to manage"
+              "text": "It makes managing roles, onboarding, and audits much simpler"
             },
             {
               "id": "b",
-              "text": "It removes the need for ownership"
+              "text": "It removes the need for file ownership"
             },
             {
               "id": "c",
-              "text": "It bypasses file permission checks"
+              "text": "It allows users to bypass file permission checks"
             },
             {
               "id": "d",
-              "text": "It guarantees no mistakes"
+              "text": "It guarantees that no configuration mistakes will ever be made"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Group-centered policy scales better and simplifies governance."
+          "explanation": "Group-based permissions scale effectively. When a person's role changes, you only need to change their group membership, not hundreds of individual file permissions."
         }
       ],
       "learningAids": [
@@ -264,7 +264,7 @@ export const Linux201Module: LearningModule = {
           "id": "linux-201-l03-a1",
           "type": "mnemonic",
           "title": "SAFE",
-          "content": "Source trust, Access scope, Fix windows, Evidence logs."
+          "content": "Source trust, Access scope, Fix windows, Evidence logs. A mnemonic for core operational security principles."
         }
       ]
     },
@@ -278,36 +278,36 @@ export const Linux201Module: LearningModule = {
           "id": "linux-201-l04-c1",
           "kind": "concept",
           "title": "Filesystem and Mount Strategy",
-          "content": "To ensure reliable operations in Linux, it's essential to understand how partitioning works, the different filesystem options available, and how to configure persistent mounts correctly. Operators should be able to distinguish between temporary mounts, which are only active during a session, and boot-time definitions, which are set to load automatically when the system starts. After making changes, it's also important to validate that the mount behavior is as expected after a restart to avoid any surprises.\nContext recap: To ensure reliable operations in Linux, it's essential to understand how partitioning works, the different filesystem options available, and how to configure persistent mounts correctly. Operators should be able to distinguish between temporary mounts, which are only active during a session, and boot-time definitions, which are set to load automatically when the system starts. After making changes, it's also important to validate that the mount behavior is as expected after a restart to avoid any surprises."
+          "content": "Properly managing storage is key to a stable Linux system. This involves understanding how to partition disks, choosing the right filesystem type (like ext4 or XFS), and ensuring storage is available where it's needed. We 'mount' a storage device to a directory to make it accessible. It's crucial to know how to make these mounts permanent by editing the `/etc/fstab` file, so they are automatically reconnected after a reboot. Always test your `/etc/fstab` changes and verify mounts after restarting to prevent boot failures."
         },
         {
           "id": "linux-201-l04-c2",
           "kind": "concept",
           "title": "Capacity and Failure Signals",
-          "content": "When it comes to storage systems, problems can often begin with subtle warning signs that might seem minor at first. For example, you might notice that you are running low on inodes, which are essential for managing files, or that your input/output (IO) operations are becoming slower than usual. Additionally, if log files are growing unchecked, they can take up valuable space and lead to issues. To avoid these potential problems from becoming serious, it's crucial to keep an eye on both the available storage space and the inode headroom. By regularly monitoring these metrics and setting specific thresholds, you can receive alerts before any write failures happen. This proactive approach allows you to take necessary actions to keep your services running smoothly and efficiently."
+          "content": "Storage problems often start with subtle warnings. You might run out of 'inodes' (data structures that store file metadata) even with plenty of disk space left, which prevents new files from being created. Or, you might see disk input/output (I/O) operations slowing down. Unchecked log file growth can also quickly fill up a disk. To prevent these issues from causing an outage, you must monitor both disk space and inode usage. Setting up alerts for when usage crosses a certain threshold (e.g., 85% full) gives you time to act before services fail."
         },
         {
           "id": "linux-201-l04-c3",
           "kind": "recap",
           "title": "Backup and Restore Thinking",
-          "content": "Having backups is crucial, but they are only truly reliable if the procedures for restoring data are regularly tested. It's important to define your recovery point objective (RPO) and recovery time objective (RTO) to understand how much data loss is acceptable and how quickly you need to restore services. After defining these objectives, you should verify that your backup tools and retention policies align with these requirements to ensure that you can recover effectively when needed.\nContext recap: Having backups is crucial, but they are only truly reliable if the procedures for restoring data are regularly tested. It's important to define your recovery point objective (RPO) and recovery time objective (RTO) to understand how much data loss is acceptable and how quickly you need to restore services. After defining these objectives, you should verify that your backup tools and retention policies align with these requirements to ensure that you can recover effectively when needed."
+          "content": "Backups are useless if you can't restore from them. The only way to know if your backups work is to test them regularly. Before setting up backups, you must define two key goals: the Recovery Point Objective (RPO), which is the maximum amount of data you can afford to lose (e.g., 1 hour), and the Recovery Time Objective (RTO), which is how quickly you need to be back online after a failure (e.g., 15 minutes). Your backup tools, schedule, and restore procedures must all be designed to meet these RPO and RTO goals."
         }
       ],
       "flashcards": [
         {
           "id": "linux-201-l04-f1",
-          "front": "RPO",
-          "back": "Maximum acceptable data loss window measured in time."
+          "front": "RPO (Recovery Point Objective)",
+          "back": "The maximum acceptable amount of data loss, measured in time (e.g., 1 hour of data)."
         },
         {
           "id": "linux-201-l04-f2",
-          "front": "RTO",
-          "back": "Maximum acceptable service restoration time after failure."
+          "front": "RTO (Recovery Time Objective)",
+          "back": "The maximum acceptable amount of time to restore a service after a failure (e.g., 15 minutes)."
         },
         {
           "id": "linux-201-l04-f3",
           "front": "Inode exhaustion",
-          "back": "Condition where file metadata entries run out before disk space does."
+          "back": "A condition where a filesystem runs out of file metadata entries, preventing new file creation, even if disk space is available."
         }
       ],
       "learningAids": [
@@ -315,56 +315,68 @@ export const Linux201Module: LearningModule = {
           "id": "linux-201-l04-a1",
           "type": "image",
           "title": "Storage Health Dashboard",
-          "content": "Sample dashboard for space, inodes, latency, and backup freshness."
+          "content": "An illustration of a monitoring dashboard with gauges and charts showing disk space usage (in GB and %), inode count, I/O latency, and a 'Last Successful Backup' status indicator with a timestamp."
         }
       ]
     },
     {
       "id": "linux-201-l05",
-      "title": "Service Operations, Logging, and Scheduled Automation",
+      "title": "Service Management, Logging, and Automation",
       "type": "interactive",
       "duration": 15,
       "chunks": [
         {
           "id": "linux-201-l05-c1",
-          "kind": "practice",
-          "title": "Service Lifecycle",
-          "content": "In Linux, making sure that services run reliably is very important. This means we need to have a clear plan for how services start up, how they restart if something goes wrong, and how we can see logs to help us fix issues. One great tool for managing these services is called systemd. It helps us keep everything organized and running smoothly. Additionally, we can look at logs using a tool called the journal. This helps us understand what happened during any problems we face. By combining these tools into one easy process, we can quickly figure out what went wrong and keep our services running well."
+          "kind": "concept",
+          "title": "Managing Services with systemd",
+          "content": "Most modern Linux systems use `systemd` to manage services, which are programs that run in the background, like a web server or a database. As an administrator, you need to know the basic lifecycle commands: `systemctl start` to turn a service on, `systemctl stop` to turn it off, and `systemctl status` to check if it's running correctly. To ensure a service starts automatically when the server boots, you use `systemctl enable`. Understanding this lifecycle is the first step to ensuring your applications are reliable."
         },
         {
           "id": "linux-201-l05-c2",
+          "kind": "concept",
+          "title": "Investigating with Logs",
+          "content": "When a service fails, the first place to look for clues is in the logs. Logs are records of events that happen on the system. `systemd` has its own logging system called the journal, which you can view with the `journalctl` command (e.g., `journalctl -u nginx.service`). Many applications also write to text files in the `/var/log` directory. Learning to use tools like `tail -f` to watch logs in real-time and `grep` to search for specific errors is an essential skill for troubleshooting any problem."
+        },
+        {
+          "id": "linux-201-l05-c3",
+          "kind": "practice",
+          "title": "Automating Tasks with Cron",
+          "content": "Many administrative tasks are repetitive, like running backups, cleaning up temporary files, or checking for updates. Instead of doing these manually, we can automate them. The classic tool for scheduling tasks in Linux is `cron`. You edit a special file called a `crontab` to define a command and the exact time or interval it should run (e.g., every night at 2 AM). This 'set it and forget it' approach saves time and ensures important maintenance happens consistently."
+        },
+        {
+          "id": "linux-201-l05-c4",
           "kind": "recap",
-          "title": "Automation Quality",
-          "content": "When automating tasks in Linux, it's important to ensure that the automation is idempotent, meaning that it can be safely run multiple times without causing unintended effects. Additionally, all automated actions should be logged, and there should be a clear ownership structure in place for scheduled tasks. Monitoring these tasks and having a system for notifying users of any failures can help prevent silent issues from arising, ensuring that everything continues to function as expected.\nContext recap: When automating tasks in Linux, it's important to ensure that the automation is idempotent, meaning that it can be safely run multiple times without causing unintended effects. Additionally, all automated actions should be logged, and there should be a clear ownership structure in place for scheduled tasks. Monitoring these tasks and having a system for notifying users of any failures can help prevent silent issues from arising, ensuring that everything continues to function as expected."
+          "title": "Reliable Automation",
+          "content": "Good automation is more than just a script. It should be 'idempotent', meaning it can be run multiple times without causing problems. Every automated action should be logged, so there's a record of what happened. Every scheduled job needs a clear owner who is responsible for it. Finally, you must monitor your automation and set up alerts for failures. Without monitoring, a silent failure in a backup script could go unnoticed for weeks, leading to disaster."
         }
       ],
       "interactiveActivities": [
         {
           "id": "linux-201-l05-act1",
           "type": "sorting_buckets",
-          "title": "Task Ownership Sort",
-          "description": "Sort operations tasks by execution model.",
+          "title": "Task Trigger Sort",
+          "description": "Sort these administrative tasks by how they are typically triggered.",
           "buckets": [
-            "On-demand",
-            "Scheduled",
-            "Event-driven"
+            "On-demand (Manual)",
+            "Scheduled (Time-based)",
+            "Event-driven (Reactive)"
           ],
           "items": [
             {
               "text": "Weekly log rotation validation",
-              "bucket": "Scheduled"
+              "bucket": "Scheduled (Time-based)"
             },
             {
-              "text": "Manual service restart during maintenance",
-              "bucket": "On-demand"
+              "text": "Manual service restart during a planned maintenance window",
+              "bucket": "On-demand (Manual)"
             },
             {
-              "text": "Alert-triggered disk cleanup playbook",
-              "bucket": "Event-driven"
+              "text": "An alert-triggered script that cleans up disk space",
+              "bucket": "Event-driven (Reactive)"
             },
             {
               "text": "Nightly backup integrity check",
-              "bucket": "Scheduled"
+              "bucket": "Scheduled (Time-based)"
             }
           ]
         },
@@ -374,16 +386,17 @@ export const Linux201Module: LearningModule = {
           "title": "Failed Job Response",
           "description": "Respond to a failed scheduled task with structured diagnosis.",
           "instructions": [
-            "Identify the first log source to inspect.",
-            "Define one preventive control for repeat failure."
+            "Scenario: A scheduled script to clean up old log files failed last night. The only alert is 'Job failed'.",
+            "Task 1: List the first two commands you would run to investigate what happened.",
+            "Task 2: Suggest one improvement to the script to prevent this failure from happening silently again."
           ]
         }
       ],
       "metadata": {
         "prompts": [
           "How do you ensure scheduled jobs remain visible and auditable?",
-          "What makes an automation script safe to rerun?",
-          "When should a service be configured to auto-restart?"
+          "What makes an automation script 'idempotent' and why is it important?",
+          "When should a service be configured to automatically restart on failure?"
         ]
       },
       "learningAids": [
@@ -391,7 +404,7 @@ export const Linux201Module: LearningModule = {
           "id": "linux-201-l05-a1",
           "type": "practice",
           "title": "Automation Runbook",
-          "content": "Template for trigger, command flow, log path, rollback, and owner."
+          "content": "A template document formatted like a standard operating procedure, with fields for Job Name, Schedule, Command/Script Path, Expected Outcome, Logging, Alerting, and Owner Contact."
         }
       ]
     },
@@ -403,57 +416,57 @@ export const Linux201Module: LearningModule = {
       "questions": [
         {
           "id": "linux-201-l06-q1",
-          "text": "Why test restore workflows instead of only checking backup completion logs?",
+          "text": "Why must you test your data restore process, instead of just confirming that backups completed successfully?",
           "skillId": "linux-201-skill-recovery",
           "options": [
             {
               "id": "a",
-              "text": "Completion logs prove full recoverability"
+              "text": "Backup completion logs are a perfect guarantee of recoverability"
             },
             {
               "id": "b",
-              "text": "Only restore tests validate data integrity and recovery speed"
+              "text": "Only a restore test can validate data integrity and recovery time (RTO)"
             },
             {
               "id": "c",
-              "text": "Restore tests are never needed"
+              "text": "Restore tests are an outdated practice and no longer needed"
             },
             {
               "id": "d",
-              "text": "Restore tests replace all monitoring"
+              "text": "Restore tests replace the need for all other system monitoring"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "A successful backup job can still produce unusable restore artifacts."
+          "explanation": "A backup job can complete 'successfully' but still produce a corrupted or unusable file. Only by performing a test restore can you be certain the data is valid and that you can meet your RTO."
         },
         {
           "id": "linux-201-l06-q2",
-          "text": "A robust scheduled automation practice requires:",
+          "text": "A reliable scheduled task requires which of the following?",
           "skillId": "linux-201-skill-automation",
           "options": [
             {
               "id": "a",
-              "text": "No ownership or alerting"
+              "text": "No assigned owner or alerting"
             },
             {
               "id": "b",
-              "text": "Owner assignment, log visibility, and failure notification"
+              "text": "Clear ownership, visible logs, and failure notifications"
             },
             {
               "id": "c",
-              "text": "Hidden scripts without documentation"
+              "text": "Scripts that are hidden and have no documentation"
             },
             {
               "id": "d",
-              "text": "Manual execution only"
+              "text": "It should only ever be run manually"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Visibility and accountability are required for reliable automation."
+          "explanation": "For automation to be reliable, it must be visible and accountable. This includes knowing who owns it, where to find its logs, and being alerted if it fails."
         },
         {
           "id": "linux-201-l06-q3",
-          "text": "Which indicator most directly signals metadata pressure despite free disk space?",
+          "text": "Which issue can prevent you from creating new files, even if you have plenty of free disk space?",
           "skillId": "linux-201-skill-storage",
           "options": [
             {
@@ -462,44 +475,44 @@ export const Linux201Module: LearningModule = {
             },
             {
               "id": "b",
-              "text": "CPU utilization"
+              "text": "High CPU utilization"
             },
             {
               "id": "c",
-              "text": "Timezone mismatch"
+              "text": "Incorrect timezone settings"
             },
             {
               "id": "d",
-              "text": "Swap disable"
+              "text": "Swap space is disabled"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Hosts can fail file writes when inode count reaches zero."
+          "explanation": "Every file requires an inode to store its metadata. If the filesystem runs out of inodes, no new files can be created, regardless of available disk space."
         },
         {
           "id": "linux-201-l06-q4",
-          "text": "Most useful first step in service incident triage is:",
+          "text": "When a critical service stops working, what is the most useful first step in troubleshooting?",
           "skillId": "linux-201-skill-service",
           "options": [
             {
               "id": "a",
-              "text": "Restart repeatedly without checking evidence"
+              "text": "Restart the service repeatedly without looking at any evidence"
             },
             {
               "id": "b",
-              "text": "Inspect recent unit and journal events for failure signatures"
+              "text": "Inspect recent service and system logs for error messages"
             },
             {
               "id": "c",
-              "text": "Delete logs immediately"
+              "text": "Delete all log files to get a fresh start"
             },
             {
               "id": "d",
-              "text": "Disable the service permanently"
+              "text": "Disable the service permanently to prevent more errors"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Evidence-first triage speeds root-cause isolation and safe remediation."
+          "explanation": "An evidence-first approach is the fastest way to find the root cause. Logs from `journalctl` or in `/var/log` provide the clues needed for a safe and effective fix."
         }
       ],
       "learningAids": [
@@ -507,7 +520,7 @@ export const Linux201Module: LearningModule = {
           "id": "linux-201-l06-a1",
           "type": "mnemonic",
           "title": "CARE",
-          "content": "Check logs, Assess risk, Recover service, Evaluate prevention."
+          "content": "Check logs, Assess risk, Recover service, Evaluate prevention. A mnemonic for a structured incident response process."
         }
       ]
     }

@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const BasicMath301Module: LearningModule = {
+export const basic_math_301_Module: LearningModule = {
   "id": "basic-math-301",
   "title": "Quantitative Reasoning Lab",
   "description": "Strengthen quantitative reasoning with multi-step, data-rich, real-world problem sets.",
@@ -14,9 +14,9 @@ export const BasicMath301Module: LearningModule = {
   "maxAge": 18,
   "version": "1.1.0",
   "learningObjectives": [
-    "Understand core concepts in Math",
-    "Apply Multi-Step Verification strategies through guided practice",
-    "Demonstrate mastery with subject-specific quizzes"
+    "Understand core concepts in ratios, proportions, and data modeling.",
+    "Apply multi-step verification strategies through guided practice.",
+    "Demonstrate mastery with subject-specific quizzes and real-world scenarios."
   ],
   "lessons": [
     {
@@ -24,48 +24,50 @@ export const BasicMath301Module: LearningModule = {
       "title": "Ratio and Proportion in Context",
       "type": "video",
       "duration": 10,
+      "lessonImagePrompt": "A vibrant, 3D animated illustration of a diverse group of students dividing a giant pizza. Floating math symbols like ratios (e.g., 1:4) and fractions glow in the background. Bright, engaging lighting, Pixar style.",
+      "conceptVideoPrompt": "A dynamic 3D animation showing a glowing neon scale balancing different weights. The camera pans around the scale as numbers transform into fractions and ratios, visually demonstrating equivalence. High quality, educational, smooth 60fps.",
       "chunks": [
         {
           "id": "basic-math-301-l01-c1",
-          "title": "Ratio and Proportion in Context Overview",
-          "content": "In this lesson, we will dive into the fascinating world of ratio and proportion! These concepts are not just numbers; they help us understand how different quantities relate to each other in our everyday lives. For example, when we share a pizza among friends or compare the heights of two plants, we are using ratios and proportions. Our main goal today is to learn how to recognize strong reasoning skills before we tackle any problems. By doing this, we will become better thinkers and problem solvers, ready to face various challenges that involve these important mathematical ideas. Let's get started on this exciting journey of learning!"
+          "title": "Welcome to Ratios!",
+          "content": "In this lesson, we will dive into the fascinating world of ratios and proportions! These concepts are not just numbers on a page; they help us understand how different quantities relate to each other in our everyday lives. For example, when we share a pizza among friends or mix different colors of paint to get the perfect shade, we are using ratios. Our main goal today is to learn how to recognize these relationships so we can become better problem solvers."
         },
         {
           "id": "basic-math-301-l01-c2",
-          "title": "Core Concept",
-          "content": "In this section, we will explore how ratio, proportion, and percent reasoning work together to help us understand and solve various problems. First, we will identify the main goal we want to achieve, which is like setting a target for our learning. Next, we will look for the evidence or steps that support our reasoning, much like gathering clues in a mystery. This process will not only help us build a strong foundation for making decisions based on numerical information but also enhance our critical thinking skills. By understanding these concepts, we can apply them in real-life situations, such as cooking, shopping, or even planning a party. Let's dive in and discover how these mathematical tools can empower us in everyday life!"
+          "title": "The Core Concept",
+          "content": "A ratio is simply a way to compare two things. If you have 2 apples and 3 oranges, the ratio of apples to oranges is 2 to 3 (or 2:3). A proportion is when we set two ratios equal to each other. Imagine a recipe that calls for 1 cup of sugar for every 2 cups of flour. If you want to double the recipe, you'll need 2 cups of sugar and 4 cups of flour. The ratio stays the same! Understanding this helps us scale things up or down perfectly."
         },
         {
           "id": "basic-math-301-l01-c3",
           "title": "Worked Example",
-          "content": "Let's walk through a guided example together! First, we will clearly define our goal. Next, we will apply a strategy for percent reasoning to help us find the answer. Finally, we will verify our result with a quick check to make sure we did everything correctly. This step-by-step approach will help us understand how to tackle similar problems in the future.\nContext recap: Let's walk through a guided example together! First, we will clearly define our goal. Next, we will apply a strategy for percent reasoning to help us find the answer. Finally, we will verify our result with a quick check to make sure we did everything correctly."
+          "content": "Let's walk through a guided example together! Imagine a car travels 150 miles on 5 gallons of gas. We want to know how far it can travel on 10 gallons. First, we define our goal: find the distance for 10 gallons. Next, we set up our proportion: 150 miles / 5 gallons = X miles / 10 gallons. Since 10 is double 5, we just double 150 to get 300 miles. Finally, we verify our result: does 300 miles on 10 gallons make sense? Yes, it's the exact same rate!"
         },
         {
           "id": "basic-math-301-l01-c4",
-          "title": "Transfer Prompt",
-          "content": "Now it's your turn to shine! Take the process we just learned about ratios and proportions and apply it to a new situation. As you work through your example, be sure to explain why the method you chose makes sense. Try to write this explanation in one clear sentence. This will not only help you understand the concept better but also show how well you can think through problems and share your ideas with others.\nContext recap: Now it's your turn to shine! Take the process we just learned about ratios and proportions and apply it to a new situation. As you work through your example, be sure to explain why the method you chose makes sense. Try to write this explanation in one clear sentence.\nWhy this matters: Transfer Prompt helps learners in Math connect ideas from Quantitative Reasoning Lab to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "title": "Your Turn to Shine",
+          "content": "Now it's your turn! Take the process we just learned and apply it to a new situation. If 3 movie tickets cost $30, how much would 5 tickets cost? As you work through your example, be sure to explain why the method you chose makes sense. Writing down your steps will not only help you understand the concept better but also show how well you can think through problems and share your ideas with others."
         }
       ],
       "flashcards": [
         {
           "id": "basic-math-301-l01-f1",
-          "front": "ratio and proportion",
-          "back": "A central target skill in this module. Name it before solving."
+          "front": "Ratio",
+          "back": "A comparison of two different quantities (e.g., 2 apples to 3 oranges)."
         },
         {
           "id": "basic-math-301-l01-f2",
-          "front": "percent reasoning",
-          "back": "Use this as the method step after defining the goal."
+          "front": "Proportion",
+          "back": "An equation stating that two ratios are equal."
         },
         {
           "id": "basic-math-301-l01-f3",
           "front": "Verification",
-          "back": "Check that your result matches the original goal and constraints."
+          "back": "Checking that your final answer makes sense and matches the original rules."
         },
         {
           "id": "basic-math-301-l01-f4",
-          "front": "Transfer",
-          "back": "Use the same strategy on a new item to confirm true mastery."
+          "front": "Scaling",
+          "back": "Multiplying or dividing both parts of a ratio by the same number to keep it equal."
         }
       ],
       "learningAids": [
@@ -73,21 +75,24 @@ export const BasicMath301Module: LearningModule = {
           "id": "basic-math-301-l01-a1",
           "type": "image",
           "title": "Concept Poster",
-          "content": "A colorful infographic about ratio and proportion and percent reasoning."
+          "content": "A colorful infographic showing how to write ratios in three ways: with a colon (2:3), with the word 'to' (2 to 3), and as a fraction (2/3)."
         },
         {
           "id": "basic-math-301-l01-a2",
           "type": "animation",
           "title": "Warm-up Animation",
-          "content": "Short animation introducing Math vocabulary."
+          "content": "Short animation showing a recipe being doubled, visually demonstrating proportions."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/basic-math-301-l01.png"
     },
     {
       "id": "basic-math-301-l02",
       "title": "Percent Change and Comparison",
       "type": "interactive",
       "duration": 12,
+      "lessonImagePrompt": "A colorful digital storefront window with a bright neon '20% OFF' sign. A friendly animated character is calculating the new price on a glowing holographic tablet.",
+      "conceptVideoPrompt": "A sleek, modern animation of a price tag morphing. It starts at $100, a '25% off' stamp hits it, and the number smoothly rolls down to $75, with a glowing formula appearing below it.",
       "metadata": {
         "prompts": [
           "Identify one core idea about ratio and proportion from this lesson.",
@@ -99,8 +104,8 @@ export const BasicMath301Module: LearningModule = {
         {
           "id": "basic-math-301-l02-ia1",
           "type": "drag_and_drop",
-          "title": "Practice Flow Builder",
-          "description": "Sort each action into Plan, Execute, or Reflect.",
+          "title": "Discount Flow Builder",
+          "description": "Sort each action into the correct phase of solving a percent discount problem.",
           "estimatedMinutes": 8,
           "difficultyLevel": "easy",
           "data": {
@@ -121,17 +126,17 @@ export const BasicMath301Module: LearningModule = {
             "draggables": [
               {
                 "id": "d1",
-                "label": "Set a goal for ratio and proportion",
+                "label": "Identify the original price and the discount percentage.",
                 "correctTargetId": "plan"
               },
               {
                 "id": "d2",
-                "label": "Try one strategy for percent reasoning",
+                "label": "Multiply the original price by the decimal form of the percent.",
                 "correctTargetId": "execute"
               },
               {
                 "id": "d3",
-                "label": "Record what worked and what to improve",
+                "label": "Check if the final price is lower than the original price.",
                 "correctTargetId": "reflect"
               }
             ]
@@ -143,7 +148,7 @@ export const BasicMath301Module: LearningModule = {
           "id": "basic-math-301-l02-a1",
           "type": "practice",
           "title": "Try It Board",
-          "content": "Complete a guided activity on percent reasoning and write one reflection."
+          "content": "Complete a guided activity on calculating a 15% tip on a restaurant bill."
         }
       ]
     },
@@ -152,99 +157,101 @@ export const BasicMath301Module: LearningModule = {
       "title": "Checkpoint: Quantitative Setup",
       "type": "quiz",
       "duration": 10,
+      "lessonImagePrompt": "A 3D animated checkpoint flag on a digital racetrack. The track is made of math symbols and glowing grids, symbolizing progress in learning.",
+      "conceptVideoPrompt": "A fast-paced, engaging animation of a quiz interface where correct answers light up in bright green, accompanied by satisfying particle effects and a rising progress bar.",
       "questions": [
         {
           "id": "basic-math-301-l03-q1",
-          "text": "Which statement best explains ratio and proportion in Math?",
+          "text": "What is the best definition of a ratio?",
           "skillId": "basic-math-301-skill-core",
           "options": [
             {
               "id": "a",
-              "text": "It explains ratio and proportion using evidence from the lesson."
+              "text": "A comparison of two different quantities."
             },
             {
               "id": "b",
-              "text": "It ignores how ratio and proportion works in practice."
+              "text": "The total sum of all numbers in a dataset."
             },
             {
               "id": "c",
-              "text": "It focuses on an unrelated topic outside Math."
+              "text": "A number that is always less than zero."
             },
             {
               "id": "d",
-              "text": "It repeats terms without showing meaning."
+              "text": "The process of guessing an answer."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "basic-math-301-l03-q2",
-          "text": "What is the best first step when analyzing percent reasoning?",
+          "text": "If a $40 video game is on sale for 25% off, what is the first step to find the discount amount?",
           "skillId": "basic-math-301-skill-process",
           "options": [
             {
               "id": "a",
-              "text": "Define the goal and examine evidence for percent reasoning."
+              "text": "Multiply $40 by 0.25."
             },
             {
               "id": "b",
-              "text": "Guess quickly without checking evidence."
+              "text": "Add $40 and 25."
             },
             {
               "id": "c",
-              "text": "Use data unrelated to percent reasoning."
+              "text": "Subtract 25 from 40."
             },
             {
               "id": "d",
-              "text": "Skip the context and jump to a conclusion."
+              "text": "Divide 25 by 40."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "basic-math-301-l03-q3",
-          "text": "Which option shows strong reasoning about quantitative reasoning under constraints?",
+          "text": "Why is it important to verify your answer in a math problem?",
           "skillId": "basic-math-301-skill-reasoning",
           "options": [
             {
               "id": "a",
-              "text": "Use examples and verify assumptions step by step."
+              "text": "To ensure the result makes sense in the context of the real-world problem."
             },
             {
               "id": "b",
-              "text": "Ignore important details and edge cases."
+              "text": "To make the problem take longer to solve."
             },
             {
               "id": "c",
-              "text": "Use assumptions unrelated to quantitative reasoning under constraints."
+              "text": "Because the first answer you guess is usually wrong."
             },
             {
               "id": "d",
-              "text": "Change the topic when evidence gets hard."
+              "text": "To change the original numbers in the question."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "basic-math-301-l03-q4",
-          "text": "Why is spaced review useful for Math mastery?",
+          "text": "If a recipe calls for 2 cups of milk for every 1 cup of water, how much milk is needed for 3 cups of water?",
           "skillId": "basic-math-301-skill-review",
           "options": [
             {
               "id": "a",
-              "text": "It strengthens memory and transfer over time"
+              "text": "6 cups"
             },
             {
               "id": "b",
-              "text": "It creates confusion"
+              "text": "3 cups"
             },
             {
               "id": "c",
-              "text": "It removes key facts"
+              "text": "4 cups"
             },
             {
               "id": "d",
-              "text": "It has no value"
+              "text": "5 cups"
             }
           ],
           "correctOptionId": "a"
@@ -254,42 +261,41 @@ export const BasicMath301Module: LearningModule = {
         {
           "id": "basic-math-301-l03-ia1",
           "type": "matching_pairs",
-          "title": "Reasoning Match: Checkpoint: Quantitative Setup",
-          "description": "Match each error signal to the strongest correction strategy.",
+          "title": "Fix the Mistake",
+          "description": "Match the common math mistake with the best way to fix it.",
           "estimatedMinutes": 7,
           "difficultyLevel": "medium",
           "instructions": [
-            "Review each left-side signal.",
-            "Pick the best response on the right.",
-            "Use your matches to plan the next drill."
+            "Review the mistake on the left.",
+            "Pick the best correction strategy on the right."
           ],
           "data": {
             "left": [
               {
                 "id": "l1",
-                "label": "Confusion about ratio and proportion"
+                "label": "I added the ratio numbers instead of multiplying."
               },
               {
                 "id": "l2",
-                "label": "Inconsistent approach to percent reasoning"
+                "label": "My discount price is higher than the original price."
               },
               {
                 "id": "l3",
-                "label": "Weak transfer of quantitative reasoning under constraints under timing"
+                "label": "I forgot what the question was asking for."
               }
             ],
             "right": [
               {
                 "id": "r1",
-                "label": "Create a one-step concept summary with one worked example"
+                "label": "Review how to scale proportions using multiplication."
               },
               {
                 "id": "r2",
-                "label": "Use a checklist before choosing the final answer"
+                "label": "Remember to subtract the discount from the original price."
               },
               {
                 "id": "r3",
-                "label": "Retest the same target with a short timed sprint"
+                "label": "Re-read the prompt and underline the final goal."
               }
             ],
             "pairs": [
@@ -340,73 +346,79 @@ export const BasicMath301Module: LearningModule = {
           "id": "basic-math-301-l03-a1",
           "type": "mnemonic",
           "title": "Memory Tip",
-          "content": "Use the phrase Plan, Check, Explain for each question."
+          "content": "Use the phrase 'Plan, Check, Explain' for each question to avoid rushing."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/basic-math-301-l03.png"
     },
     {
       "id": "basic-math-301-l04",
       "title": "Data Modeling from Tables",
       "type": "video",
       "duration": 11,
+      "lessonImagePrompt": "A futuristic, glowing digital spreadsheet floating in mid-air. A young student wearing high-tech glasses is pointing at a specific cell, causing a 3D bar chart to pop out of the table.",
+      "conceptVideoPrompt": "A cinematic animation of a data table. The rows and columns slide into place like puzzle pieces. Suddenly, the numbers lift off the grid and form a beautiful, glowing line graph showing an upward trend.",
       "chunks": [
         {
           "id": "basic-math-301-l04-c1",
-          "title": "Data Modeling from Tables Focus",
-          "content": "In this lesson, we will deepen our understanding of data modeling by using structured reasoning. We will move from simply understanding concepts to making applied decisions based on the data we analyze. This will help us learn how to interpret information from tables and use it to make informed choices.\nContext recap: In this lesson, we will deepen our understanding of data modeling by using structured reasoning. We will move from simply understanding concepts to making applied decisions based on the data we analyze. This will help us learn how to interpret information from tables and use it to make informed choices."
+          "title": "Unlocking Data Tables",
+          "content": "In this lesson, we will learn how to read and use data tables. Tables are like organized treasure maps for information! Instead of a messy pile of numbers, a table puts everything into neat rows and columns. By learning how to read these maps, we can spot patterns, make predictions, and make smart decisions based on real evidence."
         },
         {
           "id": "basic-math-301-l04-c2",
-          "title": "Method Steps",
-          "content": "Here are the steps we will follow to effectively model data: Step 1: Identify what is being asked in the problem. Step 2: Choose a strategy that aligns with data modeling techniques. Step 3: Justify your choices with evidence from the data. By following these steps, we can ensure that our reasoning is sound and our conclusions are well-supported.\nContext recap: Here are the steps we will follow to effectively model data: Step 1: Identify what is being asked in the problem. Step 2: Choose a strategy that aligns with data modeling techniques. Step 3: Justify your choices with evidence from the data. By following these steps, we can ensure that our reasoning is sound and our conclusions are well-supported."
+          "title": "The 3-Step Method",
+          "content": "Here are the steps we will follow to effectively model data from a table. Step 1: Read the headers. What is this table actually about? Step 2: Look for the pattern. Are the numbers going up, going down, or staying the same? Step 3: Use the pattern to find your answer. By following these steps, we make sure our conclusions are supported by the data, not just wild guesses."
         },
         {
           "id": "basic-math-301-l04-c3",
-          "title": "Common Mistakes",
-          "content": "As we work with data modeling, it's important to be aware of common mistakes that can occur. Some frequent errors include skipping the setup phase, making unrelated assumptions, or failing to verify the final result. By recognizing these pitfalls, we can improve our approach and ensure that our conclusions are accurate.\nContext recap: As we work with data modeling, it's important to be aware of common mistakes that can occur. Some frequent errors include skipping the setup phase, making unrelated assumptions, or failing to verify the final result. By recognizing these pitfalls, we can improve our approach and ensure that our conclusions are accurate."
+          "title": "Watch Out for Traps!",
+          "content": "As we work with data, it's important to avoid common mistakes. A frequent error is skipping the headers and just looking at the numbers. If you don't know what the numbers represent (like dollars, miles, or hours), you can't solve the problem! Another trap is assuming a pattern continues without checking the evidence. Always verify your thoughts with the data provided."
         },
         {
           "id": "basic-math-301-l04-c4",
           "title": "Independent Try",
-          "content": "Now, it's time for you to try solving a similar problem on your own! After you complete it, take a moment to compare your process to the lesson sequence we discussed. This reflection will help you identify areas where you did well and where you might want to improve in the future.\nContext recap: Now, it's time for you to try solving a similar problem on your own! After you complete it, take a moment to compare your process to the lesson sequence we discussed. This reflection will help you identify areas where you did well and where you might want to improve in the future."
+          "content": "Now, it's time for you to try! Look at a table showing the temperature over 5 days. If it goes up by 2 degrees every day, what will the temperature be on day 6? After you figure it out, take a moment to compare your process to the 3-step method we discussed. Did you read the headers? Did you find the pattern? Great job!"
         }
       ],
       "flashcards": [
         {
           "id": "basic-math-301-l04-f1",
-          "front": "data modeling",
-          "back": "State the target and pick a strategy before solving."
+          "front": "Data Table",
+          "back": "Information organized into rows and columns to make it easy to read."
         },
         {
           "id": "basic-math-301-l04-f2",
-          "front": "Step Sequence",
-          "back": "Goal -> Strategy -> Evidence -> Check."
+          "front": "Header",
+          "back": "The title at the top of a column or row that tells you what the numbers mean."
         },
         {
           "id": "basic-math-301-l04-f3",
-          "front": "Assumption Check",
-          "back": "Remove assumptions that are not supported by the prompt."
+          "front": "Pattern",
+          "back": "A repeating sequence or trend in the data (e.g., increasing by 5 each time)."
         },
         {
           "id": "basic-math-301-l04-f4",
-          "front": "Process Match",
-          "back": "Your explanation should match the steps you actually used."
+          "front": "Prediction",
+          "back": "Using data patterns to guess what will happen next."
         }
       ],
       "learningAids": [
         {
           "id": "basic-math-301-l04-a1",
           "type": "image",
-          "title": "Worked Example Sheet",
-          "content": "Step-by-step visuals for data modeling scenarios."
+          "title": "Table Anatomy",
+          "content": "A visual guide pointing out the Title, Headers, Rows, Columns, and Data Cells of a standard table."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/basic-math-301-l04.png"
     },
     {
       "id": "basic-math-301-l05",
       "title": "Constraint-Based Problem Solving",
       "type": "interactive",
       "duration": 13,
+      "lessonImagePrompt": "An animated illustration of a student looking at a blueprint. Around them are floating icons representing constraints: a ticking clock (time), a piggy bank (budget), and a toolbox (materials).",
+      "conceptVideoPrompt": "A 3D animation showing a character trying to pack a suitcase. The suitcase glows red when it's too full (a constraint). The character swaps items until the suitcase glows green and closes perfectly.",
       "metadata": {
         "prompts": [
           "Pick one challenge and outline your approach.",
@@ -418,40 +430,40 @@ export const BasicMath301Module: LearningModule = {
         {
           "id": "basic-math-301-l05-ia1",
           "type": "sorting_buckets",
-          "title": "Strategy Sort",
-          "description": "Sort study actions into Concept, Process, or Review lanes.",
+          "title": "Identify the Constraint",
+          "description": "Sort each real-world limitation into the correct constraint category: Time, Budget, or Material.",
           "estimatedMinutes": 9,
           "difficultyLevel": "medium",
           "data": {
             "buckets": [
               {
-                "id": "concept",
-                "label": "data modeling Concept"
+                "id": "time",
+                "label": "Time Constraint"
               },
               {
-                "id": "process",
-                "label": "multi-step verification Process"
+                "id": "budget",
+                "label": "Budget Constraint"
               },
               {
-                "id": "review",
-                "label": "Review Loop"
+                "id": "material",
+                "label": "Material Constraint"
               }
             ],
             "items": [
               {
                 "id": "i1",
-                "label": "Write one definition in your own words",
-                "correctBucketId": "concept"
+                "label": "You only have 45 minutes to finish the exam.",
+                "correctBucketId": "time"
               },
               {
                 "id": "i2",
-                "label": "Follow the step-by-step method on a new example",
-                "correctBucketId": "process"
+                "label": "You can only spend $20 on party snacks.",
+                "correctBucketId": "budget"
               },
               {
                 "id": "i3",
-                "label": "Retest the same skill tomorrow",
-                "correctBucketId": "review"
+                "label": "You only have 3 cups of flour left for baking.",
+                "correctBucketId": "material"
               }
             ]
           }
@@ -461,109 +473,112 @@ export const BasicMath301Module: LearningModule = {
         {
           "id": "basic-math-301-l05-a1",
           "type": "animation",
-          "title": "Challenge Walkthrough",
-          "content": "Animated sequence for solving a data modeling challenge."
+          "title": "Constraint Walkthrough",
+          "content": "Animated sequence showing how to plan a trip while staying under a $100 budget."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/basic-math-301-l05.png"
     },
     {
       "id": "basic-math-301-l06",
       "title": "Checkpoint: Multi-Step Verification",
       "type": "quiz",
       "duration": 10,
+      "lessonImagePrompt": "A 3D animated magnifying glass hovering over a complex math equation, highlighting the final answer with a bright green checkmark.",
+      "conceptVideoPrompt": "A dynamic animation of a multi-step math problem solving itself line by line. After the final answer appears, a glowing scanner sweeps over it to 'verify' it, turning the text gold.",
       "questions": [
         {
           "id": "basic-math-301-l06-q1",
-          "text": "Which statement best explains data modeling in Math?",
+          "text": "When reading a data table, what should you look at first?",
           "skillId": "basic-math-301-skill-core",
           "options": [
             {
               "id": "a",
-              "text": "It explains data modeling using evidence from the lesson."
+              "text": "The title and column headers to understand what the data means."
             },
             {
               "id": "b",
-              "text": "It ignores how data modeling works in practice."
+              "text": "The largest number in the table."
             },
             {
               "id": "c",
-              "text": "It focuses on an unrelated topic outside Math."
+              "text": "The smallest number in the table."
             },
             {
               "id": "d",
-              "text": "It repeats terms without showing meaning."
+              "text": "The very last row of data."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "basic-math-301-l06-q2",
-          "text": "What is the best first step when analyzing multi-step verification?",
+          "text": "If a table shows a plant growing 2 inches every week, how tall will it be after 4 weeks if it started at 0 inches?",
           "skillId": "basic-math-301-skill-process",
           "options": [
             {
               "id": "a",
-              "text": "Define the goal and examine evidence for multi-step verification."
+              "text": "8 inches"
             },
             {
               "id": "b",
-              "text": "Guess quickly without checking evidence."
+              "text": "6 inches"
             },
             {
               "id": "c",
-              "text": "Use data unrelated to multi-step verification."
+              "text": "4 inches"
             },
             {
               "id": "d",
-              "text": "Skip the context and jump to a conclusion."
+              "text": "10 inches"
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "basic-math-301-l06-q3",
-          "text": "Which option shows strong reasoning about quantitative reasoning under constraints?",
+          "text": "Which of the following is an example of a budget constraint?",
           "skillId": "basic-math-301-skill-reasoning",
           "options": [
             {
               "id": "a",
-              "text": "Use examples and verify assumptions step by step."
+              "text": "You cannot spend more than $50 on groceries."
             },
             {
               "id": "b",
-              "text": "Ignore important details and edge cases."
+              "text": "You must finish your homework before 8 PM."
             },
             {
               "id": "c",
-              "text": "Use assumptions unrelated to quantitative reasoning under constraints."
+              "text": "You need 4 tires to build a toy car."
             },
             {
               "id": "d",
-              "text": "Change the topic when evidence gets hard."
+              "text": "You want to run 3 miles today."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "basic-math-301-l06-q4",
-          "text": "Why is spaced review useful for Math mastery?",
+          "text": "Why is multi-step verification important in math?",
           "skillId": "basic-math-301-skill-review",
           "options": [
             {
               "id": "a",
-              "text": "It strengthens memory and transfer over time"
+              "text": "It helps catch small mistakes made early in the problem."
             },
             {
               "id": "b",
-              "text": "It creates confusion"
+              "text": "It makes the problem impossible to solve."
             },
             {
               "id": "c",
-              "text": "It removes key facts"
+              "text": "It allows you to skip reading the instructions."
             },
             {
               "id": "d",
-              "text": "It has no value"
+              "text": "It changes the final goal of the question."
             }
           ],
           "correctOptionId": "a"
@@ -573,42 +588,41 @@ export const BasicMath301Module: LearningModule = {
         {
           "id": "basic-math-301-l06-ia1",
           "type": "matching_pairs",
-          "title": "Reasoning Match: Checkpoint: Multi-Step Verification",
-          "description": "Match each error signal to the strongest correction strategy.",
+          "title": "Verification Match",
+          "description": "Match the error signal to the best correction strategy.",
           "estimatedMinutes": 7,
           "difficultyLevel": "medium",
           "instructions": [
-            "Review each left-side signal.",
-            "Pick the best response on the right.",
-            "Use your matches to plan the next drill."
+            "Review each error signal on the left.",
+            "Pick the best response on the right."
           ],
           "data": {
             "left": [
               {
                 "id": "l1",
-                "label": "Confusion about data modeling"
+                "label": "I misread the table headers."
               },
               {
                 "id": "l2",
-                "label": "Inconsistent approach to multi-step verification"
+                "label": "I forgot about the $20 budget limit."
               },
               {
                 "id": "l3",
-                "label": "Weak transfer of quantitative reasoning under constraints under timing"
+                "label": "I made an addition error in step 1."
               }
             ],
             "right": [
               {
                 "id": "r1",
-                "label": "Create a one-step concept summary with one worked example"
+                "label": "Always highlight the title and labels first."
               },
               {
                 "id": "r2",
-                "label": "Use a checklist before choosing the final answer"
+                "label": "Write down all constraints before calculating."
               },
               {
                 "id": "r3",
-                "label": "Retest the same target with a short timed sprint"
+                "label": "Check your work after every single step."
               }
             ],
             "pairs": [
@@ -659,73 +673,79 @@ export const BasicMath301Module: LearningModule = {
           "id": "basic-math-301-l06-a1",
           "type": "mnemonic",
           "title": "Memory Tip",
-          "content": "Use the phrase Plan, Check, Explain for each question."
+          "content": "Check twice, submit once!"
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/basic-math-301-l06.png"
     },
     {
       "id": "basic-math-301-l07",
       "title": "Estimation and Reasonableness",
       "type": "video",
       "duration": 12,
+      "lessonImagePrompt": "A fun 3D illustration of a student holding a giant foam finger pointing at a target. Around them are floating bubbles with estimated numbers like '~50' and '~100'.",
+      "conceptVideoPrompt": "A playful animation showing a jar full of jellybeans. A digital counter rapidly spins, then stops at an estimated number 'About 500!'. The camera zooms in to show the exact count is 498, proving the estimate was reasonable.",
       "chunks": [
         {
           "id": "basic-math-301-l07-c1",
-          "title": "Estimation and Reasonableness Setup",
-          "content": "Before we dive into our tasks, it's important to use multi-step verification to organize our approach. Planning ahead can significantly improve both the quality of our work and the speed at which we complete it. By taking the time to think through our steps, we set ourselves up for success.\nContext recap: Before we dive into our tasks, it's important to use multi-step verification to organize our approach. Planning ahead can significantly improve both the quality of our work and the speed at which we complete it. By taking the time to think through our steps, we set ourselves up for success."
+          "title": "The Power of Guessing (Smartly!)",
+          "content": "Sometimes in math, and in life, we don't need an exact answer right away. We just need a really good guess! This is called estimation. Estimation helps us quickly figure out if we have enough money at the store or enough time to finish a game. By rounding numbers to make them easier to work with, we set ourselves up for quick success."
         },
         {
           "id": "basic-math-301-l07-c2",
-          "title": "Decision Rules",
-          "content": "When you have to make a choice between different options, it can sometimes be confusing. To help you decide, you can use a simple rule: always pick the option that has the strongest evidence supporting it and the clearest connection to what you want to achieve. This way, you can make smart choices that keep you focused on your goals and help you reach them more effectively.\nContext recap: When you have to make a choice between different options, it can sometimes be confusing. To help you decide, you can use a simple rule: always pick the option that has the strongest evidence supporting it and the clearest connection to what you want to achieve. This way, you can make smart choices that keep you focused on your goals and help you reach them more effectively."
+          "title": "Rounding Rules",
+          "content": "To estimate, we usually round numbers. If a video game costs $48.99, it's much easier to pretend it costs $50 in your head. If you want to buy two games, you can quickly estimate: 50 + 50 = 100. So, you need about $100. This is much faster than trying to add 48.99 + 48.99 in your head!"
         },
         {
           "id": "basic-math-301-l07-c3",
-          "title": "Quality Control",
-          "content": "As you review your work, check for three important things: accuracy, completeness, and alignment with the original objective. This quality control process ensures that your final answer is not only correct but also fully addresses the problem you set out to solve.\nContext recap: As you review your work, check for three important things: accuracy, completeness, and alignment with the original objective. This quality control process ensures that your final answer is not only correct but also fully addresses the problem you set out to solve."
+          "title": "Does it Make Sense?",
+          "content": "Once you solve a problem, you must ask yourself: 'Is this reasonable?' Reasonableness is your built-in quality control. If you calculate that a normal bicycle costs $5,000,000, your brain should say, 'Wait, that's not reasonable!' Checking for reasonableness catches huge mistakes before they happen."
         },
         {
           "id": "basic-math-301-l07-c4",
           "title": "Next-Step Plan",
-          "content": "After completing your practice round, take a moment to write down one action you want to repeat in your next attempt and one action you would like to improve. This reflection will help you grow as a learner and enhance your skills in future exercises.\nContext recap: After completing your practice round, take a moment to write down one action you want to repeat in your next attempt and one action you would like to improve. This reflection will help you grow as a learner and enhance your skills in future exercises."
+          "content": "After completing your practice round today, take a moment to write down one time you used estimation. Did it help you find the answer faster? Reflecting on how you use these tools will help you grow as a math learner and enhance your skills in future exercises."
         }
       ],
       "flashcards": [
         {
           "id": "basic-math-301-l07-f1",
-          "front": "multi-step verification",
-          "back": "Use this as your organizing framework before execution."
+          "front": "Estimation",
+          "back": "Finding a value that is close enough to the right answer, usually to save time."
         },
         {
           "id": "basic-math-301-l07-f2",
-          "front": "Decision Rule",
-          "back": "Choose the option with strongest evidence-to-goal alignment."
+          "front": "Rounding",
+          "back": "Adjusting a number to make it easier to work with (e.g., 48 becomes 50)."
         },
         {
           "id": "basic-math-301-l07-f3",
-          "front": "Quality Control",
-          "back": "Accuracy + completeness + objective match."
+          "front": "Reasonableness",
+          "back": "Checking if an answer makes logical sense in the real world."
         },
         {
           "id": "basic-math-301-l07-f4",
-          "front": "Iteration",
-          "back": "Repeat what works; refine one weak step each cycle."
+          "front": "Quality Control",
+          "back": "Reviewing your work for accuracy and completeness before finishing."
         }
       ],
       "learningAids": [
         {
           "id": "basic-math-301-l07-a1",
           "type": "practice",
-          "title": "Project Planner",
-          "content": "Template for planning a mini project focused on multi-step verification."
+          "title": "Estimation Planner",
+          "content": "A quick worksheet where you round grocery prices to the nearest dollar to estimate a total bill."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/basic-math-301-l07.png"
     },
     {
       "id": "basic-math-301-l08",
       "title": "Applied Math Lab Session",
       "type": "interactive",
       "duration": 10,
+      "lessonImagePrompt": "A 3D animated science-math lab. Beakers are bubbling with glowing numbers, and a chalkboard in the background shows a mix of fractions, percentages, and estimated totals.",
+      "conceptVideoPrompt": "A first-person view animation of hands assembling a puzzle made of math symbols. When a piece doesn't fit, the hands pause, rotate it, and try again until the puzzle glows brightly.",
       "metadata": {
         "prompts": [
           "What did you learn most clearly?",
@@ -738,36 +758,36 @@ export const BasicMath301Module: LearningModule = {
           "id": "basic-math-301-l08-ia1",
           "type": "matching_pairs",
           "title": "Reflection Match",
-          "description": "Match each reflection prompt with the best follow-up action.",
+          "description": "Match each reflection prompt with the best follow-up action to improve your math skills.",
           "estimatedMinutes": 7,
           "difficultyLevel": "easy",
           "data": {
             "left": [
               {
                 "id": "l1",
-                "label": "I keep missing one skill pattern"
+                "label": "My final answer was way too big."
               },
               {
                 "id": "l2",
-                "label": "I rush and make avoidable mistakes"
+                "label": "I rush and make avoidable addition mistakes."
               },
               {
                 "id": "l3",
-                "label": "I understand in notes but miss in quizzes"
+                "label": "I understand the notes but freeze on quizzes."
               }
             ],
             "right": [
               {
                 "id": "r1",
-                "label": "Do a focused drill on that exact pattern"
+                "label": "Use estimation first to see if the answer is reasonable."
               },
               {
                 "id": "r2",
-                "label": "Use a short checklist before submitting answers"
+                "label": "Use a short checklist to verify steps before submitting."
               },
               {
                 "id": "r3",
-                "label": "Repeat the skill in a timed re-check"
+                "label": "Practice with a timed mini-quiz to build confidence."
               }
             ],
             "pairs": [
@@ -792,108 +812,111 @@ export const BasicMath301Module: LearningModule = {
           "id": "basic-math-301-l08-a1",
           "type": "mnemonic",
           "title": "Reflection Cycle",
-          "content": "Remember Observe, Adjust, Repeat while practicing."
+          "content": "Remember: Observe your mistake, Adjust your strategy, Repeat the practice."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/basic-math-301-l08.png"
     },
     {
       "id": "basic-math-301-l09",
       "title": "Review: Quantitative Strategies",
       "type": "quiz",
       "duration": 10,
+      "lessonImagePrompt": "A glowing 3D brain lifting weights shaped like percentage signs and division symbols, set in a bright, colorful gym environment.",
+      "conceptVideoPrompt": "A fast-paced montage animation showing previous lessons: a pizza being sliced, a price tag dropping, and a data table building itself. It ends with a golden trophy.",
       "questions": [
         {
           "id": "basic-math-301-l09-q1",
-          "text": "Which statement best explains percent reasoning in Math?",
+          "text": "Which is the best estimate for 48 multiplied by 11?",
           "skillId": "basic-math-301-skill-core",
           "options": [
             {
               "id": "a",
-              "text": "It explains percent reasoning using evidence from the lesson."
+              "text": "500 (because 50 x 10 = 500)"
             },
             {
               "id": "b",
-              "text": "It ignores how percent reasoning works in practice."
+              "text": "100 (because 50 + 50 = 100)"
             },
             {
               "id": "c",
-              "text": "It focuses on an unrelated topic outside Math."
+              "text": "1000 (because 100 x 10 = 1000)"
             },
             {
               "id": "d",
-              "text": "It repeats terms without showing meaning."
+              "text": "50 (because 50 x 1 = 50)"
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "basic-math-301-l09-q2",
-          "text": "What is the best first step when analyzing multi-step verification?",
+          "text": "If you have $20, is it reasonable to think you can buy three items that cost $8.99 each?",
           "skillId": "basic-math-301-skill-process",
           "options": [
             {
               "id": "a",
-              "text": "Define the goal and examine evidence for multi-step verification."
+              "text": "No, because 3 x $9 is $27, which is more than $20."
             },
             {
               "id": "b",
-              "text": "Guess quickly without checking evidence."
+              "text": "Yes, because $8.99 is less than $20."
             },
             {
               "id": "c",
-              "text": "Use data unrelated to multi-step verification."
+              "text": "Yes, because 3 items is a small amount."
             },
             {
               "id": "d",
-              "text": "Skip the context and jump to a conclusion."
+              "text": "No, because you need exactly $30."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "basic-math-301-l09-q3",
-          "text": "Which option shows strong reasoning about quantitative reasoning under constraints?",
+          "text": "What does it mean to check for 'reasonableness'?",
           "skillId": "basic-math-301-skill-reasoning",
           "options": [
             {
               "id": "a",
-              "text": "Use examples and verify assumptions step by step."
+              "text": "Asking yourself if the final answer makes logical sense."
             },
             {
               "id": "b",
-              "text": "Ignore important details and edge cases."
+              "text": "Making sure the numbers are written neatly."
             },
             {
               "id": "c",
-              "text": "Use assumptions unrelated to quantitative reasoning under constraints."
+              "text": "Guessing the answer without doing any math."
             },
             {
               "id": "d",
-              "text": "Change the topic when evidence gets hard."
+              "text": "Asking a friend for the answer."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "basic-math-301-l09-q4",
-          "text": "Why is spaced review useful for Math mastery?",
+          "text": "Why is rounding helpful in math?",
           "skillId": "basic-math-301-skill-review",
           "options": [
             {
               "id": "a",
-              "text": "It strengthens memory and transfer over time"
+              "text": "It makes numbers easier to work with for quick estimation."
             },
             {
               "id": "b",
-              "text": "It creates confusion"
+              "text": "It gives you the exact, perfect answer every time."
             },
             {
               "id": "c",
-              "text": "It removes key facts"
+              "text": "It makes the problem harder to solve."
             },
             {
               "id": "d",
-              "text": "It has no value"
+              "text": "It removes the need to learn multiplication."
             }
           ],
           "correctOptionId": "a"
@@ -903,42 +926,41 @@ export const BasicMath301Module: LearningModule = {
         {
           "id": "basic-math-301-l09-ia1",
           "type": "matching_pairs",
-          "title": "Reasoning Match: Review: Quantitative Strategies",
-          "description": "Match each error signal to the strongest correction strategy.",
+          "title": "Strategy Match",
+          "description": "Match the math scenario to the best strategy to solve it.",
           "estimatedMinutes": 7,
           "difficultyLevel": "medium",
           "instructions": [
-            "Review each left-side signal.",
-            "Pick the best response on the right.",
-            "Use your matches to plan the next drill."
+            "Review each scenario on the left.",
+            "Pick the best strategy on the right."
           ],
           "data": {
             "left": [
               {
                 "id": "l1",
-                "label": "Confusion about percent reasoning"
+                "label": "You need to know roughly how much 5 items at $3.95 will cost."
               },
               {
                 "id": "l2",
-                "label": "Inconsistent approach to multi-step verification"
+                "label": "You need to find a pattern in daily temperatures."
               },
               {
                 "id": "l3",
-                "label": "Weak transfer of quantitative reasoning under constraints under timing"
+                "label": "You need to scale a recipe for 10 people."
               }
             ],
             "right": [
               {
                 "id": "r1",
-                "label": "Create a one-step concept summary with one worked example"
+                "label": "Use rounding and estimation."
               },
               {
                 "id": "r2",
-                "label": "Use a checklist before choosing the final answer"
+                "label": "Use a data table."
               },
               {
                 "id": "r3",
-                "label": "Retest the same target with a short timed sprint"
+                "label": "Use ratios and proportions."
               }
             ],
             "pairs": [
@@ -989,108 +1011,111 @@ export const BasicMath301Module: LearningModule = {
           "id": "basic-math-301-l09-a1",
           "type": "mnemonic",
           "title": "Memory Tip",
-          "content": "Use the phrase Plan, Check, Explain for each question."
+          "content": "Round up, round down, makes the math go round the town!"
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/basic-math-301-l09.png"
     },
     {
       "id": "basic-math-301-l10",
       "title": "Mastery: Quantitative Reasoning",
       "type": "quiz",
       "duration": 10,
+      "lessonImagePrompt": "A 3D animated golden key unlocking a glowing treasure chest filled with math symbols, representing mastery of the subject.",
+      "conceptVideoPrompt": "A cinematic animation of a student standing at the top of a mountain made of geometric shapes. They plant a flag with a percentage sign on it, and fireworks explode in the background.",
       "questions": [
         {
           "id": "basic-math-301-l10-q1",
-          "text": "Which statement best explains ratio and proportion in Math?",
+          "text": "If a car travels 60 miles in 1 hour, how far will it travel in 3.5 hours at the same speed?",
           "skillId": "basic-math-301-skill-core",
           "options": [
             {
               "id": "a",
-              "text": "It explains ratio and proportion using evidence from the lesson."
+              "text": "210 miles"
             },
             {
               "id": "b",
-              "text": "It ignores how ratio and proportion works in practice."
+              "text": "180 miles"
             },
             {
               "id": "c",
-              "text": "It focuses on an unrelated topic outside Math."
+              "text": "200 miles"
             },
             {
               "id": "d",
-              "text": "It repeats terms without showing meaning."
+              "text": "240 miles"
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "basic-math-301-l10-q2",
-          "text": "What is the best first step when analyzing data modeling?",
+          "text": "A jacket originally costs $80. It is on sale for 10% off. What is the sale price?",
           "skillId": "basic-math-301-skill-process",
           "options": [
             {
               "id": "a",
-              "text": "Define the goal and examine evidence for data modeling."
+              "text": "$72"
             },
             {
               "id": "b",
-              "text": "Guess quickly without checking evidence."
+              "text": "$70"
             },
             {
               "id": "c",
-              "text": "Use data unrelated to data modeling."
+              "text": "$88"
             },
             {
               "id": "d",
-              "text": "Skip the context and jump to a conclusion."
+              "text": "$8"
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "basic-math-301-l10-q3",
-          "text": "Which option shows strong reasoning about quantitative reasoning under constraints?",
+          "text": "You have a budget of $50. You buy a shirt for $25 and a hat for $15. How much money is left?",
           "skillId": "basic-math-301-skill-reasoning",
           "options": [
             {
               "id": "a",
-              "text": "Use examples and verify assumptions step by step."
+              "text": "$10"
             },
             {
               "id": "b",
-              "text": "Ignore important details and edge cases."
+              "text": "$15"
             },
             {
               "id": "c",
-              "text": "Use assumptions unrelated to quantitative reasoning under constraints."
+              "text": "$20"
             },
             {
               "id": "d",
-              "text": "Change the topic when evidence gets hard."
+              "text": "$5"
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "basic-math-301-l10-q4",
-          "text": "Why is spaced review useful for Math mastery?",
+          "text": "Which of the following is the best estimate for 19% of 50?",
           "skillId": "basic-math-301-skill-review",
           "options": [
             {
               "id": "a",
-              "text": "It strengthens memory and transfer over time"
+              "text": "10 (because 20% of 50 is 10)"
             },
             {
               "id": "b",
-              "text": "It creates confusion"
+              "text": "20 (because 19 is close to 20)"
             },
             {
               "id": "c",
-              "text": "It removes key facts"
+              "text": "5 (because 10% of 50 is 5)"
             },
             {
               "id": "d",
-              "text": "It has no value"
+              "text": "50 (because it's the original number)"
             }
           ],
           "correctOptionId": "a"
@@ -1100,42 +1125,41 @@ export const BasicMath301Module: LearningModule = {
         {
           "id": "basic-math-301-l10-ia1",
           "type": "matching_pairs",
-          "title": "Reasoning Match: Mastery: Quantitative Reasoning",
-          "description": "Match each error signal to the strongest correction strategy.",
+          "title": "Mastery Match",
+          "description": "Match the math term to its real-world example.",
           "estimatedMinutes": 7,
           "difficultyLevel": "medium",
           "instructions": [
-            "Review each left-side signal.",
-            "Pick the best response on the right.",
-            "Use your matches to plan the next drill."
+            "Review each term on the left.",
+            "Pick the best example on the right."
           ],
           "data": {
             "left": [
               {
                 "id": "l1",
-                "label": "Confusion about ratio and proportion"
+                "label": "Ratio"
               },
               {
                 "id": "l2",
-                "label": "Inconsistent approach to data modeling"
+                "label": "Percent Discount"
               },
               {
                 "id": "l3",
-                "label": "Weak transfer of quantitative reasoning under constraints under timing"
+                "label": "Constraint"
               }
             ],
             "right": [
               {
                 "id": "r1",
-                "label": "Create a one-step concept summary with one worked example"
+                "label": "2 slices of pizza for every 1 person."
               },
               {
                 "id": "r2",
-                "label": "Use a checklist before choosing the final answer"
+                "label": "Saving $5 on a $20 toy."
               },
               {
                 "id": "r3",
-                "label": "Retest the same target with a short timed sprint"
+                "label": "Only having 30 minutes to play."
               }
             ],
             "pairs": [
@@ -1186,7 +1210,7 @@ export const BasicMath301Module: LearningModule = {
           "id": "basic-math-301-l10-a1",
           "type": "mnemonic",
           "title": "Memory Tip",
-          "content": "Use the phrase Plan, Check, Explain for each question."
+          "content": "Take a deep breath. You have all the tools you need!"
         }
       ]
     },
@@ -1195,6 +1219,8 @@ export const BasicMath301Module: LearningModule = {
       "title": "Applied Math Challenge Studio",
       "type": "interactive",
       "duration": 14,
+      "lessonImagePrompt": "A 3D animated art studio, but instead of paint, the canvases are filled with colorful math equations, charts, and graphs. A student is 'painting' a solution with a glowing stylus.",
+      "conceptVideoPrompt": "A time-lapse animation of a complex word problem being broken down. Highlighters magically appear to color-code the numbers, constraints, and the final question, organizing the chaos into a clear plan.",
       "metadata": {
         "prompts": [
           "Select one weak pattern from recent quizzes.",
@@ -1206,39 +1232,39 @@ export const BasicMath301Module: LearningModule = {
         {
           "id": "basic-math-301-l11-ia1",
           "type": "sorting_buckets",
-          "title": "Transfer Ladder",
-          "description": "Sort actions into Diagnose, Fix, and Transfer phases.",
+          "title": "Word Problem Ladder",
+          "description": "Sort the actions into the correct phase of solving a tough word problem: Diagnose, Fix, and Transfer.",
           "estimatedMinutes": 9,
           "difficultyLevel": "medium",
           "data": {
             "buckets": [
               {
                 "id": "diagnose",
-                "label": "Diagnose"
+                "label": "Diagnose (Understand)"
               },
               {
                 "id": "fix",
-                "label": "Fix"
+                "label": "Fix (Solve)"
               },
               {
                 "id": "transfer",
-                "label": "Transfer"
+                "label": "Transfer (Check)"
               }
             ],
             "items": [
               {
                 "id": "i1",
-                "label": "Tag repeated mistakes in percent reasoning",
+                "label": "Highlight the key numbers and what the question is asking.",
                 "correctBucketId": "diagnose"
               },
               {
                 "id": "i2",
-                "label": "Rework one missed item with full reasoning",
+                "label": "Write out the equation and do the math.",
                 "correctBucketId": "fix"
               },
               {
                 "id": "i3",
-                "label": "Retest with a timed mini-check on multi-step verification",
+                "label": "Ask if the answer makes sense in the real world.",
                 "correctBucketId": "transfer"
               }
             ]
@@ -1250,7 +1276,7 @@ export const BasicMath301Module: LearningModule = {
           "id": "basic-math-301-l11-a1",
           "type": "practice",
           "title": "Correction Loop Card",
-          "content": "Use Diagnose, Fix, Transfer for each difficult problem."
+          "content": "Use Diagnose, Fix, Transfer for each difficult word problem."
         }
       ]
     },
@@ -1259,99 +1285,101 @@ export const BasicMath301Module: LearningModule = {
       "title": "Quantitative Reasoning Mastery Applied Retest",
       "type": "quiz",
       "duration": 10,
+      "lessonImagePrompt": "A 3D animated glowing 'Level Up' badge surrounded by floating math symbols, set against a dark, sleek background.",
+      "conceptVideoPrompt": "A dynamic animation of a student running through a digital obstacle course. They jump over a division sign, slide under a percentage, and cross the finish line to cheers.",
       "questions": [
         {
           "id": "basic-math-301-l12-q1",
-          "text": "Which statement best explains ratio and proportion in Math?",
+          "text": "A recipe uses 3 eggs for every 2 cups of flour. If you use 6 cups of flour, how many eggs do you need?",
           "skillId": "basic-math-301-skill-core",
           "options": [
             {
               "id": "a",
-              "text": "It explains ratio and proportion using evidence from the lesson."
+              "text": "9 eggs"
             },
             {
               "id": "b",
-              "text": "It ignores how ratio and proportion works in practice."
+              "text": "6 eggs"
             },
             {
               "id": "c",
-              "text": "It focuses on an unrelated topic outside Math."
+              "text": "12 eggs"
             },
             {
               "id": "d",
-              "text": "It repeats terms without showing meaning."
+              "text": "3 eggs"
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "basic-math-301-l12-q2",
-          "text": "What is the best first step when analyzing multi-step verification?",
+          "text": "A pair of shoes costs $60. If there is a 20% discount, how much money do you save?",
           "skillId": "basic-math-301-skill-process",
           "options": [
             {
               "id": "a",
-              "text": "Define the goal and examine evidence for multi-step verification."
+              "text": "$12"
             },
             {
               "id": "b",
-              "text": "Guess quickly without checking evidence."
+              "text": "$20"
             },
             {
               "id": "c",
-              "text": "Use data unrelated to multi-step verification."
+              "text": "$48"
             },
             {
               "id": "d",
-              "text": "Skip the context and jump to a conclusion."
+              "text": "$10"
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "basic-math-301-l12-q3",
-          "text": "Which option shows strong reasoning about quantitative reasoning under constraints?",
+          "text": "You have 2 hours to finish 4 chores. If each chore takes 25 minutes, do you have enough time?",
           "skillId": "basic-math-301-skill-reasoning",
           "options": [
             {
               "id": "a",
-              "text": "Use examples and verify assumptions step by step."
+              "text": "Yes, because 4 x 25 = 100 minutes, which is less than 120 minutes (2 hours)."
             },
             {
               "id": "b",
-              "text": "Ignore important details and edge cases."
+              "text": "No, because 4 x 25 = 100 minutes, which is more than 2 hours."
             },
             {
               "id": "c",
-              "text": "Use assumptions unrelated to quantitative reasoning under constraints."
+              "text": "Yes, because 25 minutes is very fast."
             },
             {
               "id": "d",
-              "text": "Change the topic when evidence gets hard."
+              "text": "No, because you need exactly 120 minutes."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "basic-math-301-l12-q4",
-          "text": "Why is spaced review useful for Math mastery?",
+          "text": "Which is the most reasonable estimate for the cost of 4 books that are $9.95 each?",
           "skillId": "basic-math-301-skill-review",
           "options": [
             {
               "id": "a",
-              "text": "It strengthens memory and transfer over time"
+              "text": "$40"
             },
             {
               "id": "b",
-              "text": "It creates confusion"
+              "text": "$30"
             },
             {
               "id": "c",
-              "text": "It removes key facts"
+              "text": "$50"
             },
             {
               "id": "d",
-              "text": "It has no value"
+              "text": "$100"
             }
           ],
           "correctOptionId": "a"
@@ -1361,42 +1389,41 @@ export const BasicMath301Module: LearningModule = {
         {
           "id": "basic-math-301-l12-ia1",
           "type": "matching_pairs",
-          "title": "Reasoning Match: Quantitative Reasoning Mastery Applied Retest",
-          "description": "Match each error signal to the strongest correction strategy.",
+          "title": "Retest Review Match",
+          "description": "Match the math problem to the core skill it tests.",
           "estimatedMinutes": 7,
           "difficultyLevel": "medium",
           "instructions": [
-            "Review each left-side signal.",
-            "Pick the best response on the right.",
-            "Use your matches to plan the next drill."
+            "Review each problem on the left.",
+            "Pick the matching skill on the right."
           ],
           "data": {
             "left": [
               {
                 "id": "l1",
-                "label": "Confusion about ratio and proportion"
+                "label": "Finding 15% of $40."
               },
               {
                 "id": "l2",
-                "label": "Inconsistent approach to multi-step verification"
+                "label": "Guessing that 49 x 2 is about 100."
               },
               {
                 "id": "l3",
-                "label": "Weak transfer of quantitative reasoning under constraints under timing"
+                "label": "Checking if you have enough time to finish a test."
               }
             ],
             "right": [
               {
                 "id": "r1",
-                "label": "Create a one-step concept summary with one worked example"
+                "label": "Percent Reasoning"
               },
               {
                 "id": "r2",
-                "label": "Use a checklist before choosing the final answer"
+                "label": "Estimation"
               },
               {
                 "id": "r3",
-                "label": "Retest the same target with a short timed sprint"
+                "label": "Constraint Checking"
               }
             ],
             "pairs": [
@@ -1447,57 +1474,60 @@ export const BasicMath301Module: LearningModule = {
           "id": "basic-math-301-l12-a1",
           "type": "mnemonic",
           "title": "Memory Tip",
-          "content": "Use the phrase Plan, Check, Explain for each question."
+          "content": "Read carefully. The answer is often hiding in the details!"
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/basic-math-301-l12.png"
     },
     {
       "id": "basic-math-301-l13",
       "title": "Math Scenario Lab",
       "type": "video",
       "duration": 12,
+      "lessonImagePrompt": "A 3D animated scene of a school gymnasium being decorated for a dance. A student holds a glowing digital clipboard showing a budget pie chart and a checklist.",
+      "conceptVideoPrompt": "A fast-paced, fun animation showing a party being planned. A budget bar at the top of the screen fills up as items (DJ, pizza, balloons) are added. When it hits the limit, it flashes red, prompting the planner to swap items until it's green.",
       "chunks": [
         {
           "id": "basic-math-301-l13-c1",
-          "title": "Scenario Brief",
-          "content": "In this exciting scenario, we will explore the concepts of ratio and proportion, data modeling, and multi-step verification. These important math skills will come together in a fun challenge that allows you to apply what you've learned in a real-world context. Get ready to think critically and creatively as you tackle this problem!\nContext recap: In this exciting scenario, we will explore the concepts of ratio and proportion, data modeling, and multi-step verification. These important math skills will come together in a fun challenge that allows you to apply what you've learned in a real-world context. Get ready to think critically and creatively as you tackle this problem!"
+          "title": "The Big Project",
+          "content": "In this exciting scenario, we are going to plan a school dance! We will use everything we've learned: ratios for mixing punch, percentages for discounts on decorations, and data tables to compare DJ prices. This is where math comes to life. Get ready to think critically and creatively as you tackle this real-world challenge!"
         },
         {
           "id": "basic-math-301-l13-c2",
           "title": "Plan the Approach",
-          "content": "To effectively solve the scenario, start by breaking it down into smaller, manageable decisions. This will help you understand each part of the challenge better. Once you have identified these decisions, think about which strategy or method you will use for each one. This organized approach will make it easier to find the best solution!\nContext recap: To effectively solve the scenario, start by breaking it down into smaller, manageable decisions. This will help you understand each part of the challenge better. Once you have identified these decisions, think about which strategy or method you will use for each one. This organized approach will make it easier to find the best solution!"
+          "content": "To effectively plan the dance, start by breaking it down into smaller decisions. First, what is our total budget? Let's say it's $500. Next, what are our constraints? We need music, food, and decorations. By organizing our approach, we make sure we don't spend all our money on a DJ and have nothing left for snacks!"
         },
         {
           "id": "basic-math-301-l13-c3",
           "title": "Execute and Justify",
-          "content": "Now it's time to put your plan into action! As you execute each step, be sure to explain your reasoning clearly. Use evidence from your calculations and data to support your choices, rather than making guesses. This will help you build a strong argument for why your approach is effective and ensure that your solution is well-founded.\nContext recap: Now it's time to put your plan into action! As you execute each step, be sure to explain your reasoning clearly. Use evidence from your calculations and data to support your choices, rather than making guesses. This will help you build a strong argument for why your approach is effective and ensure that your solution is well-founded."
+          "content": "Now it's time to put your plan into action! If the DJ costs $200, what percentage of our $500 budget is that? (Hint: It's 40%). As you make choices, explain your reasoning. 'I chose the $50 pizza package because it feeds 20 people, which is a better ratio than the $30 package that only feeds 10.' Use evidence to support your choices!"
         },
         {
           "id": "basic-math-301-l13-c4",
           "title": "Evaluate Outcome",
-          "content": "After you have completed your scenario, take a moment to evaluate the outcome. Compare your final result to the target you were aiming for. Reflect on what worked well and what might need some adjustments. This step is crucial for learning and improving your problem-solving skills for future challenges!\nContext recap: After you have completed your scenario, take a moment to evaluate the outcome. Compare your final result to the target you were aiming for. Reflect on what worked well and what might need some adjustments. This step is crucial for learning and improving your problem-solving skills for future challenges!"
+          "content": "After you have completed your budget, take a moment to evaluate the outcome. Did you stay under the $500 limit? Did you get everything you needed? Reflect on what worked well and what might need some adjustments. This step is crucial for learning how to manage complex projects in the future!"
         }
       ],
       "flashcards": [
         {
           "id": "basic-math-301-l13-f1",
           "front": "Scenario Planning",
-          "back": "Split a complex task into clear decision points."
+          "back": "Splitting a big, complex task into smaller, clear decision points."
         },
         {
           "id": "basic-math-301-l13-f2",
           "front": "Evidence Link",
-          "back": "Each step should connect to evidence in the scenario."
+          "back": "Making sure every choice you make is backed up by math and data."
         },
         {
           "id": "basic-math-301-l13-f3",
           "front": "Adjustment Loop",
-          "back": "Use outcome checks to refine your next attempt."
+          "back": "Changing your plan if you hit a constraint (like running out of money)."
         },
         {
           "id": "basic-math-301-l13-f4",
           "front": "Applied Mastery",
-          "back": "Mastery means transferring the process to a new context."
+          "back": "Using math skills in a real-world situation, not just on a worksheet."
         }
       ],
       "learningAids": [
@@ -1505,21 +1535,24 @@ export const BasicMath301Module: LearningModule = {
           "id": "basic-math-301-l13-a1",
           "type": "image",
           "title": "Scenario Map",
-          "content": "A real-world scenario map connecting ratio and proportion, data modeling, and multi-step verification."
+          "content": "A real-world scenario map connecting ratio and proportion, data modeling, and multi-step verification to planning a party."
         },
         {
           "id": "basic-math-301-l13-a2",
           "type": "practice",
           "title": "Mini Case Prompt",
-          "content": "Apply one strategy to a new case and explain your reasoning."
+          "content": "Apply one strategy to a new case: Planning a weekend camping trip budget."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/basic-math-301-l13.png"
     },
     {
       "id": "basic-math-301-l14",
       "title": "Math Coaching Clinic",
       "type": "interactive",
       "duration": 13,
+      "lessonImagePrompt": "A 3D animated sports locker room, but for mathletes. A coach is pointing at a glowing digital whiteboard showing a game plan for solving tough equations.",
+      "conceptVideoPrompt": "An animation of a math 'playbook'. The pages flip rapidly, stopping on a play called 'The Double Check'. X's and O's move around the screen to demonstrate how to verify an answer before submitting.",
       "metadata": {
         "prompts": [
           "Identify one repeated error pattern from your recent work.",
@@ -1532,36 +1565,36 @@ export const BasicMath301Module: LearningModule = {
           "id": "basic-math-301-l14-ia1",
           "type": "matching_pairs",
           "title": "Error to Fix Match",
-          "description": "Match each error signal to the highest-impact correction action.",
+          "description": "Match each common math mistake to the highest-impact correction action.",
           "estimatedMinutes": 8,
           "difficultyLevel": "medium",
           "data": {
             "left": [
               {
                 "id": "l1",
-                "label": "Repeated miss on ratio and proportion setup"
+                "label": "I keep setting up my ratios backwards."
               },
               {
                 "id": "l2",
-                "label": "Losses due to rushed multi-step verification decisions"
+                "label": "I make silly mistakes because I rush."
               },
               {
                 "id": "l3",
-                "label": "Correct in notes but weak transfer in new tasks"
+                "label": "I get it right in practice, but freeze on the test."
               }
             ],
             "right": [
               {
                 "id": "r1",
-                "label": "Rebuild setup steps and retest one parallel item"
+                "label": "Always write the words (e.g., apples/oranges) before the numbers."
               },
               {
                 "id": "r2",
-                "label": "Use checkpoint pacing + verify before submit"
+                "label": "Use checkpoint pacing and verify before you submit."
               },
               {
                 "id": "r3",
-                "label": "Pair correction with one timed transfer item"
+                "label": "Do timed practice drills to get used to the pressure."
               }
             ],
             "pairs": [
@@ -1586,108 +1619,111 @@ export const BasicMath301Module: LearningModule = {
           "id": "basic-math-301-l14-a1",
           "type": "mnemonic",
           "title": "Clinic Loop",
-          "content": "Diagnose, Correct, Transfer."
+          "content": "Diagnose the mistake, Correct the habit, Transfer to the test."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/basic-math-301-l14.png"
     },
     {
       "id": "basic-math-301-l15",
-      "title": "Quantitative Reasoning Mastery Mastery Sprint",
+      "title": "Quantitative Reasoning Mastery Sprint",
       "type": "quiz",
       "duration": 10,
+      "lessonImagePrompt": "A 3D animated finish line ribbon being broken by a glowing, fast-moving math symbol. Confetti made of numbers falls from the sky.",
+      "conceptVideoPrompt": "A high-energy animation of a countdown timer. As the timer ticks down, complex math problems are solved rapidly on screen, ending with a massive '100% MASTERY' graphic.",
       "questions": [
         {
           "id": "basic-math-301-l15-q1",
-          "text": "Which statement best explains percent reasoning in Math?",
+          "text": "A store buys a toy for $10 and sells it for $15. What is the profit ratio of profit to cost?",
           "skillId": "basic-math-301-skill-core",
           "options": [
             {
               "id": "a",
-              "text": "It explains percent reasoning using evidence from the lesson."
+              "text": "5 to 10 (or 1:2)"
             },
             {
               "id": "b",
-              "text": "It ignores how percent reasoning works in practice."
+              "text": "15 to 10"
             },
             {
               "id": "c",
-              "text": "It focuses on an unrelated topic outside Math."
+              "text": "10 to 5"
             },
             {
               "id": "d",
-              "text": "It repeats terms without showing meaning."
+              "text": "5 to 15"
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "basic-math-301-l15-q2",
-          "text": "What is the best first step when analyzing data modeling?",
+          "text": "If a data table shows that 4 out of 5 students prefer pizza, what percentage of students prefer pizza?",
           "skillId": "basic-math-301-skill-process",
           "options": [
             {
               "id": "a",
-              "text": "Define the goal and examine evidence for data modeling."
+              "text": "80%"
             },
             {
               "id": "b",
-              "text": "Guess quickly without checking evidence."
+              "text": "40%"
             },
             {
               "id": "c",
-              "text": "Use data unrelated to data modeling."
+              "text": "50%"
             },
             {
               "id": "d",
-              "text": "Skip the context and jump to a conclusion."
+              "text": "20%"
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "basic-math-301-l15-q3",
-          "text": "Which option shows strong reasoning about quantitative reasoning under constraints?",
+          "text": "You need to buy 3 shirts that cost $14.99 each. You have $50. Is it reasonable to think you have enough money?",
           "skillId": "basic-math-301-skill-reasoning",
           "options": [
             {
               "id": "a",
-              "text": "Use examples and verify assumptions step by step."
+              "text": "Yes, because 3 x $15 is $45, which is less than $50."
             },
             {
               "id": "b",
-              "text": "Ignore important details and edge cases."
+              "text": "No, because 3 x $15 is $60."
             },
             {
               "id": "c",
-              "text": "Use assumptions unrelated to quantitative reasoning under constraints."
+              "text": "Yes, because $14.99 is a small number."
             },
             {
               "id": "d",
-              "text": "Change the topic when evidence gets hard."
+              "text": "No, because you need exactly $45."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "basic-math-301-l15-q4",
-          "text": "Why is spaced review useful for Math mastery?",
+          "text": "Why is it important to identify constraints (like time or budget) before solving a problem?",
           "skillId": "basic-math-301-skill-review",
           "options": [
             {
               "id": "a",
-              "text": "It strengthens memory and transfer over time"
+              "text": "It sets the rules for what a correct and possible answer looks like."
             },
             {
               "id": "b",
-              "text": "It creates confusion"
+              "text": "It makes the math equations easier to write."
             },
             {
               "id": "c",
-              "text": "It removes key facts"
+              "text": "It allows you to skip the estimation step."
             },
             {
               "id": "d",
-              "text": "It has no value"
+              "text": "It changes the numbers in the data table."
             }
           ],
           "correctOptionId": "a"
@@ -1697,42 +1733,41 @@ export const BasicMath301Module: LearningModule = {
         {
           "id": "basic-math-301-l15-ia1",
           "type": "matching_pairs",
-          "title": "Reasoning Match: Quantitative Reasoning Mastery Mastery Sprint",
-          "description": "Match each error signal to the strongest correction strategy.",
+          "title": "Final Sprint Match",
+          "description": "Match the math concept to its final definition.",
           "estimatedMinutes": 7,
           "difficultyLevel": "medium",
           "instructions": [
-            "Review each left-side signal.",
-            "Pick the best response on the right.",
-            "Use your matches to plan the next drill."
+            "Review each concept on the left.",
+            "Pick the best definition on the right."
           ],
           "data": {
             "left": [
               {
                 "id": "l1",
-                "label": "Confusion about percent reasoning"
+                "label": "Proportion"
               },
               {
                 "id": "l2",
-                "label": "Inconsistent approach to data modeling"
+                "label": "Estimation"
               },
               {
                 "id": "l3",
-                "label": "Weak transfer of quantitative reasoning under constraints under timing"
+                "label": "Constraint"
               }
             ],
             "right": [
               {
                 "id": "r1",
-                "label": "Create a one-step concept summary with one worked example"
+                "label": "An equation showing two ratios are equal."
               },
               {
                 "id": "r2",
-                "label": "Use a checklist before choosing the final answer"
+                "label": "A smart guess using rounded numbers."
               },
               {
                 "id": "r3",
-                "label": "Retest the same target with a short timed sprint"
+                "label": "A real-world limit, like a budget or time limit."
               }
             ],
             "pairs": [
@@ -1782,10 +1817,11 @@ export const BasicMath301Module: LearningModule = {
         {
           "id": "basic-math-301-l15-a1",
           "type": "mnemonic",
-          "title": "Memory Tip",
-          "content": "Use the phrase Plan, Check, Explain for each question."
+          "title": "Final Tip",
+          "content": "You've mastered the lab! Trust your reasoning and finish strong."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/basic-math-301-l15.png"
     }
   ]
 };

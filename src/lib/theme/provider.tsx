@@ -9,6 +9,7 @@ import {
   useMemo,
   useState,
 } from "react";
+import { getAppId, getManifestSync, type AppManifest } from "@/lib/platform/app-manifest";
 
 export type ThemeMode = "light" | "dark" | "system";
 export type ThemeResolved = "light" | "dark";
@@ -96,16 +97,6 @@ function normalizeThemeMode(mode: ThemeMode): ThemeMode {
   return mode;
 }
 
-function resolveTheme(mode: ThemeMode): ThemeResolved {
-  if (mode === "dark") return "dark";
-  if (mode === "light") return "light";
-  // system: detect OS preference
-  if (typeof window !== "undefined" && window.matchMedia("(prefers-color-scheme: dark)").matches) {
-    return "dark";
-  }
-  return "light";
-}
-
 function resolveMotionDatasetValue() {
   if (typeof window === "undefined") {
     return "standard";
@@ -147,6 +138,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
   const [systemDark, setSystemDark] = useState<boolean>(() =>
     typeof window !== "undefined" && window.matchMedia("(prefers-color-scheme: dark)").matches,
   );
+  const [runtimeManifest, setRuntimeManifest] = useState<AppManifest | null>(null);
 
   // Track OS dark mode preference reactively
   useEffect(() => {
@@ -264,6 +256,72 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
       mediaQuery.removeEventListener("change", syncMotionPreference);
     };
   }, [themeMode, themePack, ageGroup, typographyDensity, resolvedTheme]);
+
+  useEffect(() => {
+    if (typeof window === "undefined") {
+      return;
+    }
+
+    const appId = getAppId();
+    if (appId === "koydo_main") {
+      return;
+    }
+
+    let active = true;
+    const controller = new AbortController();
+
+    const hydrateManifest = async () => {
+      try {
+        const response = await fetch(`/api/app/manifest?appId=${encodeURIComponent(appId)}`, {
+          method: "GET",
+          cache: "no-store",
+          signal: controller.signal,
+        });
+        if (!response.ok) return;
+
+        const payload = (await response.json()) as { manifest?: AppManifest };
+        if (!active || !payload.manifest) return;
+        setRuntimeManifest(payload.manifest);
+      } catch {
+        // Keep static manifest fallback when manifest fetch fails.
+      }
+    };
+
+    void hydrateManifest();
+
+    return () => {
+      active = false;
+      controller.abort();
+    };
+  }, []);
+
+  // ── Micro-app manifest theme overrides ──────────────────────────────────
+  useEffect(() => {
+    if (typeof document === "undefined") return;
+    const appId = getAppId();
+    if (appId === "koydo_main") return;
+
+    const manifest = runtimeManifest ?? getManifestSync(appId);
+    const html = document.documentElement;
+    const appliedKeys: string[] = [];
+    const themeConfig = {
+      ...manifest.themeConfig,
+      ...(resolvedTheme === "dark" ? manifest.darkThemeConfig ?? {} : {}),
+    };
+
+    for (const [prop, val] of Object.entries(themeConfig)) {
+      if (prop.startsWith("--")) {
+        html.style.setProperty(prop, val);
+        appliedKeys.push(prop);
+      }
+    }
+
+    return () => {
+      for (const prop of appliedKeys) {
+        html.style.removeProperty(prop);
+      }
+    };
+  }, [resolvedTheme, runtimeManifest]);
 
   const value = useMemo(
     () => ({

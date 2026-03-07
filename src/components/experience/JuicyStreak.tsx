@@ -43,7 +43,7 @@ export default function JuicyStreak({ count, className = "" }: JuicyStreakProps)
                     y: isHot ? -10 : 0
                 }}
                 exit={{ scale: 0, opacity: 0 }}
-                className={`flex items-center gap-2 rounded-full border-2 bg-white px-4 py-2 shadow-lg dark:bg-stone-900 ${getIntensity()} ${className}`}
+                className={`koydo-streak-widget flex items-center gap-2 rounded-full border-2 bg-white px-4 py-2 shadow-lg dark:bg-stone-900 ${getIntensity()} ${className}`}
                 style={{
                     borderColor: "currentColor",
                     boxShadow: count >= 5 ? "0 0 20px rgba(255, 69, 0, 0.2)" : "none"

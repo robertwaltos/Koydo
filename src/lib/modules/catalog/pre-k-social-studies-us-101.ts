@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const PreKSocialStudiesUs101Module: LearningModule = {
+export const pre_k_social_studies_us_101_Module: LearningModule = {
   "id": "pre-k-social-studies-us-101",
   "title": "Pre-K My Community in the US",
   "description": "Explore neighborhoods, community helpers, American symbols, maps, and being a good citizen through stories, sorting games, and pretend play for ages 3-5.",
@@ -16,7 +16,7 @@ export const PreKSocialStudiesUs101Module: LearningModule = {
   ],
   "minAge": 3,
   "maxAge": 5,
-  "version": "4.0.0",
+  "version": "1.1.0",
   "difficultyBand": "beginner",
   "localeSupport": [
     "en",
@@ -44,17 +44,17 @@ export const PreKSocialStudiesUs101Module: LearningModule = {
         {
           "id": "pre-k-social-studies-us-101-l01-c1",
           "title": "People Living Together",
-          "content": "A community is a special group of people who live, work, and play close to one another. Think about your neighborhood — that’s your community! It includes homes where people live, stores where we buy things, parks where we can play, and schools where we learn new things. Everyone in a community helps each other, making it a friendly and supportive place to be. Together, we can share fun times and help one another when needed! In our community, we can meet friends, celebrate special events, and learn about different cultures. Each person has something unique to share, and by working together, we can make our community an even better place to live. So, let’s explore our community and discover all the wonderful things we can do together!\nContext recap: A community is a special group of people who live, work, and play close to one another. Think about your neighborhood — that’s your community! It includes homes where people live, stores where we buy things, parks where we can play, and schools where we learn new things. Everyone in a community helps each other, making it a friendly and supportive place to be.\nWhy this matters: People Living Together helps learners in Social Studies US connect ideas from Pre-K My Community in the US to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "A community is a group of people who live, work, and play near each other. Your neighborhood is your community! It has homes, stores, parks, and schools. Everyone in a community helps each other, making it a friendly and helpful place to be. We can make new friends and have fun together!"
         },
         {
           "id": "pre-k-social-studies-us-101-l01-c2",
           "title": "Places in a Community",
-          "content": "Communities are filled with special places that help us in many ways. For example, a school is where you go to learn new things like reading, math, and even art! It’s a place where you can make friends and discover exciting ideas. A library is a magical place full of books that everyone can enjoy, where you can go on adventures through stories and learn about the world around you. The fire station is where brave firefighters work to keep us safe, always ready to help in emergencies. Grocery stores are where we find food to eat, filled with fruits, vegetables, and yummy snacks. Hospitals are there to help people feel better when they are sick, with doctors and nurses who care for us. Parks are wonderful places where we can play, run, and have fun with friends, enjoying the sunshine and fresh air! Each of these places is important for making our community a great place to live and grow together.\nContext recap: Communities are filled with special places that help us in many ways. For example, a school is where you go to learn new things like reading, math, and even art! It’s a place where you can make friends and discover exciting ideas. A library is a magical place full of books that everyone can enjoy, where you can go on adventures through stories and learn about the world around you.\nWhy this matters: Places in a Community helps learners in Social Studies US connect ideas from Pre-K My Community in the US to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "Your community has many important places. A school is where you learn and make friends. A library is full of books and stories. A fire station is where brave firefighters work to keep us safe. A grocery store is where we get our food. A hospital is where doctors and nurses help us feel better when we're sick. And a park is a fun place to run and play!"
         },
         {
           "id": "pre-k-social-studies-us-101-l01-c3",
           "title": "Your Community",
-          "content": "Every community is unique and has its own special features that make it interesting! Some communities are found in big cities, where you can see tall buildings and meet lots of people. These cities are busy and full of exciting things to do! Other communities are in small towns, where you might find farms with animals like cows and chickens. In these towns, you can enjoy the fresh air and open spaces. Some communities are close to the ocean, where you can hear the waves crashing and see beautiful beaches. Others are nestled in the mountains, surrounded by trees and wildlife. No matter where you live, people in every community work together to make it a wonderful place to call home. They help each other, share fun activities, and celebrate special moments together, creating a sense of belonging and friendship for everyone!\nContext recap: Every community is unique and has its own special features that make it interesting! Some communities are found in big cities, where you can see tall buildings and meet lots of people. These cities are busy and full of exciting things to do! Other communities are in small towns, where you might find farms with animals like cows and chickens.\nWhy this matters: Your Community helps learners in Social Studies US connect ideas from Pre-K My Community in the US to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "Every community is special! Some are in big cities with tall buildings. Some are in small towns with farms and animals. Some are near the ocean, and some are in the mountains. No matter where you live, people in a community work together to make it a wonderful home. It feels like being part of a big family!"
         }
       ],
       "flashcards": [
@@ -78,7 +78,7 @@ export const PreKSocialStudiesUs101Module: LearningModule = {
         {
           "id": "pre-k-social-studies-us-101-l01-a1",
           "type": "image",
-          "title": "Community Map",
+          "title": "Community Map 🗺️",
           "content": "Colorful bird's-eye view of a neighborhood with labeled buildings: school, library, fire station, store, park, homes."
         }
       ]
@@ -92,17 +92,17 @@ export const PreKSocialStudiesUs101Module: LearningModule = {
         {
           "id": "pre-k-social-studies-us-101-l02-c1",
           "title": "Helpers Who Keep Us Safe",
-          "content": "In our communities, there are many special helpers who work hard every day to keep us safe and healthy. Firefighters are very brave people who rush to put out fires and help rescue anyone who might be in danger. They wear special gear and use big trucks to do their important job. Police officers are also important helpers; they make sure our neighborhoods are safe and help find lost pets when they wander away. They wear uniforms and drive cars that help them get to places quickly. Paramedics are another kind of helper; they ride in ambulances and are trained to help people who are hurt or need medical care. They know how to take care of people in emergencies. All these helpers are very brave and go through special training to learn how to do their important jobs well. We can always show our appreciation by saying thank you for their hard work and dedication to keeping us safe!\nContext recap: In our communities, there are many special helpers who work hard every day to keep us safe and healthy. Firefighters are very brave people who rush to put out fires and help rescue anyone who might be in danger. They wear special gear and use big trucks to do their important job. Police officers are also important helpers; they make sure our neighborhoods are safe and help find lost pets when they wander away.\nWhy this matters: Helpers Who Keep Us Safe helps learners in Social Studies US connect ideas from Pre-K My Community in the US to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "Some community helpers keep us safe. Firefighters are brave and put out fires. Police officers make sure everyone follows the rules and help people who are lost. Paramedics come in an ambulance to help when someone is sick or hurt. They are all trained to help us in an emergency. We can say 'thank you' to show them we are happy they help us!"
         },
         {
           "id": "pre-k-social-studies-us-101-l02-c2",
           "title": "Helpers Who Teach and Heal",
-          "content": "In our communities, we have many special helpers who teach us new things and take care of our health. For example, teachers are amazing people who help us learn how to read stories, count numbers, and even make new friends! They make learning fun and exciting. Then, we have doctors and nurses who are like superheroes for our health. They check how we are feeling and give us medicine when we are not feeling well. They help us get better so we can play and have fun again! Dentists are also important because they help keep our teeth shiny and strong. They teach us how to brush our teeth so we can have bright smiles. And let’s not forget about librarians! They are wonderful helpers who guide us to find the perfect book to read and enjoy. Each of these helpers plays a very important role in making our lives happier and healthier!\nContext recap: In our communities, we have many special helpers who teach us new things and take care of our health. For example, teachers are amazing people who help us learn how to read stories, count numbers, and even make new friends! They make learning fun and exciting. Then, we have doctors and nurses who are like superheroes for our health.\nWhy this matters: Helpers Who Teach and Heal helps learners in Social Studies US connect ideas from Pre-K My Community in the US to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "Some helpers teach us and keep us healthy. Teachers help us learn to read, count, and play with friends at school. Doctors and nurses help us get better when we are sick. Dentists help keep our teeth clean and strong so we have a happy smile. Librarians help us find amazing books to read. They all help our community!"
         },
         {
           "id": "pre-k-social-studies-us-101-l02-c3",
           "title": "Helpers Who Build and Deliver",
-          "content": "In our communities, there are many special helpers who work hard to make our lives better! Construction workers are the amazing people who build houses, roads, and bridges. They help create safe places for us to live, play, and travel. Then we have mail carriers, who are like friendly superheroes! They deliver letters and packages right to our doors, helping us stay connected with our family and friends, even if they live far away. Farmers are also very important; they grow the yummy fruits and vegetables that we eat every day, making sure we have healthy food on our plates. And let’s not forget about bus drivers! They take us to school safely, making sure we arrive ready to learn and have fun with our friends. Every helper in our community has a special job that is important to us, and they all work together to make our lives easier and more enjoyable!\nContext recap: In our communities, there are many special helpers who work hard to make our lives better! Construction workers are the amazing people who build houses, roads, and bridges. They help create safe places for us to live, play, and travel. Then we have mail carriers, who are like friendly superheroes!\nWhy this matters: Helpers Who Build and Deliver helps learners in Social Studies US connect ideas from Pre-K My Community in the US to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "Other helpers build things and bring us things. Construction workers build our houses, schools, and roads. Mail carriers bring letters and packages to our homes from family and friends. Farmers grow the yummy fruits and vegetables we eat. Bus drivers take us to school safely. All of these helpers have important jobs!"
         }
       ],
       "flashcards": [
@@ -131,7 +131,7 @@ export const PreKSocialStudiesUs101Module: LearningModule = {
         {
           "id": "pre-k-social-studies-us-101-l02-a1",
           "type": "image",
-          "title": "Helpers Poster",
+          "title": "Helpers Poster 🧑‍🚒👮‍♀️👩‍🏫",
           "content": "Grid of community helpers: firefighter, police officer, teacher, doctor, farmer, mail carrier — each with their tool."
         }
       ]
@@ -218,7 +218,7 @@ export const PreKSocialStudiesUs101Module: LearningModule = {
         {
           "id": "pre-k-social-studies-us-101-l03-a1",
           "type": "practice",
-          "title": "Helper Interview",
+          "title": "Helper Interview 📝",
           "content": "Ask a grown-up about their job. What do they do? Who do they help? Draw a picture of them at work!"
         }
       ]
@@ -232,17 +232,17 @@ export const PreKSocialStudiesUs101Module: LearningModule = {
         {
           "id": "pre-k-social-studies-us-101-l04-c1",
           "title": "The American Flag",
-          "content": "The American flag is a very special symbol for our country. It has beautiful red and white stripes that flow across the fabric, and in the corner, there is a blue rectangle filled with bright white stars. Can you count the stars? There are 50 stars on the flag, and each one represents one of the 50 states in our great nation! The flag also has 13 stripes, which stand for the first 13 states that joined together to form the United States of America. When we say the Pledge of Allegiance, we are showing our respect and love for our flag and everything it represents. This special pledge reminds us of our unity, the values we share, and the importance of being good citizens. Let's always remember to honor our flag and what it stands for as we learn about our community and country!\nContext recap: The American flag is a very special symbol for our country. It has beautiful red and white stripes that flow across the fabric, and in the corner, there is a blue rectangle filled with bright white stars. Can you count the stars? There are 50 stars on the flag, and each one represents one of the 50 states in our great nation!\nWhy this matters: The American Flag helps learners in Social Studies US connect ideas from Pre-K My Community in the US to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "The American flag is a special symbol of our country. It has red and white stripes and a blue box with white stars. There are 50 stars, one for each state in our country. There are 13 stripes for the first 13 states. When we see the flag, it reminds us that we are all one big American family."
         },
         {
           "id": "pre-k-social-studies-us-101-l04-c2",
           "title": "The Bald Eagle",
-          "content": "The bald eagle is a very important symbol for America and is known as our national bird. This magnificent bird is big, strong, and free, which are qualities that many Americans cherish! You can find the bald eagle on coins, stamps, and even the Great Seal of the United States. Interestingly, its white head is not actually bald; the word 'bald' used to mean white! The bald eagle represents freedom and strength, reminding us of the great values we hold dear. When we see the bald eagle soaring high in the sky, it makes us think about how special our country is and how we can all work together to keep it strong and free. Just like the bald eagle, we can all strive to be brave and kind, helping one another in our communities. Let's celebrate the bald eagle and what it stands for in our lives every day!\nContext recap: The bald eagle is a very important symbol for America and is known as our national bird. This magnificent bird is big, strong, and free, which are qualities that many Americans cherish! You can find the bald eagle on coins, stamps, and even the Great Seal of the United States. Interestingly, its white head is not actually bald; the word 'bald' used to mean white!\nWhy this matters: The Bald Eagle helps learners in Social Studies US connect ideas from Pre-K My Community in the US to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "The bald eagle is our national bird. It's a big, strong bird that flies high and free. This reminds us that America is a strong and free country. You can see pictures of the bald eagle on coins and stamps. It's a very important symbol!"
         },
         {
           "id": "pre-k-social-studies-us-101-l04-c3",
           "title": "The Statue of Liberty",
-          "content": "The Statue of Liberty is a very special and famous symbol that stands tall in New York City. She holds a bright torch high in the air, shining a warm light to welcome people from all around the world. This beautiful statue was a wonderful gift from France to America, showing the friendship and love between the two countries! Her crown is unique and has seven points, which represent the seven continents of our amazing world. The Statue of Liberty stands for freedom and hope, reminding us that everyone is welcome to come and chase their dreams. She teaches us to be kind and open-hearted to others, no matter where they come from.\nContext recap: The Statue of Liberty is a very special and famous symbol that stands tall in New York City. She holds a bright torch high in the air, shining a warm light to welcome people from all around the world. This beautiful statue was a wonderful gift from France to America, showing the friendship and love between the two countries! Her crown is unique and has seven points, which represent the seven continents of our amazing world.\nWhy this matters: The Statue of Liberty helps learners in Social Studies US connect ideas from Pre-K My Community in the US to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "The Statue of Liberty is a very tall statue in New York City. She holds a torch up high to welcome people to America. The statue was a gift of friendship from the country of France. She is a symbol of freedom and hope, reminding us to be kind and welcoming to everyone."
         }
       ],
       "flashcards": [
@@ -271,7 +271,7 @@ export const PreKSocialStudiesUs101Module: LearningModule = {
         {
           "id": "pre-k-social-studies-us-101-l04-a1",
           "type": "image",
-          "title": "Symbols Poster",
+          "title": "Symbols Poster 🇺🇸🦅🗽",
           "content": "Three American symbols side by side: the flag, the bald eagle, and the Statue of Liberty."
         }
       ]
@@ -418,17 +418,17 @@ export const PreKSocialStudiesUs101Module: LearningModule = {
         {
           "id": "pre-k-social-studies-us-101-l06-c1",
           "title": "What Is a Map?",
-          "content": "A map is a special kind of picture that helps us see what a place looks like from way up high, just like a bird soaring in the sky! Maps are really helpful because they show us where different things are located. For example, if we look at a map of your classroom, we can find out where the desks are, where the door is, and where the cozy reading corner is. If we have a map of your town, it can show us important places like the streets we walk on, the parks where we play, and the buildings where we learn and have fun. Maps are exciting tools that help us explore and understand the world around us better! They can even help us find our way when we want to go somewhere new! So, next time you see a map, remember how special it is for discovering all the wonderful places nearby!\nContext recap: A map is a special kind of picture that helps us see what a place looks like from way up high, just like a bird soaring in the sky! Maps are really helpful because they show us where different things are located. For example, if we look at a map of your classroom, we can find out where the desks are, where the door is, and where the cozy reading corner is. If we have a map of your town, it can show us important places like the streets we walk on, the parks where we play, and the buildings where we learn and have fun.\nWhy this matters: What Is a Map? helps learners in Social Studies US connect ideas from Pre-K My Community in the US to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "A map is like a drawing of a place from high up in the sky, like how a bird sees it! A map of your room shows where your bed and toys are. A map of your town shows the streets, parks, and school. Maps help us find where things are and explore new places!"
         },
         {
           "id": "pre-k-social-studies-us-101-l06-c2",
           "title": "Direction Words",
-          "content": "To help us talk about where things are in our world, we use special words called direction words. These words help us understand and describe locations better. Some important direction words are left and right, up and down, near and far, next to and between. For example, if you want to tell someone where the park is, you might say, 'The park is NEXT TO the school.' Or if you want to explain how far away the library is, you could say, 'The library is FAR from my house.' These direction words are super helpful because they guide us in finding places and understanding how to move around our community. By using these words, we can share directions and help each other explore our neighborhoods safely and easily!\nContext recap: To help us talk about where things are in our world, we use special words called direction words. These words help us understand and describe locations better. Some important direction words are left and right, up and down, near and far, next to and between. For example, if you want to tell someone where the park is, you might say, 'The park is NEXT TO the school.' Or if you want to explain how far away the library is, you could say, 'The library is FAR from my house.' These direction words are super helpful because they guide us in finding places and understanding how to move around our community."
+          "content": "We use special direction words to talk about where things are. Words like left, right, up, down, near, and far help us give directions. You can say, 'The park is NEAR my house,' or 'The toy is on your LEFT.' These words help us find our way around!"
         },
         {
           "id": "pre-k-social-studies-us-101-l06-c3",
           "title": "A Map of America",
-          "content": "The United States is a large and diverse country made up of 50 different states! Each state has its own unique features and characteristics. For example, Texas is one of the biggest states, and it has lots of open land and fun things to do! Then there's Alaska, which is even bigger than Texas, but it's far away and very cold! And don't forget about Hawaii, which is a beautiful group of islands located in the ocean, filled with sandy beaches and palm trees. When you look at a map, you can see all these states and more! Can you find the state where YOU live on a map? Exploring maps is a fun way to learn about our country and discover where we fit into it! Maps can show us where our friends live, where we go to school, and even where our favorite parks are! So grab a map and start your adventure today!\nContext recap: The United States is a large and diverse country made up of 50 different states! Each state has its own unique features and characteristics. For example, Texas is one of the biggest states, and it has lots of open land and fun things to do! Then there's Alaska, which is even bigger than Texas, but it's far away and very cold!\nWhy this matters: A Map of America helps learners in Social Studies US connect ideas from Pre-K My Community in the US to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "The United States is a big country with 50 states. A map of the United States shows all the states. Some states are very big, like Texas. Some are very cold, like Alaska. Some are islands in the ocean, like Hawaii. Can you find the state where you live on a map? It's fun to see where we are in our big country!"
         }
       ],
       "flashcards": [
@@ -452,7 +452,7 @@ export const PreKSocialStudiesUs101Module: LearningModule = {
         {
           "id": "pre-k-social-studies-us-101-l06-a1",
           "type": "practice",
-          "title": "Classroom Map",
+          "title": "Classroom Map 🗺️",
           "content": "Draw a map of your room from above. Where is the bed? The door? The window? Label each one!"
         }
       ]
@@ -527,7 +527,7 @@ export const PreKSocialStudiesUs101Module: LearningModule = {
         {
           "id": "pre-k-social-studies-us-101-l07-a1",
           "type": "practice",
-          "title": "Direction Walk",
+          "title": "Direction Walk 🚶‍♀️",
           "content": "Take a walk with a grown-up. Practice saying: 'Turn LEFT at the tree. The park is NEAR. The store is FAR.'"
         }
       ]
@@ -541,17 +541,17 @@ export const PreKSocialStudiesUs101Module: LearningModule = {
         {
           "id": "pre-k-social-studies-us-101-l08-c1",
           "title": "What Are Rules?",
-          "content": "Rules are very important because they help us understand how to behave in different places, ensuring that everyone feels safe and happy. For example, at school, we should walk instead of running. This helps prevent accidents and keeps our friends safe. At home, it's a good idea to pick up our toys after playing. This not only keeps our space tidy but also helps us avoid tripping over things. When we are outside on the road, stopping at red lights is super important. It helps keep everyone safe, including us! Remember, rules are not there to make life boring or dull; they are here to protect us and help us enjoy our time together with friends and family. Following rules means we can have fun while staying safe! Let's all work together to follow the rules and make our community a happy place!\nContext recap: Rules are very important because they help us understand how to behave in different places, ensuring that everyone feels safe and happy. For example, at school, we should walk instead of running. This helps prevent accidents and keeps our friends safe. At home, it's a good idea to pick up our toys after playing.\nWhy this matters: What Are Rules? helps learners in Social Studies US connect ideas from Pre-K My Community in the US to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "Rules help keep everyone safe and happy. At school, a rule might be to walk in the hallway so no one gets hurt. At home, a rule might be to clean up your toys so no one trips. When we cross the street, we follow the rule to look both ways. Rules are not to stop our fun, they are here to help us!"
         },
         {
           "id": "pre-k-social-studies-us-101-l08-c2",
           "title": "Being Kind",
-          "content": "Being a good citizen means being kind to everyone around us. Kindness is very important because it helps us make friends and create a happy community. We can show kindness in many ways! For example, when we ask for something, we should say 'please,' and when someone gives us something, we should always say 'thank you.' Sharing our toys and games with our friends is another great way to be kind. If we notice someone who looks sad, we can help them feel better by listening to them and being there for them. When we practice kindness every day, we help make our community a happier and friendlier place for everyone to enjoy! Let's remember that every small act of kindness counts and can make a big difference in someone's day.\nContext recap: Being a good citizen means being kind to everyone around us. Kindness is very important because it helps us make friends and create a happy community. We can show kindness in many ways! For example, when we ask for something, we should say 'please,' and when someone gives us something, we should always say 'thank you.' Sharing our toys and games with our friends is another great way to be kind.\nWhy this matters: Being Kind helps learners in Social Studies US connect ideas from Pre-K My Community in the US to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "Being a good citizen means being kind. We can be kind by saying 'please' and 'thank you.' We can share our toys with friends. If you see someone who is sad, you can ask if they are okay. Every time you are kind, you make your community a happier place for everyone!"
         },
         {
           "id": "pre-k-social-studies-us-101-l08-c3",
           "title": "Taking Care of Our Community",
-          "content": "Good citizens care for their community in many wonderful ways! One important way is by picking up trash, even if we didn’t drop it ourselves. This helps keep our parks and streets clean and makes the environment a nicer place for everyone. We should also be gentle with the playground equipment, like swings and slides, so that all our friends can play safely and have fun. Another great way to show we care is by watering the garden. This helps the flowers and plants grow, making our community look beautiful and bright. When everyone helps out just a little bit, our whole community can shine brightly and become a fantastic place to live and play together! Let's all do our part to make our community the best it can be!\nContext recap: Good citizens care for their community in many wonderful ways! One important way is by picking up trash, even if we didn’t drop it ourselves. This helps keep our parks and streets clean and makes the environment a nicer place for everyone. We should also be gentle with the playground equipment, like swings and slides, so that all our friends can play safely and have fun.\nWhy this matters: Taking Care of Our Community helps learners in Social Studies US connect ideas from Pre-K My Community in the US to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "Good citizens take care of their community. You can help by putting trash in the trash can to keep our parks and streets clean. You can be gentle with playground toys so everyone can enjoy them. Helping to water plants makes our community beautiful. When we all help a little, it makes a big difference!"
         }
       ],
       "flashcards": [
@@ -575,7 +575,7 @@ export const PreKSocialStudiesUs101Module: LearningModule = {
         {
           "id": "pre-k-social-studies-us-101-l08-a1",
           "type": "image",
-          "title": "Good Citizen Checklist",
+          "title": "Good Citizen Checklist 👍",
           "content": "Checklist: ✅ Be kind ✅ Follow rules ✅ Help others ✅ Share ✅ Take care of our community."
         }
       ]
@@ -650,7 +650,7 @@ export const PreKSocialStudiesUs101Module: LearningModule = {
         {
           "id": "pre-k-social-studies-us-101-l09-a1",
           "type": "practice",
-          "title": "Kindness Challenge",
+          "title": "Kindness Challenge ❤️",
           "content": "Try to do three kind things today: help a family member, say something nice, and share something. Tell a grown-up about it!"
         }
       ]
@@ -684,7 +684,7 @@ export const PreKSocialStudiesUs101Module: LearningModule = {
             }
           ],
           "correctOptionId": "a",
-          "explanation": "The bald eagle is big, strong, and free — just like the values America stands for!"
+          "explanation": "The bald eagle is big, strong, and free. It reminds us that America is a strong and free country!"
         },
         {
           "id": "pre-k-social-studies-us-101-l10-q2",
@@ -734,7 +734,7 @@ export const PreKSocialStudiesUs101Module: LearningModule = {
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Rules protect us. Stop at a red light keeps cars from crashing. Quiet in the library helps everyone read."
+          "explanation": "Rules protect us. A rule like 'stop at a red light' keeps cars from crashing. A rule like 'be quiet in the library' helps everyone read."
         },
         {
           "id": "pre-k-social-studies-us-101-l10-q4",
@@ -816,7 +816,7 @@ export const PreKSocialStudiesUs101Module: LearningModule = {
         {
           "id": "pre-k-social-studies-us-101-l10-a1",
           "type": "mnemonic",
-          "title": "Community Rhyme",
+          "title": "Community Rhyme 🎶",
           "content": "Helpers help and rules keep us right, be kind to all from morning to night. Our flag has stars, our eagle flies free — what a great community we can be!"
         }
       ]

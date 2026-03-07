@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const Cybersecurity601Module: LearningModule = {
+export const cybersecurity_601_Module: LearningModule = {
   "id": "cybersecurity-601",
   "title": "Cybersecurity Research and Leadership",
   "description": "Post-401 specialization in Cybersecurity, focused on threat modeling, defense-in-depth design, incident response systems, and security governance through advanced casework, simulation, and capstone-level defense.",
@@ -14,7 +14,7 @@ export const Cybersecurity601Module: LearningModule = {
   ],
   "minAge": 17,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en"
@@ -33,6 +33,8 @@ export const Cybersecurity601Module: LearningModule = {
       "title": "Cybersecurity Advanced Foundations",
       "type": "video",
       "duration": 14,
+      "lessonImagePrompt": "A sleek, high-tech cybersecurity command center with holographic data models showing threat vectors, cinematic lighting, photorealistic, 8k.",
+      "conceptVideoPrompt": "A slow pan across a futuristic digital map where glowing red threat nodes are systematically neutralized by blue defense shields, high contrast, cinematic depth of field.",
       "learningAids": [
         {
           "id": "cybersecurity-601-l01-a1",
@@ -46,44 +48,47 @@ export const Cybersecurity601Module: LearningModule = {
           "id": "cybersecurity-601-l01-c1",
           "kind": "concept",
           "title": "Advanced Scope and Decision Boundaries",
-          "content": "In this lesson, we will explore the advanced boundaries of Cybersecurity. We will learn how to define these boundaries and understand the importance of threat modeling. Additionally, we will discuss how the concept of defense-in-depth design plays a crucial role in protecting complex systems from various threats. By the end of this lesson, you will have a clearer understanding of how these elements interact to create a safer digital environment.\nContext recap: In this lesson, we will explore the advanced boundaries of Cybersecurity. We will learn how to define these boundaries and understand the importance of threat modeling. Additionally, we will discuss how the concept of defense-in-depth design plays a crucial role in protecting complex systems from various threats. By the end of this lesson, you will have a clearer understanding of how these elements interact to create a safer digital environment."
+          "content": "In this lesson, we will explore the advanced boundaries of Cybersecurity leadership. We will learn how to define these boundaries and understand the critical importance of threat modeling in high-stakes environments. Additionally, we will discuss how the concept of defense-in-depth design plays a crucial role in protecting complex systems from sophisticated, multi-vector threats. By the end of this lesson, you will have a clearer understanding of how these elements interact to create a resilient digital infrastructure."
         },
         {
           "id": "cybersecurity-601-l01-c2",
           "kind": "concept",
           "title": "Causal Structure Under Uncertainty",
-          "content": "In this section, learners will engage in modeling causal pathways, which helps us understand how different factors can lead to certain outcomes. We will also explore the ranges of uncertainty that can affect our decisions and identify hidden assumptions that might influence our designs. This foundational knowledge is essential for creating effective interventions in Cybersecurity, ensuring that we are prepared for various scenarios.\nContext recap: In this section, learners will engage in modeling causal pathways, which helps us understand how different factors can lead to certain outcomes. We will also explore the ranges of uncertainty that can affect our decisions and identify hidden assumptions that might influence our designs. This foundational knowledge is essential for creating effective interventions in Cybersecurity, ensuring that we are prepared for various scenarios."
+          "content": "Learners will engage in modeling causal pathways, which helps us understand how different systemic factors can lead to cascading security outcomes. We will explore the ranges of uncertainty that affect our strategic decisions and identify hidden assumptions that might compromise our architectural designs. This foundational knowledge is essential for creating effective, proactive interventions in Cybersecurity, ensuring preparedness for highly volatile scenarios."
         },
         {
           "id": "cybersecurity-601-l01-c3",
           "kind": "recap",
           "title": "Evidence and Rigor Standards",
-          "content": "In our recap, we will emphasize the importance of grounding all advanced claims in measurable indicators. This means that every assertion we make should be supported by data that can be quantified. We will also discuss the significance of establishing confidence bounds and setting up review checkpoints to ensure that our findings are reliable and can withstand scrutiny. This rigorous approach is vital for maintaining high standards in Cybersecurity.\nContext recap: In our recap, we will emphasize the importance of grounding all advanced claims in measurable indicators. This means that every assertion we make should be supported by data that can be quantified. We will also discuss the significance of establishing confidence bounds and setting up review checkpoints to ensure that our findings are reliable and can withstand scrutiny. This rigorous approach is vital for maintaining high standards in Cybersecurity."
+          "content": "We emphasize the importance of grounding all advanced security claims in measurable indicators. Every assertion made in a leadership capacity must be supported by quantifiable data. We will discuss the significance of establishing confidence bounds and setting up rigorous review checkpoints to ensure that our findings are reliable and can withstand expert scrutiny. This empirical approach is vital for maintaining high standards in enterprise security."
         }
       ],
       "flashcards": [
         {
           "id": "cybersecurity-601-l01-f1",
-          "front": "threat modeling",
-          "back": "A specialization axis in Cybersecurity requiring explicit assumptions and measured tradeoff choices."
+          "front": "Threat Modeling",
+          "back": "A specialization axis in Cybersecurity requiring explicit assumptions and measured tradeoff choices to anticipate attack vectors."
         },
         {
           "id": "cybersecurity-601-l01-f2",
-          "front": "defense-in-depth design",
-          "back": "Operational design capability that governs whether complex workflows remain reliable."
+          "front": "Defense-in-Depth Design",
+          "back": "Operational design capability that governs whether complex workflows remain reliable through layered security controls."
         },
         {
           "id": "cybersecurity-601-l01-f3",
-          "front": "incident response systems",
-          "back": "Evaluation practice for validating outcomes beyond headline metrics."
+          "front": "Incident Response Systems",
+          "back": "Evaluation practice for validating outcomes beyond headline metrics, focusing on containment, eradication, and recovery."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/cybersecurity-601-l01.png"
     },
     {
       "id": "cybersecurity-601-l02",
       "title": "Cybersecurity Specialist Methods Lab",
       "type": "interactive",
       "duration": 17,
+      "lessonImagePrompt": "A diverse team of cybersecurity specialists analyzing complex network graphs on a large glowing interactive table, modern laboratory setting, dramatic shadows.",
+      "conceptVideoPrompt": "Time-lapse of a cybersecurity team collaborating around a digital whiteboard, drawing connections between failure gates and control systems, dynamic lighting.",
       "learningAids": [
         {
           "id": "cybersecurity-601-l02-a1",
@@ -97,13 +102,13 @@ export const Cybersecurity601Module: LearningModule = {
           "id": "cybersecurity-601-l02-c1",
           "kind": "practice",
           "title": "Method Sequence and Stress Test",
-          "content": "In this interactive lab, learners will create a specialist workflow that focuses on high-quality research reasoning and effective leadership decision-making. This workflow will culminate in a capstone defense that can be published. After building this workflow, students will put it to the test against challenging scenarios, including adversarial conditions or edge cases. This hands-on experience will help solidify their understanding of how to apply their knowledge in real-world situations.\nContext recap: In this interactive lab, learners will create a specialist workflow that focuses on high-quality research reasoning and effective leadership decision-making. This workflow will culminate in a capstone defense that can be published. After building this workflow, students will put it to the test against challenging scenarios, including adversarial conditions or edge cases. This hands-on experience will help solidify their understanding of how to apply their knowledge in real-world situations."
+          "content": "In this interactive lab, learners will create a specialist workflow that focuses on high-quality research reasoning and effective leadership decision-making. This workflow will culminate in a capstone defense that meets publication standards. After building this workflow, students will put it to the test against challenging scenarios, including adversarial conditions and edge cases. This hands-on experience solidifies the application of theoretical knowledge in high-pressure, real-world situations."
         },
         {
           "id": "cybersecurity-601-l02-c2",
           "kind": "recap",
           "title": "Controls and Failure Gates",
-          "content": "In our recap, we will highlight the necessity of incorporating control gates, rollback criteria, and accountability checkpoints into robust specialist workflows. These elements are essential for ensuring that our processes are reliable and can adapt to unexpected challenges. By understanding and implementing these controls, learners will be better equipped to manage risks and maintain the integrity of their Cybersecurity practices.\nContext recap: In our recap, we will highlight the necessity of incorporating control gates, rollback criteria, and accountability checkpoints into robust specialist workflows. These elements are essential for ensuring that our processes are reliable and can adapt to unexpected challenges. By understanding and implementing these controls, learners will be better equipped to manage risks and maintain the integrity of their Cybersecurity practices."
+          "content": "We highlight the necessity of incorporating control gates, rollback criteria, and accountability checkpoints into robust specialist workflows. These elements are essential for ensuring that our processes are reliable and can adapt to unexpected systemic challenges. By understanding and implementing these controls, leaders are better equipped to manage risks and maintain the integrity of their organization's security posture."
         }
       ],
       "interactiveActivities": [
@@ -160,13 +165,16 @@ export const Cybersecurity601Module: LearningModule = {
             }
           ]
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/cybersecurity-601-l02.png"
     },
     {
       "id": "cybersecurity-601-l03",
       "title": "Checkpoint 1: Specialist Methods",
       "type": "quiz",
       "duration": 11,
+      "lessonImagePrompt": "A glowing digital lock morphing into a shield, surrounded by floating binary code and checkmarks, representing assessment and security, 3D render, neon blue and silver.",
+      "conceptVideoPrompt": "A smooth zoom into a digital interface where multiple security checkpoints light up green one by one, symbolizing successful knowledge validation, sleek UI animation.",
       "learningAids": [
         {
           "id": "cybersecurity-601-l03-a1",
@@ -208,7 +216,7 @@ export const Cybersecurity601Module: LearningModule = {
           "options": [
             {
               "id": "a",
-              "text": "research-grade reasoning, leadership decision quality, and publishable capstone defense"
+              "text": "Research-grade reasoning, leadership decision quality, and publishable capstone defense"
             },
             {
               "id": "b",
@@ -383,6 +391,8 @@ export const Cybersecurity601Module: LearningModule = {
       "title": "Cybersecurity Advanced Case Analysis",
       "type": "video",
       "duration": 14,
+      "lessonImagePrompt": "A split-screen holographic display showing a cyber attack on one side and a structured tradeoff matrix on the other, high-tech corporate boardroom, photorealistic.",
+      "conceptVideoPrompt": "A dynamic 3D visualization of a cyber threat spreading through a network, followed by a rapid deployment of containment protocols that isolate the affected nodes, cinematic camera sweep.",
       "learningAids": [
         {
           "id": "cybersecurity-601-l04-a1",
@@ -396,44 +406,47 @@ export const Cybersecurity601Module: LearningModule = {
           "id": "cybersecurity-601-l04-c1",
           "kind": "example",
           "title": "Case Stakes and Competing Objectives",
-          "content": "In this engaging case study, we will explore a coordinated attack campaign that requires swift and effective responses, including detection, containment, communication, and recovery. As part of this exercise, learners will work on mapping out strategic objectives that guide their actions, identifying potential risks that could lead to failure, and understanding the governance constraints that must be adhered to before proceeding. This hands-on activity will not only deepen students' understanding of the complexities involved in Cybersecurity but also highlight the critical importance of thorough planning in high-stakes scenarios where every decision counts."
+          "content": "In this engaging case study, we explore a coordinated attack campaign that requires swift and effective responses, including detection, containment, communication, and recovery. Learners will map out strategic objectives that guide their actions, identify potential risks that could lead to failure, and understand the governance constraints that must be adhered to before proceeding. This hands-on activity deepens the understanding of the complexities involved in Cybersecurity and highlights the critical importance of thorough planning in high-stakes scenarios."
         },
         {
           "id": "cybersecurity-601-l04-c2",
           "kind": "concept",
           "title": "Tradeoff Matrix and Option Scoring",
-          "content": "In this section, we will introduce the concept of a tradeoff matrix, where different options are evaluated based on various criteria. These criteria include effectiveness, reliability, equity, feasibility, and long-term maintainability. By scoring options across these dimensions, learners will develop a deeper understanding of how to make informed decisions in Cybersecurity, balancing competing priorities to achieve the best outcomes.\nContext recap: In this section, we will introduce the concept of a tradeoff matrix, where different options are evaluated based on various criteria. These criteria include effectiveness, reliability, equity, feasibility, and long-term maintainability. By scoring options across these dimensions, learners will develop a deeper understanding of how to make informed decisions in Cybersecurity, balancing competing priorities to achieve the best outcomes."
+          "content": "We introduce the concept of a tradeoff matrix, where different strategic options are evaluated based on rigorous criteria. These criteria include effectiveness, reliability, equity, feasibility, and long-term maintainability. By scoring options across these dimensions, learners develop a deeper understanding of how to make informed, defensible decisions in Cybersecurity, balancing competing priorities to achieve optimal outcomes."
         },
         {
           "id": "cybersecurity-601-l04-c3",
           "kind": "recap",
           "title": "Recovery and Adaptation Design",
-          "content": "In our recap, we will discuss how to translate failure signatures into actionable safeguards, response playbooks, and measurable adaptation loops. This process is crucial for ensuring that we learn from past mistakes and improve our responses to future challenges. By establishing these mechanisms, learners will be better prepared to adapt and respond effectively in the ever-evolving landscape of Cybersecurity.\nContext recap: In our recap, we will discuss how to translate failure signatures into actionable safeguards, response playbooks, and measurable adaptation loops. This process is crucial for ensuring that we learn from past mistakes and improve our responses to future challenges. By establishing these mechanisms, learners will be better prepared to adapt and respond effectively in the ever-evolving landscape of Cybersecurity."
+          "content": "We discuss how to translate failure signatures into actionable safeguards, response playbooks, and measurable adaptation loops. This process is crucial for ensuring that organizations learn from past incidents and systematically improve their responses to future challenges. By establishing these mechanisms, leaders are better prepared to adapt and respond effectively in the ever-evolving landscape of cyber threats."
         }
       ],
       "flashcards": [
         {
           "id": "cybersecurity-601-l04-f1",
-          "front": "Tradeoff matrix",
-          "back": "A scoring framework for choosing among competing options under real constraints."
+          "front": "Tradeoff Matrix",
+          "back": "A scoring framework for choosing among competing options under real constraints, balancing risk and reward."
         },
         {
           "id": "cybersecurity-601-l04-f2",
-          "front": "Failure signature",
-          "back": "A recurrent signal indicating a predictable class of breakdown risk."
+          "front": "Failure Signature",
+          "back": "A recurrent signal or pattern indicating a predictable class of breakdown risk within a system."
         },
         {
           "id": "cybersecurity-601-l04-f3",
-          "front": "Adaptation loop",
-          "back": "A measured process for converting incident learning into improved future behavior."
+          "front": "Adaptation Loop",
+          "back": "A measured process for converting incident learning into improved future behavior and updated security controls."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/cybersecurity-601-l04.png"
     },
     {
       "id": "cybersecurity-601-l05",
       "title": "Cybersecurity Simulation and Response Studio",
       "type": "interactive",
       "duration": 17,
+      "lessonImagePrompt": "A first-person view of a dual-monitor setup displaying live cybersecurity simulation metrics, red and blue team scores, dark room with glowing screen reflections.",
+      "conceptVideoPrompt": "Over-the-shoulder shot of a cybersecurity expert typing rapidly, the screen showing a live simulation of a network breach being actively mitigated, fast-paced, tense atmosphere.",
       "learningAids": [
         {
           "id": "cybersecurity-601-l05-a1",
@@ -447,13 +460,13 @@ export const Cybersecurity601Module: LearningModule = {
           "id": "cybersecurity-601-l05-c1",
           "kind": "practice",
           "title": "Scenario Modeling",
-          "content": "In this interactive practice session, learners will configure simulation assumptions, set thresholds, and outline intervention pathways while operating under high-stakes conditions. This hands-on experience will allow students to apply their theoretical knowledge in a practical setting, enhancing their understanding of how to navigate complex scenarios in Cybersecurity effectively.\nContext recap: In this interactive practice session, learners will configure simulation assumptions, set thresholds, and outline intervention pathways while operating under high-stakes conditions. This hands-on experience will allow students to apply their theoretical knowledge in a practical setting, enhancing their understanding of how to navigate complex scenarios in Cybersecurity effectively."
+          "content": "In this interactive practice session, learners will configure simulation assumptions, set operational thresholds, and outline intervention pathways while operating under high-stakes conditions. This hands-on experience allows students to apply their theoretical knowledge in a practical setting, enhancing their understanding of how to navigate complex, rapidly evolving scenarios in Cybersecurity effectively."
         },
         {
           "id": "cybersecurity-601-l05-c2",
           "kind": "recap",
           "title": "Debrief and Decision Quality Review",
-          "content": "After each simulation run, teams will engage in a debriefing session where they will review their performance in terms of target attainment, any side effects that occurred, and gaps in governance compliance. This reflective practice is essential for continuous improvement and helps learners understand the importance of accountability in Cybersecurity operations.\nContext recap: After each simulation run, teams will engage in a debriefing session where they will review their performance in terms of target attainment, any side effects that occurred, and gaps in governance compliance. This reflective practice is essential for continuous improvement and helps learners understand the importance of accountability in Cybersecurity operations."
+          "content": "After each simulation run, teams will engage in a structured debriefing session. They will review their performance in terms of target attainment, analyze any unintended side effects that occurred, and identify gaps in governance compliance. This reflective practice is essential for continuous improvement and helps learners internalize the importance of accountability in security operations."
         }
       ],
       "interactiveActivities": [
@@ -492,13 +505,16 @@ export const Cybersecurity601Module: LearningModule = {
             }
           ]
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/cybersecurity-601-l05.png"
     },
     {
       "id": "cybersecurity-601-l06",
       "title": "Checkpoint 2: Research and Systems Decisions",
       "type": "quiz",
       "duration": 11,
+      "lessonImagePrompt": "A futuristic glowing scale balancing a glowing red padlock and a blue data server, representing research and systems decisions, abstract digital art, 8k.",
+      "conceptVideoPrompt": "A slow, rotating shot of a glowing 3D matrix evaluating different security protocols, with data streams flowing through the optimal path, high-tech aesthetic.",
       "learningAids": [
         {
           "id": "cybersecurity-601-l06-a1",
@@ -510,211 +526,214 @@ export const Cybersecurity601Module: LearningModule = {
       "questions": [
         {
           "id": "cybersecurity-601-l06-q1",
-          "text": "Which practice most improves specialist performance in threat modeling?",
-          "skillId": "cybersecurity-601-skill-specialist",
+          "text": "What is the primary purpose of a tradeoff matrix in cybersecurity incident response?",
+          "skillId": "cybersecurity-601-skill-tradeoff",
           "options": [
             {
               "id": "a",
-              "text": "Rely on undocumented assumptions"
+              "text": "To guarantee a zero-risk outcome for all stakeholders"
             },
             {
               "id": "b",
-              "text": "Define constraints, monitor leading indicators, and test edge cases"
+              "text": "To evaluate competing options across criteria like reliability, equity, and feasibility"
             },
             {
               "id": "c",
-              "text": "Avoid post-decision review"
+              "text": "To bypass governance constraints during an emergency"
             },
             {
               "id": "d",
-              "text": "Optimize only for speed"
+              "text": "To assign blame to specific team members post-incident"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Advanced performance depends on explicit constraints, monitoring, and stress testing."
+          "explanation": "A tradeoff matrix provides a structured framework for scoring and choosing among competing options under real constraints."
         },
         {
           "id": "cybersecurity-601-l06-q2",
-          "text": "At level 601, the curriculum emphasizes:",
-          "skillId": "cybersecurity-601-skill-level",
+          "text": "How should a failure signature be utilized in recovery design?",
+          "skillId": "cybersecurity-601-skill-recovery",
           "options": [
             {
               "id": "a",
-              "text": "research-grade reasoning, leadership decision quality, and publishable capstone defense"
+              "text": "To translate predictable breakdown risks into actionable safeguards and playbooks"
             },
             {
               "id": "b",
-              "text": "Unbounded iteration with no controls"
+              "text": "To permanently shut down the affected system"
             },
             {
               "id": "c",
-              "text": "Single-metric decision making"
+              "text": "To obscure the root cause from external auditors"
             },
             {
               "id": "d",
-              "text": "No uncertainty communication"
+              "text": "To justify ignoring minor security alerts"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "The 601 design is built around research-grade reasoning, leadership decision quality, and publishable capstone defense."
+          "explanation": "Failure signatures help identify recurrent risks, allowing teams to build targeted safeguards and adaptation loops."
         },
         {
           "id": "cybersecurity-601-l06-q3",
-          "text": "What best strengthens defense-in-depth design execution quality?",
-          "skillId": "cybersecurity-601-skill-execution",
+          "text": "What defines a mature adaptation loop in cybersecurity operations?",
+          "skillId": "cybersecurity-601-skill-adaptation",
           "options": [
             {
               "id": "a",
-              "text": "No owner mapping or escalation path"
+              "text": "Repeating the same incident response steps without review"
             },
             {
               "id": "b",
-              "text": "Explicit ownership, checkpoints, and governance thresholds"
+              "text": "Converting incident learnings into measured, improved future behaviors and controls"
             },
             {
               "id": "c",
-              "text": "Ad-hoc process changes without logs"
+              "text": "Waiting for a third-party audit before making any changes"
             },
             {
               "id": "d",
-              "text": "Skipping retrospective review"
+              "text": "Focusing solely on public relations management"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Quality execution needs ownership clarity, checkpoints, and threshold-driven governance."
+          "explanation": "An adaptation loop is a measured process that ensures lessons learned from incidents lead to tangible improvements."
         },
         {
           "id": "cybersecurity-601-l06-q4",
-          "text": "A rigorous approach to incident response systems should include:",
-          "skillId": "cybersecurity-601-skill-evaluation",
+          "text": "During high-stakes scenario modeling, what is the most critical initial step?",
+          "skillId": "cybersecurity-601-skill-modeling",
           "options": [
             {
               "id": "a",
-              "text": "Outcome claims without baselines"
+              "text": "Drafting the final press release"
             },
             {
               "id": "b",
-              "text": "Baseline comparison, side-effect checks, and uncertainty bounds"
+              "text": "Configuring explicit simulation assumptions, constraints, and escalation triggers"
             },
             {
               "id": "c",
-              "text": "Removal of difficult scenarios"
+              "text": "Executing the simulation without predefined metrics"
             },
             {
               "id": "d",
-              "text": "Changing criteria after seeing results"
+              "text": "Assuming the adversary has limited capabilities"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Baselines, side-effect checks, and uncertainty disclosure make results defensible."
+          "explanation": "Effective scenario modeling requires clear assumptions, constraints, and triggers to ensure the simulation yields valuable insights."
         },
         {
           "id": "cybersecurity-601-l06-q5",
-          "text": "A mature security governance system should connect:",
-          "skillId": "cybersecurity-601-skill-governance",
+          "text": "In a post-simulation debrief, which factor is most crucial for a decision quality review?",
+          "skillId": "cybersecurity-601-skill-debrief",
           "options": [
             {
               "id": "a",
-              "text": "Policy and practice without measurement"
+              "text": "Evaluating target attainment against governance compliance and unintended side effects"
             },
             {
               "id": "b",
-              "text": "Policy, measurable thresholds, and remediation pathways"
+              "text": "Ensuring the simulation finished under the allotted time"
             },
             {
               "id": "c",
-              "text": "Technical delivery with no accountability"
+              "text": "Praising the team regardless of the outcome"
             },
             {
               "id": "d",
-              "text": "Performance targets with no risk controls"
+              "text": "Deleting the simulation logs to save storage space"
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "Governance quality comes from linking policy intent to measurable controls and action."
+          "correctOptionId": "a",
+          "explanation": "A quality review must balance whether the goal was met against the costs, side effects, and adherence to governance."
         },
         {
           "id": "cybersecurity-601-l06-q6",
-          "text": "In high-stakes Cybersecurity Research and Leadership execution, which communication protocol is strongest?",
-          "skillId": "cybersecurity-601-skill-advanced-6",
+          "text": "When addressing an ambiguous ownership chain during an incident, the best mitigation is to:",
+          "skillId": "cybersecurity-601-skill-mitigation",
           "options": [
             {
               "id": "a",
-              "text": "Broadcast conclusions without assumptions"
+              "text": "Wait for someone to volunteer to lead"
             },
             {
               "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
+              "text": "Define an accountable owner map and clear escalation rights"
             },
             {
               "id": "c",
-              "text": "Share only final outcomes after completion"
+              "text": "Escalate immediately to the CEO"
             },
             {
               "id": "d",
-              "text": "Limit updates to a single informal channel"
+              "text": "Pause the response until ownership is naturally resolved"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
+          "explanation": "Clear ownership and escalation paths are critical to resolving ambiguity and ensuring swift incident response."
         },
         {
           "id": "cybersecurity-601-l06-q7",
-          "text": "A mature remediation loop in advanced Computer Science should prioritize:",
-          "skillId": "cybersecurity-601-skill-advanced-7",
+          "text": "If policy-execution drift is detected during a simulation, the appropriate response is to:",
+          "skillId": "cybersecurity-601-skill-governance-drift",
           "options": [
             {
               "id": "a",
-              "text": "Blame assignment without system updates"
+              "text": "Rewrite the policy to match the flawed execution"
             },
             {
               "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
+              "text": "Re-align operational controls to explicit governance standards"
             },
             {
               "id": "c",
-              "text": "One-time fixes without retesting"
+              "text": "Ignore the drift if the outcome was successful"
             },
             {
               "id": "d",
-              "text": "Issue closure based on elapsed time"
+              "text": "Disband the simulation team"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
+          "explanation": "Policy-execution drift indicates a breakdown in controls, requiring realignment to ensure governance standards are met."
         },
         {
           "id": "cybersecurity-601-l06-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Cybersecurity Research and Leadership?",
-          "skillId": "cybersecurity-601-skill-advanced-8",
+          "text": "Why is it necessary to record both near-term and long-term tradeoffs during intervention planning?",
+          "skillId": "cybersecurity-601-skill-planning",
           "options": [
             {
               "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
+              "text": "To prevent immediate containment actions from causing severe downstream systemic failures"
             },
             {
               "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
+              "text": "To make the documentation look more comprehensive"
             },
             {
               "id": "c",
-              "text": "Ignore correlated failure modes"
+              "text": "To delay the decision-making process"
             },
             {
               "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
+              "text": "Because short-term tradeoffs are usually irrelevant"
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "correctOptionId": "a",
+          "explanation": "Interventions often have cascading effects; evaluating both timeframes ensures a cure isn't worse than the disease."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/cybersecurity-601-l06.png"
     },
     {
       "id": "cybersecurity-601-l07",
       "title": "Cybersecurity Governance and Public Impact",
       "type": "video",
       "duration": 13,
+      "lessonImagePrompt": "A stylized globe interconnected with glowing fiber optic cables, surrounded by diverse silhouettes of people, representing public impact and global governance, cinematic lighting.",
+      "conceptVideoPrompt": "A sweeping drone-style shot over a digital smart city where data flows securely between buildings, protected by glowing energy barriers, representing public cybersecurity governance.",
       "learningAids": [
         {
           "id": "cybersecurity-601-l07-a1",
@@ -728,44 +747,47 @@ export const Cybersecurity601Module: LearningModule = {
           "id": "cybersecurity-601-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "In this lesson, learners will evaluate how the outcomes of Cybersecurity decisions are distributed among various stakeholders. This includes considering both immediate effects and those that may be delayed or indirect. Understanding this distribution is crucial for making informed decisions that consider the broader impact on the community and society as a whole.\nContext recap: In this lesson, learners will evaluate how the outcomes of Cybersecurity decisions are distributed among various stakeholders. This includes considering both immediate effects and those that may be delayed or indirect. Understanding this distribution is crucial for making informed decisions that consider the broader impact on the community and society as a whole."
+          "content": "In this lesson, learners will evaluate how the outcomes of Cybersecurity decisions are distributed among various stakeholders. This includes considering both immediate operational effects and those that may be delayed or indirect, such as public trust and regulatory compliance. Understanding this distribution is crucial for making informed, ethical decisions that consider the broader impact on the community and society as a whole."
         },
         {
           "id": "cybersecurity-601-l07-c2",
           "kind": "concept",
           "title": "Accountability System Design",
-          "content": "In this section, we will explore how to design an accountability system that ensures transparency and responsibility in Cybersecurity practices. This includes implementing traceability standards, establishing review rights, and defining remediation obligations. By understanding these components, learners will appreciate the importance of accountability in maintaining trust and integrity within Cybersecurity frameworks.\nContext recap: In this section, we will explore how to design an accountability system that ensures transparency and responsibility in Cybersecurity practices. This includes implementing traceability standards, establishing review rights, and defining remediation obligations. By understanding these components, learners will appreciate the importance of accountability in maintaining trust and integrity within Cybersecurity frameworks."
+          "content": "We explore how to design an accountability system that ensures transparency and responsibility in enterprise Cybersecurity practices. This includes implementing strict traceability standards, establishing review rights, and defining clear remediation obligations. By mastering these components, leaders ensure that their security frameworks maintain integrity and foster trust among users and regulatory bodies."
         },
         {
           "id": "cybersecurity-601-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "A responsible leadership checklist is an important tool that helps leaders connect their strategies, ethical considerations, policies, and operational controls. This checklist serves as a comprehensive review document that ensures all aspects of leadership are aligned and working together effectively to promote good governance in cybersecurity.\nContext recap: A responsible leadership checklist is an important tool that helps leaders connect their strategies, ethical considerations, policies, and operational controls. This checklist serves as a comprehensive review document that ensures all aspects of leadership are aligned and working together effectively to promote good governance in cybersecurity."
+          "content": "A responsible leadership checklist is a vital tool that helps executives connect their strategic vision with ethical considerations, corporate policies, and operational controls. This checklist serves as a comprehensive review mechanism, ensuring that all aspects of leadership are aligned and working synergistically to promote robust, defensible governance in cybersecurity."
         }
       ],
       "flashcards": [
         {
           "id": "cybersecurity-601-l07-f1",
-          "front": "Impact distribution",
-          "back": "How benefits and harms are allocated across groups and timeframes."
+          "front": "Impact Distribution",
+          "back": "The analytical process of determining how benefits and harms of a security decision are allocated across groups and timeframes."
         },
         {
           "id": "cybersecurity-601-l07-f2",
-          "front": "Decision traceability",
-          "back": "An auditable explanation of evidence, rationale, and ownership behind a decision."
+          "front": "Decision Traceability",
+          "back": "An auditable, documented explanation of the evidence, rationale, and ownership behind a critical security decision."
         },
         {
           "id": "cybersecurity-601-l07-f3",
-          "front": "Responsible leadership",
-          "back": "Decision practice that balances performance, risk, ethics, and accountability."
+          "front": "Responsible Leadership",
+          "back": "A decision-making practice that explicitly balances technical performance, systemic risk, ethics, and accountability."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/cybersecurity-601-l07.png"
     },
     {
       "id": "cybersecurity-601-l08",
       "title": "Cybersecurity Capstone Defense Lab",
       "type": "interactive",
       "duration": 16,
+      "lessonImagePrompt": "A prestigious, modern auditorium with a large screen displaying a complex cybersecurity architecture diagram, a speaker at a podium defending their capstone, photorealistic.",
+      "conceptVideoPrompt": "A slow push-in on a confident cybersecurity professional presenting a holographic defense strategy to a panel of experts, professional lighting, shallow depth of field.",
       "learningAids": [
         {
           "id": "cybersecurity-601-l08-a1",
@@ -779,13 +801,13 @@ export const Cybersecurity601Module: LearningModule = {
           "id": "cybersecurity-601-l08-c1",
           "kind": "practice",
           "title": "Capstone Charter and Evidence Pack",
-          "content": "In this activity, learners will create a detailed capstone charter. This document will outline the main objectives of their project, any constraints they might face, the metrics they will use to measure success, the governance controls they will implement, and a plan for gathering evidence to support their findings. This comprehensive approach helps ensure that all aspects of the project are well thought out and organized.\nContext recap: In this activity, learners will create a detailed capstone charter. This document will outline the main objectives of their project, any constraints they might face, the metrics they will use to measure success, the governance controls they will implement, and a plan for gathering evidence to support their findings. This comprehensive approach helps ensure that all aspects of the project are well thought out and organized."
+          "content": "In this culminating activity, learners will create a detailed capstone charter. This document outlines the main objectives of their project, the constraints they face, the metrics used to measure success, the governance controls implemented, and a rigorous plan for gathering evidence. This comprehensive approach ensures that all aspects of the project are architected to withstand professional scrutiny."
         },
         {
           "id": "cybersecurity-601-l08-c2",
           "kind": "recap",
           "title": "Defense Rehearsal",
-          "content": "The final practice round is designed to prepare learners for defending their decisions. During this rehearsal, they will practice responding to critiques that may come from technical experts, governance bodies, and various stakeholders. This exercise is crucial for building confidence and ensuring that learners can effectively communicate and justify their choices in a real-world setting.\nContext recap: The final practice round is designed to prepare learners for defending their decisions. During this rehearsal, they will practice responding to critiques that may come from technical experts, governance bodies, and various stakeholders. This exercise is crucial for building confidence and ensuring that learners can effectively communicate and justify their choices in a real-world setting."
+          "content": "The final practice round is designed to prepare learners for defending their strategic decisions. During this rehearsal, they will practice responding to intense critiques from technical experts, governance bodies, and executive stakeholders. This exercise is crucial for building confidence and ensuring that leaders can effectively communicate, justify, and adapt their choices in a high-stakes, real-world setting."
         }
       ],
       "interactiveActivities": [
@@ -806,7 +828,8 @@ export const Cybersecurity601Module: LearningModule = {
           "title": "Capstone Defense Panel",
           "description": "Defend your capstone against expert critique on rigor, risk, and accountability."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/cybersecurity-601-l08.png"
     }
   ]
 };

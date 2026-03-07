@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const DeveloperToolsDevops301Module: LearningModule = {
+export const developer_tools_devops_301_Module: LearningModule = {
   "id": "developer-tools-devops-301",
   "title": "Developer Tools and DevOps Systems and Governance",
   "description": "Level 301 curriculum in Developer Tools and DevOps, centered on delivery pipeline engineering, developer productivity systems, reliability automation, and platform governance through case analysis, simulation, and checkpoint-driven mastery.",
@@ -14,7 +14,7 @@ export const DeveloperToolsDevops301Module: LearningModule = {
   ],
   "minAge": 16,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en"
@@ -37,8 +37,8 @@ export const DeveloperToolsDevops301Module: LearningModule = {
         {
           "id": "developer-tools-devops-301-l01-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use structured reasoning, map tradeoffs, and verify outcomes with metrics before finalizing."
+          "title": "Pipeline Feedback Loops",
+          "content": "A visual diagram showing a continuous integration/continuous deployment (CI/CD) pipeline with feedback loops highlighting exactly where metrics are gathered and analyzed."
         }
       ],
       "chunks": [
@@ -46,36 +46,36 @@ export const DeveloperToolsDevops301Module: LearningModule = {
           "id": "developer-tools-devops-301-l01-c1",
           "kind": "concept",
           "title": "Scope and Vocabulary",
-          "content": "In this lesson, we will work together to develop a common language that everyone can understand when discussing Developer Tools and DevOps. This shared vocabulary is important because it helps us communicate more clearly and effectively with each other. Additionally, we will outline the specific areas we will focus on, particularly how to create efficient delivery pipelines and enhance developer productivity. By understanding these concepts and using the same terms, we can collaborate better and achieve our project goals more successfully.\nContext recap: In this lesson, we will work together to develop a common language that everyone can understand when discussing Developer Tools and DevOps. This shared vocabulary is important because it helps us communicate more clearly and effectively with each other. Additionally, we will outline the specific areas we will focus on, particularly how to create efficient delivery pipelines and enhance developer productivity. By understanding these concepts and using the same terms, we can collaborate better and achieve our project goals more successfully."
+          "content": "This lesson establishes a standardized vocabulary for Developer Tools and DevOps, ensuring clear communication across engineering teams. We will define the boundaries of delivery pipeline engineering and developer productivity systems. By aligning on industry-standard terminology, teams can effectively collaborate, reduce friction, and accelerate the deployment of reliable software architectures."
         },
         {
           "id": "developer-tools-devops-301-l01-c2",
           "kind": "concept",
-          "title": "Causal Reasoning",
-          "content": "In this section, learners will explore how to identify and understand the relationships between different factors in a system. This involves mapping out causal relationships, which means figuring out how one thing can lead to another. Additionally, we will discuss the assumptions we make and the limitations we face before we design any interventions or solutions. This foundational understanding is crucial for effective problem-solving.\nContext recap: In this section, learners will explore how to identify and understand the relationships between different factors in a system. This involves mapping out causal relationships, which means figuring out how one thing can lead to another. Additionally, we will discuss the assumptions we make and the limitations we face before we design any interventions or solutions. This foundational understanding is crucial for effective problem-solving."
+          "title": "Causal Reasoning in Systems",
+          "content": "Understanding complex systems requires mapping causal relationships—identifying how a change in one component impacts the entire pipeline. We will explore how to uncover hidden dependencies, articulate underlying assumptions, and recognize systemic constraints before designing interventions. This foundational systems-thinking approach is critical for diagnosing bottlenecks and preventing cascading failures."
         },
         {
           "id": "developer-tools-devops-301-l01-c3",
           "kind": "recap",
-          "title": "Evidence Standards",
-          "content": "In this recap, we emphasize the importance of grounding our claims in solid evidence. This means that any assertions we make should be backed by measurable indicators, which are specific data points we can track. We will also discuss the significance of having confidence ranges, which help us understand the reliability of our data, and review checkpoints to ensure that we are on the right path. This approach helps us make informed decisions.\nContext recap: In this recap, we emphasize the importance of grounding our claims in solid evidence. This means that any assertions we make should be backed by measurable indicators, which are specific data points we can track. We will also discuss the significance of having confidence ranges, which help us understand the reliability of our data, and review checkpoints to ensure that we are on the right path. This approach helps us make informed decisions."
+          "title": "Evidence Standards and Metrics",
+          "content": "Effective DevOps relies on empirical evidence rather than intuition. This section emphasizes grounding architectural claims in measurable indicators, such as DORA metrics (deployment frequency, lead time, MTTR, and change failure rate). We will also cover the importance of establishing confidence intervals and utilizing review checkpoints to ensure data-driven decision-making remains accurate and reliable."
         }
       ],
       "flashcards": [
         {
           "id": "developer-tools-devops-301-l01-f1",
-          "front": "delivery pipeline engineering",
-          "back": "A core decision lens in Developer Tools and DevOps requiring explicit assumption control."
+          "front": "Delivery Pipeline Engineering",
+          "back": "The design and optimization of automated software release processes, requiring explicit assumption control and constraint management."
         },
         {
           "id": "developer-tools-devops-301-l01-f2",
-          "front": "developer productivity systems",
-          "back": "Execution systems that determine reliability and repeatability."
+          "front": "Developer Productivity Systems",
+          "back": "The integrated tools and execution environments that determine the reliability, speed, and repeatability of developer workflows."
         },
         {
           "id": "developer-tools-devops-301-l01-f3",
-          "front": "reliability automation",
-          "back": "Evaluation process for distinguishing real gains from superficial wins."
+          "front": "Reliability Automation",
+          "back": "The implementation of automated safeguards and evaluation processes to distinguish sustainable system gains from superficial, short-term wins."
         }
       ]
     },
@@ -88,22 +88,22 @@ export const DeveloperToolsDevops301Module: LearningModule = {
         {
           "id": "developer-tools-devops-301-l02-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use structured reasoning, map tradeoffs, and verify outcomes with metrics before finalizing."
+          "title": "Interactive Pipeline Builder",
+          "content": "An interactive flowchart interface where learners drag and drop control gates (e.g., 'Pre-commit review', 'Automated testing') into a software delivery pipeline to optimize flow."
         }
       ],
       "chunks": [
         {
           "id": "developer-tools-devops-301-l02-c1",
           "kind": "practice",
-          "title": "Workflow Build",
-          "content": "In this interactive lab, learners will have the opportunity to build their own workflow. This involves mapping out who is responsible for each part of the process, establishing control gates to ensure quality, and defining measurable outcomes to assess success. By engaging in this hands-on activity, learners will gain practical experience in creating effective workflows that enhance productivity.\nContext recap: In this interactive lab, learners will have the opportunity to build their own workflow. This involves mapping out who is responsible for each part of the process, establishing control gates to ensure quality, and defining measurable outcomes to assess success. By engaging in this hands-on activity, learners will gain practical experience in creating effective workflows that enhance productivity."
+          "title": "Workflow Build and Control Gates",
+          "content": "In this interactive lab, you will architect a robust delivery workflow. This involves mapping out component ownership, establishing automated control gates to enforce quality standards, and defining measurable outcomes to assess pipeline health. By engaging in this hands-on activity, you will gain practical experience in balancing deployment velocity with rigorous quality assurance."
         },
         {
           "id": "developer-tools-devops-301-l02-c2",
           "kind": "recap",
-          "title": "Readiness and Rollback",
-          "content": "In this recap, we will discuss the importance of preparing systems for potential failures. This involves stress-testing our systems to see how they perform under challenging conditions and establishing clear thresholds for when to roll back changes. By understanding these concepts, learners will be better equipped to make informed decisions about system reliability and recovery strategies.\nContext recap: In this recap, we will discuss the importance of preparing systems for potential failures. This involves stress-testing our systems to see how they perform under challenging conditions and establishing clear thresholds for when to roll back changes. By understanding these concepts, learners will be better equipped to make informed decisions about system reliability and recovery strategies."
+          "title": "Readiness and Automated Rollback",
+          "content": "Preparing systems for inevitable failures is a cornerstone of advanced DevOps. We will examine strategies for stress-testing infrastructure under degraded conditions and establishing precise, automated thresholds for deployment rollbacks. Mastering these concepts ensures high availability and minimizes user impact during anomalous system behavior."
         }
       ],
       "interactiveActivities": [
@@ -111,23 +111,23 @@ export const DeveloperToolsDevops301Module: LearningModule = {
           "id": "developer-tools-devops-301-l02-act1",
           "type": "matching_pairs",
           "title": "Control Mapping",
-          "description": "Match each control to its strongest reliability or governance effect.",
+          "description": "Match each control mechanism to its strongest reliability or governance effect within the pipeline.",
           "pairs": [
             {
               "left": "Pre-commit review",
-              "right": "Prevents avoidable defects"
+              "right": "Prevents avoidable defects from entering the codebase"
             },
             {
-              "left": "Rollback trigger",
-              "right": "Contains impact during failures"
+              "left": "Automated Rollback trigger",
+              "right": "Contains blast radius and user impact during deployment failures"
             },
             {
               "left": "Baseline monitor",
-              "right": "Supports defensible outcome claims"
+              "right": "Supports defensible outcome claims with historical data"
             },
             {
-              "left": "Retrospective cycle",
-              "right": "Improves future decisions"
+              "left": "Blameless Retrospective",
+              "right": "Improves future architectural decisions and team psychological safety"
             }
           ]
         }
@@ -142,110 +142,110 @@ export const DeveloperToolsDevops301Module: LearningModule = {
         {
           "id": "developer-tools-devops-301-l03-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use structured reasoning, map tradeoffs, and verify outcomes with metrics before finalizing."
+          "title": "Quiz Strategy",
+          "content": "Recall the causal relationships mapped in L01 and the control gates established in L02. Focus on how metrics validate assumptions."
         }
       ],
       "questions": [
         {
           "id": "developer-tools-devops-301-l03-q1",
-          "text": "Which practice most improves decision quality in delivery pipeline engineering?",
+          "text": "Which practice most significantly improves decision quality in delivery pipeline engineering?",
           "skillId": "developer-tools-devops-301-skill-core",
           "options": [
             {
               "id": "a",
-              "text": "Use implicit assumptions and no baseline"
+              "text": "Relying on implicit assumptions to increase deployment speed"
             },
             {
               "id": "b",
-              "text": "Define assumptions, constraints, and measurable indicators"
+              "text": "Explicitly defining assumptions, constraints, and measurable indicators"
             },
             {
               "id": "c",
-              "text": "Prioritize speed over evidence in all cases"
+              "text": "Prioritizing feature delivery over evidence-based evaluation"
             },
             {
               "id": "d",
-              "text": "Ignore uncertainty and edge cases"
+              "text": "Bypassing edge cases to streamline the CI/CD process"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Decision quality improves when assumptions, constraints, and measurement are explicit."
+          "explanation": "Decision quality improves dramatically when assumptions, constraints, and measurement criteria are made explicit and trackable."
         },
         {
           "id": "developer-tools-devops-301-l03-q2",
-          "text": "At level 301, high-quality execution in developer productivity systems should include:",
+          "text": "At an advanced level, high-quality execution in developer productivity systems must include:",
           "skillId": "developer-tools-devops-301-skill-execution",
           "options": [
             {
               "id": "a",
-              "text": "Owner mapping, checkpoints, and escalation thresholds"
+              "text": "Clear owner mapping, automated checkpoints, and defined escalation thresholds"
             },
             {
               "id": "b",
-              "text": "No role clarity and ad-hoc decisions"
+              "text": "Fluid role definitions to encourage ad-hoc problem solving"
             },
             {
               "id": "c",
-              "text": "No post-implementation review"
+              "text": "Elimination of post-implementation reviews to save time"
             },
             {
               "id": "d",
-              "text": "Untracked process changes"
+              "text": "Untracked process changes to foster rapid innovation"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Reliable execution needs clear ownership and threshold-driven control points."
+          "explanation": "Reliable and scalable execution requires clear ownership, threshold-driven control points, and predefined escalation paths."
         },
         {
           "id": "developer-tools-devops-301-l03-q3",
-          "text": "A defensible approach to reliability automation requires:",
+          "text": "A defensible, rigorous approach to reliability automation requires:",
           "skillId": "developer-tools-devops-301-skill-eval",
           "options": [
             {
               "id": "a",
-              "text": "Anecdotal wins without comparison"
+              "text": "Highlighting anecdotal wins without historical comparison"
             },
             {
               "id": "b",
-              "text": "Baseline comparison and side-effect analysis"
+              "text": "Baseline comparison and comprehensive side-effect analysis"
             },
             {
               "id": "c",
-              "text": "Changing criteria after seeing results"
+              "text": "Adjusting success criteria after reviewing the initial results"
             },
             {
               "id": "d",
-              "text": "Ignoring difficult cases"
+              "text": "Focusing solely on the happy path and ignoring complex failure modes"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Comparison and side-effect analysis prevent biased conclusions."
+          "explanation": "Comparing new data against a baseline and analyzing unintended side-effects prevents biased conclusions and ensures true reliability."
         },
         {
           "id": "developer-tools-devops-301-l03-q4",
-          "text": "Mature platform governance systems connect:",
+          "text": "Mature platform governance systems effectively connect:",
           "skillId": "developer-tools-devops-301-skill-governance",
           "options": [
             {
               "id": "a",
-              "text": "Policy intent, measurable controls, and remediation pathways"
+              "text": "Policy intent, measurable automated controls, and clear remediation pathways"
             },
             {
               "id": "b",
-              "text": "Policy statements without accountability"
+              "text": "High-level policy statements without technical accountability"
             },
             {
               "id": "c",
-              "text": "Performance targets with no risk controls"
+              "text": "Aggressive performance targets with minimal risk controls"
             },
             {
               "id": "d",
-              "text": "Governance with no transparency"
+              "text": "Strict governance mandates with opaque enforcement mechanisms"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Effective governance links policy intent to measurable controls and corrective action."
+          "explanation": "Effective governance translates abstract policy intent into measurable, automated controls linked to specific corrective actions."
         }
       ]
     },
@@ -258,45 +258,45 @@ export const DeveloperToolsDevops301Module: LearningModule = {
         {
           "id": "developer-tools-devops-301-l04-a1",
           "type": "mnemonic",
-          "title": "Guided Practice",
-          "content": "Use structured reasoning, map tradeoffs, and verify outcomes with metrics before finalizing."
+          "title": "Tradeoff Matrix Visualization",
+          "content": "A 2x2 tradeoff matrix visualizing 'Speed of Delivery' versus 'System Reliability', plotting various DevOps interventions as data points to highlight compromises."
         }
       ],
       "chunks": [
         {
           "id": "developer-tools-devops-301-l04-c1",
           "kind": "example",
-          "title": "Case Context",
-          "content": "In this case analysis, we will focus on a rapidly growing engineering organization that is trying to balance the speed of deployments with the need for quality and reliability. Learners will identify the competing objectives that the organization faces and the risks associated with their systems. This analysis will help learners understand the complexities involved in managing growth while maintaining high standards.\nContext recap: In this case analysis, we will focus on a rapidly growing engineering organization that is trying to balance the speed of deployments with the need for quality and reliability. Learners will identify the competing objectives that the organization faces and the risks associated with their systems. This analysis will help learners understand the complexities involved in managing growth while maintaining high standards."
+          "title": "Case Context: Hyper-Growth Challenges",
+          "content": "We will analyze a rapidly scaling engineering organization struggling to balance deployment velocity with system reliability. You will identify the competing objectives the organization faces, such as time-to-market pressures versus the risk of catastrophic outages. This case study illuminates the architectural and cultural complexities involved in managing hyper-growth while maintaining stringent quality standards."
         },
         {
           "id": "developer-tools-devops-301-l04-c2",
           "kind": "concept",
-          "title": "Tradeoff Matrix",
-          "content": "In this section, we will introduce the concept of a tradeoff matrix. This tool helps us evaluate different options by scoring them based on their effectiveness, feasibility, risk, and impact on stakeholders. By using this matrix, learners will be able to make more informed decisions about which options to pursue in their projects.\nContext recap: In this section, we will introduce the concept of a tradeoff matrix. This tool helps us evaluate different options by scoring them based on their effectiveness, feasibility, risk, and impact on stakeholders. By using this matrix, learners will be able to make more informed decisions about which options to pursue in their projects."
+          "title": "The Tradeoff Matrix",
+          "content": "To navigate competing priorities, we introduce the tradeoff matrix. This analytical tool allows engineers to evaluate potential interventions by scoring them across dimensions like effectiveness, technical feasibility, operational risk, and stakeholder impact. Utilizing this matrix transforms subjective debates into objective, data-driven architectural decisions."
         },
         {
           "id": "developer-tools-devops-301-l04-c3",
           "kind": "recap",
-          "title": "Recovery Design",
-          "content": "In this recap, we will discuss how to turn patterns of failure into proactive measures. This involves creating safeguards and response playbooks that outline how to react when things go wrong. By preparing for potential issues in advance, learners will be better equipped to handle challenges effectively and minimize disruptions.\nContext recap: In this recap, we will discuss how to turn patterns of failure into proactive measures. This involves creating safeguards and response playbooks that outline how to react when things go wrong. By preparing for potential issues in advance, learners will be better equipped to handle challenges effectively and minimize disruptions."
+          "title": "Recovery Design and Playbooks",
+          "content": "Turning historical failure patterns into proactive defense mechanisms is vital. We will discuss how to design automated safeguards and comprehensive incident response playbooks. By pre-defining action pathways for known failure modes, teams can drastically reduce Mean Time to Recovery (MTTR) and execute safe, coordinated responses during high-stress outages."
         }
       ],
       "flashcards": [
         {
           "id": "developer-tools-devops-301-l04-f1",
-          "front": "Tradeoff matrix",
-          "back": "A structured method to compare options under competing priorities."
+          "front": "Tradeoff Matrix",
+          "back": "A structured analytical method used to objectively compare architectural options under competing priorities."
         },
         {
           "id": "developer-tools-devops-301-l04-f2",
-          "front": "Failure pattern",
-          "back": "A recurring signal indicating a predictable risk mode."
+          "front": "Failure Pattern",
+          "back": "A recurring systemic signal or sequence of events indicating a predictable and mitigatable risk mode."
         },
         {
           "id": "developer-tools-devops-301-l04-f3",
-          "front": "Response playbook",
-          "back": "A predefined action pathway for safe and timely recovery."
+          "front": "Response Playbook",
+          "back": "A predefined, documented action pathway designed to ensure safe, coordinated, and timely recovery during an incident."
         }
       ]
     },
@@ -309,22 +309,22 @@ export const DeveloperToolsDevops301Module: LearningModule = {
         {
           "id": "developer-tools-devops-301-l05-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use structured reasoning, map tradeoffs, and verify outcomes with metrics before finalizing."
+          "title": "Incident Dashboard",
+          "content": "A simulated dashboard interface showing server health metrics, deployment status, and active alerts during a mock production incident."
         }
       ],
       "chunks": [
         {
           "id": "developer-tools-devops-301-l05-c1",
           "kind": "practice",
-          "title": "Scenario Simulation",
-          "content": "In this interactive simulation, learners will run through various intervention scenarios while facing uncertainty. They will compare the outcomes of these different scenarios to understand how different decisions can lead to different results. This hands-on experience will help learners develop critical thinking skills and learn how to adapt to changing circumstances.\nContext recap: In this interactive simulation, learners will run through various intervention scenarios while facing uncertainty. They will compare the outcomes of these different scenarios to understand how different decisions can lead to different results. This hands-on experience will help learners develop critical thinking skills and learn how to adapt to changing circumstances."
+          "title": "Scenario Simulation: Outage Response",
+          "content": "In this interactive simulation, you will navigate a complex production outage characterized by high uncertainty. You will be tasked with selecting intervention strategies, observing their immediate impacts, and managing cascading effects. This hands-on environment hones critical thinking and adaptability, requiring you to balance rapid mitigation with long-term system stability."
         },
         {
           "id": "developer-tools-devops-301-l05-c2",
           "kind": "recap",
-          "title": "Debrief",
-          "content": "In this recap, we will evaluate each simulation run based on how well it met the targets, any unintended side effects that occurred, and whether it complied with governance standards. This evaluation process is essential for understanding the effectiveness of our interventions and ensuring that we are making responsible decisions.\nContext recap: In this recap, we will evaluate each simulation run based on how well it met the targets, any unintended side effects that occurred, and whether it complied with governance standards. This evaluation process is essential for understanding the effectiveness of our interventions and ensuring that we are making responsible decisions."
+          "title": "Simulation Debrief and Validation",
+          "content": "Following the simulation, we will conduct a rigorous debrief. We will evaluate each intervention path based on target achievement, the emergence of unintended side effects, and adherence to governance standards. This post-run review is essential for validating whether the chosen metrics accurately reflected system health and for refining future incident response strategies."
         }
       ],
       "interactiveActivities": [
@@ -332,11 +332,11 @@ export const DeveloperToolsDevops301Module: LearningModule = {
           "id": "developer-tools-devops-301-l05-act1",
           "type": "scenario_practice",
           "title": "Intervention Simulation",
-          "description": "Compare intervention paths for delivery pipeline engineering and platform governance.",
+          "description": "Compare intervention paths for delivery pipeline engineering and platform governance during an active incident.",
           "instructions": [
-            "Define objective and constraints before intervention selection.",
-            "Document near-term and long-term tradeoffs.",
-            "Specify metrics that validate your chosen path."
+            "Define your primary objective and operational constraints before selecting an intervention.",
+            "Document anticipated near-term fixes and potential long-term tradeoffs.",
+            "Specify the exact telemetry metrics that will validate the success of your chosen path."
           ]
         }
       ]
@@ -350,110 +350,110 @@ export const DeveloperToolsDevops301Module: LearningModule = {
         {
           "id": "developer-tools-devops-301-l06-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use structured reasoning, map tradeoffs, and verify outcomes with metrics before finalizing."
+          "title": "Quiz Strategy",
+          "content": "Reflect on the tradeoff matrix from L04 and the incident response strategies applied in the L05 simulation."
         }
       ],
       "questions": [
         {
           "id": "developer-tools-devops-301-l06-q1",
-          "text": "Which practice most improves decision quality in delivery pipeline engineering?",
+          "text": "When utilizing a tradeoff matrix in DevOps case analysis, what is the primary objective?",
           "skillId": "developer-tools-devops-301-skill-core",
           "options": [
             {
               "id": "a",
-              "text": "Use implicit assumptions and no baseline"
+              "text": "To eliminate all risks associated with a new deployment"
             },
             {
               "id": "b",
-              "text": "Define assumptions, constraints, and measurable indicators"
+              "text": "To systematically compare architectural options against competing priorities like speed and reliability"
             },
             {
               "id": "c",
-              "text": "Prioritize speed over evidence in all cases"
+              "text": "To justify the cheapest available tool to stakeholders"
             },
             {
               "id": "d",
-              "text": "Ignore uncertainty and edge cases"
+              "text": "To bypass governance controls during an emergency"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Decision quality improves when assumptions, constraints, and measurement are explicit."
+          "explanation": "A tradeoff matrix provides a structured, objective framework to evaluate how different solutions balance competing priorities."
         },
         {
           "id": "developer-tools-devops-301-l06-q2",
-          "text": "At level 301, high-quality execution in developer productivity systems should include:",
+          "text": "What is the most effective way to utilize a failure pattern identified during a post-mortem?",
           "skillId": "developer-tools-devops-301-skill-execution",
           "options": [
             {
               "id": "a",
-              "text": "Owner mapping, checkpoints, and escalation thresholds"
+              "text": "Update the response playbook and implement automated safeguards to prevent recurrence"
             },
             {
               "id": "b",
-              "text": "No role clarity and ad-hoc decisions"
+              "text": "Assign blame to the engineer who triggered the failure"
             },
             {
               "id": "c",
-              "text": "No post-implementation review"
+              "text": "Archive the report and focus entirely on new feature development"
             },
             {
               "id": "d",
-              "text": "Untracked process changes"
+              "text": "Increase the manual approval gates for all future deployments"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Reliable execution needs clear ownership and threshold-driven control points."
+          "explanation": "Identifying a failure pattern should directly inform proactive defenses, such as updating playbooks and automating safeguards."
         },
         {
           "id": "developer-tools-devops-301-l06-q3",
-          "text": "A defensible approach to reliability automation requires:",
+          "text": "During a scenario simulation, why is it critical to define constraints before selecting an intervention?",
           "skillId": "developer-tools-devops-301-skill-eval",
           "options": [
             {
               "id": "a",
-              "text": "Anecdotal wins without comparison"
+              "text": "To ensure the simulation ends as quickly as possible"
             },
             {
               "id": "b",
-              "text": "Baseline comparison and side-effect analysis"
+              "text": "To ensure the chosen solution is viable within the organization's operational, financial, and technical limits"
             },
             {
               "id": "c",
-              "text": "Changing criteria after seeing results"
+              "text": "To limit the number of metrics that need to be monitored"
             },
             {
               "id": "d",
-              "text": "Ignoring difficult cases"
+              "text": "To prevent junior engineers from participating in the response"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Comparison and side-effect analysis prevent biased conclusions."
+          "explanation": "Constraints dictate reality; defining them ensures that proposed interventions are actually feasible in a real-world environment."
         },
         {
           "id": "developer-tools-devops-301-l06-q4",
-          "text": "Mature platform governance systems connect:",
+          "text": "Which metric best validates the effectiveness of a newly implemented automated rollback system?",
           "skillId": "developer-tools-devops-301-skill-governance",
           "options": [
             {
               "id": "a",
-              "text": "Policy intent, measurable controls, and remediation pathways"
+              "text": "Total lines of code deployed per week"
             },
             {
               "id": "b",
-              "text": "Policy statements without accountability"
+              "text": "Mean Time to Recovery (MTTR) during failed deployments"
             },
             {
               "id": "c",
-              "text": "Performance targets with no risk controls"
+              "text": "Number of successful builds in the CI pipeline"
             },
             {
               "id": "d",
-              "text": "Governance with no transparency"
+              "text": "The percentage of test coverage in the codebase"
             }
           ],
-          "correctOptionId": "a",
-          "explanation": "Effective governance links policy intent to measurable controls and corrective action."
+          "correctOptionId": "b",
+          "explanation": "Automated rollbacks are designed to restore service quickly after a failure, making MTTR the most direct metric of their success."
         }
       ]
     },
@@ -466,45 +466,45 @@ export const DeveloperToolsDevops301Module: LearningModule = {
         {
           "id": "developer-tools-devops-301-l07-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use structured reasoning, map tradeoffs, and verify outcomes with metrics before finalizing."
+          "title": "Governance Architecture Diagram",
+          "content": "A conceptual diagram linking policy intent (a document icon) to automated controls (gear icons) and audit logs (clipboard icon), demonstrating traceability."
         }
       ],
       "chunks": [
         {
           "id": "developer-tools-devops-301-l07-c1",
           "kind": "concept",
-          "title": "Stakeholder Impact",
-          "content": "In this section, learners will explore how to map out the benefits and burdens that different stakeholder groups experience. This mapping helps us understand who gains from our decisions and who might face challenges. By considering the perspectives of all stakeholders, learners will be better prepared to make balanced and fair decisions.\nContext recap: In this section, learners will explore how to map out the benefits and burdens that different stakeholder groups experience. This mapping helps us understand who gains from our decisions and who might face challenges. By considering the perspectives of all stakeholders, learners will be better prepared to make balanced and fair decisions."
+          "title": "Stakeholder Impact Distribution",
+          "content": "DevOps transformations do not affect all teams equally. We will explore how to map the distribution of benefits and burdens across different stakeholder groups—such as developers, operations, security, and end-users. Understanding this impact distribution is crucial for managing organizational change, mitigating friction, and ensuring that productivity gains do not come at the cost of operational burnout."
         },
         {
           "id": "developer-tools-devops-301-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "In this section, we will discuss the concept of accountability architecture. This involves ensuring that there is a clear trace of decisions made, the rights to review those decisions, and the obligations to correct any issues that arise. By integrating these elements, learners will understand the importance of transparency and responsibility in decision-making processes.\nContext recap: In this section, we will discuss the concept of accountability architecture. This involves ensuring that there is a clear trace of decisions made, the rights to review those decisions, and the obligations to correct any issues that arise. By integrating these elements, learners will understand the importance of transparency and responsibility in decision-making processes."
+          "content": "Robust platform governance requires an accountability architecture. This involves implementing compliance-as-code, ensuring a clear, auditable trace of automated decisions, and defining Role-Based Access Control (RBAC). By integrating these elements, organizations can maintain high deployment velocity while satisfying security, compliance, and audit requirements transparently."
         },
         {
           "id": "developer-tools-devops-301-l07-c3",
           "kind": "recap",
           "title": "Responsible Execution",
-          "content": "At the end of our project, it's important to use a checklist that helps us think about three key areas: how well our project performs, how we can manage any risks, and the ethical effects of our work. This checklist ensures that we are responsible in our execution and that we consider all aspects of our project before finalizing it.\nContext recap: At the end of our project, it's important to use a checklist that helps us think about three key areas: how well our project performs, how we can manage any risks, and the ethical effects of our work. This checklist ensures that we are responsible in our execution and that we consider all aspects of our project before finalizing it."
+          "content": "Responsible execution bridges the gap between technical capability and ethical engineering. We will review a comprehensive checklist that evaluates project performance, risk management, and the broader ethical implications of automation—such as the sustainability of on-call rotations. This ensures that our DevOps practices are not only effective but also equitable and accountable."
         }
       ],
       "flashcards": [
         {
           "id": "developer-tools-devops-301-l07-f1",
-          "front": "Impact distribution",
-          "back": "How outcomes are allocated across people, systems, and time."
+          "front": "Impact Distribution",
+          "back": "The analysis of how the outcomes, benefits, and burdens of a system change are allocated across people, systems, and time."
         },
         {
           "id": "developer-tools-devops-301-l07-f2",
-          "front": "Decision traceability",
-          "back": "An auditable explanation of evidence, ownership, and rationale."
+          "front": "Decision Traceability",
+          "back": "An auditable, transparent record explaining the evidence, ownership, and rationale behind automated and manual system changes."
         },
         {
           "id": "developer-tools-devops-301-l07-f3",
-          "front": "Responsible execution",
-          "back": "Delivery mode that combines effectiveness with accountability and fairness."
+          "front": "Responsible Execution",
+          "back": "A delivery methodology that balances technical effectiveness with accountability, security, and fairness to all stakeholders."
         }
       ]
     },
@@ -517,22 +517,22 @@ export const DeveloperToolsDevops301Module: LearningModule = {
         {
           "id": "developer-tools-devops-301-l08-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use structured reasoning, map tradeoffs, and verify outcomes with metrics before finalizing."
+          "title": "Charter Template",
+          "content": "A structured project charter template with highlighted sections for Objectives, Constraints, Metrics, and Governance Triggers to guide the planning process."
         }
       ],
       "chunks": [
         {
           "id": "developer-tools-devops-301-l08-c1",
           "kind": "practice",
-          "title": "Capstone Charter",
-          "content": "In this activity, you will create a Capstone Charter. This document will outline the objectives of your project, the constraints you might face, the metrics you will use to measure success, and the governance triggers that will guide your decisions. This is a crucial step in ensuring your project is well-planned and organized.\nContext recap: In this activity, you will create a Capstone Charter. This document will outline the objectives of your project, the constraints you might face, the metrics you will use to measure success, and the governance triggers that will guide your decisions. This is a crucial step in ensuring your project is well-planned and organized."
+          "title": "Drafting the Capstone Charter",
+          "content": "In this culminating activity, you will synthesize your learning to create a comprehensive Capstone Charter. This document will define the scope of a proposed DevOps transformation, detailing specific objectives, operational constraints, DORA metrics for success validation, and automated governance triggers. A well-architected charter is the blueprint for successful, scalable system evolution."
         },
         {
           "id": "developer-tools-devops-301-l08-c2",
           "kind": "recap",
-          "title": "Defense Readiness",
-          "content": "As you work on your project, it's essential to prepare for defending your decisions. This means thinking about how to respond to questions and critiques related to both the technical aspects of your work and the governance principles that guide it. Being ready to explain your choices will help you communicate effectively and demonstrate your understanding.\nContext recap: As you work on your project, it's essential to prepare for defending your decisions. This means thinking about how to respond to questions and critiques related to both the technical aspects of your work and the governance principles that guide it. Being ready to explain your choices will help you communicate effectively and demonstrate your understanding."
+          "title": "Defense Readiness and Stakeholder Communication",
+          "content": "Engineering leadership requires the ability to defend architectural choices. You must prepare to articulate the rationale behind your Capstone Charter to mixed stakeholders, translating complex technical tradeoffs into business value. We will practice communicating uncertainty, justifying risk mitigations, and demonstrating how your governance principles align with organizational goals."
         }
       ],
       "interactiveActivities": [
@@ -540,11 +540,11 @@ export const DeveloperToolsDevops301Module: LearningModule = {
           "id": "developer-tools-devops-301-l08-act1",
           "type": "project_builder",
           "title": "Capstone Charter Builder",
-          "description": "Build a capstone charter with measurable outcomes and remediation pathways.",
+          "description": "Construct a comprehensive capstone charter featuring measurable outcomes, tradeoff analyses, and remediation pathways.",
           "instructions": [
-            "Define objective and operating boundaries.",
-            "List at least three measurable success indicators.",
-            "Define escalation and corrective-action criteria."
+            "Define the primary objective and strict operating boundaries of your proposed system.",
+            "List at least three measurable success indicators (e.g., deployment frequency, MTTR).",
+            "Define specific escalation paths and automated corrective-action criteria."
           ]
         }
       ]

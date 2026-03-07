@@ -1,9 +1,9 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const MusicTheory601Module: LearningModule = {
+export const music_theory_601_Module: LearningModule = {
   "id": "music-theory-601",
-  "title": "Music Theory Research and Leadership",
-  "description": "Post-401 specialization in Music Theory, focused on music systems diagnostics, music operations and execution design, music impact and tradeoff analysis, and music governance and leadership through advanced casework, simulation, and defense-based checkpoints.",
+  "title": "Music Theory: Research, Analysis, and Leadership",
+  "description": "An advanced specialization in Music Theory focusing on the analysis of complex musical systems, strategic performance and compositional design, impact evaluation, and principles of artistic leadership. Learning is driven by advanced case studies, interactive simulations, and a final capstone defense.",
   "subject": "Music",
   "tags": [
     "core",
@@ -14,121 +14,121 @@ export const MusicTheory601Module: LearningModule = {
   ],
   "minAge": 17,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en",
     "es"
   ],
   "learningObjectives": [
-    "Apply advanced methods for music systems diagnostics in high-constraint environments",
-    "Design robust systems for music operations and execution design with measurable control gates",
-    "Evaluate interventions in music impact and tradeoff analysis with research-grade rigor",
-    "Operationalize music governance and leadership with accountable governance and escalation pathways",
-    "Lead cross-functional decision reviews with explicit tradeoff communication",
-    "Defend recommendations under expert critique using evidence and uncertainty bounds"
+    "Apply advanced analytical frameworks to complex musical works and systems.",
+    "Design robust strategies for composition or performance with measurable artistic goals.",
+    "Evaluate the impact and artistic tradeoffs of musical decisions with research-grade rigor.",
+    "Develop frameworks for ethical artistic governance and leadership.",
+    "Lead cross-functional artistic reviews with clear communication of goals and tradeoffs.",
+    "Defend analytical or creative recommendations against expert critique using evidence from scores and scholarship."
   ],
   "lessons": [
     {
       "id": "music-theory-601-l01",
-      "title": "Music Theory Advanced Foundations",
+      "title": "Advanced Foundations in Musical Analysis",
       "type": "video",
       "duration": 14,
       "learningAids": [
         {
           "id": "music-theory-601-l01-a1",
-          "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "diagram",
+          "title": "Framework for Musical System Analysis",
+          "content": "A visual diagram showing layers of analysis: harmonic, melodic, rhythmic, structural, and contextual."
         }
       ],
       "chunks": [
         {
           "id": "music-theory-601-l01-c1",
           "kind": "concept",
-          "title": "Scope and Boundary Design",
-          "content": "In this lesson, we will delve into the advanced boundaries of Music Theory, which is essential for anyone looking to deepen their understanding of music. We will focus on how to effectively diagnose music systems, which involves analyzing various elements of music to identify strengths and weaknesses. Additionally, we will learn how to design effective operations and execution strategies that can be applied in real-world musical contexts. By the end of this lesson, you will have a richer insight into the complexities of music theory and its practical applications, enhancing your skills as a musician and a thinker.\nContext recap: In this lesson, we will delve into the advanced boundaries of Music Theory, which is essential for anyone looking to deepen their understanding of music. We will focus on how to effectively diagnose music systems, which involves analyzing various elements of music to identify strengths and weaknesses. Additionally, we will learn how to design effective operations and execution strategies that can be applied in real-world musical contexts. By the end of this lesson, you will have a richer insight into the complexities of music theory and its practical applications, enhancing your skills as a musician and a thinker.\nContext recap: In this lesson, we will delve into the advanced boundaries of Music Theory, which is essential for anyone looking to deepen their understanding of music. We will focus on how to effectively diagnose music systems, which involves analyzing various elements of music to identify strengths and weaknesses. Additionally, we will learn how to design effective operations and execution strategies that can be applied in real-world musical contexts. By the end of this lesson, you will have a richer insight into the complexities of music theory and its practical applications, enhancing your skills as a musician and a thinker.\nWhy this matters: Scope and Boundary Design helps learners in Music connect ideas from Music Theory Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "Defining the Analytical Scope",
+          "content": "This lesson introduces methods for defining the boundaries of a musical analysis. We will explore how to select an appropriate scope, whether analyzing a single motif, a movement, or an entire opera, and how to make your analytical assumptions clear from the outset. This foundational skill ensures your research is focused and your conclusions are sound."
         },
         {
           "id": "music-theory-601-l01-c2",
           "kind": "concept",
-          "title": "Causal and Uncertainty Modeling",
-          "content": "In this section, learners will engage in mapping out causal pathways, which means understanding how different factors influence each other. We will also look at uncertainty ranges and system dependencies, which are important for planning interventions effectively. This process will help you think critically about how to approach challenges in music theory.\nContext recap: In this section, learners will engage in mapping out causal pathways, which means understanding how different factors influence each other. We will also look at uncertainty ranges and system dependencies, which are important for planning interventions effectively. This process will help you think critically about how to approach challenges in music theory."
+          "title": "Modeling Musical Influence and Ambiguity",
+          "content": "Learn to map the causal pathways within a musical piece, understanding how different elements influence one another. We will also develop techniques for interpreting musical ambiguity, such as unresolved harmonies or complex metric structures, by considering a range of possibilities and their systemic implications."
         },
         {
           "id": "music-theory-601-l01-c3",
           "kind": "recap",
-          "title": "Evidence Thresholds",
-          "content": "In our recap, we will emphasize that all claims made in our analyses should be linked to measurable indicators. This means we will establish confidence bounds and set up review checkpoints to ensure our findings are reliable and valid. This practice is essential for maintaining high standards in music theory research.\nContext recap: In our recap, we will emphasize that all claims made in our analyses should be linked to measurable indicators. This means we will establish confidence bounds and set up review checkpoints to ensure our findings are reliable and valid. This practice is essential for maintaining high standards in music theory research."
+          "title": "Establishing Evidentiary Standards",
+          "content": "In our recap, we will emphasize that all analytical claims must be linked to measurable evidence from the score. This involves establishing clear criteria for your findings and setting up review checkpoints to ensure your analysis is reliable, valid, and defensible."
         }
       ],
       "flashcards": [
         {
           "id": "music-theory-601-l01-f1",
-          "front": "music systems diagnostics",
-          "back": "A specialization axis requiring explicit assumptions and measurable constraints."
+          "front": "Systemic Musical Analysis",
+          "back": "An analytical approach that requires explicit assumptions about a work's structure and measurable constraints."
         },
         {
           "id": "music-theory-601-l01-f2",
-          "front": "music operations and execution design",
-          "back": "Execution architecture that determines reliability under stress."
+          "front": "Performance Practice Design",
+          "back": "The architecture of an interpretation that determines its artistic reliability and coherence under performance pressure."
         },
         {
           "id": "music-theory-601-l01-f3",
-          "front": "music impact and tradeoff analysis",
-          "back": "Evaluation discipline for identifying true gains and hidden costs."
+          "front": "Analysis of Musical Tradeoffs",
+          "back": "The discipline of evaluating compositional or performance choices to identify true artistic gains and hidden costs."
         }
       ]
     },
     {
       "id": "music-theory-601-l02",
-      "title": "Music Theory Specialist Methods Lab",
+      "title": "Applied Analytical Methods Lab",
       "type": "interactive",
       "duration": 17,
       "learningAids": [
         {
           "id": "music-theory-601-l02-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "template",
+          "title": "Workflow Design Template",
+          "content": "A fillable template for designing an analytical workflow, including stages for hypothesis, score study, analysis, and conclusion."
         }
       ],
       "chunks": [
         {
           "id": "music-theory-601-l02-c1",
           "kind": "practice",
-          "title": "Method Design and Stress Test",
-          "content": "In this interactive practice, learners will have the opportunity to design specialized workflows. These workflows will then be put to the test in various challenging scenarios to see how they hold up under pressure. This hands-on experience will enhance your problem-solving skills and prepare you for real-world applications.\nContext recap: In this interactive practice, learners will have the opportunity to design specialized workflows. These workflows will then be put to the test in various challenging scenarios to see how they hold up under pressure. This hands-on experience will enhance your problem-solving skills and prepare you for real-world applications."
+          "title": "Designing and Testing Analytical Workflows",
+          "content": "In this interactive lab, you will design a specialized workflow for analyzing a particular musical style or form, such as a Baroque fugue or a 12-tone row. You will then stress-test your workflow against complex or atypical examples to refine its effectiveness and identify its limitations."
         },
         {
           "id": "music-theory-601-l02-c2",
           "kind": "recap",
-          "title": "Control Gate Architecture",
-          "content": "In our recap, we will discuss how workflows should include important elements such as checkpoints, rollback criteria, and threshold-based escalation. This means we will ensure that there are clear steps to follow and safety nets in place, which is crucial for effective management in music theory projects.\nContext recap: In our recap, we will discuss how workflows should include important elements such as checkpoints, rollback criteria, and threshold-based escalation. This means we will ensure that there are clear steps to follow and safety nets in place, which is crucial for effective management in music theory projects."
+          "title": "Structuring Analytical Reviews",
+          "content": "We will recap how to build quality controls into your analytical process. This includes establishing checkpoints for peer review, defining criteria for self-correction, and creating pathways for escalating complex problems that require a new approach."
         }
       ],
       "interactiveActivities": [
         {
           "id": "music-theory-601-l02-act1",
           "type": "matching_pairs",
-          "title": "Control-to-Outcome Mapping",
-          "description": "Match specialist controls with their strongest reliability and governance effects.",
+          "title": "Matching Analytical Tools to Musical Problems",
+          "description": "Match specific analytical techniques to the musical excerpts where they are most effective.",
           "pairs": [
             {
-              "left": "Pre-commit gate",
-              "right": "Prevents avoidable downstream failures"
+              "left": "Schenkerian Analysis",
+              "right": "Reveals large-scale harmonic structure in a Brahms Intermezzo."
             },
             {
-              "left": "Rollback trigger",
-              "right": "Limits blast radius under adverse outcomes"
+              "left": "Set Theory",
+              "right": "Identifies motivic relationships in a Webern concerto."
             },
             {
-              "left": "Baseline dashboard",
-              "right": "Supports defensible impact attribution"
+              "left": "Metric Analysis",
+              "right": "Uncovers rhythmic complexity in a piece by Stravinsky."
             },
             {
-              "left": "Retrospective loop",
-              "right": "Improves next-cycle decision quality"
+              "left": "Formal Analysis",
+              "right": "Maps the sonata form structure of a Mozart symphony."
             }
           ]
         }
@@ -136,590 +136,506 @@ export const MusicTheory601Module: LearningModule = {
     },
     {
       "id": "music-theory-601-l03",
-      "title": "Checkpoint 1: Specialist Methods",
+      "title": "Checkpoint 1: Foundational Methods",
       "type": "quiz",
       "duration": 10,
       "learningAids": [
         {
           "id": "music-theory-601-l03-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "summary_sheet",
+          "title": "Key Concepts Review",
+          "content": "A one-page summary of core concepts from Lessons 1 and 2, including analytical scope, evidentiary standards, and workflow design."
         }
       ],
       "questions": [
         {
           "id": "music-theory-601-l03-q1",
-          "text": "Which practice most improves music systems diagnostics decision quality?",
+          "text": "Which practice most improves the quality of a complex musical analysis?",
           "skillId": "music-theory-601-skill-core",
           "options": [
             {
               "id": "a",
-              "text": "Proceed without baseline or assumptions"
+              "text": "Relying solely on intuition without score-based evidence."
             },
             {
               "id": "b",
-              "text": "Define assumptions, constraints, and measurable indicators"
+              "text": "Defining the analytical scope, assumptions, and measurable indicators from the score."
             },
             {
               "id": "c",
-              "text": "Optimize only for speed in every context"
+              "text": "Optimizing only for a single element, like harmony, in every context."
             },
             {
               "id": "d",
-              "text": "Ignore uncertainty and edge conditions"
+              "text": "Ignoring ambiguous passages or structural anomalies."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Advanced decisions improve when assumptions, constraints, and metrics are explicit."
+          "explanation": "A rigorous analysis improves when its scope, assumptions, and metrics are made explicit and are grounded in the musical text."
         },
         {
           "id": "music-theory-601-l03-q2",
-          "text": "At level 601, strong execution for music operations and execution design requires:",
+          "text": "A strong workflow for musical analysis requires:",
           "skillId": "music-theory-601-skill-execution",
           "options": [
             {
               "id": "a",
-              "text": "Owner mapping, checkpoint cadence, and escalation thresholds"
+              "text": "Clear stages, peer-review checkpoints, and criteria for revision."
             },
             {
               "id": "b",
-              "text": "No role clarity and ad-hoc process changes"
+              "text": "An undefined process that changes with every piece."
             },
             {
               "id": "c",
-              "text": "No retrospective or post-run review"
+              "text": "No retrospective or review of the analytical process."
             },
             {
               "id": "d",
-              "text": "No rollback or fallback conditions"
+              "text": "No ability to go back and revise an initial hypothesis."
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Reliable advanced execution needs ownership clarity and threshold-driven governance."
+          "explanation": "A reliable analytical workflow needs clear structure, quality gates like peer review, and defined criteria for making changes."
         },
         {
           "id": "music-theory-601-l03-q3",
-          "text": "A defensible approach to music impact and tradeoff analysis includes:",
+          "text": "A defensible approach to evaluating artistic tradeoffs includes:",
           "skillId": "music-theory-601-skill-eval",
           "options": [
             {
               "id": "a",
-              "text": "Anecdotes without comparison"
+              "text": "Anecdotes without comparison to other choices."
             },
             {
               "id": "b",
-              "text": "Baseline comparisons, side-effect analysis, and uncertainty bounds"
+              "text": "Baseline comparisons, analysis of side effects, and acknowledging interpretive ambiguity."
             },
             {
               "id": "c",
-              "text": "Changing success criteria after outcomes"
+              "text": "Changing success criteria after hearing the performance."
             },
             {
               "id": "d",
-              "text": "Excluding difficult scenarios from analysis"
+              "text": "Excluding difficult performance scenarios from analysis."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible analysis combines comparative baselines, side-effect checks, and uncertainty disclosure."
+          "explanation": "Defensible analysis of tradeoffs requires comparing choices against a baseline, considering unintended consequences, and disclosing uncertainty."
         },
         {
           "id": "music-theory-601-l03-q4",
-          "text": "Mature governance systems connect:",
+          "text": "A mature system for artistic governance connects:",
           "skillId": "music-theory-601-skill-governance",
           "options": [
             {
               "id": "a",
-              "text": "Policy intent, measurable controls, and remediation pathways"
+              "text": "Artistic intent, measurable controls (e.g., rehearsal schedules), and clear remediation pathways."
             },
             {
               "id": "b",
-              "text": "Policy language with no measurable enforcement"
+              "text": "A mission statement with no measurable connection to artistic practice."
             },
             {
               "id": "c",
-              "text": "Targets without ownership or escalation design"
+              "text": "Artistic goals without clear roles or escalation paths for problems."
             },
             {
               "id": "d",
-              "text": "Operations without transparent accountability"
+              "text": "Creative processes without transparent accountability."
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Governance maturity is the operational link between intent, measurement, and corrective action."
-        },
-        {
-          "id": "music-theory-601-l03-q5",
-          "text": "What is the best way to compare competing interventions in advanced Music?",
-          "skillId": "music-theory-601-skill-advanced-5",
-          "options": [
-            {
-              "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
-            },
-            {
-              "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
-            },
-            {
-              "id": "c",
-              "text": "Switch metrics after results arrive"
-            },
-            {
-              "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
-        },
-        {
-          "id": "music-theory-601-l03-q6",
-          "text": "In high-stakes Music Theory Research and Leadership execution, which communication protocol is strongest?",
-          "skillId": "music-theory-601-skill-advanced-6",
-          "options": [
-            {
-              "id": "a",
-              "text": "Broadcast conclusions without assumptions"
-            },
-            {
-              "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
-            },
-            {
-              "id": "c",
-              "text": "Share only final outcomes after completion"
-            },
-            {
-              "id": "d",
-              "text": "Limit updates to a single informal channel"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
-        },
-        {
-          "id": "music-theory-601-l03-q7",
-          "text": "A mature remediation loop in advanced Music should prioritize:",
-          "skillId": "music-theory-601-skill-advanced-7",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blame assignment without system updates"
-            },
-            {
-              "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
-            },
-            {
-              "id": "c",
-              "text": "One-time fixes without retesting"
-            },
-            {
-              "id": "d",
-              "text": "Issue closure based on elapsed time"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
-        },
-        {
-          "id": "music-theory-601-l03-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Music Theory Research and Leadership?",
-          "skillId": "music-theory-601-skill-advanced-8",
-          "options": [
-            {
-              "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
-            },
-            {
-              "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
-            },
-            {
-              "id": "c",
-              "text": "Ignore correlated failure modes"
-            },
-            {
-              "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "explanation": "Mature governance links artistic vision to measurable processes and clear paths for corrective action."
         }
       ]
     },
     {
       "id": "music-theory-601-l04",
-      "title": "Music Theory Advanced Case Analysis",
+      "title": "Case Studies in Musical Strategy",
       "type": "video",
       "duration": 14,
       "learningAids": [
         {
           "id": "music-theory-601-l04-a1",
-          "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "case_study",
+          "title": "Case Study: Stravinsky's 'The Rite of Spring' Premiere",
+          "content": "An analysis of the compositional innovations, performance challenges, and audience reception of the 1913 premiere."
         }
       ],
       "chunks": [
         {
           "id": "music-theory-601-l04-c1",
           "kind": "concept",
-          "title": "Scenario Architecture",
-          "content": "In this lesson, we will frame cases that highlight the competing constraints in music systems diagnostics. We will analyze the impact of music and the trade-offs involved in decision-making. Understanding these dynamics will help you appreciate the complexities of music theory in practice.\nContext recap: In this lesson, we will frame cases that highlight the competing constraints in music systems diagnostics. We will analyze the impact of music and the trade-offs involved in decision-making. Understanding these dynamics will help you appreciate the complexities of music theory in practice."
+          "title": "Deconstructing Complex Musical Scenarios",
+          "content": "In this lesson, we will analyze historical and compositional case studies that feature competing constraints, such as artistic innovation versus audience expectation, or compositional complexity versus performer capability. Understanding these dynamics is key to strategic thinking in music."
         },
         {
           "id": "music-theory-601-l04-c2",
           "kind": "practice",
-          "title": "Tradeoff Framing",
-          "content": "During this practice session, learners will compare different options based on various dimensions such as safety, reliability, cost, equity, and governance. This comparison will help you develop a well-rounded perspective on decision-making in music theory.\nContext recap: During this practice session, learners will compare different options based on various dimensions such as safety, reliability, cost, equity, and governance. This comparison will help you develop a well-rounded perspective on decision-making in music theory.\nWhy this matters: Tradeoff Framing helps learners in Music connect ideas from Music Theory Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "Evaluating Artistic Tradeoffs",
+          "content": "Using our case studies, you will compare different artistic choices across dimensions like aesthetic impact, technical feasibility, cost, and historical authenticity. This practice will help you develop a multi-faceted perspective on musical decision-making."
         },
         {
           "id": "music-theory-601-l04-c3",
           "kind": "recap",
-          "title": "Decision Memo Pattern",
-          "content": "In our recap, we will highlight that each recommendation made should include assumptions, evidence, risk controls, and fallback plans. This structured approach ensures that we are prepared for any uncertainties and can make informed decisions in music theory.\nContext recap: In our recap, we will highlight that each recommendation made should include assumptions, evidence, risk controls, and fallback plans. This structured approach ensures that we are prepared for any uncertainties and can make informed decisions in music theory.\nContext recap: In our recap, we will highlight that each recommendation made should include assumptions, evidence, risk controls, and fallback plans. This structured approach ensures that we are prepared for any uncertainties and can make informed decisions in music theory. Context recap: In our recap, we will highlight that each recommendation made should include assumptions, evidence, risk controls, and fallback plans. This structured approach ensures that we are prepared for any uncertainties and can make informed decisions in music theory."
+          "title": "Structuring a Defensible Analysis",
+          "content": "We will recap a pattern for presenting a case study analysis. Each recommendation or conclusion should be presented with its underlying assumptions, supporting evidence from the score or historical record, and an acknowledgment of alternative interpretations."
         }
       ]
     },
     {
       "id": "music-theory-601-l05",
-      "title": "Music Theory Simulation Clinic",
+      "title": "Composition and Performance Simulation",
       "type": "interactive",
       "duration": 18,
       "learningAids": [
         {
           "id": "music-theory-601-l05-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "interactive_tool",
+          "title": "Orchestration Balancer",
+          "content": "A visual interface simulating an orchestra where students can adjust instrumentation to hear the effect on balance, timbre, and texture."
         }
       ],
       "chunks": [
         {
           "id": "music-theory-601-l05-c1",
           "kind": "practice",
-          "title": "Live Scenario Controls",
-          "content": "In this interactive practice, learners will operate scenario controls while balancing performance and governance constraints. This means you will learn how to manage different aspects of a project simultaneously, which is a vital skill in music theory and beyond.\nContext recap: In this interactive practice, learners will operate scenario controls while balancing performance and governance constraints. This means you will learn how to manage different aspects of a project simultaneously, which is a vital skill in music theory and beyond.\nContext recap: In this interactive practice, learners will operate scenario controls while balancing performance and governance constraints. This means you will learn how to manage different aspects of a project simultaneously, which is a vital skill in music theory and beyond. Context recap: In this interactive practice, learners will operate scenario controls while balancing performance and governance constraints. This means you will learn how to manage different aspects of a project simultaneously, which is a vital skill in music theory and beyond."
+          "title": "Interactive Decision-Making",
+          "content": "In this interactive simulation, you will take on the role of a composer, conductor, or producer. You will make real-time artistic and logistical decisions while balancing competing constraints like budget, timeline, and artistic vision, learning to manage resources effectively."
         },
         {
           "id": "music-theory-601-l05-c2",
           "kind": "recap",
-          "title": "Adaptive Response Design",
-          "content": "In our recap, we will discuss how effective responses should update control gates while maintaining traceability and accountability. This ensures that all changes are documented and that we can track our decisions over time, which is essential for transparency in music theory.\nContext recap: In our recap, we will discuss how effective responses should update control gates while maintaining traceability and accountability. This ensures that all changes are documented and that we can track our decisions over time, which is essential for transparency in music theory.\nContext recap: In our recap, we will discuss how effective responses should update control gates while maintaining traceability and accountability. This ensures that all changes are documented and that we can track our decisions over time, which is essential for transparency in music theory. Context recap: In our recap, we will discuss how effective responses should update control gates while maintaining traceability and accountability. This ensures that all changes are documented and that we can track our decisions over time, which is essential for transparency in music theory."
+          "title": "Adapting Strategies Under Pressure",
+          "content": "Our recap will focus on how to adapt your strategy when a simulation reveals unexpected problems. Effective responses involve updating your plan while maintaining clear communication and accountability for the changes."
         }
       ],
       "interactiveActivities": [
         {
           "id": "music-theory-601-l05-act1",
           "type": "scenario",
-          "title": "Adverse-Condition Decision Run",
-          "description": "Run a high-pressure music theory scenario and tune controls under uncertainty."
+          "title": "Conducting a Virtual Orchestra",
+          "description": "Lead a simulated orchestra through a difficult passage, making real-time adjustments to tempo, dynamics, and section balance to achieve a target interpretation under pressure."
         }
       ]
     },
     {
       "id": "music-theory-601-l06",
-      "title": "Checkpoint 2: Case and Simulation Mastery",
+      "title": "Checkpoint 2: Application and Strategy",
       "type": "quiz",
       "duration": 11,
       "learningAids": [
         {
           "id": "music-theory-601-l06-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "summary_sheet",
+          "title": "Case Study and Simulation Review",
+          "content": "A one-page summary of key takeaways from the case study and simulation lessons, focusing on tradeoff analysis and adaptive strategy."
         }
       ],
       "questions": [
         {
           "id": "music-theory-601-l06-q1",
-          "text": "In advanced casework, the first requirement for defensible recommendations is:",
+          "text": "In advanced case work, the first requirement for a defensible recommendation is:",
           "skillId": "music-theory-601-skill-case1",
           "options": [
             {
               "id": "a",
-              "text": "A preferred option without explicit assumptions"
+              "text": "A preferred option without explicit assumptions."
             },
             {
               "id": "b",
-              "text": "A clear baseline, explicit constraints, and success criteria"
+              "text": "A clear baseline for comparison, explicit constraints, and success criteria."
             },
             {
               "id": "c",
-              "text": "High confidence without evidence logs"
+              "text": "High confidence without evidence from the score or historical context."
             },
             {
               "id": "d",
-              "text": "Single-metric optimization only"
+              "text": "Optimization based on a single metric, such as technical difficulty."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible recommendations begin with explicit assumptions, constraints, and measurable targets."
+          "explanation": "Defensible recommendations begin with an explicit baseline, constraints, and measurable targets for comparison."
         },
         {
           "id": "music-theory-601-l06-q2",
-          "text": "A resilient strategy for music operations and execution design should include:",
+          "text": "A resilient strategy for a complex musical project should include:",
           "skillId": "music-theory-601-skill-case2",
           "options": [
             {
               "id": "a",
-              "text": "Checkpointed execution with fallback and escalation criteria"
+              "text": "A project plan with checkpoints, fallback options, and clear escalation criteria."
             },
             {
               "id": "b",
-              "text": "One-way execution with no rollback capability"
+              "text": "A single, unchangeable plan with no contingency for problems."
             },
             {
               "id": "c",
-              "text": "No ownership mapping across teams"
+              "text": "No clear assignment of roles or responsibilities."
             },
             {
               "id": "d",
-              "text": "Hidden assumptions and undocumented decisions"
+              "text": "Hidden assumptions and undocumented decisions."
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Resilience depends on checkpoints, fallback options, and explicit escalation design."
+          "explanation": "Resilience in project execution depends on checkpoints, fallback options, and explicit design for handling problems."
         },
         {
           "id": "music-theory-601-l06-q3",
-          "text": "When evaluating music impact and tradeoff analysis, which method is most rigorous?",
+          "text": "When evaluating a composition's impact, which method is most rigorous?",
           "skillId": "music-theory-601-skill-case3",
           "options": [
             {
               "id": "a",
-              "text": "Single success story without controls"
+              "text": "A single success story without a control or comparison."
             },
             {
               "id": "b",
-              "text": "Comparative baselines plus side-effect and uncertainty analysis"
+              "text": "Comparative analysis against a baseline, plus consideration of side effects and uncertainty."
             },
             {
               "id": "c",
-              "text": "Outcome-only narrative without process evidence"
+              "text": "An outcome-only narrative without evidence of the creative process."
             },
             {
               "id": "d",
-              "text": "Retrospective scope changes to fit outcomes"
+              "text": "Changing the definition of success to fit the outcome."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Rigorous evaluation requires comparisons, side-effect analysis, and uncertainty disclosure."
+          "explanation": "Rigorous evaluation requires comparisons, analysis of unintended consequences, and disclosure of uncertainty."
         },
         {
           "id": "music-theory-601-l06-q4",
-          "text": "Advanced governance is strongest when it:",
+          "text": "Advanced artistic governance is strongest when it:",
           "skillId": "music-theory-601-skill-case4",
           "options": [
             {
               "id": "a",
-              "text": "Aligns authority, measurement, and remediation obligations"
+              "text": "Aligns artistic authority, measurable processes, and obligations for remediation."
             },
             {
               "id": "b",
-              "text": "Separates policy from operational controls"
+              "text": "Separates artistic policy from the operational realities of rehearsal and performance."
             },
             {
               "id": "c",
-              "text": "Avoids external review and transparency"
+              "text": "Avoids external review and transparency."
             },
             {
               "id": "d",
-              "text": "Treats accountability as optional under pressure"
+              "text": "Treats accountability as optional under pressure."
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Mature governance links authority, measurable controls, and corrective action."
-        },
-        {
-          "id": "music-theory-601-l06-q5",
-          "text": "What is the best way to compare competing interventions in advanced Music?",
-          "skillId": "music-theory-601-skill-advanced-5",
-          "options": [
-            {
-              "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
-            },
-            {
-              "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
-            },
-            {
-              "id": "c",
-              "text": "Switch metrics after results arrive"
-            },
-            {
-              "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
-        },
-        {
-          "id": "music-theory-601-l06-q6",
-          "text": "In high-stakes Music Theory Research and Leadership execution, which communication protocol is strongest?",
-          "skillId": "music-theory-601-skill-advanced-6",
-          "options": [
-            {
-              "id": "a",
-              "text": "Broadcast conclusions without assumptions"
-            },
-            {
-              "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
-            },
-            {
-              "id": "c",
-              "text": "Share only final outcomes after completion"
-            },
-            {
-              "id": "d",
-              "text": "Limit updates to a single informal channel"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
-        },
-        {
-          "id": "music-theory-601-l06-q7",
-          "text": "A mature remediation loop in advanced Music should prioritize:",
-          "skillId": "music-theory-601-skill-advanced-7",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blame assignment without system updates"
-            },
-            {
-              "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
-            },
-            {
-              "id": "c",
-              "text": "One-time fixes without retesting"
-            },
-            {
-              "id": "d",
-              "text": "Issue closure based on elapsed time"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
-        },
-        {
-          "id": "music-theory-601-l06-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Music Theory Research and Leadership?",
-          "skillId": "music-theory-601-skill-advanced-8",
-          "options": [
-            {
-              "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
-            },
-            {
-              "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
-            },
-            {
-              "id": "c",
-              "text": "Ignore correlated failure modes"
-            },
-            {
-              "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "explanation": "Mature governance links authority, measurable controls, and corrective action into a coherent system."
         }
       ]
     },
     {
       "id": "music-theory-601-l07",
-      "title": "Music Theory Governance and Public Impact",
+      "title": "Leadership, Ethics, and Public Impact in Music",
       "type": "video",
       "duration": 13,
       "learningAids": [
         {
           "id": "music-theory-601-l07-a1",
-          "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "checklist",
+          "title": "Ethical Leadership Checklist for Musicians",
+          "content": "A checklist for evaluating the ethical implications of musical projects, considering artists, audiences, and cultural context."
         }
       ],
       "chunks": [
         {
           "id": "music-theory-601-l07-c1",
           "kind": "concept",
-          "title": "Stakeholder Impact Distribution",
-          "content": "In this lesson, learners will map out the benefits, burdens, and delayed effects that different decisions have on various stakeholder groups. This understanding is crucial for recognizing the broader impact of our actions in the field of music theory.\nContext recap: In this lesson, learners will map out the benefits, burdens, and delayed effects that different decisions have on various stakeholder groups. This understanding is crucial for recognizing the broader impact of our actions in the field of music theory.\nContext recap: In this lesson, learners will map out the benefits, burdens, and delayed effects that different decisions have on various stakeholder groups. This understanding is crucial for recognizing the broader impact of our actions in the field of music theory. Context recap: In this lesson, learners will map out the benefits, burdens, and delayed effects that different decisions have on various stakeholder groups. This understanding is crucial for recognizing the broader impact of our actions in the field of music theory."
+          "title": "Analyzing Impact on Stakeholders",
+          "content": "Learn to map the potential effects of musical decisions on all stakeholders. This includes analyzing the benefits and burdens for performers, composers, audiences, and the wider community, considering both immediate and long-term consequences."
         },
         {
           "id": "music-theory-601-l07-c2",
           "kind": "concept",
-          "title": "Accountability Architecture",
-          "content": "In this section, we will explore how to integrate decision traceability, review rights, and remediation obligations into our processes. This means we will ensure that everyone involved has a clear understanding of their roles and responsibilities, which is key to effective governance in music theory.\nContext recap: In this section, we will explore how to integrate decision traceability, review rights, and remediation obligations into our processes. This means we will ensure that everyone involved has a clear understanding of their roles and responsibilities, which is key to effective governance in music theory."
+          "title": "Frameworks for Artistic Accountability",
+          "content": "Explore how to build accountability into artistic processes. We will discuss methods for ensuring decision traceability, establishing rights of review for collaborators, and defining clear obligations for remediation when things go wrong."
         },
         {
           "id": "music-theory-601-l07-c3",
           "kind": "recap",
-          "title": "Responsible Leadership Checklist",
-          "content": "As we wrap up our lesson, we will present a detailed checklist that is specifically crafted to link essential outcomes with ethical considerations. This checklist is not just a list; it is a tool that will help us make sure we are following important policies and nurturing resilience in our leadership practices. By utilizing this checklist, you will have a valuable resource to reflect on your responsibilities as a leader in the exciting world of music theory. It will guide you in making thoughtful decisions and leading with integrity. This means that your actions can have a positive impact on your community and the broader music world. Remember, being a responsible leader is about more than just making decisions; it's about ensuring those decisions uplift others and contribute to a vibrant musical environment. Let's embrace this opportunity to lead with purpose and care, making a difference in the lives of those around us through our love for music.\nContext recap: As we wrap up our lesson, we will present a detailed checklist that is specifically crafted to link essential outcomes with ethical considerations. This checklist is not just a list; it is a tool that will help us make sure we are following important policies and nurturing resilience in our leadership practices. By utilizing this checklist, you will have a valuable resource to reflect on your responsibilities as a leader in the exciting world of music theory. It will guide you in making thoughtful decisions and leading with integrity."
+          "title": "Principles of Responsible Musical Leadership",
+          "content": "We will conclude with a checklist for responsible leadership that links artistic outcomes with ethical considerations. This tool is designed to ensure adherence to institutional policies and to foster resilience, integrity, and a positive impact in your artistic practice."
         }
       ],
       "flashcards": [
         {
           "id": "music-theory-601-l07-f1",
-          "front": "Impact distribution",
-          "back": "How outcomes are allocated across populations and timescales."
+          "front": "Stakeholder Impact",
+          "back": "How the outcomes of an artistic project are distributed across different groups and over time."
         },
         {
           "id": "music-theory-601-l07-f2",
-          "front": "Decision traceability",
-          "back": "An auditable record of evidence, ownership, and rationale."
+          "front": "Decision Traceability",
+          "back": "An auditable record of the evidence, ownership, and rationale behind a key artistic or operational decision."
         },
         {
           "id": "music-theory-601-l07-f3",
-          "front": "Responsible leadership",
-          "back": "Decision behavior balancing performance, accountability, and ethics."
+          "front": "Responsible Leadership",
+          "back": "Decision-making that balances artistic performance, accountability to stakeholders, and ethical principles."
         }
       ]
     },
     {
       "id": "music-theory-601-l08",
-      "title": "Music Theory Capstone Defense Lab",
+      "title": "Capstone Project: Research Defense",
       "type": "interactive",
       "duration": 16,
       "learningAids": [
         {
           "id": "music-theory-601-l08-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "template",
+          "title": "Research Defense Presentation Template",
+          "content": "A slide deck template outlining the key components of a research defense: thesis, methodology, evidence, conclusions, and areas for future research."
         }
       ],
       "chunks": [
         {
           "id": "music-theory-601-l08-c1",
           "kind": "practice",
-          "title": "Defense Brief Assembly",
-          "content": "In this engaging activity, you will collaborate with your peers to create a comprehensive brief that clearly outlines your main claims regarding your music theory project. You will provide supporting evidence that backs up your claims, identify areas of uncertainty where questions may arise, and suggest possible solutions to any challenges you might face during your presentation. This exercise is designed to enhance your critical thinking skills, which are essential for analyzing complex issues in music theory. Additionally, it will prepare you to present your ideas in a clear and persuasive manner, helping you to communicate effectively with your audience. By practicing this skill, you will become more confident in sharing your insights and advocating for your perspectives in the field of music theory. This collaborative effort not only fosters teamwork but also encourages you to think deeply about your subject matter, ensuring that you are well-prepared for your capstone defense. Remember, the ability to articulate your thoughts clearly is a vital skill that will serve you well in your academic and professional journey in music.\nContext recap: In this engaging activity, you will collaborate with your peers to create a comprehensive brief that clearly outlines your main claims regarding your music theory project. You will provide supporting evidence that backs up your claims, identify areas of uncertainty where questions may arise, and suggest possible solutions to any challenges you might face during your presentation. This exercise is designed to enhance your critical thinking skills, which are essential for analyzing complex issues in music theory. Additionally, it will prepare you to present your ideas in a clear and persuasive manner, helping you to communicate effectively with your audience."
+          "title": "Constructing Your Research Argument",
+          "content": "In this collaborative lab, you will assemble a defense brief for your capstone project. This involves clearly stating your central claims, organizing your supporting evidence, identifying areas of uncertainty, and proposing responses to potential challenges. This exercise will sharpen your critical thinking and persuasive communication skills."
         },
         {
           "id": "music-theory-601-l08-c2",
           "kind": "recap",
-          "title": "Expert Panel Rehearsal",
-          "content": "During this valuable practice session, you will have the chance to rehearse your responses to questions and feedback from a panel of experts. This panel will focus on various aspects, including technical details, governance issues, and concerns raised by stakeholders. Engaging in this rehearsal will not only help you gain confidence but also improve your ability to communicate your ideas clearly and effectively. By preparing in this way, you will be better equipped to handle real-life discussions and presentations, ensuring that your voice is heard and respected in the field of music theory. This experience is crucial as it allows you to refine your thoughts and articulate them in a way that resonates with your audience. Remember, effective communication is key to sharing your passion for music theory and making a positive impact in your community. So, take this opportunity seriously, and let your enthusiasm shine through as you practice your responses!\nContext recap: During this valuable practice session, you will have the chance to rehearse your responses to questions and feedback from a panel of experts. This panel will focus on various aspects, including technical details, governance issues, and concerns raised by stakeholders. Engaging in this rehearsal will not only help you gain confidence but also improve your ability to communicate your ideas clearly and effectively. By preparing in this way, you will be better equipped to handle real-life discussions and presentations, ensuring that your voice is heard and respected in the field of music theory.\nWhy this matters: Expert Panel Rehearsal helps learners in Music connect ideas from Music Theory Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "Mock Defense Panel",
+          "content": "During this practice session, you will rehearse your capstone defense in front of a peer panel. This is an opportunity to practice responding to critical questions about your technical analysis, artistic choices, and ethical considerations, helping you build confidence and refine your presentation."
         }
       ],
       "interactiveActivities": [
         {
           "id": "music-theory-601-l08-act1",
           "type": "debate_simulator",
-          "title": "Expert Defense Panel",
-          "description": "Defend specialization recommendations under adversarial cross-examination."
+          "title": "Simulated Thesis Defense",
+          "description": "Present your capstone research proposal to an AI-driven expert panel that asks critical questions about your methodology, evidence, and conclusions."
+        }
+      ]
+    },
+    {
+      "id": "music-theory-601-l09",
+      "title": "Checkpoint 3: Leadership and Synthesis",
+      "type": "quiz",
+      "duration": 12,
+      "learningAids": [
+        {
+          "id": "music-theory-601-l09-a1",
+          "type": "summary_sheet",
+          "title": "Key Concepts Review",
+          "content": "A one-page summary of the core principles from the module, from analytical frameworks to ethical leadership and research defense."
+        }
+      ],
+      "questions": [
+        {
+          "id": "music-theory-601-l09-q1",
+          "text": "What is the primary goal of a stakeholder impact analysis in a musical context?",
+          "skillId": "music-theory-601-skill-governance",
+          "options": [
+            {
+              "id": "a",
+              "text": "To maximize ticket sales regardless of artistic or community impact."
+            },
+            {
+              "id": "b",
+              "text": "To understand the distribution of benefits and burdens across artists, audiences, and the community."
+            },
+            {
+              "id": "c",
+              "text": "To focus exclusively on the experience of the composer."
+            },
+            {
+              "id": "d",
+              "text": "To prove that a project has no negative consequences."
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "A stakeholder analysis aims to create a comprehensive and ethical understanding of a project's effects on all involved parties."
+        },
+        {
+          "id": "music-theory-601-l09-q2",
+          "text": "In a capstone defense, what is the most effective way to handle a question about a weakness in your research?",
+          "skillId": "music-theory-601-skill-defense",
+          "options": [
+            {
+              "id": "a",
+              "text": "Deny that any weakness exists."
+            },
+            {
+              "id": "b",
+              "text": "Acknowledge the limitation, explain its impact, and suggest areas for future research to address it."
+            },
+            {
+              "id": "c",
+              "text": "Criticize the questioner's expertise."
+            },
+            {
+              "id": "d",
+              "text": "Change the subject to a stronger part of your argument."
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Acknowledging limitations demonstrates intellectual honesty and a mature understanding of the research process."
+        },
+        {
+          "id": "music-theory-601-l09-q3",
+          "text": "Responsible artistic leadership primarily involves balancing artistic vision with:",
+          "skillId": "music-theory-601-skill-leadership",
+          "options": [
+            {
+              "id": "a",
+              "text": "Personal preference and convenience."
+            },
+            {
+              "id": "b",
+              "text": "Ethical responsibilities, stakeholder accountability, and resource management."
+            },
+            {
+              "id": "c",
+              "text": "The desire for positive reviews above all else."
+            },
+            {
+              "id": "d",
+              "text": "Maintaining the status quo without innovation."
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Effective leadership requires integrating artistic goals with ethical, social, and practical obligations."
+        },
+        {
+          "id": "music-theory-601-l09-q4",
+          "text": "What does 'decision traceability' mean in the context of leading a musical ensemble?",
+          "skillId": "music-theory-601-skill-governance",
+          "options": [
+            {
+              "id": "a",
+              "text": "Making all decisions verbally with no written record."
+            },
+            {
+              "id": "b",
+              "text": "Keeping a clear, auditable record of why key interpretive or personnel decisions were made."
+            },
+            {
+              "id": "c",
+              "text": "Ensuring no one can question the leader's decisions."
+            },
+            {
+              "id": "d",
+              "text": "Forgetting past decisions to focus only on the future."
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Traceability ensures transparency and accountability by documenting the rationale and evidence behind important choices."
         }
       ]
     }

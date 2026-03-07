@@ -1,109 +1,154 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const Math301Module: LearningModule = {
+export const math_301_Module: LearningModule = {
   "id": "math-301",
-  "title": "Functions, Modeling, and Advanced Algebra III",
-  "description": "Advanced mathematics curriculum on function families, quadratic behavior, exponential and logarithmic reasoning, and model evaluation under constraints.",
+  "title": "Functions, Modeling, and Advanced Algebra",
+  "description": "An advanced mathematics curriculum focused on analyzing function families, modeling real-world phenomena with quadratic and exponential functions, and evaluating models under constraints.",
   "subject": "Math",
   "tags": [
     "core",
     "curriculum",
     "interactive",
     "functions",
-    "modeling"
+    "modeling",
+    "algebra"
   ],
   "minAge": 14,
   "maxAge": 18,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en"
   ],
   "learningObjectives": [
-    "Analyze and compare linear, quadratic, and exponential function behavior",
-    "Interpret function parameters in contextual models",
-    "Solve polynomial and exponential equations with structured methods",
-    "Use transformations to predict graph behavior",
-    "Evaluate model fit and limitations against real datasets",
-    "Construct defensible mathematical arguments from symbolic and graphical evidence"
+    "Analyze and compare linear, quadratic, and exponential function behavior.",
+    "Interpret function parameters in contextual models.",
+    "Solve polynomial and exponential equations with structured methods.",
+    "Use transformations to predict graph behavior.",
+    "Evaluate model fit and limitations against real datasets.",
+    "Construct defensible mathematical arguments from symbolic and graphical evidence."
+  ],
+  "skills": [
+    {
+      "id": "math-301-skill-functions",
+      "description": "Understanding and applying function transformations and properties."
+    },
+    {
+      "id": "math-301-skill-quadratics",
+      "description": "Analyzing quadratic functions in various forms."
+    },
+    {
+      "id": "math-301-skill-modeling",
+      "description": "Evaluating and interpreting mathematical models."
+    },
+    {
+      "id": "math-301-skill-growth",
+      "description": "Modeling with exponential and logarithmic functions."
+    }
   ],
   "lessons": [
     {
       "id": "math-301-l01",
-      "title": "Function Thinking and Transformations",
+      "title": "Introduction to Function Families and Transformations",
       "type": "video",
       "duration": 14,
+      "learningObjectiveIds": [
+        "Analyze and compare linear, quadratic, and exponential function behavior",
+        "Interpret function parameters in contextual models",
+        "Use transformations to predict graph behavior"
+      ],
       "learningAids": [
         {
           "id": "math-301-l01-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Apply the lesson process and record your reasoning steps."
+          "title": "Guided Practice Worksheet",
+          "content": "Worksheet with parent functions (linear, quadratic, exponential) and prompts to apply and describe transformations (e.g., f(x) -> f(x+2) - 3)."
         }
       ],
       "chunks": [
         {
           "id": "math-301-l01-c1",
           "kind": "concept",
-          "title": "Functions as Mappings",
-          "content": "Functions are like special rules that connect inputs to outputs. When we think about functions, we need to understand how these connections work and what limits we have on the inputs we can use. By learning about how these mappings behave, we can make predictions and understand what the outputs will be based on different inputs. This helps us in many areas of math and real-life situations.\nContext recap: Functions are like special rules that connect inputs to outputs. When we think about functions, we need to understand how these connections work and what limits we have on the inputs we can use. By learning about how these mappings behave, we can make predictions and understand what the outputs will be based on different inputs. This helps us in many areas of math and real-life situations."
+          "title": "What is a Function?",
+          "content": "A function is a rule that assigns exactly one output to each input. We'll explore the concepts of domain (valid inputs) and range (possible outputs) which define a function's boundaries.",
+          "visualPrompts": [
+            "A 'function machine' diagram showing an input (x) going in, a rule (f(x)) being applied, and an output (y) coming out.",
+            "Side-by-side graphs of a relation that is a function and one that is not (fails the vertical line test)."
+          ]
         },
         {
           "id": "math-301-l01-c2",
           "kind": "concept",
-          "title": "Transformation Language",
-          "content": "In mathematics, we use specific terms to describe how graphs change. These terms include shifts, stretches, compressions, and reflections. By using this language, we can easily understand how a graph looks without having to go through the entire process of rewriting the equations. This makes it simpler to analyze and interpret the variations in graphs.\nContext recap: In mathematics, we use specific terms to describe how graphs change. These terms include shifts, stretches, compressions, and reflections. By using this language, we can easily understand how a graph looks without having to go through the entire process of rewriting the equations. This makes it simpler to analyze and interpret the variations in graphs."
+          "title": "The Language of Transformations",
+          "content": "We can change a function's graph using transformations. Key moves include shifts (sliding), stretches/compressions (resizing), and reflections (flipping). Understanding these helps predict a graph's appearance from its equation.",
+          "visualPrompts": [
+            "Animation of a parabola f(x) = x^2 transforming to g(x) = a(x-h)^2 + k, showing each parameter's effect one by one."
+          ]
         },
         {
           "id": "math-301-l01-c3",
           "kind": "recap",
-          "title": "Contextual Interpretation",
-          "content": "When we talk about parameters in mathematical models, it's important to remember that their meaning depends on the context of the model. We must interpret these parameters in a way that makes sense with the units we are using and the real-world situations we are trying to describe. This ensures that our understanding aligns with what we observe in reality.\nContext recap: When we talk about parameters in mathematical models, it's important to remember that their meaning depends on the context of the model. We must interpret these parameters in a way that makes sense with the units we are using and the real-world situations we are trying to describe. This ensures that our understanding aligns with what we observe in reality."
+          "title": "Interpreting Parameters in Context",
+          "content": "In a real-world model, the numbers in a function's equation (parameters) have specific meanings. We must always interpret them with units to understand what they represent, like a starting amount or a rate of change.",
+          "visualPrompts": [
+            "A graph of a linear cost function C(t) = 50t + 200, with the y-intercept (200) labeled as 'Initial Fee' and the slope (50) labeled as 'Hourly Rate'."
+          ]
         }
       ],
       "flashcards": [
         {
           "id": "math-301-l01-f1",
           "front": "Domain",
-          "back": "Set of allowed input values for a function."
+          "back": "The set of all possible input values (x-values) for a function."
         },
         {
           "id": "math-301-l01-f2",
           "front": "Range",
-          "back": "Set of output values produced by a function."
+          "back": "The set of all possible output values (y-values) produced by a function."
         },
         {
           "id": "math-301-l01-f3",
           "front": "Transformation",
-          "back": "Graph modification such as shift, scale, or reflection."
+          "back": "A change to a function's graph, such as a shift, stretch, compression, or reflection."
         }
       ]
     },
     {
       "id": "math-301-l02",
-      "title": "Quadratic Models and Structural Features Lab",
+      "title": "Exploring Quadratic Functions",
       "type": "interactive",
       "duration": 16,
+      "learningObjectiveIds": [
+        "Analyze and compare linear, quadratic, and exponential function behavior",
+        "Interpret function parameters in contextual models",
+        "Solve polynomial and exponential equations with structured methods"
+      ],
       "learningAids": [
         {
           "id": "math-301-l02-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Apply the lesson process and record your reasoning steps."
+          "title": "Interactive Graphing Tool",
+          "content": "Use a graphing tool to adjust parameters in vertex, standard, and factored forms and observe the changes to the parabola."
         }
       ],
       "chunks": [
         {
           "id": "math-301-l02-c1",
           "kind": "concept",
-          "title": "Vertex and Symmetry",
-          "content": "Quadratic functions have unique characteristics that we can identify, such as the turning point, which is the highest or lowest point on the graph, the axis of symmetry that divides the graph into two mirror-image halves, and the direction in which the graph curves. Understanding these features helps us analyze and graph quadratic functions effectively.\nContext recap: Quadratic functions have unique characteristics that we can identify, such as the turning point, which is the highest or lowest point on the graph, the axis of symmetry that divides the graph into two mirror-image halves, and the direction in which the graph curves. Understanding these features helps us analyze and graph quadratic functions effectively."
+          "title": "Key Features of a Parabola",
+          "content": "Every quadratic function graphs as a parabola. We can identify its key features: the vertex (the peak or valley), the axis of symmetry (the line that splits it in half), and its direction of opening (up or down).",
+          "visualPrompts": [
+            "A diagram of a parabola with its vertex, axis of symmetry, roots (x-intercepts), and y-intercept clearly labeled."
+          ]
         },
         {
           "id": "math-301-l02-c2",
           "kind": "practice",
-          "title": "Equivalent Forms",
-          "content": "Quadratic functions can be expressed in different forms, including standard, vertex, and factored forms. Each of these forms highlights different useful features of the same function. By learning to recognize and convert between these forms, we can better understand the properties of quadratic functions and how they behave.\nContext recap: Quadratic functions can be expressed in different forms, including standard, vertex, and factored forms. Each of these forms highlights different useful features of the same function. By learning to recognize and convert between these forms, we can better understand the properties of quadratic functions and how they behave."
+          "title": "The Three Forms of a Quadratic",
+          "content": "Quadratic functions can be written in standard, vertex, and factored form. Each form is useful because it immediately reveals different key features of the parabola, like its y-intercept, vertex, or roots.",
+          "visualPrompts": [
+            "A table comparing the three forms (Standard, Vertex, Factored) side-by-side, listing the key feature each form reveals most easily."
+          ]
         }
       ],
       "interactiveActivities": [
@@ -111,135 +156,138 @@ export const Math301Module: LearningModule = {
           "id": "math-301-l02-act1",
           "type": "matching_pairs",
           "title": "Form-to-Feature Match",
-          "description": "Match expression form to easiest extracted feature.",
+          "description": "Match each quadratic form to the key feature it reveals most directly.",
           "pairs": [
             {
-              "left": "a(x-h)^2 + k",
+              "left": "Vertex Form: a(x-h)² + k",
               "right": "Vertex"
             },
             {
-              "left": "ax^2 + bx + c",
+              "left": "Standard Form: ax² + bx + c",
               "right": "Y-intercept"
             },
             {
-              "left": "a(x-r1)(x-r2)",
+              "left": "Factored Form: a(x-r₁)(x-r₂)",
               "right": "Roots / x-intercepts"
-            },
-            {
-              "left": "Axis x = h",
-              "right": "Symmetry line"
             }
           ]
         },
         {
           "id": "math-301-l02-act2",
           "type": "scenario_practice",
-          "title": "Trajectory Model Drill",
-          "description": "Interpret a quadratic model for motion data.",
+          "title": "Projectile Motion Model",
+          "description": "Given a quadratic model for a thrown ball's height over time, analyze its trajectory.",
           "instructions": [
-            "Identify peak and time at peak.",
-            "State one realistic model limitation."
+            "Find the ball's maximum height and the time it takes to reach it.",
+            "Determine how long the ball is in the air.",
+            "State one limitation of this model in a real-world scenario (e.g., air resistance is ignored)."
           ]
         }
       ]
     },
     {
       "id": "math-301-l03",
-      "title": "Checkpoint 1: Functions and Quadratics",
+      "title": "Checkpoint: Functions and Quadratics",
       "type": "quiz",
       "duration": 10,
+      "learningObjectiveIds": [
+        "Analyze and compare linear, quadratic, and exponential function behavior",
+        "Interpret function parameters in contextual models",
+        "Use transformations to predict graph behavior",
+        "Solve polynomial and exponential equations with structured methods"
+      ],
       "learningAids": [
         {
           "id": "math-301-l03-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Apply the lesson process and record your reasoning steps."
+          "title": "Review Sheet",
+          "content": "Review sheet summarizing key concepts: function definitions, transformation rules (shifts, stretches, reflections), and the three forms of quadratic equations."
         }
       ],
       "questions": [
         {
           "id": "math-301-l03-q1",
-          "text": "Why is vertex form useful?",
-          "skillId": "math-301-skill-functions",
-          "options": [
-            {
-              "id": "a",
-              "text": "It hides key features"
-            },
-            {
-              "id": "b",
-              "text": "It gives turning point directly"
-            },
-            {
-              "id": "c",
-              "text": "It removes symmetry"
-            },
-            {
-              "id": "d",
-              "text": "It prevents graphing"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Vertex form exposes the maximum or minimum coordinate immediately."
-        },
-        {
-          "id": "math-301-l03-q2",
-          "text": "A positive leading coefficient in a quadratic means:",
+          "text": "Why is vertex form, a(x-h)² + k, particularly useful for analyzing a quadratic function?",
           "skillId": "math-301-skill-quadratics",
           "options": [
             {
               "id": "a",
-              "text": "Parabola opens downward"
+              "text": "It directly shows the y-intercept."
             },
             {
               "id": "b",
-              "text": "Parabola opens upward"
+              "text": "It directly shows the coordinates of the turning point (vertex)."
             },
             {
               "id": "c",
-              "text": "No vertex"
+              "text": "It directly shows the x-intercepts (roots)."
             },
             {
               "id": "d",
-              "text": "No real outputs"
+              "text": "It is the only form that can be graphed."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Positive leading coefficient yields upward concavity."
+          "explanation": "Vertex form, a(x-h)² + k, is named for its primary advantage: the vertex coordinates (h, k) are immediately visible."
+        },
+        {
+          "id": "math-301-l03-q2",
+          "text": "A positive leading coefficient 'a' in a standard form quadratic (ax² + bx + c) indicates that the parabola:",
+          "skillId": "math-301-skill-quadratics",
+          "options": [
+            {
+              "id": "a",
+              "text": "Opens downward"
+            },
+            {
+              "id": "b",
+              "text": "Opens upward"
+            },
+            {
+              "id": "c",
+              "text": "Has no vertex"
+            },
+            {
+              "id": "d",
+              "text": "Is a straight line"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "A positive leading coefficient 'a' means the parabola opens upward, resulting in a minimum value at the vertex."
         },
         {
           "id": "math-301-l03-q3",
-          "text": "Most defensible function interpretation includes:",
+          "text": "A complete interpretation of a function parameter in a real-world model must include:",
           "skillId": "math-301-skill-modeling",
           "options": [
             {
               "id": "a",
-              "text": "Equation only"
+              "text": "The equation only"
             },
             {
               "id": "b",
-              "text": "Parameter meaning with units and assumptions"
+              "text": "The parameter's meaning, its value, its units, and any assumptions."
             },
             {
               "id": "c",
-              "text": "Graph shape only"
+              "text": "The shape of the graph only"
             },
             {
               "id": "d",
-              "text": "No domain statement"
+              "text": "A list of all possible outputs"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Context and units are needed for meaningful interpretation."
+          "explanation": "For a meaningful interpretation, you must connect the parameter's numerical value to its real-world context, including units and underlying assumptions."
         },
         {
           "id": "math-301-l03-q4",
-          "text": "Factored form is most directly useful for identifying:",
+          "text": "Factored form, a(x-r₁)(x-r₂), is most directly useful for identifying a parabola's:",
           "skillId": "math-301-skill-quadratics",
           "options": [
             {
               "id": "a",
-              "text": "Y-intercept only"
+              "text": "Y-intercept"
             },
             {
               "id": "b",
@@ -247,94 +295,120 @@ export const Math301Module: LearningModule = {
             },
             {
               "id": "c",
-              "text": "Domain restrictions"
+              "text": "Vertex"
             },
             {
               "id": "d",
-              "text": "Rate of change constant"
+              "text": "Axis of symmetry"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Factored form exposes zero-value inputs."
+          "explanation": "The values r₁ and r₂ in factored form directly correspond to the x-intercepts, where the function's output is zero."
         }
       ]
     },
     {
       "id": "math-301-l04",
-      "title": "Exponential, Logarithmic, and Growth Reasoning",
+      "title": "Exponential and Logarithmic Functions",
       "type": "video",
       "duration": 14,
+      "learningObjectiveIds": [
+        "Analyze and compare linear, quadratic, and exponential function behavior",
+        "Solve polynomial and exponential equations with structured methods",
+        "Construct defensible mathematical arguments from symbolic and graphical evidence"
+      ],
       "learningAids": [
         {
           "id": "math-301-l04-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Apply the lesson process and record your reasoning steps."
+          "title": "Growth Pattern Comparison",
+          "content": "A table comparing linear, quadratic, and exponential growth patterns using numerical examples and graphs to highlight their differences."
         }
       ],
       "chunks": [
         {
           "id": "math-301-l04-c1",
           "kind": "concept",
-          "title": "Growth and Decay Dynamics",
-          "content": "Exponential models are special because they show how things grow or shrink at a rate that multiplies over equal intervals of time. This is different from linear models, which add the same amount over time. Understanding this difference helps us analyze situations like population growth or radioactive decay more accurately.\nContext recap: Exponential models are special because they show how things grow or shrink at a rate that multiplies over equal intervals of time. This is different from linear models, which add the same amount over time. Understanding this difference helps us analyze situations like population growth or radioactive decay more accurately."
+          "title": "Multiplicative Change: Growth and Decay",
+          "content": "Exponential functions model situations where a quantity changes by a constant multiplicative factor over equal intervals. This is different from linear functions, which change by a constant additive amount.",
+          "visualPrompts": [
+            "A split-screen graph comparing linear growth (a straight line) with exponential growth (a J-shaped curve).",
+            "An animation showing a population doubling each year versus a population growing by 100 each year."
+          ]
         },
         {
           "id": "math-301-l04-c2",
           "kind": "concept",
-          "title": "Logarithms as Inverse Tools",
-          "content": "Logarithms are powerful tools in mathematics because they help us reverse exponential relationships. When we encounter problems where we need to find unknown exponents, logarithms allow us to solve these equations effectively. This makes them very useful in various applied math scenarios.\nContext recap: Logarithms are powerful tools in mathematics because they help us reverse exponential relationships. When we encounter problems where we need to find unknown exponents, logarithms allow us to solve these equations effectively. This makes them very useful in various applied math scenarios."
+          "title": "Logarithms: The Inverse of Exponents",
+          "content": "Logarithms are the tool we use to solve for an unknown exponent. They 'undo' exponentiation, allowing us to answer questions like, 'How long will it take for an investment to double?'",
+          "visualPrompts": [
+            "A diagram showing the relationship: if b^x = y, then log_b(y) = x.",
+            "Graphs of y = 2^x and y = log₂(x) on the same axes, showing their reflection across the line y = x."
+          ]
         },
         {
           "id": "math-301-l04-c3",
           "kind": "recap",
-          "title": "Model Choice Discipline",
-          "content": "When choosing a mathematical model to represent data, it is important to base our decision on the patterns we observe in the data rather than personal preferences. This ensures that our model accurately reflects the underlying trends and can provide reliable predictions.\nContext recap: When choosing a mathematical model to represent data, it is important to base our decision on the patterns we observe in the data rather than personal preferences. This ensures that our model accurately reflects the underlying trends and can provide reliable predictions."
+          "title": "Choosing the Right Model",
+          "content": "When analyzing data, the pattern of change tells us which function family to use. Look at the differences or ratios between consecutive data points to decide if a linear, quadratic, or exponential model is the best fit.",
+          "visualPrompts": [
+            "A flowchart guiding the model selection process based on patterns in a data table (e.g., 'Are first differences constant? -> Linear')."
+          ]
         }
       ],
       "flashcards": [
         {
           "id": "math-301-l04-f1",
-          "front": "Exponential growth",
-          "back": "Change by constant factor per interval."
+          "front": "Exponential Growth",
+          "back": "Growth where the rate of change is proportional to the current quantity, resulting in a constant multiplication factor per interval."
         },
         {
           "id": "math-301-l04-f2",
-          "front": "Decay factor",
-          "back": "Multiplier between 0 and 1 reducing quantity each interval."
+          "front": "Decay Factor",
+          "back": "In an exponential model, the constant multiplier (between 0 and 1) that reduces the quantity in each time interval."
         },
         {
           "id": "math-301-l04-f3",
           "front": "Logarithm",
-          "back": "Inverse operation to exponentiation."
+          "back": "The inverse operation of exponentiation; it finds the exponent to which a base must be raised to produce a given number."
         }
       ]
     },
     {
       "id": "math-301-l05",
-      "title": "Model Fit and Assumption Testing Lab",
+      "title": "Building and Evaluating Models",
       "type": "interactive",
       "duration": 16,
+      "learningObjectiveIds": [
+        "Evaluate model fit and limitations against real datasets",
+        "Construct defensible mathematical arguments from symbolic and graphical evidence"
+      ],
       "learningAids": [
         {
           "id": "math-301-l05-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Apply the lesson process and record your reasoning steps."
+          "title": "Dataset Analysis Lab",
+          "content": "A sample dataset (e.g., world population over time) with instructions to fit different models (linear, exponential) and compare their residual plots."
         }
       ],
       "chunks": [
         {
           "id": "math-301-l05-c1",
           "kind": "practice",
-          "title": "Residual Thinking",
-          "content": "Residuals are the differences between the observed values and the values predicted by our model. By examining the patterns of these residuals, we can identify where our model assumptions might not hold true and where we may need to make adjustments or refinements to improve our model's accuracy.\nContext recap: Residuals are the differences between the observed values and the values predicted by our model. By examining the patterns of these residuals, we can identify where our model assumptions might not hold true and where we may need to make adjustments or refinements to improve our model's accuracy."
+          "title": "Analyzing Residuals",
+          "content": "A residual is the difference between an actual data point and the value predicted by our model. Plotting these residuals helps us see if our model is a good fit. A random scatter is good; a clear pattern suggests our model is missing something.",
+          "visualPrompts": [
+            "Side-by-side residual plots: one showing a random scatter (good fit) and one showing a U-shaped pattern (poor fit)."
+          ]
         },
         {
           "id": "math-301-l05-c2",
           "kind": "recap",
-          "title": "Predictive Limits",
-          "content": "When we make predictions based on our models, especially outside the range of our observed data, we need to be careful. This is called extrapolation, and it comes with uncertainties. It is essential to clearly state these uncertainties so that we understand the limitations of our predictions.\nContext recap: When we make predictions based on our models, especially outside the range of our observed data, we need to be careful. This is called extrapolation, and it comes with uncertainties. It is essential to clearly state these uncertainties so that we understand the limitations of our predictions."
+          "title": "The Danger of Extrapolation",
+          "content": "Extrapolation means making predictions outside the range of your original data. It can be unreliable because you are assuming the trend continues indefinitely. Always state the limitations and uncertainty when extrapolating.",
+          "visualPrompts": [
+            "A graph showing a data trend with a fitted line. The line is solid within the data range and becomes a dashed line outside of it, labeled 'Extrapolation Zone - High Uncertainty'."
+          ]
         }
       ],
       "interactiveActivities": [
@@ -342,7 +416,7 @@ export const Math301Module: LearningModule = {
           "id": "math-301-l05-act1",
           "type": "sorting_buckets",
           "title": "Model Family Sort",
-          "description": "Sort contexts by likely primary model type.",
+          "description": "Drag and drop real-world scenarios into the bucket of the function family that would best model them.",
           "buckets": [
             "Linear",
             "Quadratic",
@@ -350,19 +424,19 @@ export const Math301Module: LearningModule = {
           ],
           "items": [
             {
-              "text": "Constant monthly fee plus fixed add-on",
+              "text": "A phone bill with a constant monthly fee plus a fixed cost per gigabyte of data.",
               "bucket": "Linear"
             },
             {
-              "text": "Object height over time under gravity",
+              "text": "The height of an object thrown into the air over time, under the influence of gravity.",
               "bucket": "Quadratic"
             },
             {
-              "text": "Population doubling behavior",
+              "text": "A bacterial population that doubles in size every hour.",
               "bucket": "Exponential"
             },
             {
-              "text": "Simple constant speed distance",
+              "text": "The total distance traveled by a car moving at a constant speed.",
               "bucket": "Linear"
             }
           ]
@@ -370,57 +444,62 @@ export const Math301Module: LearningModule = {
         {
           "id": "math-301-l05-act2",
           "type": "scenario_practice",
-          "title": "Forecast Critique",
-          "description": "Evaluate a forecast and challenge one weak assumption.",
+          "title": "Critiquing a Business Forecast",
+          "description": "Analyze a business revenue forecast based on a mathematical model.",
           "instructions": [
-            "State one missing variable.",
-            "Suggest one validation data check."
+            "Identify one key assumption the model makes.",
+            "Suggest one way to test the model's validity (e.g., check against historical data)."
           ]
         }
       ]
     },
     {
       "id": "math-301-l06",
-      "title": "Checkpoint 2: Advanced Algebra and Modeling",
+      "title": "Checkpoint: Advanced Modeling",
       "type": "quiz",
       "duration": 11,
+      "learningObjectiveIds": [
+        "Evaluate model fit and limitations against real datasets",
+        "Construct defensible mathematical arguments from symbolic and graphical evidence",
+        "Interpret function parameters in contextual models"
+      ],
       "learningAids": [
         {
           "id": "math-301-l06-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Apply the lesson process and record your reasoning steps."
+          "title": "Concept Map Review",
+          "content": "A concept map connecting key terms: model, data, residual, extrapolation, assumption, linear, quadratic, exponential."
         }
       ],
       "questions": [
         {
           "id": "math-301-l06-q1",
-          "text": "Why examine residuals after fitting a model?",
+          "text": "What is the primary reason for examining a residual plot after fitting a model to data?",
           "skillId": "math-301-skill-modeling",
           "options": [
             {
               "id": "a",
-              "text": "To hide model error"
+              "text": "To confirm the model is perfect."
             },
             {
               "id": "b",
-              "text": "To detect pattern mismatches and assumption failure"
+              "text": "To detect systematic patterns that indicate the model is a poor fit."
             },
             {
               "id": "c",
-              "text": "To avoid recalibration"
+              "text": "To calculate the exact values of the original data."
             },
             {
               "id": "d",
-              "text": "To remove all uncertainty"
+              "text": "To eliminate all sources of error."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Residual structure signals missing dynamics or misfit."
+          "explanation": "A pattern in the residuals (e.g., a curve) indicates that the chosen model does not capture the underlying structure of the data."
         },
         {
           "id": "math-301-l06-q2",
-          "text": "A multiplicative growth pattern is best modeled first by:",
+          "text": "A quantity that changes by a constant multiplicative factor per unit of time is best modeled by which type of function?",
           "skillId": "math-301-skill-growth",
           "options": [
             {
@@ -433,65 +512,65 @@ export const Math301Module: LearningModule = {
             },
             {
               "id": "c",
-              "text": "Constant function"
+              "text": "Quadratic function"
             },
             {
               "id": "d",
-              "text": "Random choice"
+              "text": "Constant function"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Constant factor change aligns with exponential structure."
+          "explanation": "The defining characteristic of an exponential function is change by a constant ratio or factor over equal intervals."
         },
         {
           "id": "math-301-l06-q3",
-          "text": "Why state domain restrictions explicitly?",
+          "text": "Why is it critical to state a model's domain restrictions when applying it to a real-world problem?",
           "skillId": "math-301-skill-functions",
           "options": [
             {
               "id": "a",
-              "text": "To make model vague"
+              "text": "To make the model more complicated."
             },
             {
               "id": "b",
-              "text": "To prevent invalid interpretations outside context"
+              "text": "To prevent nonsensical interpretations outside the model's valid context (e.g., negative time)."
             },
             {
               "id": "c",
-              "text": "To remove outputs"
+              "text": "To ensure the range is always positive."
             },
             {
               "id": "d",
-              "text": "To avoid units"
+              "text": "To eliminate the need for units."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Domain keeps interpretation aligned with real context."
+          "explanation": "The domain defines the set of valid inputs. In a real-world context, this prevents applying the model to situations where it is not meaningful."
         },
         {
           "id": "math-301-l06-q4",
-          "text": "Best practice when extrapolating beyond observed data is:",
+          "text": "The best practice when extrapolating (predicting beyond the range of observed data) is to:",
           "skillId": "math-301-skill-modeling",
           "options": [
             {
               "id": "a",
-              "text": "Claim certainty"
+              "text": "Claim the prediction is certain to be accurate."
             },
             {
               "id": "b",
-              "text": "State uncertainty and assumption sensitivity"
+              "text": "Acknowledge the increased uncertainty and state the assumptions being made."
             },
             {
               "id": "c",
-              "text": "Ignore model limits"
+              "text": "Use a linear model regardless of the data's pattern."
             },
             {
               "id": "d",
-              "text": "Drop context entirely"
+              "text": "Ignore the model's limitations."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Extrapolation risk increases with distance from known data region."
+          "explanation": "Extrapolation is inherently risky because the observed trend may not continue. Responsible modeling requires acknowledging this uncertainty."
         }
       ]
     }

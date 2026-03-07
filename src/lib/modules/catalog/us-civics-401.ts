@@ -1,163 +1,171 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const UsCivics401Module: LearningModule = {
+export const us_civics_401_Module: LearningModule = {
   "id": "us-civics-401",
   "title": "U.S. Civics Mastery and Leadership",
-  "description": "Level 401 curriculum in U.S. Civics, emphasizing constitutional principles, institutional design, public policy, civic participation, and real-world decision quality through structured practice and assessment.",
+  "description": "An advanced curriculum in U.S. Civics, emphasizing constitutional principles, institutional processes, public policy analysis, and effective, real-world civic engagement through structured practice and assessment.",
   "subject": "Social Studies",
   "tags": [
     "civics",
     "government",
     "history",
-    "curriculum",
-    "interactive"
+    "public policy",
+    "leadership"
   ],
   "minAge": 16,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en",
     "es"
   ],
   "learningObjectives": [
-    "Develop rigorous mental models for constitutional principles and institutional design",
-    "Apply structured methods to plan, execute, and review public policy tasks",
-    "Interpret evidence using metrics, constraints, and context",
-    "Diagnose common failure modes and design recovery actions",
-    "Communicate tradeoffs clearly to technical and non-technical audiences",
-    "Build repeatable systems for sustained improvement in U.S. Civics"
+    "Develop sophisticated analytical frameworks for constitutional principles and institutional design.",
+    "Apply structured methods to plan, execute, and review public policy analysis.",
+    "Interpret historical and statistical evidence using metrics, constraints, and context.",
+    "Diagnose common governance failure modes and design effective remedies.",
+    "Communicate complex policy trade-offs clearly to diverse audiences.",
+    "Build repeatable systems for sustained improvement in civic analysis and participation."
   ],
   "lessons": [
     {
       "id": "us-civics-401-l01",
-      "title": "Core Models for U.S. Civics",
+      "title": "Foundational Concepts in U.S. Civics",
       "type": "video",
       "duration": 13,
       "learningAids": [
         {
           "id": "us-civics-401-l01-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use the structured prompt and write your reasoning before finalizing answers."
+          "title": "Conceptual Framework",
+          "content": "A tripartite flowchart illustrating the flow from Constitutional Principles (e.g., Federalism) to Institutional Design (e.g., Bicameralism), culminating in Policy Outcomes, with feedback loops representing judicial review and elections.",
+          "imageUrl": "https://example.com/images/conceptual_framework.png"
+        },
+        {
+          "id": "us-civics-401-l01-a2",
+          "type": "practice",
+          "title": "Guided Analysis",
+          "content": "Use the provided structured prompt to analyze a primary source document, such as a Federalist Paper, identifying its core thesis and underlying assumptions."
         }
       ],
       "chunks": [
         {
           "id": "us-civics-401-l01-c1",
           "kind": "concept",
-          "title": "Operating Vocabulary and Scope",
-          "content": "In U.S. Civics at the 401 level, using clear and precise language is very important. This involves defining the boundaries of our discussions, which helps us understand what topics we are focusing on. We also need to identify the main focus of our analysis, which is the specific aspect we are examining. Additionally, it is crucial that everyone uses the same terms when discussing these topics. By ensuring that we are all on the same page with our vocabulary, we can make better decisions and compare our findings across different teams more effectively. Understanding the vocabulary and scope not only helps us communicate more clearly but also allows us to work together more efficiently, leading to better outcomes in our civic discussions and analyses.\nContext recap: In U.S. Civics at the 401 level, using clear and precise language is very important. This involves defining the boundaries of our discussions, which helps us understand what topics we are focusing on. We also need to identify the main focus of our analysis, which is the specific aspect we are examining.\nWhy this matters: Operating Vocabulary and Scope helps learners in Social Studies connect ideas from U.S. Civics Mastery and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "Defining Scope and Vocabulary",
+          "content": "In advanced U.S. Civics, precision is paramount. This begins with clearly defining the scope of our inquiry and establishing a shared vocabulary. Terms like 'federalism,' 'judicial review,' and 'due process' have specific legal and historical parameters that shape political debates. By defining our unit of analysis—whether it is a specific statute, a landmark court case, or an executive agency—and utilizing precise language, we ensure our discussions are focused, coherent, and yield defensible conclusions."
         },
         {
           "id": "us-civics-401-l01-c2",
           "kind": "concept",
-          "title": "Causal Thinking and Constraints",
-          "content": "To truly excel in U.S. Civics, it is essential to grasp the reasons behind various events and decisions, rather than merely focusing on their outcomes. This lesson will guide you through the exploration of the assumptions we often make, the relationships between different factors, and the limitations we encounter in civic discussions. By mapping out these elements, we can direct our efforts toward addressing the root causes of civic issues instead of just treating the symptoms. This thoughtful approach not only encourages deeper understanding but also fosters more effective problem-solving skills, which are vital for active participation in our democracy.\nContext recap: To truly excel in U.S. Civics, it is essential to grasp the reasons behind various events and decisions, rather than merely focusing on their outcomes. This lesson will guide you through the exploration of the assumptions we often make, the relationships between different factors, and the limitations we encounter in civic discussions. By mapping out these elements, we can direct our efforts toward addressing the root causes of civic issues instead of just treating the symptoms.\nContext recap: To truly excel in U.S. Civics, it is essential to grasp the reasons behind various events and decisions, rather than merely focusing on their outcomes. This lesson will guide you through the exploration of the assumptions we often make, the relationships between different factors, and the limitations we encounter in civic discussions. By mapping out these elements, we can direct our efforts toward addressing the root causes of civic issues instead of just treating the symptoms.\nWhy this matters: Causal Thinking and Constraints helps learners in Social Studies connect ideas from U.S. Civics Mastery and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "Causal Reasoning and Constraints",
+          "content": "To comprehend why our government functions as it does, we must elevate our analysis from simple description to causal reasoning. This requires mapping the cause-and-effect relationships driving historical events and policy decisions. Crucially, we must also identify the constraints—constitutional boundaries, legal precedents, economic realities, and political dynamics—that limit the spectrum of possible actions. This methodology empowers us to target the root causes of civic challenges rather than merely addressing their symptoms."
         },
         {
           "id": "us-civics-401-l01-c3",
           "kind": "recap",
           "title": "Evidence and Accountability",
-          "content": "In this lesson, we introduce important practices that are essential for ensuring accountability and reliability in our work. We will discuss the standards for evidence, the importance of keeping detailed records, and the need for clear accountability measures. These practices are non-negotiable and help us maintain high standards in our execution of civic responsibilities. By adhering to these principles, we can ensure that our actions are well-informed and transparent.\nContext recap: In this lesson, we introduce important practices that are essential for ensuring accountability and reliability in our work. We will discuss the standards for evidence, the importance of keeping detailed records, and the need for clear accountability measures. These practices are non-negotiable and help us maintain high standards in our execution of civic responsibilities. By adhering to these principles, we can ensure that our actions are well-informed and transparent.\nContext recap: In this lesson, we introduce important practices that are essential for ensuring accountability and reliability in our work. We will discuss the standards for evidence, the importance of keeping detailed records, and the need for clear accountability measures. These practices are non-negotiable and help us maintain high standards in our execution of civic responsibilities. By adhering to these principles, we can ensure that our actions are well-informed and transparent.\nWhy this matters: Evidence and Accountability helps learners in Social Studies connect ideas from U.S. Civics Mastery and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "This lesson introduces the core practices of evidence-based analysis and institutional accountability. We will explore rigorous standards for credible evidence, ranging from primary source documents to empirical statistical data, and underscore the importance of a transparent public record. A systematic approach includes: (1) Defining the inquiry, (2) Gathering and evaluating relevant evidence, (3) Analyzing how the evidence substantiates or refutes a claim, and (4) Formulating a conclusion that explicitly acknowledges any methodological limitations."
         }
       ],
       "flashcards": [
         {
           "id": "us-civics-401-l01-f1",
-          "front": "Unit of analysis",
-          "back": "The specific entity or process you evaluate to make defensible decisions."
+          "front": "Unit of Analysis",
+          "back": "The primary subject of a civic inquiry, such as a specific law, court case, or government agency, chosen to establish boundaries for research and decision-making."
         },
         {
           "id": "us-civics-401-l01-f2",
-          "front": "Constraint mapping",
-          "back": "A method for identifying boundaries that shape feasible options."
+          "front": "Constraint Analysis",
+          "back": "A systematic method for identifying the constitutional, legal, economic, and political boundaries that restrict or shape possible government actions."
         },
         {
           "id": "us-civics-401-l01-f3",
-          "front": "Evidence standard",
-          "back": "The minimum quality threshold data must meet before action is taken."
+          "front": "Standard of Evidence",
+          "back": "The rigorous criteria used to determine if data and sources are credible, objective, and sufficient to support a definitive conclusion regarding a civic issue."
         }
       ]
     },
     {
       "id": "us-civics-401-l02",
-      "title": "U.S. Civics Workflow Lab",
+      "title": "Mapping Civic Processes: From Bill to Law",
       "type": "interactive",
       "duration": 15,
       "learningAids": [
         {
           "id": "us-civics-401-l02-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use the structured prompt and write your reasoning before finalizing answers."
+          "type": "image",
+          "title": "Process Flowchart",
+          "content": "A detailed swimlane diagram mapping the lifecycle of a bill, featuring distinct lanes for the House, Senate, Executive Branch, and Judiciary, highlighting critical decision gates, veto points, and committee markups.",
+          "imageUrl": "https://example.com/images/process_flowchart.png"
         }
       ],
       "chunks": [
         {
           "id": "us-civics-401-l02-c1",
           "kind": "practice",
-          "title": "Workflow Construction",
-          "content": "In this interactive activity, you will have the opportunity to create a comprehensive workflow that outlines the principles of the Constitution and the design of our institutions. This includes identifying the necessary inputs, establishing checkpoints to monitor progress, determining the expected outputs, and setting up rollback triggers to address any issues that arise. This hands-on experience will help you understand how these elements work together to support effective governance.\nContext recap: In this interactive activity, you will have the opportunity to create a comprehensive workflow that outlines the principles of the Constitution and the design of our institutions. This includes identifying the necessary inputs, establishing checkpoints to monitor progress, determining the expected outputs, and setting up rollback triggers to address any issues that arise. This hands-on experience will help you understand how these elements work together to support effective governance."
+          "title": "Constructing a Process Map",
+          "content": "In this interactive lab, you will construct a comprehensive process map illustrating the legislative journey of a bill. This involves identifying pivotal stages such as sponsorship, committee hearings, markups, floor debates, reconciliation, and executive action. By mapping these checkpoints and decision gates, you will visualize the complex, multi-stage friction intentionally built into American governance to prevent hasty legislation."
         },
         {
           "id": "us-civics-401-l02-c2",
           "kind": "recap",
-          "title": "Decision Logging",
-          "content": "In this recap, we emphasize the importance of documenting every decision made during the workflow process. Each decision should be accompanied by a clear rationale, an expected outcome, and a point for verification. This practice enables us to conduct thorough analyses after the workflow has been executed, allowing us to learn from our experiences and improve future decision-making processes.\nContext recap: In this recap, we emphasize the importance of documenting every decision made during the workflow process. Each decision should be accompanied by a clear rationale, an expected outcome, and a point for verification. This practice enables us to conduct thorough analyses after the workflow has been executed, allowing us to learn from our experiences and improve future decision-making processes."
+          "title": "The Public Record",
+          "content": "We will recap the critical role of documenting the civic process. The public record—encompassing legislative history, committee reports, floor speeches, and judicial opinions—provides an indispensable log of the rationale behind each decision. This transparency is vital for post-enactment analysis, enabling citizens, journalists, and scholars to decipher legislative intent and evaluate eventual policy outcomes against original promises."
         }
       ],
       "interactiveActivities": [
         {
           "id": "us-civics-401-l02-act1",
           "type": "matching_pairs",
-          "title": "Workflow Match",
-          "description": "Match each workflow component to its strongest governance function.",
+          "title": "Matching Governance Functions",
+          "description": "Match each stage of the legislative process to its primary institutional function.",
           "pairs": [
             {
-              "left": "Input audit",
-              "right": "Prevents low-quality data from entering the system"
+              "left": "Committee Hearing",
+              "right": "Gathers expert testimony and conducts detailed scrutiny"
             },
             {
-              "left": "Checkpoint gate",
-              "right": "Stops propagation of known defects"
+              "left": "Floor Debate",
+              "right": "Allows for broad public deliberation and amendment proposals"
             },
             {
-              "left": "Outcome metric",
-              "right": "Measures whether the objective was met"
+              "left": "Presidential Veto",
+              "right": "Provides an executive check on legislative overreach"
             },
             {
-              "left": "Retrospective log",
-              "right": "Captures lessons for next iteration"
+              "left": "Judicial Review",
+              "right": "Ensures the enacted law complies with constitutional boundaries"
             }
           ]
         },
         {
           "id": "us-civics-401-l02-act2",
           "type": "sorting_buckets",
-          "title": "Risk Classification",
-          "description": "Sort items into strategic, operational, and quality-risk groups.",
+          "title": "Identifying Political Risks",
+          "description": "Sort potential legislative obstacles into strategic, procedural, or public-opinion categories.",
           "buckets": [
             "Strategic",
-            "Operational",
-            "Quality"
+            "Procedural",
+            "Public Opinion"
           ],
           "items": [
             {
-              "text": "Misaligned goals",
+              "text": "Opposing party's unified agenda",
               "bucket": "Strategic"
             },
             {
-              "text": "Unclear handoff timing",
-              "bucket": "Operational"
+              "text": "A Senate filibuster threat",
+              "bucket": "Procedural"
             },
             {
-              "text": "Inconsistent acceptance criteria",
-              "bucket": "Quality"
+              "text": "Negative grassroots polling data",
+              "bucket": "Public Opinion"
             },
             {
-              "text": "No benchmark baseline",
-              "bucket": "Quality"
+              "text": "Lack of a key committee chair endorsement",
+              "bucket": "Strategic"
             }
           ]
         }
@@ -165,7 +173,7 @@ export const UsCivics401Module: LearningModule = {
     },
     {
       "id": "us-civics-401-l03",
-      "title": "Checkpoint 1: Concepts and Workflow",
+      "title": "Checkpoint 1: Concepts and Processes",
       "type": "quiz",
       "duration": 10,
       "learningAids": [
@@ -173,223 +181,231 @@ export const UsCivics401Module: LearningModule = {
           "id": "us-civics-401-l03-a1",
           "type": "practice",
           "title": "Guided Practice",
-          "content": "Use the structured prompt and write your reasoning before finalizing answers."
+          "content": "Use the structured prompt and write out your analytical reasoning before finalizing your answers."
         }
       ],
       "questions": [
         {
           "id": "us-civics-401-l03-q1",
-          "text": "Which action best improves decisions in constitutional principles work?",
-          "skillId": "us-civics-401-skill-core",
+          "text": "When analyzing the application of the First Amendment to a modern issue, what is the most effective first analytical step?",
+          "skillId": "us-civics-401-skill-analysis",
           "options": [
             {
               "id": "a",
-              "text": "Rely on one unverified example"
+              "text": "Assume its meaning is universally agreed upon based on plain text."
             },
             {
               "id": "b",
-              "text": "Define criteria, compare alternatives, and test assumptions"
+              "text": "Define the 'unit of analysis' (e.g., 'freedom of speech' in public schools) and review relevant Supreme Court precedents."
             },
             {
               "id": "c",
-              "text": "Skip metrics and move directly to execution"
+              "text": "Focus exclusively on contemporary public opinion polls regarding the issue."
             },
             {
               "id": "d",
-              "text": "Avoid documenting rationale"
+              "text": "Read secondary opinion editorials without consulting the primary constitutional text."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Explicit criteria and testable assumptions improve reliability and transferability."
+          "explanation": "Defining the specific scope of the inquiry and utilizing primary evidence (legal precedents) are foundational analytical skills for rigorous constitutional law evaluation."
         },
         {
           "id": "us-civics-401-l03-q2",
-          "text": "In institutional design, what is the strongest indicator of process quality?",
-          "skillId": "us-civics-401-skill-process",
+          "text": "What is the primary institutional purpose of the committee review stage in the federal legislative process?",
+          "skillId": "us-civics-401-skill-process-design",
           "options": [
             {
               "id": "a",
-              "text": "Output speed only"
+              "text": "To expedite the passage of all bills introduced by the majority party."
             },
             {
               "id": "b",
-              "text": "Traceable steps, checkpoints, and measurable outcomes"
+              "text": "To act as a rigorous quality gate, allowing for expert testimony, detailed amendment, and the filtering of flawed legislation."
             },
             {
               "id": "c",
-              "text": "Unstructured iteration without logs"
+              "text": "To ensure the Executive Branch formally agrees with the bill before a floor vote."
             },
             {
               "id": "d",
-              "text": "One-time performance anecdotes"
+              "text": "To conduct the final, binding vote on the legislation's passage."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Quality processes are observable, repeatable, and measurable."
+          "explanation": "Committees serve as critical quality control checkpoints, providing the detailed scrutiny and subject-matter expertise that is impractical on the full chamber floor."
         },
         {
           "id": "us-civics-401-l03-q3",
-          "text": "When evaluating public policy, which practice supports trustworthy conclusions?",
-          "skillId": "us-civics-401-skill-eval",
+          "text": "In evaluating the efficacy of a new environmental regulation, what constitutes the strongest 'standard of evidence'?",
+          "skillId": "us-civics-401-skill-evaluation",
           "options": [
             {
               "id": "a",
-              "text": "Ignore edge cases"
+              "text": "Anecdotal reports from a single affected municipality."
             },
             {
               "id": "b",
-              "text": "Use baseline comparisons and failure analysis"
+              "text": "Comparing post-policy empirical data against a pre-policy baseline and an unaffected control group."
             },
             {
               "id": "c",
-              "text": "Change targets after results are known"
+              "text": "The stated aspirational goals of the legislators who drafted the regulation."
             },
             {
               "id": "d",
-              "text": "Remove context from findings"
+              "text": "A consensus of op-eds praising the policy's intent."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Baselines and failure analysis prevent overclaiming and improve design quality."
+          "explanation": "Defensible conclusions require measurable, empirical data compared against a baseline to demonstrate a definitive causal link between the policy intervention and the outcome."
         },
         {
           "id": "us-civics-401-l03-q4",
-          "text": "A mature civic participation strategy should prioritize:",
-          "skillId": "us-civics-401-skill-strategy",
+          "text": "A mature strategy for civic participation (e.g., a grassroots advocacy campaign) should primarily prioritize:",
+          "skillId": "us-civics-401-skill-strategic-thinking",
           "options": [
             {
               "id": "a",
-              "text": "Single-metric optimization at any cost"
+              "text": "Maximizing raw outreach numbers, regardless of message accuracy or community impact."
             },
             {
               "id": "b",
-              "text": "Balanced outcomes across quality, risk, and sustainability"
+              "text": "Balancing outreach efforts with data privacy, message integrity, and the cultivation of long-term community trust."
             },
             {
               "id": "c",
-              "text": "Decisions based only on intuition"
+              "text": "Relying solely on leadership intuition without establishing metrics to track results."
             },
             {
               "id": "d",
-              "text": "No post-implementation review"
+              "text": "Ignoring feedback from volunteers and constituents to maintain strict message discipline."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Balanced scorecards align long-term performance with accountability."
+          "explanation": "Effective and ethical civic strategies require a holistic balance of factors, including quality of engagement, risk mitigation (such as maintaining trust), and long-term sustainability, rather than optimizing for a single vanity metric."
         }
       ]
     },
     {
       "id": "us-civics-401-l04",
-      "title": "Methods, Metrics, and Failure Modes in U.S. Civics",
+      "title": "Analytical Methods for Civic Evaluation",
       "type": "video",
       "duration": 14,
       "learningAids": [
         {
           "id": "us-civics-401-l04-a1",
-          "type": "mnemonic",
-          "title": "Guided Practice",
-          "content": "Use the structured prompt and write your reasoning before finalizing answers."
+          "type": "image",
+          "title": "Decision Tree",
+          "content": "A diagnostic decision tree guiding users through civic inquiry: starting with 'What is the core issue?' branching into Legal Analysis (precedent), Historical Analysis (primary sources), and Quantitative Policy Evaluation (statistical metrics).",
+          "imageUrl": "https://example.com/images/decision_tree.png"
         }
       ],
       "chunks": [
         {
           "id": "us-civics-401-l04-c1",
           "kind": "concept",
-          "title": "Method Selection",
-          "content": "When selecting methods for our civic projects, it is important to consider various factors such as constraints, the quality of information available, and the potential cost of errors. In this lesson, you will compare different alternatives and justify which methods are best suited for specific U.S. Civics scenarios. This critical thinking exercise will help you understand how to make informed choices that align with our civic goals.\nContext recap: When selecting methods for our civic projects, it is important to consider various factors such as constraints, the quality of information available, and the potential cost of errors. In this lesson, you will compare different alternatives and justify which methods are best suited for specific U.S. Civics scenarios. This critical thinking exercise will help you understand how to make informed choices that align with our civic goals."
+          "title": "Selecting Analytical Methods",
+          "content": "Complex civic questions demand tailored analytical tools. In this lesson, we explore how to select the most rigorous method for your inquiry. Questions of constitutionality require legal analysis of precedent. Questions of historical causality demand qualitative analysis of primary sources. Questions of policy efficacy necessitate quantitative analysis of empirical data. Explicitly justifying your choice of methodology is a critical step in producing a credible, unassailable analysis."
         },
         {
           "id": "us-civics-401-l04-c2",
           "kind": "example",
-          "title": "Metric Architecture",
-          "content": "A well-structured metric architecture is essential for linking various indicators that help us measure success. This includes leading indicators, which predict future performance, lagging outcomes, which reflect past results, and diagnostic measures that help us understand the current situation. By connecting these elements, teams can identify early signs of deviation from expected outcomes and respond thoughtfully to keep projects on track.\nContext recap: A well-structured metric architecture is essential for linking various indicators that help us measure success. This includes leading indicators, which predict future performance, lagging outcomes, which reflect past results, and diagnostic measures that help us understand the current situation. By connecting these elements, teams can identify early signs of deviation from expected outcomes and respond thoughtfully to keep projects on track."
+          "title": "Measuring Policy Impact",
+          "content": "To objectively evaluate a policy, we must establish a framework of metrics. This includes 'leading indicators' that predict emerging trends (e.g., enrollment rates in a new job training program) and 'lagging indicators' that measure final, definitive outcomes (e.g., long-term employment rates five years post-program). By monitoring both, policymakers can identify early if an initiative is veering off track and implement course corrections, rather than waiting years for a final autopsy."
         },
         {
           "id": "us-civics-401-l04-c3",
           "kind": "recap",
-          "title": "Failure Taxonomy",
-          "content": "In this recap, we categorize failures into four main groups: data-related issues, process problems, execution errors, and governance challenges. By organizing failures in this way, we can develop specific plans to address each type of issue rather than applying generic solutions. This targeted approach allows us to effectively mitigate risks and improve our civic systems.\nContext recap: In this recap, we categorize failures into four main groups: data-related issues, process problems, execution errors, and governance challenges. By organizing failures in this way, we can develop specific plans to address each type of issue rather than applying generic solutions. This targeted approach allows us to effectively mitigate risks and improve our civic systems."
+          "title": "Analyzing Governance Failures",
+          "content": "We will classify governance failures to better diagnose and rectify them. We distinguish between 'policy design flaws' (the underlying theory of change was incorrect), 'implementation failures' (the execution or administration was incompetent), and 'unintended consequences' (the policy succeeded in its primary goal but triggered unforeseen negative externalities). This structured taxonomy allows for precise, targeted solutions instead of generic political posturing."
         }
       ],
       "flashcards": [
         {
           "id": "us-civics-401-l04-f1",
-          "front": "Leading indicator",
-          "back": "A metric that signals probable future outcomes before final results appear."
+          "front": "Leading Indicator",
+          "back": "An early, predictive metric that suggests future policy outcomes, allowing for proactive adjustments. Example: The volume of small business loan applications immediately following an economic stimulus."
         },
         {
           "id": "us-civics-401-l04-f2",
-          "front": "Failure taxonomy",
-          "back": "A structured classification of failure types used to design targeted fixes."
+          "front": "Governance Failure Analysis",
+          "back": "A structured diagnostic method for classifying policy shortcomings (e.g., design flaws vs. implementation errors) to identify root causes and engineer effective remedies."
         },
         {
           "id": "us-civics-401-l04-f3",
-          "front": "Cost of error",
-          "back": "The operational, financial, or social impact caused by an incorrect decision."
+          "front": "Cost of Inaction",
+          "back": "The quantifiable social, economic, or political consequences of failing to address a public problem, often used as a baseline to justify the expense or disruption of a proposed policy intervention."
         }
       ]
     },
     {
       "id": "us-civics-401-l05",
-      "title": "Case Studio: Improve a U.S. Civics System",
+      "title": "Case Study: Reforming a Civic Process",
       "type": "interactive",
       "duration": 16,
       "learningAids": [
         {
           "id": "us-civics-401-l05-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use the structured prompt and write your reasoning before finalizing answers."
+          "type": "image",
+          "title": "Stakeholder Map",
+          "content": "A concentric stakeholder mapping matrix categorizing actors by 'Influence' (high/low) and 'Interest' (high/low), using campaign finance reform as the central case study.",
+          "imageUrl": "https://example.com/images/stakeholder_map.png"
         }
       ],
       "chunks": [
         {
           "id": "us-civics-401-l05-c1",
           "kind": "practice",
-          "title": "Case Decomposition",
-          "content": "In this interactive case study, you will break down a realistic scenario into its key components: objectives, context, constraints, and possible intervention options. Additionally, you will take note of the trade-offs involved in each option. This exercise will enhance your analytical skills and help you understand the complexities involved in improving civic systems.\nContext recap: In this interactive case study, you will break down a realistic scenario into its key components: objectives, context, constraints, and possible intervention options. Additionally, you will take note of the trade-offs involved in each option. This exercise will enhance your analytical skills and help you understand the complexities involved in improving civic systems."
+          "title": "Deconstructing a Case Study",
+          "content": "In this interactive case study on campaign finance reform, you will deconstruct a complex issue into its core systemic components. You will identify the primary objectives (e.g., mitigating corruption, ensuring free speech), the legal context (e.g., Supreme Court precedents like Citizens United), key stakeholders (e.g., PACs, political parties, grassroots organizations), and evaluate various reform proposals by explicitly mapping their respective trade-offs."
         },
         {
           "id": "us-civics-401-l05-c2",
           "kind": "recap",
-          "title": "Improvement Proposal",
-          "content": "As a recap of your learning, you will present a structured improvement proposal based on the case study. This proposal should include clear success criteria, a mapping of who is responsible for each part of the plan, and a timeline for follow-up actions. This exercise will help you practice articulating your ideas and ensure that your proposals are actionable and well-organized.\nContext recap: As a recap of your learning, you will present a structured improvement proposal based on the case study. This proposal should include clear success criteria, a mapping of who is responsible for each part of the plan, and a timeline for follow-up actions. This exercise will help you practice articulating your ideas and ensure that your proposals are actionable and well-organized."
+          "title": "Drafting a Policy Proposal",
+          "content": "Synthesizing your case study analysis, you will draft a structured policy proposal. This transcends a mere opinion piece; it must incorporate clear success criteria (how improvement will be empirically measured), an accountability framework (who bears responsibility for implementation), and a timeline for iterative review. This exercise hones the critical leadership skill of translating abstract analysis into an actionable, defensible plan."
+        },
+        {
+          "id": "us-civics-401-l05-c3",
+          "kind": "concept",
+          "title": "Communicating Trade-offs to Diverse Audiences",
+          "content": "A technically perfect policy will fail if it cannot be communicated effectively. You must learn to tailor your communication of policy trade-offs to diverse audiences. This means translating dense statistical metrics into compelling, accessible narratives for the general public, while simultaneously maintaining technical rigor and legal precision when briefing policymakers or legal counsel. Mastery of civics requires mastery of civic translation."
         }
       ],
       "interactiveActivities": [
         {
           "id": "us-civics-401-l05-act1",
           "type": "scenario_practice",
-          "title": "Decision Path Simulation",
-          "description": "Choose among three interventions to improve public policy outcomes under time and quality constraints.",
+          "title": "Policy Reform Simulation",
+          "description": "You are a senior legislative aide tasked with improving voter turnout. Choose among three policy interventions, weighing budget constraints against political feasibility.",
           "instructions": [
-            "Define success criteria before selecting an intervention.",
-            "Document one short-term tradeoff and one long-term benefit.",
-            "Specify a metric that confirms success in the next cycle."
+            "Define your empirical success criteria before selecting an intervention (e.g., 'increase turnout by 5% in the next midterm election').",
+            "Document one short-term trade-off (e.g., high upfront implementation cost) and one long-term systemic benefit for your chosen path.",
+            "Specify a leading indicator that will confirm the policy is on track prior to the next election cycle."
           ]
         },
         {
           "id": "us-civics-401-l05-act2",
           "type": "matching_pairs",
-          "title": "Intervention to Outcome Mapping",
-          "description": "Connect interventions with the most likely system-level effects.",
+          "title": "Matching Reforms to Systemic Effects",
+          "description": "Connect each proposed structural reform to its most likely systemic outcome or trade-off.",
           "pairs": [
             {
-              "left": "Tighter intake criteria",
-              "right": "Higher signal quality and lower downstream rework"
+              "left": "Public financing of elections",
+              "right": "Reduces reliance on private mega-donors but requires significant taxpayer funding"
             },
             {
-              "left": "Checkpoint automation",
-              "right": "Faster detection of preventable defects"
+              "left": "Automatic voter registration",
+              "right": "Increases baseline participation rates but requires robust cybersecurity and data integration"
             },
             {
-              "left": "Post-run retrospective",
-              "right": "Improved adaptation in later cycles"
+              "left": "Independent redistricting commissions",
+              "right": "Reduces partisan gerrymandering but shifts power to unelected appointees"
             },
             {
-              "left": "Cross-team briefing",
-              "right": "Reduced ambiguity at handoff boundaries"
+              "left": "Strengthened ethics oversight",
+              "right": "Increases public trust but may slow down administrative efficiency"
             }
           ]
         }
@@ -397,7 +413,7 @@ export const UsCivics401Module: LearningModule = {
     },
     {
       "id": "us-civics-401-l06",
-      "title": "Checkpoint 2: Systems Reasoning",
+      "title": "Checkpoint 2: Applying Systems Analysis",
       "type": "quiz",
       "duration": 10,
       "learningAids": [
@@ -405,109 +421,109 @@ export const UsCivics401Module: LearningModule = {
           "id": "us-civics-401-l06-a1",
           "type": "practice",
           "title": "Guided Practice",
-          "content": "Use the structured prompt and write your reasoning before finalizing answers."
+          "content": "Use the structured prompt and write out your analytical reasoning before finalizing your answers."
         }
       ],
       "questions": [
         {
           "id": "us-civics-401-l06-q1",
-          "text": "Which action best improves decisions in constitutional principles work?",
-          "skillId": "us-civics-401-skill-core",
+          "text": "A municipality notices that a newly constructed public transit line is severely underutilized. Which 'leading indicator' would best help administrators diagnose the problem early?",
+          "skillId": "us-civics-401-skill-metrics",
           "options": [
             {
               "id": "a",
-              "text": "Rely on one unverified example"
+              "text": "The final annual ridership and revenue report published at the end of the fiscal year."
             },
             {
               "id": "b",
-              "text": "Define criteria, compare alternatives, and test assumptions"
+              "text": "Real-time daily data on station entry/exit times combined with immediate user feedback surveys."
             },
             {
               "id": "c",
-              "text": "Skip metrics and move directly to execution"
+              "text": "The total sunk cost of constructing the transit line."
             },
             {
               "id": "d",
-              "text": "Avoid documenting rationale"
+              "text": "National macroeconomic trends regarding public transit usage."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Explicit criteria and testable assumptions improve reliability and transferability."
+          "explanation": "Real-time data and immediate user feedback serve as leading indicators, allowing for rapid diagnosis and agile adjustments, unlike lagging indicators such as annual reports."
         },
         {
           "id": "us-civics-401-l06-q2",
-          "text": "In institutional design, what is the strongest indicator of process quality?",
-          "skillId": "us-civics-401-skill-process",
+          "text": "A major federal IT project (e.g., a new healthcare enrollment portal) crashes immediately upon launch. A rigorous 'governance failure analysis' would most likely classify this as:",
+          "skillId": "us-civics-401-skill-failure-analysis",
           "options": [
             {
               "id": "a",
-              "text": "Output speed only"
+              "text": "A fundamental failure of constitutional principles."
             },
             {
               "id": "b",
-              "text": "Traceable steps, checkpoints, and measurable outcomes"
+              "text": "An implementation failure, likely stemming from poor project management, inadequate load testing, or misaligned vendor incentives."
             },
             {
               "id": "c",
-              "text": "Unstructured iteration without logs"
+              "text": "An unavoidable unintended consequence of complex legislation."
             },
             {
               "id": "d",
-              "text": "One-time performance anecdotes"
+              "text": "A policy design flaw, indicating the core idea of providing healthcare was wrong."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Quality processes are observable, repeatable, and measurable."
+          "explanation": "This represents a classic implementation failure, where the execution and administration of the policy—not necessarily the underlying policy objective itself—were critically flawed."
         },
         {
           "id": "us-civics-401-l06-q3",
-          "text": "When evaluating public policy, which practice supports trustworthy conclusions?",
-          "skillId": "us-civics-401-skill-eval",
+          "text": "When drafting a proposal to reform the Electoral College, what is the most critical component of a comprehensive 'Case Decomposition'?",
+          "skillId": "us-civics-401-skill-analysis",
           "options": [
             {
               "id": "a",
-              "text": "Ignore edge cases"
+              "text": "Dismissing the historical context of its creation as irrelevant to modern politics."
             },
             {
               "id": "b",
-              "text": "Use baseline comparisons and failure analysis"
+              "text": "Focusing exclusively on the moral superiority of one's personal opinion."
             },
             {
               "id": "c",
-              "text": "Change targets after results are known"
+              "text": "Systematically analyzing the objectives (e.g., democratic proportionality), constraints (e.g., the Article V amendment process), and competing stakeholder interests (e.g., small vs. large states)."
             },
             {
               "id": "d",
-              "text": "Remove context from findings"
+              "text": "Assuming the proposed reform will be universally accepted and have no unintended consequences."
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "Baselines and failure analysis prevent overclaiming and improve design quality."
+          "correctOptionId": "c",
+          "explanation": "A thorough case decomposition requires a dispassionate, systematic analysis of the goals, the legal/procedural constraints, and the competing interests of all affected parties."
         },
         {
           "id": "us-civics-401-l06-q4",
-          "text": "A mature civic participation strategy should prioritize:",
-          "skillId": "us-civics-401-skill-strategy",
+          "text": "In a policy simulation, you must choose between a low-cost, low-impact intervention and a high-cost, high-impact intervention. What represents the most mature analytical approach?",
+          "skillId": "us-civics-401-skill-strategic-thinking",
           "options": [
             {
               "id": "a",
-              "text": "Single-metric optimization at any cost"
+              "text": "Always default to the cheapest option to minimize taxpayer burden."
             },
             {
               "id": "b",
-              "text": "Balanced outcomes across quality, risk, and sustainability"
+              "text": "Always select the high-impact option, regardless of budget constraints or political capital."
             },
             {
               "id": "c",
-              "text": "Decisions based only on intuition"
+              "text": "Rigorously analyze the trade-offs, factoring in the 'cost of inaction' and calculating the long-term return on investment for each option."
             },
             {
               "id": "d",
-              "text": "No post-implementation review"
+              "text": "Make a decision based primarily on which option generates the most favorable immediate press coverage."
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "Balanced scorecards align long-term performance with accountability."
+          "correctOptionId": "c",
+          "explanation": "Advanced strategic thinking involves weighing complex trade-offs and making decisions based on a comprehensive cost-benefit analysis, which explicitly includes the long-term value and the negative consequences of maintaining the status quo."
         }
       ]
     }

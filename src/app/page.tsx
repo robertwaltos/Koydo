@@ -9,10 +9,11 @@ import {
   type Locale,
   translate,
 } from "@/lib/i18n/translations";
-import VoicePicker from "@/app/explore/_components/voice-picker";
 import SubjectShowcase from "@/app/components/subject-showcase";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import LandingHeroInteractive from "@/app/components/ui/landing-hero-interactive";
+import { getAppId } from "@/lib/platform/app-manifest";
+import { getHeroConfig } from "@/lib/platform/app-onboarding";
 
 export const metadata: Metadata = {
   title: "Koydo — Learn Anything, Any Age, Any Language",
@@ -39,19 +40,33 @@ export default async function Home() {
   const locale: Locale = isSupportedLocale(localeCookie) ? localeCookie : "en";
   const t = (key: string, vars?: Record<string, string | number>) =>
     translate(locale, key, vars);
+  const appId = getAppId();
+  const heroConfig = getHeroConfig(appId);
+  const isMainLanding = appId === "koydo_main";
+  const heroStrings = isMainLanding
+    ? {
+      eyebrow: t("home_hero_eyebrow"),
+      titlePrefix: t("home_hero_title_prefix"),
+      titleHighlight: t("home_hero_title_highlight"),
+      body: t("home_hero_body"),
+      cta: t("home_hero_cta"),
+      ctaHref: "/explore",
+    }
+    : {
+      eyebrow: heroConfig.title,
+      titlePrefix: heroConfig.title,
+      titleHighlight: "",
+      body: heroConfig.subtitle,
+      cta: heroConfig.ctaLabel,
+      ctaHref: heroConfig.ctaHref,
+    };
 
   return (
     <div className="relative font-sans overflow-x-hidden">
       {/* ════════════════════════════════════════════════════════
            SECTION 1 — HERO (Interactive Adaptive Hero)
       ════════════════════════════════════════════════════════ */}
-      <LandingHeroInteractive strings={{
-        eyebrow: t("home_hero_eyebrow"),
-        titlePrefix: t("home_hero_title_prefix"),
-        titleHighlight: t("home_hero_title_highlight"),
-        body: t("home_hero_body"),
-        cta: t("home_hero_cta"),
-      }} />
+      <LandingHeroInteractive strings={heroStrings} />
 
       {/* ── Stats bar ── */}
       <section className="landing-section relative mx-auto max-w-7xl px-4 py-10 sm:py-14">

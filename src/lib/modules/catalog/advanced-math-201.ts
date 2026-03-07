@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const AdvancedMath201Module: LearningModule = {
+export const advanced_math_201_Module: LearningModule = {
   "id": "advanced-math-201",
   "title": "Advanced Math Topics",
   "description": "Master fractions, decimals, ratios, proportions, and introductory algebra through worked examples and real-world problem solving.",
@@ -12,7 +12,7 @@ export const AdvancedMath201Module: LearningModule = {
   ],
   "minAge": 7,
   "maxAge": 18,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "learningObjectives": [
     "Represent, compare, and perform operations with fractions",
     "Convert between fractions, decimals, and percentages",
@@ -28,6 +28,8 @@ export const AdvancedMath201Module: LearningModule = {
       "title": "Understanding Fractions",
       "type": "video",
       "duration": 11,
+      "lessonImagePrompt": "A colorful, appetizing pizza cut into 8 slices with 3 slices slightly pulled away, showing 3/8, set on a bright, engaging background. Imagen 4.",
+      "conceptVideoPrompt": "A dynamic 3D animation showing a chocolate bar breaking into equal pieces, with glowing numbers appearing to represent the numerator and denominator as pieces are selected. Veo 3.1.",
       "objectives": [
         "Define numerator and denominator",
         "Represent fractions on a number line and with area models",
@@ -91,10 +93,29 @@ export const AdvancedMath201Module: LearningModule = {
       "title": "Fraction Operations",
       "type": "interactive",
       "duration": 13,
+      "lessonImagePrompt": "A vibrant digital scale balancing different fraction blocks (like 1/2 and 2/4) with glowing math symbols floating around. Imagen 4.",
+      "conceptVideoPrompt": "An engaging animation of liquid being poured from measuring cups of different fraction sizes into a larger bowl, visually demonstrating addition of fractions. Veo 3.1.",
       "objectives": [
         "Add and subtract fractions with like and unlike denominators",
         "Multiply fractions and simplify the result",
         "Solve a word problem involving fraction operations"
+      ],
+      "chunks": [
+        {
+          "id": "advanced-math-201-l02-c1",
+          "title": "Adding and Subtracting Fractions",
+          "content": "When adding or subtracting fractions, the most important rule is that the denominators (the bottom numbers) must be the same! If they are already the same, you simply add or subtract the numerators (the top numbers) and keep the denominator exactly as it is. For example, 2/5 + 1/5 = 3/5. But what if the denominators are different? You have to find a 'common denominator' first. For instance, to add 1/3 and 1/4, you find a number both 3 and 4 can divide into, which is 12. Convert them: 1/3 becomes 4/12, and 1/4 becomes 3/12. Now you can add them: 4/12 + 3/12 = 7/12!"
+        },
+        {
+          "id": "advanced-math-201-l02-c2",
+          "title": "Multiplying Fractions",
+          "content": "Multiplying fractions is actually simpler than adding them because you don't need a common denominator! To multiply two fractions, you just multiply straight across. Multiply the numerators together to get your new numerator, and multiply the denominators together to get your new denominator. For example, 2/3 × 4/5. First, multiply the tops: 2 × 4 = 8. Then, multiply the bottoms: 3 × 5 = 15. Your answer is 8/15. Always remember to check if your final fraction can be simplified!"
+        },
+        {
+          "id": "advanced-math-201-l02-c3",
+          "title": "Real-World Fraction Operations",
+          "content": "Fractions are everywhere in the real world! Imagine you are baking cookies and the recipe calls for 3/4 cup of sugar, but you want to make half a batch. You would multiply 3/4 by 1/2 to find out how much sugar you need (which is 3/8 cup). Or, if you have 7/8 of a pizza left and you eat 2/8 of it for lunch, you subtract to find out you have 5/8 left. Understanding how to operate with fractions helps you solve everyday puzzles like these with ease."
+        }
       ],
       "metadata": {
         "prompts": [
@@ -235,6 +256,8 @@ export const AdvancedMath201Module: LearningModule = {
       "title": "Checkpoint: Fractions",
       "type": "quiz",
       "duration": 10,
+      "lessonImagePrompt": "A glowing checkpoint flag on a 3D game-like path made of fraction tiles. Imagen 4.",
+      "conceptVideoPrompt": "A fast-paced, energetic recap montage of fraction pieces snapping together like puzzle pieces, ending with a glowing question mark. Veo 3.1.",
       "questions": [
         {
           "id": "advanced-math-201-l03-q1",
@@ -377,6 +400,8 @@ export const AdvancedMath201Module: LearningModule = {
       "title": "Decimals and Percentages",
       "type": "video",
       "duration": 11,
+      "lessonImagePrompt": "A futuristic digital price tag showing a 50% off discount, morphing into 0.50 and 1/2 in bright neon colors. Imagen 4.",
+      "conceptVideoPrompt": "A visual zoom-in on a dollar bill breaking down into 100 shiny pennies, with a percentage meter filling up to 100% alongside it. Veo 3.1.",
       "objectives": [
         "Convert between fractions, decimals, and percentages",
         "Compare and order decimals",
@@ -440,10 +465,29 @@ export const AdvancedMath201Module: LearningModule = {
       "title": "Ratios and Proportions",
       "type": "interactive",
       "duration": 12,
+      "lessonImagePrompt": "A split-screen graphic showing 2 blue paint buckets and 3 yellow paint buckets mixing to make green, representing a 2:3 ratio. Imagen 4.",
+      "conceptVideoPrompt": "A time-lapse animation of a recipe being doubled, showing ingredients multiplying proportionally with floating ratio numbers (e.g., 2:3 becomes 4:6). Veo 3.1.",
       "objectives": [
         "Write ratios in three forms (a:b, a/b, a to b)",
         "Determine if two ratios form a proportion",
         "Solve proportion problems using cross-multiplication"
+      ],
+      "chunks": [
+        {
+          "id": "advanced-math-201-l05-c1",
+          "title": "Introduction to Ratios",
+          "content": "A ratio is simply a way to compare two different quantities. Imagine you have a bowl of fruit with 2 apples and 3 oranges. The ratio of apples to oranges is 2 to 3. We can write this in three different ways: using the word 'to' (2 to 3), using a colon (2:3), or as a fraction (2/3). Ratios are incredibly useful because they help us understand the relationship between different amounts, whether we are mixing paint colors, cooking a recipe, or comparing scores in a game!"
+        },
+        {
+          "id": "advanced-math-201-l05-c2",
+          "title": "Understanding Proportions",
+          "content": "A proportion is an equation that says two ratios are equal. Think of it like equivalent fractions! If a recipe calls for 2 cups of flour for every 3 cups of sugar (a 2:3 ratio), and you want to double the recipe, you would use 4 cups of flour and 6 cups of sugar (a 4:6 ratio). Because 2/3 is equal to 4/6, these two ratios form a proportion. Proportions help us scale things up or down perfectly without changing the balance."
+        },
+        {
+          "id": "advanced-math-201-l05-c3",
+          "title": "Cross-Multiplication",
+          "content": "How can you tell for sure if two ratios form a proportion? You can use a neat trick called cross-multiplication! If you have two fractions, like a/b and c/d, you multiply diagonally: a × d and b × c. If the two answers are the same, the ratios are proportional! For example, with 2/3 and 4/6, you multiply 2 × 6 (which is 12) and 3 × 4 (which is also 12). Since 12 equals 12, it's a perfect proportion. You can also use this trick to find a missing number in a proportion!"
+        }
       ],
       "metadata": {
         "prompts": [
@@ -584,6 +628,8 @@ export const AdvancedMath201Module: LearningModule = {
       "title": "Checkpoint: Decimals, Percentages & Ratios",
       "type": "quiz",
       "duration": 10,
+      "lessonImagePrompt": "A glowing neon sign displaying a mix of decimals, percentages, and ratio colons in a fun, arcade-style font. Imagen 4.",
+      "conceptVideoPrompt": "A dynamic slot machine animation where the reels spin and match equivalent fractions, decimals, and percentages (e.g., 1/4, 0.25, 25%). Veo 3.1.",
       "questions": [
         {
           "id": "advanced-math-201-l06-q1",
@@ -726,6 +772,8 @@ export const AdvancedMath201Module: LearningModule = {
       "title": "Intro to Algebra: Expressions",
       "type": "video",
       "duration": 12,
+      "lessonImagePrompt": "A glowing, magical mystery box with a large 'X' on it, surrounded by floating numbers and math operation symbols. Imagen 4.",
+      "conceptVideoPrompt": "An animated sequence where letters like 'x' and 'y' jump into a mathematical machine, combining with numbers to output colorful expressions. Veo 3.1.",
       "objectives": [
         "Identify variables, constants, coefficients, and terms in an expression",
         "Evaluate an expression by substituting a value for the variable",
@@ -789,10 +837,29 @@ export const AdvancedMath201Module: LearningModule = {
       "title": "Solving Equations",
       "type": "interactive",
       "duration": 13,
+      "lessonImagePrompt": "A classic golden balance scale with a glowing 'x' block on one side and several numbered weights on the other, perfectly balanced. Imagen 4.",
+      "conceptVideoPrompt": "A step-by-step visual of a balance scale where weights are removed equally from both sides, isolating the glowing 'x' block. Veo 3.1.",
       "objectives": [
         "Solve one-step equations (x + 5 = 12, 3x = 18)",
         "Solve two-step equations (2x + 3 = 11)",
         "Check solutions by substituting back"
+      ],
+      "chunks": [
+        {
+          "id": "advanced-math-201-l08-c1",
+          "title": "The Golden Rule of Algebra",
+          "content": "An equation is like a perfectly balanced scale. The equals sign (=) means that everything on the left side weighs exactly the same as everything on the right side. The Golden Rule of Algebra is: Whatever you do to one side of the equation, you MUST do to the other side! If you subtract 5 from the left, you must subtract 5 from the right to keep it balanced. We use this rule to 'isolate the variable'—which means getting the letter all by itself to find out what number it represents."
+        },
+        {
+          "id": "advanced-math-201-l08-c2",
+          "title": "Solving Two-Step Equations",
+          "content": "Sometimes, getting the variable by itself takes more than one step. Imagine the variable is a present wrapped in a box and tied with a bow. To open it, you have to untie the bow first, then open the box. In math, we do this by doing PEMDAS in reverse! First, undo any addition or subtraction. Then, undo any multiplication or division. For example, in 2x + 3 = 11, first subtract 3 from both sides (2x = 8). Then, divide both sides by 2 (x = 4). You've unwrapped the variable!"
+        },
+        {
+          "id": "advanced-math-201-l08-c3",
+          "title": "Checking Your Answer",
+          "content": "The best part about algebra is that you can always know if you got the right answer before you even turn in your test! Once you find a value for your variable, just plug it back into the original equation. If we think x = 4 for the equation 2x + 3 = 11, we substitute 4 for x: 2(4) + 3. That becomes 8 + 3, which equals 11. Since 11 = 11, our scale is balanced, and we know our answer is 100% correct!"
+        }
       ],
       "metadata": {
         "prompts": [
@@ -931,6 +998,8 @@ export const AdvancedMath201Module: LearningModule = {
       "title": "Checkpoint: Algebra Basics",
       "type": "quiz",
       "duration": 10,
+      "lessonImagePrompt": "A futuristic digital lock with an equation on the screen and a keypad to enter the value of 'x'. Imagen 4.",
+      "conceptVideoPrompt": "A fast-paced animation of a maze where solving simple equations opens doors to the center. Veo 3.1.",
       "questions": [
         {
           "id": "advanced-math-201-l09-q1",
@@ -1073,6 +1142,8 @@ export const AdvancedMath201Module: LearningModule = {
       "title": "Data and Graphs",
       "type": "video",
       "duration": 11,
+      "lessonImagePrompt": "A vibrant 3D pie chart, bar graph, and line graph popping out of a digital tablet screen. Imagen 4.",
+      "conceptVideoPrompt": "A time-lapse of a colorful bar graph growing taller, transitioning into a line graph that charts a soaring rocket's trajectory. Veo 3.1.",
       "objectives": [
         "Read and interpret bar graphs, line graphs, and circle graphs",
         "Calculate mean, median, and mode of a data set",
@@ -1136,10 +1207,29 @@ export const AdvancedMath201Module: LearningModule = {
       "title": "Probability Basics",
       "type": "interactive",
       "duration": 12,
+      "lessonImagePrompt": "A dynamic action shot of a pair of colorful dice rolling in mid-air, surrounded by floating probability fractions. Imagen 4.",
+      "conceptVideoPrompt": "A slow-motion animation of a spinning prize wheel with different colored sections, stopping on a winning color with a probability fraction appearing. Veo 3.1.",
       "objectives": [
         "Express probability as a fraction between 0 and 1",
         "Calculate the probability of simple events",
         "Distinguish between theoretical and experimental probability"
+      ],
+      "chunks": [
+        {
+          "id": "advanced-math-201-l11-c1",
+          "title": "The Probability Scale",
+          "content": "Probability is the math of chance! It tells us how likely it is that an event will happen. We measure probability on a scale from 0 to 1. If an event has a probability of 0, it is impossible (like rolling a 7 on a standard 6-sided die). If it has a probability of 1, it is absolutely certain to happen. If it has a probability of 1/2 (or 0.5 or 50%), there is an even chance of it happening or not happening, just like flipping a coin and getting heads."
+        },
+        {
+          "id": "advanced-math-201-l11-c2",
+          "title": "Calculating Probability",
+          "content": "To find the probability of a simple event, we use a fraction. The numerator (top number) is the number of 'favorable outcomes'—the results we are looking for. The denominator (bottom number) is the 'total possible outcomes'. For example, if you have a bag with 3 red marbles and 7 blue marbles, there are 10 marbles in total. The probability of pulling out a red marble is 3/10. It's that simple!"
+        },
+        {
+          "id": "advanced-math-201-l11-c3",
+          "title": "Theoretical vs. Experimental",
+          "content": "There are two ways to think about probability. 'Theoretical probability' is what SHOULD happen based on math. For example, a coin has 2 sides, so the theoretical probability of getting heads is 1/2. 'Experimental probability' is what ACTUALLY happens when you run an experiment. If you flip a coin 10 times and get heads 7 times, your experimental probability is 7/10. If you flip the coin hundreds of times, the experimental probability will usually get closer and closer to the theoretical probability!"
+        }
       ],
       "metadata": {
         "prompts": [
@@ -1266,6 +1356,8 @@ export const AdvancedMath201Module: LearningModule = {
       "title": "Checkpoint: Data & Probability",
       "type": "quiz",
       "duration": 10,
+      "lessonImagePrompt": "A glowing target board with darts landing in different colored zones, representing probability and data points. Imagen 4.",
+      "conceptVideoPrompt": "A rapid-fire montage of coins flipping, dice rolling, and graphs drawing themselves, ending with a bold 'Checkpoint' text. Veo 3.1.",
       "questions": [
         {
           "id": "advanced-math-201-l12-q1",
@@ -1408,6 +1500,8 @@ export const AdvancedMath201Module: LearningModule = {
       "title": "Budget Planning Scenario Lab",
       "type": "video",
       "duration": 13,
+      "lessonImagePrompt": "A top-down view of a party planning table with a calculator, colorful budget pie charts, and scattered party supplies. Imagen 4.",
+      "conceptVideoPrompt": "An animated piggy bank that fills with coins, then the coins are divided into different labeled jars (Food, Decorations, Supplies) showing percentages. Veo 3.1.",
       "objectives": [
         "Apply fractions, percentages, and ratios to a budget scenario",
         "Calculate totals, discounts, and remaining amounts",
@@ -1471,10 +1565,29 @@ export const AdvancedMath201Module: LearningModule = {
       "title": "Math Investigation Studio",
       "type": "interactive",
       "duration": 13,
+      "lessonImagePrompt": "A detective's magnifying glass hovering over a complex math word problem, revealing hidden equations and percentages in glowing ink. Imagen 4.",
+      "conceptVideoPrompt": "A first-person view of a digital notebook where a multi-step math problem is being solved with colorful animated ink, highlighting the steps. Veo 3.1.",
       "objectives": [
         "Connect fractions, decimals, percentages, and algebra in a single problem",
         "Explain mathematical reasoning step by step",
         "Identify which concept to apply in a multi-step scenario"
+      ],
+      "chunks": [
+        {
+          "id": "advanced-math-201-l14-c1",
+          "title": "Tackling Multi-Step Problems",
+          "content": "Real-world math problems rarely ask you to do just one thing. They are like puzzles that require multiple steps to solve! When you face a multi-step problem, don't panic. Use the 4-step method: 1) Read carefully to understand what is being asked. 2) Plan your attack by identifying which math tools you need (like fractions, percentages, or algebra). 3) Solve the problem one step at a time, writing down your work. 4) Check your answer to see if it makes logical sense in the real world."
+        },
+        {
+          "id": "advanced-math-201-l14-c2",
+          "title": "Connecting Math Concepts",
+          "content": "Did you know that fractions, decimals, percentages, and algebra are all connected? They are just different languages for talking about the same numbers! For example, if a problem says 'half the students', you can write that as 1/2, 0.5, 50%, or even set up an algebraic equation like x/2. Being able to switch between these different 'math languages' is the secret superpower of advanced problem solvers. It lets you choose the easiest way to solve any challenge!"
+        },
+        {
+          "id": "advanced-math-201-l14-c3",
+          "title": "The Power of Checking Your Work",
+          "content": "Once you've solved a multi-step problem, your job isn't quite done! The final and most important step is checking your work. Does your answer make sense in the real world? For example, if you calculated the sale price of a $50 shirt and got $60, you know something went wrong because a sale price should be lower! You can also work backward: take your final answer and plug it back into the original problem to see if everything matches up. This simple habit will catch tiny mistakes and make you a confident math master!"
+        }
       ],
       "metadata": {
         "prompts": [
@@ -1599,6 +1712,8 @@ export const AdvancedMath201Module: LearningModule = {
       "title": "Mastery Sprint: Advanced Math",
       "type": "quiz",
       "duration": 12,
+      "lessonImagePrompt": "A golden trophy surrounded by floating math symbols (fractions, decimals, 'x', graphs) on a glowing podium. Imagen 4.",
+      "conceptVideoPrompt": "An epic, fast-paced journey flying through a 3D tunnel made of all the math concepts learned, bursting into confetti at the finish line. Veo 3.1.",
       "questions": [
         {
           "id": "advanced-math-201-l15-q1",

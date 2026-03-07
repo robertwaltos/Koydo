@@ -1,9 +1,9 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const MediaLiteracy201Module: LearningModule = {
+export const media_literacy_201_Module: LearningModule = {
   "id": "media-literacy-201",
   "title": "Media Literacy Applied Practice",
-  "description": "Level 201 curriculum in Media Literacy, focused on source credibility, narrative framing, misinformation analysis, and civic decision impact, with rigorous scenario analysis and assessment-backed mastery.",
+  "description": "A hands-on course in media literacy where you'll learn to analyze source credibility, understand how stories are framed, identify misinformation, and see how media impacts society. Develop critical thinking skills through real-world scenarios and projects.",
   "subject": "Media Studies",
   "tags": [
     "core",
@@ -14,19 +14,19 @@ export const MediaLiteracy201Module: LearningModule = {
   ],
   "minAge": 15,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "intermediate",
   "localeSupport": [
     "en",
     "es"
   ],
   "learningObjectives": [
-    "Explain and apply source credibility using clear assumptions and constraints",
-    "Build repeatable workflows for narrative framing with measurable checkpoints",
-    "Evaluate misinformation analysis outcomes against baseline and target metrics",
-    "Use governance patterns to improve civic decision impact decision quality",
-    "Communicate tradeoffs across technical, policy, and user-impact dimensions",
-    "Synthesize Media Literacy methods into defensible recommendations"
+    "Analyze the credibility of a media source by identifying its biases and assumptions.",
+    "Develop a consistent method for evaluating how media narratives are constructed.",
+    "Identify and analyze misinformation and its potential impact.",
+    "Evaluate how media consumption can influence personal and community decisions.",
+    "Communicate complex media concepts, including the trade-offs between different viewpoints.",
+    "Synthesize media literacy skills to create and defend a final analysis project."
   ],
   "lessons": [
     {
@@ -38,45 +38,45 @@ export const MediaLiteracy201Module: LearningModule = {
         {
           "id": "media-literacy-201-l01-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use the lesson scaffold, show your reasoning, and verify assumptions before finalizing your answer."
+          "title": "The 5 W's of Source Credibility",
+          "content": "An infographic showing key questions to ask: Who created this? What is its purpose? When was it published? Where does the information come from? Why should I believe it?"
         }
       ],
       "chunks": [
         {
           "id": "media-literacy-201-l01-c1",
           "kind": "concept",
-          "title": "Vocabulary and System Boundaries",
-          "content": "In this lesson, we will work together to build a shared vocabulary that will enhance our understanding of Media Literacy. We will clearly define the boundaries that guide our discussions and learning. Additionally, we will investigate how the credibility of various sources and the way stories are presented can shape our perceptions in real-world contexts. By doing this, we aim to become more thoughtful and critical consumers of media, enabling us to navigate information more effectively and make informed decisions.\nContext recap: In this lesson, we will work together to build a shared vocabulary that will enhance our understanding of Media Literacy. We will clearly define the boundaries that guide our discussions and learning. Additionally, we will investigate how the credibility of various sources and the way stories are presented can shape our perceptions in real-world contexts. By doing this, we aim to become more thoughtful and critical consumers of media, enabling us to navigate information more effectively and make informed decisions."
+          "title": "Building a Common Language",
+          "content": "In this lesson, we'll establish a shared vocabulary for discussing media literacy. We will define the key terms and concepts that guide our learning, and explore how source credibility and narrative framing shape our perception of real-world events. Our goal is to become more thoughtful and critical consumers of information."
         },
         {
           "id": "media-literacy-201-l01-c2",
           "kind": "concept",
-          "title": "Causal Structures and Constraints",
-          "content": "In this section, learners will practice modeling causal paths, which means they will learn how to trace the connections between different events and outcomes. They will also identify hidden assumptions that may not be immediately obvious and apply checks to understand any constraints before suggesting possible interventions. This process will help them think critically about cause and effect in media narratives.\nContext recap: In this section, learners will practice modeling causal paths, which means they will learn how to trace the connections between different events and outcomes. They will also identify hidden assumptions that may not be immediately obvious and apply checks to understand any constraints before suggesting possible interventions. This process will help them think critically about cause and effect in media narratives."
+          "title": "Understanding Cause and Effect",
+          "content": "Here, you will practice tracing the connections between events and their reported outcomes in media. We will learn to identify hidden assumptions in a story and check for important context before drawing conclusions. This helps you think critically about the cause-and-effect relationships presented in media narratives."
         },
         {
           "id": "media-literacy-201-l01-c3",
           "kind": "recap",
-          "title": "Evidence Discipline",
-          "content": "This module introduces a workflow that prioritizes evidence. Learners will discover how to connect each claim they encounter to observable indicators, which are pieces of evidence that can be seen or measured. They will also learn to recognize the uncertainty that can come with different claims, helping them to approach information with a critical mindset.\nContext recap: This module introduces a workflow that prioritizes evidence. Learners will discover how to connect each claim they encounter to observable indicators, which are pieces of evidence that can be seen or measured. They will also learn to recognize the uncertainty that can come with different claims, helping them to approach information with a critical mindset."
+          "title": "The Importance of Evidence",
+          "content": "This module introduces a workflow that puts evidence first. You will learn how to connect claims made in the media to facts that can be checked and verified. We will also discuss how to assess the level of certainty for different claims, helping you approach all information with a healthy dose of skepticism."
         }
       ],
       "flashcards": [
         {
           "id": "media-literacy-201-l01-f1",
-          "front": "source credibility",
-          "back": "A core mechanism in Media Literacy requiring explicit assumptions and measurable controls."
+          "front": "Source Credibility",
+          "back": "How trustworthy a source of information is, based on evidence like expertise, reputation, and lack of bias."
         },
         {
           "id": "media-literacy-201-l01-f2",
-          "front": "narrative framing",
-          "back": "Operational practices that convert strategy into reliable execution."
+          "front": "Narrative Framing",
+          "back": "The way a story is told, including the details, images, and words chosen to influence an audience's perspective."
         },
         {
           "id": "media-literacy-201-l01-f3",
-          "front": "misinformation analysis",
-          "back": "The evaluation layer that determines whether interventions truly improve outcomes."
+          "front": "Misinformation Analysis",
+          "back": "The process of identifying false or misleading information and understanding how it spreads and affects people."
         }
       ]
     },
@@ -88,76 +88,76 @@ export const MediaLiteracy201Module: LearningModule = {
       "learningAids": [
         {
           "id": "media-literacy-201-l02-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use the lesson scaffold, show your reasoning, and verify assumptions before finalizing your answer."
+          "type": "image",
+          "title": "Your Media Analysis Toolkit",
+          "content": "A visual checklist of steps for analyzing a media piece: 1. Identify the source. 2. Check for bias. 3. Find other sources. 4. Analyze the framing."
         }
       ],
       "chunks": [
         {
           "id": "media-literacy-201-l02-c1",
           "kind": "practice",
-          "title": "Method Sequence Construction",
-          "content": "In this interactive practice, learners will construct a sequence of methods that are optimized for effective execution. They will focus on ensuring that their workflow is reliable and that they can interpret various scenarios accurately. After building their method sequence, they will stress-test each step to see how it holds up under uncertain conditions, which will enhance their problem-solving skills.\nContext recap: In this interactive practice, learners will construct a sequence of methods that are optimized for effective execution. They will focus on ensuring that their workflow is reliable and that they can interpret various scenarios accurately. After building their method sequence, they will stress-test each step to see how it holds up under uncertain conditions, which will enhance their problem-solving skills."
+          "title": "Building Your Analysis Workflow",
+          "content": "In this interactive practice, you will build a step-by-step process to analyze media effectively and reliably. After creating your workflow, you will test it against several challenging scenarios to see how well it works under uncertain conditions, sharpening your problem-solving skills."
         },
         {
           "id": "media-literacy-201-l02-c2",
           "kind": "recap",
-          "title": "Operational Readiness Checks",
-          "content": "In this recap, learners will assess their readiness by mapping out who is responsible for each part of the process. They will check the timing of their checkpoints, identify triggers for rolling back decisions if necessary, and maintain evidence logs to track their findings. This will help them ensure that they are prepared for any challenges that may arise.\nContext recap: In this recap, learners will assess their readiness by mapping out who is responsible for each part of the process. They will check the timing of their checkpoints, identify triggers for rolling back decisions if necessary, and maintain evidence logs to track their findings. This will help them ensure that they are prepared for any challenges that may arise."
+          "title": "Reviewing Your Process",
+          "content": "In this recap, you will review your media analysis workflow. We'll focus on setting checkpoints to pause and reflect, identifying when a piece of information is too unreliable to continue, and keeping a log of your evidence. This ensures you are prepared for any analytical challenges."
         }
       ],
       "interactiveActivities": [
         {
           "id": "media-literacy-201-l02-act1",
           "type": "matching_pairs",
-          "title": "Method-to-Outcome Mapping",
-          "description": "Match each design choice to the strongest expected system effect.",
+          "title": "Connecting Actions to Results",
+          "description": "Match each critical thinking action to its most likely outcome.",
           "pairs": [
             {
-              "left": "Pre-release stress tests",
-              "right": "Lower severe failure probability"
+              "left": "Fact-checking a claim before sharing",
+              "right": "Reduces the spread of misinformation"
             },
             {
-              "left": "Checkpoint gating",
-              "right": "Prevents defect propagation"
+              "left": "Pausing to review your own bias",
+              "right": "Leads to a more objective analysis"
             },
             {
-              "left": "Baseline comparison",
-              "right": "Supports defensible impact claims"
+              "left": "Comparing multiple sources",
+              "right": "Provides a more complete picture of the story"
             },
             {
-              "left": "Retrospective review",
-              "right": "Improves next-iteration decisions"
+              "left": "Reflecting on what you learned",
+              "right": "Improves your analysis skills for the future"
             }
           ]
         },
         {
           "id": "media-literacy-201-l02-act2",
           "type": "sorting_buckets",
-          "title": "Constraint Sorting",
-          "description": "Sort constraints into technical, policy, and user-impact categories.",
+          "title": "Identifying Different Types of Influence",
+          "description": "Sort these factors based on how they influence a media message.",
           "buckets": [
-            "Technical",
-            "Policy",
-            "User Impact"
+            "Creator's Choices",
+            "Audience Factors",
+            "Platform Rules"
           ],
           "items": [
             {
-              "text": "Latency budget",
-              "bucket": "Technical"
+              "text": "Using emotional language in a headline",
+              "bucket": "Creator's Choices"
             },
             {
-              "text": "Audit retention requirement",
-              "bucket": "Policy"
+              "text": "A viewer's existing political beliefs",
+              "bucket": "Audience Factors"
             },
             {
-              "text": "Accessibility burden",
-              "bucket": "User Impact"
+              "text": "An algorithm that promotes viral content",
+              "bucket": "Platform Rules"
             },
             {
-              "text": "Human review threshold",
-              "bucket": "Policy"
+              "text": "The photo chosen for an article",
+              "bucket": "Creator's Choices"
             }
           ]
         }
@@ -171,136 +171,136 @@ export const MediaLiteracy201Module: LearningModule = {
       "learningAids": [
         {
           "id": "media-literacy-201-l03-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use the lesson scaffold, show your reasoning, and verify assumptions before finalizing your answer."
+          "type": "image",
+          "title": "Tip Sheet: Answering Quiz Questions",
+          "content": "A graphic with tips: 1. Read each question carefully. 2. Eliminate obviously wrong answers. 3. Choose the BEST option based on the lessons."
         }
       ],
       "questions": [
         {
           "id": "media-literacy-201-l03-q1",
-          "text": "Which practice most strengthens source credibility in real deployments?",
-          "skillId": "media-literacy-201-skill-risk",
+          "text": "When evaluating a news source's credibility, what is the most important first step?",
+          "skillId": "media-literacy-201-skill-credibility",
           "options": [
             {
               "id": "a",
-              "text": "Use assumptions without documenting them"
+              "text": "Agreeing with the article's conclusion"
             },
             {
               "id": "b",
-              "text": "Define failure criteria and monitor leading indicators"
+              "text": "Identifying the author and their potential biases"
             },
             {
               "id": "c",
-              "text": "Evaluate outcomes only once per year"
+              "text": "Checking how many likes it has on social media"
             },
             {
               "id": "d",
-              "text": "Avoid stress-testing edge cases"
+              "text": "Reading only the headline"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Explicit failure criteria and leading indicators improve early detection and response."
+          "explanation": "Understanding who created the content and what their perspective might be is a critical first step in assessing credibility."
         },
         {
           "id": "media-literacy-201-l03-q2",
-          "text": "At level 201, Media Literacy work should prioritize:",
-          "skillId": "media-literacy-201-skill-level",
+          "text": "Narrative framing refers to...",
+          "skillId": "media-literacy-201-skill-framing",
           "options": [
             {
               "id": "a",
-              "text": "method execution, workflow reliability, and scenario interpretation"
+              "text": "The process of printing a newspaper."
             },
             {
               "id": "b",
-              "text": "Speed over traceability in all cases"
+              "text": "How a story is constructed to emphasize certain aspects and influence the audience."
             },
             {
               "id": "c",
-              "text": "No validation loops after release"
+              "text": "A list of 100% objective, unchangeable facts."
             },
             {
               "id": "d",
-              "text": "Single-metric optimization without context"
+              "text": "The physical frame around a picture in an article."
             }
           ],
-          "correctOptionId": "a",
-          "explanation": "The 201 sequence is designed around method execution, workflow reliability, and scenario interpretation."
+          "correctOptionId": "b",
+          "explanation": "Framing involves selecting and highlighting certain information to encourage a particular interpretation."
         },
         {
           "id": "media-literacy-201-l03-q3",
-          "text": "What is the strongest indicator of healthy narrative framing?",
-          "skillId": "media-literacy-201-skill-ops",
+          "text": "What is the most effective way to verify a surprising claim you see online?",
+          "skillId": "media-literacy-201-skill-verification",
           "options": [
             {
               "id": "a",
-              "text": "Untracked interventions and ad-hoc approvals"
+              "text": "Trust it if it comes from a friend."
             },
             {
               "id": "b",
-              "text": "Clear owner mapping, review cadence, and measurable thresholds"
+              "text": "Check the comment section to see if people agree."
             },
             {
               "id": "c",
-              "text": "Skipping post-incident analysis"
+              "text": "Search for the claim on multiple, independent, and reliable news sites."
             },
             {
               "id": "d",
-              "text": "Changing targets after observing results"
+              "text": "Share it immediately to see what your friends think."
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "Stable systems require clear ownership, decision cadence, and measurable controls."
+          "correctOptionId": "c",
+          "explanation": "Corroborating information across multiple reliable sources is a core practice of fact-checking and media literacy."
         },
         {
           "id": "media-literacy-201-l03-q4",
-          "text": "When improving misinformation analysis, which approach is most defensible?",
-          "skillId": "media-literacy-201-skill-eval",
+          "text": "An 'observable indicator' of a claim is another way of saying...",
+          "skillId": "media-literacy-201-skill-evidence",
           "options": [
             {
               "id": "a",
-              "text": "Use anecdotal wins as sole evidence"
+              "text": "A popular opinion about the claim."
             },
             {
               "id": "b",
-              "text": "Compare against baselines and include failure analysis"
+              "text": "A feeling or hunch you have."
             },
             {
               "id": "c",
-              "text": "Remove difficult test scenarios"
+              "text": "Verifiable evidence or data that supports the claim."
             },
             {
               "id": "d",
-              "text": "Ignore lagging outcomes"
+              "text": "A prediction of what might happen next."
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "Baselines and failure analysis reduce bias and reveal true system performance."
+          "correctOptionId": "c",
+          "explanation": "Evidence consists of facts, data, and observations that can be checked and verified independently."
         },
         {
           "id": "media-literacy-201-l03-q5",
-          "text": "A mature civic decision impact strategy should include:",
-          "skillId": "media-literacy-201-skill-governance",
+          "text": "Developing a personal 'analysis workflow' is useful because it...",
+          "skillId": "media-literacy-201-skill-workflow",
           "options": [
             {
               "id": "a",
-              "text": "No escalation path for critical defects"
+              "text": "Guarantees you will never be wrong."
             },
             {
               "id": "b",
-              "text": "Policy, measurement, and escalation pathways linked to impact tiers"
+              "text": "Helps you analyze information quickly without thinking."
             },
             {
               "id": "c",
-              "text": "One-time governance review only"
+              "text": "Provides a consistent, step-by-step method for evaluating media critically."
             },
             {
               "id": "d",
-              "text": "Separation between metrics and decisions"
+              "text": "Only works for analyzing social media posts."
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "Effective governance connects policy intent to measurement and response action."
+          "correctOptionId": "c",
+          "explanation": "A workflow provides a structured and reliable process to ensure you are thorough and consistent in your analysis."
         }
       ]
     },
@@ -312,46 +312,46 @@ export const MediaLiteracy201Module: LearningModule = {
       "learningAids": [
         {
           "id": "media-literacy-201-l04-a1",
-          "type": "mnemonic",
-          "title": "Guided Practice",
-          "content": "Use the lesson scaffold, show your reasoning, and verify assumptions before finalizing your answer."
+          "type": "image",
+          "title": "Case Study Deconstruction",
+          "content": "A diagram showing how to break down a news story: Main Claim -> Supporting Evidence -> Narrative Frame -> Potential Impact."
         }
       ],
       "chunks": [
         {
           "id": "media-literacy-201-l04-c1",
           "kind": "example",
-          "title": "Case Setup and Stakes",
-          "content": "In this case study, we will explore a fast-paced public event that has generated various media narratives. These narratives can significantly affect how individuals and communities respond to the situation. As learners, your goal will be to critically analyze the information presented, distinguishing between solid evidence and personal assumptions. Additionally, you will identify the potential high-stakes risks that arise from these narratives. This exercise is designed to deepen your understanding of how media influences public perception and behavior, encouraging you to think critically about the information you consume."
+          "title": "Analyzing a Real-World Event",
+          "content": "In this case study, we will analyze multiple media narratives surrounding a recent, fast-moving public event. Your goal is to distinguish between verifiable evidence and speculation, and to identify the potential real-world consequences of different media portrayals. This exercise will deepen your understanding of how media shapes public perception."
         },
         {
           "id": "media-literacy-201-l04-c2",
           "kind": "concept",
-          "title": "Decision Tradeoff Matrix",
-          "content": "In this section, learners will evaluate different alternatives using a decision tradeoff matrix. They will score each option based on its performance, reliability, cost, and fairness implications. This structured approach will guide them in selecting the best intervention path, encouraging thoughtful decision-making.\nContext recap: In this section, learners will evaluate different alternatives using a decision tradeoff matrix. They will score each option based on its performance, reliability, cost, and fairness implications. This structured approach will guide them in selecting the best intervention path, encouraging thoughtful decision-making."
+          "title": "Weighing Different Perspectives",
+          "content": "In this section, you will practice evaluating different interpretations of the same event. We will use a structured approach to compare the evidence, logic, and potential biases of each perspective. This method will guide you in forming a more complete and nuanced understanding of complex issues."
         },
         {
           "id": "media-literacy-201-l04-c3",
           "kind": "recap",
-          "title": "Lessons from Failure Modes",
-          "content": "In this recap, learners will categorize patterns of failure to transform isolated incidents into valuable lessons. By understanding these failure modes, they can create reusable design safeguards that help prevent similar issues in the future, fostering a proactive approach to problem-solving.\nContext recap: In this recap, learners will categorize patterns of failure to transform isolated incidents into valuable lessons. By understanding these failure modes, they can create reusable design safeguards that help prevent similar issues in the future, fostering a proactive approach to problem-solving."
+          "title": "Learning from Misleading Media",
+          "content": "In this recap, we will identify common patterns in how media can be misleading. By understanding these patterns, such as using emotional language or taking quotes out of context, you can develop mental shortcuts to spot potential misinformation more quickly in the future."
         }
       ],
       "flashcards": [
         {
           "id": "media-literacy-201-l04-f1",
-          "front": "Tradeoff matrix",
-          "back": "A structured way to compare options across competing priorities before choosing an intervention."
+          "front": "Weighing Pros and Cons",
+          "back": "A structured way to compare the strengths and weaknesses of different arguments or interpretations before forming a conclusion."
         },
         {
           "id": "media-literacy-201-l04-f2",
-          "front": "Failure mode",
-          "back": "A repeatable pattern describing how systems break under real constraints."
+          "front": "Misleading Pattern",
+          "back": "A common technique or reason why information can be deceptive, such as using a misleading chart or an out-of-context photo."
         },
         {
           "id": "media-literacy-201-l04-f3",
-          "front": "Escalation threshold",
-          "back": "A predefined condition that triggers higher-level review or corrective action."
+          "front": "Impact Assessment",
+          "back": "The process of evaluating the potential real-world consequences of a media narrative on individuals or society."
         }
       ]
     },
@@ -363,58 +363,58 @@ export const MediaLiteracy201Module: LearningModule = {
       "learningAids": [
         {
           "id": "media-literacy-201-l05-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use the lesson scaffold, show your reasoning, and verify assumptions before finalizing your answer."
+          "type": "image",
+          "title": "Simulation Dashboard",
+          "content": "An image of a dashboard with dials for 'Public Trust,' 'Information Accuracy,' and 'Civic Engagement' that you will try to influence in the simulation."
         }
       ],
       "chunks": [
         {
           "id": "media-literacy-201-l05-c1",
           "kind": "practice",
-          "title": "Simulation Setup",
-          "content": "In this interactive practice, learners will set up a scenario model that includes clear assumptions about uncertainty and metrics for success. These metrics will be linked to the impact of civic decisions, allowing learners to understand how their choices can affect the community and society at large.\nContext recap: In this interactive practice, learners will set up a scenario model that includes clear assumptions about uncertainty and metrics for success. These metrics will be linked to the impact of civic decisions, allowing learners to understand how their choices can affect the community and society at large."
+          "title": "Setting the Scene",
+          "content": "In this interactive simulation, you will take on the role of a media analyst during a breaking news event. You will make choices about what information to trust and share, and see how those choices affect public trust and understanding of the event."
         },
         {
           "id": "media-literacy-201-l05-c2",
           "kind": "recap",
-          "title": "Decision Review Loop",
-          "content": "At the end of each simulation round, learners will engage in a review process. They will examine the evidence gathered, check for alignment with policy goals, and identify actions for improvement. This reflective practice will help them learn from their experiences and enhance their decision-making skills.\nContext recap: At the end of each simulation round, learners will engage in a review process. They will examine the evidence gathered, check for alignment with policy goals, and identify actions for improvement. This reflective practice will help them learn from their experiences and enhance their decision-making skills."
+          "title": "Analyzing Your Impact",
+          "content": "At the end of each simulation round, you will review the consequences of your decisions. We will examine the evidence, see how your actions aligned with the goal of informing the public responsibly, and identify ways to improve your decision-making in the next round."
         }
       ],
       "interactiveActivities": [
         {
           "id": "media-literacy-201-l05-act1",
           "type": "scenario_practice",
-          "title": "Policy and Operations Simulation",
-          "description": "Run three intervention strategies and justify which option best advances source credibility and civic decision impact.",
+          "title": "The Information Crisis Simulation",
+          "description": "You are presented with three conflicting reports about a local crisis. Choose a strategy for how to report on the situation and justify your choice based on its likely impact on public trust and safety.",
           "instructions": [
-            "Define the primary objective and guardrails before choosing an intervention.",
-            "Record one tradeoff created by each intervention.",
-            "Select a follow-up metric that confirms whether the choice was successful."
+            "Define your primary objective: Is it to be first, to be 100% accurate, or to prevent panic?",
+            "For each of the three reports, identify one potential risk of sharing it.",
+            "Choose your strategy and explain how you will measure whether it was successful."
           ]
         },
         {
           "id": "media-literacy-201-l05-act2",
           "type": "matching_pairs",
-          "title": "Mitigation Mapping",
-          "description": "Match each failure condition with the strongest mitigation response.",
+          "title": "Matching Problems to Solutions",
+          "description": "Match each common media problem with the best response.",
           "pairs": [
             {
-              "left": "Unreliable input stream",
-              "right": "Introduce quality contracts and quarantine checks"
+              "left": "A source is known for sensational clickbait.",
+              "right": "Verify its claims with more reputable sources."
             },
             {
-              "left": "Policy ambiguity",
-              "right": "Define decision authority and escalation rules"
+              "left": "A platform's rules on misinformation are unclear.",
+              "right": "Be extra cautious and prioritize well-vetted information."
             },
             {
-              "left": "Metric drift",
-              "right": "Re-baseline and monitor leading indicators"
+              "left": "A story's 'likes' don't match its factual accuracy.",
+              "right": "Ignore social metrics and focus on the evidence."
             },
             {
-              "left": "User trust decline",
-              "right": "Increase transparency and corrective feedback loops"
+              "left": "Public trust in the media is declining.",
+              "right": "Increase transparency about your sources and methods."
             }
           ]
         }
@@ -428,136 +428,136 @@ export const MediaLiteracy201Module: LearningModule = {
       "learningAids": [
         {
           "id": "media-literacy-201-l06-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use the lesson scaffold, show your reasoning, and verify assumptions before finalizing your answer."
+          "type": "image",
+          "title": "Tip Sheet: Answering Quiz Questions",
+          "content": "A graphic with tips: 1. Read each question carefully. 2. Eliminate obviously wrong answers. 3. Choose the BEST option based on the lessons."
         }
       ],
       "questions": [
         {
           "id": "media-literacy-201-l06-q1",
-          "text": "Which practice most strengthens source credibility in real deployments?",
-          "skillId": "media-literacy-201-skill-risk",
+          "text": "In a case study involving multiple conflicting reports, what is the most responsible action?",
+          "skillId": "media-literacy-201-skill-synthesis",
           "options": [
             {
               "id": "a",
-              "text": "Use assumptions without documenting them"
+              "text": "Choose the report that sounds the most exciting."
             },
             {
               "id": "b",
-              "text": "Define failure criteria and monitor leading indicators"
+              "text": "Report all of them as equally true."
             },
             {
               "id": "c",
-              "text": "Evaluate outcomes only once per year"
+              "text": "Acknowledge the uncertainty and report only what can be verified."
             },
             {
               "id": "d",
-              "text": "Avoid stress-testing edge cases"
+              "text": "Ignore all of them and wait for the story to disappear."
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "Explicit failure criteria and leading indicators improve early detection and response."
+          "correctOptionId": "c",
+          "explanation": "Responsible analysis involves clearly communicating what is known, what is unknown, and what is unconfirmed."
         },
         {
           "id": "media-literacy-201-l06-q2",
-          "text": "At level 201, Media Literacy work should prioritize:",
-          "skillId": "media-literacy-201-skill-level",
+          "text": "The goal of a 'weighing perspectives' exercise is to...",
+          "skillId": "media-literacy-201-skill-perspective",
           "options": [
             {
               "id": "a",
-              "text": "method execution, workflow reliability, and scenario interpretation"
+              "text": "Prove that one side is 100% right and the other is 100% wrong."
             },
             {
               "id": "b",
-              "text": "Speed over traceability in all cases"
+              "text": "Understand the strengths, weaknesses, and underlying assumptions of different viewpoints."
             },
             {
               "id": "c",
-              "text": "No validation loops after release"
+              "text": "Decide which perspective is the most popular."
             },
             {
               "id": "d",
-              "text": "Single-metric optimization without context"
+              "text": "Avoid making any judgment at all."
             }
           ],
-          "correctOptionId": "a",
-          "explanation": "The 201 sequence is designed around method execution, workflow reliability, and scenario interpretation."
+          "correctOptionId": "b",
+          "explanation": "This method encourages a nuanced understanding by systematically evaluating multiple sides of an issue."
         },
         {
           "id": "media-literacy-201-l06-q3",
-          "text": "What is the strongest indicator of healthy narrative framing?",
-          "skillId": "media-literacy-201-skill-ops",
+          "text": "What does it mean to learn from 'misleading patterns' in media?",
+          "skillId": "media-literacy-201-skill-patterns",
           "options": [
             {
               "id": "a",
-              "text": "Untracked interventions and ad-hoc approvals"
+              "text": "Memorizing a list of every false story ever published."
             },
             {
               "id": "b",
-              "text": "Clear owner mapping, review cadence, and measurable thresholds"
+              "text": "Recognizing common techniques used to manipulate or mislead audiences."
             },
             {
               "id": "c",
-              "text": "Skipping post-incident analysis"
+              "text": "Assuming that all media is intentionally misleading."
             },
             {
               "id": "d",
-              "text": "Changing targets after observing results"
+              "text": "Only trusting media that you create yourself."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Stable systems require clear ownership, decision cadence, and measurable controls."
+          "explanation": "Identifying patterns, like using emotional appeals over facts, helps you spot potential issues in new content you encounter."
         },
         {
           "id": "media-literacy-201-l06-q4",
-          "text": "When improving misinformation analysis, which approach is most defensible?",
-          "skillId": "media-literacy-201-skill-eval",
+          "text": "A media simulation is a useful learning tool because it...",
+          "skillId": "media-literacy-201-skill-simulation",
           "options": [
             {
               "id": "a",
-              "text": "Use anecdotal wins as sole evidence"
+              "text": "Perfectly predicts the future."
             },
             {
               "id": "b",
-              "text": "Compare against baselines and include failure analysis"
+              "text": "Shows how your decisions can have unintended consequences in a safe environment."
             },
             {
               "id": "c",
-              "text": "Remove difficult test scenarios"
+              "text": "Proves that there is always one single right answer."
             },
             {
               "id": "d",
-              "text": "Ignore lagging outcomes"
+              "text": "Is a fun game that has no connection to the real world."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Baselines and failure analysis reduce bias and reveal true system performance."
+          "explanation": "Simulations provide a space to practice decision-making and see the cause-and-effect of your choices without real-world harm."
         },
         {
           "id": "media-literacy-201-l06-q5",
-          "text": "A mature civic decision impact strategy should include:",
-          "skillId": "media-literacy-201-skill-governance",
+          "text": "In the 'Information Crisis Simulation,' prioritizing speed over accuracy is likely to lead to what outcome?",
+          "skillId": "media-literacy-201-skill-tradeoffs",
           "options": [
             {
               "id": "a",
-              "text": "No escalation path for critical defects"
+              "text": "An increase in long-term public trust."
             },
             {
               "id": "b",
-              "text": "Policy, measurement, and escalation pathways linked to impact tiers"
+              "text": "A decrease in public trust if the initial information is wrong."
             },
             {
               "id": "c",
-              "text": "One-time governance review only"
+              "text": "A perfectly informed public."
             },
             {
               "id": "d",
-              "text": "Separation between metrics and decisions"
+              "text": "No significant consequences."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Effective governance connects policy intent to measurement and response action."
+          "explanation": "Rushing to publish unverified information can severely damage credibility and trust, even if it is later corrected."
         }
       ]
     },
@@ -570,45 +570,45 @@ export const MediaLiteracy201Module: LearningModule = {
         {
           "id": "media-literacy-201-l07-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use the lesson scaffold, show your reasoning, and verify assumptions before finalizing your answer."
+          "title": "The Ripple Effect",
+          "content": "An infographic showing how a single piece of media can ripple outwards to affect individuals, communities, and society."
         }
       ],
       "chunks": [
         {
           "id": "media-literacy-201-l07-c1",
           "kind": "concept",
-          "title": "Stakeholder Analysis",
-          "content": "In this section, learners will conduct a stakeholder analysis to identify who benefits from certain decisions, who might face risks, and how different policy choices can shape outcomes for various groups. This understanding will help them appreciate the complexity of media impacts on society.\nContext recap: In this section, learners will conduct a stakeholder analysis to identify who benefits from certain decisions, who might face risks, and how different policy choices can shape outcomes for various groups. This understanding will help them appreciate the complexity of media impacts on society."
+          "title": "Who is Affected?",
+          "content": "In this section, we will conduct a 'stakeholder analysis' to identify who benefits from a media narrative, who might be harmed, and how different editorial choices can shape outcomes for various groups. This helps us understand the complex impact of media on society."
         },
         {
           "id": "media-literacy-201-l07-c2",
           "kind": "concept",
-          "title": "Governance and Accountability",
-          "content": "In this concept segment, learners will explore governance and accountability. They will learn how governance mechanisms are connected to measurable controls, obligations for transparency, and pathways for remediation. This knowledge will empower them to understand how policies can be structured to ensure fairness and accountability.\nContext recap: In this concept segment, learners will explore governance and accountability. They will learn how governance mechanisms are connected to measurable controls, obligations for transparency, and pathways for remediation. This knowledge will empower them to understand how policies can be structured to ensure fairness and accountability."
+          "title": "Rules, Responsibility, and Consequences",
+          "content": "Here, we will explore governance and accountability in media. You will learn how ethical guidelines, transparency, and pathways for correcting errors are essential for building trust. This knowledge will empower you to understand how media organizations can be held accountable."
         },
         {
           "id": "media-literacy-201-l07-c3",
           "kind": "recap",
-          "title": "Responsible Execution Checklist",
-          "content": "Before making any decisions about deploying media projects, it is essential to use a comprehensive checklist. This checklist should include important factors such as legal considerations, ethical standards, technical requirements, and the potential impact on users. By carefully evaluating these criteria, we can ensure that our media practices are responsible and beneficial to the community.\nContext recap: Before making any decisions about deploying media projects, it is essential to use a comprehensive checklist. This checklist should include important factors such as legal considerations, ethical standards, technical requirements, and the potential impact on users. By carefully evaluating these criteria, we can ensure that our media practices are responsible and beneficial to the community."
+          "title": "An Ethical Media Checklist",
+          "content": "Before creating or sharing media, it's important to consider its ethical implications. We will review a checklist that includes key questions about fairness, accuracy, potential for harm, and transparency. This helps ensure our media practices are responsible and constructive."
         }
       ],
       "flashcards": [
         {
           "id": "media-literacy-201-l07-f1",
-          "front": "Stakeholder map",
-          "back": "A framework that tracks impact distribution across affected groups."
+          "front": "Stakeholder",
+          "back": "Any person or group who is affected by a media story, including the subjects of the story, the audience, and the wider community."
         },
         {
           "id": "media-literacy-201-l07-f2",
-          "front": "Accountability loop",
-          "back": "A cycle connecting outcomes, ownership, and corrective action."
+          "front": "Accountability",
+          "back": "The process of holding media creators and organizations responsible for their content and its impact, often through corrections, clarifications, or public statements."
         },
         {
           "id": "media-literacy-201-l07-f3",
-          "front": "Responsible execution",
-          "back": "Delivery practice that balances performance with safety, fairness, and transparency."
+          "front": "Responsible Sharing",
+          "back": "The practice of sharing information in a way that is ethical, fair, and considers the potential harm to others."
         }
       ]
     },
@@ -620,42 +620,42 @@ export const MediaLiteracy201Module: LearningModule = {
       "learningAids": [
         {
           "id": "media-literacy-201-l08-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use the lesson scaffold, show your reasoning, and verify assumptions before finalizing your answer."
+          "type": "image",
+          "title": "Capstone Project Canvas",
+          "content": "A one-page template with sections for Project Goal, Key Questions, Target Audience, and Success Metrics."
         }
       ],
       "chunks": [
         {
           "id": "media-literacy-201-l08-c1",
           "kind": "practice",
-          "title": "Capstone Scope Definition",
-          "content": "In this activity, learners will create a detailed capstone charter. This document will outline the main objectives of the project, identify potential risks, establish metrics for measuring success, and set up governance checkpoints to ensure everything stays on track. This process helps students think critically about their projects and prepares them for real-world challenges.\nContext recap: In this activity, learners will create a detailed capstone charter. This document will outline the main objectives of the project, identify potential risks, establish metrics for measuring success, and set up governance checkpoints to ensure everything stays on track. This process helps students think critically about their projects and prepares them for real-world challenges."
+          "title": "Defining Your Final Project",
+          "content": "In this activity, you will create a detailed plan for your final capstone project. This plan will outline your main research question, identify potential challenges, establish how you will measure success, and set checkpoints to keep your project on track."
         },
         {
           "id": "media-literacy-201-l08-c2",
           "kind": "recap",
-          "title": "Defense Preparation",
-          "content": "To conclude the lesson, students will work with a defense preparation template. This template will guide them in making claims that are supported by evidence and require them to explain the reasoning behind any trade-offs they make. This exercise encourages critical thinking and helps students articulate their ideas clearly and convincingly.\nContext recap: To conclude the lesson, students will work with a defense preparation template. This template will guide them in making claims that are supported by evidence and require them to explain the reasoning behind any trade-offs they make. This exercise encourages critical thinking and helps students articulate their ideas clearly and convincingly."
+          "title": "Preparing to Present Your Findings",
+          "content": "To conclude the lesson, you will use a presentation template to structure your project's argument. This will guide you in making claims that are strongly supported by evidence and require you to explain the reasoning behind your conclusions and any trade-offs you considered."
         }
       ],
       "interactiveActivities": [
         {
           "id": "media-literacy-201-l08-act1",
           "type": "project_builder",
-          "title": "Capstone Charter Builder",
-          "description": "Build a one-page capstone charter with metrics, controls, and success criteria.",
+          "title": "Project Proposal Builder",
+          "description": "Build a one-page plan for your capstone project, including your topic, key questions, and success criteria.",
           "instructions": [
-            "State the primary objective and boundary conditions.",
-            "Define at least three measurable success indicators.",
-            "Identify one ethical or policy risk and mitigation plan."
+            "State the primary objective of your analysis.",
+            "Define at least three key questions you plan to investigate.",
+            "Identify one potential ethical consideration or bias in your topic and a plan to address it."
           ]
         },
         {
           "id": "media-literacy-201-l08-act2",
           "type": "debate_simulator",
-          "title": "Decision Defense Drill",
-          "description": "Defend your capstone approach against cost, risk, and equity critiques."
+          "title": "Critique Your Own Work",
+          "description": "Anticipate and prepare responses to potential critiques of your capstone project related to bias, evidence, and fairness."
         }
       ]
     }

@@ -36,6 +36,7 @@ import type { ReactNode } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import JuicyConfetti from "@/components/experience/JuicyConfetti";
 import AchievementToast from "@/components/experience/AchievementToast";
+import { useZenMode } from "@/lib/theme/zen-mode-context";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Types
@@ -187,6 +188,9 @@ export function ExperienceProvider({ children }: { children: ReactNode }) {
   const [pendingReward, setPendingReward] = useState<PendingReward>(null);
   const [showConfetti, setShowConfetti] = useState(false);
   const [floatingXPs, setFloatingXPs] = useState<FloatingXP[]>([]);
+
+  // Zen Mode: suppress visual celebrations while still recording XP server-side
+  const { isZenMode: zenActive } = useZenMode();
 
   // Track previous level to detect level-up after optimistic update
   const prevLevelRef = useRef<number>(1);
@@ -407,36 +411,40 @@ export function ExperienceProvider({ children }: { children: ReactNode }) {
     <ExperienceContext.Provider value={value}>
       {children}
 
-      {/* Floating XP animations */}
-      <AnimatePresence>
-        {floatingXPs.map((fxp) => (
-          <motion.div
-            key={fxp.id}
-            initial={{ opacity: 1, y: fxp.y, x: fxp.x, scale: 0.8 }}
-            animate={{ opacity: 0, y: fxp.y - 120, scale: 1.5 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 1.5, ease: "easeOut" }}
-            className="fixed z-[9999] pointer-events-none font-bold text-3xl text-amber-400 drop-shadow-lg"
-            style={{
-              left: 0,
-              top: 0,
-              WebkitTextStroke: "1.5px #b45309",
-            }}
-          >
-            +{fxp.amount} XP
-          </motion.div>
-        ))}
-      </AnimatePresence>
+      {/* Floating XP animations — hidden in Zen Mode */}
+      {!zenActive && (
+        <AnimatePresence>
+          {floatingXPs.map((fxp) => (
+            <motion.div
+              key={fxp.id}
+              initial={{ opacity: 1, y: fxp.y, x: fxp.x, scale: 0.8 }}
+              animate={{ opacity: 0, y: fxp.y - 120, scale: 1.5 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 1.5, ease: "easeOut" }}
+              className="koydo-xp-float fixed z-[9999] pointer-events-none font-bold text-3xl text-amber-400 drop-shadow-lg"
+              style={{
+                left: 0,
+                top: 0,
+                WebkitTextStroke: "1.5px #b45309",
+              }}
+            >
+              +{fxp.amount} XP
+            </motion.div>
+          ))}
+        </AnimatePresence>
+      )}
 
-      {/* Global celebration overlays — rendered once at app root */}
-      <JuicyConfetti
-        active={showConfetti}
-        durationMs={3500}
-        particleCount={120}
-        onComplete={() => setShowConfetti(false)}
-      />
+      {/* Global celebration overlays — hidden in Zen Mode */}
+      {!zenActive && (
+        <JuicyConfetti
+          active={showConfetti}
+          durationMs={3500}
+          particleCount={120}
+          onComplete={() => setShowConfetti(false)}
+        />
+      )}
 
-      {pendingReward && (
+      {!zenActive && pendingReward && (
         <AchievementToast
           show={Boolean(pendingReward)}
           title={pendingReward.title}

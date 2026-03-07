@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const Farming401Module: LearningModule = {
+export const farming_401_Module: LearningModule = {
   "id": "farming-401",
   "title": "Farming Systems Leadership and Climate Resilience",
   "description": "Expert-level farming curriculum on agroecosystem strategy, precision decision systems, climate risk adaptation, resource economics, and long-term farm resilience planning.",
@@ -13,21 +13,21 @@ export const Farming401Module: LearningModule = {
     "agroecology",
     "resilience"
   ],
-  "minAge": 12,
+  "minAge": 14,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en"
   ],
   "thumbnail": "/placeholders/lesson-robot.svg",
   "learningObjectives": [
-    "Design integrated farming systems that balance productivity and ecological health",
-    "Use precision data for irrigation, nutrient, and pest management decisions",
-    "Evaluate climate risk scenarios and adaptation pathways",
-    "Optimize resource allocation under economic and environmental constraints",
-    "Build resilient farm operating plans with measurable sustainability indicators",
-    "Communicate strategy across technical, financial, and community stakeholders"
+    "Design integrated farming systems that balance productivity and ecological health.",
+    "Utilize precision data for irrigation, nutrient, and pest management decisions.",
+    "Evaluate climate risk scenarios and formulate robust adaptation pathways.",
+    "Optimize resource allocation under economic and environmental constraints.",
+    "Develop resilient farm operating plans with measurable sustainability indicators.",
+    "Communicate strategic plans effectively to technical, financial, and community stakeholders."
   ],
   "lessons": [
     {
@@ -39,37 +39,37 @@ export const Farming401Module: LearningModule = {
         {
           "id": "farming-401-l01-c1",
           "kind": "concept",
-          "title": "Farm as a System",
-          "content": "When we think about a farm, it's important to see it as a whole system. This means that everything on the farm—like the soil, water, crops, animals, workers, and how we sell our products—works together. If we only focus on improving one part of the farm without considering the others, we might accidentally make the entire farm less strong and less able to handle challenges. So, it's crucial to plan carefully and think about how all these parts connect.\nContext recap: When we think about a farm, it's important to see it as a whole system. This means that everything on the farm—like the soil, water, crops, animals, workers, and how we sell our products—works together. If we only focus on improving one part of the farm without considering the others, we might accidentally make the entire farm less strong and less able to handle challenges. So, it's crucial to plan carefully and think about how all these parts connect."
+          "title": "The Farm as an Integrated System",
+          "content": "An advanced approach to farm management views the entire operation as an integrated agroecosystem. This perspective recognizes that all components—soil biology, water cycles, crop and livestock genetics, labor, and market dynamics—are interconnected. Optimizing one component in isolation can create unintended negative consequences elsewhere, compromising the resilience of the whole system. Strategic planning, therefore, requires a holistic understanding of these complex interactions."
         },
         {
           "id": "farming-401-l01-c2",
           "kind": "concept",
-          "title": "Productivity-Resilience Trade-offs",
-          "content": "Sometimes, farmers want to get the most crops in the shortest time, but this can lead to problems later on. For example, if we take too much from the soil or use too much water, we might hurt the land and make it harder to grow food in the future. Good farm planning looks at both the immediate needs and the long-term health of the farm. This means finding a balance between getting good crops now and making sure the farm can keep producing in the years to come."
+          "title": "Balancing Productivity and Resilience",
+          "content": "A common strategic challenge involves the trade-off between maximizing short-term yield and ensuring long-term resilience. Aggressive production strategies can deplete natural capital like soil organic matter or water resources, increasing future vulnerability. Effective farm design seeks to balance immediate productivity with the capacity to withstand shocks and stresses, ensuring the farm's viability and ecological integrity for years to come."
         },
         {
           "id": "farming-401-l01-c3",
           "kind": "recap",
-          "title": "Design Principles",
-          "content": "To create a strong and resilient farm, there are some key ideas we should follow. These include diversifying what we grow, changing our planting schedules based on what the land needs, taking care of our water resources, and ensuring that we have different ways to earn money. By using these principles, we can design a farm that is better prepared for challenges and can thrive over time.\nContext recap: To create a strong and resilient farm, there are some key ideas we should follow. These include diversifying what we grow, changing our planting schedules based on what the land needs, taking care of our water resources, and ensuring that we have different ways to earn money. By using these principles, we can design a farm that is better prepared for challenges and can thrive over time."
+          "title": "Core Design Principles for Resilience",
+          "content": "Key principles for designing a resilient agroecosystem include enhancing biodiversity through crop diversification and habitat integration, implementing adaptive rotational planning, optimizing water stewardship, and building diversified revenue streams. Applying these principles systematically creates a farm structure that is robust, adaptable, and capable of thriving amidst uncertainty."
         }
       ],
       "flashcards": [
         {
           "id": "farming-401-l01-f1",
           "front": "Agroecosystem",
-          "back": "An integrated system of biological, environmental, and economic processes within farming operations."
+          "back": "An integrated system of biological, environmental, and economic processes that constitute a farming operation."
         },
         {
           "id": "farming-401-l01-f2",
           "front": "Resilience",
-          "back": "Capacity to absorb shocks, adapt, and sustain function over time."
+          "back": "The capacity of a system to absorb disturbances, adapt to change, and maintain core functions over time."
         },
         {
           "id": "farming-401-l01-f3",
           "front": "Diversification",
-          "back": "Risk-reduction strategy using variety in crops, practices, and income channels."
+          "back": "A primary risk-management strategy that utilizes variety in crops, livestock, management practices, and income channels."
         }
       ],
       "learningAids": [
@@ -77,27 +77,27 @@ export const Farming401Module: LearningModule = {
           "id": "farming-401-l01-a1",
           "type": "image",
           "title": "Whole-Farm Systems Map",
-          "content": "Visual map linking soil, water, crop, labor, and market loops in strategic farm planning."
+          "content": "A dynamic infographic illustrating the interconnected feedback loops between soil health, water cycles, crop selection, labor inputs, and market access in a resilient agroecosystem."
         }
       ]
     },
     {
       "id": "farming-401-l02",
-      "title": "Precision Agriculture Decision Lab",
+      "title": "Precision Agriculture and Decision Systems",
       "type": "interactive",
       "duration": 16,
       "chunks": [
         {
           "id": "farming-401-l02-c1",
           "kind": "concept",
-          "title": "Data-Informed Operations",
-          "content": "Precision agriculture is a modern approach that uses advanced technology to make farming more efficient and effective. This involves using various tools such as sensors placed in the fields to monitor soil conditions, weather data to understand climate patterns, satellite images to track crop health, and telemetry from our farming equipment to gather important information. By analyzing this data, farmers can determine the best times to plant seeds, water their crops, and apply fertilizers or pesticides. The main goal of precision agriculture is to help farmers make informed decisions based on reliable information, rather than feeling confused by too much data. This way, they can ensure their crops grow healthy and strong while also being mindful of resources and the environment."
+          "title": "From Data to Actionable Intelligence",
+          "content": "Precision agriculture leverages technology to transform raw data into actionable intelligence for farm management. By integrating inputs from in-field sensors, satellite imagery, weather models, and equipment telemetry, farmers can move beyond intuition-based decisions. The goal is not simply to collect data, but to establish a clear decision-support system that guides precise interventions, such as variable-rate application of water and nutrients, optimizing resource use and improving outcomes."
         },
         {
           "id": "farming-401-l02-c2",
           "kind": "practice",
-          "title": "Decision Thresholds",
-          "content": "In the world of farming, knowing the right time to take action is crucial for growing healthy crops. This is where we talk about something called 'action thresholds.' These thresholds help farmers decide when to water their plants, add nutrients to the soil, or check for pests. It's like having a guide that tells us the best moments to act. When we set these thresholds, we need to think carefully because sometimes things can be uncertain. We want to avoid jumping to conclusions based on small changes, which might lead us to make hasty decisions. Instead, we should create a thoughtful plan that allows us to respond wisely to the needs of our crops, ensuring they get the care they need without overreacting to minor issues."
+          "title": "Establishing Decision Thresholds",
+          "content": "Effective precision agriculture relies on pre-defined action thresholds—specific data points that trigger a management response. For example, a soil moisture level dropping below a certain percentage might trigger an irrigation event. Setting these thresholds requires careful calibration to avoid overreacting to minor fluctuations (noise) while ensuring timely responses to meaningful trends (signals). This structured approach ensures that interventions are necessary, targeted, and efficient."
         }
       ],
       "interactiveActivities": [
@@ -105,23 +105,23 @@ export const Farming401Module: LearningModule = {
           "id": "farming-401-l02-act1",
           "type": "matching_pairs",
           "title": "Signal-to-Action Match",
-          "description": "Match field signals with the most appropriate management response.",
+          "description": "Match the field data signal with the most appropriate management response.",
           "pairs": [
             {
               "left": "Soil moisture trending below threshold",
-              "right": "Targeted irrigation scheduling"
+              "right": "Initiate targeted irrigation cycle"
             },
             {
               "left": "Leaf chlorophyll decline with stable moisture",
-              "right": "Nutrient status assessment"
+              "right": "Schedule nutrient status assessment"
             },
             {
-              "left": "Localized canopy stress hotspot",
-              "right": "Zone-specific scouting"
+              "left": "Localized canopy stress hotspot via NDVI",
+              "right": "Deploy zone-specific pest/disease scouting"
             },
             {
-              "left": "Weather forecast indicates heat spike",
-              "right": "Irrigation and shade-risk contingency review"
+              "left": "Weather forecast indicates imminent heat spike",
+              "right": "Review and adjust irrigation and shade-risk contingency plans"
             }
           ]
         },
@@ -129,18 +129,18 @@ export const Farming401Module: LearningModule = {
           "id": "farming-401-l02-act2",
           "type": "scenario_practice",
           "title": "Input Optimization Drill",
-          "description": "Prioritize interventions under constrained water and fertilizer budgets.",
+          "description": "Given a scenario with constrained water and fertilizer budgets, prioritize interventions for maximum impact.",
           "instructions": [
-            "Select one high-impact intervention now.",
-            "Define one indicator that triggers escalation."
+            "Select one high-impact intervention to implement immediately.",
+            "Define one key performance indicator (KPI) that would trigger an escalation or change in strategy."
           ]
         }
       ],
       "metadata": {
         "prompts": [
-          "How do you separate signal from noise in farm telemetry?",
-          "What is one risk of over-automated decision-making in agriculture?",
-          "Which metric best reflects irrigation efficiency outcome?"
+          "How do you differentiate between signal and noise in farm telemetry data?",
+          "What is a primary risk of over-automating decision-making in agriculture?",
+          "Which metric best reflects the outcome of irrigation efficiency, beyond just application rates?"
         ]
       },
       "learningAids": [
@@ -148,7 +148,7 @@ export const Farming401Module: LearningModule = {
           "id": "farming-401-l02-a1",
           "type": "practice",
           "title": "Threshold Design Worksheet",
-          "content": "Template for trigger values, confidence bounds, action owner, and review cadence."
+          "content": "A template for defining operational thresholds, including trigger values, confidence bounds, action owners, and the cadence for review and recalibration."
         }
       ]
     },
@@ -160,103 +160,103 @@ export const Farming401Module: LearningModule = {
       "questions": [
         {
           "id": "farming-401-l03-q1",
-          "text": "Why is whole-farm systems thinking essential at advanced levels?",
+          "text": "Why is whole-farm systems thinking essential for advanced farm management?",
           "skillId": "farming-401-skill-systems",
           "options": [
             {
               "id": "a",
-              "text": "It ignores economic constraints"
+              "text": "It allows managers to ignore economic constraints."
             },
             {
               "id": "b",
-              "text": "It captures cross-impact among ecological and operational variables"
+              "text": "It captures the critical cross-impacts among ecological, economic, and operational variables."
             },
             {
               "id": "c",
-              "text": "It removes weather uncertainty"
+              "text": "It completely removes weather-related uncertainty."
             },
             {
               "id": "d",
-              "text": "It guarantees maximum yield every season"
+              "text": "It guarantees maximum possible yield in every season."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "System interactions determine long-term performance and resilience."
+          "explanation": "Systems thinking is crucial because it acknowledges that farm performance and resilience are determined by the complex interactions between its parts, not by optimizing components in isolation."
         },
         {
           "id": "farming-401-l03-q2",
-          "text": "Best use of precision data in farm operations?",
+          "text": "What is the most effective use of precision data in farm operations?",
           "skillId": "farming-401-skill-precision",
           "options": [
             {
               "id": "a",
-              "text": "Collect data without action thresholds"
+              "text": "To collect as much data as possible without establishing action thresholds."
             },
             {
               "id": "b",
-              "text": "Inform decisions through defined triggers and validation"
+              "text": "To inform timely and targeted decisions through defined triggers and subsequent validation."
             },
             {
               "id": "c",
-              "text": "Replace all field observations"
+              "text": "To replace all direct field observations and human judgment."
             },
             {
               "id": "d",
-              "text": "Increase interventions regardless of context"
+              "text": "To increase the frequency of interventions regardless of context."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Data value comes from actionable and validated operational decisions."
+          "explanation": "The value of precision data is realized when it is used to drive specific, validated actions based on pre-defined thresholds, leading to more efficient and effective management."
         },
         {
           "id": "farming-401-l03-q3",
-          "text": "A sudden stress signal appears in only one zone. Best first action?",
+          "text": "A satellite image reveals a sudden stress signal in a single management zone. What is the best first action?",
           "skillId": "farming-401-skill-precision",
           "options": [
             {
               "id": "a",
-              "text": "Apply whole-farm treatment immediately"
+              "text": "Apply a corrective treatment to the entire farm immediately."
             },
             {
               "id": "b",
-              "text": "Conduct targeted zone inspection before broad intervention"
+              "text": "Conduct a targeted ground-truth inspection of that zone before any broad intervention."
             },
             {
               "id": "c",
-              "text": "Ignore until next season"
+              "text": "Ignore the signal until the end of the season."
             },
             {
               "id": "d",
-              "text": "Reduce monitoring frequency"
+              "text": "Reduce the frequency of satellite monitoring to avoid false alarms."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Targeted verification limits unnecessary cost and intervention risk."
+          "explanation": "Targeted verification (ground-truthing) is essential to diagnose the specific cause of the signal and avoid the cost and potential harm of an unnecessary or incorrect farm-wide intervention."
         },
         {
           "id": "farming-401-l03-q4",
-          "text": "Which choice most improves long-term resilience?",
+          "text": "Which of the following strategic choices most improves a farm's long-term resilience?",
           "skillId": "farming-401-skill-systems",
           "options": [
             {
               "id": "a",
-              "text": "Single-input dependency"
+              "text": "Dependency on a single crop and a single market channel."
             },
             {
               "id": "b",
-              "text": "Diversified production and risk pathways"
+              "text": "Diversified production, practices, and market pathways."
             },
             {
               "id": "c",
-              "text": "No rotation planning"
+              "text": "Elimination of crop rotation planning to specialize."
             },
             {
               "id": "d",
-              "text": "Minimal record keeping"
+              "text": "Minimal record-keeping to reduce administrative overhead."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Diversification reduces vulnerability to single-point shocks."
+          "explanation": "Diversification is a cornerstone of resilience, as it reduces vulnerability to any single point of failure, whether it's a pest outbreak, a market downturn, or a climate shock."
         }
       ],
       "learningAids": [
@@ -264,7 +264,7 @@ export const Farming401Module: LearningModule = {
           "id": "farming-401-l03-a1",
           "type": "mnemonic",
           "title": "SCAN",
-          "content": "System, Constraints, Action thresholds, Next review."
+          "content": "A decision-making framework: assess the whole System, identify Constraints, apply Action thresholds, and schedule the Next review."
         }
       ]
     },
@@ -272,78 +272,78 @@ export const Farming401Module: LearningModule = {
       "id": "farming-401-l04",
       "title": "Climate Risk Adaptation and Resource Stewardship",
       "type": "video",
-      "duration": 13,
+      "duration": 14,
       "chunks": [
         {
           "id": "farming-401-l04-c1",
           "kind": "concept",
           "title": "Climate Scenario Planning",
-          "content": "Farm leaders need to be forward-thinking about how climate change might impact their farms in the future. Instead of only focusing on past weather patterns, they should explore various possible future climate scenarios. This means considering how rising temperatures, unpredictable rainfall, new pests, and potential supply chain disruptions could affect their farming practices. By preparing for these different situations, farm leaders can make smarter decisions and ensure their farms are ready for whatever challenges may come their way. This proactive approach helps them protect their crops, livestock, and overall farm health in an ever-changing environment."
+          "content": "Effective farm leadership requires moving beyond reliance on historical weather data. Climate scenario planning involves evaluating a range of plausible future climate conditions—such as increased temperature variability, altered rainfall patterns, and new pest pressures. By stress-testing operational plans against these scenarios, leaders can develop more robust and adaptive strategies that are prepared for a wider range of potential futures."
         },
         {
           "id": "farming-401-l04-c2",
           "kind": "concept",
-          "title": "Water and Soil Resilience",
-          "content": "To keep our farms healthy and strong, we need to focus on how we manage water and soil. Important practices include making sure water is retained in the soil, allowing water to soak in properly, preventing soil erosion, and maintaining healthy organic matter in the soil. It's essential that the choices we make about our farming tools and practices work together, rather than trying to optimize each one separately.\nContext recap: To keep our farms healthy and strong, we need to focus on how we manage water and soil. Important practices include making sure water is retained in the soil, allowing water to soak in properly, preventing soil erosion, and maintaining healthy organic matter in the soil. It's essential that the choices we make about our farming tools and practices work together, rather than trying to optimize each one separately."
+          "title": "Building Water and Soil Resilience",
+          "content": "Water and soil health are foundational to climate resilience. Key strategies focus on enhancing the entire soil-water system, including maximizing water infiltration, increasing soil water-holding capacity through organic matter, and minimizing erosion. Practices like cover cropping, conservation tillage, and integrated water harvesting work synergistically to create a buffer against both drought and extreme rainfall events."
         },
         {
           "id": "farming-401-l04-c3",
           "kind": "recap",
-          "title": "Adaptation Governance",
-          "content": "When creating plans to adapt to climate changes, it's important to set clear goals and indicators. This means defining what success looks like, who is responsible for each part of the plan, and when we will review and update our strategies. As climate patterns change, having a structured approach helps ensure that we can adjust our plans effectively.\nContext recap: When creating plans to adapt to climate changes, it's important to set clear goals and indicators. This means defining what success looks like, who is responsible for each part of the plan, and when we will review and update our strategies. As climate patterns change, having a structured approach helps ensure that we can adjust our plans effectively."
+          "title": "Adaptive Governance Frameworks",
+          "content": "An adaptation plan is a living document. Adaptive governance provides the framework for its execution, defining clear performance indicators, assigning accountability for specific actions, and establishing a regular cadence for reviewing progress and updating the strategy. This structured, iterative process ensures that the farm's adaptation efforts remain relevant and effective as climate conditions and scientific understanding evolve."
         }
       ],
       "flashcards": [
         {
           "id": "farming-401-l04-f1",
-          "front": "Scenario planning",
-          "back": "Evaluating multiple plausible futures to design robust decisions under uncertainty."
+          "front": "Scenario Planning",
+          "back": "A strategic planning method that involves evaluating multiple plausible futures to design robust decisions under deep uncertainty."
         },
         {
           "id": "farming-401-l04-f2",
-          "front": "Soil organic matter",
-          "back": "Key indicator tied to water retention, nutrient dynamics, and long-term soil function."
+          "front": "Soil Organic Matter (SOM)",
+          "back": "A critical component of soil health that is strongly correlated with water retention, nutrient cycling, and long-term soil function."
         },
         {
           "id": "farming-401-l04-f3",
-          "front": "Adaptive governance",
-          "back": "A management approach that updates policy and operations based on new evidence."
+          "front": "Adaptive Governance",
+          "back": "A management approach that systematically updates policies and operations based on monitoring, new evidence, and learning."
         }
       ],
       "learningAids": [
         {
           "id": "farming-401-l04-a1",
           "type": "image",
-          "title": "Climate Adaptation Map",
-          "content": "Visual linking climate stressors to operational adaptation levers and monitoring indicators."
+          "title": "Climate Adaptation Pathways Map",
+          "content": "A strategic diagram mapping potential climate stressors (e.g., drought, heatwaves) to specific operational adaptations (e.g., new crop varieties, adjusted irrigation schedules) and the key performance indicators (KPIs) used to monitor effectiveness."
         }
       ]
     },
     {
       "id": "farming-401-l05",
-      "title": "Farm Economics and Risk Portfolio Lab",
+      "title": "Farm Economics and Risk Portfolio Management",
       "type": "interactive",
       "duration": 16,
       "chunks": [
         {
           "id": "farming-401-l05-c1",
           "kind": "concept",
-          "title": "Economic Resilience",
-          "content": "For a farm to be resilient, it needs to be strong both ecologically and financially. This means that how we manage our resources and finances can greatly affect our ability to survive tough times. Factors like keeping a stable profit margin, being aware of cost changes, understanding market demands, and having the right insurance can all play a role in helping a farm withstand challenges.\nContext recap: For a farm to be resilient, it needs to be strong both ecologically and financially. This means that how we manage our resources and finances can greatly affect our ability to survive tough times. Factors like keeping a stable profit margin, being aware of cost changes, understanding market demands, and having the right insurance can all play a role in helping a farm withstand challenges."
+          "title": "Integrating Economic and Ecological Resilience",
+          "content": "True farm resilience is both ecological and financial. Economic resilience is the ability to withstand financial shocks, which is directly linked to operational decisions. Key factors include maintaining healthy profit margins, managing input cost volatility, securing diverse market channels, and strategically using financial instruments like crop insurance and hedging. These financial buffers provide the capacity to invest in long-term ecological health."
         },
         {
           "id": "farming-401-l05-c2",
           "kind": "practice",
-          "title": "Portfolio Decisions",
-          "content": "Farm leaders need to carefully consider their choices about what crops to grow, how to handle contracts, when to store products, and how to invest money. By analyzing different scenarios, they can make informed decisions that will help the farm perform well, even when faced with unpredictable weather or market conditions. The goal is to ensure the farm does well overall, rather than just trying to achieve the best possible outcome in perfect conditions.\nContext recap: Farm leaders need to carefully consider their choices about what crops to grow, how to handle contracts, when to store products, and how to invest money. By analyzing different scenarios, they can make informed decisions that will help the farm perform well, even when faced with unpredictable weather or market conditions. The goal is to ensure the farm does well overall, rather than just trying to achieve the best possible outcome in perfect conditions."
+          "title": "Managing a Portfolio of Enterprises",
+          "content": "Farm leaders should view their operation as a portfolio of enterprises, including different crops, livestock, and value-added products. Strategic decisions about this mix—along with choices in contracting, storage, and capital investment—should be analyzed across various scenarios. The objective is to optimize for robust performance across a range of weather and market conditions, rather than maximizing returns in a single, idealized scenario."
         }
       ],
       "interactiveActivities": [
         {
           "id": "farming-401-l05-act1",
           "type": "sorting_buckets",
-          "title": "Risk Lever Sort",
-          "description": "Sort interventions by the primary risk they mitigate.",
+          "title": "Risk Mitigation Levers",
+          "description": "Categorize each intervention by the primary type of risk it is designed to mitigate.",
           "buckets": [
             "Yield Risk",
             "Price Risk",
@@ -351,180 +351,184 @@ export const Farming401Module: LearningModule = {
           ],
           "items": [
             {
-              "text": "Drought-tolerant cultivar adoption",
+              "text": "Adoption of drought-tolerant cultivars",
               "bucket": "Yield Risk"
             },
             {
-              "text": "Forward pricing contract",
+              "text": "Executing a forward pricing contract",
               "bucket": "Price Risk"
             },
             {
-              "text": "Fertilizer procurement hedge",
+              "text": "Hedging fertilizer procurement costs",
               "bucket": "Input Cost Risk"
             },
             {
-              "text": "Diversified crop calendar",
+              "text": "Implementing a diversified crop calendar",
               "bucket": "Yield Risk"
+            },
+            {
+              "text": "Investing in on-farm storage capacity",
+              "bucket": "Price Risk"
             }
           ]
         },
         {
           "id": "farming-401-l05-act2",
           "type": "scenario_practice",
-          "title": "Season Planning Drill",
-          "description": "Choose a robust farm plan under uncertain weather and market conditions.",
+          "title": "Seasonal Planning Simulation",
+          "description": "Choose a robust farm plan given a scenario with uncertain weather forecasts and volatile market prices.",
           "instructions": [
-            "State one decision that protects downside risk.",
-            "State one trade-off in expected upside."
+            "State one decision that explicitly protects against downside risk.",
+            "Identify the primary trade-off you are making in terms of potential upside."
           ]
         }
       ],
       "metadata": {
         "prompts": [
-          "Why can a highest-yield strategy still be financially fragile?",
-          "What indicator would trigger changing crop mix mid-season?",
-          "How do ecological and financial resilience reinforce each other?"
+          "Why can a strategy focused solely on maximizing yield be financially fragile?",
+          "What financial or operational indicator would trigger a decision to change your crop mix mid-season?",
+          "Provide one example of how ecological and financial resilience can be mutually reinforcing."
         ]
       },
       "learningAids": [
         {
           "id": "farming-401-l05-a1",
           "type": "practice",
-          "title": "Risk Dashboard Template",
-          "content": "Template for key yield, water, cost, and market risk indicators with trigger actions."
+          "title": "Integrated Risk Dashboard Template",
+          "content": "A template for tracking key yield, water, cost, and market risk indicators, with pre-defined trigger levels and corresponding response actions."
         }
       ]
     },
     {
       "id": "farming-401-l06",
-      "title": "Checkpoint 2: Climate and Economics",
+      "title": "Checkpoint 2: Climate, Economics, and Adaptation",
       "type": "quiz",
       "duration": 11,
       "questions": [
         {
           "id": "farming-401-l06-q1",
-          "text": "Best reason to use scenario planning in climate-sensitive farming?",
+          "text": "What is the primary benefit of using scenario planning for climate adaptation in farming?",
           "skillId": "farming-401-skill-climate",
           "options": [
             {
               "id": "a",
-              "text": "To avoid uncertainty discussions"
+              "text": "To avoid discussing uncertainty with stakeholders."
             },
             {
               "id": "b",
-              "text": "To design robust plans across multiple plausible futures"
+              "text": "To design robust operational plans that perform well across multiple plausible futures."
             },
             {
               "id": "c",
-              "text": "To predict one exact season outcome"
+              "text": "To predict the exact outcome of a single future season."
             },
             {
               "id": "d",
-              "text": "To eliminate all risk"
+              "text": "To completely eliminate all potential risks from climate change."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Scenario planning improves decisions under uncertainty rather than assuming one future."
+          "explanation": "Scenario planning is a tool for making better decisions under uncertainty; its strength is in building strategies that are resilient to a range of possible outcomes, not in predicting one specific future."
         },
         {
           "id": "farming-401-l06-q2",
-          "text": "Which option most directly improves water resilience?",
+          "text": "Which of the following actions most directly improves a farm's water resilience?",
           "skillId": "farming-401-skill-resources",
           "options": [
             {
               "id": "a",
-              "text": "Ignoring infiltration trends"
+              "text": "Ignoring trends in soil water infiltration rates."
             },
             {
               "id": "b",
-              "text": "Practices that increase soil retention and reduce runoff"
+              "text": "Implementing practices that increase soil organic matter and reduce runoff."
             },
             {
               "id": "c",
-              "text": "Single high-intensity irrigation schedule"
+              "text": "Relying on a single, high-intensity irrigation schedule regardless of conditions."
             },
             {
               "id": "d",
-              "text": "Reducing all monitoring"
+              "text": "Reducing all environmental monitoring to cut costs."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Retention and infiltration improvements stabilize water availability under stress."
+          "explanation": "Improving soil's ability to capture and store water is a fundamental strategy for stabilizing water availability and buffering against both drought and heavy rainfall."
         },
         {
           "id": "farming-401-l06-q3",
-          "text": "A resilient economic farm strategy typically includes:",
+          "text": "A resilient economic strategy for a farm typically includes:",
           "skillId": "farming-401-skill-economics",
           "options": [
             {
               "id": "a",
-              "text": "Single market dependency"
+              "text": "Dependence on a single buyer or market channel."
             },
             {
               "id": "b",
-              "text": "Risk-diversified revenue and cost management levers"
+              "text": "A diversified portfolio of revenue streams and cost management levers."
             },
             {
               "id": "c",
-              "text": "No contingency planning"
+              "text": "An absence of financial contingency planning."
             },
             {
               "id": "d",
-              "text": "Only short-term yield targets"
+              "text": "A singular focus on short-term yield targets."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Diversified risk controls support stability when conditions shift."
+          "explanation": "Economic resilience is built on diversification and proactive risk management, which provide stability and options when market or production conditions shift unexpectedly."
         },
         {
           "id": "farming-401-l06-q4",
-          "text": "Most useful trigger for adaptive governance updates is:",
+          "text": "What is the most useful trigger for making updates within an adaptive governance framework?",
           "skillId": "farming-401-skill-governance",
           "options": [
             {
               "id": "a",
-              "text": "Annual tradition only"
+              "text": "Adherence to an unchanging annual tradition."
             },
             {
               "id": "b",
-              "text": "Indicator thresholds crossing planned bounds"
+              "text": "Key performance indicators crossing pre-defined threshold boundaries."
             },
             {
               "id": "c",
-              "text": "Random schedule changes"
+              "text": "Random changes to the operational schedule."
             },
             {
               "id": "d",
-              "text": "No trigger needed"
+              "text": "No trigger is needed; plans should not be changed."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Evidence-based thresholds support timely adaptation decisions."
+          "explanation": "Adaptive management relies on evidence. Using pre-defined indicator thresholds ensures that strategic adjustments are timely, data-driven, and responsive to changing conditions."
         },
         {
           "id": "farming-401-l06-q5",
-          "text": "Why should precision interventions include validation loops?",
+          "text": "Why is it critical for precision agriculture interventions to include validation loops?",
           "skillId": "farming-401-skill-precision",
           "options": [
             {
               "id": "a",
-              "text": "To increase intervention frequency blindly"
+              "text": "To increase the frequency of interventions without justification."
             },
             {
               "id": "b",
-              "text": "To confirm that actions improved target outcomes"
+              "text": "To confirm that the actions taken actually improved the targeted outcomes and to refine future thresholds."
             },
             {
               "id": "c",
-              "text": "To avoid documenting results"
+              "text": "To avoid the need to document results and outcomes."
             },
             {
               "id": "d",
-              "text": "To remove field observations"
+              "text": "To completely remove the need for any further field observations."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Closed-loop validation ensures interventions are effective and efficient."
+          "explanation": "A closed-loop system of action and validation (e.g., check strips, yield analysis) is essential for learning, ensuring interventions are effective, and continuously improving the decision-making model."
         }
       ],
       "learningAids": [
@@ -532,7 +536,7 @@ export const Farming401Module: LearningModule = {
           "id": "farming-401-l06-a1",
           "type": "mnemonic",
           "title": "GROW",
-          "content": "Goals, Risks, Options, Watch indicators."
+          "content": "A strategic review framework: define Goals, assess Risks, evaluate Options, and Watch key indicators."
         }
       ]
     },
@@ -540,34 +544,80 @@ export const Farming401Module: LearningModule = {
       "id": "farming-401-l07",
       "title": "Capstone: Climate-Resilient Farm Strategy Proposal",
       "type": "interactive",
-      "duration": 19,
+      "duration": 20,
       "chunks": [
         {
           "id": "farming-401-l07-c1",
           "kind": "practice",
-          "title": "Capstone Brief",
-          "content": "For your final project, you will design a detailed plan for a farm that spans several years. This plan should include specific goals that focus on protecting the environment, strategies to manage financial risks, and clear indicators that will help you know when it's time to make changes. Additionally, you will need to create a step-by-step guide on how to put your ideas into action. Remember to consider the practical limits of available workers and money as you work on your proposal. This will help ensure that your plan is not only ambitious but also achievable."
+          "title": "Capstone Project Brief",
+          "content": "Your capstone project is to develop a comprehensive, multi-year strategic plan for a case-study farm. This proposal must integrate ecological goals, financial risk management strategies, and climate adaptation pathways. You will define clear, measurable objectives, establish indicator thresholds that trigger adaptive actions, and outline a phased implementation plan, considering realistic operational and capital constraints."
         },
         {
           "id": "farming-401-l07-c2",
           "kind": "recap",
-          "title": "Assessment Criteria",
-          "content": "When you create your farm strategy proposals, it's important to blend together good farming practices, ways to adapt to climate changes, and plans for financial stability. Each proposal should have clear, measurable goals that help track progress and specific roles for everyone involved to ensure that everyone is accountable as the farm develops and grows.\nContext recap: When you create your farm strategy proposals, it's important to blend together good farming practices, ways to adapt to climate changes, and plans for financial stability. Each proposal should have clear, measurable goals that help track progress and specific roles for everyone involved to ensure that everyone is accountable as the farm develops and grows."
+          "title": "Evaluation Criteria",
+          "content": "Proposals will be evaluated on the sophisticated integration of systems thinking, data-driven decision principles, and robust risk mitigation. Success is demonstrated by the clarity of the strategic vision, the inclusion of measurable KPIs, a well-defined governance structure with clear accountabilities, and a realistic assessment of trade-offs."
         }
       ],
       "metadata": {
         "prompts": [
-          "Define top three farm resilience goals and metrics.",
-          "List two adaptation triggers and response actions.",
-          "Explain one trade-off between short-term profitability and long-term resilience."
+          "Define the top three resilience goals for your farm and the primary metric for each.",
+          "Identify two critical adaptation triggers (e.g., 'three consecutive weeks with soil moisture below X%') and the corresponding response actions.",
+          "Explain one significant trade-off your plan makes between short-term profitability and long-term resilience."
         ]
       },
       "learningAids": [
         {
           "id": "farming-401-l07-a1",
           "type": "practice",
-          "title": "Strategy Proposal Template",
-          "content": "Template for goals, indicators, risk scenarios, action plan, and review cadence."
+          "title": "Strategic Plan Proposal Template",
+          "content": "A structured document template for outlining strategic goals, key performance indicators, risk scenario analysis, a phased action plan, and a governance and review cadence."
+        }
+      ]
+    },
+    {
+      "id": "farming-401-l08",
+      "title": "Leadership and Stakeholder Communication",
+      "type": "video",
+      "duration": 12,
+      "chunks": [
+        {
+          "id": "farming-401-l08-c1",
+          "kind": "concept",
+          "title": "Translating Strategy into a Compelling Narrative",
+          "content": "A robust strategy is only effective if it can be communicated clearly. Farm leaders must be able to translate their complex plans into a compelling narrative for diverse audiences. This involves articulating the 'why' behind the strategy—framing it in terms of long-term value, sustainability, and resilience—to secure buy-in from investors, employees, and the wider community."
+        },
+        {
+          "id": "farming-401-l08-c2",
+          "kind": "concept",
+          "title": "Engaging Key Stakeholders",
+          "content": "Effective communication requires identifying key stakeholders and tailoring the message to their specific interests and concerns. Financial partners need to understand the risk-adjusted returns of resilience investments. Operational teams need clear direction on new practices. Community members and regulators may be focused on environmental stewardship. A targeted approach ensures the right message reaches the right audience."
+        },
+        {
+          "id": "farming-401-l08-c3",
+          "kind": "recap",
+          "title": "Building Trust and Alignment",
+          "content": "Ultimately, the goal of strategic communication is to build trust and alignment. Clear, consistent, and transparent communication fosters a shared understanding of the farm's vision and challenges. This alignment is a critical asset, strengthening the farm's social license to operate and enhancing its ability to navigate complex challenges as a cohesive team."
+        }
+      ],
+      "flashcards": [
+        {
+          "id": "farming-401-l08-f1",
+          "front": "Stakeholder Mapping",
+          "back": "The process of identifying and analyzing the interests, influence, and impact of individuals or groups affected by the farm's operations."
+        },
+        {
+          "id": "farming-401-l08-f2",
+          "front": "Social License to Operate",
+          "back": "The ongoing acceptance and approval of a farm's operations and practices by its local community and other stakeholders."
+        }
+      ],
+      "learningAids": [
+        {
+          "id": "farming-401-l08-a1",
+          "type": "practice",
+          "title": "Stakeholder Communication Plan Template",
+          "content": "A worksheet to outline key strategic messages, target audiences, preferred communication channels, and a delivery schedule for a major farm initiative."
         }
       ]
     }

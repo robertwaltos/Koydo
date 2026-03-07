@@ -97,12 +97,14 @@ export default function AdminAuditPage() {
         <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-4">
           <input
             placeholder="Action type"
+            aria-label="Filter by action type"
             className="rounded-xl border border-border bg-surface-muted px-3 py-1.5 text-sm"
             value={actionType}
             onChange={(e) => { setActionType(e.target.value); setPage(1); }}
           />
           <input
             placeholder="Admin user ID"
+            aria-label="Filter by admin user ID"
             className="rounded-xl border border-border bg-surface-muted px-3 py-1.5 text-sm"
             value={adminUserId}
             onChange={(e) => { setAdminUserId(e.target.value); setPage(1); }}

@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const NetworkEngineering601Module: LearningModule = {
+export const network_engineering_601_Module: LearningModule = {
   "id": "network-engineering-601",
   "title": "Network Engineering Research and Leadership",
   "description": "Post-401 specialization in Network Engineering, focused on network engineering systems diagnostics, network engineering operations and execution design, network engineering impact and tradeoff analysis, and network engineering governance and leadership through advanced casework, simulation, and defense-based checkpoints.",
@@ -14,7 +14,7 @@ export const NetworkEngineering601Module: LearningModule = {
   ],
   "minAge": 17,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en",
@@ -38,8 +38,14 @@ export const NetworkEngineering601Module: LearningModule = {
         {
           "id": "network-engineering-601-l01-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Conceptual Framework Diagram",
+          "content": "A diagram showing the relationship between diagnostics, operations design, and impact analysis."
+        },
+        {
+          "id": "network-engineering-601-l01-a2",
+          "type": "image",
+          "title": "Causal Loop Example",
+          "content": "An illustration of a feedback loop in a network system, showing causes and effects."
         }
       ],
       "chunks": [
@@ -47,36 +53,36 @@ export const NetworkEngineering601Module: LearningModule = {
           "id": "network-engineering-601-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "In this lesson, we will dive deep into the advanced concepts of scope boundaries in the field of Network Engineering. We will learn how to effectively diagnose issues within network engineering systems, which is crucial for maintaining their performance. Additionally, we will discuss how to design operations that ensure successful execution of network tasks. Understanding these boundaries is not just important; it is essential for making sure our network systems work at their best and meet all necessary standards. By mastering these concepts, you will be better equipped to tackle real-world challenges in network engineering.\nContext recap: In this lesson, we will dive deep into the advanced concepts of scope boundaries in the field of Network Engineering. We will learn how to effectively diagnose issues within network engineering systems, which is crucial for maintaining their performance. Additionally, we will discuss how to design operations that ensure successful execution of network tasks. Understanding these boundaries is not just important; it is essential for making sure our network systems work at their best and meet all necessary standards."
+          "content": "Learn to define the scope and boundaries for complex network systems. This lesson covers advanced diagnostics for identifying performance issues and designing robust operational workflows to ensure successful execution and compliance with industry standards."
         },
         {
           "id": "network-engineering-601-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different events and outcomes. They will also identify ranges of uncertainty and understand how various systems depend on each other. This foundational knowledge is crucial for planning effective interventions in network engineering.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different events and outcomes. They will also identify ranges of uncertainty and understand how various systems depend on each other. This foundational knowledge is crucial for planning effective interventions in network engineering."
+          "content": "Explore how to map causal relationships between network events and outcomes. You will learn to identify and quantify ranges of uncertainty and understand system interdependencies, which is critical for planning effective interventions."
         },
         {
           "id": "network-engineering-601-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "In our recap, we will emphasize that all claims made in network engineering must be supported by measurable indicators. This means we will establish confidence bounds and set up review checkpoints to ensure that our findings are reliable and can be verified.\nContext recap: In our recap, we will emphasize that all claims made in network engineering must be supported by measurable indicators. This means we will establish confidence bounds and set up review checkpoints to ensure that our findings are reliable and can be verified.\nContext recap: In our recap, we will emphasize that all claims made in network engineering must be supported by measurable indicators. This means we will establish confidence bounds and set up review checkpoints to ensure that our findings are reliable and can be verified. Context recap: In our recap, we will emphasize that all claims made in network engineering must be supported by measurable indicators. This means we will establish confidence bounds and set up review checkpoints to ensure that our findings are reliable and can be verified."
+          "content": "This recap emphasizes that all engineering claims must be supported by measurable evidence. We will review how to establish confidence bounds and implement review checkpoints to ensure findings are reliable and verifiable."
         }
       ],
       "flashcards": [
         {
           "id": "network-engineering-601-l01-f1",
-          "front": "network engineering systems diagnostics",
-          "back": "A specialization axis requiring explicit assumptions and measurable constraints."
+          "front": "What are network engineering systems diagnostics?",
+          "back": "A specialization axis requiring explicit assumptions and measurable constraints to solve complex system issues."
         },
         {
           "id": "network-engineering-601-l01-f2",
-          "front": "network engineering operations and execution design",
-          "back": "Execution architecture that determines reliability under stress."
+          "front": "What is network engineering operations and execution design?",
+          "back": "The design of an execution architecture that determines system reliability under stress."
         },
         {
           "id": "network-engineering-601-l01-f3",
-          "front": "network engineering impact and tradeoff analysis",
-          "back": "Evaluation discipline for identifying true gains and hidden costs."
+          "front": "What is network engineering impact and tradeoff analysis?",
+          "back": "An evaluation discipline for identifying the true gains and hidden costs of an engineering decision."
         }
       ]
     },
@@ -88,9 +94,9 @@ export const NetworkEngineering601Module: LearningModule = {
       "learningAids": [
         {
           "id": "network-engineering-601-l02-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "image",
+          "title": "Workflow with Control Gates",
+          "content": "A flowchart illustrating a network deployment workflow with decision points, checkpoints, and rollback paths."
         }
       ],
       "chunks": [
@@ -98,13 +104,13 @@ export const NetworkEngineering601Module: LearningModule = {
           "id": "network-engineering-601-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "In this interactive practice, learners will have the opportunity to design specialized workflows tailored for specific tasks in network engineering. They will also conduct stress tests on these workflows to see how they perform under challenging scenarios, helping them to identify potential weaknesses and areas for improvement.\nContext recap: In this interactive practice, learners will have the opportunity to design specialized workflows tailored for specific tasks in network engineering. They will also conduct stress tests on these workflows to see how they perform under challenging scenarios, helping them to identify potential weaknesses and areas for improvement."
+          "content": "In this lab, you will design specialized workflows for specific network engineering tasks. You will then conduct stress tests on these workflows to evaluate their performance under high-pressure scenarios, identifying potential weaknesses and areas for improvement."
         },
         {
           "id": "network-engineering-601-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "In our recap, we will discuss how workflows should include important elements such as checkpoints, rollback criteria, and threshold-based escalation. These components are essential for ensuring that the workflows can adapt to changes and maintain their effectiveness.\nContext recap: In our recap, we will discuss how workflows should include important elements such as checkpoints, rollback criteria, and threshold-based escalation. These components are essential for ensuring that the workflows can adapt to changes and maintain their effectiveness.\nContext recap: In our recap, we will discuss how workflows should include important elements such as checkpoints, rollback criteria, and threshold-based escalation. These components are essential for ensuring that the workflows can adapt to changes and maintain their effectiveness. Context recap: In our recap, we will discuss how workflows should include important elements such as checkpoints, rollback criteria, and threshold-based escalation. These components are essential for ensuring that the workflows can adapt to changes and maintain their effectiveness."
+          "content": "This recap covers the essential components of a resilient workflow architecture. We will discuss the importance of including control gates like checkpoints, clear rollback criteria, and threshold-based escalation paths to manage risk and ensure adaptability."
         }
       ],
       "interactiveActivities": [
@@ -142,20 +148,20 @@ export const NetworkEngineering601Module: LearningModule = {
       "learningAids": [
         {
           "id": "network-engineering-601-l03-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "image",
+          "title": "Review: Key Methodologies",
+          "content": "A summary graphic of the structured methods for diagnostics, design, and analysis."
         }
       ],
       "questions": [
         {
           "id": "network-engineering-601-l03-q1",
-          "text": "Which practice most improves network engineering systems diagnostics decision quality?",
-          "skillId": "network-engineering-601-skill-core",
+          "text": "Which practice most improves decision quality in network engineering systems diagnostics?",
+          "skillId": "network-engineering-601-diagnostics",
           "options": [
             {
               "id": "a",
-              "text": "Proceed without baseline or assumptions"
+              "text": "Proceed without a baseline or assumptions"
             },
             {
               "id": "b",
@@ -171,12 +177,12 @@ export const NetworkEngineering601Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Advanced decisions improve when assumptions, constraints, and metrics are explicit."
+          "explanation": "Advanced decisions improve when assumptions, constraints, and metrics are made explicit."
         },
         {
           "id": "network-engineering-601-l03-q2",
-          "text": "At level 601, strong execution for network engineering operations and execution design requires:",
-          "skillId": "network-engineering-601-skill-execution",
+          "text": "At an advanced level, strong network engineering operations and execution design requires:",
+          "skillId": "network-engineering-601-operations-design",
           "options": [
             {
               "id": "a",
@@ -201,7 +207,7 @@ export const NetworkEngineering601Module: LearningModule = {
         {
           "id": "network-engineering-601-l03-q3",
           "text": "A defensible approach to network engineering impact and tradeoff analysis includes:",
-          "skillId": "network-engineering-601-skill-eval",
+          "skillId": "network-engineering-601-impact-analysis",
           "options": [
             {
               "id": "a",
@@ -213,11 +219,11 @@ export const NetworkEngineering601Module: LearningModule = {
             },
             {
               "id": "c",
-              "text": "Changing success criteria after outcomes"
+              "text": "Changing success criteria after outcomes are known"
             },
             {
               "id": "d",
-              "text": "Excluding difficult scenarios from analysis"
+              "text": "Excluding difficult scenarios from the analysis"
             }
           ],
           "correctOptionId": "b",
@@ -226,7 +232,7 @@ export const NetworkEngineering601Module: LearningModule = {
         {
           "id": "network-engineering-601-l03-q4",
           "text": "Mature governance systems connect:",
-          "skillId": "network-engineering-601-skill-governance",
+          "skillId": "network-engineering-601-governance",
           "options": [
             {
               "id": "a",
@@ -247,106 +253,6 @@ export const NetworkEngineering601Module: LearningModule = {
           ],
           "correctOptionId": "a",
           "explanation": "Governance maturity is the operational link between intent, measurement, and corrective action."
-        },
-        {
-          "id": "network-engineering-601-l03-q5",
-          "text": "What is the best way to compare competing interventions in advanced Network Engineering?",
-          "skillId": "network-engineering-601-skill-advanced-5",
-          "options": [
-            {
-              "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
-            },
-            {
-              "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
-            },
-            {
-              "id": "c",
-              "text": "Switch metrics after results arrive"
-            },
-            {
-              "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
-        },
-        {
-          "id": "network-engineering-601-l03-q6",
-          "text": "In high-stakes Network Engineering Research and Leadership execution, which communication protocol is strongest?",
-          "skillId": "network-engineering-601-skill-advanced-6",
-          "options": [
-            {
-              "id": "a",
-              "text": "Broadcast conclusions without assumptions"
-            },
-            {
-              "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
-            },
-            {
-              "id": "c",
-              "text": "Share only final outcomes after completion"
-            },
-            {
-              "id": "d",
-              "text": "Limit updates to a single informal channel"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
-        },
-        {
-          "id": "network-engineering-601-l03-q7",
-          "text": "A mature remediation loop in advanced Network Engineering should prioritize:",
-          "skillId": "network-engineering-601-skill-advanced-7",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blame assignment without system updates"
-            },
-            {
-              "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
-            },
-            {
-              "id": "c",
-              "text": "One-time fixes without retesting"
-            },
-            {
-              "id": "d",
-              "text": "Issue closure based on elapsed time"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
-        },
-        {
-          "id": "network-engineering-601-l03-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Network Engineering Research and Leadership?",
-          "skillId": "network-engineering-601-skill-advanced-8",
-          "options": [
-            {
-              "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
-            },
-            {
-              "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
-            },
-            {
-              "id": "c",
-              "text": "Ignore correlated failure modes"
-            },
-            {
-              "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
         }
       ]
     },
@@ -359,8 +265,8 @@ export const NetworkEngineering601Module: LearningModule = {
         {
           "id": "network-engineering-601-l04-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Case Study Decision Matrix",
+          "content": "A table comparing two potential network solutions across criteria like cost, performance, and security."
         }
       ],
       "chunks": [
@@ -368,19 +274,19 @@ export const NetworkEngineering601Module: LearningModule = {
           "id": "network-engineering-601-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "In this lesson, we will explore the architecture of scenarios in the field of network engineering. We will examine the various competing constraints that can emerge during the diagnostic process of network systems. Additionally, we will analyze the impacts and trade-offs that come with different engineering decisions. Grasping these concepts is essential for making well-informed choices that can significantly affect network performance and reliability.\nContext recap: In this lesson, we will explore the architecture of scenarios in the field of network engineering. We will examine the various competing constraints that can emerge during the diagnostic process of network systems. Additionally, we will analyze the impacts and trade-offs that come with different engineering decisions. Grasping these concepts is essential for making well-informed choices that can significantly affect network performance and reliability.\nContext recap: In this lesson, we will explore the architecture of scenarios in the field of network engineering. We will examine the various competing constraints that can emerge during the diagnostic process of network systems. Additionally, we will analyze the impacts and trade-offs that come with different engineering decisions. Grasping these concepts is essential for making well-informed choices that can significantly affect network performance and reliability.\nWhy this matters: Scenario Architecture helps learners in Network Engineering connect ideas from Network Engineering Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "Analyze complex network engineering scenarios featuring competing constraints. This lesson focuses on deconstructing problems to understand the critical tradeoffs between performance, cost, and reliability, enabling you to make well-informed strategic decisions."
         },
         {
           "id": "network-engineering-601-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "In this practice session, learners will compare different options available to them in network engineering. They will evaluate these options based on various important dimensions, including safety, reliability, cost, equity, and governance. This comparative analysis will help them understand the implications of their choices.\nContext recap: In this practice session, learners will compare different options available to them in network engineering. They will evaluate these options based on various important dimensions, including safety, reliability, cost, equity, and governance. This comparative analysis will help them understand the implications of their choices."
+          "content": "In this practice, you will compare alternative solutions for a given network challenge. You will learn to frame tradeoffs by evaluating options across multiple dimensions, including security, scalability, cost, and operational complexity."
         },
         {
           "id": "network-engineering-601-l04-c3",
           "kind": "recap",
           "title": "Decision Memo Pattern",
-          "content": "In our recap, we will highlight that each recommendation made in network engineering should include key components such as assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that decisions are well-informed and prepared for potential challenges.\nContext recap: In our recap, we will highlight that each recommendation made in network engineering should include key components such as assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that decisions are well-informed and prepared for potential challenges.\nContext recap: In our recap, we will highlight that each recommendation made in network engineering should include key components such as assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that decisions are well-informed and prepared for potential challenges. Context recap: In our recap, we will highlight that each recommendation made in network engineering should include key components such as assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that decisions are well-informed and prepared for potential challenges."
+          "content": "This recap introduces a structured pattern for creating a decision memo. A strong recommendation must clearly state its core assumptions, present supporting evidence, outline risk mitigation controls, and define fallback plans."
         }
       ]
     },
@@ -392,9 +298,9 @@ export const NetworkEngineering601Module: LearningModule = {
       "learningAids": [
         {
           "id": "network-engineering-601-l05-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "image",
+          "title": "Simulation Control Dashboard",
+          "content": "An interactive dashboard interface for managing network traffic, security policies, and resource allocation in a simulated environment."
         }
       ],
       "chunks": [
@@ -402,13 +308,13 @@ export const NetworkEngineering601Module: LearningModule = {
           "id": "network-engineering-601-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "In this interactive practice, learners will operate scenario controls while carefully balancing performance and governance constraints. This hands-on experience will help them understand the complexities involved in managing network systems effectively.\nContext recap: In this interactive practice, learners will operate scenario controls while carefully balancing performance and governance constraints. This hands-on experience will help them understand the complexities involved in managing network systems effectively.\nWhy this matters: Live Scenario Controls helps learners in Network Engineering connect ideas from Network Engineering Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "Engage in a hands-on simulation where you will manage a network under changing conditions. This practice requires you to operate scenario controls to balance performance targets with governance constraints, reacting to unexpected events in real-time."
         },
         {
           "id": "network-engineering-601-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "In our recap, we will discuss how effective responses to challenges in network engineering should involve updating control gates. It is important that these updates maintain traceability and accountability, ensuring that all actions taken can be tracked and understood.\nContext recap: In our recap, we will discuss how effective responses to challenges in network engineering should involve updating control gates. It is important that these updates maintain traceability and accountability, ensuring that all actions taken can be tracked and understood.\nContext recap: In our recap, we will discuss how effective responses to challenges in network engineering should involve updating control gates. It is important that these updates maintain traceability and accountability, ensuring that all actions taken can be tracked and understood. Context recap: In our recap, we will discuss how effective responses to challenges in network engineering should involve updating control gates. It is important that these updates maintain traceability and accountability, ensuring that all actions taken can be tracked and understood."
+          "content": "This recap focuses on designing adaptive responses to network incidents. We will review how to update control gates and operational parameters dynamically while maintaining full traceability and accountability for all actions taken."
         }
       ],
       "interactiveActivities": [
@@ -428,16 +334,16 @@ export const NetworkEngineering601Module: LearningModule = {
       "learningAids": [
         {
           "id": "network-engineering-601-l06-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "image",
+          "title": "Review: Case & Simulation Principles",
+          "content": "A visual summary of the principles for analyzing cases and managing simulations effectively."
         }
       ],
       "questions": [
         {
           "id": "network-engineering-601-l06-q1",
           "text": "In advanced casework, the first requirement for defensible recommendations is:",
-          "skillId": "network-engineering-601-skill-case1",
+          "skillId": "network-engineering-601-case-analysis",
           "options": [
             {
               "id": "a",
@@ -462,7 +368,7 @@ export const NetworkEngineering601Module: LearningModule = {
         {
           "id": "network-engineering-601-l06-q2",
           "text": "A resilient strategy for network engineering operations and execution design should include:",
-          "skillId": "network-engineering-601-skill-case2",
+          "skillId": "network-engineering-601-resilient-strategy",
           "options": [
             {
               "id": "a",
@@ -487,11 +393,11 @@ export const NetworkEngineering601Module: LearningModule = {
         {
           "id": "network-engineering-601-l06-q3",
           "text": "When evaluating network engineering impact and tradeoff analysis, which method is most rigorous?",
-          "skillId": "network-engineering-601-skill-case3",
+          "skillId": "network-engineering-601-rigorous-evaluation",
           "options": [
             {
               "id": "a",
-              "text": "Single success story without controls"
+              "text": "A single success story without controls"
             },
             {
               "id": "b",
@@ -499,7 +405,7 @@ export const NetworkEngineering601Module: LearningModule = {
             },
             {
               "id": "c",
-              "text": "Outcome-only narrative without process evidence"
+              "text": "An outcome-only narrative without process evidence"
             },
             {
               "id": "d",
@@ -512,7 +418,7 @@ export const NetworkEngineering601Module: LearningModule = {
         {
           "id": "network-engineering-601-l06-q4",
           "text": "Advanced governance is strongest when it:",
-          "skillId": "network-engineering-601-skill-case4",
+          "skillId": "network-engineering-601-advanced-governance",
           "options": [
             {
               "id": "a",
@@ -536,103 +442,53 @@ export const NetworkEngineering601Module: LearningModule = {
         },
         {
           "id": "network-engineering-601-l06-q5",
-          "text": "What is the best way to compare competing interventions in advanced Network Engineering?",
-          "skillId": "network-engineering-601-skill-advanced-5",
+          "text": "When presenting a case analysis, what is the most effective way to communicate a complex tradeoff between network speed and security?",
+          "skillId": "network-engineering-601-tradeoff-communication",
           "options": [
             {
               "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
+              "text": "Focus only on the benefits of the chosen option."
             },
             {
               "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
+              "text": "Use a decision matrix to visually compare options against both criteria, highlighting the recommended balance."
             },
             {
               "id": "c",
-              "text": "Switch metrics after results arrive"
+              "text": "State that both are important without quantifying the impact."
             },
             {
               "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
+              "text": "Avoid mentioning the security downside to get faster approval."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
+          "explanation": "Visual tools like a decision matrix provide a clear, evidence-based way to communicate complex tradeoffs to stakeholders."
         },
         {
           "id": "network-engineering-601-l06-q6",
-          "text": "In high-stakes Network Engineering Research and Leadership execution, which communication protocol is strongest?",
-          "skillId": "network-engineering-601-skill-advanced-6",
+          "text": "In a live network simulation, an unexpected traffic surge occurs. What is the best initial action according to adaptive response design?",
+          "skillId": "network-engineering-601-adaptive-response",
           "options": [
             {
               "id": "a",
-              "text": "Broadcast conclusions without assumptions"
+              "text": "Immediately shut down non-essential services."
             },
             {
               "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
+              "text": "Consult the pre-defined escalation path and activate temporary traffic shaping controls."
             },
             {
               "id": "c",
-              "text": "Share only final outcomes after completion"
+              "text": "Wait for the system to fail to identify the weakest point."
             },
             {
               "id": "d",
-              "text": "Limit updates to a single informal channel"
+              "text": "Request a full system redesign meeting."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
-        },
-        {
-          "id": "network-engineering-601-l06-q7",
-          "text": "A mature remediation loop in advanced Network Engineering should prioritize:",
-          "skillId": "network-engineering-601-skill-advanced-7",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blame assignment without system updates"
-            },
-            {
-              "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
-            },
-            {
-              "id": "c",
-              "text": "One-time fixes without retesting"
-            },
-            {
-              "id": "d",
-              "text": "Issue closure based on elapsed time"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
-        },
-        {
-          "id": "network-engineering-601-l06-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Network Engineering Research and Leadership?",
-          "skillId": "network-engineering-601-skill-advanced-8",
-          "options": [
-            {
-              "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
-            },
-            {
-              "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
-            },
-            {
-              "id": "c",
-              "text": "Ignore correlated failure modes"
-            },
-            {
-              "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "explanation": "Adaptive response relies on using pre-planned controls and escalation paths to manage incidents predictably before resorting to drastic measures."
         }
       ]
     },
@@ -645,8 +501,14 @@ export const NetworkEngineering601Module: LearningModule = {
         {
           "id": "network-engineering-601-l07-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Stakeholder Impact Map",
+          "content": "A visual map showing how a network policy change affects different user groups (e.g., urban vs. rural, business vs. residential)."
+        },
+        {
+          "id": "network-engineering-601-l07-a2",
+          "type": "image",
+          "title": "Accountability Flowchart",
+          "content": "A diagram illustrating the process for decision review, escalation, and remediation in a governance framework."
         }
       ],
       "chunks": [
@@ -654,36 +516,36 @@ export const NetworkEngineering601Module: LearningModule = {
           "id": "network-engineering-601-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. This understanding is crucial for recognizing how decisions in network engineering can impact various individuals and communities.\nContext recap: In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. This understanding is crucial for recognizing how decisions in network engineering can impact various individuals and communities.\nWhy this matters: Stakeholder Impact Distribution helps learners in Network Engineering connect ideas from Network Engineering Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "Learn to map the full impact of network engineering decisions. This involves analyzing the distribution of benefits, costs, and risks across various stakeholder groups, including end-users, operators, and the public, over both short and long terms."
         },
         {
           "id": "network-engineering-601-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "In this section, we will explore the architecture of accountability in network engineering. We will integrate concepts such as decision traceability, review rights, and remediation obligations to ensure that all stakeholders are held accountable for their actions and decisions.\nContext recap: In this section, we will explore the architecture of accountability in network engineering. We will integrate concepts such as decision traceability, review rights, and remediation obligations to ensure that all stakeholders are held accountable for their actions and decisions.\nContext recap: In this section, we will explore the architecture of accountability in network engineering. We will integrate concepts such as decision traceability, review rights, and remediation obligations to ensure that all stakeholders are held accountable for their actions and decisions. Context recap: In this section, we will explore the architecture of accountability in network engineering. We will integrate concepts such as decision traceability, review rights, and remediation obligations to ensure that all stakeholders are held accountable for their actions and decisions."
+          "content": "This section covers how to design robust accountability systems. We will integrate key architectural components like decision traceability, stakeholder review rights, and clear remediation obligations to ensure responsible governance."
         },
         {
           "id": "network-engineering-601-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "To ensure effective leadership in network engineering, it is important to have a final checklist that connects various important aspects. This checklist should include outcomes that we aim to achieve, ethical considerations that guide our decisions, compliance with relevant policies, and strategies for building resilience in our projects. By using this checklist, we can make sure that we are leading responsibly and making a positive impact.\nContext recap: To ensure effective leadership in network engineering, it is important to have a final checklist that connects various important aspects. This checklist should include outcomes that we aim to achieve, ethical considerations that guide our decisions, compliance with relevant policies, and strategies for building resilience in our projects. By using this checklist, we can make sure that we are leading responsibly and making a positive impact."
+          "content": "This recap provides a leadership checklist for responsible engineering. It connects project outcomes with ethical guidelines, policy compliance, and resilience strategies to ensure decisions are sound, accountable, and beneficial."
         }
       ],
       "flashcards": [
         {
           "id": "network-engineering-601-l07-f1",
-          "front": "Impact distribution",
-          "back": "How outcomes are allocated across populations and timescales."
+          "front": "What is impact distribution?",
+          "back": "How the outcomes of a decision are allocated across different populations and timescales."
         },
         {
           "id": "network-engineering-601-l07-f2",
-          "front": "Decision traceability",
-          "back": "An auditable record of evidence, ownership, and rationale."
+          "front": "What is decision traceability?",
+          "back": "An auditable record of the evidence, ownership, and rationale behind a decision."
         },
         {
           "id": "network-engineering-601-l07-f3",
-          "front": "Responsible leadership",
-          "back": "Decision behavior balancing performance, accountability, and ethics."
+          "front": "What is responsible leadership in engineering?",
+          "back": "Decision-making behavior that balances performance, accountability, and ethics."
         }
       ]
     },
@@ -695,9 +557,9 @@ export const NetworkEngineering601Module: LearningModule = {
       "learningAids": [
         {
           "id": "network-engineering-601-l08-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "image",
+          "title": "Capstone Defense Brief Template",
+          "content": "A structured document template for the capstone defense, with sections for the proposal, evidence, risk analysis, and stakeholder impact."
         }
       ],
       "chunks": [
@@ -705,13 +567,13 @@ export const NetworkEngineering601Module: LearningModule = {
           "id": "network-engineering-601-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "In this interactive activity, learners will work together to create a comprehensive brief. This brief will include important claims that support their ideas, evidence that backs up those claims, and clear boundaries of uncertainty to show where more information is needed. Additionally, they will outline pathways for remediation, which are steps to take if issues arise. This exercise helps learners practice critical thinking and effective communication skills.\nContext recap: In this interactive activity, learners will work together to create a comprehensive brief. This brief will include important claims that support their ideas, evidence that backs up those claims, and clear boundaries of uncertainty to show where more information is needed. Additionally, they will outline pathways for remediation, which are steps to take if issues arise. This exercise helps learners practice critical thinking and effective communication skills.\nContext recap: In this interactive activity, learners will work together to create a comprehensive brief. This brief will include important claims that support their ideas, evidence that backs up those claims, and clear boundaries of uncertainty to show where more information is needed. Additionally, they will outline pathways for remediation, which are steps to take if issues arise. This exercise helps learners practice critical thinking and effective communication skills.\nWhy this matters: Defense Brief Assembly helps learners in Network Engineering connect ideas from Network Engineering Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "In this capstone lab, you will assemble a professional defense brief for a complex network engineering proposal. This involves articulating key claims, backing them with verifiable evidence, defining the boundaries of uncertainty, and outlining clear remediation pathways."
         },
         {
           "id": "network-engineering-601-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "During the Expert Panel Rehearsal, learners will practice their responses to various critiques that may come from technical experts, governance representatives, and stakeholders. This rehearsal is a valuable opportunity for learners to refine their communication skills and prepare for real-world scenarios where they must defend their ideas and projects. By anticipating questions and feedback, they can build confidence and improve their ability to engage with different audiences.\nContext recap: During the Expert Panel Rehearsal, learners will practice their responses to various critiques that may come from technical experts, governance representatives, and stakeholders. This rehearsal is a valuable opportunity for learners to refine their communication skills and prepare for real-world scenarios where they must defend their ideas and projects. By anticipating questions and feedback, they can build confidence and improve their ability to engage with different audiences."
+          "content": "Prepare for your final defense by rehearsing responses to critical feedback. You will practice addressing challenging questions from technical experts, governance reviewers, and public stakeholders to refine your arguments and build confidence."
         }
       ],
       "interactiveActivities": [

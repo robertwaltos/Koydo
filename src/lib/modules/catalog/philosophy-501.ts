@@ -1,9 +1,9 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const Philosophy501Module: LearningModule = {
+export const philosophy_501_Module: LearningModule = {
   "id": "philosophy-501",
   "title": "Philosophy Specialization Studio",
-  "description": "Post-401 specialization in Philosophy, focused on humanities systems diagnostics, humanities operations and execution design, humanities impact and tradeoff analysis, and humanities governance and leadership through advanced casework, simulation, and defense-based checkpoints.",
+  "description": "An advanced studio for applying philosophical frameworks to complex, real-world systems. Learners will master techniques for diagnosing ethical challenges, designing operational solutions, analyzing trade-offs, and leading with accountable governance, culminating in a capstone defense of their work.",
   "subject": "Humanities",
   "tags": [
     "core",
@@ -14,19 +14,19 @@ export const Philosophy501Module: LearningModule = {
   ],
   "minAge": 17,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en",
     "es"
   ],
   "learningObjectives": [
-    "Apply advanced methods for humanities systems diagnostics in high-constraint environments",
-    "Design robust systems for humanities operations and execution design with measurable control gates",
-    "Evaluate interventions in humanities impact and tradeoff analysis with research-grade rigor",
-    "Operationalize humanities governance and leadership with accountable governance and escalation pathways",
-    "Lead cross-functional decision reviews with explicit tradeoff communication",
-    "Defend recommendations under expert critique using evidence and uncertainty bounds"
+    "Apply advanced philosophical frameworks to diagnose systemic challenges in high-stakes environments.",
+    "Design robust operational systems for ethical action with clear checkpoints and success metrics.",
+    "Evaluate the impact and trade-offs of interventions with research-grade rigor.",
+    "Develop and implement accountable governance models with clear leadership roles and escalation pathways.",
+    "Lead cross-functional reviews, clearly communicating complex trade-offs.",
+    "Defend complex ethical and systemic recommendations against expert critique, using evidence and clearly stated uncertainty."
   ],
   "lessons": [
     {
@@ -38,45 +38,45 @@ export const Philosophy501Module: LearningModule = {
         {
           "id": "philosophy-501-l01-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "System Mapping",
+          "content": "Visualize a complex system (e.g., a social program, a corporate policy) with its key components, stakeholders, inputs, and feedback loops. Identify points of friction or ethical tension."
         }
       ],
       "chunks": [
         {
           "id": "philosophy-501-l01-c1",
           "kind": "concept",
-          "title": "Scope and Boundary Design",
-          "content": "In this lesson, we will explore the advanced boundaries of philosophy, particularly focusing on how we can analyze and improve systems within the humanities. We will discuss the importance of understanding the different elements that make up these systems and how they interact with one another. This foundational knowledge will help us design effective strategies for executing philosophical inquiries and operations.\nContext recap: In this lesson, we will explore the advanced boundaries of philosophy, particularly focusing on how we can analyze and improve systems within the humanities. We will discuss the importance of understanding the different elements that make up these systems and how they interact with one another. This foundational knowledge will help us design effective strategies for executing philosophical inquiries and operations."
+          "title": "Defining the Problem Space",
+          "content": "Before we can solve a problem, we must define it. This lesson introduces methods for mapping the boundaries of a complex ethical or social system. We'll learn to identify key components, stakeholders, and the rules that govern their interactions, setting a clear scope for our analysis."
         },
         {
           "id": "philosophy-501-l01-c2",
           "kind": "concept",
-          "title": "Causal and Uncertainty Modeling",
-          "content": "In this part of the lesson, learners will engage in mapping out causal pathways, which are the connections between different events or actions. They will also identify ranges of uncertainty and understand how various systems depend on one another. This preparation is crucial before planning any interventions, as it allows us to anticipate potential outcomes and make informed decisions.\nContext recap: In this part of the lesson, learners will engage in mapping out causal pathways, which are the connections between different events or actions. They will also identify ranges of uncertainty and understand how various systems depend on one another. This preparation is crucial before planning any interventions, as it allows us to anticipate potential outcomes and make informed decisions."
+          "title": "Modeling Causes and Uncertainties",
+          "content": "Complex systems are full of hidden connections and unpredictable outcomes. Here, we'll practice mapping potential causal chains ('if we do X, then Y might happen') and identifying areas of uncertainty. This is crucial for anticipating the consequences of any proposed intervention."
         },
         {
           "id": "philosophy-501-l01-c3",
           "kind": "recap",
-          "title": "Evidence Thresholds",
-          "content": "In our recap, we emphasize that every claim we make should be supported by measurable indicators. This means we need to establish confidence bounds, which help us understand how certain we are about our claims, and set up review checkpoints to assess our progress. This structured approach ensures that our philosophical arguments are grounded in evidence.\nContext recap: In our recap, we emphasize that every claim we make should be supported by measurable indicators. This means we need to establish confidence bounds, which help us understand how certain we are about our claims, and set up review checkpoints to assess our progress. This structured approach ensures that our philosophical arguments are grounded in evidence."
+          "title": "Setting Standards for Evidence",
+          "content": "A strong philosophical argument requires strong evidence. We'll recap the importance of grounding claims in measurable data, establishing confidence levels for our conclusions, and planning regular checkpoints to review our analysis against new information."
         }
       ],
       "flashcards": [
         {
           "id": "philosophy-501-l01-f1",
-          "front": "humanities systems diagnostics",
-          "back": "A specialization axis requiring explicit assumptions and measurable constraints."
+          "front": "Humanities Systems Diagnostics",
+          "back": "The structured process of identifying the root causes of ethical or systemic problems by mapping components, assumptions, and constraints."
         },
         {
           "id": "philosophy-501-l01-f2",
-          "front": "humanities operations and execution design",
-          "back": "Execution architecture that determines reliability under stress."
+          "front": "Humanities Operations Design",
+          "back": "Creating a reliable, repeatable process for implementing an ethical solution, including clear roles and checkpoints."
         },
         {
           "id": "philosophy-501-l01-f3",
-          "front": "humanities impact and tradeoff analysis",
-          "back": "Evaluation discipline for identifying true gains and hidden costs."
+          "front": "Impact and Trade-off Analysis",
+          "back": "A method for evaluating the potential positive and negative consequences of a decision across different stakeholders and values."
         }
       ]
     },
@@ -89,22 +89,22 @@ export const Philosophy501Module: LearningModule = {
         {
           "id": "philosophy-501-l02-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Decision Flowchart",
+          "content": "Sketch a flowchart for a complex decision process. Include decision points, criteria for advancing (checkpoints), conditions for stopping or reversing (rollback triggers), and pathways for escalating difficult problems."
         }
       ],
       "chunks": [
         {
           "id": "philosophy-501-l02-c1",
           "kind": "practice",
-          "title": "Method Design and Stress Test",
-          "content": "In this interactive session, learners will have the opportunity to design specialized workflows. These workflows will be put to the test in various challenging scenarios to see how they hold up under pressure. This practice is essential for understanding how to create robust methods that can withstand real-world challenges.\nContext recap: In this interactive session, learners will have the opportunity to design specialized workflows. These workflows will be put to the test in various challenging scenarios to see how they hold up under pressure. This practice is essential for understanding how to create robust methods that can withstand real-world challenges."
+          "title": "Designing and Testing Analytical Methods",
+          "content": "In this lab, you will design your own workflow for analyzing a philosophical problem. We will then 'stress test' these workflows against challenging scenarios to see how they perform under pressure, revealing weaknesses and areas for improvement."
         },
         {
           "id": "philosophy-501-l02-c2",
           "kind": "recap",
-          "title": "Control Gate Architecture",
-          "content": "In our recap, we will discuss how workflows should include important elements such as checkpoints, which allow us to monitor progress, rollback criteria that help us revert to previous states if needed, and threshold-based escalation to ensure that we respond appropriately to different situations. These components are vital for maintaining control and ensuring effective governance.\nContext recap: In our recap, we will discuss how workflows should include important elements such as checkpoints, which allow us to monitor progress, rollback criteria that help us revert to previous states if needed, and threshold-based escalation to ensure that we respond appropriately to different situations. These components are vital for maintaining control and ensuring effective governance."
+          "title": "Building in Controls and Safeguards",
+          "content": "A robust workflow needs safeguards. We'll recap how to build in key control gates: checkpoints to review progress, rollback criteria to reverse a failing decision, and escalation paths to bring in senior leaders when a predefined risk threshold is crossed."
         }
       ],
       "interactiveActivities": [
@@ -115,20 +115,20 @@ export const Philosophy501Module: LearningModule = {
           "description": "Match specialist controls with their strongest reliability and governance effects.",
           "pairs": [
             {
-              "left": "Pre-commit gate",
-              "right": "Prevents avoidable downstream failures"
+              "left": "Pre-commitment Gate",
+              "right": "Prevents action on a flawed plan before resources are wasted."
             },
             {
-              "left": "Rollback trigger",
-              "right": "Limits blast radius under adverse outcomes"
+              "left": "Rollback Trigger",
+              "right": "Contains the damage from an unexpected negative outcome."
             },
             {
-              "left": "Baseline dashboard",
-              "right": "Supports defensible impact attribution"
+              "left": "Performance Dashboard",
+              "right": "Provides objective evidence for attributing success or failure."
             },
             {
-              "left": "Retrospective loop",
-              "right": "Improves next-cycle decision quality"
+              "left": "Post-Mortem Review",
+              "right": "Ensures lessons from one cycle improve the next."
             }
           ]
         }
@@ -150,7 +150,7 @@ export const Philosophy501Module: LearningModule = {
       "questions": [
         {
           "id": "philosophy-501-l03-q1",
-          "text": "Which practice most improves humanities systems diagnostics decision quality?",
+          "text": "Which practice most improves the quality of a humanities systems diagnosis?",
           "skillId": "philosophy-501-skill-core",
           "options": [
             {
@@ -175,7 +175,7 @@ export const Philosophy501Module: LearningModule = {
         },
         {
           "id": "philosophy-501-l03-q2",
-          "text": "At level 501, strong execution for humanities operations and execution design requires:",
+          "text": "Strong operational design in this field requires:",
           "skillId": "philosophy-501-skill-execution",
           "options": [
             {
@@ -200,7 +200,7 @@ export const Philosophy501Module: LearningModule = {
         },
         {
           "id": "philosophy-501-l03-q3",
-          "text": "A defensible approach to humanities impact and tradeoff analysis includes:",
+          "text": "A defensible impact and trade-off analysis includes:",
           "skillId": "philosophy-501-skill-eval",
           "options": [
             {
@@ -225,7 +225,7 @@ export const Philosophy501Module: LearningModule = {
         },
         {
           "id": "philosophy-501-l03-q4",
-          "text": "Mature governance systems connect:",
+          "text": "Mature governance systems effectively connect:",
           "skillId": "philosophy-501-skill-governance",
           "options": [
             {
@@ -247,106 +247,6 @@ export const Philosophy501Module: LearningModule = {
           ],
           "correctOptionId": "a",
           "explanation": "Governance maturity is the operational link between intent, measurement, and corrective action."
-        },
-        {
-          "id": "philosophy-501-l03-q5",
-          "text": "What is the best way to compare competing interventions in advanced Humanities?",
-          "skillId": "philosophy-501-skill-advanced-5",
-          "options": [
-            {
-              "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
-            },
-            {
-              "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
-            },
-            {
-              "id": "c",
-              "text": "Switch metrics after results arrive"
-            },
-            {
-              "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
-        },
-        {
-          "id": "philosophy-501-l03-q6",
-          "text": "In high-stakes Philosophy Specialization Studio execution, which communication protocol is strongest?",
-          "skillId": "philosophy-501-skill-advanced-6",
-          "options": [
-            {
-              "id": "a",
-              "text": "Broadcast conclusions without assumptions"
-            },
-            {
-              "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
-            },
-            {
-              "id": "c",
-              "text": "Share only final outcomes after completion"
-            },
-            {
-              "id": "d",
-              "text": "Limit updates to a single informal channel"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
-        },
-        {
-          "id": "philosophy-501-l03-q7",
-          "text": "A mature remediation loop in advanced Humanities should prioritize:",
-          "skillId": "philosophy-501-skill-advanced-7",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blame assignment without system updates"
-            },
-            {
-              "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
-            },
-            {
-              "id": "c",
-              "text": "One-time fixes without retesting"
-            },
-            {
-              "id": "d",
-              "text": "Issue closure based on elapsed time"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
-        },
-        {
-          "id": "philosophy-501-l03-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Philosophy Specialization Studio?",
-          "skillId": "philosophy-501-skill-advanced-8",
-          "options": [
-            {
-              "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
-            },
-            {
-              "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
-            },
-            {
-              "id": "c",
-              "text": "Ignore correlated failure modes"
-            },
-            {
-              "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
         }
       ]
     },
@@ -359,28 +259,36 @@ export const Philosophy501Module: LearningModule = {
         {
           "id": "philosophy-501-l04-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Trade-off Matrix",
+          "content": "Create a matrix to compare two proposed solutions to an ethical dilemma. Score each option against key values like equity, safety, cost, and transparency. Use this visual to identify the core trade-offs."
         }
       ],
       "chunks": [
         {
           "id": "philosophy-501-l04-c1",
           "kind": "concept",
-          "title": "Scenario Architecture",
-          "content": "In this lesson, we will frame cases that highlight the competing constraints we face in humanities systems diagnostics. We will analyze the impacts and trade-offs involved in our decisions, helping us understand the complexities of the situations we encounter. This analysis is crucial for making informed philosophical arguments.\nContext recap: In this lesson, we will frame cases that highlight the competing constraints we face in humanities systems diagnostics. We will analyze the impacts and trade-offs involved in our decisions, helping us understand the complexities of the situations we encounter. This analysis is crucial for making informed philosophical arguments."
+          "title": "Deconstructing Complex Cases",
+          "content": "This lesson focuses on analyzing real-world case studies. We'll learn to frame the central dilemma, identify the competing values and constraints at play, and map the potential consequences of different paths forward."
         },
         {
           "id": "philosophy-501-l04-c2",
           "kind": "practice",
-          "title": "Tradeoff Framing",
-          "content": "During this practice session, learners will compare different options based on various important dimensions such as safety, reliability, cost, equity, and governance. This comparison will help them understand the trade-offs involved in decision-making and how to prioritize different factors when evaluating options.\nContext recap: During this practice session, learners will compare different options based on various important dimensions such as safety, reliability, cost, equity, and governance. This comparison will help them understand the trade-offs involved in decision-making and how to prioritize different factors when evaluating options."
+          "title": "Framing and Quantifying Trade-offs",
+          "content": "Every difficult decision involves trade-offs. During this practice, you'll learn to systematically compare options across multiple dimensions—such as safety, reliability, cost, and equity—to make the hidden costs and benefits of each choice explicit."
         },
         {
           "id": "philosophy-501-l04-c3",
           "kind": "recap",
-          "title": "Decision Memo Pattern",
-          "content": "In our recap, we will highlight that each recommendation we make should include clear assumptions, evidence to support our claims, risk controls to mitigate potential issues, and fallback plans in case things do not go as expected. This structured approach ensures that our decisions are well thought out and accountable.\nContext recap: In our recap, we will highlight that each recommendation we make should include clear assumptions, evidence to support our claims, risk controls to mitigate potential issues, and fallback plans in case things do not go as expected. This structured approach ensures that our decisions are well thought out and accountable."
+          "title": "Structuring a Recommendation",
+          "content": "A good recommendation is more than just an opinion. We'll recap a standard pattern for a decision memo: state your recommendation, list the core assumptions, present the supporting evidence, outline risk controls, and describe a fallback plan."
+        }
+      ],
+      "interactiveActivities": [
+        {
+          "id": "philosophy-501-l04-act1",
+          "type": "drag_and_drop_sort",
+          "title": "Prioritizing Ethical Values",
+          "description": "In a medical ethics scenario involving a new AI diagnostic tool, drag and drop the following values into order of priority: Patient Autonomy, Medical Accuracy, Data Privacy, and Cost Efficiency."
         }
       ]
     },
@@ -393,30 +301,30 @@ export const Philosophy501Module: LearningModule = {
         {
           "id": "philosophy-501-l05-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Simulation Dashboard",
+          "content": "An interactive dashboard showing key metrics (e.g., public trust, budget, system reliability) in real-time. Your decisions will cause these metrics to change, forcing you to adapt your strategy."
         }
       ],
       "chunks": [
         {
           "id": "philosophy-501-l05-c1",
           "kind": "practice",
-          "title": "Live Scenario Controls",
-          "content": "In this interactive clinic, learners will operate scenario controls while balancing performance and governance constraints. This hands-on experience will allow them to practice making decisions in real-time, considering both the effectiveness of their actions and the ethical implications of their choices.\nContext recap: In this interactive clinic, learners will operate scenario controls while balancing performance and governance constraints. This hands-on experience will allow them to practice making decisions in real-time, considering both the effectiveness of their actions and the ethical implications of their choices.\nContext recap: In this interactive clinic, learners will operate scenario controls while balancing performance and governance constraints. This hands-on experience will allow them to practice making decisions in real-time, considering both the effectiveness of their actions and the ethical implications of their choices. Context recap: In this interactive clinic, learners will operate scenario controls while balancing performance and governance constraints. This hands-on experience will allow them to practice making decisions in real-time, considering both the effectiveness of their actions and the ethical implications of their choices."
+          "title": "Navigating a Live Scenario",
+          "content": "This interactive clinic puts you in the driver's seat. You will manage a complex scenario in real-time, making decisions that balance performance goals with ethical governance constraints. This is where theory meets practice."
         },
         {
           "id": "philosophy-501-l05-c2",
           "kind": "recap",
-          "title": "Adaptive Response Design",
-          "content": "In our recap, we will discuss how effective responses to challenges should update control gates without losing traceability or accountability. This means that as we adapt our strategies, we must ensure that we can still track our decisions and understand the reasons behind them.\nContext recap: In our recap, we will discuss how effective responses to challenges should update control gates without losing traceability or accountability. This means that as we adapt our strategies, we must ensure that we can still track our decisions and understand the reasons behind them."
+          "title": "Designing Adaptive Responses",
+          "content": "Situations change. This recap focuses on how to adapt your strategy mid-stream. We'll discuss how to modify your operational controls in response to new information without losing accountability or a clear record of why decisions were changed."
         }
       ],
       "interactiveActivities": [
         {
           "id": "philosophy-501-l05-act1",
           "type": "scenario",
-          "title": "Adverse-Condition Decision Run",
-          "description": "Run a high-pressure philosophy scenario and tune controls under uncertainty."
+          "title": "High-Stakes Decision Simulation",
+          "description": "Manage a public health crisis using a simulated dashboard. Balance resource allocation, public communication, and ethical guidelines under evolving conditions and uncertainty."
         }
       ]
     },
@@ -536,103 +444,103 @@ export const Philosophy501Module: LearningModule = {
         },
         {
           "id": "philosophy-501-l06-q5",
-          "text": "What is the best way to compare competing interventions in advanced Humanities?",
-          "skillId": "philosophy-501-skill-advanced-5",
+          "text": "When analyzing a case study, what is the primary purpose of a 'trade-off matrix'?",
+          "skillId": "philosophy-501-skill-case-tradeoff",
           "options": [
             {
               "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
+              "text": "To prove one option is perfect"
             },
             {
               "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
+              "text": "To make the comparative costs and benefits of different options explicit"
             },
             {
               "id": "c",
-              "text": "Switch metrics after results arrive"
+              "text": "To hide the negative aspects of a preferred solution"
             },
             {
               "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
+              "text": "To choose the cheapest option automatically"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
+          "explanation": "A trade-off matrix is a tool for systematically comparing options across multiple criteria, making the relative advantages and disadvantages clear."
         },
         {
           "id": "philosophy-501-l06-q6",
-          "text": "In high-stakes Philosophy Specialization Studio execution, which communication protocol is strongest?",
-          "skillId": "philosophy-501-skill-advanced-6",
+          "text": "In the 'Decision Memo Pattern', why is it crucial to state your assumptions?",
+          "skillId": "philosophy-501-skill-case-memo",
           "options": [
             {
               "id": "a",
-              "text": "Broadcast conclusions without assumptions"
+              "text": "To make the memo longer"
             },
             {
               "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
+              "text": "Assumptions are not important"
             },
             {
               "id": "c",
-              "text": "Share only final outcomes after completion"
+              "text": "To clarify the conditions under which your recommendation is valid"
             },
             {
               "id": "d",
-              "text": "Limit updates to a single informal channel"
+              "text": "To confuse the reader"
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
+          "correctOptionId": "c",
+          "explanation": "Explicitly stating assumptions clarifies the logical foundation of your argument and identifies potential points of failure if those assumptions prove false."
         },
         {
           "id": "philosophy-501-l06-q7",
-          "text": "A mature remediation loop in advanced Humanities should prioritize:",
-          "skillId": "philosophy-501-skill-advanced-7",
+          "text": "What is the key learning objective of a 'Live Scenario' simulation?",
+          "skillId": "philosophy-501-skill-sim-objective",
           "options": [
             {
               "id": "a",
-              "text": "Blame assignment without system updates"
+              "text": "To prove you can follow instructions without deviation"
             },
             {
               "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
+              "text": "To find a single, perfect solution"
             },
             {
               "id": "c",
-              "text": "One-time fixes without retesting"
+              "text": "To practice making decisions under pressure and adapting to changing conditions"
             },
             {
               "id": "d",
-              "text": "Issue closure based on elapsed time"
+              "text": "To memorize a specific set of facts"
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
+          "correctOptionId": "c",
+          "explanation": "Simulations are designed to test and improve decision-making skills in dynamic environments where adaptation is necessary."
         },
         {
           "id": "philosophy-501-l06-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Philosophy Specialization Studio?",
-          "skillId": "philosophy-501-skill-advanced-8",
+          "text": "An 'adaptive response' during a simulation means:",
+          "skillId": "philosophy-501-skill-sim-adaptive",
           "options": [
             {
               "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
+              "text": "Sticking to the original plan no matter what"
             },
             {
               "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
+              "text": "Making random changes to see what happens"
             },
             {
               "id": "c",
-              "text": "Ignore correlated failure modes"
+              "text": "Ignoring new data that contradicts your plan"
             },
             {
               "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
+              "text": "Updating your strategy based on new data while maintaining accountability"
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "correctOptionId": "d",
+          "explanation": "A mature adaptive response involves thoughtful, evidence-based changes to a plan, with clear documentation of why the changes were made."
         }
       ]
     },
@@ -645,45 +553,45 @@ export const Philosophy501Module: LearningModule = {
         {
           "id": "philosophy-501-l07-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Accountability Flowchart",
+          "content": "Diagram the flow of accountability for a major public decision. Show who makes the decision, who has oversight, how the public can appeal, and what the process for remediation is."
         }
       ],
       "chunks": [
         {
           "id": "philosophy-501-l07-c1",
           "kind": "concept",
-          "title": "Stakeholder Impact Distribution",
-          "content": "In this lesson, learners will map out the distribution of benefits and burdens among different stakeholder groups. They will also explore the delayed effects of decisions, helping them understand how different groups are impacted over time. This analysis is crucial for ethical decision-making in philosophy.\nContext recap: In this lesson, learners will map out the distribution of benefits and burdens among different stakeholder groups. They will also explore the delayed effects of decisions, helping them understand how different groups are impacted over time. This analysis is crucial for ethical decision-making in philosophy."
+          "title": "Mapping Stakeholder Impacts",
+          "content": "Decisions are never made in a vacuum. In this lesson, we'll map how the benefits and burdens of a policy are distributed across different groups, including delayed or second-order effects. This is a cornerstone of ethical analysis and just governance."
         },
         {
           "id": "philosophy-501-l07-c2",
           "kind": "concept",
-          "title": "Accountability Architecture",
-          "content": "In this section, we will discuss the architecture of accountability in decision-making. This includes ensuring that there is traceability for decisions made, rights for review, and obligations for remediation when necessary. Understanding these elements is vital for maintaining ethical standards in governance.\nContext recap: In this section, we will discuss the architecture of accountability in decision-making. This includes ensuring that there is traceability for decisions made, rights for review, and obligations for remediation when necessary. Understanding these elements is vital for maintaining ethical standards in governance.\nContext recap: In this section, we will discuss the architecture of accountability in decision-making. This includes ensuring that there is traceability for decisions made, rights for review, and obligations for remediation when necessary. Understanding these elements is vital for maintaining ethical standards in governance. Context recap: In this section, we will discuss the architecture of accountability in decision-making.\nWhy this matters: Accountability Architecture helps learners in Humanities connect ideas from Philosophy Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "Designing for Accountability",
+          "content": "Who is responsible when things go wrong? This section explores the architecture of accountability: ensuring decisions are traceable, creating clear rights of review and appeal, and defining obligations for remediation. These systems build public trust and ensure fairness."
         },
         {
           "id": "philosophy-501-l07-c3",
           "kind": "recap",
-          "title": "Responsible Leadership Checklist",
-          "content": "At the end of our lesson, we will create a comprehensive checklist that connects important outcomes with ethical considerations, ensures that we are following policies correctly, and promotes resilience in leadership. This checklist will help us understand how to be responsible leaders in our communities.\nContext recap: At the end of our lesson, we will create a comprehensive checklist that connects important outcomes with ethical considerations, ensures that we are following policies correctly, and promotes resilience in leadership. This checklist will help us understand how to be responsible leaders in our communities."
+          "title": "The Responsible Leadership Checklist",
+          "content": "We'll conclude by developing a practical checklist for responsible leadership. This tool connects strategic outcomes to ethical principles, ensures compliance with governance policies, and promotes resilient, accountable decision-making."
         }
       ],
       "flashcards": [
         {
           "id": "philosophy-501-l07-f1",
-          "front": "Impact distribution",
-          "back": "How outcomes are allocated across populations and timescales."
+          "front": "Impact Distribution",
+          "back": "The analysis of how a decision's positive and negative effects are spread across different populations and over time."
         },
         {
           "id": "philosophy-501-l07-f2",
-          "front": "Decision traceability",
-          "back": "An auditable record of evidence, ownership, and rationale."
+          "front": "Decision Traceability",
+          "back": "Maintaining a clear, auditable record of who made a decision, when, and based on what evidence and rationale."
         },
         {
           "id": "philosophy-501-l07-f3",
-          "front": "Responsible leadership",
-          "back": "Decision behavior balancing performance, accountability, and ethics."
+          "front": "Responsible Leadership",
+          "back": "A leadership style that balances achieving goals with ethical conduct, public accountability, and systemic resilience."
         }
       ]
     },
@@ -696,30 +604,30 @@ export const Philosophy501Module: LearningModule = {
         {
           "id": "philosophy-501-l08-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Argument Structure Template",
+          "content": "Use a template to structure your capstone argument. Sections include: 1. Core Thesis, 2. Key Evidence, 3. Acknowledged Uncertainties & Counterarguments, 4. Proposed Mitigation/Controls, 5. Conclusion."
         }
       ],
       "chunks": [
         {
           "id": "philosophy-501-l08-c1",
           "kind": "practice",
-          "title": "Defense Brief Assembly",
-          "content": "In this activity, learners will work together to create a detailed brief. This brief will include well-supported claims, relevant evidence, an understanding of the uncertainties involved, and possible pathways for addressing any issues that may arise. This practice will help us prepare for presenting our ideas effectively.\nContext recap: In this activity, learners will work together to create a detailed brief. This brief will include well-supported claims, relevant evidence, an understanding of the uncertainties involved, and possible pathways for addressing any issues that may arise. This practice will help us prepare for presenting our ideas effectively."
+          "title": "Assembling the Capstone Brief",
+          "content": "In this lab, you will synthesize your work into a persuasive defense brief. This involves formulating a clear central claim, supporting it with evidence, honestly acknowledging uncertainties and risks, and proposing clear remediation pathways."
         },
         {
           "id": "philosophy-501-l08-c2",
           "kind": "recap",
-          "title": "Expert Panel Rehearsal",
-          "content": "During this session, learners will practice their responses to questions and critiques that may come from experts in the field, as well as from stakeholders and governance representatives. This rehearsal will help build confidence and ensure that we are ready to engage in meaningful discussions about our ideas.\nContext recap: During this session, learners will practice their responses to questions and critiques that may come from experts in the field, as well as from stakeholders and governance representatives. This rehearsal will help build confidence and ensure that we are ready to engage in meaningful discussions about our ideas."
+          "title": "Rehearsing for Expert Review",
+          "content": "A strong argument must withstand scrutiny. Here, you will practice defending your brief against critical questions from peers acting as an expert panel. This rehearsal builds confidence and sharpens your ability to think on your feet."
         }
       ],
       "interactiveActivities": [
         {
           "id": "philosophy-501-l08-act1",
           "type": "debate_simulator",
-          "title": "Expert Defense Panel",
-          "description": "Defend specialization recommendations under adversarial cross-examination."
+          "title": "Capstone Defense Simulation",
+          "description": "Present your final recommendation to a simulated expert panel. Respond to challenging questions and adversarial critiques that test the rigor of your analysis and the resilience of your proposal."
         }
       ]
     }

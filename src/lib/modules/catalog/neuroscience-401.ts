@@ -1,81 +1,81 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const Neuroscience401Module: LearningModule = {
+export const neuroscience_401_Module: LearningModule = {
   "id": "neuroscience-401",
   "title": "Neuroscience Leadership and Capstone",
-  "description": "Level 401 curriculum in Neuroscience, focused on neural signaling, cognitive systems, experimental methods, and clinical translation, with rigorous scenario analysis and assessment-backed mastery.",
+  "description": "An advanced curriculum in Neuroscience focusing on neural signaling, cognitive systems, experimental methods, and clinical translation, culminating in a capstone project.",
   "subject": "Neuroscience",
   "tags": [
-    "core",
-    "curriculum",
-    "interactive",
+    "neuroscience",
     "biology",
-    "cognition"
+    "cognition",
+    "ethics",
+    "capstone"
   ],
   "minAge": 16,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en"
   ],
   "learningObjectives": [
-    "Explain and apply neural signaling using clear assumptions and constraints",
-    "Build repeatable workflows for cognitive systems with measurable checkpoints",
-    "Evaluate experimental methods outcomes against baseline and target metrics",
-    "Use governance patterns to improve clinical translation decision quality",
-    "Communicate tradeoffs across technical, policy, and user-impact dimensions",
-    "Synthesize Neuroscience methods into defensible recommendations"
+    "Model neural signaling pathways, clearly stating assumptions and constraints.",
+    "Design and evaluate experiments for studying cognitive systems using baseline and target metrics.",
+    "Analyze complex clinical scenarios to recommend interventions using a decision tradeoff matrix.",
+    "Apply ethical frameworks and governance patterns to neuroscience research and clinical applications.",
+    "Communicate the tradeoffs between technical, policy, and patient-impact dimensions of a neuroscience project.",
+    "Synthesize research and analysis into a defensible capstone project proposal."
   ],
   "lessons": [
     {
       "id": "neuroscience-401-l01",
-      "title": "Neuroscience Core Concepts",
+      "title": "Foundations of Neural Systems",
       "type": "video",
-      "duration": 13,
+      "duration": 12,
       "learningAids": [
         {
           "id": "neuroscience-401-l01-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use the lesson scaffold, show your reasoning, and verify assumptions before finalizing your answer."
+          "title": "Neuron and Synapse Diagram",
+          "content": "A visual guide to the basic components of neural communication, including the axon, dendrite, and synaptic cleft."
         }
       ],
       "chunks": [
         {
           "id": "neuroscience-401-l01-c1",
           "kind": "concept",
-          "title": "Vocabulary and System Boundaries",
-          "content": "In this lesson, we will create a common language that helps us understand the fascinating field of Neuroscience. We will define the boundaries within which we will operate, and we will explore how neural signaling interacts with cognitive systems in real-world environments. This will help us better understand how our brains work and how they connect to our thoughts and actions.\nContext recap: In this lesson, we will create a common language that helps us understand the fascinating field of Neuroscience. We will define the boundaries within which we will operate, and we will explore how neural signaling interacts with cognitive systems in real-world environments. This will help us better understand how our brains work and how they connect to our thoughts and actions."
+          "title": "Core Vocabulary and System Boundaries",
+          "content": "This lesson establishes a common language for our study of neuroscience. We will define key terms, from the single neuron to complex cognitive systems, and outline the scope of our exploration into how the brain functions and gives rise to thought and action."
         },
         {
           "id": "neuroscience-401-l01-c2",
           "kind": "concept",
-          "title": "Causal Structures and Constraints",
-          "content": "In this part of the lesson, students will learn how to model causal paths, which means understanding how different factors influence each other. They will also identify hidden assumptions that may affect their understanding and apply checks to constraints before suggesting any interventions. This process encourages critical thinking and ensures that proposed solutions are well thought out.\nContext recap: In this part of the lesson, students will learn how to model causal paths, which means understanding how different factors influence each other. They will also identify hidden assumptions that may affect their understanding and apply checks to constraints before suggesting any interventions. This process encourages critical thinking and ensures that proposed solutions are well thought out."
+          "title": "Mapping Cause and Effect",
+          "content": "Learn to model causal pathways in neural systems, identifying how different factors influence one another. We will practice uncovering hidden assumptions and checking constraints, developing a critical thinking approach to understanding brain function and potential interventions."
         },
         {
           "id": "neuroscience-401-l01-c3",
           "kind": "recap",
-          "title": "Evidence Discipline",
-          "content": "This module introduces a systematic approach to working with evidence. Each claim made will be connected to observable indicators, which are facts we can see or measure. Additionally, we will consider the expected uncertainty associated with these claims. This evidence-first workflow helps us make informed decisions based on solid data.\nContext recap: This module introduces a systematic approach to working with evidence. Each claim made will be connected to observable indicators, which are facts we can see or measure. Additionally, we will consider the expected uncertainty associated with these claims. This evidence-first workflow helps us make informed decisions based on solid data.\nContext recap: This module introduces a systematic approach to working with evidence. Each claim made will be connected to observable indicators, which are facts we can see or measure. Additionally, we will consider the expected uncertainty associated with these claims. This evidence-first workflow helps us make informed decisions based on solid data.\nWhy this matters: Evidence Discipline helps learners in Neuroscience connect ideas from Neuroscience Leadership and Capstone to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "The Importance of Evidence",
+          "content": "This module introduces a systematic, evidence-first workflow. We will practice linking every claim to observable, measurable indicators and accounting for uncertainty. This discipline ensures our conclusions are based on solid data, which is critical for both research and clinical practice."
         }
       ],
       "flashcards": [
         {
           "id": "neuroscience-401-l01-f1",
-          "front": "neural signaling",
-          "back": "A core mechanism in Neuroscience requiring explicit assumptions and measurable controls."
+          "front": "Neural Signaling",
+          "back": "The process of communication between neurons through electrical and chemical signals, forming the basis of all brain activity."
         },
         {
           "id": "neuroscience-401-l01-f2",
-          "front": "cognitive systems",
-          "back": "Operational practices that convert strategy into reliable execution."
+          "front": "Cognitive Systems",
+          "back": "Models representing mental processes like memory, attention, and decision-making, used to study how the brain performs complex tasks."
         },
         {
           "id": "neuroscience-401-l01-f3",
-          "front": "experimental methods",
-          "back": "The evaluation layer that determines whether interventions truly improve outcomes."
+          "front": "Experimental Methods",
+          "back": "The systematic procedures used to test hypotheses, measure outcomes, and determine if interventions have a real effect."
         }
       ]
     },
@@ -88,22 +88,22 @@ export const Neuroscience401Module: LearningModule = {
         {
           "id": "neuroscience-401-l02-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use the lesson scaffold, show your reasoning, and verify assumptions before finalizing your answer."
+          "title": "Lab Protocol Template",
+          "content": "A structured template to help you design your experiment, including sections for hypothesis, methods, controls, and data analysis."
         }
       ],
       "chunks": [
         {
           "id": "neuroscience-401-l02-c1",
           "kind": "practice",
-          "title": "Method Sequence Construction",
-          "content": "In this interactive session, learners will construct a sequence of methods that are designed to enhance strategic leadership and ensure that different teams work well together. They will also prepare for their capstone defense by stress-testing each step of their method sequence to see how it holds up under uncertain conditions. This practice helps build resilience and adaptability in leadership.\nContext recap: In this interactive session, learners will construct a sequence of methods that are designed to enhance strategic leadership and ensure that different teams work well together. They will also prepare for their capstone defense by stress-testing each step of their method sequence to see how it holds up under uncertain conditions. This practice helps build resilience and adaptability in leadership."
+          "title": "Designing a Neuroscience Experiment",
+          "content": "In this interactive session, you will design a sequence of experimental methods to investigate a neuroscience question. You will stress-test each step of your design against potential uncertainties to ensure your experiment is robust and your results will be reliable."
         },
         {
           "id": "neuroscience-401-l02-c2",
           "kind": "recap",
           "title": "Operational Readiness Checks",
-          "content": "To ensure that our plans are ready for action, we will conduct operational readiness checks. This involves mapping out who is responsible for each part of the project, setting regular checkpoints to monitor progress, identifying triggers that would require us to go back and reassess our plans, and keeping detailed logs of the evidence we gather. These steps help us stay organized and prepared.\nContext recap: To ensure that our plans are ready for action, we will conduct operational readiness checks. This involves mapping out who is responsible for each part of the project, setting regular checkpoints to monitor progress, identifying triggers that would require us to go back and reassess our plans, and keeping detailed logs of the evidence we gather. These steps help us stay organized and prepared."
+          "content": "Before running an experiment, we must ensure it's ready. This involves defining clear roles and responsibilities, setting progress checkpoints, and establishing triggers for re-evaluation. These steps ensure a well-organized and adaptable research process."
         }
       ],
       "interactiveActivities": [
@@ -111,7 +111,7 @@ export const Neuroscience401Module: LearningModule = {
           "id": "neuroscience-401-l02-act1",
           "type": "matching_pairs",
           "title": "Method-to-Outcome Mapping",
-          "description": "Match each design choice to the strongest expected system effect.",
+          "description": "Match each experimental design choice to its most likely effect on the results.",
           "pairs": [
             {
               "left": "Pre-release stress tests",
@@ -135,7 +135,7 @@ export const Neuroscience401Module: LearningModule = {
           "id": "neuroscience-401-l02-act2",
           "type": "sorting_buckets",
           "title": "Constraint Sorting",
-          "description": "Sort constraints into technical, policy, and user-impact categories.",
+          "description": "Sort these experimental constraints into technical, policy, and user-impact categories.",
           "buckets": [
             "Technical",
             "Policy",
@@ -171,14 +171,14 @@ export const Neuroscience401Module: LearningModule = {
         {
           "id": "neuroscience-401-l03-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use the lesson scaffold, show your reasoning, and verify assumptions before finalizing your answer."
+          "title": "Key Concepts Review Sheet",
+          "content": "A one-page summary of the core concepts from the first two lessons to help you prepare for the quiz."
         }
       ],
       "questions": [
         {
           "id": "neuroscience-401-l03-q1",
-          "text": "Which practice most strengthens neural signaling in real deployments?",
+          "text": "Which practice most strengthens the study of neural signaling in practical applications?",
           "skillId": "neuroscience-401-skill-risk",
           "options": [
             {
@@ -191,24 +191,24 @@ export const Neuroscience401Module: LearningModule = {
             },
             {
               "id": "c",
-              "text": "Evaluate outcomes only once per year"
+              "text": "Evaluate outcomes only once at the end of the study"
             },
             {
               "id": "d",
-              "text": "Avoid stress-testing edge cases"
+              "text": "Avoid testing challenging or edge-case scenarios"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Explicit failure criteria and leading indicators improve early detection and response."
+          "explanation": "Defining failure criteria and monitoring leading indicators allow for early detection of problems and a more robust experimental design."
         },
         {
           "id": "neuroscience-401-l03-q2",
-          "text": "At level 401, Neuroscience work should prioritize:",
+          "text": "An advanced neuroscience curriculum should prioritize:",
           "skillId": "neuroscience-401-skill-level",
           "options": [
             {
               "id": "a",
-              "text": "strategic leadership, cross-functional alignment, and capstone defense"
+              "text": "Strategic thinking, interdisciplinary collaboration, and project defense"
             },
             {
               "id": "b",
@@ -216,90 +216,65 @@ export const Neuroscience401Module: LearningModule = {
             },
             {
               "id": "c",
-              "text": "No validation loops after release"
+              "text": "Avoiding validation after a project is complete"
             },
             {
               "id": "d",
-              "text": "Single-metric optimization without context"
+              "text": "Optimizing for a single metric without considering the broader context"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "The 401 sequence is designed around strategic leadership, cross-functional alignment, and capstone defense."
+          "explanation": "This course is designed to build strategic leadership, collaboration, and the ability to defend one's work, which are key advanced skills."
         },
         {
           "id": "neuroscience-401-l03-q3",
-          "text": "What is the strongest indicator of healthy cognitive systems?",
+          "text": "What is the strongest indicator of a well-managed cognitive systems experiment?",
           "skillId": "neuroscience-401-skill-ops",
           "options": [
             {
               "id": "a",
-              "text": "Untracked interventions and ad-hoc approvals"
+              "text": "Untracked interventions and informal approvals"
             },
             {
               "id": "b",
-              "text": "Clear owner mapping, review cadence, and measurable thresholds"
+              "text": "Clear owner mapping, a regular review cadence, and measurable thresholds"
             },
             {
               "id": "c",
-              "text": "Skipping post-incident analysis"
+              "text": "Skipping post-incident analysis to save time"
             },
             {
               "id": "d",
-              "text": "Changing targets after observing results"
+              "text": "Changing success targets after observing the results"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Stable systems require clear ownership, decision cadence, and measurable controls."
+          "explanation": "Well-managed systems require clear ownership, a consistent review schedule, and measurable controls to ensure stability and reliability."
         },
         {
           "id": "neuroscience-401-l03-q4",
-          "text": "When improving experimental methods, which approach is most defensible?",
+          "text": "When evaluating experimental methods, which approach is most scientifically defensible?",
           "skillId": "neuroscience-401-skill-eval",
           "options": [
             {
               "id": "a",
-              "text": "Use anecdotal wins as sole evidence"
+              "text": "Using anecdotal wins as the sole source of evidence"
             },
             {
               "id": "b",
-              "text": "Compare against baselines and include failure analysis"
+              "text": "Comparing results against a baseline and including failure analysis"
             },
             {
               "id": "c",
-              "text": "Remove difficult test scenarios"
+              "text": "Removing difficult test scenarios to ensure success"
             },
             {
               "id": "d",
-              "text": "Ignore lagging outcomes"
+              "text": "Ignoring long-term outcomes"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Baselines and failure analysis reduce bias and reveal true system performance."
-        },
-        {
-          "id": "neuroscience-401-l03-q5",
-          "text": "A mature clinical translation strategy should include:",
-          "skillId": "neuroscience-401-skill-governance",
-          "options": [
-            {
-              "id": "a",
-              "text": "No escalation path for critical defects"
-            },
-            {
-              "id": "b",
-              "text": "Policy, measurement, and escalation pathways linked to impact tiers"
-            },
-            {
-              "id": "c",
-              "text": "One-time governance review only"
-            },
-            {
-              "id": "d",
-              "text": "Separation between metrics and decisions"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Effective governance connects policy intent to measurement and response action."
+          "explanation": "Comparing against a baseline and analyzing failures reduces bias and provides a true understanding of an intervention's performance."
         }
       ]
     },
@@ -311,46 +286,46 @@ export const Neuroscience401Module: LearningModule = {
       "learningAids": [
         {
           "id": "neuroscience-401-l04-a1",
-          "type": "mnemonic",
-          "title": "Guided Practice",
-          "content": "Use the lesson scaffold, show your reasoning, and verify assumptions before finalizing your answer."
+          "type": "image",
+          "title": "Decision Tradeoff Matrix",
+          "content": "A template for a matrix to help you evaluate different options by scoring them against criteria like performance, cost, and fairness."
         }
       ],
       "chunks": [
         {
           "id": "neuroscience-401-l04-c1",
           "kind": "example",
-          "title": "Case Setup and Stakes",
-          "content": "In this engaging case analysis, we will delve into a patient pathway that links cognitive symptoms to specific neural circuits and various intervention options. This exploration will challenge learners to carefully differentiate between solid evidence, personal assumptions, and the potential risks that could lead to significant consequences for the patient. By participating in this exercise, learners will enhance their critical analytical skills and gain a deeper understanding of the complexities involved in real-world medical scenarios, preparing them for future challenges in the field of neuroscience.\nContext recap: In this engaging case analysis, we will delve into a patient pathway that links cognitive symptoms to specific neural circuits and various intervention options. This exploration will challenge learners to carefully differentiate between solid evidence, personal assumptions, and the potential risks that could lead to significant consequences for the patient. By participating in this exercise, learners will enhance their critical analytical skills and gain a deeper understanding of the complexities involved in real-world medical scenarios, preparing them for future challenges in the field of neuroscience."
+          "title": "Analyzing a Clinical Case Study",
+          "content": "We will analyze a clinical case linking a patient's cognitive symptoms to specific neural circuits and potential interventions. This exercise challenges you to distinguish between evidence, assumptions, and risks, enhancing your analytical skills for real-world scenarios."
         },
         {
           "id": "neuroscience-401-l04-c2",
           "kind": "concept",
-          "title": "Decision Tradeoff Matrix",
-          "content": "In this section, we will create a decision tradeoff matrix where we will evaluate different alternatives based on several important criteria. These criteria include performance, reliability, cost, and fairness. By scoring these alternatives, learners will be better equipped to select the most appropriate intervention path, ensuring that their decisions are well-rounded and considerate of various impacts.\nContext recap: In this section, we will create a decision tradeoff matrix where we will evaluate different alternatives based on several important criteria. These criteria include performance, reliability, cost, and fairness. By scoring these alternatives, learners will be better equipped to select the most appropriate intervention path, ensuring that their decisions are well-rounded and considerate of various impacts."
+          "title": "Weighing Treatment Options",
+          "content": "Using a decision tradeoff matrix, we will evaluate different intervention alternatives. By scoring options against criteria like performance, reliability, cost, and fairness, you will learn to select the most appropriate path based on a well-rounded and considerate analysis."
         },
         {
           "id": "neuroscience-401-l04-c3",
           "kind": "recap",
-          "title": "Lessons from Failure Modes",
-          "content": "In this recap, we will categorize different failure patterns that we have observed. By analyzing these patterns, we can learn from past mistakes and turn one-time incidents into reusable design safeguards. This approach helps us improve our processes and avoid similar issues in the future, fostering a culture of continuous learning.\nContext recap: In this recap, we will categorize different failure patterns that we have observed. By analyzing these patterns, we can learn from past mistakes and turn one-time incidents into reusable design safeguards. This approach helps us improve our processes and avoid similar issues in the future, fostering a culture of continuous learning."
+          "title": "Learning from Failure Modes",
+          "content": "In this recap, we will categorize different patterns of failure observed in the case study. By analyzing these patterns, we can learn from past mistakes and develop reusable design safeguards, turning incidents into opportunities for improvement."
         }
       ],
       "flashcards": [
         {
           "id": "neuroscience-401-l04-f1",
-          "front": "Tradeoff matrix",
-          "back": "A structured way to compare options across competing priorities before choosing an intervention."
+          "front": "Tradeoff Matrix",
+          "back": "A structured tool for comparing options across competing priorities (e.g., effectiveness vs. side effects) before choosing an intervention."
         },
         {
           "id": "neuroscience-401-l04-f2",
-          "front": "Failure mode",
-          "back": "A repeatable pattern describing how systems break under real constraints."
+          "front": "Failure Mode",
+          "back": "A specific way in which a system, process, or intervention can fail to perform its intended function."
         },
         {
           "id": "neuroscience-401-l04-f3",
-          "front": "Escalation threshold",
-          "back": "A predefined condition that triggers higher-level review or corrective action."
+          "front": "Clinical Translation",
+          "back": "The process of applying discoveries from basic science research (the 'bench') to real-world clinical practice (the 'bedside')."
         }
       ]
     },
@@ -362,23 +337,23 @@ export const Neuroscience401Module: LearningModule = {
       "learningAids": [
         {
           "id": "neuroscience-401-l05-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use the lesson scaffold, show your reasoning, and verify assumptions before finalizing your answer."
+          "type": "image",
+          "title": "Simulation Flowchart",
+          "content": "A visual diagram illustrating the steps of setting up, running, and analyzing a simulation, from defining variables to interpreting results."
         }
       ],
       "chunks": [
         {
           "id": "neuroscience-401-l05-c1",
           "kind": "practice",
-          "title": "Simulation Setup",
-          "content": "In this interactive practice session, learners will set up a simulation scenario that includes clear assumptions about uncertainties and specific success metrics that relate to clinical translation. This hands-on experience allows students to engage with real-world applications of neuroscience and understand how to navigate complex situations.\nContext recap: In this interactive practice session, learners will set up a simulation scenario that includes clear assumptions about uncertainties and specific success metrics that relate to clinical translation. This hands-on experience allows students to engage with real-world applications of neuroscience and understand how to navigate complex situations."
+          "title": "Building a Neural Simulation",
+          "content": "In this hands-on session, you will set up a simulation of a clinical scenario. This involves defining your assumptions about uncertainties and establishing clear success metrics related to patient outcomes, giving you practice in applying neuroscience concepts in a dynamic model."
         },
         {
           "id": "neuroscience-401-l05-c2",
           "kind": "recap",
-          "title": "Decision Review Loop",
-          "content": "At the end of each simulation round, we will conduct a review of the evidence gathered during the simulation. This will include checking for alignment with policies and identifying actions for improvement. This review loop is crucial for refining our approach and ensuring that we are making informed decisions based on the latest data.\nContext recap: At the end of each simulation round, we will conduct a review of the evidence gathered during the simulation. This will include checking for alignment with policies and identifying actions for improvement. This review loop is crucial for refining our approach and ensuring that we are making informed decisions based on the latest data."
+          "title": "Analyzing Simulation Results",
+          "content": "At the end of each simulation round, we will review the evidence gathered. This review loop is crucial for checking if our approach aligns with best practices and identifying actions for improvement, ensuring our decisions are informed by data."
         }
       ],
       "interactiveActivities": [
@@ -386,9 +361,9 @@ export const Neuroscience401Module: LearningModule = {
           "id": "neuroscience-401-l05-act1",
           "type": "scenario_practice",
           "title": "Policy and Operations Simulation",
-          "description": "Run three intervention strategies and justify which option best advances neural signaling and clinical translation.",
+          "description": "Run three intervention strategies in a simulated environment and justify which option best balances effectiveness with patient safety.",
           "instructions": [
-            "Define the primary objective and guardrails before choosing an intervention.",
+            "Define the primary objective and safety guardrails before choosing an intervention.",
             "Record one tradeoff created by each intervention.",
             "Select a follow-up metric that confirms whether the choice was successful."
           ]
@@ -397,22 +372,22 @@ export const Neuroscience401Module: LearningModule = {
           "id": "neuroscience-401-l05-act2",
           "type": "matching_pairs",
           "title": "Mitigation Mapping",
-          "description": "Match each failure condition with the strongest mitigation response.",
+          "description": "Match each potential problem with the strongest mitigation response.",
           "pairs": [
             {
-              "left": "Unreliable input stream",
+              "left": "Unreliable input data",
               "right": "Introduce quality contracts and quarantine checks"
             },
             {
-              "left": "Policy ambiguity",
+              "left": "Ambiguous clinical policy",
               "right": "Define decision authority and escalation rules"
             },
             {
-              "left": "Metric drift",
+              "left": "Metric drift over time",
               "right": "Re-baseline and monitor leading indicators"
             },
             {
-              "left": "User trust decline",
+              "left": "Decline in patient trust",
               "right": "Increase transparency and corrective feedback loops"
             }
           ]
@@ -428,135 +403,110 @@ export const Neuroscience401Module: LearningModule = {
         {
           "id": "neuroscience-401-l06-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use the lesson scaffold, show your reasoning, and verify assumptions before finalizing your answer."
+          "title": "Case Study and Simulation Review",
+          "content": "Review the key decision-making frameworks from the case analysis and simulation lessons before the quiz."
         }
       ],
       "questions": [
         {
           "id": "neuroscience-401-l06-q1",
-          "text": "Which practice most strengthens neural signaling in real deployments?",
-          "skillId": "neuroscience-401-skill-risk",
+          "text": "When using a decision tradeoff matrix to select a patient intervention, what is the primary goal?",
+          "skillId": "neuroscience-401-skill-tradeoff",
           "options": [
             {
               "id": "a",
-              "text": "Use assumptions without documenting them"
+              "text": "To choose the cheapest option available"
             },
             {
               "id": "b",
-              "text": "Define failure criteria and monitor leading indicators"
+              "text": "To systematically compare options across multiple important criteria"
             },
             {
               "id": "c",
-              "text": "Evaluate outcomes only once per year"
+              "text": "To select the intervention that works the fastest, regardless of side effects"
             },
             {
               "id": "d",
-              "text": "Avoid stress-testing edge cases"
+              "text": "To confirm a decision that has already been made"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Explicit failure criteria and leading indicators improve early detection and response."
+          "explanation": "A tradeoff matrix is designed to provide a structured comparison of options across competing priorities like efficacy, cost, and safety."
         },
         {
           "id": "neuroscience-401-l06-q2",
-          "text": "At level 401, Neuroscience work should prioritize:",
-          "skillId": "neuroscience-401-skill-level",
+          "text": "In a clinical simulation, what is the main benefit of analyzing 'failure modes'?",
+          "skillId": "neuroscience-401-skill-failure-analysis",
           "options": [
             {
               "id": "a",
-              "text": "strategic leadership, cross-functional alignment, and capstone defense"
+              "text": "To assign blame when something goes wrong"
             },
             {
               "id": "b",
-              "text": "Speed over traceability in all cases"
+              "text": "To prove that the simulation is perfect"
             },
             {
               "id": "c",
-              "text": "No validation loops after release"
+              "text": "To proactively identify potential risks and improve patient safety protocols"
             },
             {
               "id": "d",
-              "text": "Single-metric optimization without context"
+              "text": "To eliminate all variables from the simulation"
             }
           ],
-          "correctOptionId": "a",
-          "explanation": "The 401 sequence is designed around strategic leadership, cross-functional alignment, and capstone defense."
+          "correctOptionId": "c",
+          "explanation": "Analyzing how a system can fail helps in designing more robust and safer protocols by anticipating problems before they happen in the real world."
         },
         {
           "id": "neuroscience-401-l06-q3",
-          "text": "What is the strongest indicator of healthy cognitive systems?",
-          "skillId": "neuroscience-401-skill-ops",
+          "text": "What does 'clinical translation' refer to in neuroscience?",
+          "skillId": "neuroscience-401-skill-translation",
           "options": [
             {
               "id": "a",
-              "text": "Untracked interventions and ad-hoc approvals"
+              "text": "Translating research papers from one language to another"
             },
             {
               "id": "b",
-              "text": "Clear owner mapping, review cadence, and measurable thresholds"
+              "text": "Applying findings from laboratory research to the development of patient treatments"
             },
             {
               "id": "c",
-              "text": "Skipping post-incident analysis"
+              "text": "The process of neurons transmitting signals"
             },
             {
               "id": "d",
-              "text": "Changing targets after observing results"
+              "text": "Creating financial models for a new drug"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Stable systems require clear ownership, decision cadence, and measurable controls."
+          "explanation": "Clinical translation is the process of turning basic scientific discoveries into practical applications that improve human health."
         },
         {
           "id": "neuroscience-401-l06-q4",
-          "text": "When improving experimental methods, which approach is most defensible?",
-          "skillId": "neuroscience-401-skill-eval",
+          "text": "A robust simulation for testing a new therapy should include:",
+          "skillId": "neuroscience-401-skill-simulation",
           "options": [
             {
               "id": "a",
-              "text": "Use anecdotal wins as sole evidence"
+              "text": "Only scenarios where the therapy is guaranteed to succeed"
             },
             {
               "id": "b",
-              "text": "Compare against baselines and include failure analysis"
+              "text": "Clear assumptions, success metrics, and a range of potential patient responses"
             },
             {
               "id": "c",
-              "text": "Remove difficult test scenarios"
+              "text": "No way to measure the outcome"
             },
             {
               "id": "d",
-              "text": "Ignore lagging outcomes"
+              "text": "Data from a single, ideal patient"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Baselines and failure analysis reduce bias and reveal true system performance."
-        },
-        {
-          "id": "neuroscience-401-l06-q5",
-          "text": "A mature clinical translation strategy should include:",
-          "skillId": "neuroscience-401-skill-governance",
-          "options": [
-            {
-              "id": "a",
-              "text": "No escalation path for critical defects"
-            },
-            {
-              "id": "b",
-              "text": "Policy, measurement, and escalation pathways linked to impact tiers"
-            },
-            {
-              "id": "c",
-              "text": "One-time governance review only"
-            },
-            {
-              "id": "d",
-              "text": "Separation between metrics and decisions"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Effective governance connects policy intent to measurement and response action."
+          "explanation": "A useful simulation must be built on clear assumptions and metrics, and it should account for the variability seen in real patient populations."
         }
       ]
     },
@@ -569,45 +519,45 @@ export const Neuroscience401Module: LearningModule = {
         {
           "id": "neuroscience-401-l07-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use the lesson scaffold, show your reasoning, and verify assumptions before finalizing your answer."
+          "title": "Stakeholder Map Example",
+          "content": "A diagram showing how to map out different groups affected by a neuroscience project, such as patients, families, researchers, and regulators."
         }
       ],
       "chunks": [
         {
           "id": "neuroscience-401-l07-c1",
           "kind": "concept",
-          "title": "Stakeholder Analysis",
-          "content": "In this lesson, learners will analyze stakeholders involved in neuroscience projects. They will identify who benefits from various outcomes, who may face risks, and how different policy choices can influence results across different groups. This understanding is essential for making ethical decisions in neuroscience and ensuring that all voices are considered.\nContext recap: In this lesson, learners will analyze stakeholders involved in neuroscience projects. They will identify who benefits from various outcomes, who may face risks, and how different policy choices can influence results across different groups. This understanding is essential for making ethical decisions in neuroscience and ensuring that all voices are considered."
+          "title": "Who is Affected? A Stakeholder Analysis",
+          "content": "In this lesson, we will identify the stakeholders in a neuroscience project—the people and groups who benefit, face risks, or are otherwise affected. Understanding these different perspectives is essential for making ethical decisions and ensuring fair outcomes."
         },
         {
           "id": "neuroscience-401-l07-c2",
           "kind": "concept",
-          "title": "Governance and Accountability",
-          "content": "In this section, we will explore governance and accountability in neuroscience. We will discuss how governance mechanisms are connected to measurable controls, obligations for transparency, and pathways for remediation. Understanding these concepts is vital for ensuring that neuroscience practices are ethical and responsible.\nContext recap: In this section, we will explore governance and accountability in neuroscience. We will discuss how governance mechanisms are connected to measurable controls, obligations for transparency, and pathways for remediation. Understanding these concepts is vital for ensuring that neuroscience practices are ethical and responsible.\nContext recap: In this section, we will explore governance and accountability in neuroscience. We will discuss how governance mechanisms are connected to measurable controls, obligations for transparency, and pathways for remediation. Understanding these concepts is vital for ensuring that neuroscience practices are ethical and responsible. Context recap: In this section, we will explore governance and accountability in neuroscience.\nWhy this matters: Governance and Accountability helps learners in Neuroscience connect ideas from Neuroscience Leadership and Capstone to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "Ensuring Ethical and Accountable Research",
+          "content": "We will explore how governance mechanisms, such as ethics review boards and transparency requirements, create accountability in neuroscience. This includes establishing measurable controls and clear pathways for addressing issues when they arise."
         },
         {
           "id": "neuroscience-401-l07-c3",
           "kind": "recap",
-          "title": "Responsible Execution Checklist",
-          "content": "Before we embark on important decisions regarding the launch of a neuroscience project, it is essential to utilize a detailed and comprehensive checklist. This checklist should encompass several critical areas that we need to consider. First, we must be aware of the legal requirements that govern our work, ensuring that we comply with all relevant laws and regulations. Next, we should reflect on the ethical standards that guide our actions, which help us to respect the rights and dignity of all individuals involved. Additionally, we need to pay attention to the technical aspects of our project, including the tools and methods we will use to ensure accuracy and reliability. Finally, we must think about the potential impact our project may have on the users and the broader community. By systematically reviewing each item on this checklist, we can ensure that our decisions are not only responsible but also beneficial for everyone involved. This careful approach allows us to feel confident that we are making a positive contribution to our field and society as a whole.\nContext recap: Before we embark on important decisions regarding the launch of a neuroscience project, it is essential to utilize a detailed and comprehensive checklist. This checklist should encompass several critical areas that we need to consider. First, we must be aware of the legal requirements that govern our work, ensuring that we comply with all relevant laws and regulations. Next, we should reflect on the ethical standards that guide our actions, which help us to respect the rights and dignity of all individuals involved.\nWhy this matters: Responsible Execution Checklist helps learners in Neuroscience connect ideas from Neuroscience Leadership and Capstone to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "A Checklist for Responsible Neuroscience",
+          "content": "Before launching a project, a responsible researcher considers its full impact. We will review a checklist covering legal requirements, ethical standards, technical reliability, and user impact to ensure our work is conducted responsibly and beneficially."
         }
       ],
       "flashcards": [
         {
           "id": "neuroscience-401-l07-f1",
-          "front": "Stakeholder map",
-          "back": "A framework that tracks impact distribution across affected groups."
+          "front": "Stakeholder Map",
+          "back": "A visual framework for identifying and analyzing the impact of a project on various affected groups."
         },
         {
           "id": "neuroscience-401-l07-f2",
-          "front": "Accountability loop",
-          "back": "A cycle connecting outcomes, ownership, and corrective action."
+          "front": "Accountability Loop",
+          "back": "A process that connects project outcomes to the responsible parties and ensures corrective action is taken when needed."
         },
         {
           "id": "neuroscience-401-l07-f3",
-          "front": "Responsible execution",
-          "back": "Delivery practice that balances performance with safety, fairness, and transparency."
+          "front": "Responsible Execution",
+          "back": "A practice that balances achieving project goals with ensuring safety, fairness, and transparency for all stakeholders."
         }
       ]
     },
@@ -620,22 +570,22 @@ export const Neuroscience401Module: LearningModule = {
         {
           "id": "neuroscience-401-l08-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use the lesson scaffold, show your reasoning, and verify assumptions before finalizing your answer."
+          "title": "Capstone Project Charter Template",
+          "content": "A fillable document to help you define your capstone project's scope, objectives, metrics, risks, and timeline."
         }
       ],
       "chunks": [
         {
           "id": "neuroscience-401-l08-c1",
           "kind": "practice",
-          "title": "Capstone Scope Definition",
-          "content": "In this engaging and interactive activity, you will have the exciting opportunity to create a detailed capstone charter for your project. This important document serves as a roadmap for your capstone journey, helping you outline the main goals you want to achieve. You will think about what you hope to accomplish and how you can measure your success along the way. Additionally, you will identify any potential risks that could arise during your project, which is a crucial step in planning. By recognizing these risks early, you can develop strategies to address them effectively. Furthermore, you will establish clear metrics to measure your success, ensuring that you can track your progress and make adjustments if needed. To keep everything on track, you will also set up governance checkpoints. These checkpoints are like milestones that help you review your progress and make sure you are moving in the right direction. By going through this comprehensive process, you will enhance your critical thinking skills as you consider various aspects of your project. This preparation will not only help you succeed in your capstone but also equip you with valuable skills that you can use in real-world situations, making you more prepared for future challenges. Overall, this activity is designed to empower you and set you up for success in your academic and professional endeavors.\nContext recap: In this engaging and interactive activity, you will have the exciting opportunity to create a detailed capstone charter for your project. This important document serves as a roadmap for your capstone journey, helping you outline the main goals you want to achieve. You will think about what you hope to accomplish and how you can measure your success along the way. Additionally, you will identify any potential risks that could arise during your project, which is a crucial step in planning.\nWhy this matters: Capstone Scope Definition helps learners in Neuroscience connect ideas from Neuroscience Leadership and Capstone to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "Defining Your Capstone Project",
+          "content": "In this interactive lab, you will create a capstone charter. This document will serve as the roadmap for your final project, outlining your primary goals, success metrics, potential risks, and the governance checkpoints to keep your research on track."
         },
         {
           "id": "neuroscience-401-l08-c2",
           "kind": "recap",
-          "title": "Defense Preparation",
-          "content": "At the end of this lesson, you will receive a very useful defense preparation template. This template is specifically designed to help you present your projects in a clear and effective manner. It will guide you in supporting your claims with strong evidence, which is important for making your arguments convincing. Additionally, it will encourage you to think about and explain any trade-offs you have considered during your project. This means you will reflect on the choices you made and understand their implications. This practice is not just about improving your presentation skills; it also helps you develop critical thinking and analytical skills. By preparing in this structured way, you will become more confident in sharing your ideas and findings with your classmates and teachers. You will learn how to communicate your thoughts clearly, which is an essential skill not just in school, but in many areas of life. So, get ready to dive into your projects with a thoughtful approach, and remember that every choice you make is an opportunity to learn and grow!\nContext recap: At the end of this lesson, you will receive a very useful defense preparation template. This template is specifically designed to help you present your projects in a clear and effective manner. It will guide you in supporting your claims with strong evidence, which is important for making your arguments convincing. Additionally, it will encourage you to think about and explain any trade-offs you have considered during your project.\nWhy this matters: Defense Preparation helps learners in Neuroscience connect ideas from Neuroscience Leadership and Capstone to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "Preparing to Defend Your Research",
+          "content": "At the end of this lesson, you will receive a defense preparation template. This guide will help you structure your final presentation, ensuring you support your claims with strong evidence and clearly articulate the tradeoffs you considered in your project."
         }
       ],
       "interactiveActivities": [
@@ -647,14 +597,15 @@ export const Neuroscience401Module: LearningModule = {
           "instructions": [
             "State the primary objective and boundary conditions.",
             "Define at least three measurable success indicators.",
-            "Identify one ethical or policy risk and mitigation plan."
+            "Identify one ethical or policy risk and a plan to mitigate it."
           ]
         },
         {
           "id": "neuroscience-401-l08-act2",
           "type": "debate_simulator",
           "title": "Decision Defense Drill",
-          "description": "Defend your capstone approach against cost, risk, and equity critiques."
+          "description": "Defend your proposed capstone approach against critiques based on cost, risk, and equity.",
+          "instructions": []
         }
       ]
     }

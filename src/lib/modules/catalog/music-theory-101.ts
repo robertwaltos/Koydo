@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const MusicTheory101Module: LearningModule = {
+export const music_theory_101_Module: LearningModule = {
   "id": "music-theory-101",
   "title": "Music Theory Foundations",
   "description": "Learn to read music, understand rhythm, identify notes on the staff, and play basic scales. Build the vocabulary every musician needs.",
@@ -13,14 +13,15 @@ export const MusicTheory101Module: LearningModule = {
   ],
   "minAge": 7,
   "maxAge": 12,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "learningObjectives": [
     "Identify the lines and spaces of the treble and bass clef",
     "Read and write note values from whole notes to eighth notes",
     "Clap and count rhythms in 4/4 and 3/4 time signatures",
     "Name and play the C major scale ascending and descending",
-    "Recognize basic dynamic markings and tempo terms",
+    "Define basic dynamic markings and tempo terms",
     "Understand the structure of a musical staff, measures, and bar lines",
+    "Distinguish between whole steps and half steps",
     "Apply note-reading skills to a simple melody"
   ],
   "lessons": [
@@ -32,28 +33,28 @@ export const MusicTheory101Module: LearningModule = {
       "objectives": [
         "Identify the five lines and four spaces of a staff",
         "Explain the purpose of the treble clef and bass clef",
-        "Name the notes on the treble clef lines and spaces"
+        "Name the notes on the treble and bass clef lines and spaces"
       ],
       "chunks": [
         {
           "id": "music-theory-101-l01-c1",
           "title": "What Is a Staff?",
-          "content": "In the world of music, we have a special tool called a staff that helps us write down the notes we want to play. Imagine a staff as a set of five horizontal lines that sit next to each other, like a ladder made of lines! These lines are very important because they tell us where to place our musical notes. You can put notes on the lines themselves or in the spaces that are found between them. The position of a note on the staff is very important: if a note is placed higher up on the staff, it will sound higher when we play it! But here's something interesting: just by looking at the staff, we can't tell exactly which notes we are playing. To figure that out, we need to use a special symbol called a clef. The clef is placed at the beginning of the staff, and it acts like a guide, helping us understand which notes match up with the lines and spaces. So, the staff and the clef work together to help us read and write music! Learning about the staff is the first step in becoming a great musician, and it opens up a whole new world of sounds and creativity for us to explore!\nContext recap: In the world of music, we have a special tool called a staff that helps us write down the notes we want to play. Imagine a staff as a set of five horizontal lines that sit next to each other, like a ladder made of lines! These lines are very important because they tell us where to place our musical notes. You can put notes on the lines themselves or in the spaces that are found between them.\nWhy this matters: What Is a Staff? helps learners in Music connect ideas from Music Theory Foundations to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "In the world of music, we have a special tool called a staff that helps us write down the notes we want to play. Imagine a staff as a set of five horizontal lines that sit next to each other, like a ladder made of lines! These lines are very important because they tell us where to place our musical notes. You can put notes on the lines themselves or in the spaces that are found between them. The position of a note on the staff is very important: if a note is placed higher up on the staff, it will sound higher when we play it! But here's something interesting: just by looking at the staff, we can't tell exactly which notes we are playing. To figure that out, we need to use a special symbol called a clef. The clef is placed at the beginning of the staff, and it acts like a guide, helping us understand which notes match up with the lines and spaces. So, the staff and the clef work together to help us read and write music! Learning about the staff is the first step in becoming a great musician, and it opens up a whole new world of sounds and creativity for us to explore!"
         },
         {
           "id": "music-theory-101-l01-c2",
           "title": "The Treble Clef",
-          "content": "The treble clef, also known as the G clef, is a very special musical symbol that curls around the second line of the staff. This line is important because it represents the note G. The treble clef is used for instruments and voices that play higher notes, such as the flute, violin, or a soprano singer. When you see the treble clef, it tells you that the music will be played in a higher range.\nIf you look closely at the lines of the treble clef, from the bottom to the top, they spell out a fun phrase: 'Every Good Boy Does Fine.' Each word in this phrase helps you remember the notes that are located on those lines: E, G, B, D, and F. This is a great way to memorize the order of the notes!\nAdditionally, the spaces between the lines of the treble clef spell the word 'FACE.' This is another easy way to remember the notes that are found in those spaces: F, A, C, and E. So, whenever you see the treble clef, you can think of these helpful phrases to guide you in playing and reading music. Understanding the treble clef is a key step in learning how to read music and play your favorite songs!\nContext recap: The treble clef, also known as the G clef, is a very special musical symbol that curls around the second line of the staff. This line is important because it represents the note G. The treble clef is used for instruments and voices that play higher notes, such as the flute, violin, or a soprano singer. When you see the treble clef, it tells you that the music will be played in a higher range.\nWhy this matters: The Treble Clef helps learners in Music connect ideas from Music Theory Foundations to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "The treble clef, also known as the G clef, is a very special musical symbol that curls around the second line of the staff. This line is important because it represents the note G. The treble clef is used for instruments and voices that play higher notes, such as the flute, violin, or a soprano singer. When you see the treble clef, it tells you that the music will be played in a higher range.\nIf you look closely at the lines of the treble clef, from the bottom to the top, they spell out a fun phrase: 'Every Good Boy Does Fine.' Each word in this phrase helps you remember the notes that are located on those lines: E, G, B, D, and F. This is a great way to memorize the order of the notes!\nAdditionally, the spaces between the lines of the treble clef spell the word 'FACE.' This is another easy way to remember the notes that are found in those spaces: F, A, C, and E. So, whenever you see the treble clef, you can think of these helpful phrases to guide you in playing and reading music. Understanding the treble clef is a key step in learning how to read music and play your favorite songs!"
         },
         {
           "id": "music-theory-101-l01-c3",
           "title": "The Bass Clef",
-          "content": "The bass clef, which is also known as the F clef, is a very important symbol in music that helps us understand how to read notes for lower-pitched sounds. You can recognize the bass clef by its two dots that sit above and below the fourth line of the musical staff. These dots point to the note F, which is why we call it the F clef! This clef is used by musicians who play lower-pitched instruments, such as the cello, bass guitar, and even the left hand on the piano.\nWhen you look at the lines of the bass clef, starting from the bottom and moving to the top, you can remember the notes by using the phrase 'Good Boys Do Fine Always.' This phrase helps you recall the notes G, B, D, F, and A.\nAdditionally, the spaces between the lines in the bass clef can be remembered with the fun saying 'All Cows Eat Grass.' This helps you remember the notes A, C, E, and G that are found in those spaces. Understanding the bass clef is essential for playing music that sounds deep and rich, and it opens up a whole new world of musical possibilities! So, next time you see the bass clef, remember its importance and the fun phrases that help you learn it!\nContext recap: The bass clef, which is also known as the F clef, is a very important symbol in music that helps us understand how to read notes for lower-pitched sounds. You can recognize the bass clef by its two dots that sit above and below the fourth line of the musical staff. These dots point to the note F, which is why we call it the F clef! This clef is used by musicians who play lower-pitched instruments, such as the cello, bass guitar, and even the left hand on the piano.\nWhy this matters: The Bass Clef helps learners in Music connect ideas from Music Theory Foundations to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "The bass clef, which is also known as the F clef, is a very important symbol in music that helps us understand how to read notes for lower-pitched sounds. You can recognize the bass clef by its two dots that sit above and below the fourth line of the musical staff. These dots point to the note F, which is why we call it the F clef! This clef is used by musicians who play lower-pitched instruments, such as the cello, bass guitar, and even the left hand on the piano.\nWhen you look at the lines of the bass clef, starting from the bottom and moving to the top, you can remember the notes by using the phrase 'Good Boys Do Fine Always.' This phrase helps you recall the notes G, B, D, F, and A.\nAdditionally, the spaces between the lines in the bass clef can be remembered with the fun saying 'All Cows Eat Grass.' This helps you remember the notes A, C, E, and G that are found in those spaces. Understanding the bass clef is essential for playing music that sounds deep and rich, and it opens up a whole new world of musical possibilities!"
         },
         {
           "id": "music-theory-101-l01-c4",
-          "title": "Putting It Together",
-          "content": "When we combine the treble clef and bass clef using a brace, we create something really special called the grand staff. This grand staff is the standard layout that musicians use when they play the piano. In this layout, there is a very important note known as Middle C, which sits on a small line that connects the two staves. Each note on the grand staff has its own unique spot, and learning to find these spots quickly is the first step to becoming a great music reader! As you practice, you'll start to recognize the notes more easily, and soon you'll be able to play your favorite songs with confidence. Remember, every musician started just like you, and with a little bit of time and effort, you'll be reading music and playing beautifully in no time! Keep up the great work, and enjoy your musical journey!\nContext recap: When we combine the treble clef and bass clef using a brace, we create something really special called the grand staff. This grand staff is the standard layout that musicians use when they play the piano. In this layout, there is a very important note known as Middle C, which sits on a small line that connects the two staves. Each note on the grand staff has its own unique spot, and learning to find these spots quickly is the first step to becoming a great music reader!\nWhy this matters: Putting It Together helps learners in Music connect ideas from Music Theory Foundations to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "title": "The Grand Staff",
+          "content": "When we combine the treble clef and bass clef using a brace, we create something really special called the grand staff. This grand staff is the standard layout that musicians use when they play the piano. In this layout, there is a very important note known as Middle C, which sits on a small line that connects the two staves. Each note on the grand staff has its own unique spot, and learning to find these spots quickly is the first step to becoming a great music reader! As you practice, you'll start to recognize the notes more easily, and soon you'll be able to play your favorite songs with confidence. Remember, every musician started just like you, and with a little bit of time and effort, you'll be reading music and playing beautifully in no time!"
         }
       ],
       "flashcards": [
@@ -74,8 +75,13 @@ export const MusicTheory101Module: LearningModule = {
         },
         {
           "id": "music-theory-101-l01-f4",
-          "front": "Middle C",
-          "back": "The note on a ledger line between the treble and bass clefs; the center of the grand staff"
+          "front": "Bass clef line notes (bottom to top)",
+          "back": "G - B - D - F - A (Good Boys Do Fine Always)"
+        },
+        {
+          "id": "music-theory-101-l01-f5",
+          "front": "Bass clef space notes (bottom to top)",
+          "back": "A - C - E - G (All Cows Eat Grass)"
         }
       ],
       "learningAids": [
@@ -93,14 +99,14 @@ export const MusicTheory101Module: LearningModule = {
       "type": "interactive",
       "duration": 12,
       "objectives": [
-        "Identify treble clef notes by name",
+        "Identify treble and bass clef notes by name",
         "Distinguish line notes from space notes",
         "Match note positions to letter names quickly"
       ],
       "metadata": {
         "prompts": [
-          "Which mnemonic helps you remember the treble clef lines?",
-          "If a note sits in the third space of the treble clef, what letter is it?",
+          "Which mnemonic helps you remember the bass clef spaces?",
+          "If a note sits on the top line of the treble clef, what letter is it?",
           "How does a ledger line extend the staff?"
         ]
       },
@@ -121,17 +127,17 @@ export const MusicTheory101Module: LearningModule = {
               },
               {
                 "id": "p2",
-                "left": "Second line (treble)",
-                "right": "G"
+                "left": "Third space (treble)",
+                "right": "C"
               },
               {
                 "id": "p3",
-                "left": "First space (treble)",
+                "left": "Fourth line (bass)",
                 "right": "F"
               },
               {
                 "id": "p4",
-                "left": "Third space (treble)",
+                "left": "Second space (bass)",
                 "right": "C"
               }
             ]
@@ -354,22 +360,22 @@ export const MusicTheory101Module: LearningModule = {
         {
           "id": "music-theory-101-l04-c1",
           "title": "The Whole Note",
-          "content": "A whole note is a very special note in music! It looks like an open oval shape, and it doesn't have a stem like some other notes do. When we talk about music that is written in 4/4 time, which is a common way to organize music, a whole note lasts for four beats. You can think of it as the 'long breath' of music. This means that when you see a whole note, you get to hold the sound for a full four counts: 1-2-3-4. It's like taking a deep breath and letting it out slowly while you enjoy the music. A whole note is powerful because it fills up an entire measure all by itself! So, when you play or sing a whole note, you are giving the music a nice, long sound that everyone can appreciate. Remember, the next time you see a whole note, take your time and let that beautiful sound ring out!\nContext recap: A whole note is a very special note in music! It looks like an open oval shape, and it doesn't have a stem like some other notes do. When we talk about music that is written in 4/4 time, which is a common way to organize music, a whole note lasts for four beats. You can think of it as the 'long breath' of music.\nWhy this matters: The Whole Note helps learners in Music connect ideas from Music Theory Foundations to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "A whole note is a very special note in music! It looks like an open oval shape, and it doesn't have a stem like some other notes do. When we talk about music that is written in 4/4 time, which is a common way to organize music, a whole note lasts for four beats. You can think of it as the 'long breath' of music. This means that when you see a whole note, you get to hold the sound for a full four counts: 1-2-3-4. It's like taking a deep breath and letting it out slowly while you enjoy the music. A whole note is powerful because it fills up an entire measure all by itself! So, when you play or sing a whole note, you are giving the music a nice, long sound that everyone can appreciate."
         },
         {
           "id": "music-theory-101-l04-c2",
           "title": "Half Notes and Quarter Notes",
-          "content": "Let's dive into the world of music notes! A half note is a special type of note that looks like an open oval shape with a stem sticking up from it. This note is important because it lasts for 2 beats, which means it takes up half the time of a whole note. Imagine you are clapping your hands: if you clap for 4 beats, a half note would take up 2 of those claps! Now, let's talk about the quarter note. This note looks like a filled-in oval with a stem, and it only lasts for 1 beat. So, if you were to clap again, you would clap once for each quarter note. In a measure of music that is counted as 4/4 time, you can fit two half notes or four quarter notes. This means that when you play music, you can choose to use different types of notes to create different rhythms. Each time you go from a whole note to a half note or a quarter note, you are making the music move faster because you are cutting the time in half! Isn't that exciting? Understanding these notes helps you play music that sounds great and keeps everyone tapping their feet!\nContext recap: Let's dive into the world of music notes! A half note is a special type of note that looks like an open oval shape with a stem sticking up from it. This note is important because it lasts for 2 beats, which means it takes up half the time of a whole note. Imagine you are clapping your hands: if you clap for 4 beats, a half note would take up 2 of those claps!\nWhy this matters: Half Notes and Quarter Notes helps learners in Music connect ideas from Music Theory Foundations to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "Let's dive into the world of music notes! A half note is a special type of note that looks like an open oval shape with a stem sticking up from it. This note is important because it lasts for 2 beats, which means it takes up half the time of a whole note. Imagine you are clapping your hands: if you clap for 4 beats, a half note would take up 2 of those claps! Now, let's talk about the quarter note. This note looks like a filled-in oval with a stem, and it only lasts for 1 beat. So, if you were to clap again, you would clap once for each quarter note. In a measure of music that is counted as 4/4 time, you can fit two half notes or four quarter notes. Each time you go from a whole note to a half note or a quarter note, you are making the music move faster because you are cutting the time in half!"
         },
         {
           "id": "music-theory-101-l04-c3",
           "title": "Eighth Notes and Flags",
-          "content": "An eighth note is a special kind of note that looks like a quarter note but has a little flag on its stem, making it stand out! This note is important because it lasts for half a beat. That means if you play two eighth notes in a row, they will take the same amount of time as one quarter note. Isn’t that cool? When you see a group of eighth notes, you might notice that their flags can connect together to form a beam, which makes them look even more interesting! To help you count eighth notes, you can use a fun rhythm by saying '1-and-2-and-3-and-4-and.' Each number and each 'and' represents one eighth note. This counting method helps you keep a steady beat while you play your music, making it easier to stay in time with your friends or your favorite songs! So remember, eighth notes are not just notes; they are a way to make music lively and exciting! Keep practicing, and soon you'll be a pro at counting and playing eighth notes!\nContext recap: An eighth note is a special kind of note that looks like a quarter note but has a little flag on its stem, making it stand out! This note is important because it lasts for half a beat. That means if you play two eighth notes in a row, they will take the same amount of time as one quarter note. Isn’t that cool?\nWhy this matters: Eighth Notes and Flags helps learners in Music connect ideas from Music Theory Foundations to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "An eighth note is a special kind of note that looks like a quarter note but has a little flag on its stem, making it stand out! This note is important because it lasts for half a beat. That means if you play two eighth notes in a row, they will take the same amount of time as one quarter note. When you see a group of eighth notes, you might notice that their flags can connect together to form a beam, which makes them look even more interesting! To help you count eighth notes, you can use a fun rhythm by saying '1-and-2-and-3-and-4-and.' Each number and each 'and' represents one eighth note. This counting method helps you keep a steady beat while you play your music, making it easier to stay in time with your friends or your favorite songs!"
         },
         {
           "id": "music-theory-101-l04-c4",
           "title": "The Note Value Tree",
-          "content": "Let's think of note values like a family tree! At the very top, we have the whole note. This note is special because it can be divided into two half notes. If we go down another level, each half note can be split into two quarter notes, which means that one whole note equals four quarter notes. Now, if we keep going down, each quarter note can be divided into two eighth notes, so one whole note equals eight eighth notes! This means that as we move down the tree, the number of notes doubles, but each note takes less time to play. This pattern continues with sixteenth notes, where you can fit 16 notes in a measure! For now, let’s focus on learning whole notes, half notes, quarter notes, and eighth notes. Mastering these will give you a strong start in understanding music theory and how to read and play music! Remember, every note has its own special place in our musical family tree, and knowing them will help you become a better musician!\nContext recap: Let's think of note values like a family tree! At the very top, we have the whole note. This note is special because it can be divided into two half notes. If we go down another level, each half note can be split into two quarter notes, which means that one whole note equals four quarter notes.\nWhy this matters: The Note Value Tree helps learners in Music connect ideas from Music Theory Foundations to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "Let's think of note values like a family tree! At the very top, we have the whole note. This note is special because it can be divided into two half notes. If we go down another level, each half note can be split into two quarter notes, which means that one whole note equals four quarter notes. Now, if we keep going down, each quarter note can be divided into two eighth notes, so one whole note equals eight eighth notes! This means that as we move down the tree, the number of notes doubles, but each note takes less time to play. This pattern continues with sixteenth notes, where you can fit 16 notes in a measure! For now, let’s focus on learning whole notes, half notes, quarter notes, and eighth notes. Mastering these will give you a strong start in understanding music theory and how to read and play music!"
         }
       ],
       "flashcards": [
@@ -671,22 +677,22 @@ export const MusicTheory101Module: LearningModule = {
         {
           "id": "music-theory-101-l07-c1",
           "title": "What Is a Scale?",
-          "content": "A scale is a special collection of musical notes that are arranged in a specific order. When we arrange the notes from low to high, we call this ascending, and when we arrange them from high to low, we call it descending. Scales are really important in music because they help give songs their unique 'flavor' or character, almost like how different ingredients can change the taste of a dish! One of the most popular scales is the C major scale. This scale is special because it only uses the white keys on a piano, which are the notes C, D, E, F, G, A, B, and then back to C. When you play the C major scale, it sounds bright and cheerful, making it a favorite among many musicians. That's why most beginners start by learning this scale first; it's easy to play since it doesn't have any sharps or flats, which are the black keys on the piano. Learning the C major scale can be a fun way to get started with music and helps you understand how different notes work together to create beautiful melodies!\nContext recap: A scale is a special collection of musical notes that are arranged in a specific order. When we arrange the notes from low to high, we call this ascending, and when we arrange them from high to low, we call it descending. Scales are really important in music because they help give songs their unique 'flavor' or character, almost like how different ingredients can change the taste of a dish! One of the most popular scales is the C major scale.\nWhy this matters: What Is a Scale? helps learners in Music connect ideas from Music Theory Foundations to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "A scale is a special collection of musical notes that are arranged in a specific order. When we arrange the notes from low to high, we call this ascending, and when we arrange them from high to low, we call it descending. Scales are really important in music because they help give songs their unique 'flavor' or character, almost like how different ingredients can change the taste of a dish! One of the most popular scales is the C major scale. This scale is special because it only uses the white keys on a piano, which are the notes C, D, E, F, G, A, B, and then back to C. When you play the C major scale, it sounds bright and cheerful, making it a favorite among many musicians. That's why most beginners start by learning this scale first; it's easy to play since it doesn't have any sharps or flats."
         },
         {
           "id": "music-theory-101-l07-c2",
           "title": "Whole Steps and Half Steps",
-          "content": "In the world of music, we often talk about how far apart notes are from each other, and we call these distances 'steps.' There are two main types of steps: half steps and whole steps. A half step is the smallest distance between two notes. For example, if you play the note E and then move to the note F, or if you go from B to C, you are moving a half step. On a piano, these notes are two white keys that are right next to each other, with no black key in between them.\nNow, let's talk about whole steps! A whole step is a little bigger than a half step because it skips one key. For instance, when you move from C to D, you are making a whole step because there is a black key (C#) in between those two notes.\nWhen we create a major scale, we follow a special pattern of steps that helps us understand how to build it. This pattern is written as W-W-H-W-W-W-H, where 'W' stands for whole step and 'H' stands for half step. So, the major scale starts with two whole steps, then a half step, followed by three more whole steps, and finally ends with another half step. This pattern is what makes the major scale sound bright and happy! Learning about these steps is the first step in understanding how to play and create music!\nContext recap: In the world of music, we often talk about how far apart notes are from each other, and we call these distances 'steps.' There are two main types of steps: half steps and whole steps. A half step is the smallest distance between two notes. For example, if you play the note E and then move to the note F, or if you go from B to C, you are moving a half step. On a piano, these notes are two white keys that are right next to each other, with no black key in between them.\nWhy this matters: Whole Steps and Half Steps helps learners in Music connect ideas from Music Theory Foundations to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "In music, we talk about how far apart notes are from each other, and we call these distances 'steps.' There are two main types: half steps and whole steps. A half step is the smallest distance between two notes. For example, if you play the note E and then move to the note F, or if you go from B to C, you are moving a half step. On a piano, these notes are two white keys that are right next to each other, with no black key in between them.\nA whole step is bigger than a half step because it skips one key. For instance, when you move from C to D, you are making a whole step because there is a black key in between those two notes.\nWhen we create a major scale, we follow a special pattern of steps: W-W-H-W-W-W-H, where 'W' stands for whole step and 'H' stands for half step. This pattern is what makes the major scale sound bright and happy!"
         },
         {
           "id": "music-theory-101-l07-c3",
           "title": "Sharps and Flats",
-          "content": "In the world of music, we have some special symbols that help us change the sounds of notes. These symbols are called sharps and flats. A sharp, which you can recognize by the symbol (#), makes a note sound a little higher by raising it by one half step. On the other hand, a flat, which looks like this (♭), makes a note sound a bit lower by lowering it by one half step. If you look at a piano, you will notice that sharps and flats are usually found on the black keys. For instance, if you play the black key that is located between F and G, you are playing F#. This is an important note to know! Now, when we talk about the C major scale, it is special because it does not have any sharps or flats. However, learning about sharps and flats is really important because they will help you understand other scales and keys in music as you continue your musical journey! So, remember, sharps make notes higher, and flats make them lower, and this knowledge will be very helpful as you explore more about music!\nContext recap: In the world of music, we have some special symbols that help us change the sounds of notes. These symbols are called sharps and flats. A sharp, which you can recognize by the symbol (#), makes a note sound a little higher by raising it by one half step. On the other hand, a flat, which looks like this (♭), makes a note sound a bit lower by lowering it by one half step.\nWhy this matters: Sharps and Flats helps learners in Music connect ideas from Music Theory Foundations to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "In music, we have special symbols that help us change the sounds of notes. These symbols are called sharps and flats. A sharp, which you can recognize by the symbol (#), makes a note sound a little higher by raising it by one half step. On the other hand, a flat, which looks like this (♭), makes a note sound a bit lower by lowering it by one half step. On a piano, sharps and flats are usually the black keys. For instance, the black key between F and G is F#. The C major scale is special because it does not have any sharps or flats. However, learning about sharps and flats is really important because they will help you understand other scales and keys in music as you continue your musical journey!"
         },
         {
           "id": "music-theory-101-l07-c4",
           "title": "Playing the Scale",
-          "content": "To begin playing the C major scale, first locate middle C on your piano or keyboard. This is the C note that is right in the center of the keyboard. Once you find it, you will start your journey through the scale by playing each white key in order, moving up to the next C. As you play each note, say the names out loud: C, D, E, F, G, A, B, and finally back to C. This helps you remember the notes better!\nWhile you play, pay special attention to the half steps in the scale. You will notice that there are no black keys between E and F, and also between B and C. These are important spots to remember because they show us how the notes are spaced out.\nNow, when you want to come back down the scale, you will play the notes in reverse order: C, B, A, G, F, E, D, and back to C. It’s like going back down a slide after you’ve climbed up!\nStart by practicing this scale slowly. Make sure each note sounds clear and even. Once you feel more comfortable, try to play it a little faster. Remember, mastering the C major scale is a very important step in learning music theory, and it will help you with many other musical concepts in the future! Keep practicing, and soon you will be a scale-playing pro!\nContext recap: To begin playing the C major scale, first locate middle C on your piano or keyboard. This is the C note that is right in the center of the keyboard. Once you find it, you will start your journey through the scale by playing each white key in order, moving up to the next C. As you play each note, say the names out loud: C, D, E, F, G, A, B, and finally back to C.\nWhy this matters: Playing the Scale helps learners in Music connect ideas from Music Theory Foundations to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "To begin playing the C major scale, first locate middle C on your piano or keyboard. Once you find it, you will start your journey through the scale by playing each white key in order, moving up to the next C. As you play each note, say the names out loud: C, D, E, F, G, A, B, and finally back to C. This helps you remember the notes better!\nWhile you play, pay special attention to the half steps in the scale. You will notice that there are no black keys between E and F, and also between B and C. These are important spots to remember.\nNow, when you want to come back down the scale, you will play the notes in reverse order: C, B, A, G, F, E, D, and back to C. Start by practicing this scale slowly. Make sure each note sounds clear and even. Once you feel more comfortable, try to play it a little faster. Mastering the C major scale is a very important step in learning music theory!"
         }
       ],
       "flashcards": [
@@ -1042,22 +1048,22 @@ export const MusicTheory101Module: LearningModule = {
         {
           "id": "music-theory-101-l10-c1",
           "title": "What Are Dynamics?",
-          "content": "Dynamics in music are like the volume control on your favorite music player. They help musicians understand how loud or soft to play a piece of music, making it more expressive and interesting. In Italian, the word 'piano' means soft, which is a gentle sound, while 'forte' means loud, which is a strong sound. There are also other levels of sound that help us describe how to play music: 'pianissimo' (pp) means very soft, like a whisper; 'mezzo-piano' (mp) means moderately soft, like a quiet conversation; 'mezzo-forte' (mf) means moderately loud, like a lively chat; and 'fortissimo' (ff) means very loud, like a cheering crowd. You will often see these special markings written below the staff in sheet music. They guide musicians on how to express the feelings and emotions of the music, helping to tell a story through sound.\nContext recap: Dynamics in music are like the volume control on your favorite music player. They help musicians understand how loud or soft to play a piece of music, making it more expressive and interesting. In Italian, the word 'piano' means soft, which is a gentle sound, while 'forte' means loud, which is a strong sound. There are also other levels of sound that help us describe how to play music: 'pianissimo' (pp) means very soft, like a whisper; 'mezzo-piano' (mp) means moderately soft, like a quiet conversation; 'mezzo-forte' (mf) means moderately loud, like a lively chat; and 'fortissimo' (ff) means very loud, like a cheering crowd."
+          "content": "Dynamics in music are like the volume control on your favorite music player. They help musicians understand how loud or soft to play a piece of music, making it more expressive and interesting. In Italian, the word 'piano' means soft, while 'forte' means loud. There are also other levels of sound: 'pianissimo' (pp) means very soft, like a whisper; 'mezzo-piano' (mp) means moderately soft; 'mezzo-forte' (mf) means moderately loud; and 'fortissimo' (ff) means very loud, like a cheering crowd. You will often see these special markings written below the staff in sheet music. They guide musicians on how to express the feelings and emotions of the music, helping to tell a story through sound."
         },
         {
           "id": "music-theory-101-l10-c2",
           "title": "Crescendo and Decrescendo",
-          "content": "When you see a crescendo in music, it means you should gradually play louder, just like when you get really excited and your voice starts to rise! This is often shown with a special symbol that looks like a hairpin opening to the right. Imagine you're at a fun party, and the music is getting more and more exciting — that's a crescendo! On the flip side, a decrescendo or diminuendo means to gradually get softer. This is represented by a hairpin that opens to the left. Think about when a story is coming to a gentle end, and the music fades away softly. These changes in volume are super important because they help create feelings in music. They can build excitement during a thrilling moment or bring a sense of calmness at the end of a song. So next time you listen to music, pay attention to these changes and see how they make you feel!\nContext recap: When you see a crescendo in music, it means you should gradually play louder, just like when you get really excited and your voice starts to rise! This is often shown with a special symbol that looks like a hairpin opening to the right. Imagine you're at a fun party, and the music is getting more and more exciting — that's a crescendo! On the flip side, a decrescendo or diminuendo means to gradually get softer.\nWhy this matters: Crescendo and Decrescendo helps learners in Music connect ideas from Music Theory Foundations to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "When you see a crescendo in music, it means you should gradually play louder, just like when you get really excited and your voice starts to rise! This is often shown with a special symbol that looks like a hairpin opening to the right. On the flip side, a decrescendo or diminuendo means to gradually get softer. This is represented by a hairpin that opens to the left. Think about when a story is coming to a gentle end, and the music fades away softly. These changes in volume are super important because they help create feelings in music. They can build excitement during a thrilling moment or bring a sense of calmness at the end of a song."
         },
         {
           "id": "music-theory-101-l10-c3",
           "title": "Tempo Markings",
-          "content": "Tempo is all about how fast or slow the music is played, just like how quickly you might run or how leisurely you walk. There are some fun Italian words that musicians use to describe different speeds of music. For example, 'Largo' means very slow, like a gentle breeze. 'Adagio' means slow and graceful, like a beautiful dance. 'Andante' means at a walking pace, which is nice and steady. 'Moderato' means a moderate speed, not too fast and not too slow. 'Allegro' means fast and lively, like when you're excited and running around! Finally, 'Presto' means very fast, like a cheetah sprinting! Tempo is measured in beats per minute (BPM), which tells us how many beats happen in one minute. For instance, 'Allegro' usually falls between 120 to 156 BPM. Understanding tempo is important because it helps you feel the rhythm and energy of the music, making it more enjoyable to play and listen to!\nContext recap: Tempo is all about how fast or slow the music is played, just like how quickly you might run or how leisurely you walk. There are some fun Italian words that musicians use to describe different speeds of music. For example, 'Largo' means very slow, like a gentle breeze. 'Adagio' means slow and graceful, like a beautiful dance.\nWhy this matters: Tempo Markings helps learners in Music connect ideas from Music Theory Foundations to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "Tempo is all about how fast or slow the music is played. There are some fun Italian words that musicians use to describe different speeds. For example, 'Adagio' means slow and graceful. 'Andante' means at a walking pace, which is nice and steady. 'Moderato' means a moderate speed, not too fast and not too slow. 'Allegro' means fast and lively, like when you're excited and running around! Finally, 'Presto' means very fast, like a cheetah sprinting! Tempo is measured in beats per minute (BPM), which tells us how many beats happen in one minute. Understanding tempo is important because it helps you feel the rhythm and energy of the music."
         },
         {
           "id": "music-theory-101-l10-c4",
           "title": "Putting Expression Together",
-          "content": "When you come across a piece of music that says 'Allegro, f', it means you should play it quickly and loudly. This creates a lively and powerful sound that can make you feel excited! On the other hand, if you see 'Adagio, p', you should play it slowly and softly. This gives the music a gentle and thoughtful feeling, almost like a warm hug. Composers, the people who write music, use these terms—dynamics and tempo—to help you understand how the music should sound and feel. It's like they are sharing their emotions with you through the notes! Learning to read these special markings is like discovering a secret code that helps you unlock the feelings hidden in the music. By understanding these expressions, you can bring the music to life and share its story with others. So, next time you play, pay attention to these markings; they will guide you in creating the perfect mood for your performance!\nContext recap: When you come across a piece of music that says 'Allegro, f', it means you should play it quickly and loudly. This creates a lively and powerful sound that can make you feel excited! On the other hand, if you see 'Adagio, p', you should play it slowly and softly. This gives the music a gentle and thoughtful feeling, almost like a warm hug.\nWhy this matters: Putting Expression Together helps learners in Music connect ideas from Music Theory Foundations to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "When you come across a piece of music that says 'Allegro, f', it means you should play it quickly and loudly. This creates a lively and powerful sound that can make you feel excited! On the other hand, if you see 'Adagio, p', you should play it slowly and softly. This gives the music a gentle and thoughtful feeling. Composers, the people who write music, use these terms—dynamics and tempo—to help you understand how the music should sound and feel. It's like they are sharing their emotions with you through the notes! Learning to read these special markings is like discovering a secret code that helps you unlock the feelings hidden in the music."
         }
       ],
       "flashcards": [
@@ -1078,8 +1084,18 @@ export const MusicTheory101Module: LearningModule = {
         },
         {
           "id": "music-theory-101-l10-f4",
+          "front": "Decrescendo",
+          "back": "Gradually get softer"
+        },
+        {
+          "id": "music-theory-101-l10-f5",
           "front": "Allegro",
-          "back": "Fast and lively tempo (roughly 120-156 BPM)"
+          "back": "Fast and lively tempo"
+        },
+        {
+          "id": "music-theory-101-l10-f6",
+          "front": "Andante",
+          "back": "A walking pace tempo"
         }
       ],
       "learningAids": [
@@ -1093,69 +1109,145 @@ export const MusicTheory101Module: LearningModule = {
     },
     {
       "id": "music-theory-101-l11",
-      "title": "Mastery Quiz: Music Theory Foundations",
-      "type": "quiz",
+      "title": "Express Yourself!",
+      "type": "interactive",
       "duration": 12,
       "objectives": [
-        "Demonstrate comprehensive understanding of staff, notes, rhythm, scales, and expression",
-        "Apply knowledge across multiple topic areas",
-        "Identify areas needing further practice"
+        "Identify dynamic markings from softest to loudest",
+        "Match tempo terms to their correct speed",
+        "Connect expression markings to the mood of the music"
+      ],
+      "metadata": {
+        "prompts": [
+          "Which is louder, 'p' or 'mf'?",
+          "If a song is sad, would it more likely be 'Adagio' or 'Presto'?",
+          "What does a crescendo symbol look like?"
+        ]
+      },
+      "interactiveActivities": [
+        {
+          "id": "music-theory-101-l11-ia1",
+          "type": "drag_and_drop",
+          "title": "Order the Dynamic Markings",
+          "description": "Drag the dynamic markings from softest to loudest.",
+          "estimatedMinutes": 5,
+          "difficultyLevel": "medium",
+          "data": {
+            "targets": [
+              {
+                "id": "t1",
+                "label": "Softest"
+              },
+              {
+                "id": "t2",
+                "label": "Soft"
+              },
+              {
+                "id": "t3",
+                "label": "Medium-Soft"
+              },
+              {
+                "id": "t4",
+                "label": "Medium-Loud"
+              },
+              {
+                "id": "t5",
+                "label": "Loud"
+              },
+              {
+                "id": "t6",
+                "label": "Loudest"
+              }
+            ],
+            "draggables": [
+              {
+                "id": "d1",
+                "label": "pp (pianissimo)",
+                "correctTargetId": "t1"
+              },
+              {
+                "id": "d2",
+                "label": "p (piano)",
+                "correctTargetId": "t2"
+              },
+              {
+                "id": "d3",
+                "label": "mp (mezzo-piano)",
+                "correctTargetId": "t3"
+              },
+              {
+                "id": "d4",
+                "label": "mf (mezzo-forte)",
+                "correctTargetId": "t4"
+              },
+              {
+                "id": "d5",
+                "label": "f (forte)",
+                "correctTargetId": "t5"
+              },
+              {
+                "id": "d6",
+                "label": "ff (fortissimo)",
+                "correctTargetId": "t6"
+              }
+            ]
+          }
+        },
+        {
+          "id": "music-theory-101-l11-ia2",
+          "type": "matching_pairs",
+          "title": "Tempo and Mood Match",
+          "description": "Match each tempo marking to the mood it creates.",
+          "estimatedMinutes": 5,
+          "difficultyLevel": "medium",
+          "data": {
+            "pairs": [
+              {
+                "id": "p1",
+                "left": "Adagio",
+                "right": "Slow, graceful, calm"
+              },
+              {
+                "id": "p2",
+                "left": "Andante",
+                "right": "Walking pace, relaxed"
+              },
+              {
+                "id": "p3",
+                "left": "Allegro",
+                "right": "Fast, lively, energetic"
+              },
+              {
+                "id": "p4",
+                "left": "Presto",
+                "right": "Very fast, exciting"
+              }
+            ]
+          }
+        }
+      ],
+      "learningAids": [
+        {
+          "id": "music-theory-101-l11-a1",
+          "type": "image",
+          "title": "Tempo Spectrum",
+          "content": "A visual spectrum from slow to fast, placing Adagio, Andante, Moderato, Allegro, and Presto along the line."
+        }
+      ]
+    },
+    {
+      "id": "music-theory-101-l12",
+      "title": "Checkpoint: Dynamics and Expression",
+      "type": "quiz",
+      "duration": 8,
+      "objectives": [
+        "Recall the meaning of dynamic markings",
+        "Interpret tempo terms",
+        "Understand symbols for changing volume"
       ],
       "questions": [
         {
-          "id": "music-theory-101-l11-q1",
-          "text": "How many lines does a standard musical staff have?",
-          "skillId": "music-theory-101-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "4"
-            },
-            {
-              "id": "b",
-              "text": "6"
-            },
-            {
-              "id": "c",
-              "text": "5"
-            },
-            {
-              "id": "d",
-              "text": "3"
-            }
-          ],
-          "correctOptionId": "c",
-          "explanation": "A standard musical staff has 5 lines and 4 spaces.",
-          "hint": "Count the lines of any staff you've seen."
-        },
-        {
-          "id": "music-theory-101-l11-q2",
-          "text": "A dotted half note in 4/4 time gets how many beats?",
-          "skillId": "music-theory-101-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "2 beats"
-            },
-            {
-              "id": "b",
-              "text": "3 beats"
-            },
-            {
-              "id": "c",
-              "text": "4 beats"
-            },
-            {
-              "id": "d",
-              "text": "1.5 beats"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "A dot adds half the value of the note. A half note = 2 beats, so the dot adds 1 beat, totaling 3 beats.",
-          "hint": "A dot adds half the original value."
-        },
-        {
-          "id": "music-theory-101-l11-q3",
+          "id": "music-theory-101-l12-q1",
           "text": "Which tempo marking means 'walking pace'?",
           "skillId": "music-theory-101-skill-core",
           "options": [
@@ -1181,37 +1273,89 @@ export const MusicTheory101Module: LearningModule = {
           "hint": "Think of the Italian word for 'to walk' — andare."
         },
         {
-          "id": "music-theory-101-l11-q4",
-          "text": "In the C major scale, where do the two half steps occur?",
+          "id": "music-theory-101-l12-q2",
+          "text": "What does the dynamic marking 'p' stand for?",
           "skillId": "music-theory-101-skill-core",
           "options": [
             {
               "id": "a",
-              "text": "Between C-D and F-G"
+              "text": "Presto (fast)"
             },
             {
               "id": "b",
-              "text": "Between D-E and A-B"
+              "text": "Piano (soft)"
             },
             {
               "id": "c",
-              "text": "Between E-F and B-C"
+              "text": "Pause"
             },
             {
               "id": "d",
-              "text": "Between F-G and C-D"
+              "text": "Poco (a little)"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "The letter 'p' is the abbreviation for 'piano', the Italian word for soft.",
+          "hint": "The opposite of 'f' for forte (loud)."
+        },
+        {
+          "id": "music-theory-101-l12-q3",
+          "text": "A crescendo means to:",
+          "skillId": "music-theory-101-skill-core",
+          "options": [
+            {
+              "id": "a",
+              "text": "Gradually get softer"
+            },
+            {
+              "id": "b",
+              "text": "Gradually get faster"
+            },
+            {
+              "id": "c",
+              "text": "Gradually get louder"
+            },
+            {
+              "id": "d",
+              "text": "Play the note sharply"
             }
           ],
           "correctOptionId": "c",
-          "explanation": "In C major, the half steps fall between E-F (3rd-4th degrees) and B-C (7th-8th degrees). These are the natural half steps with no black key between them on the piano.",
-          "hint": "Remember the W-W-H-W-W-W-H pattern."
+          "explanation": "A crescendo tells the musician to increase the volume over time. Its symbol looks like a hairpin opening to the right.",
+          "hint": "Think of a sound growing bigger and bigger."
+        },
+        {
+          "id": "music-theory-101-l12-q4",
+          "text": "Which of these dynamic markings is the LOUDEST?",
+          "skillId": "music-theory-101-skill-core",
+          "options": [
+            {
+              "id": "a",
+              "text": "mp (mezzo-piano)"
+            },
+            {
+              "id": "b",
+              "text": "p (piano)"
+            },
+            {
+              "id": "c",
+              "text": "f (forte)"
+            },
+            {
+              "id": "d",
+              "text": "mf (mezzo-forte)"
+            }
+          ],
+          "correctOptionId": "c",
+          "explanation": "Forte (f) means loud. Mezzo-forte (mf) is moderately loud, while piano (p) and mezzo-piano (mp) are soft and moderately soft.",
+          "hint": "The letter 'f' stands for forte, which means loud in Italian."
         }
       ],
       "quizBlueprint": {
-        "frequency": "end_of_module",
+        "frequency": "lesson_assessment",
         "questionsPerCheck": 4,
         "totalQuestions": 4,
-        "timeLimitMinutes": 12,
+        "timeLimitMinutes": 8,
         "questionTypes": [
           {
             "type": "mcq_single",
@@ -1219,22 +1363,21 @@ export const MusicTheory101Module: LearningModule = {
             "pointsEach": 1,
             "bloomsLevels": [
               1,
-              2,
-              3
+              2
             ]
           }
         ],
         "difficultyDistribution": {
-          "easy": 1,
+          "easy": 2,
           "medium": 2,
-          "hard": 1
+          "hard": 0
         },
         "feedbackMode": "after_submit",
         "masteryThreshold": 0.75
       }
     },
     {
-      "id": "music-theory-101-l12",
+      "id": "music-theory-101-l13",
       "title": "Applied Challenge: Read a Melody",
       "type": "interactive",
       "duration": 14,
@@ -1252,92 +1395,38 @@ export const MusicTheory101Module: LearningModule = {
       },
       "interactiveActivities": [
         {
-          "id": "music-theory-101-l12-ia1",
-          "type": "drag_and_drop",
-          "title": "Order the Dynamic Markings",
-          "description": "Drag the dynamic markings from softest to loudest.",
-          "estimatedMinutes": 4,
+          "id": "music-theory-101-l13-ia1",
+          "type": "fill_in_the_blanks",
+          "title": "Analyze 'Twinkle, Twinkle'",
+          "description": "Look at the first line of 'Twinkle, Twinkle, Little Star' and fill in the blanks about the music.",
+          "estimatedMinutes": 8,
           "difficultyLevel": "medium",
           "data": {
-            "targets": [
+            "text": "The melody starts on the note [blank1]. The first two notes are both [blank2] notes. The time signature is [blank3]. The last note in the phrase is a [blank4] note, which gets two beats.",
+            "blanks": [
               {
-                "id": "t1",
-                "label": "Softest"
+                "id": "blank1",
+                "correctAnswers": [
+                  "C"
+                ]
               },
               {
-                "id": "t2",
-                "label": "Soft"
+                "id": "blank2",
+                "correctAnswers": [
+                  "quarter"
+                ]
               },
               {
-                "id": "t3",
-                "label": "Medium"
+                "id": "blank3",
+                "correctAnswers": [
+                  "4/4"
+                ]
               },
               {
-                "id": "t4",
-                "label": "Loud"
-              },
-              {
-                "id": "t5",
-                "label": "Loudest"
-              }
-            ],
-            "draggables": [
-              {
-                "id": "d1",
-                "label": "pp (pianissimo)",
-                "correctTargetId": "t1"
-              },
-              {
-                "id": "d2",
-                "label": "p (piano)",
-                "correctTargetId": "t2"
-              },
-              {
-                "id": "d3",
-                "label": "mf (mezzo-forte)",
-                "correctTargetId": "t3"
-              },
-              {
-                "id": "d4",
-                "label": "f (forte)",
-                "correctTargetId": "t4"
-              },
-              {
-                "id": "d5",
-                "label": "ff (fortissimo)",
-                "correctTargetId": "t5"
-              }
-            ]
-          }
-        },
-        {
-          "id": "music-theory-101-l12-ia2",
-          "type": "matching_pairs",
-          "title": "Tempo and Mood Match",
-          "description": "Match each tempo marking to the mood it creates.",
-          "estimatedMinutes": 5,
-          "difficultyLevel": "medium",
-          "data": {
-            "pairs": [
-              {
-                "id": "p1",
-                "left": "Largo",
-                "right": "Very slow, broad, solemn"
-              },
-              {
-                "id": "p2",
-                "left": "Andante",
-                "right": "Walking pace, relaxed"
-              },
-              {
-                "id": "p3",
-                "left": "Allegro",
-                "right": "Fast, lively, energetic"
-              },
-              {
-                "id": "p4",
-                "left": "Presto",
-                "right": "Very fast, exciting, breathless"
+                "id": "blank4",
+                "correctAnswers": [
+                  "half"
+                ]
               }
             ]
           }
@@ -1345,152 +1434,12 @@ export const MusicTheory101Module: LearningModule = {
       ],
       "learningAids": [
         {
-          "id": "music-theory-101-l12-a1",
-          "type": "practice",
-          "title": "Melody Reading Practice",
-          "content": "Try reading 'Twinkle Twinkle Little Star' in C major: C-C-G-G-A-A-G (half note), F-F-E-E-D-D-C (half note). Clap the rhythm first, then name the notes."
+          "id": "music-theory-101-l13-a1",
+          "type": "image",
+          "title": "Melody for Analysis",
+          "content": "A simple musical score showing the first phrase of 'Twinkle, Twinkle, Little Star' in C major: C-C-G-G-A-A-G. The first six notes are quarter notes and the last G is a half note. The time signature is 4/4."
         }
       ]
-    },
-    {
-      "id": "music-theory-101-l13",
-      "title": "Mastery Retest: Music Theory Foundations",
-      "type": "quiz",
-      "duration": 10,
-      "objectives": [
-        "Confirm mastery across all foundational topics",
-        "Apply knowledge to slightly different question formats"
-      ],
-      "questions": [
-        {
-          "id": "music-theory-101-l13-q1",
-          "text": "The treble clef is also known as the ______ clef.",
-          "skillId": "music-theory-101-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "F clef"
-            },
-            {
-              "id": "b",
-              "text": "C clef"
-            },
-            {
-              "id": "c",
-              "text": "G clef"
-            },
-            {
-              "id": "d",
-              "text": "D clef"
-            }
-          ],
-          "correctOptionId": "c",
-          "explanation": "The treble clef curls around the second line, marking it as G. That's why it's called the G clef.",
-          "hint": "Look at which line the clef symbol wraps around."
-        },
-        {
-          "id": "music-theory-101-l13-q2",
-          "text": "How many eighth notes fit in one measure of 4/4 time?",
-          "skillId": "music-theory-101-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "4"
-            },
-            {
-              "id": "b",
-              "text": "6"
-            },
-            {
-              "id": "c",
-              "text": "8"
-            },
-            {
-              "id": "d",
-              "text": "16"
-            }
-          ],
-          "correctOptionId": "c",
-          "explanation": "4/4 time has 4 beats. Each beat divides into 2 eighth notes. 4 × 2 = 8 eighth notes per measure.",
-          "hint": "Two eighths per beat, four beats per measure."
-        },
-        {
-          "id": "music-theory-101-l13-q3",
-          "text": "What does 'decrescendo' mean?",
-          "skillId": "music-theory-101-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "Get faster"
-            },
-            {
-              "id": "b",
-              "text": "Gradually get softer"
-            },
-            {
-              "id": "c",
-              "text": "Gradually get louder"
-            },
-            {
-              "id": "d",
-              "text": "Play very loud"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Decrescendo (or diminuendo) means to gradually decrease the volume. The opposite of crescendo.",
-          "hint": "The prefix 'de-' means to decrease or reduce."
-        },
-        {
-          "id": "music-theory-101-l13-q4",
-          "text": "Starting on G, what note do you reach after going up a whole step?",
-          "skillId": "music-theory-101-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "G#"
-            },
-            {
-              "id": "b",
-              "text": "A"
-            },
-            {
-              "id": "c",
-              "text": "F"
-            },
-            {
-              "id": "d",
-              "text": "B"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "A whole step from G goes past the black key (G#/Ab) to A. On a piano, G → A skips one key.",
-          "hint": "A whole step means skip one key."
-        }
-      ],
-      "quizBlueprint": {
-        "frequency": "end_of_module",
-        "questionsPerCheck": 4,
-        "totalQuestions": 4,
-        "timeLimitMinutes": 10,
-        "questionTypes": [
-          {
-            "type": "mcq_single",
-            "count": 4,
-            "pointsEach": 1,
-            "bloomsLevels": [
-              2,
-              3
-            ]
-          }
-        ],
-        "difficultyDistribution": {
-          "easy": 1,
-          "medium": 2,
-          "hard": 1
-        },
-        "feedbackMode": "after_submit",
-        "masteryThreshold": 0.75
-      }
     },
     {
       "id": "music-theory-101-l14",
@@ -1506,22 +1455,22 @@ export const MusicTheory101Module: LearningModule = {
         {
           "id": "music-theory-101-l14-c1",
           "title": "Hearing the Beat",
-          "content": "The next time you listen to your favorite song, why not try tapping your foot or clapping your hands along with the beat? It's a fun way to feel the music! Most pop and rock songs are written in a time signature called 4/4. This means that you can count along with the music by saying '1-2-3-4' as you tap or clap. If you happen to hear a waltz, which is a different style of music, it will be in a time signature called 3/4. In this case, you can count '1-2-3' instead! The first beat, which we call beat 1, is usually the strongest beat in the music. You might notice that this strong beat often lines up with the sound of the kick drum or a change in the chords being played. By tapping along and counting, you're not just enjoying the music; you're also practicing your understanding of time signatures in a really fun and interactive way! So go ahead, give it a try and see how it feels to connect with the rhythm of the music around you!\nContext recap: The next time you listen to your favorite song, why not try tapping your foot or clapping your hands along with the beat? It's a fun way to feel the music! Most pop and rock songs are written in a time signature called 4/4. This means that you can count along with the music by saying '1-2-3-4' as you tap or clap.\nWhy this matters: Hearing the Beat helps learners in Music connect ideas from Music Theory Foundations to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "The next time you listen to your favorite song, try tapping your foot or clapping your hands along with the beat! Most pop and rock songs are in 4/4 time. This means that you can count along with the music by saying '1-2-3-4' as you tap or clap. If you hear a waltz, it will be in 3/4 time, so you can count '1-2-3' instead! The first beat, beat 1, is usually the strongest. You might notice that this strong beat often lines up with the sound of the kick drum. By tapping along and counting, you're practicing your understanding of time signatures in a really fun way!"
         },
         {
           "id": "music-theory-101-l14-c2",
           "title": "Spotting Dynamics",
-          "content": "When you listen to a song, pay attention to how it changes as it plays. At the beginning, the verse might be soft and gentle, which musicians call 'piano'. Then, when the chorus comes in, it might be much louder, and this is referred to as 'forte'. This shift in volume is known as a crescendo, and it adds excitement and energy to the music! Think about how movie soundtracks use these changes in volume. For instance, during a suspenseful moment, you might hear quiet strings that make you feel tense, and then suddenly, the music gets really loud for a jump scare! Composers are like emotional guides; they use different volumes to help you feel what the characters are experiencing in the story. So next time you listen to music or watch a movie, notice how the sounds can change your feelings!\nContext recap: When you listen to a song, pay attention to how it changes as it plays. At the beginning, the verse might be soft and gentle, which musicians call 'piano'. Then, when the chorus comes in, it might be much louder, and this is referred to as 'forte'. This shift in volume is known as a crescendo, and it adds excitement and energy to the music!\nWhy this matters: Spotting Dynamics helps learners in Music connect ideas from Music Theory Foundations to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "When you listen to a song, pay attention to how it changes. At the beginning, the verse might be soft and gentle ('piano'). Then, when the chorus comes in, it might be much louder ('forte'). This shift in volume adds excitement and energy to the music! Think about how movie soundtracks use these changes. During a suspenseful moment, you might hear quiet strings, and then suddenly, the music gets really loud for a jump scare! Composers use different volumes to help you feel what the characters are experiencing in the story."
         },
         {
           "id": "music-theory-101-l14-c3",
           "title": "Recognizing Scales",
-          "content": "Have you ever listened to a song and felt really happy, while another song made you feel a little sad or even a bit spooky? This happens because of something called scales! Happy-sounding songs usually use major scales, which are bright and cheerful. For example, if you hum the 'Do-Re-Mi' scale, which is also known as the C major scale, you will notice how joyful it sounds! Now, let's try something different. Hum a spooky melody in your head. Did you notice how it feels different? That’s because it likely uses minor scales, which can sound sad or mysterious. Think of scales like the colors in a painter's palette; just like an artist chooses colors to express feelings, musicians use scales to create different moods in their music. So next time you hear a song, pay attention to how it makes you feel and see if you can identify the scale being used!\nContext recap: Have you ever listened to a song and felt really happy, while another song made you feel a little sad or even a bit spooky? This happens because of something called scales! Happy-sounding songs usually use major scales, which are bright and cheerful. For example, if you hum the 'Do-Re-Mi' scale, which is also known as the C major scale, you will notice how joyful it sounds!\nWhy this matters: Recognizing Scales helps learners in Music connect ideas from Music Theory Foundations to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "Have you ever listened to a song and felt really happy, while another song made you feel a little sad? This happens because of scales! Happy-sounding songs usually use major scales, which are bright and cheerful, like the 'Do-Re-Mi' scale. Spooky or sad melodies often use minor scales, which can sound mysterious. Think of scales like the colors in a painter's palette; musicians use scales to create different moods in their music. So next time you hear a song, pay attention to how it makes you feel and see if you can guess the scale!"
         },
         {
           "id": "music-theory-101-l14-c4",
           "title": "Your Music Theory Toolkit",
-          "content": "Congratulations, young musician! You now have a fantastic music theory toolkit at your fingertips! This toolkit includes important skills like reading the staff, understanding note values, recognizing time signatures, identifying scales, and knowing about dynamics and tempo markings. These elements are the building blocks of every piece of music you hear, from your favorite songs to classical masterpieces. As you continue your exciting musical journey, there are so many fun things to explore! You can learn about different scales, which are like musical ladders that help you climb to new heights in your playing. You can also dive into the world of chords, which are groups of notes played together that create harmony. And guess what? You can even try your hand at writing your own short melodies! Music theory is like a special language that helps you understand and express yourself through music. The more you practice, the more fluent you will become in this wonderful language, allowing you to create beautiful music that can touch hearts and bring joy to others. Keep exploring and have fun with your music!\nContext recap: Congratulations, young musician! You now have a fantastic music theory toolkit at your fingertips! This toolkit includes important skills like reading the staff, understanding note values, recognizing time signatures, identifying scales, and knowing about dynamics and tempo markings. These elements are the building blocks of every piece of music you hear, from your favorite songs to classical masterpieces.\nWhy this matters: Your Music Theory Toolkit helps learners in Music connect ideas from Music Theory Foundations to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "Congratulations, young musician! You now have a fantastic music theory toolkit. This includes reading the staff, understanding note values, recognizing time signatures, identifying scales, and knowing about dynamics and tempo. These are the building blocks of every piece of music you hear. As you continue your musical journey, you can learn about different scales, chords, and even try writing your own short melodies! Music theory is like a special language that helps you understand and express yourself through music. The more you practice, the more fluent you will become."
         }
       ],
       "flashcards": [
@@ -1557,7 +1506,7 @@ export const MusicTheory101Module: LearningModule = {
     },
     {
       "id": "music-theory-101-l15",
-      "title": "Mastery Sprint: Music Theory Foundations",
+      "title": "Mastery Quiz: Music Theory Foundations",
       "type": "quiz",
       "duration": 10,
       "objectives": [

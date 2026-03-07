@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const Economics601Module: LearningModule = {
+export const economics_601_Module: LearningModule = {
   "id": "economics-601",
   "title": "Economics Research and Leadership",
   "description": "Post-401 specialization in Economics, focused on business systems diagnostics, business operations and execution design, business impact and tradeoff analysis, and business governance and leadership through advanced casework, simulation, and defense-based checkpoints.",
@@ -14,32 +14,38 @@ export const Economics601Module: LearningModule = {
   ],
   "minAge": 17,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en",
     "es"
   ],
   "learningObjectives": [
-    "Apply advanced methods for business systems diagnostics in high-constraint environments",
-    "Design robust systems for business operations and execution design with measurable control gates",
-    "Evaluate interventions in business impact and tradeoff analysis with research-grade rigor",
-    "Operationalize business governance and leadership with accountable governance and escalation pathways",
-    "Lead cross-functional decision reviews with explicit tradeoff communication",
-    "Defend recommendations under expert critique using evidence and uncertainty bounds"
+    "Apply advanced methods for business systems diagnostics in high-constraint environments.",
+    "Design robust systems for business operations and execution with measurable control gates.",
+    "Evaluate interventions and their tradeoffs with research-grade rigor.",
+    "Operationalize business governance with accountable, transparent, and auditable systems.",
+    "Lead cross-functional decision reviews with explicit tradeoff communication.",
+    "Defend complex recommendations under expert critique using evidence and uncertainty bounds."
   ],
   "lessons": [
     {
       "id": "economics-601-l01",
-      "title": "Economics Advanced Foundations",
+      "title": "Advanced Economic Foundations",
       "type": "video",
       "duration": 14,
       "learningAids": [
         {
           "id": "economics-601-l01-a1",
-          "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "visual_prompt",
+          "title": "System Boundary Diagram",
+          "content": "An animated diagram showing a complex business system, with a dotted line defining the analysis scope, highlighting inputs, outputs, and external factors being excluded."
+        },
+        {
+          "id": "economics-601-l01-a2",
+          "type": "visual_prompt",
+          "title": "Causal Loop Diagram",
+          "content": "A visual model illustrating feedback loops and dependencies between variables, with nodes representing system components and arrows indicating causal links and potential delays."
         }
       ],
       "chunks": [
@@ -47,64 +53,64 @@ export const Economics601Module: LearningModule = {
           "id": "economics-601-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "In this lesson, we will explore the advanced concepts of scope boundaries in Economics. We will focus on how to analyze business systems effectively, looking closely at how businesses operate and how they can design their processes for better execution. Understanding these boundaries helps us identify what is included in our analysis and what is not, which is crucial for making informed decisions in business.\nContext recap: In this lesson, we will explore the advanced concepts of scope boundaries in Economics. We will focus on how to analyze business systems effectively, looking closely at how businesses operate and how they can design their processes for better execution. Understanding these boundaries helps us identify what is included in our analysis and what is not, which is crucial for making informed decisions in business."
+          "content": "Effective diagnostics begin with rigorously defining the analytical frame. This section covers techniques for setting system boundaries, identifying key variables, and making explicit assumptions about external factors to ensure a focused and defensible analysis."
         },
         {
           "id": "economics-601-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different factors that can lead to certain outcomes. Additionally, we will explore uncertainty ranges and system dependencies, which help us understand the various elements that might affect our plans. This preparation is essential before we create strategies for intervention, ensuring that we are well-informed about the potential impacts of our actions.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different factors that can lead to certain outcomes. Additionally, we will explore uncertainty ranges and system dependencies, which help us understand the various elements that might affect our plans. This preparation is essential before we create strategies for intervention, ensuring that we are well-informed about the potential impacts of our actions."
+          "content": "Before designing interventions, we must model the system's logic. Learners will map causal pathways, identify critical dependencies, and quantify uncertainty ranges for key variables. This creates a probabilistic understanding of potential outcomes and system vulnerabilities."
         },
         {
           "id": "economics-601-l01-c3",
           "kind": "recap",
-          "title": "Evidence Thresholds",
-          "content": "In our recap, we emphasize that all claims made in our analysis should be supported by measurable indicators. This means we need to have clear evidence that can be quantified. We will also discuss the importance of confidence bounds, which help us understand the reliability of our claims, and review checkpoints that ensure we stay on track throughout our analysis process.\nContext recap: In our recap, we emphasize that all claims made in our analysis should be supported by measurable indicators. This means we need to have clear evidence that can be quantified. We will also discuss the importance of confidence bounds, which help us understand the reliability of our claims, and review checkpoints that ensure we stay on track throughout our analysis process."
+          "title": "Evidence Thresholds and Validation",
+          "content": "This recap establishes the standard for empirical validation. All claims must be supported by measurable indicators and fall within specified confidence bounds. We will introduce the role of review checkpoints to ensure analytical rigor is maintained throughout the process."
         }
       ],
       "flashcards": [
         {
           "id": "economics-601-l01-f1",
-          "front": "business systems diagnostics",
-          "back": "A specialization axis requiring explicit assumptions and measurable constraints."
+          "front": "Business Systems Diagnostics",
+          "back": "A specialization requiring explicit assumptions, defined system boundaries, and measurable constraints to analyze performance and risk."
         },
         {
           "id": "economics-601-l01-f2",
-          "front": "business operations and execution design",
-          "back": "Execution architecture that determines reliability under stress."
+          "front": "Business Operations and Execution Design",
+          "back": "The architecture of workflows, controls, and governance that determines operational reliability and resilience under stress."
         },
         {
           "id": "economics-601-l01-f3",
-          "front": "business impact and tradeoff analysis",
-          "back": "Evaluation discipline for identifying true gains and hidden costs."
+          "front": "Business Impact and Tradeoff Analysis",
+          "back": "A rigorous evaluation discipline for quantifying the intended benefits, unintended side effects, and hidden costs of an intervention."
         }
       ]
     },
     {
       "id": "economics-601-l02",
-      "title": "Economics Specialist Methods Lab",
+      "title": "Specialist Methods Lab",
       "type": "interactive",
       "duration": 17,
       "learningAids": [
         {
           "id": "economics-601-l02-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Interactive Workflow Builder",
+          "content": "Utilize a drag-and-drop interface to construct a business process, defining control gates, escalation triggers, and data dashboards for a given scenario."
         }
       ],
       "chunks": [
         {
           "id": "economics-601-l02-c1",
           "kind": "practice",
-          "title": "Method Design and Stress Test",
-          "content": "In this interactive practice, learners will have the opportunity to design specialized workflows tailored to specific tasks. They will also conduct stress tests on these workflows by simulating adverse scenarios, which means they will see how their designs hold up under challenging conditions. This hands-on experience is vital for understanding how to create robust systems that can withstand unexpected challenges.\nContext recap: In this interactive practice, learners will have the opportunity to design specialized workflows tailored to specific tasks. They will also conduct stress tests on these workflows by simulating adverse scenarios, which means they will see how their designs hold up under challenging conditions. This hands-on experience is vital for understanding how to create robust systems that can withstand unexpected challenges."
+          "title": "Method Design and Stress Testing",
+          "content": "In this lab, learners design specialized operational workflows using a simulation toolkit. They will then conduct quantitative stress tests by introducing adverse scenarios, such as resource shortages or demand shocks, to identify failure points and refine the design for resilience."
         },
         {
           "id": "economics-601-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "In our recap, we will discuss how workflows can be structured to include important checkpoints. These checkpoints help us monitor progress and ensure that we can revert to previous steps if necessary. Additionally, we will explore the concept of threshold-based escalation, which means that certain criteria will trigger specific actions when limits are reached, ensuring that we maintain control over our processes.\nContext recap: In our recap, we will discuss how workflows can be structured to include important checkpoints. These checkpoints help us monitor progress and ensure that we can revert to previous steps if necessary. Additionally, we will explore the concept of threshold-based escalation, which means that certain criteria will trigger specific actions when limits are reached, ensuring that we maintain control over our processes."
+          "content": "We will review the principles of robust workflow architecture. Key concepts include designing auditable decision gates, implementing automated rollback protocols, and defining clear, threshold-based escalation pathways to ensure process integrity and accountability."
         }
       ],
       "interactiveActivities": [
@@ -112,7 +118,7 @@ export const Economics601Module: LearningModule = {
           "id": "economics-601-l02-act1",
           "type": "matching_pairs",
           "title": "Control-to-Outcome Mapping",
-          "description": "Match specialist controls with their strongest reliability and governance effects.",
+          "description": "Match specialist controls with their primary reliability and governance effects.",
           "pairs": [
             {
               "left": "Pre-commit gate",
@@ -136,231 +142,231 @@ export const Economics601Module: LearningModule = {
     },
     {
       "id": "economics-601-l03",
-      "title": "Checkpoint 1: Specialist Methods",
+      "title": "Checkpoint 1: Foundations and Methods",
       "type": "quiz",
       "duration": 10,
       "learningAids": [
         {
           "id": "economics-601-l03-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "summary",
+          "title": "Key Concepts Review",
+          "content": "Review the principles of boundary design, causal modeling, and control gate architecture before starting the quiz."
         }
       ],
       "questions": [
         {
           "id": "economics-601-l03-q1",
-          "text": "Which practice most improves business systems diagnostics decision quality?",
-          "skillId": "economics-601-skill-core",
+          "text": "Which practice most improves the quality of a business systems diagnostic?",
+          "skillId": "economics-601-skill-diagnostics",
           "options": [
             {
               "id": "a",
-              "text": "Proceed without baseline or assumptions"
+              "text": "Proceeding without a baseline or explicit assumptions"
             },
             {
               "id": "b",
-              "text": "Define assumptions, constraints, and measurable indicators"
+              "text": "Defining clear system boundaries, assumptions, and measurable indicators"
             },
             {
               "id": "c",
-              "text": "Optimize only for speed in every context"
+              "text": "Optimizing only for speed in every context"
             },
             {
               "id": "d",
-              "text": "Ignore uncertainty and edge conditions"
+              "text": "Ignoring uncertainty and potential edge conditions"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Advanced decisions improve when assumptions, constraints, and metrics are explicit."
+          "explanation": "Advanced diagnostics improve when assumptions, constraints, and metrics are made explicit, creating a defensible analytical frame."
         },
         {
           "id": "economics-601-l03-q2",
-          "text": "At level 601, strong execution for business operations and execution design requires:",
-          "skillId": "economics-601-skill-execution",
+          "text": "At an advanced level, strong execution design requires:",
+          "skillId": "economics-601-skill-execution-design",
           "options": [
             {
               "id": "a",
-              "text": "Owner mapping, checkpoint cadence, and escalation thresholds"
+              "text": "Clear ownership, checkpointed cadences, and defined escalation thresholds"
             },
             {
               "id": "b",
-              "text": "No role clarity and ad-hoc process changes"
+              "text": "Ambiguous roles and ad-hoc process changes"
             },
             {
               "id": "c",
-              "text": "No retrospective or post-run review"
+              "text": "No retrospective or post-mortem review process"
             },
             {
               "id": "d",
-              "text": "No rollback or fallback conditions"
+              "text": "No defined rollback or fallback conditions"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Reliable advanced execution needs ownership clarity and threshold-driven governance."
+          "explanation": "Reliable advanced execution depends on ownership clarity, structured reviews, and threshold-driven governance to manage complexity."
         },
         {
           "id": "economics-601-l03-q3",
-          "text": "A defensible approach to business impact and tradeoff analysis includes:",
-          "skillId": "economics-601-skill-eval",
+          "text": "A defensible approach to impact and tradeoff analysis includes:",
+          "skillId": "economics-601-skill-impact-analysis",
           "options": [
             {
               "id": "a",
-              "text": "Anecdotes without comparison"
+              "text": "Relying on anecdotes without a comparison group"
             },
             {
               "id": "b",
-              "text": "Baseline comparisons, side-effect analysis, and uncertainty bounds"
+              "text": "Baseline comparisons, side-effect analysis, and explicit uncertainty bounds"
             },
             {
               "id": "c",
-              "text": "Changing success criteria after outcomes"
+              "text": "Changing success criteria after observing outcomes"
             },
             {
               "id": "d",
-              "text": "Excluding difficult scenarios from analysis"
+              "text": "Excluding inconvenient scenarios from the analysis"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible analysis combines comparative baselines, side-effect checks, and uncertainty disclosure."
+          "explanation": "Defensible analysis combines comparative baselines, a systematic check for side-effects, and transparent disclosure of uncertainty."
         },
         {
           "id": "economics-601-l03-q4",
-          "text": "Mature governance systems connect:",
+          "text": "Mature governance systems operationally connect:",
           "skillId": "economics-601-skill-governance",
           "options": [
             {
               "id": "a",
-              "text": "Policy intent, measurable controls, and remediation pathways"
+              "text": "Policy intent, measurable controls, and pre-defined remediation pathways"
             },
             {
               "id": "b",
-              "text": "Policy language with no measurable enforcement"
+              "text": "Policy language with no measurable enforcement mechanism"
             },
             {
               "id": "c",
-              "text": "Targets without ownership or escalation design"
+              "text": "Performance targets without ownership or an escalation design"
             },
             {
               "id": "d",
-              "text": "Operations without transparent accountability"
+              "text": "Operations without transparent accountability structures"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Governance maturity is the operational link between intent, measurement, and corrective action."
+          "explanation": "Governance maturity is the operational link between strategic intent, its measurement via controls, and the corrective actions taken when deviations occur."
         },
         {
           "id": "economics-601-l03-q5",
-          "text": "What is the best way to compare competing interventions in advanced Business?",
-          "skillId": "economics-601-skill-advanced-5",
+          "text": "In causal modeling, what is the primary purpose of identifying system dependencies?",
+          "skillId": "economics-601-skill-causal-modeling",
           "options": [
             {
               "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
+              "text": "To simplify the model by ignoring interconnected variables"
             },
             {
               "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
+              "text": "To understand how changes in one part of the system might propagate and cause unintended effects elsewhere"
             },
             {
               "id": "c",
-              "text": "Switch metrics after results arrive"
+              "text": "To focus exclusively on linear, one-to-one relationships"
             },
             {
               "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
+              "text": "To prove that all variables are independent of each other"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
+          "explanation": "Identifying dependencies is crucial for anticipating second-order effects and understanding the systemic impact of an intervention."
         },
         {
           "id": "economics-601-l03-q6",
-          "text": "In high-stakes Economics Research and Leadership execution, which communication protocol is strongest?",
-          "skillId": "economics-601-skill-advanced-6",
+          "text": "Why is quantifying uncertainty ranges a critical step before designing an intervention?",
+          "skillId": "economics-601-skill-uncertainty-modeling",
           "options": [
             {
               "id": "a",
-              "text": "Broadcast conclusions without assumptions"
+              "text": "To guarantee a single, predictable outcome"
             },
             {
               "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
+              "text": "To create a realistic picture of the potential spectrum of outcomes, including best-case and worst-case scenarios"
             },
             {
               "id": "c",
-              "text": "Share only final outcomes after completion"
+              "text": "To eliminate all risks from the project plan"
             },
             {
               "id": "d",
-              "text": "Limit updates to a single informal channel"
+              "text": "To prove that the model is 100% accurate"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
+          "explanation": "Quantifying uncertainty provides a probabilistic view of outcomes, which is essential for risk management and designing resilient strategies."
         },
         {
           "id": "economics-601-l03-q7",
-          "text": "A mature remediation loop in advanced Business should prioritize:",
-          "skillId": "economics-601-skill-advanced-7",
+          "text": "A 'rollback trigger' in a control gate architecture is designed to:",
+          "skillId": "economics-601-skill-control-gates",
           "options": [
             {
               "id": "a",
-              "text": "Blame assignment without system updates"
+              "text": "Ensure a flawed process continues to completion regardless of negative signals"
             },
             {
               "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
+              "text": "Automatically revert a process to a previous stable state when a critical failure threshold is breached"
             },
             {
               "id": "c",
-              "text": "One-time fixes without retesting"
+              "text": "Assign blame after a project has failed"
             },
             {
               "id": "d",
-              "text": "Issue closure based on elapsed time"
+              "text": "Manually approve every single step in a workflow"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
+          "explanation": "A rollback trigger is a pre-defined control that contains damage by automatically reverting to a known-good state, limiting the blast radius of a failure."
         },
         {
           "id": "economics-601-l03-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Economics Research and Leadership?",
-          "skillId": "economics-601-skill-advanced-8",
+          "text": "What is the primary goal of stress-testing a newly designed business workflow?",
+          "skillId": "economics-601-skill-stress-testing",
           "options": [
             {
               "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
+              "text": "To prove the workflow only functions under ideal conditions"
             },
             {
               "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
+              "text": "To identify hidden vulnerabilities and failure modes before deployment in a live environment"
             },
             {
               "id": "c",
-              "text": "Ignore correlated failure modes"
+              "text": "To demonstrate that the workflow requires no resources to operate"
             },
             {
               "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
+              "text": "To generate performance metrics that look as positive as possible"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "explanation": "Stress-testing is a proactive measure to discover how a system behaves under adverse conditions, allowing for improvements to resilience and reliability."
         }
       ]
     },
     {
       "id": "economics-601-l04",
-      "title": "Economics Advanced Case Analysis",
+      "title": "Advanced Case Analysis",
       "type": "video",
       "duration": 14,
       "learningAids": [
         {
           "id": "economics-601-l04-a1",
-          "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "visual_prompt",
+          "title": "Tradeoff Matrix",
+          "content": "A table is shown comparing three different policy options. Rows represent evaluation criteria (Cost, Reliability, Equity), and cells are color-coded (green/yellow/red) to show performance, visually summarizing the tradeoffs."
         }
       ],
       "chunks": [
@@ -368,47 +374,47 @@ export const Economics601Module: LearningModule = {
           "id": "economics-601-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "In this lesson, we will frame a case study that highlights the competing constraints found in business systems diagnostics. We will analyze how different factors impact business decisions and the trade-offs that must be considered. Understanding these dynamics is crucial for making informed choices that balance various business needs and objectives.\nContext recap: In this lesson, we will frame a case study that highlights the competing constraints found in business systems diagnostics. We will analyze how different factors impact business decisions and the trade-offs that must be considered. Understanding these dynamics is crucial for making informed choices that balance various business needs and objectives."
+          "content": "This lesson deconstructs a complex business case involving multi-variate constraints and competing stakeholder interests. We will architect the scenario by mapping its core tensions, resource limitations, and ethical dilemmas to set the stage for a structured analysis."
         },
         {
           "id": "economics-601-l04-c2",
           "kind": "practice",
-          "title": "Tradeoff Framing",
-          "content": "In this practice session, learners will compare different options available to them across several important dimensions. These include safety, reliability, cost, equity, and governance. By evaluating these factors, learners will gain a deeper understanding of how to make balanced decisions that consider multiple perspectives and stakeholder needs.\nContext recap: In this practice session, learners will compare different options available to them across several important dimensions. These include safety, reliability, cost, equity, and governance. By evaluating these factors, learners will gain a deeper understanding of how to make balanced decisions that consider multiple perspectives and stakeholder needs."
+          "title": "Tradeoff Framing and Analysis",
+          "content": "Learners will evaluate competing intervention strategies from the case study. This involves a disciplined comparison across key dimensions like safety, reliability, cost, and equity, using both quantitative and qualitative evidence to frame the tradeoffs for decision-makers."
         },
         {
           "id": "economics-601-l04-c3",
           "kind": "recap",
-          "title": "Decision Memo Pattern",
-          "content": "In our recap, we will outline the essential components of each recommendation made in our analysis. This includes detailing the assumptions that underpin our decisions, the evidence we have gathered, the risk controls we have put in place, and the fallback plans that will guide us if things do not go as expected. This structured approach ensures that our recommendations are well-founded and actionable.\nContext recap: In our recap, we will outline the essential components of each recommendation made in our analysis. This includes detailing the assumptions that underpin our decisions, the evidence we have gathered, the risk controls we have put in place, and the fallback plans that will guide us if things do not go as expected. This structured approach ensures that our recommendations are well-founded and actionable."
+          "title": "The Defensible Decision Memo",
+          "content": "We will synthesize our findings into a standardized decision memo. This recap outlines the critical components of a defensible recommendation: explicit assumptions, supporting evidence, risk controls, uncertainty bounds, and pre-defined fallback plans."
         }
       ]
     },
     {
       "id": "economics-601-l05",
-      "title": "Economics Simulation Clinic",
+      "title": "Simulation Clinic",
       "type": "interactive",
       "duration": 18,
       "learningAids": [
         {
           "id": "economics-601-l05-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Live Control Dashboard",
+          "content": "Interact with a dashboard showing real-time data feeds from a simulated business environment. Adjust operational parameters and governance thresholds to meet performance targets while managing emergent risks."
         }
       ],
       "chunks": [
         {
           "id": "economics-601-l05-c1",
           "kind": "practice",
-          "title": "Live Scenario Controls",
-          "content": "In this interactive practice, learners will take on the role of operators managing scenario controls. They will learn how to balance performance with governance constraints, which means ensuring that their actions meet both efficiency goals and regulatory requirements. This experience will help them understand the complexities involved in decision-making within a business context.\nContext recap: In this interactive practice, learners will take on the role of operators managing scenario controls. They will learn how to balance performance with governance constraints, which means ensuring that their actions meet both efficiency goals and regulatory requirements. This experience will help them understand the complexities involved in decision-making within a business context."
+          "title": "Live Scenario Management",
+          "content": "In this interactive clinic, learners operate a simulated business system facing dynamic conditions. They must make real-time decisions, balancing performance targets with governance constraints, and respond to unexpected events using the control systems they've designed."
         },
         {
           "id": "economics-601-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "In our recap, we will discuss the importance of effective responses that can adapt to changing circumstances. Learners will explore how to update control gates while maintaining traceability and accountability. This means that even as adjustments are made, it is crucial to keep track of decisions and ensure that responsibilities are clear.\nContext recap: In our recap, we will discuss the importance of effective responses that can adapt to changing circumstances. Learners will explore how to update control gates while maintaining traceability and accountability. This means that even as adjustments are made, it is crucial to keep track of decisions and ensure that responsibilities are clear."
+          "content": "This recap focuses on the principles of adaptive management. We will discuss how to dynamically recalibrate control gates in response to new information while maintaining a clear audit trail and accountability for all adjustments made during the live scenario."
         }
       ],
       "interactiveActivities": [
@@ -416,7 +422,7 @@ export const Economics601Module: LearningModule = {
           "id": "economics-601-l05-act1",
           "type": "scenario",
           "title": "Adverse-Condition Decision Run",
-          "description": "Run a high-pressure economics scenario and tune controls under uncertainty."
+          "description": "Manage a high-pressure economic scenario by tuning system controls in real-time to mitigate risks and optimize outcomes under uncertainty."
         }
       ]
     },
@@ -428,16 +434,16 @@ export const Economics601Module: LearningModule = {
       "learningAids": [
         {
           "id": "economics-601-l06-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "summary",
+          "title": "Key Concepts Review",
+          "content": "Review the principles of tradeoff analysis, the decision memo structure, and adaptive response design before starting the quiz."
         }
       ],
       "questions": [
         {
           "id": "economics-601-l06-q1",
-          "text": "In advanced casework, the first requirement for defensible recommendations is:",
-          "skillId": "economics-601-skill-case1",
+          "text": "In advanced casework, the first requirement for a defensible recommendation is:",
+          "skillId": "economics-601-skill-case-foundations",
           "options": [
             {
               "id": "a",
@@ -445,208 +451,208 @@ export const Economics601Module: LearningModule = {
             },
             {
               "id": "b",
-              "text": "A clear baseline, explicit constraints, and success criteria"
+              "text": "A clear baseline, explicit constraints, and pre-defined success criteria"
             },
             {
               "id": "c",
-              "text": "High confidence without evidence logs"
+              "text": "High confidence without documented evidence"
             },
             {
               "id": "d",
-              "text": "Single-metric optimization only"
+              "text": "Optimization based on a single, convenient metric"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible recommendations begin with explicit assumptions, constraints, and measurable targets."
+          "explanation": "Defensible recommendations are built upon a foundation of explicit assumptions, constraints, and measurable targets established before the analysis."
         },
         {
           "id": "economics-601-l06-q2",
-          "text": "A resilient strategy for business operations and execution design should include:",
-          "skillId": "economics-601-skill-case2",
+          "text": "A resilient strategy for business operations should always include:",
+          "skillId": "economics-601-skill-case-resilience",
           "options": [
             {
               "id": "a",
-              "text": "Checkpointed execution with fallback and escalation criteria"
+              "text": "Checkpointed execution with defined fallback and escalation criteria"
             },
             {
               "id": "b",
-              "text": "One-way execution with no rollback capability"
+              "text": "A one-way execution path with no capability for rollback"
             },
             {
               "id": "c",
-              "text": "No ownership mapping across teams"
+              "text": "No ownership mapping across functional teams"
             },
             {
               "id": "d",
-              "text": "Hidden assumptions and undocumented decisions"
+              "text": "Hidden assumptions and undocumented critical decisions"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Resilience depends on checkpoints, fallback options, and explicit escalation design."
+          "explanation": "Resilience in complex operations depends on structured checkpoints, pre-planned fallback options, and explicit escalation protocols for handling anomalies."
         },
         {
           "id": "economics-601-l06-q3",
-          "text": "When evaluating business impact and tradeoff analysis, which method is most rigorous?",
-          "skillId": "economics-601-skill-case3",
+          "text": "When evaluating business impact, which method demonstrates the most rigor?",
+          "skillId": "economics-601-skill-case-evaluation",
           "options": [
             {
               "id": "a",
-              "text": "Single success story without controls"
+              "text": "A single success story without control groups or baseline data"
             },
             {
               "id": "b",
-              "text": "Comparative baselines plus side-effect and uncertainty analysis"
+              "text": "Comparative analysis against a baseline, plus analysis of side-effects and uncertainty"
             },
             {
               "id": "c",
-              "text": "Outcome-only narrative without process evidence"
+              "text": "An outcome-only narrative without evidence of the process followed"
             },
             {
               "id": "d",
-              "text": "Retrospective scope changes to fit outcomes"
+              "text": "Retrospectively changing the scope and metrics to fit the observed outcomes"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Rigorous evaluation requires comparisons, side-effect analysis, and uncertainty disclosure."
+          "explanation": "Rigorous evaluation requires objective comparison against a baseline, a systematic search for unintended consequences, and transparent disclosure of uncertainty."
         },
         {
           "id": "economics-601-l06-q4",
           "text": "Advanced governance is strongest when it:",
-          "skillId": "economics-601-skill-case4",
+          "skillId": "economics-601-skill-case-governance",
           "options": [
             {
               "id": "a",
-              "text": "Aligns authority, measurement, and remediation obligations"
+              "text": "Tightly aligns decision authority, performance measurement, and remediation obligations"
             },
             {
               "id": "b",
-              "text": "Separates policy from operational controls"
+              "text": "Separates high-level policy from day-to-day operational controls"
             },
             {
               "id": "c",
-              "text": "Avoids external review and transparency"
+              "text": "Avoids external review and operational transparency"
             },
             {
               "id": "d",
-              "text": "Treats accountability as optional under pressure"
+              "text": "Treats accountability as optional, especially under pressure"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Mature governance links authority, measurable controls, and corrective action."
+          "explanation": "Mature governance creates a closed loop by linking the authority to act, the tools to measure performance, and the responsibility to correct deviations."
         },
         {
           "id": "economics-601-l06-q5",
-          "text": "What is the best way to compare competing interventions in advanced Business?",
-          "skillId": "economics-601-skill-advanced-5",
+          "text": "The primary purpose of a 'tradeoff matrix' in case analysis is to:",
+          "skillId": "economics-601-skill-tradeoff-analysis",
           "options": [
             {
               "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
+              "text": "Find a single option that is superior on all dimensions"
             },
             {
               "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
+              "text": "Visually and systematically compare multiple options across shared criteria, making tradeoffs explicit"
             },
             {
               "id": "c",
-              "text": "Switch metrics after results arrive"
+              "text": "Obscure the negative aspects of the preferred option"
             },
             {
               "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
+              "text": "Prove that all options are equally viable"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
+          "explanation": "A tradeoff matrix is a decision-support tool designed to clarify how different options perform against the same set of criteria, highlighting where gains in one area require sacrifices in another."
         },
         {
           "id": "economics-601-l06-q6",
-          "text": "In high-stakes Economics Research and Leadership execution, which communication protocol is strongest?",
-          "skillId": "economics-601-skill-advanced-6",
+          "text": "In a live simulation, 'adaptive response' refers to the ability to:",
+          "skillId": "economics-601-skill-simulation-adaptation",
           "options": [
             {
               "id": "a",
-              "text": "Broadcast conclusions without assumptions"
+              "text": "Strictly adhere to the initial plan, regardless of new data"
             },
             {
               "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
+              "text": "Make random changes to system controls without a clear rationale"
             },
             {
               "id": "c",
-              "text": "Share only final outcomes after completion"
+              "text": "Update operational controls and strategy in response to real-time feedback, while maintaining an audit trail"
             },
             {
               "id": "d",
-              "text": "Limit updates to a single informal channel"
+              "text": "Pause the simulation whenever an unexpected event occurs"
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
+          "correctOptionId": "c",
+          "explanation": "Adaptive response is a disciplined process of adjusting to changing conditions based on incoming data, ensuring that decisions remain traceable and accountable."
         },
         {
           "id": "economics-601-l06-q7",
-          "text": "A mature remediation loop in advanced Business should prioritize:",
-          "skillId": "economics-601-skill-advanced-7",
+          "text": "A key component of a 'Defensible Decision Memo' is the inclusion of fallback plans. Why is this important?",
+          "skillId": "economics-601-skill-decision-memo",
           "options": [
             {
               "id": "a",
-              "text": "Blame assignment without system updates"
+              "text": "It demonstrates a lack of confidence in the primary recommendation"
             },
             {
               "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
+              "text": "It provides pre-planned, alternative courses of action if key assumptions prove incorrect or risks materialize"
             },
             {
               "id": "c",
-              "text": "One-time fixes without retesting"
+              "text": "It is a formality that is rarely used in practice"
             },
             {
               "id": "d",
-              "text": "Issue closure based on elapsed time"
+              "text": "It replaces the need for monitoring and risk controls"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
+          "explanation": "Fallback plans are a critical part of risk management, ensuring that the organization is prepared to act decisively if the initial strategy fails, rather than having to improvise under pressure."
         },
         {
           "id": "economics-601-l06-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Economics Research and Leadership?",
-          "skillId": "economics-601-skill-advanced-8",
+          "text": "During a simulation clinic, an operator who successfully balances performance and governance would:",
+          "skillId": "economics-601-skill-simulation-balance",
           "options": [
             {
               "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
+              "text": "Exceed performance targets by violating all governance constraints"
             },
             {
               "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
+              "text": "Meet all governance constraints but fail to achieve any performance targets"
             },
             {
               "id": "c",
-              "text": "Ignore correlated failure modes"
+              "text": "Optimize performance within the established boundaries of the governance framework"
             },
             {
               "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
+              "text": "Frequently change the governance rules to make performance targets easier to hit"
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "correctOptionId": "c",
+          "explanation": "The core challenge of advanced operations is to achieve optimal performance while adhering to the rules and constraints that ensure safety, fairness, and accountability."
         }
       ]
     },
     {
       "id": "economics-601-l07",
-      "title": "Economics Governance and Public Impact",
+      "title": "Governance and Public Impact",
       "type": "video",
       "duration": 13,
       "learningAids": [
         {
           "id": "economics-601-l07-a1",
-          "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "visual_prompt",
+          "title": "Stakeholder Impact Map",
+          "content": "A network diagram showing a central business decision connected to various stakeholder groups (customers, employees, community). The connections are labeled with the type of impact (e.g., 'cost increase', 'job creation') and timescale."
         }
       ],
       "chunks": [
@@ -654,50 +660,50 @@ export const Economics601Module: LearningModule = {
           "id": "economics-601-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "In this lesson, learners will map out the distribution of impacts among various stakeholders. This includes identifying who benefits, who bears burdens, and what delayed effects may arise from decisions made. Understanding these dynamics is essential for ensuring that all voices are considered in the decision-making process.\nContext recap: In this lesson, learners will map out the distribution of impacts among various stakeholders. This includes identifying who benefits, who bears burdens, and what delayed effects may arise from decisions made. Understanding these dynamics is essential for ensuring that all voices are considered in the decision-making process."
+          "content": "This section moves beyond simple cost-benefit analysis to map the distribution of impacts across stakeholders. Learners will analyze who benefits, who bears burdens, and what second-order or delayed effects might arise, with a focus on equity and fairness."
         },
         {
           "id": "economics-601-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "In this section, we will explore the concept of accountability architecture. This involves integrating elements such as decision traceability, which tracks how decisions are made, review rights that allow stakeholders to assess decisions, and remediation obligations that ensure responsibilities are met. This framework is vital for fostering trust and transparency in governance.\nContext recap: In this section, we will explore the concept of accountability architecture. This involves integrating elements such as decision traceability, which tracks how decisions are made, review rights that allow stakeholders to assess decisions, and remediation obligations that ensure responsibilities are met. This framework is vital for fostering trust and transparency in governance."
+          "content": "Effective governance requires a robust accountability architecture. We will examine how to integrate decision traceability, stakeholder review rights, and clear remediation obligations into business processes to build trust and ensure transparent operations."
         },
         {
           "id": "economics-601-l07-c3",
           "kind": "recap",
-          "title": "Responsible Leadership Checklist",
-          "content": "At the end of our lesson, we will create a helpful checklist that connects important outcomes with ethical considerations, ensures we follow policies correctly, and builds our ability to adapt to challenges. This checklist will guide us in making responsible decisions as leaders.\nContext recap: At the end of our lesson, we will create a helpful checklist that connects important outcomes with ethical considerations, ensures we follow policies correctly, and builds our ability to adapt to challenges. This checklist will guide us in making responsible decisions as leaders."
+          "title": "Responsible Leadership Framework",
+          "content": "We conclude by synthesizing the module's concepts into a practical leadership framework. This checklist connects performance outcomes with ethical duties, policy adherence, and institutional resilience, providing a heuristic for responsible decision-making under pressure."
         }
       ],
       "flashcards": [
         {
           "id": "economics-601-l07-f1",
-          "front": "Impact distribution",
-          "back": "How outcomes are allocated across populations and timescales."
+          "front": "Impact Distribution",
+          "back": "The analysis of how outcomes, both positive and negative, are allocated across different populations and timescales."
         },
         {
           "id": "economics-601-l07-f2",
-          "front": "Decision traceability",
-          "back": "An auditable record of evidence, ownership, and rationale."
+          "front": "Decision Traceability",
+          "back": "An auditable and unbroken record of the evidence, ownership, and rationale behind a decision and its subsequent implementation."
         },
         {
           "id": "economics-601-l07-f3",
-          "front": "Responsible leadership",
-          "back": "Decision behavior balancing performance, accountability, and ethics."
+          "front": "Responsible Leadership",
+          "back": "A decision-making behavior that systematically balances performance goals with accountability structures and ethical considerations."
         }
       ]
     },
     {
       "id": "economics-601-l08",
-      "title": "Economics Capstone Defense Lab",
+      "title": "Capstone Defense Lab",
       "type": "interactive",
       "duration": 16,
       "learningAids": [
         {
           "id": "economics-601-l08-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Defense Simulation",
+          "content": "Present your final recommendation to a simulated expert panel. Respond to challenging questions and critiques based on the evidence you've assembled throughout the module."
         }
       ],
       "chunks": [
@@ -705,13 +711,13 @@ export const Economics601Module: LearningModule = {
           "id": "economics-601-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "In this interactive activity, you will work together to create a comprehensive brief. This brief will include your main claims, supporting evidence, the limits of uncertainty in your arguments, and possible solutions to address any issues that arise. This exercise will help you practice presenting your ideas clearly and effectively.\nContext recap: In this interactive activity, you will work together to create a comprehensive brief. This brief will include your main claims, supporting evidence, the limits of uncertainty in your arguments, and possible solutions to address any issues that arise. This exercise will help you practice presenting your ideas clearly and effectively."
+          "content": "In this culminating activity, learners synthesize their analysis into a comprehensive defense brief. This document must articulate their core claims, present the supporting evidence, define the uncertainty bounds, and propose a robust governance and remediation plan."
         },
         {
           "id": "economics-601-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "During this session, you will have the opportunity to practice your responses to questions and feedback from an expert panel. You will prepare for critiques related to technical aspects, governance issues, and the perspectives of various stakeholders. This rehearsal will help you gain confidence and improve your communication skills.\nContext recap: During this session, you will have the opportunity to practice your responses to questions and feedback from an expert panel. You will prepare for critiques related to technical aspects, governance issues, and the perspectives of various stakeholders. This rehearsal will help you gain confidence and improve your communication skills."
+          "content": "This session prepares learners for the final defense. We will rehearse responses to adversarial testing from an expert panel, focusing on critiques of technical methods, governance design, and stakeholder impact analysis to ensure recommendations are resilient to scrutiny."
         }
       ],
       "interactiveActivities": [
@@ -719,7 +725,7 @@ export const Economics601Module: LearningModule = {
           "id": "economics-601-l08-act1",
           "type": "debate_simulator",
           "title": "Expert Defense Panel",
-          "description": "Defend specialization recommendations under adversarial cross-examination."
+          "description": "Defend your final, specialized recommendation against rigorous cross-examination from a simulated panel of technical, governance, and economic experts."
         }
       ]
     }

@@ -1,5 +1,11 @@
+import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import AdaptiveBackground from "@/app/components/ui/adaptive-background";
+
+export const metadata: Metadata = {
+  title: "Sign In — Koydo",
+  robots: { index: false, follow: false },
+};
 
 export const dynamic = "force-dynamic";
 

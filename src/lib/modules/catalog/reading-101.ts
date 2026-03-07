@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const Reading101Module: LearningModule = {
+export const reading_101_Module: LearningModule = {
   "id": "reading-101",
   "title": "The Alphabet & Early Reading",
   "description": "Master alphabet recognition, letter sounds, CVC word building, rhyming families, following directions, and story comprehension for children ages 4-9.",
@@ -13,7 +13,7 @@ export const Reading101Module: LearningModule = {
   ],
   "minAge": 4,
   "maxAge": 9,
-  "version": "4.0.0",
+  "version": "1.1.0",
   "difficultyBand": "beginner",
   "localeSupport": [
     "en",
@@ -43,23 +43,42 @@ export const Reading101Module: LearningModule = {
         {
           "id": "reading-101-l01-c1",
           "title": "Letters A through E",
-          "content": "Let's dive into the wonderful world of letters as we explore the first five letters of the alphabet: A, B, C, D, and E! The uppercase letter A is shaped like a little tent with a crossbar on top, which makes it easy to remember. When we look at the lowercase a, we see a round shape with a tail that curls out, just like a little fish swimming in the water! Next, we have the letter B, which has two bumps on its top, making it look like a pair of balloons. The lowercase b has one bump on the right side, almost like a little balloon floating away. Now, let's talk about the letter C. It is shaped like a gentle curve, and the lowercase c is just a smaller version of it, like a tiny wave in the ocean. Moving on to the letter D, it has a straight back and a big round belly on the right side, which makes it look like it's ready to give a big hug! The lowercase d has its belly on the left side, making it look a bit different but still friendly. Finally, we have the letter E, which has three horizontal arms that stretch out wide, like a bird spreading its wings. The lowercase e is a small curl, almost like a little snail. Now, let's think of some fun words that start with these letters: Apple, Ball, Cat, Dog, and Elephant! Can you think of more words that start with these letters? Maybe you can find some around your home or in your favorite books! Learning letters is the first step to reading, and it's so exciting to discover new words together! Keep practicing, and soon you'll be reading all sorts of amazing stories!\nContext recap: Let's dive into the wonderful world of letters as we explore the first five letters of the alphabet: A, B, C, D, and E! The uppercase letter A is shaped like a little tent with a crossbar on top, which makes it easy to remember. When we look at the lowercase a, we see a round shape with a tail that curls out, just like a little fish swimming in the water! Next, we have the letter B, which has two bumps on its top, making it look like a pair of balloons.\nWhy this matters: Letters A through E helps learners in Reading connect ideas from The Alphabet & Early Reading to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "Let's dive into the wonderful world of letters as we explore the first five letters of the alphabet: A, B, C, D, and E! The uppercase letter A is shaped like a little tent. When we look at the lowercase a, we see a round shape with a small tail. Next, we have the letter B, which has two bumps, like a pair of balloons. The lowercase b has one bump on the right side. Now, let's talk about the letter C. It is shaped like a gentle curve, and the lowercase c is just a smaller version of it. Moving on to the letter D, it has a straight back and a big round belly on the right side. The lowercase d has its belly on the left side. Finally, we have the letter E, which has three horizontal arms that stretch out wide. The lowercase e is a small curl. Let's think of some fun words that start with these letters: Apple, Ball, Cat, Dog, and Elephant! Can you think of more words that start with these letters? Learning letters is the first step to reading!",
+          "visualPrompts": [
+            "Display uppercase 'A' and lowercase 'a'. Animate a tent shape over the 'A'. Show a picture of an apple.",
+            "Display 'B' and 'b'. Animate two balloons appearing from the bumps of the 'B'. Show a picture of a ball.",
+            "Display 'C' and 'c'. Animate a wave curving to form the 'C'. Show a picture of a cat.",
+            "Display 'D' and 'd'. Animate a big belly on the 'D'. Show a picture of a dog.",
+            "Display 'E' and 'e'. Animate three arms stretching out from the 'E'. Show a picture of an elephant."
+          ]
         },
         {
           "id": "reading-101-l01-c2",
           "title": "Letters F through I",
-          "content": "Let's dive into the next group of letters: F, G, H, and I! First up is the uppercase letter F. It looks a bit like the letter E, but it only has two arms instead of three. Next, we have the letter G. This letter is similar to C, but it has a little shelf inside that makes it unique! Now, let’s look at the letter H. It’s made of two tall lines that stand straight up, and there’s a bridge connecting them right in the middle. Finally, we have the letter I. This one is a simple line, but it has a fun little hat on top and shoes at the bottom! To help you remember these letters, here are some example words that start with them: Fish for F, Goat for G, House for H, and Igloo for I. Here’s a cool tip: when you see a lowercase g, it hangs down below the line, so be sure to look out for it when you are reading! Keep practicing these letters, and soon you'll be reading all sorts of fun words!\nContext recap: Let's dive into the next group of letters: F, G, H, and I! First up is the uppercase letter F. It looks a bit like the letter E, but it only has two arms instead of three. Next, we have the letter G.\nWhy this matters: Letters F through I helps learners in Reading connect ideas from The Alphabet & Early Reading to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "Let's dive into the next group of letters: F, G, H, and I! First up is the uppercase letter F. It looks a bit like the letter E, but it only has two arms instead of three. Next, we have the letter G. This letter is similar to C, but it has a little shelf inside! Now, let’s look at the letter H. It’s made of two tall lines with a bridge connecting them in the middle. Finally, we have the letter I. This one is a simple line, with a little hat on top and shoes at the bottom! To help you remember these letters, here are some example words: Fish for F, Goat for G, House for H, and Igloo for I. A cool tip: when you see a lowercase g, it hangs down below the line! Keep practicing these letters!",
+          "visualPrompts": [
+            "Display 'F' and 'f'. Show an 'E' and have one arm disappear to become an 'F'. Show a picture of a fish.",
+            "Display 'G' and 'g'. Highlight the 'shelf' inside the 'G'. Show a picture of a goat.",
+            "Display 'H' and 'h'. Animate a bridge connecting the two lines of the 'H'. Show a picture of a house.",
+            "Display 'I' and 'i'. Animate a hat and shoes onto the 'I'. Show a picture of an igloo."
+          ]
         },
         {
           "id": "reading-101-l01-c3",
           "title": "Letters J through M",
-          "content": "Let's continue our exciting adventure through the first half of the alphabet by learning about the letters J, K, L, and M! The uppercase letter J is shaped like a candy cane that curves to the left, making it fun and festive. Next, we have the letter K, which has two strong arms that reach out from a tall line, giving it a sturdy appearance. The letter L is a tall line with a little foot at the bottom, standing proudly. Lastly, the letter M has two peaks that look just like mountains, standing tall and strong. To help you remember these letters, here are some example words: Jam, Kite, Lion, and Moon. Fantastic job! Now you have learned 13 letters of the alphabet, from A all the way to M! Keep practicing, and soon you will know the whole alphabet!\nContext recap: Let's continue our exciting adventure through the first half of the alphabet by learning about the letters J, K, L, and M! The uppercase letter J is shaped like a candy cane that curves to the left, making it fun and festive. Next, we have the letter K, which has two strong arms that reach out from a tall line, giving it a sturdy appearance. The letter L is a tall line with a little foot at the bottom, standing proudly.\nWhy this matters: Letters J through M helps learners in Reading connect ideas from The Alphabet & Early Reading to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "Let's continue our exciting adventure with the letters J, K, L, and M! The uppercase letter J is shaped like a candy cane that curves to the left. Next, we have the letter K, which has two arms that reach out from a tall line. The letter L is a tall line with a little foot at the bottom. Lastly, the letter M has two peaks that look just like mountains. To help you remember these letters, here are some example words: Jam, Kite, Lion, and Moon. Fantastic job! Now you have learned 13 letters of the alphabet, from A all the way to M!",
+          "visualPrompts": [
+            "Display 'J' and 'j'. Animate a candy cane shape over the 'J'. Show a picture of jam.",
+            "Display 'K' and 'k'. Animate two arms reaching out from the 'K'. Show a picture of a kite.",
+            "Display 'L' and 'l'. Animate a foot appearing at the bottom of the 'L'. Show a picture of a lion.",
+            "Display 'M' and 'm'. Animate two mountain peaks over the 'M'. Show a picture of the moon."
+          ]
         }
       ],
       "flashcards": [
         {
           "id": "reading-101-l01-fc1",
-          "front": "What letter looks like a tent with a crossbar?",
+          "front": "What letter looks like a tent?",
           "back": "A — apple and ant start with A"
         },
         {
@@ -77,8 +96,8 @@ export const Reading101Module: LearningModule = {
         {
           "id": "reading-101-l01-a1",
           "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary of the lesson's main concept."
+          "title": "Alphabet Chart: A-M",
+          "content": "A colorful chart showing uppercase and lowercase letters from A to M with a picture for each."
         }
       ]
     },
@@ -96,17 +115,38 @@ export const Reading101Module: LearningModule = {
         {
           "id": "reading-101-l02-c1",
           "title": "Letters N through R",
-          "content": "Let's dive into the wonderful world of letters N, O, P, Q, and R! The uppercase letter N is special because it has a slanted bridge that connects two tall lines, making it look like a mountain range. Now, O is a fun letter because it is shaped like a perfect circle, just like a round cookie or a shiny ball! Next, we have the letter P, which has a little bump on top that looks just like a flag waving in the breeze. Isn't that cool? Moving on to Q, this letter is very similar to O, but it has a cute little tail that sticks out. And here's a fun fact: Q and U are best friends, and they often hang out together in words! Lastly, we have R, which is like P but with a leg that kicks out to the side, making it look like it's ready to run! Here are some example words that start with these letters: Nut, Orange, Panda, Queen, and Rabbit. Can you think of even more words that begin with N, O, P, Q, or R? Let's explore together and see how many we can find!\nContext recap: Let's dive into the wonderful world of letters N, O, P, Q, and R! The uppercase letter N is special because it has a slanted bridge that connects two tall lines, making it look like a mountain range. Now, O is a fun letter because it is shaped like a perfect circle, just like a round cookie or a shiny ball! Next, we have the letter P, which has a little bump on top that looks just like a flag waving in the breeze.\nWhy this matters: Letters N through R helps learners in Reading connect ideas from The Alphabet & Early Reading to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "Let's learn the letters N, O, P, Q, and R! The uppercase letter N has a slanted bridge that connects two tall lines. O is a fun letter because it is shaped like a perfect circle, just like a cookie! Next, we have the letter P, which has a little bump on top that looks like a flag. Moving on to Q, this letter is very similar to O, but it has a cute little tail. A fun fact: Q and U are best friends and are almost always together in words! Lastly, we have R, which is like P but with a leg that kicks out to the side. Here are some example words: Nut, Orange, Panda, Queen, and Rabbit. Can you think of more?",
+          "visualPrompts": [
+            "Display 'N' and 'n'. Highlight the slanted bridge. Show a picture of a nut.",
+            "Display 'O' and 'o'. Animate the letter spinning like a wheel. Show a picture of an orange.",
+            "Display 'P' and 'p'. Animate a flag waving from the top of the 'P'. Show a picture of a panda.",
+            "Display 'Q' and 'q'. Show an 'O' and then add a tail to make it a 'Q'. Show the letter 'U' sliding next to 'Q'. Show a picture of a queen.",
+            "Display 'R' and 'r'. Show a 'P' and then animate a leg kicking out to form an 'R'. Show a picture of a rabbit."
+          ]
         },
         {
           "id": "reading-101-l02-c2",
           "title": "Letters S through V",
-          "content": "Let's explore the letters S, T, U, and V together! The uppercase letter S is like a curvy snake that wiggles and moves. Can you imagine a snake slithering through the grass? Next, we have the letter T, which looks like a tall cross with a flat top, standing proudly. Now, think about the letter U; it resembles a cup that can hold your favorite drink, like juice or milk! Finally, we have the letter V, which is formed by two lines that come together at a point, just like a valley between two hills. Here are some fun words that start with these letters: Snake, Tree, Umbrella, and Violin. But be careful when writing! The lowercase letters u and v can look a bit alike. Just remember, the letter u has a nice curved bottom, while the letter v has a sharp pointed bottom. Keep practicing, and you'll become a letter expert in no time!\nContext recap: Let's explore the letters S, T, U, and V together! The uppercase letter S is like a curvy snake that wiggles and moves. Can you imagine a snake slithering through the grass? Next, we have the letter T, which looks like a tall cross with a flat top, standing proudly.\nWhy this matters: Letters S through V helps learners in Reading connect ideas from The Alphabet & Early Reading to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "Let's explore the letters S, T, U, and V together! The uppercase letter S is like a curvy snake. Next, we have the letter T, which looks like a tall cross with a flat top. Now, think about the letter U; it resembles a cup that can hold your favorite drink! Finally, we have the letter V, which is formed by two lines that come together at a point, just like a valley. Here are some fun words that start with these letters: Snake, Tree, Umbrella, and Violin. Be careful when writing! The lowercase letters u and v can look a bit alike. Just remember, u has a curved bottom, while v has a sharp, pointed bottom.",
+          "visualPrompts": [
+            "Display 'S' and 's'. Animate a snake slithering in an 'S' shape. Show a picture of a snake.",
+            "Display 'T' and 't'. Show the letter standing tall. Show a picture of a tree.",
+            "Display 'U' and 'u'. Animate rain falling into the 'U' shape like a cup. Show a picture of an umbrella.",
+            "Display 'V' and 'v'. Highlight the sharp point at the bottom. Show a picture of a violin.",
+            "Show lowercase 'u' and 'v' side-by-side, highlighting the curved bottom of 'u' and the pointed bottom of 'v'."
+          ]
         },
         {
           "id": "reading-101-l02-c3",
           "title": "Letters W through Z",
-          "content": "Now, let's explore the last four letters of our alphabet: W, X, Y, and Z! The uppercase letter W is special because it looks like two V's standing right next to each other, which makes it the widest letter we have! Next, we have the letter X, which is made up of two lines that cross each other, just like the marks you might see on a treasure map to show where something special is hidden! The letter Y is shaped like a slingshot, ready to launch something fun, and Z is a zigzag letter that moves down and then across the page. Let's think of some words that start with these letters: Water for W, X-ray for X, Yarn for Y, and Zebra for Z. Remember, there are some tricky pairs to watch out for: the letter b looks like it’s facing to the right, while d is facing to the left. Also, p hangs down to the right, but q hangs down to the left. You did an amazing job learning all the letters of the alphabet! Keep practicing, and soon you'll be reading all kinds of words!\nContext recap: Now, let's explore the last four letters of our alphabet: W, X, Y, and Z! The uppercase letter W is special because it looks like two V's standing right next to each other, which makes it the widest letter we have! Next, we have the letter X, which is made up of two lines that cross each other, just like the marks you might see on a treasure map to show where something special is hidden! The letter Y is shaped like a slingshot, ready to launch something fun, and Z is a zigzag letter that moves down and then across the page."
+          "content": "Now, let's explore the last four letters: W, X, Y, and Z! The uppercase letter W looks like two V's standing right next to each other. Next, we have the letter X, which is made of two lines that cross, like a treasure map mark! The letter Y is shaped like a slingshot. And Z is a zigzag letter. Let's think of some words: Water for W, X-ray for X, Yarn for Y, and Zebra for Z. Remember, some letters can be tricky: b faces right, while d faces left. Also, p hangs down to the right, but q hangs down to the left. You did an amazing job learning all the letters of the alphabet!",
+          "visualPrompts": [
+            "Display 'W' and 'w'. Show two 'V's sliding together to form a 'W'. Show a picture of water.",
+            "Display 'X' and 'x'. Animate an 'X' marking a spot on a treasure map. Show a picture of an X-ray.",
+            "Display 'Y' and 'y'. Animate a slingshot shape over the 'Y'. Show a picture of yarn.",
+            "Display 'Z' and 'z'. Animate a zigzag line being drawn. Show a picture of a zebra.",
+            "Show 'b' and 'd' side-by-side, with arrows showing the direction each one faces. Animate the 'bed' hand trick (left hand 'b', right hand 'd'). Do the same for 'p' and 'q'."
+          ]
         }
       ],
       "flashcards": [
@@ -117,21 +157,21 @@ export const Reading101Module: LearningModule = {
         },
         {
           "id": "reading-101-l02-fc2",
-          "front": "How do you tell b and d apart?",
-          "back": "b faces right (bumps right), d faces left (bumps left). Make fists with thumbs up — left hand makes a b, right hand makes a d!"
+          "front": "How do you tell 'b' and 'd' apart?",
+          "back": "'b' has its belly first. 'd' has its drum first. You can also make a 'bed' with your hands!"
         },
         {
           "id": "reading-101-l02-fc3",
-          "front": "Which letter always has U right next to it?",
-          "back": "Q — almost every Q is followed by U (queen, quiet, quiz)"
+          "front": "Which letter is almost always followed by U?",
+          "back": "Q — like in queen, quiet, and quiz"
         }
       ],
       "learningAids": [
         {
           "id": "reading-101-l02-a1",
           "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary of the lesson's main concept."
+          "title": "Alphabet Chart: N-Z",
+          "content": "A colorful chart showing uppercase and lowercase letters from N to Z with a picture for each."
         }
       ]
     },
@@ -149,24 +189,43 @@ export const Reading101Module: LearningModule = {
         {
           "id": "reading-101-l03-c1",
           "title": "Letter Names vs. Letter Sounds",
-          "content": "Did you know that every letter in the alphabet has two important parts? Each letter has a NAME and a SOUND! For instance, the letter B is called 'bee,' which is its NAME. But when we use the letter B in words, it makes the SOUND /b/. The same goes for the letter F; we call it 'eff,' but its SOUND is /f/. When we read, we pay attention to the SOUNDS of the letters because they help us form words. Knowing both the names and sounds of letters is a super important step in becoming a great reader! Can you try practicing saying the names and sounds of the letters you know? It can be fun to say them out loud and even make up words with those sounds! Keep practicing, and you'll be reading like a pro in no time!\nContext recap: Did you know that every letter in the alphabet has two important parts? Each letter has a NAME and a SOUND! For instance, the letter B is called 'bee,' which is its NAME. But when we use the letter B in words, it makes the SOUND /b/.\nWhy this matters: Letter Names vs. Letter Sounds helps learners in Reading connect ideas from The Alphabet & Early Reading to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "Did you know that every letter has two important parts? Each letter has a NAME and a SOUND! For instance, the letter B is called 'bee,' which is its NAME. But when we use the letter B in words, it makes the SOUND /b/. The same goes for the letter F; we call it 'eff,' but its SOUND is /f/. When we read, we use the SOUNDS of the letters to build words. Knowing both the names and sounds of letters is a super important step in becoming a great reader! Let's practice saying the names and sounds of the letters you know.",
+          "visualPrompts": [
+            "Show the letter 'B' on screen. Display the text 'Name: bee' next to it.",
+            "The text 'Name: bee' fades out and is replaced by 'Sound: /b/'. An animation of lips making the /b/ sound appears.",
+            "Repeat the process for the letter 'F', showing its name 'eff' and its sound '/f/'."
+          ]
         },
         {
           "id": "reading-101-l03-c2",
           "title": "Consonant Sounds",
-          "content": "Consonants are all the letters in the alphabet that are NOT vowels, and they each make their own special sounds! Let's explore some of them together. For instance, the letter B makes the sound /b/, just like in the word 'ball.' Can you think of other words that start with B? Next, we have the letter D, which says /d/, like in 'dog.' How about the letter F? It says /f/, just like in 'fish.' Now, let's look at the letter M, which makes the sound /m/, as in 'moon.' Then there's S, which says /s/, like in 'sun,' and T, which says /t/, just like in 'tree.' Now, here's a fun activity: try saying each of these sounds out loud! Pay attention to how your mouth feels when you make these sounds. Some of them, like b, d, and m, use your voice, while others, like f, s, and t, are made just with air. Can you practice making these sounds? It's a great way to get to know the consonants better and have fun with your voice! Remember, practicing helps you become a better reader!\nContext recap: Consonants are all the letters in the alphabet that are NOT vowels, and they each make their own special sounds! Let's explore some of them together. For instance, the letter B makes the sound /b/, just like in the word 'ball.' Can you think of other words that start with B? Next, we have the letter D, which says /d/, like in 'dog.' How about the letter F?\nWhy this matters: Consonant Sounds helps learners in Reading connect ideas from The Alphabet & Early Reading to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "Consonants are all the letters in the alphabet that are NOT vowels. They each make their own special sounds! Let's explore some. The letter B makes the sound /b/, like in 'ball.' The letter D says /d/, like in 'dog.' How about the letter F? It says /f/, just like in 'fish.' The letter M makes the sound /m/, as in 'moon.' S says /s/, like in 'sun,' and T says /t/, just like in 'tree.' Try saying each of these sounds out loud! Pay attention to how your mouth moves. Practicing helps you become a better reader!",
+          "visualPrompts": [
+            "Display the letter 'B' and a picture of a ball. Highlight the 'B' as the /b/ sound is made.",
+            "Display the letter 'D' and a picture of a dog. Highlight the 'D' as the /d/ sound is made.",
+            "Display the letter 'M' and a picture of a moon. Highlight the 'M' as the /m/ sound is made.",
+            "Display the letter 'S' and a picture of a sun. Highlight the 'S' as the /s/ sound is made."
+          ]
         },
         {
           "id": "reading-101-l03-c3",
-          "title": "Vowel Sounds",
-          "content": "Let's explore the wonderful world of vowels! There are five special vowels in the English language: A, E, I, O, and U. Each of these vowels has two different sounds: a SHORT sound and a LONG sound. Let's start with the short sounds because they are super important for beginners like you!\nFirst, let's look at the letter A. The short sound of A is /a/, just like in the word 'cat.' Can you hear that sound? Now, when we say the long sound of A, it sounds like /ay/, as in the word 'cake.' Isn't that fun?\nNext up is the letter E. The short sound of E is /e/, which you can hear in the word 'bed.' Now, if we stretch it out for the long sound, it sounds like /ee/, as in 'see.'\nMoving on to the letter I, the short sound is /i/, like in 'pig.' And the long sound is /eye/, as in 'bike.'\nNow let's talk about O! The short sound of O is /o/, like in 'hot.' For the long sound, it becomes /oh/, as in 'go.'\nFinally, we have U. The short sound of U is /u/, like in 'cup.' The long sound is /you/, as in 'unicorn.'\nNow that we know the short sounds of these vowels, can you think of other words that use them? Let's practice together and have some fun with vowels!\nContext recap: Let's explore the wonderful world of vowels! There are five special vowels in the English language: A, E, I, O, and U. Each of these vowels has two different sounds: a SHORT sound and a LONG sound. Let's start with the short sounds because they are super important for beginners like you!\nWhy this matters: Vowel Sounds helps learners in Reading connect ideas from The Alphabet & Early Reading to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "title": "Short Vowel Sounds",
+          "content": "Let's explore the wonderful world of vowels! There are five special vowels: A, E, I, O, and U. Vowels can make a few different sounds, but today we will learn their SHORT sounds. The short sound of A is /a/, like in the word 'cat.' The short sound of E is /e/, which you can hear in the word 'bed.' The short sound of I is /i/, like in 'pig.' The short sound of O is /o/, like in 'dog.' Finally, the short sound of U is /u/, like in 'cup.' Let's practice saying those sounds together: /a/, /e/, /i/, /o/, /u/.",
+          "visualPrompts": [
+            "Display the five vowels: A, E, I, O, U. Make them colorful and bouncy.",
+            "Show 'A' and a picture of a cat. Highlight the 'a' in 'cat' as the /a/ sound is made.",
+            "Show 'E' and a picture of a bed. Highlight the 'e' in 'bed' as the /e/ sound is made.",
+            "Show 'I' and a picture of a pig. Highlight the 'i' in 'pig' as the /i/ sound is made.",
+            "Show 'O' and a picture of a dog. Highlight the 'o' in 'dog' as the /o/ sound is made.",
+            "Show 'U' and a picture of a cup. Highlight the 'u' in 'cup' as the /u/ sound is made."
+          ]
         }
       ],
       "flashcards": [
         {
           "id": "reading-101-l03-fc1",
-          "front": "What is the difference between a letter name and a letter sound?",
-          "back": "The name is what we call the letter (like 'bee' for B). The sound is what it says when reading (/b/ for B)."
+          "front": "What is the difference between a letter's name and its sound?",
+          "back": "The name is what we call it (like 'bee' for B). The sound is what it says in a word (/b/ for B)."
         },
         {
           "id": "reading-101-l03-fc2",
@@ -183,8 +242,8 @@ export const Reading101Module: LearningModule = {
         {
           "id": "reading-101-l03-a1",
           "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary of the lesson's main concept."
+          "title": "Vowel & Consonant Chart",
+          "content": "A chart separating the letters of the alphabet into two groups: Vowels and Consonants."
         }
       ]
     },
@@ -201,36 +260,36 @@ export const Reading101Module: LearningModule = {
         {
           "id": "reading-101-l04-ia1",
           "type": "matching_pairs",
-          "title": "Match Sound to Letter",
-          "description": "Match each beginning sound to the correct letter.",
+          "title": "Match Picture to Letter",
+          "description": "Match each picture to the letter it starts with.",
           "estimatedMinutes": 5,
           "difficultyLevel": "easy",
           "data": {
             "pairs": [
               {
                 "id": "p1",
-                "left": "/b/ - ball",
+                "left": "Picture of a Ball",
                 "right": "B"
               },
               {
                 "id": "p2",
-                "left": "/f/ - fish",
+                "left": "Picture of a Fish",
                 "right": "F"
               },
               {
                 "id": "p3",
-                "left": "/s/ - sun",
+                "left": "Picture of a Sun",
                 "right": "S"
               },
               {
                 "id": "p4",
-                "left": "/m/ - moon",
+                "left": "Picture of a Moon",
                 "right": "M"
               },
               {
                 "id": "p5",
-                "left": "/t/ - tree",
-                "right": "T"
+                "left": "Picture of an Apple",
+                "right": "A"
               }
             ]
           }
@@ -339,7 +398,7 @@ export const Reading101Module: LearningModule = {
         },
         {
           "id": "reading-101-l05-q2",
-          "text": "What sound does the letter C most commonly make?",
+          "text": "What sound does the letter C most commonly make in the word 'cat'?",
           "options": [
             {
               "id": "a",
@@ -351,15 +410,15 @@ export const Reading101Module: LearningModule = {
             },
             {
               "id": "c",
-              "text": "Both /k/ and /s/"
+              "text": "/ch/ like cheese"
             },
             {
               "id": "d",
               "text": "/m/ like moon"
             }
           ],
-          "correctOptionId": "c",
-          "explanation": "C can say /k/ (cat, cup) or /s/ (city, circle). It makes both sounds!"
+          "correctOptionId": "b",
+          "explanation": "C usually says /k/ like in cat and cup. It can also say /s/ like in city, but /k/ is very common."
         },
         {
           "id": "reading-101-l05-q3",
@@ -383,7 +442,7 @@ export const Reading101Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Sun and sock both start with /s/. They share the same beginning sound!"
+          "explanation": "Sun and sock both start with the /s/ sound. They share the same beginning sound!"
         },
         {
           "id": "reading-101-l05-q4",
@@ -433,17 +492,34 @@ export const Reading101Module: LearningModule = {
         {
           "id": "reading-101-l06-c1",
           "title": "What Is a CVC Word?",
-          "content": "A CVC word is a fun and special kind of word that has three parts: it starts with a CONSONANT, followed by a VOWEL, and ends with another CONSONANT. Let's take the word 'cat' as an example. In 'cat', we have C (which is a consonant), A (which is a vowel), and T (which is another consonant). Isn't that neat? There are many other CVC words you can learn, such as hat, dog, sun, pig, and cup. These words are some of the very first ones you can read all by yourself, and they are super exciting to practice! Can you think of more CVC words? Maybe you can find some around your house or in your favorite books! Learning these words will help you become a great reader! Keep practicing, and soon you'll be reading even more words with confidence!\nContext recap: A CVC word is a fun and special kind of word that has three parts: it starts with a CONSONANT, followed by a VOWEL, and ends with another CONSONANT. Let's take the word 'cat' as an example. In 'cat', we have C (which is a consonant), A (which is a vowel), and T (which is another consonant). Isn't that neat?\nWhy this matters: What Is a CVC Word? helps learners in Reading connect ideas from The Alphabet & Early Reading to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "A CVC word is a special kind of word that has three parts: it starts with a CONSONANT, has a VOWEL in the middle, and ends with another CONSONANT. Let's take the word 'cat'. In 'cat', we have C (a consonant), A (a vowel), and T (another consonant). Isn't that neat? There are many other CVC words you can learn, such as dog, sun, pig, and cup. These words are some of the very first ones you can read all by yourself! Can you think of more CVC words?",
+          "visualPrompts": [
+            "Display the letters C-V-C. Below them, write out Consonant-Vowel-Consonant.",
+            "Show the word 'cat'. Color the 'c' and 't' blue (for consonant) and the 'a' red (for vowel).",
+            "Show pictures of a dog, sun, pig, and cup, with the CVC words next to them, color-coded."
+          ]
         },
         {
           "id": "reading-101-l06-c2",
           "title": "How to Blend Sounds",
-          "content": "To read a CVC word, we can use a fun and exciting technique called blending! Blending helps us put sounds together to make words. Let's start by breaking down the sounds of the word 'cat.' First, we say each sound slowly: /k/... /a/... /t/. Now, let’s try to say it a little faster: /k/-/a/-/t/. Can you feel how the sounds are coming together? Now, let’s say it even faster: 'cat'! Awesome job! You did it! Now, let’s try another word together. For 'dog,' we start with the sounds: /d/-/o/-/g/... Now, let’s blend them together: dog! You’re getting really good at this! Let’s do one more: for 'sun,' we say /s/-/u/-/n/... and then blend it quickly: sun! Blending sounds is a super skill for reading, and you’re becoming a blending expert! Keep practicing, and you’ll be reading all kinds of words in no time!\nContext recap: To read a CVC word, we can use a fun and exciting technique called blending! Blending helps us put sounds together to make words. Let's start by breaking down the sounds of the word 'cat.' First, we say each sound slowly: /k/... /a/...\nWhy this matters: How to Blend Sounds helps learners in Reading connect ideas from The Alphabet & Early Reading to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "To read a CVC word, we use a fun technique called blending! Blending helps us put sounds together to make words. Let's try the word 'cat.' First, we say each sound slowly: /k/... /a/... /t/. Now, let’s try to say it a little faster: /k/-/a/-/t/. Can you feel how the sounds are coming together? Now, let’s say it even faster: 'cat'! Awesome job! Let’s try another word: 'dog.' We start with the sounds: /d/.../o/.../g/. Now, let’s blend them together: dog! Blending sounds is a super skill for reading!",
+          "visualPrompts": [
+            "Show the letters c, a, t spaced apart. As each sound is made, the corresponding letter lights up.",
+            "Animate the letters sliding closer together as the blending gets faster.",
+            "The letters merge to form the word 'cat' as the full word is spoken.",
+            "Repeat the animation process for the word 'dog'."
+          ]
         },
         {
           "id": "reading-101-l06-c3",
           "title": "Swap One Letter, New Word!",
-          "content": "Here’s an amazing reading superpower that you can use to become a word wizard! Did you know that if you change just ONE letter in a CVC (consonant-vowel-consonant) word, you can create a completely new word? Let’s explore this together! For example, if you start with the word 'cat' and change the first letter 'C' to an 'H', you get the word 'hat.' Isn’t that cool? Now, if you take the same word 'cat' and change the 'C' to a 'B', what do you get? That’s right, you get 'bat!' And here’s another fun one: if you change the middle letter 'A' to an 'O', you will have the word 'cot.' This is how word families work — just one small change can create a brand new word! Now it’s your turn! Can you think of other words that you can change by swapping just one letter? Let’s get creative and see how many new words we can come up with together!\nContext recap: Here’s an amazing reading superpower that you can use to become a word wizard! Did you know that if you change just ONE letter in a CVC (consonant-vowel-consonant) word, you can create a completely new word? Let’s explore this together! For example, if you start with the word 'cat' and change the first letter 'C' to an 'H', you get the word 'hat.' Isn’t that cool?\nWhy this matters: Swap One Letter, New Word! helps learners in Reading connect ideas from The Alphabet & Early Reading to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "Here’s a reading superpower! Did you know that if you change just ONE letter in a CVC word, you can create a completely new word? Let’s try it! If you start with the word 'cat' and change the first letter 'c' to an 'h', you get the word 'hat.' Isn’t that cool? Now, if you take 'cat' and change the 'c' to a 'b', what do you get? That’s right, 'bat!' This is how word families work — just one small change can create a brand new word! Can you think of other words you can make by swapping just one letter?",
+          "visualPrompts": [
+            "Display the word 'cat'.",
+            "Animate the letter 'c' flying away.",
+            "Animate the letter 'h' flying into its place to form the word 'hat'. A picture of a hat appears.",
+            "Show 'cat' again. Animate the 'c' being replaced by a 'b' to form 'bat'. A picture of a bat appears."
+          ]
         }
       ],
       "flashcards": [
@@ -478,17 +554,31 @@ export const Reading101Module: LearningModule = {
         {
           "id": "reading-101-l07-c1",
           "title": "What Is Rhyming?",
-          "content": "Rhyming words are really fun because they sound the same at the end! For example, when we say 'cat' and 'hat', we notice they both end with the sound '-at'. This means they rhyme! Another pair of rhyming words is 'dog' and 'log', which both finish with the sound '-og'. Learning about rhyming words is super important for becoming a great reader! When you know one word from a rhyming family, like 'cat', you can easily read other words that rhyme with it, such as 'hat', 'bat', and 'mat'. This makes reading not only easier but also a lot more enjoyable! So, the more rhyming words you learn, the faster and more confident you will become in your reading skills. Let's have fun with rhymes and discover new words together!\nContext recap: Rhyming words are really fun because they sound the same at the end! For example, when we say 'cat' and 'hat', we notice they both end with the sound '-at'. This means they rhyme! Another pair of rhyming words is 'dog' and 'log', which both finish with the sound '-og'.\nWhy this matters: What Is Rhyming? helps learners in Reading connect ideas from The Alphabet & Early Reading to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "Rhyming words are fun because they sound the same at the end! For example, 'cat' and 'hat' both end with the '-at' sound. This means they rhyme! Another pair of rhyming words is 'dog' and 'log', which both finish with the '-og' sound. Learning about rhyming words is super important. When you know one word from a rhyming family, like 'cat', you can easily read other words that rhyme with it, such as 'hat', 'bat', and 'mat'. This makes reading easier and more enjoyable!",
+          "visualPrompts": [
+            "Show a picture of a cat and a hat. Display the words 'cat' and 'hat' underneath.",
+            "Highlight the '-at' ending in both words with a bright color.",
+            "Show a picture of a dog and a log. Display the words 'dog' and 'log' and highlight the '-og' ending."
+          ]
         },
         {
           "id": "reading-101-l07-c2",
           "title": "The -at and -an Families",
-          "content": "Let’s dive into two exciting rhyming families that will help us become better readers! First, we have the -at family. This family includes fun words like 'cat', 'hat', 'bat', 'mat', 'sat', 'rat', and 'flat'. The best part is that you can create all these words just by changing the first letter! For example, if you can say 'cat', then you can easily say 'hat', 'bat', and 'mat' too, because they all end with the same sound. Now, let’s move on to the -an family. This family has words like 'can', 'man', 'van', 'pan', 'fan', 'ran', and 'plan'. Just like before, if you can read 'can', you can also read 'man', 'van', and 'pan' because they share that same ending sound. Isn’t that amazing? Learning these rhyming families makes reading not only easier but also a lot more fun! So, let’s practice together and see how many words we can come up with from these families!\nContext recap: Let’s dive into two exciting rhyming families that will help us become better readers! First, we have the -at family. This family includes fun words like 'cat', 'hat', 'bat', 'mat', 'sat', 'rat', and 'flat'. The best part is that you can create all these words just by changing the first letter!\nWhy this matters: The -at and -an Families helps learners in Reading connect ideas from The Alphabet & Early Reading to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "Let’s dive into two exciting rhyming families! First, we have the -at family. This family includes words like 'cat', 'hat', 'bat', and 'mat'. You can make all these words just by changing the first letter! Now, let’s move on to the -an family. This family has words like 'can', 'man', 'van', and 'pan'. Just like before, if you can read 'can', you can also read 'man' and 'van' because they share that same ending sound. Isn’t that amazing? Learning these rhyming families makes reading so much fun!",
+          "visualPrompts": [
+            "Show a house with '-at' written on the roof. Animate words like 'cat', 'hat', 'bat', and 'mat' appearing in the windows.",
+            "Show another house with '-an' on the roof. Animate words like 'can', 'man', 'van', and 'pan' appearing in its windows."
+          ]
         },
         {
           "id": "reading-101-l07-c3",
           "title": "The -op and -ig Families",
-          "content": "Let’s explore two exciting rhyming word families together! First, we have the -op family. This family includes some fun words like 'hop', 'mop', 'top', 'stop', 'pop', and 'drop'. Each of these words shares the same ending sound, which makes them rhyme! Now, let’s look at the -ig family. This family has words like 'pig', 'wig', 'big', 'dig', 'fig', and 'jig'. Just like the -op family, these words also rhyme because they share the same ending sound. Here’s a super fun activity for you: if you already know the word 'hop', cover the 'H' at the beginning and replace it with an 'M'. What word do you get? That’s right, 'mop'! Now, if you cover the 'M' and put a 'T' in front, what do you have? Yes, 'top'! Playing with these word families is not just learning; it’s like a game that makes reading so much more enjoyable! Keep practicing, and you’ll become a reading superstar in no time!\nContext recap: Let’s explore two exciting rhyming word families together! First, we have the -op family. This family includes some fun words like 'hop', 'mop', 'top', 'stop', 'pop', and 'drop'. Each of these words shares the same ending sound, which makes them rhyme!\nWhy this matters: The -op and -ig Families helps learners in Reading connect ideas from The Alphabet & Early Reading to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "Let’s explore two more rhyming word families! First, we have the -op family. This family includes fun words like 'hop', 'mop', and 'top'. Each of these words shares the same ending sound. Now, let’s look at the -ig family. This family has words like 'pig', 'wig', and 'big'. Here’s a fun activity: if you know the word 'hop', cover the 'h' and replace it with an 'm'. What word do you get? That’s right, 'mop'! Playing with word families is like a game that makes reading so much more enjoyable!",
+          "visualPrompts": [
+            "Show a tree with '-op' on the trunk. Animate words like 'hop', 'mop', and 'top' growing as apples on the branches.",
+            "Show another tree with '-ig' on the trunk. Animate words like 'pig', 'wig', and 'big' growing as apples.",
+            "Animate the letter 'h' in 'hop' being swapped out for an 'm' to create 'mop'."
+          ]
         }
       ],
       "flashcards": [
@@ -499,8 +589,8 @@ export const Reading101Module: LearningModule = {
         },
         {
           "id": "reading-101-l07-fc2",
-          "front": "Name three words in the -at family",
-          "back": "cat, hat, bat (also: mat, sat, rat, flat)"
+          "front": "Name three words in the -at family.",
+          "back": "cat, hat, bat (also: mat, sat, rat)"
         },
         {
           "id": "reading-101-l07-fc3",
@@ -523,17 +613,32 @@ export const Reading101Module: LearningModule = {
         {
           "id": "reading-101-l08-c1",
           "title": "Following Directions",
-          "content": "Following directions is a very important skill that helps us learn and do things correctly! A direction is like a little instruction that tells you what to do. For example, a one-step direction is easy to follow because it has just one action. An example of a one-step direction is 'Pick up the book.' This means you only need to do one thing: lift the book off the table or shelf.\nNow, let’s talk about two-step directions! A two-step direction has two actions you need to do, like 'Pick up the book AND open it to the first page.' This means you first lift the book, and then you open it to see what’s inside.\nTo follow directions successfully, it’s really important to listen carefully and do each step in the right order. Sometimes, directions will use special words to help you understand what to do first and what comes next. Words like FIRST, THEN, and NEXT are super helpful! For example, you might hear, 'FIRST, pick up the book. THEN, open it to the first page.' Practicing following directions will make you a great listener and help you do things the right way!\nContext recap: Following directions is a very important skill that helps us learn and do things correctly! A direction is like a little instruction that tells you what to do. For example, a one-step direction is easy to follow because it has just one action. An example of a one-step direction is 'Pick up the book.' This means you only need to do one thing: lift the book off the table or shelf.\nWhy this matters: Following Directions helps learners in Reading connect ideas from The Alphabet & Early Reading to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "Following directions is a very important skill! A direction is an instruction that tells you what to do. A one-step direction has just one action, like 'Pick up the book.' A two-step direction has two actions, like 'Pick up the book AND open it to the first page.' To follow directions, it’s important to listen carefully and do each step in order. Words like FIRST, THEN, and NEXT are super helpful! For example, 'FIRST, pick up the book. THEN, open it.' Practicing following directions will make you a great listener!",
+          "visualPrompts": [
+            "Show an animated character looking at a book on a table.",
+            "A speech bubble appears: 'Pick up the book.' The character performs the action. Text on screen: 'One-Step Direction'.",
+            "A new speech bubble appears: 'FIRST, pick up the book. THEN, open it.' The character performs both actions in order. Text on screen: 'Two-Step Direction'."
+          ]
         },
         {
           "id": "reading-101-l08-c2",
           "title": "Listening to Stories",
-          "content": "When you listen to a story, it’s really exciting to pay close attention to the characters! Characters are the people, animals, or even special objects that can talk and have their own personalities. For example, in a story about a brave little mouse, the mouse is a character! It’s also super important to notice what happens in the story; these happenings are called the events. The events unfold in a specific order: first, there’s a beginning where we meet the characters and learn about their world. Then comes the middle, where the characters face challenges or adventures. Finally, there’s the end, where everything wraps up and we see how the characters have changed. By focusing on the characters and events, you can understand the story better and enjoy it even more! So next time you listen to a story, remember to think about who is in it and what happens throughout the tale! This will make your story time even more fun and engaging!\nContext recap: When you listen to a story, it’s really exciting to pay close attention to the characters! Characters are the people, animals, or even special objects that can talk and have their own personalities. For example, in a story about a brave little mouse, the mouse is a character! It’s also super important to notice what happens in the story; these happenings are called the events.\nWhy this matters: Listening to Stories helps learners in Reading connect ideas from The Alphabet & Early Reading to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "When you listen to a story, pay close attention to the characters! Characters are the people or animals the story is about. It’s also important to notice what happens in the story; these are called the events. The events happen in order: there’s a beginning, a middle, and an end. By focusing on the characters and events, you can understand the story better and enjoy it even more! So next time you listen to a story, think about who is in it and what happens.",
+          "visualPrompts": [
+            "Show an animated storybook opening.",
+            "A friendly cartoon bear appears with the label 'Character' pointing to it.",
+            "Show three simple pictures in a row: 1. The bear wakes up (Beginning). 2. The bear finds honey (Middle). 3. The bear goes to sleep happy (End). Label the sequence 'Events'."
+          ]
         },
         {
           "id": "reading-101-l08-c3",
           "title": "The Story Map",
-          "content": "A story map is a wonderful tool that helps you remember the important parts of a story! It has three main sections that make it easy to understand what you read or heard. The first section is about CHARACTERS, which are the people or animals in the story. Who are they? What do they do? Next, we have the SETTING, which tells us where the story takes place. Is it in a magical forest, a busy city, or maybe even in outer space? Finally, we have the EVENTS, which are the things that happen in the story. What happens first? What comes next? And what happens last? After you read or listen to a story, try to share what you learned with someone else. Tell them about the characters, where the story happened, and the order of events. This practice will help you remember the story better and make it even more fun to talk about with your friends and family!\nContext recap: A story map is a wonderful tool that helps you remember the important parts of a story! It has three main sections that make it easy to understand what you read or heard. The first section is about CHARACTERS, which are the people or animals in the story. Who are they?\nWhy this matters: The Story Map helps learners in Reading connect ideas from The Alphabet & Early Reading to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "A story map is a wonderful tool that helps you remember the important parts of a story! It has three main sections. The first is CHARACTERS, which are the people or animals in the story. Next is the SETTING, which tells us where the story takes place. Is it in a forest or a city? Finally, we have the EVENTS, which are the things that happen in the story. What happens first, next, and last? After you read a story, try to tell someone about the characters, setting, and events. This will help you remember the story better!",
+          "visualPrompts": [
+            "Display a simple graphic organizer on screen titled 'Story Map'.",
+            "Show three empty boxes labeled 'Characters', 'Setting', and 'Events'.",
+            "As each part is described, an icon appears in the box: a person icon for Characters, a tree/building icon for Setting, and a 1-2-3 list icon for Events."
+          ]
         }
       ],
       "flashcards": [
@@ -545,12 +650,12 @@ export const Reading101Module: LearningModule = {
         {
           "id": "reading-101-l08-fc2",
           "front": "What are characters in a story?",
-          "back": "The people, animals, or things that the story is about"
+          "back": "The people, animals, or things that the story is about."
         },
         {
           "id": "reading-101-l08-fc3",
           "front": "What are the three parts of a story map?",
-          "back": "Characters (who), Setting (where), and Events (what happens)"
+          "back": "Characters (who), Setting (where), and Events (what happens)."
         }
       ]
     },
@@ -592,6 +697,11 @@ export const Reading101Module: LearningModule = {
                 "id": "p4",
                 "left": "can",
                 "right": "van"
+              },
+              {
+                "id": "p5",
+                "left": "sun",
+                "right": "run"
               }
             ]
           }
@@ -612,6 +722,10 @@ export const Reading101Module: LearningModule = {
               {
                 "id": "b2",
                 "label": "-op family"
+              },
+              {
+                "id": "b3",
+                "label": "-ig family"
               }
             ],
             "items": [
@@ -637,13 +751,23 @@ export const Reading101Module: LearningModule = {
               },
               {
                 "id": "i5",
-                "label": "bat",
-                "correctBucketId": "b1"
+                "label": "pig",
+                "correctBucketId": "b3"
               },
               {
                 "id": "i6",
                 "label": "top",
                 "correctBucketId": "b2"
+              },
+              {
+                "id": "i7",
+                "label": "big",
+                "correctBucketId": "b3"
+              },
+              {
+                "id": "i8",
+                "label": "bat",
+                "correctBucketId": "b1"
               }
             ]
           }

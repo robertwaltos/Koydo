@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const StrategicManagement501Module: LearningModule = {
+export const strategic_management_501_Module: LearningModule = {
   "id": "strategic-management-501",
   "title": "Strategic Management Specialization Studio",
   "description": "Post-401 specialization in Strategic Management, focused on business systems diagnostics, business operations and execution design, business impact and tradeoff analysis, and business governance and leadership through advanced casework, simulation, and defense-based checkpoints.",
@@ -14,7 +14,7 @@ export const StrategicManagement501Module: LearningModule = {
   ],
   "minAge": 17,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en",
@@ -22,8 +22,8 @@ export const StrategicManagement501Module: LearningModule = {
   ],
   "learningObjectives": [
     "Apply advanced methods for business systems diagnostics in high-constraint environments",
-    "Design robust systems for business operations and execution design with measurable control gates",
-    "Evaluate interventions in business impact and tradeoff analysis with research-grade rigor",
+    "Design robust systems for business operations and execution with measurable control gates",
+    "Evaluate interventions and their consequences using rigorous tradeoff analysis",
     "Operationalize business governance and leadership with accountable governance and escalation pathways",
     "Lead cross-functional decision reviews with explicit tradeoff communication",
     "Defend recommendations under expert critique using evidence and uncertainty bounds"
@@ -31,15 +31,21 @@ export const StrategicManagement501Module: LearningModule = {
   "lessons": [
     {
       "id": "strategic-management-501-l01",
-      "title": "Strategic Management Advanced Foundations",
+      "title": "Advanced Strategic Foundations",
       "type": "video",
       "duration": 14,
       "learningAids": [
         {
           "id": "strategic-management-501-l01-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Causal Loop Diagram",
+          "content": "A visual diagram illustrating the interconnected feedback loops and dependencies within a complex business system."
+        },
+        {
+          "id": "strategic-management-501-l01-a2",
+          "type": "document",
+          "title": "Key Concepts Glossary",
+          "content": "A downloadable PDF defining core terminology used throughout the specialization, such as 'uncertainty bounds' and 'control gates'."
         }
       ],
       "chunks": [
@@ -47,50 +53,50 @@ export const StrategicManagement501Module: LearningModule = {
           "id": "strategic-management-501-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "In this lesson, we will dive into the important idea of advanced scope boundaries in Strategic Management. This means we will learn how to carefully examine and diagnose the various systems within a business. We will also discuss how to design operations that allow these systems to work together smoothly. By concentrating on these key areas, we can develop a clearer framework that helps businesses run more efficiently and adapt to any changes in their environment. Understanding these concepts is crucial for anyone looking to succeed in the field of business management.\nContext recap: In this lesson, we will dive into the important idea of advanced scope boundaries in Strategic Management. This means we will learn how to carefully examine and diagnose the various systems within a business. We will also discuss how to design operations that allow these systems to work together smoothly. By concentrating on these key areas, we can develop a clearer framework that helps businesses run more efficiently and adapt to any changes in their environment."
+          "content": "This lesson introduces the critical concept of defining scope and boundaries in strategic management. We will learn to diagnose a business's complex systems and design operational frameworks that ensure smooth integration. Mastering these skills is essential for building efficient, adaptable businesses that can thrive in dynamic environments."
         },
         {
           "id": "strategic-management-501-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different factors that influence outcomes. Additionally, we will look at uncertainty ranges and how various system dependencies can affect our plans. This foundational understanding is crucial for effective intervention planning, allowing us to anticipate challenges and make informed decisions.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different factors that influence outcomes. Additionally, we will look at uncertainty ranges and how various system dependencies can affect our plans. This foundational understanding is crucial for effective intervention planning, allowing us to anticipate challenges and make informed decisions."
+          "content": "Learners will map the causal pathways that connect actions to outcomes, while also quantifying uncertainty ranges and system dependencies. This foundational understanding is crucial for effective intervention planning, allowing strategists to anticipate challenges, model potential impacts, and make more informed decisions."
         },
         {
           "id": "strategic-management-501-l01-c3",
           "kind": "recap",
-          "title": "Evidence Thresholds",
-          "content": "In our recap, we emphasize that every claim we make should be supported by measurable indicators. This means we need to establish confidence bounds and set up review checkpoints to ensure our strategies are on track. By doing so, we can maintain a high level of accountability and ensure that our decisions are based on solid evidence.\nContext recap: In our recap, we emphasize that every claim we make should be supported by measurable indicators. This means we need to establish confidence bounds and set up review checkpoints to ensure our strategies are on track. By doing so, we can maintain a high level of accountability and ensure that our decisions are based on solid evidence."
+          "title": "Evidence Thresholds and Accountability",
+          "content": "This recap emphasizes that every strategic claim must be supported by measurable indicators. We will review how to establish confidence bounds and design review checkpoints to ensure strategies remain on track. This rigorous approach fosters a culture of accountability where decisions are based on solid evidence."
         }
       ],
       "flashcards": [
         {
           "id": "strategic-management-501-l01-f1",
-          "front": "business systems diagnostics",
-          "back": "A specialization axis requiring explicit assumptions and measurable constraints."
+          "front": "Business Systems Diagnostics",
+          "back": "A structured method for analyzing a business's components and their interactions, requiring explicit assumptions and measurable constraints."
         },
         {
           "id": "strategic-management-501-l01-f2",
-          "front": "business operations and execution design",
-          "back": "Execution architecture that determines reliability under stress."
+          "front": "Execution Design",
+          "back": "The architecture of business operations that determines reliability, scalability, and performance under stress."
         },
         {
           "id": "strategic-management-501-l01-f3",
-          "front": "business impact and tradeoff analysis",
-          "back": "Evaluation discipline for identifying true gains and hidden costs."
+          "front": "Tradeoff Analysis",
+          "back": "A systematic evaluation discipline for identifying the true gains, hidden costs, and second-order effects of a decision."
         }
       ]
     },
     {
       "id": "strategic-management-501-l02",
-      "title": "Strategic Management Specialist Methods Lab",
+      "title": "Specialist Methods Lab",
       "type": "interactive",
       "duration": 17,
       "learningAids": [
         {
           "id": "strategic-management-501-l02-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "document",
+          "title": "Workflow Design Template",
+          "content": "A structured template for designing and documenting specialized workflows, including sections for control gates, escalation paths, and rollback procedures."
         }
       ],
       "chunks": [
@@ -98,13 +104,13 @@ export const StrategicManagement501Module: LearningModule = {
           "id": "strategic-management-501-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "In this interactive practice, learners will have the opportunity to design specialized workflows tailored to specific tasks. After creating these workflows, they will stress-test them by simulating adverse scenarios. This hands-on experience will help learners understand how to prepare for unexpected challenges and ensure their designs are robust and effective.\nContext recap: In this interactive practice, learners will have the opportunity to design specialized workflows tailored to specific tasks. After creating these workflows, they will stress-test them by simulating adverse scenarios. This hands-on experience will help learners understand how to prepare for unexpected challenges and ensure their designs are robust and effective."
+          "content": "In this interactive lab, learners will design a specialized workflow for a given business challenge. They will then stress-test their design by simulating adverse scenarios, such as budget cuts or supply chain disruptions, to identify and fortify potential points of failure."
         },
         {
           "id": "strategic-management-501-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "In our recap, we will discuss the importance of integrating control gates into workflows. These gates serve as checkpoints that help us monitor progress and ensure that we can roll back to previous states if necessary. Additionally, we will explore how threshold-based escalation can be used to manage risks effectively, ensuring that we respond appropriately to any issues that arise.\nContext recap: In our recap, we will discuss the importance of integrating control gates into workflows. These gates serve as checkpoints that help us monitor progress and ensure that we can roll back to previous states if necessary. Additionally, we will explore how threshold-based escalation can be used to manage risks effectively, ensuring that we respond appropriately to any issues that arise."
+          "content": "We will recap the importance of integrating control gates into workflows. These gates act as critical checkpoints to monitor progress and enable rollbacks if necessary. We will also review how to implement threshold-based escalation to manage risks and ensure a timely response to emerging issues."
         }
       ],
       "interactiveActivities": [
@@ -142,225 +148,131 @@ export const StrategicManagement501Module: LearningModule = {
       "learningAids": [
         {
           "id": "strategic-management-501-l03-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "document",
+          "title": "Review Checklist",
+          "content": "A checklist summarizing the key concepts from the first two lessons to help learners prepare for the checkpoint."
         }
       ],
       "questions": [
         {
           "id": "strategic-management-501-l03-q1",
-          "text": "Which practice most improves business systems diagnostics decision quality?",
-          "skillId": "strategic-management-501-skill-core",
+          "text": "Which practice most improves the decision quality of business systems diagnostics?",
+          "skillId": "strategic-management-501-skill-diagnostics",
           "options": [
             {
               "id": "a",
-              "text": "Proceed without baseline or assumptions"
+              "text": "Proceeding without a baseline or assumptions"
             },
             {
               "id": "b",
-              "text": "Define assumptions, constraints, and measurable indicators"
+              "text": "Defining explicit assumptions, constraints, and measurable indicators"
             },
             {
               "id": "c",
-              "text": "Optimize only for speed in every context"
+              "text": "Optimizing only for speed in every context"
             },
             {
               "id": "d",
-              "text": "Ignore uncertainty and edge conditions"
+              "text": "Ignoring uncertainty and edge conditions"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Advanced decisions improve when assumptions, constraints, and metrics are explicit."
+          "explanation": "Advanced decisions improve when assumptions, constraints, and metrics are made explicit, providing a clear and defensible foundation."
         },
         {
           "id": "strategic-management-501-l03-q2",
-          "text": "At level 501, strong execution for business operations and execution design requires:",
-          "skillId": "strategic-management-501-skill-execution",
+          "text": "At an advanced level, strong execution design requires:",
+          "skillId": "strategic-management-501-skill-execution-design",
           "options": [
             {
               "id": "a",
-              "text": "Owner mapping, checkpoint cadence, and escalation thresholds"
+              "text": "Clear owner mapping, a defined checkpoint cadence, and escalation thresholds"
             },
             {
               "id": "b",
-              "text": "No role clarity and ad-hoc process changes"
+              "text": "Ambiguous roles and ad-hoc process changes"
             },
             {
               "id": "c",
-              "text": "No retrospective or post-run review"
+              "text": "Eliminating retrospectives or post-run reviews"
             },
             {
               "id": "d",
-              "text": "No rollback or fallback conditions"
+              "text": "No defined rollback or fallback conditions"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Reliable advanced execution needs ownership clarity and threshold-driven governance."
+          "explanation": "Reliable advanced execution needs clear ownership, regular checkpoints, and threshold-driven governance to manage complexity."
         },
         {
           "id": "strategic-management-501-l03-q3",
-          "text": "A defensible approach to business impact and tradeoff analysis includes:",
-          "skillId": "strategic-management-501-skill-eval",
+          "text": "A defensible approach to tradeoff analysis includes:",
+          "skillId": "strategic-management-501-skill-tradeoff-analysis",
           "options": [
             {
               "id": "a",
-              "text": "Anecdotes without comparison"
+              "text": "Using anecdotes without a comparison group"
             },
             {
               "id": "b",
-              "text": "Baseline comparisons, side-effect analysis, and uncertainty bounds"
+              "text": "Baseline comparisons, side-effect analysis, and explicit uncertainty bounds"
             },
             {
               "id": "c",
-              "text": "Changing success criteria after outcomes"
+              "text": "Changing success criteria after observing outcomes"
             },
             {
               "id": "d",
-              "text": "Excluding difficult scenarios from analysis"
+              "text": "Excluding difficult-to-model scenarios from the analysis"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible analysis combines comparative baselines, side-effect checks, and uncertainty disclosure."
+          "explanation": "Defensible analysis combines comparative baselines, a thorough check for side-effects, and a transparent disclosure of uncertainty."
         },
         {
           "id": "strategic-management-501-l03-q4",
-          "text": "Mature governance systems connect:",
+          "text": "Mature governance systems effectively connect:",
           "skillId": "strategic-management-501-skill-governance",
           "options": [
             {
               "id": "a",
-              "text": "Policy intent, measurable controls, and remediation pathways"
+              "text": "Policy intent, measurable controls, and clear remediation pathways"
             },
             {
               "id": "b",
-              "text": "Policy language with no measurable enforcement"
+              "text": "Policy language with no measurable enforcement mechanism"
             },
             {
               "id": "c",
-              "text": "Targets without ownership or escalation design"
+              "text": "Targets without clear ownership or an escalation design"
             },
             {
               "id": "d",
-              "text": "Operations without transparent accountability"
+              "text": "Operations without transparent accountability structures"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Governance maturity is the operational link between intent, measurement, and corrective action."
-        },
-        {
-          "id": "strategic-management-501-l03-q5",
-          "text": "What is the best way to compare competing interventions in advanced Business?",
-          "skillId": "strategic-management-501-skill-advanced-5",
-          "options": [
-            {
-              "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
-            },
-            {
-              "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
-            },
-            {
-              "id": "c",
-              "text": "Switch metrics after results arrive"
-            },
-            {
-              "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
-        },
-        {
-          "id": "strategic-management-501-l03-q6",
-          "text": "In high-stakes Strategic Management Specialization Studio execution, which communication protocol is strongest?",
-          "skillId": "strategic-management-501-skill-advanced-6",
-          "options": [
-            {
-              "id": "a",
-              "text": "Broadcast conclusions without assumptions"
-            },
-            {
-              "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
-            },
-            {
-              "id": "c",
-              "text": "Share only final outcomes after completion"
-            },
-            {
-              "id": "d",
-              "text": "Limit updates to a single informal channel"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
-        },
-        {
-          "id": "strategic-management-501-l03-q7",
-          "text": "A mature remediation loop in advanced Business should prioritize:",
-          "skillId": "strategic-management-501-skill-advanced-7",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blame assignment without system updates"
-            },
-            {
-              "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
-            },
-            {
-              "id": "c",
-              "text": "One-time fixes without retesting"
-            },
-            {
-              "id": "d",
-              "text": "Issue closure based on elapsed time"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
-        },
-        {
-          "id": "strategic-management-501-l03-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Strategic Management Specialization Studio?",
-          "skillId": "strategic-management-501-skill-advanced-8",
-          "options": [
-            {
-              "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
-            },
-            {
-              "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
-            },
-            {
-              "id": "c",
-              "text": "Ignore correlated failure modes"
-            },
-            {
-              "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "explanation": "Governance maturity is defined by the operational link between strategic intent, its measurement, and the process for corrective action."
         }
       ]
     },
     {
       "id": "strategic-management-501-l04",
-      "title": "Strategic Management Advanced Case Analysis",
+      "title": "Advanced Case Analysis",
       "type": "video",
       "duration": 14,
       "learningAids": [
         {
           "id": "strategic-management-501-l04-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Tradeoff Matrix",
+          "content": "A visual matrix comparing strategic options across multiple dimensions like cost, risk, reliability, and stakeholder impact."
+        },
+        {
+          "id": "strategic-management-501-l04-a2",
+          "type": "document",
+          "title": "Case Study: 'Apex Innovations'",
+          "content": "The full text of the case study to be analyzed, detailing a company facing a critical strategic decision under high uncertainty."
         }
       ],
       "chunks": [
@@ -368,33 +280,33 @@ export const StrategicManagement501Module: LearningModule = {
           "id": "strategic-management-501-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "In this lesson, we will frame a case that highlights the competing constraints within business systems diagnostics. We will analyze how these constraints impact business decisions and the importance of tradeoff analysis. By understanding these dynamics, learners will be better equipped to navigate complex business environments and make informed choices.\nContext recap: In this lesson, we will frame a case that highlights the competing constraints within business systems diagnostics. We will analyze how these constraints impact business decisions and the importance of tradeoff analysis. By understanding these dynamics, learners will be better equipped to navigate complex business environments and make informed choices."
+          "content": "This lesson introduces a complex case study that highlights competing constraints within a business. We will analyze how these constraints force difficult decisions and necessitate rigorous tradeoff analysis. By deconstructing the scenario, learners will be better equipped to navigate complex business environments."
         },
         {
           "id": "strategic-management-501-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "In this practice session, learners will compare different options available to them, focusing on various dimensions such as safety, reliability, cost, equity, and governance. This comparative analysis will help them understand the tradeoffs involved in decision-making and the importance of considering multiple factors before arriving at a conclusion.\nContext recap: In this practice session, learners will compare different options available to them, focusing on various dimensions such as safety, reliability, cost, equity, and governance. This comparative analysis will help them understand the tradeoffs involved in decision-making and the importance of considering multiple factors before arriving at a conclusion."
+          "content": "In this guided practice, learners will compare the strategic options presented in the case study. We will frame the decision by evaluating each option across key dimensions such as safety, reliability, cost, equity, and governance, making the tradeoffs explicit and quantifiable."
         },
         {
           "id": "strategic-management-501-l04-c3",
           "kind": "recap",
           "title": "Decision Memo Pattern",
-          "content": "In our recap, we will outline the essential components of a decision memo. Each recommendation should clearly include the underlying assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that all aspects of the decision-making process are transparent and well-documented.\nContext recap: In our recap, we will outline the essential components of a decision memo. Each recommendation should clearly include the underlying assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that all aspects of the decision-making process are transparent and well-documented."
+          "content": "We will recap the essential components of a professional decision memo. Each recommendation must clearly state the underlying assumptions, present supporting evidence, define risk controls, and outline fallback plans. This structured approach ensures transparency and robust decision-making."
         }
       ]
     },
     {
       "id": "strategic-management-501-l05",
-      "title": "Strategic Management Simulation Clinic",
+      "title": "Simulation Clinic",
       "type": "interactive",
       "duration": 18,
       "learningAids": [
         {
           "id": "strategic-management-501-l05-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "document",
+          "title": "Simulation Control Dashboard Guide",
+          "content": "A guide explaining the variables, controls, and key performance indicators within the interactive simulation."
         }
       ],
       "chunks": [
@@ -402,13 +314,13 @@ export const StrategicManagement501Module: LearningModule = {
           "id": "strategic-management-501-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "In this interactive practice, learners will take charge of scenario controls, balancing the need for performance with governance constraints. This exercise will help them understand how to manage competing priorities effectively and make decisions that align with both operational goals and regulatory requirements.\nContext recap: In this interactive practice, learners will take charge of scenario controls, balancing the need for performance with governance constraints. This exercise will help them understand how to manage competing priorities effectively and make decisions that align with both operational goals and regulatory requirements.\nContext recap: In this interactive practice, learners will take charge of scenario controls, balancing the need for performance with governance constraints. This exercise will help them understand how to manage competing priorities effectively and make decisions that align with both operational goals and regulatory requirements. Context recap: In this interactive practice, learners will take charge of scenario controls, balancing the need for performance with governance constraints. This exercise will help them understand how to manage competing priorities effectively and make decisions that align with both operational goals and regulatory requirements."
+          "content": "In this interactive simulation, learners will manage a business unit through a volatile market scenario. They must balance performance targets with governance constraints by adjusting operational controls in real-time, making decisions that align with both strategic goals and regulatory requirements."
         },
         {
           "id": "strategic-management-501-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "In our recap, we will discuss the importance of designing effective responses that can adapt to changing circumstances. These responses should update control gates while maintaining traceability and accountability. This ensures that all actions taken are documented and can be reviewed later, which is crucial for maintaining trust and transparency.\nContext recap: In our recap, we will discuss the importance of designing effective responses that can adapt to changing circumstances. These responses should update control gates while maintaining traceability and accountability. This ensures that all actions taken are documented and can be reviewed later, which is crucial for maintaining trust and transparency."
+          "content": "This recap focuses on designing effective responses that adapt to changing circumstances. We will review how to update control gates during a crisis while maintaining traceability and accountability, ensuring that all actions are documented and auditable."
         }
       ],
       "interactiveActivities": [
@@ -416,7 +328,7 @@ export const StrategicManagement501Module: LearningModule = {
           "id": "strategic-management-501-l05-act1",
           "type": "scenario",
           "title": "Adverse-Condition Decision Run",
-          "description": "Run a high-pressure strategic management scenario and tune controls under uncertainty."
+          "description": "Run a high-pressure strategic management scenario and tune controls under uncertainty to achieve the best possible outcome."
         }
       ]
     },
@@ -428,16 +340,16 @@ export const StrategicManagement501Module: LearningModule = {
       "learningAids": [
         {
           "id": "strategic-management-501-l06-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "document",
+          "title": "Case and Simulation Debrief",
+          "content": "A summary of key takeaways from the case analysis and simulation clinic to prepare for the checkpoint."
         }
       ],
       "questions": [
         {
           "id": "strategic-management-501-l06-q1",
-          "text": "In advanced casework, the first requirement for defensible recommendations is:",
-          "skillId": "strategic-management-501-skill-case1",
+          "text": "In advanced casework, the first requirement for a defensible recommendation is:",
+          "skillId": "strategic-management-501-skill-diagnostics",
           "options": [
             {
               "id": "a",
@@ -445,208 +357,114 @@ export const StrategicManagement501Module: LearningModule = {
             },
             {
               "id": "b",
-              "text": "A clear baseline, explicit constraints, and success criteria"
+              "text": "A clear baseline, explicit constraints, and pre-defined success criteria"
             },
             {
               "id": "c",
-              "text": "High confidence without evidence logs"
+              "text": "High confidence without an evidence log"
             },
             {
               "id": "d",
-              "text": "Single-metric optimization only"
+              "text": "Optimization based on a single metric only"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible recommendations begin with explicit assumptions, constraints, and measurable targets."
+          "explanation": "Defensible recommendations begin with an explicit foundation: a baseline for comparison, defined constraints, and measurable targets."
         },
         {
           "id": "strategic-management-501-l06-q2",
-          "text": "A resilient strategy for business operations and execution design should include:",
-          "skillId": "strategic-management-501-skill-case2",
+          "text": "During the simulation, if a key performance indicator drops below its critical threshold, what is the best immediate action based on adaptive response design?",
+          "skillId": "strategic-management-501-skill-execution-design",
           "options": [
             {
               "id": "a",
-              "text": "Checkpointed execution with fallback and escalation criteria"
+              "text": "Wait for the situation to resolve on its own"
             },
             {
               "id": "b",
-              "text": "One-way execution with no rollback capability"
+              "text": "Activate a pre-defined fallback plan and escalate to the designated owner"
             },
             {
               "id": "c",
-              "text": "No ownership mapping across teams"
+              "text": "Change the threshold to make the indicator appear normal"
             },
             {
               "id": "d",
-              "text": "Hidden assumptions and undocumented decisions"
+              "text": "Continue with the original plan regardless of the new data"
             }
           ],
-          "correctOptionId": "a",
-          "explanation": "Resilience depends on checkpoints, fallback options, and explicit escalation design."
+          "correctOptionId": "b",
+          "explanation": "Resilience depends on having pre-planned fallback options and explicit escalation criteria to handle adverse events systematically."
         },
         {
           "id": "strategic-management-501-l06-q3",
-          "text": "When evaluating business impact and tradeoff analysis, which method is most rigorous?",
-          "skillId": "strategic-management-501-skill-case3",
+          "text": "When drafting the decision memo for the case analysis, which component is essential for ensuring stakeholder buy-in and transparent governance?",
+          "skillId": "strategic-management-501-skill-tradeoff-analysis",
           "options": [
             {
               "id": "a",
-              "text": "Single success story without controls"
+              "text": "Focusing only on the positive aspects of the chosen option"
             },
             {
               "id": "b",
-              "text": "Comparative baselines plus side-effect and uncertainty analysis"
+              "text": "A clear analysis of tradeoffs, including risks and second-order effects for each option"
             },
             {
               "id": "c",
-              "text": "Outcome-only narrative without process evidence"
+              "text": "Using complex jargon to demonstrate expertise"
             },
             {
               "id": "d",
-              "text": "Retrospective scope changes to fit outcomes"
+              "text": "Keeping the decision rationale confidential"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Rigorous evaluation requires comparisons, side-effect analysis, and uncertainty disclosure."
+          "explanation": "Transparently communicating the tradeoffs and potential negative impacts builds trust and allows for more rigorous, accountable decision-making."
         },
         {
           "id": "strategic-management-501-l06-q4",
-          "text": "Advanced governance is strongest when it:",
-          "skillId": "strategic-management-501-skill-case4",
+          "text": "In the adverse-condition simulation, what does 'tuning a control gate' primarily involve?",
+          "skillId": "strategic-management-501-skill-governance",
           "options": [
             {
               "id": "a",
-              "text": "Aligns authority, measurement, and remediation obligations"
+              "text": "Adjusting the thresholds for review or escalation based on new information and risk tolerance"
             },
             {
               "id": "b",
-              "text": "Separates policy from operational controls"
+              "text": "Removing the control gate entirely to increase speed"
             },
             {
               "id": "c",
-              "text": "Avoids external review and transparency"
+              "text": "Assigning blame for the adverse condition"
             },
             {
               "id": "d",
-              "text": "Treats accountability as optional under pressure"
+              "text": "Ignoring the data from the control gate"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Mature governance links authority, measurable controls, and corrective action."
-        },
-        {
-          "id": "strategic-management-501-l06-q5",
-          "text": "What is the best way to compare competing interventions in advanced Business?",
-          "skillId": "strategic-management-501-skill-advanced-5",
-          "options": [
-            {
-              "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
-            },
-            {
-              "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
-            },
-            {
-              "id": "c",
-              "text": "Switch metrics after results arrive"
-            },
-            {
-              "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
-        },
-        {
-          "id": "strategic-management-501-l06-q6",
-          "text": "In high-stakes Strategic Management Specialization Studio execution, which communication protocol is strongest?",
-          "skillId": "strategic-management-501-skill-advanced-6",
-          "options": [
-            {
-              "id": "a",
-              "text": "Broadcast conclusions without assumptions"
-            },
-            {
-              "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
-            },
-            {
-              "id": "c",
-              "text": "Share only final outcomes after completion"
-            },
-            {
-              "id": "d",
-              "text": "Limit updates to a single informal channel"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
-        },
-        {
-          "id": "strategic-management-501-l06-q7",
-          "text": "A mature remediation loop in advanced Business should prioritize:",
-          "skillId": "strategic-management-501-skill-advanced-7",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blame assignment without system updates"
-            },
-            {
-              "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
-            },
-            {
-              "id": "c",
-              "text": "One-time fixes without retesting"
-            },
-            {
-              "id": "d",
-              "text": "Issue closure based on elapsed time"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
-        },
-        {
-          "id": "strategic-management-501-l06-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Strategic Management Specialization Studio?",
-          "skillId": "strategic-management-501-skill-advanced-8",
-          "options": [
-            {
-              "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
-            },
-            {
-              "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
-            },
-            {
-              "id": "c",
-              "text": "Ignore correlated failure modes"
-            },
-            {
-              "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "explanation": "Mature governance involves dynamically adjusting controls—like thresholds for action—in response to real-time data and shifting conditions."
         }
       ]
     },
     {
       "id": "strategic-management-501-l07",
-      "title": "Strategic Management Governance and Public Impact",
+      "title": "Governance and Public Impact",
       "type": "video",
       "duration": 13,
       "learningAids": [
         {
           "id": "strategic-management-501-l07-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Stakeholder Impact Map",
+          "content": "A visual map showing how a strategic decision's benefits and burdens are distributed across different stakeholder groups over time."
+        },
+        {
+          "id": "strategic-management-501-l07-a2",
+          "type": "document",
+          "title": "Responsible Leadership Checklist",
+          "content": "A checklist to evaluate strategic decisions against ethical, policy, and resilience criteria."
         }
       ],
       "chunks": [
@@ -654,50 +472,50 @@ export const StrategicManagement501Module: LearningModule = {
           "id": "strategic-management-501-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "In this lesson, learners will map out how benefits, burdens, and delayed effects are distributed among different stakeholder groups. Understanding this distribution is essential for recognizing the impact of decisions on various parties involved, which helps in making more equitable and informed choices.\nContext recap: In this lesson, learners will map out how benefits, burdens, and delayed effects are distributed among different stakeholder groups. Understanding this distribution is essential for recognizing the impact of decisions on various parties involved, which helps in making more equitable and informed choices.\nContext recap: In this lesson, learners will map out how benefits, burdens, and delayed effects are distributed among different stakeholder groups. Understanding this distribution is essential for recognizing the impact of decisions on various parties involved, which helps in making more equitable and informed choices. Context recap: In this lesson, learners will map out how benefits, burdens, and delayed effects are distributed among different stakeholder groups. Understanding this distribution is essential for recognizing the impact of decisions on various parties involved, which helps in making more equitable and informed choices."
+          "content": "Learners will map how benefits, burdens, and delayed effects of a decision are distributed among different stakeholder groups. Understanding this distribution is essential for making equitable and sustainable choices that account for the full spectrum of public impact."
         },
         {
           "id": "strategic-management-501-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "In this section, we will explore the concept of accountability architecture. This includes ensuring that decision traceability, review rights, and remediation obligations are integrated into our processes. By establishing clear lines of accountability, we can enhance trust and ensure that all stakeholders are aware of their responsibilities.\nContext recap: In this section, we will explore the concept of accountability architecture. This includes ensuring that decision traceability, review rights, and remediation obligations are integrated into our processes. By establishing clear lines of accountability, we can enhance trust and ensure that all stakeholders are aware of their responsibilities."
+          "content": "This section explores how to build robust accountability architecture. This includes designing systems for decision traceability, defining stakeholder review rights, and clarifying remediation obligations. Establishing these clear lines of accountability enhances trust and ensures responsible governance."
         },
         {
           "id": "strategic-management-501-l07-c3",
           "kind": "recap",
-          "title": "Responsible Leadership Checklist",
-          "content": "At the end of our lesson, we have a helpful checklist that connects important outcomes with ethical considerations, ensures we follow policies, and builds resilience in our leadership approach. This checklist serves as a guide to make sure we are making responsible decisions.\nContext recap: At the end of our lesson, we have a helpful checklist that connects important outcomes with ethical considerations, ensures we follow policies, and builds resilience in our leadership approach. This checklist serves as a guide to make sure we are making responsible decisions.\nContext recap: At the end of our lesson, we have a helpful checklist that connects important outcomes with ethical considerations, ensures we follow policies, and builds resilience in our leadership approach. This checklist serves as a guide to make sure we are making responsible decisions. Context recap: At the end of our lesson, we have a helpful checklist that connects important outcomes with ethical considerations, ensures we follow policies, and builds resilience in our leadership approach. This checklist serves as a guide to make sure we are making responsible decisions."
+          "title": "Responsible Leadership",
+          "content": "This recap provides a practical checklist for responsible leadership. It connects strategic outcomes with ethical considerations, policy compliance, and organizational resilience. This checklist serves as a guide for making decisions that are not just effective, but also principled."
         }
       ],
       "flashcards": [
         {
           "id": "strategic-management-501-l07-f1",
-          "front": "Impact distribution",
-          "back": "How outcomes are allocated across populations and timescales."
+          "front": "Impact Distribution",
+          "back": "The analysis of how outcomes (benefits, costs, risks) are allocated across different populations and timescales."
         },
         {
           "id": "strategic-management-501-l07-f2",
-          "front": "Decision traceability",
-          "back": "An auditable record of evidence, ownership, and rationale."
+          "front": "Decision Traceability",
+          "back": "An auditable and unbroken record of the evidence, ownership, and rationale behind a strategic decision."
         },
         {
           "id": "strategic-management-501-l07-f3",
-          "front": "Responsible leadership",
-          "back": "Decision behavior balancing performance, accountability, and ethics."
+          "front": "Responsible Leadership",
+          "back": "A decision-making approach that balances performance objectives with accountability, ethical duties, and long-term resilience."
         }
       ]
     },
     {
       "id": "strategic-management-501-l08",
-      "title": "Strategic Management Capstone Defense Lab",
+      "title": "Capstone Defense Lab",
       "type": "interactive",
       "duration": 16,
       "learningAids": [
         {
           "id": "strategic-management-501-l08-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "document",
+          "title": "Capstone Defense Rubric",
+          "content": "A detailed rubric outlining the evaluation criteria for the final defense, including quality of evidence, clarity of tradeoffs, and robustness of recommendations."
         }
       ],
       "chunks": [
@@ -705,13 +523,13 @@ export const StrategicManagement501Module: LearningModule = {
           "id": "strategic-management-501-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "In this activity, learners will work together to create a comprehensive brief. This brief will include clear claims supported by evidence, outline areas of uncertainty, and suggest pathways for remediation. This exercise helps develop critical thinking and communication skills.\nContext recap: In this activity, learners will work together to create a comprehensive brief. This brief will include clear claims supported by evidence, outline areas of uncertainty, and suggest pathways for remediation. This exercise helps develop critical thinking and communication skills.\nContext recap: In this activity, learners will work together to create a comprehensive brief. This brief will include clear claims supported by evidence, outline areas of uncertainty, and suggest pathways for remediation. This exercise helps develop critical thinking and communication skills. Context recap: In this activity, learners will work together to create a comprehensive brief.\nWhy this matters: Defense Brief Assembly helps learners in Business connect ideas from Strategic Management Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "In this collaborative activity, learners will synthesize their work into a comprehensive defense brief. The brief must present a clear recommendation supported by evidence, explicitly state assumptions and uncertainties, and propose concrete remediation pathways for potential risks."
         },
         {
           "id": "strategic-management-501-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "During this session, learners will practice their responses to various critiques that may come from experts in technical fields, governance issues, and stakeholder perspectives. This rehearsal is crucial for building confidence and preparing for real-world discussions.\nContext recap: During this session, learners will practice their responses to various critiques that may come from experts in technical fields, governance issues, and stakeholder perspectives. This rehearsal is crucial for building confidence and preparing for real-world discussions.\nWhy this matters: Expert Panel Rehearsal helps learners in Business connect ideas from Strategic Management Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "During this session, learners will rehearse their defense by responding to critiques from simulated expert roles, including technical, governance, and stakeholder perspectives. This rehearsal is crucial for building confidence and preparing for a rigorous, real-world defense."
         }
       ],
       "interactiveActivities": [
@@ -719,7 +537,7 @@ export const StrategicManagement501Module: LearningModule = {
           "id": "strategic-management-501-l08-act1",
           "type": "debate_simulator",
           "title": "Expert Defense Panel",
-          "description": "Defend specialization recommendations under adversarial cross-examination."
+          "description": "Defend your capstone recommendation under adversarial cross-examination from a panel of virtual experts."
         }
       ]
     }

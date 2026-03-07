@@ -14,6 +14,7 @@ interface LandingHeroInteractiveProps {
     titleHighlight: string;
     body: string;
     cta: string;
+    ctaHref?: string;
   };
 }
 
@@ -93,7 +94,7 @@ export default function LandingHeroInteractive({ strings }: LandingHeroInteracti
                 </p>
                 
                 <div className="mt-10 flex flex-wrap items-center gap-4">
-                  <Link href="/explore" className={currentStyles.button}>
+                  <Link href={strings.ctaHref ?? "/explore"} className={currentStyles.button}>
                     {strings.cta}
                   </Link>
                   <VoicePicker />

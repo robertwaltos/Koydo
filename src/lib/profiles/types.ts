@@ -13,4 +13,8 @@ export interface StudentProfile {
   path_allowlist?: string[] | null;
   featured_module_ids?: string[] | null;
   module_assignment_mode?: "guided" | "random";
+  last_checkpoint_url?: string | null;
+  last_module_title?: string | null;
+  last_lesson_title?: string | null;
+  last_checkpoint_at?: string | null;
 }

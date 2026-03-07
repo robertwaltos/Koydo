@@ -1,9 +1,9 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const QuantumComputing601Module: LearningModule = {
+export const quantum_computing_601_Module: LearningModule = {
   "id": "quantum-computing-601",
   "title": "Quantum Computing Research and Leadership",
-  "description": "Post-401 specialization in Quantum Computing, focused on quantum algorithm design and complexity reasoning, error mitigation and fault-tolerant architecture, hybrid quantum-classical optimization workflows, and deployment governance and strategic risk management through advanced casework, simulation, and defense-based checkpoints.",
+  "description": "A post-401 specialization in Quantum Computing. This module covers advanced quantum algorithm design, fault-tolerant architecture, hybrid quantum-classical workflows, and strategic governance. Learning is driven by advanced casework, high-fidelity simulations, and defense-based capstone projects.",
   "subject": "Computer Science",
   "tags": [
     "core",
@@ -14,7 +14,7 @@ export const QuantumComputing601Module: LearningModule = {
   ],
   "minAge": 17,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en",
@@ -31,15 +31,15 @@ export const QuantumComputing601Module: LearningModule = {
   "lessons": [
     {
       "id": "quantum-computing-601-l01",
-      "title": "Quantum Computing Advanced Foundations",
+      "title": "Advanced Quantum Foundations",
       "type": "video",
       "duration": 14,
       "learningAids": [
         {
           "id": "quantum-computing-601-l01-a1",
-          "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "diagram",
+          "title": "Key Concepts Map",
+          "content": "A visual diagram connecting quantum algorithm design, error mitigation, and fault-tolerant architectures."
         }
       ],
       "chunks": [
@@ -47,50 +47,50 @@ export const QuantumComputing601Module: LearningModule = {
           "id": "quantum-computing-601-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "In this lesson, we will dive into the exciting world of Quantum Computing and examine its advanced boundaries. We will learn how to design quantum algorithms, which are special sets of instructions that help quantum computers solve problems. Understanding the complexities involved in these algorithms is essential, as it helps us grasp how quantum computers operate differently from traditional ones. We will also explore techniques for error mitigation, which are strategies to reduce mistakes that can occur during computations. Furthermore, we will discuss the significance of creating fault-tolerant architectures. These architectures are designed to handle errors effectively, ensuring that quantum computers can perform reliably even when faced with challenges. This foundational knowledge is vital for anyone aspiring to make a mark in the fascinating field of quantum computing.\nContext recap: In this lesson, we will dive into the exciting world of Quantum Computing and examine its advanced boundaries. We will learn how to design quantum algorithms, which are special sets of instructions that help quantum computers solve problems. Understanding the complexities involved in these algorithms is essential, as it helps us grasp how quantum computers operate differently from traditional ones. We will also explore techniques for error mitigation, which are strategies to reduce mistakes that can occur during computations.\nWhy this matters: Scope and Boundary Design helps learners in Computer Science connect ideas from Quantum Computing Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "We will dive into the advanced boundaries of Quantum Computing, focusing on the design of quantum algorithms—specialized instructions for solving complex problems. Understanding algorithm complexity is essential to grasp how quantum computers operate differently from classical ones. We will also explore error mitigation techniques and the design of fault-tolerant architectures, which are crucial for ensuring quantum computers can perform reliably. This foundational knowledge is vital for making strategic decisions and highlighting the tradeoffs, assumptions, and verification methods required in the field."
         },
         {
           "id": "quantum-computing-601-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "In this section, learners will engage in mapping out causal pathways, which help us understand how different factors influence one another. We will also explore uncertainty ranges, which allow us to identify the limits of our knowledge about a system. Additionally, we will examine system dependencies to see how various components interact. This foundational understanding is essential for planning effective interventions in quantum computing projects.\nContext recap: In this section, learners will engage in mapping out causal pathways, which help us understand how different factors influence one another. We will also explore uncertainty ranges, which allow us to identify the limits of our knowledge about a system. Additionally, we will examine system dependencies to see how various components interact. This foundational understanding is essential for planning effective interventions in quantum computing projects.\nContext recap: In this section, learners will engage in mapping out causal pathways, which help us understand how different factors influence one another. We will also explore uncertainty ranges, which allow us to identify the limits of our knowledge about a system. Additionally, we will examine system dependencies to see how various components interact. This foundational understanding is essential for planning effective interventions in quantum computing projects.\nWhy this matters: Causal and Uncertainty Modeling helps learners in Computer Science connect ideas from Quantum Computing Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "In this section, we will map causal pathways to understand how different factors influence one another in a quantum system. By exploring uncertainty ranges and system dependencies, we can identify the limits of our knowledge and see how various components interact. This foundational understanding is essential for planning effective interventions and making robust decisions during practice and assessment, forcing us to make assumptions and tradeoffs explicit."
         },
         {
           "id": "quantum-computing-601-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "In our recap, we will emphasize that all claims made in our work must be supported by measurable indicators. This means we need to establish confidence bounds that help us understand the reliability of our results. Furthermore, we will set up review checkpoints to ensure that our findings are continually assessed and validated. This approach helps maintain the integrity and credibility of our research in quantum computing.\nContext recap: In our recap, we will emphasize that all claims made in our work must be supported by measurable indicators. This means we need to establish confidence bounds that help us understand the reliability of our results. Furthermore, we will set up review checkpoints to ensure that our findings are continually assessed and validated. This approach helps maintain the integrity and credibility of our research in quantum computing.\nContext recap: In our recap, we will emphasize that all claims made in our work must be supported by measurable indicators. This means we need to establish confidence bounds that help us understand the reliability of our results. Furthermore, we will set up review checkpoints to ensure that our findings are continually assessed and validated. This approach helps maintain the integrity and credibility of our research in quantum computing.\nWhy this matters: Evidence Thresholds helps learners in Computer Science connect ideas from Quantum Computing Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "This recap emphasizes that all claims must be supported by measurable indicators and confidence bounds to ensure the reliability of our results. We will establish review checkpoints to continually assess and validate findings, maintaining the integrity of our research. A structured approach involves: (1) defining the goal, (2) identifying supporting evidence, (3) explaining how evidence shapes the conclusion, and (4) verifying the final answer against original goals and constraints."
         }
       ],
       "flashcards": [
         {
           "id": "quantum-computing-601-l01-f1",
-          "front": "Quantum Algorithm Design And Complexity Reasoning",
-          "back": "A specialization axis requiring explicit assumptions and measurable constraints."
+          "front": "Quantum Algorithm Design",
+          "back": "The practice of creating quantum instruction sets, requiring explicit assumptions about constraints and complexity."
         },
         {
           "id": "quantum-computing-601-l01-f2",
-          "front": "Error Mitigation And Fault-Tolerant Architecture",
-          "back": "Execution architecture that determines reliability under stress."
+          "front": "Fault-Tolerant Architecture",
+          "back": "A system design that ensures computational reliability and manages errors, especially under stress conditions."
         },
         {
           "id": "quantum-computing-601-l01-f3",
-          "front": "Hybrid Quantum-Classical Optimization Workflows",
-          "back": "Evaluation discipline for identifying true gains and hidden costs."
+          "front": "Hybrid Optimization Workflows",
+          "back": "A structured evaluation discipline for identifying the true performance gains and hidden costs of combining quantum and classical systems."
         }
       ]
     },
     {
       "id": "quantum-computing-601-l02",
-      "title": "Quantum Computing Specialist Methods Lab",
+      "title": "Specialist Methods Lab",
       "type": "interactive",
       "duration": 17,
       "learningAids": [
         {
           "id": "quantum-computing-601-l02-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "template",
+          "title": "Workflow Design Canvas",
+          "content": "A structured template for designing and stress-testing a quantum workflow, including sections for controls and escalation paths."
         }
       ],
       "chunks": [
@@ -98,13 +98,13 @@ export const QuantumComputing601Module: LearningModule = {
           "id": "quantum-computing-601-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "In this interactive lab, learners will have the opportunity to design specialized workflows tailored for quantum computing tasks. They will also conduct stress tests on these workflows to see how they perform under challenging or adverse scenarios. This hands-on experience is vital for understanding how to create robust systems that can handle unexpected challenges in real-world applications.\nContext recap: In this interactive lab, learners will have the opportunity to design specialized workflows tailored for quantum computing tasks. They will also conduct stress tests on these workflows to see how they perform under challenging or adverse scenarios. This hands-on experience is vital for understanding how to create robust systems that can handle unexpected challenges in real-world applications."
+          "content": "In this interactive lab, you will design specialized workflows for quantum computing tasks. You will then conduct stress tests on these workflows to evaluate their performance under challenging or adverse scenarios. This hands-on experience is vital for understanding how to create robust and resilient systems for real-world applications."
         },
         {
           "id": "quantum-computing-601-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "In our recap, we will discuss how workflows should incorporate essential elements such as checkpoints, rollback criteria, and threshold-based escalation. Checkpoints allow us to monitor progress, rollback criteria help us revert to previous states if needed, and threshold-based escalation ensures that we can respond appropriately when certain limits are reached. These components are crucial for maintaining control and ensuring the reliability of our quantum computing processes.\nContext recap: In our recap, we will discuss how workflows should incorporate essential elements such as checkpoints, rollback criteria, and threshold-based escalation. Checkpoints allow us to monitor progress, rollback criteria help us revert to previous states if needed, and threshold-based escalation ensures that we can respond appropriately when certain limits are reached. These components are crucial for maintaining control and ensuring the reliability of our quantum computing processes."
+          "content": "This recap focuses on integrating essential governance elements into workflows. These include checkpoints to monitor progress, rollback criteria to revert to previous states if needed, and threshold-based escalation to ensure appropriate responses when limits are breached. These components are crucial for maintaining control and ensuring the reliability of quantum processes."
         }
       ],
       "interactiveActivities": [
@@ -142,24 +142,24 @@ export const QuantumComputing601Module: LearningModule = {
       "learningAids": [
         {
           "id": "quantum-computing-601-l03-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "cheatsheet",
+          "title": "Key Concepts Review",
+          "content": "A one-page summary of core concepts from lessons 1 and 2, including definitions and key formulas."
         }
       ],
       "questions": [
         {
           "id": "quantum-computing-601-l03-q1",
-          "text": "Which practice most improves quantum algorithm design and complexity reasoning decision quality?",
+          "text": "Which practice most improves the decision quality of quantum algorithm design?",
           "skillId": "quantum-computing-601-skill-core",
           "options": [
             {
               "id": "a",
-              "text": "Proceed without baseline or assumptions"
+              "text": "Proceed without a baseline or assumptions"
             },
             {
               "id": "b",
-              "text": "Define assumptions, constraints, and measurable indicators"
+              "text": "Define assumptions, constraints, and measurable indicators upfront"
             },
             {
               "id": "c",
@@ -171,11 +171,11 @@ export const QuantumComputing601Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Advanced decisions improve when assumptions, constraints, and metrics are explicit."
+          "explanation": "Advanced decisions improve when assumptions, constraints, and metrics are made explicit before starting."
         },
         {
           "id": "quantum-computing-601-l03-q2",
-          "text": "At level 601, strong execution for error mitigation and fault-tolerant architecture requires:",
+          "text": "At a 601-level, strong execution for fault-tolerant architecture requires:",
           "skillId": "quantum-computing-601-skill-execution",
           "options": [
             {
@@ -196,16 +196,16 @@ export const QuantumComputing601Module: LearningModule = {
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Reliable advanced execution needs ownership clarity and threshold-driven governance."
+          "explanation": "Reliable advanced execution needs ownership clarity, regular checkpoints, and threshold-driven governance."
         },
         {
           "id": "quantum-computing-601-l03-q3",
-          "text": "A defensible approach to hybrid quantum-classical optimization workflows includes:",
+          "text": "A defensible approach to evaluating hybrid quantum-classical optimization workflows includes:",
           "skillId": "quantum-computing-601-skill-eval",
           "options": [
             {
               "id": "a",
-              "text": "Anecdotes without comparison"
+              "text": "Anecdotes without a comparison group"
             },
             {
               "id": "b",
@@ -213,19 +213,19 @@ export const QuantumComputing601Module: LearningModule = {
             },
             {
               "id": "c",
-              "text": "Changing success criteria after outcomes"
+              "text": "Changing success criteria after seeing the outcomes"
             },
             {
               "id": "d",
-              "text": "Excluding difficult scenarios from analysis"
+              "text": "Excluding difficult scenarios from the analysis"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible analysis combines comparative baselines, side-effect checks, and uncertainty disclosure."
+          "explanation": "Defensible analysis combines comparative baselines, checks for unintended side-effects, and disclosure of uncertainty."
         },
         {
           "id": "quantum-computing-601-l03-q4",
-          "text": "Mature governance systems connect:",
+          "text": "Mature governance systems effectively connect:",
           "skillId": "quantum-computing-601-skill-governance",
           "options": [
             {
@@ -238,7 +238,7 @@ export const QuantumComputing601Module: LearningModule = {
             },
             {
               "id": "c",
-              "text": "Targets without ownership or escalation design"
+              "text": "Targets without ownership or an escalation design"
             },
             {
               "id": "d",
@@ -246,7 +246,7 @@ export const QuantumComputing601Module: LearningModule = {
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Governance maturity is the operational link between intent, measurement, and corrective action."
+          "explanation": "Governance maturity is the operational link between strategic intent, measurable controls, and corrective action."
         },
         {
           "id": "quantum-computing-601-l03-q5",
@@ -271,11 +271,11 @@ export const QuantumComputing601Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
+          "explanation": "Defensible comparisons require shared metrics, accounting for side-effects, and disclosing uncertainty."
         },
         {
           "id": "quantum-computing-601-l03-q6",
-          "text": "In high-stakes Quantum Computing Research and Leadership execution, which communication protocol is strongest?",
+          "text": "In high-stakes Quantum Computing execution, which communication protocol is strongest?",
           "skillId": "quantum-computing-601-skill-advanced-6",
           "options": [
             {
@@ -296,7 +296,7 @@ export const QuantumComputing601Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
+          "explanation": "High-stakes communication must be transparent about assumptions, confidence levels, and review checkpoints."
         },
         {
           "id": "quantum-computing-601-l03-q7",
@@ -321,11 +321,11 @@ export const QuantumComputing601Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
+          "explanation": "Mature remediation connects identifying root causes to redesigning controls and verifying the fix works."
         },
         {
           "id": "quantum-computing-601-l03-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Quantum Computing Research and Leadership?",
+          "text": "Which portfolio decision rule best balances performance and resilience in Quantum Computing?",
           "skillId": "quantum-computing-601-skill-advanced-8",
           "options": [
             {
@@ -352,15 +352,15 @@ export const QuantumComputing601Module: LearningModule = {
     },
     {
       "id": "quantum-computing-601-l04",
-      "title": "Quantum Computing Advanced Case Analysis",
+      "title": "Advanced Case Analysis",
       "type": "video",
       "duration": 14,
       "learningAids": [
         {
           "id": "quantum-computing-601-l04-a1",
-          "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "document",
+          "title": "Case Study Dossier",
+          "content": "A detailed document outlining the case scenario, stakeholder profiles, and key data for analysis."
         }
       ],
       "chunks": [
@@ -368,33 +368,33 @@ export const QuantumComputing601Module: LearningModule = {
           "id": "quantum-computing-601-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "In this lesson, we will frame a case that highlights the competing constraints faced in quantum algorithm design. We will delve into complexity reasoning and explore hybrid quantum-classical optimization workflows. Understanding these competing factors is essential for making informed decisions in the development of quantum algorithms, as it allows us to balance various requirements effectively.\nContext recap: In this lesson, we will frame a case that highlights the competing constraints faced in quantum algorithm design. We will delve into complexity reasoning and explore hybrid quantum-classical optimization workflows. Understanding these competing factors is essential for making informed decisions in the development of quantum algorithms, as it allows us to balance various requirements effectively."
+          "content": "In this lesson, we will frame a case study that highlights the competing constraints in quantum algorithm design and hybrid optimization workflows. We will delve into complexity reasoning to understand how to balance various requirements effectively. Mastering this is essential for making informed, strategic decisions in the development of quantum technologies."
         },
         {
           "id": "quantum-computing-601-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "In this practice session, learners will compare different options based on several important dimensions, including safety, reliability, cost, equity, and governance. This comparative analysis will help them understand the trade-offs involved in decision-making processes. By evaluating these factors, learners will be better equipped to make informed choices in their quantum computing projects.\nContext recap: In this practice session, learners will compare different options based on several important dimensions, including safety, reliability, cost, equity, and governance. This comparative analysis will help them understand the trade-offs involved in decision-making processes. By evaluating these factors, learners will be better equipped to make informed choices in their quantum computing projects."
+          "content": "In this practice session, you will compare different strategic options based on multiple dimensions, including safety, reliability, cost, equity, and governance. This comparative analysis will help you understand and articulate the complex trade-offs involved in high-stakes decision-making, equipping you to make more informed choices in your own projects."
         },
         {
           "id": "quantum-computing-601-l04-c3",
           "kind": "recap",
           "title": "Decision Memo Pattern",
-          "content": "In our recap, we will outline the key components of each recommendation made during our analysis. This includes detailing the assumptions that underlie our decisions, presenting the evidence that supports our claims, identifying risk controls that have been put in place, and outlining fallback plans in case things do not go as expected. This structured approach ensures that our recommendations are well-founded and actionable.\nContext recap: In our recap, we will outline the key components of each recommendation made during our analysis. This includes detailing the assumptions that underlie our decisions, presenting the evidence that supports our claims, identifying risk controls that have been put in place, and outlining fallback plans in case things do not go as expected. This structured approach ensures that our recommendations are well-founded and actionable."
+          "content": "This recap outlines a structured pattern for presenting recommendations. Each recommendation must detail the underlying assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that your proposals are well-founded, transparent, and actionable for leadership and stakeholders."
         }
       ]
     },
     {
       "id": "quantum-computing-601-l05",
-      "title": "Quantum Computing Simulation Clinic",
+      "title": "Simulation Clinic",
       "type": "interactive",
       "duration": 18,
       "learningAids": [
         {
           "id": "quantum-computing-601-l05-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "guide",
+          "title": "Simulation Interface Guide",
+          "content": "An interactive tutorial on how to use the simulation's control panel, read dashboards, and execute decisions."
         }
       ],
       "chunks": [
@@ -402,13 +402,13 @@ export const QuantumComputing601Module: LearningModule = {
           "id": "quantum-computing-601-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "In this interactive clinic, learners will take on the role of operators managing scenario controls. They will need to balance performance with governance constraints, ensuring that their actions align with established guidelines and regulations. This experience will provide valuable insights into the complexities of managing quantum computing scenarios in real-time.\nContext recap: In this interactive clinic, learners will take on the role of operators managing scenario controls. They will need to balance performance with governance constraints, ensuring that their actions align with established guidelines and regulations. This experience will provide valuable insights into the complexities of managing quantum computing scenarios in real-time."
+          "content": "In this interactive clinic, you will act as an operator managing a live quantum computing scenario. Your task is to balance performance objectives with governance constraints, ensuring your actions align with established guidelines. This experience provides valuable insights into the complexities of managing high-stakes technology in real-time."
         },
         {
           "id": "quantum-computing-601-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "In our recap, we will discuss the importance of effective responses that can adaptively update control gates. It is crucial that these updates maintain traceability and accountability, ensuring that all changes are documented and can be reviewed later. This practice is essential for maintaining transparency and trust in quantum computing operations.\nContext recap: In our recap, we will discuss the importance of effective responses that can adaptively update control gates. It is crucial that these updates maintain traceability and accountability, ensuring that all changes are documented and can be reviewed later. This practice is essential for maintaining transparency and trust in quantum computing operations."
+          "content": "This recap discusses the importance of designing effective responses that can adaptively update system controls during a live scenario. It is crucial that these updates maintain full traceability and accountability, ensuring all changes are documented and auditable. This practice is essential for maintaining transparency and trust in complex operations."
         }
       ],
       "interactiveActivities": [
@@ -416,7 +416,7 @@ export const QuantumComputing601Module: LearningModule = {
           "id": "quantum-computing-601-l05-act1",
           "type": "scenario",
           "title": "Adverse-Condition Decision Run",
-          "description": "Run a high-pressure quantum computing scenario and tune controls under uncertainty."
+          "description": "Run a high-pressure quantum computing deployment scenario and tune system controls under uncertainty and unexpected events."
         }
       ]
     },
@@ -428,225 +428,225 @@ export const QuantumComputing601Module: LearningModule = {
       "learningAids": [
         {
           "id": "quantum-computing-601-l06-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "document",
+          "title": "Case and Simulation Debrief",
+          "content": "A summary of key decision points from the case study and simulation, highlighting best practices and common pitfalls."
         }
       ],
       "questions": [
         {
           "id": "quantum-computing-601-l06-q1",
-          "text": "In advanced casework, the first requirement for defensible recommendations is:",
+          "text": "When framing an advanced quantum case study, what is the most critical first step?",
           "skillId": "quantum-computing-601-skill-case1",
           "options": [
             {
               "id": "a",
-              "text": "A preferred option without explicit assumptions"
+              "text": "Immediately selecting a solution"
             },
             {
               "id": "b",
-              "text": "A clear baseline, explicit constraints, and success criteria"
+              "text": "Defining the scope, stakeholders, and competing constraints"
             },
             {
               "id": "c",
-              "text": "High confidence without evidence logs"
+              "text": "Focusing only on the technical aspects"
             },
             {
               "id": "d",
-              "text": "Single-metric optimization only"
+              "text": "Gathering as much data as possible without a clear goal"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible recommendations begin with explicit assumptions, constraints, and measurable targets."
+          "explanation": "A strong case analysis begins with clearly defining the problem's boundaries, who is affected, and what goals are in conflict."
         },
         {
           "id": "quantum-computing-601-l06-q2",
-          "text": "A resilient strategy for error mitigation and fault-tolerant architecture should include:",
+          "text": "In the 'Tradeoff Framing' practice, why is it important to compare options across multiple dimensions like safety, cost, and reliability?",
           "skillId": "quantum-computing-601-skill-case2",
           "options": [
             {
               "id": "a",
-              "text": "Checkpointed execution with fallback and escalation criteria"
+              "text": "To prove one option is universally superior"
             },
             {
               "id": "b",
-              "text": "One-way execution with no rollback capability"
+              "text": "To make the decision-making process more complex"
             },
             {
               "id": "c",
-              "text": "No ownership mapping across teams"
+              "text": "To make tradeoffs explicit and justify a balanced decision"
             },
             {
               "id": "d",
-              "text": "Hidden assumptions and undocumented decisions"
+              "text": "To satisfy a bureaucratic requirement"
             }
           ],
-          "correctOptionId": "a",
-          "explanation": "Resilience depends on checkpoints, fallback options, and explicit escalation design."
+          "correctOptionId": "c",
+          "explanation": "Multi-dimensional analysis forces a clear and defensible discussion about which tradeoffs are acceptable to achieve a strategic goal."
         },
         {
           "id": "quantum-computing-601-l06-q3",
-          "text": "When evaluating hybrid quantum-classical optimization workflows, which method is most rigorous?",
+          "text": "What is the primary purpose of the 'Decision Memo Pattern' taught in the case analysis lesson?",
           "skillId": "quantum-computing-601-skill-case3",
           "options": [
             {
               "id": "a",
-              "text": "Single success story without controls"
+              "text": "To hide the assumptions behind a recommendation"
             },
             {
               "id": "b",
-              "text": "Comparative baselines plus side-effect and uncertainty analysis"
+              "text": "To provide a long narrative history of the project"
             },
             {
               "id": "c",
-              "text": "Outcome-only narrative without process evidence"
+              "text": "To structure a recommendation with explicit assumptions, evidence, risks, and fallbacks"
             },
             {
               "id": "d",
-              "text": "Retrospective scope changes to fit outcomes"
+              "text": "To create a formal record for legal purposes only"
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "Rigorous evaluation requires comparisons, side-effect analysis, and uncertainty disclosure."
+          "correctOptionId": "c",
+          "explanation": "The pattern is a tool for clear, transparent, and defensible communication of a strategic recommendation."
         },
         {
           "id": "quantum-computing-601-l06-q4",
-          "text": "Advanced governance is strongest when it:",
+          "text": "In the 'Live Scenario Controls' simulation, what is the core tension the operator must manage?",
           "skillId": "quantum-computing-601-skill-case4",
           "options": [
             {
               "id": "a",
-              "text": "Aligns authority, measurement, and remediation obligations"
+              "text": "Maximizing performance at all costs"
             },
             {
               "id": "b",
-              "text": "Separates policy from operational controls"
+              "text": "Balancing the achievement of performance targets with adherence to governance constraints"
             },
             {
               "id": "c",
-              "text": "Avoids external review and transparency"
+              "text": "Strictly following the pre-approved plan, regardless of changing conditions"
             },
             {
               "id": "d",
-              "text": "Treats accountability as optional under pressure"
+              "text": "Communicating with as few stakeholders as possible to maintain speed"
             }
           ],
-          "correctOptionId": "a",
-          "explanation": "Mature governance links authority, measurable controls, and corrective action."
+          "correctOptionId": "b",
+          "explanation": "The simulation tests the ability to make decisions that are both effective (performance) and responsible (governance)."
         },
         {
           "id": "quantum-computing-601-l06-q5",
-          "text": "What is the best way to compare competing interventions in advanced Computer Science?",
+          "text": "What does 'Adaptive Response Design' require when updating controls during a simulation?",
           "skillId": "quantum-computing-601-skill-advanced-5",
           "options": [
             {
               "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
+              "text": "Making changes quickly without documentation"
             },
             {
               "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
+              "text": "Ensuring all changes are traceable and accountable"
             },
             {
               "id": "c",
-              "text": "Switch metrics after results arrive"
+              "text": "Getting unanimous approval before any adjustment"
             },
             {
               "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
+              "text": "Resetting the simulation to the beginning after each change"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
+          "explanation": "Effective adaptive response demands that even rapid changes are made within a framework of accountability and can be audited later."
         },
         {
           "id": "quantum-computing-601-l06-q6",
-          "text": "In high-stakes Quantum Computing Research and Leadership execution, which communication protocol is strongest?",
+          "text": "During a simulation of a quantum system failure, what is the most critical immediate action in an adaptive response?",
           "skillId": "quantum-computing-601-skill-advanced-6",
           "options": [
             {
               "id": "a",
-              "text": "Broadcast conclusions without assumptions"
+              "text": "Conducting a full root-cause analysis"
             },
             {
               "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
+              "text": "Isolating the failure to limit its impact and activating fallback plans"
             },
             {
               "id": "c",
-              "text": "Share only final outcomes after completion"
+              "text": "Writing a report for senior leadership"
             },
             {
               "id": "d",
-              "text": "Limit updates to a single informal channel"
+              "text": "Waiting for the system to self-correct"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
+          "explanation": "The first priority in a crisis is containment and stabilization, which involves isolating the problem and using pre-planned contingencies."
         },
         {
           "id": "quantum-computing-601-l06-q7",
-          "text": "A mature remediation loop in advanced Computer Science should prioritize:",
+          "text": "When presenting a case analysis, what is the most effective way to communicate complex tradeoffs to a leadership audience?",
           "skillId": "quantum-computing-601-skill-advanced-7",
           "options": [
             {
               "id": "a",
-              "text": "Blame assignment without system updates"
+              "text": "A detailed spreadsheet with hundreds of rows of raw data"
             },
             {
               "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
+              "text": "A visual scorecard comparing options against key criteria like cost, performance, and risk"
             },
             {
               "id": "c",
-              "text": "One-time fixes without retesting"
+              "text": "A long, text-only document explaining every technical detail"
             },
             {
               "id": "d",
-              "text": "Issue closure based on elapsed time"
+              "text": "Focusing only on the benefits of the recommended option"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
+          "explanation": "Visual scorecards and dashboards are highly effective tools for communicating complex, multi-dimensional comparisons to decision-makers."
         },
         {
           "id": "quantum-computing-601-l06-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Quantum Computing Research and Leadership?",
+          "text": "What is the primary learning objective of the 'Adverse-Condition Decision Run' simulation?",
           "skillId": "quantum-computing-601-skill-advanced-8",
           "options": [
             {
               "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
+              "text": "To memorize technical specifications of a quantum computer"
             },
             {
               "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
+              "text": "To test a leader's ability to make sound judgments under pressure and with incomplete information"
             },
             {
               "id": "c",
-              "text": "Ignore correlated failure modes"
+              "text": "To practice public speaking skills"
             },
             {
               "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
+              "text": "To prove that a single, static plan is always best"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "explanation": "The simulation is designed to build and test decision-making resilience in realistic, high-pressure environments characterized by uncertainty."
         }
       ]
     },
     {
       "id": "quantum-computing-601-l07",
-      "title": "Quantum Computing Governance and Public Impact",
+      "title": "Governance and Public Impact",
       "type": "video",
       "duration": 13,
       "learningAids": [
         {
           "id": "quantum-computing-601-l07-a1",
-          "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "template",
+          "title": "Stakeholder Impact Map",
+          "content": "A worksheet to map the distribution of benefits, burdens, and delayed effects across different stakeholder groups."
         }
       ],
       "chunks": [
@@ -654,50 +654,50 @@ export const QuantumComputing601Module: LearningModule = {
           "id": "quantum-computing-601-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "In this lesson, learners will map out the distribution of impacts among various stakeholders. This includes identifying the benefits and burdens that different groups may experience, as well as any delayed effects that may arise from decisions made in quantum computing projects. Understanding these dynamics is essential for ensuring that all voices are considered in the decision-making process.\nContext recap: In this lesson, learners will map out the distribution of impacts among various stakeholders. This includes identifying the benefits and burdens that different groups may experience, as well as any delayed effects that may arise from decisions made in quantum computing projects. Understanding these dynamics is essential for ensuring that all voices are considered in the decision-making process."
+          "content": "In this lesson, you will learn to map the distribution of impacts from a quantum computing project across various stakeholders. This includes identifying the benefits, burdens, and delayed effects that different groups may experience. Understanding these dynamics is essential for equitable and responsible decision-making."
         },
         {
           "id": "quantum-computing-601-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "In this section, we will explore the architecture of accountability in decision-making processes. This includes ensuring that there is traceability for decisions made, rights for reviews, and obligations for remediation when necessary. Integrating these elements is vital for fostering a culture of responsibility and transparency in the field of quantum computing.\nContext recap: In this section, we will explore the architecture of accountability in decision-making processes. This includes ensuring that there is traceability for decisions made, rights for reviews, and obligations for remediation when necessary. Integrating these elements is vital for fostering a culture of responsibility and transparency in the field of quantum computing."
+          "content": "This section explores the architecture of accountability in decision-making. We will cover how to ensure traceability for key decisions, establish rights for independent review, and define clear obligations for remediation when things go wrong. Integrating these elements is vital for fostering a culture of responsibility and transparency."
         },
         {
           "id": "quantum-computing-601-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "At the end of our lesson, we will provide a comprehensive checklist that connects important outcomes with ethical considerations, ensures compliance with relevant policies, and promotes resilience in our decision-making processes. This checklist will help guide responsible leadership in the field of quantum computing.\nContext recap: At the end of our lesson, we will provide a comprehensive checklist that connects important outcomes with ethical considerations, ensures compliance with relevant policies, and promotes resilience in our decision-making processes. This checklist will help guide responsible leadership in the field of quantum computing."
+          "content": "At the end of the lesson, we will provide a comprehensive checklist for responsible leadership. This tool connects strategic outcomes with ethical considerations, ensures compliance with relevant policies, and promotes resilience in decision-making. It serves as a practical guide for leading quantum computing initiatives responsibly."
         }
       ],
       "flashcards": [
         {
           "id": "quantum-computing-601-l07-f1",
-          "front": "Impact distribution",
-          "back": "How outcomes are allocated across populations and timescales."
+          "front": "Impact Distribution",
+          "back": "The analysis of how outcomes (both positive and negative) are allocated across different populations and over various timescales."
         },
         {
           "id": "quantum-computing-601-l07-f2",
-          "front": "Decision traceability",
-          "back": "An auditable record of evidence, ownership, and rationale."
+          "front": "Decision Traceability",
+          "back": "An auditable and transparent record linking a decision to its evidence, ownership, and underlying rationale."
         },
         {
           "id": "quantum-computing-601-l07-f3",
-          "front": "Responsible leadership",
-          "back": "Decision behavior balancing performance, accountability, and ethics."
+          "front": "Responsible Leadership",
+          "back": "A decision-making approach that systematically balances performance goals with accountability and ethical considerations."
         }
       ]
     },
     {
       "id": "quantum-computing-601-l08",
-      "title": "Quantum Computing Capstone Defense Lab",
+      "title": "Capstone Defense Lab",
       "type": "interactive",
       "duration": 16,
       "learningAids": [
         {
           "id": "quantum-computing-601-l08-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "template",
+          "title": "Defense Briefing Template",
+          "content": "A structured document for assembling claims, evidence, uncertainty bounds, and remediation pathways for the capstone defense."
         }
       ],
       "chunks": [
@@ -705,13 +705,13 @@ export const QuantumComputing601Module: LearningModule = {
           "id": "quantum-computing-601-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "In this interactive activity, learners will work together to create a detailed brief. This brief will include well-supported claims, relevant evidence, an understanding of uncertainty bounds, and proposed pathways for remediation. This exercise will help develop critical thinking and communication skills essential for presenting complex ideas.\nContext recap: In this interactive activity, learners will work together to create a detailed brief. This brief will include well-supported claims, relevant evidence, an understanding of uncertainty bounds, and proposed pathways for remediation. This exercise will help develop critical thinking and communication skills essential for presenting complex ideas."
+          "content": "In this interactive activity, you will collaborate to create a detailed defense brief for your capstone recommendation. This brief must include well-supported claims, relevant evidence, a clear statement of uncertainty bounds, and proposed pathways for remediation. This exercise develops the critical thinking and communication skills essential for presenting complex ideas."
         },
         {
           "id": "quantum-computing-601-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "During this rehearsal session, learners will practice their responses to a variety of critiques. These critiques will cover technical aspects, governance issues, and concerns from stakeholders. This preparation is crucial for building confidence and ensuring that learners can effectively communicate their ideas and defend their positions.\nContext recap: During this rehearsal session, learners will practice their responses to a variety of critiques. These critiques will cover technical aspects, governance issues, and concerns from stakeholders. This preparation is crucial for building confidence and ensuring that learners can effectively communicate their ideas and defend their positions."
+          "content": "During this rehearsal, you will practice responding to a variety of critiques from a simulated expert panel. These critiques will cover technical feasibility, governance risks, and stakeholder concerns. This preparation is crucial for building confidence and ensuring you can effectively communicate your ideas and defend your position under pressure."
         }
       ],
       "interactiveActivities": [
@@ -719,7 +719,7 @@ export const QuantumComputing601Module: LearningModule = {
           "id": "quantum-computing-601-l08-act1",
           "type": "debate_simulator",
           "title": "Expert Defense Panel",
-          "description": "Defend specialization recommendations under adversarial cross-examination."
+          "description": "Defend your capstone recommendation under adversarial cross-examination from a panel of simulated technical, governance, and business experts."
         }
       ]
     }

@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const AiWorkflows301Module: LearningModule = {
+export const ai_workflows_301_Module: LearningModule = {
   "id": "ai-workflows-301",
   "title": "AI Workflows Systems and Analysis",
   "description": "Level 301 curriculum in AI Workflows, emphasizing prompt design, retrieval pipelines, agent orchestration, evaluation metrics, and real-world decision quality through structured practice and assessment.",
@@ -14,7 +14,7 @@ export const AiWorkflows301Module: LearningModule = {
   ],
   "minAge": 15,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en"
@@ -33,12 +33,14 @@ export const AiWorkflows301Module: LearningModule = {
       "title": "Core Models for AI Workflows",
       "type": "video",
       "duration": 13,
+      "lessonImagePrompt": "A sleek, futuristic digital blueprint of an AI workflow system glowing on a dark glass table. Holographic nodes connect 'Prompt Design' and 'Retrieval Pipeline' modules. Cinematic lighting, photorealistic, 8k resolution, shot with a macro lens, highly detailed.",
+      "conceptVideoPrompt": "A dynamic 3D animation showing glowing data packets flowing through a complex network of translucent pipes, representing an AI retrieval pipeline. The camera pans smoothly across the network, highlighting nodes that light up in neon blue and purple as data passes through. Cinematic depth of field, high-tech aesthetic, smooth 60fps motion.",
       "learningAids": [
         {
           "id": "ai-workflows-301-l01-a1",
-          "type": "image",
-          "title": "Guided Practice",
-          "content": "Use the structured prompt and write your reasoning before finalizing answers."
+          "type": "mnemonic",
+          "title": "The UCE Framework",
+          "content": "Remember UCE: Unit, Constraints, Evidence. Always define your Unit of analysis, map your Constraints, and set your Evidence standard before building."
         }
       ],
       "chunks": [
@@ -46,50 +48,53 @@ export const AiWorkflows301Module: LearningModule = {
           "id": "ai-workflows-301-l01-c1",
           "kind": "concept",
           "title": "Operating Vocabulary and Scope",
-          "content": "In AI Workflows at the 301 level, using clear and precise language is very important. This means we need to carefully define the boundaries of our work, which helps us understand what is included and what is not. We will also identify the specific unit we are analyzing, which is the main focus of our study. Additionally, it is crucial that everyone involved uses the same terms consistently. By doing this, we can make decisions that are easy to compare across different teams. This approach fosters better collaboration and understanding among all participants, ensuring that everyone is on the same page and working towards common goals."
+          "content": "In AI Workflows, precision is everything. We start by defining our 'unit of analysis'—whether that is a specific prompt design or a complex retrieval pipeline. By establishing a shared vocabulary, teams of any age or background can collaborate effectively and build systems that are easy to compare, evaluate, and scale."
         },
         {
           "id": "ai-workflows-301-l01-c2",
           "kind": "concept",
           "title": "Causal Thinking and Constraints",
-          "content": "To truly excel in AI Workflows, it is essential to grasp the reasons behind events, rather than merely focusing on their outcomes. In this lesson, we will delve into the process of mapping our assumptions, identifying the dependencies that connect different elements, and recognizing the constraints that may limit our actions. By adopting this comprehensive approach, we can concentrate on addressing the root causes of problems instead of just treating the symptoms. This deeper understanding will enable us to develop more effective and sustainable solutions to the challenges we encounter in AI workflows."
+          "content": "Great AI engineering requires causal thinking. Instead of just looking at the final output of a retrieval pipeline, we must map our constraints and dependencies. Why did the model choose this specific context? By understanding the root causes of AI behavior and the boundaries of our system, we build sustainable solutions rather than quick fixes."
         },
         {
           "id": "ai-workflows-301-l01-c3",
           "kind": "recap",
           "title": "Evidence and Accountability",
-          "content": "In our recap, we will discuss the importance of having high standards for evidence, maintaining a disciplined approach to logging our work, and establishing clear accountability loops. These practices are essential for ensuring that our execution is reliable and that we can trust the results we achieve.\nContext recap: In our recap, we will discuss the importance of having high standards for evidence, maintaining a disciplined approach to logging our work, and establishing clear accountability loops. These practices are essential for ensuring that our execution is reliable and that we can trust the results we achieve."
+          "content": "Finally, we must hold our AI systems accountable. This means setting strict evidence standards for our prompt designs and maintaining detailed logs of our workflow. Clear accountability loops and rigorous testing ensure that our AI workflows are reliable, safe, and trustworthy for real-world applications."
         }
       ],
       "flashcards": [
         {
           "id": "ai-workflows-301-l01-f1",
           "front": "Unit of analysis",
-          "back": "The specific entity or process you evaluate to make defensible decisions."
+          "back": "The specific entity or process (like a prompt or pipeline) you evaluate to make defensible decisions."
         },
         {
           "id": "ai-workflows-301-l01-f2",
           "front": "Constraint mapping",
-          "back": "A method for identifying boundaries that shape feasible options."
+          "back": "A method for identifying boundaries and limitations that shape feasible AI workflow options."
         },
         {
           "id": "ai-workflows-301-l01-f3",
           "front": "Evidence standard",
-          "back": "The minimum quality threshold data must meet before action is taken."
+          "back": "The minimum quality threshold data must meet before an AI system takes action."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/ai-workflows-301-l01.png"
     },
     {
       "id": "ai-workflows-301-l02",
       "title": "AI Workflows Workflow Lab",
       "type": "interactive",
       "duration": 15,
+      "lessonImagePrompt": "A modern, well-lit tech laboratory with multiple transparent OLED screens displaying interactive workflow diagrams. A diverse team of engineers pointing at a checkpoint gate on the screen, vibrant colors, highly detailed, 4k resolution, photorealistic.",
+      "conceptVideoPrompt": "Time-lapse style shot of a digital workflow being constructed piece by piece on a dark, infinite canvas. Glowing lines connect input nodes to output metrics, with a subtle pulse effect indicating successful data flow. Smooth zoom-in on a 'Decision Log' module locking into place.",
       "learningAids": [
         {
           "id": "ai-workflows-301-l02-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use the structured prompt and write your reasoning before finalizing answers."
+          "title": "Workflow Checklist",
+          "content": "Before finalizing your workflow, verify you have defined: Inputs, Checkpoints, Expected Outputs, and Rollback Triggers."
         }
       ],
       "chunks": [
@@ -97,13 +102,19 @@ export const AiWorkflows301Module: LearningModule = {
           "id": "ai-workflows-301-l02-c1",
           "kind": "practice",
           "title": "Workflow Construction",
-          "content": "In this interactive lab, you will have the opportunity to construct a complete workflow for designing prompts and creating retrieval pipelines. This includes identifying the necessary inputs, setting up checkpoints to monitor progress, defining the expected outputs, and establishing rollback triggers to manage any issues that arise during the process.\nContext recap: In this interactive lab, you will have the opportunity to construct a complete workflow for designing prompts and creating retrieval pipelines. This includes identifying the necessary inputs, setting up checkpoints to monitor progress, defining the expected outputs, and establishing rollback triggers to manage any issues that arise during the process."
+          "content": "In this interactive lab, you will construct a complete workflow for designing prompts and creating retrieval pipelines. This includes identifying the necessary data inputs, setting up checkpoint gates to monitor progress, defining the expected outputs, and establishing rollback triggers to safely manage any issues that arise during the process."
         },
         {
           "id": "ai-workflows-301-l02-c2",
+          "kind": "practice",
+          "title": "Iterative Testing and Rollbacks",
+          "content": "Once your workflow is constructed, it must be tested iteratively. This means running small batches of data through the pipeline to see how the AI behaves. If an error occurs, rollback triggers automatically revert the system to its last safe state, preventing bad data from corrupting the entire workflow."
+        },
+        {
+          "id": "ai-workflows-301-l02-c3",
           "kind": "recap",
           "title": "Decision Logging",
-          "content": "As we recap our decision logging process, we will emphasize that every decision made should be accompanied by a clear rationale, an expected effect, and a verification point. This approach enables us to conduct thorough analyses after our workflows run, helping us learn from our experiences and improve future outcomes.\nContext recap: As we recap our decision logging process, we will emphasize that every decision made should be accompanied by a clear rationale, an expected effect, and a verification point. This approach enables us to conduct thorough analyses after our workflows run, helping us learn from our experiences and improve future outcomes."
+          "content": "Every decision made in your workflow should be accompanied by a clear rationale, an expected effect, and a verification point. This approach enables thorough post-run analyses, helping us learn from our experiences, trace back errors, and continuously improve future iterations of the AI model."
         }
       ],
       "interactiveActivities": [
@@ -160,19 +171,22 @@ export const AiWorkflows301Module: LearningModule = {
             }
           ]
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/ai-workflows-301-l02.png"
     },
     {
       "id": "ai-workflows-301-l03",
       "title": "Checkpoint 1: Concepts and Workflow",
       "type": "quiz",
       "duration": 10,
+      "lessonImagePrompt": "A stylized, glowing checkpoint gate in a digital landscape, representing a knowledge test. Neon blue and purple hues, geometric shapes, futuristic and clean design, 8k resolution, Unreal Engine 5 render style.",
+      "conceptVideoPrompt": "A sleek, abstract representation of a lock clicking open as glowing puzzle pieces snap together perfectly. Smooth slow-motion, macro lens, soft neon lighting, symbolizing successful knowledge acquisition and unlocking the next level.",
       "learningAids": [
         {
           "id": "ai-workflows-301-l03-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use the structured prompt and write your reasoning before finalizing answers."
+          "title": "Test Strategy",
+          "content": "Read each scenario carefully. Identify the core constraint or objective before selecting your answer."
         }
       ],
       "questions": [
@@ -195,11 +209,11 @@ export const AiWorkflows301Module: LearningModule = {
             },
             {
               "id": "d",
-              "text": "Avoid documenting rationale"
+              "text": "Avoid documenting rationale to save time"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Explicit criteria and testable assumptions improve reliability and transferability."
+          "explanation": "Explicit criteria and testable assumptions improve reliability and transferability, ensuring your prompt design is robust."
         },
         {
           "id": "ai-workflows-301-l03-q2",
@@ -224,7 +238,7 @@ export const AiWorkflows301Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Quality processes are observable, repeatable, and measurable."
+          "explanation": "Quality processes are observable, repeatable, and measurable. Traceability allows you to debug and improve the pipeline."
         },
         {
           "id": "ai-workflows-301-l03-q3",
@@ -249,7 +263,7 @@ export const AiWorkflows301Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Baselines and failure analysis prevent overclaiming and improve design quality."
+          "explanation": "Baselines and failure analysis prevent overclaiming, provide context, and directly improve design quality."
         },
         {
           "id": "ai-workflows-301-l03-q4",
@@ -274,41 +288,44 @@ export const AiWorkflows301Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Balanced scorecards align long-term performance with accountability."
+          "explanation": "Balanced scorecards align long-term performance with accountability, ensuring the system doesn't optimize one metric while breaking another."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/ai-workflows-301-l03.png"
     },
     {
       "id": "ai-workflows-301-l04",
       "title": "Methods, Metrics, and Failure Modes in AI Workflows",
       "type": "video",
       "duration": 14,
+      "lessonImagePrompt": "A sophisticated dashboard displaying AI evaluation metrics, with leading and lagging indicators shown as glowing holographic charts. Dark mode UI, sharp focus, professional tech environment, photorealistic, 8k.",
+      "conceptVideoPrompt": "A visual metaphor of a complex clockwork mechanism where one gear slips, causing a cascade effect, representing a failure mode. The camera tracks the failure, then reverses as a glowing 'fix' stabilizes the system. High-quality 3D render, dramatic lighting, cinematic pacing.",
       "learningAids": [
         {
           "id": "ai-workflows-301-l04-a1",
           "type": "mnemonic",
-          "title": "Guided Practice",
-          "content": "Use the structured prompt and write your reasoning before finalizing answers."
+          "title": "The LLD Metric Triad",
+          "content": "Remember LLD: Leading, Lagging, Diagnostic. Use this triad to build a complete and robust metric architecture."
         }
       ],
       "chunks": [
         {
           "id": "ai-workflows-301-l04-c1",
           "kind": "concept",
-          "title": "Method Selection",
-          "content": "When we choose methods for our AI Workflows, it's important to think about several key factors. First, we need to look at the constraints we are working with, such as time limits or resource availability. Next, we should evaluate the quality of the information we have; is it reliable and accurate? Finally, we must consider the potential cost of making mistakes, as errors can lead to significant consequences. In this lesson, you will explore various alternatives and explain why a specific method is the best fit for certain situations in AI Workflows. This will help you develop critical thinking skills and make informed decisions in your future projects."
+          "title": "Method Selection for Agent Orchestration",
+          "content": "When orchestrating AI agents, choosing the right evaluation method is crucial. You must balance constraints like time and computing power against the cost of an AI error. By weighing these factors, you can select the most defensible method to guide your agent's decision-making process and ensure reliable task execution."
         },
         {
           "id": "ai-workflows-301-l04-c2",
           "kind": "example",
           "title": "Metric Architecture",
-          "content": "A well-designed metric architecture is like a roadmap for teams working on AI projects. It connects three important types of measurements: leading indicators, which help us predict future performance; lagging outcomes, which show us the results of our actions; and diagnostic measures, which help us understand why things are happening. By using this framework, teams can spot any changes or issues early on, allowing them to respond thoughtfully and make adjustments as needed. This proactive approach helps ensure that we stay on track and successfully reach our goals in our AI workflows."
+          "content": "A robust metric architecture uses the LLD triad: Leading indicators (predicting future agent performance), Lagging outcomes (the final results of the workflow), and Diagnostic measures (understanding why the agent made a specific choice). This triad helps you spot orchestration issues early and keep workflows on track."
         },
         {
           "id": "ai-workflows-301-l04-c3",
           "kind": "recap",
           "title": "Failure Taxonomy",
-          "content": "In our recap, we will categorize failures into four main groups: data-related issues, process problems, execution errors, and governance challenges. By organizing failures this way, we can create specific mitigation plans that address the unique aspects of each type of failure, rather than relying on generic solutions.\nContext recap: In our recap, we will categorize failures into four main groups: data-related issues, process problems, execution errors, and governance challenges. By organizing failures this way, we can create specific mitigation plans that address the unique aspects of each type of failure, rather than relying on generic solutions."
+          "content": "Even the best AI workflows fail. We categorize these failures into a taxonomy: data issues (bad context), process problems (flawed retrieval), execution errors (agent hallucination), and governance challenges (lack of oversight). This structure helps us design precise, targeted fixes rather than guessing at solutions."
         }
       ],
       "flashcards": [
@@ -325,21 +342,24 @@ export const AiWorkflows301Module: LearningModule = {
         {
           "id": "ai-workflows-301-l04-f3",
           "front": "Cost of error",
-          "back": "The operational, financial, or social impact caused by an incorrect decision."
+          "back": "The operational, financial, or social impact caused by an incorrect AI decision."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/ai-workflows-301-l04.png"
     },
     {
       "id": "ai-workflows-301-l05",
-      "title": "Case Studio: Improve a AI Workflows System",
+      "title": "Case Studio: Improve an AI Workflows System",
       "type": "interactive",
       "duration": 16,
+      "lessonImagePrompt": "An interactive command center desk with a glowing 3D map of an AI system architecture. A person's hands are visible adjusting a physical dial that changes the flow of the digital map, representing system improvement. Cinematic, highly detailed, 8k.",
+      "conceptVideoPrompt": "Overhead tracking shot of a digital blueprint transforming into a fully optimized, glowing 3D network. The network pulses with bright, clean energy as bottlenecks are visually cleared away. Smooth, continuous motion, futuristic aesthetic, 4k resolution.",
       "learningAids": [
         {
           "id": "ai-workflows-301-l05-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use the structured prompt and write your reasoning before finalizing answers."
+          "title": "Decomposition Framework",
+          "content": "Follow this flow: Objective -> Context -> Constraints -> Options. Use this to break down any complex AI system case."
         }
       ],
       "chunks": [
@@ -347,13 +367,19 @@ export const AiWorkflows301Module: LearningModule = {
           "id": "ai-workflows-301-l05-c1",
           "kind": "practice",
           "title": "Case Decomposition",
-          "content": "In this practice session, you will break down a realistic case into its key components: the objective we aim to achieve, the context in which we are working, the constraints we face, and the various options for intervention. Be sure to include notes on the trade-offs involved in each option to guide your decision-making.\nContext recap: In this practice session, you will break down a realistic case into its key components: the objective we aim to achieve, the context in which we are working, the constraints we face, and the various options for intervention. Be sure to include notes on the trade-offs involved in each option to guide your decision-making."
+          "content": "In this practice session, you will break down a realistic AI workflow case into its key components: the objective we aim to achieve, the context in which we are working, the constraints we face, and the various options for intervention. Document the trade-offs involved in each option to guide your decision-making."
         },
         {
           "id": "ai-workflows-301-l05-c2",
+          "kind": "practice",
+          "title": "Evaluating Trade-offs",
+          "content": "Every intervention comes with a cost. If you tighten intake criteria to improve quality, you might slow down the system. If you automate checkpoints, you risk missing nuanced errors. In this step, you will weigh these trade-offs, balancing speed, cost, and accuracy to find the most sustainable solution."
+        },
+        {
+          "id": "ai-workflows-301-l05-c3",
           "kind": "recap",
           "title": "Improvement Proposal",
-          "content": "As we wrap up, you will present a staged improvement proposal that outlines the criteria for success, identifies who will be responsible for each part of the plan, and includes a timeline for follow-up actions. This structured approach will help ensure that your proposal is clear and actionable.\nContext recap: As we wrap up, you will present a staged improvement proposal that outlines the criteria for success, identifies who will be responsible for each part of the plan, and includes a timeline for follow-up actions. This structured approach will help ensure that your proposal is clear and actionable."
+          "content": "To wrap up, you will present a staged improvement proposal for the AI system. This must outline the criteria for success, identify who is responsible for each part of the plan, and include a timeline for follow-up actions. This structured approach ensures your proposal is clear, measurable, and actionable."
         }
       ],
       "interactiveActivities": [
@@ -392,123 +418,127 @@ export const AiWorkflows301Module: LearningModule = {
             }
           ]
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/ai-workflows-301-l05.png"
     },
     {
       "id": "ai-workflows-301-l06",
       "title": "Checkpoint 2: Systems Reasoning",
       "type": "quiz",
       "duration": 10,
+      "lessonImagePrompt": "A grand, futuristic archway made of glowing data streams, symbolizing the final checkpoint of a complex system. Deep space background with subtle nebula clouds, epic scale, highly detailed, 8k resolution.",
+      "conceptVideoPrompt": "A fast-paced, dynamic fly-through of a massive, perfectly synchronized digital city representing a flawless AI workflow system. Data flows like traffic in glowing streams. The camera spirals upward to reveal the entire optimized network in a grand finale.",
       "learningAids": [
         {
           "id": "ai-workflows-301-l06-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use the structured prompt and write your reasoning before finalizing answers."
+          "title": "Final Review",
+          "content": "Synthesize your knowledge of metrics, failure modes, and system constraints to evaluate these complex scenarios."
         }
       ],
       "questions": [
         {
           "id": "ai-workflows-301-l06-q1",
-          "text": "Which action best improves decisions in prompt design work?",
-          "skillId": "ai-workflows-301-skill-core",
+          "text": "When selecting a method for an AI workflow under strict time constraints and a high cost of error, what is the most defensible approach?",
+          "skillId": "ai-workflows-301-skill-methods",
           "options": [
             {
               "id": "a",
-              "text": "Rely on one unverified example"
+              "text": "Deploy the fastest experimental model available"
             },
             {
               "id": "b",
-              "text": "Define criteria, compare alternatives, and test assumptions"
+              "text": "Implement a proven, conservative model with robust diagnostic logging"
             },
             {
               "id": "c",
-              "text": "Skip metrics and move directly to execution"
+              "text": "Bypass checkpoint gates to meet the deadline"
             },
             {
               "id": "d",
-              "text": "Avoid documenting rationale"
+              "text": "Rely entirely on lagging indicators to catch mistakes"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Explicit criteria and testable assumptions improve reliability and transferability."
+          "explanation": "When the cost of error is high, prioritizing proven methods and diagnostic logging ensures safety and traceability over raw speed."
         },
         {
           "id": "ai-workflows-301-l06-q2",
-          "text": "In retrieval pipelines, what is the strongest indicator of process quality?",
-          "skillId": "ai-workflows-301-skill-process",
+          "text": "Which combination of metrics provides the most comprehensive view of an AI system's health?",
+          "skillId": "ai-workflows-301-skill-metrics",
           "options": [
             {
               "id": "a",
-              "text": "Output speed only"
+              "text": "Only lagging outcomes to see final results"
             },
             {
               "id": "b",
-              "text": "Traceable steps, checkpoints, and measurable outcomes"
+              "text": "Leading indicators for prediction, lagging outcomes for results, and diagnostic measures for root-cause analysis"
             },
             {
               "id": "c",
-              "text": "Unstructured iteration without logs"
+              "text": "Diagnostic measures exclusively"
             },
             {
               "id": "d",
-              "text": "One-time performance anecdotes"
+              "text": "A single, overarching performance score"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Quality processes are observable, repeatable, and measurable."
+          "explanation": "A complete metric architecture requires leading, lagging, and diagnostic metrics to predict, measure, and understand performance."
         },
         {
           "id": "ai-workflows-301-l06-q3",
-          "text": "When evaluating agent orchestration, which practice supports trustworthy conclusions?",
-          "skillId": "ai-workflows-301-skill-eval",
+          "text": "If an AI agent consistently hallucinates due to outdated context windows, how should this failure be classified in a taxonomy?",
+          "skillId": "ai-workflows-301-skill-failures",
           "options": [
             {
               "id": "a",
-              "text": "Ignore edge cases"
+              "text": "Execution error"
             },
             {
               "id": "b",
-              "text": "Use baseline comparisons and failure analysis"
+              "text": "Governance challenge"
             },
             {
               "id": "c",
-              "text": "Change targets after results are known"
+              "text": "Data-related issue"
             },
             {
               "id": "d",
-              "text": "Remove context from findings"
+              "text": "Process problem"
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "Baselines and failure analysis prevent overclaiming and improve design quality."
+          "correctOptionId": "c",
+          "explanation": "Outdated context windows represent a flaw in the information being fed to the model, making it a data-related issue."
         },
         {
           "id": "ai-workflows-301-l06-q4",
-          "text": "A mature evaluation metrics strategy should prioritize:",
-          "skillId": "ai-workflows-301-skill-strategy",
+          "text": "What is the primary benefit of including a 'post-run retrospective' in an AI workflow improvement proposal?",
+          "skillId": "ai-workflows-301-skill-improvement",
           "options": [
             {
               "id": "a",
-              "text": "Single-metric optimization at any cost"
+              "text": "It captures lessons learned to improve adaptation and reduce errors in subsequent cycles"
             },
             {
               "id": "b",
-              "text": "Balanced outcomes across quality, risk, and sustainability"
+              "text": "It guarantees that no errors will occur in the future"
             },
             {
               "id": "c",
-              "text": "Decisions based only on intuition"
+              "text": "It speeds up the initial deployment phase"
             },
             {
               "id": "d",
-              "text": "No post-implementation review"
+              "text": "It replaces the need for leading indicators"
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "Balanced scorecards align long-term performance with accountability."
+          "correctOptionId": "a",
+          "explanation": "Retrospectives are designed to capture insights and feedback, which directly inform and improve the next iteration of the workflow."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/ai-workflows-301-l06.png"
     }
   ]
 };

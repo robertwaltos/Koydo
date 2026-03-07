@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const Robotics501Module: LearningModule = {
+export const robotics_501_Module: LearningModule = {
   "id": "robotics-501",
   "title": "Robotics Specialization Studio",
   "description": "Post-401 specialization in Robotics, focused on robotics systems diagnostics, robotics operations and execution design, robotics impact and tradeoff analysis, and robotics governance and leadership through advanced casework, simulation, and defense-based checkpoints.",
@@ -14,7 +14,7 @@ export const Robotics501Module: LearningModule = {
   ],
   "minAge": 17,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en",
@@ -37,9 +37,9 @@ export const Robotics501Module: LearningModule = {
       "learningAids": [
         {
           "id": "robotics-501-l01-a1",
-          "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "document",
+          "title": "Key Concepts & Definitions",
+          "content": "A printable PDF summarizing the core concepts of Scope Design, Causal Modeling, and Evidence Thresholds."
         }
       ],
       "chunks": [
@@ -47,36 +47,39 @@ export const Robotics501Module: LearningModule = {
           "id": "robotics-501-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "In this lesson, we will dive into the advanced concepts of scope boundaries in the field of robotics. We will learn how to effectively diagnose robotics systems, which means figuring out what is working well and what might need improvement. Additionally, we will focus on designing operations that ensure our robotic systems can execute tasks successfully. Understanding these principles is crucial for creating efficient robotic systems that can perform tasks accurately and reliably, making them valuable tools in various applications.\nContext recap: In this lesson, we will dive into the advanced concepts of scope boundaries in the field of robotics. We will learn how to effectively diagnose robotics systems, which means figuring out what is working well and what might need improvement. Additionally, we will focus on designing operations that ensure our robotic systems can execute tasks successfully. Understanding these principles is crucial for creating efficient robotic systems that can perform tasks accurately and reliably, making them valuable tools in various applications.\nContext recap: In this lesson, we will dive into the advanced concepts of scope boundaries in the field of robotics. We will learn how to effectively diagnose robotics systems, which means figuring out what is working well and what might need improvement. Additionally, we will focus on designing operations that ensure our robotic systems can execute tasks successfully. Understanding these principles is crucial for creating efficient robotic systems that can perform tasks accurately and reliably, making them valuable tools in various applications.\nWhy this matters: Scope and Boundary Design helps learners in Robotics connect ideas from Robotics Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "This lesson introduces advanced concepts of scope boundaries in robotics. We will learn to effectively diagnose robotics systems by identifying what is working well and what needs improvement. We will also focus on designing operations that ensure robotic systems can execute tasks successfully and reliably. Why this matters: Proper Scope and Boundary Design connects theoretical knowledge to practical decisions, highlighting critical tradeoffs, assumptions, and verification methods.",
+          "visualPrompt": "A diagram showing a robot's operational area with clear 'in-scope' and 'out-of-scope' zones, highlighting potential interaction points and external factors."
         },
         {
           "id": "robotics-501-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "In this section, learners will engage in mapping out causal pathways, which help us understand how different factors influence each other. We will also look at uncertainty ranges and system dependencies. This foundational knowledge is crucial for planning interventions effectively and ensuring that our robotics projects are well-informed and strategically sound.\nContext recap: In this section, learners will engage in mapping out causal pathways, which help us understand how different factors influence each other. We will also look at uncertainty ranges and system dependencies. This foundational knowledge is crucial for planning interventions effectively and ensuring that our robotics projects are well-informed and strategically sound."
+          "content": "Learners will map out causal pathways to understand how different factors influence system behavior. We will also model uncertainty ranges and system dependencies. This foundational knowledge is crucial for planning effective interventions and ensuring robotics projects are well-informed and strategically sound.",
+          "visualPrompt": "A flowchart illustrating a causal chain with nodes for variables and arrows for influence, including probability percentages to represent uncertainty."
         },
         {
           "id": "robotics-501-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "In our recap, we emphasize that all claims made during our robotics projects should be linked to measurable indicators. This means we will establish confidence bounds and set up review checkpoints to ensure that our findings are reliable and valid. This practice helps us maintain high standards in our work and supports informed decision-making.\nContext recap: In our recap, we emphasize that all claims made during our robotics projects should be linked to measurable indicators. This means we will establish confidence bounds and set up review checkpoints to ensure that our findings are reliable and valid. This practice helps us maintain high standards in our work and supports informed decision-making."
+          "content": "In this recap, we emphasize that all claims must be linked to measurable indicators. This involves establishing confidence bounds and setting up review checkpoints to ensure findings are reliable and valid. This practice maintains high standards and supports data-driven decision-making.",
+          "visualPrompt": "A dashboard view showing a key performance indicator (KPI) with green/yellow/red zones representing pre-defined evidence thresholds for success, caution, and failure."
         }
       ],
       "flashcards": [
         {
           "id": "robotics-501-l01-f1",
-          "front": "robotics systems diagnostics",
-          "back": "A specialization axis requiring explicit assumptions and measurable constraints."
+          "front": "What is robotics systems diagnostics?",
+          "back": "A specialization axis requiring explicit assumptions and measurable constraints to evaluate system performance and identify root causes of failure or success."
         },
         {
           "id": "robotics-501-l01-f2",
-          "front": "robotics operations and execution design",
-          "back": "Execution architecture that determines reliability under stress."
+          "front": "What is robotics operations and execution design?",
+          "back": "The architecture of processes and controls that determines a robotic system's reliability and performance under stress and adverse conditions."
         },
         {
           "id": "robotics-501-l01-f3",
-          "front": "robotics impact and tradeoff analysis",
-          "back": "Evaluation discipline for identifying true gains and hidden costs."
+          "front": "What is robotics impact and tradeoff analysis?",
+          "back": "An evaluation discipline for identifying the true gains, hidden costs, and secondary effects of a robotics intervention across multiple dimensions like safety, cost, and equity."
         }
       ]
     },
@@ -88,9 +91,9 @@ export const Robotics501Module: LearningModule = {
       "learningAids": [
         {
           "id": "robotics-501-l02-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "simulation_guide",
+          "title": "Workflow Design Sandbox Guide",
+          "content": "A step-by-step guide on how to use the interactive lab to design, test, and refine operational workflows for a simulated robotics task."
         }
       ],
       "chunks": [
@@ -98,13 +101,15 @@ export const Robotics501Module: LearningModule = {
           "id": "robotics-501-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "In this interactive segment, learners will have the opportunity to design specialized workflows tailored to their robotics projects. They will also conduct stress tests on these workflows by simulating adverse scenarios. This hands-on experience is vital for understanding how to create robust systems that can withstand challenges and perform effectively under pressure.\nContext recap: In this interactive segment, learners will have the opportunity to design specialized workflows tailored to their robotics projects. They will also conduct stress tests on these workflows by simulating adverse scenarios. This hands-on experience is vital for understanding how to create robust systems that can withstand challenges and perform effectively under pressure."
+          "content": "In this interactive lab, learners will design specialized operational workflows for a given robotics project. They will then conduct stress tests on these workflows by simulating adverse scenarios, such as sensor failure or unexpected obstacles. This hands-on experience is vital for building robust systems that can perform effectively under pressure.",
+          "visualPrompt": "An animation of a robotic arm attempting a task, first succeeding, then failing under a 'stress test' condition, with diagnostic data appearing on screen."
         },
         {
           "id": "robotics-501-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "In our recap, we will discuss how workflows can be enhanced by integrating various checkpoints, rollback criteria, and threshold-based escalation procedures. These elements are essential for ensuring that our robotics systems can adapt to unexpected situations while maintaining control and oversight throughout the process.\nContext recap: In our recap, we will discuss how workflows can be enhanced by integrating various checkpoints, rollback criteria, and threshold-based escalation procedures. These elements are essential for ensuring that our robotics systems can adapt to unexpected situations while maintaining control and oversight throughout the process."
+          "content": "This recap explores how to enhance workflows by integrating control gates, such as automated checkpoints, pre-defined rollback criteria, and threshold-based escalation procedures. These elements are essential for creating adaptive systems that maintain control and oversight throughout complex operations.",
+          "visualPrompt": "A process diagram with decision points (diamonds) labeled 'Checkpoint,' 'Rollback Trigger,' and 'Escalation,' showing different paths for success and failure."
         }
       ],
       "interactiveActivities": [
@@ -142,9 +147,9 @@ export const Robotics501Module: LearningModule = {
       "learningAids": [
         {
           "id": "robotics-501-l03-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "review_sheet",
+          "title": "Checkpoint 1 Study Guide",
+          "content": "A summary of key concepts from Lessons 1 and 2 to prepare for the quiz."
         }
       ],
       "questions": [
@@ -247,106 +252,6 @@ export const Robotics501Module: LearningModule = {
           ],
           "correctOptionId": "a",
           "explanation": "Governance maturity is the operational link between intent, measurement, and corrective action."
-        },
-        {
-          "id": "robotics-501-l03-q5",
-          "text": "What is the best way to compare competing interventions in advanced Robotics?",
-          "skillId": "robotics-501-skill-advanced-5",
-          "options": [
-            {
-              "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
-            },
-            {
-              "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
-            },
-            {
-              "id": "c",
-              "text": "Switch metrics after results arrive"
-            },
-            {
-              "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
-        },
-        {
-          "id": "robotics-501-l03-q6",
-          "text": "In high-stakes Robotics Specialization Studio execution, which communication protocol is strongest?",
-          "skillId": "robotics-501-skill-advanced-6",
-          "options": [
-            {
-              "id": "a",
-              "text": "Broadcast conclusions without assumptions"
-            },
-            {
-              "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
-            },
-            {
-              "id": "c",
-              "text": "Share only final outcomes after completion"
-            },
-            {
-              "id": "d",
-              "text": "Limit updates to a single informal channel"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
-        },
-        {
-          "id": "robotics-501-l03-q7",
-          "text": "A mature remediation loop in advanced Robotics should prioritize:",
-          "skillId": "robotics-501-skill-advanced-7",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blame assignment without system updates"
-            },
-            {
-              "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
-            },
-            {
-              "id": "c",
-              "text": "One-time fixes without retesting"
-            },
-            {
-              "id": "d",
-              "text": "Issue closure based on elapsed time"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
-        },
-        {
-          "id": "robotics-501-l03-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Robotics Specialization Studio?",
-          "skillId": "robotics-501-skill-advanced-8",
-          "options": [
-            {
-              "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
-            },
-            {
-              "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
-            },
-            {
-              "id": "c",
-              "text": "Ignore correlated failure modes"
-            },
-            {
-              "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
         }
       ]
     },
@@ -358,9 +263,9 @@ export const Robotics501Module: LearningModule = {
       "learningAids": [
         {
           "id": "robotics-501-l04-a1",
-          "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "case_study_document",
+          "title": "Case Study: Autonomous Warehouse Logistics",
+          "content": "A detailed case study document outlining a real-world robotics challenge, including technical specs, stakeholder needs, and budget constraints."
         }
       ],
       "chunks": [
@@ -368,19 +273,22 @@ export const Robotics501Module: LearningModule = {
           "id": "robotics-501-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "In this lesson, we will frame cases that highlight the competing constraints faced in robotics systems diagnostics. We will also analyze the impacts and trade-offs involved in different robotics applications. Understanding these complexities is crucial for making informed decisions that balance various factors effectively.\nContext recap: In this lesson, we will frame cases that highlight the competing constraints faced in robotics systems diagnostics. We will also analyze the impacts and trade-offs involved in different robotics applications. Understanding these complexities is crucial for making informed decisions that balance various factors effectively."
+          "content": "We will deconstruct complex cases that highlight the competing constraints in robotics systems diagnostics, such as speed versus safety. We will analyze the impacts and trade-offs of different solutions, which is crucial for making informed decisions that balance various factors effectively.",
+          "visualPrompt": "A split-screen video showing two different robots attempting the same task, highlighting their different constraints (e.g., one is faster but less precise, the other is slower but more accurate)."
         },
         {
           "id": "robotics-501-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "During this practice session, learners will compare different options available to them across several important dimensions, including safety, reliability, cost, equity, and governance. This comparative analysis will help them understand the trade-offs involved in their decisions and the implications of their choices in robotics.\nContext recap: During this practice session, learners will compare different options available to them across several important dimensions, including safety, reliability, cost, equity, and governance. This comparative analysis will help them understand the trade-offs involved in their decisions and the implications of their choices in robotics."
+          "content": "Learners will practice comparing different strategic options across several critical dimensions, including safety, reliability, cost, equity, and governance. This comparative analysis helps clarify the trade-offs and long-term implications of key decisions in robotics.",
+          "visualPrompt": "A radar chart comparing two design options across axes like 'Safety', 'Cost', 'Reliability', 'Speed', and 'Equity', showing the different strengths of each choice."
         },
         {
           "id": "robotics-501-l04-c3",
           "kind": "recap",
           "title": "Decision Memo Pattern",
-          "content": "In our recap, we will highlight that each recommendation made in our robotics projects should include clear assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that we are prepared for potential challenges and can make decisions that are well-supported and thought out.\nContext recap: In our recap, we will highlight that each recommendation made in our robotics projects should include clear assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that we are prepared for potential challenges and can make decisions that are well-supported and thought out."
+          "content": "This recap introduces a structured pattern for recommendations. Each proposal must include clear assumptions, supporting evidence, risk controls, and fallback plans. This approach ensures that decisions are well-supported, transparent, and prepared for potential challenges.",
+          "visualPrompt": "An infographic template for a 'Decision Memo' with clearly labeled sections for 'Assumptions', 'Evidence', 'Risks', and 'Fallback Plan'."
         }
       ]
     },
@@ -392,9 +300,9 @@ export const Robotics501Module: LearningModule = {
       "learningAids": [
         {
           "id": "robotics-501-l05-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "interactive_tutorial",
+          "title": "Simulation Control Walkthrough",
+          "content": "An interactive, guided walkthrough of the simulation interface, explaining how to adjust parameters and interpret the results."
         }
       ],
       "chunks": [
@@ -402,13 +310,15 @@ export const Robotics501Module: LearningModule = {
           "id": "robotics-501-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "In this interactive practice, learners will operate scenario controls while carefully balancing performance and governance constraints. This experience will help them understand the importance of maintaining control over their robotics systems while ensuring they meet necessary standards and regulations.\nContext recap: In this interactive practice, learners will operate scenario controls while carefully balancing performance and governance constraints. This experience will help them understand the importance of maintaining control over their robotics systems while ensuring they meet necessary standards and regulations.\nContext recap: In this interactive practice, learners will operate scenario controls while carefully balancing performance and governance constraints. This experience will help them understand the importance of maintaining control over their robotics systems while ensuring they meet necessary standards and regulations. Context recap: In this interactive practice, learners will operate scenario controls while carefully balancing performance and governance constraints. This experience will help them understand the importance of maintaining control over their robotics systems while ensuring they meet necessary standards and regulations."
+          "content": "In this interactive simulation, learners will operate scenario controls to manage a robotics system in real-time. The goal is to balance performance targets with governance constraints, such as energy usage limits or safety protocols. This experience highlights the dynamic nature of robotics operations.",
+          "visualPrompt": "A user interface for a simulation, showing control sliders for 'Speed' and 'Power' next to a dashboard of 'Safety Compliance' and 'Energy Use'."
         },
         {
           "id": "robotics-501-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "In our recap, we will discuss how effective responses to challenges can be designed to update control gates without losing traceability or accountability. This is crucial for maintaining oversight and ensuring that all actions taken during robotics operations are documented and can be reviewed when necessary.\nContext recap: In our recap, we will discuss how effective responses to challenges can be designed to update control gates without losing traceability or accountability. This is crucial for maintaining oversight and ensuring that all actions taken during robotics operations are documented and can be reviewed when necessary."
+          "content": "This recap discusses how to design effective, adaptive responses to challenges that arise during operations. The key is to update control gates and operational parameters without losing traceability or accountability, ensuring all actions are documented and auditable.",
+          "visualPrompt": "An animation showing a system flowchart where a control gate (a literal gate icon) changes from green to red, triggering an alert and rerouting the process flow to a 'Contingency Plan' path."
         }
       ],
       "interactiveActivities": [
@@ -428,9 +338,9 @@ export const Robotics501Module: LearningModule = {
       "learningAids": [
         {
           "id": "robotics-501-l06-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "review_sheet",
+          "title": "Checkpoint 2 Study Guide",
+          "content": "A summary of key concepts from Lessons 4 and 5 to prepare for the quiz."
         }
       ],
       "questions": [
@@ -536,103 +446,53 @@ export const Robotics501Module: LearningModule = {
         },
         {
           "id": "robotics-501-l06-q5",
-          "text": "What is the best way to compare competing interventions in advanced Robotics?",
+          "text": "In a simulation where a robotics system unexpectedly fails, what is the most critical immediate step in an adaptive response?",
           "skillId": "robotics-501-skill-advanced-5",
           "options": [
             {
               "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
+              "text": "Immediately restart the system with the same parameters."
             },
             {
               "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
+              "text": "Activate a pre-defined fallback protocol while logging failure data."
             },
             {
               "id": "c",
-              "text": "Switch metrics after results arrive"
+              "text": "Delete the error logs to avoid a negative performance review."
             },
             {
               "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
+              "text": "Wait for the system to self-correct without intervention."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
+          "explanation": "A mature adaptive response prioritizes safety and data integrity by using a fallback plan and ensuring the failure can be analyzed later."
         },
         {
           "id": "robotics-501-l06-q6",
-          "text": "In high-stakes Robotics Specialization Studio execution, which communication protocol is strongest?",
+          "text": "When presenting the results of a case study analysis, which communication practice demonstrates the most rigor?",
           "skillId": "robotics-501-skill-advanced-6",
           "options": [
             {
               "id": "a",
-              "text": "Broadcast conclusions without assumptions"
+              "text": "Only showing the final recommendation to save time."
             },
             {
               "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
+              "text": "Presenting the data that supports the chosen option while omitting contradictory evidence."
             },
             {
               "id": "c",
-              "text": "Share only final outcomes after completion"
+              "text": "Clearly stating the recommendation, key assumptions, considered alternatives, and associated risks."
             },
             {
               "id": "d",
-              "text": "Limit updates to a single informal channel"
+              "text": "Focusing entirely on the potential financial return of the recommendation."
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
-        },
-        {
-          "id": "robotics-501-l06-q7",
-          "text": "A mature remediation loop in advanced Robotics should prioritize:",
-          "skillId": "robotics-501-skill-advanced-7",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blame assignment without system updates"
-            },
-            {
-              "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
-            },
-            {
-              "id": "c",
-              "text": "One-time fixes without retesting"
-            },
-            {
-              "id": "d",
-              "text": "Issue closure based on elapsed time"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
-        },
-        {
-          "id": "robotics-501-l06-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Robotics Specialization Studio?",
-          "skillId": "robotics-501-skill-advanced-8",
-          "options": [
-            {
-              "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
-            },
-            {
-              "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
-            },
-            {
-              "id": "c",
-              "text": "Ignore correlated failure modes"
-            },
-            {
-              "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "correctOptionId": "c",
+          "explanation": "Rigorous communication is transparent about the entire decision-making process, including assumptions, risks, and why other options were not chosen."
         }
       ]
     },
@@ -644,9 +504,9 @@ export const Robotics501Module: LearningModule = {
       "learningAids": [
         {
           "id": "robotics-501-l07-a1",
-          "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "infographic",
+          "title": "Framework for Responsible Robotics",
+          "content": "A visual one-page summary of the key pillars of robotics governance: Impact Distribution, Accountability, and Responsible Leadership."
         }
       ],
       "chunks": [
@@ -654,36 +514,39 @@ export const Robotics501Module: LearningModule = {
           "id": "robotics-501-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. This understanding is essential for recognizing how robotics projects can impact various communities and ensuring that all voices are considered in the decision-making process.\nContext recap: In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. This understanding is essential for recognizing how robotics projects can impact various communities and ensuring that all voices are considered in the decision-making process."
+          "content": "Learners will map the distribution of benefits, burdens, and delayed effects of a robotics system across different stakeholder groups. This is essential for understanding the societal and ethical footprint of a project and ensuring equitable outcomes.",
+          "visualPrompt": "A map showing a city with different zones colored to represent the positive and negative impacts of a delivery drone service on various communities."
         },
         {
           "id": "robotics-501-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "In this section, we will explore the concept of accountability architecture. This includes understanding how decision traceability, review rights, and remediation obligations are integrated into our robotics projects. This framework is vital for ensuring that all stakeholders are held accountable and that ethical considerations are prioritized.\nContext recap: In this section, we will explore the concept of accountability architecture. This includes understanding how decision traceability, review rights, and remediation obligations are integrated into our robotics projects. This framework is vital for ensuring that all stakeholders are held accountable and that ethical considerations are prioritized."
+          "content": "This section explores accountability architecture, which integrates decision traceability, review rights, and remediation obligations into a project's lifecycle. This framework is vital for ensuring that stakeholders are accountable and that ethical considerations are prioritized.",
+          "visualPrompt": "A diagram showing a decision point, with arrows pointing to a log file (traceability), a review board (review rights), and a remediation team (obligations)."
         },
         {
           "id": "robotics-501-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "To ensure responsible leadership in robotics, it is important to have a final checklist. This checklist should connect the outcomes of our projects with ethical considerations, adherence to policies, and the ability to adapt and recover from challenges. By using this checklist, we can make sure that our work in robotics is not only innovative but also responsible and beneficial to society.\nContext recap: To ensure responsible leadership in robotics, it is important to have a final checklist. This checklist should connect the outcomes of our projects with ethical considerations, adherence to policies, and the ability to adapt and recover from challenges. By using this checklist, we can make sure that our work in robotics is not only innovative but also responsible and beneficial to society."
+          "content": "We conclude with a final checklist for responsible leadership. This tool connects project outcomes with ethical principles, policy adherence, and system resilience. Using this checklist ensures that our work in robotics is not only innovative but also responsible and beneficial to society.",
+          "visualPrompt": "A checklist graphic with items like 'Ethical Review', 'Policy Compliance', and 'Resilience Plan' being ticked off."
         }
       ],
       "flashcards": [
         {
           "id": "robotics-501-l07-f1",
-          "front": "Impact distribution",
-          "back": "How outcomes are allocated across populations and timescales."
+          "front": "What is impact distribution?",
+          "back": "The analysis of how the positive and negative outcomes of a system are allocated across different populations and timescales."
         },
         {
           "id": "robotics-501-l07-f2",
-          "front": "Decision traceability",
-          "back": "An auditable record of evidence, ownership, and rationale."
+          "front": "What is decision traceability?",
+          "back": "An auditable and immutable record of key decisions, including the evidence, ownership, and rationale behind them."
         },
         {
           "id": "robotics-501-l07-f3",
-          "front": "Responsible leadership",
-          "back": "Decision behavior balancing performance, accountability, and ethics."
+          "front": "What is responsible leadership in robotics?",
+          "back": "A decision-making behavior that actively balances performance goals with accountability structures and ethical considerations."
         }
       ]
     },
@@ -695,9 +558,9 @@ export const Robotics501Module: LearningModule = {
       "learningAids": [
         {
           "id": "robotics-501-l08-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "template_document",
+          "title": "Capstone Defense Brief Template",
+          "content": "A structured document template to help learners assemble their claims, evidence, and risk analysis for the final defense."
         }
       ],
       "chunks": [
@@ -705,13 +568,15 @@ export const Robotics501Module: LearningModule = {
           "id": "robotics-501-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "In this interactive session, learners will work together to create a comprehensive defense brief. This brief will include important claims that support their ideas, evidence that backs up those claims, an understanding of the uncertainties involved, and potential pathways for addressing any issues that may arise. This exercise helps learners practice critical thinking and effective communication.\nContext recap: In this interactive session, learners will work together to create a comprehensive defense brief. This brief will include important claims that support their ideas, evidence that backs up those claims, an understanding of the uncertainties involved, and potential pathways for addressing any issues that may arise. This exercise helps learners practice critical thinking and effective communication."
+          "content": "In this collaborative session, learners will assemble a comprehensive defense brief for their capstone project. This brief will structure their core claims, the evidence backing those claims, an analysis of uncertainties, and potential remediation pathways. This exercise hones skills in critical thinking and persuasive, evidence-based communication.",
+          "visualPrompt": "A slide deck template with sections for 'Claim', 'Supporting Evidence', 'Uncertainty Analysis', and 'Remediation Path'."
         },
         {
           "id": "robotics-501-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "During the expert panel rehearsal, learners will practice their responses to a variety of critiques. These critiques may come from technical experts, governance representatives, and stakeholders who have an interest in their projects. This rehearsal is crucial as it prepares learners to confidently address questions and concerns, ensuring they can effectively communicate their ideas and solutions.\nContext recap: During the expert panel rehearsal, learners will practice their responses to a variety of critiques. These critiques may come from technical experts, governance representatives, and stakeholders who have an interest in their projects. This rehearsal is crucial as it prepares learners to confidently address questions and concerns, ensuring they can effectively communicate their ideas and solutions."
+          "content": "During this rehearsal, learners will practice responding to critiques from the perspectives of technical experts, governance representatives, and public stakeholders. This preparation is crucial for confidently addressing tough questions and communicating complex ideas effectively under pressure.",
+          "visualPrompt": "A simulated video conference call with the learner presenting to three 'panelists' with nameplates like 'Technical Expert', 'Governance Lead', and 'Community Stakeholder'."
         }
       ],
       "interactiveActivities": [
@@ -720,6 +585,122 @@ export const Robotics501Module: LearningModule = {
           "type": "debate_simulator",
           "title": "Expert Defense Panel",
           "description": "Defend specialization recommendations under adversarial cross-examination."
+        }
+      ]
+    },
+    {
+      "id": "robotics-501-l09",
+      "title": "Checkpoint 3: Governance and Defense",
+      "type": "quiz",
+      "duration": 12,
+      "learningAids": [
+        {
+          "id": "robotics-501-l09-a1",
+          "type": "review_sheet",
+          "title": "Final Checkpoint Study Guide",
+          "content": "A comprehensive review of concepts from Lessons 7 and 8, focusing on governance, public impact, and defense preparation."
+        }
+      ],
+      "questions": [
+        {
+          "id": "robotics-501-l09-q1",
+          "text": "When analyzing stakeholder impact, what is a critical component to consider beyond immediate benefits and costs?",
+          "skillId": "robotics-501-skill-governance",
+          "options": [
+            {
+              "id": "a",
+              "text": "Only the impact on the primary user."
+            },
+            {
+              "id": "b",
+              "text": "The marketing and public relations angle."
+            },
+            {
+              "id": "c",
+              "text": "Delayed effects and the distribution of burdens across different groups."
+            },
+            {
+              "id": "d",
+              "text": "The system's aesthetic design."
+            }
+          ],
+          "correctOptionId": "c",
+          "explanation": "A thorough impact analysis must account for second-order and long-term effects, as well as how different populations are affected, to be ethically responsible."
+        },
+        {
+          "id": "robotics-501-l09-q2",
+          "text": "A robust accountability architecture in a robotics project must include:",
+          "skillId": "robotics-501-skill-governance",
+          "options": [
+            {
+              "id": "a",
+              "text": "A way to blame a single individual for any failure."
+            },
+            {
+              "id": "b",
+              "text": "Decision traceability, clear review rights, and defined remediation obligations."
+            },
+            {
+              "id": "c",
+              "text": "Keeping all decision-making processes secret to protect intellectual property."
+            },
+            {
+              "id": "d",
+              "text": "Flexible policies that change based on outcomes."
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "True accountability is systemic, requiring transparent records (traceability), oversight (review rights), and a commitment to fix issues (remediation)."
+        },
+        {
+          "id": "robotics-501-l09-q3",
+          "text": "During a capstone defense, you are challenged on the uncertainty of your data. What is the strongest response?",
+          "skillId": "robotics-501-skill-defense",
+          "options": [
+            {
+              "id": "a",
+              "text": "Insist your data is 100% certain and the critique is invalid."
+            },
+            {
+              "id": "b",
+              "text": "Acknowledge the uncertainty, present your confidence bounds, and explain the risk mitigation plans you have in place."
+            },
+            {
+              "id": "c",
+              "text": "Change the subject to a stronger part of your project."
+            },
+            {
+              "id": "d",
+              "text": "Agree that the uncertainty invalidates your entire project."
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "A strong defense acknowledges limitations transparently and demonstrates foresight by having plans to manage the associated risks."
+        },
+        {
+          "id": "robotics-501-l09-q4",
+          "text": "What is the primary purpose of assembling a defense brief before a final review?",
+          "skillId": "robotics-501-skill-defense",
+          "options": [
+            {
+              "id": "a",
+              "text": "To create a long document that is difficult for reviewers to critique."
+            },
+            {
+              "id": "b",
+              "text": "To formally structure your argument by connecting claims to evidence and anticipating challenges."
+            },
+            {
+              "id": "c",
+              "text": "To have a script that can be read verbatim during the presentation."
+            },
+            {
+              "id": "d",
+              "text": "To satisfy a bureaucratic requirement without strategic thought."
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "The defense brief is a strategic tool for clarifying your own thinking and building a logical, evidence-based case for your recommendations."
         }
       ]
     }

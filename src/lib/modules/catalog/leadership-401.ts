@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const Leadership401Module: LearningModule = {
+export const leadership_401_Module: LearningModule = {
   "id": "leadership-401",
   "title": "Executive Leadership & Systems Thinking",
   "description": "Master the highest level of leadership practice. Develop executive presence, make strategic decisions under deep ambiguity, apply systems thinking to complex organizations, lead through crisis, drive organizational transformation, ground your leadership in ethics, and craft a lasting leadership legacy.",
@@ -14,7 +14,7 @@ export const Leadership401Module: LearningModule = {
   ],
   "minAge": 18,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en",
@@ -24,7 +24,7 @@ export const Leadership401Module: LearningModule = {
   "learningObjectives": [
     "Cultivate executive presence through communication and composure",
     "Apply decision-making frameworks to strategic choices under ambiguity",
-    "Use Senge's five disciplines of systems thinking in organizational leadership",
+    "Use systems thinking to diagnose and solve complex organizational problems",
     "Lead effectively during organizational crises",
     "Design and execute large-scale organizational transformations",
     "Integrate ethical reasoning and character into leadership practice",
@@ -45,42 +45,42 @@ export const Leadership401Module: LearningModule = {
         {
           "id": "leadership-401-l01-c1",
           "title": "What Is Executive Presence?",
-          "content": "Executive presence is a vital skill for leaders that enables them to convey confidence, credibility, and a sense of calmness. This ability not only helps them gain the trust of others but also captures their attention effectively. Research conducted by Sylvia Ann Hewlett highlights three essential components that contribute to executive presence: gravitas, communication, and appearance.\nGravitas is the first and most crucial element, accounting for approximately 67% of executive presence. It encompasses how a leader acts, which includes demonstrating confidence, making decisive choices, and possessing emotional intelligence. Leaders with strong gravitas are often seen as trustworthy and capable.\nThe second component, communication, focuses on how leaders express their thoughts and ideas. This includes speaking clearly, persuading others, and engaging an audience effectively. Good communication skills are essential for leaders to convey their vision and inspire their teams.\nLastly, appearance plays a significant role in executive presence. It refers to how leaders present themselves, which should reflect a polished and professional demeanor. A well-groomed appearance signals competence and reinforces the leader's credibility.\nIn summary, developing executive presence involves honing these three components, with gravitas being the most important factor in establishing a strong leadership identity.\nContext recap: Executive presence is a vital skill for leaders that enables them to convey confidence, credibility, and a sense of calmness. This ability not only helps them gain the trust of others but also captures their attention effectively. Research conducted by Sylvia Ann Hewlett highlights three essential components that contribute to executive presence: gravitas, communication, and appearance. Gravitas is the first and most crucial element, accounting for approximately 67% of executive presence.\nWhy this matters: What Is Executive Presence? helps learners in Business connect ideas from Executive Leadership & Systems Thinking to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "Executive presence is the ability to signal confidence and credibility, inspiring trust and commanding attention. Research by Sylvia Ann Hewlett identifies three essential pillars: gravitas, communication, and appearance. Gravitas, the most critical element at 67%, is about how you act—demonstrating confidence, decisiveness, and emotional intelligence. Communication, the second pillar, is how you speak—your ability to articulate ideas clearly and persuasively. Finally, appearance is how you look—a polished and professional demeanor that signals competence. Mastering these three areas, with a primary focus on gravitas, is fundamental to establishing a strong leadership identity."
         },
         {
           "id": "leadership-401-l01-c2",
           "title": "Developing Gravitas",
-          "content": "Gravitas is an important quality that leaders can develop through specific behaviors. It involves staying calm and composed, especially when faced with challenging situations. For instance, when things get tough, a leader with gravitas can make confident decisions, even if they don't have all the facts at hand. This ability to act decisively is crucial because it helps inspire confidence in others. Additionally, gravitas means being able to speak the truth to those in positions of power, but doing so in a respectful manner. This shows that a leader values honesty and integrity.\nAnother key aspect of gravitas is the ability to remain calm during chaotic circumstances. Leaders who can project a sense of calm help to reassure their teams and create a more stable environment. Furthermore, having emotional intelligence is vital; this means being aware of and understanding the emotions of others in the room. By recognizing how others feel, a leader can adapt their approach to better support their team.\nIt's important to note that gravitas is not about being the loudest or most dominant voice in the room. Instead, it is about being a reliable and trustworthy presence that others can turn to for guidance. Leaders build their gravitas over time by consistently following through on their commitments, openly acknowledging their mistakes, and maintaining their composure when others might be losing their heads. This gradual development of gravitas helps to establish a leader's credibility and fosters a sense of trust among their peers and team members.\nContext recap: Gravitas is an important quality that leaders can develop through specific behaviors. It involves staying calm and composed, especially when faced with challenging situations. For instance, when things get tough, a leader with gravitas can make confident decisions, even if they don't have all the facts at hand. This ability to act decisively is crucial because it helps inspire confidence in others.\nWhy this matters: Developing Gravitas helps learners in Business connect ideas from Executive Leadership & Systems Thinking to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "Gravitas is earned through consistent behavior, especially under pressure. It involves maintaining composure in chaotic situations, making confident decisions with incomplete information, and speaking truth to power respectfully. Leaders with gravitas project a calm, steady presence that reassures their teams. This quality is not about being the loudest voice but the most reliable one. It is built over time by acting with integrity, taking accountability for mistakes, and demonstrating emotional intelligence—the ability to read a room and respond with empathy and wisdom."
         },
         {
           "id": "leadership-401-l01-c3",
           "title": "High-Stakes Communication",
-          "content": "When you are communicating at an executive level, it is very important to not only master what you want to say but also how you say it. To do this effectively, start by organizing your messages in a way that is easy to understand. Begin with a clear headline that summarizes your main point, followed by supporting evidence that backs up your claims, and finish with a specific request or recommendation. This structure helps your audience grasp your message quickly.\nIn situations like board presentations, it is often best to lead with your conclusion. Busy executives appreciate getting the answer right away before they hear all the details. This approach respects their time and keeps them engaged.\nAnother powerful technique is storytelling. By weaving stories into your data, you can make the information more memorable and emotionally impactful for your audience. People are more likely to remember facts when they are presented in a narrative format.\nAdditionally, practicing strategic silence is key. This means taking pauses at important moments to emphasize your points. These pauses not only convey confidence but also give your listeners a moment to absorb what you have said.\nFinally, remember that the best executive communicators are also exceptional listeners. They make sure that others feel heard and valued before they share their own ideas. This creates a more collaborative environment and fosters better communication overall.\nContext recap: When you are communicating at an executive level, it is very important to not only master what you want to say but also how you say it. To do this effectively, start by organizing your messages in a way that is easy to understand. Begin with a clear headline that summarizes your main point, followed by supporting evidence that backs up your claims, and finish with a specific request or recommendation. This structure helps your audience grasp your message quickly.\nWhy this matters: High-Stakes Communication helps learners in Business connect ideas from Executive Leadership & Systems Thinking to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "Executive communication demands mastery of both message and delivery. Structure your message for clarity: start with a headline, provide supporting evidence, and end with a clear call to action. In high-stakes settings like board presentations, lead with your conclusion. Busy executives value the bottom line upfront. Enhance your message with storytelling to make data memorable and emotionally resonant. Use strategic silence—pausing at key moments—to add emphasis and convey confidence. Finally, the best communicators are exceptional listeners; they ensure others feel heard before advancing their own agenda, fostering a collaborative environment."
         }
       ],
       "flashcards": [
         {
           "id": "leadership-401-l01-f1",
           "front": "Executive presence (Hewlett's three pillars)",
-          "back": "Gravitas (how you act — confidence, decisiveness, composure), Communication (how you speak — clarity, persuasion), Appearance (how you look — professional polish) — gravitas is the dominant factor at 67%"
+          "back": "Gravitas (how you act — confidence, decisiveness, composure), Communication (how you speak — clarity, persuasion), Appearance (how you look — professional polish). Gravitas is the dominant factor at 67%."
         },
         {
           "id": "leadership-401-l01-f2",
           "front": "Gravitas in leadership",
-          "back": "Demonstrated through grace under fire, confident decision-making with incomplete data, truth-telling, calm in chaos, and emotional intelligence — built over time through consistency and composure"
+          "back": "Demonstrated through grace under fire, confident decision-making with incomplete data, truth-telling, calm in chaos, and emotional intelligence. It is built over time through consistency and composure."
         },
         {
           "id": "leadership-401-l01-f3",
           "front": "Executive communication principle: lead with the conclusion",
-          "back": "In high-stakes settings, state your recommendation or answer first, then provide supporting evidence — busy executives want the bottom line before the analysis"
+          "back": "In high-stakes settings, state your recommendation or answer first, then provide supporting evidence. This respects executives' time and focuses the discussion."
         }
       ],
       "learningAids": [
         {
           "id": "leadership-401-l01-a1",
           "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary of the lesson's main concept."
+          "title": "The Three Pillars of Presence",
+          "content": "A diagram showing Gravitas (67%), Communication (28%), and Appearance (5%) as pillars supporting a leader."
         }
       ]
     },
@@ -98,42 +98,42 @@ export const Leadership401Module: LearningModule = {
         {
           "id": "leadership-401-l02-c1",
           "title": "Cognitive Biases in Executive Decisions",
-          "content": "Research conducted by Daniel Kahneman highlights that even seasoned leaders can be influenced by various cognitive biases that may hinder their decision-making abilities. One prevalent bias is known as confirmation bias. This occurs when leaders unconsciously seek out information that aligns with their pre-existing beliefs, which can cloud their judgment. Another significant bias is anchoring, where leaders place too much importance on the first piece of information they encounter, which can skew their perspective on subsequent data. Additionally, overconfidence bias can lead leaders to underestimate potential risks and overvalue their own decision-making capabilities, which can be detrimental in high-stakes situations. The sunk cost fallacy is another critical concept; it describes a situation where leaders continue to pour resources into failing strategies simply because they have already invested time or money into them. Understanding these biases is crucial for effective leadership. However, awareness alone is not enough. Leaders must also adopt structural strategies to mitigate these biases. For instance, employing devil's advocates can provide alternative viewpoints, while red teams can challenge existing plans. Furthermore, fostering diverse decision-making groups can enhance the quality of discussions and lead to more balanced outcomes. By implementing these strategies, leaders can make more informed and rational decisions, ultimately improving their effectiveness in navigating complex situations.\nContext recap: Research conducted by Daniel Kahneman highlights that even seasoned leaders can be influenced by various cognitive biases that may hinder their decision-making abilities. One prevalent bias is known as confirmation bias. This occurs when leaders unconsciously seek out information that aligns with their pre-existing beliefs, which can cloud their judgment. Another significant bias is anchoring, where leaders place too much importance on the first piece of information they encounter, which can skew their perspective on subsequent data.\nWhy this matters: Cognitive Biases in Executive Decisions helps learners in Business connect ideas from Executive Leadership & Systems Thinking to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "Even seasoned leaders are susceptible to cognitive biases that can distort judgment. Daniel Kahneman's research highlights several key traps. Confirmation bias is the tendency to favor information that confirms existing beliefs. Anchoring causes over-reliance on the first piece of information received. Overconfidence bias leads to underestimating risks, while the sunk cost fallacy compels leaders to continue investing in failing projects due to past commitments. Awareness is the first step, but mitigating these biases requires structural solutions like appointing a devil's advocate, using red teams to challenge plans, and cultivating diverse decision-making groups."
         },
         {
           "id": "leadership-401-l02-c2",
           "title": "Frameworks for Strategic Decisions",
-          "content": "Leaders often face situations where they must make decisions without having all the information they would like. To help navigate these uncertain times, there are several useful frameworks. One of these is scenario planning, which involves imagining different possible futures. By creating various scenarios, leaders can test their strategies against each one to see how they might perform. Another approach is real options analysis. This method treats strategic investments like financial options, which means that leaders can keep their choices open. They can decide to expand, reduce, or even abandon a strategy as new information comes in and the situation becomes clearer.\nThe OODA loop is another important framework. It stands for Observe, Orient, Decide, and Act. This concept was created by military strategist John Boyd and highlights the need for leaders to quickly adapt to changing circumstances. By observing their environment and orienting themselves to the situation, leaders can make informed decisions and take action swiftly.\nLastly, Gary Klein's recognition-primed decision model shows how experienced leaders often rely on their past experiences to identify patterns. This allows them to make quick, intuitive decisions when they find themselves in familiar situations. By using these frameworks, leaders can enhance their decision-making skills and navigate uncertainty more effectively.\nContext recap: Leaders often face situations where they must make decisions without having all the information they would like. To help navigate these uncertain times, there are several useful frameworks. One of these is scenario planning, which involves imagining different possible futures. By creating various scenarios, leaders can test their strategies against each one to see how they might perform.\nWhy this matters: Frameworks for Strategic Decisions helps learners in Business connect ideas from Executive Leadership & Systems Thinking to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "When facing uncertainty, structured frameworks can guide decision-making. Scenario planning involves imagining multiple plausible futures to test strategies against a range of outcomes. Real options analysis treats strategic investments like financial options, allowing leaders to expand, delay, or abandon initiatives as new information emerges. The OODA loop (Observe, Orient, Decide, Act), developed by military strategist John Boyd, emphasizes speed and adaptability in competitive environments. Finally, Gary Klein's recognition-primed decision model explains how experts use experience to recognize patterns and make rapid, intuitive judgments in familiar situations."
         },
         {
           "id": "leadership-401-l02-c3",
           "title": "Balancing Analysis and Intuition",
-          "content": "Successful strategic decision-making is like a recipe that combines two important ingredients: careful analysis and intuitive judgment. Think of analysis as gathering all the facts and data you can find, while intuition is the gut feeling you develop from your experiences. Sometimes, relying only on analysis can be tricky, especially when you don’t have all the data you need or when you’re facing a brand-new situation that hasn’t been encountered before. On the flip side, if you only trust your intuition, you might make mistakes, especially if you don’t recognize your own biases or if the situation is too complicated to understand based on what you’ve seen in the past. The most effective leaders know how to balance these two approaches. They start by using analysis to clearly define the problem and narrow down their choices. Once they have a clearer picture, they then use their judgment to make the final decision. A well-known leader, Jeff Bezos, suggests that it’s often best to make decisions when you have about 70% of the information you wish you had. If you wait until you have 90%, you might miss out on important opportunities. The secret to effective decision-making is to make reversible decisions quickly, like trying out a new idea, while being much more careful with irreversible decisions, like committing to a long-term strategy. This way, you can adapt and learn as you go without taking unnecessary risks.\nContext recap: Successful strategic decision-making is like a recipe that combines two important ingredients: careful analysis and intuitive judgment. Think of analysis as gathering all the facts and data you can find, while intuition is the gut feeling you develop from your experiences. Sometimes, relying only on analysis can be tricky, especially when you don’t have all the data you need or when you’re facing a brand-new situation that hasn’t been encountered before. On the flip side, if you only trust your intuition, you might make mistakes, especially if you don’t recognize your own biases or if the situation is too complicated to understand based on what you’ve seen in the past.\nWhy this matters: Balancing Analysis and Intuition helps learners in Business connect ideas from Executive Leadership & Systems Thinking to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "Effective strategic decision-making blends rigorous analysis with honed intuition. Over-reliance on data can lead to paralysis, especially when information is incomplete. Conversely, relying solely on gut instinct can be clouded by bias. The best leaders use analysis to frame the problem and narrow options, then apply their judgment to make the final call. Jeff Bezos advocates for making decisions with about 70% of the desired information, arguing that waiting for 90% means you're too slow. The key is to distinguish between reversible decisions, which can be made quickly, and irreversible ones, which require deeper deliberation."
         }
       ],
       "flashcards": [
         {
           "id": "leadership-401-l02-f1",
           "front": "Confirmation bias in executive decisions",
-          "back": "The tendency to seek, interpret, and remember information that confirms existing beliefs while ignoring contradictory evidence — countered by devil's advocates and red teams"
+          "back": "The tendency to seek, interpret, and remember information that confirms existing beliefs while ignoring contradictory evidence. It can be countered by using devil's advocates and red teams."
         },
         {
           "id": "leadership-401-l02-f2",
           "front": "OODA loop (Boyd)",
-          "back": "Observe, Orient, Decide, Act — a rapid decision-making cycle emphasizing speed and adaptation, where the leader who cycles through OODA faster gains a decisive advantage"
+          "back": "Observe, Orient, Decide, Act — a rapid decision-making cycle emphasizing speed and adaptation, where the leader who cycles through OODA faster gains a decisive advantage."
         },
         {
           "id": "leadership-401-l02-f3",
           "front": "Bezos's 70% rule",
-          "back": "Decide with roughly 70% of desired information rather than waiting for 90% — most decisions are reversible and the cost of slowness exceeds the cost of occasional mistakes"
+          "back": "Decide with roughly 70% of desired information rather than waiting for 90%. Most decisions are reversible, and the cost of slowness often exceeds the cost of being wrong."
         }
       ],
       "learningAids": [
         {
           "id": "leadership-401-l02-a1",
           "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary of the lesson's main concept."
+          "title": "The OODA Loop",
+          "content": "A circular diagram illustrating the Observe -> Orient -> Decide -> Act cycle, emphasizing speed and adaptation."
         }
       ]
     },
@@ -151,42 +151,42 @@ export const Leadership401Module: LearningModule = {
         {
           "id": "leadership-401-l03-c1",
           "title": "Senge's Five Disciplines",
-          "content": "In his influential book 'The Fifth Discipline,' Peter Senge presents a compelling argument that for an organization to thrive and achieve lasting success, it must embrace five essential and interconnected disciplines. The first discipline is Personal Mastery. This means that each individual within the organization should commit to continuous learning and personal development. It encourages everyone to strive for excellence and to seek out opportunities for growth in their skills and knowledge.\nThe second discipline is Mental Models. This involves recognizing and questioning the deeply held beliefs and assumptions that shape our perceptions and actions. By bringing these mental models to the surface, individuals can better understand how their thinking influences their behavior and decision-making.\nThe third discipline is Shared Vision. This is about fostering a genuine commitment among all members of the organization towards a common future. Instead of simply following orders from higher-ups, everyone collaborates and contributes to a vision that they all believe in and are excited about.\nThe fourth discipline is Team Learning. This emphasizes the power of collective intelligence, where the insights and ideas generated by the group are greater than those of any single individual. It encourages teamwork and open communication, allowing for richer discussions and innovative solutions.\nFinally, the fifth discipline is Systems Thinking. This is the integrating practice that connects all the other disciplines. It helps individuals see the bigger picture by revealing the interconnections and feedback loops that drive organizational behavior. By understanding these relationships, leaders can make more informed decisions that benefit the entire organization. Together, these five disciplines create a framework for sustainable success and effective leadership in any organization.\nContext recap: In his influential book 'The Fifth Discipline,' Peter Senge presents a compelling argument that for an organization to thrive and achieve lasting success, it must embrace five essential and interconnected disciplines. The first discipline is Personal Mastery. This means that each individual within the organization should commit to continuous learning and personal development. It encourages everyone to strive for excellence and to seek out opportunities for growth in their skills and knowledge.\nWhy this matters: Senge's Five Disciplines helps learners in Business connect ideas from Executive Leadership & Systems Thinking to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "In 'The Fifth Discipline,' Peter Senge outlines five practices for building a 'learning organization.' Personal Mastery is the individual commitment to continuous learning. Mental Models involves surfacing and challenging our deep-seated assumptions. Shared Vision is about building a genuine, collective aspiration for the future. Team Learning focuses on the power of group dialogue and collaborative intelligence. The fifth discipline, Systems Thinking, is the integrator that weaves the others together. It provides a framework for seeing the whole, understanding the interconnections and patterns that shape organizational behavior."
         },
         {
           "id": "leadership-401-l03-c2",
           "title": "Systems Thinking in Practice",
-          "content": "Systems thinking is a powerful approach that helps leaders understand the bigger picture instead of just focusing on individual parts. This way of thinking encourages leaders to recognize patterns in behavior and outcomes, rather than seeing events as isolated incidents. One of the key ideas in systems thinking is the concept of feedback loops. These loops show how actions can create effects that circle back to influence the original action. There are two main types of feedback loops: reinforcing loops and balancing loops. Reinforcing loops can create cycles that either promote positive changes, like increased teamwork, or lead to negative consequences, such as conflict. On the other hand, balancing loops help maintain stability by resisting change, ensuring that a system remains in equilibrium. Another important aspect of systems thinking is the idea of delays. Delays refer to the time it takes for an action to produce an outcome. Understanding these delays is crucial because they can cause leaders to either overshoot their targets or fall short of their goals. Leaders who embrace systems thinking actively seek out leverage points. These are specific areas where a small change can lead to significant and lasting improvements, rather than just quick fixes that might not address the root of the problem. By thinking systemically, leaders can make more informed decisions that benefit their organizations in the long run.\nContext recap: Systems thinking is a powerful approach that helps leaders understand the bigger picture instead of just focusing on individual parts. This way of thinking encourages leaders to recognize patterns in behavior and outcomes, rather than seeing events as isolated incidents. One of the key ideas in systems thinking is the concept of feedback loops. These loops show how actions can create effects that circle back to influence the original action.\nWhy this matters: Systems Thinking in Practice helps learners in Business connect ideas from Executive Leadership & Systems Thinking to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "Systems thinking shifts our focus from isolated events to underlying patterns and structures. Key concepts include feedback loops, which show how actions can reinforce or counteract themselves over time. Reinforcing loops create exponential growth or decline, while balancing loops seek stability and resist change. Another critical element is understanding delays—the time lag between an action and its consequences. Ignoring delays can lead to overcorrection and instability. The goal of a systems thinker is to identify leverage points: small, well-focused actions that can produce significant, enduring improvements in the system."
         },
         {
           "id": "leadership-401-l03-c3",
           "title": "Common System Archetypes",
-          "content": "System archetypes are common patterns that can trap organizations in unproductive cycles. Understanding these archetypes is crucial for leaders because they help identify recurring issues that can hinder progress. One example is 'Shifting the Burden.' This occurs when organizations rely on quick fixes, like using overtime to meet demands, instead of addressing the underlying problem of staffing shortages. While it may seem effective in the short term, this approach can lead to burnout and decreased morale among employees.\nAnother archetype is 'Limits to Growth.' This happens when an organization experiences initial success, but that success creates side effects that slow down further progress. For instance, if a company expands too quickly without investing in the necessary infrastructure, it may face challenges that prevent sustainable growth.\nLastly, we have 'Fixes that Fail.' This archetype occurs when a quick solution is implemented, but it leads to unintended consequences that make the original problem worse. For example, if a team tries to solve a communication issue by mandating more meetings, it could lead to information overload and frustration instead of clarity.\nBy recognizing these archetypes, leaders can avoid repeating the same mistakes. Instead of applying temporary fixes, they can develop strategies that address the root causes of problems, leading to more effective and sustainable solutions for their organizations.\nContext recap: System archetypes are common patterns that can trap organizations in unproductive cycles. Understanding these archetypes is crucial for leaders because they help identify recurring issues that can hinder progress. One example is 'Shifting the Burden.' This occurs when organizations rely on quick fixes, like using overtime to meet demands, instead of addressing the underlying problem of staffing shortages. While it may seem effective in the short term, this approach can lead to burnout and decreased morale among employees.\nWhy this matters: Common System Archetypes helps learners in Business connect ideas from Executive Leadership & Systems Thinking to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "System archetypes are recurring patterns of behavior that can trap organizations. Recognizing them is the first step to breaking free. 'Shifting the Burden' occurs when a short-term, symptomatic solution (like overtime) is used instead of addressing a fundamental problem (like understaffing), weakening the ability to find a real solution. 'Limits to Growth' describes a situation where initial success creates unintended consequences that slow further progress. 'Fixes that Fail' happens when a solution has unforeseen negative effects that make the original problem even worse. By identifying these archetypes, leaders can avoid reactive problem-solving and design more sustainable solutions."
         }
       ],
       "flashcards": [
         {
           "id": "leadership-401-l03-f1",
           "front": "Senge's five disciplines",
-          "back": "Personal Mastery, Mental Models, Shared Vision, Team Learning, Systems Thinking (the integrating fifth discipline) — the foundation of a learning organization"
+          "back": "Personal Mastery, Mental Models, Shared Vision, Team Learning, and Systems Thinking (the integrating fifth discipline). These are the foundation of a learning organization."
         },
         {
           "id": "leadership-401-l03-f2",
           "front": "Leverage points (systems thinking)",
-          "back": "Places in a system where a small, well-focused intervention produces significant and lasting improvement — the goal of systems-thinking leaders over symptomatic quick fixes"
+          "back": "Places in a system where a small, well-focused intervention can produce significant and lasting improvement. Systems-thinking leaders seek these over symptomatic quick fixes."
         },
         {
           "id": "leadership-401-l03-f3",
           "front": "Shifting the Burden archetype",
-          "back": "A systemic pattern where reliance on symptomatic solutions (quick fixes) gradually undermines the capacity for fundamental solutions — e.g., using overtime instead of hiring"
+          "back": "A systemic pattern where reliance on symptomatic solutions (quick fixes) gradually undermines the capacity for fundamental solutions, e.g., using consultants instead of training internal staff."
         }
       ],
       "learningAids": [
         {
           "id": "leadership-401-l03-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Follow the prompt sequence and document your reasoning."
+          "type": "interactive",
+          "title": "Archetype Explorer",
+          "content": "An interactive diagram where users can click on different parts of the 'Shifting the Burden' archetype to see how the symptomatic solution, problem symptom, and fundamental solution interact."
         }
       ]
     },
@@ -204,42 +204,42 @@ export const Leadership401Module: LearningModule = {
         {
           "id": "leadership-401-l04-c1",
           "title": "The Nature of Crisis Leadership",
-          "content": "Organizational crises are events that happen infrequently but can have a significant impact on a company. These crises can threaten the survival of the organization, damage its reputation, or harm the well-being of its stakeholders, such as employees, customers, and the community. Unlike regular challenges that businesses face, crises require leaders to make decisions quickly, often with limited information. This can lead to heightened emotions and increased scrutiny from the public and media, which can reveal the true character of a leader.\nWhen leading during a crisis, it is essential to adopt a different approach. Leaders must gather information as quickly as possible, even if it is not complete. They need to make decisive choices, even when there is uncertainty about the outcomes. Transparent communication is crucial during these times, as it helps to build trust and keep everyone informed. Additionally, leaders must manage their emotions effectively, remaining calm and composed while others around them may feel anxious or overwhelmed. This ability to regulate emotions is vital for maintaining stability and guiding the organization through challenging times.\nContext recap: Organizational crises are events that happen infrequently but can have a significant impact on a company. These crises can threaten the survival of the organization, damage its reputation, or harm the well-being of its stakeholders, such as employees, customers, and the community. Unlike regular challenges that businesses face, crises require leaders to make decisions quickly, often with limited information. This can lead to heightened emotions and increased scrutiny from the public and media, which can reveal the true character of a leader.\nWhy this matters: The Nature of Crisis Leadership helps learners in Business connect ideas from Executive Leadership & Systems Thinking to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "An organizational crisis is a low-probability, high-impact event that threatens the viability of the organization and is characterized by ambiguity of cause, effect, and means of resolution. Unlike routine problems, crises demand rapid decisions under intense pressure with incomplete information. They are a crucible for leadership, stripping away pretense and revealing a leader's true character. Effective crisis leadership requires a shift in mindset: from deliberate to decisive, from hierarchical to networked, and from managing information to managing meaning."
         },
         {
           "id": "leadership-401-l04-c2",
           "title": "A Crisis Leadership Framework",
-          "content": "Effective crisis leadership can be understood through three important phases that help leaders navigate challenging situations. The first phase is called Pre-crisis. During this time, leaders focus on building resilience within their organizations. This involves planning for potential crises by imagining different scenarios that could occur. Leaders create detailed response protocols, which are step-by-step plans for how to react when a crisis happens. They also form cross-functional crisis teams, which are groups made up of members from different departments who work together to handle crises. Regular practice simulations are conducted to ensure everyone knows their roles and can respond effectively when a real crisis occurs.\nThe second phase is During the crisis. In this phase, leaders activate their response teams, which means they gather the people who will help manage the situation. It is crucial to establish a reliable source of information, often referred to as a 'single source of truth,' so that everyone has access to the same facts. Leaders must make quick decisions based on the information available to them, which can be challenging but is essential for effective management. Communication is key during this phase; leaders should communicate frequently and clearly with all stakeholders, including employees, customers, and the public. Importantly, leaders must prioritize the safety of people over financial concerns, ensuring that human well-being is the top priority.\nThe final phase is Post-crisis. After the crisis has passed, leaders conduct a thorough review of what happened. This is known as an after-action review, where they analyze the response to understand what worked well and what could be improved. Leaders then implement changes to prevent similar crises from occurring in the future. They also address the emotional impact that the crisis may have had on employees, providing support as needed. Finally, rebuilding trust with stakeholders is vital, and this can be achieved through open accountability, where leaders are transparent about the actions taken and the lessons learned from the crisis.\nContext recap: Effective crisis leadership can be understood through three important phases that help leaders navigate challenging situations. The first phase is called Pre-crisis. During this time, leaders focus on building resilience within their organizations. This involves planning for potential crises by imagining different scenarios that could occur.\nWhy this matters: A Crisis Leadership Framework helps learners in Business connect ideas from Executive Leadership & Systems Thinking to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints.\nGuided check: Ask yourself, \"What is the claim?\", \"Which evidence is strongest?\", and \"What would change my conclusion?\" Use the terms leaders, crisis, phase, during, crises, response, leadership, effective while answering to reinforce vocabulary and precision."
+          "content": "Effective crisis management unfolds in three phases. The Pre-crisis phase is about preparation: building resilience through scenario planning, establishing response protocols, and training a cross-functional crisis team. During the crisis, leaders must activate the team, establish a single source of truth, make rapid decisions, communicate constantly, and prioritize people over property or profits. The Post-crisis phase is for recovery and learning. It involves conducting a thorough after-action review, implementing systemic changes to prevent recurrence, addressing the emotional toll on employees, and rebuilding trust with stakeholders through transparency and accountability."
         },
         {
           "id": "leadership-401-l04-c3",
           "title": "Crisis Communication",
-          "content": "Crisis communication plays a vital role in how effectively an organization can respond during challenging times. According to Timothy Coombs's Situational Crisis Communication Theory, it is essential for leaders to adapt their communication strategies based on the specific type of crisis and the level of accountability the organization has in that situation. There are several important principles to keep in mind when communicating during a crisis: First, it is important to communicate as soon as possible, even if you do not have all the details yet. This helps to establish trust and shows that you are taking the situation seriously. Second, expressing empathy is crucial; showing that you care about those affected by the crisis can help to calm fears and build rapport. Third, being transparent about what you know and what you do not know is essential. This honesty helps to prevent misinformation and speculation. Fourth, leaders should take responsibility that is appropriate to their role in the situation. This means acknowledging mistakes when necessary and outlining the steps being taken to correct them. Lastly, providing regular updates is key to keeping everyone informed and engaged. It is important to remember that leaders who choose to hide information, blame others, or downplay the seriousness of a crisis often make the situation worse. By following these principles, leaders can navigate crises more effectively and maintain the trust of their stakeholders.\nContext recap: Crisis communication plays a vital role in how effectively an organization can respond during challenging times. According to Timothy Coombs's Situational Crisis Communication Theory, it is essential for leaders to adapt their communication strategies based on the specific type of crisis and the level of accountability the organization has in that situation. There are several important principles to keep in mind when communicating during a crisis: First, it is important to communicate as soon as possible, even if you do not have all the details yet. This helps to establish trust and shows that you are taking the situation seriously.\nWhy this matters: Crisis Communication helps learners in Business connect ideas from Executive Leadership & Systems Thinking to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "During a crisis, communication is an operational necessity. Based on Timothy Coombs's Situational Crisis Communication Theory, the response must match the crisis type and the organization's responsibility. Key principles include: communicate immediately, even with incomplete information. Express empathy first, before stating facts. Be transparent about what you know and what you don't. Take appropriate responsibility and outline corrective actions. Provide regular updates through a central channel. Leaders who hide information, shift blame, or minimize the situation invariably worsen the damage."
         }
       ],
       "flashcards": [
         {
           "id": "leadership-401-l04-f1",
           "front": "Three phases of crisis leadership",
-          "back": "Pre-crisis (build resilience, plan, simulate), During crisis (activate team, single source of truth, rapid decisions, constant communication), Post-crisis (after-action review, systemic change, trust rebuilding)"
+          "back": "Pre-crisis (build resilience, plan, simulate), During crisis (activate team, single source of truth, rapid decisions, constant communication), Post-crisis (after-action review, systemic change, trust rebuilding)."
         },
         {
           "id": "leadership-401-l04-f2",
           "front": "Crisis communication first principle",
-          "back": "Communicate immediately even with incomplete information — express empathy before facts, be transparent about knowns and unknowns, and provide consistent updates"
+          "back": "Communicate immediately even with incomplete information. Express empathy before facts, be transparent about knowns and unknowns, and provide consistent updates."
         },
         {
           "id": "leadership-401-l04-f3",
           "front": "Coombs's Situational Crisis Communication Theory",
-          "back": "A framework advising leaders to match communication strategy to the crisis type and the organization's level of responsibility — from denial to full apology and corrective action"
+          "back": "A framework advising leaders to match their communication strategy to the crisis type and the organization's level of responsibility, ranging from denial to a full apology and corrective action."
         }
       ],
       "learningAids": [
         {
           "id": "leadership-401-l04-a1",
           "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary of the lesson's main concept."
+          "title": "Crisis Leadership Timeline",
+          "content": "A timeline graphic showing the three phases: Pre-Crisis (preparation), During Crisis (response), and Post-Crisis (recovery and learning)."
         }
       ]
     },
@@ -343,63 +343,177 @@ export const Leadership401Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Crisis communication best practice calls for immediate communication that leads with empathy, is transparent about what is known and unknown, and commits to ongoing updates — waiting, blaming, or minimizing all worsen outcomes."
+          "explanation": "Crisis communication best practice calls for immediate communication that leads with empathy, is transparent about what is known and unknown, and commits to ongoing updates. Waiting, blaming, or minimizing all worsen outcomes."
         }
       ]
     },
     {
       "id": "leadership-401-l06",
-      "title": "Leading Organizational Transformation & Ethics",
-      "type": "interactive",
-      "duration": 14,
+      "title": "Leading Organizational Transformation",
+      "type": "video",
+      "duration": 15,
       "objectives": [
         "Apply Kotter's eight-step model for leading change",
-        "Identify why transformation efforts fail and how to overcome resistance",
-        "Integrate ethical reasoning into leadership decisions"
+        "Diagnose and overcome common sources of resistance",
+        "Anchor change within the organizational culture"
       ],
       "chunks": [
         {
           "id": "leadership-401-l06-c1",
-          "title": "Leading Organizational Transformation",
-          "content": "John Kotter's eight-step model is a widely recognized and effective framework for guiding organizations through change and improvement. Let's explore each step in detail to understand how they contribute to successful transformation: (1) **Create Urgency** — It’s crucial to help everyone in the organization understand why change is necessary at this moment. This can be achieved by sharing compelling stories or presenting data that clearly illustrates the need for improvement. By fostering a sense of urgency, you motivate others to engage with the change process. (2) **Build a Guiding Coalition** — Assemble a team of individuals who are respected and have the influence needed to lead the change efforts. This coalition should include members from various levels and departments within the organization to ensure diverse perspectives and strong support. (3) **Form a Strategic Vision** — Clearly articulate what the future looks like after the change is implemented. This vision should outline the goals and the specific strategies that will be employed to achieve them, providing a roadmap for everyone involved. (4) **Enlist Volunteers** — Share the vision broadly to inspire others to join the effort. Encouraging volunteers to participate fosters a sense of ownership and commitment to the change initiative. (5) **Enable Action** — Identify and eliminate any barriers that may hinder progress. This may involve adjusting existing systems or processes that do not align with the new vision, ensuring that everyone can contribute effectively. (6) **Generate Short-Term Wins** — Focus on achieving quick, visible improvements that can demonstrate the benefits of the change. Celebrating these early successes helps build excitement and momentum, encouraging further participation. (7) **Sustain Acceleration** — Leverage the credibility gained from these initial wins to tackle larger challenges. This sustained effort is essential for maintaining enthusiasm and commitment to the change process. (8) **Institute Change** — Finally, it’s important to ensure that the new behaviors and practices become ingrained in the organization’s culture. This means reinforcing the changes so that they are not just temporary but become a lasting part of how the organization operates. By following these steps, organizations can effectively navigate the complexities of transformation and foster a culture of continuous improvement.\nContext recap: John Kotter's eight-step model is a widely recognized and effective framework for guiding organizations through change and improvement. Let's explore each step in detail to understand how they contribute to successful transformation: (1) **Create Urgency** — It’s crucial to help everyone in the organization understand why change is necessary at this moment. This can be achieved by sharing compelling stories or presenting data that clearly illustrates the need for improvement. By fostering a sense of urgency, you motivate others to engage with the change process.\nWhy this matters: Leading Organizational Transformation helps learners in Business connect ideas from Executive Leadership & Systems Thinking to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "title": "Kotter's Eight-Step Model for Change",
+          "content": "John Kotter's eight-step model provides a roadmap for leading successful transformations. It begins with (1) Creating a sense of urgency to motivate action. Next, (2) Build a powerful guiding coalition with the influence to lead the change. Then, (3) Form a strategic vision and initiatives to clarify the future state. (4) Enlist a volunteer army by communicating the vision broadly. (5) Enable action by removing barriers like outdated systems or hierarchies. (6) Generate short-term wins to build momentum and credibility. (7) Sustain acceleration by building on early wins to tackle bigger challenges. Finally, (8) Institute change by anchoring new approaches in the culture."
         },
         {
           "id": "leadership-401-l06-c2",
-          "title": "Overcoming Resistance to Change",
-          "content": "Understanding that many transformation efforts face challenges is crucial. In fact, research shows that around 70% of these initiatives do not achieve their intended goals. There are several common reasons why this happens. For instance, leaders may fail to create a strong sense of urgency, which is essential to motivate people to embrace change. Additionally, if the team leading the change lacks strength or cohesion, it can hinder progress. A clear vision is also vital; without it, people may feel lost or confused about the direction of the change. Communication plays a significant role as well; often, leaders communicate too little, sometimes by a factor of ten, which can lead to misunderstandings and resistance. Furthermore, if obstacles that impede progress are not addressed, it can create frustration among team members. Achieving quick wins is important too; if leaders do not celebrate small successes along the way, it can be easy to lose momentum. Declaring victory too soon can also backfire, as it may overlook the need for ongoing effort and adjustment. Lastly, embedding changes into the organization's culture is essential for long-term success. It's natural for people to resist change, and this resistance can often be understood. Individuals may feel threatened by the loss of something important, feel excluded from the decision-making process, distrust the motives of those leading the change, or perceive the change as a threat to their skills or identity. To effectively overcome this resistance, leaders should practice empathetic listening, actively involve those who are hesitant in the planning and design of the change, and showcase quick wins that highlight the benefits of the new direction. By doing so, leaders can foster a more supportive environment for transformation.\nContext recap: Understanding that many transformation efforts face challenges is crucial. In fact, research shows that around 70% of these initiatives do not achieve their intended goals. There are several common reasons why this happens. For instance, leaders may fail to create a strong sense of urgency, which is essential to motivate people to embrace change.\nWhy this matters: Overcoming Resistance to Change helps learners in Business connect ideas from Executive Leadership & Systems Thinking to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "title": "Why Transformations Fail",
+          "content": "Research suggests that up to 70% of transformation efforts fail to achieve their goals. Common pitfalls directly map to Kotter's model: insufficient urgency, a weak guiding coalition, an unclear vision, and under-communication (often by a factor of ten). Other failures include not removing obstacles, failing to create short-term wins, declaring victory too soon, and neglecting to anchor the changes in the corporate culture. Successful leaders are vigilant about these potential failure points and proactively manage them throughout the change process."
         },
         {
           "id": "leadership-401-l06-c3",
-          "title": "Leadership Ethics and Character",
-          "content": "Ethical leadership is about demonstrating the right behaviors through your actions and how you relate to others. It also involves encouraging those around you to act in a way that is morally right. Leaders often encounter difficult situations where they must choose between conflicting values. For example, they might have to decide between making a profit and ensuring safety, being loyal to someone versus being honest, or considering individual rights against the welfare of the entire group. To help navigate these tough decisions, there are several frameworks for ethical reasoning.\nOne important framework is utilitarianism, which suggests that the best action is the one that produces the greatest good for the largest number of people. Another is deontology, which emphasizes the importance of following rules and fulfilling duties, regardless of the consequences that may arise. Virtue ethics encourages us to think about what a person of good character would do in a given situation, while justice theory focuses on fairness in how resources and opportunities are distributed among people.\nIt’s crucial to understand that character is not just something you are born with; it is something you develop over time. Building character involves making ethical choices, especially when faced with pressure or challenges. Each decision you make can strengthen your character and influence those around you, creating a positive environment where ethical behavior is valued and practiced. By committing to ethical leadership, you can inspire others to do the same, fostering a culture of integrity and respect in any organization.\nContext recap: Ethical leadership is about demonstrating the right behaviors through your actions and how you relate to others. It also involves encouraging those around you to act in a way that is morally right. Leaders often encounter difficult situations where they must choose between conflicting values. For example, they might have to decide between making a profit and ensuring safety, being loyal to someone versus being honest, or considering individual rights against the welfare of the entire group.\nWhy this matters: Leadership Ethics and Character helps learners in Business connect ideas from Executive Leadership & Systems Thinking to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "Overcoming Resistance to Change",
+          "content": "Resistance to change is a natural human reaction, often stemming from a perceived loss of control, competence, or identity. People may also distrust the motives behind the change or feel excluded from the process. To overcome resistance, leaders must move beyond simply pushing their agenda. Effective strategies include empathetic listening to understand the root of the resistance, co-creation by involving resistors in the design of the change, and clear, consistent communication that explains the 'why' behind the transformation. Showcasing early wins that benefit those who were hesitant can also be a powerful tool for building support."
         }
       ],
       "flashcards": [
         {
           "id": "leadership-401-l06-f1",
           "front": "Kotter's eight steps for transformation",
-          "back": "Create urgency, build guiding coalition, form vision, enlist volunteers, enable action, generate short-term wins, sustain acceleration, institute change in culture"
+          "back": "Create urgency, build guiding coalition, form vision, enlist volunteers, enable action, generate short-term wins, sustain acceleration, institute change in culture."
         },
         {
           "id": "leadership-401-l06-f2",
           "front": "Why 70% of transformations fail",
-          "back": "Insufficient urgency, weak coalition, unclear vision, under-communication, unremoved obstacles, no short-term wins, premature victory declaration, failure to embed in culture"
+          "back": "Insufficient urgency, weak coalition, unclear vision, under-communication, unremoved obstacles, no short-term wins, premature victory declaration, and failure to embed in culture."
         },
         {
           "id": "leadership-401-l06-f3",
-          "front": "Four ethical reasoning frameworks",
-          "back": "Utilitarianism (greatest good for most), Deontology (duty-based rules), Virtue ethics (character-driven choices), Justice theory (fairness in distribution and procedure)"
+          "front": "Strategies for overcoming resistance",
+          "back": "Empathetic listening, co-creation (involving resistors in the process), and clear communication of the 'why' to address fear of loss, distrust, and uncertainty."
+        }
+      ],
+      "learningAids": [
+        {
+          "id": "leadership-401-l06-a1",
+          "type": "image",
+          "title": "Kotter's 8 Steps to Transformation",
+          "content": "An infographic visualizing Kotter's eight steps as an ascending pathway or ladder."
         }
       ]
     },
     {
       "id": "leadership-401-l07",
+      "title": "Ethical Leadership and Character",
+      "type": "video",
+      "duration": 14,
+      "objectives": [
+        "Define the role of ethics and character in executive leadership",
+        "Apply multiple ethical frameworks to complex dilemmas",
+        "Develop strategies for building an ethical organizational culture"
+      ],
+      "chunks": [
+        {
+          "id": "leadership-401-l07-c1",
+          "title": "The Moral Compass of Leadership",
+          "content": "Ethical leadership is more than just following rules; it's about possessing a well-developed character and moral compass that guides decisions in the gray areas. It involves not only acting ethically yourself but also actively fostering ethical conduct in others. Leaders frequently face ethical dilemmas that pit competing values against each other, such as short-term profit versus long-term safety, or loyalty to an individual versus the truth. Your character is revealed and forged in how you navigate these difficult choices."
+        },
+        {
+          "id": "leadership-401-l07-c2",
+          "title": "Frameworks for Ethical Reasoning",
+          "content": "Several ethical frameworks can help structure decision-making. Utilitarianism seeks the greatest good for the greatest number of people. Deontology focuses on duties and rules, arguing that certain actions are inherently right or wrong regardless of their consequences. Virtue ethics asks what a person of good character (e.g., courageous, honest, just) would do in a situation. Finally, justice theory is concerned with fairness, ensuring that processes and outcomes are distributed equitably. Effective leaders often consider a dilemma through multiple lenses to arrive at a more robust decision."
+        },
+        {
+          "id": "leadership-401-l07-c3",
+          "title": "Building an Ethical Culture",
+          "content": "A leader's personal character is necessary but not sufficient for an ethical organization. Executive leaders must intentionally design and nurture an ethical culture. This is achieved by aligning formal systems—like codes of conduct, performance reviews, and incentive structures—with ethical values. It also requires cultivating informal norms through storytelling, celebrating ethical role models, and ensuring that leader behavior is consistent with stated values. When a gap exists between what leaders say and what the organization rewards, the culture will always default to what is rewarded."
+        }
+      ],
+      "flashcards": [
+        {
+          "id": "leadership-401-l07-f1",
+          "front": "Four ethical reasoning frameworks",
+          "back": "Utilitarianism (greatest good for most), Deontology (duty-based rules), Virtue ethics (character-driven choices), and Justice theory (fairness in distribution and procedure)."
+        },
+        {
+          "id": "leadership-401-l07-f2",
+          "front": "Ethical dilemma",
+          "back": "A conflict between two or more competing values, such as profit vs. safety, or loyalty vs. truth, where any choice will result in compromising a value."
+        },
+        {
+          "id": "leadership-401-l07-f3",
+          "front": "Building an ethical culture",
+          "back": "Involves aligning formal systems (codes of conduct, reviews), informal norms (storytelling, role modeling), and leader behavior to reinforce ethical conduct."
+        }
+      ],
+      "learningAids": [
+        {
+          "id": "leadership-401-l07-a1",
+          "type": "image",
+          "title": "Ethical Frameworks Quadrant",
+          "content": "A 2x2 grid comparing the four ethical frameworks based on focus (Actions vs. Outcomes) and scope (Individual vs. Community)."
+        }
+      ]
+    },
+    {
+      "id": "leadership-401-l08",
+      "title": "Crafting Your Leadership Legacy",
+      "type": "interactive",
+      "duration": 12,
+      "objectives": [
+        "Articulate the concept of a leadership legacy",
+        "Connect personal values to a coherent leadership philosophy",
+        "Develop an intentional plan for building a lasting, positive impact"
+      ],
+      "chunks": [
+        {
+          "id": "leadership-401-l08-c1",
+          "title": "Beyond the Resume: What is a Legacy?",
+          "content": "Your resume lists your accomplishments; your legacy is the story people tell about you after you're gone. It is the enduring impact you have on the people, teams, and culture of your organization that outlasts your tenure. A leadership legacy is not built by accident. It is the result of intentional choices, consistent behaviors, and a deep understanding of your core purpose. It's about shifting your focus from 'what did I achieve?' to 'who did I help become better?'"
+        },
+        {
+          "id": "leadership-401-l08-c2",
+          "title": "Defining Your Leadership Philosophy",
+          "content": "A leadership philosophy is a personal statement that codifies your values and principles, acting as a compass for your actions. To define yours, start by identifying your core values—the non-negotiable principles that guide you. Reflect on the leaders who have inspired you and why. Consider what you believe about people and motivation. Finally, articulate how you want the people you lead to feel and grow under your guidance. This philosophy becomes the foundation of your legacy."
+        },
+        {
+          "id": "leadership-401-l08-c3",
+          "title": "Living Your Legacy Intentionally",
+          "content": "A legacy is built in the small moments of daily leadership. It's how you show up in a difficult meeting, how you give feedback, how you allocate your time and attention, and the decisions you make under pressure. To live your legacy intentionally, you must constantly check for alignment between your leadership philosophy and your actual behavior. Seek feedback on your impact. Are your actions reinforcing the values you claim to hold? Every interaction is an opportunity to build—or erode—the legacy you wish to leave."
+        }
+      ],
+      "flashcards": [
+        {
+          "id": "leadership-401-l08-f1",
+          "front": "Leadership Legacy",
+          "back": "The enduring impact a leader has on individuals, teams, and the organization, defined by their values, character, and the culture they cultivate."
+        },
+        {
+          "id": "leadership-401-l08-f2",
+          "front": "Leadership Philosophy",
+          "back": "A personal statement that articulates your core values, beliefs about people, and principles for leading, serving as a guide for your actions."
+        },
+        {
+          "id": "leadership-401-l08-f3",
+          "front": "Intentional Legacy Building",
+          "back": "The conscious practice of aligning daily decisions, communications, and behaviors with your desired long-term impact and leadership philosophy."
+        }
+      ],
+      "learningAids": [
+        {
+          "id": "leadership-401-l08-a1",
+          "type": "practice",
+          "title": "Personal Legacy Canvas",
+          "content": "A downloadable worksheet with prompts for users to define their core values, leadership philosophy, key stakeholders, and desired long-term impact."
+        }
+      ]
+    },
+    {
+      "id": "leadership-401-l09",
       "title": "Final Assessment: Executive Leadership & Systems Thinking",
       "type": "quiz",
       "duration": 15,
       "questions": [
         {
-          "id": "leadership-401-l07-q1",
+          "id": "leadership-401-l09-q1",
           "text": "Which cognitive bias leads executives to continue investing in a failing strategy because of past commitments?",
           "options": [
             {
@@ -420,10 +534,10 @@ export const Leadership401Module: LearningModule = {
             }
           ],
           "correctOptionId": "c",
-          "explanation": "The sunk cost fallacy drives continued investment in failing strategies because leaders focus on irrecoverable past costs rather than future expected returns — 'we have already invested too much to stop now.'"
+          "explanation": "The sunk cost fallacy drives continued investment in failing strategies because leaders focus on irrecoverable past costs rather than future expected returns, often thinking 'we have already invested too much to stop now.'"
         },
         {
-          "id": "leadership-401-l07-q2",
+          "id": "leadership-401-l09-q2",
           "text": "In Kotter's transformation model, what is the purpose of generating short-term wins?",
           "options": [
             {
@@ -444,34 +558,34 @@ export const Leadership401Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Short-term wins provide visible evidence that the transformation is working — they build credibility, energize supporters, silence critics, and create momentum for tackling larger and more difficult changes."
+          "explanation": "Short-term wins provide visible evidence that the transformation is working. They build credibility, energize supporters, silence critics, and create momentum for tackling larger and more difficult changes."
         },
         {
-          "id": "leadership-401-l07-q3",
-          "text": "Which of Senge's disciplines serves as the integrating framework that connects all the others?",
+          "id": "leadership-401-l09-q3",
+          "text": "What is the primary focus of crafting a leadership legacy?",
           "options": [
             {
               "id": "a",
-              "text": "Personal Mastery"
+              "text": "Achieving the highest possible title and salary"
             },
             {
               "id": "b",
-              "text": "Shared Vision"
+              "text": "The enduring, positive impact on people and culture"
             },
             {
               "id": "c",
-              "text": "Team Learning"
+              "text": "Winning every competitive battle"
             },
             {
               "id": "d",
-              "text": "Systems Thinking"
+              "text": "Implementing the most advanced technological systems"
             }
           ],
-          "correctOptionId": "d",
-          "explanation": "Systems Thinking is the 'fifth discipline' that integrates all the others — it reveals the interconnections and feedback loops that tie personal mastery, mental models, shared vision, and team learning into a coherent whole."
+          "correctOptionId": "b",
+          "explanation": "A leadership legacy is not about personal achievements (resume virtues) but about the lasting, positive influence you have on the people you lead and the organization's culture."
         },
         {
-          "id": "leadership-401-l07-q4",
+          "id": "leadership-401-l09-q4",
           "text": "An executive must choose between maximizing shareholder returns this quarter and investing in employee safety improvements. Which ethical framework asks 'what would a person of good character do?'",
           "options": [
             {
@@ -492,7 +606,7 @@ export const Leadership401Module: LearningModule = {
             }
           ],
           "correctOptionId": "c",
-          "explanation": "Virtue ethics centers on character — asking what a person of integrity, courage, and wisdom would do in a given situation, rather than calculating consequences (utilitarianism) or applying rules (deontology)."
+          "explanation": "Virtue ethics centers on character, asking what a person of integrity, courage, and wisdom would do in a given situation, rather than calculating consequences (utilitarianism) or applying rules (deontology)."
         }
       ]
     }

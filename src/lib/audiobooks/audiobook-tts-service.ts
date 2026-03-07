@@ -6,7 +6,7 @@
  *
  * Flow:
  *   1. Check Supabase Storage cache for existing audio
- *   2. Cache miss → call existing TTS provider chain (OpenAI → ElevenLabs)
+ *   2. Cache miss → call existing TTS provider chain (Gemini → OpenAI)
  *   3. Store result in Supabase Storage with immutable cache headers
  *   4. Return public URL (subsequent requests are $0)
  *
@@ -14,9 +14,8 @@
  * individually, then concatenated before caching.
  */
 
-import { serverEnv } from "@/lib/config/env";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
-import { generateTTS } from "@/lib/media/tts-service";
+import { generateTTS, type TTSProvider } from "@/lib/media/tts-service";
 
 import {
   audiobookCacheKey,
@@ -58,6 +57,7 @@ async function getCachedAudiobookAudio(key: string): Promise<string | null> {
 async function setCachedAudiobookAudio(
   key: string,
   audioBuffer: Buffer,
+  contentType: "audio/mpeg" | "audio/wav" = "audio/mpeg",
 ): Promise<string | null> {
   try {
     const supabase = createSupabaseAdminClient();
@@ -65,7 +65,7 @@ async function setCachedAudiobookAudio(
     const { error } = await supabase.storage
       .from(AUDIOBOOK_BUCKET)
       .upload(key, audioBuffer, {
-        contentType: "audio/mpeg",
+        contentType,
         cacheControl: "public, max-age=31536000, immutable",
         upsert: true,
       });
@@ -128,6 +128,45 @@ function splitTextForTTS(text: string): string[] {
   return segments;
 }
 
+/* ── Audio format helpers ──────────────────────────────────────────── */
+
+/** Check if a buffer starts with RIFF/WAVE magic bytes (WAV format) */
+function isWavBuffer(buf: Buffer): boolean {
+  return buf.length >= 12 && buf.toString("ascii", 0, 4) === "RIFF" && buf.toString("ascii", 8, 12) === "WAVE";
+}
+
+/**
+ * Concatenate multiple audio buffers, handling both MP3 and WAV formats.
+ *
+ * - MP3: frames are self-contained, simple concat works.
+ * - WAV: strip the 44-byte header from all but the first segment,
+ *   then rebuild the first header with the total data size.
+ */
+function concatAudioBuffers(buffers: Buffer[]): { audio: Buffer; isWav: boolean } {
+  if (buffers.length === 0) return { audio: Buffer.alloc(0), isWav: false };
+  if (buffers.length === 1) return { audio: buffers[0], isWav: isWavBuffer(buffers[0]) };
+
+  const wav = isWavBuffer(buffers[0]);
+  if (!wav) {
+    // MP3 — simple concatenation
+    return { audio: Buffer.concat(buffers), isWav: false };
+  }
+
+  // WAV — extract PCM data from each segment, then re-wrap with a single header
+  const WAV_HEADER_SIZE = 44;
+  const pcmChunks = buffers.map((buf, i) =>
+    i === 0 ? buf.subarray(WAV_HEADER_SIZE) : buf.subarray(isWavBuffer(buf) ? WAV_HEADER_SIZE : 0),
+  );
+  const totalPcmSize = pcmChunks.reduce((sum, c) => sum + c.length, 0);
+
+  // Rebuild WAV header from the first segment's header, updating sizes
+  const header = Buffer.from(buffers[0].subarray(0, WAV_HEADER_SIZE));
+  header.writeUInt32LE(36 + totalPcmSize, 4);   // ChunkSize
+  header.writeUInt32LE(totalPcmSize, 40);         // Subchunk2Size (data)
+
+  return { audio: Buffer.concat([header, ...pcmChunks]), isWav: true };
+}
+
 /* ── Duration estimation ───────────────────────────────────────────── */
 
 function estimateDurationMs(text: string): number {
@@ -155,7 +194,7 @@ export async function generateAudiobookChapterTTS(
     return {
       audioUrl: cachedUrl,
       cached: true,
-      provider: "openai",
+      provider: "gemini", // primary provider; we don't track original provider in cache
       durationEstimateMs: estimateDurationMs(chapterText),
     };
   }
@@ -165,14 +204,17 @@ export async function generateAudiobookChapterTTS(
 
   // 3. Generate audio for each segment using existing TTS service
   const audioBuffers: Buffer[] = [];
+  let actualProvider: TTSProvider = "gemini";
 
   for (const segment of segments) {
     const result = await generateTTS({
       text: segment,
       voice: voiceId,
-      // Use a unique cache key per segment so individual segments are also cached
       skipCache: false,
     });
+
+    // Track which provider was used (last segment's provider wins)
+    actualProvider = result.provider;
 
     // Fetch the audio data from the URL to concatenate
     const response = await fetch(result.audioUrl);
@@ -183,18 +225,19 @@ export async function generateAudiobookChapterTTS(
     audioBuffers.push(Buffer.from(arrayBuffer));
   }
 
-  // 4. Concatenate all MP3 segments
-  // MP3 frames are self-contained, so simple concatenation works
-  const fullAudio = Buffer.concat(audioBuffers);
+  // 4. Concatenate segments (handles both MP3 and WAV formats)
+  const { audio: fullAudio, isWav } = concatAudioBuffers(audioBuffers);
+  const contentType = isWav ? "audio/wav" : "audio/mpeg";
+  const mimeType = isWav ? "audio/wav" : "audio/mpeg";
 
   // 5. Cache the complete chapter audio
-  const publicUrl = await setCachedAudiobookAudio(key, fullAudio);
+  const publicUrl = await setCachedAudiobookAudio(key, fullAudio, contentType);
 
   if (publicUrl) {
     return {
       audioUrl: publicUrl,
       cached: false,
-      provider: "openai",
+      provider: actualProvider,
       durationEstimateMs: estimateDurationMs(chapterText),
     };
   }
@@ -202,9 +245,9 @@ export async function generateAudiobookChapterTTS(
   // 6. Fallback: return base64 data URL
   const base64 = fullAudio.toString("base64");
   return {
-    audioUrl: `data:audio/mpeg;base64,${base64}`,
+    audioUrl: `data:${mimeType};base64,${base64}`,
     cached: false,
-    provider: "openai",
+    provider: actualProvider,
     durationEstimateMs: estimateDurationMs(chapterText),
   };
 }

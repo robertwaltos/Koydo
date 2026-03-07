@@ -1,0 +1,1 @@
+https://aistudio.google.com/rate-limit?timeRange=last-28-days

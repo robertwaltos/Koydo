@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const Nursing501Module: LearningModule = {
+export const nursing_501_Module: LearningModule = {
   "id": "nursing-501",
   "title": "Nursing Specialization Studio",
   "description": "Post-401 specialization in Nursing, focused on nursing systems diagnostics, nursing operations and execution design, nursing impact and tradeoff analysis, and nursing governance and leadership through advanced casework, simulation, and defense-based checkpoints.",
@@ -12,71 +12,71 @@ export const Nursing501Module: LearningModule = {
     "nursing",
     "specialization"
   ],
-  "minAge": 17,
+  "minAge": 21,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en",
     "es"
   ],
   "learningObjectives": [
-    "Apply advanced methods for nursing systems diagnostics in high-constraint environments",
-    "Design robust systems for nursing operations and execution design with measurable control gates",
-    "Evaluate interventions in nursing impact and tradeoff analysis with research-grade rigor",
-    "Operationalize nursing governance and leadership with accountable governance and escalation pathways",
-    "Lead cross-functional decision reviews with explicit tradeoff communication",
-    "Defend recommendations under expert critique using evidence and uncertainty bounds"
+    "Apply advanced diagnostic methods to complex nursing systems in high-constraint environments.",
+    "Design robust and measurable systems for nursing operations and care delivery.",
+    "Evaluate clinical and operational interventions with research-grade rigor, analyzing impacts and tradeoffs.",
+    "Develop and implement accountable nursing governance structures with clear escalation pathways.",
+    "Lead cross-functional decision reviews, communicating tradeoffs and evidence effectively.",
+    "Defend system-level recommendations against expert critique using evidence and uncertainty analysis."
   ],
   "lessons": [
     {
       "id": "nursing-501-l01",
-      "title": "Nursing Advanced Foundations",
+      "title": "Foundations of Advanced Nursing Systems",
       "type": "video",
-      "duration": 14,
+      "duration": 15,
       "learningAids": [
         {
           "id": "nursing-501-l01-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Systems Thinking Framework",
+          "prompt": "A diagram showing a healthcare system with interconnected nodes representing patient flow, staffing, resources, and policies. Arrows indicate causal links and feedback loops."
         }
       ],
       "chunks": [
         {
           "id": "nursing-501-l01-c1",
           "kind": "concept",
-          "title": "Scope and Boundary Design",
-          "content": "In this lesson, we will delve into the advanced boundaries of nursing practice. We will learn how to effectively diagnose nursing systems, which involves identifying the needs and challenges within healthcare settings. Additionally, we will focus on designing efficient nursing operations. Mastering these concepts is crucial for fostering a safe and effective healthcare environment, enabling nurses to deliver the highest quality of care to their patients.\nContext recap: In this lesson, we will delve into the advanced boundaries of nursing practice. We will learn how to effectively diagnose nursing systems, which involves identifying the needs and challenges within healthcare settings. Additionally, we will focus on designing efficient nursing operations. Mastering these concepts is crucial for fostering a safe and effective healthcare environment, enabling nurses to deliver the highest quality of care to their patients.\nContext recap: In this lesson, we will delve into the advanced boundaries of nursing practice. We will learn how to effectively diagnose nursing systems, which involves identifying the needs and challenges within healthcare settings. Additionally, we will focus on designing efficient nursing operations. Mastering these concepts is crucial for fostering a safe and effective healthcare environment, enabling nurses to deliver the highest quality of care to their patients.\nWhy this matters: Scope and Boundary Design helps learners in Nursing connect ideas from Nursing Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "title": "Defining Scope and Boundaries",
+          "content": "To effectively diagnose and improve a nursing system, we must first define its scope and boundaries. This involves clearly stating the primary goal, identifying the key components of the system (e.g., patient intake, medication administration), and defining the constraints, such as budget, staffing, and regulatory requirements. A well-defined scope prevents scope creep and focuses analysis on the most critical areas for improvement."
         },
         {
           "id": "nursing-501-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different factors that can affect patient care. They will also identify ranges of uncertainty and understand how various systems depend on one another. This foundational knowledge is crucial for planning effective interventions that can improve patient outcomes.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different factors that can affect patient care. They will also identify ranges of uncertainty and understand how various systems depend on one another. This foundational knowledge is crucial for planning effective interventions that can improve patient outcomes."
+          "content": "This section introduces methods for mapping the causal pathways that influence patient outcomes. Learners will create simple diagrams to trace how factors like nurse-to-patient ratios, technology availability, and communication protocols are interconnected. We will also learn to identify and quantify uncertainty in these systems, which is crucial for planning robust interventions that are effective under a range of conditions."
         },
         {
           "id": "nursing-501-l01-c3",
           "kind": "recap",
-          "title": "Evidence Thresholds",
-          "content": "In our recap, we emphasize that all claims made in nursing practice should be linked to measurable indicators. This means that we need to have clear evidence and confidence bounds to support our decisions. Additionally, regular review checkpoints are important to ensure that we are on the right track and making informed choices.\nContext recap: In our recap, we emphasize that all claims made in nursing practice should be linked to measurable indicators. This means that we need to have clear evidence and confidence bounds to support our decisions. Additionally, regular review checkpoints are important to ensure that we are on the right track and making informed choices."
+          "title": "Establishing Evidence Thresholds",
+          "content": "In summary, all claims and decisions in advanced nursing practice must be supported by measurable evidence. This requires establishing clear performance indicators and confidence bounds before an intervention begins. Regular review checkpoints ensure that decisions are continuously validated against real-world data, allowing for timely course correction."
         }
       ],
       "flashcards": [
         {
           "id": "nursing-501-l01-f1",
-          "front": "nursing systems diagnostics",
-          "back": "A specialization axis requiring explicit assumptions and measurable constraints."
+          "front": "Nursing Systems Diagnostics",
+          "back": "The systematic process of identifying root causes of performance issues within a clinical system by analyzing its components, interactions, and constraints."
         },
         {
           "id": "nursing-501-l01-f2",
-          "front": "nursing operations and execution design",
-          "back": "Execution architecture that determines reliability under stress."
+          "front": "Nursing Operations Design",
+          "back": "The architecture of clinical workflows and processes that determines their safety, efficiency, and reliability under both normal and high-stress conditions."
         },
         {
           "id": "nursing-501-l01-f3",
-          "front": "nursing impact and tradeoff analysis",
-          "back": "Evaluation discipline for identifying true gains and hidden costs."
+          "front": "Impact and Tradeoff Analysis",
+          "back": "An evaluation discipline for quantifying the intended benefits and unintended consequences of a nursing intervention across multiple dimensions like safety, cost, and equity."
         }
       ]
     },
@@ -89,22 +89,22 @@ export const Nursing501Module: LearningModule = {
         {
           "id": "nursing-501-l02-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Workflow Design Canvas",
+          "prompt": "An interactive digital canvas where learners can drag and drop components (e.g., 'Triage', 'Assessment', 'Intervention', 'Escalation Point') to build a clinical workflow."
         }
       ],
       "chunks": [
         {
           "id": "nursing-501-l02-c1",
           "kind": "practice",
-          "title": "Method Design and Stress Test",
-          "content": "In this interactive practice session, learners will have the opportunity to design specialized workflows that reflect their unique nursing methods. They will also conduct stress tests on these workflows by simulating adverse scenarios. This hands-on experience will help them understand how to adapt their approaches in challenging situations.\nContext recap: In this interactive practice session, learners will have the opportunity to design specialized workflows that reflect their unique nursing methods. They will also conduct stress tests on these workflows by simulating adverse scenarios. This hands-on experience will help them understand how to adapt their approaches in challenging situations."
+          "title": "Workflow Design and Stress Testing",
+          "content": "In this interactive lab, learners will design a specialized nursing workflow for a given clinical challenge, such as reducing patient falls. They will then stress-test this workflow by running simulations with adverse scenarios, like a sudden staffing shortage or equipment failure, to identify and mitigate potential points of failure."
         },
         {
           "id": "nursing-501-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "In our recap of this session, we discuss how workflows should include important elements such as checkpoints, rollback criteria, and threshold-based escalation. These components ensure that nursing practices are not only effective but also safe and accountable, allowing for adjustments when necessary.\nContext recap: In our recap of this session, we discuss how workflows should include important elements such as checkpoints, rollback criteria, and threshold-based escalation. These components ensure that nursing practices are not only effective but also safe and accountable, allowing for adjustments when necessary.\nContext recap: In our recap of this session, we discuss how workflows should include important elements such as checkpoints, rollback criteria, and threshold-based escalation. These components ensure that nursing practices are not only effective but also safe and accountable, allowing for adjustments when necessary. Context recap: In our recap of this session, we discuss how workflows should include important elements such as checkpoints, rollback criteria, and threshold-based escalation. These components ensure that nursing practices are not only effective but also safe and accountable, allowing for adjustments when necessary."
+          "content": "To ensure safety and accountability, robust workflows must include control gates. These are predefined checkpoints that require certain criteria to be met before proceeding. Key elements include rollback criteria for reversing a process if adverse outcomes are detected, and threshold-based escalation pathways to alert leadership when key metrics deviate from the safe range."
         }
       ],
       "interactiveActivities": [
@@ -112,23 +112,23 @@ export const Nursing501Module: LearningModule = {
           "id": "nursing-501-l02-act1",
           "type": "matching_pairs",
           "title": "Control-to-Outcome Mapping",
-          "description": "Match specialist controls with their strongest reliability and governance effects.",
+          "description": "Match each operational control with its primary effect on system reliability and governance.",
           "pairs": [
             {
-              "left": "Pre-commit gate",
-              "right": "Prevents avoidable downstream failures"
+              "left": "Pre-intervention checklist",
+              "right": "Prevents predictable, avoidable errors"
             },
             {
-              "left": "Rollback trigger",
-              "right": "Limits blast radius under adverse outcomes"
+              "left": "Automated alert trigger",
+              "right": "Limits the scope of adverse impact from an emerging issue"
             },
             {
-              "left": "Baseline dashboard",
-              "right": "Supports defensible impact attribution"
+              "left": "Baseline performance dashboard",
+              "right": "Supports defensible attribution of an intervention's impact"
             },
             {
-              "left": "Retrospective loop",
-              "right": "Improves next-cycle decision quality"
+              "left": "Post-incident review loop",
+              "right": "Improves the quality of future decisions and protocols"
             }
           ]
         }
@@ -139,284 +139,177 @@ export const Nursing501Module: LearningModule = {
       "title": "Checkpoint 1: Specialist Methods",
       "type": "quiz",
       "duration": 10,
-      "learningAids": [
-        {
-          "id": "nursing-501-l03-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
-        }
-      ],
+      "learningAids": [],
       "questions": [
         {
           "id": "nursing-501-l03-q1",
-          "text": "Which practice most improves nursing systems diagnostics decision quality?",
-          "skillId": "nursing-501-skill-core",
+          "text": "Which practice most improves the quality of a nursing systems diagnostic?",
+          "skillId": "nursing-501-systems-diagnostics",
           "options": [
             {
               "id": "a",
-              "text": "Proceed without baseline or assumptions"
+              "text": "Proceeding without a baseline or explicit assumptions"
             },
             {
               "id": "b",
-              "text": "Define assumptions, constraints, and measurable indicators"
+              "text": "Defining clear assumptions, constraints, and measurable indicators"
             },
             {
               "id": "c",
-              "text": "Optimize only for speed in every context"
+              "text": "Optimizing only for speed of diagnosis in every context"
             },
             {
               "id": "d",
-              "text": "Ignore uncertainty and edge conditions"
+              "text": "Ignoring uncertainty and potential edge conditions"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Advanced decisions improve when assumptions, constraints, and metrics are explicit."
+          "explanation": "High-quality diagnostics depend on making assumptions, constraints, and metrics explicit from the start, ensuring a rigorous and transparent analysis."
         },
         {
           "id": "nursing-501-l03-q2",
-          "text": "At level 501, strong execution for nursing operations and execution design requires:",
-          "skillId": "nursing-501-skill-execution",
+          "text": "A robust design for nursing operations requires:",
+          "skillId": "nursing-501-operations-design",
           "options": [
             {
               "id": "a",
-              "text": "Owner mapping, checkpoint cadence, and escalation thresholds"
+              "text": "Clear role ownership, a regular checkpoint cadence, and defined escalation thresholds"
             },
             {
               "id": "b",
-              "text": "No role clarity and ad-hoc process changes"
+              "text": "Ambiguous role clarity and frequent ad-hoc process changes"
             },
             {
               "id": "c",
-              "text": "No retrospective or post-run review"
+              "text": "Eliminating retrospectives or post-implementation reviews"
             },
             {
               "id": "d",
-              "text": "No rollback or fallback conditions"
+              "text": "No predefined conditions for rollback or fallback procedures"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Reliable advanced execution needs ownership clarity and threshold-driven governance."
+          "explanation": "Reliable execution at an advanced level requires clear ownership, scheduled reviews, and threshold-driven governance to manage complexity and risk."
         },
         {
           "id": "nursing-501-l03-q3",
           "text": "A defensible approach to nursing impact and tradeoff analysis includes:",
-          "skillId": "nursing-501-skill-eval",
+          "skillId": "nursing-501-impact-analysis",
           "options": [
             {
               "id": "a",
-              "text": "Anecdotes without comparison"
+              "text": "Relying on anecdotes without a comparison group"
             },
             {
               "id": "b",
-              "text": "Baseline comparisons, side-effect analysis, and uncertainty bounds"
+              "text": "Baseline comparisons, side-effect analysis, and explicit uncertainty bounds"
             },
             {
               "id": "c",
-              "text": "Changing success criteria after outcomes"
+              "text": "Changing the success criteria after the outcomes are known"
             },
             {
               "id": "d",
-              "text": "Excluding difficult scenarios from analysis"
+              "text": "Excluding challenging scenarios from the analysis to simplify it"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible analysis combines comparative baselines, side-effect checks, and uncertainty disclosure."
+          "explanation": "A defensible analysis is comprehensive, combining comparative baselines, a thorough check for unintended consequences (side effects), and honest disclosure of uncertainty."
         },
         {
           "id": "nursing-501-l03-q4",
-          "text": "Mature governance systems connect:",
-          "skillId": "nursing-501-skill-governance",
+          "text": "Mature nursing governance systems effectively connect:",
+          "skillId": "nursing-501-governance",
           "options": [
             {
               "id": "a",
-              "text": "Policy intent, measurable controls, and remediation pathways"
+              "text": "Policy intent, measurable operational controls, and clear remediation pathways"
             },
             {
               "id": "b",
-              "text": "Policy language with no measurable enforcement"
+              "text": "Policy language that has no measurable enforcement mechanism"
             },
             {
               "id": "c",
-              "text": "Targets without ownership or escalation design"
+              "text": "Performance targets without clear ownership or an escalation plan"
             },
             {
               "id": "d",
-              "text": "Operations without transparent accountability"
+              "text": "Clinical operations that lack transparent accountability structures"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Governance maturity is the operational link between intent, measurement, and corrective action."
-        },
-        {
-          "id": "nursing-501-l03-q5",
-          "text": "What is the best way to compare competing interventions in advanced Nursing?",
-          "skillId": "nursing-501-skill-advanced-5",
-          "options": [
-            {
-              "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
-            },
-            {
-              "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
-            },
-            {
-              "id": "c",
-              "text": "Switch metrics after results arrive"
-            },
-            {
-              "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
-        },
-        {
-          "id": "nursing-501-l03-q6",
-          "text": "In high-stakes Nursing Specialization Studio execution, which communication protocol is strongest?",
-          "skillId": "nursing-501-skill-advanced-6",
-          "options": [
-            {
-              "id": "a",
-              "text": "Broadcast conclusions without assumptions"
-            },
-            {
-              "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
-            },
-            {
-              "id": "c",
-              "text": "Share only final outcomes after completion"
-            },
-            {
-              "id": "d",
-              "text": "Limit updates to a single informal channel"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
-        },
-        {
-          "id": "nursing-501-l03-q7",
-          "text": "A mature remediation loop in advanced Nursing should prioritize:",
-          "skillId": "nursing-501-skill-advanced-7",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blame assignment without system updates"
-            },
-            {
-              "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
-            },
-            {
-              "id": "c",
-              "text": "One-time fixes without retesting"
-            },
-            {
-              "id": "d",
-              "text": "Issue closure based on elapsed time"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
-        },
-        {
-          "id": "nursing-501-l03-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Nursing Specialization Studio?",
-          "skillId": "nursing-501-skill-advanced-8",
-          "options": [
-            {
-              "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
-            },
-            {
-              "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
-            },
-            {
-              "id": "c",
-              "text": "Ignore correlated failure modes"
-            },
-            {
-              "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "explanation": "Mature governance is the operational link between the intent of a policy, how it is measured and controlled in practice, and what happens when it fails."
         }
       ]
     },
     {
       "id": "nursing-501-l04",
-      "title": "Nursing Advanced Case Analysis",
+      "title": "Advanced Case Analysis",
       "type": "video",
       "duration": 14,
       "learningAids": [
         {
           "id": "nursing-501-l04-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Tradeoff Analysis Matrix",
+          "prompt": "A table comparing two proposed nursing interventions. Rows represent evaluation criteria (Patient Safety, Cost, Nurse Satisfaction, Equity), and cells are color-coded (green, yellow, red) to show how each option performs."
         }
       ],
       "chunks": [
         {
           "id": "nursing-501-l04-c1",
           "kind": "concept",
-          "title": "Scenario Architecture",
-          "content": "In this lesson, we will examine the architecture of case scenarios that highlight the competing constraints faced in nursing systems diagnostics. We will analyze how to assess the impact of nursing decisions and the trade-offs that must be considered. This understanding is vital for making informed choices in patient care.\nContext recap: In this lesson, we will examine the architecture of case scenarios that highlight the competing constraints faced in nursing systems diagnostics. We will analyze how to assess the impact of nursing decisions and the trade-offs that must be considered. This understanding is vital for making informed choices in patient care."
+          "title": "Deconstructing Case Scenarios",
+          "content": "In this lesson, we will deconstruct complex case scenarios that feature competing constraints, such as improving patient outcomes while facing budget cuts. We will analyze how to identify the core problem, map the stakeholders, and assess the potential impact of different nursing decisions and the tradeoffs they entail."
         },
         {
           "id": "nursing-501-l04-c2",
           "kind": "practice",
-          "title": "Tradeoff Framing",
-          "content": "During this practice session, learners will compare different options available to them, focusing on key dimensions such as safety, reliability, cost, equity, and governance. This comparative analysis will help them understand the implications of their choices and how to prioritize patient care effectively.\nContext recap: During this practice session, learners will compare different options available to them, focusing on key dimensions such as safety, reliability, cost, equity, and governance. This comparative analysis will help them understand the implications of their choices and how to prioritize patient care effectively.\nContext recap: During this practice session, learners will compare different options available to them, focusing on key dimensions such as safety, reliability, cost, equity, and governance. This comparative analysis will help them understand the implications of their choices and how to prioritize patient care effectively. Context recap: During this practice session, learners will compare different options available to them, focusing on key dimensions such as safety, reliability, cost, equity, and governance. This comparative analysis will help them understand the implications of their choices and how to prioritize patient care effectively."
+          "title": "Tradeoff Framing and Communication",
+          "content": "Using a case study, learners will practice framing and comparing different strategic options. This involves evaluating choices across key dimensions such as clinical safety, operational reliability, cost-effectiveness, equity, and governance. The goal is to learn how to communicate these complex tradeoffs clearly and concisely to other stakeholders."
         },
         {
           "id": "nursing-501-l04-c3",
           "kind": "recap",
-          "title": "Decision Memo Pattern",
-          "content": "In our recap, we highlight that each recommendation made in nursing practice should include clear assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that nurses are prepared for various outcomes and can provide the best possible care.\nContext recap: In our recap, we highlight that each recommendation made in nursing practice should include clear assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that nurses are prepared for various outcomes and can provide the best possible care.\nContext recap: In our recap, we highlight that each recommendation made in nursing practice should include clear assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that nurses are prepared for various outcomes and can provide the best possible care. Context recap: In our recap, we highlight that each recommendation made in nursing practice should include clear assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that nurses are prepared for various outcomes and can provide the best possible care."
+          "title": "The Structured Decision Memo",
+          "content": "We conclude by introducing a structured pattern for documenting recommendations. Each decision memo should articulate the core recommendation, the underlying assumptions, the supporting evidence, the identified risks with their mitigation controls, and a contingency or fallback plan. This structure ensures clarity, accountability, and preparedness."
         }
       ]
     },
     {
       "id": "nursing-501-l05",
-      "title": "Nursing Simulation Clinic",
+      "title": "High-Fidelity Simulation Clinic",
       "type": "interactive",
       "duration": 18,
       "learningAids": [
         {
           "id": "nursing-501-l05-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Simulation Control Dashboard",
+          "prompt": "A mock-up of a hospital operations dashboard with real-time data streams for patient wait times, bed availability, and staffing levels. The learner can adjust variables like 'staff allocation' to see the impact."
         }
       ],
       "chunks": [
         {
           "id": "nursing-501-l05-c1",
           "kind": "practice",
-          "title": "Live Scenario Controls",
-          "content": "In this interactive practice, learners will operate scenario controls while balancing performance with governance constraints. This experience will teach them how to manage real-time situations effectively, ensuring that patient care remains a top priority while adhering to established guidelines.\nContext recap: In this interactive practice, learners will operate scenario controls while balancing performance with governance constraints. This experience will teach them how to manage real-time situations effectively, ensuring that patient care remains a top priority while adhering to established guidelines.\nContext recap: In this interactive practice, learners will operate scenario controls while balancing performance with governance constraints. This experience will teach them how to manage real-time situations effectively, ensuring that patient care remains a top priority while adhering to established guidelines. Context recap: In this interactive practice, learners will operate scenario controls while balancing performance with governance constraints. This experience will teach them how to manage real-time situations effectively, ensuring that patient care remains a top priority while adhering to established guidelines."
+          "title": "Live Scenario Management",
+          "content": "In this interactive simulation, learners will manage a hospital unit during a crisis, such as an unexpected surge in patient admissions. They will operate scenario controls to allocate staff, manage resources, and make critical decisions in real-time, all while balancing clinical performance with governance constraints and safety protocols."
         },
         {
           "id": "nursing-501-l05-c2",
           "kind": "recap",
-          "title": "Adaptive Response Design",
-          "content": "In our recap, we discuss the importance of effective responses that update control gates without losing traceability or accountability. This means that as situations change, nurses must be able to adapt their responses while keeping clear records of their actions and decisions.\nContext recap: In our recap, we discuss the importance of effective responses that update control gates without losing traceability or accountability. This means that as situations change, nurses must be able to adapt their responses while keeping clear records of their actions and decisions.\nContext recap: In our recap, we discuss the importance of effective responses that update control gates without losing traceability or accountability. This means that as situations change, nurses must be able to adapt their responses while keeping clear records of their actions and decisions. Context recap: In our recap, we discuss the importance of effective responses that update control gates without losing traceability or accountability. This means that as situations change, nurses must be able to adapt their responses while keeping clear records of their actions and decisions."
+          "title": "Adaptive Response and Control",
+          "content": "Effective crisis management requires adaptive responses. This recap focuses on how to update operational controls and protocols during a live event without losing traceability or accountability. We emphasize the importance of clear communication and documentation, even under pressure, to ensure that adaptations are safe and effective."
         }
       ],
       "interactiveActivities": [
         {
           "id": "nursing-501-l05-act1",
           "type": "scenario",
-          "title": "Adverse-Condition Decision Run",
-          "description": "Run a high-pressure nursing scenario and tune controls under uncertainty."
+          "title": "Adverse-Condition Decision Simulation",
+          "description": "Manage a high-pressure nursing leadership scenario. Your goal is to maintain patient safety metrics while operating under evolving constraints like staff shortages and equipment malfunctions."
         }
       ]
     },
@@ -425,228 +318,121 @@ export const Nursing501Module: LearningModule = {
       "title": "Checkpoint 2: Case and Simulation Mastery",
       "type": "quiz",
       "duration": 11,
-      "learningAids": [
-        {
-          "id": "nursing-501-l06-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
-        }
-      ],
+      "learningAids": [],
       "questions": [
         {
           "id": "nursing-501-l06-q1",
-          "text": "In advanced casework, the first requirement for defensible recommendations is:",
-          "skillId": "nursing-501-skill-case1",
+          "text": "In advanced casework, the first requirement for a defensible recommendation is:",
+          "skillId": "nursing-501-case-analysis",
           "options": [
             {
               "id": "a",
-              "text": "A preferred option without explicit assumptions"
+              "text": "A preferred option presented without explicit assumptions"
             },
             {
               "id": "b",
-              "text": "A clear baseline, explicit constraints, and success criteria"
+              "text": "A clear baseline for comparison, explicit constraints, and predefined success criteria"
             },
             {
               "id": "c",
-              "text": "High confidence without evidence logs"
+              "text": "High confidence in a solution without providing evidence logs"
             },
             {
               "id": "d",
-              "text": "Single-metric optimization only"
+              "text": "Optimization based on a single metric, such as cost"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible recommendations begin with explicit assumptions, constraints, and measurable targets."
+          "explanation": "Defensible recommendations are built on a solid foundation of explicit assumptions, constraints, and measurable targets established before analysis begins."
         },
         {
           "id": "nursing-501-l06-q2",
-          "text": "A resilient strategy for nursing operations and execution design should include:",
-          "skillId": "nursing-501-skill-case2",
+          "text": "A resilient strategy for nursing operations, especially under stress, should include:",
+          "skillId": "nursing-501-simulation-strategy",
           "options": [
             {
               "id": "a",
-              "text": "Checkpointed execution with fallback and escalation criteria"
+              "text": "A checkpointed execution plan with clear fallback and escalation criteria"
             },
             {
               "id": "b",
-              "text": "One-way execution with no rollback capability"
+              "text": "A rigid, one-way execution plan with no capability for rollback"
             },
             {
               "id": "c",
-              "text": "No ownership mapping across teams"
+              "text": "No predefined ownership mapping across clinical teams"
             },
             {
               "id": "d",
-              "text": "Hidden assumptions and undocumented decisions"
+              "text": "Hidden assumptions and undocumented critical decisions"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Resilience depends on checkpoints, fallback options, and explicit escalation design."
+          "explanation": "Resilience in operations depends on planned checkpoints, predefined fallback options, and explicit escalation pathways to manage unexpected events."
         },
         {
           "id": "nursing-501-l06-q3",
-          "text": "When evaluating nursing impact and tradeoff analysis, which method is most rigorous?",
-          "skillId": "nursing-501-skill-case3",
+          "text": "During a simulation of a patient surge, you notice wait times exceeding the safety threshold. What is the most appropriate immediate action based on adaptive response design?",
+          "skillId": "nursing-501-adaptive-response",
           "options": [
             {
               "id": "a",
-              "text": "Single success story without controls"
+              "text": "Wait for the situation to resolve itself at the end of the shift."
             },
             {
               "id": "b",
-              "text": "Comparative baselines plus side-effect and uncertainty analysis"
+              "text": "Activate a pre-defined escalation protocol to bring in additional resources."
             },
             {
               "id": "c",
-              "text": "Outcome-only narrative without process evidence"
+              "text": "Change the safety threshold in the system to make the metrics look better."
             },
             {
               "id": "d",
-              "text": "Retrospective scope changes to fit outcomes"
+              "text": "Continue operating as normal but ask staff to work faster."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Rigorous evaluation requires comparisons, side-effect analysis, and uncertainty disclosure."
+          "explanation": "Adaptive response relies on using predefined thresholds to trigger specific, planned actions, such as escalation protocols, to manage emerging risks."
         },
         {
           "id": "nursing-501-l06-q4",
-          "text": "Advanced governance is strongest when it:",
-          "skillId": "nursing-501-skill-case4",
+          "text": "When presenting a tradeoff analysis between two staffing models, what is the most effective communication strategy?",
+          "skillId": "nursing-501-tradeoff-communication",
           "options": [
             {
               "id": "a",
-              "text": "Aligns authority, measurement, and remediation obligations"
+              "text": "Only present the data that supports your preferred model."
             },
             {
               "id": "b",
-              "text": "Separates policy from operational controls"
+              "text": "Present a balanced view comparing both models against shared criteria like safety, cost, and staff satisfaction."
             },
             {
               "id": "c",
-              "text": "Avoids external review and transparency"
+              "text": "Focus entirely on the financial costs and ignore clinical or staff-related impacts."
             },
             {
               "id": "d",
-              "text": "Treats accountability as optional under pressure"
-            }
-          ],
-          "correctOptionId": "a",
-          "explanation": "Mature governance links authority, measurable controls, and corrective action."
-        },
-        {
-          "id": "nursing-501-l06-q5",
-          "text": "What is the best way to compare competing interventions in advanced Nursing?",
-          "skillId": "nursing-501-skill-advanced-5",
-          "options": [
-            {
-              "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
-            },
-            {
-              "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
-            },
-            {
-              "id": "c",
-              "text": "Switch metrics after results arrive"
-            },
-            {
-              "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
+              "text": "Use complex jargon to demonstrate expertise without explaining the practical implications."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
-        },
-        {
-          "id": "nursing-501-l06-q6",
-          "text": "In high-stakes Nursing Specialization Studio execution, which communication protocol is strongest?",
-          "skillId": "nursing-501-skill-advanced-6",
-          "options": [
-            {
-              "id": "a",
-              "text": "Broadcast conclusions without assumptions"
-            },
-            {
-              "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
-            },
-            {
-              "id": "c",
-              "text": "Share only final outcomes after completion"
-            },
-            {
-              "id": "d",
-              "text": "Limit updates to a single informal channel"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
-        },
-        {
-          "id": "nursing-501-l06-q7",
-          "text": "A mature remediation loop in advanced Nursing should prioritize:",
-          "skillId": "nursing-501-skill-advanced-7",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blame assignment without system updates"
-            },
-            {
-              "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
-            },
-            {
-              "id": "c",
-              "text": "One-time fixes without retesting"
-            },
-            {
-              "id": "d",
-              "text": "Issue closure based on elapsed time"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
-        },
-        {
-          "id": "nursing-501-l06-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Nursing Specialization Studio?",
-          "skillId": "nursing-501-skill-advanced-8",
-          "options": [
-            {
-              "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
-            },
-            {
-              "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
-            },
-            {
-              "id": "c",
-              "text": "Ignore correlated failure modes"
-            },
-            {
-              "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "explanation": "Effective tradeoff communication requires a transparent and balanced comparison of all viable options against a consistent set of relevant criteria."
         }
       ]
     },
     {
       "id": "nursing-501-l07",
-      "title": "Nursing Governance and Public Impact",
+      "title": "Governance and Public Impact",
       "type": "video",
       "duration": 13,
       "learningAids": [
         {
           "id": "nursing-501-l07-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Accountability Flowchart",
+          "prompt": "A flowchart illustrating a governance process. It starts with 'Policy Intent', moves to 'Operational Control' and 'Monitoring', and has branches for 'Remediation' and 'Stakeholder Reporting'."
         }
       ],
       "chunks": [
@@ -654,64 +440,64 @@ export const Nursing501Module: LearningModule = {
           "id": "nursing-501-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. Understanding how decisions impact various individuals and communities is crucial for responsible nursing practice and ensuring equitable care.\nContext recap: In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. Understanding how decisions impact various individuals and communities is crucial for responsible nursing practice and ensuring equitable care.\nWhy this matters: Stakeholder Impact Distribution helps learners in Nursing connect ideas from Nursing Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "Nursing leadership decisions have wide-ranging effects. In this lesson, learners will map the distribution of benefits, burdens, and delayed consequences across various stakeholder groups, including patients, families, clinical staff, and the broader community. This analysis is crucial for ensuring equitable and responsible practice."
         },
         {
           "id": "nursing-501-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "In this section, we will explore the architecture of accountability in nursing. This includes understanding how decisions are traced, the rights to review those decisions, and the obligations to remediate any issues that arise. This framework is essential for maintaining trust and integrity in nursing practice.\nContext recap: In this section, we will explore the architecture of accountability in nursing. This includes understanding how decisions are traced, the rights to review those decisions, and the obligations to remediate any issues that arise. This framework is essential for maintaining trust and integrity in nursing practice."
+          "content": "This section explores the architecture of accountability. This includes systems for decision traceability (who made what decision and why), the rights of stakeholders to review those decisions, and the obligation of the organization to remediate failures. A strong accountability framework is essential for maintaining public trust and driving continuous improvement."
         },
         {
           "id": "nursing-501-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "As you wrap up your learning, it's important to have a checklist that connects key outcomes with ethical considerations, adherence to policies, and the ability to bounce back from challenges. This checklist will help ensure that you are prepared to lead responsibly in the nursing field.\nContext recap: As you wrap up your learning, it's important to have a checklist that connects key outcomes with ethical considerations, adherence to policies, and the ability to bounce back from challenges. This checklist will help ensure that you are prepared to lead responsibly in the nursing field."
+          "content": "We conclude with a practical checklist for responsible leadership. This tool helps connect key decisions to ethical principles, policy compliance, and organizational resilience. It serves as a guide to ensure that performance goals are pursued in a way that is transparent, accountable, and aligned with professional nursing values."
         }
       ],
       "flashcards": [
         {
           "id": "nursing-501-l07-f1",
-          "front": "Impact distribution",
-          "back": "How outcomes are allocated across populations and timescales."
+          "front": "Impact Distribution",
+          "back": "The analysis of how the positive and negative outcomes of a decision are allocated across different populations and over various timescales."
         },
         {
           "id": "nursing-501-l07-f2",
-          "front": "Decision traceability",
-          "back": "An auditable record of evidence, ownership, and rationale."
+          "front": "Decision Traceability",
+          "back": "An auditable record linking a specific decision to the evidence, rationale, and individuals responsible for it."
         },
         {
           "id": "nursing-501-l07-f3",
-          "front": "Responsible leadership",
-          "back": "Decision behavior balancing performance, accountability, and ethics."
+          "front": "Responsible Leadership",
+          "back": "A decision-making approach that balances the pursuit of performance with duties of accountability, ethical conduct, and stakeholder engagement."
         }
       ]
     },
     {
       "id": "nursing-501-l08",
-      "title": "Nursing Capstone Defense Lab",
+      "title": "Capstone Defense Lab",
       "type": "interactive",
       "duration": 16,
       "learningAids": [
         {
           "id": "nursing-501-l08-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Defense Presentation Template",
+          "prompt": "A slide deck template with pre-defined sections: 'Problem Statement', 'Proposed Intervention', 'Evidence Base', 'Risk Analysis', 'Implementation Plan', and 'Evaluation Metrics'."
         }
       ],
       "chunks": [
         {
           "id": "nursing-501-l08-c1",
           "kind": "practice",
-          "title": "Defense Brief Assembly",
-          "content": "In this activity, you will create a comprehensive brief that includes your main claims, supporting evidence, the limits of your uncertainty, and possible pathways for remediation. This exercise will help you practice organizing your thoughts and presenting them clearly, which is essential for your capstone defense.\nContext recap: In this activity, you will create a comprehensive brief that includes your main claims, supporting evidence, the limits of your uncertainty, and possible pathways for remediation. This exercise will help you practice organizing your thoughts and presenting them clearly, which is essential for your capstone defense."
+          "title": "Assembling the Defense Brief",
+          "content": "In this activity, learners will assemble a comprehensive defense brief for a capstone project. This brief will synthesize their main claims, the supporting evidence, an honest assessment of uncertainty and limitations, and proposed pathways for implementation and remediation. This exercise hones the skill of organizing a complex argument into a clear, defensible proposal."
         },
         {
           "id": "nursing-501-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "During this rehearsal, you will practice responding to questions and critiques from an expert panel. This includes addressing technical aspects, governance issues, and concerns from stakeholders. This preparation is crucial for building your confidence and ensuring you can effectively communicate your ideas during the actual defense.\nContext recap: During this rehearsal, you will practice responding to questions and critiques from an expert panel. This includes addressing technical aspects, governance issues, and concerns from stakeholders. This preparation is crucial for building your confidence and ensuring you can effectively communicate your ideas during the actual defense."
+          "content": "This final section is a rehearsal for the capstone defense. Learners will practice responding to critical questions and constructive feedback from a simulated expert panel. The questioning will cover technical methods, governance implications, and stakeholder concerns, building confidence and preparing learners to communicate their work effectively under professional scrutiny."
         }
       ],
       "interactiveActivities": [
@@ -719,7 +505,7 @@ export const Nursing501Module: LearningModule = {
           "id": "nursing-501-l08-act1",
           "type": "debate_simulator",
           "title": "Expert Defense Panel",
-          "description": "Defend specialization recommendations under adversarial cross-examination."
+          "description": "Present and defend your specialization recommendations to a simulated panel of nursing executives and clinical experts. Respond to their critique and questioning in a professional setting."
         }
       ]
     }

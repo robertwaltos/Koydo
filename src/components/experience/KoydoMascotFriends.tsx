@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { MascotMood } from "./KoydoMascot";
 
-export type FriendId = "pixel" | "spark" | "echo" | "luna" | "terra";
+export type FriendId = "pixel" | "spark" | "echo" | "luna" | "terra" | "brook";
 
 interface MascotFriendProps {
     id: FriendId;
@@ -32,13 +32,15 @@ export default function MascotFriend({
         xl: 240,
     }[sizeProp];
 
-    const colors = {
+    const colors: Record<FriendId, { primary: string; secondary: string; accent: string; }> = {
         pixel: { primary: "#0ea5e9", secondary: "#e0f2fe", accent: "#38bdf8" }, // Sky
         spark: { primary: "#f59e0b", secondary: "#fef3c7", accent: "#fbbf24" }, // Amber/Yellow
         echo: { primary: "#8b5cf6", secondary: "#ede9fe", accent: "#a78bfa" }, // Violet/Purple
         luna: { primary: "#a855f7", secondary: "#f3e8ff", accent: "#c084fc" }, // Purple/Art
         terra: { primary: "#22c55e", secondary: "#dcfce7", accent: "#4ade80" }, // Green/Nature
+        brook: { primary: "#0284c7", secondary: "#e0f2fe", accent: "#38bdf8" }, // River/Blue
     };
+    const friendPalette = colors[id as keyof typeof colors] ?? colors.pixel;
 
     const getFriendPaths = () => {
         switch (id) {
@@ -112,7 +114,7 @@ export default function MascotFriend({
                     <rect x="30" y="32" width="40" height="30" rx="15" fill="black" fillOpacity="0.05" />
                     <path
                         d={getEyePath()}
-                        stroke={colors[id].primary}
+                        stroke={friendPalette.primary}
                         strokeWidth="3"
                         strokeLinecap="round"
                         strokeLinejoin="round"

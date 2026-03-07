@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const Windows401Module: LearningModule = {
+export const windows_401_Module: LearningModule = {
   "id": "windows-401",
   "title": "Windows Platform Strategy, Governance, and Enterprise Resilience",
   "description": "Expert-level Windows platform curriculum on operating model design, fleet governance, reliability economics, supply-chain trust, and executive-level transformation planning.",
@@ -16,7 +16,7 @@ export const Windows401Module: LearningModule = {
   ],
   "minAge": 17,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en"
@@ -41,19 +41,19 @@ export const Windows401Module: LearningModule = {
           "id": "windows-401-l01-c1",
           "kind": "concept",
           "title": "Ownership Model Trade-offs",
-          "content": "When creating a strategy for managing computers in a business, it's important to find a balance between having a central authority and allowing local teams to be flexible. Centralized control helps ensure that everything is consistent and follows the same rules, while allowing local teams to make decisions can help them respond quickly to changes. However, to make this work well, strong rules and guidelines need to be in place to govern how decisions are made.\nContext recap: When creating a strategy for managing computers in a business, it's important to find a balance between having a central authority and allowing local teams to be flexible. Centralized control helps ensure that everything is consistent and follows the same rules, while allowing local teams to make decisions can help them respond quickly to changes. However, to make this work well, strong rules and guidelines need to be in place to govern how decisions are made."
+          "content": "When designing a strategy for managing enterprise computers (endpoints), finding the right balance between centralized authority and local team flexibility is critical. Centralized control ensures consistency, strict compliance, and standardized rules across the organization. Conversely, a federated model allows local teams to make autonomous decisions, enabling them to respond rapidly to specific departmental needs. To make a hybrid approach work effectively, strong governance frameworks and explicit guidelines must be established to dictate how and when decisions are made."
         },
         {
           "id": "windows-401-l01-c2",
           "kind": "concept",
           "title": "Decision Rights in High-Stakes Events",
-          "content": "In situations where there are major software updates, urgent security issues, or exceptions to policies, it is crucial to have clear guidelines about who is in charge of making decisions. If there is confusion about who is responsible, it can lead to delays in resolving problems, which can make situations worse. Having predefined authority boundaries helps ensure that issues are addressed quickly and effectively.\nContext recap: In situations where there are major software updates, urgent security issues, or exceptions to policies, it is crucial to have clear guidelines about who is in charge of making decisions. If there is confusion about who is responsible, it can lead to delays in resolving problems, which can make situations worse. Having predefined authority boundaries helps ensure that issues are addressed quickly and effectively."
+          "content": "During major software updates, urgent zero-day security patches, or critical policy exceptions, clear decision-making guidelines are vital. If there is ambiguity about who holds the authority to approve or halt a rollout, it leads to operational paralysis and prolonged system vulnerabilities. Establishing predefined authority boundaries and escalation paths ensures that high-stakes issues are addressed decisively and effectively, minimizing potential downtime."
         },
         {
           "id": "windows-401-l01-c3",
           "kind": "recap",
           "title": "Operational Cadence",
-          "content": "Successful endpoint management programs that are well-developed typically have a regular schedule for assessing risks, checking reliability, and ensuring compliance. For example, they might conduct risk assessments every week, review reliability and compliance scores every month, and reassess their strategic priorities every three months. This consistent operational cadence helps maintain high standards and ensures that any potential issues are addressed promptly.\nContext recap: Successful endpoint management programs that are well-developed typically have a regular schedule for assessing risks, checking reliability, and ensuring compliance. For example, they might conduct risk assessments every week, review reliability and compliance scores every month, and reassess their strategic priorities every three months. This consistent operational cadence helps maintain high standards and ensures that any potential issues are addressed promptly."
+          "content": "Successful endpoint management requires a regular schedule—or cadence—for assessing risks, verifying reliability, and ensuring compliance. For example, an enterprise might conduct automated risk assessments weekly, review fleet reliability and compliance scores monthly, and reassess strategic platform priorities quarterly. This consistent operational rhythm sustains high standards, prevents configuration drift, and ensures emerging issues are caught early."
         }
       ],
       "flashcards": [
@@ -78,7 +78,7 @@ export const Windows401Module: LearningModule = {
           "id": "windows-401-l01-a1",
           "type": "image",
           "title": "Endpoint Operating Model Blueprint",
-          "content": "Blueprint contrasting centralized, federated, and hybrid endpoint governance."
+          "content": "[Visual Prompt: A flowchart contrasting Centralized (single node to many), Federated (multiple independent nodes), and Hybrid (central node with semi-autonomous sub-nodes) endpoint governance models.] Blueprint contrasting centralized, federated, and hybrid endpoint governance."
         }
       ]
     },
@@ -92,13 +92,13 @@ export const Windows401Module: LearningModule = {
           "id": "windows-401-l02-c1",
           "kind": "concept",
           "title": "Blast Radius Management",
-          "content": "Changes made to the Windows operating system across many devices can lead to widespread problems if the rollout process is not carefully controlled. To ensure safety, it is important to implement a structured approach that includes sequencing changes in groups, setting health checkpoints, having rollback options in case of issues, and continuously monitoring system performance. This proactive management helps prevent major outages and keeps systems running smoothly.\nContext recap: Changes made to the Windows operating system across many devices can lead to widespread problems if the rollout process is not carefully controlled. To ensure safety, it is important to implement a structured approach that includes sequencing changes in groups, setting health checkpoints, having rollback options in case of issues, and continuously monitoring system performance. This proactive management helps prevent major outages and keeps systems running smoothly."
+          "content": "Deploying changes across thousands of Windows devices can cause widespread outages if not carefully controlled. 'Blast radius' refers to the scope of impact if an update fails. To ensure safety, engineers implement a structured approach: sequencing changes in deployment rings (cohorts), setting automated health checkpoints (gates), defining strict rollback thresholds, and continuously monitoring system telemetry. This proactive containment strategy prevents localized defects from becoming global catastrophes."
         },
         {
           "id": "windows-401-l02-c2",
           "kind": "practice",
           "title": "Policy Lifecycle Governance",
-          "content": "For any software release that carries a high level of risk, it is essential to follow a structured process that includes several key steps. These steps should involve proposing the release, simulating its effects, validating it through a pilot program, rolling it out in stages, and finally verifying its success after release. Each step should have clear documentation and approval from responsible parties to ensure accountability and thoroughness.\nContext recap: For any software release that carries a high level of risk, it is essential to follow a structured process that includes several key steps. These steps should involve proposing the release, simulating its effects, validating it through a pilot program, rolling it out in stages, and finally verifying its success after release. Each step should have clear documentation and approval from responsible parties to ensure accountability and thoroughness."
+          "content": "High-risk software releases require a structured lifecycle: propose, simulate, pilot, stage, and verify. Each phase acts as a filter. A change is first simulated in a lab, then piloted with a small 'canary' group of IT users, rolled out in stages to broader departments, and finally verified post-release. Each transition requires clear documentation, telemetry evidence, and explicit approval from designated owners to ensure accountability."
         }
       ],
       "interactiveActivities": [
@@ -149,7 +149,7 @@ export const Windows401Module: LearningModule = {
           "id": "windows-401-l02-a1",
           "type": "practice",
           "title": "Release Governance Worksheet",
-          "content": "Template for rollout rings, gate metrics, rollback conditions, and owner approvals."
+          "content": "[Visual Prompt: A digital worksheet interface with sections for 'Rollout Rings', 'Gate Metrics', 'Rollback Conditions', and 'Sign-offs'.] Template for rollout rings, gate metrics, rollback conditions, and owner approvals."
         }
       ]
     },
@@ -265,7 +265,7 @@ export const Windows401Module: LearningModule = {
           "id": "windows-401-l03-a1",
           "type": "mnemonic",
           "title": "GATE",
-          "content": "Goals, Approvals, Thresholds, Evidence."
+          "content": "[Visual Prompt: A stylized gate icon with the acronym G.A.T.E. spelled out on the pillars.] Goals, Approvals, Thresholds, Evidence."
         }
       ]
     },
@@ -279,19 +279,19 @@ export const Windows401Module: LearningModule = {
           "id": "windows-401-l04-c1",
           "kind": "concept",
           "title": "Cost of Endpoint Failure",
-          "content": "When we talk about endpoints, we mean the individual devices that people use, like computers and tablets. If these devices are not working properly, it can lead to several problems. For instance, employees may find it hard to get their work done, which can lower productivity. Additionally, when devices fail, it often leads to higher costs for support teams who need to fix them. This can also hurt the trust that customers and clients have in the business, as they rely on technology to function smoothly. Therefore, it is crucial for businesses to think carefully about how they invest in technology. They should consider the risks involved and the potential costs that come with device failures. By doing this, companies can make smarter decisions that help improve the reliability and efficiency of their operations.\nContext recap: When we talk about endpoints, we mean the individual devices that people use, like computers and tablets. If these devices are not working properly, it can lead to several problems. For instance, employees may find it hard to get their work done, which can lower productivity. Additionally, when devices fail, it often leads to higher costs for support teams who need to fix them.\nWhy this matters: Cost of Endpoint Failure helps learners in Operating Systems connect ideas from Windows Platform Strategy, Governance, and Enterprise Resilience to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "Endpoints—such as laptops, desktops, and tablets—are the primary tools employees use to drive business value. When these devices fail, it directly impacts the bottom line. A crashed device causes a ripple effect: lost employee productivity, increased IT support costs (helpdesk tickets), and potential damage to customer trust if client-facing operations are interrupted. Therefore, organizations must evaluate technology investments through an economic lens, weighing the upfront cost of reliability controls against the financial risk of widespread device failures."
         },
         {
           "id": "windows-401-l04-c2",
           "kind": "concept",
           "title": "Portfolio Prioritization",
-          "content": "When deciding which initiatives to prioritize, organizations should carefully evaluate several key factors. First, they need to assess how critical each initiative is to the overall success of the business. Next, it's essential to consider how frequently similar incidents have occurred in the past, as this can help predict future challenges. Additionally, the team's confidence in their ability to effectively manage and reduce risks plays a crucial role in this decision-making process. Often, foundational controls—these are the basic security measures that help ensure both safety and reliability—tend to provide the most significant benefits over the long term. By thoughtfully prioritizing initiatives in this way, organizations can concentrate their efforts on the projects that will have the most positive impact on their operations and resilience.\nContext recap: When deciding which initiatives to prioritize, organizations should carefully evaluate several key factors. First, they need to assess how critical each initiative is to the overall success of the business. Next, it's essential to consider how frequently similar incidents have occurred in the past, as this can help predict future challenges. Additionally, the team's confidence in their ability to effectively manage and reduce risks plays a crucial role in this decision-making process.\nWhy this matters: Portfolio Prioritization helps learners in Operating Systems connect ideas from Windows Platform Strategy, Governance, and Enterprise Resilience to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "Organizations must prioritize IT initiatives based on business criticality, historical incident frequency, and mitigation confidence. Foundational controls—the core security and stability measures—often yield the highest long-term return on investment (ROI). By systematically evaluating which platform services support the most critical workflows, engineering teams can allocate their budget and effort toward projects that maximize enterprise resilience."
         },
         {
           "id": "windows-401-l04-c3",
           "kind": "example",
           "title": "Executive Framing",
-          "content": "When presenting recommendations to company leaders, it is important to clearly outline the expected results and the reasoning behind those expectations. For instance, you could state, 'By adopting health-gated rollouts, we anticipate a reduction in serious release incidents by 30% over the next two quarters.' Providing this type of measurable information allows executives to grasp the potential effects of their decisions more effectively. It helps them make informed choices that can lead to better outcomes for the organization.\nContext recap: When presenting recommendations to company leaders, it is important to clearly outline the expected results and the reasoning behind those expectations. For instance, you could state, 'By adopting health-gated rollouts, we anticipate a reduction in serious release incidents by 30% over the next two quarters.' Providing this type of measurable information allows executives to grasp the potential effects of their decisions more effectively. It helps them make informed choices that can lead to better outcomes for the organization."
+          "content": "When presenting IT strategies to leadership, frame recommendations around measurable business outcomes rather than purely technical metrics. For instance, instead of saying 'We need to implement deployment rings,' state, 'By adopting health-gated rollouts, we project a 30% reduction in severe release incidents and a savings of 500 helpdesk hours over the next two quarters.' Quantifying the impact allows executives to grasp the ROI and make informed funding decisions."
         }
       ],
       "flashcards": [
@@ -316,7 +316,7 @@ export const Windows401Module: LearningModule = {
           "id": "windows-401-l04-a1",
           "type": "image",
           "title": "Investment Prioritization Matrix",
-          "content": "Matrix ranking endpoint initiatives by impact potential and implementation complexity."
+          "content": "[Visual Prompt: A 2x2 matrix chart with 'Implementation Complexity' on the X-axis and 'Impact Potential' on the Y-axis, with dots representing different IT initiatives.] Matrix ranking endpoint initiatives by impact potential and implementation complexity."
         }
       ]
     },
@@ -330,13 +330,13 @@ export const Windows401Module: LearningModule = {
           "id": "windows-401-l05-c1",
           "kind": "concept",
           "title": "Endpoint Trust Boundaries",
-          "content": "The integrity of endpoints, or individual devices, relies on ensuring that they come from trusted sources, that the flow of software packages is controlled, that all software is signed to verify its authenticity, and that checks are performed before deploying software widely. These measures help protect the system from potential threats and ensure that only safe software is used.\nContext recap: The integrity of endpoints, or individual devices, relies on ensuring that they come from trusted sources, that the flow of software packages is controlled, that all software is signed to verify its authenticity, and that checks are performed before deploying software widely. These measures help protect the system from potential threats and ensure that only safe software is used."
+          "content": "Securing endpoints requires strict trust boundaries to prevent supply chain attacks. This means verifying that software originates from trusted vendors, internal package pipelines are tightly controlled, all executables are cryptographically signed, and automated admission checks are passed before widespread deployment. These zero-trust principles ensure that compromised or tampered software cannot execute on the fleet."
         },
         {
           "id": "windows-401-l05-c2",
           "kind": "practice",
           "title": "Provenance Workflow",
-          "content": "To ensure the reliability of software releases, it is important to include a thorough validation process. This process should involve verifying the source of the software, confirming that builds are properly attested, obtaining approvals for any changes, and keeping track of any exceptions with clear expiration dates and review processes. This structured approach helps maintain high standards of quality and security.\nContext recap: To ensure the reliability of software releases, it is important to include a thorough validation process. This process should involve verifying the source of the software, confirming that builds are properly attested, obtaining approvals for any changes, and keeping track of any exceptions with clear expiration dates and review processes. This structured approach helps maintain high standards of quality and security."
+          "content": "Software provenance is the verifiable history of a software build. A robust release assurance workflow validates the source code, confirms build attestations (proof that the build process wasn't tampered with), enforces peer approvals, and tracks any security exceptions with strict expiration dates. This structured approach guarantees that only high-integrity artifacts reach the end user."
         }
       ],
       "interactiveActivities": [
@@ -392,7 +392,7 @@ export const Windows401Module: LearningModule = {
           "id": "windows-401-l05-a1",
           "type": "practice",
           "title": "Provenance Audit Worksheet",
-          "content": "Template for source checks, build evidence, deploy gating, and exception tracking."
+          "content": "[Visual Prompt: A checklist graphic showing a magnifying glass over code (Source), a factory (Build), a gateway (Deploy), and a clipboard (Exceptions).] Template for source checks, build evidence, deploy gating, and exception tracking."
         }
       ]
     },
@@ -533,7 +533,7 @@ export const Windows401Module: LearningModule = {
           "id": "windows-401-l06-a1",
           "type": "mnemonic",
           "title": "CLEAR",
-          "content": "Context, Levers, Economics, Accountability, Risk."
+          "content": "[Visual Prompt: A magnifying glass focusing on the word CLEAR, breaking down into Context, Levers, Economics, Accountability, Risk.] Context, Levers, Economics, Accountability, Risk."
         }
       ]
     },
@@ -547,13 +547,13 @@ export const Windows401Module: LearningModule = {
           "id": "windows-401-l07-c1",
           "kind": "practice",
           "title": "Capstone Brief",
-          "content": "For your capstone project, you will design a comprehensive proposal aimed at transforming Windows endpoints over a two-year period. This proposal must thoughtfully consider and balance several important factors: security to protect sensitive information, reliability to ensure systems function smoothly, user productivity to enhance the work experience, and operating costs to manage expenses effectively. Additionally, you should include a governance structure that clearly defines how decisions will be made throughout the project. This structure will help ensure that all stakeholders are involved and informed. Furthermore, create a portfolio of controls that outlines the specific measures and technologies you will implement to achieve your goals. Finally, develop a detailed timeline that includes key milestones to help track your progress and ensure that the project stays on schedule. This will not only help you stay organized but also demonstrate your ability to plan and execute a significant transformation project successfully.\nContext recap: For your capstone project, you will design a comprehensive proposal aimed at transforming Windows endpoints over a two-year period. This proposal must thoughtfully consider and balance several important factors: security to protect sensitive information, reliability to ensure systems function smoothly, user productivity to enhance the work experience, and operating costs to manage expenses effectively. Additionally, you should include a governance structure that clearly defines how decisions will be made throughout the project. This structure will help ensure that all stakeholders are involved and informed.\nWhy this matters: Capstone Brief helps learners in Operating Systems connect ideas from Windows Platform Strategy, Governance, and Enterprise Resilience to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "Your capstone project is to design a comprehensive, two-year Windows endpoint transformation proposal. You must balance competing priorities: security to protect sensitive data, reliability to ensure uptime, user productivity to enhance the employee experience, and operating costs to manage IT budgets effectively. Your proposal must include a governance structure defining decision rights, a portfolio of technical controls, and a detailed timeline with quarterly milestones to track progress and ensure executive alignment."
         },
         {
           "id": "windows-401-l07-c2",
           "kind": "recap",
           "title": "Assessment Criteria",
-          "content": "High-quality proposals should clearly define measurable outcomes, consider the sequence of dependencies, explicitly state any risks that are accepted, and ensure that there is accountable ownership at every stage of the project. This clarity helps ensure that everyone involved understands their responsibilities and the goals of the project.\nContext recap: High-quality proposals should clearly define measurable outcomes, consider the sequence of dependencies, explicitly state any risks that are accepted, and ensure that there is accountable ownership at every stage of the project. This clarity helps ensure that everyone involved understands their responsibilities and the goals of the project."
+          "content": "A high-quality proposal clearly defines measurable business outcomes, maps out technical dependency sequences, explicitly states any accepted risks, and assigns accountable owners for every stage of the project. This clarity ensures that all stakeholders—from engineering to the C-suite—understand their responsibilities and the strategic goals of the transformation."
         }
       ],
       "metadata": {
@@ -568,7 +568,7 @@ export const Windows401Module: LearningModule = {
           "id": "windows-401-l07-a1",
           "type": "practice",
           "title": "Board Memo Framework",
-          "content": "Template for objective, options, recommendation, economics, controls, and quarterly milestones."
+          "content": "[Visual Prompt: A professional executive memo template with placeholders for Objective, Options, Recommendation, Economics, Controls, and Quarterly Milestones.] Template for objective, options, recommendation, economics, controls, and quarterly milestones."
         }
       ]
     }

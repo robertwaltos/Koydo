@@ -54,7 +54,7 @@ export default function AchievementToast({
                     exit={{ y: 20, x: "-50%", opacity: 0, scale: 0.9 }}
                     transition={{ type: "spring", stiffness: 300, damping: 20 }}
                     style={{ left: "50%" }}
-                    className="fixed bottom-0 z-[100] w-[90%] max-w-md pointer-events-auto"
+                    className="koydo-achievement-toast fixed bottom-0 z-[100] w-[90%] max-w-md pointer-events-auto"
                 >
                     <div className="relative group overflow-hidden rounded-[2rem] p-[3px] shadow-2xl">
                         {/* Animated Border Gradient */}

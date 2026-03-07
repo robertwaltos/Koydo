@@ -1,88 +1,92 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const Geography501Module: LearningModule = {
+export const geography_501_Module: LearningModule = {
   "id": "geography-501",
-  "title": "Geography Specialization Studio",
-  "description": "Post-401 specialization in Geography, focused on geography systems diagnostics, geography operations and execution design, geography impact and tradeoff analysis, and geography governance and leadership through advanced casework, simulation, and defense-based checkpoints.",
+  "title": "Applied Geospatial Systems Analysis",
+  "description": "An advanced specialization in applied geography focusing on the analysis of complex environmental and urban systems. This module uses advanced casework, simulation, and policy defense exercises to build skills in geospatial diagnostics, operational planning, impact analysis, and ethical governance.",
   "subject": "Geography",
   "tags": [
-    "core",
-    "curriculum",
-    "interactive",
-    "geography",
+    "geospatial",
+    "gis",
+    "urban planning",
+    "environmental management",
     "specialization"
   ],
   "minAge": 17,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en",
     "es"
   ],
   "learningObjectives": [
-    "Apply advanced methods for geography systems diagnostics in high-constraint environments",
-    "Design robust systems for geography operations and execution design with measurable control gates",
-    "Evaluate interventions in geography impact and tradeoff analysis with research-grade rigor",
-    "Operationalize geography governance and leadership with accountable governance and escalation pathways",
-    "Lead cross-functional decision reviews with explicit tradeoff communication",
-    "Defend recommendations under expert critique using evidence and uncertainty bounds"
+    "Analyze complex socio-environmental systems using spatial modeling techniques.",
+    "Design robust geospatial data collection and analysis workflows for real-world problems.",
+    "Evaluate the potential impacts, tradeoffs, and ethical implications of proposed geographical interventions.",
+    "Develop and defend evidence-based policy recommendations derived from geospatial analysis.",
+    "Lead cross-functional reviews of geographic projects, clearly communicating assumptions, methods, and uncertainty.",
+    "Operationalize principles of ethical governance in the management of geospatial data and projects."
   ],
   "lessons": [
     {
       "id": "geography-501-l01",
-      "title": "Geography Advanced Foundations",
+      "title": "Foundations of Geospatial Systems",
       "type": "video",
       "duration": 14,
       "learningAids": [
         {
           "id": "geography-501-l01-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "System Mapping",
+          "content": "Define a system by its boundaries, components, and interactions. Make assumptions explicit and use measurable data.",
+          "visualPrompt": "A diagram showing a watershed system, with inputs (precipitation), components (rivers, groundwater, forests), and outputs (river flow, evaporation)."
         }
       ],
       "chunks": [
         {
           "id": "geography-501-l01-c1",
           "kind": "concept",
-          "title": "Scope and Boundary Design",
-          "content": "In this lesson, we will delve into the advanced boundaries of geography, which are essential for understanding the complex interactions within our world. We will focus on how geographic systems function, learn to identify and diagnose any issues that may arise within these systems, and design effective operations to implement geographic strategies. Gaining this foundational knowledge will empower us to analyze geographical challenges more effectively and develop solutions that can make a positive impact on our environment and communities.\nContext recap: In this lesson, we will delve into the advanced boundaries of geography, which are essential for understanding the complex interactions within our world. We will focus on how geographic systems function, learn to identify and diagnose any issues that may arise within these systems, and design effective operations to implement geographic strategies. Gaining this foundational knowledge will empower us to analyze geographical challenges more effectively and develop solutions that can make a positive impact on our environment and communities."
+          "title": "Defining Complex Geospatial Systems",
+          "content": "To analyze a geographic phenomenon, we must first define it as a system with clear boundaries. In this lesson, we'll learn how to define systems like a watershed, a transportation network, or a regional food supply chain. This allows us to identify key components and the flows between them, forming the basis for rigorous analysis.",
+          "visualPrompt": "An animated map showing the nested boundaries of a city, its metropolitan area, and the larger bioregion it inhabits."
         },
         {
           "id": "geography-501-l01-c2",
           "kind": "concept",
-          "title": "Causal and Uncertainty Modeling",
-          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different factors that influence geographic systems. They will also identify ranges of uncertainty and understand how different systems depend on one another. This preparation is essential for planning effective interventions that can positively impact geographic outcomes.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different factors that influence geographic systems. They will also identify ranges of uncertainty and understand how different systems depend on one another. This preparation is essential for planning effective interventions that can positively impact geographic outcomes."
+          "title": "Modeling System Dynamics and Uncertainty",
+          "content": "Geographic systems are dynamic, with complex feedback loops and inherent uncertainty. We will explore methods for modeling these dynamics, such as spatial autocorrelation and feedback analysis. Acknowledging and quantifying uncertainty in our data and models is crucial for making honest and reliable recommendations.",
+          "visualPrompt": "A causal loop diagram illustrating the urban heat island effect, showing reinforcing loops between pavement, heat absorption, and air conditioner use."
         },
         {
           "id": "geography-501-l01-c3",
           "kind": "recap",
-          "title": "Evidence Thresholds",
-          "content": "In our recap, we emphasize that all claims made in our geographic analyses should be linked to measurable indicators. This means we will establish confidence bounds and set up review checkpoints to ensure our findings are reliable and can be verified. This practice is crucial for maintaining the integrity of our geographic assessments.\nContext recap: In our recap, we emphasize that all claims made in our geographic analyses should be linked to measurable indicators. This means we will establish confidence bounds and set up review checkpoints to ensure our findings are reliable and can be verified. This practice is crucial for maintaining the integrity of our geographic assessments."
+          "title": "Establishing Baselines and Metrics",
+          "content": "To measure change, we need a starting point. This recap emphasizes the importance of establishing a clear baseline using geospatial data, such as a pre-intervention land-use map. We will also define key performance indicators (KPIs) to track the system's behavior over time, ensuring our analysis is grounded in measurable evidence.",
+          "visualPrompt": "A side-by-side comparison of two satellite images of a coastline, one from 1990 (baseline) and one from 2020, with areas of erosion highlighted."
         }
       ],
       "flashcards": [
         {
           "id": "geography-501-l01-f1",
-          "front": "geography systems diagnostics",
-          "back": "A specialization axis requiring explicit assumptions and measurable constraints."
+          "front": "Geospatial System",
+          "back": "A network of interconnected geographic features and processes with defined boundaries, such as a watershed or urban area."
         },
         {
           "id": "geography-501-l01-f2",
-          "front": "geography operations and execution design",
-          "back": "Execution architecture that determines reliability under stress."
+          "front": "Spatial Autocorrelation",
+          "back": "A measure of the degree to which near and distant objects are related. The principle that 'everything is related to everything else, but near things are more related than distant things.'"
         },
         {
           "id": "geography-501-l01-f3",
-          "front": "geography impact and tradeoff analysis",
-          "back": "Evaluation discipline for identifying true gains and hidden costs."
+          "front": "Baseline Data",
+          "back": "A set of measurements collected before an intervention or project begins, used as a reference point for evaluating impact."
         }
       ]
     },
     {
       "id": "geography-501-l02",
-      "title": "Geography Specialist Methods Lab",
+      "title": "Geospatial Analysis Methods Lab",
       "type": "interactive",
       "duration": 17,
       "learningAids": [
@@ -90,45 +94,48 @@ export const Geography501Module: LearningModule = {
           "id": "geography-501-l02-a1",
           "type": "practice",
           "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "content": "Design a logical workflow from data acquisition to final analysis, including checkpoints for quality control.",
+          "visualPrompt": "A flowchart template for a GIS project, with boxes for 'Data Collection', 'Data Cleaning', 'Analysis', and 'Visualization'."
         }
       ],
       "chunks": [
         {
           "id": "geography-501-l02-c1",
           "kind": "practice",
-          "title": "Method Design and Stress Test",
-          "content": "In this interactive segment, learners will have the opportunity to design specialized workflows tailored to geographic studies. They will also conduct stress tests on these workflows by simulating adverse scenarios. This hands-on practice will help them understand how to adapt their methods in real-world situations.\nContext recap: In this interactive segment, learners will have the opportunity to design specialized workflows tailored to geographic studies. They will also conduct stress tests on these workflows by simulating adverse scenarios. This hands-on practice will help them understand how to adapt their methods in real-world situations."
+          "title": "Designing an Analysis Workflow",
+          "content": "In this interactive lab, you will design a complete geospatial analysis workflow for a specific problem. You'll select appropriate data sources, outline processing steps, and choose analytical methods. We will also simulate common challenges, like incomplete data, to test the resilience of your workflow design.",
+          "visualPrompt": "An interactive diagram where users drag and drop procedural blocks (e.g., 'Buffer', 'Overlay', 'Reclassify') to build a workflow for a site selection problem."
         },
         {
           "id": "geography-501-l02-c2",
           "kind": "recap",
-          "title": "Control Gate Architecture",
-          "content": "In our recap, we will discuss how workflows can be structured to include important checkpoints, criteria for rolling back decisions, and escalation procedures based on specific thresholds. This architecture ensures that our geographic methods are robust and can be adjusted as needed during implementation.\nContext recap: In our recap, we will discuss how workflows can be structured to include important checkpoints, criteria for rolling back decisions, and escalation procedures based on specific thresholds. This architecture ensures that our geographic methods are robust and can be adjusted as needed during implementation."
+          "title": "Quality Assurance in Geospatial Analysis",
+          "content": "A reliable analysis depends on strong quality control. We'll recap how to build checkpoints into your workflow. This includes criteria for data validation, steps for model calibration, and protocols for peer review to ensure your results are accurate, repeatable, and defensible.",
+          "visualPrompt": "A checklist graphic showing key quality assurance steps: Data Provenance Check, Metadata Review, Sensitivity Analysis, Peer Review."
         }
       ],
       "interactiveActivities": [
         {
           "id": "geography-501-l02-act1",
           "type": "matching_pairs",
-          "title": "Control-to-Outcome Mapping",
-          "description": "Match specialist controls with their strongest reliability and governance effects.",
+          "title": "Matching Methods to Problems",
+          "description": "Match the geographic question with the most appropriate geospatial analysis method.",
           "pairs": [
             {
-              "left": "Pre-commit gate",
-              "right": "Prevents avoidable downstream failures"
+              "left": "Find all suitable locations for a new hospital.",
+              "right": "Multi-Criteria Suitability Analysis"
             },
             {
-              "left": "Rollback trigger",
-              "right": "Limits blast radius under adverse outcomes"
+              "left": "Identify clusters of high-crime incidents.",
+              "right": "Hot Spot Analysis"
             },
             {
-              "left": "Baseline dashboard",
-              "right": "Supports defensible impact attribution"
+              "left": "Determine the most efficient route for a delivery truck.",
+              "right": "Network Analysis"
             },
             {
-              "left": "Retrospective loop",
-              "right": "Improves next-cycle decision quality"
+              "left": "Estimate how a new highway will affect forest cover.",
+              "right": "Land-Use Change Modeling"
             }
           ]
         }
@@ -136,223 +143,124 @@ export const Geography501Module: LearningModule = {
     },
     {
       "id": "geography-501-l03",
-      "title": "Checkpoint 1: Specialist Methods",
+      "title": "Checkpoint 1: Methods and System Definition",
       "type": "quiz",
       "duration": 10,
       "learningAids": [
         {
           "id": "geography-501-l03-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Knowledge Check",
+          "content": "Review the core concepts of system definition and analytical workflows before proceeding.",
+          "visualPrompt": "A concept map connecting 'Geospatial System' to 'Boundaries', 'Components', 'Metrics', and 'Workflows'."
         }
       ],
       "questions": [
         {
           "id": "geography-501-l03-q1",
-          "text": "Which practice most improves geography systems diagnostics decision quality?",
+          "text": "When defining a watershed as a geospatial system for analysis, what is the most critical first step?",
           "skillId": "geography-501-skill-core",
           "options": [
             {
               "id": "a",
-              "text": "Proceed without baseline or assumptions"
+              "text": "Immediately start collecting rainfall data."
             },
             {
               "id": "b",
-              "text": "Define assumptions, constraints, and measurable indicators"
+              "text": "Delineate the watershed boundary using a digital elevation model."
             },
             {
               "id": "c",
-              "text": "Optimize only for speed in every context"
+              "text": "Choose the color scheme for the final map."
             },
             {
               "id": "d",
-              "text": "Ignore uncertainty and edge conditions"
+              "text": "Assume the boundary is the same as the county line."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Advanced decisions improve when assumptions, constraints, and metrics are explicit."
+          "explanation": "Defining the system's boundary is the foundational step before any analysis can be performed accurately."
         },
         {
           "id": "geography-501-l03-q2",
-          "text": "At level 501, strong execution for geography operations and execution design requires:",
+          "text": "A robust geospatial workflow should include checkpoints to:",
           "skillId": "geography-501-skill-execution",
           "options": [
             {
               "id": "a",
-              "text": "Owner mapping, checkpoint cadence, and escalation thresholds"
+              "text": "Validate data quality, verify model assumptions, and peer-review results."
             },
             {
               "id": "b",
-              "text": "No role clarity and ad-hoc process changes"
+              "text": "Ensure the project is completed as quickly as possible."
             },
             {
               "id": "c",
-              "text": "No retrospective or post-run review"
+              "text": "Prevent anyone from questioning the final conclusion."
             },
             {
               "id": "d",
-              "text": "No rollback or fallback conditions"
+              "text": "Make the process more complicated and difficult to follow."
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Reliable advanced execution needs ownership clarity and threshold-driven governance."
+          "explanation": "Checkpoints are for ensuring quality and reliability through validation, verification, and review."
         },
         {
           "id": "geography-501-l03-q3",
-          "text": "A defensible approach to geography impact and tradeoff analysis includes:",
+          "text": "What does it mean to account for uncertainty in a geospatial model?",
           "skillId": "geography-501-skill-eval",
           "options": [
             {
               "id": "a",
-              "text": "Anecdotes without comparison"
+              "text": "Claiming the model's predictions are 100% certain."
             },
             {
               "id": "b",
-              "text": "Baseline comparisons, side-effect analysis, and uncertainty bounds"
+              "text": "Identifying and reporting the model's margin of error and potential data gaps."
             },
             {
               "id": "c",
-              "text": "Changing success criteria after outcomes"
+              "text": "Ignoring any data that doesn't fit the expected outcome."
             },
             {
               "id": "d",
-              "text": "Excluding difficult scenarios from analysis"
+              "text": "Using the oldest available data to ensure consistency."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible analysis combines comparative baselines, side-effect checks, and uncertainty disclosure."
+          "explanation": "Defensible analysis requires acknowledging and quantifying sources of uncertainty, such as measurement error or model limitations."
         },
         {
           "id": "geography-501-l03-q4",
-          "text": "Mature governance systems connect:",
+          "text": "Mature data governance for a geospatial project connects:",
           "skillId": "geography-501-skill-governance",
           "options": [
             {
               "id": "a",
-              "text": "Policy intent, measurable controls, and remediation pathways"
+              "text": "Data collection standards, clear metadata, and defined access rights."
             },
             {
               "id": "b",
-              "text": "Policy language with no measurable enforcement"
+              "text": "The project goal with the team's favorite software."
             },
             {
               "id": "c",
-              "text": "Targets without ownership or escalation design"
+              "text": "Having a lot of data, regardless of its quality or relevance."
             },
             {
               "id": "d",
-              "text": "Operations without transparent accountability"
+              "text": "Keeping the data source and methods a secret."
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Governance maturity is the operational link between intent, measurement, and corrective action."
-        },
-        {
-          "id": "geography-501-l03-q5",
-          "text": "What is the best way to compare competing interventions in advanced Geography?",
-          "skillId": "geography-501-skill-advanced-5",
-          "options": [
-            {
-              "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
-            },
-            {
-              "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
-            },
-            {
-              "id": "c",
-              "text": "Switch metrics after results arrive"
-            },
-            {
-              "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
-        },
-        {
-          "id": "geography-501-l03-q6",
-          "text": "In high-stakes Geography Specialization Studio execution, which communication protocol is strongest?",
-          "skillId": "geography-501-skill-advanced-6",
-          "options": [
-            {
-              "id": "a",
-              "text": "Broadcast conclusions without assumptions"
-            },
-            {
-              "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
-            },
-            {
-              "id": "c",
-              "text": "Share only final outcomes after completion"
-            },
-            {
-              "id": "d",
-              "text": "Limit updates to a single informal channel"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
-        },
-        {
-          "id": "geography-501-l03-q7",
-          "text": "A mature remediation loop in advanced Geography should prioritize:",
-          "skillId": "geography-501-skill-advanced-7",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blame assignment without system updates"
-            },
-            {
-              "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
-            },
-            {
-              "id": "c",
-              "text": "One-time fixes without retesting"
-            },
-            {
-              "id": "d",
-              "text": "Issue closure based on elapsed time"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
-        },
-        {
-          "id": "geography-501-l03-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Geography Specialization Studio?",
-          "skillId": "geography-501-skill-advanced-8",
-          "options": [
-            {
-              "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
-            },
-            {
-              "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
-            },
-            {
-              "id": "c",
-              "text": "Ignore correlated failure modes"
-            },
-            {
-              "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "explanation": "Good governance ensures data quality, usability, and security through standards, documentation (metadata), and access controls."
         }
       ]
     },
     {
       "id": "geography-501-l04",
-      "title": "Geography Advanced Case Analysis",
+      "title": "Case Study: The Aral Sea Restoration",
       "type": "video",
       "duration": 14,
       "learningAids": [
@@ -360,33 +268,37 @@ export const Geography501Module: LearningModule = {
           "id": "geography-501-l04-a1",
           "type": "image",
           "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "content": "Analyze the case by identifying stakeholders, evaluating tradeoffs, and structuring an evidence-based recommendation.",
+          "visualPrompt": "A timeline showing key events in the Aral Sea's history, with corresponding satellite images showing the shoreline receding and partially returning."
         }
       ],
       "chunks": [
         {
           "id": "geography-501-l04-c1",
           "kind": "concept",
-          "title": "Scenario Architecture",
-          "content": "In this lesson, we will frame cases that highlight competing constraints within geographic systems. We will analyze how these constraints affect diagnostics and the impact of geography, as well as the trade-offs involved in decision-making. Understanding these dynamics is essential for effective geographic analysis.\nContext recap: In this lesson, we will frame cases that highlight competing constraints within geographic systems. We will analyze how these constraints affect diagnostics and the impact of geography, as well as the trade-offs involved in decision-making. Understanding these dynamics is essential for effective geographic analysis."
+          "title": "Analyzing the System",
+          "content": "We will examine the Aral Sea ecological disaster as a complex socio-environmental system. The case highlights competing constraints: the economic need for cotton irrigation versus the ecological and social costs of a shrinking sea. We will analyze the causes and cascading effects of this large-scale geographic change.",
+          "visualPrompt": "A map of the Amu Darya and Syr Darya river basins, showing the vast network of irrigation canals diverting water from the rivers before they reach the Aral Sea."
         },
         {
           "id": "geography-501-l04-c2",
           "kind": "practice",
-          "title": "Tradeoff Framing",
-          "content": "In this practice segment, learners will compare different options available to them, focusing on various dimensions such as safety, reliability, cost, equity, and governance. This comparison will help them understand the complexities involved in making informed decisions in geography.\nContext recap: In this practice segment, learners will compare different options available to them, focusing on various dimensions such as safety, reliability, cost, equity, and governance. This comparison will help them understand the complexities involved in making informed decisions in geography."
+          "title": "Evaluating Tradeoffs",
+          "content": "Using data from the case, you will compare the different interventions and their outcomes. This involves weighing economic benefits (agriculture) against ecological restoration (fisheries, climate moderation) and public health impacts (dust storms). This practice hones your ability to analyze complex, multi-dimensional tradeoffs.",
+          "visualPrompt": "A spider chart comparing two scenarios ('Continued Irrigation' vs. 'River Restoration') across multiple dimensions like 'Agricultural Output', 'Water Salinity', 'Air Quality', and 'Local Employment'."
         },
         {
           "id": "geography-501-l04-c3",
           "kind": "recap",
-          "title": "Decision Memo Pattern",
-          "content": "In our recap, we will highlight that each recommendation made in our geographic analyses should include clear assumptions, supporting evidence, risk management strategies, and fallback plans. This comprehensive approach ensures that our decisions are well-informed and prepared for potential challenges.\nContext recap: In our recap, we will highlight that each recommendation made in our geographic analyses should include clear assumptions, supporting evidence, risk management strategies, and fallback plans. This comprehensive approach ensures that our decisions are well-informed and prepared for potential challenges."
+          "title": "Synthesizing a Policy Brief",
+          "content": "A strong analysis concludes with a clear recommendation. We'll recap how to structure a policy brief based on your case analysis. Every recommendation must be supported by evidence, acknowledge risks and uncertainties, and propose a plan for monitoring the expected outcomes.",
+          "visualPrompt": "A template of a one-page policy brief with sections for 'Executive Summary', 'Background', 'Analysis of Options', 'Recommendation', and 'Monitoring Plan'."
         }
       ]
     },
     {
       "id": "geography-501-l05",
-      "title": "Geography Simulation Clinic",
+      "title": "Urban Growth Simulation Lab",
       "type": "interactive",
       "duration": 18,
       "learningAids": [
@@ -394,302 +306,210 @@ export const Geography501Module: LearningModule = {
           "id": "geography-501-l05-a1",
           "type": "practice",
           "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "content": "Use the simulation to test policy interventions. Observe the outcomes, identify unintended consequences, and adapt your strategy.",
+          "visualPrompt": "The user interface of the urban growth simulator, showing control sliders for 'Zoning Density', 'Transit Funding', and 'Greenbelt Protection'."
         }
       ],
       "chunks": [
         {
           "id": "geography-501-l05-c1",
           "kind": "practice",
-          "title": "Live Scenario Controls",
-          "content": "In this interactive practice, learners will operate scenario controls while carefully balancing performance metrics and governance constraints. This exercise will help them develop skills in managing complex geographic scenarios effectively.\nContext recap: In this interactive practice, learners will operate scenario controls while carefully balancing performance metrics and governance constraints. This exercise will help them develop skills in managing complex geographic scenarios effectively.\nWhy this matters: Live Scenario Controls helps learners in Geography connect ideas from Geography Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "Simulating Urban Sprawl",
+          "content": "In this interactive simulation, you are in charge of planning for a growing city. You will adjust policy controls like zoning laws, transportation investment, and environmental protections. Your goal is to balance competing metrics like economic growth, housing affordability, traffic congestion, and preservation of green space.",
+          "visualPrompt": "An animated map showing a simulated city expanding over 50 years. One version shows sprawling, low-density growth; another shows compact, transit-oriented development."
         },
         {
           "id": "geography-501-l05-c2",
           "kind": "recap",
-          "title": "Adaptive Response Design",
-          "content": "In our recap, we will discuss how effective responses to geographic challenges should be designed to update control gates while maintaining traceability and accountability. This ensures that all actions taken are transparent and can be tracked back to their origins.\nContext recap: In our recap, we will discuss how effective responses to geographic challenges should be designed to update control gates while maintaining traceability and accountability. This ensures that all actions taken are transparent and can be tracked back to their origins."
+          "title": "Developing Adaptive Policies",
+          "content": "Simulations teach us that the best policies are often adaptive. This recap focuses on how to use simulation results to design policies that can be monitored and adjusted over time. We will discuss the importance of setting trigger points for policy review based on real-world data, ensuring governance is responsive and effective.",
+          "visualPrompt": "A flowchart illustrating an adaptive policy cycle: 'Implement Policy' -> 'Monitor KPIs' -> 'Compare to Thresholds' -> 'Review & Adjust Policy'."
         }
       ],
       "interactiveActivities": [
         {
           "id": "geography-501-l05-act1",
           "type": "scenario",
-          "title": "Adverse-Condition Decision Run",
-          "description": "Run a high-pressure geography scenario and tune controls under uncertainty."
+          "title": "Crisis Scenario: Urban Flood Response",
+          "description": "A '100-year flood' strikes your simulated city. Use geospatial tools to analyze vulnerable areas, allocate emergency resources, and manage the response under pressure."
         }
       ]
     },
     {
       "id": "geography-501-l06",
-      "title": "Checkpoint 2: Case and Simulation Mastery",
+      "title": "Checkpoint 2: Case Analysis and Simulation",
       "type": "quiz",
       "duration": 11,
       "learningAids": [
         {
           "id": "geography-501-l06-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Knowledge Check",
+          "content": "Assess your ability to analyze complex cases and interpret simulation results.",
+          "visualPrompt": "A split-screen image showing the Aral Sea case study on one side and the urban simulation map on the other."
         }
       ],
       "questions": [
         {
           "id": "geography-501-l06-q1",
-          "text": "In advanced casework, the first requirement for defensible recommendations is:",
+          "text": "In the Aral Sea case, the primary tradeoff was between:",
           "skillId": "geography-501-skill-case1",
           "options": [
             {
               "id": "a",
-              "text": "A preferred option without explicit assumptions"
+              "text": "Short-term agricultural economy and long-term ecological stability."
             },
             {
               "id": "b",
-              "text": "A clear baseline, explicit constraints, and success criteria"
+              "text": "Building more cities versus preserving farmland."
             },
             {
               "id": "c",
-              "text": "High confidence without evidence logs"
+              "text": "International tourism and local fishing rights."
             },
             {
               "id": "d",
-              "text": "Single-metric optimization only"
+              "text": "Hydroelectric power and nuclear power."
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "Defensible recommendations begin with explicit assumptions, constraints, and measurable targets."
+          "correctOptionId": "a",
+          "explanation": "The core conflict was diverting river water for cotton farming, which collapsed the sea's ecosystem and the economy that depended on it."
         },
         {
           "id": "geography-501-l06-q2",
-          "text": "A resilient strategy for geography operations and execution design should include:",
+          "text": "A resilient urban growth strategy developed from the simulation would likely include:",
           "skillId": "geography-501-skill-case2",
           "options": [
             {
               "id": "a",
-              "text": "Checkpointed execution with fallback and escalation criteria"
+              "text": "A mix of development policies with clear metrics and a plan for future adjustments."
             },
             {
               "id": "b",
-              "text": "One-way execution with no rollback capability"
+              "text": "A single, irreversible plan to build highways everywhere."
             },
             {
               "id": "c",
-              "text": "No ownership mapping across teams"
+              "text": "Ignoring population growth projections."
             },
             {
               "id": "d",
-              "text": "Hidden assumptions and undocumented decisions"
+              "text": "Focusing only on building luxury housing."
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Resilience depends on checkpoints, fallback options, and explicit escalation design."
+          "explanation": "Resilience comes from adaptive strategies that balance multiple goals and can be modified based on monitored outcomes."
         },
         {
           "id": "geography-501-l06-q3",
-          "text": "When evaluating geography impact and tradeoff analysis, which method is most rigorous?",
+          "text": "When evaluating the impact of a large-scale project like a dam, what is the most rigorous approach?",
           "skillId": "geography-501-skill-case3",
           "options": [
             {
               "id": "a",
-              "text": "Single success story without controls"
+              "text": "Only counting the number of jobs created."
             },
             {
               "id": "b",
-              "text": "Comparative baselines plus side-effect and uncertainty analysis"
+              "text": "Comparing pre-project baselines with post-project outcomes across social, economic, and environmental metrics."
             },
             {
               "id": "c",
-              "text": "Outcome-only narrative without process evidence"
+              "text": "Relying solely on anecdotal stories from residents."
             },
             {
               "id": "d",
-              "text": "Retrospective scope changes to fit outcomes"
+              "text": "Changing the success criteria after the project is complete to ensure it looks good."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Rigorous evaluation requires comparisons, side-effect analysis, and uncertainty disclosure."
+          "explanation": "Rigorous evaluation is comprehensive, comparative, and based on pre-defined metrics and baseline data."
         },
         {
           "id": "geography-501-l06-q4",
-          "text": "Advanced governance is strongest when it:",
+          "text": "In the urban flood simulation, effective governance means:",
           "skillId": "geography-501-skill-case4",
           "options": [
             {
               "id": "a",
-              "text": "Aligns authority, measurement, and remediation obligations"
+              "text": "Having pre-established emergency plans that use spatial data to prioritize response efforts."
             },
             {
               "id": "b",
-              "text": "Separates policy from operational controls"
+              "text": "Waiting for the crisis to be over before making any decisions."
             },
             {
               "id": "c",
-              "text": "Avoids external review and transparency"
+              "text": "Sending all resources to the wealthiest neighborhoods first."
             },
             {
               "id": "d",
-              "text": "Treats accountability as optional under pressure"
+              "text": "Ignoring flood plain maps when making zoning decisions."
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Mature governance links authority, measurable controls, and corrective action."
-        },
-        {
-          "id": "geography-501-l06-q5",
-          "text": "What is the best way to compare competing interventions in advanced Geography?",
-          "skillId": "geography-501-skill-advanced-5",
-          "options": [
-            {
-              "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
-            },
-            {
-              "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
-            },
-            {
-              "id": "c",
-              "text": "Switch metrics after results arrive"
-            },
-            {
-              "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
-        },
-        {
-          "id": "geography-501-l06-q6",
-          "text": "In high-stakes Geography Specialization Studio execution, which communication protocol is strongest?",
-          "skillId": "geography-501-skill-advanced-6",
-          "options": [
-            {
-              "id": "a",
-              "text": "Broadcast conclusions without assumptions"
-            },
-            {
-              "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
-            },
-            {
-              "id": "c",
-              "text": "Share only final outcomes after completion"
-            },
-            {
-              "id": "d",
-              "text": "Limit updates to a single informal channel"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
-        },
-        {
-          "id": "geography-501-l06-q7",
-          "text": "A mature remediation loop in advanced Geography should prioritize:",
-          "skillId": "geography-501-skill-advanced-7",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blame assignment without system updates"
-            },
-            {
-              "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
-            },
-            {
-              "id": "c",
-              "text": "One-time fixes without retesting"
-            },
-            {
-              "id": "d",
-              "text": "Issue closure based on elapsed time"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
-        },
-        {
-          "id": "geography-501-l06-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Geography Specialization Studio?",
-          "skillId": "geography-501-skill-advanced-8",
-          "options": [
-            {
-              "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
-            },
-            {
-              "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
-            },
-            {
-              "id": "c",
-              "text": "Ignore correlated failure modes"
-            },
-            {
-              "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "explanation": "Effective governance in a crisis relies on data-driven plans that allow for rapid and prioritized action."
         }
       ]
     },
     {
       "id": "geography-501-l07",
-      "title": "Geography Governance and Public Impact",
+      "title": "Geospatial Ethics and Governance",
       "type": "video",
       "duration": 13,
       "learningAids": [
         {
           "id": "geography-501-l07-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Ethical Framework",
+          "content": "Balance project goals with principles of justice, privacy, and public accountability.",
+          "visualPrompt": "A Venn diagram showing the overlap between 'Project Viability', 'Environmental Sustainability', and 'Social Equity'."
         }
       ],
       "chunks": [
         {
           "id": "geography-501-l07-c1",
           "kind": "concept",
-          "title": "Stakeholder Impact Distribution",
-          "content": "In this lesson, learners will map out the distribution of benefits, burdens, and any delayed effects that may impact different stakeholder groups. Understanding these dynamics is crucial for ensuring that all voices are considered in geographic decision-making.\nContext recap: In this lesson, learners will map out the distribution of benefits, burdens, and any delayed effects that may impact different stakeholder groups. Understanding these dynamics is crucial for ensuring that all voices are considered in geographic decision-making."
+          "title": "Analyzing Environmental Justice",
+          "content": "Geospatial tools can reveal, but also perpetuate, inequality. We will learn how to use GIS to analyze environmental justice: the fair treatment of all people regardless of race or income with respect to environmental laws. This includes mapping the distribution of environmental hazards (like pollution) and amenities (like parks).",
+          "visualPrompt": "A map of a city showing industrial zones overlaid with demographic data, highlighting the disproportionate proximity of low-income communities to sources of pollution."
         },
         {
           "id": "geography-501-l07-c2",
           "kind": "concept",
-          "title": "Accountability Architecture",
-          "content": "In this section, we will explore the architecture of accountability in geographic governance. This includes ensuring that decisions are traceable, that stakeholders have review rights, and that there are clear obligations for remediation. This framework is vital for maintaining trust and responsibility in geographic practices.\nContext recap: In this section, we will explore the architecture of accountability in geographic governance. This includes ensuring that decisions are traceable, that stakeholders have review rights, and that there are clear obligations for remediation. This framework is vital for maintaining trust and responsibility in geographic practices."
+          "title": "Data Privacy and Public Participation",
+          "content": "Geospatial data, especially location data from individuals, carries significant privacy risks. We will discuss the ethical responsibilities of geographers to protect sensitive data. We'll also explore Public Participation GIS (PPGIS), a method for empowering communities to contribute their own local knowledge to planning processes.",
+          "visualPrompt": "An illustration of a community workshop where residents are adding information to a large printed map, representing the PPGIS process."
         },
         {
           "id": "geography-501-l07-c3",
           "kind": "recap",
-          "title": "Responsible Leadership Checklist",
-          "content": "To ensure effective governance and positive public impact, it is important to use a comprehensive checklist. This checklist should connect important outcomes, ethical considerations, adherence to policies, and the ability to adapt and recover from challenges. By following this checklist, leaders can make informed decisions that benefit the community and promote responsible leadership.\nContext recap: To ensure effective governance and positive public impact, it is important to use a comprehensive checklist. This checklist should connect important outcomes, ethical considerations, adherence to policies, and the ability to adapt and recover from challenges. By following this checklist, leaders can make informed decisions that benefit the community and promote responsible leadership."
+          "title": "Framework for Ethical Geospatial Practice",
+          "content": "This recap provides a practical checklist for ethical practice. It connects key principles—like data transparency, stakeholder consent, and equitable impact—to the project lifecycle. This framework helps ensure that our work is not only technically sound but also socially responsible and accountable.",
+          "visualPrompt": "A checklist graphic with items like 'Have we assessed for biased data?', 'Is personal data anonymized?', 'Have affected communities been consulted?'"
         }
       ],
       "flashcards": [
         {
           "id": "geography-501-l07-f1",
-          "front": "Impact distribution",
-          "back": "How outcomes are allocated across populations and timescales."
+          "front": "Environmental Justice",
+          "back": "The principle that all people are entitled to equal environmental protection, regardless of race, color, or national origin."
         },
         {
           "id": "geography-501-l07-f2",
-          "front": "Decision traceability",
-          "back": "An auditable record of evidence, ownership, and rationale."
+          "front": "Data Provenance",
+          "back": "An auditable record of the origin of a piece of data and the transformations it has undergone."
         },
         {
           "id": "geography-501-l07-f3",
-          "front": "Responsible leadership",
-          "back": "Decision behavior balancing performance, accountability, and ethics."
+          "front": "PPGIS",
+          "back": "Public Participation Geographic Information Systems: an approach that empowers communities to use GIS technology to represent their own spatial knowledge."
         }
       ]
     },
     {
       "id": "geography-501-l08",
-      "title": "Geography Capstone Defense Lab",
+      "title": "Capstone Project: Policy Proposal and Defense",
       "type": "interactive",
       "duration": 16,
       "learningAids": [
@@ -697,29 +517,32 @@ export const Geography501Module: LearningModule = {
           "id": "geography-501-l08-a1",
           "type": "practice",
           "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "content": "Construct a complete, evidence-based proposal. Anticipate critiques and prepare a clear, concise defense of your methods and conclusions.",
+          "visualPrompt": "A sample capstone project poster, showing a title, map, charts, key findings, and policy recommendations."
         }
       ],
       "chunks": [
         {
           "id": "geography-501-l08-c1",
           "kind": "practice",
-          "title": "Defense Brief Assembly",
-          "content": "In this interactive activity, learners will work together to create a detailed defense brief. This brief will include well-supported claims, relevant evidence, and clearly defined boundaries of uncertainty. Additionally, learners will outline potential pathways for remediation, which are strategies to address any issues that may arise. This exercise helps develop critical thinking and communication skills.\nContext recap: In this interactive activity, learners will work together to create a detailed defense brief. This brief will include well-supported claims, relevant evidence, and clearly defined boundaries of uncertainty. Additionally, learners will outline potential pathways for remediation, which are strategies to address any issues that may arise. This exercise helps develop critical thinking and communication skills."
+          "title": "Building Your Policy Proposal",
+          "content": "In this final lab, you will synthesize all your skills into a capstone project. Using a provided real-world dataset, you will conduct a full geospatial analysis to address a specific problem, such as proposing a new public transit route or identifying priority areas for urban tree planting. You will produce a professional policy brief and supporting maps.",
+          "visualPrompt": "A screen showing a GIS interface with multiple data layers (e.g., population density, existing bus routes, income levels) for the capstone project."
         },
         {
           "id": "geography-501-l08-c2",
           "kind": "recap",
-          "title": "Expert Panel Rehearsal",
-          "content": "During the expert panel rehearsal, learners will practice their responses to various critiques. These critiques will focus on technical aspects, governance issues, and the perspectives of different stakeholders. This rehearsal is crucial for building confidence and ensuring that learners can effectively communicate their ideas and defend their positions in front of an audience.\nContext recap: During the expert panel rehearsal, learners will practice their responses to various critiques. These critiques will focus on technical aspects, governance issues, and the perspectives of different stakeholders. This rehearsal is crucial for building confidence and ensuring that learners can effectively communicate their ideas and defend their positions in front of an audience."
+          "title": "Defending Your Analysis",
+          "content": "The final step is to defend your work. This recap prepares you for the defense simulation. We will review how to respond to critical questions about your methodology, data limitations, stakeholder impacts, and ethical considerations. The goal is to communicate your findings confidently and transparently.",
+          "visualPrompt": "A short video clip of a student confidently answering a tough question from a panel during a presentation."
         }
       ],
       "interactiveActivities": [
         {
           "id": "geography-501-l08-act1",
           "type": "debate_simulator",
-          "title": "Expert Defense Panel",
-          "description": "Defend specialization recommendations under adversarial cross-examination."
+          "title": "Live Capstone Defense Simulation",
+          "description": "Present your capstone policy proposal and defend your recommendations under cross-examination from a simulated expert panel."
         }
       ]
     }

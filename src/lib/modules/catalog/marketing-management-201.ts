@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const MarketingManagement201Module: LearningModule = {
+export const marketing_management_201_Module: LearningModule = {
   "id": "marketing-management-201",
   "title": "Brand Strategy & Digital Marketing",
   "description": "Build and manage powerful brands in the digital age. Master brand equity, brand architecture, content marketing, social media strategy, SEO/SEM, influencer marketing, and integrated marketing communications.",
@@ -16,7 +16,7 @@ export const MarketingManagement201Module: LearningModule = {
   ],
   "minAge": 18,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "intermediate",
   "localeSupport": [
     "en",
@@ -24,57 +24,61 @@ export const MarketingManagement201Module: LearningModule = {
   ],
   "thumbnail": "/placeholders/lesson-robot.svg",
   "learningObjectives": [
-    "Define brand equity and measure brand strength using Keller's model",
-    "Design brand architecture for multi-brand companies",
-    "Develop content marketing strategies for customer engagement",
-    "Implement SEO and SEM to drive digital visibility",
-    "Evaluate social media marketing ROI across platforms",
-    "Create integrated marketing communications campaigns",
-    "Apply customer journey mapping to optimize touchpoints"
+    "Define brand equity and measure brand strength using Keller's model.",
+    "Design effective brand architecture for multi-brand companies.",
+    "Develop integrated content and social media marketing strategies.",
+    "Implement SEO and SEM tactics to drive qualified digital traffic.",
+    "Leverage influencer marketing and marketing automation effectively.",
+    "Map the customer journey to optimize omnichannel experiences.",
+    "Apply strategic pricing frameworks and modern revenue models.",
+    "Measure marketing ROI using key performance indicators and analytics."
   ],
   "lessons": [
     {
       "id": "marketing-management-201-l01",
-      "title": "Brand Equity & Brand Building",
+      "title": "Foundations of Brand Strategy",
       "type": "video",
-      "duration": 14,
+      "duration": 15,
       "objectives": [
-        "Define brand equity using Keller's CBBE model",
-        "Identify the building blocks of strong brands",
-        "Measure brand value through financial and consumer metrics"
+        "Define brand equity using Keller's CBBE model.",
+        "Differentiate between various brand architecture models.",
+        "Formulate a brand positioning statement using Points of Parity and Points of Difference."
       ],
       "chunks": [
         {
           "id": "marketing-management-201-l01-c1",
-          "title": "What Is Brand Equity?",
-          "content": "Brand equity is the additional value that a brand name brings to a product, making it more attractive to consumers than just its basic features. For instance, when someone chooses to buy a Starbucks coffee for $5 instead of making a similar coffee at home for only $0.50, the extra $4.50 they pay reflects the brand equity of Starbucks. This difference in price shows how much people value the brand itself, beyond just the drink. Kevin Lane Keller, a well-known marketing expert, created a model called Customer-Based Brand Equity (CBBE) to help us understand how brands connect with consumers. This model has four key levels: First, there's brand identity, which asks the question, 'Who are you?' This level is all about recognizing the brand and what it stands for. Next is brand meaning, which explores the question, 'What are you?' This level helps consumers understand the values and qualities associated with the brand. After that comes brand response, which looks at 'What do I think or feel about you?' This level focuses on the feelings and opinions that consumers develop about the brand. Finally, we have brand resonance, which examines 'How connected am I to you?' This level is the ultimate goal for brands, as it represents a deep loyalty and a strong sense of community among customers. When a brand achieves resonance, it means that customers feel a strong emotional connection and commitment to the brand, which can lead to long-term loyalty and advocacy.\nContext recap: Brand equity is the additional value that a brand name brings to a product, making it more attractive to consumers than just its basic features. For instance, when someone chooses to buy a Starbucks coffee for $5 instead of making a similar coffee at home for only $0.50, the extra $4.50 they pay reflects the brand equity of Starbucks. This difference in price shows how much people value the brand itself, beyond just the drink. Kevin Lane Keller, a well-known marketing expert, created a model called Customer-Based Brand Equity (CBBE) to help us understand how brands connect with consumers."
+          "title": "Understanding Brand Equity",
+          "content": "Brand equity is the commercial value derived from consumer perception of a brand name, rather than from the product or service itself. It represents the tangible and intangible value that a brand provides. For example, the premium consumers are willing to pay for a Starbucks coffee over a generic alternative is a direct measure of Starbucks' brand equity. A leading framework for understanding this is Kevin Lane Keller's Customer-Based Brand Equity (CBBE) model. This model is structured as a pyramid with four ascending levels: 1) Brand Identity ('Who are you?'), focusing on brand awareness and recognition. 2) Brand Meaning ('What are you?'), encompassing performance and imagery attributes. 3) Brand Response ('What about you?'), covering consumer judgments and feelings. 4) Brand Resonance ('What about you and me?'), the pinnacle where customers exhibit intense loyalty, attachment, and a sense of community. Achieving brand resonance is the ultimate goal, as it creates a deep psychological bond with consumers.",
+          "visualPrompt": "An animated pyramid diagram showing the four levels of Keller's CBBE model, with each level building on the one below. Icons representing awareness, performance, feelings, and loyalty appear at each stage."
         },
         {
           "id": "marketing-management-201-l01-c2",
           "title": "Brand Architecture",
-          "content": "When companies have multiple brands, it's important for them to have a clear brand architecture. Think of brand architecture as a blueprint that shows how the different brands are organized within the company. There are several structures that companies can choose from. One option is called a 'branded house.' In this structure, there is one main brand that represents everything the company does. For example, Google and Virgin are great examples of a branded house because they are known for a wide range of products and services under one name.\nAnother structure is known as a 'house of brands.' In this case, the company owns several independent brands that operate separately from each other. A well-known example is Procter & Gamble, which owns popular brands like Tide, Pampers, and Gillette. Each of these brands has its own identity and marketing strategy.\nThere are also 'endorsed brands,' which are sub-brands that are supported by a parent brand. For instance, Marriott has different hotel brands like Marriott Courtyard and Marriott Bonvoy, where the parent brand helps to give credibility to the sub-brands.\nLastly, some companies use a hybrid approach that combines elements from the other structures. Choosing the right brand architecture is crucial because it can affect how efficiently the brands share their reputation and how they manage risks. For example, if one brand experiences a failure, a good brand architecture can help ensure that this does not negatively impact the other brands in the company.\nUnderstanding these different structures can help businesses make informed decisions about how to organize their brands effectively.\nContext recap: When companies have multiple brands, it's important for them to have a clear brand architecture. Think of brand architecture as a blueprint that shows how the different brands are organized within the company. There are several structures that companies can choose from. One option is called a 'branded house.' In this structure, there is one main brand that represents everything the company does.\nWhy this matters: Brand Architecture helps learners in Business connect ideas from Brand Strategy & Digital Marketing to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "Brand architecture is the organizational structure of a company's portfolio of brands, sub-brands, and products. A coherent architecture clarifies brand roles and relationships, maximizes synergy, and minimizes brand dilution. There are three primary models: 1) The 'Branded House' (e.g., Google, Virgin), where a single master brand extends across a wide range of offerings, leveraging the parent brand's equity. 2) The 'House of Brands' (e.g., Procter & Gamble), where the parent company operates a portfolio of distinct, independent brands like Tide, Pampers, and Gillette, each targeting a specific market segment. 3) The 'Hybrid' or 'Endorsed Brands' model (e.g., Marriott Bonvoy, which endorses sub-brands like Courtyard by Marriott), which combines elements of both. The choice of architecture has significant implications for marketing efficiency, risk management, and future growth.",
+          "visualPrompt": "A split-screen graphic. On the left, a 'Branded House' is shown as a large house with many windows labeled with Google products (Search, Maps, Gmail). On the right, a 'House of Brands' is shown as a street with separate, unique houses labeled Tide, Pampers, and Gillette, with a small P&G logo on a distant sign."
         },
         {
           "id": "marketing-management-201-l01-c3",
           "title": "Brand Positioning & Differentiation",
-          "content": "Brand positioning is an important concept that helps a brand find its unique place in the minds of customers. Imagine a crowded marketplace where many brands are competing for attention. To stand out, a brand needs to clearly communicate what makes it special. This is where points of parity (POPs) and points of difference (PODs) come into play. Points of parity are the similarities that a brand shares with its competitors. These are essential because they help customers recognize the brand as a valid option. For example, if two brands of smartphones both have a camera and internet access, these features are points of parity. On the flip side, points of difference are the unique features that set a brand apart from others. Strong PODs are characteristics that customers not only want but also believe the brand can deliver, and they are difficult for competitors to copy. For instance, Tesla has several strong PODs, such as cutting-edge technology, impressive performance, and a strong commitment to environmental sustainability in its luxury vehicles. These unique qualities help Tesla stand out in the automotive market, making it a preferred choice for many customers who value innovation and eco-friendliness.\nContext recap: Brand positioning is an important concept that helps a brand find its unique place in the minds of customers. Imagine a crowded marketplace where many brands are competing for attention. To stand out, a brand needs to clearly communicate what makes it special. This is where points of parity (POPs) and points of difference (PODs) come into play.\nWhy this matters: Brand Positioning & Differentiation helps learners in Business connect ideas from Brand Strategy & Digital Marketing to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "Brand positioning is the strategic process of establishing a unique and valued place for a brand in the minds of its target audience. Effective positioning hinges on defining Points of Parity (POPs) and Points of Difference (PODs). POPs are the attributes or benefits that are not necessarily unique to the brand but may be shared with other brands; they are the 'must-haves' to be considered a legitimate competitor in a category. For example, any smartphone must offer calling and internet access. PODs are the strong, favorable, and unique associations that distinguish a brand from its competitors. For a POD to be effective, it must be desirable to the consumer, deliverable by the brand, and differentiating from competitors. Tesla's PODs, for instance, include its proprietary Supercharger network, cutting-edge autonomous driving technology, and a direct-to-consumer sales model, which collectively create a strong competitive advantage in the electric vehicle market.",
+          "visualPrompt": "A 2x2 positioning map for the automotive market. The X-axis is 'Price (Economy to Luxury)' and the Y-axis is 'Powertrain (Internal Combustion to Electric)'. Various car brand logos are plotted, with Tesla occupying a distinct position in the 'Luxury Electric' quadrant."
         }
       ],
       "flashcards": [
         {
           "id": "marketing-management-201-l01-f1",
-          "front": "Keller's CBBE Model (4 levels)",
-          "back": "Brand Identity (awareness) → Brand Meaning (performance + imagery) → Brand Response (judgments + feelings) → Brand Resonance (loyalty + community)"
+          "front": "What are the four levels of Keller's CBBE Model?",
+          "back": "1. Identity (Salience) 2. Meaning (Performance & Imagery) 3. Response (Judgments & Feelings) 4. Resonance (Loyalty & Community)"
         },
         {
           "id": "marketing-management-201-l01-f2",
-          "front": "Branded house vs. House of brands",
-          "back": "Branded house: one master brand (Google). House of brands: separate independent brands (P&G's Tide, Pampers, Gillette)"
+          "front": "Contrast 'Branded House' and 'House of Brands'.",
+          "back": "Branded House: A single master brand across all offerings (e.g., Google). House of Brands: A portfolio of independent brands under a parent company (e.g., P&G)."
         },
         {
           "id": "marketing-management-201-l01-f3",
-          "front": "Points of Parity (POP) vs. Points of Difference (POD)",
-          "back": "POP: shared category associations needed to compete. POD: unique brand associations that differentiate — must be desirable, deliverable, differentiating"
+          "front": "Define Points of Parity (POP) and Points of Difference (POD).",
+          "back": "POP: Category essentials required to compete. POD: Unique, desirable, and deliverable attributes that differentiate the brand."
         }
       ],
       "learningAids": [
@@ -82,7 +86,7 @@ export const MarketingManagement201Module: LearningModule = {
           "id": "marketing-management-201-l01-a1",
           "type": "image",
           "title": "Concept Card",
-          "content": "Visual summary of the lesson's main concept."
+          "content": "Visual summary of Brand Strategy concepts."
         }
       ]
     },
@@ -92,42 +96,45 @@ export const MarketingManagement201Module: LearningModule = {
       "type": "video",
       "duration": 14,
       "objectives": [
-        "Map the digital marketing ecosystem",
-        "Implement SEO and SEM strategies",
-        "Evaluate digital channel effectiveness"
+        "Map the core components of the digital marketing ecosystem.",
+        "Differentiate between SEO and SEM and their strategic applications.",
+        "Develop a content marketing strategy aligned with the marketing funnel."
       ],
       "chunks": [
         {
           "id": "marketing-management-201-l02-c1",
-          "title": "The Digital Marketing Landscape",
-          "content": "Digital marketing is a way for businesses to connect with their customers using electronic devices and the internet. It includes a variety of strategies and tools that help companies promote their products and services online. Some of the most important channels in digital marketing are:\n1. **Search Engine Marketing (SEM)**: This includes techniques like Google Ads, which allow businesses to display ads on search engines, and Search Engine Optimization (SEO), which helps improve a website's visibility in search results.\n2. **Social Media Marketing**: Platforms such as Meta (formerly Facebook), TikTok, and LinkedIn are used to engage with audiences and share content. These platforms allow businesses to create targeted ads that reach specific groups of people based on their interests and behaviors.\n3. **Email Marketing**: This involves sending promotional messages directly to customers' inboxes. It’s a great way to keep in touch with customers and inform them about new products or special offers.\n4. **Content Marketing**: This strategy focuses on creating valuable content, such as blogs, videos, and podcasts, to attract and engage an audience.\n5. **Affiliate Marketing**: This is a performance-based strategy where businesses reward affiliates for bringing in customers through their marketing efforts.\n6. **Programmatic Display Advertising**: This involves using automated technology to buy and sell online advertising space in real-time.\nThe move towards digital marketing has been driven by several factors. One major advantage is measurability; businesses can track every click and interaction, allowing them to see what works and what doesn’t. Additionally, digital marketing allows for precise targeting, meaning ads can be shown to specific demographics, ensuring that the right people see the right messages. Finally, digital marketing is often more cost-effective than traditional media, making it an attractive option for businesses of all sizes.\nContext recap: Digital marketing is a way for businesses to connect with their customers using electronic devices and the internet. It includes a variety of strategies and tools that help companies promote their products and services online. Some of the most important channels in digital marketing are:\n1. **Search Engine Marketing (SEM)**: This includes techniques like Google Ads, which allow businesses to display ads on search engines, and Search Engine Optimization (SEO), which helps improve a website's visibility in search results.\nWhy this matters: The Digital Marketing Landscape helps learners in Business connect ideas from Brand Strategy & Digital Marketing to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "title": "The Digital Marketing Ecosystem",
+          "content": "The digital marketing ecosystem is a complex network of interconnected channels and strategies used to reach customers online. Key components include: Search Engine Marketing (SEM), which encompasses both paid search (PPC) and organic search (SEO); Social Media Marketing on platforms like Meta, LinkedIn, and TikTok; Content Marketing, the creation and distribution of valuable content to attract a target audience; Email Marketing for direct communication and lead nurturing; and Programmatic Display Advertising, the automated buying of ad space. The shift to digital is driven by its superior measurability, precise targeting capabilities, and often higher return on investment compared to traditional media. Marketers can track user behavior in granular detail, allowing for continuous optimization of campaigns.",
+          "visualPrompt": "An animated mind map or infographic showing 'Digital Marketing' at the center, with branches extending to SEO, SEM, Social Media, Content, Email, and Display Ads. Each branch has smaller sub-branches with key terms (e.g., 'Keywords' under SEO)."
         },
         {
           "id": "marketing-management-201-l02-c2",
-          "title": "SEO & SEM",
-          "content": "Search Engine Optimization, or SEO, is a powerful technique that helps improve how a website appears in search results without paying for ads. There are several important strategies involved in SEO. First, technical optimization ensures that a website loads quickly and is easy to use on mobile devices. This is crucial because many people browse the internet on their phones. Second, on-page factors come into play, which include using relevant keywords that match what users are searching for, creating high-quality content that provides value, and optimizing meta tags that help search engines understand the content of the page. Lastly, off-page factors, such as building backlinks from other reputable websites and establishing domain authority, also contribute to a website's credibility and ranking.\nOn the other hand, Search Engine Marketing, or SEM, is a strategy that involves paying for advertisements that appear when users search for specific keywords. For example, Google Ads allows businesses to create ads that show up in search results, targeting users who are looking for particular products or services.\nWhen used together, SEO and SEM can effectively attract 'intent-based' traffic, which refers to users who are actively searching for solutions to their needs. A crucial metric to monitor in this process is the conversion rate, which tells us how many visitors take a desired action, such as making a purchase or signing up for a newsletter, rather than just focusing on the total number of visitors to the site. Understanding these concepts is essential for anyone looking to succeed in the digital marketing landscape.\nContext recap: Search Engine Optimization, or SEO, is a powerful technique that helps improve how a website appears in search results without paying for ads. There are several important strategies involved in SEO. First, technical optimization ensures that a website loads quickly and is easy to use on mobile devices. This is crucial because many people browse the internet on their phones.\nWhy this matters: SEO & SEM helps learners in Business connect ideas from Brand Strategy & Digital Marketing to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "title": "Search Engine Optimization (SEO) & Marketing (SEM)",
+          "content": "SEO and SEM are two sides of the same coin, both aimed at increasing visibility on search engine results pages (SERPs). SEO focuses on optimizing a website to rank higher in organic, unpaid search results. It involves three core pillars: Technical SEO (site speed, mobile-friendliness, crawlability), On-Page SEO (keyword research, content quality, meta tags), and Off-Page SEO (earning high-quality backlinks from authoritative domains). SEM, more broadly, includes SEO but is most commonly used to refer to paid advertising, such as Pay-Per-Click (PPC) campaigns on Google Ads. In PPC, advertisers bid on keywords to have their ads appear at the top of the SERP. A combined SEO and SEM strategy is powerful because it captures 'intent-based' traffic—users actively searching for products or solutions—at different stages of their journey.",
+          "visualPrompt": "A screenshot of a Google search results page. A box is drawn around the top paid ad results, labeled 'SEM (PPC)'. Another box is drawn around the first non-ad result, labeled 'SEO (Organic)'."
         },
         {
           "id": "marketing-management-201-l02-c3",
           "title": "Content & Social Media Strategy",
-          "content": "Content marketing is a strategy that focuses on creating valuable and relevant content to attract and engage a specific audience. Imagine this strategy as a funnel with three important stages. The first stage is called awareness content, which includes things like blog posts and social media updates that help people discover your brand. The second stage is consideration content, which involves more in-depth materials such as case studies, webinars, and comparison guides that help potential customers understand your offerings better. Finally, the third stage is decision content, which includes free trials, product demonstrations, and customer testimonials that encourage people to make a purchase.\nWhen it comes to social media, different platforms require different strategies. For instance, LinkedIn is an excellent choice for businesses looking to establish thought leadership in a B2B environment. Instagram is perfect for brands that rely heavily on visuals to tell their story. TikTok is particularly popular among younger audiences, making it a great platform for engaging with that demographic. Lastly, X (formerly known as Twitter) is effective for real-time engagement and updates.\nTo achieve success in content marketing, brands must prioritize consistently providing value to their audience rather than focusing solely on selling their products or services. This approach helps build trust and loyalty among customers, leading to long-term relationships and business growth.\nContext recap: Content marketing is a strategy that focuses on creating valuable and relevant content to attract and engage a specific audience. Imagine this strategy as a funnel with three important stages. The first stage is called awareness content, which includes things like blog posts and social media updates that help people discover your brand. The second stage is consideration content, which involves more in-depth materials such as case studies, webinars, and comparison guides that help potential customers understand your offerings better.\nWhy this matters: Content & Social Media Strategy helps learners in Business connect ideas from Brand Strategy & Digital Marketing to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "Content marketing is a strategic approach focused on creating and distributing valuable, relevant, and consistent content to attract and retain a clearly defined audience. This strategy is often visualized as a funnel. At the Top of the Funnel (ToFu), awareness content like blog posts and social media updates attracts a broad audience. In the Middle of the Funnel (MoFu), consideration content such as case studies, webinars, and in-depth guides helps educate qualified leads. At the Bottom of the Funnel (BoFu), decision content like free trials, demos, and testimonials aims to convert leads into customers. Social media platforms are key distribution channels, each with a distinct purpose: LinkedIn for B2B thought leadership, Instagram for visual storytelling, TikTok for engaging younger demographics, and X (formerly Twitter) for real-time news and customer service. The ultimate goal is to provide value first, building trust and authority before making a direct sales pitch.",
+          "visualPrompt": "An animated funnel graphic. At the wide top (Awareness), icons for blogs and social media fall in. In the middle (Consideration), icons for webinars and case studies appear. At the narrow bottom (Decision), icons for demos and trials emerge."
         }
       ],
       "flashcards": [
         {
           "id": "marketing-management-201-l02-f1",
-          "front": "SEO three pillars",
-          "back": "Technical (speed, mobile, crawling), On-page (keywords, content quality, meta tags), Off-page (backlinks, domain authority)"
+          "front": "What are the three pillars of SEO?",
+          "back": "1. Technical SEO (site health) 2. On-Page SEO (content & keywords) 3. Off-Page SEO (backlinks & authority)"
         },
         {
           "id": "marketing-management-201-l02-f2",
-          "front": "Content marketing funnel",
-          "back": "Awareness (blogs, social) → Consideration (case studies, webinars) → Decision (trials, demos, testimonials)"
+          "front": "Describe the content marketing funnel stages.",
+          "back": "Awareness (ToFu): Attract audience (blogs). Consideration (MoFu): Educate leads (webinars). Decision (BoFu): Convert to customers (demos)."
         },
         {
           "id": "marketing-management-201-l02-f3",
-          "front": "SEO vs. SEM",
-          "back": "SEO: organic (free) search rankings through optimization. SEM: paid search ads for specific keywords. Both capture intent-based traffic."
+          "front": "What is the primary difference between SEO and SEM?",
+          "back": "SEO focuses on earning organic (unpaid) traffic through optimization. SEM is a broader term that includes SEO and paid search (PPC) advertising."
         }
       ],
       "learningAids": [
@@ -135,52 +142,55 @@ export const MarketingManagement201Module: LearningModule = {
           "id": "marketing-management-201-l02-a1",
           "type": "image",
           "title": "Concept Card",
-          "content": "Visual summary of the lesson's main concept."
+          "content": "Visual summary of Digital Marketing Fundamentals."
         }
       ]
     },
     {
       "id": "marketing-management-201-l03",
-      "title": "Customer Journey & Experience",
+      "title": "Customer Journey & Omnichannel Experience",
       "type": "interactive",
       "duration": 14,
       "objectives": [
-        "Map a customer journey across touchpoints",
-        "Identify moments of truth in the customer experience",
-        "Design omnichannel marketing strategies"
+        "Map a customer journey across digital and physical touchpoints.",
+        "Identify and optimize for key 'moments of truth' in the customer experience.",
+        "Design an omnichannel marketing strategy that ensures a seamless experience."
       ],
       "chunks": [
         {
           "id": "marketing-management-201-l03-c1",
           "title": "Customer Journey Mapping",
-          "content": "A customer journey map is a helpful tool that visually shows all the different ways a customer interacts with a brand. It starts from the moment they first hear about the brand, goes through the steps of buying a product, and continues to when they share their positive experiences with others. This map highlights various touchpoints, which are the specific places where customers connect with the brand. These touchpoints can include advertisements they see, the company’s website, physical stores they visit, and interactions with customer service representatives.\nIn addition to showing where customers interact with the brand, the map also tracks what customers do at each stage, how they feel during their journey, and any difficulties they encounter. For example, a customer might discover a product on Instagram, but if the website is hard to use on their mobile phone, they might leave without making a purchase. By creating a customer journey map, businesses can find out where the experience might be lacking. The ultimate goal is to make the journey smoother and more enjoyable for customers at every step, ensuring they have a positive experience that encourages them to return and recommend the brand to others.\nContext recap: A customer journey map is a helpful tool that visually shows all the different ways a customer interacts with a brand. It starts from the moment they first hear about the brand, goes through the steps of buying a product, and continues to when they share their positive experiences with others. This map highlights various touchpoints, which are the specific places where customers connect with the brand. These touchpoints can include advertisements they see, the company’s website, physical stores they visit, and interactions with customer service representatives.\nWhy this matters: Customer Journey Mapping helps learners in Business connect ideas from Brand Strategy & Digital Marketing to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "A customer journey map is a visual representation of a customer's interactions and experiences with a brand across all touchpoints over time. The process begins with initial awareness, moves through consideration and purchase, and extends to post-purchase service and advocacy. The map details the customer's actions, thoughts, and emotions at each stage, identifying key touchpoints such as social media ads, website visits, in-store experiences, and customer service calls. By mapping this journey, businesses can identify 'pain points'—areas of friction or frustration—and opportunities to enhance the experience. The ultimate goal is to design a more cohesive, intuitive, and satisfying journey that fosters loyalty and positive sentiment.",
+          "visualPrompt": "A sample customer journey map shown as a timeline from left to right. Stages (Awareness, Consideration, Purchase, Service, Loyalty) are columns. Rows detail 'Customer Actions', 'Touchpoints', 'Emotions (using emojis)', and 'Opportunities'."
         },
         {
           "id": "marketing-management-201-l03-c2",
           "title": "Moments of Truth",
-          "content": "Procter & Gamble, a well-known company, discovered some very important points in the customer experience called 'moments of truth.' These moments play a big role in how customers think about and feel towards a brand. The First Moment of Truth (FMOT) is when customers are at the store or looking at search results online and have to decide which product to choose from many options. This is a crucial time because it’s when they first see the product and make a decision. Google also introduced the concept of the Zero Moment of Truth (ZMOT). This is the time when customers do their research online before they make a purchase. They might read reviews, compare prices, or watch videos about the product. After they buy the product, the Second Moment of Truth occurs when they actually use it. This is important because their experience with the product can affect their future decisions. Finally, there’s the Ultimate Moment of Truth, which happens when customers share their experiences with others, either through word of mouth or on social media. To be successful at each of these moments, brands need to invest in different marketing strategies and approaches that cater to each stage of the customer journey. Understanding these moments helps brands connect better with their customers and improve their overall experience.\nContext recap: Procter & Gamble, a well-known company, discovered some very important points in the customer experience called 'moments of truth.' These moments play a big role in how customers think about and feel towards a brand. The First Moment of Truth (FMOT) is when customers are at the store or looking at search results online and have to decide which product to choose from many options. This is a crucial time because it’s when they first see the product and make a decision. Google also introduced the concept of the Zero Moment of Truth (ZMOT).\nWhy this matters: Moments of Truth helps learners in Business connect ideas from Brand Strategy & Digital Marketing to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "The 'Moments of Truth' framework identifies critical points in the customer journey that disproportionately impact their perception of a brand. Originally coined by Procter & Gamble, the First Moment of Truth (FMOT) is the 3-7 seconds when a consumer chooses a product at the point of purchase. The Second Moment of Truth (SMOT) is the actual experience of using the product. Google later introduced the Zero Moment of Truth (ZMOT), which describes the pre-shopping research phase where consumers consult reviews, social media, and search engines. The cycle concludes with the Ultimate Moment of Truth (UMOT), when a customer shares their experience, creating ZMOT for others. Optimizing for each of these moments—from search rankings (ZMOT) to packaging (FMOT) to product quality (SMOT)—is critical for success.",
+          "visualPrompt": "A circular flow diagram illustrating the Moments of Truth. It starts with a 'Stimulus', leads to 'ZMOT' (laptop icon), then 'FMOT' (shopping cart icon), then 'SMOT' (product usage icon), and finally 'UMOT' (social media share icon), which then points back to ZMOT for the next customer."
         },
         {
           "id": "marketing-management-201-l03-c3",
           "title": "Omnichannel Marketing",
-          "content": "Omnichannel marketing is a strategy that focuses on providing customers with a smooth and unified experience across all different ways they interact with a brand. This includes physical stores, websites, mobile apps, social media platforms, emails, and customer service interactions. The goal is for customers to feel like they are engaging with one consistent brand, no matter which channel they choose to use. To make this happen, companies need to have integrated data systems that allow them to see a single view of each customer. This means that all information about a customer is collected in one place, making it easier to understand their preferences and needs. Additionally, companies must ensure that their messaging and design are consistent across all platforms, so customers recognize the brand no matter where they are. Flexible fulfillment options are also important; for example, customers should be able to buy products online and then pick them up in a store if they prefer. Finally, having coordinated team structures is essential, as it allows different departments to work together effectively. Well-known companies like Disney, Starbucks, and Nike are great examples of brands that have mastered omnichannel marketing. They have invested in the right technology and fostered collaboration among their teams to create a seamless experience for their customers.\nContext recap: Omnichannel marketing is a strategy that focuses on providing customers with a smooth and unified experience across all different ways they interact with a brand. This includes physical stores, websites, mobile apps, social media platforms, emails, and customer service interactions. The goal is for customers to feel like they are engaging with one consistent brand, no matter which channel they choose to use. To make this happen, companies need to have integrated data systems that allow them to see a single view of each customer.\nWhy this matters: Omnichannel Marketing helps learners in Business connect ideas from Brand Strategy & Digital Marketing to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "Omnichannel marketing is an evolution of multichannel marketing that focuses on creating a seamless and integrated customer experience, regardless of the channel or device used. While multichannel means having a presence on multiple platforms, omnichannel means those platforms are connected and work together. This requires a unified view of the customer, enabled by integrated data systems like a Customer Data Platform (CDP). Key components include consistent brand messaging and design across all channels, flexible fulfillment options (e.g., buy online, pick up in-store), and coordinated cross-functional teams. Leading brands like Disney and Starbucks excel at this, allowing a customer to start an interaction on a mobile app, continue it on a website, and complete it in a physical location without any friction.",
+          "visualPrompt": "A diagram contrasting two approaches. 'Multichannel' shows a customer at the center with separate, unconnected lines to a store, a website, and a mobile app. 'Omnichannel' shows the same elements, but the store, website, and app are interconnected, forming a unified ring around the customer."
         }
       ],
       "flashcards": [
         {
           "id": "marketing-management-201-l03-f1",
-          "front": "Customer journey map includes",
-          "back": "Touchpoints, customer actions, emotions at each stage, pain points, and opportunities for improvement across the full experience"
+          "front": "What are the key components of a customer journey map?",
+          "back": "Stages (e.g., Awareness, Purchase), Customer Actions, Touchpoints, Emotions, and Pain Points/Opportunities."
         },
         {
           "id": "marketing-management-201-l03-f2",
-          "front": "Moments of truth (marketing)",
-          "back": "ZMOT (online research) → FMOT (shelf/search choice) → SMOT (product experience) → UMOT (sharing experience)"
+          "front": "List the four 'Moments of Truth' in order.",
+          "back": "Zero Moment of Truth (ZMOT): Online research. First (FMOT): Purchase decision. Second (SMOT): Product experience. Ultimate (UMOT): Sharing the experience."
         },
         {
           "id": "marketing-management-201-l03-f3",
-          "front": "Omnichannel marketing",
-          "back": "Seamless, unified brand experience across all channels — requires integrated data, consistent messaging, and cross-functional coordination"
+          "front": "What is the core difference between multichannel and omnichannel?",
+          "back": "Multichannel is having multiple, separate channels. Omnichannel is having multiple, integrated channels that provide a seamless, unified customer experience."
         }
       ],
       "learningAids": [
@@ -188,52 +198,55 @@ export const MarketingManagement201Module: LearningModule = {
           "id": "marketing-management-201-l03-a1",
           "type": "practice",
           "title": "Guided Practice",
-          "content": "Follow the prompt sequence and document your reasoning."
+          "content": "Map the customer journey for a recent purchase you made, identifying key touchpoints and moments of truth."
         }
       ]
     },
     {
       "id": "marketing-management-201-l04",
-      "title": "Integrated Marketing Communications",
+      "title": "Integrated Marketing Communications (IMC)",
       "type": "video",
       "duration": 12,
       "objectives": [
-        "Design an IMC campaign across multiple channels",
-        "Allocate marketing budget across communication tools",
-        "Measure campaign effectiveness with key metrics"
+        "Design an IMC campaign that ensures brand consistency across channels.",
+        "Identify the strengths of each tool in the promotional mix.",
+        "Select key metrics to measure IMC campaign effectiveness."
       ],
       "chunks": [
         {
           "id": "marketing-management-201-l04-c1",
-          "title": "IMC Defined",
-          "content": "Integrated Marketing Communications, often abbreviated as IMC, is a comprehensive strategy that ensures all forms of messaging and communication channels work together harmoniously to present a consistent and cohesive brand message. This approach is essential because it helps to avoid confusion among customers that can arise when different teams manage separate advertising, public relations, social media, and direct marketing campaigns without coordination. Instead of operating in silos, IMC brings these various efforts together under a unified strategy that aligns with the brand's overall goals. The core principle of IMC is that every interaction a customer has with the brand—whether it's through an advertisement, a social media post, or an in-store experience—should reinforce the same brand promise. A great example of this is Nike, which consistently uses its famous slogan 'Just Do It' across various platforms, including television commercials, social media content, in-store promotions, and endorsements from well-known athletes. This consistency helps to create a strong and recognizable brand identity that resonates with consumers and builds trust over time.\nContext recap: Integrated Marketing Communications, often abbreviated as IMC, is a comprehensive strategy that ensures all forms of messaging and communication channels work together harmoniously to present a consistent and cohesive brand message. This approach is essential because it helps to avoid confusion among customers that can arise when different teams manage separate advertising, public relations, social media, and direct marketing campaigns without coordination. Instead of operating in silos, IMC brings these various efforts together under a unified strategy that aligns with the brand's overall goals. The core principle of IMC is that every interaction a customer has with the brand—whether it's through an advertisement, a social media post, or an in-store experience—should reinforce the same brand promise."
+          "title": "The IMC Framework",
+          "content": "Integrated Marketing Communications (IMC) is a strategic approach that aligns and coordinates all of a company's marketing communication channels to deliver a clear, consistent, and compelling message about the organization and its brands. It breaks down the silos that often exist between advertising, public relations, social media, and sales teams. The core principle is synergy: the combined effect of integrated communications is greater than the sum of the individual parts. Every brand touchpoint, from a TV ad to a customer service email, should reinforce the same core brand promise. Nike's 'Just Do It' campaign is a classic example of IMC, where the message of empowerment and determination is consistently conveyed across athlete endorsements, digital content, and retail experiences.",
+          "visualPrompt": "A diagram showing two scenarios. 'Siloed Marketing' has separate, disconnected bubbles for Advertising, PR, and Social Media, all sending different messages to the customer. 'Integrated Marketing (IMC)' shows the bubbles connected, feeding into a central 'Consistent Brand Message' that reaches the customer."
         },
         {
           "id": "marketing-management-201-l04-c2",
-          "title": "Communication Tools",
-          "content": "The Integrated Marketing Communications (IMC) toolkit is a collection of different communication tools that brands can use to connect with their audience in effective ways. Here are the main tools included in the IMC toolkit:\n1. **Advertising**: This tool is designed to build brand awareness. It reaches a wide audience through various media channels, helping people recognize and remember the brand.\n2. **Public Relations (PR)**: PR focuses on enhancing a brand's credibility. It does this by gaining positive media coverage and managing the brand's reputation through earned media, which is coverage that is not paid for.\n3. **Sales Promotions**: These are short-term incentives that encourage customers to try a product or service. Examples include coupons, discounts, and contests that create excitement and urgency.\n4. **Direct Marketing**: This tool involves sending personalized messages directly to consumers, often through email or traditional mail. It allows brands to communicate directly with their audience, making the message more relevant.\n5. **Personal Selling**: This is a one-on-one approach where sales representatives persuade potential customers, particularly in business-to-business (B2B) transactions or luxury markets. It allows for tailored communication and relationship building.\n6. **Digital/Social Media**: These platforms enable two-way engagement between brands and their audiences. They help in building communities and fostering conversations around the brand.\nEach of these tools has unique strengths: advertising is excellent for raising awareness, PR builds trust and credibility, promotions drive trial and interest, and personal selling is crucial for closing more complex deals. By using a combination of these tools, brands can create a comprehensive marketing strategy that effectively reaches and engages their target audience.\nContext recap: The Integrated Marketing Communications (IMC) toolkit is a collection of different communication tools that brands can use to connect with their audience in effective ways. Here are the main tools included in the IMC toolkit:\n1. **Advertising**: This tool is designed to build brand awareness. It reaches a wide audience through various media channels, helping people recognize and remember the brand.\nWhy this matters: Communication Tools helps learners in Business connect ideas from Brand Strategy & Digital Marketing to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "title": "The Promotional Mix",
+          "content": "The IMC toolkit, or promotional mix, consists of several distinct but complementary tools. 1) Advertising is paid, non-personal communication ideal for building broad awareness and brand image. 2) Public Relations (PR) focuses on earning media coverage and managing reputation to build credibility and trust. 3) Sales Promotions are short-term incentives like discounts or contests designed to stimulate immediate purchase. 4) Direct Marketing involves personalized communication (e.g., email, direct mail) aimed at soliciting a direct response. 5) Personal Selling uses one-on-one interaction, crucial for complex B2B sales or high-value consumer goods. 6) Digital & Social Media marketing enables two-way dialogue and community building. A successful IMC strategy selects the optimal blend of these tools based on the campaign objectives, target audience, and budget.",
+          "visualPrompt": "A wheel diagram with 'Promotional Mix' at the hub. Each spoke represents a tool (Advertising, PR, Sales Promotion, etc.) with a keyword for its primary strength (e.g., 'Reach' for Advertising, 'Credibility' for PR, 'Action' for Sales Promotion)."
         },
         {
           "id": "marketing-management-201-l04-c3",
-          "title": "Measuring Effectiveness",
-          "content": "When businesses want to understand how well their marketing is working, they look at several important factors. First, there's reach, which tells us how many people saw the marketing message. Next is engagement, which includes actions that people take, like clicking on a link, sharing the message with friends, or leaving comments. Then we have conversion, which measures how many people actually made a purchase or signed up for a service after seeing the marketing. Finally, we consider return on investment (ROI), which compares the money made from the marketing to the costs involved in running it.\nDigital marketing has a special tool called attribution modeling. This helps businesses track which specific interactions, or touchpoints, helped lead to conversions. There are several key metrics that businesses pay attention to. Customer Acquisition Cost (CAC) shows how much money a company spends to gain a new customer. Customer Lifetime Value (CLV) estimates how much revenue a customer will bring in over the entire time they do business with the company. Return on Ad Spend (ROAS) measures how effective the advertising is at generating revenue. Lastly, the Net Promoter Score (NPS) helps gauge how loyal customers are to the brand. A successful marketing strategy usually aims for a CLV to CAC ratio of at least 3:1, meaning that for every dollar spent on acquiring a customer, the company should earn three dollars back over time.\nContext recap: When businesses want to understand how well their marketing is working, they look at several important factors. First, there's reach, which tells us how many people saw the marketing message. Next is engagement, which includes actions that people take, like clicking on a link, sharing the message with friends, or leaving comments. Then we have conversion, which measures how many people actually made a purchase or signed up for a service after seeing the marketing.\nWhy this matters: Measuring Effectiveness helps learners in Business connect ideas from Brand Strategy & Digital Marketing to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "title": "Measuring Campaign Effectiveness",
+          "content": "Measuring the effectiveness of an IMC campaign requires a holistic view across the marketing funnel. Key metrics include: Reach and Impressions (awareness), Engagement Rate (clicks, shares, comments), and Conversion Rate (purchases, sign-ups). To assess financial performance, marketers use metrics like Return on Investment (ROI) and Return on Ad Spend (ROAS). Two critical business metrics are Customer Acquisition Cost (CAC)—the total cost to acquire a new customer—and Customer Lifetime Value (CLV)—the total net profit a customer generates over their entire relationship with the brand. A healthy business model typically aims for a CLV:CAC ratio of at least 3:1. Digital marketing enables sophisticated attribution modeling, which helps assign credit to the various touchpoints that influenced a conversion, providing insight into which channels are most effective.",
+          "visualPrompt": "A dashboard interface showing key marketing metrics. Gauges and charts display CAC, CLV, CLV:CAC Ratio (highlighted in green at 3.5:1), ROAS, and Conversion Rate."
         }
       ],
       "flashcards": [
         {
           "id": "marketing-management-201-l04-f1",
-          "front": "Integrated Marketing Communications (IMC)",
-          "back": "Coordinating all messaging channels to deliver a consistent brand message — advertising, PR, promotions, digital, and personal selling aligned"
+          "front": "What is the core principle of Integrated Marketing Communications (IMC)?",
+          "back": "To coordinate all marketing channels to deliver a clear, consistent, and compelling brand message, creating synergy."
         },
         {
           "id": "marketing-management-201-l04-f2",
-          "front": "CLV:CAC ratio",
-          "back": "Customer Lifetime Value to Customer Acquisition Cost — should be at least 3:1 for healthy marketing economics"
+          "front": "What is a healthy CLV:CAC ratio for a business?",
+          "back": "A ratio of at least 3:1, meaning the customer's lifetime value is at least three times the cost to acquire them."
         },
         {
           "id": "marketing-management-201-l04-f3",
-          "front": "Key marketing metrics",
-          "back": "Reach, Engagement, Conversion, ROI, CAC, CLV, ROAS, NPS — measured at multiple levels of the funnel"
+          "front": "Name the six main tools in the promotional mix.",
+          "back": "Advertising, Public Relations, Sales Promotions, Direct Marketing, Personal Selling, and Digital/Social Media."
         }
       ],
       "learningAids": [
@@ -241,13 +254,13 @@ export const MarketingManagement201Module: LearningModule = {
           "id": "marketing-management-201-l04-a1",
           "type": "image",
           "title": "Concept Card",
-          "content": "Visual summary of the lesson's main concept."
+          "content": "Visual summary of the IMC framework and metrics."
         }
       ]
     },
     {
       "id": "marketing-management-201-l05",
-      "title": "Checkpoint: Brand & Digital Marketing",
+      "title": "Checkpoint: Brand & Digital Foundations",
       "type": "quiz",
       "duration": 12,
       "questions": [
@@ -273,7 +286,7 @@ export const MarketingManagement201Module: LearningModule = {
             }
           ],
           "correctOptionId": "d",
-          "explanation": "Brand Resonance — the highest level — represents deep psychological bonds: intense loyalty, active engagement, community attachment, and sense of kinship with the brand."
+          "explanation": "Brand Resonance—the highest level—represents deep psychological bonds: intense loyalty, active engagement, community attachment, and sense of kinship with the brand."
         },
         {
           "id": "marketing-management-201-l05-q2",
@@ -297,7 +310,7 @@ export const MarketingManagement201Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": "ZMOT is the moment consumers go online to research a product before the traditional First Moment of Truth — reading reviews, comparing options, watching unboxing videos."
+          "explanation": "ZMOT is the moment consumers go online to research a product before the traditional First Moment of Truth—reading reviews, comparing options, and watching videos."
         },
         {
           "id": "marketing-management-201-l05-q3",
@@ -321,11 +334,11 @@ export const MarketingManagement201Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": "House of brands means the parent company (P&G) owns multiple independent brands, each with its own identity — consumers often don't know they share a parent."
+          "explanation": "House of brands means the parent company (P&G) owns multiple independent brands, each with its own identity—consumers often don't know they share a parent."
         },
         {
           "id": "marketing-management-201-l05-q4",
-          "text": "Which digital marketing approach captures customers who are actively searching for solutions?",
+          "text": "Which digital marketing approach is best for capturing customers with high purchase intent?",
           "options": [
             {
               "id": "a",
@@ -345,87 +358,138 @@ export const MarketingManagement201Module: LearningModule = {
             }
           ],
           "correctOptionId": "c",
-          "explanation": "SEM targets intent-based traffic — people actively typing queries into search engines — making it one of the highest-converting digital channels."
+          "explanation": "SEM targets intent-based traffic—people actively typing queries into search engines—making it one of the highest-converting digital channels."
         }
       ]
     },
     {
       "id": "marketing-management-201-l06",
-      "title": "Pricing Strategy & Revenue Models",
+      "title": "Advanced Digital Tactics & Automation",
       "type": "video",
-      "duration": 12,
+      "duration": 13,
       "objectives": [
-        "Apply psychological pricing principles",
-        "Design subscription and freemium revenue models",
-        "Evaluate pricing elasticity and competitive dynamics"
+        "Develop an influencer marketing strategy, considering authenticity and ROI.",
+        "Design a marketing automation workflow for lead nurturing.",
+        "Explain the mechanics of programmatic advertising and retargeting."
       ],
       "chunks": [
         {
           "id": "marketing-management-201-l06-c1",
-          "title": "Strategic Pricing",
-          "content": "Pricing is a crucial factor that can significantly influence a company's profits. In fact, if a company raises its prices by just 1%, it can lead to an increase in profits by as much as 7 to 11%. This is much more effective than cutting costs, which typically only increases profits by 3 to 4%. There are three main strategies that businesses can use when setting prices. The first is cost-plus pricing, where a company adds a certain percentage to the cost of producing a product. While this method is straightforward, it doesn't take into account how much customers value the product. The second strategy is competition-based pricing, where a business sets its prices based on what competitors are charging. This approach can be reactive and may not always maximize profits. The most effective strategy is value-based pricing, which involves setting prices according to how much customers believe a product is worth. For example, Apple is known for charging higher prices because customers see great value in its innovative designs. On the other hand, products that are considered commodities often have to compete primarily on price, as they offer less differentiation in value.\nContext recap: Pricing is a crucial factor that can significantly influence a company's profits. In fact, if a company raises its prices by just 1%, it can lead to an increase in profits by as much as 7 to 11%. This is much more effective than cutting costs, which typically only increases profits by 3 to 4%. There are three main strategies that businesses can use when setting prices.\nWhy this matters: Strategic Pricing helps learners in Business connect ideas from Brand Strategy & Digital Marketing to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "title": "Influencer Marketing",
+          "content": "Influencer marketing leverages individuals with established credibility and a dedicated following to promote a brand. The landscape ranges from mega-influencers with millions of followers to micro- and nano-influencers with smaller, highly engaged niche audiences. The key to success is authenticity; modern consumers are wary of overly commercialized endorsements. Effective strategies focus on long-term partnerships with influencers whose values align with the brand. Measurement has evolved beyond vanity metrics like 'likes' to focus on engagement rates, conversion tracking through unique affiliate links or promo codes, and brand sentiment analysis. All sponsored content must also adhere to FTC guidelines requiring clear disclosure of the partnership.",
+          "visualPrompt": "A spectrum graphic showing different influencer tiers from 'Nano' to 'Micro' to 'Macro' to 'Mega'. Below each tier, icons represent typical follower counts, engagement rates (higher for smaller tiers), and cost."
         },
         {
           "id": "marketing-management-201-l06-c2",
-          "title": "Psychological Pricing",
-          "content": "When we think about how prices affect our buying decisions, it's important to realize that consumers often don't make choices based solely on logic. One fascinating strategy that businesses use is called charm pricing. This is when a price is set at $9.99 instead of $10. Why does this work? It's because people tend to pay more attention to the first number in a price. So, $9.99 feels much cheaper than $10, even though the difference is just one cent! Another clever technique is known as price anchoring. This is when a company shows the original price of an item before offering a discount. By doing this, they create a reference point that helps customers see the new price as a better deal. For example, if an item originally costs $50 and is marked down to $30, the original price makes the discount seem more appealing. Additionally, there's a strategy called decoy pricing. This involves adding a less attractive option to the mix, which makes the main option look even better. A classic example of this is how The Economist presents different subscription plans, guiding customers toward the most profitable choice for the company. Lastly, bundle pricing is another effective approach. This is when companies offer a group of products at a lower price than if you bought each one separately. For instance, Microsoft 365 offers several apps together at a better price than purchasing each app on its own. By understanding these psychological pricing strategies, businesses can boost their revenue without having to change their products at all.\nContext recap: When we think about how prices affect our buying decisions, it's important to realize that consumers often don't make choices based solely on logic. One fascinating strategy that businesses use is called charm pricing. This is when a price is set at $9.99 instead of $10. Why does this work?\nWhy this matters: Psychological Pricing helps learners in Business connect ideas from Brand Strategy & Digital Marketing to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "title": "Marketing Automation",
+          "content": "Marketing automation uses software to automate repetitive marketing tasks, nurture leads, and personalize customer communication at scale. A core application is email marketing workflows. For example, when a user downloads a whitepaper, an automated workflow can be triggered to send a series of follow-up emails over several weeks, providing additional value and gently guiding the lead towards a sales conversation. These platforms integrate with Customer Relationship Management (CRM) systems to score leads based on their behavior (e.g., website visits, email opens), allowing sales teams to prioritize the most engaged prospects. By automating these processes, companies can improve efficiency, deliver more timely and relevant messages, and increase conversion rates.",
+          "visualPrompt": "A flowchart visualizing an automated lead nurturing sequence. It starts with a trigger ('User Downloads Ebook'), branches to a series of timed emails ('Day 1: Welcome Email', 'Day 3: Case Study', 'Day 7: Demo Offer'), with conditional logic based on user actions (e.g., 'Clicked Link?')."
         },
         {
           "id": "marketing-management-201-l06-c3",
-          "title": "Modern Revenue Models",
-          "content": "In today's market, businesses are moving beyond just selling products through one-time purchases. Many companies are adopting recurring revenue models, which provide a steady stream of income. For example, subscription services like Netflix and software as a service (SaaS) platforms charge customers regularly for access to their services. Another model is freemium, where a basic version of a service is offered for free, like Spotify, which includes ads, while a premium version is available without ads for a fee. Usage-based models, such as Amazon Web Services (AWS), charge customers based on how much they use the service. Marketplace commissions, like those used by Airbnb, allow companies to take a small percentage from each booking. Additionally, the razor-and-blade model involves selling a product at a low price, like a printer, while making profits from the necessary supplies, such as ink. Investors often favor subscription models because they provide predictable revenue and a high customer lifetime value (CLV). Two important metrics to consider in these models are Monthly Recurring Revenue (MRR) and the churn rate, which measures how many customers stop using the service.\nContext recap: In today's market, businesses are moving beyond just selling products through one-time purchases. Many companies are adopting recurring revenue models, which provide a steady stream of income. For example, subscription services like Netflix and software as a service (SaaS) platforms charge customers regularly for access to their services. Another model is freemium, where a basic version of a service is offered for free, like Spotify, which includes ads, while a premium version is available without ads for a fee.\nWhy this matters: Modern Revenue Models helps learners in Business connect ideas from Brand Strategy & Digital Marketing to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "Programmatic Advertising & Retargeting",
+          "content": "Programmatic advertising is the automated, real-time buying and selling of digital ad inventory through an auction-based system. It involves Demand-Side Platforms (DSPs) for advertisers and Supply-Side Platforms (SSPs) for publishers. A powerful tactic within this is retargeting (or remarketing). This works by placing a small piece of code (a pixel) on a company's website. When a user visits the site but leaves without converting, the pixel allows the brand to 'follow' them and serve targeted ads on other websites and social media platforms they visit. This keeps the brand top-of-mind and encourages users to return and complete their purchase. While highly effective, marketers must manage frequency capping to avoid ad fatigue and respect user privacy.",
+          "visualPrompt": "An animated sequence showing how retargeting works. 1) A user visits a product page on a website. 2) They leave the site. 3) They browse a news website, and an ad for the product they viewed appears. 4) They browse social media, and the same ad appears again."
         }
       ],
       "flashcards": [
         {
           "id": "marketing-management-201-l06-f1",
-          "front": "Three pricing approaches",
-          "back": "Cost-plus (margin on costs), Competition-based (match rivals), Value-based (price by perceived value) — value-based is most profitable"
+          "front": "What is the key to a successful influencer marketing campaign?",
+          "back": "Authenticity. Partnering with influencers whose values and audience align with the brand, focusing on genuine endorsement over simple promotion."
         },
         {
           "id": "marketing-management-201-l06-f2",
-          "front": "Decoy pricing",
-          "back": "Adding an inferior option to make the target option look relatively more attractive — exploits context-dependent consumer preferences"
+          "front": "How does marketing automation assist in lead nurturing?",
+          "back": "It automates the delivery of personalized, timed content (e.g., email sequences) to guide leads through the sales funnel based on their behavior."
         },
         {
           "id": "marketing-management-201-l06-f3",
-          "front": "Freemium model",
-          "back": "Free basic tier attracts users; premium paid tier monetizes power users — success depends on conversion rate from free to paid"
+          "front": "What is retargeting in digital advertising?",
+          "back": "A strategy that uses a tracking pixel to serve targeted ads to users who have previously visited a website but did not convert."
         }
       ]
     },
     {
       "id": "marketing-management-201-l07",
+      "title": "Analytics & Monetization Strategy",
+      "type": "video",
+      "duration": 12,
+      "objectives": [
+        "Apply value-based and psychological pricing principles.",
+        "Differentiate between modern revenue models like subscription and freemium.",
+        "Utilize A/B testing to optimize marketing campaigns."
+      ],
+      "chunks": [
+        {
+          "id": "marketing-management-201-l07-c1",
+          "title": "Data-Driven Optimization",
+          "content": "Effective marketing relies on continuous, data-driven optimization. A fundamental technique is A/B testing (or split testing), where two versions of a marketing asset (e.g., an email subject line, a landing page headline, an ad creative) are shown to two similar audience segments to see which one performs better against a specific goal, like click-through rate or conversion rate. This scientific approach removes guesswork and allows for incremental improvements that compound over time. Beyond A/B testing, cohort analysis groups users by shared characteristics (e.g., sign-up date) to track their behavior over time, providing deep insights into customer retention and long-term value. A data-first culture is essential for maximizing marketing ROI.",
+          "visualPrompt": "A simple graphic showing an A/B test. An original webpage ('Version A') is shown next to a modified version with a different button color ('Version B'). Arrows point from each to their respective conversion rates, with Version B's rate highlighted as the winner."
+        },
+        {
+          "id": "marketing-management-201-l07-c2",
+          "title": "Strategic Pricing Frameworks",
+          "content": "Pricing is one of the most powerful levers for profitability. While cost-plus and competition-based pricing are common, value-based pricing is often the most effective. This strategy sets prices primarily on the perceived value to the customer rather than on the cost of the product. This is often enhanced by psychological pricing tactics. For example, 'charm pricing' (e.g., $9.99 vs. $10.00) leverages the left-digit bias to make a price seem significantly lower. 'Price anchoring' establishes a reference point by showing a higher original price next to a sale price, making the deal seem more attractive. 'Decoy pricing' introduces a third, less attractive option to make the target option look better by comparison. These strategies influence consumer perception and can increase willingness to pay.",
+          "visualPrompt": "An example of decoy pricing for a magazine subscription. Option A: Web Only - $59. Option B: Print Only - $125. Option C: Web + Print - $125. Option B is the 'decoy', making Option C look like an exceptional value."
+        },
+        {
+          "id": "marketing-management-201-l07-c3",
+          "title": "Modern Revenue Models",
+          "content": "Digital transformation has popularized recurring revenue models beyond one-time transactions. The Subscription model (e.g., Netflix, Salesforce) provides predictable revenue through recurring payments. The Freemium model (e.g., Spotify, Dropbox) offers a free basic version to attract a large user base, with the goal of converting a percentage to a paid premium tier. Usage-Based models (e.g., Amazon Web Services) charge customers based on their consumption. The Razor-and-Blade model (e.g., printers and ink) involves selling a core product at a low margin to drive profitable sales of recurring consumables. For subscription businesses, key metrics include Monthly Recurring Revenue (MRR), Annual Recurring Revenue (ARR), Customer Churn Rate, and Customer Lifetime Value (CLV).",
+          "visualPrompt": "A set of four icons, each representing a revenue model. A calendar for 'Subscription', a free and a premium key for 'Freemium', a utility meter for 'Usage-Based', and a razor with a blade for 'Razor-and-Blade'."
+        }
+      ],
+      "flashcards": [
+        {
+          "id": "marketing-management-201-l07-f1",
+          "front": "What is the most profitable strategic pricing approach?",
+          "back": "Value-based pricing, which sets prices according to the product's perceived value to the customer, rather than its cost or competitor prices."
+        },
+        {
+          "id": "marketing-management-201-l07-f2",
+          "front": "Explain the Freemium revenue model.",
+          "back": "It offers a free, feature-limited version of a product to attract a large user base and monetizes by converting a fraction of those users to a paid, premium version."
+        },
+        {
+          "id": "marketing-management-201-l07-f3",
+          "front": "What is A/B testing?",
+          "back": "A method of comparing two versions of a webpage, email, or other marketing asset to determine which one performs better against a specific goal."
+        }
+      ]
+    },
+    {
+      "id": "marketing-management-201-l08",
       "title": "Final Assessment: Brand Strategy & Digital Marketing",
       "type": "quiz",
       "duration": 15,
       "questions": [
         {
-          "id": "marketing-management-201-l07-q1",
-          "text": "A 1% price increase typically yields how much profit increase?",
+          "id": "marketing-management-201-l08-q1",
+          "text": "A 1% price increase typically has the most significant impact on which of the following?",
           "options": [
             {
               "id": "a",
-              "text": "1-2%"
+              "text": "Market Share"
             },
             {
               "id": "b",
-              "text": "3-4%"
+              "text": "Operating Profit"
             },
             {
               "id": "c",
-              "text": "7-11%"
+              "text": "Variable Costs"
             },
             {
               "id": "d",
-              "text": "15-20%"
+              "text": "Brand Awareness"
             }
           ],
-          "correctOptionId": "c",
-          "explanation": "Research consistently shows pricing is the most powerful profit lever — a 1% price increase yields 7-11% profit improvement, compared to 3-4% from cost reduction."
+          "correctOptionId": "b",
+          "explanation": "Research consistently shows pricing is the most powerful profit lever. A 1% price increase can yield a 7-11% improvement in operating profit, far more than similar improvements in volume or costs."
         },
         {
-          "id": "marketing-management-201-l07-q2",
+          "id": "marketing-management-201-l08-q2",
           "text": "Omnichannel marketing requires all of the following EXCEPT:",
           "options": [
             {
@@ -438,7 +502,7 @@ export const MarketingManagement201Module: LearningModule = {
             },
             {
               "id": "c",
-              "text": "Separate teams for each channel with no coordination"
+              "text": "Separate, siloed teams for each channel"
             },
             {
               "id": "d",
@@ -446,11 +510,11 @@ export const MarketingManagement201Module: LearningModule = {
             }
           ],
           "correctOptionId": "c",
-          "explanation": "Omnichannel explicitly requires cross-functional coordination — separate, uncoordinated teams would create a fragmented, inconsistent experience."
+          "explanation": "Omnichannel explicitly requires cross-functional coordination and breaking down silos. Separate, uncoordinated teams would create a fragmented, inconsistent experience, which is the opposite of the omnichannel goal."
         },
         {
-          "id": "marketing-management-201-l07-q3",
-          "text": "The Economist's subscription experiment that made the print+digital bundle look attractive used:",
+          "id": "marketing-management-201-l08-q3",
+          "text": "A company introduces a new subscription plan that is deliberately poor value to make its existing premium plan look like a better deal. This is an example of:",
           "options": [
             {
               "id": "a",
@@ -466,11 +530,11 @@ export const MarketingManagement201Module: LearningModule = {
             },
             {
               "id": "d",
-              "text": "Loss leader pricing"
+              "text": "Cost-plus pricing"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "By adding a print-only option at the same price as print+digital, The Economist created a decoy that made the bundle appear as an incredible deal — a classic behavioral pricing experiment."
+          "explanation": "By adding an inferior option (the decoy), the company makes the target option appear relatively more attractive, influencing the customer's choice. This is a classic behavioral pricing strategy."
         }
       ]
     }

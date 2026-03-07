@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const Windows201Module: LearningModule = {
+export const windows_201_Module: LearningModule = {
   "id": "windows-201",
   "title": "Windows Administration and Automation II",
   "description": "Intermediate Windows operations curriculum on identity governance, update lifecycle, endpoint hardening, event-driven troubleshooting, and automation with PowerShell.",
@@ -15,7 +15,7 @@ export const Windows201Module: LearningModule = {
   ],
   "minAge": 13,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "intermediate",
   "localeSupport": [
     "en"
@@ -40,26 +40,26 @@ export const Windows201Module: LearningModule = {
           "id": "windows-201-l01-c1",
           "kind": "concept",
           "title": "Access Boundaries in Windows Operations",
-          "content": "To manage Windows systems effectively, it's really important to understand the difference between what regular users can do and what actions need special permissions. This clear separation helps keep the system safe and organized. Instead of giving individual permissions to each user, which can be confusing and hard to manage, we can use groups to control access. This method is much more efficient and allows us to easily scale and manage user permissions as the number of users grows. By using groups, we can ensure that everyone has the right level of access without compromising security.\nContext recap: To manage Windows systems effectively, it's really important to understand the difference between what regular users can do and what actions need special permissions. This clear separation helps keep the system safe and organized. Instead of giving individual permissions to each user, which can be confusing and hard to manage, we can use groups to control access. This method is much more efficient and allows us to easily scale and manage user permissions as the number of users grows."
+          "content": "To manage Windows systems effectively, it's important to understand the difference between what regular users can do and what actions need special permissions. Imagine your computer system is a school: not everyone gets the master keys. This clear separation helps keep the system safe. Instead of giving individual permissions to each user, which can be confusing, we use groups to control access. This makes it easy to scale and manage user permissions as the number of users grows.\nContext recap: Separating regular user actions from special permissions keeps systems safe. Using groups instead of individual permissions makes managing access much easier and more organized."
         },
         {
           "id": "windows-201-l01-c2",
           "kind": "concept",
           "title": "Privilege Elevation Discipline",
-          "content": "When someone needs to perform actions that require higher privileges, it is important that this elevation is carefully controlled. Each request for elevated access should be approved, documented, and monitored. Allowing broad and ongoing administrative rights can lead to increased risks for both security and the overall operation of the system, so it’s crucial to manage these permissions wisely.\nContext recap: When someone needs to perform actions that require higher privileges, it is important that this elevation is carefully controlled. Each request for elevated access should be approved, documented, and monitored. Allowing broad and ongoing administrative rights can lead to increased risks for both security and the overall operation of the system, so it’s crucial to manage these permissions wisely."
+          "content": "When someone needs 'admin' powers to fix something, this elevation must be carefully controlled. Each request for elevated access should be approved, documented, and monitored. Allowing broad and ongoing administrative rights is like leaving the vault door open—it increases security risks and the chance of accidental damage. Permissions should only be elevated when absolutely necessary.\nContext recap: Elevated access should be temporary, approved, and tracked. Permanent admin rights create unnecessary security risks."
         },
         {
           "id": "windows-201-l01-c3",
           "kind": "recap",
           "title": "Governance Signals",
-          "content": "Good governance in managing access includes regularly reviewing who has access to what, cleaning up accounts that are no longer in use, and having clear policies that can be audited for any exceptions to privileged activities. This helps ensure that the system remains secure and that access is granted only when necessary.\nContext recap: Good governance in managing access includes regularly reviewing who has access to what, cleaning up accounts that are no longer in use, and having clear policies that can be audited for any exceptions to privileged activities. This helps ensure that the system remains secure and that access is granted only when necessary."
+          "content": "Good governance means regularly reviewing who has access to what, cleaning up old accounts that are no longer in use, and having clear rules for any exceptions. This helps ensure that the system remains secure and that access is granted only when truly necessary.\nContext recap: Regular reviews and cleanups of user accounts ensure that only the right people have access to sensitive parts of the system."
         }
       ],
       "flashcards": [
         {
           "id": "windows-201-l01-f1",
           "front": "Least privilege",
-          "back": "Operational principle of granting only minimum required rights for a task."
+          "back": "Operational principle of granting only the minimum required rights for a task."
         },
         {
           "id": "windows-201-l01-f2",
@@ -77,7 +77,7 @@ export const Windows201Module: LearningModule = {
           "id": "windows-201-l01-a1",
           "type": "image",
           "title": "Privilege Governance Map",
-          "content": "Map of user roles, admin scopes, and approval checkpoints."
+          "content": "Visual Prompt: A flowchart showing a regular user requesting access, a manager approving it, and a timer ticking down until the access expires."
         }
       ]
     },
@@ -91,13 +91,13 @@ export const Windows201Module: LearningModule = {
           "id": "windows-201-l02-c1",
           "kind": "concept",
           "title": "Update Rings and Validation",
-          "content": "When updating Windows systems, it is important to use a phased approach. This means rolling out updates in stages, checking for compatibility beforehand, and using health monitoring tools to ensure everything is working well before making the updates available to everyone. This careful process helps prevent issues and ensures a smoother experience for users.\nContext recap: When updating Windows systems, it is important to use a phased approach. This means rolling out updates in stages, checking for compatibility beforehand, and using health monitoring tools to ensure everything is working well before making the updates available to everyone. This careful process helps prevent issues and ensures a smoother experience for users."
+          "content": "When updating Windows systems, we don't update everyone at once. We use a phased approach called 'update rings'. This means rolling out updates in stages—starting with a small test group, checking for compatibility, and using health monitoring tools to ensure everything works before updating everyone else. This careful process prevents widespread issues.\nContext recap: Update rings allow us to test new patches on a small group of computers first, ensuring they are safe before rolling them out to the entire network."
         },
         {
           "id": "windows-201-l02-c2",
           "kind": "practice",
           "title": "Rollback and Recovery Readiness",
-          "content": "Whenever a major update is released, it's very important to have a backup plan ready in case things don't go as expected. This plan should clearly outline when and how to reverse the update if necessary. It's also crucial to assign specific roles to team members so everyone knows their responsibilities. Additionally, setting up clear communication channels ensures that support teams can quickly tackle any issues that come up. Being well-prepared can help reduce any interruptions to our systems and keep everything running smoothly.\nContext recap: Whenever a major update is released, it's very important to have a backup plan ready in case things don't go as expected. This plan should clearly outline when and how to reverse the update if necessary. It's also crucial to assign specific roles to team members so everyone knows their responsibilities. Additionally, setting up clear communication channels ensures that support teams can quickly tackle any issues that come up."
+          "content": "Sometimes updates break things. A rollback plan is our 'undo' button. It clearly outlines when and how to reverse an update if necessary. It's crucial to assign specific roles to team members so everyone knows what to do during an emergency. Setting up clear communication channels ensures support teams can quickly tackle any issues that pop up.\nContext recap: Always have a rollback plan ready. Knowing exactly how to undo an update and who is responsible saves time and reduces panic during system failures."
         }
       ],
       "interactiveActivities": [
@@ -148,7 +148,7 @@ export const Windows201Module: LearningModule = {
           "id": "windows-201-l02-a1",
           "type": "practice",
           "title": "Patch Runbook",
-          "content": "Template for scope, ring plan, validation checks, rollback, and owner sign-off."
+          "content": "Visual Prompt: A checklist graphic showing 'Test Group', 'Main Group', and a big red 'Undo' button representing the rollback plan."
         }
       ]
     },
@@ -264,7 +264,7 @@ export const Windows201Module: LearningModule = {
           "id": "windows-201-l03-a1",
           "type": "mnemonic",
           "title": "RISK",
-          "content": "Rights, Indicators, Staging, Kill-switch."
+          "content": "Visual Prompt: A shield icon with the letters R.I.S.K. spelled out vertically: Rights, Indicators, Staging, Kill-switch."
         }
       ]
     },
@@ -278,19 +278,19 @@ export const Windows201Module: LearningModule = {
           "id": "windows-201-l04-c1",
           "kind": "concept",
           "title": "Baseline Security Components",
-          "content": "To keep Windows systems safe and secure, it's important to create a baseline security policy. This policy should include several key components. First, we need to protect endpoints, which are the devices that connect to the network. Next, we should manage firewall settings to control incoming and outgoing traffic. Additionally, we must safeguard credentials, such as passwords, to prevent unauthorized access. Finally, controlling how scripts are executed helps to ensure that only safe and approved scripts run on the system. By combining all these elements, we build a strong defense against potential threats and keep our systems secure.\nContext recap: To keep Windows systems safe and secure, it's important to create a baseline security policy. This policy should include several key components. First, we need to protect endpoints, which are the devices that connect to the network. Next, we should manage firewall settings to control incoming and outgoing traffic.\nWhy this matters: Baseline Security Components helps learners in Operating Systems connect ideas from Windows Administration and Automation II to decisions they make during practice and assessment. Connect ideas to real decisions and evidence."
+          "content": "To keep Windows systems safe, we create a baseline security policy—a digital suit of armor. This includes protecting endpoints (devices connected to the network), managing firewalls to control traffic, safeguarding passwords, and controlling which scripts are allowed to run. By combining all these elements, we build a strong defense against potential threats.\nContext recap: A security baseline is a standard set of rules that protects devices, firewalls, and passwords from unauthorized access."
         },
         {
           "id": "windows-201-l04-c2",
           "kind": "concept",
           "title": "Policy Exceptions and Evidence",
-          "content": "When exceptions to security policies are necessary, they should be limited in time and clearly assigned to specific individuals. Without proper documentation and evidence, these temporary exceptions can become permanent risks, which can compromise the security of the system. It is important to keep track of these exceptions to maintain a secure environment.\nContext recap: When exceptions to security policies are necessary, they should be limited in time and clearly assigned to specific individuals. Without proper documentation and evidence, these temporary exceptions can become permanent risks, which can compromise the security of the system. It is important to keep track of these exceptions to maintain a secure environment."
+          "content": "Sometimes, a user needs to bypass a security rule to do their job. We call this an exception. Exceptions should be limited in time and clearly assigned to specific individuals. Without proper documentation, these temporary exceptions can become permanent risks. It is important to keep track of these exceptions to maintain a secure environment.\nContext recap: Security exceptions must be temporary and documented. If left unchecked, they create permanent holes in your security armor."
         },
         {
           "id": "windows-201-l04-c3",
           "kind": "recap",
           "title": "Operational Fit",
-          "content": "While enhancing security, it is crucial to ensure that the core functions and workflows of users are not disrupted. Security measures should be tested in real-world scenarios to confirm that they do not interfere with productivity. This balance between security and usability is key to effective system management.\nContext recap: While enhancing security, it is crucial to ensure that the core functions and workflows of users are not disrupted. Security measures should be tested in real-world scenarios to confirm that they do not interfere with productivity. This balance between security and usability is key to effective system management."
+          "content": "Security shouldn't make computers impossible to use. While enhancing security, it is crucial to ensure that the core functions and workflows of users are not disrupted. Security measures should be tested in real-world scenarios to confirm they do not interfere with productivity.\nContext recap: The best security policies balance safety with usability, ensuring users can still do their jobs efficiently."
         }
       ],
       "flashcards": [
@@ -315,7 +315,7 @@ export const Windows201Module: LearningModule = {
           "id": "windows-201-l04-a1",
           "type": "image",
           "title": "Windows Hardening Matrix",
-          "content": "Matrix of protection controls, enforcement level, and review cadence."
+          "content": "Visual Prompt: A grid showing different security locks (firewall, passwords, antivirus) and how often they are checked."
         }
       ]
     },
@@ -329,13 +329,13 @@ export const Windows201Module: LearningModule = {
           "id": "windows-201-l05-c1",
           "kind": "practice",
           "title": "Evidence-First Triage",
-          "content": "When handling incidents in Windows systems, it is important to start by correlating events, reviewing the state of services, and testing hypotheses in a controlled manner before making any significant changes to the system. This evidence-first approach helps ensure that any actions taken are based on solid information, reducing the risk of further issues.\nContext recap: When handling incidents in Windows systems, it is important to start by correlating events, reviewing the state of services, and testing hypotheses in a controlled manner before making any significant changes to the system. This evidence-first approach helps ensure that any actions taken are based on solid information, reducing the risk of further issues."
+          "content": "When a computer breaks, don't just guess the problem. Be a digital detective. Start by looking at event logs, reviewing the state of services, and testing ideas in a controlled way before making big changes. This evidence-first approach ensures your actions are based on facts, reducing the risk of making the problem worse.\nContext recap: Always look for evidence in system logs before trying to fix a problem. Guessing can lead to bigger issues."
         },
         {
           "id": "windows-201-l05-c2",
           "kind": "recap",
           "title": "Automation Safety",
-          "content": "When using PowerShell for automation, it is important to ensure that scripts are designed to be idempotent, meaning they can be run multiple times without causing unintended effects. Scripts should also be parameterized for flexibility and logged for accountability. Additionally, it is essential to have clear ownership and verification checkpoints to maintain control over automated processes.\nContext recap: When using PowerShell for automation, it is important to ensure that scripts are designed to be idempotent, meaning they can be run multiple times without causing unintended effects. Scripts should also be parameterized for flexibility and logged for accountability. Additionally, it is essential to have clear ownership and verification checkpoints to maintain control over automated processes."
+          "content": "PowerShell is a tool that lets you write scripts to do tasks automatically. But with great power comes great responsibility. Scripts should be 'idempotent', meaning they can be run multiple times without causing errors. They should also keep logs of what they do. Clear ownership and verification checkpoints help maintain control over automated processes.\nContext recap: Safe automation scripts can be run multiple times without breaking things, and they always log their actions so you know exactly what happened."
         }
       ],
       "interactiveActivities": [
@@ -391,7 +391,7 @@ export const Windows201Module: LearningModule = {
           "id": "windows-201-l05-a1",
           "type": "practice",
           "title": "Troubleshooting Runbook",
-          "content": "Template for symptom, log evidence, intervention, validation, and escalation."
+          "content": "Visual Prompt: A magnifying glass over a computer log file, leading to a wrench fixing a gear."
         }
       ]
     },
@@ -507,7 +507,7 @@ export const Windows201Module: LearningModule = {
           "id": "windows-201-l06-a1",
           "type": "mnemonic",
           "title": "EVIDE",
-          "content": "Events, Validate, Intervene, Document, Escalate."
+          "content": "Visual Prompt: A 5-step staircase showing the E.V.I.D.E. process: Events, Validate, Intervene, Document, Escalate."
         }
       ]
     }

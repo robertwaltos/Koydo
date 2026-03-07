@@ -119,7 +119,7 @@ export interface AudiobookTTSRequest {
 export interface AudiobookTTSResult {
   audioUrl: string;
   cached: boolean;
-  provider: "openai" | "elevenlabs" | "local" | "browser";
+  provider: "gemini" | "openai" | "elevenlabs" | "local" | "browser";
   durationEstimateMs: number;
 }
 

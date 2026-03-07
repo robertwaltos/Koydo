@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import SupportClient from "./support-client";
@@ -5,6 +6,11 @@ import SoftCard from "@/app/components/ui/soft-card";
 import ProgressChip from "@/app/components/ui/progress-chip";
 import PageHeader from "@/app/components/page-header";
 import { loadSupportRuntimeConfig } from "@/lib/support/config";
+
+export const metadata: Metadata = {
+  title: "Support — Koydo",
+  description: "Get help with your Koydo account, billing, technical issues, or feature requests. Our support team is here to help.",
+};
 
 export const dynamic = "force-dynamic";
 

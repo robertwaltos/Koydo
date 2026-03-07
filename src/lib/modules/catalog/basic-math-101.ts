@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const BasicMath101Module: LearningModule = {
+export const basic_math_101_Module: LearningModule = {
   "id": "basic-math-101",
   "title": "Basic Math Foundations",
   "description": "Learn number sense, counting, addition, subtraction, and early problem solving.",
@@ -12,7 +12,7 @@ export const BasicMath101Module: LearningModule = {
   ],
   "minAge": 7,
   "maxAge": 18,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "learningObjectives": [
     "Read and write whole numbers using place value up to thousands",
     "Add and subtract multi-digit numbers with regrouping",
@@ -30,6 +30,8 @@ export const BasicMath101Module: LearningModule = {
         "Identify the value of each digit in a number up to 9,999",
         "Compare and order whole numbers using place value"
       ],
+      "lessonImagePrompt": "A vibrant, engaging 3D illustration of a glowing place value chart with colorful base-ten blocks (ones, tens, hundreds, thousands) floating playfully in a magical math classroom.",
+      "conceptVideoPrompt": "A dynamic, colorful 3D animation showing a single glowing cube multiplying into a rod of 10, then a flat square of 100, and finally a large cube of 1000, with clear, bold numbers appearing to show their values.",
       "chunks": [
         {
           "id": "basic-math-101-l01-c1",
@@ -102,6 +104,8 @@ export const BasicMath101Module: LearningModule = {
         "Add multi-digit numbers using the standard algorithm",
         "Use mental math strategies like making tens and breaking apart numbers"
       ],
+      "lessonImagePrompt": "A fun, colorful illustration of two friendly robots stacking glowing numbered blocks together to form a larger tower, symbolizing addition.",
+      "conceptVideoPrompt": "A bright, engaging 2D animation showing the number 8 and 7. The 7 splits into 2 and 5. The 2 flies over to the 8 to make a glowing 10, and the 5 joins it to make 15, with cheerful sound effects.",
       "interactiveActivities": [
         {
           "id": "basic-math-101-l02-ia1",
@@ -171,7 +175,7 @@ export const BasicMath101Module: LearningModule = {
           "id": "basic-math-101-l02-c2",
           "title": "Breaking Apart Numbers",
           "kind": "concept",
-          "content": "For the addition problem 47 + 36, you can simplify the process by breaking the numbers apart based on their place values. Start by adding the tens: 40 (from 47) and 30 (from 36) to get 70. Next, add the ones: 7 (from 47) and 6 (from 36) to get 13. Finally, combine these two results: 70 + 13 equals 83. This method of breaking apart numbers helps you manage mental math more easily and accurately.\nContext recap: For the addition problem 47 + 36, you can simplify the process by breaking the numbers apart based on their place values. Start by adding the tens: 40 (from 47) and 30 (from 36) to get 70. Next, add the ones: 7 (from 47) and 6 (from 36) to get 13. Finally, combine these two results: 70 + 13 equals 83."
+          "content": "For the addition problem 47 + 36, you can simplify the process by breaking the numbers apart based on their place values. Start by adding the tens: 40 (from 47) and 30 (from 36) to get 70. Next, add the ones: 7 (from 47) and 6 (from 36) to get 13. Finally, combine these two results: 70 + 13 equals 83. This method of breaking apart numbers helps you manage mental math more easily and accurately."
         },
         {
           "id": "basic-math-101-l02-c3",
@@ -187,13 +191,16 @@ export const BasicMath101Module: LearningModule = {
           "title": "Quick Addition Drill",
           "content": "Solve these using any strategy: 56 + 38, 247 + 185, 1,309 + 2,764. Check with the standard algorithm."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/basic-math-101-l02.png"
     },
     {
       "id": "basic-math-101-l03",
       "title": "Checkpoint: Number Operations",
       "type": "quiz",
       "duration": 10,
+      "lessonImagePrompt": "A bright, encouraging checkpoint flag on a colorful math-themed race track, with floating numbers and addition symbols.",
+      "conceptVideoPrompt": "A fast-paced, fun animated recap showing a quick montage of place value blocks, addition regrouping, and a giant checkmark appearing with confetti.",
       "questions": [
         {
           "id": "basic-math-101-l03-q1",
@@ -383,7 +390,8 @@ export const BasicMath101Module: LearningModule = {
           "title": "Addition Carry Rule",
           "content": "When the sum of a column is 10 or more, write the ones digit and carry the tens digit to the next column."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/basic-math-101-l03.png"
     },
     {
       "id": "basic-math-101-l04",
@@ -394,6 +402,8 @@ export const BasicMath101Module: LearningModule = {
         "Subtract multi-digit numbers with regrouping",
         "Check subtraction using addition"
       ],
+      "lessonImagePrompt": "A colorful illustration of a magical jar of glowing marbles, with a few marbles floating away, symbolizing subtraction.",
+      "conceptVideoPrompt": "A clear, step-by-step 3D animation showing the number 542 above 278. A glowing light moves from the tens place to the ones place, visually breaking a ten-rod into ten single cubes to demonstrate regrouping.",
       "chunks": [
         {
           "id": "basic-math-101-l04-c1",
@@ -449,7 +459,8 @@ export const BasicMath101Module: LearningModule = {
           "title": "Regrouping Step-by-Step",
           "content": "Visual diagram showing the borrowing process for 542 − 278 with crossed-out digits and regrouped values."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/basic-math-101-l04.png"
     },
     {
       "id": "basic-math-101-l05",
@@ -460,6 +471,8 @@ export const BasicMath101Module: LearningModule = {
         "Identify the operation needed in a word problem",
         "Solve one-step addition and subtraction word problems"
       ],
+      "lessonImagePrompt": "A cartoon detective with a magnifying glass looking at a giant math word problem, highlighting clue words like 'total' and 'left' in bright neon colors.",
+      "conceptVideoPrompt": "An animated sequence showing a word problem turning into a puzzle. The words 'altogether' and 'fewer' glow, transforming into a plus and minus sign respectively, guiding the viewer to the solution.",
       "interactiveActivities": [
         {
           "id": "basic-math-101-l05-ia1",
@@ -539,13 +552,16 @@ export const BasicMath101Module: LearningModule = {
           "title": "Word Problem Walkthrough",
           "content": "Animated example showing the four-step method applied to: 'A library has 1,250 books. 389 are checked out. How many are on the shelves?'"
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/basic-math-101-l05.png"
     },
     {
       "id": "basic-math-101-l06",
       "title": "Checkpoint: Problem Solving",
       "type": "quiz",
       "duration": 10,
+      "lessonImagePrompt": "A colorful treasure map with a path connecting different math word problem islands, leading to a glowing treasure chest.",
+      "conceptVideoPrompt": "A fun, quick animation of a student character successfully solving a puzzle by matching a word problem to a subtraction symbol, triggering a celebratory burst of stars.",
       "questions": [
         {
           "id": "basic-math-101-l06-q1",
@@ -735,7 +751,8 @@ export const BasicMath101Module: LearningModule = {
           "title": "CUBES Method",
           "content": "Circle the numbers, Underline the question, Box key words, Evaluate the operation, Solve and check."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/basic-math-101-l06.png"
     },
     {
       "id": "basic-math-101-l07",
@@ -746,6 +763,8 @@ export const BasicMath101Module: LearningModule = {
         "Round numbers to the nearest ten and hundred",
         "Estimate sums and differences using rounding"
       ],
+      "lessonImagePrompt": "A whimsical illustration of a giant ruler and a magnifying glass examining a bouncy, rounded number balloon.",
+      "conceptVideoPrompt": "A playful animation showing a number line on a roller coaster track. A cart with the number 73 rolls down the hill backward to 70, while a cart with 87 powers forward to 90.",
       "chunks": [
         {
           "id": "basic-math-101-l07-c1",
@@ -763,7 +782,7 @@ export const BasicMath101Module: LearningModule = {
           "id": "basic-math-101-l07-c3",
           "title": "Estimating Sums",
           "kind": "example",
-          "content": "Let’s practice estimating sums! For the problem 639 plus 274, we can round each number to make it simpler. Round 639 down to 600 and 274 up to 300. Now, when we add these rounded numbers together, we get an estimated sum of 900. The exact answer is 913, which shows that our estimate was very close! This technique of estimating helps us quickly check if our exact answer is reasonable and gives us a good idea of what to expect.\nContext recap: Let’s practice estimating sums! For the problem 639 plus 274, we can round each number to make it simpler. Round 639 down to 600 and 274 up to 300. Now, when we add these rounded numbers together, we get an estimated sum of 900.\nWhy this matters: Estimating Sums helps learners in Math connect ideas from Basic Math Foundations to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "Let’s practice estimating sums! For the problem 639 plus 274, we can round each number to make it simpler. Round 639 down to 600 and 274 up to 300. Now, when we add these rounded numbers together, we get an estimated sum of 900. The exact answer is 913, which shows that our estimate was very close! This technique of estimating helps us quickly check if our exact answer is reasonable and gives us a good idea of what to expect."
         },
         {
           "id": "basic-math-101-l07-c4",
@@ -801,7 +820,8 @@ export const BasicMath101Module: LearningModule = {
           "title": "Estimation Challenge",
           "content": "Estimate then calculate: 387 + 445, 903 − 467, 1,250 + 3,870. Compare your estimate to the exact answer each time."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/basic-math-101-l07.png"
     },
     {
       "id": "basic-math-101-l08",
@@ -812,6 +832,8 @@ export const BasicMath101Module: LearningModule = {
         "Reflect on personal strengths and weaknesses in arithmetic",
         "Set a specific improvement goal"
       ],
+      "lessonImagePrompt": "A cozy, inviting illustration of an open glowing journal with floating math symbols, a pencil, and a lightbulb representing new ideas.",
+      "conceptVideoPrompt": "A soothing, inspiring animation of a student looking at a glowing math journal. Mistakes turn into stepping stones that build a bridge to a shiny golden star.",
       "interactiveActivities": [
         {
           "id": "basic-math-101-l08-ia1",
@@ -881,13 +903,16 @@ export const BasicMath101Module: LearningModule = {
           "title": "Growth Mindset Prompt",
           "content": "Mistakes are proof you are trying. Identify one error pattern and commit to one fix this week."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/basic-math-101-l08.png"
     },
     {
       "id": "basic-math-101-l09",
       "title": "Review: Core Math Skills",
       "type": "quiz",
       "duration": 10,
+      "lessonImagePrompt": "A vibrant, futuristic control room with screens displaying various math puzzles, addition, subtraction, and rounding challenges.",
+      "conceptVideoPrompt": "A high-energy, fast-paced animated montage reviewing place value, addition, subtraction, and estimation, ending with a 'Ready for Mastery!' glowing sign.",
       "questions": [
         {
           "id": "basic-math-101-l09-q1",
@@ -1075,13 +1100,16 @@ export const BasicMath101Module: LearningModule = {
           "title": "Rounding Rhyme",
           "content": "Five or more, let it soar (round up). Four or less, let it rest (round down)."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/basic-math-101-l09.png"
     },
     {
       "id": "basic-math-101-l10",
       "title": "Mastery: Basic Math",
       "type": "quiz",
       "duration": 10,
+      "lessonImagePrompt": "A grand, glowing golden trophy surrounded by floating numbers, plus signs, and minus signs in a celebratory, colorful environment.",
+      "conceptVideoPrompt": "An epic, celebratory animation showing a rocket ship launching into space, powered by solving math equations, reaching a planet made of numbers.",
       "questions": [
         {
           "id": "basic-math-101-l10-q1",
@@ -1275,7 +1303,8 @@ export const BasicMath101Module: LearningModule = {
           "title": "Check It Twice",
           "content": "After solving a subtraction problem, add the answer to the smaller number. If you get the original number, you are correct."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/basic-math-101-l10.png"
     },
     {
       "id": "basic-math-101-l11",
@@ -1286,6 +1315,8 @@ export const BasicMath101Module: LearningModule = {
         "Solve two-step word problems",
         "Combine addition and subtraction in context"
       ],
+      "lessonImagePrompt": "A bustling, colorful cartoon bakery with trays of muffins and a cash register, illustrating a real-world math scenario.",
+      "conceptVideoPrompt": "A fun, step-by-step animation of a bakery scenario. First, a tray of muffins is added to another tray (Step 1). Then, a customer buys some, and they disappear (Step 2), revealing the final answer.",
       "interactiveActivities": [
         {
           "id": "basic-math-101-l11-ia1",
@@ -1353,13 +1384,16 @@ export const BasicMath101Module: LearningModule = {
           "title": "Two-Step Challenge",
           "content": "Solve: A library had 1,500 books. They donated 230 and received 175 new ones. How many books does the library have now?"
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/basic-math-101-l11.png"
     },
     {
       "id": "basic-math-101-l12",
       "title": "Basic Math Mastery Applied Retest",
       "type": "quiz",
       "duration": 10,
+      "lessonImagePrompt": "A bright, encouraging 'Level Up' screen with a glowing gamepad and floating math symbols, ready for a final challenge.",
+      "conceptVideoPrompt": "A dynamic animation of a character jumping over hurdles. Each hurdle represents a math problem. The character successfully clears them all and crosses a finish line.",
       "questions": [
         {
           "id": "basic-math-101-l12-q1",
@@ -1549,7 +1583,8 @@ export const BasicMath101Module: LearningModule = {
           "title": "Two-Step Reminder",
           "content": "Read the whole problem first. Solve one step at a time. Use the result of Step 1 as input for Step 2."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/basic-math-101-l12.png"
     },
     {
       "id": "basic-math-101-l13",
@@ -1560,6 +1595,8 @@ export const BasicMath101Module: LearningModule = {
         "Apply all arithmetic skills to a real-world scenario",
         "Justify each step with reasoning"
       ],
+      "lessonImagePrompt": "A colorful illustration of a yellow school bus parked outside a museum, with a giant floating budget checklist and a piggy bank.",
+      "conceptVideoPrompt": "An engaging animation showing a piggy bank filling up with coins. The coins are then divided into piles for a bus, museum tickets, and lunch, showing how a budget works.",
       "chunks": [
         {
           "id": "basic-math-101-l13-c1",
@@ -1571,7 +1608,7 @@ export const BasicMath101Module: LearningModule = {
           "id": "basic-math-101-l13-c2",
           "title": "Calculate Each Cost",
           "kind": "example",
-          "content": "Let’s break down the costs for our field trip! The bus costs $385. For the museum, we need to calculate the total for all 28 students: 28 times $12 equals $336. For lunch, we do the same: 28 times $8 equals $224. We can also think of this as repeated addition: 28 times 8 can be broken down into 20 times 8 plus 8 times 8, which gives us 160 plus 64, totaling $224. Now, we can add all these costs together to find the total expense!\nContext recap: Let’s break down the costs for our field trip! The bus costs $385. For the museum, we need to calculate the total for all 28 students: 28 times $12 equals $336. For lunch, we do the same: 28 times $8 equals $224.\nWhy this matters: Calculate Each Cost helps learners in Math connect ideas from Basic Math Foundations to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "Let’s break down the costs for our field trip! The bus costs $385. For the museum, we need to calculate the total for all 28 students: 28 times $12 equals $336. For lunch, we do the same: 28 times $8 equals $224. We can also think of this as repeated addition: 28 times 8 can be broken down into 20 times 8 plus 8 times 8, which gives us 160 plus 64, totaling $224. Now, we can add all these costs together to find the total expense!"
         },
         {
           "id": "basic-math-101-l13-c3",
@@ -1583,7 +1620,7 @@ export const BasicMath101Module: LearningModule = {
           "id": "basic-math-101-l13-c4",
           "title": "Reflect and Extend",
           "kind": "practice",
-          "content": "Now, let’s think about what happens if 4 more students decide to join the trip! We need to recalculate the costs for the museum and lunch based on 32 students instead of 28. After finding the new total cost, we will check if it still fits within our budget of $1,200. This exercise will help us practice adjusting our calculations based on changing numbers!\nContext recap: Now, let’s think about what happens if 4 more students decide to join the trip! We need to recalculate the costs for the museum and lunch based on 32 students instead of 28. After finding the new total cost, we will check if it still fits within our budget of $1,200. This exercise will help us practice adjusting our calculations based on changing numbers!"
+          "content": "Now, let’s think about what happens if 4 more students decide to join the trip! We need to recalculate the costs for the museum and lunch based on 32 students instead of 28. After finding the new total cost, we will check if it still fits within our budget of $1,200. This exercise will help us practice adjusting our calculations based on changing numbers!"
         }
       ],
       "flashcards": [
@@ -1621,7 +1658,8 @@ export const BasicMath101Module: LearningModule = {
           "title": "Your Own Budget",
           "content": "Plan a party for 25 friends. Decide on food ($5/person), decorations ($45), and entertainment ($80). Calculate the total cost."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/basic-math-101-l13.png"
     },
     {
       "id": "basic-math-101-l14",
@@ -1632,6 +1670,8 @@ export const BasicMath101Module: LearningModule = {
         "Diagnose personal error patterns",
         "Apply targeted fixes for common arithmetic mistakes"
       ],
+      "lessonImagePrompt": "A friendly cartoon doctor with a stethoscope examining a math equation on a clipboard, diagnosing common math mistakes.",
+      "conceptVideoPrompt": "A helpful, clear animation showing a common math mistake, like forgetting to carry a 1. A friendly animated eraser fixes the mistake, and a glowing 1 appears in the correct spot.",
       "interactiveActivities": [
         {
           "id": "basic-math-101-l14-ia1",
@@ -1713,13 +1753,16 @@ export const BasicMath101Module: LearningModule = {
           "title": "Fix-It Loop",
           "content": "Spot the pattern → Practice the rule → Test yourself → Repeat until automatic."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/basic-math-101-l14.png"
     },
     {
       "id": "basic-math-101-l15",
       "title": "Basic Math Mastery Sprint",
       "type": "quiz",
       "duration": 10,
+      "lessonImagePrompt": "A high-speed, colorful race track with a runner dashing through a finish line ribbon made of numbers and math symbols.",
+      "conceptVideoPrompt": "A fast-paced, exciting animation of a timer ticking down while a series of math problems are solved rapidly, ending with a massive fireworks display of numbers.",
       "questions": [
         {
           "id": "basic-math-101-l15-q1",
@@ -1907,7 +1950,8 @@ export const BasicMath101Module: LearningModule = {
           "title": "Final Review Tip",
           "content": "Before submitting, estimate every answer first. If your exact answer is far from the estimate, recheck your work."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/basic-math-101-l15.png"
     }
   ]
 };

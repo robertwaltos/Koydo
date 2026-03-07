@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const PreKCoding101Module: LearningModule = {
+export const pre_k_coding_101_Module: LearningModule = {
   "id": "pre-k-coding-101",
   "title": "Pre-K Coding Adventures",
   "description": "A playful introduction to coding concepts for children ages 3-5. Learn about step-by-step instructions, patterns, loops, and simple if-then choices — all through stories about friendly robots, silly animals, and everyday adventures.",
@@ -12,7 +12,7 @@ export const PreKCoding101Module: LearningModule = {
   ],
   "minAge": 3,
   "maxAge": 5,
-  "version": "4.0.0",
+  "version": "1.1.0",
   "difficultyBand": "beginner",
   "localeSupport": [
     "en",
@@ -42,29 +42,29 @@ export const PreKCoding101Module: LearningModule = {
         {
           "id": "prek-coding-l01-c1",
           "title": "Meet Robo the Friendly Robot",
-          "content": "Let me introduce you to Robo, the little blue robot who is always excited to help out! 🤖 Robo is a very special robot because it can only do what you tell it to do, and it needs to follow your instructions one step at a time. Imagine if you wanted Robo to help you set the table. If you say 'pick up the cup' before 'walk to the table,' Robo will get all mixed up and try to grab nothing at all! This is because Robo doesn’t understand what to do unless you give it clear and simple steps in the right order. Just like Robo, computers are a bit like helpful robots too! They need clear instructions to work properly. They listen to what you say and follow your commands in a specific order, from the first step to the last. So, when you give Robo a task, remember to tell it what to do in the right order, just like you would when you are building a tower with blocks or following a recipe for a yummy snack! This way, Robo can help you perfectly every time! Let's have fun giving Robo the best instructions ever!\nContext recap: Let me introduce you to Robo, the little blue robot who is always excited to help out! 🤖 Robo is a very special robot because it can only do what you tell it to do, and it needs to follow your instructions one step at a time. Imagine if you wanted Robo to help you set the table. If you say 'pick up the cup' before 'walk to the table,' Robo will get all mixed up and try to grab nothing at all!\nWhy this matters: Meet Robo the Friendly Robot helps learners in Coding connect ideas from Pre-K Coding Adventures to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "Meet Robo, our friendly blue robot! 🤖 Robo loves to help, but he needs you to tell him exactly what to do, one step at a time. Imagine you want Robo to get a drink. If you say 'drink the water' before you say 'pick up the cup,' Robo will get all mixed up! He needs the steps in the right order. First, walk to the table. Second, pick up the cup. Third, drink the water. See? Computers are like Robo. They need clear steps in the right order to do amazing things. Let's have fun giving Robo the best instructions ever!"
         },
         {
           "id": "prek-coding-l01-c2",
           "title": "Making a Peanut Butter Sandwich",
-          "content": "Let's help our friend Robo make a yummy peanut butter sandwich! To do this, we need to give Robo clear and easy steps to follow. First, we start with Step 1: We need to get two slices of bread 🍞. Can you imagine how tasty that will be? Next, in Step 2, we will spread some peanut butter on one of the slices 🥜. It's important to spread it nicely so that every bite is delicious! Finally, in Step 3, we will put the two slices together to make our sandwich. But wait! If we forget Step 1 and jump right to spreading the peanut butter, Robo might make a big mess by putting peanut butter all over the table! Oh no! This shows us that the order of steps is super important when we give instructions. Just like in coding, where every step we take matters, we must remember to follow the right order. So, let's be great helpers and guide Robo step by step! Making a sandwich is fun, and it teaches us how to follow instructions carefully!\nContext recap: Let's help our friend Robo make a yummy peanut butter sandwich! To do this, we need to give Robo clear and easy steps to follow. First, we start with Step 1: We need to get two slices of bread 🍞. Can you imagine how tasty that will be?\nWhy this matters: Making a Peanut Butter Sandwich helps learners in Coding connect ideas from Pre-K Coding Adventures to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "Let's help Robo make a yummy peanut butter sandwich! We need to give him the steps in the right order. Step 1: Get two slices of bread 🍞. Step 2: Spread peanut butter on one slice 🥜. Step 3: Put the two slices together. Yum! But what if we did Step 2 first? Robo would spread peanut butter all over the table! Oh no, what a mess! The order of the steps is super important. Following instructions carefully, one step at a time, is the first part of learning to code!"
         },
         {
           "id": "prek-coding-l01-c3",
           "title": "You Are Already a Coder!",
-          "content": "Guess what? You are already a coder! Every single morning, when you get ready for the day, you follow a special order of steps. First, you put on your underwear, then you put on your pants, and finally, you slip on your shoes. Can you imagine putting your shoes on before your pants? That would be silly, right? 👟 This is a great example of how you use coding skills without even knowing it! By putting your clothes on in the right order, you are giving instructions just like a coder does. So, the next time you get dressed, think about how you are using your coding brain! You are doing a fantastic job of thinking like a coder every day! Keep it up!\nContext recap: Guess what? You are already a coder! Every single morning, when you get ready for the day, you follow a special order of steps. First, you put on your underwear, then you put on your pants, and finally, you slip on your shoes.\nWhy this matters: You Are Already a Coder! helps learners in Coding connect ideas from Pre-K Coding Adventures to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "Guess what? You are already a coder! Every morning when you get dressed, you follow steps in a special order. First, you put on your socks. Then, you put on your shoes. Can you imagine putting your shoes on before your socks? 👟 That would be so silly! When you get dressed in the right order, you are thinking just like a coder. You are giving your body instructions, one step at a time. You are doing a fantastic job!"
         }
       ],
       "flashcards": [
         {
           "id": "prek-coding-l01-f1",
           "front": "What is an instruction?",
-          "back": "A step that tells the computer (or robot) exactly what to do! 🤖"
+          "back": "A step that tells a computer (or robot) exactly what to do! 🤖"
         },
         {
           "id": "prek-coding-l01-f2",
           "front": "Why does order matter?",
-          "back": "If steps are out of order, the result will be wrong — like shoes before pants!"
+          "back": "If steps are out of order, the result will be wrong — like shoes before socks!"
         },
         {
           "id": "prek-coding-l01-f3",
@@ -126,8 +126,8 @@ export const PreKCoding101Module: LearningModule = {
         {
           "id": "prek-coding-l01-a1",
           "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary of the lesson's main concept."
+          "title": "Step-by-Step Picture",
+          "content": "A colorful picture showing the right and wrong way to make a sandwich for Robo."
         }
       ]
     },
@@ -145,17 +145,17 @@ export const PreKCoding101Module: LearningModule = {
         {
           "id": "prek-coding-l02-c1",
           "title": "What Is a Pattern?",
-          "content": "A pattern is something that happens again and again in a fun and predictable way! For example, look at this colorful sequence: 🔴🔵🔴🔵 — that's red, blue, red, blue. Isn’t that cool? Your favorite striped shirt has a pattern too! It might have red and blue stripes that repeat. The days of the week also follow a pattern, repeating every week like Monday, Tuesday, Wednesday, and so on. Even when we make music with our bodies by clapping our hands and stomping our feet, like clap-stomp-clap-stomp, we are creating a pattern! 👏🦶 Patterns are everywhere around us, and they help us understand the world better! They can be found in nature, in our clothes, and even in the games we play. So, keep your eyes open for patterns all around you! You might be surprised by how many you can find! 🌈\nContext recap: A pattern is something that happens again and again in a fun and predictable way! For example, look at this colorful sequence: 🔴🔵🔴🔵 — that's red, blue, red, blue. Isn’t that cool? Your favorite striped shirt has a pattern too!\nWhy this matters: What Is a Pattern? helps learners in Coding connect ideas from Pre-K Coding Adventures to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "A pattern is something that repeats again and again! Look: 🔴🔵🔴🔵. That's red, blue, red, blue. The pattern is 'red, blue.' Your favorite striped shirt has a pattern. Even music has patterns! Let's make one: clap-stomp-clap-stomp! 👏🦶 Patterns are everywhere. Look around you, can you find one? 🌈"
         },
         {
           "id": "prek-coding-l02-c2",
           "title": "Patterns Help Coders",
-          "content": "Coders really enjoy working with patterns because once they learn the rule, they can predict what comes next! For example, if we have a pattern like circle-star-circle-star, can you guess what comes after the second star? That's right, it’s a circle! ⭐⚪⭐⚪ Patterns are everywhere, and they help us understand how things work. Computers are fantastic at recognizing and repeating patterns — they never get tired or bored like we do! This ability makes them super helpful when we want to create fun things like games or animations. So, the next time you see a pattern, remember that it’s like a little secret code that helps us and computers work together to make amazing things!\nContext recap: Coders really enjoy working with patterns because once they learn the rule, they can predict what comes next! For example, if we have a pattern like circle-star-circle-star, can you guess what comes after the second star? That's right, it’s a circle! ⭐⚪⭐⚪ Patterns are everywhere, and they help us understand how things work.\nWhy this matters: Patterns Help Coders helps learners in Coding connect ideas from Pre-K Coding Adventures to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "Coders love patterns! Once you know the pattern, you can guess what comes next. If we have a pattern like circle-star-circle-star... ⚪⭐⚪⭐... what comes next? A circle! Computers are great at repeating patterns. We can tell a computer to draw a circle-star pattern a hundred times, and it will do it perfectly! This helps coders make games and fun animations."
         },
         {
           "id": "prek-coding-l02-c3",
           "title": "Pattern Detective Game",
-          "content": "Are you ready to become a super pattern detective? Let's take a look at these colorful beads together: 🟡🟢🟡🟢🟡... Can you guess what bead comes next? That's right, it's green! 🟢 Great job! Now, let’s try a trickier one: 🔺🔺🔵🔺🔺🔵... What do you think comes next? Yes, you got it! It's triangle, triangle! 🔺🔺 Wow, you are doing an amazing job at spotting patterns! Remember, the more you practice, the better you will get at being a pattern detective. Keep up the great work, and soon you'll be a pattern expert! Let's keep having fun with patterns together!\nContext recap: Are you ready to become a super pattern detective? Let's take a look at these colorful beads together: 🟡🟢🟡🟢🟡... Can you guess what bead comes next? That's right, it's green!\nWhy this matters: Pattern Detective Game helps learners in Coding connect ideas from Pre-K Coding Adventures to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "Let's be pattern detectives! 🕵️‍♀️ Look at these beads: 🟡🟢🟡🟢🟡... What color bead comes next? Yes, it's green! 🟢 You got it! Let's try a trickier one: 🔺🔺🔵🔺🔺🔵... What comes next? It's another triangle! 🔺 You are an amazing pattern detective! The more you look for patterns, the easier they are to spot."
         }
       ],
       "flashcards": [
@@ -167,11 +167,11 @@ export const PreKCoding101Module: LearningModule = {
         {
           "id": "prek-coding-l02-f2",
           "front": "Why do coders like patterns?",
-          "back": "Patterns let you predict what comes next — computers repeat patterns perfectly!"
+          "back": "Patterns let you predict what comes next — computers can repeat them perfectly!"
         },
         {
           "id": "prek-coding-l02-f3",
-          "front": "AB pattern",
+          "front": "What is an AB pattern?",
           "back": "A pattern with two things that take turns: red-blue-red-blue or clap-stomp-clap-stomp."
         }
       ],
@@ -205,8 +205,8 @@ export const PreKCoding101Module: LearningModule = {
         {
           "id": "prek-coding-l02-a1",
           "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary of the lesson's main concept."
+          "title": "Pattern Chart",
+          "content": "A colorful chart with different patterns like stripes, dots, and animal tracks."
         }
       ]
     },
@@ -266,8 +266,8 @@ export const PreKCoding101Module: LearningModule = {
         {
           "id": "prek-coding-l03-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Follow the prompt sequence and document your reasoning."
+          "title": "Pattern Practice Fun!",
+          "content": "Let's build some patterns together on the screen!"
         }
       ]
     },
@@ -285,17 +285,17 @@ export const PreKCoding101Module: LearningModule = {
         {
           "id": "prek-coding-l04-c1",
           "title": "What Is a Loop?",
-          "content": "A loop is a special way of doing the same thing again and again! 🔄 Imagine when you brush your teeth: you move the toothbrush up and down, up and down, up and down — that’s a loop! Instead of writing 'move the brush up, then move the brush down' a hundred times, we can just say, 'repeat up and down until your teeth are clean.' This makes it much easier and faster! In coding, loops are super helpful because they let us tell the computer to do things many times without having to write everything out over and over. Just like how brushing your teeth is a routine, loops help us create routines in our code. So remember, loops are all about repeating actions to make our work simpler and quicker!\nContext recap: A loop is a special way of doing the same thing again and again! 🔄 Imagine when you brush your teeth: you move the toothbrush up and down, up and down, up and down — that’s a loop! Instead of writing 'move the brush up, then move the brush down' a hundred times, we can just say, 'repeat up and down until your teeth are clean.' This makes it much easier and faster! In coding, loops are super helpful because they let us tell the computer to do things many times without having to write everything out over and over."
+          "content": "A loop is when you do the same thing again and again! 🔄 When you brush your teeth, you move the brush up and down, up and down. That's a loop! In coding, loops are super helpful. Instead of telling the computer 'move up, move down' a hundred times, we can just say, 'repeat up and down 100 times.' It saves a lot of work!"
         },
         {
           "id": "prek-coding-l04-c2",
           "title": "Robo's Loop Dance",
-          "content": "Robo is super excited to show off his silly dance! 🕺 The dance moves are really fun and include spinning around, clapping your hands, and jumping up high! Instead of saying 'spin, clap, jump' over and over again, we can make it easier for Robo by saying, 'repeat spin, clap, jump 3 times.' This is called a loop! A loop is like a magic trick that helps us tell Robo to do the same dance moves without getting tired. It makes dancing so much more fun because we don’t have to say the same thing again and again. Just imagine how happy Robo will be to dance without stopping! Let’s help Robo dance his best by using loops! 🎉\nContext recap: Robo is super excited to show off his silly dance! 🕺 The dance moves are really fun and include spinning around, clapping your hands, and jumping up high! Instead of saying 'spin, clap, jump' over and over again, we can make it easier for Robo by saying, 'repeat spin, clap, jump 3 times.' This is called a loop! A loop is like a magic trick that helps us tell Robo to do the same dance moves without getting tired.\nWhy this matters: Robo's Loop Dance helps learners in Coding connect ideas from Pre-K Coding Adventures to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "Robo wants to do a silly dance! 🕺 The moves are: spin, clap, jump! To make him dance for a while, we can use a loop. We can tell him: 'Do the dance 3 times.' Then Robo will spin-clap-jump, spin-clap-jump, spin-clap-jump! A loop tells Robo to repeat the steps so he can dance all day long! 🎉"
         },
         {
           "id": "prek-coding-l04-c3",
           "title": "Loops in Your Day",
-          "content": "Did you know that you use loops in your everyday life all the time? Let's think about some fun examples! When you bounce a ball, you do it over and over again: bounce-catch, bounce-catch, bounce-catch 🏀. It’s like a little dance with the ball! And when you sing the chorus of your favorite song, you might sing la-la-la, la-la-la 🎵 again and again. Isn’t that fun? Even when you walk, you are using a loop: left foot, right foot, left foot, right foot. Loops help us do things in a simple way, and they also help us understand coding better! So next time you bounce, sing, or walk, remember that you are using loops, just like in coding! Loops make our lives easier and more fun!\nContext recap: Did you know that you use loops in your everyday life all the time? Let's think about some fun examples! When you bounce a ball, you do it over and over again: bounce-catch, bounce-catch, bounce-catch 🏀. It’s like a little dance with the ball!\nWhy this matters: Loops in Your Day helps learners in Coding connect ideas from Pre-K Coding Adventures to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "You use loops all the time! When you bounce a ball, you do a loop: bounce-catch, bounce-catch, bounce-catch 🏀. When you sing your favorite song, you repeat the chorus again and again 🎵. Even walking is a loop: left foot, right foot, left foot, right foot. Loops are everywhere, and they help us do things without having to think about every single step."
         }
       ],
       "flashcards": [
@@ -307,7 +307,7 @@ export const PreKCoding101Module: LearningModule = {
         {
           "id": "prek-coding-l04-f2",
           "front": "Why are loops helpful?",
-          "back": "Loops save time! Instead of writing the same thing 100 times, you say 'repeat' once."
+          "back": "Loops save time! Instead of writing the same thing 100 times, you just say 'repeat' once."
         },
         {
           "id": "prek-coding-l04-f3",
@@ -369,8 +369,8 @@ export const PreKCoding101Module: LearningModule = {
         {
           "id": "prek-coding-l04-a1",
           "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary of the lesson's main concept."
+          "title": "Robo's Dance!",
+          "content": "An animation of Robo doing his loop dance: spin, clap, jump, again and again!"
         }
       ]
     },
@@ -474,15 +474,15 @@ export const PreKCoding101Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": "If steps are out of order, things go wrong — like shoes before pants!"
+          "explanation": "If steps are out of order, things go wrong — like shoes before socks!"
         }
       ],
       "learningAids": [
         {
           "id": "prek-coding-l05-a1",
           "type": "mnemonic",
-          "title": "Memory Cue",
-          "content": "Use Plan, Solve, Explain to structure each response."
+          "title": "Brain Booster!",
+          "content": "A friendly character cheering you on before the quiz! You can do it!"
         }
       ]
     },
@@ -500,24 +500,24 @@ export const PreKCoding101Module: LearningModule = {
         {
           "id": "prek-coding-l06-c1",
           "title": "What Is If-Then?",
-          "content": "If-then statements are a fun and important way we make choices every day! 🤔 Let’s think about some examples together! IF it is raining outside, THEN you should take an umbrella with you to stay dry. IF you feel hungry, THEN it’s a great time to have a yummy snack to keep your energy up. IF the traffic light is red, THEN you need to stop and wait for it to turn green before crossing the street. These little choices help us stay safe and happy! You already use if-then thinking in your daily life — you just didn’t know it had a special coding name! Isn’t that cool? By understanding if-then statements, we can learn how to make smart choices in many situations, just like a computer does when it follows instructions!\nContext recap: If-then statements are a fun and important way we make choices every day! 🤔 Let’s think about some examples together! IF it is raining outside, THEN you should take an umbrella with you to stay dry. IF you feel hungry, THEN it’s a great time to have a yummy snack to keep your energy up.\nWhy this matters: What Is If-Then? helps learners in Coding connect ideas from Pre-K Coding Adventures to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "We make choices all day using special 'if-then' rules! 🤔 For example: IF it is raining outside 🌧️, THEN you take an umbrella. IF you feel hungry, THEN you eat a yummy snack. IF the traffic light is red, THEN you stop. You are already an expert at if-then thinking! It's how we make smart choices to stay safe and happy."
         },
         {
           "id": "prek-coding-l06-c2",
           "title": "Robo's If-Then Rules",
-          "content": "We can teach Robo how to make smart choices by using if-then rules! For example, we can say: IF Robo sees a wall, THEN it should turn around to avoid bumping into it. If Robo hears clapping, THEN it should start dancing happily! 🤖💃 These special rules are very important because, without them, Robo might just keep walking straight into the wall over and over again — bonk, bonk, bonk! Ouch! By using if-then rules, we help Robo understand what to do in different situations, making it a clever little robot friend!\nContext recap: We can teach Robo how to make smart choices by using if-then rules! For example, we can say: IF Robo sees a wall, THEN it should turn around to avoid bumping into it. If Robo hears clapping, THEN it should start dancing happily! 🤖💃 These special rules are very important because, without them, Robo might just keep walking straight into the wall over and over again — bonk, bonk, bonk!"
+          "content": "We can teach Robo to make smart choices with if-then rules! We can tell him: IF you see a wall, THEN turn around. Without this rule, Robo might walk right into the wall! Bonk, bonk, bonk! Ouch! We can also tell him: IF you hear clapping 👏, THEN do a happy dance! 🤖💃 If-then rules help Robo know what to do."
         },
         {
           "id": "prek-coding-l06-c3",
           "title": "If-Then-Else: Two Choices!",
-          "content": "Sometimes, we have to make choices, and that's where the magic of 'if-then-else' comes in! Let's think about a sunny day. IF it is sunny outside, THEN you can wear a fun t-shirt to enjoy the warm weather. But if it’s not sunny, we have to think about what to wear instead. In that case, we say, ELSE you should wear a cozy jacket to keep warm. ☀️🧥\nThis 'else' part is super important because it tells us what to do when the first choice isn't true. Here’s another fun example: IF you have homework to do, THEN you should sit down and finish your homework. But if you don’t have any homework, we say, ELSE you can go outside and play with your friends!\nIsn't it cool how computers use this 'if-then-else' idea all the time? They use it to help them decide what to do next, just like we do in our everyday lives! So remember, making choices can be fun, and understanding 'if-then-else' helps us make smart decisions!\nContext recap: Sometimes, we have to make choices, and that's where the magic of 'if-then-else' comes in! Let's think about a sunny day. IF it is sunny outside, THEN you can wear a fun t-shirt to enjoy the warm weather. But if it’s not sunny, we have to think about what to wear instead.\nWhy this matters: If-Then-Else: Two Choices! helps learners in Coding connect ideas from Pre-K Coding Adventures to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "Sometimes there are two choices! That's when we use 'if-then-else.' For example: IF it is sunny outside ☀️, THEN wear a t-shirt. ELSE, wear a jacket 🧥. The 'else' tells us what to do if the 'if' isn't true. Here's another one: IF you finished your toys, THEN you can have a snack. ELSE, you need to finish cleaning up. Computers use if-then-else to make choices all the time!"
         }
       ],
       "flashcards": [
         {
           "id": "prek-coding-l06-f1",
           "front": "What is an if-then rule?",
-          "back": "A rule that says: IF something is true, THEN do this action! Like: IF raining, THEN take umbrella. ☔"
+          "back": "A rule that says: IF something is true, THEN do this action! Like: IF it's raining, THEN take an umbrella. ☔"
         },
         {
           "id": "prek-coding-l06-f2",
@@ -578,37 +578,37 @@ export const PreKCoding101Module: LearningModule = {
             "left": [
               {
                 "id": "l1",
-                "label": "IF it is cold"
+                "label": "IF it is cold 🥶"
               },
               {
                 "id": "l2",
-                "label": "IF you are sleepy"
+                "label": "IF you are sleepy 🥱"
               },
               {
                 "id": "l3",
-                "label": "IF the light is green"
+                "label": "IF the light is green 🟢"
               },
               {
                 "id": "l4",
-                "label": "IF Robo sees a cat"
+                "label": "IF Robo sees a cat 😺"
               }
             ],
             "right": [
               {
                 "id": "r1",
-                "label": "THEN wear a coat"
+                "label": "THEN wear a coat 🧥"
               },
               {
                 "id": "r2",
-                "label": "THEN go to bed"
+                "label": "THEN go to bed 🛌"
               },
               {
                 "id": "r3",
-                "label": "THEN walk across"
+                "label": "THEN walk across 🚶"
               },
               {
                 "id": "r4",
-                "label": "THEN wave hello"
+                "label": "THEN wave hello 👋"
               }
             ],
             "pairs": [
@@ -647,17 +647,17 @@ export const PreKCoding101Module: LearningModule = {
         {
           "id": "prek-coding-l08-c1",
           "title": "The Big Scary Task",
-          "content": "Imagine if someone asked you to 'clean your whole room!' That sounds really big and maybe a little scary, right? 😱 But what if we think of it as lots of little jobs instead? We can break it down into tiny steps! Step 1: First, let’s pick up all your toys and put them in the toy box. This is fun because you can see how many toys you have! Step 2: Next, let’s put your books back on the shelf where they belong. You can even organize them by color or size if you want! Step 3: Now, it’s time to make your bed. You can straighten the blankets and fluff the pillows to make it look nice and cozy. Step 4: Finally, take a look around your room. Is there anything else that needs to be tidied up? Maybe some clothes need to go in the hamper or some shoes need to be put away. Now, you’re done! Each of these little steps is easy to do, and when we finish them, your room will look great! This process of breaking a big task into smaller parts is called decomposition — it’s a fancy word that means we’re taking something big and making it smaller and simpler to handle! So remember, when a big job feels overwhelming, just break it down into tiny steps, and you can do it!\nContext recap: Imagine if someone asked you to 'clean your whole room!' That sounds really big and maybe a little scary, right? 😱 But what if we think of it as lots of little jobs instead? We can break it down into tiny steps! Step 1: First, let’s pick up all your toys and put them in the toy box.\nWhy this matters: The Big Scary Task helps learners in Coding connect ideas from Pre-K Coding Adventures to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "Imagine someone says, 'Clean your whole room!' That sounds like a really big, scary job, right? 😱 But we can make it easy by breaking it down into tiny steps! Step 1: Put all your toys in the toy box. Step 2: Put your books on the shelf. Step 3: Make your bed. See? Each small step is easy to do. When you finish all the small steps, the big job is done! This is called decomposition. It's a fancy word for breaking a big task into tiny steps."
         },
         {
           "id": "prek-coding-l08-c2",
           "title": "How Coders Decompose",
-          "content": "Did you know that real coders do something very similar to what we can do? When they want to create a game, it might seem like a really big job at first. But here’s the secret: they break it down into smaller, easier steps! Let’s think about how they do this together! For example, they might start with Step 1: Draw a fun character that you would like to play with. Step 2: Make that character move left and right on the screen so it can explore the game world. Step 3: Add a score counter to keep track of how many points you earn while playing. Step 4: Include some cool sound effects to make the game exciting and fun! 🎮 Each of these tiny steps is something you can do, and when you put them all together, guess what? You’ve created your very own game! Isn’t that amazing? You can be a coder too! Remember, every big project starts with small steps, and you can do it!\nContext recap: Did you know that real coders do something very similar to what we can do? When they want to create a game, it might seem like a really big job at first. But here’s the secret: they break it down into smaller, easier steps! Let’s think about how they do this together!\nWhy this matters: How Coders Decompose helps learners in Coding connect ideas from Pre-K Coding Adventures to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "Coders do this all the time! Making a whole game sounds hard, but they break it down. Step 1: Draw a fun character. Step 2: Make the character move left and right. Step 3: Add fun sounds. 🎮 Each tiny step is easy. When they put all the steps together, they have a whole game! Breaking things down makes big jobs feel small and fun."
         },
         {
           "id": "prek-coding-l08-c3",
           "title": "Let's Decompose Getting Ready",
-          "content": "Let’s practice breaking down a big task together! Imagine the big job is to 'get ready for school.' It sounds like a lot, but we can make it easier by breaking it down into smaller steps. Here’s how we can do it: Step 1: Wake up and stretch your arms to wake up your body 🌅. Step 2: Brush your teeth to keep them clean and shiny 🪥. Step 3: Get dressed in your favorite clothes 👕. Step 4: Enjoy a yummy breakfast to give you energy for the day 🥞. Step 5: Pack your backpack with everything you need for school 🎒. Now, instead of one big confusing task, we have five small and easy steps to follow!\nContext recap: Let’s practice breaking down a big task together! Imagine the big job is to 'get ready for school.' It sounds like a lot, but we can make it easier by breaking it down into smaller steps. Here’s how we can do it: Step 1: Wake up and stretch your arms to wake up your body 🌅. Step 2: Brush your teeth to keep them clean and shiny 🪥.\nWhy this matters: Let's Decompose Getting Ready helps learners in Coding connect ideas from Pre-K Coding Adventures to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "Let's practice! The big job is 'get ready for school.' Let's break it down. Step 1: Wake up and stretch 🌅. Step 2: Brush your teeth 🪥. Step 3: Get dressed 👕. Step 4: Eat breakfast 🥞. Step 5: Pack your backpack 🎒. Wow! Instead of one big job, we have five small, easy steps. You're great at decomposition!"
         }
       ],
       "flashcards": [
@@ -713,17 +713,17 @@ export const PreKCoding101Module: LearningModule = {
         {
           "id": "prek-coding-l09-c1",
           "title": "What Is a Bug?",
-          "content": "In the exciting world of coding, we often talk about something called a 'bug.' But what is a bug? Well, a bug is a special word we use to describe a mistake in our code! 🐛 The fun part is that the word 'bug' comes from a real story about a little moth that got stuck inside an old computer and made it stop working. Can you imagine that? Now, whenever something in our code doesn’t work the way we want it to, coders say, 'Oh no! There’s a bug!' This means it’s time for a fun adventure called a bug hunt! During a bug hunt, coders become detectives, searching for clues to find the mistake and fix it. Just like solving a mystery, it can be really exciting! So remember, bugs are just little mistakes that we can find and fix together, making our coding even better!\nContext recap: In the exciting world of coding, we often talk about something called a 'bug.' But what is a bug? Well, a bug is a special word we use to describe a mistake in our code! 🐛 The fun part is that the word 'bug' comes from a real story about a little moth that got stuck inside an old computer and made it stop working. Can you imagine that?\nWhy this matters: What Is a Bug? helps learners in Coding connect ideas from Pre-K Coding Adventures to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "In coding, a 'bug' is just a silly mistake in the instructions! 🐛 A long time ago, a real moth got stuck in a giant computer and made it stop working. So now, when something goes wrong, coders say, 'There's a bug!' Finding and fixing these mistakes is called 'debugging.' It's like being a detective on a bug hunt!"
         },
         {
           "id": "prek-coding-l09-c2",
           "title": "Robo's Buggy Morning",
-          "content": "Let’s help our friend Robo with a little problem he’s having! Robo is trying to get dressed all by himself, but something is not quite right. Here are the steps Robo is following: Step 1: Put on shoes 👟, Step 2: Put on socks 🧦, and Step 3: Put on pants 👖. Oh no! That’s a bit buggy! You see, you can’t put your shoes on before your socks! That would be like trying to put on a hat before your shirt! The fix is super easy: let’s swap steps 1 and 2 around. First, we need to put on the socks, and then we can put on the shoes! Now Robo is all dressed and ready to go on his adventures! Hooray for fixing bugs! 🐛→✅\nContext recap: Let’s help our friend Robo with a little problem he’s having! Robo is trying to get dressed all by himself, but something is not quite right. Here are the steps Robo is following: Step 1: Put on shoes 👟, Step 2: Put on socks 🧦, and Step 3: Put on pants 👖. Oh no!\nWhy this matters: Robo's Buggy Morning helps learners in Coding connect ideas from Pre-K Coding Adventures to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "Oh no, Robo is having a buggy morning! Here are his steps for getting dressed: Step 1: Put on shoes 👟. Step 2: Put on socks 🧦. Can you spot the bug? You can't put shoes on before socks! That's a bug in the steps. To fix it, we just swap the steps. Step 1: Put on socks. Step 2: Put on shoes. Great debugging! You fixed the bug! 🐛→✅"
         },
         {
           "id": "prek-coding-l09-c3",
           "title": "Everyone Makes Bugs!",
-          "content": "Here’s a little secret: even the best coders in the whole wide world make bugs sometimes! 🌍 It’s totally okay to make mistakes. What’s really important is not to worry about being perfect. Instead, we want to be great bug hunters! This means checking our steps, looking for what might be wrong, and then fixing it. This process is called debugging, and it’s one of the most important skills a coder can have. Debugging is like being a detective! You get to search for clues to find out what went wrong. So remember, making mistakes is just part of learning! When we find a bug and fix it, we become better coders. Every time we debug, we learn something new that helps us in our coding adventures. So let’s embrace our mistakes and turn them into opportunities to grow and improve! Coding is all about trying, learning, and having fun together! 🎉\nContext recap: Here’s a little secret: even the best coders in the whole wide world make bugs sometimes! 🌍 It’s totally okay to make mistakes. What’s really important is not to worry about being perfect. Instead, we want to be great bug hunters!\nWhy this matters: Everyone Makes Bugs! helps learners in Coding connect ideas from Pre-K Coding Adventures to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "Here's a secret: even the best coders in the world make bugs! 🌍 It is okay to make mistakes. The important part is being a good bug hunter. When something doesn't work, we don't give up. We check our steps, find the mistake, and fix it. Finding and fixing bugs helps our brains grow stronger. So don't worry about making mistakes—be a proud bug hunter! 🎉"
         }
       ],
       "flashcards": [

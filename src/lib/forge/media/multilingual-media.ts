@@ -25,6 +25,8 @@ export interface LocaleVoiceMapping {
   bcp47: string;
   /** OpenAI TTS voice ID (same 6 voices work for all languages) */
   openaiVoice: string;
+  /** Gemini 2.5 Flash TTS prebuilt voice name (language auto-detected) */
+  geminiVoice: string;
   /** ElevenLabs voice ID (multilingual v2 supports all launch languages) */
   elevenlabsVoice: string;
   /** Kokoro local voice prefix (null = not supported, use XTTS v2) */
@@ -40,6 +42,7 @@ export const LOCALE_VOICE_MAP: Record<string, LocaleVoiceMapping> = {
     locale: "en" as Locale,
     bcp47: "en-US",
     openaiVoice: "nova",
+    geminiVoice: "Sulafat",
     elevenlabsVoice: "21m00Tcm4TlvDq8ikWAM", // Rachel
     kokoroLangCode: "a", // American English
     xttsSupported: true,
@@ -49,6 +52,7 @@ export const LOCALE_VOICE_MAP: Record<string, LocaleVoiceMapping> = {
     locale: "es" as Locale,
     bcp47: "es-ES",
     openaiVoice: "nova",
+    geminiVoice: "Sulafat",
     elevenlabsVoice: "21m00Tcm4TlvDq8ikWAM",
     kokoroLangCode: "e", // Spanish
     xttsSupported: true,
@@ -58,6 +62,7 @@ export const LOCALE_VOICE_MAP: Record<string, LocaleVoiceMapping> = {
     locale: "zh" as Locale,
     bcp47: "zh-CN",
     openaiVoice: "nova",
+    geminiVoice: "Sulafat",
     elevenlabsVoice: "21m00Tcm4TlvDq8ikWAM",
     kokoroLangCode: "z", // Mandarin Chinese
     xttsSupported: true,
@@ -67,6 +72,7 @@ export const LOCALE_VOICE_MAP: Record<string, LocaleVoiceMapping> = {
     locale: "pl" as Locale,
     bcp47: "pl-PL",
     openaiVoice: "nova",
+    geminiVoice: "Sulafat",
     elevenlabsVoice: "21m00Tcm4TlvDq8ikWAM",
     kokoroLangCode: null, // Kokoro doesn't support Polish
     xttsSupported: true, // XTTS v2 does
@@ -76,6 +82,7 @@ export const LOCALE_VOICE_MAP: Record<string, LocaleVoiceMapping> = {
     locale: "fr" as Locale,
     bcp47: "fr-FR",
     openaiVoice: "nova",
+    geminiVoice: "Sulafat",
     elevenlabsVoice: "21m00Tcm4TlvDq8ikWAM",
     kokoroLangCode: "f",
     xttsSupported: true,
@@ -85,6 +92,7 @@ export const LOCALE_VOICE_MAP: Record<string, LocaleVoiceMapping> = {
     locale: "de" as Locale,
     bcp47: "de-DE",
     openaiVoice: "nova",
+    geminiVoice: "Sulafat",
     elevenlabsVoice: "21m00Tcm4TlvDq8ikWAM",
     kokoroLangCode: null, // XTTS only
     xttsSupported: true,
@@ -94,6 +102,7 @@ export const LOCALE_VOICE_MAP: Record<string, LocaleVoiceMapping> = {
     locale: "ar" as Locale,
     bcp47: "ar-SA",
     openaiVoice: "nova",
+    geminiVoice: "Sulafat",
     elevenlabsVoice: "21m00Tcm4TlvDq8ikWAM",
     kokoroLangCode: null,
     xttsSupported: true,
@@ -103,6 +112,7 @@ export const LOCALE_VOICE_MAP: Record<string, LocaleVoiceMapping> = {
     locale: "hi" as Locale,
     bcp47: "hi-IN",
     openaiVoice: "nova",
+    geminiVoice: "Sulafat",
     elevenlabsVoice: "21m00Tcm4TlvDq8ikWAM",
     kokoroLangCode: "h",
     xttsSupported: true,
@@ -112,6 +122,7 @@ export const LOCALE_VOICE_MAP: Record<string, LocaleVoiceMapping> = {
     locale: "ja" as Locale,
     bcp47: "ja-JP",
     openaiVoice: "nova",
+    geminiVoice: "Sulafat",
     elevenlabsVoice: "21m00Tcm4TlvDq8ikWAM",
     kokoroLangCode: "j",
     xttsSupported: true,
@@ -121,6 +132,7 @@ export const LOCALE_VOICE_MAP: Record<string, LocaleVoiceMapping> = {
     locale: "ko" as Locale,
     bcp47: "ko-KR",
     openaiVoice: "nova",
+    geminiVoice: "Sulafat",
     elevenlabsVoice: "21m00Tcm4TlvDq8ikWAM",
     kokoroLangCode: null,
     xttsSupported: true,
@@ -130,6 +142,7 @@ export const LOCALE_VOICE_MAP: Record<string, LocaleVoiceMapping> = {
     locale: "ru" as Locale,
     bcp47: "ru-RU",
     openaiVoice: "nova",
+    geminiVoice: "Sulafat",
     elevenlabsVoice: "21m00Tcm4TlvDq8ikWAM",
     kokoroLangCode: null,
     xttsSupported: true,

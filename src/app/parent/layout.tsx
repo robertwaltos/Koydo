@@ -1,7 +1,13 @@
 import { redirect } from "next/navigation";
+import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import DashShell, { type DashNavGroup } from "@/app/components/ui/dash-shell";
+
+export const metadata: Metadata = {
+  title: "Family Portal — Koydo",
+  robots: { index: false, follow: false },
+};
 
 const PARENT_NAV: DashNavGroup[] = [
   {

@@ -6,6 +6,8 @@ import { useRouter } from "next/navigation";
 import SoftCard from "@/app/components/ui/soft-card";
 import { useI18n } from "@/lib/i18n/provider";
 import { sanitizeDisplayName } from "@/lib/security/sanitize-user-text";
+import { getAppId } from "@/lib/platform/app-manifest";
+import { getOnboardingConfig } from "@/lib/platform/app-onboarding";
 
 type AssessmentQuestion = {
   moduleId: string;
@@ -200,6 +202,9 @@ function isAssessmentQuestion(value: unknown): value is AssessmentQuestion {
 export default function StudentOnboardingPage() {
   const { t } = useI18n();
   const router = useRouter();
+  const onboardingConfig = useMemo(() => getOnboardingConfig(getAppId()), []);
+  const onboardingHeading = onboardingConfig.heroTitle || t("onboarding_heading");
+  const onboardingSubtitle = onboardingConfig.heroSubtitle || t("onboarding_subtitle");
 
   const [step, setStep] = useState<OnboardingStep>("info");
   const [formData, setFormData] = useState<FormData>({ name: "", grade: "3", age: "" });
@@ -394,10 +399,10 @@ export default function StudentOnboardingPage() {
         <header className="family-card-enter mb-2 text-center">
           <p className="ui-type-eyebrow text-emerald-700">{t("onboarding_header_eyebrow")}</p>
           <h1 id="onboarding-heading" className="ui-type-display-lg mt-2 text-zinc-900">
-            {t("onboarding_heading")}
+            {onboardingHeading}
           </h1>
           <p className="ui-type-body-md mx-auto mt-3 max-w-md text-zinc-600">
-            {t("onboarding_subtitle")}
+            {onboardingSubtitle}
           </p>
         </header>
 
@@ -472,12 +477,14 @@ export default function StudentOnboardingPage() {
 
               {/* Single primary CTA, cancel is secondary */}
               <div className="flex flex-col-reverse gap-3 pt-2 sm:flex-row sm:items-center sm:justify-between">
-                <Link
-                  href="/select-profile"
-                  className="ui-focus-ring inline-flex min-h-11 items-center justify-center rounded-full border border-zinc-200 bg-surface-muted px-5 py-2 text-sm font-semibold text-zinc-600 transition-colors hover:bg-zinc-100"
-                >
-                  {t("common_cancel")}
-                </Link>
+                {onboardingConfig.skipAllowed ? (
+                  <Link
+                    href="/select-profile"
+                    className="ui-focus-ring inline-flex min-h-11 items-center justify-center rounded-full border border-zinc-200 bg-surface-muted px-5 py-2 text-sm font-semibold text-zinc-600 transition-colors hover:bg-zinc-100"
+                  >
+                    {t("common_cancel")}
+                  </Link>
+                ) : <span />}
                 <button
                   type="submit"
                   disabled={isLoadingQuestions}

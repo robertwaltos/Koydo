@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const Psychology601Module: LearningModule = {
+export const psychology_601_Module: LearningModule = {
   "id": "psychology-601",
   "title": "Psychology Research and Leadership",
   "description": "Post-401 specialization in Psychology, focused on psychology systems diagnostics, psychology operations and execution design, psychology impact and tradeoff analysis, and psychology governance and leadership through advanced casework, simulation, and defense-based checkpoints.",
@@ -14,32 +14,38 @@ export const Psychology601Module: LearningModule = {
   ],
   "minAge": 17,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en",
     "es"
   ],
   "learningObjectives": [
-    "Apply advanced methods for psychology systems diagnostics in high-constraint environments",
-    "Design robust systems for psychology operations and execution design with measurable control gates",
-    "Evaluate interventions in psychology impact and tradeoff analysis with research-grade rigor",
-    "Operationalize psychology governance and leadership with accountable governance and escalation pathways",
-    "Lead cross-functional decision reviews with explicit tradeoff communication",
-    "Defend recommendations under expert critique using evidence and uncertainty bounds"
+    "Apply advanced methods for psychology systems diagnostics in high-constraint environments.",
+    "Design robust systems for psychology operations and execution with measurable control gates.",
+    "Evaluate interventions and their consequences with research-grade rigor in impact and tradeoff analysis.",
+    "Operationalize psychology governance and leadership with accountable governance and escalation pathways.",
+    "Lead cross-functional decision reviews with explicit tradeoff communication.",
+    "Defend complex psychological recommendations under expert critique using evidence and uncertainty bounds."
   ],
   "lessons": [
     {
       "id": "psychology-601-l01",
-      "title": "Psychology Advanced Foundations",
+      "title": "Advanced Foundations in Psychological Systems",
       "type": "video",
       "duration": 14,
       "learningAids": [
         {
           "id": "psychology-601-l01-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Diagnostic Process Flowchart",
+          "content": "A visual flowchart illustrating the steps of a psychological systems diagnostic: 1. Define Scope, 2. Map Causal Pathways, 3. Model Uncertainty, 4. Set Evidence Thresholds, 5. Propose Intervention."
+        },
+        {
+          "id": "psychology-601-l01-a2",
+          "type": "summary",
+          "title": "Key Concepts Summary",
+          "content": "A one-page document summarizing the core concepts of Scope Design, Causal Modeling, and Evidence Thresholds."
         }
       ],
       "chunks": [
@@ -47,36 +53,39 @@ export const Psychology601Module: LearningModule = {
           "id": "psychology-601-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "In this lesson, we will delve into the advanced boundaries of psychology, which are essential for understanding the field at a deeper level. We will focus on how to effectively diagnose psychological systems, which involves identifying the underlying issues that may affect individuals or groups. Additionally, we will learn about designing operations that can be executed successfully, ensuring that our psychological interventions are practical and impactful. By grasping these concepts, we will be better equipped to apply psychological principles in various real-world settings, enhancing our ability to support others in their mental health journeys.\nContext recap: In this lesson, we will delve into the advanced boundaries of psychology, which are essential for understanding the field at a deeper level. We will focus on how to effectively diagnose psychological systems, which involves identifying the underlying issues that may affect individuals or groups. Additionally, we will learn about designing operations that can be executed successfully, ensuring that our psychological interventions are practical and impactful. By grasping these concepts, we will be better equipped to apply psychological principles in various real-world settings, enhancing our ability to support others in their mental health journeys.\nContext recap: In this lesson, we will delve into the advanced boundaries of psychology, which are essential for understanding the field at a deeper level. We will focus on how to effectively diagnose psychological systems, which involves identifying the underlying issues that may affect individuals or groups. Additionally, we will learn about designing operations that can be executed successfully, ensuring that our psychological interventions are practical and impactful. By grasping these concepts, we will be better equipped to apply psychological principles in various real-world settings, enhancing our ability to support others in their mental health journeys.\nWhy this matters: Scope and Boundary Design helps learners in Psychology connect ideas from Psychology Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "This lesson delves into the advanced boundaries of psychology, essential for understanding the field at a deeper level. We will focus on how to effectively diagnose psychological systems by identifying underlying issues and designing practical, impactful operations. Why this matters: Clearly defining the scope and boundaries of a psychological problem prevents scope creep and ensures diagnostic efforts are focused and effective.",
+          "visualPrompt": "An animation showing a blurry, undefined problem space slowly coming into focus with clear boundaries and labels."
         },
         {
           "id": "psychology-601-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different events or actions. We will also look at uncertainty ranges, which help us understand the limits of our knowledge, and system dependencies, which show how different parts of a system rely on one another. This foundational work is essential before planning any interventions.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different events or actions. We will also look at uncertainty ranges, which help us understand the limits of our knowledge, and system dependencies, which show how different parts of a system rely on one another. This foundational work is essential before planning any interventions."
+          "content": "Learners will map out causal pathways, which are the connections between different events or actions. We will also define uncertainty ranges to understand the limits of our knowledge and identify system dependencies. This foundational work is essential before planning any interventions.",
+          "visualPrompt": "A diagram showing interconnected nodes representing factors, with arrows indicating causal links and shaded areas around nodes indicating uncertainty."
         },
         {
           "id": "psychology-601-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "It is important to ensure that all claims we make are supported by measurable indicators. This means we will establish confidence bounds, which help us understand how certain we are about our findings, and set up review checkpoints to evaluate our progress. This process ensures that our conclusions are based on solid evidence.\nContext recap: It is important to ensure that all claims we make are supported by measurable indicators. This means we will establish confidence bounds, which help us understand how certain we are about our findings, and set up review checkpoints to evaluate our progress. This process ensures that our conclusions are based on solid evidence."
+          "content": "It is critical to ensure that all claims are supported by measurable indicators. We will establish confidence bounds to quantify our certainty and set up review checkpoints to evaluate progress. This process ensures our conclusions are based on solid evidence.",
+          "visualPrompt": "A graph with a data trendline, showing upper and lower confidence bound lines, with a clear 'pass/fail' threshold marked."
         }
       ],
       "flashcards": [
         {
           "id": "psychology-601-l01-f1",
-          "front": "psychology systems diagnostics",
-          "back": "A specialization axis requiring explicit assumptions and measurable constraints."
+          "front": "What is psychology systems diagnostics?",
+          "back": "A specialization requiring explicit assumptions, measurable constraints, and causal modeling to identify root causes in complex psychological environments."
         },
         {
           "id": "psychology-601-l01-f2",
-          "front": "psychology operations and execution design",
-          "back": "Execution architecture that determines reliability under stress."
+          "front": "What is psychology operations design?",
+          "back": "The architecture for executing psychological interventions, defining roles, control gates, and fallback plans to ensure reliability under stress."
         },
         {
           "id": "psychology-601-l01-f3",
-          "front": "psychology impact and tradeoff analysis",
-          "back": "Evaluation discipline for identifying true gains and hidden costs."
+          "front": "What is psychology impact and tradeoff analysis?",
+          "back": "An evaluation discipline for identifying the true gains, hidden costs, and unintended side effects of an intervention across different stakeholders."
         }
       ]
     },
@@ -88,9 +97,15 @@ export const Psychology601Module: LearningModule = {
       "learningAids": [
         {
           "id": "psychology-601-l02-a1",
+          "type": "image",
+          "title": "Control Gate Diagram",
+          "content": "A diagram of a workflow with key decision points marked as 'Control Gates'. Each gate has inputs (data, metrics) and outputs (Go, No-Go, Escalate)."
+        },
+        {
+          "id": "psychology-601-l02-a2",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Workflow Design Template",
+          "content": "A fillable template for learners to design their own operational workflow, including sections for objectives, owners, control gates, and escalation criteria."
         }
       ],
       "chunks": [
@@ -98,13 +113,15 @@ export const Psychology601Module: LearningModule = {
           "id": "psychology-601-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "In this interactive practice, learners will have the opportunity to design specialized workflows. These workflows will be tested under challenging scenarios to see how they hold up. This stress-testing process is crucial for identifying potential weaknesses and ensuring that our methods are robust and effective.\nContext recap: In this interactive practice, learners will have the opportunity to design specialized workflows. These workflows will be tested under challenging scenarios to see how they hold up. This stress-testing process is crucial for identifying potential weaknesses and ensuring that our methods are robust and effective."
+          "content": "In this interactive practice, learners will design specialized operational workflows. These workflows will then be stress-tested against challenging scenarios to identify potential weaknesses and ensure the methods are robust and effective.",
+          "visualPrompt": "A user interface where a learner drags and drops components (e.g., 'Data Collection', 'Review', 'Intervention') to build a workflow, which is then tested with simulated 'stress events'."
         },
         {
           "id": "psychology-601-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "In this recap, we will discuss how workflows can be designed to include important checkpoints. These checkpoints help us monitor progress, establish rollback criteria to revert to previous states if necessary, and set up threshold-based escalation procedures to address issues as they arise. This architecture is vital for maintaining control over our processes.\nContext recap: In this recap, we will discuss how workflows can be designed to include important checkpoints. These checkpoints help us monitor progress, establish rollback criteria to revert to previous states if necessary, and set up threshold-based escalation procedures to address issues as they arise. This architecture is vital for maintaining control over our processes."
+          "content": "This recap covers how to design workflows with critical checkpoints. These gates help monitor progress, define rollback criteria to revert to previous states if necessary, and establish threshold-based escalation procedures to address issues as they arise. This architecture is vital for maintaining control.",
+          "visualPrompt": "A summary slide highlighting the three key components of a control gate: 1. Entry Criteria, 2. Decision Logic, 3. Exit Pathways (Proceed, Halt, Escalate)."
         }
       ],
       "interactiveActivities": [
@@ -143,19 +160,19 @@ export const Psychology601Module: LearningModule = {
         {
           "id": "psychology-601-l03-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Checkpoint 1 Study Guide",
+          "content": "A summary of key concepts from Lessons 1 and 2, with sample questions to help prepare for the checkpoint."
         }
       ],
       "questions": [
         {
           "id": "psychology-601-l03-q1",
-          "text": "Which practice most improves psychology systems diagnostics decision quality?",
+          "text": "Which practice most improves the decision quality of psychology systems diagnostics?",
           "skillId": "psychology-601-skill-core",
           "options": [
             {
               "id": "a",
-              "text": "Proceed without baseline or assumptions"
+              "text": "Proceed without a baseline or assumptions"
             },
             {
               "id": "b",
@@ -171,11 +188,11 @@ export const Psychology601Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Advanced decisions improve when assumptions, constraints, and metrics are explicit."
+          "explanation": "Advanced decisions improve when assumptions, constraints, and metrics are made explicit, forming a solid foundation for analysis."
         },
         {
           "id": "psychology-601-l03-q2",
-          "text": "At level 601, strong execution for psychology operations and execution design requires:",
+          "text": "At an advanced level, strong execution for psychology operations requires:",
           "skillId": "psychology-601-skill-execution",
           "options": [
             {
@@ -196,7 +213,7 @@ export const Psychology601Module: LearningModule = {
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Reliable advanced execution needs ownership clarity and threshold-driven governance."
+          "explanation": "Reliable advanced execution needs clear ownership, regular checkpoints, and pre-defined thresholds for governance and escalation."
         },
         {
           "id": "psychology-601-l03-q3",
@@ -213,15 +230,15 @@ export const Psychology601Module: LearningModule = {
             },
             {
               "id": "c",
-              "text": "Changing success criteria after outcomes"
+              "text": "Changing success criteria after outcomes are known"
             },
             {
               "id": "d",
-              "text": "Excluding difficult scenarios from analysis"
+              "text": "Excluding difficult scenarios from the analysis"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible analysis combines comparative baselines, side-effect checks, and uncertainty disclosure."
+          "explanation": "Defensible analysis combines comparative baselines, a thorough check for unintended side-effects, and transparent disclosure of uncertainty."
         },
         {
           "id": "psychology-601-l03-q4",
@@ -246,121 +263,27 @@ export const Psychology601Module: LearningModule = {
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Governance maturity is the operational link between intent, measurement, and corrective action."
-        },
-        {
-          "id": "psychology-601-l03-q5",
-          "text": "What is the best way to compare competing interventions in advanced Psychology?",
-          "skillId": "psychology-601-skill-advanced-5",
-          "options": [
-            {
-              "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
-            },
-            {
-              "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
-            },
-            {
-              "id": "c",
-              "text": "Switch metrics after results arrive"
-            },
-            {
-              "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
-        },
-        {
-          "id": "psychology-601-l03-q6",
-          "text": "In high-stakes Psychology Research and Leadership execution, which communication protocol is strongest?",
-          "skillId": "psychology-601-skill-advanced-6",
-          "options": [
-            {
-              "id": "a",
-              "text": "Broadcast conclusions without assumptions"
-            },
-            {
-              "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
-            },
-            {
-              "id": "c",
-              "text": "Share only final outcomes after completion"
-            },
-            {
-              "id": "d",
-              "text": "Limit updates to a single informal channel"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
-        },
-        {
-          "id": "psychology-601-l03-q7",
-          "text": "A mature remediation loop in advanced Psychology should prioritize:",
-          "skillId": "psychology-601-skill-advanced-7",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blame assignment without system updates"
-            },
-            {
-              "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
-            },
-            {
-              "id": "c",
-              "text": "One-time fixes without retesting"
-            },
-            {
-              "id": "d",
-              "text": "Issue closure based on elapsed time"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
-        },
-        {
-          "id": "psychology-601-l03-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Psychology Research and Leadership?",
-          "skillId": "psychology-601-skill-advanced-8",
-          "options": [
-            {
-              "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
-            },
-            {
-              "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
-            },
-            {
-              "id": "c",
-              "text": "Ignore correlated failure modes"
-            },
-            {
-              "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "explanation": "Governance maturity is the operational link between the intent of a policy, how it is measured and controlled, and what actions are taken when it fails."
         }
       ]
     },
     {
       "id": "psychology-601-l04",
-      "title": "Psychology Advanced Case Analysis",
+      "title": "Advanced Case Analysis",
       "type": "video",
       "duration": 14,
       "learningAids": [
         {
           "id": "psychology-601-l04-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Tradeoff Analysis Matrix",
+          "content": "A table comparing three different intervention options (rows) against multiple criteria like 'Cost', 'Effectiveness', 'Equity', and 'Risk' (columns), with cells color-coded for positive or negative impact."
+        },
+        {
+          "id": "psychology-601-l04-a2",
+          "type": "summary",
+          "title": "Case Analysis Framework",
+          "content": "A step-by-step guide for analyzing complex cases: 1. Identify Core Problem, 2. Map Stakeholders & Constraints, 3. Generate Options, 4. Analyze Tradeoffs, 5. Formulate Recommendation."
         }
       ],
       "chunks": [
@@ -368,19 +291,39 @@ export const Psychology601Module: LearningModule = {
           "id": "psychology-601-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "In this lesson, we will frame cases that highlight the competing constraints in psychology systems diagnostics. We will analyze the impact of different psychological interventions and the trade-offs involved. This understanding will help us make informed decisions when faced with complex situations.\nContext recap: In this lesson, we will frame cases that highlight the competing constraints in psychology systems diagnostics. We will analyze the impact of different psychological interventions and the trade-offs involved. This understanding will help us make informed decisions when faced with complex situations.\nContext recap: In this lesson, we will frame cases that highlight the competing constraints in psychology systems diagnostics. We will analyze the impact of different psychological interventions and the trade-offs involved. This understanding will help us make informed decisions when faced with complex situations. Context recap: In this lesson, we will frame cases that highlight the competing constraints in psychology systems diagnostics.\nWhy this matters: Scenario Architecture helps learners in Psychology connect ideas from Psychology Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "We will frame cases that highlight competing constraints in psychology systems diagnostics. We will analyze the impact of different psychological interventions and the trade-offs involved, helping us make informed decisions in complex situations. Why this matters: Structuring complex cases with competing constraints allows for a systematic evaluation of challenges, mirroring real-world leadership scenarios.",
+          "visualPrompt": "An animation showing puzzle pieces labeled 'Budget', 'Timeline', 'Ethics', and 'Efficacy' being fitted together to solve a central problem."
         },
         {
           "id": "psychology-601-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "Learners will engage in comparing various options based on several important dimensions, including safety, reliability, cost, equity, and governance. This practice will help us understand how different choices can affect stakeholders and the overall effectiveness of psychological interventions.\nContext recap: Learners will engage in comparing various options based on several important dimensions, including safety, reliability, cost, equity, and governance. This practice will help us understand how different choices can affect stakeholders and the overall effectiveness of psychological interventions.\nContext recap: Learners will engage in comparing various options based on several important dimensions, including safety, reliability, cost, equity, and governance. This practice will help us understand how different choices can affect stakeholders and the overall effectiveness of psychological interventions. Context recap: Learners will engage in comparing various options based on several important dimensions, including safety, reliability, cost, equity, and governance. This practice will help us understand how different choices can affect stakeholders and the overall effectiveness of psychological interventions."
+          "content": "Learners will compare various options based on multiple dimensions, including safety, reliability, cost, equity, and governance. This practice helps in understanding how different choices affect stakeholders and the overall effectiveness of psychological interventions.",
+          "visualPrompt": "A set of balance scales, with different 'weights' (e.g., 'High Cost', 'High Impact') being placed on each side to visualize the tradeoffs between two options."
         },
         {
           "id": "psychology-601-l04-c3",
           "kind": "recap",
           "title": "Decision Memo Pattern",
-          "content": "In this recap, we will emphasize that each recommendation made should include clear assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that our decisions are well-informed and that we are prepared for any unforeseen circumstances.\nContext recap: In this recap, we will emphasize that each recommendation made should include clear assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that our decisions are well-informed and that we are prepared for any unforeseen circumstances.\nContext recap: In this recap, we will emphasize that each recommendation made should include clear assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that our decisions are well-informed and that we are prepared for any unforeseen circumstances. Context recap: In this recap, we will emphasize that each recommendation made should include clear assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that our decisions are well-informed and that we are prepared for any unforeseen circumstances."
+          "content": "This recap emphasizes that each recommendation must include clear assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that our decisions are well-informed and that we are prepared for unforeseen circumstances.",
+          "visualPrompt": "A document template for a 'Decision Memo' with clearly marked sections for 'Recommendation', 'Evidence', 'Risks', and 'Contingency Plan'."
+        }
+      ],
+      "flashcards": [
+        {
+          "id": "psychology-601-l04-f1",
+          "front": "What are competing constraints?",
+          "back": "Factors such as safety, cost, ethics, and efficacy that must be balanced against each other when making a decision."
+        },
+        {
+          "id": "psychology-601-l04-f2",
+          "front": "What is tradeoff analysis?",
+          "back": "A systematic method for comparing the pros and cons of different options across multiple, often competing, dimensions."
+        },
+        {
+          "id": "psychology-601-l04-f3",
+          "front": "What is a decision memo?",
+          "back": "A structured document outlining a recommendation, its supporting rationale, key assumptions, identified risks, and fallback plans."
         }
       ]
     },
@@ -392,9 +335,15 @@ export const Psychology601Module: LearningModule = {
       "learningAids": [
         {
           "id": "psychology-601-l05-a1",
+          "type": "image",
+          "title": "Simulation Control Dashboard",
+          "content": "A screenshot of a simulation interface showing real-time metrics (e.g., 'Public Trust', 'Budget Remaining'), a news feed with developing events, and a panel of intervention options for the learner to choose from."
+        },
+        {
+          "id": "psychology-601-l05-a2",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Simulation Scenario Brief",
+          "content": "A document outlining the background, objectives, and key stakeholders for the upcoming simulation exercise."
         }
       ],
       "chunks": [
@@ -402,13 +351,15 @@ export const Psychology601Module: LearningModule = {
           "id": "psychology-601-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "During this interactive session, learners will operate scenario controls while balancing performance and governance constraints. This hands-on experience will help them understand the complexities involved in managing psychological scenarios effectively.\nContext recap: During this interactive session, learners will operate scenario controls while balancing performance and governance constraints. This hands-on experience will help them understand the complexities involved in managing psychological scenarios effectively.\nWhy this matters: Live Scenario Controls helps learners in Psychology connect ideas from Psychology Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "During this interactive session, learners will operate scenario controls while balancing performance and governance constraints. This hands-on experience helps them understand the complexities of managing psychological scenarios effectively. Why this matters: Operating controls in a live simulation provides hands-on practice in making high-stakes decisions under pressure, bridging the gap between theory and application.",
+          "visualPrompt": "A first-person view of the simulation dashboard, with the learner's cursor hovering over a critical decision button as a timer counts down."
         },
         {
           "id": "psychology-601-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "In this recap, we will discuss how effective responses to challenges should update control gates while maintaining traceability and accountability. This means that we need to keep track of our decisions and ensure that we can refer back to them when necessary.\nContext recap: In this recap, we will discuss how effective responses to challenges should update control gates while maintaining traceability and accountability. This means that we need to keep track of our decisions and ensure that we can refer back to them when necessary.\nContext recap: In this recap, we will discuss how effective responses to challenges should update control gates while maintaining traceability and accountability. This means that we need to keep track of our decisions and ensure that we can refer back to them when necessary. Context recap: In this recap, we will discuss how effective responses to challenges should update control gates while maintaining traceability and accountability. This means that we need to keep track of our decisions and ensure that we can refer back to them when necessary."
+          "content": "This recap discusses how effective responses to challenges should update control gates while maintaining traceability and accountability. This means we need to track our decisions and ensure we can refer back to them when necessary.",
+          "visualPrompt": "A flowchart showing an initial plan, an unexpected event occurring, and a new branch in the plan labeled 'Adaptive Response' with a note linking back to the original decision."
         }
       ],
       "interactiveActivities": [
@@ -416,7 +367,7 @@ export const Psychology601Module: LearningModule = {
           "id": "psychology-601-l05-act1",
           "type": "scenario",
           "title": "Adverse-Condition Decision Run",
-          "description": "Run a high-pressure psychology scenario and tune controls under uncertainty."
+          "description": "Manage a high-pressure public health crisis simulation. Allocate resources, manage public communications, and adapt your strategy as new information and unexpected events emerge. Your performance will be scored on effectiveness, ethics, and resource management."
         }
       ]
     },
@@ -429,14 +380,14 @@ export const Psychology601Module: LearningModule = {
         {
           "id": "psychology-601-l06-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Checkpoint 2 Study Guide",
+          "content": "A summary of key concepts from Lessons 4 and 5, focusing on case analysis, tradeoff framing, and adaptive decision-making in simulations."
         }
       ],
       "questions": [
         {
           "id": "psychology-601-l06-q1",
-          "text": "In advanced casework, the first requirement for defensible recommendations is:",
+          "text": "In advanced casework, the first requirement for a defensible recommendation is:",
           "skillId": "psychology-601-skill-case1",
           "options": [
             {
@@ -445,7 +396,7 @@ export const Psychology601Module: LearningModule = {
             },
             {
               "id": "b",
-              "text": "A clear baseline, explicit constraints, and success criteria"
+              "text": "A clear baseline, explicit constraints, and pre-defined success criteria"
             },
             {
               "id": "c",
@@ -453,186 +404,86 @@ export const Psychology601Module: LearningModule = {
             },
             {
               "id": "d",
-              "text": "Single-metric optimization only"
+              "text": "Optimization for a single metric only"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible recommendations begin with explicit assumptions, constraints, and measurable targets."
+          "explanation": "Defensible recommendations begin with an explicit framework of assumptions, constraints, and measurable targets before any solution is proposed."
         },
         {
           "id": "psychology-601-l06-q2",
-          "text": "A resilient strategy for psychology operations and execution design should include:",
-          "skillId": "psychology-601-skill-case2",
-          "options": [
-            {
-              "id": "a",
-              "text": "Checkpointed execution with fallback and escalation criteria"
-            },
-            {
-              "id": "b",
-              "text": "One-way execution with no rollback capability"
-            },
-            {
-              "id": "c",
-              "text": "No ownership mapping across teams"
-            },
-            {
-              "id": "d",
-              "text": "Hidden assumptions and undocumented decisions"
-            }
-          ],
-          "correctOptionId": "a",
-          "explanation": "Resilience depends on checkpoints, fallback options, and explicit escalation design."
-        },
-        {
-          "id": "psychology-601-l06-q3",
-          "text": "When evaluating psychology impact and tradeoff analysis, which method is most rigorous?",
+          "text": "When framing tradeoffs between two psychological interventions, the most rigorous approach is to:",
           "skillId": "psychology-601-skill-case3",
           "options": [
             {
               "id": "a",
-              "text": "Single success story without controls"
+              "text": "Focus only on the positive outcomes of your preferred option"
             },
             {
               "id": "b",
-              "text": "Comparative baselines plus side-effect and uncertainty analysis"
+              "text": "Compare them across a shared set of criteria, including costs, risks, and equity impacts"
             },
             {
               "id": "c",
-              "text": "Outcome-only narrative without process evidence"
+              "text": "Choose the option that is easiest to explain"
             },
             {
               "id": "d",
-              "text": "Retrospective scope changes to fit outcomes"
+              "text": "Ignore long-term side effects in favor of short-term gains"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Rigorous evaluation requires comparisons, side-effect analysis, and uncertainty disclosure."
+          "explanation": "Rigorous tradeoff analysis requires comparing all options against the same, comprehensive set of criteria to ensure a fair and complete evaluation."
+        },
+        {
+          "id": "psychology-601-l06-q3",
+          "text": "During a live simulation, an unexpected event makes your initial strategy less effective. What is the best adaptive response?",
+          "skillId": "psychology-601-skill-sim1",
+          "options": [
+            {
+              "id": "a",
+              "text": "Continue with the original plan regardless of the new information"
+            },
+            {
+              "id": "b",
+              "text": "Pause, re-evaluate the situation against your goals, and adjust your plan with documented rationale"
+            },
+            {
+              "id": "c",
+              "text": "Immediately switch to a random alternative strategy"
+            },
+            {
+              "id": "d",
+              "text": "End the simulation to avoid a negative outcome"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Effective adaptive response involves a deliberate process of re-evaluation and adjustment, ensuring decisions remain rational and traceable even under pressure."
         },
         {
           "id": "psychology-601-l06-q4",
-          "text": "Advanced governance is strongest when it:",
+          "text": "A well-structured decision memo, following a complex case analysis, primarily serves to:",
           "skillId": "psychology-601-skill-case4",
           "options": [
             {
               "id": "a",
-              "text": "Aligns authority, measurement, and remediation obligations"
+              "text": "Obscure the risks associated with the recommendation"
             },
             {
               "id": "b",
-              "text": "Separates policy from operational controls"
+              "text": "Provide a long narrative without a clear conclusion"
             },
             {
               "id": "c",
-              "text": "Avoids external review and transparency"
+              "text": "Create a transparent and accountable record of the decision logic, including evidence, risks, and fallbacks"
             },
             {
               "id": "d",
-              "text": "Treats accountability as optional under pressure"
+              "text": "Persuade the reader using emotion rather than evidence"
             }
           ],
-          "correctOptionId": "a",
-          "explanation": "Mature governance links authority, measurable controls, and corrective action."
-        },
-        {
-          "id": "psychology-601-l06-q5",
-          "text": "What is the best way to compare competing interventions in advanced Psychology?",
-          "skillId": "psychology-601-skill-advanced-5",
-          "options": [
-            {
-              "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
-            },
-            {
-              "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
-            },
-            {
-              "id": "c",
-              "text": "Switch metrics after results arrive"
-            },
-            {
-              "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
-        },
-        {
-          "id": "psychology-601-l06-q6",
-          "text": "In high-stakes Psychology Research and Leadership execution, which communication protocol is strongest?",
-          "skillId": "psychology-601-skill-advanced-6",
-          "options": [
-            {
-              "id": "a",
-              "text": "Broadcast conclusions without assumptions"
-            },
-            {
-              "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
-            },
-            {
-              "id": "c",
-              "text": "Share only final outcomes after completion"
-            },
-            {
-              "id": "d",
-              "text": "Limit updates to a single informal channel"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
-        },
-        {
-          "id": "psychology-601-l06-q7",
-          "text": "A mature remediation loop in advanced Psychology should prioritize:",
-          "skillId": "psychology-601-skill-advanced-7",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blame assignment without system updates"
-            },
-            {
-              "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
-            },
-            {
-              "id": "c",
-              "text": "One-time fixes without retesting"
-            },
-            {
-              "id": "d",
-              "text": "Issue closure based on elapsed time"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
-        },
-        {
-          "id": "psychology-601-l06-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Psychology Research and Leadership?",
-          "skillId": "psychology-601-skill-advanced-8",
-          "options": [
-            {
-              "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
-            },
-            {
-              "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
-            },
-            {
-              "id": "c",
-              "text": "Ignore correlated failure modes"
-            },
-            {
-              "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "correctOptionId": "c",
+          "explanation": "The core purpose of a decision memo is to create a clear, auditable trail of the rationale, enhancing transparency and accountability."
         }
       ]
     },
@@ -645,8 +496,14 @@ export const Psychology601Module: LearningModule = {
         {
           "id": "psychology-601-l07-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Stakeholder Impact Map",
+          "content": "A diagram with concentric circles representing primary, secondary, and tertiary stakeholders. Lines connect a central policy decision to each group, showing the distribution of positive (green) and negative (red) impacts."
+        },
+        {
+          "id": "psychology-601-l07-a2",
+          "type": "summary",
+          "title": "Governance Checklist",
+          "content": "A checklist for evaluating the governance of a psychological intervention, with items like 'Is there decision traceability?', 'Are there appeal pathways?', and 'Are impacts monitored?'"
         }
       ],
       "chunks": [
@@ -654,36 +511,39 @@ export const Psychology601Module: LearningModule = {
           "id": "psychology-601-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. This understanding is crucial for recognizing how various decisions impact different people and communities.\nContext recap: In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. This understanding is crucial for recognizing how various decisions impact different people and communities.\nWhy this matters: Stakeholder Impact Distribution helps learners in Psychology connect ideas from Psychology Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "Learners will map the distribution of benefits, burdens, and delayed effects across different stakeholder groups. This is crucial for recognizing how decisions impact various people and communities. Why this matters: Analyzing the distribution of impacts is a core ethical responsibility, ensuring that interventions do not create unintended harm or exacerbate inequalities.",
+          "visualPrompt": "An animated map showing a resource being distributed from a central point, with some areas receiving a large share and others receiving very little, illustrating unequal distribution."
         },
         {
           "id": "psychology-601-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "In this section, we will explore the architecture of accountability. This includes understanding how decisions can be traced back, the rights of individuals to review these decisions, and the obligations we have to address any issues that arise. This framework is essential for ensuring ethical practices in psychology.\nContext recap: In this section, we will explore the architecture of accountability. This includes understanding how decisions can be traced back, the rights of individuals to review these decisions, and the obligations we have to address any issues that arise. This framework is essential for ensuring ethical practices in psychology."
+          "content": "We will explore the architecture of accountability. This includes understanding decision traceability, the rights of individuals to review those decisions, and the obligations to address any issues that arise. This framework is essential for ensuring ethical practices in psychology.",
+          "visualPrompt": "A blueprint diagram showing the 'architecture' of an accountable system, with pillars labeled 'Transparency', 'Redress', and 'Traceability' supporting a roof labeled 'Trust'."
         },
         {
           "id": "psychology-601-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "At the end of our discussion, we have a helpful checklist that connects important outcomes with ethical considerations, ensures we follow policies correctly, and promotes resilience in our leadership practices. This checklist serves as a guide to help us reflect on our responsibilities as leaders.\nContext recap: At the end of our discussion, we have a helpful checklist that connects important outcomes with ethical considerations, ensures we follow policies correctly, and promotes resilience in our leadership practices. This checklist serves as a guide to help us reflect on our responsibilities as leaders."
+          "content": "This recap provides a checklist connecting key outcomes with ethical considerations, policy compliance, and resilience in leadership practices. This serves as a guide for reflecting on our responsibilities as leaders.",
+          "visualPrompt": "A simple, elegant checklist on screen with key items being ticked off one by one as the narrator summarizes them."
         }
       ],
       "flashcards": [
         {
           "id": "psychology-601-l07-f1",
-          "front": "Impact distribution",
-          "back": "How outcomes are allocated across populations and timescales."
+          "front": "What is impact distribution?",
+          "back": "The way in which the outcomes (benefits, costs, risks) of a decision or intervention are allocated across different populations and over time."
         },
         {
           "id": "psychology-601-l07-f2",
-          "front": "Decision traceability",
-          "back": "An auditable record of evidence, ownership, and rationale."
+          "front": "What is decision traceability?",
+          "back": "An auditable record of a decision, including the evidence used, the owners involved, and the rationale behind the final choice."
         },
         {
           "id": "psychology-601-l07-f3",
-          "front": "Responsible leadership",
-          "back": "Decision behavior balancing performance, accountability, and ethics."
+          "front": "What is responsible leadership?",
+          "back": "A decision-making approach that balances performance and efficiency with accountability, ethical considerations, and long-term resilience."
         }
       ]
     },
@@ -695,9 +555,15 @@ export const Psychology601Module: LearningModule = {
       "learningAids": [
         {
           "id": "psychology-601-l08-a1",
+          "type": "image",
+          "title": "Defense Brief Template",
+          "content": "A slide deck template for the capstone defense, with pre-formatted slides for 'Problem Statement', 'Proposed Solution', 'Evidence & Analysis', 'Risk Mitigation', and 'Conclusion'."
+        },
+        {
+          "id": "psychology-601-l08-a2",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Capstone Defense Rubric",
+          "content": "The official scoring rubric for the final defense, detailing how learners will be evaluated on clarity, evidence, handling of critiques, and overall defensibility."
         }
       ],
       "chunks": [
@@ -705,13 +571,15 @@ export const Psychology601Module: LearningModule = {
           "id": "psychology-601-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "In this activity, learners will work together to create a comprehensive brief. This brief will include well-supported claims, relevant evidence, an understanding of the uncertainties involved, and proposed pathways for addressing any issues that may arise. This exercise helps develop critical thinking and communication skills.\nContext recap: In this activity, learners will work together to create a comprehensive brief. This brief will include well-supported claims, relevant evidence, an understanding of the uncertainties involved, and proposed pathways for addressing any issues that may arise. This exercise helps develop critical thinking and communication skills."
+          "content": "In this activity, learners will assemble a comprehensive defense brief. This brief will include well-supported claims, relevant evidence, an analysis of uncertainties, and proposed remediation pathways for potential failures. This exercise develops critical thinking and communication skills.",
+          "visualPrompt": "A collaborative workspace where learners are adding evidence, charts, and text to a shared presentation, building their defense brief together."
         },
         {
           "id": "psychology-601-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "During this session, learners will practice their responses to questions and feedback from an expert panel. They will prepare for critiques related to technical aspects, governance issues, and the perspectives of various stakeholders. This rehearsal is essential for building confidence and improving their ability to articulate their ideas effectively.\nContext recap: During this session, learners will practice their responses to questions and feedback from an expert panel. They will prepare for critiques related to technical aspects, governance issues, and the perspectives of various stakeholders. This rehearsal is essential for building confidence and improving their ability to articulate their ideas effectively."
+          "content": "During this session, learners will practice responding to questions and feedback from a simulated expert panel. They will prepare for critiques related to technical methods, governance, and stakeholder impacts. This rehearsal is essential for building confidence and articulating their ideas effectively.",
+          "visualPrompt": "A split-screen view showing a learner presenting on one side, and three 'expert' avatars on the other side, ready to ask challenging questions."
         }
       ],
       "interactiveActivities": [
@@ -719,7 +587,7 @@ export const Psychology601Module: LearningModule = {
           "id": "psychology-601-l08-act1",
           "type": "debate_simulator",
           "title": "Expert Defense Panel",
-          "description": "Defend specialization recommendations under adversarial cross-examination."
+          "description": "Present your capstone recommendation to a simulated panel of experts. Defend your methodology, tradeoff analysis, and governance plan under adversarial cross-examination from technical, ethical, and leadership perspectives."
         }
       ]
     }

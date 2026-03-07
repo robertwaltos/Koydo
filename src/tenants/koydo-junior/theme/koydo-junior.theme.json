@@ -1,0 +1,86 @@
+{
+  "name": "koydo-junior",
+  "description": "Bright, high-contrast, child-safe theme for ages 3-8 with oversized touch targets.",
+  "palette": {
+    "bubblegum_pink": "#ff5fa2",
+    "sky_blue": "#4cc9ff",
+    "sunflower_yellow": "#ffd24a",
+    "mint_green": "#4ee3b2",
+    "lavender": "#b28dff",
+    "tangerine": "#ff9b54",
+    "cloud_white": "#fff9f4",
+    "ink_navy": "#24314f"
+  },
+  "night_palette": {
+    "soft_navy": "#1b2a44",
+    "midnight_blue": "#22385a",
+    "moon_glow": "#cfe8ff",
+    "star_gold": "#ffd36a"
+  },
+  "typography": {
+    "display": "'Fredoka', 'Quicksand', 'Nunito', 'Comic Neue', sans-serif",
+    "body": "'Nunito Sans', 'Quicksand', 'Nunito', sans-serif",
+    "letter_spacing": "0.01em",
+    "line_height": 1.5
+  },
+  "spacing": {
+    "touch_target_min": "64px",
+    "padding_xl": "28px",
+    "padding_lg": "22px",
+    "padding_md": "16px",
+    "padding_sm": "12px",
+    "gap_xl": "24px",
+    "gap_lg": "18px"
+  },
+  "radii": {
+    "card": "24px",
+    "pill": "999px",
+    "bubble": "32px"
+  },
+  "shadows": {
+    "soft_raised": "0 12px 0 rgba(36, 49, 79, 0.18), 0 18px 28px rgba(36, 49, 79, 0.22)",
+    "soft_pressed": "inset 0 6px 10px rgba(36, 49, 79, 0.2)"
+  },
+  "components": {
+    "button": {
+      "height": "64px",
+      "font_weight": 800,
+      "radius": "24px",
+      "press_scale": 0.94
+    },
+    "card": {
+      "radius": "24px",
+      "border_width": "2px"
+    }
+  },
+  "css_variables": {
+    "--background": "#fff9f4",
+    "--foreground": "#24314f",
+    "--surface": "#ffffff",
+    "--surface-muted": "#ffeef7",
+    "--border": "#ffd6ea",
+    "--accent": "#ff5fa2",
+    "--success": "#4ee3b2",
+    "--warn": "#ffd24a",
+    "--danger": "#ff7a8a",
+    "--radius-card": "24px",
+    "--radius-pill": "999px",
+    "--shadow-soft-raised": "0 12px 0 rgba(36, 49, 79, 0.18), 0 18px 28px rgba(36, 49, 79, 0.22)",
+    "--shadow-soft-pressed": "inset 0 6px 10px rgba(36, 49, 79, 0.2)",
+    "--font-display-sans": "var(--font-display-round)",
+    "--font-body-sans": "var(--font-display-round)",
+    "--type-body-md": "1.12rem",
+    "--type-body-sm": "1.02rem"
+  },
+  "dark_mode": {
+    "--background": "#1b2a44",
+    "--foreground": "#e9f3ff",
+    "--surface": "#22385a",
+    "--surface-muted": "#2a426a",
+    "--border": "#364e77",
+    "--accent": "#66d0ff",
+    "--success": "#6cf0c7",
+    "--warn": "#ffd36a",
+    "--danger": "#ff8ea1"
+  }
+}

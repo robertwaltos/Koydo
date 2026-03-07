@@ -15,6 +15,7 @@ import AiFollowupPanel from "./ai-followup-panel";
 import AiRemediationWorksheetPanel from "./ai-remediation-worksheet-panel";
 import AiLessonTutor from "./ai-lesson-tutor";
 import { trackLearningEvent } from "@/lib/analytics/xapi-lite";
+import { useSaveCheckpoint } from "@/lib/progress/save-checkpoint";
 import JuicyTabBar from "@/components/experience/JuicyTabBar";
 import SoftCard from "@/app/components/ui/soft-card";
 import MascotHost from "@/components/experience/MascotHost";
@@ -198,6 +199,7 @@ export default function LessonExperience({
   const chunks = useMemo(() => normalizeChunks(lesson), [lesson]);
   const [activeChunkId, setActiveChunkId] = useState<string>(chunks[0]?.id ?? "");
   const trackedChunksRef = useRef<Set<string>>(new Set());
+  const { saveCheckpoint } = useSaveCheckpoint();
 
   const activeChunk = useMemo(
     () => chunks.find((chunk) => chunk.id === activeChunkId) ?? chunks[0] ?? null,
@@ -263,6 +265,11 @@ export default function LessonExperience({
       }),
     [chunks.length, hasTypedInteractiveActivities, interactivePrompts.length, lesson.flashcards?.length, lesson.learningAids?.length, quizQuestions.length, typedActivities.length],
   );
+
+  // Save checkpoint on tab/chunk navigation (debounced)
+  useEffect(() => {
+    saveCheckpoint({ moduleTitle: subject, lessonTitle: lesson.title });
+  }, [activeTab, activeChunkId, saveCheckpoint, subject, lesson.title]);
 
   useEffect(() => {
     void trackLearningEvent({

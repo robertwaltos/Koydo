@@ -1,17 +1,19 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const RenewableEnergySystems201Module: LearningModule = {
+export const renewable_energy_systems_201_Module: LearningModule = {
   "id": "renewable-energy-systems-201",
   "title": "Renewable Energy Engineering",
-  "description": "Intermediate renewable energy engineering: system sizing, storage design, and grid-aware integration.",
+  "description": "An intermediate course on designing and implementing renewable energy systems, focusing on solar PV system sizing, battery storage design, and grid-aware integration.",
   "subject": "Renewable Energy",
   "tags": [
-    "curriculum",
-    "interactive"
+    "engineering",
+    "solar",
+    "energy storage",
+    "grid integration"
   ],
   "minAge": 15,
   "maxAge": 99,
-  "version": "1.0.0",
+  "version": "1.1.0",
   "difficultyBand": "intermediate",
   "localeSupport": [
     "en",
@@ -25,489 +27,334 @@ export const RenewableEnergySystems201Module: LearningModule = {
     "ko",
     "ru"
   ],
-  "thumbnail": "/placeholders/lesson-robot.svg",
+  "thumbnail": "/thumbnails/renewable-energy-system.svg",
   "learningObjectives": [
-    "Understand core concepts in Renewable Energy",
-    "Apply Renewable Energy skills through guided practice",
-    "Demonstrate mastery through checkpoint quizzes"
+    "Calculate the required size of a solar PV array based on electrical load and geographic location.",
+    "Design a battery storage system to meet specific energy autonomy requirements.",
+    "Analyze the components and principles of grid-tied and hybrid renewable energy systems.",
+    "Demonstrate system design skills through a final comprehensive checkpoint."
   ],
   "lessons": [
     {
       "id": "renewable-energy-systems-201-l01",
-      "title": "Renewable Energy Concepts 1",
+      "title": "Load Analysis & Solar Irradiance",
       "type": "video",
-      "duration": 9,
+      "duration": 12,
       "learningAids": [
         {
           "id": "renewable-energy-systems-201-l01-a1",
           "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary for Renewable Energy."
+          "title": "Solar Irradiance Map",
+          "content": "A world map showing average Peak Sun Hours (PSH) by region, crucial for system sizing."
         },
         {
           "id": "renewable-energy-systems-201-l01-a2",
           "type": "animation",
-          "title": "Animated Example",
-          "content": "Step-by-step walkthrough for Renewable Energy."
+          "title": "Calculating Daily Load",
+          "content": "An animated walkthrough of creating a load table (appliance wattage x hours of use) to find total daily kWh."
         }
       ]
     },
     {
       "id": "renewable-energy-systems-201-l02",
-      "title": "Renewable Energy Practice 2",
+      "title": "Practice: Sizing a PV Array",
       "type": "interactive",
-      "duration": 12,
+      "duration": 15,
       "metadata": {
         "prompts": [
-          "State the key concept in one sentence.",
-          "Apply it to one example.",
-          "Explain your improvement step for next time."
+          "Step 1: Calculate the total daily energy load for a sample household in kWh.",
+          "Step 2: Using the provided irradiance map, determine the Peak Sun Hours for the location.",
+          "Step 3: Calculate the required DC size of the solar PV array in kW, accounting for system losses."
         ]
       },
       "learningAids": [
         {
           "id": "renewable-energy-systems-201-l02-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Follow the challenge flow and record your approach."
+          "title": "PV Sizing Calculator",
+          "content": "An interactive tool to input load and location data to calculate the required array size."
         }
       ]
     },
     {
       "id": "renewable-energy-systems-201-l03",
-      "title": "Checkpoint 1: Renewable Energy",
+      "title": "Checkpoint 1: System Sizing",
       "type": "quiz",
       "duration": 10,
       "questions": [
         {
           "id": "renewable-energy-systems-201-l03-q1",
-          "text": "Which choice best matches the main idea of Renewable Energy?",
-          "skillId": "renewable-energy-systems-201-skill-core",
+          "text": "If a household's daily energy consumption is 20 kWh and the location receives 5 Peak Sun Hours, what is the minimum required size of the PV array before accounting for system losses?",
+          "skillId": "renewable-energy-systems-201-skill-sizing",
           "options": [
             {
               "id": "a",
-              "text": "A complete, evidence-based explanation"
+              "text": "2 kW"
             },
             {
               "id": "b",
-              "text": "An unrelated claim"
+              "text": "4 kW"
             },
             {
               "id": "c",
-              "text": "A random guess"
+              "text": "5 kW"
             },
             {
               "id": "d",
-              "text": "A conflicting idea"
+              "text": "100 kW"
             }
           ],
-          "correctOptionId": "a"
+          "correctOptionId": "b",
+          "explanation": "The required array size (kW) is the daily energy load (kWh) divided by the Peak Sun Hours (h). So, 20 kWh / 5 h = 4 kW."
         },
         {
           "id": "renewable-energy-systems-201-l03-q2",
-          "text": "What should a learner do after getting an answer wrong?",
-          "skillId": "renewable-energy-systems-201-skill-review",
+          "text": "How does installing more energy-efficient appliances affect the required size of a new solar PV system?",
+          "skillId": "renewable-energy-systems-201-skill-load-analysis",
           "options": [
             {
               "id": "a",
-              "text": "Review error cause and retry with strategy"
+              "text": "It increases the required system size."
             },
             {
               "id": "b",
-              "text": "Skip all corrections"
+              "text": "It has no effect on the required system size."
             },
             {
               "id": "c",
-              "text": "Memorize only the answer letter"
+              "text": "It decreases the required system size."
             },
             {
               "id": "d",
-              "text": "Stop practicing"
+              "text": "It only affects the battery, not the panels."
             }
           ],
-          "correctOptionId": "a"
-        },
-        {
-          "id": "renewable-energy-systems-201-l03-q3",
-          "text": "Which strategy most improves long-term retention for Renewable Energy Engineering?",
-          "skillId": "renewable-energy-systems-201-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "Use spaced retrieval and mixed practice over multiple sessions."
-            },
-            {
-              "id": "b",
-              "text": "Cram once and avoid later practice."
-            },
-            {
-              "id": "c",
-              "text": "Read notes passively without self-testing."
-            },
-            {
-              "id": "d",
-              "text": "Rely on confidence alone instead of evidence."
-            }
-          ],
-          "correctOptionId": "a",
-          "explanation": "Spaced retrieval with varied practice strengthens durable memory and flexible application."
-        }
-      ],
-      "learningAids": [
-        {
-          "id": "renewable-energy-systems-201-l03-a1",
-          "type": "mnemonic",
-          "title": "Memory Cue",
-          "content": "Use Plan, Solve, Explain to structure each response."
+          "correctOptionId": "c",
+          "explanation": "More efficient appliances lower the total energy load (kWh), which directly reduces the size of the PV array needed to meet that load."
         }
       ]
     },
     {
       "id": "renewable-energy-systems-201-l04",
-      "title": "Renewable Energy Practice 4",
-      "type": "interactive",
-      "duration": 12,
-      "metadata": {
-        "prompts": [
-          "State the key concept in one sentence.",
-          "Apply it to one example.",
-          "Explain your improvement step for next time."
-        ]
-      },
+      "title": "Battery Technologies & Sizing",
+      "type": "video",
+      "duration": 11,
       "learningAids": [
         {
           "id": "renewable-energy-systems-201-l04-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Follow the challenge flow and record your approach."
+          "type": "image",
+          "title": "Battery Chemistry Comparison",
+          "content": "A chart comparing Lead-Acid, Li-ion, and Flow batteries on metrics like cycle life, efficiency, and Depth of Discharge (DoD)."
+        },
+        {
+          "id": "renewable-energy-systems-201-l04-a2",
+          "type": "animation",
+          "title": "Depth of Discharge (DoD) Explained",
+          "content": "An animation showing how a higher DoD allows more usable energy from the same size battery, but can affect lifespan."
         }
       ]
     },
     {
       "id": "renewable-energy-systems-201-l05",
-      "title": "Renewable Energy Concepts 5",
-      "type": "video",
-      "duration": 9,
+      "title": "Practice: Designing a Battery Bank",
+      "type": "interactive",
+      "duration": 15,
+      "metadata": {
+        "prompts": [
+          "Step 1: Determine the required storage capacity in kWh for 2 days of autonomy, based on a 15 kWh daily load.",
+          "Step 2: Select a battery voltage (e.g., 48V) and calculate the required capacity in Amp-hours (Ah).",
+          "Step 3: Adjust the total Ah capacity to account for a safe Depth of Discharge (e.g., 80% for Lithium)."
+        ]
+      },
       "learningAids": [
         {
           "id": "renewable-energy-systems-201-l05-a1",
-          "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary for Renewable Energy."
-        },
-        {
-          "id": "renewable-energy-systems-201-l05-a2",
-          "type": "animation",
-          "title": "Animated Example",
-          "content": "Step-by-step walkthrough for Renewable Energy."
+          "type": "practice",
+          "title": "Battery Bank Designer",
+          "content": "An interactive tool to calculate required battery capacity based on load, autonomy days, and battery chemistry."
         }
       ]
     },
     {
       "id": "renewable-energy-systems-201-l06",
-      "title": "Checkpoint 2: Renewable Energy",
+      "title": "Checkpoint 2: Energy Storage",
       "type": "quiz",
       "duration": 10,
       "questions": [
         {
           "id": "renewable-energy-systems-201-l06-q1",
-          "text": "Which choice best matches the main idea of Renewable Energy?",
-          "skillId": "renewable-energy-systems-201-skill-core",
+          "text": "A 48V battery bank has a capacity of 200 Ah. What is its total energy storage capacity in kWh?",
+          "skillId": "renewable-energy-systems-201-skill-storage-sizing",
           "options": [
             {
               "id": "a",
-              "text": "A complete, evidence-based explanation"
+              "text": "4.17 kWh"
             },
             {
               "id": "b",
-              "text": "An unrelated claim"
+              "text": "9.6 kWh"
             },
             {
               "id": "c",
-              "text": "A random guess"
+              "text": "200 kWh"
             },
             {
               "id": "d",
-              "text": "A conflicting idea"
+              "text": "48 kWh"
             }
           ],
-          "correctOptionId": "a"
+          "correctOptionId": "b",
+          "explanation": "Energy (Wh) = Voltage (V) x Capacity (Ah). So, 48V * 200Ah = 9600 Wh, which is 9.6 kWh."
         },
         {
           "id": "renewable-energy-systems-201-l06-q2",
-          "text": "What should a learner do after getting an answer wrong?",
-          "skillId": "renewable-energy-systems-201-skill-review",
+          "text": "Why is it generally not recommended to discharge a lead-acid battery below 50% Depth of Discharge (DoD)?",
+          "skillId": "renewable-energy-systems-201-skill-battery-tech",
           "options": [
             {
               "id": "a",
-              "text": "Review error cause and retry with strategy"
+              "text": "It can cause a fire."
             },
             {
               "id": "b",
-              "text": "Skip all corrections"
+              "text": "It significantly reduces the battery's lifespan (cycle life)."
             },
             {
               "id": "c",
-              "text": "Memorize only the answer letter"
+              "text": "It makes the battery charge faster."
             },
             {
               "id": "d",
-              "text": "Stop practicing"
+              "text": "It is impossible to discharge it further."
             }
           ],
-          "correctOptionId": "a"
-        },
-        {
-          "id": "renewable-energy-systems-201-l06-q3",
-          "text": "Which strategy most improves long-term retention for Renewable Energy Engineering?",
-          "skillId": "renewable-energy-systems-201-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "Use spaced retrieval and mixed practice over multiple sessions."
-            },
-            {
-              "id": "b",
-              "text": "Cram once and avoid later practice."
-            },
-            {
-              "id": "c",
-              "text": "Read notes passively without self-testing."
-            },
-            {
-              "id": "d",
-              "text": "Rely on confidence alone instead of evidence."
-            }
-          ],
-          "correctOptionId": "a",
-          "explanation": "Spaced retrieval with varied practice strengthens durable memory and flexible application."
-        }
-      ],
-      "learningAids": [
-        {
-          "id": "renewable-energy-systems-201-l06-a1",
-          "type": "mnemonic",
-          "title": "Memory Cue",
-          "content": "Use Plan, Solve, Explain to structure each response."
+          "correctOptionId": "b",
+          "explanation": "Deeply discharging lead-acid batteries causes sulfation and damages the plates, drastically shortening the number of charge/discharge cycles they can endure."
         }
       ]
     },
     {
       "id": "renewable-energy-systems-201-l07",
-      "title": "Renewable Energy Concepts 7",
+      "title": "Grid-Tied Systems & Inverters",
       "type": "video",
-      "duration": 9,
+      "duration": 13,
       "learningAids": [
         {
           "id": "renewable-energy-systems-201-l07-a1",
           "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary for Renewable Energy."
+          "title": "System Architecture Diagram",
+          "content": "A clear diagram comparing Grid-Tied, Off-Grid, and Hybrid system components and power flow."
         },
         {
           "id": "renewable-energy-systems-201-l07-a2",
           "type": "animation",
-          "title": "Animated Example",
-          "content": "Step-by-step walkthrough for Renewable Energy."
+          "title": "How Anti-Islanding Works",
+          "content": "An animation showing how a grid-tied inverter detects a power outage and shuts down to protect utility workers."
         }
       ]
     },
     {
       "id": "renewable-energy-systems-201-l08",
-      "title": "Renewable Energy Practice 8",
+      "title": "Practice: System Component Matching",
       "type": "interactive",
-      "duration": 12,
+      "duration": 15,
       "metadata": {
         "prompts": [
-          "State the key concept in one sentence.",
-          "Apply it to one example.",
-          "Explain your improvement step for next time."
+          "Scenario: You have a 6 kW PV array and a 10 kWh battery bank.",
+          "Step 1: Select a charge controller rated to handle the voltage and amperage from the PV array.",
+          "Step 2: Select a hybrid inverter with a continuous power rating sufficient for the household's peak load.",
+          "Step 3: Draw a simple block diagram connecting the PV array, charge controller, battery, inverter, and main electrical panel."
         ]
       },
       "learningAids": [
         {
           "id": "renewable-energy-systems-201-l08-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Follow the challenge flow and record your approach."
+          "title": "Virtual System Designer",
+          "content": "A drag-and-drop interface to connect system components and check for compatibility."
         }
       ]
     },
     {
       "id": "renewable-energy-systems-201-l09",
-      "title": "Checkpoint 3: Renewable Energy",
+      "title": "Final Checkpoint: System Design",
       "type": "quiz",
-      "duration": 10,
+      "duration": 15,
       "questions": [
         {
           "id": "renewable-energy-systems-201-l09-q1",
-          "text": "Which choice best matches the main idea of Renewable Energy?",
-          "skillId": "renewable-energy-systems-201-skill-core",
+          "text": "In a hybrid solar system, what is the primary role of the inverter?",
+          "skillId": "renewable-energy-systems-201-skill-integration",
           "options": [
             {
               "id": "a",
-              "text": "A complete, evidence-based explanation"
+              "text": "To store DC energy from the sun."
             },
             {
               "id": "b",
-              "text": "An unrelated claim"
+              "text": "To convert DC power from panels/batteries to AC power for the home and grid."
             },
             {
               "id": "c",
-              "text": "A random guess"
+              "text": "To generate DC power from sunlight."
             },
             {
               "id": "d",
-              "text": "A conflicting idea"
+              "text": "To prevent the battery from overcharging."
             }
           ],
-          "correctOptionId": "a"
+          "correctOptionId": "b",
+          "explanation": "The inverter is the core component that converts Direct Current (DC) into Alternating Current (AC) that is usable by household appliances and compatible with the utility grid."
         },
         {
           "id": "renewable-energy-systems-201-l09-q2",
-          "text": "What should a learner do after getting an answer wrong?",
-          "skillId": "renewable-energy-systems-201-skill-review",
+          "text": "A client wants a system that provides power during a grid outage. Which system type should you recommend?",
+          "skillId": "renewable-energy-systems-201-skill-system-types",
           "options": [
             {
               "id": "a",
-              "text": "Review error cause and retry with strategy"
+              "text": "A standard grid-tied system without storage."
             },
             {
               "id": "b",
-              "text": "Skip all corrections"
+              "text": "A hybrid system with battery storage."
             },
             {
               "id": "c",
-              "text": "Memorize only the answer letter"
+              "text": "A system with only a charge controller."
             },
             {
               "id": "d",
-              "text": "Stop practicing"
+              "text": "A system with microinverters only."
             }
           ],
-          "correctOptionId": "a"
+          "correctOptionId": "b",
+          "explanation": "Only systems with battery storage (Off-Grid or Hybrid) can provide backup power. Standard grid-tied systems must shut down during an outage for safety."
         },
         {
           "id": "renewable-energy-systems-201-l09-q3",
-          "text": "Which strategy most improves long-term retention for Renewable Energy Engineering?",
-          "skillId": "renewable-energy-systems-201-skill-core",
+          "text": "What is the purpose of a charge controller in a solar energy system?",
+          "skillId": "renewable-energy-systems-201-skill-components",
           "options": [
             {
               "id": "a",
-              "text": "Use spaced retrieval and mixed practice over multiple sessions."
+              "text": "To convert AC to DC for battery charging."
             },
             {
               "id": "b",
-              "text": "Cram once and avoid later practice."
+              "text": "To regulate the voltage and current from the solar panels to prevent battery overcharging."
             },
             {
               "id": "c",
-              "text": "Read notes passively without self-testing."
+              "text": "To increase the voltage of the solar panels."
             },
             {
               "id": "d",
-              "text": "Rely on confidence alone instead of evidence."
+              "text": "To communicate with the utility grid."
             }
           ],
-          "correctOptionId": "a",
-          "explanation": "Spaced retrieval with varied practice strengthens durable memory and flexible application."
-        }
-      ],
-      "learningAids": [
-        {
-          "id": "renewable-energy-systems-201-l09-a1",
-          "type": "mnemonic",
-          "title": "Memory Cue",
-          "content": "Use Plan, Solve, Explain to structure each response."
-        }
-      ]
-    },
-    {
-      "id": "renewable-energy-systems-201-l10",
-      "title": "Checkpoint 4: Renewable Energy",
-      "type": "quiz",
-      "duration": 10,
-      "questions": [
-        {
-          "id": "renewable-energy-systems-201-l10-q1",
-          "text": "Which choice best matches the main idea of Renewable Energy?",
-          "skillId": "renewable-energy-systems-201-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "A complete, evidence-based explanation"
-            },
-            {
-              "id": "b",
-              "text": "An unrelated claim"
-            },
-            {
-              "id": "c",
-              "text": "A random guess"
-            },
-            {
-              "id": "d",
-              "text": "A conflicting idea"
-            }
-          ],
-          "correctOptionId": "a"
-        },
-        {
-          "id": "renewable-energy-systems-201-l10-q2",
-          "text": "What should a learner do after getting an answer wrong?",
-          "skillId": "renewable-energy-systems-201-skill-review",
-          "options": [
-            {
-              "id": "a",
-              "text": "Review error cause and retry with strategy"
-            },
-            {
-              "id": "b",
-              "text": "Skip all corrections"
-            },
-            {
-              "id": "c",
-              "text": "Memorize only the answer letter"
-            },
-            {
-              "id": "d",
-              "text": "Stop practicing"
-            }
-          ],
-          "correctOptionId": "a"
-        },
-        {
-          "id": "renewable-energy-systems-201-l10-q3",
-          "text": "Which strategy most improves long-term retention for Renewable Energy Engineering?",
-          "skillId": "renewable-energy-systems-201-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "Use spaced retrieval and mixed practice over multiple sessions."
-            },
-            {
-              "id": "b",
-              "text": "Cram once and avoid later practice."
-            },
-            {
-              "id": "c",
-              "text": "Read notes passively without self-testing."
-            },
-            {
-              "id": "d",
-              "text": "Rely on confidence alone instead of evidence."
-            }
-          ],
-          "correctOptionId": "a",
-          "explanation": "Spaced retrieval with varied practice strengthens durable memory and flexible application."
-        }
-      ],
-      "learningAids": [
-        {
-          "id": "renewable-energy-systems-201-l10-a1",
-          "type": "mnemonic",
-          "title": "Memory Cue",
-          "content": "Use Plan, Solve, Explain to structure each response."
+          "correctOptionId": "b",
+          "explanation": "The charge controller acts as a gatekeeper, managing the flow of energy from the PV array into the battery bank to ensure safe and efficient charging without causing damage."
         }
       ]
     }

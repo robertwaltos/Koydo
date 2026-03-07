@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const Linux401Module: LearningModule = {
+export const linux_401_Module: LearningModule = {
   "id": "linux-401",
   "title": "Linux Platform Strategy, SRE Governance, and Fleet Operations",
   "description": "Expert-level Linux curriculum on fleet architecture, platform governance, reliability economics, supply-chain trust, and board-level operating strategy for mission-critical environments.",
@@ -16,7 +16,7 @@ export const Linux401Module: LearningModule = {
   ],
   "minAge": 17,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en"
@@ -35,50 +35,50 @@ export const Linux401Module: LearningModule = {
       "id": "linux-401-l01",
       "title": "Linux Platform Operating Models at Scale",
       "type": "video",
-      "duration": 14,
+      "duration": 15,
       "chunks": [
         {
           "id": "linux-401-l01-c1",
           "kind": "concept",
-          "title": "Central Platform vs Embedded Ops",
-          "content": "When organizations manage a large number of Linux systems, they face an important decision about how to share responsibilities among their teams. One option is to have central platform teams. These teams focus on creating a consistent and controlled environment across all systems, which can help ensure that everything runs smoothly and securely. On the other hand, there are embedded teams that work closely with specific areas of the organization. These teams can respond more quickly to the unique needs of their departments, allowing for faster problem-solving and innovation. A hybrid model combines the strengths of both central and embedded teams. However, it is essential to establish clear agreements on how these teams will collaborate and share decision-making authority to avoid confusion and ensure effective governance. This way, organizations can benefit from both consistency and agility in their operations."
+          "title": "Central Platform vs. Embedded Operations",
+          "content": "Structuring Linux operations at scale involves a fundamental trade-off. Central platform teams achieve economies of scale, driving consistency, security, and compliance across the fleet. However, they can become bottlenecks. Embedded teams offer domain-specific expertise and faster response to business unit needs but risk creating operational silos and inconsistent standards. Hybrid models aim to balance these forces, but require explicit service contracts and decision boundaries to function effectively without creating governance gaps."
         },
         {
           "id": "linux-401-l01-c2",
           "kind": "concept",
-          "title": "Decision Rights and Escalation",
-          "content": "When it comes to making significant decisions in managing a Linux platform, such as determining the timing for upgrading the Linux kernel or deciding how to implement emergency patches, it is essential to have well-defined authority boundaries. This means that everyone involved should know who is responsible for each decision. If there is any ambiguity about who owns these decisions, it can create confusion and potentially lead to more serious issues down the line. By establishing clear roles and responsibilities, we can help prevent incidents and ensure that everyone understands who to consult for guidance when needed."
+          "title": "Decision Rights and Escalation Paths",
+          "content": "Ambiguity in decision-making authority is a primary source of operational risk. For high-impact decisions like kernel upgrades, emergency patching, or architectural changes, a clear framework (e.g., a RACI matrix) is essential. This defines who is Responsible, Accountable, Consulted, and Informed. Without this clarity, incident response is delayed, and strategic changes stall, leading to preventable outages and technical debt accumulation."
         },
         {
           "id": "linux-401-l01-c3",
-          "kind": "recap",
-          "title": "Operating Cadence",
-          "content": "To keep a Linux platform running smoothly, it's important to have a regular schedule for operations. This includes reviewing risks every week, checking reliability scores monthly, and assessing the overall architecture and any technical debt every three months. These practices help ensure that the platform remains stable and can adapt to new challenges.\nContext recap: To keep a Linux platform running smoothly, it's important to have a regular schedule for operations. This includes reviewing risks every week, checking reliability scores monthly, and assessing the overall architecture and any technical debt every three months. These practices help ensure that the platform remains stable and can adapt to new challenges."
+          "kind": "concept",
+          "title": "Strategic Operating Cadence",
+          "content": "Effective platform management relies on a structured, multi-layered review cadence. This includes weekly tactical risk reviews, monthly reliability and SLO performance analysis, and quarterly architectural and technical debt assessments. This rhythm ensures that operations shift from a reactive, incident-driven mode to a proactive, data-informed strategy, aligning engineering effort with long-term platform health and business objectives."
         }
       ],
       "flashcards": [
         {
           "id": "linux-401-l01-f1",
-          "front": "Platform operating model",
-          "back": "How responsibilities, services, and governance are structured for fleet operations."
+          "front": "Platform Operating Model",
+          "back": "The structure of responsibilities, services, and governance for fleet operations, defining how teams interact to manage the platform."
         },
         {
           "id": "linux-401-l01-f2",
-          "front": "Decision rights",
-          "back": "Defined authority to approve, reject, or escalate high-impact changes."
+          "front": "Decision Rights",
+          "back": "Explicitly defined authority to approve, reject, or escalate high-impact changes, often codified in a RACI matrix."
         },
         {
           "id": "linux-401-l01-f3",
-          "front": "Service contract",
-          "back": "Explicit expectation of capabilities, SLAs, and ownership boundaries between teams."
+          "front": "Service Contract",
+          "back": "A formal agreement defining capabilities, SLAs, and ownership boundaries between platform providers and consumer teams."
         }
       ],
       "learningAids": [
         {
           "id": "linux-401-l01-a1",
           "type": "image",
-          "title": "Operating Model Blueprint",
-          "content": "Blueprint contrasting centralized, federated, and hybrid Linux platform models."
+          "title": "Operating Model Comparison",
+          "content": "A diagram contrasting centralized, federated, and hybrid Linux platform models, showing flows of authority and service delivery."
         }
       ]
     },
@@ -86,19 +86,25 @@ export const Linux401Module: LearningModule = {
       "id": "linux-401-l02",
       "title": "Fleet Risk Governance and Change Safety Lab",
       "type": "interactive",
-      "duration": 17,
+      "duration": 18,
       "chunks": [
         {
           "id": "linux-401-l02-c1",
           "kind": "concept",
-          "title": "Change Blast Radius",
-          "content": "In large-scale operations, even tiny errors in system configuration can cause major problems that affect many parts of the system. To effectively manage this risk, organizations must adopt strong governance practices. This includes carefully checking and validating any changes before they are implemented, gradually rolling out updates in stages to monitor their impact, continuously observing the health of the systems, and establishing clear criteria for automatically reverting any changes if issues arise. These steps help ensure that the systems remain stable and reliable, minimizing the chances of widespread failures."
+          "title": "Managing Change Blast Radius",
+          "content": "In large fleets, minor configuration errors can trigger cascading failures with massive impact. Robust governance mitigates this risk through progressive delivery. Key practices include rigorous pre-flight validation, staged rollouts (e.g., canaries), continuous health monitoring against SLOs, and automated rollback triggers to contain failures before they affect the entire system."
         },
         {
           "id": "linux-401-l02-c2",
+          "kind": "concept",
+          "title": "Leading vs. Lagging Indicators",
+          "content": "Effective governance relies on proactive signals. Lagging indicators, like the number of major incidents last quarter, report past failures. Leading indicators, such as configuration drift rates or canary deployment failure rates, predict future risk. A mature SRE practice focuses on monitoring leading indicators to enable corrective action before a service-impacting event occurs."
+        },
+        {
+          "id": "linux-401-l02-c3",
           "kind": "practice",
-          "title": "Policy Lifecycle",
-          "content": "A change policy should clearly outline the steps involved in making changes to the system. This includes proposing changes, simulating their effects, getting approval, rolling them out, monitoring their impact, and eventually retiring outdated policies. For any high-risk changes, it's essential to have an owner responsible for the change, evidence to support it, and a fallback plan in case things don't go as expected.\nContext recap: A change policy should clearly outline the steps involved in making changes to the system. This includes proposing changes, simulating their effects, getting approval, rolling them out, monitoring their impact, and eventually retiring outdated policies. For any high-risk changes, it's essential to have an owner responsible for the change, evidence to support it, and a fallback plan in case things don't go as expected."
+          "title": "The Policy Lifecycle",
+          "content": "A change policy must be a living document. Its lifecycle includes proposal, simulation, approval, phased rollout, monitoring, and eventual retirement. High-risk changes demand a clear owner, supporting evidence (e.g., test results), and a pre-defined rollback plan. This structured process ensures accountability and creates an auditable record of risk management decisions."
         }
       ],
       "interactiveActivities": [
@@ -132,7 +138,7 @@ export const Linux401Module: LearningModule = {
           "title": "Kernel Patch Incident Exercise",
           "description": "Contain fleet instability caused by a bad patch rollout.",
           "instructions": [
-            "Select first containment action with lowest systemic risk.",
+            "Select the first containment action with the lowest systemic risk.",
             "Define one governance update to prevent recurrence."
           ]
         }
@@ -149,7 +155,7 @@ export const Linux401Module: LearningModule = {
           "id": "linux-401-l02-a1",
           "type": "practice",
           "title": "Fleet Change Worksheet",
-          "content": "Template for scope, canary plan, health gates, rollback trigger, and approver evidence."
+          "content": "Template for defining change scope, canary plan, health gates, rollback triggers, and required approver evidence."
         }
       ]
     },
@@ -174,7 +180,7 @@ export const Linux401Module: LearningModule = {
             },
             {
               "id": "c",
-              "text": "They remove need for monitoring"
+              "text": "They remove the need for monitoring"
             },
             {
               "id": "d",
@@ -182,11 +188,11 @@ export const Linux401Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Staging limits exposure and enables controlled validation."
+          "explanation": "Staging limits exposure to a small subset of the fleet, allowing for controlled validation and early detection of issues."
         },
         {
           "id": "linux-401-l03-q2",
-          "text": "Most common governance failure during severe incidents is:",
+          "text": "The most common governance failure during severe incidents is:",
           "skillId": "linux-401-skill-incident",
           "options": [
             {
@@ -207,41 +213,41 @@ export const Linux401Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Unclear decision rights prolong outage duration and impact."
+          "explanation": "Unclear decision rights are a primary contributor to prolonged outage duration and increased business impact."
         },
         {
           "id": "linux-401-l03-q3",
-          "text": "What is the strongest value of immutable baseline policy?",
+          "text": "What is the strongest value of an immutable baseline policy?",
           "skillId": "linux-401-skill-governance",
           "options": [
             {
               "id": "a",
-              "text": "Prevents all incidents permanently"
+              "text": "It prevents all incidents permanently"
             },
             {
               "id": "b",
-              "text": "Reduces drift and improves predictability across hosts"
+              "text": "It reduces configuration drift and improves predictability"
             },
             {
               "id": "c",
-              "text": "Eliminates need for documentation"
+              "text": "It eliminates the need for documentation"
             },
             {
               "id": "d",
-              "text": "Avoids patching"
+              "text": "It makes patching unnecessary"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Drift reduction is central to fleet reliability and security posture."
+          "explanation": "Drift reduction is central to fleet reliability and security posture, ensuring hosts behave as expected."
         },
         {
           "id": "linux-401-l03-q4",
-          "text": "A credible high-risk change record should include:",
+          "text": "A credible high-risk change record must include:",
           "skillId": "linux-401-skill-governance",
           "options": [
             {
               "id": "a",
-              "text": "Only final success claim"
+              "text": "Only the final success claim"
             },
             {
               "id": "b",
@@ -257,7 +263,7 @@ export const Linux401Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Structured evidence enables accountability and repeatable learning."
+          "explanation": "Structured evidence enables accountability, auditability, and repeatable learning from both successes and failures."
         }
       ],
       "learningAids": [
@@ -265,7 +271,7 @@ export const Linux401Module: LearningModule = {
           "id": "linux-401-l03-a1",
           "type": "mnemonic",
           "title": "GATE",
-          "content": "Goal, Approval, Thresholds, Evidence."
+          "content": "A mnemonic for safe change: Goal (what is the intent?), Approval (who signed off?), Thresholds (what are the rollback conditions?), Evidence (what data supports this?)."
         }
       ]
     },
@@ -273,42 +279,48 @@ export const Linux401Module: LearningModule = {
       "id": "linux-401-l04",
       "title": "Reliability Economics and Platform Portfolio Strategy",
       "type": "video",
-      "duration": 14,
+      "duration": 15,
       "chunks": [
         {
           "id": "linux-401-l04-c1",
           "kind": "concept",
-          "title": "Failure Cost Framing",
-          "content": "When a Linux platform experiences problems, it can result in various costs for a business. These costs may include lost transactions, which means missed sales opportunities, delays in operations that can slow down productivity, and a loss of trust from customers who expect reliable service. To make smart investment choices, businesses should concentrate on minimizing these risks instead of simply opting for the newest tools available. By understanding the potential financial impact of failures, companies can better decide where to invest their resources to ensure a more reliable and efficient operation."
+          "title": "Framing Reliability in Terms of Failure Cost",
+          "content": "Platform instability incurs direct business costs: lost revenue, SLA penalties, reputational damage, and decreased engineering productivity. Instead of chasing arbitrary reliability targets or adopting new tools, investment decisions should be framed by the 'Cost of Downtime.' This economic lens focuses engineering effort on mitigating the most expensive and probable failure modes."
         },
         {
           "id": "linux-401-l04-c2",
           "kind": "concept",
-          "title": "Portfolio Prioritization",
-          "content": "When we think about which initiatives to prioritize, we need to look at several important factors. First, we should assess how central each initiative is to the overall system. This means understanding how much it affects other parts of the system. Next, we should examine the history of incidents related to each initiative. This helps us see if there have been problems in the past that we need to address. Additionally, we need to consider how confident we are in the strategies we have to mitigate any issues that might arise. Finally, we should evaluate the potential impact of each initiative on the business as a whole. Interestingly, foundational changes, which may not be immediately noticeable, can often lead to greater benefits than smaller optimizations that might seem more attractive at first. By focusing on these key areas, we can make more informed decisions about where to direct our efforts and resources."
+          "title": "Error Budgets as a Financial Instrument",
+          "content": "Service Level Objectives (SLOs) define a target level of reliability. The allowable margin of error is the 'error budget.' This budget is not just a technical metric; it's a financial one. It represents an acceptable level of risk and customer impact. Spending the budget allows for innovation and rapid releases, while exhausting it signals a required shift in focus to reliability work, directly linking engineering priorities to business risk."
         },
         {
           "id": "linux-401-l04-c3",
+          "kind": "concept",
+          "title": "Portfolio Prioritization",
+          "content": "A platform team's work is a portfolio of risk-reduction investments. Initiatives should be prioritized based on dependency centrality (how many critical services rely on this component?), incident history, mitigation confidence, and business impact. Foundational platform improvements often yield a higher return on investment (ROI) than isolated, feature-level optimizations by reducing systemic risk across many services."
+        },
+        {
+          "id": "linux-401-l04-c4",
           "kind": "example",
           "title": "Executive Recommendation Pattern",
-          "content": "When making recommendations, it's important to be clear about what you expect to happen and the reasons behind those expectations. For instance, you might say that if we enforce a specific configuration baseline, we expect to see a 35% reduction in serious incidents over the next two quarters. However, this outcome depends on ensuring that all hosts are fully enrolled in this process. By providing this level of detail, stakeholders can better grasp the potential benefits and impacts of the changes being proposed, allowing for more informed decision-making."
+          "content": "A strong recommendation connects engineering action to a measurable business outcome. For example: 'By investing in an automated configuration baseline enforcement system, we project a 35% reduction in P1 incidents over two quarters, contingent on 100% fleet enrollment. This will reclaim an estimated 500 engineering hours per month currently spent on manual remediation.'"
         }
       ],
       "flashcards": [
         {
           "id": "linux-401-l04-f1",
           "front": "Reliability ROI",
-          "back": "Expected outage-risk reduction per unit of engineering investment."
+          "back": "The expected reduction in outage-related costs per unit of engineering investment."
         },
         {
           "id": "linux-401-l04-f2",
-          "front": "Dependency centrality",
-          "back": "Degree to which critical services rely on a specific platform component."
+          "front": "Dependency Centrality",
+          "back": "The degree to which critical business services rely on a specific platform component, indicating its systemic importance."
         },
         {
           "id": "linux-401-l04-f3",
-          "front": "Mitigation confidence",
-          "back": "Likelihood that a planned intervention will produce the predicted improvement."
+          "front": "Error Budget",
+          "back": "The quantifiable amount of unreliability (100% - SLO) tolerated over a period, used to balance innovation speed with stability."
         }
       ],
       "learningAids": [
@@ -316,7 +328,7 @@ export const Linux401Module: LearningModule = {
           "id": "linux-401-l04-a1",
           "type": "image",
           "title": "Risk-Reduction Portfolio Matrix",
-          "content": "Matrix ranking platform initiatives by systemic impact and implementation effort."
+          "content": "A 2x2 matrix plotting platform initiatives by their systemic impact (y-axis) versus implementation effort (x-axis) to identify high-value projects."
         }
       ]
     },
@@ -324,19 +336,25 @@ export const Linux401Module: LearningModule = {
       "id": "linux-401-l05",
       "title": "Supply Chain Trust and Provenance Assurance Lab",
       "type": "interactive",
-      "duration": 17,
+      "duration": 18,
       "chunks": [
         {
           "id": "linux-401-l05-c1",
           "kind": "concept",
-          "title": "Trust Boundaries",
-          "content": "Ensuring the security of a Linux fleet involves more than just securing individual hosts. It also includes verifying the origins of software packages, maintaining the integrity of the build pipeline, signing artifacts, and ensuring transparency in dependencies. These practices help build trust in the systems and the software being used.\nContext recap: Ensuring the security of a Linux fleet involves more than just securing individual hosts. It also includes verifying the origins of software packages, maintaining the integrity of the build pipeline, signing artifacts, and ensuring transparency in dependencies. These practices help build trust in the systems and the software being used."
+          "title": "Defining Trust Boundaries",
+          "content": "Securing a Linux fleet requires a defense-in-depth approach to the software supply chain. Trust cannot be assumed at any stage. This involves verifying upstream package origins, securing the build pipeline, cryptographically signing all artifacts, and generating a Software Bill of Materials (SBOM) for dependency transparency. Each stage represents a critical control boundary."
         },
         {
           "id": "linux-401-l05-c2",
+          "kind": "concept",
+          "title": "Attestations and Policy Enforcement",
+          "content": "Provenance is established through attestations—verifiable, signed metadata that asserts facts about how an artifact was produced (e.g., 'built by CI system X from source commit Y'). These attestations are then consumed by policy engines at deployment time. An admission controller can block any artifact that lacks the required attestations, creating an automated, evidence-based trust gate."
+        },
+        {
+          "id": "linux-401-l05-c3",
           "kind": "practice",
-          "title": "Verification Workflow",
-          "content": "To ensure the authenticity of software, it is important to have a verification workflow in place. This includes documenting checks to confirm the source of software, signals that indicate reproducibility, and controls for approving releases before they are deployed. These steps help maintain the integrity and security of the software supply chain.\nContext recap: To ensure the authenticity of software, it is important to have a verification workflow in place. This includes documenting checks to confirm the source of software, signals that indicate reproducibility, and controls for approving releases before they are deployed. These steps help maintain the integrity and security of the software supply chain."
+          "title": "The Verification Workflow",
+          "content": "A robust workflow codifies trust verification. This includes documented checks for upstream source integrity, signals of build reproducibility (hermetic builds), and release approval controls. The goal is to make the secure path the easiest path, integrating these checks directly into the CI/CD pipeline to provide fast, automated feedback to developers."
         }
       ],
       "interactiveActivities": [
@@ -344,7 +362,7 @@ export const Linux401Module: LearningModule = {
           "id": "linux-401-l05-act1",
           "type": "sorting_buckets",
           "title": "Control Classification",
-          "description": "Sort controls by where they apply in supply-chain defense.",
+          "description": "Sort controls by where they apply in the supply-chain defense model.",
           "buckets": [
             "Source",
             "Build",
@@ -366,6 +384,10 @@ export const Linux401Module: LearningModule = {
             {
               "text": "Dependency allowlist maintenance",
               "bucket": "Source"
+            },
+            {
+              "text": "SBOM generation",
+              "bucket": "Build"
             }
           ]
         },
@@ -373,17 +395,17 @@ export const Linux401Module: LearningModule = {
           "id": "linux-401-l05-act2",
           "type": "scenario_practice",
           "title": "Compromised Package Simulation",
-          "description": "Respond to suspected package compromise in production pipeline.",
+          "description": "Respond to a suspected package compromise in the production pipeline.",
           "instructions": [
-            "Define immediate containment action.",
-            "Specify one permanent control improvement."
+            "Define the immediate containment action.",
+            "Specify one permanent control improvement to prevent recurrence."
           ]
         }
       ],
       "metadata": {
         "prompts": [
-          "Which supply-chain signal should block release automatically?",
-          "How do you balance release speed against provenance strictness?",
+          "Which supply-chain signal should automatically block a release?",
+          "How do you balance release velocity against provenance strictness?",
           "What minimum evidence should auditors receive for platform releases?"
         ]
       },
@@ -392,7 +414,7 @@ export const Linux401Module: LearningModule = {
           "id": "linux-401-l05-a1",
           "type": "practice",
           "title": "Provenance Audit Worksheet",
-          "content": "Template for source evidence, build attestations, deploy approval, and exception tracking."
+          "content": "A template for documenting source evidence, build attestations, deployment approvals, and exception tracking for a software release."
         }
       ]
     },
@@ -404,7 +426,7 @@ export const Linux401Module: LearningModule = {
       "questions": [
         {
           "id": "linux-401-l06-q1",
-          "text": "Best metric pairing for prioritizing Linux platform reliability investments is:",
+          "text": "The best metric pairing for prioritizing Linux platform reliability investments is:",
           "skillId": "linux-401-skill-strategy",
           "options": [
             {
@@ -425,7 +447,7 @@ export const Linux401Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Impact and centrality are strongest portfolio signals."
+          "explanation": "Business impact (cost) and systemic importance (centrality) are the strongest signals for prioritizing a portfolio of reliability work."
         },
         {
           "id": "linux-401-l06-q2",
@@ -442,7 +464,7 @@ export const Linux401Module: LearningModule = {
             },
             {
               "id": "c",
-              "text": "To remove patch management"
+              "text": "To eliminate patch management"
             },
             {
               "id": "d",
@@ -450,16 +472,16 @@ export const Linux401Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Provenance controls reduce software supply-chain compromise risk."
+          "explanation": "Provenance controls provide verifiable evidence of an artifact's origin and integrity, reducing software supply-chain compromise risk."
         },
         {
           "id": "linux-401-l06-q3",
-          "text": "What makes an executive Linux platform recommendation credible?",
+          "text": "What makes an executive recommendation for a Linux platform credible?",
           "skillId": "linux-401-skill-strategy",
           "options": [
             {
               "id": "a",
-              "text": "Only technical jargon"
+              "text": "Exclusive use of technical jargon"
             },
             {
               "id": "b",
@@ -467,7 +489,7 @@ export const Linux401Module: LearningModule = {
             },
             {
               "id": "c",
-              "text": "Longest incident timeline"
+              "text": "The longest possible incident timeline"
             },
             {
               "id": "d",
@@ -475,7 +497,7 @@ export const Linux401Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Executives need decision-ready impact with clear risk boundaries."
+          "explanation": "Executives require decision-ready proposals that clearly state the expected business impact, associated risks, and accountability."
         },
         {
           "id": "linux-401-l06-q4",
@@ -488,7 +510,7 @@ export const Linux401Module: LearningModule = {
             },
             {
               "id": "b",
-              "text": "Enable earlier corrective action before major incidents"
+              "text": "Enable corrective action before major incidents occur"
             },
             {
               "id": "c",
@@ -496,11 +518,11 @@ export const Linux401Module: LearningModule = {
             },
             {
               "id": "d",
-              "text": "Remove need for SLOs"
+              "text": "Remove the need for SLOs"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Early signals enable proactive risk reduction."
+          "explanation": "Early warning signals like configuration drift allow for proactive risk reduction, preventing incidents rather than just reacting to them."
         },
         {
           "id": "linux-401-l06-q5",
@@ -517,15 +539,15 @@ export const Linux401Module: LearningModule = {
             },
             {
               "id": "c",
-              "text": "Volume of speculation"
+              "text": "The volume of speculation"
             },
             {
               "id": "d",
-              "text": "Need for communication"
+              "text": "The need for communication"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Clear authority reduces response latency in high-pressure events."
+          "explanation": "Clear authority reduces response latency and confusion in high-pressure events, leading to faster and more effective containment."
         }
       ],
       "learningAids": [
@@ -533,7 +555,7 @@ export const Linux401Module: LearningModule = {
           "id": "linux-401-l06-a1",
           "type": "mnemonic",
           "title": "CLEAR",
-          "content": "Context, Levers, Economics, Accountability, Risk."
+          "content": "A framework for strategic proposals: Context (the problem), Levers (the proposed solution), Economics (the business case), Accountability (ownership), Risk (what could go wrong?)."
         }
       ]
     },
@@ -547,20 +569,20 @@ export const Linux401Module: LearningModule = {
           "id": "linux-401-l07-c1",
           "kind": "practice",
           "title": "Capstone Brief",
-          "content": "For your capstone project, you will be tasked with developing a comprehensive proposal aimed at transforming the Linux platform over the next two years. This proposal should address several critical components, including fleet governance, which ensures that all systems are managed effectively; reliability improvements to enhance the performance and uptime of the platform; and controls for supply chain trust to ensure that all components are secure and trustworthy. Additionally, you will need to outline key milestones for execution, which will serve as checkpoints to measure progress throughout the transformation process. This project is an excellent opportunity for you to apply the knowledge and skills you have acquired in a real-world context, making it both practical and impactful."
+          "content": "Synthesize the concepts from this course to develop a two-year strategic proposal for transforming a large-scale Linux platform. Your proposal must address fleet governance, reliability engineering, and supply chain trust. You will define a multi-quarter roadmap with key milestones, resource estimates, and success metrics. This is a practical exercise in executive communication and strategic platform leadership."
         },
         {
           "id": "linux-401-l07-c2",
           "kind": "recap",
           "title": "Assessment Criteria",
-          "content": "An effective proposal is one that clearly links the changes in engineering to the overall goals of the business. It should provide specific numbers to show the expected improvements, making it easier to understand the impact of these changes. Additionally, it is important to identify who will be responsible for each part of the proposal, how any potential risks will be managed, and to set up quarterly checkpoints. These checkpoints will allow the team to review progress and make necessary adjustments, ensuring that the proposal remains thorough and actionable.\nContext recap: An effective proposal is one that clearly links the changes in engineering to the overall goals of the business. It should provide specific numbers to show the expected improvements, making it easier to understand the impact of these changes. Additionally, it is important to identify who will be responsible for each part of the proposal, how any potential risks will be managed, and to set up quarterly checkpoints. These checkpoints will allow the team to review progress and make necessary adjustments, ensuring that the proposal remains thorough and actionable."
+          "content": "A successful proposal will be evaluated on its ability to: clearly connect engineering initiatives to business outcomes; provide quantifiable, data-driven improvement targets; assign clear ownership for risks and deliverables; and establish a realistic, quarterly review cadence. The proposal must be both technically sound and strategically compelling to a non-technical executive audience."
         }
       ],
       "metadata": {
         "prompts": [
-          "Present three strategic initiatives and expected impact metrics.",
-          "Identify top three risks and mitigation owners.",
-          "Define one executive KPI and one engineering KPI per initiative."
+          "Present three strategic initiatives and their expected impact metrics.",
+          "Identify the top three execution risks and their mitigation owners.",
+          "Define one executive KPI and one engineering KPI for each initiative."
         ]
       },
       "learningAids": [
@@ -568,7 +590,7 @@ export const Linux401Module: LearningModule = {
           "id": "linux-401-l07-a1",
           "type": "practice",
           "title": "Board Memo Framework",
-          "content": "Template for options, recommendation, economics, risk controls, and milestone roadmap."
+          "content": "A one-page template for structuring your proposal, covering: Problem Statement, Proposed Options, Recommendation, Economic Impact, Risk Mitigation Plan, and Milestone Roadmap."
         }
       ]
     }

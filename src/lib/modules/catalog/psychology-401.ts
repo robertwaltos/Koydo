@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const Psychology401Module: LearningModule = {
+export const psychology_401_Module: LearningModule = {
   "id": "psychology-401",
   "title": "Psychology Mastery and Leadership",
   "description": "Level 401 curriculum in Psychology, emphasizing cognitive systems, development and learning, research methods, intervention design, and real-world decision quality through structured practice and assessment.",
@@ -14,31 +14,31 @@ export const Psychology401Module: LearningModule = {
   ],
   "minAge": 16,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en"
   ],
   "learningObjectives": [
-    "Develop rigorous mental models for cognitive systems and development and learning",
-    "Apply structured methods to plan, execute, and review research methods tasks",
-    "Interpret evidence using metrics, constraints, and context",
-    "Diagnose common failure modes and design recovery actions",
-    "Communicate tradeoffs clearly to technical and non-technical audiences",
-    "Build repeatable systems for sustained improvement in Psychology"
+    "Develop rigorous mental models for cognitive systems, development, and learning.",
+    "Apply structured methods to plan, execute, and review research tasks.",
+    "Interpret evidence using metrics, constraints, and context.",
+    "Diagnose common failure modes and design effective recovery actions.",
+    "Communicate complex tradeoffs clearly to technical and non-technical audiences.",
+    "Build repeatable systems for sustained improvement in psychological practice."
   ],
   "lessons": [
     {
       "id": "psychology-401-l01",
-      "title": "Core Models for Psychology",
+      "title": "Foundational Models for Psychological Inquiry",
       "type": "video",
       "duration": 13,
       "learningAids": [
         {
           "id": "psychology-401-l01-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use the structured prompt and write your reasoning before finalizing answers."
+          "title": "Conceptual Framework Diagram",
+          "content": "Visualize how core concepts like scope, constraints, and evidence standards connect to form a coherent research plan."
         }
       ],
       "chunks": [
@@ -46,19 +46,19 @@ export const Psychology401Module: LearningModule = {
           "id": "psychology-401-l01-c1",
           "kind": "concept",
           "title": "Operating Vocabulary and Scope",
-          "content": "In our advanced Psychology course, using clear and precise language is crucial for effective communication. We will delve into how to define the boundaries of our study, which helps us understand what we are focusing on and what is outside of our research. Additionally, we will identify the specific units we will analyze, which means pinpointing the exact elements or groups we are studying. It's also important that everyone uses the same terminology, so we all understand each other clearly. By doing this, we can make informed decisions that can be compared across different teams. This approach not only enhances our collaboration but also deepens our understanding of the psychological concepts we are exploring together.\nContext recap: In our advanced Psychology course, using clear and precise language is crucial for effective communication. We will delve into how to define the boundaries of our study, which helps us understand what we are focusing on and what is outside of our research. Additionally, we will identify the specific units we will analyze, which means pinpointing the exact elements or groups we are studying. It's also important that everyone uses the same terminology, so we all understand each other clearly."
+          "content": "In advanced psychology, precision is paramount. This section establishes a shared lexicon for our work. We will learn to define the scope of an inquiry, which sets clear boundaries for our study. We will also identify the specific 'unit of analysis'—the core entity or process being examined. Establishing this common ground ensures that our analyses are consistent, comparable, and built on a solid foundation."
         },
         {
           "id": "psychology-401-l01-c2",
           "kind": "concept",
           "title": "Causal Thinking and Constraints",
-          "content": "To truly excel in the field of Psychology, it is essential to grasp the underlying reasons for behaviors, rather than merely focusing on the outcomes. In this lesson, we will delve into the assumptions we often make about human behavior, explore the dependencies that influence our thoughts and actions, and identify the constraints that can limit our understanding. By thoroughly examining these elements, we can develop interventions that target the root causes of psychological issues. This approach allows us to create more effective solutions that go beyond just addressing the symptoms, ultimately leading to a deeper understanding of human behavior and improved outcomes in our interventions.\nContext recap: To truly excel in the field of Psychology, it is essential to grasp the underlying reasons for behaviors, rather than merely focusing on the outcomes. In this lesson, we will delve into the assumptions we often make about human behavior, explore the dependencies that influence our thoughts and actions, and identify the constraints that can limit our understanding. By thoroughly examining these elements, we can develop interventions that target the root causes of psychological issues. This approach allows us to create more effective solutions that go beyond just addressing the symptoms, ultimately leading to a deeper understanding of human behavior and improved outcomes in our interventions.\nContext recap: To truly excel in the field of Psychology, it is essential to grasp the underlying reasons for behaviors, rather than merely focusing on the outcomes. In this lesson, we will delve into the assumptions we often make about human behavior, explore the dependencies that influence our thoughts and actions, and identify the constraints that can limit our understanding. By thoroughly examining these elements, we can develop interventions that target the root causes of psychological issues. This approach allows us to create more effective solutions that go beyond just addressing the symptoms, ultimately leading to a deeper understanding of human behavior and improved outcomes in our interventions.\nWhy this matters: Causal Thinking and Constraints helps learners in Psychology connect ideas from Psychology Mastery and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "Effective intervention requires understanding the 'why' behind a phenomenon, not just the 'what'. We will explore how to map the causal chain of behavior by identifying underlying assumptions, dependencies between variables, and operational constraints. By making these factors explicit, we can move beyond surface-level correlations to build more robust and effective models of human behavior."
         },
         {
           "id": "psychology-401-l01-c3",
           "kind": "recap",
           "title": "Evidence and Accountability",
-          "content": "In this section, we will introduce important practices that are essential for ensuring reliable execution in our work. We will discuss the importance of maintaining high standards for evidence, keeping a disciplined log of our activities, and establishing clear accountability loops. These practices are non-negotiable and will help us achieve consistent and trustworthy results in our psychological studies.\nContext recap: In this section, we will introduce important practices that are essential for ensuring reliable execution in our work. We will discuss the importance of maintaining high standards for evidence, keeping a disciplined log of our activities, and establishing clear accountability loops. These practices are non-negotiable and will help us achieve consistent and trustworthy results in our psychological studies."
+          "content": "This section recaps the core principles of rigorous execution. We will reinforce the importance of setting high standards for evidence, maintaining a disciplined research log to document decisions and observations, and establishing clear accountability loops. These practices are essential for producing trustworthy and replicable results in any psychological study."
         }
       ],
       "flashcards": [
@@ -81,15 +81,15 @@ export const Psychology401Module: LearningModule = {
     },
     {
       "id": "psychology-401-l02",
-      "title": "Psychology Workflow Lab",
+      "title": "Designing a Research Workflow",
       "type": "interactive",
       "duration": 15,
       "learningAids": [
         {
           "id": "psychology-401-l02-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use the structured prompt and write your reasoning before finalizing answers."
+          "type": "image",
+          "title": "Workflow Diagram Template",
+          "content": "Use this visual template to map out the stages of your research process, including inputs, checkpoints, and outputs."
         }
       ],
       "chunks": [
@@ -97,13 +97,13 @@ export const Psychology401Module: LearningModule = {
           "id": "psychology-401-l02-c1",
           "kind": "practice",
           "title": "Workflow Construction",
-          "content": "In this interactive lab, you will have the opportunity to construct a complete workflow for cognitive systems, focusing on development and learning. This will include identifying the necessary inputs, establishing checkpoints to monitor progress, determining the expected outputs, and setting up rollback triggers to address any issues that arise. This hands-on experience will help you understand how to create effective workflows in psychology.\nContext recap: In this interactive lab, you will have the opportunity to construct a complete workflow for cognitive systems, focusing on development and learning. This will include identifying the necessary inputs, establishing checkpoints to monitor progress, determining the expected outputs, and setting up rollback triggers to address any issues that arise. This hands-on experience will help you understand how to create effective workflows in psychology."
+          "content": "In this interactive lab, you will construct a complete research workflow. This involves defining necessary inputs (e.g., data, literature), establishing quality checkpoints to monitor progress, specifying the expected outputs, and designing rollback triggers to correct course when issues arise. This hands-on exercise builds a practical understanding of systematic research management."
         },
         {
           "id": "psychology-401-l02-c2",
           "kind": "recap",
           "title": "Decision Logging",
-          "content": "In this recap, we will emphasize the importance of logging every decision made during our processes. Each decision should be accompanied by a clear rationale, an expected effect, and a verification point. This practice will enable us to conduct thorough post-run analyses, allowing us to learn from our experiences and improve future decision-making.\nContext recap: In this recap, we will emphasize the importance of logging every decision made during our processes. Each decision should be accompanied by a clear rationale, an expected effect, and a verification point. This practice will enable us to conduct thorough post-run analyses, allowing us to learn from our experiences and improve future decision-making."
+          "content": "We will review the critical practice of logging every key decision in the research process. Each entry should include the rationale, the expected effect, and a defined verification point. This discipline enables rigorous post-project analysis, transforming individual experiences into systematic improvements for future work."
         }
       ],
       "interactiveActivities": [
@@ -280,15 +280,15 @@ export const Psychology401Module: LearningModule = {
     },
     {
       "id": "psychology-401-l04",
-      "title": "Methods, Metrics, and Failure Modes in Psychology",
+      "title": "Advanced Methods: Metrics and Failure Analysis",
       "type": "video",
       "duration": 14,
       "learningAids": [
         {
           "id": "psychology-401-l04-a1",
-          "type": "mnemonic",
-          "title": "Guided Practice",
-          "content": "Use the structured prompt and write your reasoning before finalizing answers."
+          "type": "image",
+          "title": "Failure Mode and Effects Analysis (FMEA) Chart",
+          "content": "Use this chart to systematically identify potential failures, their causes, and their effects to design targeted mitigations."
         }
       ],
       "chunks": [
@@ -296,19 +296,19 @@ export const Psychology401Module: LearningModule = {
           "id": "psychology-401-l04-c1",
           "kind": "concept",
           "title": "Method Selection",
-          "content": "When selecting methods for our psychological studies, we must consider various factors such as constraints, the quality of information available, and the potential cost of errors. In this lesson, you will learn how to compare different alternatives and justify the choice of methods that best fit specific scenarios in psychology. This critical thinking will enhance your ability to make informed decisions.\nContext recap: When selecting methods for our psychological studies, we must consider various factors such as constraints, the quality of information available, and the potential cost of errors. In this lesson, you will learn how to compare different alternatives and justify the choice of methods that best fit specific scenarios in psychology. This critical thinking will enhance your ability to make informed decisions."
+          "content": "Choosing the right research method requires a careful trade-off analysis. We will learn to evaluate methods based on project constraints, the quality of available information, and the potential cost of error. This section equips you to justify your methodological choices in a clear, defensible manner, ensuring the best fit for each unique research scenario."
         },
         {
           "id": "psychology-401-l04-c2",
           "kind": "example",
           "title": "Metric Architecture",
-          "content": "In this example, we will delve into the concept of metric architecture and how it serves as a framework that links leading indicators, lagging outcomes, and diagnostic measures. This connection is crucial because it enables teams to identify any deviations from the expected results at an early stage. By doing so, they can respond thoughtfully and make informed decisions. Understanding this architecture is essential for effectively monitoring progress in psychological work and making necessary adjustments to improve outcomes. This knowledge empowers you to be proactive in your approach, ensuring that you can navigate challenges and enhance your effectiveness in the field of psychology.\nContext recap: In this example, we will delve into the concept of metric architecture and how it serves as a framework that links leading indicators, lagging outcomes, and diagnostic measures. This connection is crucial because it enables teams to identify any deviations from the expected results at an early stage. By doing so, they can respond thoughtfully and make informed decisions. Understanding this architecture is essential for effectively monitoring progress in psychological work and making necessary adjustments to improve outcomes."
+          "content": "Effective measurement goes beyond single data points. We will examine how to build a metric architecture that connects leading indicators (early signals of progress) with lagging outcomes (final results). This framework also includes diagnostic measures to help explain performance, enabling teams to detect deviations early and respond intelligently."
         },
         {
           "id": "psychology-401-l04-c3",
           "kind": "recap",
           "title": "Failure Taxonomy",
-          "content": "In this recap, we will categorize different types of failures that can occur in our processes. These failures can be grouped into categories such as data issues, process problems, execution errors, and governance challenges. By organizing failures in this way, we can create specific mitigation plans that address each type of failure, rather than using generic solutions that may not be effective.\nContext recap: In this recap, we will categorize different types of failures that can occur in our processes. These failures can be grouped into categories such as data issues, process problems, execution errors, and governance challenges. By organizing failures in this way, we can create specific mitigation plans that address each type of failure, rather than using generic solutions that may not be effective."
+          "content": "This recap introduces a structured approach to learning from mistakes. We will classify common failures into a taxonomy—such as data integrity issues, process breakdowns, or interpretation errors. By categorizing failures, we can move from generic fixes to specific, high-leverage mitigation plans that prevent recurrence."
         }
       ],
       "flashcards": [
@@ -331,15 +331,15 @@ export const Psychology401Module: LearningModule = {
     },
     {
       "id": "psychology-401-l05",
-      "title": "Case Studio: Improve a Psychology System",
+      "title": "Case Study: Systemic Intervention Design",
       "type": "interactive",
       "duration": 16,
       "learningAids": [
         {
           "id": "psychology-401-l05-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use the structured prompt and write your reasoning before finalizing answers."
+          "type": "image",
+          "title": "Case Decomposition Matrix",
+          "content": "Use this matrix to break down the case study into its core components: objectives, context, constraints, and intervention options."
         }
       ],
       "chunks": [
@@ -347,13 +347,13 @@ export const Psychology401Module: LearningModule = {
           "id": "psychology-401-l05-c1",
           "kind": "practice",
           "title": "Case Decomposition",
-          "content": "In this interactive case study, you will break down a realistic scenario into its key components. This includes identifying the main objective, understanding the context, recognizing any constraints, and exploring various intervention options. You will also make explicit notes about the trade-offs involved in each option, which will help you develop critical analytical skills.\nContext recap: In this interactive case study, you will break down a realistic scenario into its key components. This includes identifying the main objective, understanding the context, recognizing any constraints, and exploring various intervention options. You will also make explicit notes about the trade-offs involved in each option, which will help you develop critical analytical skills."
+          "content": "In this interactive case study, you will deconstruct a realistic scenario. The task is to identify the primary objective, analyze the context, map the constraints, and evaluate potential intervention options. A key part of this exercise is to make the trade-offs for each option explicit, honing your critical and analytical skills."
         },
         {
           "id": "psychology-401-l05-c2",
           "kind": "recap",
           "title": "Improvement Proposal",
-          "content": "In this recap, you will present a staged improvement proposal based on your analysis of the case study. Your proposal should include clear success criteria, a mapping of who will be responsible for each part of the plan, and a timeline for follow-up actions. This exercise will help you practice how to communicate your ideas effectively and ensure accountability in your proposals.\nContext recap: In this recap, you will present a staged improvement proposal based on your analysis of the case study. Your proposal should include clear success criteria, a mapping of who will be responsible for each part of the plan, and a timeline for follow-up actions. This exercise will help you practice how to communicate your ideas effectively and ensure accountability in your proposals."
+          "content": "Based on your case analysis, you will structure a staged improvement proposal. This recap focuses on presenting your plan with clear success criteria, a responsibility assignment matrix to ensure accountability, and a defined timeline for implementation and follow-up. This exercise simulates the real-world task of communicating and operationalizing a strategic plan."
         }
       ],
       "interactiveActivities": [
@@ -410,103 +410,103 @@ export const Psychology401Module: LearningModule = {
       "questions": [
         {
           "id": "psychology-401-l06-q1",
-          "text": "Which action best improves decisions in cognitive systems work?",
-          "skillId": "psychology-401-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "Rely on one unverified example"
-            },
-            {
-              "id": "b",
-              "text": "Define criteria, compare alternatives, and test assumptions"
-            },
-            {
-              "id": "c",
-              "text": "Skip metrics and move directly to execution"
-            },
-            {
-              "id": "d",
-              "text": "Avoid documenting rationale"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Explicit criteria and testable assumptions improve reliability and transferability."
-        },
-        {
-          "id": "psychology-401-l06-q2",
-          "text": "In development and learning, what is the strongest indicator of process quality?",
-          "skillId": "psychology-401-skill-process",
-          "options": [
-            {
-              "id": "a",
-              "text": "Output speed only"
-            },
-            {
-              "id": "b",
-              "text": "Traceable steps, checkpoints, and measurable outcomes"
-            },
-            {
-              "id": "c",
-              "text": "Unstructured iteration without logs"
-            },
-            {
-              "id": "d",
-              "text": "One-time performance anecdotes"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Quality processes are observable, repeatable, and measurable."
-        },
-        {
-          "id": "psychology-401-l06-q3",
-          "text": "When evaluating research methods, which practice supports trustworthy conclusions?",
+          "text": "In a metric architecture, what is the primary role of a leading indicator?",
           "skillId": "psychology-401-skill-eval",
           "options": [
             {
               "id": "a",
-              "text": "Ignore edge cases"
+              "text": "To provide a final, definitive measure of success"
             },
             {
               "id": "b",
-              "text": "Use baseline comparisons and failure analysis"
+              "text": "To offer an early signal of future outcomes, allowing for course correction"
             },
             {
               "id": "c",
-              "text": "Change targets after results are known"
+              "text": "To diagnose the root cause of a past failure"
             },
             {
               "id": "d",
-              "text": "Remove context from findings"
+              "text": "To measure the total cost of the project"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Baselines and failure analysis prevent overclaiming and improve design quality."
+          "explanation": "Leading indicators are predictive and allow for proactive adjustments before final results (lagging indicators) are known."
+        },
+        {
+          "id": "psychology-401-l06-q2",
+          "text": "What is the main advantage of using a failure taxonomy over a simple list of errors?",
+          "skillId": "psychology-401-skill-process",
+          "options": [
+            {
+              "id": "a",
+              "text": "It guarantees that no failures will ever happen again"
+            },
+            {
+              "id": "b",
+              "text": "It is faster to create than a simple list"
+            },
+            {
+              "id": "c",
+              "text": "It groups failures by root cause, enabling targeted and systemic solutions"
+            },
+            {
+              "id": "d",
+              "text": "It focuses only on the most expensive failures"
+            }
+          ],
+          "correctOptionId": "c",
+          "explanation": "A taxonomy allows for pattern recognition and the design of solutions that address entire classes of problems, not just individual symptoms."
+        },
+        {
+          "id": "psychology-401-l06-q3",
+          "text": "When selecting a research method, a high 'cost of error' for the project's outcome should lead you to prioritize:",
+          "skillId": "psychology-401-skill-core",
+          "options": [
+            {
+              "id": "a",
+              "text": "The fastest and cheapest available method"
+            },
+            {
+              "id": "b",
+              "text": "A method that maximizes rigor and validity, even if it is slower"
+            },
+            {
+              "id": "c",
+              "text": "The newest, most experimental technique"
+            },
+            {
+              "id": "d",
+              "text": "A method that requires the least amount of data"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "When the consequences of being wrong are severe, the priority shifts from speed or cost to ensuring the reliability and accuracy of the findings."
         },
         {
           "id": "psychology-401-l06-q4",
-          "text": "A mature intervention design strategy should prioritize:",
+          "text": "A strong improvement proposal, developed from a case study analysis, must include:",
           "skillId": "psychology-401-skill-strategy",
           "options": [
             {
               "id": "a",
-              "text": "Single-metric optimization at any cost"
+              "text": "A vague goal without a timeline"
             },
             {
               "id": "b",
-              "text": "Balanced outcomes across quality, risk, and sustainability"
+              "text": "A single solution with no consideration of trade-offs"
             },
             {
               "id": "c",
-              "text": "Decisions based only on intuition"
+              "text": "A list of problems without any proposed actions"
             },
             {
               "id": "d",
-              "text": "No post-implementation review"
+              "text": "Measurable success criteria, clear responsibilities, and a follow-up plan"
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "Balanced scorecards align long-term performance with accountability."
+          "correctOptionId": "d",
+          "explanation": "An actionable proposal must be specific, measurable, assign accountability, and include a mechanism for review to be effective."
         }
       ]
     }

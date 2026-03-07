@@ -14,7 +14,7 @@ export const Gardening401Module: LearningModule = {
   ],
   "minAge": 16,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en"
@@ -22,10 +22,10 @@ export const Gardening401Module: LearningModule = {
   "learningObjectives": [
     "Develop rigorous mental models for soil systems and plant care",
     "Apply structured methods to plan, execute, and review season planning tasks",
-    "Interpret evidence using metrics, constraints, and context",
-    "Diagnose common failure modes and design recovery actions",
-    "Communicate tradeoffs clearly to technical and non-technical audiences",
-    "Build repeatable systems for sustained improvement in Gardening"
+    "Interpret garden data using metrics, constraints, and context",
+    "Diagnose common garden failures and design effective recovery actions",
+    "Communicate gardening plans and tradeoffs clearly",
+    "Build repeatable systems for sustained improvement in the garden"
   ],
   "lessons": [
     {
@@ -37,45 +37,45 @@ export const Gardening401Module: LearningModule = {
         {
           "id": "gardening-401-l01-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use the structured prompt and write your reasoning before finalizing answers."
+          "title": "Garden Constraint Map",
+          "content": "Sketch your garden plot. Draw and label the key constraints like hours of direct sunlight, water access, soil type zones, and prevailing winds."
         }
       ],
       "chunks": [
         {
           "id": "gardening-401-l01-c1",
           "kind": "concept",
-          "title": "Operating Vocabulary and Scope",
-          "content": "In advanced gardening, using clear and specific language is essential for success. We will explore how to establish well-defined boundaries for our gardening projects, which helps us understand what is included and what is not. Additionally, we will identify the main focus of our analysis, which is the key area we want to study or improve. It's also crucial that everyone involved uses the same terms and definitions. This consistency allows us to make informed decisions and compare our results across different teams effectively, leading to better collaboration and outcomes in our gardening efforts."
+          "title": "Defining Your Garden System",
+          "content": "To make smart decisions, we first need to define the scope of our work. Are we focused on a single plant, a raised bed, or an entire compost system? This focus is our 'unit of analysis.' Establishing clear boundaries and a shared vocabulary ensures everyone involved understands the project's goals and limits, which is the foundation for effective planning and problem-solving."
         },
         {
           "id": "gardening-401-l01-c2",
           "kind": "concept",
           "title": "Causal Thinking and Constraints",
-          "content": "To truly succeed in gardening, it's important to grasp the reasons behind our outcomes, rather than just looking at the outcomes themselves. In this lesson, we will delve into our assumptions about gardening practices, examine how different factors are interconnected, and identify any limitations we may encounter. By doing this, we will learn to focus on solving the root causes of any challenges we face, instead of merely addressing the symptoms. This deeper understanding will empower us to make more effective decisions in our gardening efforts.\nContext recap: To truly succeed in gardening, it's important to grasp the reasons behind our outcomes, rather than just looking at the outcomes themselves. In this lesson, we will delve into our assumptions about gardening practices, examine how different factors are interconnected, and identify any limitations we may encounter. By doing this, we will learn to focus on solving the root causes of any challenges we face, instead of merely addressing the symptoms. This deeper understanding will empower us to make more effective decisions in our gardening efforts."
+          "content": "Successful gardening is about understanding cause and effect. Instead of just treating symptoms like yellow leaves, we need to find the root cause, such as a soil pH imbalance. This lesson teaches you to map the relationships between actions and outcomes and to identify the constraints—like your climate, budget, or time—that limit your options. This approach helps you solve the right problems effectively."
         },
         {
           "id": "gardening-401-l01-c3",
-          "kind": "recap",
+          "kind": "concept",
           "title": "Evidence and Accountability",
-          "content": "In this section, we will introduce important practices that help ensure our gardening projects run smoothly. We will discuss the importance of maintaining high standards for evidence, keeping detailed records, and establishing clear accountability measures. These practices are essential for achieving reliable and successful outcomes in our gardening efforts.\nContext recap: In this section, we will introduce important practices that help ensure our gardening projects run smoothly. We will discuss the importance of maintaining high standards for evidence, keeping detailed records, and establishing clear accountability measures. These practices are essential for achieving reliable and successful outcomes in our gardening efforts."
+          "content": "Making reliable improvements requires good data. We will explore the importance of keeping a detailed garden log, setting standards for the evidence you collect (e.g., photos, measurements), and establishing clear ownership for tasks. These practices ensure your conclusions are based on facts, not just guesses, leading to more consistent and successful outcomes."
         }
       ],
       "flashcards": [
         {
           "id": "gardening-401-l01-f1",
-          "front": "Unit of analysis",
-          "back": "The specific entity or process you evaluate to make defensible decisions."
+          "front": "Unit of Analysis",
+          "back": "The specific garden element (e.g., a single plant, a compost pile, a raised bed) you are evaluating to make a decision."
         },
         {
           "id": "gardening-401-l01-f2",
-          "front": "Constraint mapping",
-          "back": "A method for identifying boundaries that shape feasible options."
+          "front": "Constraint Mapping",
+          "back": "A visual method for identifying the boundaries and limitations (like sunlight, water, or soil type) that shape your available gardening options."
         },
         {
           "id": "gardening-401-l01-f3",
-          "front": "Evidence standard",
-          "back": "The minimum quality threshold data must meet before action is taken."
+          "front": "Evidence Standard",
+          "back": "The quality threshold that information (e.g., soil test results, pest counts) must meet before you use it to make a decision."
         }
       ]
     },
@@ -87,55 +87,55 @@ export const Gardening401Module: LearningModule = {
       "learningAids": [
         {
           "id": "gardening-401-l02-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use the structured prompt and write your reasoning before finalizing answers."
+          "type": "image",
+          "title": "Process Flowchart",
+          "content": "Use a flowchart template to map a key garden process, like 'Seasonal Bed Preparation,' from start to finish. Include inputs, actions, and decision points."
         }
       ],
       "chunks": [
         {
           "id": "gardening-401-l02-c1",
           "kind": "practice",
-          "title": "Workflow Construction",
-          "content": "In this interactive activity, you will create a detailed workflow for managing soil systems and caring for plants. This includes identifying the necessary inputs, setting up checkpoints to monitor progress, defining expected outputs, and establishing rollback triggers to address any issues that arise. This hands-on experience will enhance your understanding of effective gardening practices.\nContext recap: In this interactive activity, you will create a detailed workflow for managing soil systems and caring for plants. This includes identifying the necessary inputs, setting up checkpoints to monitor progress, defining expected outputs, and establishing rollback triggers to address any issues that arise. This hands-on experience will enhance your understanding of effective gardening practices."
+          "title": "Building a Garden Workflow",
+          "content": "In this activity, you'll design a step-by-step workflow for a core gardening task, such as amending soil or managing a greenhouse. You will define the necessary inputs (e.g., compost, tools), quality checkpoints (e.g., soil moisture test), expected outputs (e.g., soil ready for planting), and rollback triggers (e.g., stopping if pests are found)."
         },
         {
           "id": "gardening-401-l02-c2",
           "kind": "recap",
-          "title": "Decision Logging",
-          "content": "In this recap, we will emphasize the importance of documenting every decision made during our gardening projects. Each decision should include the reasoning behind it, the expected outcomes, and a point for verification. This approach will allow us to analyze our actions after the project is completed and learn from our experiences.\nContext recap: In this recap, we will emphasize the importance of documenting every decision made during our gardening projects. Each decision should include the reasoning behind it, the expected outcomes, and a point for verification. This approach will allow us to analyze our actions after the project is completed and learn from our experiences."
+          "title": "Keeping a Decision Log",
+          "content": "A crucial part of any systematic process is documenting your decisions. For every choice made, log the reason, what you expect to happen, and how you'll verify the result. This practice transforms your experience into a valuable dataset you can analyze later to learn and improve."
         }
       ],
       "interactiveActivities": [
         {
           "id": "gardening-401-l02-act1",
           "type": "matching_pairs",
-          "title": "Workflow Match",
-          "description": "Match each workflow component to its strongest governance function.",
+          "title": "Garden Process and Purpose",
+          "description": "Match each workflow component to its primary function in the garden.",
           "pairs": [
             {
-              "left": "Input audit",
-              "right": "Prevents low-quality data from entering the system"
+              "left": "Soil Test (Input Audit)",
+              "right": "Prevents starting with incorrect soil amendments"
             },
             {
-              "left": "Checkpoint gate",
-              "right": "Stops propagation of known defects"
+              "left": "Seedling Health Check (Checkpoint)",
+              "right": "Stops diseased plants from being transplanted"
             },
             {
-              "left": "Outcome metric",
-              "right": "Measures whether the objective was met"
+              "left": "Harvest Weight (Outcome Metric)",
+              "right": "Measures whether the yield objective was met"
             },
             {
-              "left": "Retrospective log",
-              "right": "Captures lessons for next iteration"
+              "left": "End-of-Season Review (Log)",
+              "right": "Captures lessons for the next growing season"
             }
           ]
         },
         {
           "id": "gardening-401-l02-act2",
           "type": "sorting_buckets",
-          "title": "Risk Classification",
-          "description": "Sort items into strategic, operational, and quality-risk groups.",
+          "title": "Identifying Garden Risks",
+          "description": "Sort each gardening risk into the correct category.",
           "buckets": [
             "Strategic",
             "Operational",
@@ -143,19 +143,19 @@ export const Gardening401Module: LearningModule = {
           ],
           "items": [
             {
-              "text": "Misaligned goals",
+              "text": "Planting crops unsuitable for the climate",
               "bucket": "Strategic"
             },
             {
-              "text": "Unclear handoff timing",
+              "text": "Forgetting a scheduled watering day",
               "bucket": "Operational"
             },
             {
-              "text": "Inconsistent acceptance criteria",
+              "text": "Using uncalibrated soil pH meter",
               "bucket": "Quality"
             },
             {
-              "text": "No benchmark baseline",
+              "text": "No baseline data from previous seasons",
               "bucket": "Quality"
             }
           ]
@@ -171,8 +171,8 @@ export const Gardening401Module: LearningModule = {
         {
           "id": "gardening-401-l03-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use the structured prompt and write your reasoning before finalizing answers."
+          "title": "Review Your Notes",
+          "content": "Before starting, briefly review your notes on core models and workflow design. Write down one key concept from each lesson."
         }
       ],
       "questions": [
@@ -183,32 +183,32 @@ export const Gardening401Module: LearningModule = {
           "options": [
             {
               "id": "a",
-              "text": "Rely on one unverified example"
+              "text": "Rely on one unverified example from a neighbor"
             },
             {
               "id": "b",
-              "text": "Define criteria, compare alternatives, and test assumptions"
+              "text": "Define success criteria, compare alternatives, and test assumptions"
             },
             {
               "id": "c",
-              "text": "Skip metrics and move directly to execution"
+              "text": "Skip soil testing and move directly to planting"
             },
             {
               "id": "d",
-              "text": "Avoid documenting rationale"
+              "text": "Avoid documenting the rationale for fertilizer choices"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Explicit criteria and testable assumptions improve reliability and transferability."
+          "explanation": "Explicit criteria and testable assumptions improve the reliability and transferability of your gardening decisions."
         },
         {
           "id": "gardening-401-l03-q2",
-          "text": "In plant care, what is the strongest indicator of process quality?",
+          "text": "In plant care, what is the strongest indicator of a high-quality process?",
           "skillId": "gardening-401-skill-process",
           "options": [
             {
               "id": "a",
-              "text": "Output speed only"
+              "text": "How fast you can water the plants"
             },
             {
               "id": "b",
@@ -216,116 +216,116 @@ export const Gardening401Module: LearningModule = {
             },
             {
               "id": "c",
-              "text": "Unstructured iteration without logs"
+              "text": "Trying different things randomly without a log"
             },
             {
               "id": "d",
-              "text": "One-time performance anecdotes"
+              "text": "A single story about a great harvest one year"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Quality processes are observable, repeatable, and measurable."
+          "explanation": "High-quality processes are observable, repeatable, and measurable, allowing for consistent results and continuous improvement."
         },
         {
           "id": "gardening-401-l03-q3",
-          "text": "When evaluating season planning, which practice supports trustworthy conclusions?",
+          "text": "When evaluating your season plan, which practice supports trustworthy conclusions?",
           "skillId": "gardening-401-skill-eval",
           "options": [
             {
               "id": "a",
-              "text": "Ignore edge cases"
+              "text": "Ignore unexpected plant failures"
             },
             {
               "id": "b",
-              "text": "Use baseline comparisons and failure analysis"
+              "text": "Use baseline comparisons and analyze failures"
             },
             {
               "id": "c",
-              "text": "Change targets after results are known"
+              "text": "Change your yield goals after the harvest is complete"
             },
             {
               "id": "d",
-              "text": "Remove context from findings"
+              "text": "Remove context like weather conditions from your findings"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Baselines and failure analysis prevent overclaiming and improve design quality."
+          "explanation": "Comparing to a baseline and analyzing failures prevent inaccurate claims and lead to better planning in the future."
         },
         {
           "id": "gardening-401-l03-q4",
-          "text": "A mature integrated pest management strategy should prioritize:",
+          "text": "A mature integrated pest management (IPM) strategy should prioritize:",
           "skillId": "gardening-401-skill-strategy",
           "options": [
             {
               "id": "a",
-              "text": "Single-metric optimization at any cost"
+              "text": "Eliminating all insects at any cost"
             },
             {
               "id": "b",
-              "text": "Balanced outcomes across quality, risk, and sustainability"
+              "text": "Balanced outcomes across plant health, ecosystem impact, and effort"
             },
             {
               "id": "c",
-              "text": "Decisions based only on intuition"
+              "text": "Decisions based only on intuition without scouting"
             },
             {
               "id": "d",
-              "text": "No post-implementation review"
+              "text": "No review of whether the strategy worked"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Balanced scorecards align long-term performance with accountability."
+          "explanation": "A balanced approach aligns long-term garden health with accountability and sustainability."
         }
       ]
     },
     {
       "id": "gardening-401-l04",
-      "title": "Methods, Metrics, and Failure Modes in Gardening",
+      "title": "Methods, Metrics, and Failure Modes",
       "type": "video",
       "duration": 14,
       "learningAids": [
         {
           "id": "gardening-401-l04-a1",
-          "type": "mnemonic",
-          "title": "Guided Practice",
-          "content": "Use the structured prompt and write your reasoning before finalizing answers."
+          "type": "image",
+          "title": "Garden Health Dashboard",
+          "content": "Sketch a simple dashboard for a crop. Include one leading indicator (e.g., weekly flower count), one lagging outcome (e.g., total harvest weight), and one diagnostic metric (e.g., soil moisture)."
         }
       ],
       "chunks": [
         {
           "id": "gardening-401-l04-c1",
           "kind": "concept",
-          "title": "Method Selection",
-          "content": "When choosing the best methods for gardening, it's important to think about several key factors. First, we need to recognize any limitations we might face, such as space, resources, or time. Next, we should evaluate the quality of the information we have—this means looking at how reliable and accurate our sources are. Finally, we must consider the potential costs of making mistakes, as errors can lead to wasted time and resources. In this lesson, you will explore and compare different gardening methods. You will also learn to explain why certain methods are better suited for specific gardening situations. This process of critical thinking will empower you to make informed and effective choices in your gardening journey."
+          "title": "Selecting the Right Method",
+          "content": "Choosing the right gardening technique—like no-till vs. double-digging—requires careful thought. We must weigh factors like our constraints (time, space, energy), the quality of our information, and the potential cost of error (e.g., losing a crop). This lesson teaches you to justify your choice of method based on a clear-eyed assessment of your specific situation."
         },
         {
           "id": "gardening-401-l04-c2",
           "kind": "example",
-          "title": "Metric Architecture",
-          "content": "In this example, we will delve into the process of creating a metric architecture that effectively links leading indicators, lagging outcomes, and diagnostic measures. This structured approach allows teams to spot any changes or deviations from what we expect to see in our gardening results at an early stage. By doing so, we can respond thoughtfully and strategically, ensuring that our gardening practices not only remain effective but also continue to improve over time. This proactive method helps us maintain a healthy garden and achieve our goals more efficiently.\nContext recap: In this example, we will delve into the process of creating a metric architecture that effectively links leading indicators, lagging outcomes, and diagnostic measures. This structured approach allows teams to spot any changes or deviations from what we expect to see in our gardening results at an early stage. By doing so, we can respond thoughtfully and strategically, ensuring that our gardening practices not only remain effective but also continue to improve over time. This proactive method helps us maintain a healthy garden and achieve our goals more efficiently."
+          "title": "Tracking Garden Health with Metrics",
+          "content": "Effective gardeners use metrics to monitor plant health. We'll explore how to link leading indicators (early signs like germination rate) with lagging outcomes (final results like crop yield). We also use diagnostic metrics (like soil pH) to understand why something is happening. This system allows you to detect problems early and respond intelligently."
         },
         {
           "id": "gardening-401-l04-c3",
-          "kind": "recap",
-          "title": "Failure Taxonomy",
-          "content": "In this recap, we will categorize different types of failures that can occur in gardening projects. These include issues related to data, processes, execution, and governance. By organizing failures in this way, we can create specific plans to address and mitigate these issues, rather than relying on generic solutions.\nContext recap: In this recap, we will categorize different types of failures that can occur in gardening projects. These include issues related to data, processes, execution, and governance. By organizing failures in this way, we can create specific plans to address and mitigate these issues, rather than relying on generic solutions."
+          "kind": "concept",
+          "title": "Diagnosing Garden Problems",
+          "content": "When things go wrong, it's important to diagnose the problem accurately. We will learn to categorize common garden failures into groups like 'Nutrient Issues,' 'Pest & Disease,' 'Environmental Stress,' and 'Process Errors.' This structured approach helps you apply targeted fixes instead of relying on guesswork."
         }
       ],
       "flashcards": [
         {
           "id": "gardening-401-l04-f1",
-          "front": "Leading indicator",
-          "back": "A metric that signals probable future outcomes before final results appear."
+          "front": "Leading Indicator",
+          "back": "An early measurement (e.g., weekly pest count) that helps predict a future result (e.g., final crop damage) before it is too late to act."
         },
         {
           "id": "gardening-401-l04-f2",
-          "front": "Failure taxonomy",
-          "back": "A structured classification of failure types used to design targeted fixes."
+          "front": "Failure Taxonomy",
+          "back": "A structured classification of problem types (e.g., nutrient, pest, water) used to design targeted and effective solutions."
         },
         {
           "id": "gardening-401-l04-f3",
-          "front": "Cost of error",
-          "back": "The operational, financial, or social impact caused by an incorrect decision."
+          "front": "Cost of Error",
+          "back": "The total negative impact (e.g., lost crops, wasted time, environmental damage) caused by an incorrect gardening decision."
         }
       ]
     },
@@ -338,57 +338,57 @@ export const Gardening401Module: LearningModule = {
         {
           "id": "gardening-401-l05-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use the structured prompt and write your reasoning before finalizing answers."
+          "title": "Problem-Solving Framework",
+          "content": "Use a simple framework to structure your case analysis: 1. Problem Statement, 2. Potential Solutions, 3. Recommended Action, 4. Implementation Plan."
         }
       ],
       "chunks": [
         {
           "id": "gardening-401-l05-c1",
           "kind": "practice",
-          "title": "Case Decomposition",
-          "content": "In this interactive case study, you will break down a realistic gardening scenario into its key components. This includes identifying the main objectives, understanding the context, recognizing any constraints, and exploring various intervention options. You will also note the trade-offs involved in each option, which will help you make better decisions.\nContext recap: In this interactive case study, you will break down a realistic gardening scenario into its key components. This includes identifying the main objectives, understanding the context, recognizing any constraints, and exploring various intervention options. You will also note the trade-offs involved in each option, which will help you make better decisions."
+          "title": "Analyzing a Garden Challenge",
+          "content": "In this interactive case study, you'll analyze a realistic gardening scenario, such as a community garden with declining tomato yields. You will identify the core objectives, context, constraints (e.g., limited budget), and potential interventions, carefully considering the trade-offs of each option."
         },
         {
           "id": "gardening-401-l05-c2",
           "kind": "recap",
-          "title": "Improvement Proposal",
-          "content": "In this recap, you will present a structured improvement proposal based on the case study. Your proposal should include clear success criteria, identify who will be responsible for each part of the plan, and outline a timeline for follow-up actions. This exercise will help you practice effective communication and project management skills.\nContext recap: In this recap, you will present a structured improvement proposal based on the case study. Your proposal should include clear success criteria, identify who will be responsible for each part of the plan, and outline a timeline for follow-up actions. This exercise will help you practice effective communication and project management skills."
+          "title": "Creating an Action Plan",
+          "content": "Based on your analysis, you will develop a structured improvement plan. This proposal will include clear success criteria (e.g., 'increase yield by 15%'), assigned responsibilities for each task, and a timeline for implementation and follow-up. This exercise hones your planning and communication skills."
         }
       ],
       "interactiveActivities": [
         {
           "id": "gardening-401-l05-act1",
           "type": "scenario_practice",
-          "title": "Decision Path Simulation",
-          "description": "Choose among three interventions to improve season planning outcomes under time and quality constraints.",
+          "title": "Solving the Tomato Decline",
+          "description": "Choose one of three interventions to improve tomato yields, balancing time, cost, and quality constraints.",
           "instructions": [
-            "Define success criteria before selecting an intervention.",
-            "Document one short-term tradeoff and one long-term benefit.",
-            "Specify a metric that confirms success in the next cycle."
+            "Define what a 'successful' outcome looks like before choosing.",
+            "Document one short-term tradeoff and one long-term benefit of your choice.",
+            "Specify one leading indicator you will track to confirm your plan is working."
           ]
         },
         {
           "id": "gardening-401-l05-act2",
           "type": "matching_pairs",
-          "title": "Intervention to Outcome Mapping",
-          "description": "Connect interventions with the most likely system-level effects.",
+          "title": "Matching Actions to Garden Results",
+          "description": "Connect each intervention with its most likely system-level effect.",
           "pairs": [
             {
-              "left": "Tighter intake criteria",
-              "right": "Higher signal quality and lower downstream rework"
+              "left": "Stricter compost input rules",
+              "right": "Higher soil quality and fewer weed seeds"
             },
             {
-              "left": "Checkpoint automation",
-              "right": "Faster detection of preventable defects"
+              "left": "Automated drip irrigation",
+              "right": "More consistent soil moisture and less water waste"
             },
             {
-              "left": "Post-run retrospective",
-              "right": "Improved adaptation in later cycles"
+              "left": "Mandatory end-of-season review",
+              "right": "Improved planning and adaptation in later seasons"
             },
             {
-              "left": "Cross-team briefing",
-              "right": "Reduced ambiguity at handoff boundaries"
+              "left": "Standardized planting diagram",
+              "right": "Reduced confusion and errors on planting day"
             }
           ]
         }
@@ -403,110 +403,110 @@ export const Gardening401Module: LearningModule = {
         {
           "id": "gardening-401-l06-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use the structured prompt and write your reasoning before finalizing answers."
+          "title": "Synthesize Your Learning",
+          "content": "Review your notes from the case study. How did the concepts of metrics and failure modes apply to the scenario? Jot down two connections."
         }
       ],
       "questions": [
         {
           "id": "gardening-401-l06-q1",
-          "text": "Which action best improves decisions in soil systems work?",
-          "skillId": "gardening-401-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "Rely on one unverified example"
-            },
-            {
-              "id": "b",
-              "text": "Define criteria, compare alternatives, and test assumptions"
-            },
-            {
-              "id": "c",
-              "text": "Skip metrics and move directly to execution"
-            },
-            {
-              "id": "d",
-              "text": "Avoid documenting rationale"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Explicit criteria and testable assumptions improve reliability and transferability."
-        },
-        {
-          "id": "gardening-401-l06-q2",
-          "text": "In plant care, what is the strongest indicator of process quality?",
-          "skillId": "gardening-401-skill-process",
-          "options": [
-            {
-              "id": "a",
-              "text": "Output speed only"
-            },
-            {
-              "id": "b",
-              "text": "Traceable steps, checkpoints, and measurable outcomes"
-            },
-            {
-              "id": "c",
-              "text": "Unstructured iteration without logs"
-            },
-            {
-              "id": "d",
-              "text": "One-time performance anecdotes"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Quality processes are observable, repeatable, and measurable."
-        },
-        {
-          "id": "gardening-401-l06-q3",
-          "text": "When evaluating season planning, which practice supports trustworthy conclusions?",
+          "text": "A garden's bean crop has low yield. A soil test is expensive. What is the most systematic first step?",
           "skillId": "gardening-401-skill-eval",
           "options": [
             {
               "id": "a",
-              "text": "Ignore edge cases"
+              "text": "Immediately apply a generic all-purpose fertilizer."
             },
             {
               "id": "b",
-              "text": "Use baseline comparisons and failure analysis"
+              "text": "Assume it was bad weather and do nothing."
             },
             {
               "id": "c",
-              "text": "Change targets after results are known"
+              "text": "Analyze past garden logs for patterns and research common bean pests and diseases."
             },
             {
               "id": "d",
-              "text": "Remove context from findings"
+              "text": "Remove the beans and plant something else."
+            }
+          ],
+          "correctOptionId": "c",
+          "explanation": "A systematic approach prioritizes low-cost data gathering and analysis before committing to expensive or irreversible actions."
+        },
+        {
+          "id": "gardening-401-l06-q2",
+          "text": "To better predict your final tomato harvest weight (a lagging outcome), which of the following is the best *leading indicator* to track?",
+          "skillId": "gardening-401-skill-metrics",
+          "options": [
+            {
+              "id": "a",
+              "text": "The total weight of last year's harvest."
+            },
+            {
+              "id": "b",
+              "text": "The number of flowers that appear on the plants each week."
+            },
+            {
+              "id": "c",
+              "text": "The final taste rating of the tomatoes."
+            },
+            {
+              "id": "d",
+              "text": "The cost of the fertilizer used."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Baselines and failure analysis prevent overclaiming and improve design quality."
+          "explanation": "A leading indicator is an early measure that predicts a future outcome. Flower count directly precedes fruit production and can signal potential yield early on."
+        },
+        {
+          "id": "gardening-401-l06-q3",
+          "text": "A gardener observes yellowing leaves on their plants. Using a failure taxonomy, how should they classify this problem initially?",
+          "skillId": "gardening-401-skill-failure-analysis",
+          "options": [
+            {
+              "id": "a",
+              "text": "As a 'Process Error' because they must have done something wrong."
+            },
+            {
+              "id": "b",
+              "text": "As a 'Symptom' that requires further diagnosis to find the root cause."
+            },
+            {
+              "id": "c",
+              "text": "As a 'Pest & Disease' problem without looking for evidence of pests."
+            },
+            {
+              "id": "d",
+              "text": "As an unsolvable problem."
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Yellow leaves are a symptom, not a root cause. It could be a nutrient issue, a watering issue, or a disease. Proper diagnosis must come before classification and action."
         },
         {
           "id": "gardening-401-l06-q4",
-          "text": "A mature integrated pest management strategy should prioritize:",
+          "text": "When proposing a new community composting system, which element is most critical for ensuring long-term success and accountability?",
           "skillId": "gardening-401-skill-strategy",
           "options": [
             {
               "id": "a",
-              "text": "Single-metric optimization at any cost"
+              "text": "Buying the most expensive compost bins available."
             },
             {
               "id": "b",
-              "text": "Balanced outcomes across quality, risk, and sustainability"
+              "text": "A clear plan that defines success metrics, assigns ownership, and schedules regular reviews."
             },
             {
               "id": "c",
-              "text": "Decisions based only on intuition"
+              "text": "A verbal agreement that everyone will help out when they have time."
             },
             {
               "id": "d",
-              "text": "No post-implementation review"
+              "text": "Hoping for the best without any formal plan."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Balanced scorecards align long-term performance with accountability."
+          "explanation": "Long-term success depends on a robust system that includes clear goals, accountability, and a feedback loop for continuous improvement."
         }
       ]
     }

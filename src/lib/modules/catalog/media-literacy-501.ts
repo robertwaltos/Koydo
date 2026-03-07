@@ -1,9 +1,9 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const MediaLiteracy501Module: LearningModule = {
+export const media_literacy_501_Module: LearningModule = {
   "id": "media-literacy-501",
   "title": "Media Literacy Specialization Studio",
-  "description": "Post-401 specialization in Media Literacy, focused on information ecosystem diagnostics, misinformation detection and verification workflows, platform incentives and narrative influence analysis, and public discourse resilience and democratic safeguards through advanced casework, simulation, and defense-based checkpoints.",
+  "description": "A specialization in Media Literacy focused on diagnosing information ecosystems, detecting misinformation, analyzing platform incentives, and safeguarding public discourse. The module uses advanced casework, simulations, and defense-based checkpoints to build resilience.",
   "subject": "Social Studies",
   "tags": [
     "core",
@@ -14,97 +14,97 @@ export const MediaLiteracy501Module: LearningModule = {
   ],
   "minAge": 17,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en",
     "es"
   ],
   "learningObjectives": [
-    "Apply advanced methods for information ecosystem diagnostics in high-constraint environments",
-    "Design robust systems for misinformation detection and verification workflows with measurable control gates",
-    "Evaluate interventions in platform incentives and narrative influence analysis with research-grade rigor",
-    "Operationalize public discourse resilience and democratic safeguards with accountable governance and escalation pathways",
-    "Lead cross-functional decision reviews with explicit tradeoff communication",
-    "Defend recommendations under expert critique using evidence and uncertainty bounds"
+    "Apply advanced methods for information ecosystem diagnostics in high-constraint environments.",
+    "Design robust systems for misinformation detection and verification workflows with measurable control gates.",
+    "Evaluate interventions in platform incentives and narrative influence analysis with research-grade rigor.",
+    "Operationalize public discourse resilience and democratic safeguards with accountable governance and escalation pathways.",
+    "Lead cross-functional decision reviews with explicit tradeoff communication.",
+    "Defend recommendations under expert critique using evidence and uncertainty bounds."
   ],
   "lessons": [
     {
       "id": "media-literacy-501-l01",
-      "title": "Media Literacy Advanced Foundations",
+      "title": "Advanced Foundations of Media Literacy",
       "type": "video",
       "duration": 14,
       "learningAids": [
         {
           "id": "media-literacy-501-l01-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Structured Method Flowchart",
+          "content": "A flowchart diagram showing the structured method: 1. State Assumptions -> 2. Gather Measurable Evidence -> 3. Validate Recommendations."
         }
       ],
       "chunks": [
         {
           "id": "media-literacy-501-l01-c1",
           "kind": "concept",
-          "title": "Scope and Boundary Design",
-          "content": "In this lesson, we will explore the advanced boundaries of Media Literacy. We will focus on understanding how to analyze the information ecosystem, which includes identifying and diagnosing various sources of information. Additionally, we will learn about the processes involved in detecting misinformation and verifying the accuracy of information through structured workflows. This knowledge will help us navigate the complex world of media more effectively.\nContext recap: In this lesson, we will explore the advanced boundaries of Media Literacy. We will focus on understanding how to analyze the information ecosystem, which includes identifying and diagnosing various sources of information. Additionally, we will learn about the processes involved in detecting misinformation and verifying the accuracy of information through structured workflows. This knowledge will help us navigate the complex world of media more effectively."
+          "title": "Analyzing the Information Ecosystem",
+          "content": "In this lesson, we'll explore the advanced concepts of Media Literacy. We will start by learning how to analyze an 'information ecosystem'—the complex network of sources, platforms, and audiences that shape our news and media. We will also introduce structured workflows for detecting misinformation and verifying facts, giving you a reliable process for navigating today's media landscape."
         },
         {
           "id": "media-literacy-501-l01-c2",
           "kind": "concept",
-          "title": "Causal and Uncertainty Modeling",
-          "content": "In this part of the lesson, learners will engage in mapping out causal pathways, which means identifying how different events or factors are connected. We will also explore uncertainty ranges, which help us understand the limits of our knowledge about these connections. Finally, we will look at system dependencies, which are the relationships between different parts of a system. This foundational knowledge will be essential for planning effective interventions in media literacy.\nContext recap: In this part of the lesson, learners will engage in mapping out causal pathways, which means identifying how different events or factors are connected. We will also explore uncertainty ranges, which help us understand the limits of our knowledge about these connections. Finally, we will look at system dependencies, which are the relationships between different parts of a system. This foundational knowledge will be essential for planning effective interventions in media literacy."
+          "title": "Modeling Cause and Effect",
+          "content": "Here, we will map the causal pathways in media systems to understand how one event leads to another. We will also define 'uncertainty ranges' to acknowledge the limits of our knowledge and identify key system dependencies. This foundation is essential for planning effective interventions and understanding the potential impact of our actions."
         },
         {
           "id": "media-literacy-501-l01-c3",
           "kind": "recap",
-          "title": "Evidence Thresholds",
-          "content": "In our recap, we will emphasize that all claims we make should be linked to measurable indicators. This means we need to have clear evidence that supports our statements. We will also discuss the importance of establishing confidence bounds, which help us understand how certain we are about our claims. Lastly, we will introduce review checkpoints, which are moments where we can reassess our claims and ensure they are still valid. This structured approach will enhance our critical thinking skills.\nContext recap: In our recap, we will emphasize that all claims we make should be linked to measurable indicators. This means we need to have clear evidence that supports our statements. We will also discuss the importance of establishing confidence bounds, which help us understand how certain we are about our claims. Lastly, we will introduce review checkpoints, which are moments where we can reassess our claims and ensure they are still valid."
+          "title": "Setting Evidence Thresholds",
+          "content": "In this recap, we'll establish the importance of linking all claims to measurable evidence. We will discuss how to set 'confidence bounds' to communicate how certain we are about our conclusions. Finally, we'll introduce review checkpoints as a formal process for re-evaluating our analysis and ensuring its continued accuracy."
         }
       ],
       "flashcards": [
         {
           "id": "media-literacy-501-l01-f1",
           "front": "Information Ecosystem Diagnostics",
-          "back": "A specialization axis requiring explicit assumptions and measurable constraints."
+          "back": "The systematic analysis of information sources, flows, and impacts within a defined environment, requiring explicit assumptions and measurable constraints."
         },
         {
           "id": "media-literacy-501-l01-f2",
-          "front": "Misinformation Detection And Verification Workflows",
-          "back": "Execution architecture that determines reliability under stress."
+          "front": "Misinformation Verification Workflows",
+          "back": "A structured, repeatable process with clear checkpoints designed to reliably assess the accuracy of information, especially under pressure."
         },
         {
           "id": "media-literacy-501-l01-f3",
-          "front": "Platform Incentives And Narrative Influence Analysis",
-          "back": "Evaluation discipline for identifying true gains and hidden costs."
+          "front": "Narrative Influence Analysis",
+          "back": "The evaluation of how stories and messaging campaigns shape public perception, focusing on identifying their true impact versus their hidden costs."
         }
       ]
     },
     {
       "id": "media-literacy-501-l02",
-      "title": "Media Literacy Specialist Methods Lab",
+      "title": "Specialist Methods Lab",
       "type": "interactive",
       "duration": 17,
       "learningAids": [
         {
           "id": "media-literacy-501-l02-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Workflow Stress Test",
+          "content": "An animated infographic of a workflow being 'stress-tested' by various challenging scenarios, represented by icons like a storm cloud, a ticking clock, and a magnifying glass."
         }
       ],
       "chunks": [
         {
           "id": "media-literacy-501-l02-c1",
           "kind": "practice",
-          "title": "Method Design and Stress Test",
-          "content": "In this interactive session, learners will have the opportunity to design their own specialist workflows. This means creating step-by-step processes for how to analyze and respond to media information. After designing these workflows, we will stress-test them by putting them through challenging scenarios. This practice will help learners understand how to adapt their methods in real-world situations and ensure they are effective under pressure.\nContext recap: In this interactive session, learners will have the opportunity to design their own specialist workflows. This means creating step-by-step processes for how to analyze and respond to media information. After designing these workflows, we will stress-test them by putting them through challenging scenarios. This practice will help learners understand how to adapt their methods in real-world situations and ensure they are effective under pressure."
+          "title": "Method Design and Stress-Testing",
+          "content": "In this interactive lab, you will design your own specialist workflow for analyzing a piece of media. After designing your step-by-step process, you will stress-test it against challenging scenarios to see how it holds up under pressure. This practice will help you build adaptable and effective methods for real-world situations."
         },
         {
           "id": "media-literacy-501-l02-c2",
           "kind": "recap",
-          "title": "Control Gate Architecture",
-          "content": "In our recap, we will discuss the architecture of control gates within our workflows. This includes integrating important checkpoints, which are points where we can pause and evaluate our progress. We will also cover rollback criteria, which are guidelines for what to do if something goes wrong, and threshold-based escalation, which helps us determine when to take further action. Understanding these elements will enhance our ability to manage workflows effectively.\nContext recap: In our recap, we will discuss the architecture of control gates within our workflows. This includes integrating important checkpoints, which are points where we can pause and evaluate our progress. We will also cover rollback criteria, which are guidelines for what to do if something goes wrong, and threshold-based escalation, which helps us determine when to take further action. Understanding these elements will enhance our ability to manage workflows effectively."
+          "title": "Designing Control Gates",
+          "content": "We'll recap the architecture of 'control gates'—the safety checks in your workflow. This includes integrating review checkpoints, defining rollback criteria for when things go wrong, and setting clear thresholds for escalating an issue. Mastering these elements is key to managing complex information challenges effectively."
         }
       ],
       "interactiveActivities": [
@@ -143,8 +143,8 @@ export const MediaLiteracy501Module: LearningModule = {
         {
           "id": "media-literacy-501-l03-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Key Practices Checklist",
+          "content": "A checklist icon with the key practice points: Structured Method, Explicit Assumptions, Measurable Evidence."
         }
       ],
       "questions": [
@@ -247,168 +247,68 @@ export const MediaLiteracy501Module: LearningModule = {
           ],
           "correctOptionId": "a",
           "explanation": "Governance maturity is the operational link between intent, measurement, and corrective action."
-        },
-        {
-          "id": "media-literacy-501-l03-q5",
-          "text": "What is the best way to compare competing interventions in advanced Social Studies?",
-          "skillId": "media-literacy-501-skill-advanced-5",
-          "options": [
-            {
-              "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
-            },
-            {
-              "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
-            },
-            {
-              "id": "c",
-              "text": "Switch metrics after results arrive"
-            },
-            {
-              "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
-        },
-        {
-          "id": "media-literacy-501-l03-q6",
-          "text": "In high-stakes Media Literacy Specialization Studio execution, which communication protocol is strongest?",
-          "skillId": "media-literacy-501-skill-advanced-6",
-          "options": [
-            {
-              "id": "a",
-              "text": "Broadcast conclusions without assumptions"
-            },
-            {
-              "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
-            },
-            {
-              "id": "c",
-              "text": "Share only final outcomes after completion"
-            },
-            {
-              "id": "d",
-              "text": "Limit updates to a single informal channel"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
-        },
-        {
-          "id": "media-literacy-501-l03-q7",
-          "text": "A mature remediation loop in advanced Social Studies should prioritize:",
-          "skillId": "media-literacy-501-skill-advanced-7",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blame assignment without system updates"
-            },
-            {
-              "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
-            },
-            {
-              "id": "c",
-              "text": "One-time fixes without retesting"
-            },
-            {
-              "id": "d",
-              "text": "Issue closure based on elapsed time"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
-        },
-        {
-          "id": "media-literacy-501-l03-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Media Literacy Specialization Studio?",
-          "skillId": "media-literacy-501-skill-advanced-8",
-          "options": [
-            {
-              "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
-            },
-            {
-              "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
-            },
-            {
-              "id": "c",
-              "text": "Ignore correlated failure modes"
-            },
-            {
-              "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
         }
       ]
     },
     {
       "id": "media-literacy-501-l04",
-      "title": "Media Literacy Advanced Case Analysis",
+      "title": "Advanced Case Analysis",
       "type": "video",
       "duration": 14,
       "learningAids": [
         {
           "id": "media-literacy-501-l04-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Weighing the Tradeoffs",
+          "content": "An image of a balance scale, with icons representing safety, cost, and reliability on one side, and equity and governance on the other, illustrating the concept of tradeoffs."
         }
       ],
       "chunks": [
         {
           "id": "media-literacy-501-l04-c1",
           "kind": "concept",
-          "title": "Scenario Architecture",
-          "content": "In this lesson, we will frame a case that highlights the competing constraints within information ecosystem diagnostics. We will analyze how platform incentives and narrative influences can affect the way information is shared and perceived. By understanding these dynamics, learners will be better equipped to navigate the complexities of media and make informed decisions.\nContext recap: In this lesson, we will frame a case that highlights the competing constraints within information ecosystem diagnostics. We will analyze how platform incentives and narrative influences can affect the way information is shared and perceived. By understanding these dynamics, learners will be better equipped to navigate the complexities of media and make informed decisions."
+          "title": "Deconstructing a Case Study",
+          "content": "In this lesson, we will deconstruct a complex case study that highlights the competing pressures within an information ecosystem. We will analyze how platform incentives and narrative influence campaigns can distort public discourse. By breaking down these dynamics, you will be better equipped to navigate the complexities of modern media."
         },
         {
           "id": "media-literacy-501-l04-c2",
           "kind": "practice",
-          "title": "Tradeoff Framing",
-          "content": "In this practice session, learners will compare different options based on several important dimensions: safety, reliability, cost, equity, and governance. This comparison will help them understand the trade-offs involved in making decisions related to media literacy. By evaluating these factors, learners will develop a more nuanced understanding of how to approach complex media-related issues.\nContext recap: In this practice session, learners will compare different options based on several important dimensions: safety, reliability, cost, equity, and governance. This comparison will help them understand the trade-offs involved in making decisions related to media literacy. By evaluating these factors, learners will develop a more nuanced understanding of how to approach complex media-related issues."
+          "title": "Framing the Tradeoffs",
+          "content": "In this practice session, you will compare different potential responses to the case study. You will evaluate each option across key dimensions: safety, reliability, cost, equity, and governance. This exercise will help you articulate the difficult tradeoffs involved in media literacy decisions and develop a more nuanced approach to problem-solving."
         },
         {
           "id": "media-literacy-501-l04-c3",
           "kind": "recap",
-          "title": "Decision Memo Pattern",
-          "content": "In our recap, we will emphasize that each recommendation we make should include several key components. These include the assumptions we are making, the evidence that supports our claims, the risk controls we have in place to mitigate potential issues, and fallback plans that outline what to do if things do not go as expected. This structured approach will enhance our decision-making skills.\nContext recap: In our recap, we will emphasize that each recommendation we make should include several key components. These include the assumptions we are making, the evidence that supports our claims, the risk controls we have in place to mitigate potential issues, and fallback plans that outline what to do if things do not go as expected. This structured approach will enhance our decision-making skills."
+          "title": "The Decision Memo",
+          "content": "We'll conclude by introducing a structured format for presenting your analysis: the decision memo. We will emphasize that every recommendation must clearly state its underlying assumptions, supporting evidence, risk controls, and fallback plans. This structured approach is critical for making clear and defensible decisions."
         }
       ]
     },
     {
       "id": "media-literacy-501-l05",
-      "title": "Media Literacy Simulation Clinic",
+      "title": "Simulation Clinic",
       "type": "interactive",
       "duration": 18,
       "learningAids": [
         {
           "id": "media-literacy-501-l05-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Simulation Dashboard",
+          "content": "A dashboard interface from the simulation, showing performance metrics (e.g., information accuracy) and governance constraint alerts (e.g., budget limits) that the user must manage."
         }
       ],
       "chunks": [
         {
           "id": "media-literacy-501-l05-c1",
           "kind": "practice",
-          "title": "Live Scenario Controls",
-          "content": "In this interactive session, learners will operate scenario controls, which means they will manage different aspects of a media situation. They will need to balance performance, which refers to how well they are achieving their goals, with governance constraints, which are the rules and guidelines they must follow. This practice will help learners develop their skills in managing complex media scenarios effectively.\nContext recap: In this interactive session, learners will operate scenario controls, which means they will manage different aspects of a media situation. They will need to balance performance, which refers to how well they are achieving their goals, with governance constraints, which are the rules and guidelines they must follow. This practice will help learners develop their skills in managing complex media scenarios effectively."
+          "title": "Managing a Live Scenario",
+          "content": "In this interactive simulation, you will manage a developing media crisis in real time. You will be responsible for making decisions that balance performance goals, such as correcting misinformation, with governance constraints, like adhering to ethical guidelines. This will test your ability to apply your skills under pressure."
         },
         {
           "id": "media-literacy-501-l05-c2",
           "kind": "recap",
-          "title": "Adaptive Response Design",
-          "content": "In our recap, we will discuss the importance of effective responses in media scenarios. This means updating control gates, which are the mechanisms that help us manage our workflows, without losing traceability or accountability. We will explore how to ensure that our actions are transparent and that we can track our decisions over time. This understanding will be crucial for maintaining integrity in media literacy practices.\nContext recap: In our recap, we will discuss the importance of effective responses in media scenarios. This means updating control gates, which are the mechanisms that help us manage our workflows, without losing traceability or accountability. We will explore how to ensure that our actions are transparent and that we can track our decisions over time. This understanding will be crucial for maintaining integrity in media literacy practices."
+          "title": "Designing an Adaptive Response",
+          "content": "In our recap, we will discuss how to adapt your strategy during a live event. This includes updating your control gates and decision-making process without losing traceability or accountability. We will explore how to ensure every action is transparent and defensible, which is crucial for maintaining trust and integrity."
         }
       ],
       "interactiveActivities": [
@@ -429,8 +329,8 @@ export const MediaLiteracy501Module: LearningModule = {
         {
           "id": "media-literacy-501-l06-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Mastery Badge",
+          "content": "A certificate icon with the key practice points: Structured Method, Explicit Assumptions, Measurable Evidence."
         }
       ],
       "questions": [
@@ -533,185 +433,85 @@ export const MediaLiteracy501Module: LearningModule = {
           ],
           "correctOptionId": "a",
           "explanation": "Mature governance links authority, measurable controls, and corrective action."
-        },
-        {
-          "id": "media-literacy-501-l06-q5",
-          "text": "What is the best way to compare competing interventions in advanced Social Studies?",
-          "skillId": "media-literacy-501-skill-advanced-5",
-          "options": [
-            {
-              "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
-            },
-            {
-              "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
-            },
-            {
-              "id": "c",
-              "text": "Switch metrics after results arrive"
-            },
-            {
-              "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
-        },
-        {
-          "id": "media-literacy-501-l06-q6",
-          "text": "In high-stakes Media Literacy Specialization Studio execution, which communication protocol is strongest?",
-          "skillId": "media-literacy-501-skill-advanced-6",
-          "options": [
-            {
-              "id": "a",
-              "text": "Broadcast conclusions without assumptions"
-            },
-            {
-              "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
-            },
-            {
-              "id": "c",
-              "text": "Share only final outcomes after completion"
-            },
-            {
-              "id": "d",
-              "text": "Limit updates to a single informal channel"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
-        },
-        {
-          "id": "media-literacy-501-l06-q7",
-          "text": "A mature remediation loop in advanced Social Studies should prioritize:",
-          "skillId": "media-literacy-501-skill-advanced-7",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blame assignment without system updates"
-            },
-            {
-              "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
-            },
-            {
-              "id": "c",
-              "text": "One-time fixes without retesting"
-            },
-            {
-              "id": "d",
-              "text": "Issue closure based on elapsed time"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
-        },
-        {
-          "id": "media-literacy-501-l06-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Media Literacy Specialization Studio?",
-          "skillId": "media-literacy-501-skill-advanced-8",
-          "options": [
-            {
-              "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
-            },
-            {
-              "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
-            },
-            {
-              "id": "c",
-              "text": "Ignore correlated failure modes"
-            },
-            {
-              "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
         }
       ]
     },
     {
       "id": "media-literacy-501-l07",
-      "title": "Media Literacy Governance and Public Impact",
+      "title": "Governance and Public Impact",
       "type": "video",
       "duration": 13,
       "learningAids": [
         {
           "id": "media-literacy-501-l07-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Stakeholder Impact Map",
+          "content": "A diagram showing a central decision point with arrows pointing to various stakeholder groups (e.g., community, government, business), illustrating the distribution of impact."
         }
       ],
       "chunks": [
         {
           "id": "media-literacy-501-l07-c1",
           "kind": "concept",
-          "title": "Stakeholder Impact Distribution",
-          "content": "In this lesson, learners will map out the distribution of impacts among different stakeholders. This means identifying who benefits, who bears burdens, and what delayed effects may arise from decisions made in media contexts. By understanding these dynamics, learners will gain insight into the broader implications of media literacy and how it affects various groups in society.\nContext recap: In this lesson, learners will map out the distribution of impacts among different stakeholders. This means identifying who benefits, who bears burdens, and what delayed effects may arise from decisions made in media contexts. By understanding these dynamics, learners will gain insight into the broader implications of media literacy and how it affects various groups in society."
+          "title": "Mapping Stakeholder Impact",
+          "content": "In this lesson, you will learn to map the distribution of impact across various stakeholders. This involves identifying who benefits from a media decision, who bears the costs, and what delayed or indirect effects might arise. Understanding these dynamics is key to making equitable and responsible choices."
         },
         {
           "id": "media-literacy-501-l07-c2",
           "kind": "concept",
-          "title": "Accountability Architecture",
-          "content": "In this part of the lesson, we will explore the architecture of accountability within decision-making processes. This includes understanding how we can trace decisions back to their origins, the rights of individuals to review those decisions, and the obligations we have to remediate any issues that arise. By integrating these elements, learners will develop a strong foundation in ethical decision-making in media literacy.\nContext recap: In this part of the lesson, we will explore the architecture of accountability within decision-making processes. This includes understanding how we can trace decisions back to their origins, the rights of individuals to review those decisions, and the obligations we have to remediate any issues that arise. By integrating these elements, learners will develop a strong foundation in ethical decision-making in media literacy."
+          "title": "Building Accountability Systems",
+          "content": "Here, we will explore the architecture of accountability. This includes systems for tracing decisions back to their origins, ensuring the right to review and appeal, and establishing clear obligations to fix problems. By designing these systems, we can build a foundation for ethical and transparent decision-making."
         },
         {
           "id": "media-literacy-501-l07-c3",
           "kind": "recap",
-          "title": "Responsible Leadership Checklist",
-          "content": "To ensure responsible leadership, it's important to have a checklist that connects various important elements. This checklist should include the expected outcomes of our actions, ethical considerations, adherence to policies, and the ability to adapt and recover from challenges. By using this checklist, leaders can make informed decisions that positively impact the community.\nContext recap: To ensure responsible leadership, it's important to have a checklist that connects various important elements. This checklist should include the expected outcomes of our actions, ethical considerations, adherence to policies, and the ability to adapt and recover from challenges. By using this checklist, leaders can make informed decisions that positively impact the community."
+          "title": "The Responsible Leadership Checklist",
+          "content": "To conclude, we will introduce a checklist for responsible leadership. This tool connects expected outcomes with ethical guardrails, policy compliance, and resilience planning. Using this checklist helps ensure that decisions are not only effective but also fair, transparent, and accountable to the public."
         }
       ],
       "flashcards": [
         {
           "id": "media-literacy-501-l07-f1",
-          "front": "Impact distribution",
-          "back": "How outcomes are allocated across populations and timescales."
+          "front": "Impact Distribution",
+          "back": "An analysis of how the positive and negative outcomes of a decision are allocated across different populations and over time."
         },
         {
           "id": "media-literacy-501-l07-f2",
-          "front": "Decision traceability",
-          "back": "An auditable record of evidence, ownership, and rationale."
+          "front": "Decision Traceability",
+          "back": "An auditable record that connects a decision to its underlying evidence, rationale, and ownership, ensuring transparency."
         },
         {
           "id": "media-literacy-501-l07-f3",
-          "front": "Responsible leadership",
-          "back": "Decision behavior balancing performance, accountability, and ethics."
+          "front": "Responsible Leadership",
+          "back": "A decision-making approach that balances performance goals with accountability, ethical considerations, and public impact."
         }
       ]
     },
     {
       "id": "media-literacy-501-l08",
-      "title": "Media Literacy Capstone Defense Lab",
+      "title": "Capstone Defense Lab",
       "type": "interactive",
       "duration": 16,
       "learningAids": [
         {
           "id": "media-literacy-501-l08-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Building a Defense Brief",
+          "content": "An animation of a presentation slide being built, with sections for 'Claim,' 'Evidence,' 'Uncertainty,' and 'Remediation Plan' being filled in."
         }
       ],
       "chunks": [
         {
           "id": "media-literacy-501-l08-c1",
           "kind": "practice",
-          "title": "Defense Brief Assembly",
-          "content": "In this activity, learners will work together to create a comprehensive brief. This brief will include clear claims that express their main ideas, supporting evidence that backs up those claims, and an understanding of the uncertainties involved. Additionally, they will outline possible pathways for remediation, which are steps to take if things don't go as planned. This practice helps learners think critically and prepare for real-world situations.\nContext recap: In this activity, learners will work together to create a comprehensive brief. This brief will include clear claims that express their main ideas, supporting evidence that backs up those claims, and an understanding of the uncertainties involved. Additionally, they will outline possible pathways for remediation, which are steps to take if things don't go as planned. This practice helps learners think critically and prepare for real-world situations."
+          "title": "Assembling Your Defense Brief",
+          "content": "In this activity, you will assemble a comprehensive defense brief for your capstone project. This brief must include a clear central claim, the evidence supporting it, a frank assessment of uncertainties, and potential pathways for remediation if your proposed solution fails. This is the foundation of a defensible recommendation."
         },
         {
           "id": "media-literacy-501-l08-c2",
           "kind": "recap",
-          "title": "Expert Panel Rehearsal",
-          "content": "During this rehearsal, learners will practice their responses to various critiques that may come from experts in the field. They will prepare for questions related to technical aspects, governance issues, and the perspectives of different stakeholders. This preparation is crucial as it helps learners build confidence and improve their communication skills, ensuring they can effectively defend their ideas and proposals.\nContext recap: During this rehearsal, learners will practice their responses to various critiques that may come from experts in the field. They will prepare for questions related to technical aspects, governance issues, and the perspectives of different stakeholders. This preparation is crucial as it helps learners build confidence and improve their communication skills, ensuring they can effectively defend their ideas and proposals."
+          "title": "Rehearsing for the Expert Panel",
+          "content": "To prepare for your final defense, you will rehearse responses to critiques from multiple expert perspectives, including technical, governance, and stakeholder viewpoints. This practice is crucial for building the confidence and communication skills needed to defend your work under rigorous cross-examination."
         }
       ],
       "interactiveActivities": [
@@ -720,6 +520,97 @@ export const MediaLiteracy501Module: LearningModule = {
           "type": "debate_simulator",
           "title": "Expert Defense Panel",
           "description": "Defend specialization recommendations under adversarial cross-examination."
+        }
+      ]
+    },
+    {
+      "id": "media-literacy-501-l09",
+      "title": "Checkpoint 3: Capstone Defense",
+      "type": "quiz",
+      "duration": 10,
+      "learningAids": [
+        {
+          "id": "media-literacy-501-l09-a1",
+          "type": "image",
+          "title": "Capstone Badge",
+          "content": "A final capstone badge icon, symbolizing the integration of all learned skills: analysis, execution, governance, and defense."
+        }
+      ],
+      "questions": [
+        {
+          "id": "media-literacy-501-l09-q1",
+          "text": "What is the primary function of a 'defense brief' in a high-stakes decision review?",
+          "skillId": "media-literacy-501-skill-defense",
+          "options": [
+            {
+              "id": "a",
+              "text": "To present a conclusion without revealing the underlying evidence or assumptions."
+            },
+            {
+              "id": "b",
+              "text": "To persuasively argue for one position while ignoring all potential risks and tradeoffs."
+            },
+            {
+              "id": "c",
+              "text": "To transparently present a recommendation, including its evidence, assumptions, uncertainties, and risks."
+            },
+            {
+              "id": "d",
+              "text": "To provide a detailed history of the project without making a clear recommendation."
+            }
+          ],
+          "correctOptionId": "c",
+          "explanation": "A strong defense brief is built on transparency, clearly articulating the full context of a recommendation, including its weaknesses and risks."
+        },
+        {
+          "id": "media-literacy-501-l09-q2",
+          "text": "Effective stakeholder impact analysis requires a leader to primarily focus on:",
+          "skillId": "media-literacy-501-skill-governance",
+          "options": [
+            {
+              "id": "a",
+              "text": "The immediate benefits to the most powerful stakeholder group."
+            },
+            {
+              "id": "b",
+              "text": "The distribution of benefits, burdens, and risks across all affected groups, including long-term effects."
+            },
+            {
+              "id": "c",
+              "text": "Only the financial costs and benefits of a decision."
+            },
+            {
+              "id": "d",
+              "text": "Public relations messages that create a perception of fairness."
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Responsible governance requires a comprehensive analysis of how a decision's outcomes are distributed across all stakeholders and timescales."
+        },
+        {
+          "id": "media-literacy-501-l09-q3",
+          "text": "In an expert critique, what is the strongest way to respond to a question about uncertainty in your data?",
+          "skillId": "media-literacy-501-skill-defense",
+          "options": [
+            {
+              "id": "a",
+              "text": "Dismiss the question by stating that all data has some uncertainty."
+            },
+            {
+              "id": "b",
+              "text": "Acknowledge the uncertainty, state its potential impact on your conclusion, and explain how you've accounted for it."
+            },
+            {
+              "id": "c",
+              "text": "Defend the data as perfect and without any limitations."
+            },
+            {
+              "id": "d",
+              "text": "Change the subject to a stronger part of your argument."
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "A defensible position acknowledges uncertainty transparently and explains how it was factored into the decision-making process."
         }
       ]
     }

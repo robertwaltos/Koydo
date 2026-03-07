@@ -1,9 +1,9 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const Reading201Module: LearningModule = {
+export const reading_201_Module: LearningModule = {
   "id": "reading-201",
   "title": "Reading Comprehension and Argument Literacy II",
-  "description": "Intermediate reading curriculum on inference, structure analysis, vocabulary in context, argument quality, and evidence-based interpretation.",
+  "description": "Develop intermediate reading skills by learning to make inferences, analyze text structures, decode vocabulary, evaluate arguments, and support interpretations with evidence.",
   "subject": "Reading",
   "tags": [
     "core",
@@ -14,7 +14,7 @@ export const Reading201Module: LearningModule = {
   ],
   "minAge": 9,
   "maxAge": 14,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "intermediate",
   "localeSupport": [
     "en",
@@ -38,45 +38,48 @@ export const Reading201Module: LearningModule = {
         {
           "id": "reading-201-l01-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Apply the lesson process and record your reasoning steps."
+          "title": "Inference Detective Worksheet",
+          "content": "Use the provided short story to identify three inferences and highlight the textual evidence that supports each one."
         }
       ],
       "chunks": [
         {
           "id": "reading-201-l01-c1",
           "kind": "concept",
-          "title": "Reading Beyond the Surface",
-          "content": "When we read, we often need to go beyond just the words on the page. Inference is a skill that helps us combine clues from the text with what we already know. However, it's important to remember that our inferences should always be supported by clear evidence from the text itself. This means that while our brains are making connections, we should still be able to point to specific parts of the text that back up our thoughts.\nContext recap: When we read, we often need to go beyond just the words on the page. Inference is a skill that helps us combine clues from the text with what we already know. However, it's important to remember that our inferences should always be supported by clear evidence from the text itself. This means that while our brains are making connections, we should still be able to point to specific parts of the text that back up our thoughts.\nContext recap: When we read, we often need to go beyond just the words on the page. Inference is a skill that helps us combine clues from the text with what we already know. However, it's important to remember that our inferences should always be supported by clear evidence from the text itself. This means that while our brains are making connections, we should still be able to point to specific parts of the text that back up our thoughts.\nWhy this matters: Reading Beyond the Surface helps learners in Reading connect ideas from Reading Comprehension and Argument Literacy II to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "title": "What is an Inference?",
+          "content": "An inference is like being a reading detective. You use clues from the text, combined with what you already know about the world, to figure out what the author doesn't say directly. It's reading between the lines to understand the full picture.",
+          "visualPrompt": "An animation of a detective with a magnifying glass examining words in a book, with a thought bubble showing a lightbulb turning on."
         },
         {
           "id": "reading-201-l01-c2",
           "kind": "concept",
-          "title": "Evidence Quality",
-          "content": "When we look at quotes from a text, it's important to understand that not all quotes are equally helpful. Strong evidence is specific and relevant, meaning it directly relates to the point we are trying to make. This kind of evidence helps us build a solid argument or interpretation. So, when we find evidence, we should ask ourselves if it truly supports our ideas and how it connects to the overall message of the text.\nContext recap: When we look at quotes from a text, it's important to understand that not all quotes are equally helpful. Strong evidence is specific and relevant, meaning it directly relates to the point we are trying to make. This kind of evidence helps us build a solid argument or interpretation. So, when we find evidence, we should ask ourselves if it truly supports our ideas and how it connects to the overall message of the text.\nContext recap: When we look at quotes from a text, it's important to understand that not all quotes are equally helpful. Strong evidence is specific and relevant, meaning it directly relates to the point we are trying to make. This kind of evidence helps us build a solid argument or interpretation. So, when we find evidence, we should ask ourselves if it truly supports our ideas and how it connects to the overall message of the text.\nWhy this matters: Evidence Quality helps learners in Reading connect ideas from Reading Comprehension and Argument Literacy II to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "title": "Finding Strong Evidence",
+          "content": "Not all clues are created equal! Strong evidence is specific and directly connected to your inference. It's a quote or detail you can point to that clearly supports your idea. Weak evidence is vague, off-topic, or doesn't really prove your point.",
+          "visualPrompt": "A visual of a scale weighing a strong, specific quote (heavy side) against a weak, vague sentence (light side)."
         },
         {
           "id": "reading-201-l01-c3",
           "kind": "recap",
-          "title": "Claim-Evidence Link",
-          "content": "As readers, it's our job to explain how the evidence we choose supports our inferences. Instead of just copying lines from the text, we should take the time to analyze and discuss how that evidence connects to our understanding. This deeper engagement helps us become better thinkers and communicators, as we learn to articulate our reasoning clearly and effectively.\nContext recap: As readers, it's our job to explain how the evidence we choose supports our inferences. Instead of just copying lines from the text, we should take the time to analyze and discuss how that evidence connects to our understanding. This deeper engagement helps us become better thinkers and communicators, as we learn to articulate our reasoning clearly and effectively."
+          "title": "Explaining Your Thinking",
+          "content": "Finding evidence isn't the last step. You have to explain *how* that piece of evidence proves your inference is correct. This explanation builds a bridge between the author's words and your own conclusion, showing that your inference is based on the text.",
+          "visualPrompt": "A simple diagram showing a bridge being built to connect an island labeled 'Your Inference' to an island labeled 'Text Evidence'."
         }
       ],
       "flashcards": [
         {
           "id": "reading-201-l01-f1",
           "front": "Inference",
-          "back": "Conclusion drawn from textual clues plus background knowledge."
+          "back": "A conclusion drawn from textual clues plus what you already know."
         },
         {
           "id": "reading-201-l01-f2",
-          "front": "Text evidence",
-          "back": "Specific words or passages used to support interpretation."
+          "front": "Text Evidence",
+          "back": "Specific words or passages from a text used to support an idea."
         },
         {
           "id": "reading-201-l01-f3",
-          "front": "Relevant evidence",
-          "back": "Evidence directly tied to the reading question or claim."
+          "front": "Relevant Evidence",
+          "back": "Evidence that is directly connected to the question or claim."
         }
       ]
     },
@@ -89,22 +92,31 @@ export const Reading201Module: LearningModule = {
         {
           "id": "reading-201-l02-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Apply the lesson process and record your reasoning steps."
+          "title": "Structure Scavenger Hunt",
+          "content": "Read three short passages and identify the primary text structure for each, highlighting the signal words you find."
         }
       ],
       "chunks": [
         {
           "id": "reading-201-l02-c1",
           "kind": "concept",
-          "title": "Common Structures",
-          "content": "Informational texts are often organized in specific ways to help readers understand the ideas better. Common structures include sequences, where events are listed in order; cause and effect, which shows how one thing leads to another; compare and contrast, which highlights similarities and differences; and problem-solution, where a problem is presented along with possible solutions. Recognizing these patterns can make it easier to follow the author's message.\nContext recap: Informational texts are often organized in specific ways to help readers understand the ideas better. Common structures include sequences, where events are listed in order; cause and effect, which shows how one thing leads to another; compare and contrast, which highlights similarities and differences; and problem-solution, where a problem is presented along with possible solutions. Recognizing these patterns can make it easier to follow the author's message."
+          "title": "How Texts Are Built",
+          "content": "Authors organize their writing in patterns called text structures. Knowing these patterns helps you predict what's coming and understand the main idea. Common structures include Sequence (in order), Cause and Effect (why it happened), Compare and Contrast (what's same/different), and Problem and Solution.",
+          "visualPrompt": "Four simple icons: a numbered list for Sequence, a domino effect for Cause/Effect, a Venn diagram for Compare/Contrast, and a key fitting into a lock for Problem/Solution."
         },
         {
           "id": "reading-201-l02-c2",
-          "kind": "practice",
-          "title": "Signal Word Analysis",
-          "content": "Signal words are special words that help us identify the structure of a text. They guide us in predicting what ideas might come next. For example, words like 'first,' 'however,' and 'as a result' can signal different types of relationships between ideas. By paying attention to these signal words, we can improve our understanding of the text and anticipate what the author will discuss next.\nContext recap: Signal words are special words that help us identify the structure of a text. They guide us in predicting what ideas might come next. For example, words like 'first,' 'however,' and 'as a result' can signal different types of relationships between ideas. By paying attention to these signal words, we can improve our understanding of the text and anticipate what the author will discuss next.\nContext recap: Signal words are special words that help us identify the structure of a text. They guide us in predicting what ideas might come next. For example, words like 'first,' 'however,' and 'as a result' can signal different types of relationships between ideas. By paying attention to these signal words, we can improve our understanding of the text and anticipate what the author will discuss next.\nWhy this matters: Signal Word Analysis helps learners in Reading connect ideas from Reading Comprehension and Argument Literacy II to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "kind": "concept",
+          "title": "Spotting the Signs",
+          "content": "Authors leave clues called signal words to show you which structure they are using. Words like 'first' or 'next' signal a sequence, while 'because' or 'as a result' signal a cause. These words are like road signs for your reading journey, guiding your understanding.",
+          "visualPrompt": "An animation of a road sign with words like 'However,' 'Therefore,' and 'Next' appearing on it."
+        },
+        {
+          "id": "reading-201-l02-c3",
+          "kind": "concept",
+          "title": "Why Structure Matters",
+          "content": "Authors choose a structure to achieve a specific goal. A history text might use a sequence to explain events over time. A science article might use cause and effect to explain an experiment. Understanding the structure helps you understand the author's purpose.",
+          "visualPrompt": "An icon of a blueprint next to an icon of a finished house, labeled 'Structure' and 'Author's Goal'."
         }
       ],
       "interactiveActivities": [
@@ -112,23 +124,23 @@ export const Reading201Module: LearningModule = {
           "id": "reading-201-l02-act1",
           "type": "matching_pairs",
           "title": "Structure Signal Match",
-          "description": "Match signal words to likely text structure.",
+          "description": "Match the signal words to the text structure they indicate.",
           "pairs": [
             {
-              "left": "because / therefore",
-              "right": "Cause and effect"
+              "left": "because / therefore / as a result",
+              "right": "Cause and Effect"
             },
             {
-              "left": "first / next / finally",
+              "left": "first / next / finally / then",
               "right": "Sequence"
             },
             {
-              "left": "similarly / however",
-              "right": "Compare and contrast"
+              "left": "similarly / however / on the other hand",
+              "right": "Compare and Contrast"
             },
             {
-              "left": "challenge / solution",
-              "right": "Problem and solution"
+              "left": "the issue is / one solution is",
+              "right": "Problem and Solution"
             }
           ]
         },
@@ -136,10 +148,11 @@ export const Reading201Module: LearningModule = {
           "id": "reading-201-l02-act2",
           "type": "scenario_practice",
           "title": "Paragraph Blueprint Drill",
-          "description": "Identify structure of a short passage and justify your choice.",
+          "description": "Identify the structure of a short passage and justify your choice.",
           "instructions": [
-            "Name one signal phrase from the passage.",
-            "Explain why it indicates your selected structure."
+            "Read the short paragraph.",
+            "Identify its main text structure.",
+            "Highlight the signal words that helped you decide."
           ]
         }
       ]
@@ -149,23 +162,16 @@ export const Reading201Module: LearningModule = {
       "title": "Checkpoint 1: Inference and Structure",
       "type": "quiz",
       "duration": 10,
-      "learningAids": [
-        {
-          "id": "reading-201-l03-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Apply the lesson process and record your reasoning steps."
-        }
-      ],
+      "learningAids": [],
       "questions": [
         {
           "id": "reading-201-l03-q1",
-          "text": "A strong inference should be supported by:",
+          "text": "A strong inference must be supported by:",
           "skillId": "reading-201-skill-inference",
           "options": [
             {
               "id": "a",
-              "text": "Personal opinion only"
+              "text": "Your personal opinion only"
             },
             {
               "id": "b",
@@ -173,24 +179,24 @@ export const Reading201Module: LearningModule = {
             },
             {
               "id": "c",
-              "text": "Unrelated details"
+              "text": "Details from a different story"
             },
             {
               "id": "d",
-              "text": "Title alone"
+              "text": "The title of the book"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Inference quality depends on evidence linkage and explanation."
+          "explanation": "A good inference is not a guess; it is a conclusion logically connected to evidence from the text."
         },
         {
           "id": "reading-201-l03-q2",
-          "text": "Signal words like first, then, finally usually indicate:",
+          "text": "Signal words like 'first', 'then', and 'finally' usually indicate which text structure?",
           "skillId": "reading-201-skill-structure",
           "options": [
             {
               "id": "a",
-              "text": "Cause-effect"
+              "text": "Cause and Effect"
             },
             {
               "id": "b",
@@ -198,65 +204,65 @@ export const Reading201Module: LearningModule = {
             },
             {
               "id": "c",
-              "text": "Compare-contrast"
+              "text": "Compare and Contrast"
             },
             {
               "id": "d",
-              "text": "Argument rebuttal"
+              "text": "Problem and Solution"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Ordered transition terms point to sequence structure."
+          "explanation": "Words that show order or steps in a process point to a sequence structure."
         },
         {
           "id": "reading-201-l03-q3",
-          "text": "Best evidence for an interpretation is typically:",
+          "text": "The best evidence to support an idea from a text is typically:",
           "skillId": "reading-201-skill-evidence",
           "options": [
             {
               "id": "a",
-              "text": "Longest quote"
+              "text": "The longest quote you can find"
             },
             {
               "id": "b",
-              "text": "Most directly relevant quote"
+              "text": "The quote that is most directly relevant"
             },
             {
               "id": "c",
-              "text": "First sentence only"
+              "text": "The first sentence of the passage"
             },
             {
               "id": "d",
-              "text": "Any repeated word"
+              "text": "Any word that is repeated often"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Relevance and precision matter more than quote length."
+          "explanation": "Relevance and precision matter more than the length of a quote. The best evidence directly supports your point."
         },
         {
           "id": "reading-201-l03-q4",
-          "text": "When explaining evidence, you should:",
+          "text": "When you explain your evidence, you should:",
           "skillId": "reading-201-skill-analysis",
           "options": [
             {
               "id": "a",
-              "text": "Restate quote with no interpretation"
+              "text": "Just restate the quote without any interpretation"
             },
             {
               "id": "b",
-              "text": "Explain how quote supports the claim"
+              "text": "Explain how the quote supports your claim or inference"
             },
             {
               "id": "c",
-              "text": "Avoid the question prompt"
+              "text": "Use examples that are not related to the text"
             },
             {
               "id": "d",
-              "text": "Use unrelated examples"
+              "text": "Summarize the entire story"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Evidence must be connected to claim through reasoning."
+          "explanation": "The explanation is your reasoning. It connects the evidence to your main point."
         }
       ]
     },
@@ -269,45 +275,53 @@ export const Reading201Module: LearningModule = {
         {
           "id": "reading-201-l04-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Apply the lesson process and record your reasoning steps."
+          "title": "Word Detective Practice",
+          "content": "For a list of challenging words, find their meaning using context clues from a passage, then break them down into prefix, root, and suffix."
         }
       ],
       "chunks": [
         {
           "id": "reading-201-l04-c1",
           "kind": "concept",
-          "title": "Context Clues",
-          "content": "When we come across unfamiliar words while reading, we can often figure out their meanings by looking at the context around them. This means using definitions, examples, contrasts, and restatements found in the surrounding sentences. By using context clues, we can make educated guesses about what the unknown words mean, which helps us understand the text better.\nContext recap: When we come across unfamiliar words while reading, we can often figure out their meanings by looking at the context around them. This means using definitions, examples, contrasts, and restatements found in the surrounding sentences. By using context clues, we can make educated guesses about what the unknown words mean, which helps us understand the text better."
+          "title": "Using Clues Around the Word",
+          "content": "When you find a tricky word, look for context clues in the same sentence or nearby sentences. Authors often give hints like definitions, examples, synonyms (words with similar meanings), or antonyms (opposites) to help you figure out the meaning.",
+          "visualPrompt": "An animation of a difficult word in a sentence, with surrounding words lighting up like puzzle pieces that fit together to reveal the meaning."
         },
         {
           "id": "reading-201-l04-c2",
           "kind": "concept",
-          "title": "Morphology Strategies",
-          "content": "Understanding the parts of words can help us unlock their meanings. Prefixes, roots, and suffixes are components that can give us clues about unfamiliar academic vocabulary. For instance, knowing that 'un-' means 'not' can help us understand words like 'unhappy.' By breaking down words into their parts, we can decode their meanings more easily and expand our vocabulary.\nContext recap: Understanding the parts of words can help us unlock their meanings. Prefixes, roots, and suffixes are components that can give us clues about unfamiliar academic vocabulary. For instance, knowing that 'un-' means 'not' can help us understand words like 'unhappy.' By breaking down words into their parts, we can decode their meanings more easily and expand our vocabulary."
+          "title": "Breaking Words Apart",
+          "content": "Many big words are built from smaller parts: prefixes (at the start), roots (the core), and suffixes (at the end). If you know 'un-' means 'not' and '-able' means 'can be done', you can figure out that 'unbreakable' means 'cannot be broken'.",
+          "visualPrompt": "The word 'unbelievable' shown as three separate building blocks labeled 'un' (prefix), 'believe' (root), and 'able' (suffix) that click together."
         },
         {
           "id": "reading-201-l04-c3",
           "kind": "recap",
-          "title": "Precision in Meaning",
-          "content": "The choice of words we use can change the meaning of a sentence. It's important for readers to select meanings that fit well with the context of the sentence and the overall passage. By paying attention to nuances in word choice, we can better understand the author's intent and the message they are trying to convey.\nContext recap: The choice of words we use can change the meaning of a sentence. It's important for readers to select meanings that fit well with the context of the sentence and the overall passage. By paying attention to nuances in word choice, we can better understand the author's intent and the message they are trying to convey."
+          "title": "Choosing the Best Meaning",
+          "content": "A word can have several dictionary meanings. For example, 'run' can mean to move fast on your feet, or it can mean to operate a machine. You must use the context of the passage to decide which definition fits best in that specific sentence.",
+          "visualPrompt": "A split screen showing two pictures: a person running and a running faucet. A sentence appears, and the correct picture is highlighted."
         }
       ],
       "flashcards": [
         {
           "id": "reading-201-l04-f1",
-          "front": "Context clue",
-          "back": "Hint from surrounding text that helps determine meaning."
+          "front": "Context Clue",
+          "back": "A hint from the surrounding text that helps define a word."
         },
         {
           "id": "reading-201-l04-f2",
-          "front": "Root word",
-          "back": "Core unit of meaning in a word family."
+          "front": "Root Word",
+          "back": "The core part of a word that holds the basic meaning."
         },
         {
           "id": "reading-201-l04-f3",
           "front": "Prefix",
-          "back": "Word part added before root that modifies meaning."
+          "back": "A word part added to the beginning of a root to change its meaning."
+        },
+        {
+          "id": "reading-201-l04-f4",
+          "front": "Suffix",
+          "back": "A word part added to the end of a root to change its meaning."
         }
       ]
     },
@@ -320,22 +334,31 @@ export const Reading201Module: LearningModule = {
         {
           "id": "reading-201-l05-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Apply the lesson process and record your reasoning steps."
+          "title": "Argument Deconstruction",
+          "content": "Read a short opinion article and identify the author's main claim, two pieces of evidence, and the reasoning that connects them."
         }
       ],
       "chunks": [
         {
           "id": "reading-201-l05-c1",
-          "kind": "practice",
-          "title": "Claim-Evidence-Reasoning Framework",
-          "content": "When we read arguments, we need to identify three key elements: the author's claim, the type of evidence they use, and the quality of their reasoning. This framework helps us analyze the argument effectively. By understanding these components, we can evaluate how convincing the argument is and whether the evidence supports the claim.\nContext recap: When we read arguments, we need to identify three key elements: the author's claim, the type of evidence they use, and the quality of their reasoning. This framework helps us analyze the argument effectively. By understanding these components, we can evaluate how convincing the argument is and whether the evidence supports the claim."
+          "kind": "concept",
+          "title": "The Three Parts of an Argument",
+          "content": "A strong argument is like a three-legged stool. It needs a Claim (what the author believes), Evidence (the facts or proof), and Reasoning (the explanation that connects the evidence to the claim). If one leg is weak, the whole argument can fall over.",
+          "visualPrompt": "An animation of a three-legged stool being built, with each leg labeled 'Claim', 'Evidence', and 'Reasoning'."
         },
         {
           "id": "reading-201-l05-c2",
+          "kind": "concept",
+          "title": "Types of Evidence",
+          "content": "Authors use different kinds of evidence to support their claims. Look for facts, statistics (numbers), quotes from experts, or real-life examples. Be aware that evidence based only on a personal story (anecdote) or opinion may not be as strong.",
+          "visualPrompt": "A collage of icons: a graph for statistics, a graduation cap for an expert, a speech bubble for a quote, and a person telling a story for an anecdote."
+        },
+        {
+          "id": "reading-201-l05-c3",
           "kind": "recap",
-          "title": "Perspective Comparison",
-          "content": "Comparing different texts can help us understand how various factors influence the way information is presented. By looking at the purpose of each text, the intended audience, and the choices made regarding evidence, we can see how these elements shape our interpretation of the material. This comparison enhances our critical thinking skills and helps us become more discerning readers.\nContext recap: Comparing different texts can help us understand how various factors influence the way information is presented. By looking at the purpose of each text, the intended audience, and the choices made regarding evidence, we can see how these elements shape our interpretation of the material. This comparison enhances our critical thinking skills and helps us become more discerning readers."
+          "title": "Seeing Different Viewpoints",
+          "content": "Different authors can write about the same topic but have very different perspectives. When you read two texts, compare their claims and the evidence they choose. Ask yourself: why do they disagree? What information did each author include or leave out?",
+          "visualPrompt": "A simple drawing of two people on opposite sides of a number on the ground. One sees a '6' while the other sees a '9'."
         }
       ],
       "interactiveActivities": [
@@ -343,7 +366,7 @@ export const Reading201Module: LearningModule = {
           "id": "reading-201-l05-act1",
           "type": "sorting_buckets",
           "title": "Argument Element Sort",
-          "description": "Sort statements by claim, evidence, or reasoning role.",
+          "description": "Drag each statement into the correct bucket: Claim, Evidence, or Reasoning.",
           "buckets": [
             "Claim",
             "Evidence",
@@ -351,19 +374,19 @@ export const Reading201Module: LearningModule = {
           ],
           "items": [
             {
-              "text": "School start time should be later",
+              "text": "Schools should start later in the morning.",
               "bucket": "Claim"
             },
             {
-              "text": "Study shows improved sleep outcomes",
+              "text": "A 2022 study found that teens got 30 more minutes of sleep.",
               "bucket": "Evidence"
             },
             {
-              "text": "More sleep supports better attention",
+              "text": "Getting enough sleep is crucial for a student's ability to focus in class.",
               "bucket": "Reasoning"
             },
             {
-              "text": "Survey of student schedules",
+              "text": "According to Dr. Sleepwell, 'Later start times align with teen biology.'",
               "bucket": "Evidence"
             }
           ]
@@ -372,10 +395,11 @@ export const Reading201Module: LearningModule = {
           "id": "reading-201-l05-act2",
           "type": "scenario_practice",
           "title": "Two-Text Comparison Drill",
-          "description": "Compare viewpoints in two short passages.",
+          "description": "Compare the viewpoints in two short passages about year-round school.",
           "instructions": [
-            "Identify one agreement point.",
-            "Identify one key evidence difference."
+            "Read the two short passages about the same topic.",
+            "What is the main claim in each passage?",
+            "Identify one piece of evidence each author uses that the other does not."
           ]
         }
       ]
@@ -385,23 +409,16 @@ export const Reading201Module: LearningModule = {
       "title": "Checkpoint 2: Vocabulary and Argument Literacy",
       "type": "quiz",
       "duration": 10,
-      "learningAids": [
-        {
-          "id": "reading-201-l06-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Apply the lesson process and record your reasoning steps."
-        }
-      ],
+      "learningAids": [],
       "questions": [
         {
           "id": "reading-201-l06-q1",
-          "text": "Best first strategy for unknown academic word in passage is:",
+          "text": "What is the best first strategy for figuring out an unknown word in a passage?",
           "skillId": "reading-201-skill-vocab",
           "options": [
             {
               "id": "a",
-              "text": "Skip immediately"
+              "text": "Skip the word and move on"
             },
             {
               "id": "b",
@@ -409,24 +426,24 @@ export const Reading201Module: LearningModule = {
             },
             {
               "id": "c",
-              "text": "Guess unrelated meaning"
+              "text": "Guess a random meaning"
             },
             {
               "id": "d",
-              "text": "Assume opposite meaning"
+              "text": "Look it up in a dictionary immediately"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Context clues provide efficient meaning signals before lookup."
+          "explanation": "Context clues are the most efficient first step, as they often provide the meaning without you having to stop reading."
         },
         {
           "id": "reading-201-l06-q2",
-          "text": "In argument analysis, evidence quality is strongest when it is:",
+          "text": "In argument analysis, evidence is strongest when it is:",
           "skillId": "reading-201-skill-argument",
           "options": [
             {
               "id": "a",
-              "text": "Emotional only"
+              "text": "Based only on emotion"
             },
             {
               "id": "b",
@@ -434,65 +451,65 @@ export const Reading201Module: LearningModule = {
             },
             {
               "id": "c",
-              "text": "Unverifiable claim"
+              "text": "A claim that can't be proven"
             },
             {
               "id": "d",
-              "text": "Anecdotal with no context"
+              "text": "A personal story with no facts"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Credibility and relevance determine argument support strength."
+          "explanation": "Strong evidence must be believable (credible), directly related to the claim (relevant), and detailed (specific)."
         },
         {
           "id": "reading-201-l06-q3",
-          "text": "Compare-contrast structure is often signaled by:",
+          "text": "A text that uses signal words like 'similarly' and 'however' is likely using which structure?",
           "skillId": "reading-201-skill-structure",
           "options": [
             {
               "id": "a",
-              "text": "first / next / finally"
+              "text": "Sequence"
             },
             {
               "id": "b",
-              "text": "similarly / however"
+              "text": "Compare and Contrast"
             },
             {
               "id": "c",
-              "text": "because / therefore"
+              "text": "Cause and Effect"
             },
             {
               "id": "d",
-              "text": "problem / fix"
+              "text": "Problem and Solution"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Similarity and contrast transitions indicate comparison structure."
+          "explanation": "Words that show sameness ('similarly') and difference ('however') are key signals for the compare and contrast structure."
         },
         {
           "id": "reading-201-l06-q4",
-          "text": "Most effective reading response includes:",
+          "text": "The most effective written response to a reading prompt includes:",
           "skillId": "reading-201-skill-writing",
           "options": [
             {
               "id": "a",
-              "text": "Claim without evidence"
+              "text": "A claim with no evidence"
             },
             {
               "id": "b",
-              "text": "Claim, selected evidence, and explanation"
+              "text": "A claim, well-chosen evidence, and an explanation"
             },
             {
               "id": "c",
-              "text": "Only summary"
+              "text": "Only a summary of the text"
             },
             {
               "id": "d",
-              "text": "Only quote list"
+              "text": "A list of quotes from the text"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Interpretation requires both evidence and reasoning linkage."
+          "explanation": "A complete response needs a main idea (claim), proof (evidence), and the connection between them (explanation/reasoning)."
         }
       ]
     }

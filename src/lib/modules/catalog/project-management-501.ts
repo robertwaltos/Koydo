@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const ProjectManagement501Module: LearningModule = {
+export const project_management_501_Module: LearningModule = {
   "id": "project-management-501",
   "title": "Project Management Specialization Studio",
   "description": "Post-401 specialization in Project Management, focused on project management systems diagnostics, project management operations and execution design, project management impact and tradeoff analysis, and project management governance and leadership through advanced casework, simulation, and defense-based checkpoints.",
@@ -14,7 +14,7 @@ export const ProjectManagement501Module: LearningModule = {
   ],
   "minAge": 17,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en",
@@ -38,8 +38,8 @@ export const ProjectManagement501Module: LearningModule = {
         {
           "id": "project-management-501-l01-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "System Diagnostics Framework",
+          "content": "A diagram illustrating how to define project boundaries, map causal relationships between variables, and set evidence thresholds for system diagnostics."
         }
       ],
       "chunks": [
@@ -47,35 +47,35 @@ export const ProjectManagement501Module: LearningModule = {
           "id": "project-management-501-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "In this lesson, we will explore the concept of advanced scope boundaries in Project Management. We will focus on understanding how to diagnose project management systems effectively and design operations and execution strategies that align with project goals. By the end of this lesson, you will have a clearer understanding of how to set and manage the boundaries of your projects to ensure they stay on track and meet their objectives.\nContext recap: In this lesson, we will explore the concept of advanced scope boundaries in Project Management. We will focus on understanding how to diagnose project management systems effectively and design operations and execution strategies that align with project goals. By the end of this lesson, you will have a clearer understanding of how to set and manage the boundaries of your projects to ensure they stay on track and meet their objectives."
+          "content": "In this lesson, we will explore advanced scope and boundary design in Project Management. We will focus on diagnosing project management systems effectively and designing operations and execution strategies that align with project goals. You will learn to set and manage the boundaries of your projects to ensure they stay on track and meet their objectives."
         },
         {
           "id": "project-management-501-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different factors in a project. They will also identify ranges of uncertainty and understand how various systems depend on each other. This foundational knowledge is crucial for planning interventions effectively, as it helps learners anticipate challenges and make informed decisions.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different factors in a project. They will also identify ranges of uncertainty and understand how various systems depend on each other. This foundational knowledge is crucial for planning interventions effectively, as it helps learners anticipate challenges and make informed decisions."
+          "content": "This section focuses on mapping causal pathways—the connections between different project factors—and identifying ranges of uncertainty. Understanding these system dependencies is crucial for planning effective interventions, anticipating challenges, and making informed decisions."
         },
         {
           "id": "project-management-501-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "In this recap, we emphasize that all claims made during project management must be linked to measurable indicators. This means that we should have clear confidence bounds and established review checkpoints to validate our progress. By ensuring that our claims are backed by evidence, we can maintain accountability and improve our project outcomes.\nContext recap: In this recap, we emphasize that all claims made during project management must be linked to measurable indicators. This means that we should have clear confidence bounds and established review checkpoints to validate our progress. By ensuring that our claims are backed by evidence, we can maintain accountability and improve our project outcomes."
+          "content": "This lesson concludes by emphasizing that all project claims must be linked to measurable indicators. We will cover the importance of establishing clear confidence bounds and review checkpoints to validate progress. By ensuring all claims are backed by evidence, we can maintain accountability and improve project outcomes."
         }
       ],
       "flashcards": [
         {
           "id": "project-management-501-l01-f1",
-          "front": "project management systems diagnostics",
+          "front": "Project management systems diagnostics",
           "back": "A specialization axis requiring explicit assumptions and measurable constraints."
         },
         {
           "id": "project-management-501-l01-f2",
-          "front": "project management operations and execution design",
+          "front": "Project management operations and execution design",
           "back": "Execution architecture that determines reliability under stress."
         },
         {
           "id": "project-management-501-l01-f3",
-          "front": "project management impact and tradeoff analysis",
+          "front": "Project management impact and tradeoff analysis",
           "back": "Evaluation discipline for identifying true gains and hidden costs."
         }
       ]
@@ -88,9 +88,9 @@ export const ProjectManagement501Module: LearningModule = {
       "learningAids": [
         {
           "id": "project-management-501-l02-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "image",
+          "title": "Interactive Workflow Stress Test",
+          "content": "An animated GIF showing a project workflow diagram where an 'adverse event' is introduced, triggering a pre-defined control gate and escalation path."
         }
       ],
       "chunks": [
@@ -98,13 +98,13 @@ export const ProjectManagement501Module: LearningModule = {
           "id": "project-management-501-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "In this interactive practice, learners will have the opportunity to design specialized workflows tailored to their project needs. They will also conduct stress tests on these workflows by simulating adverse scenarios. This hands-on experience will help learners understand how to adapt their plans in real-time and ensure their workflows are robust enough to handle unexpected challenges.\nContext recap: In this interactive practice, learners will have the opportunity to design specialized workflows tailored to their project needs. They will also conduct stress tests on these workflows by simulating adverse scenarios. This hands-on experience will help learners understand how to adapt their plans in real-time and ensure their workflows are robust enough to handle unexpected challenges."
+          "content": "In this interactive lab, you will design specialized project workflows tailored to specific needs. You will then conduct stress tests on these workflows by simulating adverse scenarios, such as budget cuts or timeline shifts. This hands-on experience will help you build robust, adaptive plans that can handle unexpected challenges."
         },
         {
           "id": "project-management-501-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "In this recap, we will discuss the importance of integrating control gate architecture into workflows. This includes establishing checkpoints, criteria for rolling back decisions if necessary, and escalation procedures based on specific thresholds. By understanding these components, learners can create workflows that are not only efficient but also resilient to changes and challenges.\nContext recap: In this recap, we will discuss the importance of integrating control gate architecture into workflows. This includes establishing checkpoints, criteria for rolling back decisions if necessary, and escalation procedures based on specific thresholds. By understanding these components, learners can create workflows that are not only efficient but also resilient to changes and challenges."
+          "content": "We will conclude by reviewing the importance of integrating a control gate architecture into your workflows. This includes establishing clear checkpoints, defining criteria for rolling back decisions, and creating escalation procedures based on specific risk thresholds. These components create workflows that are not only efficient but also resilient."
         }
       ],
       "interactiveActivities": [
@@ -142,9 +142,9 @@ export const ProjectManagement501Module: LearningModule = {
       "learningAids": [
         {
           "id": "project-management-501-l03-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "image",
+          "title": "Key Concepts Review: Lessons 1-2",
+          "content": "A one-page visual summary of core concepts, including the System Diagnostics Framework and Control Gate Architecture, to prepare for the checkpoint."
         }
       ],
       "questions": [
@@ -359,8 +359,8 @@ export const ProjectManagement501Module: LearningModule = {
         {
           "id": "project-management-501-l04-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Trade-off Analysis Matrix",
+          "content": "A visual matrix comparing two project options across dimensions like cost, reliability, safety, and stakeholder impact, with sample data from the case study."
         }
       ],
       "chunks": [
@@ -368,19 +368,19 @@ export const ProjectManagement501Module: LearningModule = {
           "id": "project-management-501-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "In this lesson, we will frame a case that highlights the competing constraints within project management systems. We will analyze how diagnostics can impact project outcomes and the trade-offs that must be considered. By understanding these dynamics, learners will be better equipped to navigate complex project environments and make informed decisions.\nContext recap: In this lesson, we will frame a case that highlights the competing constraints within project management systems. We will analyze how diagnostics can impact project outcomes and the trade-offs that must be considered. By understanding these dynamics, learners will be better equipped to navigate complex project environments and make informed decisions."
+          "content": "This lesson introduces a complex case study that highlights competing constraints within a project management system. We will analyze how different diagnostic approaches can lead to vastly different outcomes and explore the critical trade-offs that must be considered when navigating high-stakes project environments."
         },
         {
           "id": "project-management-501-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "In this practice session, learners will compare different options available to them across several important dimensions, including safety, reliability, cost, equity, and governance. This comparative analysis will help learners understand the implications of their choices and how to balance various factors to achieve the best project outcomes.\nContext recap: In this practice session, learners will compare different options available to them across several important dimensions, including safety, reliability, cost, equity, and governance. This comparative analysis will help learners understand the implications of their choices and how to balance various factors to achieve the best project outcomes."
+          "content": "In this practice session, you will frame the trade-offs presented in the case study. You will compare different strategic options across several critical dimensions, including safety, reliability, cost, equity, and governance, to understand the full implication of each potential decision."
         },
         {
           "id": "project-management-501-l04-c3",
           "kind": "recap",
           "title": "Decision Memo Pattern",
-          "content": "In this recap, we will outline the key components of a decision memo. Each recommendation made should include the underlying assumptions, the evidence that supports it, risk controls to mitigate potential issues, and fallback plans in case the initial plan does not work out. This structured approach ensures that all decisions are well thought out and documented.\nContext recap: In this recap, we will outline the key components of a decision memo. Each recommendation made should include the underlying assumptions, the evidence that supports it, risk controls to mitigate potential issues, and fallback plans in case the initial plan does not work out. This structured approach ensures that all decisions are well thought out and documented."
+          "content": "We will conclude by introducing a structured decision memo pattern. This framework requires that every recommendation includes its underlying assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures all decisions are well-reasoned, transparent, and defensible."
         }
       ]
     },
@@ -392,9 +392,9 @@ export const ProjectManagement501Module: LearningModule = {
       "learningAids": [
         {
           "id": "project-management-501-l05-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "image",
+          "title": "Simulation Control Dashboard",
+          "content": "A screenshot of the interactive simulation's dashboard, showing key performance indicators (KPIs), governance alerts, and the control levers available to the project manager."
         }
       ],
       "chunks": [
@@ -402,13 +402,13 @@ export const ProjectManagement501Module: LearningModule = {
           "id": "project-management-501-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "In this interactive practice, learners will take on the role of managing scenario controls while balancing performance metrics and governance constraints. This experience will help them understand the complexities of real-time decision-making in project management and the importance of adhering to established guidelines while striving for optimal performance.\nContext recap: In this interactive practice, learners will take on the role of managing scenario controls while balancing performance metrics and governance constraints. This experience will help them understand the complexities of real-time decision-making in project management and the importance of adhering to established guidelines while striving for optimal performance."
+          "content": "In this interactive simulation, you will manage a project in real-time, making critical decisions to balance performance metrics against governance constraints. This experience will challenge you to apply the course concepts under pressure and highlight the complexities of dynamic decision-making."
         },
         {
           "id": "project-management-501-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "In this recap, we will discuss the importance of designing effective responses that can adapt to changing circumstances. These responses should be able to update control gates without losing traceability or accountability. By mastering this skill, learners will be better prepared to manage projects dynamically and responsively.\nContext recap: In this recap, we will discuss the importance of designing effective responses that can adapt to changing circumstances. These responses should be able to update control gates without losing traceability or accountability. By mastering this skill, learners will be better prepared to manage projects dynamically and responsively."
+          "content": "The simulation will conclude with a debrief on adaptive response design. We will analyze how to design effective responses that can update control gates and project plans mid-stream without losing traceability or accountability, preparing you to manage projects dynamically and responsively."
         }
       ],
       "interactiveActivities": [
@@ -428,9 +428,9 @@ export const ProjectManagement501Module: LearningModule = {
       "learningAids": [
         {
           "id": "project-management-501-l06-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "image",
+          "title": "Key Concepts Review: Lessons 4-5",
+          "content": "A visual guide summarizing the Trade-off Analysis Matrix and the Decision Memo Pattern to prepare for the case and simulation checkpoint."
         }
       ],
       "questions": [
@@ -645,8 +645,8 @@ export const ProjectManagement501Module: LearningModule = {
         {
           "id": "project-management-501-l07-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Stakeholder Impact Map",
+          "content": "A diagram mapping a project's impact across different stakeholder groups (e.g., customers, employees, community), showing positive, negative, and neutral effects over time."
         }
       ],
       "chunks": [
@@ -654,19 +654,19 @@ export const ProjectManagement501Module: LearningModule = {
           "id": "project-management-501-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "In this lesson, learners will explore how to map the distribution of impacts among different stakeholder groups. This includes identifying the benefits, burdens, and any delayed effects that may arise from project decisions. Understanding these dynamics is crucial for ensuring that all voices are heard and considered in the project management process.\nContext recap: In this lesson, learners will explore how to map the distribution of impacts among different stakeholder groups. This includes identifying the benefits, burdens, and any delayed effects that may arise from project decisions. Understanding these dynamics is crucial for ensuring that all voices are heard and considered in the project management process."
+          "content": "This lesson explores how to map the distribution of project impacts across different stakeholder groups. You will learn to identify and quantify the benefits, burdens, and potential delayed effects of project decisions, ensuring that all stakeholder interests are considered equitably."
         },
         {
           "id": "project-management-501-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "In this lesson, we will focus on the architecture of accountability within project management. This involves ensuring that there is clear traceability of decisions made, rights for review, and obligations for remediation if issues arise. By integrating these elements, learners can foster a culture of responsibility and transparency in their projects.\nContext recap: In this lesson, we will focus on the architecture of accountability within project management. This involves ensuring that there is clear traceability of decisions made, rights for review, and obligations for remediation if issues arise. By integrating these elements, learners can foster a culture of responsibility and transparency in their projects."
+          "content": "We will then focus on designing a robust accountability architecture. This involves creating systems for clear decision traceability, establishing stakeholder rights for review, and defining clear obligations for remediation when issues arise, fostering a culture of responsibility and transparency."
         },
         {
           "id": "project-management-501-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "At the end of our project management journey, it's important to have a final checklist. This checklist helps us connect the results we achieved with our ethical responsibilities, ensure we followed all necessary policies, and confirm that we built resilience into our projects. By using this checklist, we can reflect on our work and make sure we are ready for future challenges.\nContext recap: At the end of our project management journey, it's important to have a final checklist. This checklist helps us connect the results we achieved with our ethical responsibilities, ensure we followed all necessary policies, and confirm that we built resilience into our projects. By using this checklist, we can reflect on our work and make sure we are ready for future challenges."
+          "content": "To conclude the lesson, we will introduce a responsible leadership checklist. This tool helps connect project outcomes with ethical responsibilities, policy compliance, and system resilience. Using this checklist ensures a comprehensive review of your work and prepares you for future leadership challenges."
         }
       ],
       "flashcards": [
@@ -695,9 +695,9 @@ export const ProjectManagement501Module: LearningModule = {
       "learningAids": [
         {
           "id": "project-management-501-l08-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "image",
+          "title": "Defense Brief Template",
+          "content": "A structured document template for the capstone defense brief, with clearly marked sections for claims, supporting evidence, uncertainty analysis, and remediation plans."
         }
       ],
       "chunks": [
@@ -705,13 +705,13 @@ export const ProjectManagement501Module: LearningModule = {
           "id": "project-management-501-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "In this activity, you will create a defense brief. This brief will include important claims that support your project, evidence that backs up those claims, and an understanding of any uncertainties that may arise. Additionally, you will outline possible pathways for remediation, which are steps to take if things don't go as planned. This exercise will help you think critically and prepare for presenting your project effectively.\nContext recap: In this activity, you will create a defense brief. This brief will include important claims that support your project, evidence that backs up those claims, and an understanding of any uncertainties that may arise. Additionally, you will outline possible pathways for remediation, which are steps to take if things don't go as planned. This exercise will help you think critically and prepare for presenting your project effectively.\nContext recap: In this activity, you will create a defense brief. This brief will include important claims that support your project, evidence that backs up those claims, and an understanding of any uncertainties that may arise. Additionally, you will outline possible pathways for remediation, which are steps to take if things don't go as planned. This exercise will help you think critically and prepare for presenting your project effectively.\nWhy this matters: Defense Brief Assembly helps learners in Project Management connect ideas from Project Management Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "In this capstone activity, you will assemble a comprehensive defense brief for a proposed project intervention. This brief must articulate your core claims, present the evidence backing those claims, explicitly state your assumptions and uncertainty bounds, and outline clear pathways for remediation if risks materialize."
         },
         {
           "id": "project-management-501-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "During this session, you will practice responding to questions and feedback from an expert panel. You will rehearse how to address critiques related to technical aspects of your project, governance issues, and concerns from stakeholders. This practice is essential for building your confidence and ensuring you can communicate your ideas clearly and effectively when it matters most.\nContext recap: During this session, you will practice responding to questions and feedback from an expert panel. You will rehearse how to address critiques related to technical aspects of your project, governance issues, and concerns from stakeholders. This practice is essential for building your confidence and ensuring you can communicate your ideas clearly and effectively when it matters most."
+          "content": "The lab culminates in a rehearsal where you will defend your brief before a simulated expert panel. You will practice responding to critical questions and feedback related to your project's technical, governance, and stakeholder dimensions, building the confidence to communicate your recommendations effectively under scrutiny."
         }
       ],
       "interactiveActivities": [

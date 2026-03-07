@@ -1,9 +1,9 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const InternationalBusiness201Module: LearningModule = {
+export const international_business_201_Module: LearningModule = {
   "id": "international-business-201",
   "title": "International Strategy & Market Entry",
-  "description": "Master the strategic decisions firms face when expanding across borders. Analyze foreign direct investment theory, evaluate market entry modes from exporting to wholly-owned subsidiaries, and learn to manage the human side of international operations including expatriates and cross-cultural teams.",
+  "description": "Master the strategic decisions firms face when expanding across borders. Analyze foreign direct investment theory, evaluate market entry modes, assess country risk, and learn to manage the human side of international operations, including expatriates and cross-cultural teams.",
   "subject": "Business",
   "tags": [
     "core",
@@ -14,7 +14,7 @@ export const InternationalBusiness201Module: LearningModule = {
   ],
   "minAge": 18,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "intermediate",
   "localeSupport": [
     "en",
@@ -22,260 +22,260 @@ export const InternationalBusiness201Module: LearningModule = {
   ],
   "thumbnail": "/placeholders/lesson-robot.svg",
   "learningObjectives": [
-    "Explain the major theories of foreign direct investment",
-    "Compare and contrast market entry modes and their trade-offs",
-    "Evaluate location selection criteria for international expansion",
-    "Describe best practices in expatriate management",
-    "Develop strategies for leading cross-cultural teams effectively",
-    "Conduct a country risk assessment for market entry decisions",
-    "Integrate strategic analysis to recommend optimal entry approaches"
+    "Explain the major theories of foreign direct investment.",
+    "Compare and contrast market entry modes and their trade-offs.",
+    "Evaluate location selection criteria for international expansion.",
+    "Distinguish between political, economic, and financial country risks.",
+    "Describe best practices in expatriate management.",
+    "Develop strategies for leading cross-cultural teams effectively.",
+    "Integrate strategic analysis to recommend optimal market entry approaches."
   ],
   "lessons": [
     {
       "id": "international-business-201-l01",
-      "title": "Foreign Direct Investment Theory",
+      "title": "Foundations of International Strategy & FDI",
       "type": "video",
       "duration": 13,
       "objectives": [
-        "Define FDI and distinguish it from portfolio investment",
-        "Explain Dunning's OLI paradigm",
-        "Describe the motivations behind horizontal and vertical FDI"
+        "Define FDI and distinguish it from portfolio investment.",
+        "Explain Dunning's OLI paradigm as a framework for FDI decisions.",
+        "Describe the motivations behind horizontal and vertical FDI."
       ],
       "chunks": [
         {
           "id": "international-business-201-l01-c1",
-          "title": "Understanding FDI",
-          "content": "Foreign direct investment, commonly known as FDI, is an important concept in the world of international business. It occurs when a company chooses to invest directly in business operations or production in a different country. This type of investment typically means that the company owns at least 10% of the business in that foreign location. This is different from portfolio investment, where investors buy stocks and bonds without taking an active role in managing the companies they invest in. With FDI, the investing company is actively involved in the management and decision-making processes of the business.\nEvery year, global FDI flows exceed an impressive $1.3 trillion, highlighting its significance in fostering economic connections between countries. FDI plays a vital role in helping economies grow and become more integrated with one another. There are two primary forms of FDI: greenfield investments and brownfield acquisitions. Greenfield investments involve a company building new facilities from scratch, creating jobs and infrastructure in the host country. On the other hand, brownfield acquisitions occur when a company purchases an existing business, allowing for quicker entry into the market. Both strategies enable companies to broaden their influence and reach in international markets, contributing to global economic development.\nContext recap: Foreign direct investment, commonly known as FDI, is an important concept in the world of international business. It occurs when a company chooses to invest directly in business operations or production in a different country. This type of investment typically means that the company owns at least 10% of the business in that foreign location. This is different from portfolio investment, where investors buy stocks and bonds without taking an active role in managing the companies they invest in.\nWhy this matters: Understanding FDI helps learners in Business connect ideas from International Strategy & Market Entry to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "Understanding Foreign Direct Investment (FDI)",
+          "content": "Foreign Direct Investment (FDI) is an investment made by a company into business operations in a foreign country. It is characterized by a substantial, long-term interest and active management control, typically defined as owning 10% or more of the foreign business. This distinguishes FDI from passive portfolio investment, which involves buying stocks and bonds without direct managerial involvement. [Visual: An animated infographic comparing a hand planting a tree (FDI) versus a hand buying a stock certificate (Portfolio Investment).] Global FDI flows are a primary driver of economic integration, with firms using it to access new markets and resources. FDI takes two main forms: greenfield investments, where a company builds new facilities from the ground up, and brownfield acquisitions, which involve purchasing an existing foreign company. Both strategies enable firms to expand their global footprint."
         },
         {
           "id": "international-business-201-l01-c2",
           "title": "Dunning's OLI Paradigm",
-          "content": "John Dunning's eclectic paradigm, often referred to as the OLI framework, is a valuable tool for understanding why companies decide to invest directly in foreign markets. This framework outlines three essential advantages that motivate firms to engage in foreign direct investment (FDI). The first advantage is known as Ownership advantages (O). This includes unique assets such as proprietary technologies, well-established brands, or specialized managerial expertise that provide a competitive edge in the marketplace. For instance, a company with a patented technology can leverage that innovation to outperform competitors.\nThe second advantage is called Location advantages (L). This refers to beneficial factors present in the host country where the investment is made. These factors can include a large consumer market, lower operational costs, or access to important natural resources. For example, a company might choose to invest in a country with abundant raw materials to reduce production costs and increase efficiency.\nThe third advantage is Internalization advantages (I). This concept suggests that companies can maximize their profits by keeping their ownership advantages within the organization rather than licensing them to other firms. By internalizing these advantages, companies can maintain control over their unique resources and strategies, leading to greater profitability.\nFor a company to favor foreign direct investment over other investment strategies, it is crucial that all three of these conditions—Ownership, Location, and Internalization—are satisfied. When these elements align, firms are more likely to pursue FDI as their preferred approach to international expansion.\nContext recap: John Dunning's eclectic paradigm, often referred to as the OLI framework, is a valuable tool for understanding why companies decide to invest directly in foreign markets. This framework outlines three essential advantages that motivate firms to engage in foreign direct investment (FDI). The first advantage is known as Ownership advantages (O). This includes unique assets such as proprietary technologies, well-established brands, or specialized managerial expertise that provide a competitive edge in the marketplace.\nWhy this matters: Dunning's OLI Paradigm helps learners in Business connect ideas from International Strategy & Market Entry to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "John Dunning's eclectic paradigm, or OLI framework, explains why firms choose FDI. It posits that three conditions must be met. First are Ownership (O) advantages: proprietary assets like technology, brand recognition, or managerial skills that give the firm a competitive edge. Second are Location (L) advantages: factors in a host country, such as market size, low-cost labor, or access to natural resources, that make it an attractive place to invest. [Visual: A diagram showing three interlocking circles labeled 'Ownership,' 'Location,' and 'Internalization.' The overlapping center is labeled 'FDI.'] The final condition is Internalization (I) advantages: it must be more profitable for the firm to control its ownership advantages internally rather than licensing them to another company. When all three O-L-I advantages are present, FDI becomes the most logical strategic choice for international expansion."
         },
         {
           "id": "international-business-201-l01-c3",
           "title": "Horizontal vs. Vertical FDI",
-          "content": "Foreign Direct Investment (FDI) is an important concept in international business, and it can be categorized into two main types: Horizontal FDI and Vertical FDI. Let's explore these two types in more detail.\nHorizontal FDI occurs when a company decides to replicate its existing business operations in a different country. A great example of this is Toyota, a well-known car manufacturer, which builds car manufacturing plants in the United States. By doing this, Toyota can produce cars closer to its American customers, making it easier to meet their needs and preferences. This strategy helps the company to access the local market more effectively and avoid any trade barriers that might make it difficult to sell cars imported from Japan.\nOn the other hand, we have Vertical FDI, which involves a company setting up different stages of its production process in various countries. This can be broken down into two types: backward vertical integration and forward vertical integration. Backward vertical integration happens when a company sources raw materials or components from another country. For instance, an electronics company might obtain parts from Southeast Asia to reduce costs and ensure a steady supply of necessary components. Forward vertical integration, however, occurs when a company establishes distribution channels in another region, such as setting up warehouses or sales offices in Europe to reach customers more efficiently.\nIn summary, companies often choose Horizontal FDI to gain better access to local markets and avoid trade barriers, while Vertical FDI is typically motivated by the desire to reduce costs and improve access to essential resources. Understanding these strategies is crucial for anyone interested in how businesses operate on a global scale.\nContext recap: Foreign Direct Investment (FDI) is an important concept in international business, and it can be categorized into two main types: Horizontal FDI and Vertical FDI. Let's explore these two types in more detail. Horizontal FDI occurs when a company decides to replicate its existing business operations in a different country. A great example of this is Toyota, a well-known car manufacturer, which builds car manufacturing plants in the United States.\nWhy this matters: Horizontal vs. Vertical FDI helps learners in Business connect ideas from International Strategy & Market Entry to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "FDI can be classified based on its strategic motivation. Horizontal FDI occurs when a firm replicates its domestic business activities in a foreign country. For example, a car manufacturer like Toyota building a factory in the U.S. to serve the American market is engaging in horizontal FDI. The primary driver is market access, often to overcome trade barriers or reduce transportation costs. [Visual: A simple flowchart showing Horizontal FDI as one company with parallel factories in Country A and Country B. Vertical FDI is shown as a value chain with different stages (e.g., raw materials, assembly, sales) located in different countries.] In contrast, Vertical FDI involves locating different stages of the value chain in different countries to leverage cost efficiencies. This can be backward vertical integration, such as sourcing components from a low-cost country, or forward vertical integration, like establishing distribution centers in a key market. The main driver for vertical FDI is cost reduction and supply chain optimization."
         }
       ],
       "flashcards": [
         {
           "id": "international-business-201-l01-f1",
           "front": "Foreign Direct Investment (FDI)",
-          "back": "Investment in production or operations in another country with active management control, typically 10%+ ownership — distinct from passive portfolio investment"
+          "back": "An investment in foreign business operations with active management control (typically 10%+ ownership), distinct from passive portfolio investment."
         },
         {
           "id": "international-business-201-l01-f2",
-          "front": "Dunning's OLI paradigm",
-          "back": "FDI requires three advantages: Ownership (proprietary assets), Location (host country factors), Internalization (more profitable to operate internally than to license)"
+          "front": "Dunning's OLI Paradigm",
+          "back": "A framework stating that FDI requires three advantages: Ownership (proprietary assets), Location (host country factors), and Internalization (benefits of keeping operations in-house)."
         },
         {
           "id": "international-business-201-l01-f3",
           "front": "Horizontal vs. Vertical FDI",
-          "back": "Horizontal: replicating same activities abroad (market access). Vertical: locating different value chain stages abroad (cost efficiency and input access)"
+          "back": "Horizontal FDI replicates the same activities abroad for market access. Vertical FDI splits the value chain across countries for cost efficiency."
         }
       ],
       "learningAids": [
         {
           "id": "international-business-201-l01-a1",
           "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary of the lesson's main concept."
+          "title": "OLI Framework Diagram",
+          "content": "A visual summary of the Ownership, Location, and Internalization advantages that drive Foreign Direct Investment."
         }
       ]
     },
     {
       "id": "international-business-201-l02",
-      "title": "Market Entry Modes",
+      "title": "Choosing a Market Entry Mode",
       "type": "video",
       "duration": 15,
       "objectives": [
-        "Compare exporting, licensing, and franchising as entry strategies",
-        "Evaluate joint ventures versus wholly-owned subsidiaries",
-        "Analyze the trade-offs between control, risk, and resource commitment"
+        "Compare exporting, licensing, and franchising as entry strategies.",
+        "Evaluate joint ventures versus wholly-owned subsidiaries.",
+        "Analyze the trade-offs between control, risk, and resource commitment for each mode."
       ],
       "chunks": [
         {
           "id": "international-business-201-l02-c1",
           "title": "Low-Commitment Modes: Exporting and Licensing",
-          "content": "Exporting is one of the easiest and most straightforward ways for a company to enter a new market. This process involves producing goods in the company's home country and then selling them in other countries. Companies can use various channels to reach customers abroad, including agents, distributors, or even selling directly through their own stores. One of the main advantages of exporting is that it requires a relatively low investment compared to other market entry strategies, making it an attractive option for many businesses. However, companies must also consider some challenges that come with exporting. For example, they may face transportation costs, which can add to the overall expense of selling products internationally. Additionally, there are trade barriers, such as tariffs and regulations, that can impact how profitable exporting can be.\nAnother important method for entering foreign markets is licensing. In this arrangement, a foreign company is granted permission to use a firm's intellectual property, which includes valuable assets like patents, trademarks, or specialized knowledge, in exchange for a royalty fee. Licensing can be a low-risk way for companies to access new markets because it allows them to expand without making significant investments. However, there are some risks involved. For instance, companies may lose control over the quality of their products when they allow others to produce them. Furthermore, there is a possibility that the foreign company could become a competitor in the future by learning from the knowledge shared through the licensing agreement. Therefore, while both exporting and licensing offer unique opportunities for market entry, they also come with their own sets of challenges that companies must carefully consider.\nContext recap: Exporting is one of the easiest and most straightforward ways for a company to enter a new market. This process involves producing goods in the company's home country and then selling them in other countries. Companies can use various channels to reach customers abroad, including agents, distributors, or even selling directly through their own stores. One of the main advantages of exporting is that it requires a relatively low investment compared to other market entry strategies, making it an attractive option for many businesses.\nWhy this matters: Low-Commitment Modes: Exporting and Licensing helps learners in Business connect ideas from International Strategy & Market Entry to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "Firms often begin international expansion with low-commitment entry modes. Exporting, the most common approach, involves producing goods domestically and selling them abroad. It requires minimal investment but can be limited by transportation costs and trade barriers like tariffs. [Visual: A spectrum graphic appears on screen, from 'Low Commitment/Low Control' to 'High Commitment/High Control.' 'Exporting' and 'Licensing' are placed at the low end.] Licensing is an arrangement where a firm (the licensor) grants a foreign company (the licensee) the rights to its intellectual property, such as patents or trademarks, for a royalty fee. This mode offers a low-risk path to generating revenue from a foreign market, but it risks a loss of control over quality and the potential creation of a future competitor."
         },
         {
           "id": "international-business-201-l02-c2",
           "title": "Mid-Commitment Modes: Franchising and Joint Ventures",
-          "content": "Franchising is a special type of licensing that allows one business, known as the franchisor, to give another business, called the franchisee, the right to operate using its brand and business model. This arrangement includes providing a complete business system, which consists of the brand name, an operations manual that guides how to run the business, training for the franchisee, and support for the supply chain. In return, the franchisee pays fees and royalties to the franchisor. Many famous companies, such as McDonald's and Hilton, use franchising to grow their businesses around the world.\nOn the other hand, joint ventures, often referred to as JVs, are a collaborative approach where two or more companies come together to form a new business entity that they all own together. This strategy allows these companies to share the costs and risks associated with entering a new market. Additionally, joint ventures can provide valuable local knowledge and help meet government regulations in countries that have restrictions on foreign ownership. However, it is important to note that joint ventures can also encounter challenges, such as disagreements between partners and the potential for sensitive information to be shared unintentionally. Understanding these modes of market entry is crucial for businesses looking to expand internationally and navigate the complexities of different markets effectively.\nContext recap: Franchising is a special type of licensing that allows one business, known as the franchisor, to give another business, called the franchisee, the right to operate using its brand and business model. This arrangement includes providing a complete business system, which consists of the brand name, an operations manual that guides how to run the business, training for the franchisee, and support for the supply chain. In return, the franchisee pays fees and royalties to the franchisor. Many famous companies, such as McDonald's and Hilton, use franchising to grow their businesses around the world.\nWhy this matters: Mid-Commitment Modes: Franchising and Joint Ventures helps learners in Business connect ideas from International Strategy & Market Entry to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "As commitment increases, firms gain more control. Franchising is a specialized form of licensing where the franchisor provides the franchisee with a complete business system, including the brand, operating procedures, and supply chain support, in exchange for fees and royalties. This model, used by firms like McDonald's, allows for rapid expansion while maintaining brand standards. [Visual: The spectrum graphic is shown again, with 'Franchising' and 'Joint Ventures' added to the middle.] A joint venture (JV) involves two or more companies creating a new, jointly-owned business entity. JVs are attractive for sharing costs and risks, gaining local market knowledge, and satisfying host-country regulations on foreign ownership. However, they carry the risk of partner conflicts and knowledge leakage."
         },
         {
           "id": "international-business-201-l02-c3",
           "title": "High-Commitment Modes: Wholly-Owned Subsidiaries",
-          "content": "A wholly-owned subsidiary is a type of business that is entirely owned and managed by a parent company. This means that the parent company has complete control over the subsidiary's operations and decisions. There are two main ways to create a wholly-owned subsidiary: through greenfield investment or acquisition. In a greenfield investment, the parent company builds a new facility or operation from the ground up. This approach allows the company to design the operation to fit its specific culture and values, but it often takes a longer time to get started and become fully operational. On the other hand, an acquisition involves purchasing an existing company. This method allows the parent company to quickly enter the market and benefit from the resources and capabilities that the acquired company already has. However, acquisitions can also present challenges, particularly when it comes to integrating the two companies' operations and cultures. Overall, establishing a wholly-owned subsidiary requires a significant commitment of resources, including time, money, and management effort. However, it also provides the parent company with the highest level of control over its operations, technology, and profits, making it a very appealing option for many businesses looking to expand their reach in the market.\nContext recap: A wholly-owned subsidiary is a type of business that is entirely owned and managed by a parent company. This means that the parent company has complete control over the subsidiary's operations and decisions. There are two main ways to create a wholly-owned subsidiary: through greenfield investment or acquisition. In a greenfield investment, the parent company builds a new facility or operation from the ground up.\nWhy this matters: High-Commitment Modes: Wholly-Owned Subsidiaries helps learners in Business connect ideas from International Strategy & Market Entry to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "For maximum control, firms can establish a wholly-owned subsidiary, an entity in a foreign market that is 100% owned by the parent company. This can be done through a greenfield investment (building from scratch) or an acquisition (buying an existing firm). [Visual: The spectrum graphic is completed, with 'Wholly-Owned Subsidiary' at the high end.] A greenfield approach allows a firm to build its desired corporate culture and operations but is slow and capital-intensive. An acquisition provides immediate market presence and capabilities but poses significant integration challenges. While wholly-owned subsidiaries require the largest resource commitment and bear the full risk, they offer complete control over technology, operations, and profits."
         }
       ],
       "flashcards": [
         {
           "id": "international-business-201-l02-f1",
-          "front": "Licensing as market entry",
-          "back": "A foreign firm pays royalties to use intellectual property — low risk and investment, but risks quality control loss and creating future competitors"
+          "front": "Licensing Trade-offs",
+          "back": "Low risk and investment, but risks loss of quality control and the creation of a future competitor by transferring knowledge."
         },
         {
           "id": "international-business-201-l02-f2",
-          "front": "Joint venture advantages and risks",
-          "back": "Advantages: shared costs, local knowledge, meeting ownership requirements. Risks: partner conflicts, knowledge leakage, split decision-making"
+          "front": "Joint Venture (JV) Pros and Cons",
+          "back": "Pros: Shared costs/risks, local knowledge. Cons: Partner conflicts, loss of full control, potential knowledge leakage."
         },
         {
           "id": "international-business-201-l02-f3",
           "front": "Greenfield vs. Acquisition",
-          "back": "Greenfield: custom-built, culturally aligned, but slower. Acquisition: immediate presence and capabilities, but integration risk and cultural clashes"
+          "back": "Greenfield: Custom-built, culturally aligned, but slower. Acquisition: Immediate market presence, but carries integration risks and potential cultural clashes."
         }
       ],
       "learningAids": [
         {
           "id": "international-business-201-l02-a1",
           "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary of the lesson's main concept."
+          "title": "Decision Matrix: Entry Mode Trade-offs",
+          "content": "A table comparing entry modes across key dimensions: Control, Risk, Resource Commitment, and Speed."
         }
       ]
     },
     {
       "id": "international-business-201-l03",
-      "title": "Location Selection for International Expansion",
+      "title": "Selecting an International Location",
       "type": "interactive",
       "duration": 14,
       "objectives": [
-        "Identify the key factors in evaluating potential host countries",
-        "Apply frameworks for comparing location alternatives",
-        "Assess infrastructure, institutional quality, and market potential"
+        "Identify the key factors in evaluating potential host countries.",
+        "Apply frameworks for comparing location alternatives.",
+        "Assess infrastructure, institutional quality, and market potential."
       ],
       "chunks": [
         {
           "id": "international-business-201-l03-c1",
-          "title": "Market-Seeking Factors",
-          "content": "When companies decide to expand into new markets, they focus on several important factors that help them understand where to invest. One of the first things they look at is the size of the market. This can be measured in different ways, such as the Gross Domestic Product (GDP), which tells us how much money a country makes, and the population, which shows how many people live there. They also consider the growth rate of the economy, which indicates how fast it is getting bigger, and the average income per person, which helps them understand how much money consumers have to spend. Additionally, companies pay attention to consumer demographics, which include information about the age, gender, and preferences of the people in that market.\nMarket-seeking foreign direct investment (FDI) usually targets countries that have large or rapidly growing economies. These are places where there is a strong or emerging demand for the products that the company offers. For example, countries like China and India are very attractive for market-seeking investments because they have huge populations and a growing middle class that is starting to buy more goods and services. Furthermore, companies also think about competitive density when choosing a market. This means they look for markets that are not too crowded with competitors. A market that has fewer companies competing for customers can provide more opportunities for success than one that is already filled with many businesses trying to sell similar products.\nContext recap: When companies decide to expand into new markets, they focus on several important factors that help them understand where to invest. One of the first things they look at is the size of the market. This can be measured in different ways, such as the Gross Domestic Product (GDP), which tells us how much money a country makes, and the population, which shows how many people live there. They also consider the growth rate of the economy, which indicates how fast it is getting bigger, and the average income per person, which helps them understand how much money consumers have to spend.\nWhy this matters: Market-Seeking Factors helps learners in Business connect ideas from International Strategy & Market Entry to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "Market-Seeking Drivers",
+          "content": "When the goal is to serve a new market, firms analyze factors related to market potential. Key metrics include market size (GDP, population), market growth rate, and consumer purchasing power (per capita income). [Visual: An interactive dashboard where the user can click on countries like China or India to see pop-ups with key market data.] Firms also assess consumer demographics and competitive intensity. Market-seeking FDI targets countries with large or rapidly growing economies where there is strong demand for the firm's products. An ideal market has high potential and is not yet saturated with competitors, offering a greater opportunity for success."
         },
         {
           "id": "international-business-201-l03-c2",
-          "title": "Efficiency-Seeking and Resource-Seeking Factors",
-          "content": "When companies decide where to set up their operations in different countries, they think about two main factors: efficiency-seeking and resource-seeking. Efficiency-seeking means that businesses want to keep their production costs as low as possible. This includes looking at things like how much they have to pay their workers (labor rates), the cost of energy, any tax breaks they might get, and how good the transportation and logistics systems are in that area. For example, countries like Vietnam and Mexico have become popular choices for manufacturing because they offer lower wages and have trade agreements that make it easier to export goods.\nOn the other hand, resource-seeking decisions are about finding places that have valuable natural resources. For instance, Australia is known for its mining operations, while Bangalore in India is famous for its skilled tech workers and innovation hubs. Additionally, some locations are chosen for their agricultural resources, which are important for food production.\nThe best places for companies to set up shop are those that not only have low costs but also offer reliable infrastructure, a stable political environment, and regulations that support business growth. This combination helps companies thrive and succeed in the international market.\nContext recap: When companies decide where to set up their operations in different countries, they think about two main factors: efficiency-seeking and resource-seeking. Efficiency-seeking means that businesses want to keep their production costs as low as possible. This includes looking at things like how much they have to pay their workers (labor rates), the cost of energy, any tax breaks they might get, and how good the transportation and logistics systems are in that area. For example, countries like Vietnam and Mexico have become popular choices for manufacturing because they offer lower wages and have trade agreements that make it easier to export goods.\nWhy this matters: Efficiency-Seeking and Resource-Seeking Factors helps learners in Business connect ideas from International Strategy & Market Entry to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "Efficiency and Resource-Seeking Drivers",
+          "content": "Firms may expand abroad to improve efficiency or access key resources. Efficiency-seeking FDI is driven by the desire to lower production costs. Key factors include labor costs, energy prices, tax incentives, and the quality of logistics and transportation infrastructure. [Visual: A world map highlighting key global hubs for different activities: manufacturing in Vietnam, call centers in the Philippines, R&D in Israel.] Resource-seeking FDI targets locations with access to essential inputs. This can mean natural resources, like minerals in Australia, or strategic assets like a skilled talent pool, such as the tech ecosystem in Bangalore, India. The optimal location balances low costs with reliable infrastructure and a supportive business environment."
         },
         {
           "id": "international-business-201-l03-c3",
           "title": "Institutional Quality and Business Climate",
-          "content": "When companies think about expanding into new countries, they look at more than just the economy. One important factor is the quality of the institutions in those countries. This means they consider things like whether the rule of law is strong, how well contracts are enforced, how much corruption exists, how transparent the regulations are, and how well intellectual property is protected. To help measure these important aspects, businesses often refer to tools like the World Bank's Ease of Doing Business indicators and Transparency International's Corruption Perceptions Index. If a country has weak institutions, it can lead to higher costs for transactions and greater risks for businesses. To encourage foreign direct investment (FDI), many countries set up special economic zones (SEZs) and investment promotion agencies. These initiatives provide benefits like simplified regulations, tax breaks, and dedicated infrastructure, making it easier for companies to start and grow their operations in those regions. Understanding these factors is crucial for businesses looking to succeed internationally, as they can significantly impact their operations and profitability in a new market.\nContext recap: When companies think about expanding into new countries, they look at more than just the economy. One important factor is the quality of the institutions in those countries. This means they consider things like whether the rule of law is strong, how well contracts are enforced, how much corruption exists, how transparent the regulations are, and how well intellectual property is protected. To help measure these important aspects, businesses often refer to tools like the World Bank's Ease of Doing Business indicators and Transparency International's Corruption Perceptions Index.\nWhy this matters: Institutional Quality and Business Climate helps learners in Business connect ideas from International Strategy & Market Entry to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "Beyond economic factors, the institutional quality of a host country is critical. This includes the strength of the rule of law, contract enforcement, levels of corruption, regulatory transparency, and protection of intellectual property. [Visual: A comparison of two countries' rankings on the World Bank's 'Ease of Doing Business' index, with specific indicators like 'Starting a Business' highlighted.] Weak institutions increase transaction costs and business risk. To attract FDI, many governments create Special Economic Zones (SEZs) that offer streamlined regulations, tax incentives, and dedicated infrastructure, creating a more favorable micro-business climate within the country."
         }
       ],
       "flashcards": [
         {
           "id": "international-business-201-l03-f1",
-          "front": "Market-seeking FDI",
-          "back": "Investment driven by access to large or fast-growing consumer markets — evaluated through GDP, growth rate, per capita income, and competitive density"
+          "front": "Market-Seeking FDI",
+          "back": "Investment driven by access to large or fast-growing consumer markets, evaluated using GDP, growth rate, and per capita income."
         },
         {
           "id": "international-business-201-l03-f2",
-          "front": "Efficiency-seeking FDI",
-          "back": "Investment targeting lower production costs — labor rates, energy prices, tax incentives, and logistics infrastructure in host countries"
+          "front": "Efficiency-Seeking FDI",
+          "back": "Investment targeting lower production costs by evaluating factors like labor rates, tax incentives, and logistics infrastructure."
         },
         {
           "id": "international-business-201-l03-f3",
-          "front": "Special Economic Zones (SEZs)",
-          "back": "Designated areas offering streamlined regulations, tax breaks, and dedicated infrastructure to attract foreign direct investment"
+          "front": "Institutional Quality",
+          "back": "The quality of a country's formal and informal rules, including rule of law, corruption levels, and contract enforcement, which significantly impacts business risk."
         }
       ],
       "learningAids": [
         {
           "id": "international-business-201-l03-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Follow the prompt sequence and document your reasoning."
+          "title": "Location Analysis Simulation",
+          "content": "Analyze data for three potential host countries and recommend the best location for a specific business scenario."
         }
       ]
     },
     {
       "id": "international-business-201-l04",
-      "title": "International HRM & Expatriate Management",
+      "title": "Assessing and Managing Country Risk",
       "type": "video",
-      "duration": 13,
+      "duration": 12,
       "objectives": [
-        "Compare ethnocentric, polycentric, and geocentric staffing approaches",
-        "Identify the stages and challenges of the expatriate assignment cycle",
-        "Design compensation and support systems for international assignees"
+        "Distinguish between political, economic, and financial country risks.",
+        "Apply risk assessment frameworks to evaluate target markets.",
+        "Identify strategies for mitigating international business risks."
       ],
       "chunks": [
         {
           "id": "international-business-201-l04-c1",
-          "title": "International Staffing Approaches",
-          "content": "When companies decide to expand their operations to other countries, they face an important choice about how to staff their international offices. There are three main staffing philosophies that companies can adopt, each with its own advantages and challenges. The first approach is called ethnocentric staffing. In this model, companies send employees from their home country to fill key positions in foreign offices. This helps ensure that the company's headquarters maintains control over operations, but it can sometimes lead to misunderstandings or insensitivity towards the local culture and practices.\nThe second approach is known as polycentric staffing. This strategy involves hiring local nationals to take on management roles in the host country. By doing this, companies can tap into the local workforce's cultural knowledge and expertise, which can be incredibly beneficial. However, this approach might also create divisions or silos within the organization, as local managers may prioritize local practices over the company's global strategies.\nLastly, there is geocentric staffing, where companies choose the best candidates for positions, regardless of their nationality. This approach promotes a diverse and inclusive workplace, allowing companies to build a strong global talent pool. However, it can also lead to higher costs and complications related to obtaining work visas for international employees. Many multinational companies find that a combination of these staffing strategies works best, depending on the specific role and the location of the office.\nContext recap: When companies decide to expand their operations to other countries, they face an important choice about how to staff their international offices. There are three main staffing philosophies that companies can adopt, each with its own advantages and challenges. The first approach is called ethnocentric staffing. In this model, companies send employees from their home country to fill key positions in foreign offices.\nWhy this matters: International Staffing Approaches helps learners in Business connect ideas from International Strategy & Market Entry to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "title": "Types of Country Risk",
+          "content": "Country risk refers to the potential for unforeseen events in a host country to negatively impact a firm's operations and profitability. It is broadly categorized into three types. Political risk includes government instability, changes in regulations, expropriation of assets, and civil unrest. [Visual: A risk dashboard with three gauges labeled 'Political,' 'Economic,' and 'Financial.' The needles on the gauges move as examples are discussed.] Economic risk involves macroeconomic challenges like recessions, high inflation, or volatile currency exchange rates. Financial risk relates to a country's ability to meet its financial obligations, including the stability of its banking system and any restrictions on capital repatriation, which is the ability to send profits back to the home country."
         },
         {
           "id": "international-business-201-l04-c2",
-          "title": "The Expatriate Assignment Cycle",
-          "content": "The expatriate assignment cycle is a crucial process that companies need to manage effectively to ensure the success of their employees working abroad. This cycle consists of four key phases. The first phase is selection. During this phase, companies carefully assess potential candidates by looking at their technical skills, their ability to adapt to different cultures, and their family situations. This assessment is vital because it helps identify individuals who are likely to thrive in a new environment.\nThe second phase is preparation. In this phase, companies provide essential support to expatriates. This includes language training to help them communicate effectively in the host country, cultural orientation to familiarize them with local customs and practices, and assistance with relocation logistics to make the move as smooth as possible. Proper preparation can significantly ease the transition for expatriates and their families.\nThe third phase is adjustment. This phase can be challenging as expatriates often go through a U-curve of emotions. They may start with a honeymoon phase, where everything seems exciting and new. However, this can quickly turn into frustration as they face cultural differences and homesickness. Over time, they adapt to their new surroundings and eventually reach a stage of mastery, where they feel comfortable and confident in their new environment.\nThe final phase is repatriation. This is when expatriates return home after their assignment. Companies need to plan for this phase carefully, ensuring that returning employees have a clear career path and opportunities to share the knowledge and experiences they gained abroad.\nDespite the importance of these phases, the failure rates for expatriate assignments can be alarmingly high, with estimates ranging from 10% to 40%. Many of these failures stem from difficulties in family adjustment and inadequate preparation. Therefore, it is essential for companies to invest time and resources into each phase of the expatriate assignment cycle to enhance the chances of success for their employees and the organization as a whole.\nContext recap: The expatriate assignment cycle is a crucial process that companies need to manage effectively to ensure the success of their employees working abroad. This cycle consists of four key phases. The first phase is selection. During this phase, companies carefully assess potential candidates by looking at their technical skills, their ability to adapt to different cultures, and their family situations.\nWhy this matters: The Expatriate Assignment Cycle helps learners in Business connect ideas from International Strategy & Market Entry to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "title": "Risk Assessment Frameworks",
+          "content": "Firms assess country risk using both quantitative and qualitative methods. Quantitative analysis relies on data from credit rating agencies like Moody's and composite indices from organizations like the Economist Intelligence Unit, which provide numerical scores for a country's risk profile. [Visual: A side-by-side comparison of a quantitative country risk score (e.g., 'B+ Stable') and a qualitative scenario map showing potential political futures.] Qualitative methods involve in-depth political analysis, scenario planning for potential future events, and consulting with local experts to understand the nuances of the business environment. A comprehensive assessment integrates both approaches for a holistic view of the risks involved."
         },
         {
           "id": "international-business-201-l04-c3",
-          "title": "Compensation and Support",
-          "content": "When companies send employees to work in other countries, they need to think carefully about how to pay and support them. One common way to do this is called the balance sheet approach. This approach helps ensure that the expatriate, or the employee working abroad, can maintain the same purchasing power they had in their home country. In addition to their regular salary, these compensation packages often include several important components. For example, a base salary is provided, along with a hardship premium for those who are working in challenging or less desirable locations. Companies also make adjustments for the cost of living, known as cost-of-living adjustments (COLA), to help expatriates manage their expenses in a new country. Housing allowances are often included to help cover the cost of living arrangements, and education allowances can assist with the schooling needs of their children. Additionally, tax equalization is used to ensure that expatriates are not unfairly taxed compared to their home country. But financial support is just one part of a successful expatriate program. Companies also recognize the importance of providing cultural mentors who can help expatriates adjust to their new environment. They may offer assistance for spouses in finding jobs, opportunities for pre-departure visits to help families prepare, and ongoing communication with the company’s headquarters. This ongoing support is crucial to prevent the feeling of being disconnected, often referred to as the 'out of sight, out of mind' problem, ensuring that expatriates feel valued and supported during their time abroad.\nContext recap: When companies send employees to work in other countries, they need to think carefully about how to pay and support them. One common way to do this is called the balance sheet approach. This approach helps ensure that the expatriate, or the employee working abroad, can maintain the same purchasing power they had in their home country. In addition to their regular salary, these compensation packages often include several important components.\nWhy this matters: Compensation and Support helps learners in Business connect ideas from International Strategy & Market Entry to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "Risk Mitigation Strategies",
+          "content": "After assessing risks, firms must develop strategies to manage them. One key strategy is obtaining political risk insurance from organizations like the World Bank's Multilateral Investment Guarantee Agency (MIGA), which protects against losses from events like expropriation or war. [Visual: A simple animation showing a company's investment being shielded by an 'insurance' umbrella from risks like 'Expropriation' and 'Currency Controls.'] Other strategies include forming joint ventures with local partners to navigate the political landscape, diversifying investments across multiple countries to avoid overexposure to any single market, and structuring investments to minimize potential losses. Proactive risk management is essential for sustainable international operations."
         }
       ],
       "flashcards": [
         {
           "id": "international-business-201-l04-f1",
-          "front": "Ethnocentric vs. Polycentric vs. Geocentric staffing",
-          "back": "Ethnocentric: home-country managers abroad. Polycentric: local managers in each country. Geocentric: best person regardless of nationality"
+          "front": "Three Categories of Country Risk",
+          "back": "Political (government instability, expropriation), Economic (recession, inflation, currency volatility), and Financial (banking fragility, capital controls)."
         },
         {
           "id": "international-business-201-l04-f2",
-          "front": "Expatriate U-curve of adjustment",
-          "back": "Four phases: honeymoon (excitement), frustration (culture shock), adaptation (learning to cope), mastery (effective functioning)"
+          "front": "Political Risk Insurance",
+          "back": "A tool to mitigate losses from political events. A key provider is the Multilateral Investment Guarantee Agency (MIGA)."
         },
         {
           "id": "international-business-201-l04-f3",
-          "front": "Balance sheet compensation approach",
-          "back": "Maintains expatriate's home-country purchasing power plus incentives — includes base salary, COLA, hardship premium, housing, education, and tax equalization"
+          "front": "Risk Mitigation Strategies",
+          "back": "Key approaches include obtaining insurance, forming local partnerships (JVs), diversifying investments across countries, and careful investment structuring."
         }
       ],
       "learningAids": [
         {
           "id": "international-business-201-l04-a1",
           "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary of the lesson's main concept."
+          "title": "Checklist: Country Risk Assessment",
+          "content": "A downloadable checklist of key political, economic, and financial factors to consider when evaluating a new market."
         }
       ]
     },
     {
       "id": "international-business-201-l05",
-      "title": "Checkpoint: Entry Strategy & International HRM",
+      "title": "Checkpoint: Strategy, Entry, and Risk Assessment",
       "type": "quiz",
       "duration": 12,
       "questions": [
         {
           "id": "international-business-201-l05-q1",
-          "text": "According to Dunning's OLI paradigm, which condition must be met for a firm to prefer FDI over licensing?",
+          "text": "A firm possesses a unique, patented technology. According to the OLI paradigm, which other conditions must be met to favor FDI over licensing?",
           "options": [
             {
               "id": "a",
-              "text": "The firm must have location advantages only"
+              "text": "The host country must offer tax breaks and have a large market."
             },
             {
               "id": "b",
-              "text": "It must be more profitable to exploit ownership advantages internally than to license them"
+              "text": "The firm must have prior experience in exporting."
             },
             {
               "id": "c",
-              "text": "The host country must have lower wages than the home country"
+              "text": "Location and Internalization advantages must also be present."
             },
             {
-              "id": "d",
-              "text": "The firm must already have operations in the host country"
+              "d": "d",
+              "text": "The firm must use a greenfield investment strategy."
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "The Internalization advantage means the firm benefits more from exploiting its proprietary assets internally (through FDI) than by licensing them to an external party."
+          "correctOptionId": "c",
+          "explanation": "The OLI paradigm requires all three advantages to be present: Ownership (the patent), Location (favorable host country factors), and Internalization (it's more profitable to control the technology internally than to license it)."
         },
         {
           "id": "international-business-201-l05-q2",
-          "text": "Which market entry mode provides the HIGHEST level of control but also the HIGHEST resource commitment?",
+          "text": "A company wants to enter a politically unstable but potentially lucrative market. Which entry mode would best help mitigate political risk by leveraging local connections?",
           "options": [
             {
               "id": "a",
@@ -283,123 +283,183 @@ export const InternationalBusiness201Module: LearningModule = {
             },
             {
               "id": "b",
-              "text": "Licensing"
-            },
-            {
-              "id": "c",
-              "text": "Joint venture"
-            },
-            {
-              "id": "d",
               "text": "Wholly-owned subsidiary"
-            }
-          ],
-          "correctOptionId": "d",
-          "explanation": "A wholly-owned subsidiary gives 100% ownership and full operational control, but requires the greatest investment of capital, management time, and organizational resources."
-        },
-        {
-          "id": "international-business-201-l05-q3",
-          "text": "A geocentric staffing approach means:",
-          "options": [
-            {
-              "id": "a",
-              "text": "Only home-country nationals manage foreign operations"
-            },
-            {
-              "id": "b",
-              "text": "Only host-country nationals manage local operations"
             },
             {
               "id": "c",
-              "text": "The best candidate is selected regardless of nationality"
+              "text": "Joint venture with a local partner"
             },
             {
-              "id": "d",
-              "text": "All positions are filled through local recruitment agencies"
+              "d": "d",
+              "text": "Licensing"
             }
           ],
           "correctOptionId": "c",
-          "explanation": "Geocentric staffing selects the most qualified person for each role regardless of national origin, building a truly global talent pool."
+          "explanation": "A joint venture with a well-connected local partner can provide crucial knowledge and influence for navigating a country's political landscape, thereby mitigating political risk."
         },
         {
-          "id": "international-business-201-l05-q4",
-          "text": "What is the primary reason expatriate assignments fail?",
+          "id": "international-business-201-l05-q3",
+          "text": "A company decides to build a factory in Vietnam to take advantage of lower labor costs for its global supply chain. This is an example of:",
           "options": [
             {
               "id": "a",
-              "text": "Lack of technical skills"
+              "text": "Market-seeking FDI"
             },
             {
               "id": "b",
-              "text": "Family adjustment difficulties and inadequate cultural preparation"
+              "text": "Efficiency-seeking FDI"
             },
             {
               "id": "c",
-              "text": "Insufficient salary"
+              "text": "Horizontal FDI"
             },
             {
-              "id": "d",
-              "text": "Time zone differences"
+              "d": "d",
+              "text": "Resource-seeking FDI"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Research consistently shows that family adjustment issues and inadequate cross-cultural preparation are the leading causes of expatriate assignment failure, not technical competence."
+          "explanation": "Efficiency-seeking FDI is motivated by reducing production costs. Locating a factory in a country with lower labor costs is a classic example of this strategy."
+        },
+        {
+          "id": "international-business-201-l05-q4",
+          "text": "The risk that a host government might unexpectedly seize a company's assets is known as:",
+          "options": [
+            {
+              "id": "a",
+              "text": "Economic risk"
+            },
+            {
+              "id": "b",
+              "text": "Financial risk"
+            },
+            {
+              "id": "c",
+              "text": "Political risk"
+            },
+            {
+              "d": "d",
+              "text": "Operational risk"
+            }
+          ],
+          "correctOptionId": "c",
+          "explanation": "Political risk encompasses actions by a government that can harm a foreign firm's investment, with expropriation (seizure of assets) being one of the most severe forms."
         }
       ]
     },
     {
       "id": "international-business-201-l06",
-      "title": "Managing Cross-Cultural Teams & Country Risk",
-      "type": "interactive",
-      "duration": 14,
+      "title": "Managing People Across Borders",
+      "type": "video",
+      "duration": 15,
       "objectives": [
-        "Apply strategies for leading effective multicultural teams",
-        "Distinguish between political, economic, and financial country risks",
-        "Use risk assessment frameworks to evaluate target markets"
+        "Compare ethnocentric, polycentric, and geocentric staffing approaches.",
+        "Describe best practices in expatriate management, including the assignment cycle.",
+        "Develop strategies for leading cross-cultural teams effectively."
       ],
       "chunks": [
         {
           "id": "international-business-201-l06-c1",
-          "title": "Leading Cross-Cultural Teams",
-          "content": "Leading cross-cultural teams is an exciting opportunity that allows individuals from various backgrounds to come together, each contributing their unique ideas and perspectives. This rich diversity can ignite creativity and enhance problem-solving capabilities within the team. However, it also presents certain challenges. For instance, team members may experience misunderstandings stemming from different communication styles, various approaches to work, and differing assumptions about collaboration. To be an effective leader in such a dynamic environment, it is essential to establish shared norms and expectations right from the beginning. Creating a safe and inclusive space where everyone feels comfortable sharing their thoughts and opinions is crucial for fostering collaboration. Leaders should also implement structured decision-making processes to ensure clarity and fairness in how decisions are made. For teams that are spread across different time zones, rotating meeting times can help ensure that everyone has the opportunity to participate. Research conducted by Erin Meyer highlights that communication styles can vary significantly between cultures. Some cultures may prefer direct communication, while others might lean towards more indirect methods. Additionally, the ways in which feedback is provided and trust is established can differ greatly, with some cultures focusing on tasks and others placing a higher value on relationships. By understanding these cultural differences, leaders can navigate the complexities of cross-cultural teamwork more effectively, ultimately leading to a more cohesive and productive team environment.\nContext recap: Leading cross-cultural teams is an exciting opportunity that allows individuals from various backgrounds to come together, each contributing their unique ideas and perspectives. This rich diversity can ignite creativity and enhance problem-solving capabilities within the team. However, it also presents certain challenges. For instance, team members may experience misunderstandings stemming from different communication styles, various approaches to work, and differing assumptions about collaboration.\nWhy this matters: Leading Cross-Cultural Teams helps learners in Business connect ideas from International Strategy & Market Entry to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "title": "International Staffing Approaches",
+          "content": "Multinational corporations use three main approaches to staff their foreign operations. An ethnocentric approach fills key foreign positions with parent-country nationals (PCNs) to maintain tight control from headquarters. A polycentric approach hires host-country nationals (HCNs) to manage subsidiaries, leveraging their local knowledge. [Visual: A simple organizational chart for each approach. Ethnocentric shows managers from 'HQ' in all top spots. Polycentric shows local managers. Geocentric shows a mix of nationalities.] A geocentric approach seeks the best people for key jobs throughout the organization, regardless of nationality. While the geocentric approach fosters a global mindset and talent pool, it is the most complex and costly to implement due to relocation and compensation challenges."
         },
         {
           "id": "international-business-201-l06-c2",
-          "title": "Understanding Country Risk",
-          "content": "Understanding country risk is crucial for businesses that operate in different countries around the world. Country risk refers to the various challenges and factors within a nation that could negatively affect a company's ability to run smoothly or earn a profit. One significant aspect of country risk is political risk. This includes issues such as government instability, where a government may change unexpectedly, leading to uncertainty. It also covers changes in laws and regulations that can affect how businesses operate, as well as civil unrest, which can disrupt daily life and business activities.\nAnother important factor is economic risk. This can involve situations like recessions, where the economy slows down, inflation, which is when prices rise, and changes in currency value that can affect how much money a company makes when trading internationally. Additionally, financial risk is a key consideration. This relates to the stability of the banking system in a country, any restrictions on moving money in and out of the country, and difficulties in transferring profits back to the company's home country.\nThese different types of risks are interconnected. For instance, if there is political instability, it can lead to economic problems, which may cause investors to pull their money out of the country. By recognizing and analyzing these risks, businesses can better prepare for potential challenges they might face in their international operations, allowing them to make informed decisions and strategies to mitigate these risks effectively.\nContext recap: Understanding country risk is crucial for businesses that operate in different countries around the world. Country risk refers to the various challenges and factors within a nation that could negatively affect a company's ability to run smoothly or earn a profit. One significant aspect of country risk is political risk. This includes issues such as government instability, where a government may change unexpectedly, leading to uncertainty.\nWhy this matters: Understanding Country Risk helps learners in Business connect ideas from International Strategy & Market Entry to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "title": "The Expatriate Assignment Cycle",
+          "content": "Managing expatriates—employees sent on long-term international assignments—is critical. The process follows a cycle: selection, preparation, adjustment, and repatriation. Selection should assess not only technical skills but also cross-cultural adaptability and family situation. Preparation involves language training and cultural orientation. During the assignment, expatriates often experience a 'U-curve' of adjustment: an initial honeymoon phase, followed by culture shock and frustration, and finally, adaptation. [Visual: A line graph illustrating the U-curve of adjustment over time, with emotional state on the y-axis.] Repatriation, the return home, is a frequently mismanaged phase that can lead to high turnover if the employee's new skills are not valued. High failure rates (10-40%) are often due to family adjustment issues, highlighting the need for holistic support."
         },
         {
           "id": "international-business-201-l06-c3",
-          "title": "Country Risk Assessment Frameworks",
-          "content": "When businesses want to understand the risks associated with operating in different countries, they use a variety of tools and methods to assess these risks effectively. One important approach is quantitative analysis, which relies on numerical data and ratings from reputable agencies like Moody's. These ratings help businesses gauge a country's creditworthiness and overall economic stability. Additionally, composite indices, such as those provided by the Economist Intelligence Unit, compile various metrics to give a broader perspective on country risk, helping businesses make informed decisions.\nOn the other hand, qualitative methods are also crucial. These involve analyzing political situations, engaging in scenario planning to predict future changes, and consulting with expert panels to gain deeper insights into the local context. By combining both quantitative and qualitative approaches, businesses can achieve a well-rounded understanding of the risks they may face.\nMoreover, it is vital for companies to continuously monitor these risks over time, rather than only assessing them when they plan to enter a new market. This ongoing vigilance allows them to adapt to changing circumstances. To protect themselves from potential risks, businesses can implement various strategies. These include obtaining political risk insurance from organizations like MIGA, forming partnerships with local businesses to enhance their understanding of the market, diversifying their investments across different regions to spread risk, and structuring their investments in ways that minimize exposure to potential threats. By taking these steps, companies can navigate the complexities of international business more effectively.\nContext recap: When businesses want to understand the risks associated with operating in different countries, they use a variety of tools and methods to assess these risks effectively. One important approach is quantitative analysis, which relies on numerical data and ratings from reputable agencies like Moody's. These ratings help businesses gauge a country's creditworthiness and overall economic stability. Additionally, composite indices, such as those provided by the Economist Intelligence Unit, compile various metrics to give a broader perspective on country risk, helping businesses make informed decisions.\nWhy this matters: Country Risk Assessment Frameworks helps learners in Business connect ideas from International Strategy & Market Entry to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "title": "Leading Cross-Cultural Teams",
+          "content": "Leading a team with diverse cultural backgrounds can enhance creativity but also create friction due to differing communication styles and work norms. Effective leaders establish clear, shared goals and ground rules from the start. They foster psychological safety, where all members feel comfortable voicing opinions. [Visual: An image of Erin Meyer's Culture Map, showing two contrasting cultures (e.g., U.S. vs. Japan) on dimensions like 'Communicating' (Low-context vs. High-context) and 'Trusting' (Task-based vs. Relationship-based).] Understanding cultural dimensions is key. For example, some cultures prefer direct, explicit communication, while others rely on indirect, high-context cues. Leaders must adapt their style, bridge communication gaps, and structure processes to leverage the team's diversity as a strength."
         }
       ],
       "flashcards": [
         {
           "id": "international-business-201-l06-f1",
-          "front": "Keys to leading cross-cultural teams",
-          "back": "Establish shared norms early, create psychological safety, use structured decision-making, rotate meeting times, and adapt communication style to cultural context"
+          "front": "Ethnocentric vs. Polycentric vs. Geocentric Staffing",
+          "back": "Ethnocentric: Home-country managers abroad (control). Polycentric: Local managers in each country (local responsiveness). Geocentric: Best person for the job, regardless of nationality (global mindset)."
         },
         {
           "id": "international-business-201-l06-f2",
-          "front": "Three categories of country risk",
-          "back": "Political (instability, expropriation, regulation), Economic (recession, inflation, currency), Financial (banking fragility, capital controls, repatriation restrictions)"
+          "front": "Expatriate U-Curve of Adjustment",
+          "back": "The typical emotional cycle for an expatriate: Honeymoon (excitement), Frustration (culture shock), Adaptation (learning), and Mastery (effectiveness)."
         },
         {
           "id": "international-business-201-l06-f3",
-          "front": "Political risk insurance (MIGA)",
-          "back": "The Multilateral Investment Guarantee Agency provides insurance against political risks like expropriation, currency restrictions, and war — reducing the cost of investing in risky markets"
+          "front": "Keys to Leading Cross-Cultural Teams",
+          "back": "Establish shared norms, create psychological safety, understand cultural differences in communication and trust, and adapt leadership style accordingly."
+        }
+      ],
+      "learningAids": [
+        {
+          "id": "international-business-201-l06-a1",
+          "type": "practice",
+          "title": "Case Study: Cross-Cultural Team Challenge",
+          "content": "Read a short case about a conflict within a multicultural team and identify the cultural dimensions at play and recommend a solution."
         }
       ]
     },
     {
       "id": "international-business-201-l07",
+      "title": "Capstone: Developing an Entry Strategy",
+      "type": "interactive",
+      "duration": 15,
+      "objectives": [
+        "Integrate strategic analysis to recommend an optimal entry approach.",
+        "Synthesize market, risk, and operational factors in a cohesive plan."
+      ],
+      "chunks": [
+        {
+          "id": "international-business-201-l07-c1",
+          "title": "Scenario: 'Aura Renewables' Expansion",
+          "content": "You are a strategy manager at Aura Renewables, a successful European solar panel manufacturer. The board wants to expand into a new emerging market to drive growth. The two final candidates are Brazil and Vietnam. Your task is to analyze the provided data and recommend a country, an entry mode, and a staffing strategy. [Visual: A clean dashboard showing side-by-side data for Brazil and Vietnam on Market Size, GDP Growth, Labor Costs, Political Risk Index, and Local Content Regulations.]"
+        },
+        {
+          "id": "international-business-201-l07-c2",
+          "title": "Decision Point 1: Location and Risk",
+          "content": "First, evaluate the two countries. Brazil offers a larger consumer market but has higher political risk and complex regulations. Vietnam has lower labor costs, a more stable political environment, and is part of a government-supported manufacturing hub, but its domestic market is smaller. [Interactive Element: User is presented with the data and must select either Brazil or Vietnam. After selection, they must choose the primary reason for their choice from a list: 'Market-Seeking,' 'Efficiency-Seeking,' or 'Balanced Approach.']"
+        },
+        {
+          "id": "international-business-201-l07-c3",
+          "title": "Decision Point 2: Entry Mode and Staffing",
+          "content": "Based on your chosen country, you must now select the most appropriate entry mode and initial staffing approach. For Brazil, its regulations might favor a Joint Venture. For Vietnam, the SEZ benefits might make a Wholly-Owned Subsidiary (Greenfield) more attractive. [Interactive Element: Based on the country chosen in the previous step, the user is given a tailored set of entry mode options (e.g., JV or Acquisition for Brazil; Greenfield WOS or Licensing for Vietnam) and staffing approaches (Ethnocentric, Polycentric). They make their selections and receive feedback summarizing the pros and cons of their integrated strategy.]"
+        }
+      ],
+      "flashcards": [
+        {
+          "id": "international-business-201-l07-f1",
+          "front": "Strategic Alignment",
+          "back": "The principle that the choice of country, entry mode, and operational strategy must be consistent and mutually reinforcing."
+        },
+        {
+          "id": "international-business-201-l07-f2",
+          "front": "Market-Seeking Strategy Example",
+          "back": "Choosing a large market like Brazil and using a Joint Venture to navigate local complexities and gain market access."
+        },
+        {
+          "id": "international-business-201-l07-f3",
+          "front": "Efficiency-Seeking Strategy Example",
+          "back": "Choosing a low-cost hub like Vietnam and using a Wholly-Owned Subsidiary to maintain full control over production quality and technology."
+        }
+      ],
+      "learningAids": [
+        {
+          "id": "international-business-201-l07-a1",
+          "type": "practice",
+          "title": "Worksheet: International Expansion Plan",
+          "content": "A template to structure an international expansion recommendation, covering location analysis, risk mitigation, entry mode choice, and HRM."
+        }
+      ]
+    },
+    {
+      "id": "international-business-201-l08",
       "title": "Final Assessment: International Strategy & Market Entry",
       "type": "quiz",
       "duration": 15,
       "questions": [
         {
-          "id": "international-business-201-l07-q1",
+          "id": "international-business-201-l08-q1",
           "text": "A Japanese automaker builds a factory in the United States to serve American consumers. This is an example of:",
           "options": [
             {
@@ -423,7 +483,7 @@ export const InternationalBusiness201Module: LearningModule = {
           "explanation": "Horizontal FDI replicates the same production activity (car manufacturing) in a foreign market to serve local customers, avoiding trade barriers and transportation costs."
         },
         {
-          "id": "international-business-201-l07-q2",
+          "id": "international-business-201-l08-q2",
           "text": "Which market entry mode is MOST vulnerable to creating a future competitor through knowledge transfer?",
           "options": [
             {
@@ -447,52 +507,52 @@ export const InternationalBusiness201Module: LearningModule = {
           "explanation": "Licensing transfers proprietary knowledge to a foreign partner who may eventually use it independently, becoming a competitor once the license expires."
         },
         {
-          "id": "international-business-201-l07-q3",
-          "text": "A firm evaluating potential host countries considers GDP growth rate, per capita income, and consumer demographics. This firm is engaged in:",
+          "id": "international-business-201-l08-q3",
+          "text": "A staffing approach that fills key positions with the most qualified individuals, regardless of their country of origin, is called:",
           "options": [
             {
               "id": "a",
-              "text": "Efficiency-seeking analysis"
+              "text": "Ethnocentric"
             },
             {
               "id": "b",
-              "text": "Resource-seeking analysis"
+              "text": "Polycentric"
             },
             {
               "id": "c",
-              "text": "Market-seeking analysis"
+              "text": "Geocentric"
             },
             {
               "id": "d",
-              "text": "Strategic asset-seeking analysis"
+              "text": "Regiocentric"
             }
           ],
           "correctOptionId": "c",
-          "explanation": "Market-seeking analysis evaluates consumer demand indicators like GDP growth, income levels, and demographics to identify attractive target markets for expansion."
+          "explanation": "A geocentric approach focuses on building a global pool of talent by selecting the best person for the job, irrespective of nationality."
         },
         {
-          "id": "international-business-201-l07-q4",
-          "text": "The balance sheet approach to expatriate compensation is designed to:",
+          "id": "international-business-201-l08-q4",
+          "text": "A firm is worried about a host country's volatile currency and potential restrictions on sending profits home. This firm is primarily concerned with:",
           "options": [
             {
               "id": "a",
-              "text": "Pay expatriates the local market rate in the host country"
+              "text": "Political and institutional risk"
             },
             {
               "id": "b",
-              "text": "Maintain the expatriate's home-country purchasing power plus incentives"
+              "text": "Economic and financial risk"
             },
             {
               "id": "c",
-              "text": "Reduce total compensation costs for the company"
+              "text": "Operational and cultural risk"
             },
             {
               "id": "d",
-              "text": "Eliminate the need for tax equalization"
+              "text": "Market-seeking risk"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "The balance sheet approach ensures expatriates are neither better nor worse off financially than if they stayed home, adding premiums and allowances to offset the costs and disruptions of the assignment."
+          "explanation": "Currency volatility is a key economic risk, while restrictions on repatriating profits (capital controls) are a primary financial risk. Both fall under the economic/financial risk categories."
         }
       ]
     }

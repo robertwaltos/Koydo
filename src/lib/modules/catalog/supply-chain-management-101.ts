@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const SupplyChainManagement101Module: LearningModule = {
+export const supply_chain_management_101_Module: LearningModule = {
   "id": "supply-chain-management-101",
   "title": "Supply Chain Fundamentals",
   "description": "Understand how products move from raw materials to end consumers. Master the SCOR model, key supply chain metrics, and the critical role of information flow in designing efficient, responsive supply chains.",
@@ -14,7 +14,7 @@ export const SupplyChainManagement101Module: LearningModule = {
   ],
   "minAge": 18,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "beginner",
   "localeSupport": [
     "en",
@@ -45,42 +45,42 @@ export const SupplyChainManagement101Module: LearningModule = {
         {
           "id": "supply-chain-management-101-l01-c1",
           "title": "Defining Supply Chain Management",
-          "content": "Supply chain management, commonly known as SCM, is a crucial process that helps ensure products reach consumers efficiently and effectively. Imagine it as a large puzzle where each piece represents a different step in getting a product from its origin to the final buyer. This journey starts with sourcing the right raw materials needed to create a product. After that, manufacturers take these materials and transform them into finished goods. Once the products are made, they need to be delivered to various locations, such as stores or directly to customers' homes.\nIn this process, many different groups work together harmoniously. For instance, suppliers provide the essential raw materials, manufacturers are responsible for producing the items, and retailers are the ones who sell these products to consumers. SCM is not just about one single job; it is an integrative discipline that connects various activities and organizations. This collaboration ensures that everything operates smoothly and that customer demands are met effectively. Understanding SCM is essential for anyone interested in how businesses function and succeed in delivering products to people who need them.\nContext recap: Supply chain management, commonly known as SCM, is a crucial process that helps ensure products reach consumers efficiently and effectively. Imagine it as a large puzzle where each piece represents a different step in getting a product from its origin to the final buyer. This journey starts with sourcing the right raw materials needed to create a product. After that, manufacturers take these materials and transform them into finished goods.\nWhy this matters: Defining Supply Chain Management helps learners in Business connect ideas from Supply Chain Fundamentals to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "Supply Chain Management (SCM) is the management of the flow of goods and services. Think of it as the entire journey a product takes, from its initial raw materials to its arrival in a customer's hands. This journey involves sourcing materials, manufacturing products, and delivering them to the final destination. SCM connects many different organizations—like suppliers, manufacturers, and retailers—to ensure this process runs smoothly and efficiently, meeting customer demands while keeping costs down."
         },
         {
           "id": "supply-chain-management-101-l01-c2",
           "title": "Why Supply Chains Matter",
-          "content": "Supply chains play a crucial role in the business world because they significantly influence the overall cost of producing goods. In fact, they can account for about 60 to 70 percent of the total expenses involved in making a product. This is why companies like Amazon, Zara, and Toyota have achieved remarkable success; they have mastered the art of managing their supply chains effectively. A well-organized supply chain can lead to lower production costs, quicker delivery of products to customers, better quality of goods, and ultimately, happier customers. When everything runs smoothly, businesses can thrive and grow. However, if there are problems in the supply chain, such as running out of stock, experiencing delays, or having quality issues, it can have serious consequences. These failures can lead to lost sales and can damage a company's reputation, making it harder for them to earn the trust of their customers. Therefore, understanding and managing supply chains is essential for any business aiming to succeed in today's competitive market.\nContext recap: Supply chains play a crucial role in the business world because they significantly influence the overall cost of producing goods. In fact, they can account for about 60 to 70 percent of the total expenses involved in making a product. This is why companies like Amazon, Zara, and Toyota have achieved remarkable success; they have mastered the art of managing their supply chains effectively. A well-organized supply chain can lead to lower production costs, quicker delivery of products to customers, better quality of goods, and ultimately, happier customers."
+          "content": "A company's supply chain can account for 60-70% of its total costs, making it a powerful source of competitive advantage. Companies like Amazon, Zara, and Toyota dominate their industries because they have mastered their supply chains. An efficient supply chain leads to lower costs, faster delivery, higher quality, and greater customer satisfaction. Conversely, a poorly managed supply chain can lead to stockouts, delays, and quality issues, resulting in lost sales and a damaged reputation."
         },
         {
           "id": "supply-chain-management-101-l01-c3",
           "title": "Key Participants in a Supply Chain",
-          "content": "In every supply chain, there are various groups of people and companies that play crucial roles in making sure products get from the beginning to the end. The 'upstream' part of the supply chain includes those who provide the raw materials needed to create products. For example, farmers grow crops, and miners extract minerals. These raw materials are then sent to component manufacturers who create parts for the final products. The main company, often referred to as the focal company, takes these materials and transforms them into the finished goods that we see in stores.\nOn the other hand, the 'downstream' part of the supply chain involves getting these products into the hands of customers. This includes distributors who move products to different locations, wholesalers who buy in bulk, retailers who sell directly to consumers, and of course, the end consumers who purchase and use the products.\nAdditionally, there are supporting players in the supply chain, such as logistics providers who ensure that goods are transported efficiently, financial institutions that handle payments and transactions, and technology vendors that supply the tools and systems needed to keep everything running smoothly. All these participants work together to create a seamless flow of goods, information, and funds throughout the entire supply chain process.\nContext recap: In every supply chain, there are various groups of people and companies that play crucial roles in making sure products get from the beginning to the end. The 'upstream' part of the supply chain includes those who provide the raw materials needed to create products. For example, farmers grow crops, and miners extract minerals. These raw materials are then sent to component manufacturers who create parts for the final products.\nWhy this matters: Key Participants in a Supply Chain helps learners in Business connect ideas from Supply Chain Fundamentals to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "A supply chain involves many players. 'Upstream' participants are closer to the raw materials and include suppliers of raw materials (like miners or farmers) and component manufacturers. The main 'focal company' assembles the final product. 'Downstream' participants move the product toward the customer and include distributors, wholesalers, and retailers. Supporting these core players are logistics providers who handle transportation, financial institutions for payments, and technology vendors who provide essential software and systems."
         }
       ],
       "flashcards": [
         {
           "id": "supply-chain-management-101-l01-f1",
           "front": "Supply chain management (SCM)",
-          "back": "The coordination of sourcing, procurement, production, and delivery activities across multiple organizations from raw materials to the final consumer"
+          "back": "The coordination of sourcing, procurement, production, and delivery activities across multiple organizations from raw materials to the final consumer."
         },
         {
           "id": "supply-chain-management-101-l01-f2",
           "front": "Why do supply chains matter competitively?",
-          "back": "They account for 60–70% of total product cost and directly impact speed, quality, cost, and customer satisfaction — making them a key source of competitive advantage"
+          "back": "They account for 60–70% of total product cost and directly impact speed, quality, cost, and customer satisfaction — making them a key source of competitive advantage."
         },
         {
           "id": "supply-chain-management-101-l01-f3",
-          "front": "Upstream vs. downstream supply chain",
-          "back": "Upstream: suppliers, component makers, sub-assemblers (toward raw materials). Downstream: distributors, retailers, consumers (toward the end customer)"
+          "front": "Upstream vs. Downstream",
+          "back": "Upstream: Activities closer to raw materials (e.g., suppliers). Downstream: Activities closer to the end customer (e.g., distributors, retailers)."
         }
       ],
       "learningAids": [
         {
           "id": "supply-chain-management-101-l01-a1",
           "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary of the lesson's main concept."
+          "title": "Supply Chain Participants",
+          "content": "An infographic showing the flow from upstream (raw material suppliers) to a central focal company (manufacturer) and then downstream (distributors, retailers, consumers)."
         }
       ]
     },
@@ -97,43 +97,43 @@ export const SupplyChainManagement101Module: LearningModule = {
       "chunks": [
         {
           "id": "supply-chain-management-101-l02-c1",
-          "title": "Product Journey: Raw Material to Consumer",
-          "content": "Let’s explore the fascinating journey of a smartphone from its raw materials to the hands of consumers! It all begins with lithium, a key component that is mined in Australia. This lithium is then transformed into battery cells in China, which are essential for powering the phone. Next, the smartphone is assembled in Vietnam, where it comes together with various parts sourced from different countries, including chips from Taiwan and glass from Japan.\nOnce the smartphones are fully assembled and ready for use, they are shipped to distribution centers located all around the globe. From these centers, the phones are then sent out to retail stores or made available for purchase online. Each step of this journey is crucial because it adds value to the final product. However, it’s important to note that each handoff also introduces costs, takes time, and carries certain risks. By understanding this entire process, companies can identify opportunities to improve efficiency and reduce expenses at every stage, ultimately benefiting both the business and the consumer.\nContext recap: Let’s explore the fascinating journey of a smartphone from its raw materials to the hands of consumers! It all begins with lithium, a key component that is mined in Australia. This lithium is then transformed into battery cells in China, which are essential for powering the phone. Next, the smartphone is assembled in Vietnam, where it comes together with various parts sourced from different countries, including chips from Taiwan and glass from Japan.\nWhy this matters: Product Journey: Raw Material to Consumer helps learners in Business connect ideas from Supply Chain Fundamentals to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "Product Journey: From Raw Material to Consumer",
+          "content": "Let's trace a smartphone's journey. It begins with raw materials like lithium mined in Australia. This lithium is processed into battery cells in China. The phone is then assembled in Vietnam using components from around the world, like chips from Taiwan and glass from Japan. Once assembled, the phones are shipped to global distribution centers and then sent to retail stores or directly to online customers. Each step adds value, but also introduces cost, time, and risk."
         },
         {
           "id": "supply-chain-management-101-l02-c2",
-          "title": "Three Flows in a Supply Chain",
-          "content": "In the world of supply chains, there are three essential types of flows that help businesses operate smoothly. The first type is called product flow. This refers to the journey that products take as they move from suppliers, through the production process, and finally to the customers who purchase them. Understanding this flow is crucial because it ensures that the right products are available at the right time.\nThe second type is known as information flow. This flow includes important details such as demand forecasts, which predict how much of a product will be needed, the status of orders, current inventory levels, and tracking information for shipments. This information moves back and forth between companies, allowing them to make informed decisions and respond quickly to changes in demand.\nLastly, we have financial flow. This involves all the financial transactions that occur within the supply chain, including payments made for goods, credit terms that dictate how long a buyer has to pay, invoicing details, and cost data.\nTo achieve success in supply chain management, it is vital for companies to optimize all three of these flows—product, information, and financial—simultaneously. When they do this effectively, they create a supply chain that operates at its best, leading to greater efficiency and customer satisfaction.\nContext recap: In the world of supply chains, there are three essential types of flows that help businesses operate smoothly. The first type is called product flow. This refers to the journey that products take as they move from suppliers, through the production process, and finally to the customers who purchase them. Understanding this flow is crucial because it ensures that the right products are available at the right time.\nWhy this matters: Three Flows in a Supply Chain helps learners in Business connect ideas from Supply Chain Fundamentals to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "title": "The Three Core Flows",
+          "content": "Every supply chain is defined by three essential flows. The Product Flow is the physical movement of goods from suppliers to customers. The Information Flow is the bidirectional exchange of data, such as demand forecasts, order status, and shipment tracking. The Financial Flow involves the movement of money, including payments, credit terms, and invoices. To be successful, a company must manage and optimize all three flows simultaneously."
         },
         {
           "id": "supply-chain-management-101-l02-c3",
-          "title": "Supply Chain Tiers",
-          "content": "Supply chains are organized into different levels, known as tiers, which help us understand how products move from creation to the final customer. At the top level, we have Tier 1 suppliers. These are the companies that sell their products directly to the main company that manufactures the final product. For example, if a company makes smartphones, a Tier 1 supplier might provide the screens or batteries directly to them. Below Tier 1, we find Tier 2 suppliers. These suppliers provide materials or components to the Tier 1 suppliers. This structure can continue down to Tier 3 and even further, creating a complex web of suppliers. On the customer side, Tier 1 customers are those who purchase directly from the main company, such as distributors who buy in bulk. Tier 2 customers, on the other hand, are further along in the process, like retailers who sell the products to the public. It's important to note that many companies only have a clear view of their immediate Tier 1 suppliers and customers. This limited visibility can lead to risks, as any disruptions or issues at Tier 3 can have a ripple effect, impacting the entire supply chain and causing delays or shortages. Understanding these tiers helps businesses manage their supply chains more effectively and prepare for potential challenges.\nContext recap: Supply chains are organized into different levels, known as tiers, which help us understand how products move from creation to the final customer. At the top level, we have Tier 1 suppliers. These are the companies that sell their products directly to the main company that manufactures the final product. For example, if a company makes smartphones, a Tier 1 supplier might provide the screens or batteries directly to them.\nWhy this matters: Supply Chain Tiers helps learners in Business connect ideas from Supply Chain Fundamentals to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "title": "Understanding Supply Chain Tiers",
+          "content": "Supply chains are structured in levels, or 'tiers.' Tier 1 suppliers sell directly to the main (focal) company. Tier 2 suppliers provide materials to Tier 1 suppliers, and so on. Similarly, Tier 1 customers (like distributors) buy directly from the focal company, while Tier 2 customers (like retailers) buy from them. Most companies only have good visibility into their Tier 1 partners. This lack of end-to-end visibility can hide significant risks, as a disruption at a Tier 3 supplier can ripple through the entire chain."
         }
       ],
       "flashcards": [
         {
           "id": "supply-chain-management-101-l02-f1",
           "front": "Three flows in a supply chain",
-          "back": "Product flow (physical goods), Information flow (data and forecasts, bidirectional), Financial flow (payments, credit, invoicing)"
+          "back": "Product flow (physical goods), Information flow (data and forecasts, bidirectional), Financial flow (payments, credit, invoicing)."
         },
         {
           "id": "supply-chain-management-101-l02-f2",
           "front": "Supply chain tiers",
-          "back": "Tier 1 suppliers deal directly with the focal company; Tier 2 supply to Tier 1; Tier 3 supply to Tier 2 — visibility typically drops beyond Tier 1"
+          "back": "Tier 1 suppliers deal directly with the focal company; Tier 2 supply to Tier 1; Tier 3 supply to Tier 2. Visibility typically drops beyond Tier 1."
         },
         {
           "id": "supply-chain-management-101-l02-f3",
           "front": "Why is end-to-end visibility important?",
-          "back": "Disruptions at any tier can cascade through the entire chain — limited visibility beyond Tier 1 creates hidden risks and missed optimization opportunities"
+          "back": "Disruptions at any tier can cascade through the entire chain. Limited visibility beyond Tier 1 creates hidden risks and missed optimization opportunities."
         }
       ],
       "learningAids": [
         {
           "id": "supply-chain-management-101-l02-a1",
           "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary of the lesson's main concept."
+          "title": "The Three Flows Diagram",
+          "content": "A diagram showing a simple supply chain with three arrows: a 'Product' arrow flowing downstream, a 'Financial' arrow flowing upstream, and a bidirectional 'Information' arrow."
         }
       ]
     },
@@ -150,43 +150,43 @@ export const SupplyChainManagement101Module: LearningModule = {
       "chunks": [
         {
           "id": "supply-chain-management-101-l03-c1",
-          "title": "Logistics Defined",
-          "content": "Logistics is a crucial part of how we ensure that products and services are delivered efficiently. It involves careful planning and management of the entire process that starts from the point where goods are produced to the point where they are consumed or used. This means thinking about how to transport these goods, where to store them, how to keep track of inventory, how to fulfill customer orders, and how to handle materials safely and effectively. Imagine it like a well-organized team working together to make sure everything runs smoothly. While logistics plays a significant role in supply chain management, it is important to remember that it is just one piece of a much larger puzzle. Understanding logistics helps us see how different parts of the supply chain connect and work together to meet the needs of customers and businesses alike.\nContext recap: Logistics is a crucial part of how we ensure that products and services are delivered efficiently. It involves careful planning and management of the entire process that starts from the point where goods are produced to the point where they are consumed or used. This means thinking about how to transport these goods, where to store them, how to keep track of inventory, how to fulfill customer orders, and how to handle materials safely and effectively. Imagine it like a well-organized team working together to make sure everything runs smoothly.\nWhy this matters: Logistics Defined helps learners in Business connect ideas from Supply Chain Fundamentals to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "What is Logistics?",
+          "content": "Logistics is the part of the supply chain that plans, implements, and controls the efficient flow and storage of goods from their point of origin to the point of consumption. Its core functions include transportation, warehousing, inventory management, order fulfillment, and materials handling. While it's a critical component, logistics is just one piece of the larger supply chain puzzle."
         },
         {
           "id": "supply-chain-management-101-l03-c2",
-          "title": "Supply Chain Management Is Broader",
-          "content": "Logistics is an essential part of supply chain management, but it only covers the physical movement and storage of products. Supply chain management, on the other hand, is much broader and involves several key activities that are crucial for a successful business. For instance, it includes finding and managing suppliers, which means building strong relationships with those who provide the materials needed for production. Additionally, supply chain management involves planning for demand, which is about predicting how much of a product customers will want and ensuring that enough is available. Another important aspect is designing products in a way that makes them easy to manufacture, which can save time and reduce costs. Furthermore, supply chain management emphasizes collaboration among different organizations, ensuring that everyone involved works together effectively. To put it simply, you can think of logistics as the 'how we move things' part of the process, while supply chain management is about understanding 'how the entire network of businesses works together to create value for customers and stakeholders.' This holistic view is essential for optimizing operations and achieving success in today's interconnected marketplace.\nContext recap: Logistics is an essential part of supply chain management, but it only covers the physical movement and storage of products. Supply chain management, on the other hand, is much broader and involves several key activities that are crucial for a successful business. For instance, it includes finding and managing suppliers, which means building strong relationships with those who provide the materials needed for production. Additionally, supply chain management involves planning for demand, which is about predicting how much of a product customers will want and ensuring that enough is available.\nWhy this matters: Supply Chain Management Is Broader helps learners in Business connect ideas from Supply Chain Fundamentals to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "SCM is Broader Than Logistics",
+          "content": "Think of logistics as the 'movement' part of the supply chain. Supply Chain Management is much broader. SCM includes logistics, but also covers strategic activities like supplier selection and relationship management, demand planning, product design, and collaboration across the entire network of companies. In short, logistics is about moving and storing things efficiently, while SCM is about managing the entire network to deliver value."
         },
         {
           "id": "supply-chain-management-101-l03-c3",
           "title": "Types of Logistics",
-          "content": "Logistics is a crucial part of the supply chain, and it can be divided into three main types, each serving a unique purpose. First, we have inbound logistics. This type focuses on the movement of raw materials and components from suppliers to manufacturers. It ensures that manufacturers have the necessary materials to create their products. Next is outbound logistics, which is all about delivering finished goods from manufacturers to customers. This step is vital because it connects the products with the people who need them. Lastly, we have reverse logistics. This area deals with the return of products, handling recalls, recycling, and disposal. Essentially, it involves moving products backward through the supply chain. Each type of logistics has specific requirements and different cost factors associated with it. Interestingly, reverse logistics is often overlooked, but it can account for a significant portion of total supply chain costs, typically around 5-10%. Understanding these logistics types helps businesses manage their operations more effectively and improve overall efficiency in the supply chain.\nContext recap: Logistics is a crucial part of the supply chain, and it can be divided into three main types, each serving a unique purpose. First, we have inbound logistics. This type focuses on the movement of raw materials and components from suppliers to manufacturers. It ensures that manufacturers have the necessary materials to create their products.\nWhy this matters: Types of Logistics helps learners in Business connect ideas from Supply Chain Fundamentals to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "Logistics can be broken down into three main types. Inbound Logistics manages the flow of raw materials and components from suppliers into the manufacturing plant. Outbound Logistics handles the delivery of finished goods from the manufacturer to the end customer. Reverse Logistics manages the backward flow of products for returns, repairs, recycling, or disposal. This last category is often overlooked but can account for 5-10% of total supply chain costs."
         }
       ],
       "flashcards": [
         {
           "id": "supply-chain-management-101-l03-f1",
           "front": "Logistics",
-          "back": "The planning, execution, and control of the movement and storage of goods, services, and information from origin to consumption"
+          "back": "The planning, execution, and control of the movement and storage of goods, services, and information from origin to consumption."
         },
         {
           "id": "supply-chain-management-101-l03-f2",
           "front": "How does SCM differ from logistics?",
-          "back": "SCM is broader — it includes strategic sourcing, demand planning, supplier relationships, and cross-organizational optimization, while logistics focuses on movement and storage"
+          "back": "SCM is broader—it includes strategic sourcing, demand planning, and supplier relationships, while logistics focuses on the execution of movement and storage."
         },
         {
           "id": "supply-chain-management-101-l03-f3",
           "front": "Three types of logistics",
-          "back": "Inbound (materials to manufacturer), Outbound (finished goods to customer), Reverse (returns, recycling, disposal — flowing backward through the chain)"
+          "back": "Inbound (materials to manufacturer), Outbound (finished goods to customer), and Reverse (returns, recycling, disposal)."
         }
       ],
       "learningAids": [
         {
           "id": "supply-chain-management-101-l03-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Follow the prompt sequence and document your reasoning."
+          "type": "image",
+          "title": "SCM vs. Logistics",
+          "content": "A Venn diagram where a large circle labeled 'Supply Chain Management' contains a smaller circle labeled 'Logistics', illustrating that logistics is a component of SCM."
         }
       ]
     },
@@ -204,42 +204,42 @@ export const SupplyChainManagement101Module: LearningModule = {
         {
           "id": "supply-chain-management-101-l04-c1",
           "title": "Overview of the SCOR Model",
-          "content": "The Supply Chain Operations Reference (SCOR) model is an important framework developed by the Supply Chain Council, which is now known as the Association for Supply Chain Management (ASCM). This model serves as a guide for businesses to effectively describe, measure, and enhance their supply chain processes. It breaks down the supply chain into five essential processes: Plan, Source, Make, Deliver, and Return. Each of these processes plays a crucial role in ensuring that products move smoothly from the initial planning stages all the way to the final delivery to customers. By utilizing the SCOR model, companies can benchmark their performance against others in the industry, which helps them identify areas where they may need to improve. Additionally, the SCOR model encourages organizations to adopt best practices that have been proven effective, all while using a common vocabulary that makes communication easier across different teams and departments. This shared understanding is vital for collaboration and efficiency in supply chain management.\nContext recap: The Supply Chain Operations Reference (SCOR) model is an important framework developed by the Supply Chain Council, which is now known as the Association for Supply Chain Management (ASCM). This model serves as a guide for businesses to effectively describe, measure, and enhance their supply chain processes. It breaks down the supply chain into five essential processes: Plan, Source, Make, Deliver, and Return. Each of these processes plays a crucial role in ensuring that products move smoothly from the initial planning stages all the way to the final delivery to customers."
+          "content": "The Supply Chain Operations Reference (SCOR) model is a standard framework used to describe, measure, and improve supply chain processes. Developed by the Association for Supply Chain Management (ASCM), it provides a common language and set of best practices. The model is built around five core management processes: Plan, Source, Make, Deliver, and Return. Companies use SCOR to benchmark their performance against industry standards and identify areas for improvement."
         },
         {
           "id": "supply-chain-management-101-l04-c2",
           "title": "Plan, Source, and Make",
-          "content": "In supply chain management, the planning process is essential and involves several key activities. First, demand forecasting helps businesses predict how much of a product will be needed in the future. This is followed by supply planning, where companies determine how to obtain the necessary materials. Creating an inventory strategy is also important, as it ensures that there is enough stock on hand without overstocking. Capacity planning helps businesses figure out how much they can produce based on their resources. All of these planning activities work together to coordinate the other processes in the supply chain effectively.\nNext, the sourcing process is all about finding and qualifying suppliers who can provide the materials needed. This includes purchasing the materials and ensuring they are received on time. Finally, the making process involves everything related to production. This includes manufacturing products, assembling them, testing for quality, packaging, and making sure everything meets the required standards. Each of these processes has specific steps and requirements that help ensure everything runs smoothly and efficiently.\nContext recap: In supply chain management, the planning process is essential and involves several key activities. First, demand forecasting helps businesses predict how much of a product will be needed in the future. This is followed by supply planning, where companies determine how to obtain the necessary materials. Creating an inventory strategy is also important, as it ensures that there is enough stock on hand without overstocking.\nWhy this matters: Plan, Source, and Make helps learners in Business connect ideas from Supply Chain Fundamentals to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "Plan is the strategic process that coordinates all other activities. It includes demand forecasting, supply planning, and setting inventory and capacity strategies. Source involves all activities related to procuring goods and services, from qualifying suppliers to purchasing and receiving materials. Make covers all activities that transform raw materials into finished products, including manufacturing, assembly, testing, and packaging."
         },
         {
           "id": "supply-chain-management-101-l04-c3",
-          "title": "Deliver and Return",
-          "content": "In the world of supply chain management, the delivery process is crucial for ensuring that products reach customers efficiently and effectively. This process involves several key activities, including managing customer orders, organizing warehousing, coordinating transportation, and overseeing the distribution of products. Specifically, the delivery phase includes important tasks such as picking items from inventory, packing them securely for shipment, and arranging for shipping to the customer’s location. The final step, known as last-mile delivery, is particularly important as it involves getting the product directly to the customer’s doorstep.\nOn the other hand, the return process is equally significant as it addresses the reverse flow of products. This includes managing defective items that need to be returned, processing warranty claims for products that have issues, handling excess inventory that may not be sold, and ensuring that recyclable materials are dealt with properly.\nAdditionally, the SCOR model introduces the concept of 'Enable' processes. These are the management activities that support the five core processes of supply chain management. They include establishing rules, managing data, overseeing the workforce, and handling contracts. Together, all these elements create a comprehensive overview of how supply chain operations function, ensuring that both delivery and return processes are handled smoothly and efficiently.\nContext recap: In the world of supply chain management, the delivery process is crucial for ensuring that products reach customers efficiently and effectively. This process involves several key activities, including managing customer orders, organizing warehousing, coordinating transportation, and overseeing the distribution of products. Specifically, the delivery phase includes important tasks such as picking items from inventory, packing them securely for shipment, and arranging for shipping to the customer’s location. The final step, known as last-mile delivery, is particularly important as it involves getting the product directly to the customer’s doorstep.\nWhy this matters: Deliver and Return helps learners in Business connect ideas from Supply Chain Fundamentals to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "Deliver, Return, and Enable",
+          "content": "Deliver encompasses all order management, warehousing, and transportation activities required to get finished products to customers, including last-mile delivery. Return manages the reverse flow of goods for repairs, warranties, excess inventory, or recycling. Supporting these five core processes are Enable processes, which are management activities like establishing business rules, managing data, overseeing the workforce, and handling contracts."
         }
       ],
       "flashcards": [
         {
           "id": "supply-chain-management-101-l04-f1",
           "front": "SCOR model",
-          "back": "Supply Chain Operations Reference — a standardized framework with five core processes (Plan, Source, Make, Deliver, Return) for describing, measuring, and improving supply chains"
+          "back": "A standardized framework with five core processes (Plan, Source, Make, Deliver, Return) for describing, measuring, and improving supply chains."
         },
         {
           "id": "supply-chain-management-101-l04-f2",
           "front": "The five SCOR processes",
-          "back": "Plan (orchestrates all), Source (purchasing/receiving), Make (production/assembly), Deliver (order fulfillment/shipping), Return (reverse flow/returns)"
+          "back": "Plan (orchestrates all), Source (purchasing/receiving), Make (production/assembly), Deliver (order fulfillment/shipping), Return (reverse flow/returns)."
         },
         {
           "id": "supply-chain-management-101-l04-f3",
           "front": "SCOR Enable processes",
-          "back": "Management activities — business rules, data management, workforce skills, contracts — that support the five core SCOR processes"
+          "back": "Management activities—business rules, data management, workforce skills, contracts—that support the five core SCOR processes."
         }
       ],
       "learningAids": [
         {
           "id": "supply-chain-management-101-l04-a1",
           "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary of the lesson's main concept."
+          "title": "The SCOR Framework",
+          "content": "A pentagonal diagram with 'Plan' in the center and 'Source', 'Make', 'Deliver', and 'Return' at the points, showing how Plan connects to all other processes."
         }
       ]
     },
@@ -271,7 +271,7 @@ export const SupplyChainManagement101Module: LearningModule = {
             }
           ],
           "correctOptionId": "c",
-          "explanation": "The five SCOR processes are Plan, Source, Make, Deliver, and Return. 'Market' is not one of them."
+          "explanation": "The five SCOR processes are Plan, Source, Make, Deliver, and Return. 'Market' is a business function but not a core SCOR process."
         },
         {
           "id": "supply-chain-management-101-l05-q2",
@@ -279,19 +279,19 @@ export const SupplyChainManagement101Module: LearningModule = {
           "options": [
             {
               "id": "a",
-              "text": "Logistics is broader than supply chain management"
+              "text": "Logistics is broader than supply chain management."
             },
             {
               "id": "b",
-              "text": "Supply chain management includes logistics plus strategic sourcing, demand planning, and cross-organizational coordination"
+              "text": "Supply chain management includes logistics plus strategic sourcing, demand planning, and cross-organizational coordination."
             },
             {
               "id": "c",
-              "text": "They are identical concepts with different names"
+              "text": "They are identical concepts with different names."
             },
             {
               "id": "d",
-              "text": "Logistics deals with information while SCM deals with physical goods"
+              "text": "Logistics deals with information while SCM deals with physical goods."
             }
           ],
           "correctOptionId": "b",
@@ -319,7 +319,7 @@ export const SupplyChainManagement101Module: LearningModule = {
             }
           ],
           "correctOptionId": "c",
-          "explanation": "Reverse logistics manages the backward flow of products — returns, recalls, recycling, and disposal — and can represent 5–10% of total supply chain cost."
+          "explanation": "Reverse logistics manages the backward flow of products—returns, recalls, recycling, and disposal."
         },
         {
           "id": "supply-chain-management-101-l05-q4",
@@ -327,19 +327,19 @@ export const SupplyChainManagement101Module: LearningModule = {
           "options": [
             {
               "id": "a",
-              "text": "A company that sells directly to end consumers"
+              "text": "A company that sells directly to end consumers."
             },
             {
               "id": "b",
-              "text": "A supplier that provides materials to the focal company's direct suppliers"
+              "text": "A supplier that provides materials to the focal company's direct suppliers."
             },
             {
               "id": "c",
-              "text": "The most important supplier in the network"
+              "text": "The most important supplier in the network."
             },
             {
               "id": "d",
-              "text": "A backup supplier used only during disruptions"
+              "text": "A backup supplier used only during disruptions."
             }
           ],
           "correctOptionId": "b",
@@ -361,46 +361,107 @@ export const SupplyChainManagement101Module: LearningModule = {
         {
           "id": "supply-chain-management-101-l06-c1",
           "title": "Fill Rate and Order Accuracy",
-          "content": "Fill rate is a key performance indicator that helps us understand how effectively a company can satisfy customer demand right away using the inventory they currently have available. For instance, if a company reports a fill rate of 95%, this indicates that 5% of customer orders may not be fulfilled immediately due to items being out of stock. This is important because it shows how well the company can respond to customer needs in real-time. On the other hand, order accuracy is another critical metric that measures how many orders are delivered correctly, without any mistakes. This includes ensuring that the right item is sent, the correct quantity is provided, and that the goods are not damaged during transit. Leading supply chains strive to achieve fill rates that exceed 98% and order accuracy rates above 99%. These two metrics are vital because they directly influence customer satisfaction and loyalty. When customers receive their orders accurately and on time, they are more likely to return for future purchases, which is essential for the success of any business.\nContext recap: Fill rate is a key performance indicator that helps us understand how effectively a company can satisfy customer demand right away using the inventory they currently have available. For instance, if a company reports a fill rate of 95%, this indicates that 5% of customer orders may not be fulfilled immediately due to items being out of stock. This is important because it shows how well the company can respond to customer needs in real-time. On the other hand, order accuracy is another critical metric that measures how many orders are delivered correctly, without any mistakes."
+          "content": "Fill Rate measures the percentage of customer demand that is met immediately from available stock. A 95% fill rate means 5% of orders could not be fulfilled on the spot. Order Accuracy measures the percentage of orders delivered correctly—the right item, right quantity, and no damage. World-class supply chains aim for fill rates above 98% and order accuracy over 99%, as these metrics directly impact customer satisfaction and loyalty."
         },
         {
           "id": "supply-chain-management-101-l06-c2",
           "title": "Lead Time and Cycle Time",
-          "content": "Lead time is an important idea in supply chain management. It refers to the total amount of time that passes from when a customer places an order until they receive their product. This time includes several different stages: first, there is the processing time, which is how long it takes to handle the order; next, there is the production time, which is the time needed to actually make the product; and finally, there is the transportation time, which is how long it takes to deliver the product to the customer. On the other hand, cycle time is a bit different. It measures how long it takes to finish one specific internal process, such as the time it takes to manufacture a product from start to finish. Reducing lead time is very important for companies because it can give them a big advantage over their competitors. For example, Amazon has become a leader in the supply chain industry by consistently finding ways to reduce delivery lead times, shrinking them from several days down to just a few hours. This improvement makes it much more convenient for customers to receive their orders quickly, which is a key factor in their success.\nContext recap: Lead time is an important idea in supply chain management. It refers to the total amount of time that passes from when a customer places an order until they receive their product. This time includes several different stages: first, there is the processing time, which is how long it takes to handle the order; next, there is the production time, which is the time needed to actually make the product; and finally, there is the transportation time, which is how long it takes to deliver the product to the customer. On the other hand, cycle time is a bit different."
+          "content": "Lead Time is the total time from when a customer places an order until they receive it. It includes order processing, production, and transportation time. Cycle Time, in contrast, is the time it takes to complete a single internal process, like manufacturing one unit. Reducing lead time is a major competitive advantage. Amazon, for example, has built its dominance by systematically shrinking delivery lead times from days to hours."
         },
         {
           "id": "supply-chain-management-101-l06-c3",
           "title": "Inventory Turns and Cash-to-Cash Cycle",
-          "content": "Inventory turns are an important concept in business that helps us understand how efficiently a company is managing its stock. Specifically, inventory turns indicate how many times a company sells and replaces its inventory over a specific period, such as a month or a year. To calculate inventory turns, you divide the cost of goods sold (which is the total cost of the products that were sold during that period) by the average inventory that the company holds. A higher number of inventory turns is generally a positive sign, as it means that the company is selling its products quickly and not tying up too much money in unsold stock. This efficiency can lead to better financial health for the business.\nOn the other hand, the cash-to-cash cycle is another key metric that measures the time it takes for cash to flow through a company. It starts from the moment a company pays its suppliers for the materials needed to create its products and ends when the company receives payment from its customers for those products. A fascinating example of effective cash management is Dell, a company that transformed the computing industry. Dell was able to achieve a negative cash-to-cash cycle, meaning they collected payments from customers before they had to pay their suppliers. This innovative approach allowed Dell to maintain a strong cash flow, which is crucial for any business's success.\nContext recap: Inventory turns are an important concept in business that helps us understand how efficiently a company is managing its stock. Specifically, inventory turns indicate how many times a company sells and replaces its inventory over a specific period, such as a month or a year. To calculate inventory turns, you divide the cost of goods sold (which is the total cost of the products that were sold during that period) by the average inventory that the company holds. A higher number of inventory turns is generally a positive sign, as it means that the company is selling its products quickly and not tying up too much money in unsold stock.\nWhy this matters: Inventory Turns and Cash-to-Cash Cycle helps learners in Business connect ideas from Supply Chain Fundamentals to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "Inventory Turns measures how many times a company sells and replaces its inventory in a given period. It's calculated as Cost of Goods Sold divided by Average Inventory. Higher turns are better, as they indicate efficient inventory management. The Cash-to-Cash Cycle is the time between paying suppliers for materials and collecting payment from customers. A shorter cycle is ideal. Dell famously achieved a negative cash-to-cash cycle, collecting from customers before paying its suppliers."
         }
       ],
       "flashcards": [
         {
           "id": "supply-chain-management-101-l06-f1",
           "front": "Fill rate",
-          "back": "Percentage of customer demand met immediately from available stock — world-class supply chains achieve above 98%"
+          "back": "Percentage of customer demand met immediately from available stock. World-class supply chains achieve above 98%."
         },
         {
           "id": "supply-chain-management-101-l06-f2",
           "front": "Inventory turns",
-          "back": "Cost of goods sold ÷ average inventory — measures how often inventory is sold and replaced; higher turns mean less capital tied up"
+          "back": "Cost of Goods Sold ÷ Average Inventory. Measures how often inventory is sold and replaced; higher turns mean less capital is tied up."
         },
         {
           "id": "supply-chain-management-101-l06-f3",
           "front": "Cash-to-cash cycle",
-          "back": "Time from paying suppliers to collecting from customers — shorter (or negative) cycles free working capital for other investments"
+          "back": "Time from paying suppliers to collecting from customers. Shorter (or negative) cycles free up working capital for other investments."
+        }
+      ],
+      "learningAids": [
+        {
+          "id": "supply-chain-management-101-l06-a1",
+          "type": "image",
+          "title": "Performance Dashboard",
+          "content": "A visual dashboard with gauges or charts displaying key metrics like Fill Rate (98%), Inventory Turns (8.5), and Cash-to-Cash Cycle (25 days)."
         }
       ]
     },
     {
       "id": "supply-chain-management-101-l07",
+      "title": "Information Flow & The Bullwhip Effect",
+      "type": "video",
+      "duration": 12,
+      "objectives": [
+        "Describe how information sharing improves supply chain performance",
+        "Define the bullwhip effect and its causes",
+        "Identify strategies to mitigate the bullwhip effect"
+      ],
+      "chunks": [
+        {
+          "id": "supply-chain-management-101-l07-c1",
+          "title": "Information: The Supply Chain's Nervous System",
+          "content": "Accurate and timely information is the lifeblood of a modern supply chain. Sharing data like real-time sales figures, inventory levels, and production schedules allows all partners to synchronize their activities. This visibility reduces uncertainty, allowing companies to hold less safety stock, respond faster to market changes, and improve overall efficiency. Without good information flow, partners are forced to guess, leading to costly errors."
+        },
+        {
+          "id": "supply-chain-management-101-l07-c2",
+          "title": "The Bullwhip Effect Explained",
+          "content": "The bullwhip effect describes how small fluctuations in demand at the retail level can become amplified as they move upstream in the supply chain. A retailer might see a slight increase in sales and place a slightly larger order with the distributor. The distributor, seeing this larger order, places an even larger one with the manufacturer, who in turn orders even more raw materials. This creates massive swings in inventory and production that are disconnected from actual end-customer demand."
+        },
+        {
+          "id": "supply-chain-management-101-l07-c3",
+          "title": "Taming the Bullwhip",
+          "content": "The key to mitigating the bullwhip effect is to reduce uncertainty and improve coordination. Strategies include: direct information sharing (like giving suppliers access to point-of-sale data), reducing lead times so partners don't have to forecast as far into the future, and collaborative planning, forecasting, and replenishment (CPFR) programs where partners work together to align their plans."
+        }
+      ],
+      "flashcards": [
+        {
+          "id": "supply-chain-management-101-l07-f1",
+          "front": "Bullwhip effect",
+          "back": "The amplification of demand variability as orders move upstream from the customer to the raw material supplier."
+        },
+        {
+          "id": "supply-chain-management-101-l07-f2",
+          "front": "What causes the bullwhip effect?",
+          "back": "Lack of information sharing, long lead times, and independent forecasting at each stage of the supply chain."
+        },
+        {
+          "id": "supply-chain-management-101-l07-f3",
+          "front": "How can you mitigate the bullwhip effect?",
+          "back": "By sharing real-time demand data, reducing lead times, and collaborating with supply chain partners on forecasting and planning."
+        }
+      ],
+      "learningAids": [
+        {
+          "id": "supply-chain-management-101-l07-a1",
+          "type": "image",
+          "title": "Visualizing the Bullwhip Effect",
+          "content": "A graph showing four lines. The bottom line (Consumer Demand) has small variations. Each line above it (Retailer Orders, Distributor Orders, Manufacturer Orders) shows progressively larger and more erratic swings."
+        }
+      ]
+    },
+    {
+      "id": "supply-chain-management-101-l08",
       "title": "Final Assessment: Supply Chain Fundamentals",
       "type": "quiz",
       "duration": 15,
       "questions": [
         {
-          "id": "supply-chain-management-101-l07-q1",
-          "text": "A company has COGS of $10 million and average inventory of $2 million. What is its inventory turns?",
+          "id": "supply-chain-management-101-l08-q1",
+          "text": "A company has a Cost of Goods Sold (COGS) of $10 million and an average inventory of $2 million. What are its inventory turns?",
           "options": [
             {
               "id": "a",
@@ -420,35 +481,35 @@ export const SupplyChainManagement101Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Inventory turns = COGS ÷ Average Inventory = $10M ÷ $2M = 5 turns. The company sells and replaces its inventory five times per period."
+          "explanation": "Inventory turns = COGS ÷ Average Inventory = $10M ÷ $2M = 5 turns. The company sells and replaces its entire inventory five times per period."
         },
         {
-          "id": "supply-chain-management-101-l07-q2",
+          "id": "supply-chain-management-101-l08-q2",
           "text": "The bullwhip effect is best described as:",
           "options": [
             {
               "id": "a",
-              "text": "A reduction in demand variability as orders move upstream"
+              "text": "A reduction in demand variability as orders move upstream."
             },
             {
               "id": "b",
-              "text": "An amplification of demand variability as orders move upstream through the supply chain"
+              "text": "An amplification of demand variability as orders move upstream through the supply chain."
             },
             {
               "id": "c",
-              "text": "The tendency for lead times to decrease at each supply chain tier"
+              "text": "The tendency for lead times to decrease at each supply chain tier."
             },
             {
               "id": "d",
-              "text": "A method for improving forecast accuracy"
+              "text": "A method for improving forecast accuracy."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "The bullwhip effect describes how small fluctuations in consumer demand get amplified as orders move upstream — each tier over-reacts, causing excessive inventory swings."
+          "explanation": "The bullwhip effect describes how small fluctuations in consumer demand get amplified as orders move upstream—each tier over-reacts, causing excessive inventory swings."
         },
         {
-          "id": "supply-chain-management-101-l07-q3",
-          "text": "Which of the three supply chain flows moves BIDIRECTIONALLY?",
+          "id": "supply-chain-management-101-l08-q3",
+          "text": "Which of the three supply chain flows is typically BIDIRECTIONAL?",
           "options": [
             {
               "id": "a",
@@ -464,14 +525,14 @@ export const SupplyChainManagement101Module: LearningModule = {
             },
             {
               "id": "d",
-              "text": "All three flows are strictly one-directional"
+              "text": "All three flows are strictly one-directional."
             }
           ],
           "correctOptionId": "c",
-          "explanation": "Information flow moves bidirectionally — demand data flows upstream while supply status and tracking data flow downstream. Product flow is primarily downstream (with reverse logistics exceptions), and financial flow is primarily upstream."
+          "explanation": "Information flow moves bidirectionally—demand data flows upstream while supply status and tracking data flow downstream. Product flow is primarily downstream (with reverse logistics exceptions), and financial flow is primarily upstream."
         },
         {
-          "id": "supply-chain-management-101-l07-q4",
+          "id": "supply-chain-management-101-l08-q4",
           "text": "Which SCOR process orchestrates and integrates all other supply chain processes?",
           "options": [
             {
@@ -492,7 +553,7 @@ export const SupplyChainManagement101Module: LearningModule = {
             }
           ],
           "correctOptionId": "c",
-          "explanation": "Plan is the integrating process in SCOR — it encompasses demand forecasting, supply planning, inventory strategy, and capacity planning that coordinate Source, Make, Deliver, and Return."
+          "explanation": "Plan is the integrating process in SCOR—it encompasses demand forecasting, supply planning, and inventory strategy that coordinate Source, Make, Deliver, and Return."
         }
       ]
     }

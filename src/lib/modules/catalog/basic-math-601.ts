@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const BasicMath601Module: LearningModule = {
+export const basic_math_601_Module: LearningModule = {
   "id": "basic-math-601",
   "title": "Basic Math Research and Leadership",
   "description": "Post-401 specialization in Basic Math, focused on basic math systems diagnostics, basic math operations and execution design, basic math impact and tradeoff analysis, and basic math governance and leadership through advanced casework, simulation, and defense-based checkpoints.",
@@ -14,7 +14,7 @@ export const BasicMath601Module: LearningModule = {
   ],
   "minAge": 17,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en",
@@ -39,7 +39,8 @@ export const BasicMath601Module: LearningModule = {
           "id": "basic-math-601-l01-a1",
           "type": "image",
           "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence.",
+          "visualPrompt": "A high-tech blueprint or flowchart illustrating a structured diagnostic method with explicit assumptions and measurable evidence nodes."
         }
       ],
       "chunks": [
@@ -47,19 +48,19 @@ export const BasicMath601Module: LearningModule = {
           "id": "basic-math-601-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "In this lesson, we will dive deep into the advanced boundaries of what we can achieve in Basic Math. We will focus on understanding how to effectively diagnose basic math systems, which means figuring out how they work and identifying any issues that may arise. Additionally, we will learn how to design operations and execution plans that are both efficient and effective. This foundational knowledge is crucial as it will help you grasp the complexities of math systems and prepare you for more advanced topics in mathematics. By the end of this lesson, you will have a clearer understanding of how to approach math problems systematically and thoughtfully."
+          "content": "In this lesson, we will dive deep into the advanced boundaries of Basic Math systems. We will focus on systems diagnostics, identifying operational constraints, and designing execution plans that are both efficient and resilient. This foundational knowledge prepares you for complex mathematical modeling and high-stakes decision-making."
         },
         {
           "id": "basic-math-601-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "In this section, learners will engage in mapping out causal pathways, which means understanding how different factors influence each other. We will also look at uncertainty ranges, which help us recognize the limits of our knowledge, and identify system dependencies that show how different parts of a system rely on one another. This preparation is crucial before we plan any interventions or changes.\nContext recap: In this section, learners will engage in mapping out causal pathways, which means understanding how different factors influence each other. We will also look at uncertainty ranges, which help us recognize the limits of our knowledge, and identify system dependencies that show how different parts of a system rely on one another. This preparation is crucial before we plan any interventions or changes."
+          "content": "Learners will engage in mapping causal pathways to understand how variables interact within a system. We will also define uncertainty ranges to quantify the limits of our knowledge and identify critical system dependencies. This rigorous preparation is essential before implementing any structural interventions."
         },
         {
           "id": "basic-math-601-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "In our recap, we will emphasize that every claim we make should be connected to measurable indicators. This means we need to have clear evidence to support our statements. Additionally, we will discuss the importance of confidence bounds and review checkpoints, which help us ensure that our findings are reliable and can be verified.\nContext recap: In our recap, we will emphasize that every claim we make should be connected to measurable indicators. This means we need to have clear evidence to support our statements. Additionally, we will discuss the importance of confidence bounds and review checkpoints, which help us ensure that our findings are reliable and can be verified."
+          "content": "Every analytical claim must be anchored to measurable indicators. We will discuss the critical role of confidence bounds and review checkpoints, ensuring that our findings are empirically reliable, verifiable, and ready for peer defense."
         }
       ],
       "flashcards": [
@@ -90,7 +91,8 @@ export const BasicMath601Module: LearningModule = {
           "id": "basic-math-601-l02-a1",
           "type": "practice",
           "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence.",
+          "visualPrompt": "An interactive digital whiteboard showing a workflow stress test, with red and green nodes indicating pass/fail states under pressure."
         }
       ],
       "chunks": [
@@ -98,13 +100,13 @@ export const BasicMath601Module: LearningModule = {
           "id": "basic-math-601-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "In this interactive lab, learners will have the opportunity to design specialized workflows. This means creating step-by-step processes that are tailored to specific tasks. After designing these workflows, we will stress-test them by putting them through challenging scenarios to see how well they hold up under pressure. This practice will help you understand the importance of resilience in your designs.\nContext recap: In this interactive lab, learners will have the opportunity to design specialized workflows. This means creating step-by-step processes that are tailored to specific tasks. After designing these workflows, we will stress-test them by putting them through challenging scenarios to see how well they hold up under pressure. This practice will help you understand the importance of resilience in your designs."
+          "content": "In this interactive lab, learners will design specialized, step-by-step workflows tailored to complex mathematical tasks. Once designed, we will stress-test these architectures against high-constraint scenarios to evaluate their resilience and identify potential failure points under pressure."
         },
         {
           "id": "basic-math-601-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "In our recap of control gate architecture, we will discuss how workflows can be enhanced by integrating important checkpoints. These checkpoints help us monitor progress and ensure that we are on the right track. We will also cover rollback criteria, which allow us to revert to a previous state if something goes wrong, and threshold-based escalation, which helps us know when to take action if certain limits are reached.\nContext recap: In our recap of control gate architecture, we will discuss how workflows can be enhanced by integrating important checkpoints. These checkpoints help us monitor progress and ensure that we are on the right track. We will also cover rollback criteria, which allow us to revert to a previous state if something goes wrong, and threshold-based escalation, which helps us know when to take action if certain limits are reached."
+          "content": "We will explore how workflows are fortified by integrating strategic control gates. These checkpoints monitor progress and enforce quality standards. We will also define rollback criteria for reverting adverse states and establish threshold-based escalation protocols for critical limits."
         }
       ],
       "interactiveActivities": [
@@ -144,7 +146,8 @@ export const BasicMath601Module: LearningModule = {
           "id": "basic-math-601-l03-a1",
           "type": "practice",
           "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence.",
+          "visualPrompt": "A split-screen graphic comparing a baseline assumption model with a validated, evidence-backed recommendation."
         }
       ],
       "questions": [
@@ -360,7 +363,8 @@ export const BasicMath601Module: LearningModule = {
           "id": "basic-math-601-l04-a1",
           "type": "image",
           "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence.",
+          "visualPrompt": "A matrix diagram comparing competing constraints like safety, cost, and reliability across different mathematical models."
         }
       ],
       "chunks": [
@@ -368,19 +372,19 @@ export const BasicMath601Module: LearningModule = {
           "id": "basic-math-601-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "In this lesson, we will frame our case analysis by examining competing constraints within basic math systems diagnostics. This means we will look at the challenges and limitations we face when analyzing the impact of different math systems. We will also explore tradeoff analysis, which helps us understand the compromises we may need to make when balancing different factors.\nContext recap: In this lesson, we will frame our case analysis by examining competing constraints within basic math systems diagnostics. This means we will look at the challenges and limitations we face when analyzing the impact of different math systems. We will also explore tradeoff analysis, which helps us understand the compromises we may need to make when balancing different factors."
+          "content": "We will frame our case analysis by examining competing constraints within basic math systems diagnostics. This involves navigating the inherent limitations of impact analysis and utilizing tradeoff frameworks to balance competing operational factors."
         },
         {
           "id": "basic-math-601-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "During this practice session, learners will compare various options based on important dimensions such as safety, reliability, cost, equity, and governance. This comparison will help you understand how to evaluate different choices and make informed decisions that consider multiple perspectives and impacts.\nContext recap: During this practice session, learners will compare various options based on important dimensions such as safety, reliability, cost, equity, and governance. This comparison will help you understand how to evaluate different choices and make informed decisions that consider multiple perspectives and impacts."
+          "content": "Learners will evaluate competing options across critical dimensions such as safety, reliability, cost, equity, and governance. This multidimensional comparison is vital for making informed, defensible decisions that account for diverse stakeholder impacts."
         },
         {
           "id": "basic-math-601-l04-c3",
           "kind": "recap",
           "title": "Decision Memo Pattern",
-          "content": "In our recap, we will highlight that each recommendation we make should include key elements such as assumptions, evidence, risk controls, and fallback plans. This ensures that our decisions are well-supported and that we have strategies in place to address potential challenges.\nContext recap: In our recap, we will highlight that each recommendation we make should include key elements such as assumptions, evidence, risk controls, and fallback plans. This ensures that our decisions are well-supported and that we have strategies in place to address potential challenges."
+          "content": "Each recommendation must be structured as a formal decision memo. We will highlight key elements including explicit assumptions, empirical evidence, risk controls, and robust fallback plans, ensuring our strategies are resilient against potential challenges."
         }
       ]
     },
@@ -394,7 +398,8 @@ export const BasicMath601Module: LearningModule = {
           "id": "basic-math-601-l05-a1",
           "type": "practice",
           "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence.",
+          "visualPrompt": "A simulated control panel with dials for performance and governance, showing real-time feedback as parameters are adjusted."
         }
       ],
       "chunks": [
@@ -402,13 +407,13 @@ export const BasicMath601Module: LearningModule = {
           "id": "basic-math-601-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "In this interactive clinic, learners will operate scenario controls, which means managing different situations while keeping in mind the balance between performance and governance constraints. This hands-on experience will help you understand how to navigate complex scenarios effectively.\nContext recap: In this interactive clinic, learners will operate scenario controls, which means managing different situations while keeping in mind the balance between performance and governance constraints. This hands-on experience will help you understand how to navigate complex scenarios effectively."
+          "content": "In this interactive clinic, learners will operate live scenario controls, actively balancing performance optimization with strict governance constraints. This hands-on simulation develops the agility required to navigate complex, dynamic mathematical environments."
         },
         {
           "id": "basic-math-601-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "In our recap, we will discuss how effective responses can update control gates without losing traceability or accountability. This means that as we adapt to new information or changes, we must ensure that we can still track our decisions and hold ourselves accountable for them.\nContext recap: In our recap, we will discuss how effective responses can update control gates without losing traceability or accountability. This means that as we adapt to new information or changes, we must ensure that we can still track our decisions and hold ourselves accountable for them."
+          "content": "Effective adaptive responses require updating control gates dynamically without sacrificing traceability or accountability. We will practice modifying parameters in real-time while maintaining a clear, auditable record of all decision pathways."
         }
       ],
       "interactiveActivities": [
@@ -430,7 +435,8 @@ export const BasicMath601Module: LearningModule = {
           "id": "basic-math-601-l06-a1",
           "type": "practice",
           "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence.",
+          "visualPrompt": "A checklist graphic highlighting baseline, constraints, and success criteria with checkmarks."
         }
       ],
       "questions": [
@@ -646,7 +652,8 @@ export const BasicMath601Module: LearningModule = {
           "id": "basic-math-601-l07-a1",
           "type": "image",
           "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence.",
+          "visualPrompt": "A network graph showing the ripple effects of a mathematical decision across different stakeholder groups over time."
         }
       ],
       "chunks": [
@@ -654,19 +661,19 @@ export const BasicMath601Module: LearningModule = {
           "id": "basic-math-601-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "In this lesson, learners will map out the distribution of impacts among different stakeholders. This involves understanding who benefits, who bears burdens, and what delayed effects may occur as a result of decisions made. This mapping is essential for recognizing the broader implications of our actions.\nContext recap: In this lesson, learners will map out the distribution of impacts among different stakeholders. This involves understanding who benefits, who bears burdens, and what delayed effects may occur as a result of decisions made. This mapping is essential for recognizing the broader implications of our actions."
+          "content": "Learners will map the distribution of impacts across various stakeholder groups. This involves analyzing who benefits, who bears the operational burdens, and what delayed systemic effects may emerge, providing a holistic view of our strategic decisions."
         },
         {
           "id": "basic-math-601-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "In this section, we will explore the architecture of accountability. This means integrating elements such as decision traceability, which allows us to track how decisions were made, review rights that give stakeholders the ability to question decisions, and remediation obligations that ensure we take responsibility for our actions.\nContext recap: In this section, we will explore the architecture of accountability. This means integrating elements such as decision traceability, which allows us to track how decisions were made, review rights that give stakeholders the ability to question decisions, and remediation obligations that ensure we take responsibility for our actions."
+          "content": "We will explore the architecture of accountability, focusing on decision traceability. This ensures an auditable trail of how decisions were made, establishes review rights for stakeholders, and enforces remediation obligations to maintain systemic integrity."
         },
         {
           "id": "basic-math-601-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "To ensure effective leadership in math governance, it's important to have a comprehensive checklist. This checklist should connect the outcomes we aim to achieve, uphold ethical standards, ensure compliance with policies, and promote resilience in our strategies. By following this checklist, we can make informed decisions that positively impact our community.\nContext recap: To ensure effective leadership in math governance, it's important to have a comprehensive checklist. This checklist should connect the outcomes we aim to achieve, uphold ethical standards, ensure compliance with policies, and promote resilience in our strategies. By following this checklist, we can make informed decisions that positively impact our community."
+          "content": "To operationalize effective governance, we will utilize a comprehensive responsible leadership checklist. This tool aligns targeted outcomes with ethical standards, policy compliance, and systemic resilience, empowering leaders to make decisions that positively impact the broader community."
         }
       ],
       "flashcards": [
@@ -697,7 +704,8 @@ export const BasicMath601Module: LearningModule = {
           "id": "basic-math-601-l08-a1",
           "type": "practice",
           "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence.",
+          "visualPrompt": "A virtual boardroom setting where a presenter is defending a data-driven brief to a panel of experts."
         }
       ],
       "chunks": [
@@ -705,13 +713,13 @@ export const BasicMath601Module: LearningModule = {
           "id": "basic-math-601-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "In this interactive session, learners will work together to create a detailed brief. This brief will include well-supported claims, relevant evidence, clear uncertainty bounds, and proposed pathways for remediation. This exercise helps learners practice critical thinking and effective communication skills, which are essential for presenting their ideas clearly and confidently.\nContext recap: In this interactive session, learners will work together to create a detailed brief. This brief will include well-supported claims, relevant evidence, clear uncertainty bounds, and proposed pathways for remediation. This exercise helps learners practice critical thinking and effective communication skills, which are essential for presenting their ideas clearly and confidently."
+          "content": "Learners will collaboratively assemble a comprehensive defense brief. This document will articulate well-supported claims, empirical evidence, explicit uncertainty bounds, and structured remediation pathways, honing the critical communication skills required for executive presentations."
         },
         {
           "id": "basic-math-601-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "During the expert panel rehearsal, learners will practice their responses to various critiques. These critiques may come from technical experts, governance representatives, and stakeholders. This preparation is crucial for building confidence and ensuring that learners can effectively address questions and concerns during their presentations.\nContext recap: During the expert panel rehearsal, learners will practice their responses to various critiques. These critiques may come from technical experts, governance representatives, and stakeholders. This preparation is crucial for building confidence and ensuring that learners can effectively address questions and concerns during their presentations."
+          "content": "During the expert panel rehearsal, learners will defend their briefs against rigorous critiques from technical experts and governance stakeholders. This adversarial simulation builds confidence and ensures readiness to address complex challenges in real-world scenarios."
         }
       ],
       "interactiveActivities": [

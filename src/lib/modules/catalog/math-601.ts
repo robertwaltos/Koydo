@@ -1,44 +1,44 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const Math601Module: LearningModule = {
+export const math_601_Module: LearningModule = {
   "id": "math-601",
   "title": "Math Research and Leadership",
-  "description": "Post-401 specialization in Math, focused on math systems diagnostics, math operations and execution design, math impact and tradeoff analysis, and math governance and leadership through advanced casework, simulation, and defense-based checkpoints.",
+  "description": "A post-401 specialization focused on diagnosing complex mathematical systems, designing robust operational plans, analyzing impacts and tradeoffs, and exercising effective governance and leadership through advanced casework, simulations, and capstone defenses.",
   "subject": "Math",
   "tags": [
-    "core",
-    "curriculum",
-    "interactive",
-    "math",
+    "systems-thinking",
+    "decision-science",
+    "leadership",
+    "ethics",
     "specialization"
   ],
   "minAge": 17,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en",
     "es"
   ],
   "learningObjectives": [
-    "Apply advanced methods for math systems diagnostics in high-constraint environments",
-    "Design robust systems for math operations and execution design with measurable control gates",
-    "Evaluate interventions in math impact and tradeoff analysis with research-grade rigor",
-    "Operationalize math governance and leadership with accountable governance and escalation pathways",
-    "Lead cross-functional decision reviews with explicit tradeoff communication",
-    "Defend recommendations under expert critique using evidence and uncertainty bounds"
+    "Apply structured methods to diagnose issues in complex, high-constraint systems.",
+    "Design robust operational systems with measurable controls and contingency plans.",
+    "Evaluate the impact and tradeoffs of interventions with research-grade rigor.",
+    "Develop and implement accountable governance structures with clear escalation pathways.",
+    "Lead decision-making processes by communicating tradeoffs and uncertainties clearly.",
+    "Defend complex recommendations against expert critique using evidence-based arguments."
   ],
   "lessons": [
     {
       "id": "math-601-l01",
-      "title": "Math Advanced Foundations",
+      "title": "Foundations of Mathematical Systems Analysis",
       "type": "video",
       "duration": 14,
       "learningAids": [
         {
           "id": "math-601-l01-a1",
           "type": "image",
-          "title": "Guided Practice",
+          "title": "Core Principle",
           "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
         }
       ],
@@ -46,50 +46,53 @@ export const Math601Module: LearningModule = {
         {
           "id": "math-601-l01-c1",
           "kind": "concept",
-          "title": "Scope and Boundary Design",
-          "content": "In this lesson, we will delve into the advanced boundaries of mathematical concepts. We will focus on how to effectively diagnose mathematical systems, which means identifying any issues or challenges within these systems. Additionally, we will learn how to design effective operations and execution strategies. By mastering these skills, we will be better equipped to tackle complex mathematical challenges and enhance our problem-solving abilities. This understanding is crucial for navigating the intricate world of mathematics and applying it to real-world situations.\nContext recap: In this lesson, we will delve into the advanced boundaries of mathematical concepts. We will focus on how to effectively diagnose mathematical systems, which means identifying any issues or challenges within these systems. Additionally, we will learn how to design effective operations and execution strategies. By mastering these skills, we will be better equipped to tackle complex mathematical challenges and enhance our problem-solving abilities."
+          "title": "Defining the Problem Space",
+          "content": "To solve a complex problem, you must first define its boundaries. This involves identifying the key components of the system, the constraints it operates under (like budget, time, or regulations), and the goals you are trying to achieve. A clear scope prevents confusion and focuses your analytical efforts where they matter most.",
+          "visualPrompt": "A diagram showing a central problem (e.g., 'City Traffic Congestion') surrounded by a clear boundary line. Inside the boundary are elements like 'Public Transit,' 'Road Network,' and 'Traffic Lights.' Outside are related but out-of-scope items like 'National Highway Policy.'"
         },
         {
           "id": "math-601-l01-c2",
           "kind": "concept",
-          "title": "Causal and Uncertainty Modeling",
-          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different factors that lead to certain outcomes. Additionally, we will examine uncertainty ranges and how various system dependencies interact. This foundational knowledge is crucial for planning effective interventions in mathematical scenarios.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different factors that lead to certain outcomes. Additionally, we will examine uncertainty ranges and how various system dependencies interact. This foundational knowledge is crucial for planning effective interventions in mathematical scenarios."
+          "title": "Modeling Causality and Uncertainty",
+          "content": "Real-world systems are full of cause-and-effect relationships and uncertainty. We will learn to map these causal pathways to understand how different actions lead to specific outcomes. We will also learn to quantify uncertainty using ranges and probabilities, which is essential for assessing risk and planning effective interventions.",
+          "visualPrompt": "An animated causal loop diagram where adjusting one variable (e.g., 'Bus Frequency') visibly impacts another ('Rider Satisfaction') and a third ('Road Congestion'). A graph next to it shows a predicted outcome with a shaded 'uncertainty range' around the trend line."
         },
         {
           "id": "math-601-l01-c3",
           "kind": "recap",
-          "title": "Evidence Thresholds",
-          "content": "In our recap, we will emphasize that all claims made during our analysis should be supported by measurable indicators. We will also discuss the importance of establishing confidence bounds and setting up review checkpoints to ensure that our conclusions are reliable and well-founded.\nContext recap: In our recap, we will emphasize that all claims made during our analysis should be supported by measurable indicators. We will also discuss the importance of establishing confidence bounds and setting up review checkpoints to ensure that our conclusions are reliable and well-founded."
+          "title": "Setting Evidence Thresholds",
+          "content": "Strong claims require strong evidence. In this module, every recommendation must be supported by measurable data. We will establish clear standards for what constitutes sufficient evidence, including setting confidence bounds for our conclusions and defining checkpoints for review to ensure our analysis is rigorous and reliable.",
+          "visualPrompt": "A chart showing a performance metric over time. A horizontal line indicates the 'Success Threshold,' and the data points have vertical error bars representing confidence intervals. A pop-up explains that the goal is met only when the entire confidence interval is above the threshold."
         }
       ],
       "flashcards": [
         {
           "id": "math-601-l01-f1",
-          "front": "math systems diagnostics",
-          "back": "A specialization axis requiring explicit assumptions and measurable constraints."
+          "front": "Math Systems Diagnostics",
+          "back": "A structured approach to identifying the root causes of issues in a complex system by defining clear assumptions and measurable constraints."
         },
         {
           "id": "math-601-l01-f2",
-          "front": "math operations and execution design",
-          "back": "Execution architecture that determines reliability under stress."
+          "front": "Math Operations Design",
+          "back": "Designing a reliable process or workflow that performs consistently, especially under stress, by including checkpoints and clear procedures."
         },
         {
           "id": "math-601-l01-f3",
-          "front": "math impact and tradeoff analysis",
-          "back": "Evaluation discipline for identifying true gains and hidden costs."
+          "front": "Impact and Tradeoff Analysis",
+          "back": "A disciplined method for evaluating the full consequences of a decision, including both intended benefits and unintended costs."
         }
       ]
     },
     {
       "id": "math-601-l02",
-      "title": "Math Specialist Methods Lab",
+      "title": "Specialist Methods Lab",
       "type": "interactive",
       "duration": 17,
       "learningAids": [
         {
           "id": "math-601-l02-a1",
           "type": "practice",
-          "title": "Guided Practice",
+          "title": "Core Principle",
           "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
         }
       ],
@@ -97,14 +100,16 @@ export const Math601Module: LearningModule = {
         {
           "id": "math-601-l02-c1",
           "kind": "practice",
-          "title": "Method Design and Stress Test",
-          "content": "In this interactive practice, learners will have the opportunity to design specialized workflows tailored to specific mathematical tasks. They will also conduct stress tests on these workflows by simulating adverse scenarios to ensure they can withstand challenges and perform effectively under pressure.\nContext recap: In this interactive practice, learners will have the opportunity to design specialized workflows tailored to specific mathematical tasks. They will also conduct stress tests on these workflows by simulating adverse scenarios to ensure they can withstand challenges and perform effectively under pressure."
+          "title": "Workflow Design and Stress Testing",
+          "content": "In this lab, you will design a specialized workflow for a given mathematical task. You will then conduct a stress test by introducing unexpected challenges, such as missing data or tight deadlines, to see how well your workflow holds up under pressure and identify potential points of failure.",
+          "visualPrompt": "An interactive flowchart builder where the user drags and drops steps like 'Data Collection,' 'Analysis,' and 'Review.' A 'Stress Test' button introduces red 'error' icons on certain steps, forcing the user to build in contingency paths."
         },
         {
           "id": "math-601-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "In our recap, we will highlight how workflows should incorporate essential elements such as checkpoints, rollback criteria, and threshold-based escalation procedures. These components are vital for maintaining control and ensuring that processes can adapt to changing circumstances.\nContext recap: In our recap, we will highlight how workflows should incorporate essential elements such as checkpoints, rollback criteria, and threshold-based escalation procedures. These components are vital for maintaining control and ensuring that processes can adapt to changing circumstances."
+          "content": "A robust workflow isn't just a series of steps; it's a governed process. We will recap how to build in 'control gates'—formal checkpoints where progress is reviewed against set criteria. These gates include rules for when to proceed, when to roll back to a previous step, and when to escalate a problem to leadership.",
+          "visualPrompt": "A process diagram with diamond-shaped decision points labeled 'Control Gate.' Arrows leaving the gate are labeled 'Proceed,' 'Rollback,' and 'Escalate to Review Board,' each leading to a different part of the workflow."
         }
       ],
       "interactiveActivities": [
@@ -112,23 +117,23 @@ export const Math601Module: LearningModule = {
           "id": "math-601-l02-act1",
           "type": "matching_pairs",
           "title": "Control-to-Outcome Mapping",
-          "description": "Match specialist controls with their strongest reliability and governance effects.",
+          "description": "Match each operational control with its primary benefit for system reliability and governance.",
           "pairs": [
             {
-              "left": "Pre-commit gate",
+              "left": "Pre-Commit Gate",
               "right": "Prevents avoidable downstream failures"
             },
             {
-              "left": "Rollback trigger",
-              "right": "Limits blast radius under adverse outcomes"
+              "left": "Rollback Trigger",
+              "right": "Limits the damage of an unexpected failure"
             },
             {
-              "left": "Baseline dashboard",
-              "right": "Supports defensible impact attribution"
+              "left": "Baseline Dashboard",
+              "right": "Allows for clear attribution of an intervention's impact"
             },
             {
-              "left": "Retrospective loop",
-              "right": "Improves next-cycle decision quality"
+              "left": "Retrospective Loop",
+              "right": "Improves the quality of future decisions"
             }
           ]
         }
@@ -143,223 +148,223 @@ export const Math601Module: LearningModule = {
         {
           "id": "math-601-l03-a1",
           "type": "practice",
-          "title": "Guided Practice",
+          "title": "Core Principle",
           "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
         }
       ],
       "questions": [
         {
           "id": "math-601-l03-q1",
-          "text": "Which practice most improves math systems diagnostics decision quality?",
+          "text": "Which practice most improves the quality of a complex systems diagnosis?",
           "skillId": "math-601-skill-core",
           "options": [
             {
               "id": "a",
-              "text": "Proceed without baseline or assumptions"
+              "text": "Proceeding without a baseline or stated assumptions"
             },
             {
               "id": "b",
-              "text": "Define assumptions, constraints, and measurable indicators"
+              "text": "Clearly defining assumptions, constraints, and measurable indicators"
             },
             {
               "id": "c",
-              "text": "Optimize only for speed in every context"
+              "text": "Optimizing only for speed in every context"
             },
             {
               "id": "d",
-              "text": "Ignore uncertainty and edge conditions"
+              "text": "Ignoring uncertainty and potential edge cases"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Advanced decisions improve when assumptions, constraints, and metrics are explicit."
+          "explanation": "High-quality decisions are built on a foundation of explicit assumptions, constraints, and metrics, which allows for rigorous analysis."
         },
         {
           "id": "math-601-l03-q2",
-          "text": "At level 601, strong execution for math operations and execution design requires:",
+          "text": "A reliable operational plan requires which of the following elements?",
           "skillId": "math-601-skill-execution",
           "options": [
             {
               "id": "a",
-              "text": "Owner mapping, checkpoint cadence, and escalation thresholds"
+              "text": "Clear ownership, a regular review cadence, and pre-defined escalation thresholds"
             },
             {
               "id": "b",
-              "text": "No role clarity and ad-hoc process changes"
+              "text": "Vague roles and processes that change without notice"
             },
             {
               "id": "c",
-              "text": "No retrospective or post-run review"
+              "text": "No process for learning from past performance"
             },
             {
               "id": "d",
-              "text": "No rollback or fallback conditions"
+              "text": "No contingency plans for when things go wrong"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Reliable advanced execution needs ownership clarity and threshold-driven governance."
+          "explanation": "Reliable execution depends on clear ownership and threshold-driven governance to manage complexity and risk."
         },
         {
           "id": "math-601-l03-q3",
-          "text": "A defensible approach to math impact and tradeoff analysis includes:",
+          "text": "A rigorous analysis of a project's impact should always include:",
           "skillId": "math-601-skill-eval",
           "options": [
             {
               "id": "a",
-              "text": "Anecdotes without comparison"
+              "text": "A few success stories without any comparison data"
             },
             {
               "id": "b",
-              "text": "Baseline comparisons, side-effect analysis, and uncertainty bounds"
+              "text": "Comparison to a baseline, analysis of side effects, and stated uncertainty bounds"
             },
             {
               "id": "c",
-              "text": "Changing success criteria after outcomes"
+              "text": "Changing the definition of success after the results are in"
             },
             {
               "id": "d",
-              "text": "Excluding difficult scenarios from analysis"
+              "text": "Excluding inconvenient scenarios from the analysis"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible analysis combines comparative baselines, side-effect checks, and uncertainty disclosure."
+          "explanation": "Rigorous analysis requires comparing outcomes to a baseline, accounting for unintended side effects, and being transparent about uncertainty."
         },
         {
           "id": "math-601-l03-q4",
-          "text": "Mature governance systems connect:",
+          "text": "An effective governance system connects:",
           "skillId": "math-601-skill-governance",
           "options": [
             {
               "id": "a",
-              "text": "Policy intent, measurable controls, and remediation pathways"
+              "text": "The intent of a policy, the measurable controls to enforce it, and the pathways to fix violations"
             },
             {
               "id": "b",
-              "text": "Policy language with no measurable enforcement"
+              "text": "A policy statement with no way to measure or enforce it"
             },
             {
               "id": "c",
-              "text": "Targets without ownership or escalation design"
+              "text": "Ambitious targets without assigning ownership or designing an escalation process"
             },
             {
               "id": "d",
-              "text": "Operations without transparent accountability"
+              "text": "Operations that lack transparent accountability"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Governance maturity is the operational link between intent, measurement, and corrective action."
+          "explanation": "Mature governance creates an operational link between the high-level intent, on-the-ground measurement, and corrective action."
         },
         {
           "id": "math-601-l03-q5",
-          "text": "What is the best way to compare competing interventions in advanced Math?",
-          "skillId": "math-601-skill-advanced-5",
+          "text": "What is the most defensible way to compare competing project proposals?",
+          "skillId": "math-601-skill-comparison",
           "options": [
             {
               "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
+              "text": "Choose the option presented by the most persuasive speaker"
             },
             {
               "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
+              "text": "Score all alternatives against the same criteria, including risks, side effects, and uncertainty"
             },
             {
               "id": "c",
-              "text": "Switch metrics after results arrive"
+              "text": "Use different evaluation criteria for each proposal to make them all look good"
             },
             {
               "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
+              "text": "Prioritize whichever option has the shortest proposal document"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
+          "explanation": "Fair and defensible comparisons require using a consistent set of metrics and fully accounting for risks and uncertainty for all options."
         },
         {
           "id": "math-601-l03-q6",
-          "text": "In high-stakes Math Research and Leadership execution, which communication protocol is strongest?",
-          "skillId": "math-601-skill-advanced-6",
+          "text": "In a high-stakes project, which communication protocol is strongest?",
+          "skillId": "math-601-skill-communication",
           "options": [
             {
               "id": "a",
-              "text": "Broadcast conclusions without assumptions"
+              "text": "Announce final conclusions without sharing the underlying assumptions"
             },
             {
               "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
+              "text": "Proactively publish assumptions, confidence ranges, and key decision checkpoints to all stakeholders"
             },
             {
               "id": "c",
-              "text": "Share only final outcomes after completion"
+              "text": "Share only the final outcome after the project is complete"
             },
             {
               "id": "d",
-              "text": "Limit updates to a single informal channel"
+              "text": "Limit all updates to a single, informal channel"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
+          "explanation": "Strong communication in high-stakes environments requires transparency about assumptions, uncertainty, and the governance process."
         },
         {
           "id": "math-601-l03-q7",
-          "text": "A mature remediation loop in advanced Math should prioritize:",
-          "skillId": "math-601-skill-advanced-7",
+          "text": "When a system fails, a mature remediation process should prioritize:",
+          "skillId": "math-601-skill-remediation",
           "options": [
             {
               "id": "a",
-              "text": "Blame assignment without system updates"
+              "text": "Assigning blame to an individual without updating the system"
             },
             {
               "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
+              "text": "Root-cause analysis, redesigning controls to prevent recurrence, and verifying the fix"
             },
             {
               "id": "c",
-              "text": "One-time fixes without retesting"
+              "text": "Implementing a one-time fix without retesting the system under stress"
             },
             {
               "id": "d",
-              "text": "Issue closure based on elapsed time"
+              "text": "Closing the issue after a certain amount of time has passed"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
+          "explanation": "Mature remediation focuses on systemic improvement by linking the root cause of a failure to a verifiable change in system controls."
         },
         {
           "id": "math-601-l03-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Math Research and Leadership?",
-          "skillId": "math-601-skill-advanced-8",
+          "text": "Which portfolio strategy best balances performance and resilience?",
+          "skillId": "math-601-skill-portfolio",
           "options": [
             {
               "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
+              "text": "Maximize short-term gains, regardless of the risk of a single point of failure"
             },
             {
               "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
+              "text": "Optimize for expected value while enforcing risk limits and maintaining contingency options"
             },
             {
               "id": "c",
-              "text": "Ignore correlated failure modes"
+              "text": "Ignore the possibility that multiple projects could fail at the same time for the same reason"
             },
             {
               "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
+              "text": "Commit all resources to a single, irreversible path"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "explanation": "A balanced portfolio strategy combines the pursuit of high performance with explicit risk management and contingency planning."
         }
       ]
     },
     {
       "id": "math-601-l04",
-      "title": "Math Advanced Case Analysis",
+      "title": "Advanced Case Analysis",
       "type": "video",
       "duration": 14,
       "learningAids": [
         {
           "id": "math-601-l04-a1",
           "type": "image",
-          "title": "Guided Practice",
+          "title": "Core Principle",
           "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
         }
       ],
@@ -367,33 +372,36 @@ export const Math601Module: LearningModule = {
         {
           "id": "math-601-l04-c1",
           "kind": "concept",
-          "title": "Scenario Architecture",
-          "content": "In this lesson, we will frame cases that involve competing constraints within mathematical systems. We will analyze how these constraints affect diagnostics and evaluate the impacts and trade-offs involved in different mathematical decisions. This understanding is crucial for making informed choices.\nContext recap: In this lesson, we will frame cases that involve competing constraints within mathematical systems. We will analyze how these constraints affect diagnostics and evaluate the impacts and trade-offs involved in different mathematical decisions. This understanding is crucial for making informed choices."
+          "title": "Deconstructing a Case",
+          "content": "In this lesson, we will learn to analyze complex cases involving competing goals and constraints. The first step is to deconstruct the scenario into its fundamental parts: Who are the stakeholders? What are their objectives? What resources are available? What are the hard limits? This structured approach is key to understanding the core challenge.",
+          "visualPrompt": "An animation showing a complex paragraph describing a business problem being automatically highlighted and sorted into columns labeled 'Stakeholders,' 'Objectives,' 'Constraints,' and 'Key Questions.'"
         },
         {
           "id": "math-601-l04-c2",
           "kind": "practice",
-          "title": "Tradeoff Framing",
-          "content": "In this practice session, learners will compare various options based on important criteria such as safety, reliability, cost, equity, and governance. This comparative analysis will help them understand the implications of their choices and how to balance different factors effectively.\nContext recap: In this practice session, learners will compare various options based on important criteria such as safety, reliability, cost, equity, and governance. This comparative analysis will help them understand the implications of their choices and how to balance different factors effectively."
+          "title": "Framing and Evaluating Tradeoffs",
+          "content": "Nearly every important decision involves tradeoffs. We will practice framing these choices clearly, comparing different options against critical criteria like cost, safety, reliability, and fairness. This comparative analysis helps make the consequences of each choice explicit and leads to more thoughtful decisions.",
+          "visualPrompt": "An interactive decision matrix. The user populates rows with 'Option A,' 'Option B,' etc., and columns with criteria like 'Cost' and 'Safety.' As they score each option, a summary chart updates to show the relative strengths and weaknesses."
         },
         {
           "id": "math-601-l04-c3",
           "kind": "recap",
-          "title": "Decision Memo Pattern",
-          "content": "In our recap, we will discuss the structure of decision memos. Each recommendation should clearly outline the underlying assumptions, the evidence supporting the decision, risk controls in place, and fallback plans to ensure preparedness for any unforeseen circumstances.\nContext recap: In our recap, we will discuss the structure of decision memos. Each recommendation should clearly outline the underlying assumptions, the evidence supporting the decision, risk controls in place, and fallback plans to ensure preparedness for any unforeseen circumstances."
+          "title": "The Structured Decision Memo",
+          "content": "A recommendation is only as good as its justification. We will review a standard pattern for a decision memo that ensures clarity and rigor. Every recommendation should clearly state the underlying assumptions, summarize the supporting evidence, describe the risk controls, and outline a fallback plan in case things go wrong.",
+          "visualPrompt": "A document template for a decision memo with clear headings: 1. Recommendation, 2. Background, 3. Alternatives Considered, 4. Evidence & Analysis, 5. Risks & Mitigation, 6. Implementation Plan."
         }
       ]
     },
     {
       "id": "math-601-l05",
-      "title": "Math Simulation Clinic",
+      "title": "Simulation Clinic",
       "type": "interactive",
       "duration": 18,
       "learningAids": [
         {
           "id": "math-601-l05-a1",
           "type": "practice",
-          "title": "Guided Practice",
+          "title": "Core Principle",
           "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
         }
       ],
@@ -401,14 +409,16 @@ export const Math601Module: LearningModule = {
         {
           "id": "math-601-l05-c1",
           "kind": "practice",
-          "title": "Live Scenario Controls",
-          "content": "In this interactive practice, learners will operate scenario controls while carefully balancing performance metrics and governance constraints. This hands-on experience will enhance their understanding of how to manage complex mathematical scenarios effectively.\nContext recap: In this interactive practice, learners will operate scenario controls while carefully balancing performance metrics and governance constraints. This hands-on experience will enhance their understanding of how to manage complex mathematical scenarios effectively.\nWhy this matters: Live Scenario Controls helps learners in Math connect ideas from Math Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "Managing a Live Scenario",
+          "content": "This interactive simulation puts you in charge of a complex system. You will operate a set of controls to balance competing objectives, like maximizing performance while staying within safety and budget constraints. This hands-on experience connects theory to practice by forcing you to make decisions with real-time consequences.",
+          "visualPrompt": "A simulation dashboard for a power grid. The user adjusts sliders for 'Renewable Energy Input' and 'Fossil Fuel Output' to meet a fluctuating 'Energy Demand' graph, while keeping a 'Grid Stability' meter in the green zone."
         },
         {
           "id": "math-601-l05-c2",
           "kind": "recap",
-          "title": "Adaptive Response Design",
-          "content": "In our recap, we will emphasize the importance of effective responses that can update control gates while maintaining traceability and accountability. This ensures that all actions taken are transparent and can be reviewed as needed.\nContext recap: In our recap, we will emphasize the importance of effective responses that can update control gates while maintaining traceability and accountability. This ensures that all actions taken are transparent and can be reviewed as needed.\nWhy this matters: Adaptive Response Design helps learners in Math connect ideas from Math Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "Adaptive Response and Control",
+          "content": "In a dynamic world, plans must be adaptable. As the simulation unfolds, you will need to respond to unexpected events. We will recap how effective responses involve updating your strategy and controls based on new information, while maintaining clear records of your decisions to ensure traceability and accountability.",
+          "visualPrompt": "An animation showing the simulation dashboard from the previous chunk. A sudden 'heatwave' event causes the 'Energy Demand' to spike. The user is prompted to activate a 'Contingency Reserve' control, and a log entry automatically appears on screen noting the time and action taken."
         }
       ],
       "interactiveActivities": [
@@ -416,7 +426,7 @@ export const Math601Module: LearningModule = {
           "id": "math-601-l05-act1",
           "type": "scenario",
           "title": "Adverse-Condition Decision Run",
-          "description": "Run a high-pressure math scenario and tune controls under uncertainty."
+          "description": "Manage a high-pressure scenario where you must tune system controls to maintain stability and performance under rapidly changing and uncertain conditions."
         }
       ]
     },
@@ -429,52 +439,52 @@ export const Math601Module: LearningModule = {
         {
           "id": "math-601-l06-a1",
           "type": "practice",
-          "title": "Guided Practice",
+          "title": "Core Principle",
           "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
         }
       ],
       "questions": [
         {
           "id": "math-601-l06-q1",
-          "text": "In advanced casework, the first requirement for defensible recommendations is:",
-          "skillId": "math-601-skill-case1",
+          "text": "In advanced casework, the first requirement for a defensible recommendation is:",
+          "skillId": "math-601-skill-case-foundation",
           "options": [
             {
               "id": "a",
-              "text": "A preferred option without explicit assumptions"
+              "text": "A preferred option without any explicit assumptions"
             },
             {
               "id": "b",
-              "text": "A clear baseline, explicit constraints, and success criteria"
+              "text": "A clear baseline for comparison, explicit constraints, and measurable success criteria"
             },
             {
               "id": "c",
-              "text": "High confidence without evidence logs"
+              "text": "High confidence in the outcome without any supporting evidence"
             },
             {
               "id": "d",
-              "text": "Single-metric optimization only"
+              "text": "Optimizing for a single metric while ignoring all others"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible recommendations begin with explicit assumptions, constraints, and measurable targets."
+          "explanation": "Defensible recommendations are built on a clear and explicit foundation of assumptions, constraints, and measurable targets."
         },
         {
           "id": "math-601-l06-q2",
-          "text": "A resilient strategy for math operations and execution design should include:",
-          "skillId": "math-601-skill-case2",
+          "text": "A resilient strategy for executing a complex plan should always include:",
+          "skillId": "math-601-skill-case-resilience",
           "options": [
             {
               "id": "a",
-              "text": "Checkpointed execution with fallback and escalation criteria"
+              "text": "A process with checkpoints, fallback options, and clear escalation criteria"
             },
             {
               "id": "b",
-              "text": "One-way execution with no rollback capability"
+              "text": "A one-way execution path with no ability to roll back from mistakes"
             },
             {
               "id": "c",
-              "text": "No ownership mapping across teams"
+              "text": "No clear ownership mapped across the teams involved"
             },
             {
               "id": "d",
@@ -482,170 +492,170 @@ export const Math601Module: LearningModule = {
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Resilience depends on checkpoints, fallback options, and explicit escalation design."
+          "explanation": "Resilience in execution depends on having planned checkpoints, fallback options, and an explicit process for escalating problems."
         },
         {
           "id": "math-601-l06-q3",
-          "text": "When evaluating math impact and tradeoff analysis, which method is most rigorous?",
-          "skillId": "math-601-skill-case3",
+          "text": "When evaluating the impact of an intervention, which method is most rigorous?",
+          "skillId": "math-601-skill-case-evaluation",
           "options": [
             {
               "id": "a",
-              "text": "Single success story without controls"
+              "text": "Telling a single success story without providing any control data"
             },
             {
               "id": "b",
-              "text": "Comparative baselines plus side-effect and uncertainty analysis"
+              "text": "Using comparative baselines plus an analysis of side effects and uncertainty"
             },
             {
               "id": "c",
-              "text": "Outcome-only narrative without process evidence"
+              "text": "Presenting only the final outcome without any evidence from the process"
             },
             {
               "id": "d",
-              "text": "Retrospective scope changes to fit outcomes"
+              "text": "Changing the project's scope after the fact to better fit the outcomes"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Rigorous evaluation requires comparisons, side-effect analysis, and uncertainty disclosure."
+          "explanation": "Rigorous evaluation requires objective comparison against a baseline, a full accounting of side effects, and transparent disclosure of uncertainty."
         },
         {
           "id": "math-601-l06-q4",
           "text": "Advanced governance is strongest when it:",
-          "skillId": "math-601-skill-case4",
+          "skillId": "math-601-skill-case-governance",
           "options": [
             {
               "id": "a",
-              "text": "Aligns authority, measurement, and remediation obligations"
+              "text": "Directly aligns decision-making authority, performance measurement, and the obligation to remediate failures"
             },
             {
               "id": "b",
-              "text": "Separates policy from operational controls"
+              "text": "Separates high-level policy from the operational controls meant to enforce it"
             },
             {
               "id": "c",
-              "text": "Avoids external review and transparency"
+              "text": "Avoids external review and operates without transparency"
             },
             {
               "id": "d",
-              "text": "Treats accountability as optional under pressure"
+              "text": "Treats accountability as optional, especially under pressure"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Mature governance links authority, measurable controls, and corrective action."
+          "explanation": "Mature governance creates a tight link between authority, measurable controls, and the responsibility for corrective action."
         },
         {
           "id": "math-601-l06-q5",
-          "text": "What is the best way to compare competing interventions in advanced Math?",
-          "skillId": "math-601-skill-advanced-5",
+          "text": "When presenting a case analysis with multiple competing options, what is the most effective way to frame the final recommendation?",
+          "skillId": "math-601-skill-case-comm",
           "options": [
             {
               "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
+              "text": "Insist on one 'perfect' solution and dismiss all others."
             },
             {
               "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
+              "text": "Present the recommended option while clearly articulating the specific tradeoffs made against other viable alternatives."
             },
             {
               "id": "c",
-              "text": "Switch metrics after results arrive"
+              "text": "Provide a large volume of raw data and let the audience draw their own conclusions."
             },
             {
               "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
+              "text": "Focus only on the positive aspects of the recommended option, ignoring potential risks."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
+          "explanation": "Effective leadership involves making and communicating clear choices, which requires acknowledging the value of other options and justifying the specific tradeoffs made."
         },
         {
           "id": "math-601-l06-q6",
-          "text": "In high-stakes Math Research and Leadership execution, which communication protocol is strongest?",
-          "skillId": "math-601-skill-advanced-6",
+          "text": "In a dynamic simulation, you notice that your initial strategy is leading to a negative outcome. What is the most resilient response?",
+          "skillId": "math-601-skill-sim-adapt",
           "options": [
             {
               "id": "a",
-              "text": "Broadcast conclusions without assumptions"
+              "text": "Continue with the initial strategy, hoping the situation improves on its own."
             },
             {
               "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
+              "text": "Stop the simulation immediately to avoid a bad score."
             },
             {
               "id": "c",
-              "text": "Share only final outcomes after completion"
+              "text": "Analyze the new data, adjust your operational controls based on pre-defined fallback plans, and document the change."
             },
             {
               "id": "d",
-              "text": "Limit updates to a single informal channel"
+              "text": "Blame the simulation's design for being unrealistic."
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
+          "correctOptionId": "c",
+          "explanation": "Resilience in operations means actively monitoring outcomes and using established contingency plans to adapt to changing conditions, not ignoring negative data."
         },
         {
           "id": "math-601-l06-q7",
-          "text": "A mature remediation loop in advanced Math should prioritize:",
-          "skillId": "math-601-skill-advanced-7",
+          "text": "What is the primary purpose of 'stress-testing' a mathematical model or system in a simulation?",
+          "skillId": "math-601-skill-sim-stress",
           "options": [
             {
               "id": "a",
-              "text": "Blame assignment without system updates"
+              "text": "To prove that the system works perfectly under all possible conditions."
             },
             {
               "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
+              "text": "To identify the system's breaking points and hidden vulnerabilities before they occur in the real world."
             },
             {
               "id": "c",
-              "text": "One-time fixes without retesting"
+              "text": "To generate the most optimistic performance data possible for a presentation."
             },
             {
               "id": "d",
-              "text": "Issue closure based on elapsed time"
+              "text": "To confirm that the system only works under ideal, expected conditions."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
+          "explanation": "Stress-testing is a critical diagnostic tool used to discover weaknesses by intentionally exposing a system to extreme or unexpected conditions."
         },
         {
           "id": "math-601-l06-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Math Research and Leadership?",
-          "skillId": "math-601-skill-advanced-8",
+          "text": "Your case analysis reveals that the most profitable solution has a significant negative impact on a specific community. How should this be handled in your recommendation?",
+          "skillId": "math-601-skill-case-ethics",
           "options": [
             {
               "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
+              "text": "Ignore the negative impact to make the recommendation seem more appealing."
             },
             {
               "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
+              "text": "Mention the impact briefly in an appendix but not in the main summary."
             },
             {
               "id": "c",
-              "text": "Ignore correlated failure modes"
+              "text": "Quantify the negative impact as a key tradeoff, propose specific mitigation strategies, and present it as a central factor in the decision."
             },
             {
               "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
+              "text": "Recommend the profitable solution but suggest someone else should handle the community impact later."
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "correctOptionId": "c",
+          "explanation": "Responsible analysis requires transparently reporting all significant impacts, including negative ones, and integrating mitigation plans directly into the recommendation."
         }
       ]
     },
     {
       "id": "math-601-l07",
-      "title": "Math Governance and Public Impact",
+      "title": "Governance and Public Impact",
       "type": "video",
       "duration": 13,
       "learningAids": [
         {
           "id": "math-601-l07-a1",
           "type": "image",
-          "title": "Guided Practice",
+          "title": "Core Principle",
           "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
         }
       ],
@@ -653,50 +663,53 @@ export const Math601Module: LearningModule = {
         {
           "id": "math-601-l07-c1",
           "kind": "concept",
-          "title": "Stakeholder Impact Distribution",
-          "content": "In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. Understanding these dynamics is essential for assessing the broader impact of mathematical decisions on various communities.\nContext recap: In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. Understanding these dynamics is essential for assessing the broader impact of mathematical decisions on various communities.\nWhy this matters: Stakeholder Impact Distribution helps learners in Math connect ideas from Math Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "Analyzing Stakeholder Impact",
+          "content": "Decisions don't happen in a vacuum. In this lesson, you will learn to map the distribution of a decision's consequences—including benefits, costs, and risks—across different stakeholder groups. Understanding who is affected and how is a critical component of responsible leadership and ethical decision-making.",
+          "visualPrompt": "A map showing a proposed factory location. Radiating circles show the impact on different groups: 'Local Residents' (noise, jobs), 'Environment' (pollution), and 'City Treasury' (tax revenue). The impacts are color-coded as positive, negative, or mixed."
         },
         {
           "id": "math-601-l07-c2",
           "kind": "concept",
-          "title": "Accountability Architecture",
-          "content": "In this section, we will explore the architecture of accountability in decision-making processes. Key elements such as decision traceability, review rights, and obligations for remediation will be integrated into our discussions to ensure responsible governance.\nContext recap: In this section, we will explore the architecture of accountability in decision-making processes. Key elements such as decision traceability, review rights, and obligations for remediation will be integrated into our discussions to ensure responsible governance.\nWhy this matters: Accountability Architecture helps learners in Math connect ideas from Math Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "Designing for Accountability",
+          "content": "Accountability isn't an accident; it's a feature of a well-designed system. We will explore how to build accountability into a process by ensuring that every major decision is traceable, that there are clear rights for review and appeal, and that there are explicit obligations for fixing any harm caused.",
+          "visualPrompt": "A flowchart illustrating an 'Accountability Loop.' It starts with 'Decision Made,' moves to 'Outcome Monitored,' then to a 'Review Gate.' If the outcome is negative, the path leads to 'Remediation Action' and then back to 'Outcome Monitored' to verify the fix."
         },
         {
           "id": "math-601-l07-c3",
           "kind": "recap",
-          "title": "Responsible Leadership Checklist",
-          "content": "At the end of our lesson, we will use a comprehensive checklist that connects important outcomes with ethical considerations, ensures we follow policies correctly, and highlights the importance of being resilient in our leadership roles. This checklist will help us reflect on how our decisions can positively impact the community.\nContext recap: At the end of our lesson, we will use a comprehensive checklist that connects important outcomes with ethical considerations, ensures we follow policies correctly, and highlights the importance of being resilient in our leadership roles. This checklist will help us reflect on how our decisions can positively impact the community."
+          "title": "The Responsible Leadership Checklist",
+          "content": "To conclude, we will introduce a checklist for responsible leadership. This tool helps ensure your final recommendations align with ethical principles, comply with relevant policies, and incorporate resilience. It serves as a final check to confirm that your analysis considers the full impact on the broader community.",
+          "visualPrompt": "A simple, elegant checklist with icons. Items include: 'Transparent Assumptions,' 'Fair Tradeoff Analysis,' 'Stakeholder Impact Assessed,' 'Accountability Plan in Place,' and 'Ethical Review Complete.'"
         }
       ],
       "flashcards": [
         {
           "id": "math-601-l07-f1",
-          "front": "Impact distribution",
-          "back": "How outcomes are allocated across populations and timescales."
+          "front": "Impact Distribution",
+          "back": "The way the benefits, costs, and risks of a decision are spread across different groups of people and over time."
         },
         {
           "id": "math-601-l07-f2",
-          "front": "Decision traceability",
-          "back": "An auditable record of evidence, ownership, and rationale."
+          "front": "Decision Traceability",
+          "back": "A clear, auditable record showing who made a decision, when, why, and based on what evidence."
         },
         {
           "id": "math-601-l07-f3",
-          "front": "Responsible leadership",
-          "back": "Decision behavior balancing performance, accountability, and ethics."
+          "front": "Responsible Leadership",
+          "back": "Making decisions that effectively balance achieving performance goals with ethical duties and public accountability."
         }
       ]
     },
     {
       "id": "math-601-l08",
-      "title": "Math Capstone Defense Lab",
+      "title": "Capstone Defense Lab",
       "type": "interactive",
       "duration": 16,
       "learningAids": [
         {
           "id": "math-601-l08-a1",
           "type": "practice",
-          "title": "Guided Practice",
+          "title": "Core Principle",
           "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
         }
       ],
@@ -704,14 +717,16 @@ export const Math601Module: LearningModule = {
         {
           "id": "math-601-l08-c1",
           "kind": "practice",
-          "title": "Defense Brief Assembly",
-          "content": "In this activity, you will work on creating a detailed brief that includes your main claims, supporting evidence, the limits of your uncertainty, and possible solutions to any challenges. This exercise will help you practice organizing your thoughts and presenting your ideas clearly, which is essential for effective communication.\nContext recap: In this activity, you will work on creating a detailed brief that includes your main claims, supporting evidence, the limits of your uncertainty, and possible solutions to any challenges. This exercise will help you practice organizing your thoughts and presenting your ideas clearly, which is essential for effective communication."
+          "title": "Assembling Your Defense Brief",
+          "content": "In this activity, you will synthesize everything you've learned to create a defense brief for a complex capstone case. You will structure your argument by stating your core claims, presenting the key evidence, defining the bounds of your uncertainty, and proposing a robust implementation and risk mitigation plan.",
+          "visualPrompt": "A user interface for building a presentation. The user populates slides with titles like 'Executive Summary,' 'Core Recommendation,' 'Supporting Data,' and 'Risk Analysis.' A progress bar shows how complete their brief is."
         },
         {
           "id": "math-601-l08-c2",
           "kind": "recap",
-          "title": "Expert Panel Rehearsal",
-          "content": "During this session, you will practice responding to questions and feedback from an expert panel. You will prepare for critiques related to technical aspects, governance issues, and the perspectives of various stakeholders. This rehearsal will build your confidence and improve your ability to communicate effectively in a professional setting.\nContext recap: During this session, you will practice responding to questions and feedback from an expert panel. You will prepare for critiques related to technical aspects, governance issues, and the perspectives of various stakeholders. This rehearsal will build your confidence and improve your ability to communicate effectively in a professional setting."
+          "title": "Rehearsing for Expert Review",
+          "content": "The final step is to prepare for critique. You will rehearse responding to challenging questions from a simulated expert panel. This will involve defending your technical analysis, explaining your governance choices, and addressing concerns from different stakeholder perspectives, building your confidence for the final defense.",
+          "visualPrompt": "An animation of a person standing at a podium. Thought bubbles appear with potential questions from an expert panel, such as 'What is your plan B?' and 'How did you weigh the ethical implications?' The person's own thought bubble shows a structured answer."
         }
       ],
       "interactiveActivities": [
@@ -719,7 +734,7 @@ export const Math601Module: LearningModule = {
           "id": "math-601-l08-act1",
           "type": "debate_simulator",
           "title": "Expert Defense Panel",
-          "description": "Defend specialization recommendations under adversarial cross-examination."
+          "description": "Present and defend your capstone recommendation to a simulated panel of experts who will challenge your assumptions, analysis, and conclusions."
         }
       ]
     }

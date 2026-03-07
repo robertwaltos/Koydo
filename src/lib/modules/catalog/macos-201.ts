@@ -1,9 +1,9 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const Macos201Module: LearningModule = {
+export const macos_201_Module: LearningModule = {
   "id": "macos-201",
   "title": "macOS Administration and Automation II",
-  "description": "Intermediate macOS operations curriculum on account governance, device hardening, software lifecycle, automation workflows, and support-ready troubleshooting.",
+  "description": "Master intermediate macOS administration by learning to manage user accounts, secure devices, deploy software safely, and automate common support tasks.",
   "subject": "Operating Systems",
   "tags": [
     "core",
@@ -15,7 +15,7 @@ export const Macos201Module: LearningModule = {
   ],
   "minAge": 13,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "intermediate",
   "localeSupport": [
     "en"
@@ -40,44 +40,44 @@ export const Macos201Module: LearningModule = {
           "id": "macos-201-l01-c1",
           "kind": "concept",
           "title": "Identity and Role Boundaries",
-          "content": "To effectively manage macOS systems, it's crucial to establish clear boundaries for different types of users. Standard users are those who perform everyday tasks, like browsing the internet or using applications. They should not have access to sensitive system settings. On the other hand, elevated rights, which allow users to make significant changes to the system, should only be granted for specific, approved activities, such as installing software or changing system preferences. Furthermore, there should be well-defined paths for administrative access, which means that any actions taken by users with elevated rights can be tracked and reviewed. This helps ensure accountability and enhances security, making the system safer for everyone."
+          "content": "To manage macOS devices effectively, we need to separate user roles. A Standard user handles everyday tasks like browsing the web and using apps. They shouldn't be able to change critical system settings. Administrator access, which allows for major system changes like installing software, should be granted only for specific, approved tasks. All administrative actions should be logged, creating a clear record of who did what and when. This accountability helps keep the system secure."
         },
         {
           "id": "macos-201-l01-c2",
           "kind": "concept",
           "title": "Credential and Session Hygiene",
-          "content": "To effectively manage macOS systems, it's important to have secure methods for logging in. This means using strong passwords and two-factor authentication when possible. Additionally, setting up policies that automatically lock devices when they are not being used helps protect sensitive information. It's also crucial to have a plan for managing passwords over time, ensuring they are updated regularly and not shared. Finally, if someone no longer needs access to the system, it's essential to remove their privileges quickly. These practices work together to keep the system safe and secure for everyone."
+          "content": "Secure login practices are vital. This includes using strong, unique passwords and enabling two-factor authentication for an extra layer of security. Devices should be configured to lock automatically after a period of inactivity to protect data. It's also important to have a clear process for managing passwords and to promptly remove access for users who no longer need it. These habits work together to keep the system safe."
         },
         {
           "id": "macos-201-l01-c3",
           "kind": "recap",
           "title": "Least Privilege on macOS",
-          "content": "Using the principle of least privilege is essential in macOS management. This means giving users only the access they need to perform their tasks, which helps prevent mistakes and security risks. It is also important to standardize how users can gain elevated access and to keep records of any administrative actions taken.\nContext recap: Using the principle of least privilege is essential in macOS management. This means giving users only the access they need to perform their tasks, which helps prevent mistakes and security risks. It is also important to standardize how users can gain elevated access and to keep records of any administrative actions taken."
+          "content": "The principle of least privilege is essential in macOS management. This means giving users only the access they need to perform their tasks, which helps prevent mistakes and security risks. It is also important to standardize how users can gain temporary administrator access and to keep records of any administrative actions taken."
         }
       ],
       "flashcards": [
         {
           "id": "macos-201-l01-f1",
           "front": "Least privilege",
-          "back": "Access principle granting only minimum permissions needed for a task."
+          "back": "The access principle of granting only the minimum permissions needed for a task."
         },
         {
           "id": "macos-201-l01-f2",
           "front": "Elevation workflow",
-          "back": "Controlled process for temporary administrative action and approval."
+          "back": "A controlled process for requesting, approving, and auditing temporary administrative access."
         },
         {
           "id": "macos-201-l01-f3",
           "front": "Session hygiene",
-          "back": "Practices that reduce risk from unattended or overprivileged sessions."
+          "back": "Practices like auto-locking screens that reduce risk from unattended or over-privileged sessions."
         }
       ],
       "learningAids": [
         {
           "id": "macos-201-l01-a1",
           "type": "image",
-          "title": "Access Governance Map",
-          "content": "Diagram mapping user roles, admin tasks, approvals, and audit points."
+          "title": "The Access Control Map",
+          "content": "Diagram mapping user roles (Standard, Admin), administrative tasks, approval workflows, and audit points."
         }
       ]
     },
@@ -91,13 +91,13 @@ export const Macos201Module: LearningModule = {
           "id": "macos-201-l02-c1",
           "kind": "concept",
           "title": "Update Channels and Risk",
-          "content": "When we manage the software lifecycle on macOS, it's very important to understand a few key ideas. First, we need to pay attention to how urgent security updates are. Some updates are critical and need to be done right away to keep our systems safe. Next, we should always test these updates to make sure they work well with the programs and systems we already have. Finally, we must think about how these updates will affect the users who rely on the system. To make things easier and safer, we can roll out updates in stages. This means we can introduce them gradually, which helps reduce the chances of any major problems or outages happening. By doing this, we can ensure a smoother experience for everyone involved."
+          "content": "Managing software updates requires a careful strategy. We must prioritize urgent security patches to protect against threats. Before deploying any update, it's crucial to test it for compatibility with existing applications and workflows. To minimize disruption, updates should be released in phases or 'rings.' This staged approach allows us to catch potential issues with a small group of users before affecting everyone, ensuring a smooth and reliable update process."
         },
         {
           "id": "macos-201-l02-c2",
           "kind": "practice",
           "title": "Deployment Control Points",
-          "content": "To ensure a successful software deployment, it is important to have controlled processes in place. This includes setting up pilot groups to test changes, performing health checks to monitor system performance, having triggers for rolling back changes if needed, and communicating clearly with users about updates. Treating software changes as important events helps maintain order and security.\nContext recap: To ensure a successful software deployment, it is important to have controlled processes in place. This includes setting up pilot groups to test changes, performing health checks to monitor system performance, having triggers for rolling back changes if needed, and communicating clearly with users about updates. Treating software changes as important events helps maintain order and security."
+          "content": "A controlled deployment process prevents chaos. Key practices include using pilot groups to test changes in a real-world environment, monitoring system health for any negative impact, defining clear rollback triggers to undo a problematic update, and communicating clearly with users about scheduled maintenance. Treating every software change with a formal process maintains stability and trust."
         }
       ],
       "interactiveActivities": [
@@ -117,7 +117,7 @@ export const Macos201Module: LearningModule = {
             },
             {
               "left": "Rollback criterion",
-              "right": "Defines when deployment must be reverted"
+              "right": "Defines when a deployment must be reverted"
             },
             {
               "left": "Maintenance communication",
@@ -131,24 +131,30 @@ export const Macos201Module: LearningModule = {
           "title": "Patch Window Exercise",
           "description": "Plan a high-priority patch deployment with limited support capacity.",
           "instructions": [
-            "Choose first cohort and explain why.",
-            "Define one abort threshold for the rollout."
+            "Choose the first cohort (group of users) for the update and explain why.",
+            "Define one specific condition or threshold that would trigger an immediate halt to the rollout."
           ]
         }
       ],
       "metadata": {
         "prompts": [
           "What makes a software update strategy trustworthy for users?",
-          "How do you choose pilot cohort composition?",
-          "Which signals should pause rollout immediately?"
+          "How do you choose who should be in a pilot group?",
+          "What signals should cause you to pause a software rollout immediately?"
         ]
       },
       "learningAids": [
         {
           "id": "macos-201-l02-a1",
           "type": "practice",
-          "title": "Deployment Runbook",
-          "content": "Template for scope, test evidence, rollout rings, rollback triggers, and owner."
+          "title": "Deployment Runbook Template",
+          "content": "A template for documenting an update's scope, test evidence, rollout rings, rollback triggers, and owners."
+        },
+        {
+          "id": "macos-201-l02-a2",
+          "type": "image",
+          "title": "Staged Rollout Rings",
+          "content": "Diagram showing software updates moving from an IT/Test group, to a Pilot group, and finally to all users."
         }
       ]
     },
@@ -169,7 +175,7 @@ export const Macos201Module: LearningModule = {
             },
             {
               "id": "b",
-              "text": "To reduce misconfiguration and security blast radius"
+              "text": "To reduce the impact of misconfigurations and security breaches"
             },
             {
               "id": "c",
@@ -177,24 +183,24 @@ export const Macos201Module: LearningModule = {
             },
             {
               "id": "d",
-              "text": "To remove accountability"
+              "text": "To remove accountability for system changes"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Scoped admin rights reduce risk and improve auditability."
+          "explanation": "Limiting admin rights reduces risk from both accidental mistakes and malicious attacks, and improves your ability to audit changes."
         },
         {
           "id": "macos-201-l03-q2",
-          "text": "Best reason to stage software rollout in rings is:",
+          "text": "What is the best reason to stage a software rollout in rings?",
           "skillId": "macos-201-skill-deploy",
           "options": [
             {
               "id": "a",
-              "text": "To maximize early blast radius"
+              "text": "To maximize the initial impact on users"
             },
             {
               "id": "b",
-              "text": "To detect regressions before broad user impact"
+              "text": "To detect problems before they affect all users"
             },
             {
               "id": "c",
@@ -202,61 +208,61 @@ export const Macos201Module: LearningModule = {
             },
             {
               "id": "d",
-              "text": "To avoid communication plans"
+              "text": "To avoid communicating with users"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Ring deployment enables controlled validation."
+          "explanation": "Ring deployment enables controlled validation, allowing you to find and fix issues with a small group before a widespread release."
         },
         {
           "id": "macos-201-l03-q3",
-          "text": "A strong elevation workflow should include:",
+          "text": "A strong workflow for elevating to admin privileges should include:",
           "skillId": "macos-201-skill-access",
           "options": [
             {
               "id": "a",
-              "text": "Shared admin credentials"
+              "text": "Shared admin credentials for everyone"
             },
             {
               "id": "b",
-              "text": "Approval, time-bounded access, and logging"
+              "text": "Approval, time-limited access, and detailed logging"
             },
             {
               "id": "c",
-              "text": "No session controls"
+              "text": "No controls on how long a session lasts"
             },
             {
               "id": "d",
-              "text": "Permanent privilege after first request"
+              "text": "Permanent admin rights after the first request"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Time-bounded, auditable elevation supports safety and traceability."
+          "explanation": "A secure elevation process is temporary, requires approval, and is auditable to ensure safety and traceability."
         },
         {
           "id": "macos-201-l03-q4",
-          "text": "Most important deployment safety artifact is:",
+          "text": "What is the most important safety feature of a deployment plan?",
           "skillId": "macos-201-skill-deploy",
           "options": [
             {
               "id": "a",
-              "text": "A release message without rollback plan"
+              "text": "A release message without a rollback plan"
             },
             {
               "id": "b",
-              "text": "A rollback criterion tied to measurable health signals"
+              "text": "A rollback plan tied to measurable health signals"
             },
             {
               "id": "c",
-              "text": "A screenshot of installer progress"
+              "text": "A screenshot of the installer's progress bar"
             },
             {
               "id": "d",
-              "text": "A private note with no owner"
+              "text": "A private note with no assigned owner"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Measurable rollback gates protect users when updates misbehave."
+          "explanation": "Knowing exactly when and why to roll back an update, based on real data, is crucial for protecting users when updates fail."
         }
       ],
       "learningAids": [
@@ -264,7 +270,7 @@ export const Macos201Module: LearningModule = {
           "id": "macos-201-l03-a1",
           "type": "mnemonic",
           "title": "ROLE",
-          "content": "Rights, Oversight, Logs, Expiry."
+          "content": "For admin access: Rights (temporary), Oversight (approval), Logs (auditing), Expiry (time-bound)."
         }
       ]
     },
@@ -278,36 +284,36 @@ export const Macos201Module: LearningModule = {
           "id": "macos-201-l04-c1",
           "kind": "concept",
           "title": "Device Encryption and Startup Security",
-          "content": "FileVault is a special tool designed to keep the information on your macOS device safe and secure. It works by encrypting your data, which means that it scrambles the information so that only authorized users can read it. To make sure FileVault works well, it's important to have a plan for managing the keys that unlock your data and for recovering your information if you ever need to. This includes regularly testing your recovery methods to confirm that you can access your data when necessary, ensuring that your encryption policy is effective and reliable."
+          "content": "FileVault is macOS's built-in tool for full-disk encryption. It scrambles all the data on your startup disk, so it's unreadable without the login password or a special recovery key. A critical part of using FileVault is having a secure plan to manage and store these recovery keys. You must also regularly test your recovery process to ensure you can always access your data, even if a user forgets their password."
         },
         {
           "id": "macos-201-l04-c2",
           "kind": "concept",
           "title": "Application Trust and Execution Policy",
-          "content": "Gatekeeper and notarization are important tools that help keep your macOS system safe by reducing the chances of running untrusted applications. When you download an app, Gatekeeper checks if it is from a trusted source. Notarization is a process where developers submit their apps to Apple for a security check before they can be distributed. It's important to remember that if you ever need to make an exception to these rules, it should be a rare situation. You should have a good reason for doing so, and you should keep track of these exceptions, including who made them and when they expire. This way, we can ensure that our systems remain secure and that we are protected from potential threats that could harm our devices or compromise our personal information."
+          "content": "Gatekeeper and App Notarization are macOS security features that prevent you from accidentally running malicious software. Gatekeeper ensures that apps are from identified developers, and Notarization is an additional check by Apple to scan for malware. While you can create exceptions to run unverified software, this should be rare and carefully controlled. Any exception should be documented, justified, and have an expiration date to limit long-term risk."
         },
         {
           "id": "macos-201-l04-c3",
           "kind": "recap",
           "title": "Privacy Permission Governance",
-          "content": "To keep your personal information safe, it's essential to check the permissions for features like the camera, microphone, and full-disk access on your device. By doing this regularly, you can make sure that only the apps you trust can access these sensitive areas. This practice helps protect your privacy and gives you control over who can see or hear what you do on your device. Remember, staying aware of your privacy settings is a key part of using technology responsibly.\nContext recap: To keep your personal information safe, it's essential to check the permissions for features like the camera, microphone, and full-disk access on your device. By doing this regularly, you can make sure that only the apps you trust can access these sensitive areas. This practice helps protect your privacy and gives you control over who can see or hear what you do on your device. Remember, staying aware of your privacy settings is a key part of using technology responsibly."
+          "content": "Protecting user privacy involves managing which apps can access sensitive data and hardware. macOS requires apps to ask for permission before accessing your camera, microphone, location, contacts, and even files in your Desktop and Documents folders. It's good practice to regularly review these permissions in System Settings under 'Privacy & Security.' By granting access only to trusted applications, you maintain control over your personal information."
         }
       ],
       "flashcards": [
         {
           "id": "macos-201-l04-f1",
           "front": "FileVault",
-          "back": "Full-disk encryption mechanism for protecting data at rest on macOS."
+          "back": "Full-disk encryption for protecting data at rest on macOS."
         },
         {
           "id": "macos-201-l04-f2",
           "front": "Gatekeeper",
-          "back": "Execution policy control that helps block untrusted software."
+          "back": "A security feature that helps block untrusted software from running."
         },
         {
           "id": "macos-201-l04-f3",
           "front": "Permission governance",
-          "back": "Process for reviewing and limiting sensitive app permissions."
+          "back": "The process of reviewing and limiting app access to sensitive data like the camera, microphone, and files."
         }
       ],
       "learningAids": [
@@ -315,7 +321,13 @@ export const Macos201Module: LearningModule = {
           "id": "macos-201-l04-a1",
           "type": "image",
           "title": "macOS Security Baseline",
-          "content": "Reference matrix of encryption, execution policy, and privacy controls."
+          "content": "A reference checklist covering key settings for encryption, execution policy, and privacy controls."
+        },
+        {
+          "id": "macos-201-l04-a2",
+          "type": "image",
+          "title": "Privacy & Security Settings",
+          "content": "Screenshot of the macOS System Settings > Privacy & Security pane, with callouts for FileVault, Gatekeeper, and Application Data permissions."
         }
       ]
     },
@@ -329,13 +341,13 @@ export const Macos201Module: LearningModule = {
           "id": "macos-201-l05-c1",
           "kind": "practice",
           "title": "Evidence-First Support",
-          "content": "To provide effective support for macOS issues, it is essential to avoid making guesses. Instead, support teams should look at logs, understand user symptoms, and assess the current state of the system before taking action to fix the problem. This evidence-first approach leads to better outcomes.\nContext recap: To provide effective support for macOS issues, it is essential to avoid making guesses. Instead, support teams should look at logs, understand user symptoms, and assess the current state of the system before taking action to fix the problem. This evidence-first approach leads to better outcomes."
+          "content": "Effective troubleshooting starts with evidence, not guesswork. Before attempting a fix, gather information. Use built-in tools like Console to review system logs and Activity Monitor to check for unusual processes or resource usage. Combine this technical data with a clear description of the user's symptoms. This evidence-based approach helps you accurately identify the root cause and apply the correct solution."
         },
         {
           "id": "macos-201-l05-c2",
           "kind": "recap",
           "title": "Automation Safety",
-          "content": "When creating automation scripts for macOS, it is important that they are idempotent, meaning they can be run multiple times without causing issues. These scripts should also be observable, allowing users to see what they do, and scoped to specific tasks. Additionally, scheduled maintenance tasks should have clear ownership and alerts for any failures to ensure everything runs smoothly.\nContext recap: When creating automation scripts for macOS, it is important that they are idempotent, meaning they can be run multiple times without causing issues. These scripts should also be observable, allowing users to see what they do, and scoped to specific tasks. Additionally, scheduled maintenance tasks should have clear ownership and alerts for any failures to ensure everything runs smoothly."
+          "content": "When automating tasks with scripts, safety is the top priority. A good script is idempotent, meaning it achieves the same result no matter how many times you run it, preventing accidental damage. Scripts should also be observable, logging what they do so you can verify their actions. Finally, they should be scoped to perform one specific task well. Any automated process should have a clear owner and send alerts if it fails."
         }
       ],
       "interactiveActivities": [
@@ -343,7 +355,7 @@ export const Macos201Module: LearningModule = {
           "id": "macos-201-l05-act1",
           "type": "sorting_buckets",
           "title": "Support Flow Sort",
-          "description": "Sort response actions into Diagnose, Remediate, and Verify.",
+          "description": "Sort response actions into the correct troubleshooting phase.",
           "buckets": [
             "Diagnose",
             "Remediate",
@@ -355,15 +367,19 @@ export const Macos201Module: LearningModule = {
               "bucket": "Diagnose"
             },
             {
-              "text": "Apply minimal-risk configuration fix",
+              "text": "Reproduce the issue on a test device",
+              "bucket": "Diagnose"
+            },
+            {
+              "text": "Apply a minimal-risk configuration fix",
               "bucket": "Remediate"
             },
             {
-              "text": "Confirm user workflow succeeds post-fix",
+              "text": "Confirm the user's workflow succeeds post-fix",
               "bucket": "Verify"
             },
             {
-              "text": "Record root cause and prevention action",
+              "text": "Document the root cause and prevention steps",
               "bucket": "Verify"
             }
           ]
@@ -372,18 +388,18 @@ export const Macos201Module: LearningModule = {
           "id": "macos-201-l05-act2",
           "type": "scenario_practice",
           "title": "Recurring Ticket Drill",
-          "description": "Resolve a repeating issue and define one automation improvement.",
+          "description": "You are seeing the same support ticket every week. Plan how to resolve it more efficiently.",
           "instructions": [
-            "Identify one repeatable step suitable for scripting.",
-            "Define one safeguard before automating at scale."
+            "Identify one repeatable step in the fix that is suitable for scripting.",
+            "Define one safeguard you would implement before automating the fix for all users."
           ]
         }
       ],
       "metadata": {
         "prompts": [
           "Why should support runbooks include verification checkpoints?",
-          "What makes a troubleshooting script safe for reuse?",
-          "When should a ticket be escalated instead of patched locally?"
+          "What makes a troubleshooting script safe to reuse?",
+          "When should a problem be escalated instead of fixed locally?"
         ]
       },
       "learningAids": [
@@ -391,7 +407,13 @@ export const Macos201Module: LearningModule = {
           "id": "macos-201-l05-a1",
           "type": "practice",
           "title": "Support Runbook Template",
-          "content": "Template for symptom, evidence, fix, verification, and prevention notes."
+          "content": "A template with sections for Symptom, Evidence, Fix, Verification, and Prevention notes."
+        },
+        {
+          "id": "macos-201-l05-a2",
+          "type": "image",
+          "title": "Troubleshooting Flowchart",
+          "content": "A simple flowchart showing the steps: Report -> Gather Evidence -> Diagnose -> Remediate -> Verify -> Document."
         }
       ]
     },
@@ -403,7 +425,7 @@ export const Macos201Module: LearningModule = {
       "questions": [
         {
           "id": "macos-201-l06-q1",
-          "text": "Why is key escrow important when FileVault is enforced?",
+          "text": "Why is having a recovery key plan essential when FileVault is enforced?",
           "skillId": "macos-201-skill-security",
           "options": [
             {
@@ -412,7 +434,7 @@ export const Macos201Module: LearningModule = {
             },
             {
               "id": "b",
-              "text": "To ensure recoverability if user credentials are unavailable"
+              "text": "To ensure data can be recovered if user credentials are lost"
             },
             {
               "id": "c",
@@ -420,36 +442,36 @@ export const Macos201Module: LearningModule = {
             },
             {
               "id": "d",
-              "text": "To avoid backup strategy"
+              "text": "To avoid needing a backup strategy"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Encryption policy must include reliable recovery operations."
+          "explanation": "An encryption policy must include a reliable recovery process, like key escrow, to prevent data loss."
         },
         {
           "id": "macos-201-l06-q2",
-          "text": "Best practice for Gatekeeper exceptions is:",
+          "text": "What is the best practice for handling Gatekeeper exceptions?",
           "skillId": "macos-201-skill-security",
           "options": [
             {
               "id": "a",
-              "text": "Allow all unsigned software"
+              "text": "Allow all unsigned software to run"
             },
             {
               "id": "b",
-              "text": "Use documented, time-bounded exceptions with owner approval"
+              "text": "Use documented, time-limited exceptions with clear approval"
             },
             {
               "id": "c",
-              "text": "Disable execution controls globally"
+              "text": "Disable all execution controls globally"
             },
             {
               "id": "d",
-              "text": "Skip exception logs"
+              "text": "Avoid logging any exceptions"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Controlled exceptions reduce long-term trust exposure."
+          "explanation": "Controlled, temporary exceptions reduce long-term security risks while allowing for business needs."
         },
         {
           "id": "macos-201-l06-q3",
@@ -462,11 +484,11 @@ export const Macos201Module: LearningModule = {
             },
             {
               "id": "b",
-              "text": "Idempotent actions, logging, and rollback path"
+              "text": "Repeatable actions, clear logging, and a rollback path"
             },
             {
               "id": "c",
-              "text": "Hardcoded admin credentials"
+              "text": "Hardcoded admin credentials in the script"
             },
             {
               "id": "d",
@@ -474,32 +496,32 @@ export const Macos201Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Safe automation is repeatable, observable, and reversible."
+          "explanation": "Safe automation is repeatable (idempotent), observable (logging), and reversible (rollback)."
         },
         {
           "id": "macos-201-l06-q4",
-          "text": "Most useful first step in recurring support incidents is:",
+          "text": "What is the most useful first step when dealing with recurring support incidents?",
           "skillId": "macos-201-skill-support",
           "options": [
             {
               "id": "a",
-              "text": "Immediate broad reimage without evidence"
+              "text": "Immediately re-image all affected devices without gathering evidence"
             },
             {
               "id": "b",
-              "text": "Pattern analysis across logs, timing, and affected cohorts"
+              "text": "Analyze patterns across logs, timing, and affected users"
             },
             {
               "id": "c",
-              "text": "Ignore user reports"
+              "text": "Ignore user reports until they stop"
             },
             {
               "id": "d",
-              "text": "Disable all security controls"
+              "text": "Disable all security controls to see if it helps"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Pattern evidence helps isolate common root causes."
+          "explanation": "Analyzing patterns in the evidence helps isolate the common root cause of a recurring problem."
         }
       ],
       "learningAids": [
@@ -507,7 +529,7 @@ export const Macos201Module: LearningModule = {
           "id": "macos-201-l06-a1",
           "type": "mnemonic",
           "title": "SCOPE",
-          "content": "Signal, Correlate, Operate, Prove, Escalate."
+          "content": "For troubleshooting: Signal (the alert), Correlate (find patterns), Operate (the fix), Prove (verify), Escalate (if needed)."
         }
       ]
     }

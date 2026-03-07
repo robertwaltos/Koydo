@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const AiMachineLearning101Module: LearningModule = {
+export const ai_machine_learning_101_Module: LearningModule = {
   "id": "ai-machine-learning-101",
   "title": "AI & Machine Learning Fundamentals",
   "description": "Master the foundations of artificial intelligence and machine learning — from classical algorithms and neural networks to real-world pipelines and deployment. Build intuition for how models learn, evaluate, and generalize through hands-on concepts and concrete examples.",
@@ -15,7 +15,7 @@ export const AiMachineLearning101Module: LearningModule = {
   ],
   "minAge": 15,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "beginner",
   "localeSupport": [
     "en"
@@ -36,6 +36,8 @@ export const AiMachineLearning101Module: LearningModule = {
       "title": "What Is Artificial Intelligence?",
       "type": "video",
       "duration": 13,
+      "lessonImagePrompt": "Imagen 4 prompt: A sleek, modern digital illustration of a glowing artificial brain connected to a timeline of technological milestones, set against a dark blue background with neon cyan and purple accents. High quality, vector art style, 8k resolution.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A dynamic 3D animation starting with a vintage 1950s computer that rapidly evolves into a futuristic, glowing neural network. The camera pans through the glowing nodes as they light up, symbolizing the evolution of AI from simple rules to complex deep learning. Cinematic lighting, smooth 60fps motion.",
       "objectives": [
         "Trace the history of AI from the 1956 Dartmouth Conference to modern deep learning",
         "Distinguish Narrow AI (ANI) from Artificial General Intelligence (AGI)",
@@ -45,17 +47,17 @@ export const AiMachineLearning101Module: LearningModule = {
         {
           "id": "ai-ml-101-l01-c1",
           "title": "A Brief History of AI",
-          "content": "Artificial Intelligence, commonly referred to as AI, is an exciting branch of science that aims to create machines capable of thinking, learning, and acting similarly to humans. The story of AI began in 1956 during a pivotal gathering known as the Dartmouth Conference. It was here that a brilliant scientist named John McCarthy first coined the term 'Artificial Intelligence.' In those early days, researchers primarily focused on a method called symbolic AI. This approach involved creating specific rules that machines could follow to perform tasks. A notable example from this era is MYCIN, a system developed in 1976 that was designed to diagnose bacterial infections.\nHowever, the journey of AI was not always smooth. In the 1980s, the field encountered significant challenges, leading to a period known as the first 'AI winter.' During this time, progress in AI research slowed down considerably, and many people became skeptical about the future of AI.\nFortunately, the excitement around AI was reignited in the 2000s thanks to remarkable advancements in technology. Faster computer processors, the availability of massive datasets, and innovative algorithms played a crucial role in revitalizing the field. A key turning point in AI history occurred in 2006 when Geoffrey Hinton made groundbreaking discoveries in deep learning, a subset of AI that mimics the way humans learn.\nSince then, we have witnessed incredible milestones in AI development. For instance, in 1997, IBM's Deep Blue made headlines by defeating the world chess champion Garry Kasparov. Then, in 2011, IBM Watson showcased its capabilities by winning the popular quiz show Jeopardy! More recently, in 2016, AlphaGo achieved a remarkable feat by defeating the world champion Lee Sedol in the complex game of Go. Additionally, the introduction of the GPT series of language models from 2018 onward has revolutionized how machines understand and generate human language, making interactions with technology more natural and intuitive.\nAI continues to evolve, and its potential applications are vast, ranging from healthcare to entertainment, making it an exciting field to explore and understand.\nContext recap: Artificial Intelligence, commonly referred to as AI, is an exciting branch of science that aims to create machines capable of thinking, learning, and acting similarly to humans. The story of AI began in 1956 during a pivotal gathering known as the Dartmouth Conference. It was here that a brilliant scientist named John McCarthy first coined the term 'Artificial Intelligence.' In those early days, researchers primarily focused on a method called symbolic AI. This approach involved creating specific rules that machines could follow to perform tasks.\nWhy this matters: A Brief History of AI helps learners in AI & Machine Learning connect ideas from AI & Machine Learning Fundamentals to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "Artificial Intelligence (AI) is an exciting branch of computer science that aims to create machines capable of thinking, learning, and acting similarly to humans. The story of AI officially began in 1956 during a pivotal gathering known as the Dartmouth Conference, where scientist John McCarthy first coined the term 'Artificial Intelligence.' In those early days, researchers primarily focused on 'symbolic AI,' which involved creating specific, hard-coded rules that machines could follow to perform tasks. A notable example is MYCIN, a 1970s system designed to diagnose bacterial infections.\n\nHowever, the journey of AI was not always smooth. In the 1980s, the field encountered significant challenges, leading to a period known as the 'AI winter,' where funding and progress slowed down considerably. Fortunately, the excitement was reignited in the 2000s thanks to remarkable advancements in technology. Faster computer processors, the availability of massive datasets (Big Data), and innovative algorithms revitalized the field. A key turning point occurred in 2006 when researchers like Geoffrey Hinton made groundbreaking discoveries in deep learning, a subset of AI that mimics the way human brains learn.\n\nSince then, we have witnessed incredible milestones. In 1997, IBM's Deep Blue defeated world chess champion Garry Kasparov. In 2011, IBM Watson won the quiz show Jeopardy! In 2016, DeepMind's AlphaGo achieved a remarkable feat by defeating world champion Lee Sedol in the complex game of Go. More recently, the introduction of large language models (like the GPT series) has revolutionized how machines understand and generate human language, making interactions with technology more natural than ever before."
         },
         {
           "id": "ai-ml-101-l01-c2",
           "title": "Narrow AI vs. General AI",
-          "content": "In the fascinating world of artificial intelligence (AI), we can categorize AI into two main types: Narrow AI and General AI. Right now, all the AI systems we interact with are examples of Narrow AI, which means they are specifically designed to excel at one particular task. For example, a spam filter is great at identifying unwanted emails, but it cannot drive a car or translate languages. This specialization allows Narrow AI to sometimes outperform humans in its designated area. A notable instance of this occurred in 2015 when AI systems that classify images achieved higher accuracy than humans in a competition known as ImageNet.\nOn the other hand, we have the concept of Artificial General Intelligence (AGI). AGI refers to a type of AI that would possess the ability to understand and learn any intellectual task that a human can do. This means that an AGI could potentially learn how to cook, write poetry, or even diagnose medical conditions without needing specific training for each individual task. However, it is important to note that AGI is still a theoretical idea, and experts in the field do not have a consensus on when or if we will ever achieve it.\nBeyond AGI, there is an even more advanced concept called Artificial Super Intelligence (ASI). ASI describes a hypothetical form of AI that would surpass human intelligence in every possible way. This idea remains largely speculative and is a topic of much discussion and imagination among researchers and enthusiasts alike. As we explore these concepts, it is essential to think critically about the implications and possibilities of AI in our future.\nContext recap: In the fascinating world of artificial intelligence (AI), we can categorize AI into two main types: Narrow AI and General AI. Right now, all the AI systems we interact with are examples of Narrow AI, which means they are specifically designed to excel at one particular task. For example, a spam filter is great at identifying unwanted emails, but it cannot drive a car or translate languages. This specialization allows Narrow AI to sometimes outperform humans in its designated area.\nWhy this matters: Narrow AI vs. General AI helps learners in AI & Machine Learning connect ideas from AI & Machine Learning Fundamentals to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "In the fascinating world of artificial intelligence, we categorize AI into two main types: Narrow AI and General AI. Right now, all the AI systems we interact with are examples of Narrow AI (also known as Artificial Narrow Intelligence, or ANI). This means they are specifically designed to excel at one particular task. For example, a spam filter is great at identifying unwanted emails, a recommendation algorithm is great at suggesting movies, and a self-driving car system is great at navigating roads. However, the spam filter cannot drive a car, and the car cannot translate languages. This specialization allows Narrow AI to sometimes outperform humans in its designated area, such as when AI image classifiers surpassed human accuracy in the 2015 ImageNet competition.\n\nOn the other hand, we have the concept of Artificial General Intelligence (AGI). AGI refers to a type of AI that would possess the ability to understand, learn, and apply knowledge across any intellectual task that a human can do. An AGI could potentially learn how to cook, write poetry, and diagnose medical conditions without needing to be rebuilt or specifically trained from scratch for each individual task. It is important to note that AGI is still a theoretical idea, and experts do not have a consensus on when or if we will ever achieve it.\n\nBeyond AGI, there is an even more advanced concept called Artificial Super Intelligence (ASI). ASI describes a hypothetical form of AI that would surpass human intelligence in every possible way, including creativity, problem-solving, and social intelligence. While ASI remains largely speculative, understanding these categories helps us think critically about the current capabilities and future implications of AI."
         },
         {
           "id": "ai-ml-101-l01-c3",
           "title": "The Turing Test and Machine Intelligence",
-          "content": "In 1950, a brilliant mathematician named Alan Turing introduced an interesting idea known as the 'imitation game.' The concept is simple: if a human evaluator cannot tell the difference between responses from a machine and those from a human, then we can say that the machine is exhibiting intelligent behavior. This idea, known as the Turing Test, has influenced AI research for many years. However, it has some limitations. For example, a machine might pass the test by cleverly avoiding questions rather than truly understanding them. Today, researchers use more advanced methods to evaluate AI. They employ benchmarks like GLUE, SuperGLUE, and MMLU to measure how well machines understand language. For visual tasks, benchmarks like ImageNet and COCO are used to assess how well machines perceive images. A big question remains: does passing these tests mean that a machine truly understands what it is doing, or is it just simulating understanding? This philosophical debate, highlighted by John Searle's Chinese Room argument, continues to be a topic of discussion among experts.\nTo dive deeper, let's explore what these benchmarks really mean. GLUE, for instance, is a collection of tasks that test a machine's ability to understand and process human language. SuperGLUE is an even tougher version, designed to challenge the most advanced AI systems. Similarly, MMLU assesses how well machines can answer questions across various subjects, from science to history.\nOn the visual side, ImageNet is a massive database of images that helps train AI to recognize objects, while COCO focuses on understanding images in a more complex way, like identifying relationships between objects. These tools help researchers understand the capabilities and limitations of AI.\nUltimately, the question of whether machines can truly 'understand' remains open. Some argue that even if a machine can perform tasks that seem intelligent, it doesn't mean it has consciousness or genuine comprehension. This ongoing debate encourages us to think critically about the nature of intelligence, both human and artificial, and what it means to understand something deeply. As technology continues to evolve, so too will our understanding of these complex issues.\nContext recap: In 1950, a brilliant mathematician named Alan Turing introduced an interesting idea known as the 'imitation game.' The concept is simple: if a human evaluator cannot tell the difference between responses from a machine and those from a human, then we can say that the machine is exhibiting intelligent behavior. This idea, known as the Turing Test, has influenced AI research for many years. However, it has some limitations. For example, a machine might pass the test by cleverly avoiding questions rather than truly understanding them.\nWhy this matters: The Turing Test and Machine Intelligence helps learners in AI & Machine Learning connect ideas from AI & Machine Learning Fundamentals to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "In 1950, a brilliant mathematician named Alan Turing introduced an interesting idea known as the 'imitation game.' The concept is simple: if a human evaluator having a text-based conversation cannot tell the difference between responses from a machine and those from a human, then we can say that the machine is exhibiting intelligent behavior. This idea, known as the Turing Test, has heavily influenced AI research for decades.\n\nHowever, the Turing Test has limitations. A machine might pass the test by cleverly avoiding questions or using conversational tricks rather than truly understanding the topic. To address this, modern researchers use more advanced, rigorous benchmarks to evaluate AI. For language, they employ benchmarks like GLUE, SuperGLUE, and MMLU to measure how well machines comprehend complex text, answer questions, and reason across various subjects. For visual tasks, benchmarks like ImageNet and COCO assess how well machines perceive and categorize images.\n\nA big philosophical question remains: does passing these tests mean that a machine truly 'understands' what it is doing, or is it just simulating understanding? This debate is famously highlighted by philosopher John Searle's 'Chinese Room' argument, which suggests that a system can manipulate symbols perfectly to give the illusion of understanding without actually comprehending anything. As AI technology continues to evolve and models become more sophisticated, this ongoing debate encourages us to think critically about the true nature of intelligence and consciousness."
         }
       ],
       "flashcards": [
@@ -84,8 +86,8 @@ export const AiMachineLearning101Module: LearningModule = {
         {
           "id": "ai-ml-101-l01-a1",
           "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary of the lesson's main concept."
+          "title": "The AI Evolution Timeline",
+          "content": "Visual summary of the lesson's main concept: A timeline showing Symbolic AI -> AI Winter -> Deep Learning Boom -> Modern LLMs."
         }
       ]
     },
@@ -94,6 +96,8 @@ export const AiMachineLearning101Module: LearningModule = {
       "title": "Supervised Learning: Regression & Classification",
       "type": "interactive",
       "duration": 14,
+      "lessonImagePrompt": "Imagen 4 prompt: A vibrant, abstract 3D representation of data points being sorted. On the left, a smooth glowing trend line passes through scattered dots. On the right, a clear neon boundary separates blue circles from orange squares. Clean, modern UI aesthetic, volumetric lighting.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A smooth, educational 3D motion graphics animation. The screen splits: one side shows a line smoothly adjusting to fit a scatter plot of housing prices, while the other side shows a glowing boundary line shifting to separate spam emails from safe emails. High-end corporate tech style.",
       "objectives": [
         "Differentiate regression (continuous output) from classification (discrete output)",
         "Explain how linear regression minimizes mean squared error using gradient descent",
@@ -103,17 +107,17 @@ export const AiMachineLearning101Module: LearningModule = {
         {
           "id": "ai-ml-101-l02-c1",
           "title": "Regression: Predicting Continuous Values",
-          "content": "Supervised learning is an important technique in artificial intelligence (AI) that helps us teach models how to make predictions based on examples we provide. In supervised learning, we use labeled data, which means that each example includes both the input features and the correct output label. This helps the model learn the relationship between the inputs and the outputs. One of the key tasks in supervised learning is called regression, which is used to predict continuous values. For example, we might want to predict how much a house will sell for, how the stock market will perform, or what the temperature will be like tomorrow.\nTo perform regression, we often use a method called linear regression. This method finds the best-fitting line that represents the relationship between our input features and the output we want to predict. The goal is to minimize the Mean Squared Error (MSE), which is a way to measure how far off our predictions are from the actual values. A lower MSE means our predictions are more accurate.\nTo improve our model's accuracy, we use a technique called gradient descent. This involves calculating the slope of the loss function, which tells us how much we need to adjust each weight in our model to reduce the error. By making these adjustments repeatedly over many iterations, we can find the line that best fits our data.\nIf we have more than one input feature, we can extend our approach to something called multiple linear regression. This method combines all the features into a single formula to make predictions. Additionally, if the relationship between our input features and the output is not a straight line, we can use polynomial regression. This technique allows us to include squared or cubed terms in our calculations, which helps us model more complex, non-linear relationships. By understanding these concepts, we can better utilize supervised learning to make accurate predictions in various fields, from real estate to finance and beyond.\nContext recap: Supervised learning is an important technique in artificial intelligence (AI) that helps us teach models how to make predictions based on examples we provide. In supervised learning, we use labeled data, which means that each example includes both the input features and the correct output label. This helps the model learn the relationship between the inputs and the outputs. One of the key tasks in supervised learning is called regression, which is used to predict continuous values.\nWhy this matters: Regression: Predicting Continuous Values helps learners in AI & Machine Learning connect ideas from AI & Machine Learning Fundamentals to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "Now that we understand what AI is, let's dive into how machines actually learn. Supervised learning is a foundational technique in machine learning where we teach models to make predictions by providing them with examples. In supervised learning, we use 'labeled data,' meaning each example includes both the input features (like the size and location of a house) and the correct output label (the price of the house). The model's job is to learn the mathematical relationship between the inputs and the outputs.\n\nOne of the primary tasks in supervised learning is called regression, which is used to predict continuous, numerical values. Examples include predicting tomorrow's temperature, a company's future revenue, or a car's fuel efficiency. The most common method to perform this is linear regression. This algorithm tries to find the 'line of best fit' through the data points. \n\nTo find this perfect line, the model needs a way to measure how wrong its current predictions are. It uses a metric called Mean Squared Error (MSE), which calculates the average of the squared differences between the predicted values and the actual values. The goal is to make the MSE as small as possible. To achieve this, the model uses an optimization technique called gradient descent. Gradient descent calculates the slope of the error and takes small steps to adjust the model's internal weights, slowly walking down the 'hill' of error until it finds the lowest possible point. If the relationship in the data is more complex than a straight line, we can use polynomial regression to fit curves to the data instead."
         },
         {
           "id": "ai-ml-101-l02-c2",
           "title": "Classification: Predicting Categories",
-          "content": "Classification is a key concept in supervised learning, where we categorize inputs into specific groups or classes. For instance, we can classify emails as either spam or not spam, or we might determine if an image shows a cat or a dog. One popular method for performing classification is called logistic regression. Although it has the word 'regression' in its name, logistic regression is actually used for classification tasks.\nThis method works by taking a combination of the input features and processing it through a special mathematical function known as the sigmoid function. The sigmoid function transforms the output into a value between 0 and 1, which indicates the likelihood or probability that the input belongs to a particular class. After calculating this probability, we set a threshold—commonly at 0.5—to decide the final class label. If the probability exceeds this threshold, we classify the input into one category; if it falls below, we classify it into another.\nTo evaluate how well our classification is performing, we use a loss function called binary cross-entropy. This function is important because it heavily penalizes predictions that are made with high confidence but are incorrect, encouraging the model to improve its accuracy.\nIn cases where there are more than two classes to choose from, we use a technique called softmax regression. This method calculates a probability for each possible class, ensuring that all probabilities add up to 1.\nIn the real world, logistic regression is commonly used in applications like email spam filters, which help keep our inboxes free from unwanted messages. Similarly, in the medical field, logistic regression can be used to classify test results as either positive or negative, helping doctors make informed decisions about patient care.\nContext recap: Classification is a key concept in supervised learning, where we categorize inputs into specific groups or classes. For instance, we can classify emails as either spam or not spam, or we might determine if an image shows a cat or a dog. One popular method for performing classification is called logistic regression. Although it has the word 'regression' in its name, logistic regression is actually used for classification tasks.\nWhy this matters: Classification: Predicting Categories helps learners in AI & Machine Learning connect ideas from AI & Machine Learning Fundamentals to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "While regression predicts continuous numbers, classification is used when we want to categorize inputs into specific, discrete groups or classes. For instance, a classification model might determine if an email is 'spam' or 'not spam,' or if an image contains a 'cat' or a 'dog.'\n\nOne of the most popular algorithms for binary classification (choosing between two categories) is called logistic regression. Despite having 'regression' in its name, it is strictly a classification tool. Logistic regression works by taking the input features and passing them through a mathematical formula called the sigmoid function. The sigmoid function is shaped like an 'S' and squashes any input number into a value strictly between 0 and 1. This output represents a probability. For example, an output of 0.85 might mean there is an 85% chance an email is spam.\n\nOnce we have this probability, we apply a threshold—usually 0.5. If the probability is above 0.5, the model predicts 'spam'; if it's below, it predicts 'not spam.' To evaluate and improve a classification model during training, we use a loss function called binary cross-entropy. This function heavily penalizes the model if it makes an incorrect prediction with high confidence. If we need to classify data into more than two categories (like identifying whether an image is a cat, dog, or bird), we use an extension called softmax regression, which calculates a probability for each possible class, ensuring all probabilities add up to 100%."
         },
         {
           "id": "ai-ml-101-l02-c3",
           "title": "Tree-Based and Ensemble Methods",
-          "content": "Tree-based methods are an exciting and powerful approach in supervised learning, which is a type of machine learning where we teach computers to make predictions based on labeled data. One of the most popular tree-based methods is called a decision tree. Imagine a decision tree as a flowchart that helps us make decisions by asking a series of yes or no questions about the features of our data. For example, if we were trying to predict whether a fruit is an apple or an orange, the tree might first ask, 'Is it red?' If the answer is yes, it might then ask, 'Is it round?' This process continues until we reach the end of the tree, known as the leaves, which contain our final predictions. Decision trees are intuitive and easy to understand, but they can sometimes become too complex, leading to a problem known as overfitting. Overfitting happens when the model learns the training data too well, including its noise and outliers, which can make it perform poorly on new, unseen data. To overcome this issue, we can use a technique called random forests. A random forest is like a team of decision trees. Instead of relying on just one tree, we train many decision trees on different random subsets of the data and features. When it’s time to make a prediction, we combine the results from all these trees. For regression tasks, we average the predictions, while for classification tasks, we let the trees vote on the most popular class. This method is known as bagging, and it helps improve the model's accuracy and robustness. Another advanced technique is called gradient boosting. In gradient boosting, we build trees one after another, where each new tree is designed to fix the errors made by the previous trees in the ensemble. This sequential approach allows gradient boosting to be very effective, especially in competitions like Kaggle, where participants strive to create the best predictive models. However, there is a trade-off to consider: while random forests are generally more robust to noise and can handle a variety of data well, gradient boosting can achieve lower error rates but requires careful tuning of parameters like the learning rate, maximum depth of the trees, and the number of trees in the model. Understanding these methods can greatly enhance our ability to make accurate predictions in various applications, from finance to healthcare and beyond.\nContext recap: Tree-based methods are an exciting and powerful approach in supervised learning, which is a type of machine learning where we teach computers to make predictions based on labeled data. One of the most popular tree-based methods is called a decision tree. Imagine a decision tree as a flowchart that helps us make decisions by asking a series of yes or no questions about the features of our data. For example, if we were trying to predict whether a fruit is an apple or an orange, the tree might first ask, 'Is it red?' If the answer is yes, it might then ask, 'Is it round?' This process continues until we reach the end of the tree, known as the leaves, which contain our final predictions."
+          "content": "Beyond drawing lines and calculating probabilities, another powerful approach to supervised learning involves tree-based methods. The most fundamental of these is the decision tree. Imagine a decision tree as a flowchart that makes predictions by asking a series of yes-or-no questions about the data. For example, to predict if a fruit is an apple or a lemon, the tree might first ask, 'Is it yellow?' If yes, it might ask, 'Is it sour?' This process continues down the branches until it reaches a final leaf, which contains the prediction.\n\nWhile decision trees are highly intuitive, they have a major flaw: they are prone to overfitting. Overfitting happens when a tree becomes too deep and complex, essentially memorizing the training data (including its random noise) rather than learning the general patterns. As a result, it performs poorly on new, unseen data.\n\nTo fix this, we use ensemble methods, which combine multiple models to create a stronger, more robust predictor. A popular ensemble method is the Random Forest. Instead of relying on one deep decision tree, a random forest trains hundreds of different trees on random subsets of the data. When making a prediction, all the trees 'vote,' and the majority rules. This technique, known as bagging, drastically reduces overfitting.\n\nAnother advanced ensemble technique is Gradient Boosting. Instead of building trees independently like a random forest, gradient boosting builds trees sequentially. Each new tree is specifically designed to correct the errors made by the previous trees. Algorithms based on this concept, like XGBoost and LightGBM, are incredibly powerful and frequently win global machine learning competitions."
         }
       ],
       "interactiveActivities": [
@@ -157,7 +161,7 @@ export const AiMachineLearning101Module: LearningModule = {
         {
           "id": "ai-ml-101-l02-f1",
           "front": "Linear regression",
-          "back": "Fits y = wx + b by minimizing Mean Squared Error — predicts continuous values like price or temperature"
+          "back": "Fits a line (y = wx + b) by minimizing Mean Squared Error — predicts continuous values like price or temperature"
         },
         {
           "id": "ai-ml-101-l02-f2",
@@ -172,15 +176,15 @@ export const AiMachineLearning101Module: LearningModule = {
         {
           "id": "ai-ml-101-l02-f4",
           "front": "Gradient boosting",
-          "back": "Sequential ensemble where each tree corrects errors of previous trees — often wins competitions (XGBoost, LightGBM)"
+          "back": "Sequential ensemble where each tree corrects errors of previous trees — highly accurate and often wins ML competitions"
         }
       ],
       "learningAids": [
         {
           "id": "ai-ml-101-l02-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Follow the prompt sequence and document your reasoning."
+          "title": "Algorithm Selection Guide",
+          "content": "Ask yourself: Is the target output a number (Regression) or a category (Classification)? If it's a category, do I need a simple baseline (Logistic Regression) or high accuracy on complex tabular data (Random Forest / Gradient Boosting)?"
         }
       ]
     },
@@ -189,6 +193,8 @@ export const AiMachineLearning101Module: LearningModule = {
       "title": "AI Foundations & Supervised Learning Checkpoint",
       "type": "quiz",
       "duration": 8,
+      "lessonImagePrompt": "Imagen 4 prompt: A futuristic glowing checkpoint gate in a digital landscape, symbolizing the completion of the first learning phase. Holographic checkmarks float in the air. Cyberpunk aesthetic, unreal engine 5 render style.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A fast-paced 3D montage summarizing AI history zooming into a scatter plot, which then transforms into a glowing decision tree. The camera flies through the branches of the tree, ending on a glowing holographic question mark. Cinematic depth of field.",
       "objectives": [
         "Demonstrate understanding of AI history, the Turing Test, and supervised learning algorithms"
       ],
@@ -199,7 +205,7 @@ export const AiMachineLearning101Module: LearningModule = {
           "options": [
             {
               "id": "a",
-              "text": "1956 Dartmouth Conference by John McCarthy"
+              "text": "1984 Apple Macintosh launch"
             },
             {
               "id": "b",
@@ -207,14 +213,14 @@ export const AiMachineLearning101Module: LearningModule = {
             },
             {
               "id": "c",
-              "text": "1984 Apple Macintosh launch"
+              "text": "1956 Dartmouth Conference by John McCarthy"
             },
             {
               "id": "d",
               "text": "2012 ImageNet competition"
             }
           ],
-          "correctOptionId": "a",
+          "correctOptionId": "c",
           "explanation": "John McCarthy organized the 1956 Dartmouth Conference and coined the term 'Artificial Intelligence' to describe the new research field."
         },
         {
@@ -223,11 +229,11 @@ export const AiMachineLearning101Module: LearningModule = {
           "options": [
             {
               "id": "a",
-              "text": "Mean Squared Error (MSE)"
+              "text": "Binary cross-entropy"
             },
             {
               "id": "b",
-              "text": "Binary cross-entropy"
+              "text": "Mean Squared Error (MSE)"
             },
             {
               "id": "c",
@@ -238,7 +244,7 @@ export const AiMachineLearning101Module: LearningModule = {
               "text": "Kullback–Leibler divergence"
             }
           ],
-          "correctOptionId": "a",
+          "correctOptionId": "b",
           "explanation": "MSE averages the squared differences between predictions and actual values, penalizing large errors more heavily."
         },
         {
@@ -247,23 +253,23 @@ export const AiMachineLearning101Module: LearningModule = {
           "options": [
             {
               "id": "a",
-              "text": "Sigmoid (logistic) function"
-            },
-            {
-              "id": "b",
               "text": "Square root"
             },
             {
-              "id": "c",
+              "id": "b",
               "text": "Logarithmic function"
             },
             {
-              "id": "d",
+              "id": "c",
               "text": "Absolute value"
+            },
+            {
+              "id": "d",
+              "text": "Sigmoid (logistic) function"
             }
           ],
-          "correctOptionId": "a",
-          "explanation": "The sigmoid function σ(z) = 1/(1+e⁻ᶻ) squashes any real number into the range (0, 1), yielding a probability."
+          "correctOptionId": "d",
+          "explanation": "The sigmoid function squashes any real number into the range (0, 1), yielding a probability."
         },
         {
           "id": "ai-ml-101-l03-q4",
@@ -296,21 +302,15 @@ export const AiMachineLearning101Module: LearningModule = {
           "remember": 2,
           "understand": 2
         }
-      },
-      "learningAids": [
-        {
-          "id": "ai-ml-101-l03-a1",
-          "type": "mnemonic",
-          "title": "Memory Cue",
-          "content": "Use Plan, Solve, Explain to structure each response."
-        }
-      ]
+      }
     },
     {
       "id": "ai-ml-101-l04",
       "title": "Unsupervised Learning: Clustering & Dimensionality Reduction",
       "type": "video",
       "duration": 13,
+      "lessonImagePrompt": "Imagen 4 prompt: A 3D visualization of a galaxy of glowing data points slowly organizing themselves into distinct, color-coded clusters. High contrast, dark background, scientific aesthetic, 8k resolution, ray tracing.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A chaotic swarm of thousands of glowing particles floats on screen. An invisible magnetic force begins to pull them together, organizing them into three distinct, tightly packed, color-coded spheres, visually demonstrating the concept of clustering. Fluid simulation, glowing particles.",
       "objectives": [
         "Explain how k-means clustering partitions data into k groups using centroid updates",
         "Describe Principal Component Analysis (PCA) and why dimensionality reduction matters",
@@ -320,17 +320,17 @@ export const AiMachineLearning101Module: LearningModule = {
         {
           "id": "ai-ml-101-l04-c1",
           "title": "Clustering with K-Means",
-          "content": "Unsupervised learning is an exciting part of artificial intelligence (AI) that helps us find patterns in data that doesn't have any labels or predefined answers. Imagine trying to sort a box of mixed-up LEGO pieces without knowing what the final model should look like. That's similar to what unsupervised learning does! One of the most popular techniques in this area is called K-means clustering. This method helps us group data points into a specific number of clusters, which can be very useful in various applications.\nHere's how K-means clustering works: First, we start by randomly selecting a few points from our data, which we call centroids. These centroids act like the center of each cluster. Next, we look at all the data points and assign each one to the nearest centroid based on how far away it is. This distance is usually calculated using a method called Euclidean distance, which is like measuring the straight-line distance between two points on a map.\nAfter assigning the points to their nearest centroids, we then recalculate the position of each centroid by finding the average location of all the points that belong to it. This means we take all the points in a cluster and find their average position to update the centroid's location. We repeat this process of assigning points and recalculating centroids until the groups stabilize, meaning that the assignments no longer change.\nChoosing the right number of clusters, known as k, is very important for the success of K-means clustering. One effective way to find the best value for k is by using something called the elbow method. This involves creating a graph where we plot the within-cluster sum of squares (WCSS) against different values of k. We look for a point on the graph that resembles an elbow, where adding more clusters doesn't significantly improve the results.\nIt's important to note that K-means works best when the clusters are roughly spherical and of similar size. However, it can have difficulties when dealing with irregularly shaped clusters. In the real world, K-means clustering is used in many interesting ways, such as customer segmentation, where companies like Netflix group viewers based on their tastes and preferences. It is also used for organizing documents and simplifying the colors in images, making it a versatile tool in the field of AI.\nContext recap: Unsupervised learning is an exciting part of artificial intelligence (AI) that helps us find patterns in data that doesn't have any labels or predefined answers. Imagine trying to sort a box of mixed-up LEGO pieces without knowing what the final model should look like. That's similar to what unsupervised learning does! One of the most popular techniques in this area is called K-means clustering.\nWhy this matters: Clustering with K-Means helps learners in AI & Machine Learning connect ideas from AI & Machine Learning Fundamentals to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "While supervised learning relies on labeled data, unsupervised learning is used when we have data without any labels or predefined answers. Imagine being handed a massive box of mixed-up LEGO pieces without an instruction manual or a picture of the final model. Your natural instinct might be to group them by color or size. That is exactly what unsupervised learning does: it finds hidden structures and patterns in raw data.\n\nOne of the most popular unsupervised techniques is K-means clustering. This algorithm groups data points into a specific number of clusters, represented by the letter 'k'. Here is how it works: First, the algorithm randomly places 'k' points, called centroids, into the data space. Next, it measures the distance (usually the straight-line Euclidean distance) from every data point to these centroids, assigning each point to the centroid it is closest to. \n\nOnce all points are assigned, the algorithm calculates the actual center of each newly formed group and moves the centroid to that new center. It repeats this process—assigning points and moving centroids—until the centroids stop moving, meaning the clusters have stabilized. A common challenge is deciding what 'k' (the number of clusters) should be. Data scientists often use the 'elbow method,' plotting the error against different values of k and looking for a sharp bend (an elbow) in the graph to find the optimal number. K-means is widely used in the real world for customer segmentation, allowing companies to group users with similar purchasing habits."
         },
         {
           "id": "ai-ml-101-l04-c2",
           "title": "Dimensionality Reduction with PCA",
-          "content": "When we analyze real-world data, we often come across datasets that contain a large number of features, sometimes reaching into the hundreds or even thousands. This situation can create a challenge known as the 'curse of dimensionality.' Essentially, as the number of dimensions increases, our models require significantly more data to function effectively. Additionally, the distances between data points can become less meaningful, which can slow down the training process considerably. To address this challenge, we can use a powerful technique called Principal Component Analysis, or PCA for short. PCA helps us reduce the number of dimensions in our dataset while keeping as much important information as possible.\nThe way PCA works is by projecting the data into a lower-dimensional space that captures the most variance, or spread, in the data. It does this by calculating special vectors known as eigenvectors from the covariance matrix of the dataset. Each eigenvector corresponds to a principal component, and the eigenvalue associated with it tells us how much variance that component captures. By selecting only the top components—let's say those that account for 95% of the total variance—we can effectively reduce a dataset with 1,000 features down to just 50 features without losing much information.\nPCA is also a fantastic tool for visualization. It allows us to create 2D or 3D scatter plots that represent high-dimensional data in a way that we can easily understand. In addition to PCA, there are other techniques like t-SNE and UMAP that focus on preserving the local structure of the data. These methods are particularly useful for visualizing complex datasets, such as word embeddings in natural language processing or features in images. By using these techniques, we can gain valuable insights from our data while making it easier to interpret and analyze.\nContext recap: When we analyze real-world data, we often come across datasets that contain a large number of features, sometimes reaching into the hundreds or even thousands. This situation can create a challenge known as the 'curse of dimensionality.' Essentially, as the number of dimensions increases, our models require significantly more data to function effectively. Additionally, the distances between data points can become less meaningful, which can slow down the training process considerably. To address this challenge, we can use a powerful technique called Principal Component Analysis, or PCA for short.\nWhy this matters: Dimensionality Reduction with PCA helps learners in AI & Machine Learning connect ideas from AI & Machine Learning Fundamentals to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "In real-world machine learning, datasets often contain hundreds or even thousands of features (columns). For example, a high-resolution image might have millions of pixels, each acting as a separate feature. This creates a problem known as the 'curse of dimensionality.' As the number of dimensions increases, models require exponentially more data to learn effectively, training becomes incredibly slow, and the mathematical distances between points become less meaningful.\n\nTo solve this, we use a technique called dimensionality reduction. The most famous algorithm for this is Principal Component Analysis (PCA). PCA's goal is to compress the data, reducing the number of features while retaining as much important information (variance) as possible. It does this by finding new, artificial axes—called principal components—that capture the widest spread of the data. \n\nImagine looking at a 3D cloud of points shaped like a pancake. Instead of needing 3 coordinates (x, y, z) to describe where a point is, PCA realizes the data is mostly flat and projects it onto a 2D plane, effectively dropping the least important dimension. By keeping only the top principal components, we might reduce a dataset from 1,000 features down to just 50, while still keeping 95% of the original information. PCA is also an invaluable tool for data visualization, allowing us to squash complex, high-dimensional data down to 2D or 3D so human eyes can actually look at it."
         },
         {
           "id": "ai-ml-101-l04-c3",
           "title": "Other Unsupervised Techniques and Applications",
-          "content": "In the fascinating world of unsupervised learning, there are several techniques that help us understand data without needing labeled examples. One such technique is hierarchical clustering. This method builds a tree-like structure known as a dendrogram, which visually represents how data points are grouped into clusters. This is particularly helpful when we are unsure about the number of clusters we should look for in our data.\nAnother interesting method is called DBSCAN, which stands for Density-Based Spatial Clustering of Applications with Noise. This technique is unique because it can identify clusters of various shapes. It works by grouping together points that are close to each other while marking points that are far away as noise. This makes DBSCAN especially useful for analyzing geographic data, such as finding clusters of locations, and for detecting unusual patterns or anomalies in data.\nWe also have a technique known as association rule mining, which includes algorithms like Apriori. This method helps us discover patterns in data by identifying items that frequently occur together. For instance, it might show us that 'customers who buy bread and butter often also buy milk.' This kind of information is valuable for businesses, as it can guide them in making recommendations to their customers.\nA great example of this is Amazon's recommendation engine, which uses collaborative filtering. This unsupervised approach groups users based on their similar purchasing histories, allowing Amazon to suggest products that users might be interested in based on what others with similar tastes have bought.\nLastly, we have anomaly detection, a technique that identifies data points that deviate significantly from expected patterns. This is particularly important in various fields, such as detecting credit card fraud, monitoring network security for intrusions, and ensuring quality control in manufacturing processes. By using these techniques, we can gain valuable insights from data and make informed decisions based on our findings.\nContext recap: In the fascinating world of unsupervised learning, there are several techniques that help us understand data without needing labeled examples. One such technique is hierarchical clustering. This method builds a tree-like structure known as a dendrogram, which visually represents how data points are grouped into clusters. This is particularly helpful when we are unsure about the number of clusters we should look for in our data.\nWhy this matters: Other Unsupervised Techniques and Applications helps learners in AI & Machine Learning connect ideas from AI & Machine Learning Fundamentals to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "Beyond K-means and PCA, the unsupervised learning toolkit contains several other powerful methods. One is Hierarchical Clustering, which doesn't require you to guess the number of clusters upfront. Instead, it builds a tree-like visual structure called a dendrogram, showing how individual data points merge into larger and larger clusters. You can then 'cut' the tree at whatever level makes the most sense for your project.\n\nAnother highly effective clustering algorithm is DBSCAN (Density-Based Spatial Clustering of Applications with Noise). Unlike K-means, which assumes clusters are roughly spherical, DBSCAN groups together points that are densely packed together, regardless of their shape. It is also excellent at identifying outliers—points that sit alone in low-density areas are simply labeled as 'noise.'\n\nUnsupervised learning also powers Association Rule Mining, which discovers 'if-this-then-that' patterns. For example, a grocery store might use the Apriori algorithm to discover that customers who buy bread and peanut butter are highly likely to also buy jelly. This logic is the foundation of recommendation engines used by Amazon and Netflix, which use collaborative filtering to group users with similar tastes and suggest products they haven't seen yet.\n\nFinally, unsupervised learning is crucial for Anomaly Detection. By learning what 'normal' data looks like, algorithms can instantly flag data points that deviate significantly from the pattern. This is how banks detect credit card fraud in real-time and how cybersecurity systems identify network intrusions."
         }
       ],
       "flashcards": [
@@ -359,8 +359,8 @@ export const AiMachineLearning101Module: LearningModule = {
         {
           "id": "ai-ml-101-l04-a1",
           "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary of the lesson's main concept."
+          "title": "Clustering vs Dimensionality Reduction",
+          "content": "Visual summary: Clustering groups rows (data points) together. Dimensionality reduction compresses columns (features) together."
         }
       ]
     },
@@ -369,6 +369,8 @@ export const AiMachineLearning101Module: LearningModule = {
       "title": "Neural Networks & Deep Learning Foundations",
       "type": "interactive",
       "duration": 15,
+      "lessonImagePrompt": "Imagen 4 prompt: A highly detailed, glowing 3D model of a multi-layer artificial neural network. Nodes in the input layer connect via glowing lines to hidden layers, culminating in an output layer. Cyberpunk color palette with deep blacks, neon pinks, and electric blues. Macro photography style.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A glowing data point enters the left side of a 3D neural network. As it travels through the connections, the lines pulse with bright light. The camera follows the signal as it passes through hidden layers, mathematically transforming, until it lights up a specific node on the output layer. High-tech, sleek animation.",
       "objectives": [
         "Describe the architecture of a feedforward neural network: input, hidden, and output layers",
         "Explain forward propagation, loss computation, backpropagation, and weight updates via gradient descent",
@@ -378,17 +380,17 @@ export const AiMachineLearning101Module: LearningModule = {
         {
           "id": "ai-ml-101-l05-c1",
           "title": "Anatomy of a Neural Network",
-          "content": "A feedforward neural network is a key building block in the field of deep learning. This type of network is organized into several layers that work together to process information. It begins with an input layer, where each neuron represents a specific feature of the data we are analyzing. After the input layer, there are one or more hidden layers, and finally, an output layer that gives us the final prediction or result. Each neuron in the network performs a specific calculation. It takes the inputs, applies weights to them, sums them up, and adds a bias term. This can be represented by the equation z = Σ(wᵢxᵢ) + b, where 'w' represents the weights, 'x' represents the inputs, and 'b' is the bias. After this calculation, we apply a non-linear activation function to the result to introduce complexity into the model. One commonly used activation function is called ReLU, which stands for Rectified Linear Unit. This function helps to avoid problems like the vanishing gradient problem, which can hinder learning in deep networks. For tasks that require binary outputs, we often use the sigmoid function, which compresses the output to a value between 0 and 1. In cases where we have multiple classes to predict, the softmax function is used to normalize the outputs so that they add up to 1, effectively representing probabilities for each class. By increasing the number of neurons in each layer, we enhance the network's ability to learn intricate patterns in the data. Moreover, adding more layers enables the network to extract features in a hierarchical manner. For instance, the early layers might focus on detecting simple shapes, while the later layers can identify more complex objects. When a neural network contains two or more hidden layers, it is classified as a 'deep' neural network, which is the foundation of deep learning techniques that are widely used today.\nContext recap: A feedforward neural network is a key building block in the field of deep learning. This type of network is organized into several layers that work together to process information. It begins with an input layer, where each neuron represents a specific feature of the data we are analyzing. After the input layer, there are one or more hidden layers, and finally, an output layer that gives us the final prediction or result.\nWhy this matters: Anatomy of a Neural Network helps learners in AI & Machine Learning connect ideas from AI & Machine Learning Fundamentals to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "Deep learning is a specialized subset of machine learning powered by Artificial Neural Networks, which are algorithms loosely inspired by the structure of the human brain. The most basic architecture is the feedforward neural network. It is organized into distinct layers of interconnected nodes, called 'neurons.'\n\nThe network begins with an Input Layer, where each neuron represents a specific feature of the data (like the pixels of an image). The data then flows into one or more Hidden Layers. Finally, the processed information reaches the Output Layer, which delivers the final prediction. When a network has multiple hidden layers, it is considered a 'deep' neural network.\n\nInside each neuron, a specific mathematical operation occurs. The neuron takes the inputs it receives from the previous layer, multiplies them by specific 'weights' (which determine the importance of each input), sums them all up, and adds a 'bias' term. However, if networks only did this basic math, they would just be giant linear regression models. To allow the network to learn complex, non-linear patterns, the result is passed through an Activation Function. \n\nThe most common activation function in hidden layers is ReLU (Rectified Linear Unit), which simply turns any negative number into a zero, helping the network train faster. For the output layer, we use different functions depending on the task: a Sigmoid function for binary classification (outputting a probability between 0 and 1), or a Softmax function for multi-class problems (ensuring all output probabilities sum to 100%)."
         },
         {
           "id": "ai-ml-101-l05-c2",
           "title": "Training: Forward Pass, Loss, and Backpropagation",
-          "content": "Training a neural network is an exciting process that involves several important steps, and we repeat these steps for each small batch of data we use. First, we start with the forward pass. During this step, the input data moves through the different layers of the network, and the network makes a prediction based on that input. This is like how our brain processes information to come up with an answer.\nNext, we need to check how accurate our prediction is. This is done by calculating the loss, which tells us how far off our prediction is from the actual result. Depending on what we are trying to achieve, we use different loss functions. For example, if we are predicting a number (like the price of a house), we might use Mean Squared Error (MSE). On the other hand, if we are classifying things (like identifying whether an image is of a cat or a dog), we often use cross-entropy.\nAfter we know how much we missed the mark with our prediction, we move on to the backward pass, also known as backpropagation. This step is really interesting because it uses a concept from calculus called the chain rule. It helps us understand how much each weight in the network contributed to the error we made. This is like figuring out which parts of our reasoning were wrong when we make a mistake.\nFinally, we need to update the weights to improve our predictions. We do this using a method called gradient descent. In this step, we adjust each weight by subtracting a small portion of the gradient, which is influenced by a value called the learning rate (α). This learning rate helps us decide how big of a change we should make to each weight.\nWhen we complete one full pass through all the data we have, we call this an epoch. In practice, we usually run through the data many times, often dozens or even hundreds of epochs, to ensure our model learns well. There are also advanced techniques like Adam and RMSProp that help us adjust the learning rate for each weight, which can make the training process faster and more efficient.\nA major milestone in deep learning happened in 2012 when a network called AlexNet participated in the ImageNet competition. It managed to reduce the error rate from 26% to 16%, showing that deep networks could do much better than traditional methods that were used before. This breakthrough opened up new possibilities for using deep learning in various applications, from image recognition to natural language processing.\nContext recap: Training a neural network is an exciting process that involves several important steps, and we repeat these steps for each small batch of data we use. First, we start with the forward pass. During this step, the input data moves through the different layers of the network, and the network makes a prediction based on that input. This is like how our brain processes information to come up with an answer.\nWhy this matters: Training: Forward Pass, Loss, and Backpropagation helps learners in AI & Machine Learning connect ideas from AI & Machine Learning Fundamentals to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "Training a neural network is an iterative process of making guesses, calculating errors, and making adjustments. This process happens in three main phases for every batch of data.\n\nFirst is the Forward Pass. The input data is fed into the network, flows through the hidden layers, and produces a prediction at the output layer. Initially, because the network's weights are randomized, this prediction will likely be completely wrong.\n\nNext, we measure how wrong the prediction is by calculating the Loss. The loss function compares the network's prediction to the actual correct answer. For regression tasks, we use Mean Squared Error (MSE); for classification, we use Cross-Entropy Loss. The goal of training is to minimize this loss.\n\nThe magic of deep learning happens in the third phase: the Backward Pass, or Backpropagation. Using a calculus concept called the chain rule, backpropagation works backward from the output layer to the input layer, calculating exactly how much each individual weight and bias contributed to the overall error. It figures out which weights need to increase and which need to decrease.\n\nFinally, the network updates its weights using an optimization algorithm like Gradient Descent (or modern variants like Adam). It adjusts the weights by a tiny amount, controlled by a parameter called the Learning Rate. If the learning rate is too high, the model might overshoot the optimal weights; if it's too low, training will take forever. The network repeats this entire cycle—forward pass, loss calculation, backpropagation, and weight update—thousands of times across multiple 'epochs' (full passes through the dataset) until it becomes highly accurate."
         },
         {
           "id": "ai-ml-101-l05-c3",
           "title": "CNNs, RNNs, and Transformers",
-          "content": "Neural networks come in various types, each tailored for specific kinds of data. One of the most popular types is the Convolutional Neural Network, or CNN. CNNs are especially good at handling grid-like data, such as images. They work by using layers called convolutional layers, which apply small filters, known as kernels, that slide over the image. This process helps the network identify important features like edges, textures, and patterns within the image. To make the processing more efficient, CNNs also use pooling layers. These layers help reduce the size of the data being processed, which means the network can work faster and use less computational power. Modern CNN architectures, such as ResNet and EfficientNet, can stack many convolutional layers on top of each other, leading to remarkable performance in various tasks. CNNs are widely applied in fields like facial recognition, where they help identify people in photos, and in medical imaging, where they can assist doctors in detecting tumors in X-rays. They are also crucial for self-driving cars, enabling them to understand and navigate their surroundings.\nAnother important type of neural network is the Recurrent Neural Network, or RNN. RNNs are designed to work with sequential data, which means they are great for processing information that comes in a specific order, like text or time series data. RNNs maintain a hidden state that carries information from previous time steps, allowing them to remember what they have processed before. However, traditional RNNs can face challenges when dealing with long sequences due to a problem called vanishing gradients, which makes it hard for them to learn from earlier data. To address this issue, more advanced versions of RNNs, such as Long Short-Term Memory (LSTM) networks and Gated Recurrent Units (GRUs), have been developed. These models include special mechanisms that help them remember important information over longer periods.\nIn recent years, Transformers have emerged as the leading architecture for many language-related tasks. Introduced by researchers including Vaswani et al. in 2017, Transformers utilize a self-attention mechanism. This allows each token, or piece of information, in the input to connect with every other token at the same time. This capability enables Transformers to scale efficiently and handle large amounts of data. Notable models like GPT, BERT, and Vision Transformers (ViT) are built on this innovative architecture, showcasing the power and versatility of Transformers in various applications.\nContext recap: Neural networks come in various types, each tailored for specific kinds of data. One of the most popular types is the Convolutional Neural Network, or CNN. CNNs are especially good at handling grid-like data, such as images. They work by using layers called convolutional layers, which apply small filters, known as kernels, that slide over the image.\nWhy this matters: CNNs, RNNs, and Transformers helps learners in AI & Machine Learning connect ideas from AI & Machine Learning Fundamentals to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints.\nGuided check: Ask yourself, \"What is the claim?\", \"Which evidence is strongest?\", and \"What would change my conclusion?\" Use the terms data, transformers, rnns, network, layers, cnns, neural, them while answering to reinforce vocabulary and precision."
+          "content": "While standard feedforward networks are great for basic tabular data, specialized architectures have been developed to handle more complex data types like images, audio, and text.\n\nFor visual data, we use Convolutional Neural Networks (CNNs). Instead of looking at an image as a flat list of pixels, CNNs use 'convolutional layers' that slide small filters (kernels) over the image. These filters act like magnifying glasses, scanning for spatial patterns. Early layers might detect simple edges and textures, while deeper layers combine those edges to recognize complex objects like eyes, wheels, or faces. CNNs also use 'pooling layers' to shrink the image size, making the computation faster. CNNs are the backbone of facial recognition, medical image analysis, and self-driving cars.\n\nFor sequential data—where the order of the data matters, like a sentence of text or a stock market time series—we historically used Recurrent Neural Networks (RNNs). RNNs have a 'memory' (hidden state) that allows them to remember previous inputs in the sequence while processing the current one. Advanced versions of RNNs, like LSTMs (Long Short-Term Memory networks), were designed to remember information over longer sequences without forgetting.\n\nHowever, in 2017, a revolutionary architecture called the Transformer changed everything. Instead of processing data sequentially one step at a time like an RNN, Transformers use a mechanism called 'Self-Attention.' This allows the network to look at every word in a sentence simultaneously and understand the context and relationships between all words, no matter how far apart they are. Because they process data in parallel, Transformers can be scaled up massively. They are the foundational architecture behind modern Large Language Models (LLMs) like GPT, BERT, and Claude."
         }
       ],
       "interactiveActivities": [
@@ -450,8 +452,8 @@ export const AiMachineLearning101Module: LearningModule = {
         {
           "id": "ai-ml-101-l05-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Follow the prompt sequence and document your reasoning."
+          "title": "The Deep Learning Cycle",
+          "content": "Memorize the loop: 1. Forward Pass (Predict) -> 2. Calculate Loss (Error) -> 3. Backpropagation (Find Gradients) -> 4. Gradient Descent (Update Weights)."
         }
       ]
     },
@@ -460,6 +462,8 @@ export const AiMachineLearning101Module: LearningModule = {
       "title": "Unsupervised Learning & Neural Networks Checkpoint",
       "type": "quiz",
       "duration": 8,
+      "lessonImagePrompt": "Imagen 4 prompt: A glowing digital lock unlocking, revealing a bright core of data. The lock is made of interconnected neural network nodes. High-tech, futuristic security concept, neon green and blue lighting.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A fast-paced visual recap animation: A cluster of 3D data points snaps into three distinct groups, then the camera zooms infinitely into one point, revealing it is actually a complex, pulsing neural network processing an image of a cat. Seamless transition, 4k resolution.",
       "objectives": [
         "Demonstrate understanding of clustering, dimensionality reduction, and neural network training"
       ],
@@ -470,11 +474,11 @@ export const AiMachineLearning101Module: LearningModule = {
           "options": [
             {
               "id": "a",
-              "text": "Points are assigned to the nearest centroid, then centroids are recomputed as the mean of assigned points"
+              "text": "New features are created from the data"
             },
             {
               "id": "b",
-              "text": "New features are created from the data"
+              "text": "Points are assigned to the nearest centroid, then centroids are recomputed as the mean of assigned points"
             },
             {
               "id": "c",
@@ -485,7 +489,7 @@ export const AiMachineLearning101Module: LearningModule = {
               "text": "Labels are assigned by a human supervisor"
             }
           ],
-          "correctOptionId": "a",
+          "correctOptionId": "b",
           "explanation": "K-means alternates between assignment (nearest centroid) and update (recompute centroid) until convergence."
         },
         {
@@ -494,22 +498,22 @@ export const AiMachineLearning101Module: LearningModule = {
           "options": [
             {
               "id": "a",
-              "text": "Projecting data onto the directions of maximum variance (principal components)"
-            },
-            {
-              "id": "b",
               "text": "Randomly deleting features"
             },
             {
-              "id": "c",
+              "id": "b",
               "text": "Duplicating important features"
+            },
+            {
+              "id": "c",
+              "text": "Projecting data onto the directions of maximum variance (principal components)"
             },
             {
               "id": "d",
               "text": "Converting all features to binary"
             }
           ],
-          "correctOptionId": "a",
+          "correctOptionId": "c",
           "explanation": "PCA finds orthogonal axes (eigenvectors of the covariance matrix) capturing the most variance, then projects data onto the top components."
         },
         {
@@ -518,22 +522,22 @@ export const AiMachineLearning101Module: LearningModule = {
           "options": [
             {
               "id": "a",
-              "text": "The chain rule of calculus, propagating loss backward through each layer"
-            },
-            {
-              "id": "b",
               "text": "Random number generation"
             },
             {
-              "id": "c",
+              "id": "b",
               "text": "Forward pass only"
             },
             {
-              "id": "d",
+              "id": "c",
               "text": "Manual weight adjustment by the programmer"
+            },
+            {
+              "id": "d",
+              "text": "The chain rule of calculus, propagating loss backward through each layer"
             }
           ],
-          "correctOptionId": "a",
+          "correctOptionId": "d",
           "explanation": "Backpropagation applies the chain rule to decompose the overall loss gradient into per-weight gradients layer by layer."
         },
         {
@@ -575,6 +579,8 @@ export const AiMachineLearning101Module: LearningModule = {
       "title": "Model Training: Bias, Variance, Overfitting & Cross-Validation",
       "type": "video",
       "duration": 14,
+      "lessonImagePrompt": "Imagen 4 prompt: A visual 3D representation of three archery target boards. One board has arrows tightly clustered but off-center. Another has arrows scattered widely around the center. A third has arrows perfectly in the glowing bullseye. Studio lighting, realistic textures.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A 3D animation showing a glowing line trying to fit a set of floating data points. First, it's a stiff straight line that misses the curves. Then, it becomes a wildly squiggly line that touches every single point perfectly but looks chaotic. Finally, it relaxes into a smooth, elegant curve that captures the general trend perfectly.",
       "objectives": [
         "Explain the bias-variance trade-off and its impact on model generalization",
         "Identify overfitting and underfitting through learning curves",
@@ -584,17 +590,17 @@ export const AiMachineLearning101Module: LearningModule = {
         {
           "id": "ai-ml-101-l07-c1",
           "title": "The Bias-Variance Trade-Off",
-          "content": "When we build models to analyze and understand data, it's important to consider three main types of errors that can occur: bias, variance, and irreducible noise. Let's break these down.\nBias is the error that arises when our model is too simplistic to accurately capture the real patterns present in the data. For instance, if we try to fit a straight line to a set of points that actually follow a curved path, our model will struggle to make accurate predictions. This situation is known as underfitting, where we experience high bias and low variance. Essentially, the model is not complex enough to understand the true relationships in the data.\nOn the flip side, we have variance, which refers to the error that happens when our model is overly sensitive to the specific details of the training data. Imagine using a very complex model that memorizes every single detail, including random noise. While this model might perform exceptionally well on the training data, it will likely fail when faced with new, unseen data. This phenomenon is called overfitting, characterized by low bias and high variance.\nThe key to effective modeling is to find a balance between bias and variance. We want our model to be complex enough to capture the genuine patterns in the data, but not so complex that it gets distracted by noise. To achieve this balance, we can use techniques like ensemble methods, such as random forests and gradient boosting, which help reduce variance. Additionally, regularization techniques can simplify our models to prevent overfitting.\nIn practice, we monitor two types of errors: training error and validation error. Training error measures how well our model performs on the data it was trained on, while validation error assesses its performance on new data. If we notice that the training error is low but the validation error is high, it suggests that our model is overfitting. This means it is not generalizing well to new situations, which is something we want to avoid. By understanding and managing bias and variance, we can create models that are both accurate and reliable.\nContext recap: When we build models to analyze and understand data, it's important to consider three main types of errors that can occur: bias, variance, and irreducible noise. Let's break these down. Bias is the error that arises when our model is too simplistic to accurately capture the real patterns present in the data. For instance, if we try to fit a straight line to a set of points that actually follow a curved path, our model will struggle to make accurate predictions.\nWhy this matters: The Bias-Variance Trade-Off helps learners in AI & Machine Learning connect ideas from AI & Machine Learning Fundamentals to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "When training machine learning models, our ultimate goal is 'generalization'—we want the model to perform well on new, unseen data, not just the data it was trained on. To achieve this, we must navigate the Bias-Variance Trade-Off, which involves balancing two main sources of error.\n\nBias is the error introduced when a model is too simple to capture the underlying patterns in the data. Imagine trying to fit a straight line to data that curves like a bowl. The straight line will make poor predictions because it assumes the relationship is simpler than it actually is. This is called Underfitting. A model with high bias pays very little attention to the training data and oversimplifies the problem.\n\nVariance is the exact opposite. It is the error introduced when a model is too complex and highly sensitive to the specific quirks and random noise in the training data. Imagine a wildly squiggly line that perfectly connects every single data point, including the outliers. While this model gets a perfect score on the training data, it will fail miserably when given new data because it memorized the noise rather than learning the true pattern. This is called Overfitting.\n\nThe sweet spot is finding a model complex enough to capture the true signal (low bias) but simple enough to ignore the noise (low variance). We monitor this by looking at learning curves. If both training error and validation error are high, the model is underfitting. If training error is very low but validation error is high, the model is overfitting."
         },
         {
           "id": "ai-ml-101-l07-c2",
           "title": "Evaluation Metrics and the Confusion Matrix",
-          "content": "To understand how well our machine learning model is working, we use a special tool called a confusion matrix. This matrix helps us organize and interpret the results of our predictions by showing four important outcomes: True Positives (TP), True Negatives (TN), False Positives (FP), and False Negatives (FN). Let's break these terms down a bit.\n- **True Positives (TP)** are the cases where our model correctly predicted a positive outcome. For example, if we are trying to identify whether an email is spam, a true positive would be an email that is actually spam and our model correctly labeled it as spam.\n- **True Negatives (TN)** are the cases where our model correctly predicted a negative outcome. In our spam example, this would be an email that is not spam, and our model correctly identified it as not spam.\n- **False Positives (FP)** occur when our model incorrectly predicts a positive outcome. This means our model said an email was spam, but it was actually not spam.\n- **False Negatives (FN)** are the opposite; this is when our model fails to identify a positive case. For instance, it might miss a spam email and label it as not spam.\nFrom these outcomes, we can calculate several important metrics to evaluate our model's performance.\n- **Accuracy** tells us how often our model is correct overall. We calculate it by adding True Positives and True Negatives together, and then dividing by the total number of predictions made. However, we need to be careful with accuracy, especially when our data is imbalanced. For example, if 99% of our data is negative, a model that always predicts 'negative' could still show a high accuracy of 99%, but that wouldn't be very useful.\n- **Precision** measures how many of the cases we predicted as positive were actually positive. This is important because we want to know how reliable our positive predictions are.\n- **Recall**, also known as sensitivity, tells us how many actual positive cases we successfully identified. This is crucial in situations like medical screenings where we want to catch as many true cases as possible.\n- The **F1-score** combines both precision and recall into a single score, which helps us understand the balance between the two metrics.\nIn different scenarios, we might prioritize one metric over another. For instance, in spam filtering, we want high precision to avoid blocking important emails, while in medical tests, high recall is essential to ensure we don't miss any serious conditions.\nAdditionally, we can use **ROC curves** to visualize the trade-off between true positive rates and false positive rates at different thresholds. The **area under the curve (AUC)** gives us a single number that summarizes the overall performance of our model, making it easier to compare different models. Understanding these metrics helps us improve our models and make better predictions in the future.\nContext recap: To understand how well our machine learning model is working, we use a special tool called a confusion matrix. This matrix helps us organize and interpret the results of our predictions by showing four important outcomes: True Positives (TP), True Negatives (TN), False Positives (FP), and False Negatives (FN). Let's break these terms down a bit. - **True Positives (TP)** are the cases where our model correctly predicted a positive outcome.\nWhy this matters: Evaluation Metrics and the Confusion Matrix helps learners in AI & Machine Learning connect ideas from AI & Machine Learning Fundamentals to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "To know if our model is actually good, we need the right metrics. For classification tasks, we start with a tool called the Confusion Matrix. It breaks down our predictions into four categories:\n- True Positives (TP): The model predicted 'Yes', and the actual answer was 'Yes'.\n- True Negatives (TN): The model predicted 'No', and the actual answer was 'No'.\n- False Positives (FP): The model predicted 'Yes', but the actual answer was 'No' (a false alarm).\n- False Negatives (FN): The model predicted 'No', but the actual answer was 'Yes' (a missed detection).\n\nFrom this matrix, we calculate several key metrics. Accuracy is the percentage of total correct predictions. However, accuracy can be misleading if the data is imbalanced. If 99% of emails are normal and 1% are spam, a broken model that always guesses 'normal' will be 99% accurate, but completely useless at finding spam.\n\nTo fix this, we use Precision and Recall. Precision asks: 'Out of all the items the model claimed were positive, how many actually were?' (High precision means few false alarms). Recall asks: 'Out of all the actual positive items in the data, how many did the model successfully find?' (High recall means few missed detections). \n\nThere is often a trade-off between the two. In a medical test for a severe disease, you want high Recall (you don't want to miss anyone who is sick, even if it means a few false alarms). For a spam filter, you want high Precision (you don't want to accidentally send an important work email to the spam folder). The F1-Score is a metric that combines both Precision and Recall into a single number to give a balanced view of performance."
         },
         {
           "id": "ai-ml-101-l07-c3",
           "title": "Cross-Validation and Regularization",
-          "content": "To evaluate how well our machine learning model will perform on new, unseen data, we can use a technique called cross-validation. One straightforward method is to split our dataset into two parts using an 80/20 ratio. This means we use 80% of the data to train our model and the remaining 20% to test it. While this approach is simple, it can sometimes lead to unreliable estimates of how well our model will generalize to new data. To improve this, we can use K-fold cross-validation. In this method, we divide our dataset into 'k' equal parts, known as folds. Each fold will take turns being the test set, while the other folds are used to train the model. By averaging the results from all the folds, we can obtain a more accurate estimate of our model's performance. Common choices for 'k' are 5 or 10, which are widely used in practice.\nFor datasets where certain classes are not well represented, we can use a technique called stratified K-fold. This ensures that each fold maintains the same proportion of classes as the original dataset, which is crucial for achieving reliable results in imbalanced datasets.\nAnother key concept in machine learning is regularization, which helps prevent overfitting. Overfitting occurs when a model learns the training data too well, including its noise, and performs poorly on new data. Regularization introduces a penalty for large weights in our model, which helps to keep the model simpler and more generalizable. There are different types of regularization techniques. For example, L1 regularization, also known as Lasso, encourages some weights to become exactly zero. This effectively selects important features and ignores the less important ones. On the other hand, L2 regularization, known as Ridge, adds a penalty based on the square of the weights, which helps to smooth out the weights without forcing them to zero. There is also a method called Elastic Net, which combines both L1 and L2 regularization techniques.\nIn the context of neural networks, dropout is a useful technique where we randomly deactivate some neurons during the training process. This encourages the model to learn more robust features, as it cannot rely on any single neuron. Lastly, early stopping is a strategy where we monitor the model's performance on validation data and stop training if we notice that the performance starts to decline. This helps to ensure that we do not overfit the model to the training data and maintain its ability to generalize well to new data.\nContext recap: To evaluate how well our machine learning model will perform on new, unseen data, we can use a technique called cross-validation. One straightforward method is to split our dataset into two parts using an 80/20 ratio. This means we use 80% of the data to train our model and the remaining 20% to test it. While this approach is simple, it can sometimes lead to unreliable estimates of how well our model will generalize to new data.\nWhy this matters: Cross-Validation and Regularization helps learners in AI & Machine Learning connect ideas from AI & Machine Learning Fundamentals to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "To ensure our model's evaluation metrics are reliable, we can't just test it on the data it trained on. The simplest approach is a Train/Test split (e.g., 80% for training, 20% for testing). However, if we get 'lucky' or 'unlucky' with how the data is split, our evaluation might be skewed. \n\nA more robust method is K-Fold Cross-Validation. We divide the dataset into 'k' equal chunks (folds), usually 5 or 10. The model trains on 4 folds and tests on the 1st fold. Then it resets, trains on a different combination of 4 folds, and tests on the 2nd fold. It repeats this until every fold has been used as the test set exactly once. We then average the scores to get a highly reliable estimate of how the model will perform in the real world.\n\nIf we discover our model is overfitting during cross-validation, we use Regularization techniques to force the model to be simpler. \n- L1 Regularization (Lasso) adds a penalty to the loss function that forces the weights of unimportant features to become exactly zero, effectively ignoring them.\n- L2 Regularization (Ridge) adds a penalty that shrinks all weights closer to zero, preventing any single feature from having too much influence.\n- In Neural Networks, we use Dropout, which randomly turns off a percentage of neurons during training. This prevents the network from relying too heavily on any specific pathway, forcing it to learn more robust, generalized features. We also use Early Stopping, which automatically halts training the moment the validation error starts to increase, preventing the model from memorizing the noise."
         }
       ],
       "flashcards": [
@@ -618,6 +624,14 @@ export const AiMachineLearning101Module: LearningModule = {
           "front": "K-fold cross-validation",
           "back": "Splits data into k folds; each fold serves as test set once, averaging scores for a robust generalization estimate"
         }
+      ],
+      "learningAids": [
+        {
+          "id": "ai-ml-101-l07-a1",
+          "type": "image",
+          "title": "The Bullseye Analogy",
+          "content": "Visual summary: High Bias is missing the target entirely (underfitting). High Variance is hitting all over the board (overfitting). Low Bias & Low Variance is a tight cluster in the bullseye."
+        }
       ]
     },
     {
@@ -625,6 +639,8 @@ export const AiMachineLearning101Module: LearningModule = {
       "title": "Real-World ML Pipeline: Data Prep, Feature Engineering & Deployment",
       "type": "interactive",
       "duration": 15,
+      "lessonImagePrompt": "Imagen 4 prompt: An isometric 3D illustration of a futuristic factory assembly line. Raw, messy data blocks enter on a conveyor belt, pass through glowing cleaning and processing machines, and emerge as polished, glowing AI models ready for deployment. Clean, vibrant tech aesthetic.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A continuous tracking shot following a glowing block of data on a digital conveyor belt. It gets scrubbed clean of dirt, painted with new colors, compressed, and finally inserted into a glowing server rack. High-quality 3D motion graphics, seamless loop style.",
       "objectives": [
         "Outline the end-to-end ML pipeline from raw data to production deployment",
         "Apply feature scaling, one-hot encoding, and feature selection techniques",
@@ -634,17 +650,17 @@ export const AiMachineLearning101Module: LearningModule = {
         {
           "id": "ai-ml-101-l08-c1",
           "title": "Data Preparation in Practice",
-          "content": "In the exciting field of machine learning, we often start with data that can be quite messy and unorganized. This is where the important process of data cleaning comes into play. Data cleaning is essential because it helps us prepare our data for analysis so that we can make accurate predictions. One of the first things we do is handle missing values. For numerical data, we can fill in these gaps using the median, which is the middle value when all the numbers are arranged in order. For categorical data, we use the mode, which is the most frequently occurring value. Additionally, we need to remove any duplicate entries to ensure that our data is unique and reliable. It's also important to fix any inconsistencies in how the data is formatted, so everything is uniform and easy to work with.\nOnce our data is cleaned, we move on to a step called Exploratory Data Analysis, or EDA for short. EDA is a fascinating process where we use various tools to visualize our data. For example, we might create histograms to see how data is distributed, scatter plots to explore relationships between different variables, and correlation matrices to understand how closely related different features are. This step is crucial because it helps us identify any outliers—data points that are significantly different from the rest—and discover interesting patterns that can inform our modeling decisions.\nBefore we start building our machine learning models, we need to split our data into different sets. This is known as the train/test split. It's important to do this before applying any transformations that rely on overall statistics, like calculating the mean for filling in missing values. This helps us avoid a problem called data leakage, where information from the test set accidentally influences the training process. A common way to split the data is to use 70% for training our model, 15% for validation to fine-tune our model, and the remaining 15% for testing its performance. If we are working with time-series data, we must respect the order of time when splitting. This means we train our model on past data and test it on future data to ensure that our predictions are realistic and applicable to real-world scenarios.\nContext recap: In the exciting field of machine learning, we often start with data that can be quite messy and unorganized. This is where the important process of data cleaning comes into play. Data cleaning is essential because it helps us prepare our data for analysis so that we can make accurate predictions. One of the first things we do is handle missing values.\nWhy this matters: Data Preparation in Practice helps learners in AI & Machine Learning connect ideas from AI & Machine Learning Fundamentals to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints.\nGuided check: Ask yourself, \"What is the claim?\", \"Which evidence is strongest?\", and \"What would change my conclusion?\" Use the terms data, different, important, process, helps, split, test, model while answering to reinforce vocabulary and precision."
+          "content": "In the real world, data scientists spend up to 80% of their time preparing data before a machine learning model is ever trained. Raw data is often messy, incomplete, and formatted inconsistently. The first step in the ML pipeline is Data Cleaning. This involves handling missing values—either by deleting rows with missing data or filling the gaps (imputation) using the median or mean for numbers, and the mode for categories. We also must remove duplicate entries and fix formatting errors.\n\nOnce the data is clean, we perform Exploratory Data Analysis (EDA). During EDA, we use visualizations like histograms, scatter plots, and correlation matrices to understand the distribution of our data, spot outliers, and find relationships between variables.\n\nCrucially, before we apply any mathematical transformations to our data, we must perform the Train/Test Split. We typically divide the data into a Training set (e.g., 70%), a Validation set for tuning the model (15%), and a Test set for final evaluation (15%). It is vital to split the data early to prevent Data Leakage. Data leakage occurs when information from the test set accidentally influences the training process. For example, if you calculate the average price of all houses in your dataset to fill in missing values, and then split the data, the training set has 'seen' the average of the test set. This will make your model look artificially successful during testing, but it will fail in the real world."
         },
         {
           "id": "ai-ml-101-l08-c2",
           "title": "Feature Engineering and Encoding",
-          "content": "Feature engineering is a crucial part of preparing our data for machine learning, and one of the key components of this process is feature scaling. Feature scaling helps ensure that all features contribute equally to the performance of our model. One popular method for feature scaling is called min-max scaling. This technique transforms the values of a feature so that they fit within a range of 0 to 1. We can do this using the formula x' = (x − min) / (max − min), where 'x' is the original value, 'min' is the smallest value in the feature, and 'max' is the largest value. Another important method is standardization, which adjusts the data so that it has a mean of 0 and a standard deviation of 1. This is calculated using the formula z = (x − μ) / σ, where 'μ' is the mean and 'σ' is the standard deviation. Some algorithms, particularly those that rely on distance calculations, such as k-means clustering or k-nearest neighbors, as well as those that use gradient descent like neural networks, are sensitive to the scale of the features. This means that if the features are not scaled properly, the performance of these algorithms can be negatively impacted. However, tree-based models, like decision trees, do not require feature scaling and can handle features of different scales without any issues. Additionally, when we work with categorical variables, such as colors (like red, blue, and green), we can use a technique called one-hot encoding. This method converts these categorical variables into binary columns, creating a separate column for each category. For features that have many unique values, such as zip codes, we might prefer to use techniques like target encoding or embedding layers, which can help manage the complexity of the data. Feature selection is another important process in feature engineering, where we identify and remove irrelevant or redundant features. We can use methods like correlation thresholds or L1 regularization to help with this. Ultimately, having good features is often more important than using complex algorithms, and having domain knowledge is essential for effective feature engineering. By understanding the data and the problem we are trying to solve, we can create features that significantly improve the performance of our machine learning models.\nContext recap: Feature engineering is a crucial part of preparing our data for machine learning, and one of the key components of this process is feature scaling. Feature scaling helps ensure that all features contribute equally to the performance of our model. One popular method for feature scaling is called min-max scaling. This technique transforms the values of a feature so that they fit within a range of 0 to 1.\nWhy this matters: Feature Engineering and Encoding helps learners in AI & Machine Learning connect ideas from AI & Machine Learning Fundamentals to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "Machine learning models only understand numbers, and they are highly sensitive to the scale of those numbers. Feature Engineering is the process of transforming raw data into a format that algorithms can easily digest.\n\nOne major step is Feature Scaling. Imagine a dataset predicting house prices using 'Number of Bedrooms' (values 1-5) and 'Square Footage' (values 500-5000). Because the square footage numbers are so much larger, algorithms like K-Means or Neural Networks might mistakenly assume square footage is a thousand times more important than bedrooms. To fix this, we use Min-Max Scaling (squashing all values between 0 and 1) or Standardization (centering the data around a mean of 0 with a standard deviation of 1). Note: Tree-based models like Random Forests do not require feature scaling.\n\nNext, we must handle categorical text data, like a column for 'Color' containing 'Red', 'Green', and 'Blue'. We cannot simply assign them numbers (1, 2, 3) because the model will assume Blue (3) is mathematically greater than Red (1). Instead, we use One-Hot Encoding. This creates a new binary column for every category. If a row is 'Red', it gets a 1 in the 'Is_Red' column and a 0 in the others.\n\nFinally, we perform Feature Selection. Feeding a model too many irrelevant features adds noise and slows down training. We drop columns that have no predictive value or are highly correlated with each other, ensuring the model only learns from the most impactful data."
         },
         {
           "id": "ai-ml-101-l08-c3",
           "title": "MLOps: From Notebook to Production",
-          "content": "When we create a machine learning model using a Jupyter notebook, we are only at the starting point of a much larger journey; this model is not yet a finished product. To effectively move from the experimentation phase to a production-ready state, we utilize a practice called MLOps, which stands for Machine Learning Operations. MLOps is essential for ensuring that our models can be reliably used in real-world applications. There are several important practices that we need to follow in MLOps.\nFirst, we must implement version control for our data and models. This can be done using tools like DVC (Data Version Control) or MLflow. Version control helps us keep track of which specific dataset and code were used to create each model, making it easier to manage changes and improvements over time.\nNext, we should establish reproducible pipelines. This means creating automated workflows that handle the processes of data ingestion, preprocessing, training, and evaluation. Tools like Kubeflow and Airflow can help us set up these pipelines, ensuring that our work is efficient and consistent.\nAnother crucial aspect is model serving. This involves deploying our machine learning model so that it can be accessed and used by other applications. We can do this by placing our model behind a REST API or a gRPC endpoint. Additionally, we can use containerization tools like Docker to package our model, which makes it easier to run in different environments without compatibility issues.\nMonitoring our models is also very important. We need to track various metrics, such as prediction latency (how long it takes to get a prediction), throughput (how many predictions can be made in a given time), and data drift (which happens when the incoming data changes from what the model was trained on).\nFurthermore, we should set up retraining triggers. This means we can schedule regular retraining sessions for our model or automatically retrain it if we notice that its accuracy drops below a certain level.\nFinally, Continuous Integration and Continuous Delivery (CI/CD) for machine learning automates the processes of testing, validating, and deploying our models. This ensures that our models are not only reliable but also reproducible. Many leading companies, such as Uber, Google, and Netflix, have developed their own machine learning platforms to manage and serve millions of predictions every second, showcasing the power and importance of MLOps in the field of artificial intelligence.\nContext recap: When we create a machine learning model using a Jupyter notebook, we are only at the starting point of a much larger journey; this model is not yet a finished product. To effectively move from the experimentation phase to a production-ready state, we utilize a practice called MLOps, which stands for Machine Learning Operations. MLOps is essential for ensuring that our models can be reliably used in real-world applications. There are several important practices that we need to follow in MLOps.\nWhy this matters: MLOps: From Notebook to Production helps learners in AI & Machine Learning connect ideas from AI & Machine Learning Fundamentals to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "Training a model in a Jupyter notebook is only the beginning. To make a model useful, it must be deployed into the real world where users can interact with it. This transition is managed by a field called MLOps (Machine Learning Operations), which combines ML with software engineering best practices.\n\nThe first pillar of MLOps is Version Control. Just as software developers track changes to code, data scientists use tools like DVC and MLflow to track exactly which dataset, code, and hyperparameters were used to train a specific version of a model. This ensures reproducibility.\n\nNext is Model Serving. Once trained, the model is often packaged into a container (like Docker) and deployed to a cloud server. It is placed behind an API (Application Programming Interface). When a user's app needs a prediction, it sends the data to the API, the model processes it, and sends the prediction back in milliseconds.\n\nHowever, the real world is constantly changing. A model trained to predict housing prices in 2019 will perform terribly in 2024 because the economy changed. This degradation is called Data Drift. MLOps requires continuous Monitoring of the model's predictions in production. If the system detects that the incoming data looks different from the training data, or if the model's confidence drops, it triggers an automated Retraining Pipeline. This pipeline fetches the latest data, retrains the model, tests it, and seamlessly deploys the updated version, ensuring the AI remains accurate over time."
         }
       ],
       "interactiveActivities": [
@@ -652,7 +668,36 @@ export const AiMachineLearning101Module: LearningModule = {
           "id": "ai-ml-101-l08-a1",
           "title": "Order the ML Pipeline Steps",
           "type": "timeline_builder",
-          "description": "Arrange the steps in correct order: Collect and explore raw data (EDA) → Clean data: handle missing values, remove duplicates → Split into train / validation / test sets → Feature engineering: scaling, encoding, selection → Train the model on the training set → Evaluate on the validation set and tune hyperparameters → Final evaluation on the held-out test set → Deploy model behind an API and monitor in production."
+          "steps": [
+            {
+              "id": "s1",
+              "text": "Collect and explore raw data (EDA)"
+            },
+            {
+              "id": "s2",
+              "text": "Clean data: handle missing values and duplicates"
+            },
+            {
+              "id": "s3",
+              "text": "Split data into train, validation, and test sets"
+            },
+            {
+              "id": "s4",
+              "text": "Feature engineering: scaling and one-hot encoding"
+            },
+            {
+              "id": "s5",
+              "text": "Train the model on the training set"
+            },
+            {
+              "id": "s6",
+              "text": "Evaluate and tune using the validation set"
+            },
+            {
+              "id": "s7",
+              "text": "Deploy the model behind an API and monitor for drift"
+            }
+          ]
         }
       ],
       "flashcards": [
@@ -676,6 +721,14 @@ export const AiMachineLearning101Module: LearningModule = {
           "front": "Data drift",
           "back": "When the distribution of production data shifts away from training data, degrading model performance and triggering retraining"
         }
+      ],
+      "learningAids": [
+        {
+          "id": "ai-ml-101-l08-a1",
+          "type": "practice",
+          "title": "The Golden Rule of Data Splitting",
+          "content": "Always split your data BEFORE applying any transformations like scaling or imputation to prevent Data Leakage!"
+        }
       ]
     },
     {
@@ -683,6 +736,8 @@ export const AiMachineLearning101Module: LearningModule = {
       "title": "Model Training & ML Pipeline Checkpoint",
       "type": "quiz",
       "duration": 8,
+      "lessonImagePrompt": "Imagen 4 prompt: A futuristic holographic dashboard displaying various charts, graphs, and a glowing green 'System Optimal' sign, representing successful model evaluation and deployment. UI/UX design focus, dark mode, glowing accents.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A quick 3D motion graphics montage showing a target board with arrows hitting the bullseye, smoothly transitioning to a glowing confusion matrix lighting up with green checkmarks, and ending with a massive server rack powering on with blue LEDs.",
       "objectives": [
         "Demonstrate understanding of bias-variance trade-off, evaluation metrics, and MLOps practices"
       ],
@@ -693,22 +748,22 @@ export const AiMachineLearning101Module: LearningModule = {
           "options": [
             {
               "id": "a",
-              "text": "Overfitting — it memorized training noise and fails to generalize"
-            },
-            {
-              "id": "b",
               "text": "Underfitting — it is too simple to learn any patterns"
             },
             {
-              "id": "c",
+              "id": "b",
               "text": "Perfectly calibrated"
+            },
+            {
+              "id": "c",
+              "text": "Overfitting — it memorized training noise and fails to generalize"
             },
             {
               "id": "d",
               "text": "Experiencing hardware failure"
             }
           ],
-          "correctOptionId": "a",
+          "correctOptionId": "c",
           "explanation": "A large gap between training and test performance is the hallmark of overfitting — the model has high variance."
         },
         {
@@ -717,11 +772,11 @@ export const AiMachineLearning101Module: LearningModule = {
           "options": [
             {
               "id": "a",
-              "text": "Recall (sensitivity) — catching all actual positives"
+              "text": "Precision — avoiding false positives"
             },
             {
               "id": "b",
-              "text": "Precision — avoiding false positives"
+              "text": "Recall (sensitivity) — catching all actual positives"
             },
             {
               "id": "c",
@@ -732,7 +787,7 @@ export const AiMachineLearning101Module: LearningModule = {
               "text": "Training speed"
             }
           ],
-          "correctOptionId": "a",
+          "correctOptionId": "b",
           "explanation": "High recall minimizes false negatives — critical when missing a case (e.g., undetected cancer) is more dangerous than a false alarm."
         },
         {
@@ -741,22 +796,22 @@ export const AiMachineLearning101Module: LearningModule = {
           "options": [
             {
               "id": "a",
-              "text": "Convert categorical variables into binary columns so ML algorithms can process them"
-            },
-            {
-              "id": "b",
               "text": "Scale numerical features to [0, 1]"
             },
             {
-              "id": "c",
+              "id": "b",
               "text": "Remove outliers from the dataset"
             },
             {
-              "id": "d",
+              "id": "c",
               "text": "Split data into train and test sets"
+            },
+            {
+              "id": "d",
+              "text": "Convert categorical variables into binary columns so ML algorithms can process them"
             }
           ],
-          "correctOptionId": "a",
+          "correctOptionId": "d",
           "explanation": "One-hot encoding creates k binary columns for k categories — each row has exactly one '1' indicating its category."
         },
         {
@@ -798,6 +853,8 @@ export const AiMachineLearning101Module: LearningModule = {
       "title": "Mastery Quiz: AI & Machine Learning",
       "type": "quiz",
       "duration": 12,
+      "lessonImagePrompt": "Imagen 4 prompt: A grand, glowing golden trophy shaped like a stylized human brain intertwined with digital circuitry, resting on a sleek obsidian pedestal. High-end 3D render, dramatic studio lighting, 8k resolution.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A sweeping drone-style camera move over a vast, glowing digital landscape where all the concepts from the course—decision trees, neural networks, data pipelines, and clustering—are operating in perfect harmony, culminating in a bright flash of light that forms a golden mastery badge.",
       "objectives": [
         "Synthesize all AI & Machine Learning concepts across the module"
       ],
@@ -808,11 +865,11 @@ export const AiMachineLearning101Module: LearningModule = {
           "options": [
             {
               "id": "a",
-              "text": "Reinforcement learning combined with deep neural networks"
+              "text": "Linear regression on historical game data"
             },
             {
               "id": "b",
-              "text": "Linear regression on historical game data"
+              "text": "Reinforcement learning combined with deep neural networks"
             },
             {
               "id": "c",
@@ -823,7 +880,7 @@ export const AiMachineLearning101Module: LearningModule = {
               "text": "Unsupervised clustering of board positions"
             }
           ],
-          "correctOptionId": "a",
+          "correctOptionId": "b",
           "explanation": "AlphaGo used Monte Carlo tree search guided by deep neural networks trained via reinforcement learning from self-play."
         },
         {
@@ -832,23 +889,23 @@ export const AiMachineLearning101Module: LearningModule = {
           "options": [
             {
               "id": "a",
-              "text": "Moving weights in the direction that reduces the loss: w ← w − α·∂L/∂w"
-            },
-            {
-              "id": "b",
               "text": "Randomly reassigning all weights each epoch"
             },
             {
-              "id": "c",
+              "id": "b",
               "text": "Doubling all weights after each forward pass"
+            },
+            {
+              "id": "c",
+              "text": "Moving weights in the direction that reduces the loss, controlled by the learning rate"
             },
             {
               "id": "d",
               "text": "Keeping weights fixed and changing the data"
             }
           ],
-          "correctOptionId": "a",
-          "explanation": "Gradient descent subtracts a fraction (learning rate α) of the loss gradient from each weight, iteratively minimizing the loss."
+          "correctOptionId": "c",
+          "explanation": "Gradient descent subtracts a fraction (learning rate) of the loss gradient from each weight, iteratively minimizing the loss."
         },
         {
           "id": "ai-ml-101-l10-q3",
@@ -856,7 +913,7 @@ export const AiMachineLearning101Module: LearningModule = {
           "options": [
             {
               "id": "a",
-              "text": "Precision and recall"
+              "text": "Bias and variance"
             },
             {
               "id": "b",
@@ -864,14 +921,14 @@ export const AiMachineLearning101Module: LearningModule = {
             },
             {
               "id": "c",
-              "text": "Bias and variance"
+              "text": "Precision and recall"
             },
             {
               "id": "d",
               "text": "Training time and model size"
             }
           ],
-          "correctOptionId": "a",
+          "correctOptionId": "c",
           "explanation": "F1 = 2·(Precision·Recall)/(Precision+Recall) balances false positives (precision) and false negatives (recall)."
         },
         {
@@ -880,11 +937,11 @@ export const AiMachineLearning101Module: LearningModule = {
           "options": [
             {
               "id": "a",
-              "text": "Splitting into train/test before computing any global statistics"
+              "text": "Using the entire dataset to compute the mean before splitting"
             },
             {
               "id": "b",
-              "text": "Using the entire dataset to compute the mean before splitting"
+              "text": "Splitting into train/test before computing any global statistics"
             },
             {
               "id": "c",
@@ -895,7 +952,7 @@ export const AiMachineLearning101Module: LearningModule = {
               "text": "Ignoring the test set entirely"
             }
           ],
-          "correctOptionId": "a",
+          "correctOptionId": "b",
           "explanation": "Computing statistics (mean, std) on the full dataset before splitting leaks test-set information into training preprocessing."
         },
         {
@@ -904,23 +961,23 @@ export const AiMachineLearning101Module: LearningModule = {
           "options": [
             {
               "id": "a",
-              "text": "Adding the sum of squared weights to the loss, penalizing large weights"
-            },
-            {
-              "id": "b",
               "text": "Removing all hidden layers"
             },
             {
-              "id": "c",
+              "id": "b",
               "text": "Increasing the learning rate"
             },
             {
-              "id": "d",
+              "id": "c",
               "text": "Adding more training data automatically"
+            },
+            {
+              "id": "d",
+              "text": "Adding a penalty to the loss function that shrinks weights toward zero"
             }
           ],
-          "correctOptionId": "a",
-          "explanation": "L2 adds λΣw² to the loss function, shrinking weights toward zero and discouraging the model from relying too heavily on any single feature."
+          "correctOptionId": "d",
+          "explanation": "L2 adds a penalty based on squared weights to the loss function, shrinking weights and discouraging the model from relying too heavily on any single feature."
         },
         {
           "id": "ai-ml-101-l10-q6",

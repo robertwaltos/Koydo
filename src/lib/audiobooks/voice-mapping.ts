@@ -84,6 +84,21 @@ export const OPENAI_TO_KOKORO: Record<OpenAIVoice, KokoroVoiceId> = {
   shimmer: "af_heart",
 };
 
+/* ── OpenAI → Gemini 2.5 Flash TTS mapping ───────────────────────── */
+
+/**
+ * Maps each OpenAI voice to its Gemini prebuilt voice equivalent.
+ * Gemini voices are language-agnostic (auto-detect input language).
+ */
+export const OPENAI_TO_GEMINI: Record<OpenAIVoice, string> = {
+  shimmer: "Achird",   // Friendly, bright
+  nova: "Sulafat",     // Warm, clear
+  fable: "Algieba",    // Expressive, smooth
+  onyx: "Gacrux",      // Deep, mature
+  alloy: "Puck",       // Balanced, upbeat
+  echo: "Charon",      // Smooth, informative
+};
+
 /* ── Language → provider routing ───────────────────────────────────── */
 
 /**
@@ -181,14 +196,15 @@ export const PREGEN_LANGUAGE_PRIORITY = [
 ] as const;
 
 /**
- * Voices to pre-generate per book. We pre-generate a subset
- * to control storage costs while covering the most popular choices.
+ * Voices to pre-generate per book. We pre-generate 4 voices
+ * to cover the most popular choices across age tiers.
  *
- *   - nova: most popular female voice (default)
- *   - onyx: most popular male voice
+ *   - shimmer: kid-friendly default (ages 3-10)
+ *   - nova: all-rounder default (ages 11-14)
  *   - fable: British accent option
+ *   - onyx: non-fiction / mature narrator
  */
-export const PREGEN_VOICES: OpenAIVoice[] = ["nova", "onyx", "fable"];
+export const PREGEN_VOICES: OpenAIVoice[] = ["shimmer", "nova", "fable", "onyx"];
 
 /**
  * Estimate pre-generation costs for the full catalog.

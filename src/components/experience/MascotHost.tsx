@@ -1,9 +1,9 @@
 "use client";
 
 import { ReactNode, useState, useEffect, createContext, useContext } from "react";
-import MascotFriend from "./KoydoMascotFriends";
+import MascotFriend, { FriendId } from "./KoydoMascotFriends";
 import { MascotMood } from "./KoydoMascot";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { JUICY_SPRINGS } from "@/lib/experience/interaction-primitives";
 
 interface MascotContextType {
@@ -12,23 +12,42 @@ interface MascotContextType {
     message: string | null;
     setMessage: (msg: string | null) => void;
     speak: (text: string, newMood?: MascotMood) => void;
-    friendId: string;
+    // Backward-compatible alias used by existing game modules
+    say: (text: string, newMood?: MascotMood) => void;
+    friendId: FriendId;
     interactionCount: number;
     friendshipLevel: number;
 }
 
 const MascotContext = createContext<MascotContextType | undefined>(undefined);
 
+function loadPersistedInteractions(friendId: FriendId, persistenceKey: string) {
+    if (typeof window === "undefined") {
+        return 0;
+    }
+
+    try {
+        const saved = localStorage.getItem(`${persistenceKey}_${friendId}`);
+        if (!saved) return 0;
+        const data = JSON.parse(saved) as { interactions?: number } | null;
+        return typeof data?.interactions === "number" ? data.interactions : 0;
+    } catch {
+        return 0;
+    }
+}
+
 export function useMascot() {
     const context = useContext(MascotContext);
-    if (!context) throw new Error("useMascot must be used within a MascotHost");
+    if (!context) {
+        throw new Error("useMascot must be used within a MascotHost");
+    }
     return context;
 }
 
 interface MascotHostProps {
     children: ReactNode;
     initialMood?: MascotMood;
-    friendId?: "pixel" | "spark" | "echo" | "luna" | "terra";
+    friendId?: FriendId;
     persistenceKey?: string;
 }
 
@@ -40,18 +59,10 @@ export default function MascotHost({
 }: MascotHostProps) {
     const [mood, setMood] = useState<MascotMood>(initialMood);
     const [message, setMessage] = useState<string | null>(null);
-    const [interactionCount, setInteractionCount] = useState(0);
-    const [friendshipLevel, setFriendshipLevel] = useState(1);
-
-    // Persistence: Load mascot "memory"
-    useEffect(() => {
-        const saved = localStorage.getItem(`${persistenceKey}_${friendId}`);
-        if (saved) {
-            const data = JSON.parse(saved);
-            setInteractionCount(data.interactions || 0);
-            setFriendshipLevel(Math.floor((data.interactions || 0) / 10) + 1);
-        }
-    }, [friendId, persistenceKey]);
+    const [interactionCount, setInteractionCount] = useState(() =>
+        loadPersistedInteractions(friendId, persistenceKey),
+    );
+    const friendshipLevel = Math.floor(interactionCount / 10) + 1;
 
     // Save mascot "memory"
     useEffect(() => {
@@ -80,6 +91,7 @@ export default function MascotHost({
         setMessage(text);
         setTimeout(() => setMessage(null), 4000);
     };
+    const say = speak;
 
     const handleMascotClick = () => {
         setMood("happy");
@@ -98,7 +110,7 @@ export default function MascotHost({
     };
 
     return (
-        <MascotContext.Provider value={{ mood, setMood, message, setMessage, speak, friendId, interactionCount, friendshipLevel }}>
+        <MascotContext.Provider value={{ mood, setMood, message, setMessage, speak, say, friendId, interactionCount, friendshipLevel }}>
             <div className="relative isolate min-h-screen w-full overflow-x-hidden pt-16">
                 {/* The Mascot Layer */}
                 <div className="pointer-events-none fixed inset-0 z-50 overflow-hidden">

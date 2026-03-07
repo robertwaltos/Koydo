@@ -1,9 +1,9 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const UsCivics601Module: LearningModule = {
+export const us_civics_601_Module: LearningModule = {
   "id": "us-civics-601",
   "title": "Us Civics Research and Leadership",
-  "description": "Post-401 specialization in Us Civics, focused on social studies systems diagnostics, social studies operations and execution design, social studies impact and tradeoff analysis, and social studies governance and leadership through advanced casework, simulation, and defense-based checkpoints.",
+  "description": "Post-401 specialization in US Civics, focused on social studies systems diagnostics, operations and execution design, impact and tradeoff analysis, and governance and leadership through advanced casework, simulation, and defense-based checkpoints.",
   "subject": "Social Studies",
   "tags": [
     "core",
@@ -14,7 +14,7 @@ export const UsCivics601Module: LearningModule = {
   ],
   "minAge": 17,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en",
@@ -31,7 +31,7 @@ export const UsCivics601Module: LearningModule = {
   "lessons": [
     {
       "id": "us-civics-601-l01",
-      "title": "Us Civics Advanced Foundations",
+      "title": "US Civics Advanced Foundations",
       "type": "video",
       "duration": 14,
       "learningAids": [
@@ -39,7 +39,8 @@ export const UsCivics601Module: LearningModule = {
           "id": "us-civics-601-l01-a1",
           "type": "image",
           "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence.",
+          "visualPrompt": "A high-tech blueprint or flowchart showing a structured decision-making process with measurable evidence nodes."
         }
       ],
       "chunks": [
@@ -47,42 +48,42 @@ export const UsCivics601Module: LearningModule = {
           "id": "us-civics-601-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "In this lesson, we will dive into the advanced boundaries of what Us Civics includes. We will learn about the different systems that make up social studies and how to identify and diagnose any problems that may arise within these systems. Additionally, we will discuss how to create effective plans for operations and execution. This foundational knowledge is essential for understanding the complexities of civic engagement and social studies, and it will empower us to participate more effectively in our communities and society as a whole.\nContext recap: In this lesson, we will dive into the advanced boundaries of what Us Civics includes. We will learn about the different systems that make up social studies and how to identify and diagnose any problems that may arise within these systems. Additionally, we will discuss how to create effective plans for operations and execution. This foundational knowledge is essential for understanding the complexities of civic engagement and social studies, and it will empower us to participate more effectively in our communities and society as a whole.\nContext recap: In this lesson, we will dive into the advanced boundaries of what Us Civics includes. We will learn about the different systems that make up social studies and how to identify and diagnose any problems that may arise within these systems. Additionally, we will discuss how to create effective plans for operations and execution. This foundational knowledge is essential for understanding the complexities of civic engagement and social studies, and it will empower us to participate more effectively in our communities and society as a whole.\nWhy this matters: Scope and Boundary Design helps learners in Social Studies connect ideas from Us Civics Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "In this lesson, we will examine the advanced boundaries of US Civics. We will analyze the complex systems that constitute social studies and learn how to identify and diagnose systemic vulnerabilities. Additionally, we will discuss how to architect effective frameworks for operations and execution. This foundational knowledge is essential for navigating the complexities of civic engagement and empowers leaders to implement sustainable community interventions.\n\nWhy this matters: Scope and Boundary Design helps learners connect theoretical research to practical, high-stakes decisions, highlighting the importance of tradeoffs, assumptions, and rigorous verification."
         },
         {
           "id": "us-civics-601-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different events or actions. They will also identify ranges of uncertainty and understand how different systems depend on one another. This preparation is crucial for planning effective interventions that can lead to positive changes in our communities.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different events or actions. They will also identify ranges of uncertainty and understand how different systems depend on one another. This preparation is crucial for planning effective interventions that can lead to positive changes in our communities."
+          "content": "Learners will engage in mapping causal pathways—the intricate connections between civic actions and societal outcomes. We will identify ranges of uncertainty and analyze systemic interdependencies. This preparation is crucial for designing effective interventions that can withstand unpredictable variables and drive positive, measurable changes in our communities."
         },
         {
           "id": "us-civics-601-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "It is important to ensure that all claims we make are supported by measurable indicators. This means we will look for evidence that can be quantified, establish confidence bounds to understand the reliability of our claims, and set up review checkpoints to assess our progress. This process helps us maintain integrity in our civic discussions and decisions.\nContext recap: It is important to ensure that all claims we make are supported by measurable indicators. This means we will look for evidence that can be quantified, establish confidence bounds to understand the reliability of our claims, and set up review checkpoints to assess our progress. This process helps us maintain integrity in our civic discussions and decisions."
+          "content": "It is critical to ensure that all civic claims are supported by measurable indicators. This requires establishing quantifiable evidence, defining confidence bounds to understand reliability, and implementing review checkpoints to assess progress. This rigorous process maintains integrity and accountability in advanced civic discussions and policy decisions."
         }
       ],
       "flashcards": [
         {
           "id": "us-civics-601-l01-f1",
-          "front": "social studies systems diagnostics",
-          "back": "A specialization axis requiring explicit assumptions and measurable constraints."
+          "front": "Social Studies Systems Diagnostics",
+          "back": "A specialization axis requiring explicit assumptions and measurable constraints to evaluate civic structures."
         },
         {
           "id": "us-civics-601-l01-f2",
-          "front": "social studies operations and execution design",
-          "back": "Execution architecture that determines reliability under stress."
+          "front": "Operations and Execution Design",
+          "back": "The execution architecture that determines a policy's reliability and adaptability under stress."
         },
         {
           "id": "us-civics-601-l01-f3",
-          "front": "social studies impact and tradeoff analysis",
-          "back": "Evaluation discipline for identifying true gains and hidden costs."
+          "front": "Impact and Tradeoff Analysis",
+          "back": "An evaluation discipline for identifying true societal gains and uncovering hidden systemic costs."
         }
       ]
     },
     {
       "id": "us-civics-601-l02",
-      "title": "Us Civics Specialist Methods Lab",
+      "title": "US Civics Specialist Methods Lab",
       "type": "interactive",
       "duration": 17,
       "learningAids": [
@@ -90,7 +91,8 @@ export const UsCivics601Module: LearningModule = {
           "id": "us-civics-601-l02-a1",
           "type": "practice",
           "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence.",
+          "visualPrompt": "An interactive dashboard interface displaying stress-test metrics and workflow resilience."
         }
       ],
       "chunks": [
@@ -98,13 +100,13 @@ export const UsCivics601Module: LearningModule = {
           "id": "us-civics-601-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "In this interactive lab, learners will have the opportunity to design workflows that specialists might use in various scenarios. They will also conduct stress tests on these workflows, simulating adverse conditions to see how well their designs hold up. This hands-on practice will help them understand the importance of resilience in civic methods.\nContext recap: In this interactive lab, learners will have the opportunity to design workflows that specialists might use in various scenarios. They will also conduct stress tests on these workflows, simulating adverse conditions to see how well their designs hold up. This hands-on practice will help them understand the importance of resilience in civic methods."
+          "content": "In this interactive lab, learners will design workflows utilized by civic specialists in high-stakes scenarios. You will conduct stress tests on these workflows, simulating adverse conditions to evaluate structural resilience. This hands-on practice bridges the gap between theoretical policy design and practical, real-world execution."
         },
         {
           "id": "us-civics-601-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "In this recap, we will discuss how workflows can be structured to include important checkpoints. These checkpoints will help us monitor progress, establish criteria for rolling back decisions if necessary, and set up thresholds that trigger escalation when certain limits are reached. This architecture is vital for ensuring that our civic processes are accountable and effective.\nContext recap: In this recap, we will discuss how workflows can be structured to include important checkpoints. These checkpoints will help us monitor progress, establish criteria for rolling back decisions if necessary, and set up thresholds that trigger escalation when certain limits are reached. This architecture is vital for ensuring that our civic processes are accountable and effective."
+          "content": "We will explore how workflows must be structured to include critical control gates. These checkpoints monitor progress, establish criteria for rolling back decisions if adverse effects occur, and set thresholds that trigger escalation. This architecture is vital for ensuring that civic processes remain accountable, transparent, and effective."
         }
       ],
       "interactiveActivities": [
@@ -144,7 +146,8 @@ export const UsCivics601Module: LearningModule = {
           "id": "us-civics-601-l03-a1",
           "type": "practice",
           "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence.",
+          "visualPrompt": "A conceptual diagram of a magnifying glass over a data-driven policy document."
         }
       ],
       "questions": [
@@ -275,7 +278,7 @@ export const UsCivics601Module: LearningModule = {
         },
         {
           "id": "us-civics-601-l03-q6",
-          "text": "In high-stakes Us Civics Research and Leadership execution, which communication protocol is strongest?",
+          "text": "In high-stakes US Civics Research and Leadership execution, which communication protocol is strongest?",
           "skillId": "us-civics-601-skill-advanced-6",
           "options": [
             {
@@ -325,7 +328,7 @@ export const UsCivics601Module: LearningModule = {
         },
         {
           "id": "us-civics-601-l03-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Us Civics Research and Leadership?",
+          "text": "Which portfolio decision rule best balances performance and resilience in US Civics Research and Leadership?",
           "skillId": "us-civics-601-skill-advanced-8",
           "options": [
             {
@@ -352,7 +355,7 @@ export const UsCivics601Module: LearningModule = {
     },
     {
       "id": "us-civics-601-l04",
-      "title": "Us Civics Advanced Case Analysis",
+      "title": "US Civics Advanced Case Analysis",
       "type": "video",
       "duration": 14,
       "learningAids": [
@@ -360,7 +363,8 @@ export const UsCivics601Module: LearningModule = {
           "id": "us-civics-601-l04-a1",
           "type": "image",
           "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence.",
+          "visualPrompt": "A split-screen graphic showing competing policy constraints balanced on a scale."
         }
       ],
       "chunks": [
@@ -368,25 +372,25 @@ export const UsCivics601Module: LearningModule = {
           "id": "us-civics-601-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "In this lesson, we will frame cases that highlight competing constraints within social studies systems. This includes analyzing the impacts of different decisions and understanding the trade-offs involved. By examining these scenarios, learners will gain insights into the complexities of social studies diagnostics and the importance of thoughtful analysis.\nContext recap: In this lesson, we will frame cases that highlight competing constraints within social studies systems. This includes analyzing the impacts of different decisions and understanding the trade-offs involved. By examining these scenarios, learners will gain insights into the complexities of social studies diagnostics and the importance of thoughtful analysis."
+          "content": "In this lesson, we will frame complex cases that highlight competing constraints within social studies systems. This involves analyzing the cascading impacts of different decisions and understanding the inherent trade-offs. By examining these scenarios, learners will gain deep insights into the nuances of social studies diagnostics and the necessity of rigorous, multi-variable analysis."
         },
         {
           "id": "us-civics-601-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "In this practice session, learners will compare various options based on several important dimensions, including safety, reliability, cost, equity, and governance. This comparative analysis will help them understand how different choices can affect different groups and the overall community.\nContext recap: In this practice session, learners will compare various options based on several important dimensions, including safety, reliability, cost, equity, and governance. This comparative analysis will help them understand how different choices can affect different groups and the overall community.\nContext recap: In this practice session, learners will compare various options based on several important dimensions, including safety, reliability, cost, equity, and governance. This comparative analysis will help them understand how different choices can affect different groups and the overall community. Context recap: In this practice session, learners will compare various options based on several important dimensions, including safety, reliability, cost, equity, and governance. This comparative analysis will help them understand how different choices can affect different groups and the overall community."
+          "content": "During this practice session, learners will evaluate various policy options across critical dimensions, including safety, reliability, cost, equity, and governance. This comparative analysis will illuminate how different choices disproportionately affect diverse demographic groups and the broader community ecosystem."
         },
         {
           "id": "us-civics-601-l04-c3",
           "kind": "recap",
           "title": "Decision Memo Pattern",
-          "content": "In this recap, we will emphasize that each recommendation made in our analysis should include clear assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that our decisions are well-informed and that we are prepared for any potential challenges.\nContext recap: In this recap, we will emphasize that each recommendation made in our analysis should include clear assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that our decisions are well-informed and that we are prepared for any potential challenges.\nContext recap: In this recap, we will emphasize that each recommendation made in our analysis should include clear assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that our decisions are well-informed and that we are prepared for any potential challenges. Context recap: In this recap, we will emphasize that each recommendation made in our analysis should include clear assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that our decisions are well-informed and that we are prepared for any potential challenges."
+          "content": "We will emphasize that every formal recommendation must be structured as a comprehensive decision memo. This includes articulating clear assumptions, providing empirical evidence, establishing risk controls, and detailing fallback plans. This structured approach ensures that civic decisions are defensible and resilient against potential challenges."
         }
       ]
     },
     {
       "id": "us-civics-601-l05",
-      "title": "Us Civics Simulation Clinic",
+      "title": "US Civics Simulation Clinic",
       "type": "interactive",
       "duration": 18,
       "learningAids": [
@@ -394,7 +398,8 @@ export const UsCivics601Module: LearningModule = {
           "id": "us-civics-601-l05-a1",
           "type": "practice",
           "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence.",
+          "visualPrompt": "A simulation control room interface with live data feeds and governance alerts."
         }
       ],
       "chunks": [
@@ -402,13 +407,13 @@ export const UsCivics601Module: LearningModule = {
           "id": "us-civics-601-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "In this interactive clinic, learners will operate scenario controls while considering both performance and governance constraints. This experience will help them understand how to balance different priorities in real-world situations, preparing them for future civic responsibilities.\nContext recap: In this interactive clinic, learners will operate scenario controls while considering both performance and governance constraints. This experience will help them understand how to balance different priorities in real-world situations, preparing them for future civic responsibilities.\nWhy this matters: Live Scenario Controls helps learners in Social Studies connect ideas from Us Civics Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "In this interactive clinic, learners will operate scenario controls while balancing performance metrics against strict governance constraints. This immersive experience will train you to navigate competing priorities in real-time, preparing you for the high-pressure realities of advanced civic leadership.\n\nWhy this matters: Live Scenario Controls help learners connect theoretical frameworks to dynamic decision-making, emphasizing the need for rapid verification and assumption testing under pressure."
         },
         {
           "id": "us-civics-601-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "In this recap, we will discuss how effective responses to challenges should update control gates without losing traceability or accountability. This means that as we adapt our strategies, we must ensure that we can still track our decisions and hold ourselves accountable for the outcomes.\nContext recap: In this recap, we will discuss how effective responses to challenges should update control gates without losing traceability or accountability. This means that as we adapt our strategies, we must ensure that we can still track our decisions and hold ourselves accountable for the outcomes."
+          "content": "We will discuss how effective responses to systemic crises require updating control gates dynamically without sacrificing traceability or accountability. As strategies adapt to new information, leaders must ensure that every pivot is documented, justified, and measurable to maintain public trust."
         }
       ],
       "interactiveActivities": [
@@ -416,7 +421,7 @@ export const UsCivics601Module: LearningModule = {
           "id": "us-civics-601-l05-act1",
           "type": "scenario",
           "title": "Adverse-Condition Decision Run",
-          "description": "Run a high-pressure us civics scenario and tune controls under uncertainty."
+          "description": "Run a high-pressure US civics scenario and tune controls under uncertainty."
         }
       ]
     },
@@ -430,7 +435,8 @@ export const UsCivics601Module: LearningModule = {
           "id": "us-civics-601-l06-a1",
           "type": "practice",
           "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence.",
+          "visualPrompt": "A digital badge representing mastery in civic simulation and case defense."
         }
       ],
       "questions": [
@@ -536,109 +542,109 @@ export const UsCivics601Module: LearningModule = {
         },
         {
           "id": "us-civics-601-l06-q5",
-          "text": "What is the best way to compare competing interventions in advanced Social Studies?",
-          "skillId": "us-civics-601-skill-advanced-5",
+          "text": "When framing tradeoffs in a complex civic scenario, a leader must primarily ensure that:",
+          "skillId": "us-civics-601-skill-case5",
           "options": [
             {
               "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
+              "text": "Only the most cost-effective solution is presented"
             },
             {
               "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
+              "text": "Impacts across safety, equity, cost, and reliability are comparatively analyzed"
             },
             {
               "id": "c",
-              "text": "Switch metrics after results arrive"
+              "text": "The scenario is simplified to guarantee a unanimous decision"
             },
             {
               "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
+              "text": "Governance constraints are ignored to speed up execution"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
+          "explanation": "Proper tradeoff framing requires a multi-dimensional analysis of how different choices affect various systemic factors."
         },
         {
           "id": "us-civics-601-l06-q6",
-          "text": "In high-stakes Us Civics Research and Leadership execution, which communication protocol is strongest?",
-          "skillId": "us-civics-601-skill-advanced-6",
+          "text": "What is the primary purpose of a Decision Memo Pattern in advanced casework?",
+          "skillId": "us-civics-601-skill-case6",
           "options": [
             {
               "id": "a",
-              "text": "Broadcast conclusions without assumptions"
+              "text": "To provide a structured format that includes assumptions, evidence, risk controls, and fallbacks"
             },
             {
               "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
+              "text": "To obscure the uncertainties of a policy decision from the public"
             },
             {
               "id": "c",
-              "text": "Share only final outcomes after completion"
+              "text": "To bypass standard governance checkpoints"
             },
             {
               "id": "d",
-              "text": "Limit updates to a single informal channel"
+              "text": "To list only the positive outcomes of a proposed intervention"
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
+          "correctOptionId": "a",
+          "explanation": "A decision memo ensures that recommendations are defensible by explicitly detailing assumptions, evidence, and risk mitigation strategies."
         },
         {
           "id": "us-civics-601-l06-q7",
-          "text": "A mature remediation loop in advanced Social Studies should prioritize:",
-          "skillId": "us-civics-601-skill-advanced-7",
+          "text": "During a live scenario simulation, if an unexpected adverse event occurs, the best immediate action is to:",
+          "skillId": "us-civics-601-skill-case7",
           "options": [
             {
               "id": "a",
-              "text": "Blame assignment without system updates"
+              "text": "Delete the baseline data to avoid accountability"
             },
             {
               "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
+              "text": "Trigger predefined rollback or escalation protocols based on control gates"
             },
             {
               "id": "c",
-              "text": "One-time fixes without retesting"
+              "text": "Continue execution without modifying the operational plan"
             },
             {
               "id": "d",
-              "text": "Issue closure based on elapsed time"
+              "text": "Wait until the simulation ends to address the failure"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
+          "explanation": "Live scenario controls rely on predefined thresholds that trigger immediate escalation or rollback to mitigate damage."
         },
         {
           "id": "us-civics-601-l06-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Us Civics Research and Leadership?",
-          "skillId": "us-civics-601-skill-advanced-8",
+          "text": "Adaptive response design dictates that when control gates are updated dynamically:",
+          "skillId": "us-civics-601-skill-case8",
           "options": [
             {
               "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
+              "text": "Traceability and accountability must be maintained"
             },
             {
               "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
+              "text": "Previous evidence thresholds are no longer relevant"
             },
             {
               "id": "c",
-              "text": "Ignore correlated failure modes"
+              "text": "Stakeholders do not need to be informed of the changes"
             },
             {
               "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
+              "text": "The original policy intent is automatically voided"
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "correctOptionId": "a",
+          "explanation": "Adapting to crises requires flexibility, but every pivot must remain documented and accountable to maintain systemic integrity."
         }
       ]
     },
     {
       "id": "us-civics-601-l07",
-      "title": "Us Civics Governance and Public Impact",
+      "title": "US Civics Governance and Public Impact",
       "type": "video",
       "duration": 13,
       "learningAids": [
@@ -646,7 +652,8 @@ export const UsCivics601Module: LearningModule = {
           "id": "us-civics-601-l07-a1",
           "type": "image",
           "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence.",
+          "visualPrompt": "A network map illustrating the distribution of policy impacts across diverse community stakeholders."
         }
       ],
       "chunks": [
@@ -654,42 +661,42 @@ export const UsCivics601Module: LearningModule = {
           "id": "us-civics-601-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "In this lesson, learners will map out how benefits, burdens, and delayed effects are distributed among different stakeholder groups. Understanding these dynamics is crucial for ensuring that all voices are heard and considered in civic discussions and decision-making processes.\nContext recap: In this lesson, learners will map out how benefits, burdens, and delayed effects are distributed among different stakeholder groups. Understanding these dynamics is crucial for ensuring that all voices are heard and considered in civic discussions and decision-making processes.\nContext recap: In this lesson, learners will map out how benefits, burdens, and delayed effects are distributed among different stakeholder groups. Understanding these dynamics is crucial for ensuring that all voices are heard and considered in civic discussions and decision-making processes. Context recap: In this lesson, learners will map out how benefits, burdens, and delayed effects are distributed among different stakeholder groups. Understanding these dynamics is crucial for ensuring that all voices are heard and considered in civic discussions and decision-making processes."
+          "content": "In this lesson, learners will map out how benefits, burdens, and delayed effects are distributed among different stakeholder groups. Understanding these dynamics is crucial for ensuring equitable policy design and guaranteeing that marginalized voices are integrated into civic decision-making processes."
         },
         {
           "id": "us-civics-601-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "In this section, we will explore the architecture of accountability in decision-making. This includes ensuring that there is traceability for decisions made, rights for review, and obligations for remediation when necessary. These elements are essential for maintaining trust and integrity in governance.\nContext recap: In this section, we will explore the architecture of accountability in decision-making. This includes ensuring that there is traceability for decisions made, rights for review, and obligations for remediation when necessary. These elements are essential for maintaining trust and integrity in governance.\nContext recap: In this section, we will explore the architecture of accountability in decision-making. This includes ensuring that there is traceability for decisions made, rights for review, and obligations for remediation when necessary. These elements are essential for maintaining trust and integrity in governance. Context recap: In this section, we will explore the architecture of accountability in decision-making.\nWhy this matters: Accountability Architecture helps learners in Social Studies connect ideas from Us Civics Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "We will explore the architecture of accountability in governance. This includes establishing strict traceability for decisions made, guaranteeing rights for external review, and enforcing obligations for remediation when policies fail. These structural elements are non-negotiable for maintaining public trust.\n\nWhy this matters: Accountability Architecture helps leaders connect theoretical governance models to practical enforcement, highlighting the necessity of transparent verification."
         },
         {
           "id": "us-civics-601-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "At the end of our lesson, we will use a helpful checklist that connects important outcomes with ethical considerations, ensures that policies are being followed, and highlights the importance of resilience in leadership. This checklist will guide us in evaluating how well we are doing in these areas.\nContext recap: At the end of our lesson, we will use a helpful checklist that connects important outcomes with ethical considerations, ensures that policies are being followed, and highlights the importance of resilience in leadership. This checklist will guide us in evaluating how well we are doing in these areas."
+          "content": "We will conclude by utilizing a comprehensive framework that connects policy outcomes with ethical considerations. This checklist ensures that operational execution aligns with legal and moral standards, and highlights the importance of resilience and integrity in advanced civic leadership."
         }
       ],
       "flashcards": [
         {
           "id": "us-civics-601-l07-f1",
           "front": "Impact distribution",
-          "back": "How outcomes are allocated across populations and timescales."
+          "back": "The analytical mapping of how outcomes, benefits, and burdens are allocated across populations and timescales."
         },
         {
           "id": "us-civics-601-l07-f2",
           "front": "Decision traceability",
-          "back": "An auditable record of evidence, ownership, and rationale."
+          "back": "An auditable, transparent record of evidence, ownership, and rationale behind a policy choice."
         },
         {
           "id": "us-civics-601-l07-f3",
           "front": "Responsible leadership",
-          "back": "Decision behavior balancing performance, accountability, and ethics."
+          "back": "Decision behavior that rigorously balances operational performance, systemic accountability, and ethical standards."
         }
       ]
     },
     {
       "id": "us-civics-601-l08",
-      "title": "Us Civics Capstone Defense Lab",
+      "title": "US Civics Capstone Defense Lab",
       "type": "interactive",
       "duration": 16,
       "learningAids": [
@@ -697,7 +704,8 @@ export const UsCivics601Module: LearningModule = {
           "id": "us-civics-601-l08-a1",
           "type": "practice",
           "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence.",
+          "visualPrompt": "A professional presentation setting with a speaker defending a policy brief before an expert panel."
         }
       ],
       "chunks": [
@@ -705,13 +713,13 @@ export const UsCivics601Module: LearningModule = {
           "id": "us-civics-601-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "In this interactive activity, you will work on creating a detailed brief. This brief will include your main claims, the evidence that supports those claims, the uncertainties that may arise, and the pathways for remediation. This exercise will help you practice critical thinking and effective communication skills.\nContext recap: In this interactive activity, you will work on creating a detailed brief. This brief will include your main claims, the evidence that supports those claims, the uncertainties that may arise, and the pathways for remediation. This exercise will help you practice critical thinking and effective communication skills."
+          "content": "In this interactive capstone, you will assemble a comprehensive defense brief. This document will synthesize your core claims, the empirical evidence supporting those claims, the calculated uncertainty bounds, and the predefined pathways for remediation. This exercise hones critical thinking and executive communication skills."
         },
         {
           "id": "us-civics-601-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "During this session, you will have the opportunity to practice your responses to various critiques. These critiques may come from experts in technical fields, governance issues, or stakeholders who have an interest in your work. This rehearsal will prepare you to confidently address questions and feedback.\nContext recap: During this session, you will have the opportunity to practice your responses to various critiques. These critiques may come from experts in technical fields, governance issues, or stakeholders who have an interest in your work. This rehearsal will prepare you to confidently address questions and feedback."
+          "content": "During this session, you will practice defending your brief against rigorous critiques. These adversarial challenges will simulate cross-examination from technical experts, governance oversight committees, and impacted stakeholders. This rehearsal ensures you can confidently articulate and defend complex civic strategies under pressure."
         }
       ],
       "interactiveActivities": [

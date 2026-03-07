@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const HouseholdManagement601Module: LearningModule = {
+export const household_management_601_Module: LearningModule = {
   "id": "household-management-601",
   "title": "Household Management Research and Leadership",
   "description": "Post-401 specialization in Household Management, focused on household management systems diagnostics, household management operations and execution design, household management impact and tradeoff analysis, and household management governance and leadership through advanced casework, simulation, and defense-based checkpoints.",
@@ -14,7 +14,7 @@ export const HouseholdManagement601Module: LearningModule = {
   ],
   "minAge": 17,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en",
@@ -38,8 +38,8 @@ export const HouseholdManagement601Module: LearningModule = {
         {
           "id": "household-management-601-l01-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "System Boundaries Diagram",
+          "content": "A diagram illustrating a core household system (e.g., finances, maintenance) with inputs, outputs, and external dependencies (e.g., employment, community services)."
         }
       ],
       "chunks": [
@@ -47,36 +47,36 @@ export const HouseholdManagement601Module: LearningModule = {
           "id": "household-management-601-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "In this lesson, we will dive into the advanced ideas of scope and boundaries in Household Management. Understanding these concepts is crucial for effectively diagnosing the systems that keep a household running smoothly. We will also learn how to design detailed operations and execution plans that help ensure everything in the household functions well. By mastering these skills, you will be able to create a well-organized approach to managing different household tasks and responsibilities, making daily life easier and more efficient.\nContext recap: In this lesson, we will dive into the advanced ideas of scope and boundaries in Household Management. Understanding these concepts is crucial for effectively diagnosing the systems that keep a household running smoothly. We will also learn how to design detailed operations and execution plans that help ensure everything in the household functions well. By mastering these skills, you will be able to create a well-organized approach to managing different household tasks and responsibilities, making daily life easier and more efficient."
+          "content": "This lesson introduces the advanced concepts of scope and boundaries in Household Management. Understanding these is crucial for diagnosing the systems that keep a household running. We will learn to design detailed operational plans to ensure all household functions are managed efficiently."
         },
         {
           "id": "household-management-601-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different events and outcomes. They will also explore uncertainty ranges, which help us understand the limits of our knowledge about certain situations. Finally, we will discuss system dependencies, which are the relationships between different parts of a household management system. This foundational knowledge is crucial for planning effective interventions.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different events and outcomes. They will also explore uncertainty ranges, which help us understand the limits of our knowledge about certain situations. Finally, we will discuss system dependencies, which are the relationships between different parts of a household management system. This foundational knowledge is crucial for planning effective interventions."
+          "content": "Learners will map causal pathways connecting events to outcomes, explore uncertainty ranges to understand the limits of knowledge, and analyze system dependencies. This foundational knowledge is crucial for planning effective interventions and anticipating potential challenges."
         },
         {
           "id": "household-management-601-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "In our recap, we will emphasize the importance of linking all claims to measurable indicators. This means that every assertion we make should be supported by clear evidence. We will also discuss the concept of confidence bounds, which help us understand how certain we are about our claims. Lastly, we will introduce review checkpoints, which are essential for ensuring that our assessments are accurate and reliable.\nContext recap: In our recap, we will emphasize the importance of linking all claims to measurable indicators. This means that every assertion we make should be supported by clear evidence. We will also discuss the concept of confidence bounds, which help us understand how certain we are about our claims. Lastly, we will introduce review checkpoints, which are essential for ensuring that our assessments are accurate and reliable."
+          "content": "We will recap the importance of linking all claims to measurable indicators and supporting them with clear evidence. We will also review confidence bounds, which quantify certainty, and introduce review checkpoints to ensure assessments are accurate and reliable."
         }
       ],
       "flashcards": [
         {
           "id": "household-management-601-l01-f1",
-          "front": "household management systems diagnostics",
-          "back": "A specialization axis requiring explicit assumptions and measurable constraints."
+          "front": "Systems Diagnostics",
+          "back": "The process of analyzing a household system by defining explicit assumptions, constraints, and measurable indicators."
         },
         {
           "id": "household-management-601-l01-f2",
-          "front": "household management operations and execution design",
-          "back": "Execution architecture that determines reliability under stress."
+          "front": "Operations Design",
+          "back": "The architecture of workflows and processes that determines a household's reliability under stress."
         },
         {
           "id": "household-management-601-l01-f3",
-          "front": "household management impact and tradeoff analysis",
-          "back": "Evaluation discipline for identifying true gains and hidden costs."
+          "front": "Impact and Tradeoff Analysis",
+          "back": "An evaluation discipline for identifying the true benefits and hidden costs of a decision or intervention."
         }
       ]
     },
@@ -88,9 +88,9 @@ export const HouseholdManagement601Module: LearningModule = {
       "learningAids": [
         {
           "id": "household-management-601-l02-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "image",
+          "title": "Workflow Stress Test",
+          "content": "A flowchart of a meal-planning workflow with potential failure points highlighted in red, such as 'Ingredient Unavailable' or 'Appliance Malfunction'."
         }
       ],
       "chunks": [
@@ -98,13 +98,13 @@ export const HouseholdManagement601Module: LearningModule = {
           "id": "household-management-601-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "In this interactive practice session, learners will have the opportunity to design specialized workflows tailored to specific household management tasks. They will also conduct stress tests on these workflows, simulating adverse scenarios to see how well their designs hold up under pressure. This hands-on experience will help learners understand the importance of resilience in household management.\nContext recap: In this interactive practice session, learners will have the opportunity to design specialized workflows tailored to specific household management tasks. They will also conduct stress tests on these workflows, simulating adverse scenarios to see how well their designs hold up under pressure. This hands-on experience will help learners understand the importance of resilience in household management."
+          "content": "In this interactive lab, learners will design specialized workflows for specific household tasks. They will then conduct stress tests by simulating adverse scenarios to evaluate the resilience and effectiveness of their designs under pressure."
         },
         {
           "id": "household-management-601-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "In this recap, we will discuss the architecture of control gates within workflows. These control gates are essential as they integrate various checkpoints, which are points where we can assess progress. We will also cover rollback criteria, which allow us to revert to previous states if necessary, and threshold-based escalation, which helps us determine when to take further action based on specific criteria.\nContext recap: In this recap, we will discuss the architecture of control gates within workflows. These control gates are essential as they integrate various checkpoints, which are points where we can assess progress. We will also cover rollback criteria, which allow us to revert to previous states if necessary, and threshold-based escalation, which helps us determine when to take further action based on specific criteria."
+          "content": "This recap covers the architecture of control gates within workflows. We will discuss how these gates integrate checkpoints for progress assessment, define rollback criteria for reversing failed processes, and use threshold-based escalation to trigger interventions."
         }
       ],
       "interactiveActivities": [
@@ -120,17 +120,29 @@ export const HouseholdManagement601Module: LearningModule = {
             },
             {
               "left": "Rollback trigger",
-              "right": "Limits blast radius under adverse outcomes"
+              "right": "Limits the scope of negative impact from a failure"
             },
             {
               "left": "Baseline dashboard",
-              "right": "Supports defensible impact attribution"
+              "right": "Supports defensible attribution of an intervention's impact"
             },
             {
               "left": "Retrospective loop",
-              "right": "Improves next-cycle decision quality"
+              "right": "Improves the quality of decisions in the next cycle"
             }
           ]
+        }
+      ],
+      "flashcards": [
+        {
+          "id": "household-management-601-l02-f1",
+          "front": "Control Gate",
+          "back": "A formal checkpoint in a process where specific criteria must be met before proceeding, ensuring quality and control."
+        },
+        {
+          "id": "household-management-601-l02-f2",
+          "front": "Rollback Criteria",
+          "back": "Pre-defined conditions that, if met, trigger a process to revert to a previous stable state."
         }
       ]
     },
@@ -142,20 +154,20 @@ export const HouseholdManagement601Module: LearningModule = {
       "learningAids": [
         {
           "id": "household-management-601-l03-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "document",
+          "title": "Key Concepts Review",
+          "content": "A one-page summary of concepts from Lessons 1 and 2, including system diagnostics, causal modeling, and control gate architecture."
         }
       ],
       "questions": [
         {
           "id": "household-management-601-l03-q1",
-          "text": "Which practice most improves household management systems diagnostics decision quality?",
-          "skillId": "household-management-601-skill-core",
+          "text": "Which practice most improves the decision quality of household management systems diagnostics?",
+          "skillId": "skill-diagnostics",
           "options": [
             {
               "id": "a",
-              "text": "Proceed without baseline or assumptions"
+              "text": "Proceed without a baseline or assumptions"
             },
             {
               "id": "b",
@@ -171,16 +183,16 @@ export const HouseholdManagement601Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Advanced decisions improve when assumptions, constraints, and metrics are explicit."
+          "explanation": "Advanced decisions improve when assumptions, constraints, and metrics are made explicit from the start."
         },
         {
           "id": "household-management-601-l03-q2",
-          "text": "At level 601, strong execution for household management operations and execution design requires:",
-          "skillId": "household-management-601-skill-execution",
+          "text": "At an advanced level, strong execution design for household operations requires:",
+          "skillId": "skill-operations-design",
           "options": [
             {
               "id": "a",
-              "text": "Owner mapping, checkpoint cadence, and escalation thresholds"
+              "text": "Clear owner mapping, a regular checkpoint cadence, and defined escalation thresholds"
             },
             {
               "id": "b",
@@ -196,12 +208,12 @@ export const HouseholdManagement601Module: LearningModule = {
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Reliable advanced execution needs ownership clarity and threshold-driven governance."
+          "explanation": "Reliable advanced execution needs clear ownership, regular reviews, and threshold-driven governance."
         },
         {
           "id": "household-management-601-l03-q3",
-          "text": "A defensible approach to household management impact and tradeoff analysis includes:",
-          "skillId": "household-management-601-skill-eval",
+          "text": "A defensible approach to impact and tradeoff analysis includes:",
+          "skillId": "skill-impact-analysis",
           "options": [
             {
               "id": "a",
@@ -213,20 +225,20 @@ export const HouseholdManagement601Module: LearningModule = {
             },
             {
               "id": "c",
-              "text": "Changing success criteria after outcomes"
+              "text": "Changing success criteria after outcomes are known"
             },
             {
               "id": "d",
-              "text": "Excluding difficult scenarios from analysis"
+              "text": "Excluding difficult scenarios from the analysis"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible analysis combines comparative baselines, side-effect checks, and uncertainty disclosure."
+          "explanation": "Defensible analysis combines comparative baselines, checks for unintended consequences, and disclosure of uncertainty."
         },
         {
           "id": "household-management-601-l03-q4",
-          "text": "Mature governance systems connect:",
-          "skillId": "household-management-601-skill-governance",
+          "text": "Mature household governance systems effectively connect:",
+          "skillId": "skill-governance",
           "options": [
             {
               "id": "a",
@@ -238,7 +250,7 @@ export const HouseholdManagement601Module: LearningModule = {
             },
             {
               "id": "c",
-              "text": "Targets without ownership or escalation design"
+              "text": "Targets without ownership or an escalation design"
             },
             {
               "id": "d",
@@ -246,107 +258,7 @@ export const HouseholdManagement601Module: LearningModule = {
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Governance maturity is the operational link between intent, measurement, and corrective action."
-        },
-        {
-          "id": "household-management-601-l03-q5",
-          "text": "What is the best way to compare competing interventions in advanced Household Management?",
-          "skillId": "household-management-601-skill-advanced-5",
-          "options": [
-            {
-              "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
-            },
-            {
-              "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
-            },
-            {
-              "id": "c",
-              "text": "Switch metrics after results arrive"
-            },
-            {
-              "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
-        },
-        {
-          "id": "household-management-601-l03-q6",
-          "text": "In high-stakes Household Management Research and Leadership execution, which communication protocol is strongest?",
-          "skillId": "household-management-601-skill-advanced-6",
-          "options": [
-            {
-              "id": "a",
-              "text": "Broadcast conclusions without assumptions"
-            },
-            {
-              "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
-            },
-            {
-              "id": "c",
-              "text": "Share only final outcomes after completion"
-            },
-            {
-              "id": "d",
-              "text": "Limit updates to a single informal channel"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
-        },
-        {
-          "id": "household-management-601-l03-q7",
-          "text": "A mature remediation loop in advanced Household Management should prioritize:",
-          "skillId": "household-management-601-skill-advanced-7",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blame assignment without system updates"
-            },
-            {
-              "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
-            },
-            {
-              "id": "c",
-              "text": "One-time fixes without retesting"
-            },
-            {
-              "id": "d",
-              "text": "Issue closure based on elapsed time"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
-        },
-        {
-          "id": "household-management-601-l03-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Household Management Research and Leadership?",
-          "skillId": "household-management-601-skill-advanced-8",
-          "options": [
-            {
-              "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
-            },
-            {
-              "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
-            },
-            {
-              "id": "c",
-              "text": "Ignore correlated failure modes"
-            },
-            {
-              "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "explanation": "Governance maturity is the operational link between intent, measurement, and a clear process for corrective action."
         }
       ]
     },
@@ -359,8 +271,8 @@ export const HouseholdManagement601Module: LearningModule = {
         {
           "id": "household-management-601-l04-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Tradeoff Matrix",
+          "content": "A table comparing three solutions for a household repair problem across criteria like Cost, Time, Safety, and Long-term Reliability."
         }
       ],
       "chunks": [
@@ -368,19 +280,31 @@ export const HouseholdManagement601Module: LearningModule = {
           "id": "household-management-601-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "In this lesson, we will frame a case that highlights the competing constraints within household management systems. We will analyze how diagnostics can impact household management decisions and explore the trade-offs involved. Understanding these dynamics is crucial for making informed decisions that balance various factors effectively.\nContext recap: In this lesson, we will frame a case that highlights the competing constraints within household management systems. We will analyze how diagnostics can impact household management decisions and explore the trade-offs involved. Understanding these dynamics is crucial for making informed decisions that balance various factors effectively."
+          "content": "This lesson frames a case study that highlights competing constraints within household management. We will analyze how diagnostics impact decisions and explore the trade-offs involved, which is crucial for making informed choices that balance various factors."
         },
         {
           "id": "household-management-601-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "During this practice session, learners will compare different options available to them across several important dimensions. These dimensions include safety, reliability, cost, equity, and governance. By evaluating these factors, learners will gain insights into how to make balanced decisions that consider the well-being of all stakeholders involved.\nContext recap: During this practice session, learners will compare different options available to them across several important dimensions. These dimensions include safety, reliability, cost, equity, and governance. By evaluating these factors, learners will gain insights into how to make balanced decisions that consider the well-being of all stakeholders involved."
+          "content": "Learners will practice comparing different options across key dimensions such as safety, reliability, cost, equity, and governance. This evaluation helps develop the skill of making balanced decisions that consider the well-being of all stakeholders."
         },
         {
           "id": "household-management-601-l04-c3",
           "kind": "recap",
           "title": "Decision Memo Pattern",
-          "content": "In our recap, we will outline the key components of a decision memo. Each recommendation made should include clear assumptions, evidence to support the claims, risk controls to mitigate potential issues, and fallback plans in case the primary plan does not work out. This structured approach ensures that decisions are well thought out and prepared for various outcomes.\nContext recap: In our recap, we will outline the key components of a decision memo. Each recommendation made should include clear assumptions, evidence to support the claims, risk controls to mitigate potential issues, and fallback plans in case the primary plan does not work out. This structured approach ensures that decisions are well thought out and prepared for various outcomes."
+          "content": "We will recap the key components of a decision memo. Each recommendation should include clear assumptions, supporting evidence, risk controls to mitigate potential issues, and fallback plans. This structured approach ensures well-reasoned and resilient decisions."
+        }
+      ],
+      "flashcards": [
+        {
+          "id": "household-management-601-l04-f1",
+          "front": "Tradeoff Framing",
+          "back": "The practice of systematically comparing options across multiple, often competing, criteria to clarify a decision."
+        },
+        {
+          "id": "household-management-601-l04-f2",
+          "front": "Decision Memo",
+          "back": "A structured document that outlines a recommendation along with its assumptions, evidence, risks, and fallback plans."
         }
       ]
     },
@@ -392,9 +316,9 @@ export const HouseholdManagement601Module: LearningModule = {
       "learningAids": [
         {
           "id": "household-management-601-l05-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "image",
+          "title": "Simulation Dashboard",
+          "content": "An example of the simulation interface showing dials for budget allocation, time management, and risk tolerance, with real-time feedback on household well-being metrics."
         }
       ],
       "chunks": [
@@ -402,13 +326,13 @@ export const HouseholdManagement601Module: LearningModule = {
           "id": "household-management-601-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "In this interactive practice, learners will operate scenario controls, which are tools that help manage different situations in household management. They will learn how to balance performance with governance constraints, ensuring that their decisions are effective while also adhering to established guidelines and rules.\nContext recap: In this interactive practice, learners will operate scenario controls, which are tools that help manage different situations in household management. They will learn how to balance performance with governance constraints, ensuring that their decisions are effective while also adhering to established guidelines and rules."
+          "content": "In this interactive simulation, learners will operate scenario controls to manage a household system. They will practice balancing performance goals with governance constraints, making effective decisions that adhere to established guidelines."
         },
         {
           "id": "household-management-601-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "In this recap, we will discuss the design of effective responses to various scenarios. It is important that these responses update control gates without losing traceability or accountability. This means that every action taken should be documented and easily referenced to ensure transparency and responsibility in household management.\nContext recap: In this recap, we will discuss the design of effective responses to various scenarios. It is important that these responses update control gates without losing traceability or accountability. This means that every action taken should be documented and easily referenced to ensure transparency and responsibility in household management."
+          "content": "This recap focuses on designing effective responses to changing scenarios. A key principle is that responses must update control gates and resource allocations without losing traceability or accountability, ensuring all actions are documented and justified."
         }
       ],
       "interactiveActivities": [
@@ -417,6 +341,18 @@ export const HouseholdManagement601Module: LearningModule = {
           "type": "scenario",
           "title": "Adverse-Condition Decision Run",
           "description": "Run a high-pressure household management scenario and tune controls under uncertainty."
+        }
+      ],
+      "flashcards": [
+        {
+          "id": "household-management-601-l05-f1",
+          "front": "Adaptive Response",
+          "back": "The capacity of a system to adjust its operations and strategies in response to unexpected events or changing conditions."
+        },
+        {
+          "id": "household-management-601-l05-f2",
+          "front": "Scenario Controls",
+          "back": "The levers and parameters within a simulation that a user can adjust to influence outcomes and test strategies."
         }
       ]
     },
@@ -428,211 +364,111 @@ export const HouseholdManagement601Module: LearningModule = {
       "learningAids": [
         {
           "id": "household-management-601-l06-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "document",
+          "title": "Case & Sim Concepts Review",
+          "content": "A one-page summary of concepts from Lessons 4 and 5, focusing on tradeoff analysis, decision memos, and adaptive responses in simulations."
         }
       ],
       "questions": [
         {
           "id": "household-management-601-l06-q1",
-          "text": "In advanced casework, the first requirement for defensible recommendations is:",
-          "skillId": "household-management-601-skill-case1",
+          "text": "When analyzing a complex household management case study, what is the most critical first step for a defensible analysis?",
+          "skillId": "skill-impact-analysis",
           "options": [
             {
               "id": "a",
-              "text": "A preferred option without explicit assumptions"
+              "text": "Immediately selecting the most obvious solution"
             },
             {
               "id": "b",
-              "text": "A clear baseline, explicit constraints, and success criteria"
+              "text": "Clearly defining the problem, key stakeholders, and measurable success criteria"
             },
             {
               "id": "c",
-              "text": "High confidence without evidence logs"
+              "text": "Focusing only on the financial aspects of the problem"
             },
             {
               "id": "d",
-              "text": "Single-metric optimization only"
+              "text": "Gathering opinions without collecting objective data"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible recommendations begin with explicit assumptions, constraints, and measurable targets."
+          "explanation": "A defensible analysis begins with a structured problem definition, including who is affected and how success will be measured."
         },
         {
           "id": "household-management-601-l06-q2",
-          "text": "A resilient strategy for household management operations and execution design should include:",
-          "skillId": "household-management-601-skill-case2",
+          "text": "In a household management simulation, you face an unexpected event (e.g., a sudden income loss). What does an effective 'adaptive response' prioritize?",
+          "skillId": "skill-operations-design",
           "options": [
             {
               "id": "a",
-              "text": "Checkpointed execution with fallback and escalation criteria"
+              "text": "Ignoring the event and continuing with the original plan"
             },
             {
               "id": "b",
-              "text": "One-way execution with no rollback capability"
+              "text": "Adjusting operational controls and re-allocating resources based on new constraints, while documenting the changes"
             },
             {
               "id": "c",
-              "text": "No ownership mapping across teams"
+              "text": "Making random changes to see what works"
             },
             {
               "id": "d",
-              "text": "Hidden assumptions and undocumented decisions"
+              "text": "Pausing all activities indefinitely"
             }
           ],
-          "correctOptionId": "a",
-          "explanation": "Resilience depends on checkpoints, fallback options, and explicit escalation design."
+          "correctOptionId": "b",
+          "explanation": "An adaptive response involves making systematic, documented adjustments to the plan based on new information and constraints."
         },
         {
           "id": "household-management-601-l06-q3",
-          "text": "When evaluating household management impact and tradeoff analysis, which method is most rigorous?",
-          "skillId": "household-management-601-skill-case3",
+          "text": "A core component of the 'Tradeoff Framing' practice from the case analysis lesson is to:",
+          "skillId": "skill-decision-review",
           "options": [
             {
               "id": "a",
-              "text": "Single success story without controls"
+              "text": "Choose the option that is easiest to implement"
             },
             {
               "id": "b",
-              "text": "Comparative baselines plus side-effect and uncertainty analysis"
+              "text": "Systematically compare potential solutions across multiple, competing dimensions like cost, safety, and equity"
             },
             {
               "id": "c",
-              "text": "Outcome-only narrative without process evidence"
+              "text": "Hide the negative aspects of the preferred solution"
             },
             {
               "id": "d",
-              "text": "Retrospective scope changes to fit outcomes"
+              "text": "Let one stakeholder's preference determine the outcome"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Rigorous evaluation requires comparisons, side-effect analysis, and uncertainty disclosure."
+          "explanation": "Tradeoff framing requires a structured, multi-dimensional comparison to make the costs and benefits of each option explicit."
         },
         {
           "id": "household-management-601-l06-q4",
-          "text": "Advanced governance is strongest when it:",
-          "skillId": "household-management-601-skill-case4",
+          "text": "According to the 'Decision Memo Pattern', a strong recommendation must always include:",
+          "skillId": "skill-defense",
           "options": [
             {
               "id": "a",
-              "text": "Aligns authority, measurement, and remediation obligations"
+              "text": "Only the final conclusion without any reasoning"
             },
             {
               "id": "b",
-              "text": "Separates policy from operational controls"
+              "text": "Explicit assumptions, supporting evidence, risk controls, and a fallback plan"
             },
             {
               "id": "c",
-              "text": "Avoids external review and transparency"
+              "text": "A guarantee that the plan will succeed without any issues"
             },
             {
               "id": "d",
-              "text": "Treats accountability as optional under pressure"
-            }
-          ],
-          "correctOptionId": "a",
-          "explanation": "Mature governance links authority, measurable controls, and corrective action."
-        },
-        {
-          "id": "household-management-601-l06-q5",
-          "text": "What is the best way to compare competing interventions in advanced Household Management?",
-          "skillId": "household-management-601-skill-advanced-5",
-          "options": [
-            {
-              "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
-            },
-            {
-              "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
-            },
-            {
-              "id": "c",
-              "text": "Switch metrics after results arrive"
-            },
-            {
-              "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
+              "text": "Vague goals and undefined responsibilities"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
-        },
-        {
-          "id": "household-management-601-l06-q6",
-          "text": "In high-stakes Household Management Research and Leadership execution, which communication protocol is strongest?",
-          "skillId": "household-management-601-skill-advanced-6",
-          "options": [
-            {
-              "id": "a",
-              "text": "Broadcast conclusions without assumptions"
-            },
-            {
-              "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
-            },
-            {
-              "id": "c",
-              "text": "Share only final outcomes after completion"
-            },
-            {
-              "id": "d",
-              "text": "Limit updates to a single informal channel"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
-        },
-        {
-          "id": "household-management-601-l06-q7",
-          "text": "A mature remediation loop in advanced Household Management should prioritize:",
-          "skillId": "household-management-601-skill-advanced-7",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blame assignment without system updates"
-            },
-            {
-              "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
-            },
-            {
-              "id": "c",
-              "text": "One-time fixes without retesting"
-            },
-            {
-              "id": "d",
-              "text": "Issue closure based on elapsed time"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
-        },
-        {
-          "id": "household-management-601-l06-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Household Management Research and Leadership?",
-          "skillId": "household-management-601-skill-advanced-8",
-          "options": [
-            {
-              "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
-            },
-            {
-              "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
-            },
-            {
-              "id": "c",
-              "text": "Ignore correlated failure modes"
-            },
-            {
-              "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "explanation": "A strong, defensible recommendation is transparent about its assumptions, evidence, risks, and contingency plans."
         }
       ]
     },
@@ -645,8 +481,8 @@ export const HouseholdManagement601Module: LearningModule = {
         {
           "id": "household-management-601-l07-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Stakeholder Impact Map",
+          "content": "A concentric circle diagram showing a household decision at the center and mapping the ripple effects on immediate family, extended family, neighbors, and the wider community."
         }
       ],
       "chunks": [
@@ -654,36 +490,36 @@ export const HouseholdManagement601Module: LearningModule = {
           "id": "household-management-601-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "In this lesson, learners will explore how to map the distribution of impacts among different stakeholders. This includes understanding the benefits, burdens, and any delayed effects that may arise from household management decisions. Recognizing these impacts is essential for making fair and equitable choices.\nContext recap: In this lesson, learners will explore how to map the distribution of impacts among different stakeholders. This includes understanding the benefits, burdens, and any delayed effects that may arise from household management decisions. Recognizing these impacts is essential for making fair and equitable choices."
+          "content": "Learners will explore how to map the distribution of impacts—including benefits, burdens, and delayed effects—among different stakeholders. Recognizing these impacts is essential for making fair, equitable, and responsible choices."
         },
         {
           "id": "household-management-601-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "In this section, we will delve into the architecture of accountability within household management. This includes ensuring that decision traceability is maintained, which means being able to track the origins of decisions. We will also discuss review rights and remediation obligations, which are important for holding individuals accountable for their actions.\nContext recap: In this section, we will delve into the architecture of accountability within household management. This includes ensuring that decision traceability is maintained, which means being able to track the origins of decisions. We will also discuss review rights and remediation obligations, which are important for holding individuals accountable for their actions."
+          "content": "This section covers the architecture of accountability. This includes maintaining decision traceability, which allows for auditing the origins of a decision, and defining review rights and remediation obligations to ensure responsibility."
         },
         {
           "id": "household-management-601-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "To ensure effective leadership in household management, it is important to use a final checklist. This checklist should connect important outcomes, ethical considerations, adherence to policies, and the ability to adapt and recover from challenges. By following this checklist, leaders can make informed decisions that positively impact their communities.\nContext recap: To ensure effective leadership in household management, it is important to use a final checklist. This checklist should connect important outcomes, ethical considerations, adherence to policies, and the ability to adapt and recover from challenges. By following this checklist, leaders can make informed decisions that positively impact their communities."
+          "content": "We will review a final checklist for responsible leadership. This tool connects key outcomes, ethical considerations, policy adherence, and resilience. Following this checklist helps leaders make well-rounded decisions that positively impact their households and communities."
         }
       ],
       "flashcards": [
         {
           "id": "household-management-601-l07-f1",
-          "front": "Impact distribution",
-          "back": "How outcomes are allocated across populations and timescales."
+          "front": "Impact Distribution",
+          "back": "How the outcomes (positive and negative) of a decision are allocated across different groups and over time."
         },
         {
           "id": "household-management-601-l07-f2",
-          "front": "Decision traceability",
-          "back": "An auditable record of evidence, ownership, and rationale."
+          "front": "Decision Traceability",
+          "back": "An auditable record of a decision, including the evidence, ownership, and rationale behind it."
         },
         {
           "id": "household-management-601-l07-f3",
-          "front": "Responsible leadership",
-          "back": "Decision behavior balancing performance, accountability, and ethics."
+          "front": "Responsible Leadership",
+          "back": "A decision-making approach that balances performance goals with accountability and ethical considerations."
         }
       ]
     },
@@ -695,9 +531,9 @@ export const HouseholdManagement601Module: LearningModule = {
       "learningAids": [
         {
           "id": "household-management-601-l08-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "image",
+          "title": "Defense Brief Structure",
+          "content": "A visual outline of a capstone defense presentation, showing sections for Problem Statement, Analysis, Recommendation, Risk Mitigation, and Evidence Appendix."
         }
       ],
       "chunks": [
@@ -705,13 +541,13 @@ export const HouseholdManagement601Module: LearningModule = {
           "id": "household-management-601-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "In this interactive activity, learners will work together to create a comprehensive brief. This brief will include well-supported claims, relevant evidence, an understanding of the uncertainties involved, and proposed pathways for addressing any issues that may arise. This exercise helps develop critical thinking and communication skills essential for effective household management.\nContext recap: In this interactive activity, learners will work together to create a comprehensive brief. This brief will include well-supported claims, relevant evidence, an understanding of the uncertainties involved, and proposed pathways for addressing any issues that may arise. This exercise helps develop critical thinking and communication skills essential for effective household management."
+          "content": "In this interactive lab, learners will assemble a comprehensive defense brief. This brief will integrate well-supported claims, relevant evidence, an analysis of uncertainties, and proposed remediation pathways for potential risks."
         },
         {
           "id": "household-management-601-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "During the Expert Panel Rehearsal, learners will practice their responses to various critiques. These critiques may come from technical experts, governance representatives, and stakeholders. This rehearsal is crucial for building confidence and ensuring that learners are well-prepared to address questions and feedback in a professional manner.\nContext recap: During the Expert Panel Rehearsal, learners will practice their responses to various critiques. These critiques may come from technical experts, governance representatives, and stakeholders. This rehearsal is crucial for building confidence and ensuring that learners are well-prepared to address questions and feedback in a professional manner."
+          "content": "Learners will rehearse responding to critical questions from the perspective of technical experts, governance representatives, and stakeholders. This rehearsal builds confidence and prepares learners to defend their recommendations professionally."
         }
       ],
       "interactiveActivities": [
@@ -719,7 +555,14 @@ export const HouseholdManagement601Module: LearningModule = {
           "id": "household-management-601-l08-act1",
           "type": "debate_simulator",
           "title": "Expert Defense Panel",
-          "description": "Defend specialization recommendations under adversarial cross-examination."
+          "description": "Defend specialization recommendations under critical questioning from a simulated expert panel."
+        }
+      ],
+      "flashcards": [
+        {
+          "id": "household-management-601-l08-f1",
+          "front": "Defense Brief",
+          "back": "A comprehensive document or presentation that justifies a set of recommendations with evidence, analysis, and risk assessment."
         }
       ]
     }

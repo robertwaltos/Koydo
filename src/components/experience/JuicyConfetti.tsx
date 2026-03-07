@@ -114,7 +114,7 @@ export default function JuicyConfetti({
     return (
         <canvas
             ref={canvasRef}
-            className="pointer-events-none fixed inset-0 z-[100] h-full w-full"
+            className="koydo-confetti pointer-events-none fixed inset-0 z-[100] h-full w-full"
         />
     );
 }

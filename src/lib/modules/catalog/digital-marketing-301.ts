@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const DigitalMarketing301Module: LearningModule = {
+export const digital_marketing_301_Module: LearningModule = {
   "id": "digital-marketing-301",
   "title": "Digital Marketing Systems and Analysis",
   "description": "Level 301 curriculum in Digital Marketing, emphasizing audience strategy, campaign analytics, channel optimization, growth experimentation, and real-world decision quality through structured practice and assessment.",
@@ -14,7 +14,7 @@ export const DigitalMarketing301Module: LearningModule = {
   ],
   "minAge": 15,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en"
@@ -36,9 +36,9 @@ export const DigitalMarketing301Module: LearningModule = {
       "learningAids": [
         {
           "id": "digital-marketing-301-l01-a1",
-          "type": "image",
-          "title": "Guided Practice",
-          "content": "Use the structured prompt and write your reasoning before finalizing answers."
+          "type": "visual_prompt",
+          "title": "Visualizing the Core Model",
+          "content": "Visual Prompt: A funnel diagram transforming raw data into a structured decision matrix, highlighting 'Vocabulary', 'Constraints', and 'Evidence'."
         }
       ],
       "chunks": [
@@ -46,19 +46,19 @@ export const DigitalMarketing301Module: LearningModule = {
           "id": "digital-marketing-301-l01-c1",
           "kind": "concept",
           "title": "Operating Vocabulary and Scope",
-          "content": "In Digital Marketing at level 301, using clear and precise language is essential for effective communication. This involves establishing clear boundaries for the topics we discuss, identifying the specific components we are analyzing, and ensuring that everyone is using the same terminology. By doing this, we create a common understanding among team members. When teams make decisions, having a shared vocabulary allows us to easily compare their choices and understand each other's perspectives better. This clarity not only enhances collaboration but also improves the overall effectiveness of our marketing strategies."
+          "content": "In Digital Marketing, clear communication is your superpower. We start by defining our 'Operating Vocabulary'—the exact terms we use to describe campaigns, audiences, and goals. When everyone speaks the same language, teams can compare ideas easily, avoid costly misunderstandings, and build strategies that actually work."
         },
         {
           "id": "digital-marketing-301-l01-c2",
           "kind": "concept",
           "title": "Causal Thinking and Constraints",
-          "content": "In the world of Digital Marketing, achieving great results requires us to dig deeper than just looking at the final outcomes. It's important to understand the reasons behind why we get certain results. In this lesson, we will take a closer look at the assumptions we often make about our marketing strategies, the dependencies that connect different elements of our campaigns, and the constraints or limitations we might encounter. By identifying these factors, we can focus on solving the real problems at their source, rather than just addressing the visible symptoms. This approach will help us create more effective marketing strategies and achieve better results overall."
+          "content": "Great marketers don't just look at the final sales numbers; they ask why those numbers happened. This is called causal thinking. By mapping out our constraints (like budget or time limits) and understanding the dependencies between different campaign parts, we can solve problems at their root instead of just treating the symptoms."
         },
         {
           "id": "digital-marketing-301-l01-c3",
           "kind": "recap",
           "title": "Evidence and Accountability",
-          "content": "In this lesson, we will introduce some important practices that are essential for executing our plans reliably. These include setting high standards for evidence, maintaining a disciplined approach to logging our activities, and creating clear accountability loops. These practices help ensure that we can trust the results of our work and learn from our experiences.\nContext recap: In this lesson, we will introduce some important practices that are essential for executing our plans reliably. These include setting high standards for evidence, maintaining a disciplined approach to logging our activities, and creating clear accountability loops. These practices help ensure that we can trust the results of our work and learn from our experiences."
+          "content": "To execute plans reliably, we need proof that our ideas work. This means setting high standards for evidence, keeping a disciplined log of our marketing activities, and creating accountability loops. These practices ensure we aren't just guessing, but actually learning from real data to improve future campaigns."
         }
       ],
       "flashcards": [
@@ -70,7 +70,7 @@ export const DigitalMarketing301Module: LearningModule = {
         {
           "id": "digital-marketing-301-l01-f2",
           "front": "Constraint mapping",
-          "back": "A method for identifying boundaries that shape feasible options."
+          "back": "A method for identifying boundaries (like budget or time) that shape feasible options."
         },
         {
           "id": "digital-marketing-301-l01-f3",
@@ -87,9 +87,9 @@ export const DigitalMarketing301Module: LearningModule = {
       "learningAids": [
         {
           "id": "digital-marketing-301-l02-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use the structured prompt and write your reasoning before finalizing answers."
+          "type": "visual_prompt",
+          "title": "Workflow Builder Interface",
+          "content": "Visual Prompt: An interactive drag-and-drop interface showing a campaign timeline with empty slots for 'Inputs', 'Checkpoints', and 'Rollback Triggers'."
         }
       ],
       "chunks": [
@@ -97,13 +97,13 @@ export const DigitalMarketing301Module: LearningModule = {
           "id": "digital-marketing-301-l02-c1",
           "kind": "practice",
           "title": "Workflow Construction",
-          "content": "In this interactive activity, you will have the opportunity to create a complete workflow for your audience strategy and campaign analytics. This includes identifying the necessary inputs, establishing checkpoints to monitor progress, determining the expected outputs, and setting up rollback triggers to address any issues that may arise. This hands-on experience will help you understand how to effectively manage a digital marketing campaign.\nContext recap: In this interactive activity, you will have the opportunity to create a complete workflow for your audience strategy and campaign analytics. This includes identifying the necessary inputs, establishing checkpoints to monitor progress, determining the expected outputs, and setting up rollback triggers to address any issues that may arise. This hands-on experience will help you understand how to effectively manage a digital marketing campaign."
+          "content": "In this lab, you will build a complete workflow for a digital marketing campaign. You will identify necessary inputs (like target audience data), set up checkpoints to monitor progress, define expected outputs, and create 'rollback triggers'—safety nets that pause a campaign if things go wrong. This hands-on practice builds your campaign management muscles."
         },
         {
           "id": "digital-marketing-301-l02-c2",
           "kind": "recap",
           "title": "Decision Logging",
-          "content": "In this recap, we will emphasize the importance of logging every decision you make during your marketing campaigns. Each decision should be accompanied by a clear rationale, an expected effect, and a point for verification. This practice will enable you to analyze the outcomes after the campaign is completed, helping you learn and improve for future efforts.\nContext recap: In this recap, we will emphasize the importance of logging every decision you make during your marketing campaigns. Each decision should be accompanied by a clear rationale, an expected effect, and a point for verification. This practice will enable you to analyze the outcomes after the campaign is completed, helping you learn and improve for future efforts."
+          "content": "Every choice you make in a campaign should be tracked in a 'Decision Log'. You will document your reasoning, the expected outcome, and how you plan to verify it. This isn't just busywork; it is the secret to analyzing your successes and failures so you can level up your skills for the next campaign."
         }
       ],
       "interactiveActivities": [
@@ -170,9 +170,9 @@ export const DigitalMarketing301Module: LearningModule = {
       "learningAids": [
         {
           "id": "digital-marketing-301-l03-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use the structured prompt and write your reasoning before finalizing answers."
+          "type": "visual_prompt",
+          "title": "Data-Driven vs. Guessing",
+          "content": "Visual Prompt: A split-screen graphic showing a guessing marketer looking confused vs. a data-driven marketer confidently using a decision log."
         }
       ],
       "questions": [
@@ -199,7 +199,7 @@ export const DigitalMarketing301Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Explicit criteria and testable assumptions improve reliability and transferability."
+          "explanation": "Explicit criteria and testable assumptions improve reliability and make your strategies easier to transfer to new campaigns."
         },
         {
           "id": "digital-marketing-301-l03-q2",
@@ -224,7 +224,7 @@ export const DigitalMarketing301Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Quality processes are observable, repeatable, and measurable."
+          "explanation": "Quality processes are observable, repeatable, and measurable, allowing teams to catch errors early."
         },
         {
           "id": "digital-marketing-301-l03-q3",
@@ -249,7 +249,7 @@ export const DigitalMarketing301Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Baselines and failure analysis prevent overclaiming and improve design quality."
+          "explanation": "Baselines and failure analysis prevent overclaiming success and improve the design quality of future tests."
         },
         {
           "id": "digital-marketing-301-l03-q4",
@@ -274,7 +274,7 @@ export const DigitalMarketing301Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Balanced scorecards align long-term performance with accountability."
+          "explanation": "Balanced scorecards align long-term performance with accountability, ensuring you don't break one part of the system while fixing another."
         }
       ]
     },
@@ -286,9 +286,9 @@ export const DigitalMarketing301Module: LearningModule = {
       "learningAids": [
         {
           "id": "digital-marketing-301-l04-a1",
-          "type": "mnemonic",
-          "title": "Guided Practice",
-          "content": "Use the structured prompt and write your reasoning before finalizing answers."
+          "type": "visual_prompt",
+          "title": "Metrics Dashboard",
+          "content": "Visual Prompt: A dashboard mockup highlighting 'Leading Indicators' in yellow (predictive) and 'Lagging Outcomes' in blue (historical), with a red alert icon for 'Failure Modes'."
         }
       ],
       "chunks": [
@@ -296,36 +296,36 @@ export const DigitalMarketing301Module: LearningModule = {
           "id": "digital-marketing-301-l04-c1",
           "kind": "concept",
           "title": "Method Selection",
-          "content": "When choosing methods for your digital marketing projects, you need to think about several important factors. These include any limitations you might face, the quality of the information you have, and how much it could cost you if you make a mistake. In this lesson, you will explore various options and explain why a certain method works best for different situations in Digital Marketing. This process of comparing and justifying your choices will enhance your critical thinking skills and help you make smarter decisions in your marketing strategies.\nContext recap: When choosing methods for your digital marketing projects, you need to think about several important factors. These include any limitations you might face, the quality of the information you have, and how much it could cost you if you make a mistake. In this lesson, you will explore various options and explain why a certain method works best for different situations in Digital Marketing. This process of comparing and justifying your choices will enhance your critical thinking skills and help you make smarter decisions in your marketing strategies."
+          "content": "Choosing the right marketing method depends on your budget, data quality, and the 'cost of error' (how bad it is if you mess up). In this lesson, you will learn how to weigh these factors and justify your choices. Comparing different approaches sharpens your critical thinking and helps you pick the best tool for the job."
         },
         {
           "id": "digital-marketing-301-l04-c2",
           "kind": "example",
           "title": "Metric Architecture",
-          "content": "A well-structured metric architecture is essential for successful digital marketing. It creates a connection between leading indicators, which are signs that help predict future performance, and lagging outcomes, which reflect past results. Additionally, it includes diagnostic measures that assist in identifying any problems. This framework enables teams to notice any deviations from their goals early on and respond thoughtfully, ensuring that their marketing campaigns stay on track and achieve the desired results.\nContext recap: A well-structured metric architecture is essential for successful digital marketing. It creates a connection between leading indicators, which are signs that help predict future performance, and lagging outcomes, which reflect past results. Additionally, it includes diagnostic measures that assist in identifying any problems. This framework enables teams to notice any deviations from their goals early on and respond thoughtfully, ensuring that their marketing campaigns stay on track and achieve the desired results."
+          "content": "A strong 'metric architecture' is like a car's dashboard. It connects 'leading indicators' (early signs that predict future success, like click-through rates) with 'lagging outcomes' (past results, like total sales). By adding diagnostic metrics to spot engine trouble early, your team can steer campaigns back on track before they crash."
         },
         {
           "id": "digital-marketing-301-l04-c3",
           "kind": "recap",
           "title": "Failure Taxonomy",
-          "content": "In this recap, we will categorize failures into four main groups: data issues, process problems, execution errors, and governance challenges. By organizing failures this way, we can create specific plans to address each type of issue rather than using generic solutions. This targeted approach will help improve our digital marketing strategies.\nContext recap: In this recap, we will categorize failures into four main groups: data issues, process problems, execution errors, and governance challenges. By organizing failures this way, we can create specific plans to address each type of issue rather than using generic solutions. This targeted approach will help improve our digital marketing strategies."
+          "content": "Even the best campaigns fail sometimes. We categorize these failures into four buckets: data issues, process problems, execution errors, and governance challenges. By organizing mistakes into this 'Failure Taxonomy', we can design specific, targeted fixes instead of guessing what went wrong."
         }
       ],
       "flashcards": [
         {
           "id": "digital-marketing-301-l04-f1",
           "front": "Leading indicator",
-          "back": "A metric that signals probable future outcomes before final results appear."
+          "back": "A metric that signals probable future outcomes before final results appear (e.g., ad clicks)."
         },
         {
           "id": "digital-marketing-301-l04-f2",
           "front": "Failure taxonomy",
-          "back": "A structured classification of failure types used to design targeted fixes."
+          "back": "A structured classification of failure types used to design targeted fixes rather than generic solutions."
         },
         {
           "id": "digital-marketing-301-l04-f3",
           "front": "Cost of error",
-          "back": "The operational, financial, or social impact caused by an incorrect decision."
+          "back": "The operational, financial, or social impact caused by making an incorrect decision."
         }
       ]
     },
@@ -337,9 +337,9 @@ export const DigitalMarketing301Module: LearningModule = {
       "learningAids": [
         {
           "id": "digital-marketing-301-l05-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use the structured prompt and write your reasoning before finalizing answers."
+          "type": "visual_prompt",
+          "title": "Digital Whiteboard",
+          "content": "Visual Prompt: A digital whiteboard with sticky notes categorizing a marketing scenario into 'Objectives', 'Constraints', 'Interventions', and 'Trade-offs'."
         }
       ],
       "chunks": [
@@ -347,13 +347,13 @@ export const DigitalMarketing301Module: LearningModule = {
           "id": "digital-marketing-301-l05-c1",
           "kind": "practice",
           "title": "Case Decomposition",
-          "content": "In this interactive case study, you will break down a realistic scenario into its key components: the objective, the context in which it occurs, the constraints you face, and the options for intervention. You will also note any trade-offs involved in your decisions. This exercise will help you think critically about how to improve a digital marketing system.\nContext recap: In this interactive case study, you will break down a realistic scenario into its key components: the objective, the context in which it occurs, the constraints you face, and the options for intervention. You will also note any trade-offs involved in your decisions. This exercise will help you think critically about how to improve a digital marketing system."
+          "content": "In this interactive case study, you will act as a marketing detective. You will break down a realistic scenario into its core parts: the main objective, the surrounding context, the constraints holding you back, and your options for fixing the issue. You will also weigh the trade-offs of each choice to find the most balanced solution."
         },
         {
           "id": "digital-marketing-301-l05-c2",
           "kind": "recap",
           "title": "Improvement Proposal",
-          "content": "In this recap, you will present a staged improvement proposal based on your analysis. This proposal should include clear success criteria, a mapping of who is responsible for each part of the plan, and a timeline for follow-up actions. This structured approach will help ensure that your improvements are actionable and measurable.\nContext recap: In this recap, you will present a staged improvement proposal based on your analysis. This proposal should include clear success criteria, a mapping of who is responsible for each part of the plan, and a timeline for follow-up actions. This structured approach will help ensure that your improvements are actionable and measurable."
+          "content": "Now it is time to pitch your solution. You will create a staged improvement proposal that includes clear success criteria, assigns responsibilities to team members, and sets a timeline for follow-up. This structured approach turns your analysis into an actionable, measurable plan."
         }
       ],
       "interactiveActivities": [
@@ -402,111 +402,111 @@ export const DigitalMarketing301Module: LearningModule = {
       "learningAids": [
         {
           "id": "digital-marketing-301-l06-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use the structured prompt and write your reasoning before finalizing answers."
+          "type": "visual_prompt",
+          "title": "Uncovering the System",
+          "content": "Visual Prompt: A magnifying glass hovering over a campaign report, revealing the hidden systems, metrics, and failure modes driving the results."
         }
       ],
       "questions": [
         {
           "id": "digital-marketing-301-l06-q1",
-          "text": "Which action best improves decisions in audience strategy work?",
-          "skillId": "digital-marketing-301-skill-core",
+          "text": "Which of the following is the best example of a leading indicator in a digital marketing campaign?",
+          "skillId": "digital-marketing-301-skill-metrics",
           "options": [
             {
               "id": "a",
-              "text": "Rely on one unverified example"
+              "text": "Total quarterly revenue"
             },
             {
               "id": "b",
-              "text": "Define criteria, compare alternatives, and test assumptions"
+              "text": "Early click-through rates on a new ad"
             },
             {
               "id": "c",
-              "text": "Skip metrics and move directly to execution"
+              "text": "The final cost of the campaign"
             },
             {
               "id": "d",
-              "text": "Avoid documenting rationale"
+              "text": "The number of products returned"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Explicit criteria and testable assumptions improve reliability and transferability."
+          "explanation": "Early click-through rates predict future success (leading), whereas revenue and final costs are historical results (lagging)."
         },
         {
           "id": "digital-marketing-301-l06-q2",
-          "text": "In campaign analytics, what is the strongest indicator of process quality?",
-          "skillId": "digital-marketing-301-skill-process",
+          "text": "If a campaign fails because the team used outdated customer email lists, which failure category does this best fit?",
+          "skillId": "digital-marketing-301-skill-failure",
           "options": [
             {
               "id": "a",
-              "text": "Output speed only"
+              "text": "Execution error"
             },
             {
               "id": "b",
-              "text": "Traceable steps, checkpoints, and measurable outcomes"
+              "text": "Data issue"
             },
             {
               "id": "c",
-              "text": "Unstructured iteration without logs"
+              "text": "Governance challenge"
             },
             {
               "id": "d",
-              "text": "One-time performance anecdotes"
+              "text": "Process problem"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Quality processes are observable, repeatable, and measurable."
+          "explanation": "Using outdated or incorrect inputs like an old email list is a fundamental data issue that corrupts the rest of the workflow."
         },
         {
           "id": "digital-marketing-301-l06-q3",
-          "text": "When evaluating channel optimization, which practice supports trustworthy conclusions?",
-          "skillId": "digital-marketing-301-skill-eval",
+          "text": "When deciding which marketing method to use, why is it important to consider the 'cost of error'?",
+          "skillId": "digital-marketing-301-skill-methods",
           "options": [
             {
               "id": "a",
-              "text": "Ignore edge cases"
+              "text": "To ensure the cheapest method is always chosen"
             },
             {
               "id": "b",
-              "text": "Use baseline comparisons and failure analysis"
+              "text": "To understand the potential negative impact if the decision is wrong"
             },
             {
               "id": "c",
-              "text": "Change targets after results are known"
+              "text": "To guarantee the campaign will go viral"
             },
             {
               "id": "d",
-              "text": "Remove context from findings"
+              "text": "To avoid logging decisions"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Baselines and failure analysis prevent overclaiming and improve design quality."
+          "explanation": "The cost of error helps you weigh risks. If a mistake would be catastrophic, you need a more rigorous, cautious method."
         },
         {
           "id": "digital-marketing-301-l06-q4",
-          "text": "A mature growth experimentation strategy should prioritize:",
-          "skillId": "digital-marketing-301-skill-strategy",
+          "text": "When proposing a system improvement, why is it necessary to document trade-offs?",
+          "skillId": "digital-marketing-301-skill-tradeoffs",
           "options": [
             {
               "id": "a",
-              "text": "Single-metric optimization at any cost"
+              "text": "It proves that the chosen intervention has no downsides"
             },
             {
               "id": "b",
-              "text": "Balanced outcomes across quality, risk, and sustainability"
+              "text": "It helps stakeholders understand what is being sacrificed to gain a specific benefit"
             },
             {
               "id": "c",
-              "text": "Decisions based only on intuition"
+              "text": "It allows the team to skip the retrospective log"
             },
             {
               "id": "d",
-              "text": "No post-implementation review"
+              "text": "It hides the constraints from the client"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Balanced scorecards align long-term performance with accountability."
+          "explanation": "Every choice has a cost (like spending more time to get higher quality). Documenting trade-offs ensures everyone agrees on what is being sacrificed."
         }
       ]
     }

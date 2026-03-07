@@ -1,9 +1,9 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const NutritionScience301Module: LearningModule = {
+export const nutrition_science_301_Module: LearningModule = {
   "id": "nutrition-science-301",
-  "title": "Nutrition Science Systems and Governance",
-  "description": "Level 301 curriculum in Nutrition Science, centered on metabolic foundations, dietary pattern analysis, evidence-based intervention design, and nutrition policy and equity through case analysis, simulation, and checkpoint-driven mastery.",
+  "title": "Nutrition Science: Systems and Governance",
+  "description": "An advanced curriculum in Nutrition Science focused on metabolic foundations, dietary pattern analysis, evidence-based intervention design, and nutrition policy. Learning is driven by case analysis, simulation, and checkpoint-driven mastery.",
   "subject": "Health Science",
   "tags": [
     "core",
@@ -14,32 +14,32 @@ export const NutritionScience301Module: LearningModule = {
   ],
   "minAge": 16,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en",
     "es"
   ],
   "learningObjectives": [
-    "Explain and apply metabolic foundations under practical constraints",
-    "Build repeatable workflows for dietary pattern analysis with measurable controls",
-    "Evaluate interventions in evidence-based intervention design using comparative evidence",
-    "Operationalize nutrition policy and equity with transparent governance loops",
-    "Communicate uncertainty, risk, and tradeoffs clearly to mixed stakeholders",
-    "Defend decisions through evidence-backed reasoning and post-run review"
+    "Explain and apply metabolic foundations under practical constraints.",
+    "Build repeatable workflows for dietary pattern analysis with measurable controls.",
+    "Evaluate interventions in evidence-based intervention design using comparative evidence.",
+    "Operationalize nutrition policy and equity with transparent governance loops.",
+    "Communicate uncertainty, risk, and tradeoffs clearly to mixed stakeholders.",
+    "Defend decisions through evidence-backed reasoning and post-run review."
   ],
   "lessons": [
     {
       "id": "nutrition-science-301-l01",
-      "title": "Nutrition Science Core Models",
+      "title": "Core Models in Nutrition Science",
       "type": "video",
       "duration": 13,
       "learningAids": [
         {
           "id": "nutrition-science-301-l01-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use structured reasoning, map tradeoffs, and verify outcomes with metrics before finalizing."
+          "title": "Core Concepts Map",
+          "content": "A visual diagram connecting metabolic foundations, dietary patterns, and evidence-based design."
         }
       ],
       "chunks": [
@@ -47,64 +47,64 @@ export const NutritionScience301Module: LearningModule = {
           "id": "nutrition-science-301-l01-c1",
           "kind": "concept",
           "title": "Scope and Vocabulary",
-          "content": "In this lesson, we will establish a common vocabulary that is essential for understanding Nutrition Science. We will also clarify the boundaries of our discussion, focusing on the foundational aspects of metabolism and how we analyze different dietary patterns. This shared language will help us communicate effectively about nutrition concepts and ensure everyone is on the same page as we explore this important field.\nContext recap: In this lesson, we will establish a common vocabulary that is essential for understanding Nutrition Science. We will also clarify the boundaries of our discussion, focusing on the foundational aspects of metabolism and how we analyze different dietary patterns. This shared language will help us communicate effectively about nutrition concepts and ensure everyone is on the same page as we explore this important field."
+          "content": "This lesson establishes a common vocabulary for Nutrition Science. We will define the scope of our study, focusing on metabolic foundations and the analysis of dietary patterns to ensure clear communication throughout the course."
         },
         {
           "id": "nutrition-science-301-l01-c2",
           "kind": "concept",
           "title": "Causal Reasoning",
-          "content": "In this part of the lesson, learners will engage in mapping out causal relationships. This means identifying how different factors influence each other, along with the assumptions we make and the limitations we face. Understanding these connections is crucial before we design any interventions aimed at improving nutrition. By doing this, we can create more effective strategies that consider all relevant factors.\nContext recap: In this part of the lesson, learners will engage in mapping out causal relationships. This means identifying how different factors influence each other, along with the assumptions we make and the limitations we face. Understanding these connections is crucial before we design any interventions aimed at improving nutrition. By doing this, we can create more effective strategies that consider all relevant factors.\nContext recap: In this part of the lesson, learners will engage in mapping out causal relationships. This means identifying how different factors influence each other, along with the assumptions we make and the limitations we face. Understanding these connections is crucial before we design any interventions aimed at improving nutrition. By doing this, we can create more effective strategies that consider all relevant factors.\nWhy this matters: Causal Reasoning helps learners in Health Science connect ideas from Nutrition Science Systems and Governance to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "Learners will map causal relationships to understand how different factors influence nutritional outcomes. This includes identifying assumptions and limitations, which is a critical step before designing effective interventions."
         },
         {
           "id": "nutrition-science-301-l01-c3",
           "kind": "recap",
           "title": "Evidence Standards",
-          "content": "In this section, we will discuss the importance of evidence standards in Nutrition Science. Claims made in this field should be supported by measurable indicators, which are specific data points that can be observed and quantified. Additionally, we will explore confidence ranges, which help us understand the reliability of our claims, and review checkpoints that ensure our findings are accurate and trustworthy.\nContext recap: In this section, we will discuss the importance of evidence standards in Nutrition Science. Claims made in this field should be supported by measurable indicators, which are specific data points that can be observed and quantified. Additionally, we will explore confidence ranges, which help us understand the reliability of our claims, and review checkpoints that ensure our findings are accurate and trustworthy."
+          "content": "We will review the standards for evidence in Nutrition Science. Claims must be supported by measurable indicators and fall within defined confidence ranges. We will also introduce review checkpoints to ensure findings are accurate and trustworthy."
         }
       ],
       "flashcards": [
         {
           "id": "nutrition-science-301-l01-f1",
-          "front": "metabolic foundations",
-          "back": "A core decision lens in Nutrition Science requiring explicit assumption control."
+          "front": "Metabolic Foundations",
+          "back": "The biochemical processes underlying nutrition. A core lens for decision-making that requires explicit control over assumptions."
         },
         {
           "id": "nutrition-science-301-l01-f2",
-          "front": "dietary pattern analysis",
-          "back": "Execution systems that determine reliability and repeatability."
+          "front": "Dietary Pattern Analysis",
+          "back": "A systematic method for evaluating food consumption. Its reliability depends on well-defined, repeatable processes."
         },
         {
           "id": "nutrition-science-301-l01-f3",
-          "front": "evidence-based intervention design",
-          "back": "Evaluation process for distinguishing real gains from superficial wins."
+          "front": "Evidence-Based Intervention",
+          "back": "A program or policy designed using the best available evidence. Its success is evaluated by comparing outcomes against a baseline."
         }
       ]
     },
     {
       "id": "nutrition-science-301-l02",
-      "title": "Nutrition Science Workflow Lab",
+      "title": "Workflow Design Lab",
       "type": "interactive",
       "duration": 15,
       "learningAids": [
         {
           "id": "nutrition-science-301-l02-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use structured reasoning, map tradeoffs, and verify outcomes with metrics before finalizing."
+          "title": "Workflow Diagram Builder",
+          "content": "An interactive tool to drag and drop steps, assign owners, and set control gates for a sample nutrition project."
         }
       ],
       "chunks": [
         {
           "id": "nutrition-science-301-l02-c1",
           "kind": "practice",
-          "title": "Workflow Build",
-          "content": "In this interactive segment, learners will have the opportunity to build a workflow. This involves mapping out who is responsible for different tasks (owner mapping), establishing control gates to monitor progress, and defining measurable outcomes that indicate success. By creating a structured workflow, learners will gain practical skills that are essential for managing nutrition projects effectively.\nContext recap: In this interactive segment, learners will have the opportunity to build a workflow. This involves mapping out who is responsible for different tasks (owner mapping), establishing control gates to monitor progress, and defining measurable outcomes that indicate success. By creating a structured workflow, learners will gain practical skills that are essential for managing nutrition projects effectively."
+          "title": "Building a Workflow",
+          "content": "In this interactive lab, you will build a project workflow. This includes mapping owners to tasks, setting up control gates to monitor progress, and defining measurable outcomes to evaluate success."
         },
         {
           "id": "nutrition-science-301-l02-c2",
           "kind": "recap",
-          "title": "Readiness and Rollback",
-          "content": "In this recap, we will focus on the importance of testing systems for potential failures. This involves stress-testing our workflows to identify possible failure scenarios and establishing rollback decision thresholds. By preparing for these situations, we can ensure that our nutrition initiatives are resilient and can adapt to challenges that may arise.\nContext recap: In this recap, we will focus on the importance of testing systems for potential failures. This involves stress-testing our workflows to identify possible failure scenarios and establishing rollback decision thresholds. By preparing for these situations, we can ensure that our nutrition initiatives are resilient and can adapt to challenges that may arise."
+          "title": "Readiness and Rollback Planning",
+          "content": "This section focuses on system resilience. We will discuss how to stress-test workflows to identify potential failure points and establish clear decision thresholds for when to roll back a change or intervention."
         }
       ],
       "interactiveActivities": [
@@ -139,128 +139,71 @@ export const NutritionScience301Module: LearningModule = {
       "title": "Checkpoint 1: Concepts and Workflow",
       "type": "quiz",
       "duration": 10,
-      "learningAids": [
-        {
-          "id": "nutrition-science-301-l03-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use structured reasoning, map tradeoffs, and verify outcomes with metrics before finalizing."
-        }
-      ],
+      "learningAids": [],
       "questions": [
         {
           "id": "nutrition-science-301-l03-q1",
-          "text": "Which practice most improves decision quality in metabolic foundations?",
+          "text": "Which practice most improves decision quality when analyzing metabolic foundations?",
           "skillId": "nutrition-science-301-skill-core",
           "options": [
             {
               "id": "a",
-              "text": "Use implicit assumptions and no baseline"
+              "text": "Relying on implicit assumptions and no baseline data"
             },
             {
               "id": "b",
-              "text": "Define assumptions, constraints, and measurable indicators"
+              "text": "Defining assumptions, constraints, and measurable indicators"
             },
             {
               "id": "c",
-              "text": "Prioritize speed over evidence in all cases"
+              "text": "Prioritizing speed over evidence in all cases"
             },
             {
               "id": "d",
-              "text": "Ignore uncertainty and edge cases"
+              "text": "Ignoring uncertainty and potential edge cases"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Decision quality improves when assumptions, constraints, and measurement are explicit."
+          "explanation": "Decision quality improves when assumptions, constraints, and measurement are made explicit and transparent."
         },
         {
           "id": "nutrition-science-301-l03-q2",
-          "text": "At level 301, high-quality execution in dietary pattern analysis should include:",
+          "text": "A high-quality workflow for dietary pattern analysis should include:",
           "skillId": "nutrition-science-301-skill-execution",
           "options": [
             {
               "id": "a",
-              "text": "Owner mapping, checkpoints, and escalation thresholds"
+              "text": "Clear owner mapping, checkpoints, and escalation thresholds"
             },
             {
               "id": "b",
-              "text": "No role clarity and ad-hoc decisions"
+              "text": "Ambiguous roles and purely ad-hoc decisions"
             },
             {
               "id": "c",
-              "text": "No post-implementation review"
+              "text": "Skipping any post-implementation review"
             },
             {
               "id": "d",
-              "text": "Untracked process changes"
+              "text": "Making process changes without documentation"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Reliable execution needs clear ownership and threshold-driven control points."
-        },
-        {
-          "id": "nutrition-science-301-l03-q3",
-          "text": "A defensible approach to evidence-based intervention design requires:",
-          "skillId": "nutrition-science-301-skill-eval",
-          "options": [
-            {
-              "id": "a",
-              "text": "Anecdotal wins without comparison"
-            },
-            {
-              "id": "b",
-              "text": "Baseline comparison and side-effect analysis"
-            },
-            {
-              "id": "c",
-              "text": "Changing criteria after seeing results"
-            },
-            {
-              "id": "d",
-              "text": "Ignoring difficult cases"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Comparison and side-effect analysis prevent biased conclusions."
-        },
-        {
-          "id": "nutrition-science-301-l03-q4",
-          "text": "Mature nutrition policy and equity systems connect:",
-          "skillId": "nutrition-science-301-skill-governance",
-          "options": [
-            {
-              "id": "a",
-              "text": "Policy intent, measurable controls, and remediation pathways"
-            },
-            {
-              "id": "b",
-              "text": "Policy statements without accountability"
-            },
-            {
-              "id": "c",
-              "text": "Performance targets with no risk controls"
-            },
-            {
-              "id": "d",
-              "text": "Governance with no transparency"
-            }
-          ],
-          "correctOptionId": "a",
-          "explanation": "Effective governance links policy intent to measurable controls and corrective action."
+          "explanation": "Reliable execution requires clear ownership, defined control points, and pre-planned responses to problems."
         }
       ]
     },
     {
       "id": "nutrition-science-301-l04",
-      "title": "Nutrition Science Case Analysis",
+      "title": "Case Analysis: Community Nutrition",
       "type": "video",
       "duration": 14,
       "learningAids": [
         {
           "id": "nutrition-science-301-l04-a1",
-          "type": "mnemonic",
-          "title": "Guided Practice",
-          "content": "Use structured reasoning, map tradeoffs, and verify outcomes with metrics before finalizing."
+          "type": "image",
+          "title": "Sample Tradeoff Matrix",
+          "content": "A visual table comparing three intervention options across criteria like cost, effectiveness, equity, and feasibility."
         }
       ],
       "chunks": [
@@ -268,50 +211,50 @@ export const NutritionScience301Module: LearningModule = {
           "id": "nutrition-science-301-l04-c1",
           "kind": "example",
           "title": "Case Context",
-          "content": "In this case analysis, we will explore a community nutrition initiative that seeks to find a balance between achieving positive clinical outcomes, respecting cultural values, and addressing challenges related to food access. Throughout this lesson, learners will engage in identifying the various competing objectives that may arise and the potential risks that could impact the success of the initiative. By understanding these complexities, we can better appreciate the importance of designing effective nutrition programs that cater to the needs of diverse communities, ensuring that everyone has access to healthy food options.\nContext recap: In this case analysis, we will explore a community nutrition initiative that seeks to find a balance between achieving positive clinical outcomes, respecting cultural values, and addressing challenges related to food access. Throughout this lesson, learners will engage in identifying the various competing objectives that may arise and the potential risks that could impact the success of the initiative. By understanding these complexities, we can better appreciate the importance of designing effective nutrition programs that cater to the needs of diverse communities, ensuring that everyone has access to healthy food options."
+          "content": "We will analyze a community nutrition initiative aiming to balance clinical outcomes, cultural values, and food access. Learners will identify competing objectives and potential risks to understand the complexity of designing effective, equitable programs."
         },
         {
           "id": "nutrition-science-301-l04-c2",
           "kind": "concept",
-          "title": "Tradeoff Matrix",
-          "content": "In this section, we will introduce the concept of a tradeoff matrix. Here, options will be evaluated based on their effectiveness, feasibility, associated risks, and the impact they have on stakeholders. This scoring system will help learners make informed decisions when considering different approaches to nutrition initiatives.\nContext recap: In this section, we will introduce the concept of a tradeoff matrix. Here, options will be evaluated based on their effectiveness, feasibility, associated risks, and the impact they have on stakeholders. This scoring system will help learners make informed decisions when considering different approaches to nutrition initiatives."
+          "title": "The Tradeoff Matrix",
+          "content": "A tradeoff matrix is a tool for making informed decisions. We will use it to evaluate options based on their effectiveness, feasibility, risks, and stakeholder impact, helping to clarify difficult choices."
         },
         {
           "id": "nutrition-science-301-l04-c3",
           "kind": "recap",
-          "title": "Recovery Design",
-          "content": "In this recap, we will discuss how we can turn failure patterns into proactive safeguards and response strategies. By analyzing what went wrong in previous scenarios, we can create playbooks that outline how to respond effectively in the future. This approach helps ensure that we are prepared for challenges and can maintain the integrity of our nutrition programs.\nContext recap: In this recap, we will discuss how we can turn failure patterns into proactive safeguards and response strategies. By analyzing what went wrong in previous scenarios, we can create playbooks that outline how to respond effectively in the future. This approach helps ensure that we are prepared for challenges and can maintain the integrity of our nutrition programs."
+          "title": "Designing for Recovery",
+          "content": "This section covers how to turn past failures into future strengths. By analyzing what can go wrong, we can create proactive safeguards and response playbooks to ensure programs are resilient."
         }
       ],
       "flashcards": [
         {
           "id": "nutrition-science-301-l04-f1",
-          "front": "Tradeoff matrix",
-          "back": "A structured method to compare options under competing priorities."
+          "front": "Tradeoff Matrix",
+          "back": "A structured method to compare options across multiple, often competing, priorities."
         },
         {
           "id": "nutrition-science-301-l04-f2",
-          "front": "Failure pattern",
-          "back": "A recurring signal indicating a predictable risk mode."
+          "front": "Failure Pattern",
+          "back": "A recurring set of events or signals that indicate a predictable type of risk."
         },
         {
           "id": "nutrition-science-301-l04-f3",
-          "front": "Response playbook",
-          "back": "A predefined action pathway for safe and timely recovery."
+          "front": "Response Playbook",
+          "back": "A predefined action plan designed for safe and timely recovery from a known failure pattern."
         }
       ]
     },
     {
       "id": "nutrition-science-301-l05",
-      "title": "Nutrition Science Simulation Studio",
+      "title": "Simulation Studio: Intervention Design",
       "type": "interactive",
       "duration": 16,
       "learningAids": [
         {
           "id": "nutrition-science-301-l05-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use structured reasoning, map tradeoffs, and verify outcomes with metrics before finalizing."
+          "title": "Simulation Dashboard",
+          "content": "An interactive dashboard showing real-time outcomes, side effects, and budget adherence as you adjust intervention variables."
         }
       ],
       "chunks": [
@@ -319,13 +262,13 @@ export const NutritionScience301Module: LearningModule = {
           "id": "nutrition-science-301-l05-c1",
           "kind": "practice",
           "title": "Scenario Simulation",
-          "content": "In this interactive practice, learners will simulate various intervention scenarios while dealing with uncertainty. They will run multiple scenarios and compare the outcomes to understand how different approaches can lead to different results. This hands-on experience will enhance their ability to think critically about nutrition interventions.\nContext recap: In this interactive practice, learners will simulate various intervention scenarios while dealing with uncertainty. They will run multiple scenarios and compare the outcomes to understand how different approaches can lead to different results. This hands-on experience will enhance their ability to think critically about nutrition interventions."
+          "content": "In this interactive practice, you will run multiple intervention scenarios under conditions of uncertainty. By comparing the outcomes, you will develop a deeper understanding of how different variables affect results."
         },
         {
           "id": "nutrition-science-301-l05-c2",
           "kind": "recap",
-          "title": "Debrief",
-          "content": "In this debriefing session, each simulation run will be evaluated based on how well it achieved its targets, any side effects that occurred, and whether it complied with governance standards. This evaluation process is crucial for understanding the effectiveness of our interventions and ensuring that they align with best practices in nutrition science.\nContext recap: In this debriefing session, each simulation run will be evaluated based on how well it achieved its targets, any side effects that occurred, and whether it complied with governance standards. This evaluation process is crucial for understanding the effectiveness of our interventions and ensuring that they align with best practices in nutrition science."
+          "title": "Debrief and Evaluation",
+          "content": "After each simulation, we will debrief the results. Runs will be evaluated based on target achievement, unintended side effects, and compliance with governance standards, reinforcing best practices in intervention design."
         }
       ],
       "interactiveActivities": [
@@ -333,142 +276,135 @@ export const NutritionScience301Module: LearningModule = {
           "id": "nutrition-science-301-l05-act1",
           "type": "scenario_practice",
           "title": "Intervention Simulation",
-          "description": "Compare intervention paths for metabolic foundations and nutrition policy and equity.",
+          "description": "Compare intervention paths for improving community health outcomes while adhering to policy and equity goals.",
           "instructions": [
-            "Define objective and constraints before intervention selection.",
-            "Document near-term and long-term tradeoffs.",
-            "Specify metrics that validate your chosen path."
+            "Define your primary objective and key constraints before selecting an intervention.",
+            "Document the expected near-term and long-term tradeoffs of your chosen path.",
+            "Specify the metrics you will use to validate that your intervention was successful."
           ]
         }
       ]
     },
     {
       "id": "nutrition-science-301-l06",
-      "title": "Checkpoint 2: Systems Decisions",
+      "title": "Checkpoint 2: Systems and Decisions",
       "type": "quiz",
       "duration": 10,
-      "learningAids": [
-        {
-          "id": "nutrition-science-301-l06-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use structured reasoning, map tradeoffs, and verify outcomes with metrics before finalizing."
-        }
-      ],
+      "learningAids": [],
       "questions": [
         {
           "id": "nutrition-science-301-l06-q1",
-          "text": "Which practice most improves decision quality in metabolic foundations?",
-          "skillId": "nutrition-science-301-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "Use implicit assumptions and no baseline"
-            },
-            {
-              "id": "b",
-              "text": "Define assumptions, constraints, and measurable indicators"
-            },
-            {
-              "id": "c",
-              "text": "Prioritize speed over evidence in all cases"
-            },
-            {
-              "id": "d",
-              "text": "Ignore uncertainty and edge cases"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Decision quality improves when assumptions, constraints, and measurement are explicit."
-        },
-        {
-          "id": "nutrition-science-301-l06-q2",
-          "text": "At level 301, high-quality execution in dietary pattern analysis should include:",
-          "skillId": "nutrition-science-301-skill-execution",
-          "options": [
-            {
-              "id": "a",
-              "text": "Owner mapping, checkpoints, and escalation thresholds"
-            },
-            {
-              "id": "b",
-              "text": "No role clarity and ad-hoc decisions"
-            },
-            {
-              "id": "c",
-              "text": "No post-implementation review"
-            },
-            {
-              "id": "d",
-              "text": "Untracked process changes"
-            }
-          ],
-          "correctOptionId": "a",
-          "explanation": "Reliable execution needs clear ownership and threshold-driven control points."
-        },
-        {
-          "id": "nutrition-science-301-l06-q3",
-          "text": "A defensible approach to evidence-based intervention design requires:",
+          "text": "When analyzing a nutrition case study, what is the primary purpose of a tradeoff matrix?",
           "skillId": "nutrition-science-301-skill-eval",
           "options": [
             {
               "id": "a",
-              "text": "Anecdotal wins without comparison"
+              "text": "To prove one option is perfect and has no downsides"
             },
             {
               "id": "b",
-              "text": "Baseline comparison and side-effect analysis"
+              "text": "To systematically compare multiple options against a common set of critical criteria"
             },
             {
               "id": "c",
-              "text": "Changing criteria after seeing results"
+              "text": "To focus only on the financial cost of each option"
             },
             {
               "id": "d",
-              "text": "Ignoring difficult cases"
+              "text": "To select the option that is fastest to implement, regardless of risk"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Comparison and side-effect analysis prevent biased conclusions."
+          "explanation": "A tradeoff matrix provides a structured way to evaluate different choices based on multiple important factors, not just one."
+        },
+        {
+          "id": "nutrition-science-301-l06-q2",
+          "text": "In a simulation of a public health intervention, why is it important to run multiple scenarios?",
+          "skillId": "nutrition-science-301-skill-core",
+          "options": [
+            {
+              "id": "a",
+              "text": "To find the one, single correct answer"
+            },
+            {
+              "id": "b",
+              "text": "To prove that the initial hypothesis is always correct"
+            },
+            {
+              "id": "c",
+              "text": "To understand the range of potential outcomes and test the plan's resilience"
+            },
+            {
+              "id": "d",
+              "text": "To make the project appear more complex"
+            }
+          ],
+          "correctOptionId": "c",
+          "explanation": "Running multiple scenarios helps account for uncertainty and shows how an intervention might perform under different real-world conditions."
+        },
+        {
+          "id": "nutrition-science-301-l06-q3",
+          "text": "Identifying a 'failure pattern' in a community nutrition program allows planners to:",
+          "skillId": "nutrition-science-301-skill-execution",
+          "options": [
+            {
+              "id": "a",
+              "text": "Assign blame to specific individuals for mistakes"
+            },
+            {
+              "id": "b",
+              "text": "Immediately cancel the entire program"
+            },
+            {
+              "id": "c",
+              "text": "Develop proactive safeguards and response playbooks for predictable risks"
+            },
+            {
+              "id": "d",
+              "text": "Ignore the problem, as failures are inevitable"
+            }
+          ],
+          "correctOptionId": "c",
+          "explanation": "Recognizing recurring failure patterns enables teams to build preventative measures and planned responses, making the system more robust."
         },
         {
           "id": "nutrition-science-301-l06-q4",
-          "text": "Mature nutrition policy and equity systems connect:",
+          "text": "A key step in responsible intervention design involves mapping potential risks. This should primarily focus on:",
           "skillId": "nutrition-science-301-skill-governance",
           "options": [
             {
               "id": "a",
-              "text": "Policy intent, measurable controls, and remediation pathways"
+              "text": "Financial risks to the funding organization only"
             },
             {
               "id": "b",
-              "text": "Policy statements without accountability"
+              "text": "Negative side-effects and inequitable burden on different stakeholder groups"
             },
             {
               "id": "c",
-              "text": "Performance targets with no risk controls"
+              "text": "Risks to the personal careers of the research team"
             },
             {
               "id": "d",
-              "text": "Governance with no transparency"
+              "text": "Only the most obvious, easily preventable risks"
             }
           ],
-          "correctOptionId": "a",
-          "explanation": "Effective governance links policy intent to measurable controls and corrective action."
+          "correctOptionId": "b",
+          "explanation": "Responsible design requires a broad view of risk that includes potential harm and unfair outcomes for the people the intervention is meant to serve."
         }
       ]
     },
     {
       "id": "nutrition-science-301-l07",
-      "title": "Nutrition Science Governance and Impact",
+      "title": "Governance and Impact",
       "type": "video",
       "duration": 12,
       "learningAids": [
         {
           "id": "nutrition-science-301-l07-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use structured reasoning, map tradeoffs, and verify outcomes with metrics before finalizing."
+          "title": "Governance Feedback Loop",
+          "content": "A diagram illustrating how policy intent, implementation, impact measurement, and stakeholder review connect in a continuous cycle."
         }
       ],
       "chunks": [
@@ -476,64 +412,64 @@ export const NutritionScience301Module: LearningModule = {
           "id": "nutrition-science-301-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact",
-          "content": "In this lesson, learners will explore how to map the distribution of benefits and burdens among different stakeholder groups. Understanding who gains and who may be negatively impacted by nutrition initiatives is essential for creating fair and effective programs. This mapping will help us consider the perspectives of all involved parties.\nContext recap: In this lesson, learners will explore how to map the distribution of benefits and burdens among different stakeholder groups. Understanding who gains and who may be negatively impacted by nutrition initiatives is essential for creating fair and effective programs. This mapping will help us consider the perspectives of all involved parties."
+          "content": "This lesson explores how to map the distribution of benefits and burdens across different stakeholder groups. Understanding who is affected, and how, is essential for creating fair and effective programs."
         },
         {
           "id": "nutrition-science-301-l07-c2",
           "kind": "concept",
-          "title": "Accountability Architecture",
-          "content": "In this section, we will discuss the concept of accountability architecture. This includes ensuring that decisions made during nutrition initiatives are traceable, that there are rights for review, and that obligations for remediation are clearly defined. By integrating these elements, we can foster transparency and trust in our nutrition governance processes.\nContext recap: In this section, we will discuss the concept of accountability architecture. This includes ensuring that decisions made during nutrition initiatives are traceable, that there are rights for review, and that obligations for remediation are clearly defined. By integrating these elements, we can foster transparency and trust in our nutrition governance processes."
+          "title": "Accountability Systems",
+          "content": "We will discuss how to build systems for accountability. This includes ensuring decisions are traceable, stakeholders have rights to review, and there are clear obligations for correcting negative outcomes."
         },
         {
           "id": "nutrition-science-301-l07-c3",
           "kind": "recap",
           "title": "Responsible Execution",
-          "content": "At the end of our project, it's important to use a checklist that helps us ensure we are performing well, managing risks effectively, and considering the ethical implications of our actions. This checklist will guide us in making responsible decisions that positively impact our community and environment.\nContext recap: At the end of our project, it's important to use a checklist that helps us ensure we are performing well, managing risks effectively, and considering the ethical implications of our actions. This checklist will guide us in making responsible decisions that positively impact our community and environment."
+          "content": "We conclude by introducing a checklist for responsible execution. This framework helps ensure that projects are not only effective but also managed with high standards for risk, ethics, and accountability."
         }
       ],
       "flashcards": [
         {
           "id": "nutrition-science-301-l07-f1",
-          "front": "Impact distribution",
-          "back": "How outcomes are allocated across people, systems, and time."
+          "front": "Impact Distribution",
+          "back": "The way in which outcomes (both positive and negative) are allocated across different people, systems, and timeframes."
         },
         {
           "id": "nutrition-science-301-l07-f2",
-          "front": "Decision traceability",
-          "back": "An auditable explanation of evidence, ownership, and rationale."
+          "front": "Decision Traceability",
+          "back": "An auditable record explaining the evidence, ownership, and rationale behind a decision."
         },
         {
           "id": "nutrition-science-301-l07-f3",
-          "front": "Responsible execution",
-          "back": "Delivery mode that combines effectiveness with accountability and fairness."
+          "front": "Responsible Execution",
+          "back": "A mode of delivery that combines effectiveness with strong accountability and a commitment to fairness."
         }
       ]
     },
     {
       "id": "nutrition-science-301-l08",
-      "title": "Nutrition Science Capstone Planning Lab",
+      "title": "Capstone Planning Lab",
       "type": "interactive",
       "duration": 15,
       "learningAids": [
         {
           "id": "nutrition-science-301-l08-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use structured reasoning, map tradeoffs, and verify outcomes with metrics before finalizing."
+          "title": "Capstone Charter Template",
+          "content": "A downloadable document with structured sections for project objectives, scope, metrics, risks, and a governance plan."
         }
       ],
       "chunks": [
         {
           "id": "nutrition-science-301-l08-c1",
           "kind": "practice",
-          "title": "Capstone Charter",
-          "content": "In this activity, you will create a detailed plan for your capstone project. This includes writing down clear objectives, identifying any constraints you might face, establishing metrics to measure success, and outlining governance triggers that will help guide your decisions throughout the project.\nContext recap: In this activity, you will create a detailed plan for your capstone project. This includes writing down clear objectives, identifying any constraints you might face, establishing metrics to measure success, and outlining governance triggers that will help guide your decisions throughout the project.\nContext recap: In this activity, you will create a detailed plan for your capstone project. This includes writing down clear objectives, identifying any constraints you might face, establishing metrics to measure success, and outlining governance triggers that will help guide your decisions throughout the project. Context recap: In this activity, you will create a detailed plan for your capstone project. This includes writing down clear objectives, identifying any constraints you might face, establishing metrics to measure success, and outlining governance triggers that will help guide your decisions throughout the project."
+          "title": "The Capstone Charter",
+          "content": "In this activity, you will create a detailed plan for your capstone project. This charter will define your objectives, constraints, success metrics, and the governance triggers that will guide your decisions."
         },
         {
           "id": "nutrition-science-301-l08-c2",
           "kind": "recap",
           "title": "Defense Readiness",
-          "content": "As you work on your capstone project, it's essential to be ready to explain and defend your decisions. This means preparing to answer questions and critiques related to technical aspects and governance issues. Being well-prepared will help you communicate your ideas effectively and demonstrate your understanding.\nContext recap: As you work on your capstone project, it's essential to be ready to explain and defend your decisions. This means preparing to answer questions and critiques related to technical aspects and governance issues. Being well-prepared will help you communicate your ideas effectively and demonstrate your understanding."
+          "content": "As you finalize your plan, prepare to defend your decisions. This involves anticipating questions and critiques related to both the technical and governance aspects of your proposed project."
         }
       ],
       "interactiveActivities": [
@@ -541,11 +477,52 @@ export const NutritionScience301Module: LearningModule = {
           "id": "nutrition-science-301-l08-act1",
           "type": "project_builder",
           "title": "Capstone Charter Builder",
-          "description": "Build a capstone charter with measurable outcomes and remediation pathways.",
+          "description": "Build a capstone charter with measurable outcomes and corrective action plans.",
           "instructions": [
-            "Define objective and operating boundaries.",
+            "Define your project's primary objective and operating boundaries.",
             "List at least three measurable success indicators.",
-            "Define escalation and corrective-action criteria."
+            "Define the criteria for escalation and corrective action if the project deviates from its plan."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nutrition-science-301-l09",
+      "title": "Capstone Project: Defense and Review",
+      "type": "interactive",
+      "duration": 20,
+      "learningAids": [
+        {
+          "id": "nutrition-science-301-l09-a1",
+          "type": "practice",
+          "title": "Peer Review Rubric",
+          "content": "A structured rubric to evaluate a capstone project based on evidence quality, clarity of reasoning, and soundness of the governance plan."
+        }
+      ],
+      "chunks": [
+        {
+          "id": "nutrition-science-301-l09-c1",
+          "kind": "practice",
+          "title": "Project Submission and Defense",
+          "content": "Submit your completed capstone charter and a presentation defending your proposed nutrition intervention. Your defense should address the core principles of the course, including metabolic foundations, workflow controls, evidence standards, and governance."
+        },
+        {
+          "id": "nutrition-science-301-l09-c2",
+          "kind": "recap",
+          "title": "Post-Mortem and Reflection",
+          "content": "Review your project and the decisions you made. Identify the strongest parts of your plan and areas for improvement. This reflective practice is key to continuous learning in public health and nutrition science."
+        }
+      ],
+      "interactiveActivities": [
+        {
+          "id": "nutrition-science-301-l09-act1",
+          "type": "peer_review",
+          "title": "Capstone Self-Assessment",
+          "description": "Use the course rubric to score your own capstone project, providing a rationale for each score.",
+          "instructions": [
+            "Evaluate your project's objective clarity and alignment with course principles.",
+            "Assess the quality of your evidence and tradeoff analysis.",
+            "Justify the robustness of your proposed governance and risk mitigation plan."
           ]
         }
       ]

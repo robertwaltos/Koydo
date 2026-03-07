@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const GeneralRelativity401Module: LearningModule = {
+export const general_relativity_401_Module: LearningModule = {
   "id": "general-relativity-401",
   "title": "General Relativity Frontiers and Scientific Synthesis",
   "description": "Expert-level general relativity curriculum on geometric field theory, strong-gravity phenomena, gravitational-wave inference, cosmological testing, and research-grade scientific argumentation.",
@@ -15,7 +15,7 @@ export const GeneralRelativity401Module: LearningModule = {
   ],
   "minAge": 14,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en"
@@ -40,36 +40,36 @@ export const GeneralRelativity401Module: LearningModule = {
           "id": "general-relativity-401-l01-c1",
           "kind": "concept",
           "title": "Curvature as Physics",
-          "content": "In the fascinating world of general relativity, we learn that gravity is not just a force acting at a distance, like we might think. Instead, it is a result of the way spacetime is curved by the presence of matter and energy. Imagine spacetime as a stretchy fabric; when you place a heavy object on it, like a planet or a star, the fabric bends. This bending affects how objects move, guiding them along paths called free-fall trajectories. So, in essence, the geometry of spacetime shapes the way everything moves within it."
+          "content": "General relativity recasts gravity not as a force, but as a manifestation of spacetime geometry. The presence of mass and energy warps the spacetime fabric, described by the metric tensor. Objects in free-fall, from planets to photons, follow paths of extremal length through this curved geometry, known as geodesics. In essence, matter tells spacetime how to curve, and curved spacetime tells matter how to move."
         },
         {
           "id": "general-relativity-401-l01-c2",
           "kind": "concept",
           "title": "Equation-to-Observation Bridge",
-          "content": "The equations that describe gravitational fields in general relativity become truly meaningful when we can observe their effects in the real world. For example, we can see phenomena like the way planets move in their orbits, how light bends around massive objects, and how time can slow down in strong gravitational fields. These measurable effects include perihelion precession, which is the gradual shift in the orbit of a planet, light deflection, time dilation, and gravitational redshift. Additionally, when two compact objects, like black holes, merge, they create unique waveforms that we can analyze. All these observations help us understand the universe better and confirm the predictions made by the theory."
+          "content": "The abstract mathematics of Einstein's field equations connects directly to observable phenomena. These physical predictions, which have been rigorously tested, include the anomalous perihelion precession of Mercury's orbit, the gravitational deflection of starlight, gravitational time dilation and redshift, and the precise waveforms of gravitational waves emitted by merging compact objects like black holes and neutron stars."
         },
         {
           "id": "general-relativity-401-l01-c3",
           "kind": "recap",
           "title": "Model Scope and Limits",
-          "content": "When scientists create models to explain complex phenomena, it is crucial to understand the limits of those models. Expert reasoning helps us differentiate between the areas where a model works well and where it might not apply. For instance, a model might accurately describe the behavior of objects in one situation but may not be as effective in another. This understanding is essential because it prevents us from making assumptions based on incomplete information and encourages us to seek further evidence before drawing conclusions.\nContext recap: When scientists create models to explain complex phenomena, it is crucial to understand the limits of those models. Expert reasoning helps us differentiate between the areas where a model works well and where it might not apply. For instance, a model might accurately describe the behavior of objects in one situation but may not be as effective in another. This understanding is essential because it prevents us from making assumptions based on incomplete information and encourages us to seek further evidence before drawing conclusions."
+          "content": "A critical component of expert reasoning is defining a model's domain of applicability. General relativity, for example, excels in the classical, strong-gravity regime but is expected to break down at the quantum level (e.g., inside a black hole singularity). Understanding these limitations prevents misinterpretation and guides the search for more comprehensive theories."
         }
       ],
       "flashcards": [
         {
           "id": "general-relativity-401-l01-f1",
           "front": "Spacetime curvature",
-          "back": "Geometric structure that determines inertial paths and gravitational effects in relativity."
+          "back": "The geometric property of spacetime, determined by mass-energy, that dictates the gravitational motion of objects."
         },
         {
           "id": "general-relativity-401-l01-f2",
           "front": "Geodesic",
-          "back": "The locally extremal path followed by free-falling objects in curved spacetime."
+          "back": "The path that a free-falling object follows through curved spacetime, representing the straightest possible line in that geometry."
         },
         {
           "id": "general-relativity-401-l01-f3",
           "front": "Model domain",
-          "back": "The physical regime where a model's assumptions remain valid and predictive."
+          "back": "The physical regime where a model's assumptions remain valid and its predictions are reliable."
         }
       ],
       "learningAids": [
@@ -77,7 +77,7 @@ export const GeneralRelativity401Module: LearningModule = {
           "id": "general-relativity-401-l01-a1",
           "type": "image",
           "title": "Geometry-to-Measurement Map",
-          "content": "Diagram linking curvature concepts to observables such as lensing, time delay, and waveforms."
+          "content": "An infographic mapping the core concepts of the Einstein Field Equations (Stress-Energy Tensor -> Einstein Tensor/Curvature) to a tree of measurable predictions, including orbital precession, gravitational lensing, Shapiro delay, and gravitational waveforms."
         }
       ]
     },
@@ -91,13 +91,13 @@ export const GeneralRelativity401Module: LearningModule = {
           "id": "general-relativity-401-l02-c1",
           "kind": "concept",
           "title": "Strong-Gravity Regimes",
-          "content": "In the realm of strong gravity, we encounter extraordinary objects like black holes, neutron stars, and systems where two compact objects orbit each other closely. These environments are where the effects of relativity become very pronounced, and our usual understanding of gravity may not hold true. In these strong-gravity regimes, simpler models that work in weaker fields fail to provide accurate predictions. Instead, we must consider the complex, nonlinear dynamics that govern these extreme situations, which can lead to fascinating discoveries about the nature of the universe.\nContext recap: In the realm of strong gravity, we encounter extraordinary objects like black holes, neutron stars, and systems where two compact objects orbit each other closely. These environments are where the effects of relativity become very pronounced, and our usual understanding of gravity may not hold true. In these strong-gravity regimes, simpler models that work in weaker fields fail to provide accurate predictions. Instead, we must consider the complex, nonlinear dynamics that govern these extreme situations, which can lead to fascinating discoveries about the nature of the universe."
+          "content": "Strong-gravity regimes, such as the environments around black holes, neutron stars, and binary mergers, are the ultimate laboratories for testing general relativity. Here, gravitational fields are intense and rapidly changing, causing linearized approximations (like post-Newtonian theory) to fail. Understanding these systems requires solving the full, nonlinear Einstein field equations, often through complex numerical simulations."
         },
         {
           "id": "general-relativity-401-l02-c2",
           "kind": "practice",
           "title": "Simulation-Assisted Reasoning",
-          "content": "To better understand the dynamics of events like the merging of black holes, scientists use numerical simulations. These computer-generated models help us visualize and interpret the complex interactions that occur during such events. In expert practice, researchers perform sensitivity checks to ensure that their results are reliable. This means they carefully examine how changes in initial conditions, the parameters they set, and the limits of their numerical methods can affect the outcomes of their simulations. By doing this, they can gain a clearer understanding of the phenomena they are studying."
+          "content": "Numerical relativity simulations are indispensable tools for interpreting strong-field phenomena like black hole mergers. Expert practice involves rigorous validation of these simulations, including convergence testing (ensuring results are stable as numerical resolution increases) and sensitivity analysis, which probes how the output waveforms change in response to variations in initial physical parameters (e.g., mass ratio, spins)."
         }
       ],
       "interactiveActivities": [
@@ -105,7 +105,7 @@ export const GeneralRelativity401Module: LearningModule = {
           "id": "general-relativity-401-l02-act1",
           "type": "matching_pairs",
           "title": "Signal-to-Physics Match",
-          "description": "Match observed signal features to likely physical interpretation.",
+          "description": "Match observed signal features to their likely physical interpretation.",
           "pairs": [
             {
               "left": "Late-time waveform ringdown",
@@ -131,8 +131,8 @@ export const GeneralRelativity401Module: LearningModule = {
           "title": "Model Robustness Drill",
           "description": "Defend a strong-field interpretation under parameter uncertainty.",
           "instructions": [
-            "Identify one parameter assumption with highest sensitivity.",
-            "Propose one follow-up test to reduce ambiguity."
+            "You are presented with a gravitational wave signal and a best-fit model. Identify a key physical parameter in the model that is poorly constrained by the data.",
+            "Propose a follow-up observation or analysis that could break this degeneracy and strengthen the interpretation."
           ]
         }
       ],
@@ -148,7 +148,7 @@ export const GeneralRelativity401Module: LearningModule = {
           "id": "general-relativity-401-l02-a1",
           "type": "practice",
           "title": "Robustness Checklist",
-          "content": "Checklist for assumptions, sensitivity tests, residual checks, and alternative explanations."
+          "content": "Checklist for evaluating a numerical study: code validation, convergence tests, parameter sensitivity, residual analysis, and comparison with alternative models."
         }
       ]
     },
@@ -181,7 +181,7 @@ export const GeneralRelativity401Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Relativistic gravity is modeled geometrically through spacetime curvature."
+          "explanation": "Relativistic gravity is modeled geometrically through spacetime curvature, which dictates the paths of objects."
         },
         {
           "id": "general-relativity-401-l03-q2",
@@ -202,11 +202,11 @@ export const GeneralRelativity401Module: LearningModule = {
             },
             {
               "id": "d",
-              "text": "They remove need for simulation"
+              "text": "They remove the need for simulation"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Extreme conditions make relativistic predictions observable at higher contrast."
+          "explanation": "Extreme conditions in strong-field systems amplify relativistic effects, making deviations from simpler theories more easily observable."
         },
         {
           "id": "general-relativity-401-l03-q3",
@@ -219,7 +219,7 @@ export const GeneralRelativity401Module: LearningModule = {
             },
             {
               "id": "b",
-              "text": "Assumptions, uncertainty, and competing alternatives"
+              "text": "A clear statement of assumptions, uncertainties, and competing alternatives"
             },
             {
               "id": "c",
@@ -231,24 +231,24 @@ export const GeneralRelativity401Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Transparent assumptions and uncertainty are core to research rigor."
+          "explanation": "Transparently stating assumptions, uncertainties, and alternative explanations is a core principle of scientific rigor and integrity."
         },
         {
           "id": "general-relativity-401-l03-q4",
-          "text": "If residuals show unexplained structure after fitting a waveform model, likely implication is:",
+          "text": "If residuals show unexplained structure after fitting a waveform model, what is the likely implication?",
           "skillId": "general-relativity-401-skill-inference",
           "options": [
             {
               "id": "a",
-              "text": "Model may be incomplete or assumptions mismatched"
+              "text": "The model may be incomplete or its assumptions mismatched to the data"
             },
             {
               "id": "b",
-              "text": "Model is automatically correct"
+              "text": "The model is automatically correct"
             },
             {
               "id": "c",
-              "text": "Data should be ignored"
+              "text": "The data should be ignored"
             },
             {
               "id": "d",
@@ -256,7 +256,7 @@ export const GeneralRelativity401Module: LearningModule = {
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Structured residuals are often evidence of missing model components or bias."
+          "explanation": "Structured residuals (the leftover signal after subtracting the best-fit model) often indicate missing physics in the model or unaddressed systematic errors."
         }
       ],
       "learningAids": [
@@ -264,7 +264,7 @@ export const GeneralRelativity401Module: LearningModule = {
           "id": "general-relativity-401-l03-a1",
           "type": "mnemonic",
           "title": "PAIR",
-          "content": "Prediction, Assumptions, Inference, Residuals."
+          "content": "A workflow for robust analysis: Prediction, Assumptions, Inference, Residuals."
         }
       ]
     },
@@ -278,36 +278,36 @@ export const GeneralRelativity401Module: LearningModule = {
           "id": "general-relativity-401-l04-c1",
           "kind": "concept",
           "title": "Waveform Physics",
-          "content": "Gravitational waves are ripples in spacetime that carry important information about their sources, such as the masses and spins of black holes, how they orbit each other, and the dynamics of their mergers. To extract this information from the gravitational wave signals we detect, scientists use model libraries that contain various theoretical waveforms. They also need to characterize the noise present in their measurements and carefully quantify any uncertainties in their findings. This process allows them to make accurate interpretations of the data and deepen our understanding of the universe."
+          "content": "Gravitational waveforms are rich carriers of information about their astrophysical sources. The signal's evolution encodes the inspiral, merger, and ringdown phases of a binary system, allowing for precise measurement of parameters like mass, spin, and orbital eccentricity. Extracting this information requires sophisticated data analysis techniques, including matched filtering against libraries of theoretical waveform templates and Bayesian inference to quantify the posterior probabilities and uncertainties for each parameter."
         },
         {
           "id": "general-relativity-401-l04-c2",
           "kind": "concept",
           "title": "Black Hole Tests",
-          "content": "To test our understanding of black holes, scientists conduct various observational tests. These include imaging the area around black holes, studying the movements of objects in their vicinity, and analyzing the signals produced after a merger event. Each of these tests provides valuable insights, and when different methods yield similar results, it strengthens our confidence in our interpretations. This convergence of evidence from independent channels is crucial for validating our theories about these mysterious cosmic objects.\nContext recap: To test our understanding of black holes, scientists conduct various observational tests. These include imaging the area around black holes, studying the movements of objects in their vicinity, and analyzing the signals produced after a merger event. Each of these tests provides valuable insights, and when different methods yield similar results, it strengthens our confidence in our interpretations. This convergence of evidence from independent channels is crucial for validating our theories about these mysterious cosmic objects."
+          "content": "The nature of black holes is tested through multiple, independent channels. These include direct imaging of the event horizon shadow, stellar orbital dynamics around galactic centers (like Sgr A*), and analysis of the quasi-normal modes during the ringdown phase of a merger. When these disparate methods yield consistent measurements of a black hole's mass and spin, it provides powerful confirmation of the 'no-hair' theorem and our fundamental understanding of these objects."
         },
         {
           "id": "general-relativity-401-l04-c3",
           "kind": "recap",
           "title": "Synthesis Across Instruments",
-          "content": "When scientists gather evidence from different sources, such as gravitational waves, electromagnetic signals, and timing measurements, they work to combine this information effectively. This process, known as evidence synthesis, helps reduce uncertainties and improve the plausibility of their physical models. By integrating data from various instruments, researchers can create a more comprehensive picture of the phenomena they are studying, leading to deeper insights and a better understanding of the universe.\nContext recap: When scientists gather evidence from different sources, such as gravitational waves, electromagnetic signals, and timing measurements, they work to combine this information effectively. This process, known as evidence synthesis, helps reduce uncertainties and improve the plausibility of their physical models. By integrating data from various instruments, researchers can create a more comprehensive picture of the phenomena they are studying, leading to deeper insights and a better understanding of the universe."
+          "content": "Multi-messenger astronomy, the practice of combining information from gravitational waves with electromagnetic signals (like gamma-ray bursts or kilonovae) and neutrinos, represents a new frontier. This evidence synthesis allows for a more complete physical picture of an event, breaks parameter degeneracies inherent in a single messenger, and provides powerful consistency checks on our models, dramatically reducing overall uncertainty."
         }
       ],
       "flashcards": [
         {
           "id": "general-relativity-401-l04-f1",
           "front": "Ringdown",
-          "back": "Late-stage signal as a merged compact object settles to equilibrium modes."
+          "back": "The final stage of a compact binary merger signal, where the newly formed object settles into a stable state by radiating quasi-normal modes."
         },
         {
           "id": "general-relativity-401-l04-f2",
           "front": "Parameter degeneracy",
-          "back": "Different parameter combinations that can produce similar observable signals."
+          "back": "A situation in data analysis where different combinations of physical parameters produce nearly identical observable signals, making them difficult to distinguish."
         },
         {
           "id": "general-relativity-401-l04-f3",
           "front": "Evidence synthesis",
-          "back": "Combining independent data channels to test consistency and reduce ambiguity."
+          "back": "The practice of combining independent data channels (e.g., gravitational waves and light) to test consistency and break degeneracies."
         }
       ],
       "learningAids": [
@@ -315,7 +315,7 @@ export const GeneralRelativity401Module: LearningModule = {
           "id": "general-relativity-401-l04-a1",
           "type": "image",
           "title": "Waveform Inference Pipeline",
-          "content": "Pipeline from detection candidate to parameter posteriors and model comparison outcomes."
+          "content": "A detailed flowchart of the gravitational-wave data analysis pipeline. It begins with raw strain data from detectors, proceeds through signal conditioning and candidate event identification, and culminates in Bayesian parameter estimation, which produces the characteristic 'corner plots' of posterior probability distributions for the source's physical parameters."
         }
       ]
     },
@@ -329,13 +329,13 @@ export const GeneralRelativity401Module: LearningModule = {
           "id": "general-relativity-401-l05-c1",
           "kind": "concept",
           "title": "Testing Relativity at Cosmological Scales",
-          "content": "When testing the predictions of relativity on a large scale, scientists examine various aspects of the universe, such as how galaxies expand, how structures grow over time, and the statistics of gravitational lensing. They also look at background anisotropies, which are variations in the cosmic microwave background radiation. By comparing these observations with the predictions made by general relativity, researchers can identify patterns of agreement or tension. Both types of findings provide valuable insights into the workings of the universe and help refine our understanding of fundamental physics.\nContext recap: When testing the predictions of relativity on a large scale, scientists examine various aspects of the universe, such as how galaxies expand, how structures grow over time, and the statistics of gravitational lensing. They also look at background anisotropies, which are variations in the cosmic microwave background radiation. By comparing these observations with the predictions made by general relativity, researchers can identify patterns of agreement or tension. Both types of findings provide valuable insights into the workings of the universe and help refine our understanding of fundamental physics."
+          "content": "On cosmological scales, general relativity is tested by comparing predictions of the standard Lambda-CDM model against a suite of observations. These include the expansion history of the universe (probed by supernovae), the growth rate of large-scale structure (from galaxy surveys), and the geometry of spacetime (via gravitational lensing and the cosmic microwave background). Any statistically significant tension between these probes and the model's predictions could signal new physics or modifications to GR."
         },
         {
           "id": "general-relativity-401-l05-c2",
           "kind": "practice",
           "title": "Comparative Model Logic",
-          "content": "When comparing different scientific models, researchers must consider several factors to ensure a fair evaluation. This includes assessing how well the model fits the data, its complexity, the assumptions made prior to testing, and its physical plausibility. Experts are careful not to overstate their conclusions based on small differences in likelihood without conducting a thorough analysis of the robustness of their findings. This careful approach helps maintain scientific integrity and ensures that conclusions are well-founded.\nContext recap: When comparing different scientific models, researchers must consider several factors to ensure a fair evaluation. This includes assessing how well the model fits the data, its complexity, the assumptions made prior to testing, and its physical plausibility. Experts are careful not to overstate their conclusions based on small differences in likelihood without conducting a thorough analysis of the robustness of their findings. This careful approach helps maintain scientific integrity and ensures that conclusions are well-founded."
+          "content": "Rigorous model comparison is central to scientific progress. When evaluating a standard model against a more complex alternative, experts use statistical tools like the Bayes factor, which naturally incorporates Occam's razor by penalizing models with extra, poorly-constrained parameters. A responsible claim requires not just a better fit to the data, but a statistically significant preference that accounts for model complexity and has a plausible physical motivation."
         }
       ],
       "interactiveActivities": [
@@ -343,7 +343,7 @@ export const GeneralRelativity401Module: LearningModule = {
           "id": "general-relativity-401-l05-act1",
           "type": "sorting_buckets",
           "title": "Evidence Role Sort",
-          "description": "Sort cosmological evidence by primary testing role.",
+          "description": "Sort cosmological evidence by its primary testing role.",
           "buckets": [
             "Expansion Constraints",
             "Structure Constraints",
@@ -374,8 +374,8 @@ export const GeneralRelativity401Module: LearningModule = {
           "title": "Model Selection Debate",
           "description": "Argue for or against extending a baseline relativistic model.",
           "instructions": [
-            "State one empirical argument for extension.",
-            "State one caution against premature model inflation."
+            "A new dataset shows a 3-sigma tension with the standard cosmological model. First, formulate an argument for extending the model, justifying why a new physical parameter is warranted.",
+            "Second, formulate a counter-argument, cautioning against overfitting and proposing a specific systematic effect that could be mimicking the signal."
           ]
         }
       ],
@@ -391,7 +391,7 @@ export const GeneralRelativity401Module: LearningModule = {
           "id": "general-relativity-401-l05-a1",
           "type": "practice",
           "title": "Model Comparison Worksheet",
-          "content": "Template for assumptions, fit metrics, robustness checks, and interpretation boundaries."
+          "content": "Template for comparing two models, including sections for: underlying assumptions, data fit metrics (e.g., chi-squared), model complexity penalty (e.g., Bayesian evidence), robustness checks, and interpretation boundaries."
         }
       ]
     },
@@ -420,36 +420,36 @@ export const GeneralRelativity401Module: LearningModule = {
             },
             {
               "id": "d",
-              "text": "They eliminate need for theory"
+              "text": "They eliminate the need for theory"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Independent channels reduce degeneracy and test inference robustness."
+          "explanation": "Independent channels can break parameter degeneracies and provide crucial cross-checks on results, increasing confidence in the final interpretation."
         },
         {
           "id": "general-relativity-401-l06-q2",
-          "text": "Most responsible interpretation of mild model preference in one dataset is:",
+          "text": "What is the most responsible interpretation of a mild statistical preference for a new model in a single dataset?",
           "skillId": "general-relativity-401-skill-inference",
           "options": [
             {
               "id": "a",
-              "text": "Declare definitive new physics"
+              "text": "Declare definitive discovery of new physics"
             },
             {
               "id": "b",
-              "text": "Treat as tentative and seek cross-dataset validation"
+              "text": "Treat it as tentative evidence that requires independent validation"
             },
             {
               "id": "c",
-              "text": "Ignore uncertainty ranges"
+              "text": "Ignore the uncertainty ranges"
             },
             {
               "id": "d",
-              "text": "Discard baseline models immediately"
+              "text": "Discard the baseline model immediately"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Scientific caution requires replication and robustness checks before strong claims."
+          "explanation": "Scientific caution requires that tentative results, especially those at low statistical significance, be subjected to further testing and validation before strong claims are made."
         },
         {
           "id": "general-relativity-401-l06-q3",
@@ -458,7 +458,7 @@ export const GeneralRelativity401Module: LearningModule = {
           "options": [
             {
               "id": "a",
-              "text": "Overfitting without sufficient penalty for complexity"
+              "text": "Overfitting the data without a sufficient penalty for complexity"
             },
             {
               "id": "b",
@@ -474,49 +474,49 @@ export const GeneralRelativity401Module: LearningModule = {
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Complex models can appear better-fit while generalizing poorly."
+          "explanation": "More complex models with more parameters can fit noise in the data, appearing to be a better fit while having less predictive power. This is known as overfitting."
         },
         {
           "id": "general-relativity-401-l06-q4",
-          "text": "Best communication practice for frontier results is to:",
+          "text": "Best practice for communicating frontier scientific results is to:",
           "skillId": "general-relativity-401-skill-communication",
           "options": [
             {
               "id": "a",
-              "text": "Emphasize certainty and omit caveats"
+              "text": "Emphasize certainty and omit all caveats"
             },
             {
               "id": "b",
-              "text": "Report assumptions, uncertainty, alternatives, and testable predictions"
+              "text": "Clearly report assumptions, uncertainties, alternatives, and testable predictions"
             },
             {
               "id": "c",
-              "text": "Use only qualitative claims"
+              "text": "Use only qualitative claims without data"
             },
             {
               "id": "d",
-              "text": "Avoid discussing limitations"
+              "text": "Avoid discussing any limitations of the study"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Transparent framing supports reproducibility and informed scientific dialogue."
+          "explanation": "Transparent and comprehensive reporting supports reproducibility, allows for informed critique, and fosters a healthy scientific dialogue."
         },
         {
           "id": "general-relativity-401-l06-q5",
-          "text": "If two datasets disagree strongly, the first expert step is to:",
+          "text": "If two datasets measuring the same cosmological parameter disagree strongly, the first expert step is to:",
           "skillId": "general-relativity-401-skill-inference",
           "options": [
             {
               "id": "a",
-              "text": "Select the more popular dataset"
+              "text": "Select the dataset that supports your preferred theory"
             },
             {
               "id": "b",
-              "text": "Audit assumptions, calibration, and analysis pipeline differences"
+              "text": "Audit the assumptions, calibration, and analysis pipelines of both experiments"
             },
             {
               "id": "c",
-              "text": "Publish final conclusion immediately"
+              "text": "Publish a final conclusion immediately"
             },
             {
               "id": "d",
@@ -524,7 +524,7 @@ export const GeneralRelativity401Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Conflict diagnosis starts with methodological and assumption audits."
+          "explanation": "Diagnosing tension between experiments begins with a careful audit of all potential sources of systematic error and methodological differences."
         }
       ],
       "learningAids": [
@@ -532,7 +532,7 @@ export const GeneralRelativity401Module: LearningModule = {
           "id": "general-relativity-401-l06-a1",
           "type": "mnemonic",
           "title": "TEST",
-          "content": "Theory, Evidence, Sensitivity, Transparency."
+          "content": "A framework for evaluating claims: Theory, Evidence, Sensitivity, Transparency."
         }
       ]
     },
@@ -546,13 +546,13 @@ export const GeneralRelativity401Module: LearningModule = {
           "id": "general-relativity-401-l07-c1",
           "kind": "practice",
           "title": "Capstone Brief",
-          "content": "As part of your capstone project, you will create a comprehensive research synthesis proposal. This proposal should integrate various components, including the selection of theoretical frameworks, a detailed measurement plan, strategies for controlling uncertainties, a model comparison approach, and a framework for effectively communicating your scientific findings. This exercise will help you develop critical thinking and research skills that are essential for scientific inquiry.\nContext recap: As part of your capstone project, you will create a comprehensive research synthesis proposal. This proposal should integrate various components, including the selection of theoretical frameworks, a detailed measurement plan, strategies for controlling uncertainties, a model comparison approach, and a framework for effectively communicating your scientific findings. This exercise will help you develop critical thinking and research skills that are essential for scientific inquiry."
+          "content": "Your capstone challenge is to design a research proposal that addresses a frontier question in general relativity. You will synthesize concepts from this module to define a clear hypothesis, propose a multi-pronged measurement strategy (integrating theory, simulation, or multiple data sources), and develop a robust plan for data analysis, uncertainty quantification, and model comparison."
         },
         {
           "id": "general-relativity-401-l07-c2",
           "kind": "recap",
           "title": "Assessment Criteria",
-          "content": "In assessing your research proposals, it is important to ensure that they align predicted observable outcomes with practical measurement techniques. Proposals should clearly outline the assumptions made and establish criteria for testing the validity of preferred models. This clarity will help strengthen your proposal and ensure that your research is grounded in sound scientific principles.\nContext recap: In assessing your research proposals, it is important to ensure that they align predicted observable outcomes with practical measurement techniques. Proposals should clearly outline the assumptions made and establish criteria for testing the validity of preferred models. This clarity will help strengthen your proposal and ensure that your research is grounded in sound scientific principles."
+          "content": "Proposals will be evaluated on their scientific merit and rigor. Key criteria include: the clarity of the research question; the direct link between theoretical predictions and proposed observables; a realistic assessment of statistical and systematic uncertainties; and, crucially, the definition of clear, falsifiable conditions under which your preferred model would be rejected."
         }
       ],
       "metadata": {
@@ -567,7 +567,7 @@ export const GeneralRelativity401Module: LearningModule = {
           "id": "general-relativity-401-l07-a1",
           "type": "practice",
           "title": "Research Proposal Template",
-          "content": "Template for hypothesis, methods, assumptions, uncertainty budget, and interpretation plan."
+          "content": "A structured template for a research proposal, including sections for: Scientific Rationale, Hypothesis and Competing Models, Observational/Simulation Methods, Uncertainty Budget, Falsification Criteria, and Communication Plan."
         }
       ]
     }

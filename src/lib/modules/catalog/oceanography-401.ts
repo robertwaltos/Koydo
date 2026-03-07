@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const Oceanography401Module: LearningModule = {
+export const oceanography_401_Module: LearningModule = {
   "id": "oceanography-401",
   "title": "Oceanography Leadership and Capstone",
   "description": "Level 401 curriculum in Oceanography, focused on ocean circulation dynamics, marine ecosystem interactions, observation and measurement methods, and climate-ocean coupling through case analysis, simulation practice, and mastery checkpoints.",
@@ -14,7 +14,7 @@ export const Oceanography401Module: LearningModule = {
   ],
   "minAge": 16,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en",
@@ -37,9 +37,9 @@ export const Oceanography401Module: LearningModule = {
       "learningAids": [
         {
           "id": "oceanography-401-l01-a1",
-          "type": "image",
-          "title": "Guided Practice",
-          "content": "Document assumptions, show your reasoning chain, and verify your conclusions before submission."
+          "type": "infographic",
+          "title": "The Pillars of Oceanographic Analysis",
+          "content": "A diagram showing the relationship between Circulation Dynamics, Ecosystem Interactions, Observation Methods, and Climate Coupling."
         }
       ],
       "chunks": [
@@ -47,36 +47,36 @@ export const Oceanography401Module: LearningModule = {
           "id": "oceanography-401-l01-c1",
           "kind": "concept",
           "title": "Scope and Shared Vocabulary",
-          "content": "In this lesson, we will dive into the captivating field of Oceanography, which is the scientific study of the oceans and their various components. We will start by defining what Oceanography encompasses, including its importance in understanding our planet's health. Next, we will introduce some key vocabulary that will help us communicate effectively about ocean-related topics. Finally, we will examine how ocean currents, which are like rivers within the sea, interact with marine ecosystems, the communities of plants and animals living in the ocean. By understanding these relationships, we can better appreciate the vital role oceans play in our environment and how they affect climate, weather patterns, and biodiversity. This knowledge is crucial for anyone interested in protecting our oceans and ensuring a sustainable future for all living beings.\nContext recap: In this lesson, we will dive into the captivating field of Oceanography, which is the scientific study of the oceans and their various components. We will start by defining what Oceanography encompasses, including its importance in understanding our planet's health. Next, we will introduce some key vocabulary that will help us communicate effectively about ocean-related topics. Finally, we will examine how ocean currents, which are like rivers within the sea, interact with marine ecosystems, the communities of plants and animals living in the ocean.\nWhy this matters: Scope and Shared Vocabulary helps learners in Earth Science connect ideas from Oceanography Leadership and Capstone to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "In this lesson, we will dive into the captivating field of Oceanography, the scientific study of the oceans. We will define its scope, introduce key vocabulary for effective communication, and examine how ocean currents interact with marine ecosystems. Understanding these relationships is vital for appreciating the ocean's role in climate, weather, and biodiversity, and for making informed decisions to protect our planet's health."
         },
         {
           "id": "oceanography-401-l01-c2",
           "kind": "concept",
           "title": "Causal Structure and Constraints",
-          "content": "In this part of the lesson, students will learn how to create maps that show cause-and-effect relationships in oceanography. They will also practice identifying hidden assumptions that may affect their decisions. This skill is important because it helps learners choose the best actions to take when addressing ocean-related challenges.\nContext recap: In this part of the lesson, students will learn how to create maps that show cause-and-effect relationships in oceanography. They will also practice identifying hidden assumptions that may affect their decisions. This skill is important because it helps learners choose the best actions to take when addressing ocean-related challenges."
+          "content": "Here, you will learn to map cause-and-effect relationships in oceanography and practice identifying the hidden assumptions and constraints that influence decisions. This skill is crucial for choosing the most effective actions when addressing complex ocean-related challenges and understanding the potential consequences of those actions."
         },
         {
           "id": "oceanography-401-l01-c3",
           "kind": "recap",
           "title": "Evidence Discipline",
-          "content": "In this recap, we will emphasize the importance of linking claims to observable evidence. Students will learn how to identify indicators that support their claims, note any uncertainties, and establish checkpoints for reviewing their findings. This process is crucial for developing strong arguments based on scientific evidence.\nContext recap: In this recap, we will emphasize the importance of linking claims to observable evidence. Students will learn how to identify indicators that support their claims, note any uncertainties, and establish checkpoints for reviewing their findings. This process is crucial for developing strong arguments based on scientific evidence."
+          "content": "This recap emphasizes the importance of linking claims to observable evidence. You will learn to identify indicators that support your claims, note any uncertainties, and establish checkpoints for reviewing findings. This process is the foundation for developing strong, defensible arguments based on scientific evidence."
         }
       ],
       "flashcards": [
         {
           "id": "oceanography-401-l01-f1",
-          "front": "ocean circulation dynamics",
-          "back": "A core analytical lens in Oceanography requiring careful assumption control."
+          "front": "Ocean Circulation Dynamics",
+          "back": "The study of large-scale ocean currents. Analyzing these dynamics requires clearly stating and testing all assumptions."
         },
         {
           "id": "oceanography-401-l01-f2",
-          "front": "marine ecosystem interactions",
-          "back": "Operational design practices that determine system reliability and execution quality."
+          "front": "Marine Ecosystem Interactions",
+          "back": "Designing studies of marine life interactions. Well-defined procedures are key to getting reliable and high-quality data."
         },
         {
           "id": "oceanography-401-l01-f3",
-          "front": "observation and measurement methods",
-          "back": "The evaluation framework used to validate outcomes and detect hidden costs."
+          "front": "Observation and Measurement Methods",
+          "back": "The techniques and tools used to collect ocean data. A strong evaluation framework is needed to validate results and identify unintended consequences."
         }
       ]
     },
@@ -88,9 +88,9 @@ export const Oceanography401Module: LearningModule = {
       "learningAids": [
         {
           "id": "oceanography-401-l02-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Document assumptions, show your reasoning chain, and verify your conclusions before submission."
+          "type": "image",
+          "title": "Workflow Diagramming",
+          "content": "Use a flowchart to map the steps of your proposed workflow. Include decision points, control gates, and feedback loops."
         }
       ],
       "chunks": [
@@ -98,13 +98,13 @@ export const Oceanography401Module: LearningModule = {
           "id": "oceanography-401-l02-c1",
           "kind": "practice",
           "title": "Workflow Construction and Test",
-          "content": "In this interactive lab, students will have the opportunity to design a workflow that highlights the importance of strategic leadership and the integration of policies and operations. They will also prepare for their capstone project defense and test the reliability of their designs under uncertain conditions. This hands-on experience will help them understand the complexities of managing oceanographic projects.\nContext recap: In this interactive lab, students will have the opportunity to design a workflow that highlights the importance of strategic leadership and the integration of policies and operations. They will also prepare for their capstone project defense and test the reliability of their designs under uncertain conditions. This hands-on experience will help them understand the complexities of managing oceanographic projects."
+          "content": "In this interactive lab, you will design a workflow that integrates strategic leadership with policy and operations. This hands-on experience will prepare you for your capstone project by testing the reliability of your designs under uncertain conditions, helping you understand the complexities of managing oceanographic projects."
         },
         {
           "id": "oceanography-401-l02-c2",
           "kind": "recap",
           "title": "Control Gates and Readiness",
-          "content": "In this recap, we will discuss the key elements needed for readiness in project management. Students will learn about the importance of mapping out ownership, setting criteria for decision gates, understanding rollback conditions, and identifying verification signals. These components are essential for ensuring that projects are well-prepared and can adapt to changes.\nContext recap: In this recap, we will discuss the key elements needed for readiness in project management. Students will learn about the importance of mapping out ownership, setting criteria for decision gates, understanding rollback conditions, and identifying verification signals. These components are essential for ensuring that projects are well-prepared and can adapt to changes."
+          "content": "This recap covers the key elements of project readiness. You will learn the importance of mapping ownership, setting criteria for decision gates, defining rollback conditions, and identifying verification signals. These components are essential for ensuring projects are well-prepared and can adapt to changes."
         }
       ],
       "interactiveActivities": [
@@ -172,8 +172,8 @@ export const Oceanography401Module: LearningModule = {
         {
           "id": "oceanography-401-l03-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Document assumptions, show your reasoning chain, and verify your conclusions before submission."
+          "title": "Review Your Foundations",
+          "content": "Before you begin, quickly review the key terms from Lesson 1: circulation dynamics, ecosystem interactions, and observation methods."
         }
       ],
       "questions": [
@@ -312,9 +312,9 @@ export const Oceanography401Module: LearningModule = {
       "learningAids": [
         {
           "id": "oceanography-401-l04-a1",
-          "type": "mnemonic",
-          "title": "Guided Practice",
-          "content": "Document assumptions, show your reasoning chain, and verify your conclusions before submission."
+          "type": "image",
+          "title": "Example Tradeoff Matrix",
+          "content": "A table comparing three policy options (e.g., Marine Protected Area, Fishing Quotas, Artificial Reef) across four criteria: Effectiveness, Cost, Fairness, and Feasibility."
         }
       ],
       "chunks": [
@@ -322,19 +322,19 @@ export const Oceanography401Module: LearningModule = {
           "id": "oceanography-401-l04-c1",
           "kind": "example",
           "title": "Case Context and Decision Stakes",
-          "content": "In this case study, we will focus on a coastal ecosystem that is being studied to balance the needs of fisheries, the effects of warming trends, and the impact of policy interventions. Students will learn to identify high-impact risks and competing constraints that affect decision-making in ocean management. This real-world context will help them understand the complexities of environmental stewardship.\nContext recap: In this case study, we will focus on a coastal ecosystem that is being studied to balance the needs of fisheries, the effects of warming trends, and the impact of policy interventions. Students will learn to identify high-impact risks and competing constraints that affect decision-making in ocean management. This real-world context will help them understand the complexities of environmental stewardship."
+          "content": "In this case study, we will analyze a coastal ecosystem to balance the needs of fisheries, the effects of warming trends, and the impact of policy interventions. You will learn to identify high-impact risks and competing constraints that affect decision-making in ocean management, providing a real-world context for environmental stewardship."
         },
         {
           "id": "oceanography-401-l04-c2",
           "kind": "concept",
           "title": "Tradeoff Matrix",
-          "content": "In this section, we will introduce a tradeoff matrix that helps students evaluate different intervention options. They will learn how to score these options based on their effectiveness, reliability, fairness, and feasibility of implementation. This tool will assist them in making informed decisions when addressing oceanographic challenges.\nContext recap: In this section, we will introduce a tradeoff matrix that helps students evaluate different intervention options. They will learn how to score these options based on their effectiveness, reliability, fairness, and feasibility of implementation. This tool will assist them in making informed decisions when addressing oceanographic challenges."
+          "content": "We will introduce a tradeoff matrix to help evaluate different intervention options. You will learn to score these options based on their effectiveness, reliability, fairness, and feasibility. This tool will assist you in making structured, informed decisions when addressing complex oceanographic challenges."
         },
         {
           "id": "oceanography-401-l04-c3",
           "kind": "recap",
           "title": "Failure Learning and Recovery",
-          "content": "In this recap, we will discuss how to learn from failures in project management. Students will explore how to transform patterns of failure into safeguards, create response playbooks, and implement monitoring updates. This approach will help them develop resilience and adaptability in their future oceanographic endeavors.\nContext recap: In this recap, we will discuss how to learn from failures in project management. Students will explore how to transform patterns of failure into safeguards, create response playbooks, and implement monitoring updates. This approach will help them develop resilience and adaptability in their future oceanographic endeavors."
+          "content": "This recap discusses how to learn from failures in project management. You will explore how to transform patterns of failure into safeguards, create response playbooks, and implement monitoring updates. This approach helps develop resilience and adaptability in your future oceanographic endeavors."
         }
       ],
       "flashcards": [
@@ -364,8 +364,8 @@ export const Oceanography401Module: LearningModule = {
         {
           "id": "oceanography-401-l05-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Document assumptions, show your reasoning chain, and verify your conclusions before submission."
+          "title": "Simulation Parameter Log",
+          "content": "Keep a log of the parameters you set for each simulation run. Note the uncertainty levels, success thresholds, and the rationale for your choices."
         }
       ],
       "chunks": [
@@ -373,13 +373,13 @@ export const Oceanography401Module: LearningModule = {
           "id": "oceanography-401-l05-c1",
           "kind": "practice",
           "title": "Simulation Setup",
-          "content": "In this interactive session, students will set up various intervention scenarios. They will configure parameters related to uncertainty and establish measurable success thresholds. This hands-on experience will allow them to understand how to design effective interventions in oceanography.\nContext recap: In this interactive session, students will set up various intervention scenarios. They will configure parameters related to uncertainty and establish measurable success thresholds. This hands-on experience will allow them to understand how to design effective interventions in oceanography.\nContext recap: In this interactive session, students will set up various intervention scenarios. They will configure parameters related to uncertainty and establish measurable success thresholds. This hands-on experience will allow them to understand how to design effective interventions in oceanography. Context recap: In this interactive session, students will set up various intervention scenarios.\nWhy this matters: Simulation Setup helps learners in Earth Science connect ideas from Oceanography Leadership and Capstone to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "In this interactive session, you will set up various intervention scenarios by configuring parameters related to uncertainty and establishing measurable success thresholds. This hands-on experience will allow you to understand how to design and test effective interventions in a simulated oceanographic environment."
         },
         {
           "id": "oceanography-401-l05-c2",
           "kind": "recap",
           "title": "Simulation Debrief",
-          "content": "In this recap, we will conduct a review of the simulation outcomes. Students will evaluate the results, identify any side effects, and assess how well their interventions align with governance constraints. This reflective process is crucial for understanding the implications of their decisions.\nContext recap: In this recap, we will conduct a review of the simulation outcomes. Students will evaluate the results, identify any side effects, and assess how well their interventions align with governance constraints. This reflective process is crucial for understanding the implications of their decisions.\nContext recap: In this recap, we will conduct a review of the simulation outcomes. Students will evaluate the results, identify any side effects, and assess how well their interventions align with governance constraints. This reflective process is crucial for understanding the implications of their decisions. Context recap: In this recap, we will conduct a review of the simulation outcomes.\nWhy this matters: Simulation Debrief helps learners in Earth Science connect ideas from Oceanography Leadership and Capstone to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "In this recap, we will conduct a review of the simulation outcomes. You will evaluate the results, identify any side effects, and assess how well your interventions align with governance constraints. This reflective process is crucial for understanding the full implications of your decisions."
         }
       ],
       "interactiveActivities": [
@@ -429,135 +429,135 @@ export const Oceanography401Module: LearningModule = {
         {
           "id": "oceanography-401-l06-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Document assumptions, show your reasoning chain, and verify your conclusions before submission."
+          "title": "Synthesize Your Learning",
+          "content": "Think about the case study and simulation. How do these practical exercises help in making better systems-level decisions?"
         }
       ],
       "questions": [
         {
           "id": "oceanography-401-l06-q1",
-          "text": "Which approach most improves decisions in ocean circulation dynamics?",
-          "skillId": "oceanography-401-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "Rely on assumptions that are never tested"
-            },
-            {
-              "id": "b",
-              "text": "Define constraints, test failure modes, and monitor indicators"
-            },
-            {
-              "id": "c",
-              "text": "Treat all contexts as identical"
-            },
-            {
-              "id": "d",
-              "text": "Avoid uncertainty analysis"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Reliable decisions require explicit constraints, failure tests, and measured signals."
-        },
-        {
-          "id": "oceanography-401-l06-q2",
-          "text": "The 401 level should emphasize:",
-          "skillId": "oceanography-401-skill-level",
-          "options": [
-            {
-              "id": "a",
-              "text": "strategic leadership, policy and operations integration, and capstone defense"
-            },
-            {
-              "id": "b",
-              "text": "Execution speed without review"
-            },
-            {
-              "id": "c",
-              "text": "No baselines or controls"
-            },
-            {
-              "id": "d",
-              "text": "Single perspective decision-making"
-            }
-          ],
-          "correctOptionId": "a",
-          "explanation": "This level is explicitly structured around strategic leadership, policy and operations integration, and capstone defense."
-        },
-        {
-          "id": "oceanography-401-l06-q3",
-          "text": "What best strengthens marine ecosystem interactions reliability?",
-          "skillId": "oceanography-401-skill-reliability",
-          "options": [
-            {
-              "id": "a",
-              "text": "Unowned workflows and unclear escalation"
-            },
-            {
-              "id": "b",
-              "text": "Control checkpoints, ownership mapping, and response thresholds"
-            },
-            {
-              "id": "c",
-              "text": "Untracked changes"
-            },
-            {
-              "id": "d",
-              "text": "No incident review"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Reliability depends on clear controls, owners, and threshold-driven responses."
-        },
-        {
-          "id": "oceanography-401-l06-q4",
-          "text": "For observation and measurement methods, which practice is most defensible?",
+          "text": "When analyzing a complex oceanography case study involving multiple stakeholders, what is the primary purpose of a tradeoff matrix?",
           "skillId": "oceanography-401-skill-eval",
           "options": [
             {
               "id": "a",
-              "text": "Use anecdotal wins only"
+              "text": "To prove one option is perfect"
             },
             {
               "id": "b",
-              "text": "Compare against baselines and include side-effect checks"
+              "text": "To systematically compare options across multiple, competing criteria"
             },
             {
               "id": "c",
-              "text": "Ignore difficult scenarios"
+              "text": "To select the cheapest option regardless of impact"
             },
             {
               "id": "d",
-              "text": "Adjust criteria after results"
+              "text": "To ignore stakeholder concerns and focus only on technical data"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Baseline and side-effect analysis prevents biased or incomplete conclusions."
+          "explanation": "A tradeoff matrix provides a structured way to evaluate different choices against key criteria like cost, effectiveness, and fairness, making the decision process transparent."
+        },
+        {
+          "id": "oceanography-401-l06-q2",
+          "text": "In a simulation of a coastal ecosystem intervention, what is the most critical reason to configure 'uncertainty' parameters?",
+          "skillId": "oceanography-401-skill-core",
+          "options": [
+            {
+              "id": "a",
+              "text": "To make the simulation harder to complete"
+            },
+            {
+              "id": "b",
+              "text": "To test how resilient a strategy is to unpredictable real-world conditions"
+            },
+            {
+              "id": "c",
+              "text": "To guarantee a successful outcome"
+            },
+            {
+              "id": "d",
+              "text": "To eliminate the need for real-world data collection"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Modeling uncertainty helps assess whether a proposed solution will hold up under various potential future conditions, which is crucial for risk management."
+        },
+        {
+          "id": "oceanography-401-l06-q3",
+          "text": "A 'failure pattern' identified from past projects is most useful for:",
+          "skillId": "oceanography-401-skill-reliability",
+          "options": [
+            {
+              "id": "a",
+              "text": "Assigning blame for past mistakes"
+            },
+            {
+              "id": "b",
+              "text": "Proactively designing safeguards and mitigations for a new project"
+            },
+            {
+              "id": "c",
+              "text": "Justifying why no new projects should be attempted"
+            },
+            {
+              "id": "d",
+              "text": "Creating overly complex and unnecessary procedures"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Understanding recurring reasons for failure allows teams to build targeted controls and plans to prevent those same issues from happening again."
+        },
+        {
+          "id": "oceanography-401-l06-q4",
+          "text": "What is the main advantage of creating a 'response playbook' before a project begins?",
+          "skillId": "oceanography-401-skill-reliability",
+          "options": [
+            {
+              "id": "a",
+              "text": "It ensures no problems will ever occur"
+            },
+            {
+              "id": "b",
+              "text": "It provides a pre-approved plan for rapid and safe recovery when a known risk occurs"
+            },
+            {
+              "id": "c",
+              "text": "It replaces the need for skilled personnel"
+            },
+            {
+              "id": "d",
+              "text": "It is only useful for public relations"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "A response playbook allows a team to react quickly and effectively to an incident, minimizing damage and recovery time by following tested procedures."
         },
         {
           "id": "oceanography-401-l06-q5",
-          "text": "A mature climate-ocean coupling model should include:",
+          "text": "How does a simulation debrief strengthen the connection between a proposed intervention and governance constraints?",
           "skillId": "oceanography-401-skill-governance",
           "options": [
             {
               "id": "a",
-              "text": "Policy disconnected from measurement"
+              "text": "By ignoring all constraints to encourage creativity"
             },
             {
               "id": "b",
-              "text": "Policy links, measurable thresholds, and corrective pathways"
+              "text": "By allowing an explicit review of whether outcomes and side effects violate established rules or policies"
             },
             {
               "id": "c",
-              "text": "No transparency obligations"
+              "text": "By focusing only on the positive outcomes of the simulation"
             },
             {
               "id": "d",
-              "text": "No remediation expectations"
+              "text": "By proving that governance constraints are unnecessary"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Governance maturity connects intention, measurement, and corrective response."
+          "explanation": "The debrief is a critical step to check if the simulated results, including unintended consequences, comply with the established governance framework."
         }
       ]
     },
@@ -569,9 +569,9 @@ export const Oceanography401Module: LearningModule = {
       "learningAids": [
         {
           "id": "oceanography-401-l07-a1",
-          "type": "image",
-          "title": "Guided Practice",
-          "content": "Document assumptions, show your reasoning chain, and verify your conclusions before submission."
+          "type": "infographic",
+          "title": "Accountability Flowchart",
+          "content": "A diagram illustrating the flow of a decision from proposal to implementation, highlighting points for stakeholder review, data traceability, and remediation."
         }
       ],
       "chunks": [
@@ -579,19 +579,19 @@ export const Oceanography401Module: LearningModule = {
           "id": "oceanography-401-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Mapping",
-          "content": "In this lesson, students will examine how the benefits and burdens of ocean policies are distributed among different stakeholders and over time. They will learn to map these impacts, which is essential for understanding the social and environmental implications of their decisions.\nContext recap: In this lesson, students will examine how the benefits and burdens of ocean policies are distributed among different stakeholders and over time. They will learn to map these impacts, which is essential for understanding the social and environmental implications of their decisions.\nContext recap: In this lesson, students will examine how the benefits and burdens of ocean policies are distributed among different stakeholders and over time. They will learn to map these impacts, which is essential for understanding the social and environmental implications of their decisions. Context recap: In this lesson, students will examine how the benefits and burdens of ocean policies are distributed among different stakeholders and over time. They will learn to map these impacts, which is essential for understanding the social and environmental implications of their decisions."
+          "content": "In this lesson, you will examine how the benefits and burdens of ocean policies are distributed among different stakeholders and over time. Learning to map these impacts is essential for understanding and addressing the social and environmental implications of your decisions."
         },
         {
           "id": "oceanography-401-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "In this section, we will discuss the concept of accountability in oceanographic projects. Students will learn about the importance of traceability, the rights to review decisions, and the obligations for remediation. Understanding these principles is vital for ensuring ethical practices in ocean management.\nContext recap: In this section, we will discuss the concept of accountability in oceanographic projects. Students will learn about the importance of traceability, the rights to review decisions, and the obligations for remediation. Understanding these principles is vital for ensuring ethical practices in ocean management.\nContext recap: In this section, we will discuss the concept of accountability in oceanographic projects. Students will learn about the importance of traceability, the rights to review decisions, and the obligations for remediation. Understanding these principles is vital for ensuring ethical practices in ocean management. Context recap: In this section, we will discuss the concept of accountability in oceanographic projects.\nWhy this matters: Accountability Architecture helps learners in Earth Science connect ideas from Oceanography Leadership and Capstone to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "We will discuss the concept of accountability in oceanographic projects. You will learn about the importance of traceability, the rights to review decisions, and the obligations for remediation. Understanding these principles is vital for ensuring ethical and transparent practices in ocean management."
         },
         {
           "id": "oceanography-401-l07-c3",
           "kind": "recap",
           "title": "Responsible Execution Checklist",
-          "content": "As we wrap up our lesson, we will engage with a detailed checklist that is specifically designed to bridge the gap between our technical abilities and crucial components such as policy, ethics, and the trust of the community members who are impacted by our work. This checklist is not just a list of tasks; it is a thoughtful guide that encourages us to reflect on our actions and decisions. By using this tool, we can ensure that our conduct is responsible and aligns with the core values and expectations of our community. It prompts us to consider how our work affects others and reinforces the importance of integrity and accountability in our field. By adhering to this checklist, we are taking steps to become more mindful leaders in oceanography and in any future endeavors we pursue. This practice not only enhances our professional skills but also fosters a sense of responsibility towards the environment and society, making us better stewards of the ocean and its resources.\nContext recap: As we wrap up our lesson, we will engage with a detailed checklist that is specifically designed to bridge the gap between our technical abilities and crucial components such as policy, ethics, and the trust of the community members who are impacted by our work. This checklist is not just a list of tasks; it is a thoughtful guide that encourages us to reflect on our actions and decisions. By using this tool, we can ensure that our conduct is responsible and aligns with the core values and expectations of our community. It prompts us to consider how our work affects others and reinforces the importance of integrity and accountability in our field."
+          "content": "We will conclude with a checklist designed to bridge the gap between technical work and its policy, ethical, and community impacts. This tool guides you to reflect on your decisions, ensuring your conduct is responsible and aligns with community values. It reinforces integrity and accountability, fostering your growth as a steward of the ocean."
         }
       ],
       "flashcards": [
@@ -621,8 +621,8 @@ export const Oceanography401Module: LearningModule = {
         {
           "id": "oceanography-401-l08-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Document assumptions, show your reasoning chain, and verify your conclusions before submission."
+          "title": "Capstone Charter Template",
+          "content": "Use the provided template to structure your capstone plan. Sections include: Problem Statement, Objectives, Key Metrics, Stakeholders, Risks, and Governance Plan."
         }
       ],
       "chunks": [
@@ -630,13 +630,13 @@ export const Oceanography401Module: LearningModule = {
           "id": "oceanography-401-l08-c1",
           "kind": "practice",
           "title": "Capstone Charter",
-          "content": "In this engaging activity, you will have the opportunity to create a comprehensive charter for your capstone project. This charter is an essential document that outlines your primary goal, identifies any challenges you may encounter, and specifies the criteria you will use to evaluate your success. Additionally, it will include governance gates, which are important checkpoints that will guide your decision-making throughout the project. Crafting this charter is a vital step in ensuring that your project is well-planned and organized, setting you up for success as you embark on this exciting journey in oceanography. By clearly defining your objectives and understanding the potential obstacles, you will be better prepared to navigate the complexities of your project. Remember, this charter will serve as your roadmap, helping you stay focused and aligned with your goals as you explore the fascinating world of ocean science. Take your time to think through each section carefully, as this will lay the foundation for a successful and impactful capstone experience.\nContext recap: In this engaging activity, you will have the opportunity to create a comprehensive charter for your capstone project. This charter is an essential document that outlines your primary goal, identifies any challenges you may encounter, and specifies the criteria you will use to evaluate your success. Additionally, it will include governance gates, which are important checkpoints that will guide your decision-making throughout the project. Crafting this charter is a vital step in ensuring that your project is well-planned and organized, setting you up for success as you embark on this exciting journey in oceanography."
+          "content": "In this activity, you will create a comprehensive charter for your capstone project. This document will outline your primary goal, identify potential challenges, and specify success criteria. It will also include governance gates to guide your decision-making. Crafting a clear charter is a vital step in ensuring your project is well-planned and organized."
         },
         {
           "id": "oceanography-401-l08-c2",
           "kind": "recap",
           "title": "Defense Readiness",
-          "content": "As you get ready for your capstone project, it's essential to gather solid evidence that will back up your arguments and help you respond thoughtfully to any critiques that might come up. These critiques could relate to your technical work, the policy choices you've made, and the different viewpoints of stakeholders involved in your project. By preparing in this way, you will not only strengthen your defenses but also improve your ability to communicate your ideas clearly and confidently. Practicing how to present your work effectively is key to engaging in constructive discussions. This preparation will help you showcase your project in a persuasive manner that is well-supported by facts and research. Ultimately, this practice is vital for becoming a strong advocate for your project and demonstrating its positive impact on the community you aim to serve.\nContext recap: As you get ready for your capstone project, it's essential to gather solid evidence that will back up your arguments and help you respond thoughtfully to any critiques that might come up. These critiques could relate to your technical work, the policy choices you've made, and the different viewpoints of stakeholders involved in your project. By preparing in this way, you will not only strengthen your defenses but also improve your ability to communicate your ideas clearly and confidently. Practicing how to present your work effectively is key to engaging in constructive discussions.\nWhy this matters: Defense Readiness helps learners in Earth Science connect ideas from Oceanography Leadership and Capstone to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "As you prepare for your capstone, it is essential to gather solid evidence to support your arguments and respond thoughtfully to critiques. This involves anticipating challenges related to your technical work, policy choices, and stakeholder viewpoints. This preparation will strengthen your defense and improve your ability to communicate your ideas clearly and confidently."
         }
       ],
       "interactiveActivities": [
@@ -656,6 +656,47 @@ export const Oceanography401Module: LearningModule = {
           "type": "debate_simulator",
           "title": "Decision Defense Panel",
           "description": "Defend your capstone decisions against technical, policy, and stakeholder objections."
+        }
+      ]
+    },
+    {
+      "id": "oceanography-401-l09",
+      "title": "Capstone Project Defense",
+      "type": "project",
+      "duration": 45,
+      "learningAids": [
+        {
+          "id": "oceanography-401-l09-a1",
+          "type": "checklist",
+          "title": "Defense Preparation Checklist",
+          "content": "Review your project charter, data analysis, stakeholder impact map, and tradeoff matrix. Prepare a 10-minute presentation and anticipate questions on your methodology and conclusions."
+        }
+      ],
+      "chunks": [
+        {
+          "id": "oceanography-401-l09-c1",
+          "kind": "project",
+          "title": "Final Project Submission and Defense",
+          "content": "Submit your complete capstone project, including your research, analysis, data, and final recommendations. You will then present your findings to a review panel, defending your analytical methods, justifying your tradeoffs, and explaining your stakeholder engagement plan. Ensure your submission is well-documented and follows the charter you developed."
+        },
+        {
+          "id": "oceanography-401-l09-c2",
+          "kind": "recap",
+          "title": "Synthesizing for Impact",
+          "content": "This capstone project is the culmination of your work in this course. It demonstrates your ability to integrate scientific analysis, operational planning, and ethical considerations to develop defensible recommendations. Reflect on how you have applied the core concepts to address a complex oceanographic challenge and communicate your solution effectively."
+        }
+      ],
+      "projectActivities": [
+        {
+          "id": "oceanography-401-l09-act1",
+          "type": "project_defense",
+          "title": "Present and Defend Your Recommendation",
+          "description": "Present your capstone project findings and recommendations to a review panel. Be prepared to defend your analytical methods, justify your tradeoffs, and explain your stakeholder engagement plan.",
+          "instructions": [
+            "Deliver a concise presentation of your project (10-15 minutes).",
+            "Answer critical review questions from the panel.",
+            "Demonstrate how your recommendation is resilient to challenges regarding data, policy, and ethics."
+          ]
         }
       ]
     }

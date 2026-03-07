@@ -1,332 +1,311 @@
 import type { LearningModule } from "@/lib/modules/types";
 
 export const GaokaoPrep101Module: LearningModule = {
-  id: "gaokao-prep-101",
-  title: "Gaokao Prep Foundations",
-  description: "Prepare for Gaokao with disciplined study cycles and exam-specific strategy.",
-  subject: "Exam Prep",
-  tags: ["exam-prep", "assessment", "advanced"],
-  minAge: 15,
-  maxAge: 20,
-  version: "1.0.0",
-  difficultyBand: "advanced",
-  localeSupport: ["en", "es", "fr", "de", "ar", "hi", "zh", "ja", "ko", "ru"],
-  thumbnail: "/placeholders/lesson-robot.svg",
-  learningObjectives: [
-    "Build structured Gaokao readiness workflows",
-    "Improve speed and accuracy under timed constraints",
-    "Use analytics-based revision loops to close weak areas"
+  "id": "gaokao-prep-101",
+  "title": "Gaokao Prep Foundations",
+  "description": "Master the Gaokao with a structured study plan, advanced exam strategies, and data-driven revision techniques.",
+  "subject": "Exam Prep",
+  "tags": [
+    "exam-prep",
+    "assessment",
+    "advanced"
   ],
-  quizBlueprint: {
-    frequency: "weekly_assessment",
-    questionsPerCheck: 20,
-    totalQuestions: 20,
-    timeLimitMinutes: 25,
-    questionTypes: [{ type: "mcq_single", percentage: 100, pointsEach: 1, bloomsLevels: [1, 2, 3, 4] }],
-    difficultyDistribution: { easy: 6, medium: 10, hard: 4 },
-    feedbackMode: "after_submit",
-    adaptive: false,
-    masteryThreshold: 0.8
+  "minAge": 15,
+  "maxAge": 20,
+  "version": "1.1.0",
+  "difficultyBand": "advanced",
+  "localeSupport": [
+    "en",
+    "es",
+    "fr",
+    "de",
+    "ar",
+    "hi",
+    "zh",
+    "ja",
+    "ko",
+    "ru"
+  ],
+  "thumbnail": "/placeholders/lesson-robot.svg",
+  "learningObjectives": [
+    "Develop a disciplined study schedule for Gaokao subjects.",
+    "Improve problem-solving speed and accuracy under timed conditions.",
+    "Use an error analysis system to identify and fix knowledge gaps."
+  ],
+  "quizBlueprint": {
+    "frequency": "weekly_assessment",
+    "questionsPerCheck": 20,
+    "totalQuestions": 20,
+    "timeLimitMinutes": 25,
+    "questionTypes": [
+      {
+        "type": "mcq_single",
+        "percentage": 100,
+        "pointsEach": 1,
+        "bloomsLevels": [
+          1,
+          2,
+          3,
+          4
+        ]
+      }
+    ],
+    "difficultyDistribution": {
+      "easy": 6,
+      "medium": 10,
+      "hard": 4
+    },
+    "feedbackMode": "after_submit",
+    "adaptive": false,
+    "masteryThreshold": 0.8
   },
-  lessons: [
+  "lessons": [
     {
-      id: "gaokao-prep-101-l01",
-      title: "Gaokao: Gaokao Structure and Planning",
-      type: "video",
-      duration: 11,
-      learningAids: [
+      "id": "gaokao-prep-101-l01",
+      "title": "Understanding the Gaokao: Structure and Study Planning",
+      "type": "video",
+      "duration": 11,
+      "learningAids": [
         {
           "id": "gaokao-prep-101-l01-a1",
           "type": "image",
-          "title": "Core Subjects Snapshot",
-          "content": "Visual anchor for Gaokao: Gaokao Structure and Planning with emphasis on core subjects within practice set planning."
+          "title": "Gaokao Exam Blueprint",
+          "content": "Infographic showing the subjects, sections, question types, and scoring for the National College Entrance Examination."
         },
         {
           "id": "gaokao-prep-101-l01-a2",
           "type": "animation",
-          "title": "Speed Walkthrough",
-          "content": "Stepwise walkthrough for Gaokao: Gaokao Structure and Planning showing speed decisions and strategy log checks."
+          "title": "Sample Study Cycle",
+          "content": "Animation demonstrating a weekly study cycle, including subject blocks, practice tests, and review sessions."
         }
       ]
     },
     {
-      id: "gaokao-prep-101-l02",
-      title: "Gaokao: Chinese Language Performance",
-      type: "interactive",
-      duration: 14,
-      metadata: {
-        prompts: [
-          "Identify one core subjects decision rule in Gaokao: Chinese Language Performance.",
-          "Apply it in one passage set and show how it improves evidence and language precision.",
-          "Set one next-step target for speed before your next Gaokao readiness session."
+      "id": "gaokao-prep-101-l02",
+      "title": "Mastering Gaokao Chinese: Reading and Analysis",
+      "type": "interactive",
+      "duration": 14,
+      "metadata": {
+        "prompts": [
+          "Identify a key theme in a classical Chinese passage.",
+          "Explain how literary devices support this theme.",
+          "Set a goal for improving your passage analysis speed."
         ]
       },
-      interactiveActivities: [
+      "interactiveActivities": [
         {
           "id": "gaokao-prep-101-l02-ia1",
-          "type": "drag_and_drop",
-          "title": "Gaokao: Chinese Language Performance Decision-Phase Mapping",
-          "description": "Map each decision cue to Plan, Execute, or Reflect.",
+          "type": "sorting_buckets",
+          "title": "Literary Element Sort",
+          "description": "Categorize phrases from a classical Chinese text as either 'Main Idea', 'Supporting Detail', or 'Literary Device'.",
           "estimatedMinutes": 8,
           "difficultyLevel": "medium",
           "instructions": [
-            "Assign each decision cue to the best phase.",
-            "Check all mappings.",
-            "Capture one improvement target."
+            "Read each phrase from the text.",
+            "Drag it to the bucket that best describes its function.",
+            "Review your choices to understand passage structure."
           ],
           "data": {
-            "targets": [
+            "buckets": [
               {
-                "id": "plan",
-                "label": "Discipline Plan"
+                "id": "main_idea",
+                "label": "Main Idea"
               },
               {
-                "id": "execute",
-                "label": "Section Control"
+                "id": "supporting_detail",
+                "label": "Supporting Detail"
               },
               {
-                "id": "reflect",
-                "label": "Notebook Review"
+                "id": "literary_device",
+                "label": "Literary Device"
               }
             ],
-            "draggables": [
+            "items": [
               {
-                "id": "d1",
-                "label": "Set daily Gaokao subject cycles with strict recovery windows",
-                "correctTargetId": "plan"
+                "id": "i1",
+                "label": "A statement summarizing the author's core argument.",
+                "correctBucketId": "main_idea"
               },
               {
-                "id": "d2",
-                "label": "Use section checkpoints to protect accuracy under pace pressure",
-                "correctTargetId": "execute"
+                "id": "i2",
+                "label": "A specific historical fact used as evidence.",
+                "correctBucketId": "supporting_detail"
               },
               {
-                "id": "d3",
-                "label": "Update error notebook with cause, fix, and retest date",
-                "correctTargetId": "reflect"
+                "id": "i3",
+                "label": "A metaphor comparing nature to human struggle.",
+                "correctBucketId": "literary_device"
               }
             ]
           }
         }
       ],
-      learningAids: [
+      "learningAids": [
         {
           "id": "gaokao-prep-101-l02-a1",
           "type": "image",
-          "title": "Core Subjects Snapshot",
-          "content": "Visual anchor for Gaokao: Chinese Language Performance with emphasis on core subjects within passage set planning."
+          "title": "Chinese Passage Annotation Guide",
+          "content": "A visual guide showing how to mark up reading passages for themes, evidence, and author's tone."
         },
         {
           "id": "gaokao-prep-101-l02-a2",
           "type": "animation",
-          "title": "Speed Walkthrough",
-          "content": "Stepwise walkthrough for Gaokao: Chinese Language Performance showing speed decisions and annotation map checks."
+          "title": "Model Essay Structure",
+          "content": "Animation breaking down the components of a high-scoring Gaokao essay."
         }
       ]
     },
     {
-      id: "gaokao-prep-101-l03",
-      title: "Gaokao: Mathematics Intensive Strategy",
-      type: "quiz",
-      duration: 12,
-      questions: [
+      "id": "gaokao-prep-101-l03",
+      "title": "Gaokao Mathematics: Problem-Solving Strategies",
+      "type": "quiz",
+      "duration": 12,
+      "questions": [
         {
           "id": "gaokao-prep-101-l03-q1",
-          "text": "During Gaokao: Mathematics Intensive Strategy, early guesses are causing core subjects losses. Which intervention should happen first?",
-          "skillId": "gaokao-prep-101-skill-core-subjects-workflow",
+          "text": "You're consistently making careless errors in early math problems. What's the best first step to fix this?",
+          "skillId": "skill-error-analysis",
           "options": [
             {
               "id": "a",
-              "text": "Keep the same pace and hope accuracy normalizes later."
+              "text": "Keep the same pace and hope it gets better with practice."
             },
             {
               "id": "b",
-              "text": "Memorize answer patterns instead of checking reasoning."
+              "text": "Memorize answer patterns for the first few questions."
             },
             {
               "id": "c",
-              "text": "Use a short verification pass and log decision triggers in a setup sheet before restarting the drill."
+              "text": "Slow down for the first 10 minutes, double-check initial steps, and log the types of errors you catch."
             },
             {
               "id": "d",
-              "text": "Delay all correction until the weekend review session."
+              "text": "Skip the first few questions and come back to them later."
             }
           ],
           "correctOptionId": "c",
-          "hint": "Pick the option that creates immediate corrective feedback.",
-          "explanation": "Quick structured verification catches repeatable process errors before they spread across the next set."
+          "hint": "The best strategies involve immediate, focused changes to your process.",
+          "explanation": "Slowing down and actively checking your work at the beginning of a test builds momentum and prevents early mistakes from causing bigger problems later."
         },
         {
           "id": "gaokao-prep-101-l03-q2",
-          "text": "A Gaokao drill on Gaokao: Mathematics Intensive Strategy ends with unstable pacing. What should be diagnosed first?",
-          "skillId": "gaokao-prep-101-skill-speed-diagnosis",
+          "text": "Your pacing is inconsistent during math drills. What's the most effective way to diagnose the problem?",
+          "skillId": "skill-time-management",
           "options": [
             {
               "id": "a",
-              "text": "Retake the same drill immediately without analysis."
+              "text": "Redo the same drill immediately at a faster speed."
             },
             {
               "id": "b",
-              "text": "Memorize answer keys without tracking timing behavior."
+              "text": "Ask a friend how long they take on each question."
             },
             {
               "id": "c",
-              "text": "Increase question volume while keeping the same pacing errors."
+              "text": "Do more questions to increase your overall speed."
             },
             {
               "id": "d",
-              "text": "Pinpoint where speed decisions consume extra time, then redesign attempt order with checkpoints."
+              "text": "Analyze your time per question to find which problem types are slowing you down, then practice them specifically."
             }
           ],
           "correctOptionId": "d",
-          "hint": "Look for the answer that isolates a measurable timing bottleneck.",
-          "explanation": "Pacing issues usually come from specific speed decision points, not from total question count alone."
+          "hint": "Look for the answer that uses data to find the root cause of the issue.",
+          "explanation": "Effective time management comes from identifying specific bottlenecks, not just trying to go faster overall."
         },
         {
           "id": "gaokao-prep-101-l03-q3",
-          "text": "Which one-week sprint most improves accuracy transfer for Gaokao: Mathematics Intensive Strategy in Gaokao?",
-          "skillId": "gaokao-prep-101-skill-accuracy-transfer",
+          "text": "Which weekly plan is most likely to improve your math accuracy?",
+          "skillId": "skill-study-planning",
           "options": [
             {
               "id": "a",
-              "text": "Run two targeted correction blocks, one mixed timed problem set, and one retest focused on the same accuracy objective."
+              "text": "Two sessions on your weakest topic, one mixed practice test, and one re-test of corrected errors."
             },
             {
               "id": "b",
-              "text": "Use only untimed review until confidence feels high."
+              "text": "Only untimed practice until you feel more confident."
             },
             {
               "id": "c",
-              "text": "Rotate random topics daily with no retest queue."
+              "text": "Studying a different random topic each day."
             },
             {
               "id": "d",
-              "text": "Delay all error correction until the final day."
+              "text": "Saving all your error correction for the weekend."
             }
           ],
           "correctOptionId": "a",
-          "hint": "Best plans combine remediation and timed validation.",
-          "explanation": "Transfer improves when learners re-encounter corrected skills under realistic constraints."
+          "hint": "A good plan combines focused practice on weak areas with testing under realistic conditions.",
+          "explanation": "Improvement requires a cycle of targeted learning, mixed practice to simulate the exam, and re-testing to ensure the lessons stick."
         },
         {
           "id": "gaokao-prep-101-l03-q4",
-          "text": "In Gaokao Gaokao: Mathematics Intensive Strategy, there are both content misses and pacing slips. What should the learner fix first?",
-          "skillId": "gaokao-prep-101-skill-stress-control-priority",
+          "text": "You're struggling with both difficult concepts and managing your time. What should you fix first?",
+          "skillId": "skill-exam-resilience",
           "options": [
             {
               "id": "a",
-              "text": "Tackle the rarest concept gap first for variety."
+              "text": "The rarest and most difficult concept."
             },
             {
               "id": "b",
-              "text": "Prioritize the repeated stress control process issue, then apply the same correction across the next timed block."
+              "text": "Your time management strategy, as it affects all questions."
             },
             {
               "id": "c",
-              "text": "Review only confidence items and skip timing analysis."
+              "text": "Only the topics you feel confident about."
             },
             {
               "id": "d",
-              "text": "Change resources without identifying what failed."
+              "text": "Switch to a new textbook."
             }
           ],
           "correctOptionId": "b",
-          "hint": "Look for the answer that addresses recurrence.",
-          "explanation": "Recurring process errors compound quickly, so fixing them first creates cleaner conditions for content correction."
-        },
-        {
-          "id": "gaokao-prep-101-l03-q5",
-          "text": "In Gaokao core language section, inference cue miss appears during Gaokao: Mathematics Intensive Strategy. What is the strongest immediate correction?",
-          "skillId": "gaokao-prep-101-skill-core-subjects-section-application",
-          "options": [
-            {
-              "id": "a",
-              "text": "Ignore core language section diagnostics and continue for volume."
-            },
-            {
-              "id": "b",
-              "text": "Re-read notes without running a corrected attempt."
-            },
-            {
-              "id": "c",
-              "text": "Mark transition cues and author stance before final response choice."
-            },
-            {
-              "id": "d",
-              "text": "Delay correction until after several unrelated drills."
-            }
-          ],
-          "correctOptionId": "c",
-          "hint": "Choose the option that directly fixes inference cue miss.",
-          "explanation": "Immediate correction inside core language section improves transfer to the next timed problem set."
-        },
-        {
-          "id": "gaokao-prep-101-l03-q6",
-          "text": "During Gaokao mathematics section, mid-section pace collapse repeats in Gaokao: Mathematics Intensive Strategy. Which plan should be applied before the next retest?",
-          "skillId": "gaokao-prep-101-skill-speed-section-application",
-          "options": [
-            {
-              "id": "a",
-              "text": "Switch to new content before validating the fix."
-            },
-            {
-              "id": "b",
-              "text": "Increase speed without updating process controls."
-            },
-            {
-              "id": "c",
-              "text": "Retake the section with no checkpoint changes."
-            },
-            {
-              "id": "d",
-              "text": "Trigger skip-return protocol on high-friction clusters. Track outcomes in an error notebook retest sheet and retest the same pattern."
-            }
-          ],
-          "correctOptionId": "d",
-          "hint": "Best plans combine targeted correction with measurable tracking.",
-          "explanation": "A logged correction cycle in error notebook retest sheet makes the pacing fix visible and repeatable."
+          "hint": "Prioritize the fix that has the broadest impact on your score.",
+          "explanation": "Fixing a fundamental process issue like time management will improve your performance across the entire test, creating better conditions to tackle content gaps."
         }
       ],
-      interactiveActivities: [
+      "interactiveActivities": [
         {
           "id": "gaokao-prep-101-l03-ia1",
           "type": "matching_pairs",
-          "title": "Gaokao: Mathematics Intensive Strategy Correction Alignment",
-          "description": "Align each recurring signal with the strongest correction action for method and accuracy precision.",
+          "title": "Math Strategy Matching",
+          "description": "Match each common math challenge with the most effective strategy to overcome it.",
           "estimatedMinutes": 8,
           "difficultyLevel": "medium",
           "instructions": [
-            "Align each pair.",
-            "Check your result.",
-            "Apply one correction in the next drill."
+            "Read each challenge on the left.",
+            "Find the best strategic response on the right.",
+            "Match the pairs to build your problem-solving toolkit."
           ],
           "data": {
             "left": [
               {
                 "id": "l1",
-                "label": "Chinese reading response misses key inference cue"
+                "label": "Making calculation errors on simple problems."
               },
               {
                 "id": "l2",
-                "label": "Math section stalls on mid-paper hard cluster"
+                "label": "Getting stuck on complex geometry questions."
               },
               {
                 "id": "l3",
-                "label": "Error notebook exists but review loop is inconsistent"
+                "label": "Forgetting key formulas under pressure."
               }
             ],
             "right": [
               {
                 "id": "r1",
-                "label": "Highlight claim transition words before drafting response"
+                "label": "Implement a 2-minute final check to verify arithmetic."
               },
               {
                 "id": "r2",
-                "label": "Apply skip-return protocol and secure medium-difficulty marks first"
+                "label": "Use a 'skip-and-return' strategy to solve easier problems first."
               },
               {
                 "id": "r3",
-                "label": "Schedule fixed weekly retest of top repeated errors"
+                "label": "Create and review formula flashcards daily."
               }
             ],
             "pairs": [
@@ -346,15 +325,15 @@ export const GaokaoPrep101Module: LearningModule = {
           }
         }
       ],
-      quizBlueprint: {
+      "quizBlueprint": {
         "frequency": "lesson_assessment",
-        "questionsPerCheck": 6,
-        "totalQuestions": 6,
-        "timeLimitMinutes": 12,
+        "questionsPerCheck": 4,
+        "totalQuestions": 4,
+        "timeLimitMinutes": 10,
         "questionTypes": [
           {
             "type": "mcq_single",
-            "count": 6,
+            "count": 4,
             "pointsEach": 1,
             "bloomsLevels": [
               1,
@@ -364,300 +343,207 @@ export const GaokaoPrep101Module: LearningModule = {
           }
         ],
         "difficultyDistribution": {
-          "easy": 2,
-          "medium": 3,
+          "easy": 1,
+          "medium": 2,
           "hard": 1
         },
         "feedbackMode": "after_submit",
         "adaptive": false,
         "masteryThreshold": 0.75
       },
-      metadata: {
-        examDrill: "lesson_drill"
+      "metadata": {
+        "examDrill": "lesson_drill"
       },
-      learningAids: [
+      "learningAids": [
         {
           "id": "gaokao-prep-101-l03-a1",
           "type": "image",
-          "title": "Core Subjects Snapshot",
-          "content": "Visual anchor for Gaokao: Mathematics Intensive Strategy with emphasis on core subjects within problem set planning."
+          "title": "Math Problem-Type Decision Tree",
+          "content": "Flowchart helping students quickly identify the type of math problem and the best strategy to solve it."
         },
         {
           "id": "gaokao-prep-101-l03-a2",
           "type": "animation",
-          "title": "Speed Walkthrough",
-          "content": "Stepwise walkthrough for Gaokao: Mathematics Intensive Strategy showing speed decisions and setup sheet checks."
+          "title": "Solving a Multi-Step Problem",
+          "content": "Step-by-step animation of solving a complex Gaokao math problem, highlighting key decision points."
         }
       ]
     },
     {
-      id: "gaokao-prep-101-l04",
-      title: "Gaokao: English Exam Techniques",
-      type: "interactive",
-      duration: 14,
-      metadata: {
-        prompts: [
-          "Identify one core subjects decision rule in Gaokao: English Exam Techniques.",
-          "Apply it in one passage set and show how it improves evidence and language precision.",
-          "Set one next-step target for speed before your next Gaokao readiness session."
+      "id": "gaokao-prep-101-l04",
+      "title": "Gaokao English: Comprehension and Composition",
+      "type": "interactive",
+      "duration": 14,
+      "metadata": {
+        "prompts": [
+          "Identify the main idea in an English reading passage.",
+          "Find two pieces of evidence that support the main idea.",
+          "Set a personal goal for improving your English writing clarity."
         ]
       },
-      interactiveActivities: [
+      "interactiveActivities": [
         {
           "id": "gaokao-prep-101-l04-ia1",
-          "type": "drag_and_drop",
-          "title": "Gaokao: English Exam Techniques Decision-Phase Mapping",
-          "description": "Map each decision cue to Plan, Execute, or Reflect.",
+          "type": "matching_pairs",
+          "title": "Grammar Error Matching",
+          "description": "Match the incorrect sentence with the type of grammatical error it contains.",
           "estimatedMinutes": 8,
           "difficultyLevel": "medium",
           "instructions": [
-            "Assign each decision cue to the best phase.",
-            "Check all mappings.",
-            "Capture one improvement target."
+            "Read each incorrect sentence on the left.",
+            "Identify the specific grammar rule that is broken.",
+            "Match the sentence to the correct error type on the right."
           ],
           "data": {
-            "targets": [
+            "left": [
               {
-                "id": "plan",
-                "label": "Discipline Plan"
+                "id": "l1",
+                "label": "The team of players are celebrating."
               },
               {
-                "id": "execute",
-                "label": "Section Control"
+                "id": "l2",
+                "label": "Yesterday, I will go to the store."
               },
               {
-                "id": "reflect",
-                "label": "Notebook Review"
+                "id": "l3",
+                "label": "She gave the book to John and I."
               }
             ],
-            "draggables": [
+            "right": [
               {
-                "id": "d1",
-                "label": "Set daily Gaokao subject cycles with strict recovery windows",
-                "correctTargetId": "plan"
+                "id": "r1",
+                "label": "Subject-Verb Agreement Error"
               },
               {
-                "id": "d2",
-                "label": "Use section checkpoints to protect accuracy under pace pressure",
-                "correctTargetId": "execute"
+                "id": "r2",
+                "label": "Incorrect Verb Tense"
               },
               {
-                "id": "d3",
-                "label": "Update error notebook with cause, fix, and retest date",
-                "correctTargetId": "reflect"
+                "id": "r3",
+                "label": "Pronoun Case Error"
+              }
+            ],
+            "pairs": [
+              {
+                "leftId": "l1",
+                "rightId": "r1"
+              },
+              {
+                "leftId": "l2",
+                "rightId": "r2"
+              },
+              {
+                "leftId": "l3",
+                "rightId": "r3"
               }
             ]
           }
         }
       ],
-      learningAids: [
+      "learningAids": [
         {
           "id": "gaokao-prep-101-l04-a1",
           "type": "image",
-          "title": "Core Subjects Snapshot",
-          "content": "Visual anchor for Gaokao: English Exam Techniques with emphasis on core subjects within passage set planning."
+          "title": "Common English Idioms and Phrases",
+          "content": "Infographic listing frequently tested idioms with examples."
         },
         {
           "id": "gaokao-prep-101-l04-a2",
           "type": "animation",
-          "title": "Speed Walkthrough",
-          "content": "Stepwise walkthrough for Gaokao: English Exam Techniques showing speed decisions and annotation map checks."
+          "title": "English Essay Outline",
+          "content": "Animation showing how to structure a compelling English essay, from introduction to conclusion."
         }
       ]
     },
     {
-      id: "gaokao-prep-101-l05",
-      title: "Gaokao: Elective Subject Mastery",
-      type: "video",
-      duration: 11,
-      learningAids: [
+      "id": "gaokao-prep-101-l05",
+      "title": "Strategies for Elective Subjects (Science/Humanities)",
+      "type": "video",
+      "duration": 11,
+      "learningAids": [
         {
           "id": "gaokao-prep-101-l05-a1",
           "type": "image",
-          "title": "Core Subjects Snapshot",
-          "content": "Visual anchor for Gaokao: Elective Subject Mastery with emphasis on core subjects within practice set planning."
+          "title": "Science vs. Humanities Study Models",
+          "content": "A comparative chart showing effective study techniques for memorization-heavy vs. problem-solving-heavy subjects."
         },
         {
           "id": "gaokao-prep-101-l05-a2",
           "type": "animation",
-          "title": "Speed Walkthrough",
-          "content": "Stepwise walkthrough for Gaokao: Elective Subject Mastery showing speed decisions and strategy log checks."
+          "title": "Concept Mapping for History",
+          "content": "Animation demonstrating how to create a concept map to link historical events, figures, and causes."
         }
       ]
     },
     {
-      id: "gaokao-prep-101-l06",
-      title: "Gaokao: Speed and Accuracy Training",
-      type: "quiz",
-      duration: 12,
-      questions: [
+      "id": "gaokao-prep-101-l06",
+      "title": "Building Speed and Maintaining Accuracy",
+      "type": "quiz",
+      "duration": 12,
+      "questions": [
         {
           "id": "gaokao-prep-101-l06-q1",
-          "text": "Gaokao coaching notes show repeated speed misses in Gaokao: Speed and Accuracy Training. What should the learner do before the next timed block?",
-          "skillId": "gaokao-prep-101-skill-speed-workflow",
+          "text": "Your practice test results show you are accurate but too slow. What is the best way to improve your speed?",
+          "skillId": "skill-time-management",
           "options": [
             {
               "id": "a",
-              "text": "Jump to harder content before confirming the root cause."
+              "text": "Jump to harder content to challenge yourself."
             },
             {
               "id": "b",
-              "text": "Rebuild the solve workflow on two representative timed block items, then retest with the same constraints."
+              "text": "Practice with timed mini-drills on specific question types to build fluency."
             },
             {
               "id": "c",
-              "text": "Track only final score and ignore process notes."
+              "text": "Focus only on your final score and ignore how long it takes."
             },
             {
               "id": "d",
-              "text": "Switch strands even though speed is still the top weakness."
+              "text": "Stop practicing and just review your notes."
             }
           ],
           "correctOptionId": "b",
-          "hint": "Choose the option that improves process quality, not just volume.",
-          "explanation": "When speed is unstable, workflow repair plus immediate retest creates the fastest reliable gains."
+          "hint": "Improving speed requires practicing under timed conditions.",
+          "explanation": "Targeted, timed drills on familiar problems build speed and confidence, which then translates to better performance on full-length tests."
         },
         {
           "id": "gaokao-prep-101-l06-q2",
-          "text": "In Gaokao: Speed and Accuracy Training, pace drops late even when early accuracy is strong. Which move best addresses this Gaokao pattern?",
-          "skillId": "gaokao-prep-101-skill-accuracy-diagnosis",
+          "text": "You start practice tests strong, but your accuracy drops near the end. What does this pattern suggest?",
+          "skillId": "skill-exam-resilience",
           "options": [
             {
               "id": "a",
-              "text": "Spend more time on every item to avoid mistakes."
+              "text": "You should spend more time on every question to be safe."
             },
             {
               "id": "b",
-              "text": "Memorize answer keys without tracking timing behavior."
+              "text": "You need to work on your mental stamina and pacing."
             },
             {
               "id": "c",
-              "text": "Introduce phase checkpoints and a cut-loss rule around high-friction accuracy items."
+              "text": "The questions at the end are always harder."
             },
             {
               "id": "d",
-              "text": "Use random breaks with no fixed transition points."
-            }
-          ],
-          "correctOptionId": "c",
-          "hint": "Look for a solution tied to timing behavior, not memory.",
-          "explanation": "Late-section drift usually comes from unmanaged friction points, not lack of content knowledge."
-        },
-        {
-          "id": "gaokao-prep-101-l06-q3",
-          "text": "Which one-week plan best improves core subjects transfer for Gaokao readiness in Gaokao?",
-          "skillId": "gaokao-prep-101-skill-core-subjects-transfer",
-          "options": [
-            {
-              "id": "a",
-              "text": "Use only untimed warmups and avoid mixed sets."
-            },
-            {
-              "id": "b",
-              "text": "Choose random topics daily without a remediation queue."
-            },
-            {
-              "id": "c",
-              "text": "Delay all review tasks until the final week."
-            },
-            {
-              "id": "d",
-              "text": "Alternate mixed-difficulty sets with targeted remediation, then re-test the same core subjects objective under timing constraints."
-            }
-          ],
-          "correctOptionId": "d",
-          "hint": "The strongest plan combines correction and timed transfer.",
-          "explanation": "Transfer improves when correction cycles are followed by fresh timed retrieval of the same core subjects target."
-        },
-        {
-          "id": "gaokao-prep-101-l06-q4",
-          "text": "After a Gaokao: Speed and Accuracy Training drill, which remediation should be prioritized first for score impact in Gaokao?",
-          "skillId": "gaokao-prep-101-skill-stress-control-priority",
-          "options": [
-            {
-              "id": "a",
-              "text": "Fix repeated stress control breakdowns first because they scale across many items in the same run."
-            },
-            {
-              "id": "b",
-              "text": "Start with already-mastered tasks to build comfort."
-            },
-            {
-              "id": "c",
-              "text": "Rewrite notes without testing changes in a timed set."
-            },
-            {
-              "id": "d",
-              "text": "Ignore pacing because content accuracy matters more."
-            }
-          ],
-          "correctOptionId": "a",
-          "hint": "Choose the fix with the widest downstream effect.",
-          "explanation": "High-frequency process breakdowns usually produce the largest immediate score delta when corrected first."
-        },
-        {
-          "id": "gaokao-prep-101-l06-q5",
-          "text": "In Gaokao core language section, inference cue miss appears during Gaokao: Speed and Accuracy Training. What is the strongest immediate correction?",
-          "skillId": "gaokao-prep-101-skill-speed-section-application",
-          "options": [
-            {
-              "id": "a",
-              "text": "Ignore core language section diagnostics and continue for volume."
-            },
-            {
-              "id": "b",
-              "text": "Mark transition cues and author stance before final response choice."
-            },
-            {
-              "id": "c",
-              "text": "Re-read notes without running a corrected attempt."
-            },
-            {
-              "id": "d",
-              "text": "Delay correction until after several unrelated drills."
+              "text": "You should take a long break in the middle of the test."
             }
           ],
           "correctOptionId": "b",
-          "hint": "Choose the option that directly fixes inference cue miss.",
-          "explanation": "Immediate correction inside core language section improves transfer to the next timed timed block."
-        },
-        {
-          "id": "gaokao-prep-101-l06-q6",
-          "text": "During Gaokao mathematics section, mid-section pace collapse repeats in Gaokao: Speed and Accuracy Training. Which plan should be applied before the next retest?",
-          "skillId": "gaokao-prep-101-skill-accuracy-section-application",
-          "options": [
-            {
-              "id": "a",
-              "text": "Switch to new content before validating the fix."
-            },
-            {
-              "id": "b",
-              "text": "Increase speed without updating process controls."
-            },
-            {
-              "id": "c",
-              "text": "Trigger skip-return protocol on high-friction clusters. Track outcomes in an error notebook retest sheet and retest the same pattern."
-            },
-            {
-              "id": "d",
-              "text": "Retake the section with no checkpoint changes."
-            }
-          ],
-          "correctOptionId": "c",
-          "hint": "Best plans combine targeted correction with measurable tracking.",
-          "explanation": "A logged correction cycle in error notebook retest sheet makes the pacing fix visible and repeatable."
+          "hint": "Consider factors beyond just knowledge, like focus and energy.",
+          "explanation": "A drop in accuracy over time often points to mental fatigue. Practicing with full-length simulations and having a clear pacing plan can help maintain focus."
         }
       ],
-      interactiveActivities: [
+      "interactiveActivities": [
         {
           "id": "gaokao-prep-101-l06-ia1",
           "type": "drag_and_drop",
-          "title": "Gaokao: Speed and Accuracy Training Pace Control Board",
-          "description": "Place each tactic in the right phase to stabilize pacing.",
+          "title": "Pace Control Board",
+          "description": "Place each tactic in the right phase of a timed drill to build a strong pacing strategy.",
           "estimatedMinutes": 8,
           "difficultyLevel": "medium",
           "instructions": [
-            "Assign each tactic to Plan, Execute, or Recover.",
+            "Assign each tactic to the Plan, Execute, or Review phase.",
             "Check your placements.",
             "Apply one tactic in your next timed drill."
           ],
@@ -672,39 +558,39 @@ export const GaokaoPrep101Module: LearningModule = {
                 "label": "Execute"
               },
               {
-                "id": "recover",
-                "label": "Recover"
+                "id": "review",
+                "label": "Review"
               }
             ],
             "draggables": [
               {
                 "id": "d1",
-                "label": "Set daily Gaokao subject cycles with strict recovery windows",
+                "label": "Identify 'quick win' question types to answer first.",
                 "correctTargetId": "plan"
               },
               {
                 "id": "d2",
-                "label": "Use section checkpoints to protect accuracy under pace pressure",
+                "label": "Use a timer for each section to stay on track.",
                 "correctTargetId": "execute"
               },
               {
                 "id": "d3",
-                "label": "Update error notebook with cause, fix, and retest date",
-                "correctTargetId": "recover"
+                "label": "Analyze drills to see where you lost the most time.",
+                "correctTargetId": "review"
               }
             ]
           }
         }
       ],
-      quizBlueprint: {
+      "quizBlueprint": {
         "frequency": "lesson_assessment",
-        "questionsPerCheck": 6,
-        "totalQuestions": 6,
-        "timeLimitMinutes": 12,
+        "questionsPerCheck": 2,
+        "totalQuestions": 2,
+        "timeLimitMinutes": 5,
         "questionTypes": [
           {
             "type": "mcq_single",
-            "count": 6,
+            "count": 2,
             "pointsEach": 1,
             "bloomsLevels": [
               1,
@@ -714,352 +600,296 @@ export const GaokaoPrep101Module: LearningModule = {
           }
         ],
         "difficultyDistribution": {
-          "easy": 2,
-          "medium": 3,
-          "hard": 1
+          "easy": 1,
+          "medium": 1,
+          "hard": 0
         },
         "feedbackMode": "after_submit",
         "adaptive": false,
         "masteryThreshold": 0.75
       },
-      metadata: {
-        examDrill: "lesson_drill"
+      "metadata": {
+        "examDrill": "lesson_drill"
       },
-      learningAids: [
+      "learningAids": [
         {
           "id": "gaokao-prep-101-l06-a1",
           "type": "image",
-          "title": "Speed Snapshot",
-          "content": "Visual anchor for Gaokao: Speed and Accuracy Training with emphasis on speed within timed block planning."
+          "title": "Pacing Chart",
+          "content": "A sample chart for students to track their time per question and identify areas for improvement."
         },
         {
           "id": "gaokao-prep-101-l06-a2",
-          "type": "animation",
-          "title": "Accuracy Walkthrough",
-          "content": "Stepwise walkthrough for Gaokao: Speed and Accuracy Training showing accuracy decisions and checkpoint log checks."
-        }
-      ]
-    },
-    {
-      id: "gaokao-prep-101-l07",
-      title: "Gaokao: Error Notebook Method",
-      type: "video",
-      duration: 11,
-      learningAids: [
-        {
-          "id": "gaokao-prep-101-l07-a1",
           "type": "image",
-          "title": "Core Subjects Snapshot",
-          "content": "Visual anchor for Gaokao: Error Notebook Method with emphasis on core subjects within review cycle planning."
-        },
-        {
-          "id": "gaokao-prep-101-l07-a2",
-          "type": "animation",
-          "title": "Speed Walkthrough",
-          "content": "Stepwise walkthrough for Gaokao: Error Notebook Method showing speed decisions and error taxonomy checks."
+          "title": "Accuracy Checklist",
+          "content": "A checklist of common errors (e.g., calculation, reading comprehension) to use when reviewing practice tests."
         }
       ]
     },
     {
-      id: "gaokao-prep-101-l08",
-      title: "Gaokao: Past Paper Sequencing",
-      type: "interactive",
-      duration: 14,
-      metadata: {
-        prompts: [
-          "Identify one stress control decision rule in Gaokao: Past Paper Sequencing.",
-          "Apply it in one section simulation and show how it improves section execution consistency.",
-          "Set one next-step target for core subjects before your next Gaokao readiness session."
-        ]
-      },
-      interactiveActivities: [
+      "id": "gaokao-prep-101-l07",
+      "title": "The Error Notebook: Learning from Mistakes",
+      "type": "interactive",
+      "duration": 15,
+      "interactiveActivities": [
         {
-          "id": "gaokao-prep-101-l08-ia1",
-          "type": "drag_and_drop",
-          "title": "Gaokao: Past Paper Sequencing Attempt-Order Builder",
-          "description": "Place each move in the strongest simulation sequence.",
-          "estimatedMinutes": 9,
-          "difficultyLevel": "adaptive",
-          "instructions": [
-            "Assign each move to Launch, Stabilize, or Close.",
-            "Check ordering logic.",
-            "Carry one sequence rule into your next simulation."
-          ],
-          "data": {
-            "targets": [
-              {
-                "id": "launch",
-                "label": "Launch"
-              },
-              {
-                "id": "stabilize",
-                "label": "Stabilize"
-              },
-              {
-                "id": "close",
-                "label": "Close"
-              }
-            ],
-            "draggables": [
-              {
-                "id": "d1",
-                "label": "Set daily Gaokao subject cycles with strict recovery windows",
-                "correctTargetId": "launch"
-              },
-              {
-                "id": "d2",
-                "label": "Use section checkpoints to protect accuracy under pace pressure",
-                "correctTargetId": "stabilize"
-              },
-              {
-                "id": "d3",
-                "label": "Update error notebook with cause, fix, and retest date",
-                "correctTargetId": "close"
-              }
-            ]
-          }
-        }
-      ],
-      learningAids: [
-        {
-          "id": "gaokao-prep-101-l08-a1",
-          "type": "image",
-          "title": "Stress Control Snapshot",
-          "content": "Visual anchor for Gaokao: Past Paper Sequencing with emphasis on stress control within section simulation planning."
-        },
-        {
-          "id": "gaokao-prep-101-l08-a2",
-          "type": "animation",
-          "title": "Core Subjects Walkthrough",
-          "content": "Stepwise walkthrough for Gaokao: Past Paper Sequencing showing core subjects decisions and attempt-order sheet checks."
-        }
-      ]
-    },
-    {
-      id: "gaokao-prep-101-l09",
-      title: "Gaokao: Performance Week Simulation",
-      type: "quiz",
-      duration: 12,
-      questions: [
-        {
-          "id": "gaokao-prep-101-l09-q1",
-          "text": "In Gaokao: Performance Week Simulation, a learner keeps missing stress control items during Gaokao practice. Which adjustment should happen before the next timed section simulation?",
-          "skillId": "gaokao-prep-101-skill-stress-control-workflow",
-          "options": [
-            {
-              "id": "a",
-              "text": "Run a short stress control checkpoint routine and annotate why each miss occurred in an attempt-order sheet before retesting."
-            },
-            {
-              "id": "b",
-              "text": "Skip review and jump directly to harder questions."
-            },
-            {
-              "id": "c",
-              "text": "Track only total score with no error categories."
-            },
-            {
-              "id": "d",
-              "text": "Switch topics even if stress control is still the dominant weakness."
-            }
-          ],
-          "correctOptionId": "a",
-          "hint": "Choose the action that creates a repeatable feedback loop for stress control.",
-          "explanation": "Fast targeted feedback plus immediate correction is the most reliable way to improve stress control."
-        },
-        {
-          "id": "gaokao-prep-101-l09-q2",
-          "text": "A Gaokao Gaokao: Performance Week Simulation session ends with unstable timing. What should be diagnosed first?",
-          "skillId": "gaokao-prep-101-skill-core-subjects-diagnosis",
-          "options": [
-            {
-              "id": "a",
-              "text": "Retake the session immediately without diagnostics."
-            },
-            {
-              "id": "b",
-              "text": "Locate the exact core subjects decision point where time spikes, then set micro-checkpoints for that phase."
-            },
-            {
-              "id": "c",
-              "text": "Increase total question count and keep the same attempt order."
-            },
-            {
-              "id": "d",
-              "text": "Use one pacing rule for all sections regardless of load."
-            }
-          ],
-          "correctOptionId": "b",
-          "hint": "Find the answer that isolates a measurable bottleneck.",
-          "explanation": "Pacing stabilizes when the highest-cost decision point is measured and corrected directly."
-        },
-        {
-          "id": "gaokao-prep-101-l09-q3",
-          "text": "Gaokao practice shows correction is happening but not sticking in Gaokao: Performance Week Simulation. What plan fixes this fastest?",
-          "skillId": "gaokao-prep-101-skill-speed-transfer",
-          "options": [
-            {
-              "id": "a",
-              "text": "Keep reviewing notes and avoid new timed attempts."
-            },
-            {
-              "id": "b",
-              "text": "Increase difficulty only, without targeted rematches."
-            },
-            {
-              "id": "c",
-              "text": "Pair each corrected speed error with a near-transfer item in the next timed block and track it in an attempt-order sheet."
-            },
-            {
-              "id": "d",
-              "text": "Rewatch lesson content without logging applied changes."
-            }
-          ],
-          "correctOptionId": "c",
-          "hint": "The strongest option forces immediate transfer testing.",
-          "explanation": "Correction becomes durable when each fix is tested on a similar item during the next constrained attempt."
-        },
-        {
-          "id": "gaokao-prep-101-l09-q4",
-          "text": "During post-drill review for Gaokao: Performance Week Simulation, which fix should be prioritized first for score impact in Gaokao?",
-          "skillId": "gaokao-prep-101-skill-accuracy-priority",
-          "options": [
-            {
-              "id": "a",
-              "text": "Polish already-mastered question types first."
-            },
-            {
-              "id": "b",
-              "text": "Ignore pacing and focus only on confidence items."
-            },
-            {
-              "id": "c",
-              "text": "Rewrite notes without validating changes in timed practice."
-            },
-            {
-              "id": "d",
-              "text": "Address repeated accuracy and pacing errors first because they affect many questions in one run."
-            }
-          ],
-          "correctOptionId": "d",
-          "hint": "Prioritize changes that influence the largest question set.",
-          "explanation": "Highest-impact remediation usually targets repeated timing and process breakdowns before edge-case content gaps."
-        },
-        {
-          "id": "gaokao-prep-101-l09-q5",
-          "text": "In Gaokao core language section, inference cue miss appears during Gaokao: Performance Week Simulation. What is the strongest immediate correction?",
-          "skillId": "gaokao-prep-101-skill-stress-control-section-application",
-          "options": [
-            {
-              "id": "a",
-              "text": "Mark transition cues and author stance before final response choice."
-            },
-            {
-              "id": "b",
-              "text": "Ignore core language section diagnostics and continue for volume."
-            },
-            {
-              "id": "c",
-              "text": "Re-read notes without running a corrected attempt."
-            },
-            {
-              "id": "d",
-              "text": "Delay correction until after several unrelated drills."
-            }
-          ],
-          "correctOptionId": "a",
-          "hint": "Choose the option that directly fixes inference cue miss.",
-          "explanation": "Immediate correction inside core language section improves transfer to the next timed section simulation."
-        },
-        {
-          "id": "gaokao-prep-101-l09-q6",
-          "text": "During Gaokao mathematics section, mid-section pace collapse repeats in Gaokao: Performance Week Simulation. Which plan should be applied before the next retest?",
-          "skillId": "gaokao-prep-101-skill-core-subjects-section-application",
-          "options": [
-            {
-              "id": "a",
-              "text": "Switch to new content before validating the fix."
-            },
-            {
-              "id": "b",
-              "text": "Trigger skip-return protocol on high-friction clusters. Track outcomes in an error notebook retest sheet and retest the same pattern."
-            },
-            {
-              "id": "c",
-              "text": "Increase speed without updating process controls."
-            },
-            {
-              "id": "d",
-              "text": "Retake the section with no checkpoint changes."
-            }
-          ],
-          "correctOptionId": "b",
-          "hint": "Best plans combine targeted correction with measurable tracking.",
-          "explanation": "A logged correction cycle in error notebook retest sheet makes the pacing fix visible and repeatable."
-        }
-      ],
-      interactiveActivities: [
-        {
-          "id": "gaokao-prep-101-l09-ia1",
+          "id": "gaokao-prep-101-l07-ia1",
           "type": "sorting_buckets",
-          "title": "Gaokao: Performance Week Simulation Attempt-Order Sort",
-          "description": "Sort each scenario into first-pass, flag, or deep-review lanes.",
-          "estimatedMinutes": 9,
-          "difficultyLevel": "adaptive",
+          "title": "Categorize Your Errors",
+          "description": "Effective error analysis starts with proper categorization. Sort these common mistakes into the correct buckets.",
+          "estimatedMinutes": 8,
+          "difficultyLevel": "medium",
           "instructions": [
-            "Read each scenario.",
-            "Sort into the best execution lane.",
-            "Use the result to set your next section workflow."
+            "Read each type of mistake.",
+            "Drag it to the bucket that best describes its root cause.",
+            "Understanding the 'why' behind a mistake is the first step to fixing it."
           ],
           "data": {
             "buckets": [
               {
-                "id": "first_pass",
-                "label": "First Pass"
+                "id": "careless",
+                "label": "Careless Mistake"
               },
               {
-                "id": "flag",
-                "label": "Flag and Return"
+                "id": "concept",
+                "label": "Concept Gap"
               },
               {
-                "id": "deep_review",
-                "label": "Deep Review"
+                "id": "strategy",
+                "label": "Strategy Error"
               }
             ],
             "items": [
               {
                 "id": "i1",
-                "label": "Section end rushed with preventable accuracy drop",
-                "correctBucketId": "flag"
+                "label": "Forgot a math formula",
+                "correctBucketId": "concept"
               },
               {
                 "id": "i2",
-                "label": "No skip-return trigger on difficult cluster",
-                "correctBucketId": "flag"
+                "label": "Misread the question",
+                "correctBucketId": "careless"
               },
               {
                 "id": "i3",
-                "label": "Repeated miss on high-frequency mathematics pattern",
-                "correctBucketId": "deep_review"
+                "label": "Spent too much time on a hard question",
+                "correctBucketId": "strategy"
               },
               {
                 "id": "i4",
-                "label": "High-confidence medium-difficulty cluster",
-                "correctBucketId": "first_pass"
+                "label": "Didn't understand a key vocabulary word",
+                "correctBucketId": "concept"
               }
             ]
           }
         }
       ],
-      quizBlueprint: {
+      "learningAids": [
+        {
+          "id": "gaokao-prep-101-l07-a1",
+          "type": "image",
+          "title": "Sample Error Notebook Entry",
+          "content": "Image of a well-structured error log entry, showing the problem, the mistake, the correct method, and key takeaway."
+        },
+        {
+          "id": "gaokao-prep-101-l07-a2",
+          "type": "animation",
+          "title": "From Error to Insight",
+          "content": "Animation showing the process of analyzing a mistake and creating a plan to avoid it in the future."
+        }
+      ]
+    },
+    {
+      "id": "gaokao-prep-101-l08",
+      "title": "Using Past Papers Strategically",
+      "type": "interactive",
+      "duration": 14,
+      "metadata": {
+        "prompts": [
+          "Identify one recurring weakness from your last three practice tests.",
+          "Describe a strategy to address this weakness.",
+          "Set a performance goal for the next past paper you attempt."
+        ]
+      },
+      "interactiveActivities": [
+        {
+          "id": "gaokao-prep-101-l08-ia1",
+          "type": "drag_and_drop",
+          "title": "Exam Section Strategy Builder",
+          "description": "A well-planned exam is a successful exam. Drag each action into the correct phase of the test.",
+          "estimatedMinutes": 9,
+          "difficultyLevel": "medium",
+          "instructions": [
+            "Assign each action to the Warm-up, Core, or Review phase.",
+            "Check that your sequence is logical.",
+            "Use this structure in your next practice test."
+          ],
+          "data": {
+            "targets": [
+              {
+                "id": "warmup",
+                "label": "Warm-up (First 15 mins)"
+              },
+              {
+                "id": "core",
+                "label": "Core Section (Middle 60 mins)"
+              },
+              {
+                "id": "review",
+                "label": "Review & Final Check (Last 15 mins)"
+              }
+            ],
+            "draggables": [
+              {
+                "id": "d1",
+                "label": "Tackle high-confidence, easy questions",
+                "correctTargetId": "warmup"
+              },
+              {
+                "id": "d2",
+                "label": "Work through challenging, multi-step problems",
+                "correctTargetId": "core"
+              },
+              {
+                "id": "d3",
+                "label": "Verify answers for flagged questions",
+                "correctTargetId": "review"
+              }
+            ]
+          }
+        }
+      ],
+      "learningAids": [
+        {
+          "id": "gaokao-prep-101-l08-a1",
+          "type": "image",
+          "title": "Past Paper Analysis Matrix",
+          "content": "A template for students to track their performance on past papers by topic and question type."
+        },
+        {
+          "id": "gaokao-prep-101-l08-a2",
+          "type": "animation",
+          "title": "Simulating Exam Conditions",
+          "content": "Animation showing how to set up a realistic practice session at home, including timing, materials, and environment."
+        }
+      ]
+    },
+    {
+      "id": "gaokao-prep-101-l09",
+      "title": "Full-Length Mock Exam Simulation",
+      "type": "quiz",
+      "duration": 12,
+      "questions": [
+        {
+          "id": "gaokao-prep-101-l09-q1",
+          "text": "During a mock exam, you feel overwhelmed by a difficult section. What is the best course of action?",
+          "skillId": "skill-exam-resilience",
+          "options": [
+            {
+              "id": "a",
+              "text": "Take a 10-second break: close your eyes, take a deep breath, and reset."
+            },
+            {
+              "id": "b",
+              "text": "Give up on that section and move to the next one."
+            },
+            {
+              "id": "c",
+              "text": "Keep pushing through even if you are making no progress."
+            },
+            {
+              "id": "d",
+              "text": "Spend the rest of the time checking answers you've already completed."
+            }
+          ],
+          "correctOptionId": "a",
+          "hint": "Small, strategic breaks can be more effective than forcing your way through a problem.",
+          "explanation": "A brief mental reset can break a cycle of panic, allowing you to re-approach the problem with a clearer mind and avoid costly mistakes."
+        },
+        {
+          "id": "gaokao-prep-101-l09-q2",
+          "text": "After a full mock exam, what is the most valuable first step in your review process?",
+          "skillId": "skill-strategic-review",
+          "options": [
+            {
+              "id": "a",
+              "text": "Immediately take another mock exam to see if you improve."
+            },
+            {
+              "id": "b",
+              "text": "Categorize your errors to identify patterns in your mistakes."
+            },
+            {
+              "id": "c",
+              "text": "Focus only on the questions you got right to build confidence."
+            },
+            {
+              "id": "d",
+              "text": "Check your overall score and then file the test away."
+            }
+          ],
+          "correctOptionId": "b",
+          "hint": "The goal of a mock exam is to gather data for improvement.",
+          "explanation": "Analyzing and categorizing your errors (e.g., by subject, question type, or error type) provides the specific feedback needed to guide your future study."
+        }
+      ],
+      "interactiveActivities": [
+        {
+          "id": "gaokao-prep-101-l09-ia1",
+          "type": "sorting_buckets",
+          "title": "Post-Mock Exam Triage",
+          "description": "After a mock exam, you need to prioritize. Sort these findings into the correct action bucket.",
+          "estimatedMinutes": 9,
+          "difficultyLevel": "medium",
+          "instructions": [
+            "Read each finding from your mock exam analysis.",
+            "Decide if it's something to fix now, review deeply, or monitor.",
+            "Drag each item to the appropriate bucket."
+          ],
+          "data": {
+            "buckets": [
+              {
+                "id": "fix_now",
+                "label": "Fix Immediately"
+              },
+              {
+                "id": "review_deeply",
+                "label": "Review Concept"
+              },
+              {
+                "id": "monitor",
+                "label": "Monitor Pattern"
+              }
+            ],
+            "items": [
+              {
+                "id": "i1",
+                "label": "A calculation error on one problem.",
+                "correctBucketId": "fix_now"
+              },
+              {
+                "id": "i2",
+                "label": "Consistently missing questions on trigonometry.",
+                "correctBucketId": "review_deeply"
+              },
+              {
+                "id": "i3",
+                "label": "Feeling rushed at the end of the section.",
+                "correctBucketId": "monitor"
+              }
+            ]
+          }
+        }
+      ],
+      "quizBlueprint": {
         "frequency": "lesson_assessment",
-        "questionsPerCheck": 6,
-        "totalQuestions": 6,
-        "timeLimitMinutes": 12,
+        "questionsPerCheck": 2,
+        "totalQuestions": 2,
+        "timeLimitMinutes": 5,
         "questionTypes": [
           {
             "type": "mcq_single",
-            "count": 6,
+            "count": 2,
             "pointsEach": 1,
             "bloomsLevels": [
               1,
@@ -1069,330 +899,84 @@ export const GaokaoPrep101Module: LearningModule = {
           }
         ],
         "difficultyDistribution": {
-          "easy": 2,
-          "medium": 3,
-          "hard": 1
+          "easy": 1,
+          "medium": 1,
+          "hard": 0
         },
         "feedbackMode": "after_submit",
         "adaptive": false,
         "masteryThreshold": 0.75
       },
-      metadata: {
-        examDrill: "lesson_drill"
+      "metadata": {
+        "examDrill": "lesson_drill"
       },
-      learningAids: [
+      "learningAids": [
         {
           "id": "gaokao-prep-101-l09-a1",
           "type": "image",
-          "title": "Stress Control Snapshot",
-          "content": "Visual anchor for Gaokao: Performance Week Simulation with emphasis on stress control within section simulation planning."
+          "title": "Mental Stamina Checklist",
+          "content": "A checklist of techniques for maintaining focus and managing stress during a long exam."
         },
         {
           "id": "gaokao-prep-101-l09-a2",
           "type": "animation",
-          "title": "Core Subjects Walkthrough",
-          "content": "Stepwise walkthrough for Gaokao: Performance Week Simulation showing core subjects decisions and attempt-order sheet checks."
+          "title": "Mock Exam Review Process",
+          "content": "Step-by-step animation on how to effectively review a completed mock exam to maximize learning."
         }
       ]
     },
     {
-      id: "gaokao-prep-101-l10",
-      title: "Gaokao: Targeted Core Subjects Remediation",
-      type: "interactive",
-      duration: 14,
-      metadata: {
-        prompts: [
-          "Identify one core subjects decision rule in Gaokao: Targeted Core Subjects Remediation.",
-          "Apply it in one practice set and show how it improves decision quality under constraints.",
-          "Set one next-step target for speed before your next Gaokao readiness session."
+      "id": "gaokao-prep-101-l10",
+      "title": "Targeted Remediation: Closing Knowledge Gaps",
+      "type": "interactive",
+      "duration": 14,
+      "metadata": {
+        "prompts": [
+          "Look at your error notebook and identify your most common type of mistake.",
+          "Create a one-sentence action plan to address it.",
+          "Schedule a 30-minute session in your calendar to work on it."
         ]
       },
-      interactiveActivities: [
+      "interactiveActivities": [
         {
           "id": "gaokao-prep-101-l10-ia1",
-          "type": "drag_and_drop",
-          "title": "Gaokao: Targeted Core Subjects Remediation Decision-Phase Mapping",
-          "description": "Map each decision cue to Plan, Execute, or Reflect.",
-          "estimatedMinutes": 8,
-          "difficultyLevel": "medium",
-          "instructions": [
-            "Assign each decision cue to the best phase.",
-            "Check all mappings.",
-            "Capture one improvement target."
-          ],
-          "data": {
-            "targets": [
-              {
-                "id": "plan",
-                "label": "Discipline Plan"
-              },
-              {
-                "id": "execute",
-                "label": "Section Control"
-              },
-              {
-                "id": "reflect",
-                "label": "Notebook Review"
-              }
-            ],
-            "draggables": [
-              {
-                "id": "d1",
-                "label": "Set daily Gaokao subject cycles with strict recovery windows",
-                "correctTargetId": "plan"
-              },
-              {
-                "id": "d2",
-                "label": "Use section checkpoints to protect accuracy under pace pressure",
-                "correctTargetId": "execute"
-              },
-              {
-                "id": "d3",
-                "label": "Update error notebook with cause, fix, and retest date",
-                "correctTargetId": "reflect"
-              }
-            ]
-          }
-        }
-      ],
-      learningAids: [
-        {
-          "id": "gaokao-prep-101-l10-a1",
-          "type": "image",
-          "title": "Core Subjects Snapshot",
-          "content": "Visual anchor for Gaokao: Targeted Core Subjects Remediation with emphasis on core subjects within practice set planning."
-        },
-        {
-          "id": "gaokao-prep-101-l10-a2",
-          "type": "animation",
-          "title": "Speed Walkthrough",
-          "content": "Stepwise walkthrough for Gaokao: Targeted Core Subjects Remediation showing speed decisions and strategy log checks."
-        }
-      ]
-    },
-    {
-      id: "gaokao-prep-101-l11",
-      title: "Gaokao: Timed Speed Sprint",
-      type: "video",
-      duration: 11,
-      learningAids: [
-        {
-          "id": "gaokao-prep-101-l11-a1",
-          "type": "image",
-          "title": "Speed Snapshot",
-          "content": "Visual anchor for Gaokao: Timed Speed Sprint with emphasis on speed within timed block planning."
-        },
-        {
-          "id": "gaokao-prep-101-l11-a2",
-          "type": "animation",
-          "title": "Core Subjects Walkthrough",
-          "content": "Stepwise walkthrough for Gaokao: Timed Speed Sprint showing core subjects decisions and checkpoint log checks."
-        }
-      ]
-    },
-    {
-      id: "gaokao-prep-101-l12",
-      title: "Gaokao: Mixed-Section Decision Drill",
-      type: "quiz",
-      duration: 12,
-      questions: [
-        {
-          "id": "gaokao-prep-101-l12-q1",
-          "text": "During Gaokao: Mixed-Section Decision Drill, early guesses are causing core subjects losses. Which intervention should happen first?",
-          "skillId": "gaokao-prep-101-skill-core-subjects-workflow",
-          "options": [
-            {
-              "id": "a",
-              "text": "Keep the same pace and hope accuracy normalizes later."
-            },
-            {
-              "id": "b",
-              "text": "Memorize answer patterns instead of checking reasoning."
-            },
-            {
-              "id": "c",
-              "text": "Delay all correction until the weekend review session."
-            },
-            {
-              "id": "d",
-              "text": "Use a short verification pass and log decision triggers in a strategy log before restarting the drill."
-            }
-          ],
-          "correctOptionId": "d",
-          "hint": "Pick the option that creates immediate corrective feedback.",
-          "explanation": "Quick structured verification catches repeatable process errors before they spread across the next set."
-        },
-        {
-          "id": "gaokao-prep-101-l12-q2",
-          "text": "A Gaokao drill on Gaokao: Mixed-Section Decision Drill ends with unstable pacing. What should be diagnosed first?",
-          "skillId": "gaokao-prep-101-skill-speed-diagnosis",
-          "options": [
-            {
-              "id": "a",
-              "text": "Pinpoint where speed decisions consume extra time, then redesign attempt order with checkpoints."
-            },
-            {
-              "id": "b",
-              "text": "Retake the same drill immediately without analysis."
-            },
-            {
-              "id": "c",
-              "text": "Memorize answer keys without tracking timing behavior."
-            },
-            {
-              "id": "d",
-              "text": "Increase question volume while keeping the same pacing errors."
-            }
-          ],
-          "correctOptionId": "a",
-          "hint": "Look for the answer that isolates a measurable timing bottleneck.",
-          "explanation": "Pacing issues usually come from specific speed decision points, not from total question count alone."
-        },
-        {
-          "id": "gaokao-prep-101-l12-q3",
-          "text": "Which one-week sprint most improves accuracy transfer for Gaokao: Mixed-Section Decision Drill in Gaokao?",
-          "skillId": "gaokao-prep-101-skill-accuracy-transfer",
-          "options": [
-            {
-              "id": "a",
-              "text": "Use only untimed review until confidence feels high."
-            },
-            {
-              "id": "b",
-              "text": "Run two targeted correction blocks, one mixed timed practice set, and one retest focused on the same accuracy objective."
-            },
-            {
-              "id": "c",
-              "text": "Rotate random topics daily with no retest queue."
-            },
-            {
-              "id": "d",
-              "text": "Delay all error correction until the final day."
-            }
-          ],
-          "correctOptionId": "b",
-          "hint": "Best plans combine remediation and timed validation.",
-          "explanation": "Transfer improves when learners re-encounter corrected skills under realistic constraints."
-        },
-        {
-          "id": "gaokao-prep-101-l12-q4",
-          "text": "In Gaokao Gaokao: Mixed-Section Decision Drill, there are both content misses and pacing slips. What should the learner fix first?",
-          "skillId": "gaokao-prep-101-skill-stress-control-priority",
-          "options": [
-            {
-              "id": "a",
-              "text": "Tackle the rarest concept gap first for variety."
-            },
-            {
-              "id": "b",
-              "text": "Review only confidence items and skip timing analysis."
-            },
-            {
-              "id": "c",
-              "text": "Prioritize the repeated stress control process issue, then apply the same correction across the next timed block."
-            },
-            {
-              "id": "d",
-              "text": "Change resources without identifying what failed."
-            }
-          ],
-          "correctOptionId": "c",
-          "hint": "Look for the answer that addresses recurrence.",
-          "explanation": "Recurring process errors compound quickly, so fixing them first creates cleaner conditions for content correction."
-        },
-        {
-          "id": "gaokao-prep-101-l12-q5",
-          "text": "In Gaokao core language section, inference cue miss appears during Gaokao: Mixed-Section Decision Drill. What is the strongest immediate correction?",
-          "skillId": "gaokao-prep-101-skill-core-subjects-section-application",
-          "options": [
-            {
-              "id": "a",
-              "text": "Ignore core language section diagnostics and continue for volume."
-            },
-            {
-              "id": "b",
-              "text": "Re-read notes without running a corrected attempt."
-            },
-            {
-              "id": "c",
-              "text": "Delay correction until after several unrelated drills."
-            },
-            {
-              "id": "d",
-              "text": "Mark transition cues and author stance before final response choice."
-            }
-          ],
-          "correctOptionId": "d",
-          "hint": "Choose the option that directly fixes inference cue miss.",
-          "explanation": "Immediate correction inside core language section improves transfer to the next timed practice set."
-        },
-        {
-          "id": "gaokao-prep-101-l12-q6",
-          "text": "During Gaokao mathematics section, mid-section pace collapse repeats in Gaokao: Mixed-Section Decision Drill. Which plan should be applied before the next retest?",
-          "skillId": "gaokao-prep-101-skill-speed-section-application",
-          "options": [
-            {
-              "id": "a",
-              "text": "Trigger skip-return protocol on high-friction clusters. Track outcomes in an error notebook retest sheet and retest the same pattern."
-            },
-            {
-              "id": "b",
-              "text": "Switch to new content before validating the fix."
-            },
-            {
-              "id": "c",
-              "text": "Increase speed without updating process controls."
-            },
-            {
-              "id": "d",
-              "text": "Retake the section with no checkpoint changes."
-            }
-          ],
-          "correctOptionId": "a",
-          "hint": "Best plans combine targeted correction with measurable tracking.",
-          "explanation": "A logged correction cycle in error notebook retest sheet makes the pacing fix visible and repeatable."
-        }
-      ],
-      interactiveActivities: [
-        {
-          "id": "gaokao-prep-101-l12-ia1",
           "type": "matching_pairs",
-          "title": "Gaokao: Mixed-Section Decision Drill Correction Alignment",
-          "description": "Align each recurring signal with the strongest correction action for decision quality under constraints.",
+          "title": "Error Pattern to Action Plan",
+          "description": "Match the identified error pattern to the most effective remediation action.",
           "estimatedMinutes": 8,
           "difficultyLevel": "medium",
           "instructions": [
-            "Align each pair.",
-            "Check your result.",
-            "Apply one correction in the next drill."
+            "Read the error pattern on the left.",
+            "Choose the most direct and effective action from the right.",
+            "Match the pairs to practice building smart study plans."
           ],
           "data": {
             "left": [
               {
                 "id": "l1",
-                "label": "Chinese reading response misses key inference cue"
+                "label": "Frequent mistakes in chemical equations"
               },
               {
                 "id": "l2",
-                "label": "Math section stalls on mid-paper hard cluster"
+                "label": "Low scores on reading comprehension"
               },
               {
                 "id": "l3",
-                "label": "Error notebook exists but review loop is inconsistent"
+                "label": "Timing out on the math section"
               }
             ],
             "right": [
               {
                 "id": "r1",
-                "label": "Highlight claim transition words before drafting response"
+                "label": "Drill 10 practice problems daily for a week"
               },
               {
                 "id": "r2",
-                "label": "Apply skip-return protocol and secure medium-difficulty marks first"
+                "label": "Read and summarize one article daily"
               },
               {
                 "id": "r3",
-                "label": "Schedule fixed weekly retest of top repeated errors"
+                "label": "Complete three timed mini-sections"
               }
             ],
             "pairs": [
@@ -1412,15 +996,142 @@ export const GaokaoPrep101Module: LearningModule = {
           }
         }
       ],
-      quizBlueprint: {
+      "learningAids": [
+        {
+          "id": "gaokao-prep-101-l10-a1",
+          "type": "image",
+          "title": "Remediation Priority Matrix",
+          "content": "A 2x2 grid helping students prioritize what to fix based on error frequency and point value."
+        },
+        {
+          "id": "gaokao-prep-101-l10-a2",
+          "type": "animation",
+          "title": "A 3-Day Fix-It Cycle",
+          "content": "Animation showing a 3-day cycle: Day 1 (Identify & Re-learn), Day 2 (Targeted Practice), Day 3 (Re-test)."
+        }
+      ]
+    },
+    {
+      "id": "gaokao-prep-101-l11",
+      "title": "Advanced Strategy: Timed Sprints",
+      "type": "video",
+      "duration": 11,
+      "learningAids": [
+        {
+          "id": "gaokao-prep-101-l11-a1",
+          "type": "image",
+          "title": "Sprint Planning Template",
+          "content": "A template for designing a 25-minute 'sprint' session focused on a specific skill or problem type."
+        },
+        {
+          "id": "gaokao-prep-101-l11-a2",
+          "type": "animation",
+          "title": "Analyzing Sprint Results",
+          "content": "Animation showing how to interpret the results of a timed sprint to adjust pacing strategies."
+        }
+      ]
+    },
+    {
+      "id": "gaokao-prep-101-l12",
+      "title": "Drill: Mixed-Subject Problem Sets",
+      "type": "quiz",
+      "duration": 12,
+      "questions": [
+        {
+          "id": "gaokao-prep-101-l12-q1",
+          "text": "What is the main benefit of practicing with mixed-subject problem sets?",
+          "skillId": "skill-strategic-review",
+          "options": [
+            {
+              "id": "a",
+              "text": "It allows you to focus deeply on a single topic."
+            },
+            {
+              "id": "b",
+              "text": "It's easier than studying one subject at a time."
+            },
+            {
+              "id": "c",
+              "text": "It simulates the exam's demand to switch between different types of thinking."
+            },
+            {
+              "id": "d",
+              "text": "It guarantees you will not forget any information."
+            }
+          ],
+          "correctOptionId": "c",
+          "hint": "Think about how the real Gaokao is structured.",
+          "explanation": "The Gaokao requires you to shift between subjects and skills quickly. Mixed-subject drills train this mental flexibility, which is crucial for test day."
+        }
+      ],
+      "interactiveActivities": [
+        {
+          "id": "gaokao-prep-101-l12-ia1",
+          "type": "matching_pairs",
+          "title": "Mixed Drill Challenge Matching",
+          "description": "Align each common challenge faced during mixed drills with the strongest corrective action.",
+          "estimatedMinutes": 8,
+          "difficultyLevel": "medium",
+          "instructions": [
+            "Align each pair.",
+            "Check your result.",
+            "Apply one correction in the next drill."
+          ],
+          "data": {
+            "left": [
+              {
+                "id": "l1",
+                "label": "Struggling to switch between Physics and Chemistry concepts."
+              },
+              {
+                "id": "l2",
+                "label": "Forgetting key historical dates during a mixed drill."
+              },
+              {
+                "id": "l3",
+                "label": "Pacing is thrown off by a difficult math problem."
+              }
+            ],
+            "right": [
+              {
+                "id": "r1",
+                "label": "Practice with short, mixed-subject sets to improve mental flexibility."
+              },
+              {
+                "id": "r2",
+                "label": "Use mnemonic devices and review timelines before the drill."
+              },
+              {
+                "id": "r3",
+                "label": "Set a strict 3-minute time limit per problem and move on."
+              }
+            ],
+            "pairs": [
+              {
+                "leftId": "l1",
+                "rightId": "r1"
+              },
+              {
+                "leftId": "l2",
+                "rightId": "r2"
+              },
+              {
+                "leftId": "l3",
+                "rightId": "r3"
+              }
+            ]
+          }
+        }
+      ],
+      "quizBlueprint": {
         "frequency": "lesson_assessment",
-        "questionsPerCheck": 6,
-        "totalQuestions": 6,
-        "timeLimitMinutes": 12,
+        "questionsPerCheck": 1,
+        "totalQuestions": 1,
+        "timeLimitMinutes": 4,
         "questionTypes": [
           {
             "type": "mcq_single",
-            "count": 6,
+            "count": 1,
             "pointsEach": 1,
             "bloomsLevels": [
               1,
@@ -1430,456 +1141,360 @@ export const GaokaoPrep101Module: LearningModule = {
           }
         ],
         "difficultyDistribution": {
-          "easy": 2,
-          "medium": 3,
-          "hard": 1
+          "easy": 0,
+          "medium": 1,
+          "hard": 0
         },
         "feedbackMode": "after_submit",
         "adaptive": false,
-        "masteryThreshold": 0.75
+        "masteryThreshold": 1
       },
-      metadata: {
-        examDrill: "lesson_drill"
+      "metadata": {
+        "examDrill": "lesson_drill"
       },
-      learningAids: [
+      "learningAids": [
         {
           "id": "gaokao-prep-101-l12-a1",
           "type": "image",
-          "title": "Core Subjects Snapshot",
-          "content": "Visual anchor for Gaokao: Mixed-Section Decision Drill with emphasis on core subjects within practice set planning."
+          "title": "Mental Agility Drills",
+          "content": "Examples of short drills designed to improve the speed of switching between different subjects or problem types."
         },
         {
           "id": "gaokao-prep-101-l12-a2",
           "type": "animation",
-          "title": "Speed Walkthrough",
-          "content": "Stepwise walkthrough for Gaokao: Mixed-Section Decision Drill showing speed decisions and strategy log checks."
+          "title": "Building a Mixed Set",
+          "content": "Animation showing how to select problems from different subjects to create a balanced and effective mixed practice set."
         }
       ]
     },
     {
-      id: "gaokao-prep-101-l13",
-      title: "Gaokao: Adaptive Retry and Transfer Check",
-      type: "video",
-      duration: 11,
-      learningAids: [
+      "id": "gaokao-prep-101-l13",
+      "title": "Adaptive Practice: Ensuring Concepts Stick",
+      "type": "interactive",
+      "duration": 15,
+      "interactiveActivities": [
         {
-          "id": "gaokao-prep-101-l13-a1",
-          "type": "image",
-          "title": "Core Subjects Snapshot",
-          "content": "Visual anchor for Gaokao: Adaptive Retry and Transfer Check with emphasis on core subjects within practice set planning."
-        },
-        {
-          "id": "gaokao-prep-101-l13-a2",
-          "type": "animation",
-          "title": "Speed Walkthrough",
-          "content": "Stepwise walkthrough for Gaokao: Adaptive Retry and Transfer Check showing speed decisions and strategy log checks."
-        }
-      ]
-    },
-    {
-      id: "gaokao-prep-101-l14",
-      title: "Gaokao: Gaokao Readiness Stability Checkpoint",
-      type: "interactive",
-      duration: 14,
-      metadata: {
-        prompts: [
-          "Identify one core subjects decision rule in Gaokao: Gaokao Readiness Stability Checkpoint.",
-          "Apply it in one practice set and show how it improves decision quality under constraints.",
-          "Set one next-step target for speed before your next Gaokao readiness session."
-        ]
-      },
-      interactiveActivities: [
-        {
-          "id": "gaokao-prep-101-l14-ia1",
-          "type": "drag_and_drop",
-          "title": "Gaokao: Gaokao Readiness Stability Checkpoint Decision-Phase Mapping",
-          "description": "Map each decision cue to Plan, Execute, or Reflect.",
+          "id": "gaokao-prep-101-l13-ia1",
+          "type": "matching_pairs",
+          "title": "Error and Next Step Matching",
+          "description": "Match the error to the most effective follow-up action to ensure the lesson is learned.",
           "estimatedMinutes": 8,
           "difficultyLevel": "medium",
           "instructions": [
-            "Assign each decision cue to the best phase.",
-            "Check all mappings.",
-            "Capture one improvement target."
+            "Review the error on the left.",
+            "Choose the smartest next step from the right.",
+            "Match the pairs to build better study habits."
           ],
           "data": {
-            "targets": [
+            "left": [
               {
-                "id": "plan",
-                "label": "Discipline Plan"
+                "id": "l1",
+                "label": "Error: Forgot a formula"
               },
               {
-                "id": "execute",
-                "label": "Section Control"
+                "id": "l2",
+                "label": "Error: Misread the question"
               },
               {
-                "id": "reflect",
-                "label": "Notebook Review"
+                "id": "l3",
+                "label": "Error: Ran out of time"
               }
             ],
-            "draggables": [
+            "right": [
               {
-                "id": "d1",
-                "label": "Set daily Gaokao subject cycles with strict recovery windows",
-                "correctTargetId": "plan"
+                "id": "r1",
+                "label": "Next Step: Review flashcards and retry a similar problem"
               },
               {
-                "id": "d2",
-                "label": "Use section checkpoints to protect accuracy under pace pressure",
-                "correctTargetId": "execute"
+                "id": "r2",
+                "label": "Next Step: Slow down and highlight keywords on the next 3 problems"
               },
               {
-                "id": "d3",
-                "label": "Update error notebook with cause, fix, and retest date",
-                "correctTargetId": "reflect"
+                "id": "r3",
+                "label": "Next Step: Do a timed drill with fewer questions"
+              }
+            ],
+            "pairs": [
+              {
+                "leftId": "l1",
+                "rightId": "r1"
+              },
+              {
+                "leftId": "l2",
+                "rightId": "r2"
+              },
+              {
+                "leftId": "l3",
+                "rightId": "r3"
               }
             ]
           }
         }
       ],
-      learningAids: [
+      "learningAids": [
         {
-          "id": "gaokao-prep-101-l14-a1",
+          "id": "gaokao-prep-101-l13-a1",
           "type": "image",
-          "title": "Core Subjects Snapshot",
-          "content": "Visual anchor for Gaokao: Gaokao Readiness Stability Checkpoint with emphasis on core subjects within practice set planning."
+          "title": "The Forgetting Curve",
+          "content": "An infographic explaining the 'forgetting curve' and how spaced repetition helps with long-term memory."
         },
         {
-          "id": "gaokao-prep-101-l14-a2",
+          "id": "gaokao-prep-101-l13-a2",
           "type": "animation",
-          "title": "Speed Walkthrough",
-          "content": "Stepwise walkthrough for Gaokao: Gaokao Readiness Stability Checkpoint showing speed decisions and strategy log checks."
+          "title": "Smart Practice Loop",
+          "content": "Animation showing an adaptive practice loop: Attempt -> Analyze Error -> Re-learn -> Retry Similar Problem -> Test on a harder problem."
         }
       ]
     },
     {
-      id: "gaokao-prep-101-l15",
-      title: "Gaokao: Final Sprint and Recovery Plan",
-      type: "quiz",
-      duration: 20,
-      questions: [
+      "id": "gaokao-prep-101-l14",
+      "title": "Readiness Check: Are You Exam-Ready?",
+      "type": "interactive",
+      "duration": 14,
+      "metadata": {
+        "prompts": [
+          "Rate your confidence level for each Gaokao subject on a scale of 1-5.",
+          "Identify one subject that needs a final push.",
+          "What is one action you will take this week to improve in that subject?"
+        ]
+      },
+      "interactiveActivities": [
         {
-          "id": "gaokao-prep-101-l15-q1",
-          "text": "Gaokao coaching notes show repeated speed misses in Gaokao: Final Sprint and Recovery Plan. What should the learner do before the next timed block?",
-          "skillId": "gaokao-prep-101-skill-speed-workflow",
-          "options": [
-            {
-              "id": "a",
-              "text": "Jump to harder content before confirming the root cause."
-            },
-            {
-              "id": "b",
-              "text": "Track only final score and ignore process notes."
-            },
-            {
-              "id": "c",
-              "text": "Rebuild the solve workflow on two representative timed block items, then retest with the same constraints."
-            },
-            {
-              "id": "d",
-              "text": "Switch strands even though speed is still the top weakness."
-            }
-          ],
-          "correctOptionId": "c",
-          "hint": "Choose the option that improves process quality, not just volume.",
-          "explanation": "When speed is unstable, workflow repair plus immediate retest creates the fastest reliable gains."
-        },
-        {
-          "id": "gaokao-prep-101-l15-q2",
-          "text": "In Gaokao: Final Sprint and Recovery Plan, pace drops late even when early accuracy is strong. Which move best addresses this Gaokao pattern?",
-          "skillId": "gaokao-prep-101-skill-core-subjects-diagnosis",
-          "options": [
-            {
-              "id": "a",
-              "text": "Spend more time on every item to avoid mistakes."
-            },
-            {
-              "id": "b",
-              "text": "Memorize answer keys without tracking timing behavior."
-            },
-            {
-              "id": "c",
-              "text": "Use random breaks with no fixed transition points."
-            },
-            {
-              "id": "d",
-              "text": "Introduce phase checkpoints and a cut-loss rule around high-friction core subjects items."
-            }
-          ],
-          "correctOptionId": "d",
-          "hint": "Look for a solution tied to timing behavior, not memory.",
-          "explanation": "Late-section drift usually comes from unmanaged friction points, not lack of content knowledge."
-        },
-        {
-          "id": "gaokao-prep-101-l15-q3",
-          "text": "Which one-week plan best improves accuracy transfer for Gaokao readiness in Gaokao?",
-          "skillId": "gaokao-prep-101-skill-accuracy-transfer",
-          "options": [
-            {
-              "id": "a",
-              "text": "Alternate mixed-difficulty sets with targeted remediation, then re-test the same accuracy objective under timing constraints."
-            },
-            {
-              "id": "b",
-              "text": "Use only untimed warmups and avoid mixed sets."
-            },
-            {
-              "id": "c",
-              "text": "Choose random topics daily without a remediation queue."
-            },
-            {
-              "id": "d",
-              "text": "Delay all review tasks until the final week."
-            }
-          ],
-          "correctOptionId": "a",
-          "hint": "The strongest plan combines correction and timed transfer.",
-          "explanation": "Transfer improves when correction cycles are followed by fresh timed retrieval of the same accuracy target."
-        },
-        {
-          "id": "gaokao-prep-101-l15-q4",
-          "text": "After a Gaokao: Final Sprint and Recovery Plan drill, which remediation should be prioritized first for score impact in Gaokao?",
-          "skillId": "gaokao-prep-101-skill-stress-control-priority",
-          "options": [
-            {
-              "id": "a",
-              "text": "Start with already-mastered tasks to build comfort."
-            },
-            {
-              "id": "b",
-              "text": "Fix repeated stress control breakdowns first because they scale across many items in the same run."
-            },
-            {
-              "id": "c",
-              "text": "Rewrite notes without testing changes in a timed set."
-            },
-            {
-              "id": "d",
-              "text": "Ignore pacing because content accuracy matters more."
-            }
-          ],
-          "correctOptionId": "b",
-          "hint": "Choose the fix with the widest downstream effect.",
-          "explanation": "High-frequency process breakdowns usually produce the largest immediate score delta when corrected first."
-        },
-        {
-          "id": "gaokao-prep-101-l15-q5",
-          "text": "In Gaokao core language section, inference cue miss appears during Gaokao: Final Sprint and Recovery Plan. What is the strongest immediate correction?",
-          "skillId": "gaokao-prep-101-skill-speed-section-application",
-          "options": [
-            {
-              "id": "a",
-              "text": "Ignore core language section diagnostics and continue for volume."
-            },
-            {
-              "id": "b",
-              "text": "Re-read notes without running a corrected attempt."
-            },
-            {
-              "id": "c",
-              "text": "Mark transition cues and author stance before final response choice."
-            },
-            {
-              "id": "d",
-              "text": "Delay correction until after several unrelated drills."
-            }
-          ],
-          "correctOptionId": "c",
-          "hint": "Choose the option that directly fixes inference cue miss.",
-          "explanation": "Immediate correction inside core language section improves transfer to the next timed timed block."
-        },
-        {
-          "id": "gaokao-prep-101-l15-q6",
-          "text": "During Gaokao mathematics section, mid-section pace collapse repeats in Gaokao: Final Sprint and Recovery Plan. Which plan should be applied before the next retest?",
-          "skillId": "gaokao-prep-101-skill-core-subjects-section-application",
-          "options": [
-            {
-              "id": "a",
-              "text": "Switch to new content before validating the fix."
-            },
-            {
-              "id": "b",
-              "text": "Increase speed without updating process controls."
-            },
-            {
-              "id": "c",
-              "text": "Retake the section with no checkpoint changes."
-            },
-            {
-              "id": "d",
-              "text": "Trigger skip-return protocol on high-friction clusters. Track outcomes in an error notebook retest sheet and retest the same pattern."
-            }
-          ],
-          "correctOptionId": "d",
-          "hint": "Best plans combine targeted correction with measurable tracking.",
-          "explanation": "A logged correction cycle in error notebook retest sheet makes the pacing fix visible and repeatable."
-        },
-        {
-          "id": "gaokao-prep-101-l15-q7",
-          "text": "In a full Gaokao mock, misses appear across multiple strands. What triage order is strongest?",
-          "skillId": "gaokao-prep-101-skill-mock-triage",
-          "options": [
-            {
-              "id": "a",
-              "text": "Group misses by concept, strategy, and timing first, then sequence fixes by expected score gain."
-            },
-            {
-              "id": "b",
-              "text": "Review only the most recent mistakes."
-            },
-            {
-              "id": "c",
-              "text": "Retake the full mock without a remediation plan."
-            },
-            {
-              "id": "d",
-              "text": "Choose revision topics only by preference."
-            }
-          ],
-          "correctOptionId": "a",
-          "hint": "The right choice creates a stable remediation queue.",
-          "explanation": "Process-level triage finds leverage points that improve many future items."
-        },
-        {
-          "id": "gaokao-prep-101-l15-q8",
-          "text": "A learner finishes one section early but times out on another in Gaokao. What is the best pacing fix?",
-          "skillId": "gaokao-prep-101-skill-section-pacing",
-          "options": [
-            {
-              "id": "a",
-              "text": "Use the same checkpoint target for every section."
-            },
-            {
-              "id": "b",
-              "text": "Set section-specific checkpoints and rehearse transitions so pace remains stable end-to-end."
-            },
-            {
-              "id": "c",
-              "text": "Speed up all sections equally without checking accuracy."
-            },
-            {
-              "id": "d",
-              "text": "Add extra questions without tracking section pace."
-            }
-          ],
-          "correctOptionId": "b",
-          "hint": "Section load differences require section-level pacing plans.",
-          "explanation": "One-size pacing causes uneven performance; section-specific pacing is more reliable."
-        },
-        {
-          "id": "gaokao-prep-101-l15-q9",
-          "text": "Before submitting a high-stakes Gaokao section, which quality-control habit is most reliable?",
-          "skillId": "gaokao-prep-101-skill-quality-control",
-          "options": [
-            {
-              "id": "a",
-              "text": "Change random answers to distribute letters evenly."
-            },
-            {
-              "id": "b",
-              "text": "Skip verification to preserve confidence."
-            },
-            {
-              "id": "c",
-              "text": "Run a brief targeted verification pass on flagged items and known error patterns."
-            },
-            {
-              "id": "d",
-              "text": "Review only the first third of the section."
-            }
-          ],
-          "correctOptionId": "c",
-          "hint": "Targeted verification beats random checking.",
-          "explanation": "Focused verification catches preventable mistakes without excessive time cost."
-        },
-        {
-          "id": "gaokao-prep-101-l15-q10",
-          "text": "After full-mock review in Gaokao, which next-step plan yields the best one-week improvement?",
-          "skillId": "gaokao-prep-101-skill-remediation-loop",
-          "options": [
-            {
-              "id": "a",
-              "text": "Repeat the same mock daily with no targeted fixes."
-            },
-            {
-              "id": "b",
-              "text": "Study only easiest content to boost confidence."
-            },
-            {
-              "id": "c",
-              "text": "Pause all timed practice until every concept feels perfect."
-            },
-            {
-              "id": "d",
-              "text": "Build a remediation sprint with two top weak strands, one pacing drill, and one timed re-check."
-            }
-          ],
-          "correctOptionId": "d",
-          "hint": "The strongest plan includes targeted fixes plus timed validation.",
-          "explanation": "Improvement requires focused remediation and a timed checkpoint to verify transfer."
-        }
-      ],
-      interactiveActivities: [
-        {
-          "id": "gaokao-prep-101-l15-ia1",
+          "id": "gaokao-prep-101-l14-ia1",
           "type": "sorting_buckets",
-          "title": "Gaokao: Final Sprint and Recovery Plan Error Taxonomy Sort",
-          "description": "Sort mock errors into concept, strategy, or timing remediation lanes.",
-          "estimatedMinutes": 10,
-          "difficultyLevel": "adaptive",
+          "title": "Final Readiness Self-Assessment",
+          "description": "Be honest about your current status. Sort these readiness statements into the appropriate bucket.",
+          "estimatedMinutes": 8,
+          "difficultyLevel": "medium",
           "instructions": [
-            "Review each error pattern.",
-            "Sort into best remediation lane.",
-            "Use output to plan your next practice sprint."
+            "Read each statement about exam readiness.",
+            "Drag it to 'Ready to Go' if it describes you well.",
+            "Drag it to 'Needs More Work' if it's an area for improvement."
           ],
           "data": {
             "buckets": [
               {
-                "id": "concept",
-                "label": "Core Subject Gap"
+                "id": "ready",
+                "label": "Ready to Go"
               },
               {
-                "id": "strategy",
-                "label": "Execution Strategy Gap"
-              },
-              {
-                "id": "timing",
-                "label": "Mock Pace Gap"
+                "id": "needs_work",
+                "label": "Needs More Work"
               }
             ],
             "items": [
               {
                 "id": "i1",
-                "label": "Repeated miss on high-frequency mathematics pattern",
-                "correctBucketId": "concept"
+                "label": "I can finish most sections with time to spare.",
+                "correctBucketId": "ready"
               },
               {
                 "id": "i2",
-                "label": "No skip-return trigger on difficult cluster",
-                "correctBucketId": "strategy"
+                "label": "I have a clear strategy for difficult questions.",
+                "correctBucketId": "ready"
               },
               {
                 "id": "i3",
-                "label": "Section end rushed with preventable accuracy drop",
-                "correctBucketId": "timing"
+                "label": "I still make frequent careless errors.",
+                "correctBucketId": "needs_work"
               },
               {
                 "id": "i4",
-                "label": "Notebook correction not validated in next simulation",
-                "correctBucketId": "timing"
+                "label": "My error notebook is up to date.",
+                "correctBucketId": "ready"
               }
             ]
           }
         }
       ],
-      quizBlueprint: {
+      "learningAids": [
+        {
+          "id": "gaokao-prep-101-l14-a1",
+          "type": "image",
+          "title": "Pre-Exam Checklist",
+          "content": "A practical checklist for the day before and the morning of the exam, covering materials, nutrition, and mindset."
+        },
+        {
+          "id": "gaokao-prep-101-l14-a2",
+          "type": "animation",
+          "title": "Visualizing Success",
+          "content": "A short, guided animation to help students mentally rehearse the exam day, from waking up to finishing the last question."
+        }
+      ]
+    },
+    {
+      "id": "gaokao-prep-101-l15",
+      "title": "The Final Week: Sprint and Recovery",
+      "type": "quiz",
+      "duration": 20,
+      "questions": [
+        {
+          "id": "gaokao-prep-101-l15-q1",
+          "text": "In the final week before the Gaokao, what is the most effective use of your study time?",
+          "skillId": "skill-study-planning",
+          "options": [
+            {
+              "id": "a",
+              "text": "Learning a completely new and difficult topic."
+            },
+            {
+              "id": "b",
+              "text": "Taking multiple full-length mock exams every day."
+            },
+            {
+              "id": "c",
+              "text": "Light review of key concepts, formulas, and your error notebook."
+            },
+            {
+              "id": "d",
+              "text": "Stopping all studying to relax completely."
+            }
+          ],
+          "correctOptionId": "c",
+          "hint": "The goal is to be confident and rested, not exhausted.",
+          "explanation": "Intense new learning or excessive testing can lead to burnout. The final week is best for reinforcing what you already know and ensuring you are mentally and physically prepared."
+        },
+        {
+          "id": "gaokao-prep-101-l15-q2",
+          "text": "You finish one section early but run out of time on another. What does this indicate?",
+          "skillId": "skill-time-management",
+          "options": [
+            {
+              "id": "a",
+              "text": "You are an expert in the first subject."
+            },
+            {
+              "id": "b",
+              "text": "You need a better overall time allocation plan for the entire exam."
+            },
+            {
+              "id": "c",
+              "text": "You should always rush through your best subject."
+            },
+            {
+              "id": "d",
+              "text": "The second section was unfairly difficult."
+            }
+          ],
+          "correctOptionId": "b",
+          "hint": "Pacing should be managed across the entire exam, not just within one section.",
+          "explanation": "A good pacing plan allocates a specific amount of time to each section based on its length and difficulty, ensuring you don't 'borrow' time from a harder section."
+        },
+        {
+          "id": "gaokao-prep-101-l15-q3",
+          "text": "With five minutes left in a section, what is the best use of your time?",
+          "skillId": "skill-strategic-review",
+          "options": [
+            {
+              "id": "a",
+              "text": "Start the next section early."
+            },
+            {
+              "id": "b",
+              "text": "Change several answers randomly."
+            },
+            {
+              "id": "c",
+              "text": "Review questions you flagged as uncertain and check for careless errors."
+            },
+            {
+              "id": "d",
+              "text": "Reread the instructions for the section."
+            }
+          ],
+          "correctOptionId": "c",
+          "hint": "Focus on actions that have the highest chance of catching mistakes.",
+          "explanation": "A targeted review of flagged items and a quick scan for obvious errors is the most efficient way to use the final minutes to secure points."
+        },
+        {
+          "id": "gaokao-prep-101-l15-q4",
+          "text": "After reviewing your final mock exam, which problem should you prioritize fixing?",
+          "skillId": "skill-error-analysis",
+          "options": [
+            {
+              "id": "a",
+              "text": "A mistake on a very rare and obscure question type."
+            },
+            {
+              "id": "b",
+              "text": "A mistake on a common, high-frequency question type."
+            },
+            {
+              "id": "c",
+              "text": "A question you got right but weren't sure about."
+            },
+            {
+              "id": "d",
+              "text": "A question that was marked incorrectly by the grading key."
+            }
+          ],
+          "correctOptionId": "b",
+          "hint": "Focus your energy where it will have the biggest impact on your score.",
+          "explanation": "Fixing a mistake on a common question type is more valuable because that knowledge is likely to apply to multiple questions on the actual exam."
+        }
+      ],
+      "interactiveActivities": [
+        {
+          "id": "gaokao-prep-101-l15-ia1",
+          "type": "sorting_buckets",
+          "title": "Final Week Priority Sort",
+          "description": "Sort these final-week activities from highest to lowest priority to create a smart and balanced plan.",
+          "estimatedMinutes": 10,
+          "difficultyLevel": "medium",
+          "instructions": [
+            "Review each activity.",
+            "Sort it into the appropriate priority lane for the last week of prep.",
+            "Use this to build your own final week schedule."
+          ],
+          "data": {
+            "buckets": [
+              {
+                "id": "high",
+                "label": "High Priority (Do Daily)"
+              },
+              {
+                "id": "med",
+                "label": "Medium Priority (Do 2-3 Times)"
+              },
+              {
+                "id": "low",
+                "label": "Low Priority (Avoid or Do Once)"
+              }
+            ],
+            "items": [
+              {
+                "id": "i1",
+                "label": "Reviewing your top 10 errors from your notebook.",
+                "correctBucketId": "high"
+              },
+              {
+                "id": "i2",
+                "label": "Taking a full-length timed mock exam.",
+                "correctBucketId": "low"
+              },
+              {
+                "id": "i3",
+                "label": "Learning a brand new, difficult topic.",
+                "correctBucketId": "low"
+              },
+              {
+                "id": "i4",
+                "label": "Light review of key formulas and concepts.",
+                "correctBucketId": "high"
+              }
+            ]
+          }
+        }
+      ],
+      "quizBlueprint": {
         "frequency": "mock_assessment",
-        "questionsPerCheck": 10,
-        "totalQuestions": 10,
-        "timeLimitMinutes": 24,
+        "questionsPerCheck": 4,
+        "totalQuestions": 4,
+        "timeLimitMinutes": 10,
         "questionTypes": [
           {
             "type": "mcq_single",
-            "count": 10,
+            "count": 4,
             "pointsEach": 1,
             "bloomsLevels": [
               1,
@@ -1889,31 +1504,31 @@ export const GaokaoPrep101Module: LearningModule = {
           }
         ],
         "difficultyDistribution": {
-          "easy": 2,
-          "medium": 5,
-          "hard": 3
+          "easy": 1,
+          "medium": 2,
+          "hard": 1
         },
         "feedbackMode": "after_submit",
         "adaptive": false,
-        "masteryThreshold": 0.82
+        "masteryThreshold": 0.8
       },
-      metadata: {
-        examDrill: "full_mock"
+      "metadata": {
+        "examDrill": "full_mock"
       },
-      learningAids: [
+      "learningAids": [
         {
           "id": "gaokao-prep-101-l15-a1",
           "type": "image",
-          "title": "Speed Snapshot",
-          "content": "Visual anchor for Gaokao: Final Sprint and Recovery Plan with emphasis on speed within timed block planning."
+          "title": "Exam Day Game Plan",
+          "content": "A one-page summary of your personal strategies for pacing, stress management, and question-handling for test day."
         },
         {
           "id": "gaokao-prep-101-l15-a2",
           "type": "animation",
-          "title": "Core Subjects Walkthrough",
-          "content": "Stepwise walkthrough for Gaokao: Final Sprint and Recovery Plan showing core subjects decisions and checkpoint log checks."
+          "title": "The Recovery Cycle",
+          "content": "Animation showing the importance of sleep, nutrition, and light exercise during the multi-day Gaokao exam period."
         }
       ]
     }
-  ],
+  ]
 };

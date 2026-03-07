@@ -1,29 +1,29 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const science101Module: LearningModule = {
+export const science_101_Module: LearningModule = {
   "id": "science-101",
   "title": "Our Solar System",
-  "description": "Explore planets, orbits, and solar-system patterns through guided media and interactive practice.",
+  "description": "Explore the planets, their amazing journeys around the Sun, and other wonders of our solar system through fun videos and activities.",
   "subject": "Science",
   "tags": [
     "space",
     "astronomy",
-    "interactive"
+    "planets"
   ],
   "minAge": 6,
   "maxAge": 12,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "beginner",
   "localeSupport": [
     "en"
   ],
-  "thumbnail": "/placeholders/lesson-robot.svg",
+  "thumbnail": "/placeholders/lesson-rocket.svg",
   "learningObjectives": [
-    "Identify key features of inner and outer planets",
-    "Explain why planets orbit the Sun in predictable paths",
-    "Use evidence to compare planetary environments",
-    "Classify solar-system bodies as planets, dwarf planets, or small bodies",
-    "Describe the role of gravity in shaping the solar system"
+    "Identify key features of the inner and outer planets",
+    "Explain how the Sun's gravity keeps planets in their paths (orbits)",
+    "Use evidence to compare what it's like on different planets and moons",
+    "Classify objects as planets, dwarf planets, or small bodies",
+    "Describe the role of gravity in our solar system"
   ],
   "lessons": [
     {
@@ -34,53 +34,56 @@ export const science101Module: LearningModule = {
       "objectives": [
         "Describe the Sun as the center of the solar system and its source of energy",
         "Name the four inner planets and list one key feature of each",
-        "Explain why the inner planets are called rocky or terrestrial planets"
+        "Explain why the inner planets are called 'rocky' or 'terrestrial' planets"
       ],
       "chunks": [
         {
           "id": "s101-l01-c1",
           "title": "The Sun: Our Star",
-          "content": "The Sun is an incredibly fascinating medium-sized star that sits right at the center of our solar system. Picture it as a giant ball of hot gas, mostly made up of two elements: hydrogen and helium. This amazing star produces a tremendous amount of energy through a process known as nuclear fusion. This is the same process that powers the Sun and provides us with the light and warmth we need to live! The Sun's strong gravity is what keeps all eight planets, as well as dwarf planets, asteroids, and comets, in their orbits around it. Without the Sun, our world would be a dark and cold place, and life as we know it would not be possible. Can you imagine a world without sunlight? It would be very different! The distance from the Earth to the Sun is about 150 million kilometers, which is a really long way! To help you understand just how far that is, think about how long it takes for the light from the Sun to reach us—it takes about 8 minutes! That means when you see sunlight, it actually left the Sun 8 minutes ago! Isn’t that amazing? The Sun is not just a star; it is the heart of our solar system, and it plays a vital role in making our planet a wonderful place to live.\nContext recap: The Sun is an incredibly fascinating medium-sized star that sits right at the center of our solar system. Picture it as a giant ball of hot gas, mostly made up of two elements: hydrogen and helium. This amazing star produces a tremendous amount of energy through a process known as nuclear fusion. This is the same process that powers the Sun and provides us with the light and warmth we need to live!\nWhy this matters: The Sun: Our Star helps learners in Science connect ideas from Our Solar System to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "The Sun is a star, and it’s the heart of our solar system! Imagine a giant, glowing ball of super-hot gas. The Sun makes a huge amount of energy by smashing tiny particles together in its center. This process, called nuclear fusion, creates all the light and heat that travels to Earth. The Sun is so big and heavy that its powerful gravity acts like an invisible string, holding all eight planets in their paths as they travel around it. Without the Sun, Earth would be a dark, frozen world. It takes about 8 minutes for the Sun's light to reach us here on Earth, which shows you just how far away it is!",
+          "visualPrompt": "Animation of the Sun as a giant, swirling ball of hot gas. Show lines representing gravity pulling the planets, keeping them in orbit."
         },
         {
           "id": "s101-l01-c2",
           "title": "Mercury and Venus",
-          "content": "Mercury is the smallest planet in our solar system and is the closest one to the Sun. Because it has no atmosphere to keep the heat in, temperatures on Mercury can be extremely high during the day, reaching up to 430 °C! But at night, it can drop to a freezing −180 °C! This means that if you were on Mercury, you would need to be very careful about the temperature changes! On the other hand, Venus is the second planet from the Sun and is known as the hottest planet in our solar system, even hotter than Mercury! This is due to its thick atmosphere filled with carbon dioxide, which traps heat like a greenhouse. Imagine being in a big glass house where it gets really hot inside! Venus is often called Earth's 'sister planet' because they are similar in size, but the conditions on their surfaces are very different. While Earth is a comfortable place for us to live, with the right temperature and air to breathe, Venus is a very harsh environment! It has clouds of acid and high pressure that would make it impossible for us to survive there. So, even though they are similar in size, Mercury and Venus are very different worlds, each with their own unique features and challenges! Learning about these planets helps us understand more about our solar system and the amazing variety of planets that exist in it.\nContext recap: Mercury is the smallest planet in our solar system and is the closest one to the Sun. Because it has no atmosphere to keep the heat in, temperatures on Mercury can be extremely high during the day, reaching up to 430 °C! But at night, it can drop to a freezing −180 °C! This means that if you were on Mercury, you would need to be very careful about the temperature changes!\nWhy this matters: Mercury and Venus helps learners in Science connect ideas from Our Solar System to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "Let's visit the two planets closest to the Sun! First is Mercury, the smallest planet in our solar system. It has no atmosphere to trap heat, so it gets incredibly hot during the day and freezing cold at night. Next is Venus, the hottest planet of all. Its thick, cloudy atmosphere traps the Sun's heat like a blanket, making its surface hot enough to melt lead! Venus is sometimes called Earth's 'sister planet' because they are about the same size, but they are very different worlds. While Earth is just right for life, Venus has a crushing atmosphere and clouds of acid.",
+          "visualPrompt": "Side-by-side comparison showing Mercury's cratered, rocky surface and Venus's thick, swirling yellow clouds."
         },
         {
           "id": "s101-l01-c3",
           "title": "Earth and Mars",
-          "content": "Earth is the third planet from the Sun and is truly special because it is the only planet we know of that supports life! This means that all the plants, animals, and people we see around us can live here. One of the most important things about Earth is that it has liquid water on its surface. Water is essential for all living things, as it helps them grow and stay healthy. In addition to water, Earth has a protective atmosphere. This atmosphere is filled with oxygen, which is what we breathe to stay alive. It also has a magnetic field that acts like a shield, protecting us from harmful solar radiation that comes from the Sun. Now, let's talk about Mars! Mars is the fourth planet from the Sun and is often called the Red Planet. This nickname comes from the reddish color of its surface, which is caused by iron oxide, or rust. Mars is an exciting place because it has the tallest volcano in the entire solar system, known as Olympus Mons. This volcano is much taller than any mountain on Earth! However, Mars has a thin atmosphere that is mostly made up of carbon dioxide, which is different from the air we breathe. Scientists are very curious about Mars and are conducting studies to find out if it ever had liquid water in the past. If Mars did have water, it raises fascinating questions about whether it might have supported life at some point in its history! Exploring these planets helps us learn more about our solar system and our place in it.\nContext recap: Earth is the third planet from the Sun and is truly special because it is the only planet we know of that supports life! This means that all the plants, animals, and people we see around us can live here. One of the most important things about Earth is that it has liquid water on its surface. Water is essential for all living things, as it helps them grow and stay healthy.\nWhy this matters: Earth and Mars helps learners in Science connect ideas from Our Solar System to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "Earth, our home, is the third planet from the Sun. It's a special place because it's the only planet we know of with liquid water on its surface and an atmosphere with plenty of oxygen for us to breathe. These are the perfect ingredients for life! Next door is Mars, the fourth planet. It's known as the 'Red Planet' because of the rusty dust covering its surface. Mars is very cold and has a thin atmosphere, but scientists have found evidence that water once flowed there. It's also home to the tallest volcano in the solar system, Olympus Mons, which is three times taller than Mount Everest!",
+          "visualPrompt": "An animation showing Earth as a vibrant blue and green marble, then panning over to Mars, highlighting its reddish, dusty landscape and giant volcano."
         }
       ],
       "flashcards": [
         {
           "id": "s101-l01-f1",
           "front": "What powers the Sun?",
-          "back": "Nuclear fusion — hydrogen atoms combine to form helium, releasing enormous energy as light and heat"
+          "back": "Nuclear fusion: A process where the Sun smashes tiny particles together, releasing huge amounts of energy as light and heat."
         },
         {
           "id": "s101-l01-f2",
           "front": "Why is Venus hotter than Mercury?",
-          "back": "Venus has a thick CO₂ atmosphere that traps heat (greenhouse effect), while Mercury has no atmosphere"
+          "back": "Venus has a thick atmosphere that traps heat like a blanket (the greenhouse effect), while tiny Mercury has almost no atmosphere."
         },
         {
           "id": "s101-l01-f3",
           "front": "Why is Mars called the Red Planet?",
-          "back": "Iron oxide (rust) on its surface gives Mars a reddish appearance"
+          "back": "Its surface is covered in iron oxide, which is a type of rust, giving it a reddish color."
         },
         {
           "id": "s101-l01-f4",
-          "front": "Terrestrial planet",
-          "back": "A rocky planet with a solid surface — Mercury, Venus, Earth, and Mars are the four terrestrial planets"
+          "front": "What is a terrestrial planet?",
+          "back": "A planet with a solid, rocky surface. Mercury, Venus, Earth, and Mars are the four terrestrial planets."
         }
       ],
       "learningAids": [
         {
           "id": "s101-l01-a1",
           "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary of the lesson's main concept."
+          "title": "The Inner Planets",
+          "content": "A diagram showing the Sun and the four inner planets in order, with a key fact bubble for each."
         }
       ]
     },
@@ -90,25 +93,28 @@ export const science101Module: LearningModule = {
       "type": "interactive",
       "duration": 12,
       "objectives": [
-        "Sort planets by size and explain relative differences",
-        "Group planets by composition — rocky versus gas/ice giant",
+        "Compare the sizes of the planets",
+        "Group planets by their composition: rocky versus gas/ice giant",
         "Identify at least one unique fact about each inner planet"
       ],
       "chunks": [
         {
           "id": "s101-l02-c1",
           "title": "Comparing Planet Sizes",
-          "content": "In our amazing solar system, there are eight planets, and they all come in different sizes! The largest planet is Jupiter, which is so enormous that you could fit more than 1,300 Earths inside it! That's really hard to imagine! After Jupiter, the next biggest planet is Saturn, known for its beautiful rings. Then we have Uranus and Neptune, which are also quite large. When we look at the inner planets, Earth is the biggest one, and it's our home! On the other hand, Mercury is the smallest planet in our solar system. To help remember the order of the planets from the largest to the smallest, you can use this fun phrase: Jupiter, Saturn, Uranus, Neptune, Earth, Venus, Mars, and Mercury. By comparing the sizes of these planets, scientists can group them into two main categories: the inner rocky planets, which include Mercury, Venus, Earth, and Mars, and the outer planets, which are the gas and ice giants like Jupiter, Saturn, Uranus, and Neptune. Understanding the sizes of the planets helps us learn more about our solar system and how it works!\nContext recap: In our amazing solar system, there are eight planets, and they all come in different sizes! The largest planet is Jupiter, which is so enormous that you could fit more than 1,300 Earths inside it! That's really hard to imagine! After Jupiter, the next biggest planet is Saturn, known for its beautiful rings.\nWhy this matters: Comparing Planet Sizes helps learners in Science connect ideas from Our Solar System to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "The planets in our solar system come in all different sizes! The biggest is Jupiter—it's so huge that all the other seven planets could fit inside it. Saturn is the second largest, followed by Uranus and Neptune. These four giant planets are in the outer solar system. The four inner planets are much smaller. Earth is the biggest of the inner planets, followed by Venus, then Mars, and finally tiny Mercury, the smallest of all. Understanding their sizes helps us group them into two main families: the small, rocky worlds and the giant, gassy worlds.",
+          "visualPrompt": "An animation showing all eight planets lined up from largest (Jupiter) to smallest (Mercury) to show the dramatic size differences."
         },
         {
           "id": "s101-l02-c2",
           "title": "Rocky vs. Gas and Ice Giants",
-          "content": "In our solar system, we have two main types of planets: the inner planets and the outer planets. The inner planets include Mercury, Venus, Earth, and Mars. These planets are called rocky or terrestrial planets because they have solid surfaces made of rock and metal. Imagine walking on the surface of Mars or feeling the heat of Venus! Each of these planets has unique features, like mountains, valleys, and even volcanoes.\nOn the other hand, we have the outer planets, which are much larger than the inner ones. These planets are mostly made up of gas or ice. The two largest outer planets, Jupiter and Saturn, are known as gas giants. They are mostly made of hydrogen and helium, which are light gases. Jupiter is famous for its Great Red Spot, a giant storm, while Saturn is well-known for its beautiful rings!\nThen we have Uranus and Neptune, which are called ice giants. These planets also have hydrogen and helium, but they contain a lot of water, ammonia, and methane in solid form, which is why we call them ice giants. Understanding the differences between these rocky planets and the gas and ice giants helps us learn more about how our solar system works. It’s like a big puzzle, and each planet is an important piece!\nContext recap: In our solar system, we have two main types of planets: the inner planets and the outer planets. The inner planets include Mercury, Venus, Earth, and Mars. These planets are called rocky or terrestrial planets because they have solid surfaces made of rock and metal. Imagine walking on the surface of Mars or feeling the heat of Venus!\nWhy this matters: Rocky vs. Gas and Ice Giants helps learners in Science connect ideas from Our Solar System to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "The two families of planets are very different. The inner planets—Mercury, Venus, Earth, and Mars—are called rocky or terrestrial planets. They have solid ground you could stand on, made of rock and metal. The outer planets are called giants. Jupiter and Saturn are gas giants, made mostly of hydrogen and helium gas, like the Sun. They don't have a solid surface to land on! Uranus and Neptune are called ice giants. They are also made of gas but contain more icy materials, like frozen water, which gives them their cool blue colors.",
+          "visualPrompt": "A split-screen animation. On one side, a cutaway of Earth shows a solid core and rocky crust. On the other, a cutaway of Jupiter shows swirling gas layers all the way down."
         },
         {
           "id": "s101-l02-c3",
           "title": "What Planet Features Tell Us",
-          "content": "Every planet in our solar system has unique features that tell us a lot about it! The size of a planet, what it is made of, and how far it is from the Sun all help shape its environment. For instance, the smaller rocky planets, like Mercury and Venus, are located closer to the Sun. Because they are closer, they tend to be warmer, and many of them have thin atmospheres or even none at all! On the other hand, the larger planets, known as gas and ice giants, are found much farther away from the Sun. These planets, like Jupiter and Saturn, are much colder and have thick atmospheres filled with swirling clouds and powerful storms. A great example of this is Jupiter's Great Red Spot, which is an enormous storm that is even bigger than our own Earth! This storm has been going on for hundreds of years! By sorting and comparing the different features of the planets, scientists can build models that help us understand how our solar system was formed and how it continues to function today. Learning about these amazing planets helps us appreciate the wonders of space and the science behind it all!\nContext recap: Every planet in our solar system has unique features that tell us a lot about it! The size of a planet, what it is made of, and how far it is from the Sun all help shape its environment. For instance, the smaller rocky planets, like Mercury and Venus, are located closer to the Sun. Because they are closer, they tend to be warmer, and many of them have thin atmospheres or even none at all!\nWhy this matters: What Planet Features Tell Us helps learners in Science connect ideas from Our Solar System to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "A planet's features, like its size and what it's made of, tell us a story about where it lives in the solar system. The small, rocky planets are all close to the Sun's heat. The giant gas and ice planets are all in the cold, outer regions, far from the Sun. Separating these two groups is a huge ring of space rocks called the asteroid belt. By sorting planets based on their features, we can understand the patterns of our solar system, just like real scientists do when they explore space!",
+          "visualPrompt": "A simple map of the solar system showing the Sun, the four inner planets, the asteroid belt, and the four outer planets to illustrate the pattern."
         }
       ],
       "interactiveActivities": [
@@ -116,13 +122,13 @@ export const science101Module: LearningModule = {
           "id": "s101-l02-ia1",
           "type": "sorting_buckets",
           "title": "Planet Type Sort",
-          "description": "Sort planets by composition and compare relative size.",
+          "description": "Sort planets by what they're made of and compare their relative sizes.",
           "estimatedMinutes": 8,
           "difficultyLevel": "easy",
           "instructions": [
             "Read each planet card.",
-            "Drop it into rocky or gas/ice giant.",
-            "Check size ranking hints after submit."
+            "Drag it into the 'Rocky Planet' or 'Gas/Ice Giant' bucket.",
+            "After you submit, check the hints to see how they rank in size!"
           ],
           "data": {
             "buckets": [
@@ -184,30 +190,30 @@ export const science101Module: LearningModule = {
         {
           "id": "s101-l02-f1",
           "front": "Which is the largest planet?",
-          "back": "Jupiter — more than 1,300 Earths could fit inside it"
+          "back": "Jupiter. It's so big that all the other planets in the solar system could fit inside it!"
         },
         {
           "id": "s101-l02-f2",
-          "front": "Gas giant",
-          "back": "A large planet made mostly of hydrogen and helium — Jupiter and Saturn"
+          "front": "What is a gas giant?",
+          "back": "A giant planet made mostly of hydrogen and helium gas. Jupiter and Saturn are gas giants."
         },
         {
           "id": "s101-l02-f3",
-          "front": "Ice giant",
-          "back": "A large planet with hydrogen, helium, and ices (water, ammonia, methane) — Uranus and Neptune"
+          "front": "What is an ice giant?",
+          "back": "A giant planet made of gas and icy materials like water and methane. Uranus and Neptune are ice giants."
         },
         {
           "id": "s101-l02-f4",
-          "front": "Jupiter's Great Red Spot",
-          "back": "A massive storm on Jupiter larger than Earth that has been raging for hundreds of years"
+          "front": "What is Jupiter's Great Red Spot?",
+          "back": "A giant, swirling storm on Jupiter that is bigger than planet Earth and has been raging for hundreds of years."
         }
       ],
       "learningAids": [
         {
           "id": "s101-l02-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Follow the prompt sequence and document your reasoning."
+          "title": "Think Like a Scientist",
+          "content": "Use a checklist to compare two planets: 1. Is it rocky or gassy? 2. Is it big or small? 3. Is it close to the Sun or far away?"
         }
       ]
     },
@@ -243,11 +249,11 @@ export const science101Module: LearningModule = {
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Mars is called the Red Planet because iron oxide (rust) on its surface gives it a reddish color."
+          "explanation": "Mars is called the Red Planet because rusty dust on its surface gives it a reddish color."
         },
         {
           "id": "s101-l03-q2",
-          "text": "Which inner planet has the thickest cloud cover and is the hottest?",
+          "text": "Which inner planet is the hottest because of its thick, heat-trapping atmosphere?",
           "skillId": "planet-comparison",
           "options": [
             {
@@ -268,11 +274,11 @@ export const science101Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Venus has a thick CO₂ atmosphere that traps heat through the greenhouse effect, making it the hottest planet — even hotter than Mercury."
+          "explanation": "Venus has a thick atmosphere that traps heat through the greenhouse effect, making it the hottest planet—even hotter than Mercury."
         },
         {
           "id": "s101-l03-q3",
-          "text": "What do all inner planets have in common?",
+          "text": "What do all the inner planets have in common?",
           "skillId": "planet-classification",
           "options": [
             {
@@ -285,11 +291,11 @@ export const science101Module: LearningModule = {
             },
             {
               "id": "c",
-              "text": "They are gas giants."
+              "text": "They are all gas giants."
             },
             {
               "id": "d",
-              "text": "They orbit beyond Saturn."
+              "text": "They are all colder than Earth."
             }
           ],
           "correctOptionId": "a",
@@ -297,7 +303,7 @@ export const science101Module: LearningModule = {
         },
         {
           "id": "s101-l03-q4",
-          "text": "What is the main source of energy for our solar system?",
+          "text": "What is the main source of light and heat for our solar system?",
           "skillId": "sun-concepts",
           "options": [
             {
@@ -314,11 +320,11 @@ export const science101Module: LearningModule = {
             },
             {
               "id": "d",
-              "text": "Saturn's rings"
+              "text": "Earth's core"
             }
           ],
           "correctOptionId": "c",
-          "explanation": "The Sun produces energy through nuclear fusion and its gravity holds the entire solar system together."
+          "explanation": "The Sun is a star that produces energy, and its gravity holds the entire solar system together."
         }
       ],
       "quizBlueprint": {
@@ -332,8 +338,8 @@ export const science101Module: LearningModule = {
         {
           "id": "s101-l03-a1",
           "type": "mnemonic",
-          "title": "Memory Cue",
-          "content": "Use Plan, Solve, Explain to structure each response."
+          "title": "Quiz Tip: Read and Reason",
+          "content": "Read each question carefully. Think about what you learned about the inner planets. Choose the best answer and remember why it's correct!"
         }
       ]
     },
@@ -351,47 +357,50 @@ export const science101Module: LearningModule = {
         {
           "id": "s101-l04-c1",
           "title": "Jupiter and Saturn: The Gas Giants",
-          "content": "Jupiter is the largest planet in our solar system, and it is truly a giant! Its mass is so huge that it is greater than all the other planets combined! Can you believe that? Jupiter has at least 95 known moons, which are like little companions that orbit around it. One of these moons, called Europa, is especially exciting for scientists. They think that beneath its icy surface, there might be a hidden ocean of liquid water! This makes Europa a very interesting place to study, as it could possibly support life!\nJupiter is also famous for its thick atmosphere, which creates beautiful colorful bands that swirl around the planet. Among these features is the Great Red Spot, a gigantic storm that has been raging for hundreds of years! It’s so big that you could fit two or three Earths inside it!\nNow, let’s talk about Saturn, the second largest planet in our solar system. Saturn is best known for its amazing ring system that makes it look like a sparkling jewel in the sky. These rings are made up of billions of tiny pieces of ice and rock, which can range in size from small grains to enormous boulders that are as big as houses! Isn’t that incredible?\nSaturn also has a fascinating moon called Titan. Titan is unique because it has a thick atmosphere, and it even has lakes filled with liquid methane! This makes Titan a very special place to explore, as it has conditions that are very different from those on Earth. Studying these planets and their moons helps us learn more about our solar system and the possibilities of life beyond our planet!\nContext recap: Jupiter is the largest planet in our solar system, and it is truly a giant! Its mass is so huge that it is greater than all the other planets combined! Can you believe that? Jupiter has at least 95 known moons, which are like little companions that orbit around it.\nWhy this matters: Jupiter and Saturn: The Gas Giants helps learners in Science connect ideas from Our Solar System to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "Let's fly out to the gas giants! Jupiter, the biggest planet, is famous for its colorful stripes of swirling clouds and its Great Red Spot, a storm larger than Earth. Jupiter has more than 90 moons! One of its moons, Europa, is covered in ice, and scientists think there might be a liquid water ocean underneath. Next is Saturn, famous for its spectacular rings. These rings aren't solid; they're made of billions of pieces of ice and rock, from tiny specks to chunks as big as a house! Saturn's largest moon, Titan, is also special because it has a thick atmosphere and lakes of liquid methane.",
+          "visualPrompt": "An animation flying past Jupiter, showing the scale of the Great Red Spot. Then, fly through Saturn's rings to show they are made of individual particles."
         },
         {
           "id": "s101-l04-c2",
           "title": "Uranus and Neptune: The Ice Giants",
-          "content": "Uranus and Neptune are fascinating planets known as ice giants! They are called ice giants because they have a lot of water, ammonia, and methane in the form of ice, along with hydrogen and helium. This makes them very different from the rocky planets like Earth. One of the coolest things about Uranus is that it spins on its side! Its axis is tilted about 98 degrees, which is really unusual for a planet. Scientists think this strange tilt might have happened because Uranus was hit by something very large a long time ago. Because of the methane in its atmosphere, Uranus has a beautiful pale blue-green color that makes it stand out in our solar system.\nNow, let’s talk about Neptune! Neptune is the farthest planet from the Sun, and it has the strongest winds of any planet in our solar system. These winds can blow at incredible speeds of over 2,000 kilometers per hour! That’s faster than most cars can go! Another interesting fact about Neptune is its moon, Triton. Triton is special because it orbits Neptune in the opposite direction of how Neptune spins. This makes Triton unique among the moons of our solar system. Both Uranus and Neptune are amazing planets that help us learn more about the universe we live in!\nSo, remember, Uranus is the tilted ice giant with a pale blue-green color, and Neptune is the windy ice giant with a moon that has a special orbit. Isn’t space wonderful?\nContext recap: Uranus and Neptune are fascinating planets known as ice giants! They are called ice giants because they have a lot of water, ammonia, and methane in the form of ice, along with hydrogen and helium. This makes them very different from the rocky planets like Earth. One of the coolest things about Uranus is that it spins on its side!\nWhy this matters: Uranus and Neptune: The Ice Giants helps learners in Science connect ideas from Our Solar System to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "Farthest from the Sun are the two ice giants. Uranus is a beautiful pale blue-green color. What's really strange about Uranus is that it's tipped over and spins on its side! Scientists think something huge may have knocked it over long ago. The last planet is windy Neptune, which is a deep, rich blue. It has the fastest winds in the solar system, whipping around the planet at super-high speeds. Neptune's largest moon, Triton, is also unique because it orbits the planet backward, in the opposite direction that Neptune spins.",
+          "visualPrompt": "An animation showing Uranus rotating on its side compared to other planets. Then, show clouds whipping across Neptune's surface at high speed."
         },
         {
           "id": "s101-l04-c3",
           "title": "Why Outer Planets Are So Different",
-          "content": "The outer planets, which include Jupiter, Saturn, Uranus, and Neptune, are very different from the inner planets like Earth and Mars. One of the main reasons for this difference is where they formed in our solar system. The outer planets are located much farther away from the Sun, where it is much cooler. This cooler temperature allowed gases and ices to come together and form these gigantic planets. Because they are so large, they have strong gravitational fields. This means they can pull in and hold onto many moons, and they can also create stunning ring systems made of ice and rock particles that orbit around them.\nAnother interesting fact is that because the outer planets are so far from the Sun, they receive much less light and heat compared to the inner planets. For instance, Neptune, the farthest of the outer planets, gets about 900 times less sunlight than Earth! This lack of sunlight affects their atmospheres and temperatures, making them very cold and different from our home planet.\nIf you look at a map of the solar system, you will see that the boundary between the inner planets and the outer planets is marked by the asteroid belt. This asteroid belt is a region filled with rocky debris and is located between Mars and Jupiter. It acts like a barrier that separates the two groups of planets, highlighting the unique characteristics of each.\nUnderstanding these differences helps us learn more about how our solar system works and the fascinating worlds that exist beyond our own!\nContext recap: The outer planets, which include Jupiter, Saturn, Uranus, and Neptune, are very different from the inner planets like Earth and Mars. One of the main reasons for this difference is where they formed in our solar system. The outer planets are located much farther away from the Sun, where it is much cooler. This cooler temperature allowed gases and ices to come together and form these gigantic planets.\nWhy this matters: Why Outer Planets Are So Different helps learners in Science connect ideas from Our Solar System to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "Why are the outer planets so different from the inner ones? It's all about where they formed. In the cold, outer part of the solar system, it was easy for lightweight gases and ices to clump together, forming giant planets. Because these planets grew so large, their powerful gravity allowed them to capture many moons and form ring systems. Being so far from the Sun also means they are incredibly cold. Neptune, the farthest planet, gets 900 times less sunlight than Earth does! The asteroid belt between Mars and Jupiter marks the dividing line between the warm, rocky inner worlds and the cold, giant outer worlds.",
+          "visualPrompt": "An animation of the early solar system. Show rocks clumping together near the Sun, while gas and ice clump together in the colder regions far from the Sun."
         }
       ],
       "flashcards": [
         {
           "id": "s101-l04-f1",
-          "front": "Saturn's rings",
-          "back": "Made of billions of pieces of ice and rock, ranging from tiny grains to house-sized boulders"
+          "front": "What are Saturn's rings made of?",
+          "back": "Billions of pieces of ice and rock, ranging from tiny grains to boulders as big as a house."
         },
         {
           "id": "s101-l04-f2",
-          "front": "Why is Uranus tilted?",
-          "back": "Its axis is tilted about 98° — likely from a massive collision early in solar system history, causing it to rotate on its side"
+          "front": "What's strange about how Uranus spins?",
+          "back": "It's tilted on its side and spins like a rolling ball, likely because a huge object crashed into it long ago."
         },
         {
           "id": "s101-l04-f3",
-          "front": "Europa",
-          "back": "A moon of Jupiter that may have a liquid-water ocean beneath its icy surface — a target in the search for extraterrestrial life"
+          "front": "What is special about Jupiter's moon Europa?",
+          "back": "It's covered in ice, and scientists believe there is a huge ocean of liquid water underneath, making it a good place to search for life."
         },
         {
           "id": "s101-l04-f4",
-          "front": "Why are outer planets so large?",
-          "back": "They formed in cold regions where gases and ices could accumulate, building up massive atmospheres around rocky cores"
+          "front": "Why are the outer planets so big?",
+          "back": "They formed far from the Sun where it was cold enough for huge amounts of ice and gas to gather into giant planets."
         }
       ],
       "learningAids": [
         {
           "id": "s101-l04-a1",
           "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary of the lesson's main concept."
+          "title": "The Giant Planets",
+          "content": "A diagram showing the four outer planets, highlighting a key feature of each (Jupiter's spot, Saturn's rings, Uranus's tilt, Neptune's deep blue color)."
         }
       ]
     },
@@ -402,24 +411,27 @@ export const science101Module: LearningModule = {
       "duration": 14,
       "objectives": [
         "Explain how gravity keeps planets in orbit around the Sun",
-        "Compare orbital periods of inner and outer planets",
-        "Predict how changing distance affects orbital speed"
+        "Compare the time it takes inner and outer planets to orbit the Sun",
+        "Predict how changing a planet's distance from the Sun affects its speed"
       ],
       "chunks": [
         {
           "id": "s101-l05-c1",
           "title": "What is an Orbit?",
-          "content": "An orbit is like a special path that one object, such as a planet, follows around another object, like the Sun. This happens because of a force called gravity. In our solar system, every planet, including Earth, moves in an orbit around the Sun, which is at the center of our solar system. The Sun is very big and heavy, which means it has a strong gravitational pull. This pull is what keeps all the planets in their orbits, so they don’t just zoom off into space!\nImagine if there was no gravity at all. If that were the case, the planets wouldn’t follow their curved paths. Instead, they would move in straight lines and could drift away from the solar system!\nSo, an orbit is really about balance. It’s a combination of two important things: the forward motion of the planet, which we call inertia, and the gravitational pull from the Sun that tries to pull the planet toward it. This balance is what allows planets to travel around the Sun in a smooth, curved path, making our solar system a wonderful place full of amazing planets and other celestial objects. Understanding orbits helps us learn more about how our universe works and the beautiful dance of the planets around the Sun.\nContext recap: An orbit is like a special path that one object, such as a planet, follows around another object, like the Sun. This happens because of a force called gravity. In our solar system, every planet, including Earth, moves in an orbit around the Sun, which is at the center of our solar system. The Sun is very big and heavy, which means it has a strong gravitational pull.\nWhy this matters: What is an Orbit? helps learners in Science connect ideas from Our Solar System to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "An orbit is the curved path an object in space takes around another one. In our solar system, the planets are always moving forward, but the Sun's powerful gravity is always pulling them inward. Think of swinging a ball on a string around your head. The string keeps the ball from flying away. The Sun's gravity is like an invisible string that keeps the planets traveling in a circle around it. This perfect balance between moving forward and being pulled inward is what creates a stable orbit and keeps our solar system together.",
+          "visualPrompt": "Simple animation of a ball being swung on a string. Then, replace the person with the Sun and the ball with a planet, showing gravity as the string."
         },
         {
           "id": "s101-l05-c2",
           "title": "Orbital Speed and Period",
-          "content": "Did you know that the planets in our solar system move at different speeds depending on how close they are to the Sun? It's true! Planets that are nearer to the Sun, like Mercury, travel faster in their orbits. This means they take less time to complete one full trip around the Sun, which we call an orbital period. For example, Mercury is the closest planet to the Sun, and it zooms around it in just 88 Earth days! That's really quick!\nOn the other hand, we have Neptune, which is the farthest planet from the Sun. Neptune takes a whopping 165 Earth years to finish one orbit! Can you imagine waiting that long for a birthday?\nThis fascinating pattern was discovered by a scientist named Johannes Kepler. He studied the movements of the planets and found that the farther a planet is from the Sun, the slower it moves and the longer its year becomes. So, if you think about it, planets like Earth, which is about 93 million miles away from the Sun, take 365.25 days to orbit the Sun. We call this time one Earth year! Isn't it amazing how different planets have such unique journeys around our star?\nUnderstanding these concepts helps us learn more about our solar system and the incredible forces at work in space!\nContext recap: Did you know that the planets in our solar system move at different speeds depending on how close they are to the Sun? It's true! Planets that are nearer to the Sun, like Mercury, travel faster in their orbits. This means they take less time to complete one full trip around the Sun, which we call an orbital period.\nWhy this matters: Orbital Speed and Period helps learners in Science connect ideas from Our Solar System to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "Planets move at different speeds depending on how close they are to the Sun. The closer a planet is, the stronger the Sun's gravity pulls on it, and the faster it has to move to stay in orbit. Mercury zips around the Sun in just 88 Earth days! The time it takes to complete one orbit is called the orbital period, or a 'year.' Planets farther from the Sun have a weaker pull of gravity, so they move more slowly along their much larger paths. Faraway Neptune takes 165 Earth years to make just one trip around the Sun. That's a very long year!",
+          "visualPrompt": "An animation showing two orbital paths. A small inner planet (Mercury) zips around quickly, while a large outer planet (Neptune) moves very slowly along its path."
         },
         {
           "id": "s101-l05-c3",
           "title": "Exploring Orbits with a Simulation",
-          "content": "Welcome to our exciting orbit simulation! In this interactive activity, you get to play with the distance of a planet from the Sun. As you adjust how far away the planet is, you will notice some amazing changes in how fast it moves and how long it takes to go around the Sun. When you bring a planet closer to the Sun, it starts to zoom around much faster and completes its orbit in a shorter time. Imagine how thrilling it would be to see a planet racing through space! On the other hand, if you move the planet farther away from the Sun, it slows down significantly and takes a much longer time to make a full trip around the Sun. This is like how we experience seasons on Earth, but on a much grander scale!\nThis simulation helps us understand Kepler's laws of planetary motion, which are important rules that describe how planets move in our solar system. These same laws are used by NASA when they plan missions to send spacecraft to explore other planets. Isn’t it fascinating to think that every planet, moon, and satellite in our solar system follows these rules? So, get ready to experiment and discover how the universe works right before your eyes!\nContext recap: Welcome to our exciting orbit simulation! In this interactive activity, you get to play with the distance of a planet from the Sun. As you adjust how far away the planet is, you will notice some amazing changes in how fast it moves and how long it takes to go around the Sun. When you bring a planet closer to the Sun, it starts to zoom around much faster and completes its orbit in a shorter time.\nWhy this matters: Exploring Orbits with a Simulation helps learners in Science connect ideas from Our Solar System to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "Now it's your turn to be a space scientist! In this simulation, you can change a planet's distance from the Sun and see what happens. Watch how the planet speeds up when you move it closer and slows down when you move it farther away. You'll also see how its 'year' gets shorter or longer. Understanding these rules of motion is exactly what NASA scientists do when they plan missions to send spacecraft to explore other planets. Have fun experimenting with the laws that run our solar system!",
+          "visualPrompt": "A preview of the interactive simulation, showing a user dragging a planet's orbit closer to the Sun and watching the 'orbital speed' number go up."
         }
       ],
       "interactiveActivities": [
@@ -427,13 +439,13 @@ export const science101Module: LearningModule = {
           "id": "s101-l05-ia1",
           "type": "simulation",
           "title": "Orbit Speed Sandbox",
-          "description": "Adjust orbital distance and compare speed and period changes.",
+          "description": "Adjust a planet's distance from the Sun and see how its speed and year change.",
           "estimatedMinutes": 10,
           "difficultyLevel": "medium",
           "instructions": [
-            "Choose a planet profile.",
-            "Adjust distance from the Sun slider.",
-            "Observe speed and period changes in the chart."
+            "Choose a planet to start with.",
+            "Use the slider to change its distance from the Sun.",
+            "Watch the chart to see how its speed and year (orbital period) change."
           ],
           "data": {
             "controls": [
@@ -455,31 +467,31 @@ export const science101Module: LearningModule = {
       "flashcards": [
         {
           "id": "s101-l05-f1",
-          "front": "Orbit",
-          "back": "The curved path one object takes around another due to gravity — planets orbit the Sun"
+          "front": "What is an orbit?",
+          "back": "The curved path an object takes around another due to gravity. For example, planets orbit the Sun."
         },
         {
           "id": "s101-l05-f2",
-          "front": "Orbital period",
-          "back": "The time it takes for a planet to complete one full trip around the Sun — Earth's is 365.25 days"
+          "front": "What is an orbital period?",
+          "back": "The time it takes for a planet to complete one full trip around the Sun. Earth's orbital period is one year (365.25 days)."
         },
         {
           "id": "s101-l05-f3",
-          "front": "Kepler's pattern",
-          "back": "Planets farther from the Sun orbit more slowly and take longer to complete one orbit"
+          "front": "What is the pattern for orbital speed?",
+          "back": "Planets closer to the Sun orbit faster, while planets farther from the Sun orbit more slowly."
         },
         {
           "id": "s101-l05-f4",
-          "front": "Mercury's year",
-          "back": "Only 88 Earth days — the shortest orbital period because Mercury is the closest planet to the Sun"
+          "front": "Which planet has the shortest year?",
+          "back": "Mercury. It's the closest planet to the Sun, so it orbits the fastest, taking only 88 Earth days."
         }
       ],
       "learningAids": [
         {
           "id": "s101-l05-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Follow the prompt sequence and document your reasoning."
+          "title": "Orbit Explorer's Log",
+          "content": "As you use the simulation, write down your observations. What happens to the speed when you move the planet closer? What happens to the year length?"
         }
       ]
     },
@@ -511,20 +523,20 @@ export const science101Module: LearningModule = {
             },
             {
               "id": "d",
-              "text": "Mars"
+              "text": "Neptune"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Jupiter's mass is greater than all other planets combined, making it by far the largest planet in the solar system."
+          "explanation": "Jupiter is so massive that all the other planets could fit inside it, making it by far the largest planet."
         },
         {
           "id": "s101-l06-q2",
-          "text": "Which planet is famous for its bright ring system?",
+          "text": "Which planet is famous for its bright, beautiful ring system?",
           "skillId": "planet-identification",
           "options": [
             {
               "id": "a",
-              "text": "Neptune"
+              "text": "Uranus"
             },
             {
               "id": "b",
@@ -536,7 +548,7 @@ export const science101Module: LearningModule = {
             },
             {
               "id": "d",
-              "text": "Mercury"
+              "text": "Mars"
             }
           ],
           "correctOptionId": "b",
@@ -544,12 +556,12 @@ export const science101Module: LearningModule = {
         },
         {
           "id": "s101-l06-q3",
-          "text": "What mainly keeps planets in orbit around the Sun?",
+          "text": "What is the main force that keeps planets in orbit around the Sun?",
           "skillId": "orbit-concepts",
           "options": [
             {
               "id": "a",
-              "text": "Magnetism from Earth"
+              "text": "Magnetism"
             },
             {
               "id": "b",
@@ -557,11 +569,11 @@ export const science101Module: LearningModule = {
             },
             {
               "id": "c",
-              "text": "Wind in space"
+              "text": "Solar wind"
             },
             {
               "id": "d",
-              "text": "Planet engines"
+              "text": "The planets' speed"
             }
           ],
           "correctOptionId": "b",
@@ -569,28 +581,28 @@ export const science101Module: LearningModule = {
         },
         {
           "id": "s101-l06-q4",
-          "text": "A planet farther from the Sun usually has what kind of orbit period?",
+          "text": "A planet that is very far from the Sun will have a...",
           "skillId": "orbit-concepts",
           "options": [
             {
               "id": "a",
-              "text": "Shorter orbit period"
+              "text": "shorter year than Earth."
             },
             {
               "id": "b",
-              "text": "Same orbit period as Earth"
+              "text": "faster orbital speed than Earth."
             },
             {
               "id": "c",
-              "text": "Longer orbit period"
+              "text": "longer year than Earth."
             },
             {
               "id": "d",
-              "text": "No orbit period"
+              "text": "year that is the same as Earth's."
             }
           ],
           "correctOptionId": "c",
-          "explanation": "Kepler's laws show that farther planets orbit more slowly and travel longer paths, resulting in longer orbital periods."
+          "explanation": "Planets that are farther from the Sun move more slowly and have much longer paths to travel, resulting in longer orbital periods (years)."
         }
       ],
       "quizBlueprint": {
@@ -608,7 +620,7 @@ export const science101Module: LearningModule = {
       "type": "video",
       "duration": 10,
       "objectives": [
-        "Define dwarf planet and explain how it differs from a planet",
+        "Define 'dwarf planet' and explain how it differs from a planet",
         "Describe the asteroid belt and the Kuiper Belt",
         "Identify comets and explain what causes their tails"
       ],
@@ -616,39 +628,42 @@ export const science101Module: LearningModule = {
         {
           "id": "s101-l07-c1",
           "title": "What is a Dwarf Planet?",
-          "content": "A dwarf planet is a fascinating type of celestial body that orbits around the Sun, just like the planets we are more familiar with. To be called a dwarf planet, it needs to be big enough that its own gravity pulls it into a shape that is almost round. This is similar to how Earth and other planets look! However, there is an important difference between dwarf planets and regular planets. Dwarf planets have not cleared their orbital path of other objects. This means that they share their space with many other small bodies, like asteroids and comets. The most famous dwarf planet is Pluto. For many years, Pluto was considered the ninth planet in our solar system. But in 2006, scientists from the International Astronomical Union decided to change its classification to a dwarf planet. This was a big change in the way we understand our solar system! Besides Pluto, there are other dwarf planets that are also interesting. These include Eris, Ceres, Makemake, and Haumea. Ceres is special because it is found in the asteroid belt, which is a region filled with many small rocky objects. The other dwarf planets, like Eris and Makemake, orbit in a distant area called the Kuiper Belt, which is beyond the orbit of Neptune. Learning about dwarf planets is important because it helps us discover the amazing variety of objects that exist in our solar system, showing us that there is so much more to explore beyond just the eight main planets.\nContext recap: A dwarf planet is a fascinating type of celestial body that orbits around the Sun, just like the planets we are more familiar with. To be called a dwarf planet, it needs to be big enough that its own gravity pulls it into a shape that is almost round. This is similar to how Earth and other planets look! However, there is an important difference between dwarf planets and regular planets.\nWhy this matters: What is a Dwarf Planet? helps learners in Science connect ideas from Our Solar System to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "Besides the eight planets, our solar system has other smaller, round worlds called dwarf planets. To be a dwarf planet, an object must orbit the Sun and be big enough for its own gravity to make it round. But there's one key difference: a dwarf planet hasn't 'cleared its neighborhood.' This means it shares its orbital path with lots of other asteroids and icy objects. The most famous dwarf planet is Pluto. For a long time, we called it the ninth planet, but scientists reclassified it in 2006 once they discovered it shares its space with many other objects in a region called the Kuiper Belt.",
+          "visualPrompt": "An animation comparing two orbits. One shows Earth's orbit, which is clear of debris. The other shows Pluto's orbit, which is full of other small, icy objects."
         },
         {
           "id": "s101-l07-c2",
           "title": "Asteroids and the Asteroid Belt",
-          "content": "Asteroids are really interesting rocky objects that travel around the Sun, but they are much smaller than planets and dwarf planets. You can find most of these asteroids in a special area called the asteroid belt, which is located between the orbits of Mars and Jupiter. Imagine a huge space filled with millions of asteroids! Even though there are so many of them, they are spread out so far apart that spacecraft can zoom through this area without bumping into any of them. The biggest object in the asteroid belt is Ceres, which is about 940 kilometers wide! Ceres is special because it is also classified as a dwarf planet. Scientists are very curious about asteroids because they are like time capsules from the past. They hold important clues about how our solar system was formed around 4.6 billion years ago. By studying asteroids, we can learn more about the history of our solar system and how everything came together to create the planets, moons, and even Earth! Understanding these rocky objects helps us piece together the story of our cosmic neighborhood and gives us a glimpse into the early days of space. Isn’t it amazing to think that these small rocks can tell us so much about the universe we live in? So, the next time you look up at the night sky, remember that there are millions of asteroids out there, waiting to share their secrets with us!\nContext recap: Asteroids are really interesting rocky objects that travel around the Sun, but they are much smaller than planets and dwarf planets. You can find most of these asteroids in a special area called the asteroid belt, which is located between the orbits of Mars and Jupiter. Imagine a huge space filled with millions of asteroids! Even though there are so many of them, they are spread out so far apart that spacecraft can zoom through this area without bumping into any of them.\nWhy this matters: Asteroids and the Asteroid Belt helps learners in Science connect ideas from Our Solar System to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "Asteroids are space rocks, much smaller than planets, that also orbit the Sun. Most of them are found in the asteroid belt, a wide, donut-shaped region between the orbits of Mars and Jupiter. There are millions of asteroids here, but space is so big that they are very far apart. Scientists love studying asteroids because they are leftover building blocks from when our solar system first formed over 4 billion years ago. They are like rocky time capsules that can teach us about the history of the planets.",
+          "visualPrompt": "A map of the inner solar system showing the wide, sparse ring of the asteroid belt located between the orbits of Mars and Jupiter."
         },
         {
           "id": "s101-l07-c3",
           "title": "Comets and the Kuiper Belt",
-          "content": "Comets are fascinating icy bodies that zoom through space and create stunning glowing tails when they get close to the Sun. When a comet approaches the Sun, the heat from the Sun causes its icy surface to melt and turn into gas. This process creates a bright cloud around the comet known as a coma. Along with the coma, comets can develop one or two tails. These tails are made up of tiny particles of dust and gas. One of the tails, called the ion tail, always points away from the Sun. This happens because the solar wind, which is a stream of charged particles released from the Sun, pushes the ion tail away. Many comets come from a special area in space called the Kuiper Belt. The Kuiper Belt is like a ring of icy objects that lies beyond the orbit of Neptune, which is the farthest planet from the Sun in our solar system. There is also an even more distant region known as the Oort Cloud, where some comets originate. One of the most well-known comets is Halley's Comet. It is famous because it visits the inner part of our solar system about every 76 years, making it visible from Earth. By studying comets like Halley's, scientists can learn more about the materials that were present when our solar system was forming, giving us clues about the history of our cosmic neighborhood.\nContext recap: Comets are fascinating icy bodies that zoom through space and create stunning glowing tails when they get close to the Sun. When a comet approaches the Sun, the heat from the Sun causes its icy surface to melt and turn into gas. This process creates a bright cloud around the comet known as a coma. Along with the coma, comets can develop one or two tails.\nWhy this matters: Comets and the Kuiper Belt helps learners in Science connect ideas from Our Solar System to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "Comets are like giant, icy snowballs that orbit the Sun. Most of them live in the far, cold edges of the solar system, in a place called the Kuiper Belt (where Pluto is) or even farther out. When a comet's orbit brings it close to the Sun, the heat makes its ice turn into gas and dust. This material streams away from the comet, creating a beautiful, glowing tail that can stretch for millions of miles. The tail is pushed by the solar wind, so it always points away from the Sun, no matter which way the comet is traveling!",
+          "visualPrompt": "An animation of a comet approaching the Sun. As it gets closer, a bright tail forms and grows, always pointing directly away from the Sun."
         }
       ],
       "flashcards": [
         {
           "id": "s101-l07-f1",
-          "front": "Dwarf planet",
-          "back": "A body that orbits the Sun and is round, but has not cleared its orbital zone of other debris — e.g., Pluto, Ceres, Eris"
+          "front": "What is a dwarf planet?",
+          "back": "A round object that orbits the Sun but shares its orbital path with other objects. Examples include Pluto and Ceres."
         },
         {
           "id": "s101-l07-f2",
-          "front": "Asteroid belt",
-          "back": "A wide region of rocky debris between Mars and Jupiter containing millions of asteroids"
+          "front": "Where is the asteroid belt?",
+          "back": "A wide ring of millions of rocky asteroids located between the orbits of Mars and Jupiter."
         },
         {
           "id": "s101-l07-f3",
           "front": "Why do comets have tails?",
-          "back": "Solar heat vaporizes the comet's ice, creating a glowing coma and tails pushed away from the Sun by solar wind"
+          "back": "When a comet gets near the Sun, its ice turns to gas and dust. This material is pushed away by the solar wind, forming a glowing tail."
         },
         {
           "id": "s101-l07-f4",
-          "front": "Kuiper Belt",
-          "back": "A ring of icy objects beyond Neptune's orbit — home to Pluto, Eris, and many short-period comets"
+          "front": "What is the Kuiper Belt?",
+          "back": "A ring of icy objects beyond Neptune's orbit. It's home to dwarf planets like Pluto and many comets."
         }
       ]
     },
@@ -658,25 +673,28 @@ export const science101Module: LearningModule = {
       "type": "interactive",
       "duration": 12,
       "objectives": [
-        "Compare environments of different solar-system bodies using evidence",
+        "Compare the environments of different solar system bodies using evidence",
         "Explain how distance from the Sun affects surface conditions",
-        "Evaluate which bodies might support future exploration or life"
+        "Evaluate which places might be good targets to search for life"
       ],
       "chunks": [
         {
           "id": "s101-l08-c1",
           "title": "Surface Conditions Across the Solar System",
-          "content": "Every planet and moon in our solar system has its own unique surface conditions, which are influenced by several important factors. One of these factors is how far the planet is from the Sun. For example, Mercury is the closest planet to the Sun, and because it has almost no atmosphere, it experiences extreme temperature changes. During the day, it can get super hot, while at night, it becomes freezing cold!\nVenus, the second planet from the Sun, is quite different. It is surrounded by a thick, hot atmosphere that traps heat, making it the hottest planet in our solar system. Imagine being in a place where it feels like an oven all the time!\nNow, Earth is special because it is the only planet known to have stable liquid water on its surface. This water is essential for all known forms of life, including plants, animals, and humans.\nMars, the fourth planet, has a thin atmosphere and very cold temperatures. However, scientists have discovered signs that Mars once had rivers and possibly even lakes! This makes Mars a fascinating place to study because it might have supported life in the past.\nThe outer planets, like Jupiter and Saturn, are quite different from the inner planets. They do not have solid surfaces like Earth or Mars. Instead, their atmospheres become thicker and thicker as you go deeper into the planet. This means that if you were to travel to these planets, you would find yourself surrounded by swirling gases instead of solid ground. Learning about these surface conditions helps us understand the different environments in our solar system and how they might support life or be completely inhospitable.\nBy exploring these unique worlds, we can discover more about our universe and the possibilities of life beyond Earth.\nContext recap: Every planet and moon in our solar system has its own unique surface conditions, which are influenced by several important factors. One of these factors is how far the planet is from the Sun. For example, Mercury is the closest planet to the Sun, and because it has almost no atmosphere, it experiences extreme temperature changes. During the day, it can get super hot, while at night, it becomes freezing cold!\nWhy this matters: Surface Conditions Across the Solar System helps learners in Science connect ideas from Our Solar System to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "What would it be like to stand on another world? It depends! On Mercury, you'd bake in the day and freeze at night. On Venus, you'd be crushed and melted by the thick, hot atmosphere. Earth is the only place with comfortable temperatures and liquid water. Mars is a freezing, dusty desert. And if you tried to land on Jupiter or Saturn, you couldn't! They are gas giants with no solid surface, just thicker and thicker layers of swirling gas. A world's distance from the Sun and its atmosphere are the two main things that decide what its surface is like.",
+          "visualPrompt": "A split screen showing four different planetary surfaces: Mercury's craters, Venus's cloudy sky, Earth's oceans, and Mars's red rocks."
         },
         {
           "id": "s101-l08-c2",
           "title": "Moons Worth Exploring",
-          "content": "Did you know that some of the most thrilling places to explore in our solar system are moons instead of planets? Let's take a closer look at a few of these fascinating moons! First up is Europa, one of Jupiter's moons. Europa has a cracked icy surface, and scientists think that underneath this ice lies a huge ocean of liquid water. This ocean could be a perfect home for tiny, simple forms of life! Isn't that exciting?\nNext, we have Enceladus, which is a moon that orbits around Saturn. Enceladus is special because it shoots out geysers of water ice into space from an ocean that is hidden beneath its surface. Imagine water shooting high up into the sky! This makes Enceladus a very interesting place for scientists to study.\nThen there's Titan, Saturn's largest moon. Titan is unique because it has a thick atmosphere made mostly of nitrogen. It even has lakes filled with liquid methane, which is a type of gas that can be found on Earth too! The surface of Titan looks very different from our own planet, and exploring it could teach us a lot about how different worlds can be.\nThese amazing moons are at the top of the list for future space missions that want to find signs of life beyond our Earth. By studying these moons, we might be able to answer one of the biggest questions humans have: Are we alone in the universe? Exploring these moons could lead to incredible discoveries and help us understand more about our cosmic neighborhood!\nContext recap: Did you know that some of the most thrilling places to explore in our solar system are moons instead of planets? Let's take a closer look at a few of these fascinating moons! First up is Europa, one of Jupiter's moons. Europa has a cracked icy surface, and scientists think that underneath this ice lies a huge ocean of liquid water.\nWhy this matters: Moons Worth Exploring helps learners in Science connect ideas from Our Solar System to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "Some of the most exciting places to search for life aren't planets, but moons! Jupiter's moon Europa and Saturn's moon Enceladus are both covered in ice, but scientists are almost certain they have huge oceans of liquid water hidden underneath. Enceladus even sprays giant geysers of this water out into space! Another amazing moon is Titan, which orbits Saturn. It has a thick atmosphere and rivers and lakes, but they're filled with liquid methane, not water. These moons are top targets for future space missions to answer the big question: are we alone in the universe?",
+          "visualPrompt": "An animation showing a cutaway of Europa, revealing a vast liquid ocean beneath its thick, icy crust."
         },
         {
           "id": "s101-l08-c3",
           "title": "Using Evidence to Compare Worlds",
-          "content": "Scientists have exciting ways to compare different worlds in our solar system! They look at important factors like temperature, what the atmosphere is made of, how strong the gravity is on the surface, whether there is water, and how strong the magnetic fields are. By making comparison tables, scientists can spot patterns and connections between these factors. For instance, they find that all the celestial bodies that have liquid water are seen as better places to possibly support life. This means that if a planet or moon has water, it might be a good candidate for finding living things!\nWhen students create their own tables to sort and rank this information, they get to practice the same kind of thinking that real planetary scientists use. These scientists carefully decide where to send rovers, orbiters, and landers to explore new worlds. Learning how to compare and analyze data is a super important skill in science. It helps us understand not just our own planet, but also the entire universe around us. By using evidence to make comparisons, we can discover more about the amazing worlds that share our solar system!\nSo, let's get ready to explore and compare! What will you discover about the planets and moons in our cosmic neighborhood?\nRemember, every time we learn something new, we are taking a step closer to understanding the mysteries of space!\nContext recap: Scientists have exciting ways to compare different worlds in our solar system! They look at important factors like temperature, what the atmosphere is made of, how strong the gravity is on the surface, whether there is water, and how strong the magnetic fields are. By making comparison tables, scientists can spot patterns and connections between these factors. For instance, they find that all the celestial bodies that have liquid water are seen as better places to possibly support life.\nWhy this matters: Using Evidence to Compare Worlds helps learners in Science connect ideas from Our Solar System to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "When scientists decide where to send a new rover or spacecraft, they compare different worlds using evidence. They look at data about temperature, atmosphere, and whether there are signs of water. Worlds with liquid water are always the most interesting candidates for supporting life. In this activity, you'll get to be a mission planner. You will look at the evidence for several worlds and decide which ones are the best targets for future exploration. This is how real science works—using what you know to make big decisions about where to explore next!",
+          "visualPrompt": "A simple table or chart comparing Mars, Europa, and Titan. Columns could include 'Has Atmosphere?', 'Has Liquid Water?', and 'Temperature'."
         }
       ],
       "interactiveActivities": [
@@ -684,13 +702,13 @@ export const science101Module: LearningModule = {
           "id": "s101-l08-ia1",
           "type": "sorting_buckets",
           "title": "Exploration Targets Sort",
-          "description": "Sort solar-system bodies by their potential for future exploration.",
+          "description": "Sort solar system bodies by their potential for future exploration based on the evidence.",
           "estimatedMinutes": 8,
           "difficultyLevel": "medium",
           "instructions": [
-            "Read the clue card for each solar-system body.",
-            "Decide if it is a high-priority or low-priority exploration target.",
-            "Explain your reasoning after sorting."
+            "Read the clue card for each world.",
+            "Decide if it is a 'High-Priority' or 'Lower-Priority' target for exploration.",
+            "Be ready to explain your reasoning after sorting!"
           ],
           "data": {
             "buckets": [
@@ -706,32 +724,32 @@ export const science101Module: LearningModule = {
             "items": [
               {
                 "id": "europa",
-                "label": "Europa — possible subsurface ocean",
+                "label": "Europa — has a likely ocean under its ice",
                 "correctBucketId": "high"
               },
               {
                 "id": "mars",
-                "label": "Mars — evidence of ancient water",
+                "label": "Mars — shows evidence of ancient water",
                 "correctBucketId": "high"
               },
               {
                 "id": "enceladus",
-                "label": "Enceladus — water geysers detected",
+                "label": "Enceladus — shoots water geysers into space",
                 "correctBucketId": "high"
               },
               {
                 "id": "titan",
-                "label": "Titan — thick atmosphere, methane lakes",
+                "label": "Titan — has a thick atmosphere and liquid methane lakes",
                 "correctBucketId": "high"
               },
               {
                 "id": "mercury",
-                "label": "Mercury — no atmosphere, extreme temps",
+                "label": "Mercury — no atmosphere, extreme temperatures",
                 "correctBucketId": "low"
               },
               {
                 "id": "venus",
-                "label": "Venus — 460 °C surface, crushing pressure",
+                "label": "Venus — surface is hot enough to melt lead",
                 "correctBucketId": "low"
               }
             ]
@@ -741,23 +759,23 @@ export const science101Module: LearningModule = {
       "flashcards": [
         {
           "id": "s101-l08-f1",
-          "front": "Europa",
-          "back": "A moon of Jupiter with a cracked icy surface covering a possible global liquid-water ocean"
+          "front": "What is special about Europa?",
+          "back": "It's a moon of Jupiter with a cracked icy surface that likely covers a global ocean of liquid water."
         },
         {
           "id": "s101-l08-f2",
-          "front": "Enceladus",
-          "back": "A moon of Saturn that shoots geysers of water ice into space from an underground ocean"
+          "front": "What is special about Enceladus?",
+          "back": "It's a moon of Saturn that shoots geysers of water ice into space from an ocean hidden under its surface."
         },
         {
           "id": "s101-l08-f3",
-          "front": "Titan",
-          "back": "Saturn's largest moon — has a thick nitrogen atmosphere and lakes of liquid methane on its surface"
+          "front": "What is special about Titan?",
+          "back": "It's Saturn's largest moon and has a thick atmosphere and lakes of liquid methane on its surface."
         },
         {
           "id": "s101-l08-f4",
-          "front": "Why is liquid water important?",
-          "back": "All known life requires liquid water, so bodies with water are top candidates in the search for extraterrestrial life"
+          "front": "Why is finding liquid water so important?",
+          "back": "All life as we know it requires liquid water, so places with water are the best candidates in the search for life beyond Earth."
         }
       ]
     },
@@ -777,44 +795,44 @@ export const science101Module: LearningModule = {
           "options": [
             {
               "id": "a",
-              "text": "Dwarf planets are not round"
+              "text": "Dwarf planets are not round."
             },
             {
               "id": "b",
-              "text": "Dwarf planets have not cleared their orbit of other debris"
+              "text": "Dwarf planets have not cleared their orbit of other objects."
             },
             {
               "id": "c",
-              "text": "Dwarf planets do not orbit the Sun"
+              "text": "Dwarf planets do not orbit the Sun."
             },
             {
               "id": "d",
-              "text": "Dwarf planets are always larger than planets"
+              "text": "Dwarf planets are always made of ice."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "A dwarf planet orbits the Sun and is round, but unlike a full planet, it has not cleared its orbital zone of other objects."
+          "explanation": "A dwarf planet orbits the Sun and is round, but unlike a planet, it has not cleared its orbital path of other objects."
         },
         {
           "id": "s101-l09-q2",
-          "text": "What causes a comet's tail?",
+          "text": "What causes a comet to grow a glowing tail?",
           "skillId": "small-body-concepts",
           "options": [
             {
               "id": "a",
-              "text": "Rocket fuel burning behind it"
+              "text": "It has rocket engines."
             },
             {
               "id": "b",
-              "text": "Solar heat vaporizing ice, with tails pushed by solar wind"
+              "text": "Heat from the Sun turns its ice into gas and dust."
             },
             {
               "id": "c",
-              "text": "Gravity pulling dust off its surface"
+              "text": "It is on fire."
             },
             {
               "id": "d",
-              "text": "Lightning inside the comet"
+              "text": "It reflects light from Earth."
             }
           ],
           "correctOptionId": "b",
@@ -822,7 +840,7 @@ export const science101Module: LearningModule = {
         },
         {
           "id": "s101-l09-q3",
-          "text": "Which moon is considered a top target for finding life because of its possible subsurface ocean?",
+          "text": "Which moon is a top target for finding life because of its likely subsurface ocean?",
           "skillId": "exploration-concepts",
           "options": [
             {
@@ -835,24 +853,24 @@ export const science101Module: LearningModule = {
             },
             {
               "id": "c",
-              "text": "Phobos"
+              "text": "Titan"
             },
             {
               "id": "d",
-              "text": "Ganymede"
+              "text": "Phobos"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Europa, a moon of Jupiter, has a cracked icy surface that scientists believe covers a global liquid-water ocean — a possible habitat for life."
+          "explanation": "Europa, a moon of Jupiter, has a cracked icy surface that scientists believe covers a global liquid-water ocean—a possible habitat for life."
         },
         {
           "id": "s101-l09-q4",
-          "text": "Where is the asteroid belt located?",
+          "text": "Where are most of the asteroids in our solar system found?",
           "skillId": "solar-system-geography",
           "options": [
             {
               "id": "a",
-              "text": "Between Earth and Venus"
+              "text": "Orbiting Earth"
             },
             {
               "id": "b",
@@ -860,11 +878,11 @@ export const science101Module: LearningModule = {
             },
             {
               "id": "c",
-              "text": "Between Mars and Jupiter"
+              "text": "In the asteroid belt between Mars and Jupiter"
             },
             {
               "id": "d",
-              "text": "Inside Mercury's orbit"
+              "text": "Between the Sun and Mercury"
             }
           ],
           "correctOptionId": "c",
@@ -891,24 +909,24 @@ export const science101Module: LearningModule = {
       "questions": [
         {
           "id": "s101-l10-q1",
-          "text": "Which statement best compares inner and outer planets?",
+          "text": "Which statement best compares the inner and outer planets?",
           "skillId": "planet-classification",
           "options": [
             {
               "id": "a",
-              "text": "Inner planets are mostly rocky; outer planets are mostly gas or ice giants."
+              "text": "Inner planets are small and rocky; outer planets are large gas or ice giants."
             },
             {
               "id": "b",
-              "text": "All planets are rocky."
+              "text": "Inner planets are cold and icy; outer planets are hot and rocky."
             },
             {
               "id": "c",
-              "text": "All planets have rings."
+              "text": "All planets are the same size."
             },
             {
               "id": "d",
-              "text": "Outer planets are all smaller than inner planets."
+              "text": "Outer planets are closer to the Sun than inner planets."
             }
           ],
           "correctOptionId": "a",
@@ -916,7 +934,7 @@ export const science101Module: LearningModule = {
         },
         {
           "id": "s101-l10-q2",
-          "text": "Which planet is closest to the Sun?",
+          "text": "Which planet is closest to the Sun and has the shortest year?",
           "skillId": "planet-identification",
           "options": [
             {
@@ -937,36 +955,36 @@ export const science101Module: LearningModule = {
             }
           ],
           "correctOptionId": "c",
-          "explanation": "Mercury orbits closest to the Sun, completing one orbit in just 88 Earth days."
+          "explanation": "Mercury orbits closest to the Sun, completing one orbit (or year) in just 88 Earth days."
         },
         {
           "id": "s101-l10-q3",
-          "text": "Why do outer planets take longer to orbit the Sun?",
+          "text": "Why do outer planets like Neptune have such long years?",
           "skillId": "orbit-concepts",
           "options": [
             {
               "id": "a",
-              "text": "Their orbital paths are larger, so each orbit takes more time."
+              "text": "They are farther away, so their paths are much longer and they move more slowly."
             },
             {
               "id": "b",
-              "text": "They stop moving in winter."
+              "text": "They often stop moving to save energy."
             },
             {
               "id": "c",
-              "text": "They have no gravity."
+              "text": "They have less gravity."
             },
             {
               "id": "d",
-              "text": "They spin backward every day."
+              "text": "They spin backward."
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Farther planets have much longer orbital paths and move more slowly, so their years are much longer — Neptune takes 165 Earth years."
+          "explanation": "Planets that are farther from the Sun have much longer orbital paths and move more slowly, so their years are much longer. Neptune takes 165 Earth years to orbit the Sun!"
         },
         {
           "id": "s101-l10-q4",
-          "text": "Which body is classified as a dwarf planet?",
+          "text": "Which of these is classified as a dwarf planet?",
           "skillId": "planet-classification",
           "options": [
             {
@@ -983,57 +1001,57 @@ export const science101Module: LearningModule = {
             },
             {
               "id": "d",
-              "text": "Mars"
+              "text": "The Moon"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Pluto was reclassified as a dwarf planet in 2006 because it has not cleared its orbital zone in the Kuiper Belt."
+          "explanation": "Pluto was reclassified as a dwarf planet in 2006 because it is round and orbits the Sun, but has not cleared its orbital path of other objects."
         },
         {
           "id": "s101-l10-q5",
-          "text": "What is one key role of the Sun in the solar system?",
+          "text": "What are the two most important jobs of the Sun in our solar system?",
           "skillId": "sun-concepts",
           "options": [
             {
               "id": "a",
-              "text": "It provides gravity and energy that hold the system together."
+              "text": "Providing gravity to hold planets in orbit and energy for light and heat."
             },
             {
               "id": "b",
-              "text": "It orbits Earth once each day."
+              "text": "Orbiting the Earth and creating the seasons."
             },
             {
               "id": "c",
-              "text": "It is a cold rocky planet."
+              "text": "Being a rocky planet and having many moons."
             },
             {
               "id": "d",
-              "text": "It has no influence on planets."
+              "text": "Pushing planets away and making them cold."
             }
           ],
           "correctOptionId": "a",
-          "explanation": "The Sun's gravity keeps all planets in orbit, and its nuclear fusion provides the light and heat that drive conditions across the solar system."
+          "explanation": "The Sun's gravity keeps all planets in orbit, and its energy provides the light and heat that make life on Earth possible."
         },
         {
           "id": "s101-l10-q6",
-          "text": "Scientists consider Europa a top exploration target because:",
+          "text": "Scientists are most excited to explore Jupiter's moon Europa because it...",
           "skillId": "exploration-concepts",
           "options": [
             {
               "id": "a",
-              "text": "It has the tallest volcano in the solar system"
+              "text": "has the tallest volcano in the solar system."
             },
             {
               "id": "b",
-              "text": "It may have a liquid-water ocean beneath its icy surface"
+              "text": "may have a liquid water ocean beneath its icy surface."
             },
             {
               "id": "c",
-              "text": "It is the closest moon to Earth"
+              "text": "is the closest moon to Earth."
             },
             {
               "id": "d",
-              "text": "It has a thick oxygen atmosphere"
+              "text": "has a thick oxygen atmosphere we could breathe."
             }
           ],
           "correctOptionId": "b",

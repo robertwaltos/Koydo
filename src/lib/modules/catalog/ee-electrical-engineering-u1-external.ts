@@ -1,9 +1,9 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const EeElectricalEngineeringU1ExternalModule: LearningModule = {
+export const ee_electrical_engineering_u1_external_Module: LearningModule = {
   "id": "ee-electrical-engineering-u1-external",
   "title": "Electrical Engineering (Master's Level)",
-  "description": "Electrical Engineering curriculum from 1 open-source datasets. MMLU (cais/mmlu).",
+  "description": "Electrical Engineering curriculum from open-source datasets. MMLU (cais/mmlu). Refined for flow, completeness, and visual engagement.",
   "subject": "Science",
   "lessons": [
     {
@@ -11,6 +11,7 @@ export const EeElectricalEngineeringU1ExternalModule: LearningModule = {
       "title": "Electrical Engineering — Quiz 1",
       "type": "quiz",
       "duration": 30,
+      "imagePrompt": "A high-tech electrical engineering laboratory with oscilloscopes, circuit boards, and glowing digital displays.",
       "questions": [
         {
           "id": "mmlu-dec50a52b2665b0f",
@@ -221,7 +222,7 @@ export const EeElectricalEngineeringU1ExternalModule: LearningModule = {
         },
         {
           "id": "mmlu-8779d5f7e98926cb",
-          "text": "LC oscillators are used for produce a waveform with frequency ranging from",
+          "text": "LC oscillators are used to produce a waveform with frequency ranging from",
           "options": [
             {
               "id": "opt-A",
@@ -252,11 +253,11 @@ export const EeElectricalEngineeringU1ExternalModule: LearningModule = {
             },
             {
               "id": "opt-B",
-              "text": "Low resistance when forward biased, while high resistance when reverse bias"
+              "text": "Low resistance when forward biased, while high resistance when reverse biased"
             },
             {
               "id": "opt-C",
-              "text": "High resistance when forward biased, while low resistance when reverse bias"
+              "text": "High resistance when forward biased, while low resistance when reverse biased"
             },
             {
               "id": "opt-D",
@@ -290,7 +291,7 @@ export const EeElectricalEngineeringU1ExternalModule: LearningModule = {
         },
         {
           "id": "mmlu-f76a47a573a436ff",
-          "text": "How many bits are required to store one BCD digit ?",
+          "text": "How many bits are required to store one BCD digit?",
           "options": [
             {
               "id": "opt-A",
@@ -364,10 +365,11 @@ export const EeElectricalEngineeringU1ExternalModule: LearningModule = {
       "title": "Electrical Engineering — Quiz 2",
       "type": "quiz",
       "duration": 30,
+      "imagePrompt": "A close-up of a modern microprocessor chip on a green printed circuit board with glowing traces.",
       "questions": [
         {
           "id": "mmlu-cd5795f5fd6ef86d",
-          "text": "How many entries will be in the truth table of a 3 input NAND gate ?",
+          "text": "How many entries will be in the truth table of a 3 input NAND gate?",
           "options": [
             {
               "id": "opt-A",
@@ -436,7 +438,7 @@ export const EeElectricalEngineeringU1ExternalModule: LearningModule = {
         },
         {
           "id": "mmlu-7eb683eef1306f56",
-          "text": "Inintel 8085A microprocessor ALE signal is made high to",
+          "text": "In Intel 8085A microprocessor ALE signal is made high to",
           "options": [
             {
               "id": "opt-A",
@@ -459,7 +461,7 @@ export const EeElectricalEngineeringU1ExternalModule: LearningModule = {
         },
         {
           "id": "mmlu-674ab7ebe62aeb16",
-          "text": "For an SCR gate cathode characteristic is a straight line of 130. For triggered source volume of 15 V and allowable gate power dissipation of 0.5 W compute the gate source resistance?",
+          "text": "For an SCR gate cathode characteristic is a straight line of 130. For triggered source voltage of 15 V and allowable gate power dissipation of 0.5 W compute the gate source resistance?",
           "options": [
             {
               "id": "opt-A",
@@ -482,7 +484,7 @@ export const EeElectricalEngineeringU1ExternalModule: LearningModule = {
         },
         {
           "id": "mmlu-7a8ade1244c5c3ae",
-          "text": "The concept of V/f control of inverters driving induction motors resuls in",
+          "text": "The concept of V/f control of inverters driving induction motors results in",
           "options": [
             {
               "id": "opt-A",
@@ -498,7 +500,7 @@ export const EeElectricalEngineeringU1ExternalModule: LearningModule = {
             },
             {
               "id": "opt-D",
-              "text": "hormonic elimination"
+              "text": "harmonic elimination"
             }
           ],
           "correctOptionId": "opt-A"
@@ -717,6 +719,7 @@ export const EeElectricalEngineeringU1ExternalModule: LearningModule = {
       "title": "Electrical Engineering — Quiz 3",
       "type": "quiz",
       "duration": 30,
+      "imagePrompt": "A 3D rendering of a three-phase induction motor with a cutaway showing the stator windings and rotor.",
       "questions": [
         {
           "id": "mmlu-d489590ab35d791d",
@@ -820,7 +823,7 @@ export const EeElectricalEngineeringU1ExternalModule: LearningModule = {
             },
             {
               "id": "opt-B",
-              "text": "conducting materials which may be either magnetic or non-magentic materials."
+              "text": "conducting materials which may be either magnetic or non-magnetic materials."
             },
             {
               "id": "opt-C",
@@ -927,7 +930,7 @@ export const EeElectricalEngineeringU1ExternalModule: LearningModule = {
         },
         {
           "id": "mmlu-15163693e7b368a6",
-          "text": "A Lissajous pattern on an oscilloscope has 5 horinzontal tangencies and 2 vertical tangencies. The frequency of horizontal input is 100 Hz. The frequency of the vertical will be",
+          "text": "A Lissajous pattern on an oscilloscope has 5 horizontal tangencies and 2 vertical tangencies. The frequency of horizontal input is 100 Hz. The frequency of the vertical will be",
           "options": [
             {
               "id": "opt-A",
@@ -1070,6 +1073,7 @@ export const EeElectricalEngineeringU1ExternalModule: LearningModule = {
       "title": "Electrical Engineering — Quiz 4",
       "type": "quiz",
       "duration": 30,
+      "imagePrompt": "An abstract visualization of frequency modulation (FM) radio waves propagating through space.",
       "questions": [
         {
           "id": "mmlu-93597bb5f96a7174",
@@ -1423,6 +1427,7 @@ export const EeElectricalEngineeringU1ExternalModule: LearningModule = {
       "title": "Electrical Engineering — Quiz 5",
       "type": "quiz",
       "duration": 30,
+      "imagePrompt": "A glowing p-n junction diode diagram overlaid on a futuristic digital background.",
       "questions": [
         {
           "id": "mmlu-201ef597f12518e3",
@@ -1545,7 +1550,7 @@ export const EeElectricalEngineeringU1ExternalModule: LearningModule = {
           "options": [
             {
               "id": "opt-A",
-              "text": "With normal frequeny supply the electromagnetic forces causes severe stirring action in the molten metal."
+              "text": "With normal frequency supply the electromagnetic forces causes severe stirring action in the molten metal."
             },
             {
               "id": "opt-B",
@@ -1633,7 +1638,7 @@ export const EeElectricalEngineeringU1ExternalModule: LearningModule = {
         },
         {
           "id": "mmlu-6bc14b7011e8b3a3",
-          "text": "What is used to protect the SCR from over current ?",
+          "text": "What is used to protect the SCR from over current?",
           "options": [
             {
               "id": "opt-A",
@@ -1764,7 +1769,7 @@ export const EeElectricalEngineeringU1ExternalModule: LearningModule = {
             },
             {
               "id": "opt-D",
-              "text": "Nither of above."
+              "text": "Neither of above."
             }
           ],
           "correctOptionId": "opt-B"
@@ -1776,6 +1781,7 @@ export const EeElectricalEngineeringU1ExternalModule: LearningModule = {
       "title": "Electrical Engineering — Quiz 6",
       "type": "quiz",
       "duration": 30,
+      "imagePrompt": "A high-voltage transmission tower against a dramatic sunset sky, with glowing power lines.",
       "questions": [
         {
           "id": "mmlu-118347dda713e292",
@@ -2129,6 +2135,7 @@ export const EeElectricalEngineeringU1ExternalModule: LearningModule = {
       "title": "Electrical Engineering — Quiz 7",
       "type": "quiz",
       "duration": 30,
+      "imagePrompt": "A digital control system dashboard showing Bode plots, step responses, and stability margins.",
       "questions": [
         {
           "id": "mmlu-16fccbc3cc725d5d",
@@ -2482,6 +2489,7 @@ export const EeElectricalEngineeringU1ExternalModule: LearningModule = {
       "title": "Electrical Engineering — Quiz 8",
       "type": "quiz",
       "duration": 30,
+      "imagePrompt": "A close-up of a quartz crystal oscillator component on a circuit board, illuminated by a soft blue light.",
       "questions": [
         {
           "id": "mmlu-b3464dc7c0e56270",
@@ -2835,6 +2843,7 @@ export const EeElectricalEngineeringU1ExternalModule: LearningModule = {
       "title": "Electrical Engineering — Quiz 9",
       "type": "quiz",
       "duration": 30,
+      "imagePrompt": "A conceptual illustration of magnetic flux lines around a solenoid coil.",
       "questions": [
         {
           "id": "mmlu-90fa55fab6f83067",
@@ -3188,6 +3197,7 @@ export const EeElectricalEngineeringU1ExternalModule: LearningModule = {
       "title": "Electrical Engineering — Quiz 10",
       "type": "quiz",
       "duration": 30,
+      "imagePrompt": "A colorful Bohr model of a silicon atom with electrons orbiting the nucleus.",
       "questions": [
         {
           "id": "mmlu-a74ff5955e99a62a",
@@ -3540,7 +3550,8 @@ export const EeElectricalEngineeringU1ExternalModule: LearningModule = {
       "id": "ee-electrical-engineering-u1-external-l11",
       "title": "Electrical Engineering — Quiz 11",
       "type": "quiz",
-      "duration": 22,
+      "duration": 30,
+      "imagePrompt": "A complex electrical circuit diagram featuring operational amplifiers, capacitors, and resistors.",
       "questions": [
         {
           "id": "mmlu-f5c72006b90ca87c",
@@ -3721,14 +3732,14 @@ export const EeElectricalEngineeringU1ExternalModule: LearningModule = {
             },
             {
               "id": "opt-D",
-              "text": "nether A nor B."
+              "text": "neither A nor B."
             }
           ],
           "correctOptionId": "opt-C"
         },
         {
           "id": "mmlu-f81205be9d63e66e",
-          "text": "A digital circuit that can store on bit is a",
+          "text": "A digital circuit that can store one bit is a",
           "options": [
             {
               "id": "opt-A",
@@ -3744,7 +3755,7 @@ export const EeElectricalEngineeringU1ExternalModule: LearningModule = {
             },
             {
               "id": "opt-D",
-              "text": "registor"
+              "text": "register"
             }
           ],
           "correctOptionId": "opt-B"
@@ -3794,6 +3805,98 @@ export const EeElectricalEngineeringU1ExternalModule: LearningModule = {
             }
           ],
           "correctOptionId": "opt-D"
+        },
+        {
+          "id": "ee-added-q12",
+          "text": "In a Bode plot, a phase margin greater than zero indicates that the closed-loop system is:",
+          "options": [
+            {
+              "id": "opt-A",
+              "text": "Stable"
+            },
+            {
+              "id": "opt-B",
+              "text": "Unstable"
+            },
+            {
+              "id": "opt-C",
+              "text": "Marginally stable"
+            },
+            {
+              "id": "opt-D",
+              "text": "Oscillatory"
+            }
+          ],
+          "correctOptionId": "opt-A"
+        },
+        {
+          "id": "ee-added-q13",
+          "text": "In a three-phase full converter, the output voltage ripple frequency for a 50 Hz supply is:",
+          "options": [
+            {
+              "id": "opt-A",
+              "text": "50 Hz"
+            },
+            {
+              "id": "opt-B",
+              "text": "100 Hz"
+            },
+            {
+              "id": "opt-C",
+              "text": "150 Hz"
+            },
+            {
+              "id": "opt-D",
+              "text": "300 Hz"
+            }
+          ],
+          "correctOptionId": "opt-D"
+        },
+        {
+          "id": "ee-added-q14",
+          "text": "The depth of penetration (skin depth) of an electromagnetic wave in a conductive medium is inversely proportional to:",
+          "options": [
+            {
+              "id": "opt-A",
+              "text": "The square root of frequency"
+            },
+            {
+              "id": "opt-B",
+              "text": "The frequency"
+            },
+            {
+              "id": "opt-C",
+              "text": "The square of frequency"
+            },
+            {
+              "id": "opt-D",
+              "text": "Independent of frequency"
+            }
+          ],
+          "correctOptionId": "opt-A"
+        },
+        {
+          "id": "ee-added-q15",
+          "text": "The Fourier transform of a unit impulse function δ(t) is:",
+          "options": [
+            {
+              "id": "opt-A",
+              "text": "1/jω"
+            },
+            {
+              "id": "opt-B",
+              "text": "1"
+            },
+            {
+              "id": "opt-C",
+              "text": "2πδ(ω)"
+            },
+            {
+              "id": "opt-D",
+              "text": "e^(-jω)"
+            }
+          ],
+          "correctOptionId": "opt-B"
         }
       ]
     }
@@ -3807,7 +3910,7 @@ export const EeElectricalEngineeringU1ExternalModule: LearningModule = {
   ],
   "minAge": 21,
   "maxAge": 99,
-  "version": "external-1.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "gradeBand": "graduate",
   "learningObjectives": [
@@ -3826,7 +3929,7 @@ export const EeElectricalEngineeringU1ExternalModule: LearningModule = {
       "MMLU (cais/mmlu)"
     ],
     "itemCounts": {
-      "questions": 161,
+      "questions": 165,
       "flashcards": 0,
       "chunks": 0
     },

@@ -1,9 +1,9 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const Hvac601Module: LearningModule = {
+export const hvac_601_Module: LearningModule = {
   "id": "hvac-601",
-  "title": "Hvac Research and Leadership",
-  "description": "Post-401 specialization in Hvac, focused on hvac systems diagnostics, hvac operations and execution design, hvac impact and tradeoff analysis, and hvac governance and leadership through advanced casework, simulation, and defense-based checkpoints.",
+  "title": "HVAC Research and Leadership",
+  "description": "An advanced specialization for HVAC professionals. Learn to diagnose complex systems, design robust operational plans, analyze trade-offs with research-grade rigor, and lead with accountable governance. This module uses advanced case studies, simulations, and defense-based checkpoints to build expert-level skills.",
   "subject": "HVAC",
   "tags": [
     "core",
@@ -14,83 +14,88 @@ export const Hvac601Module: LearningModule = {
   ],
   "minAge": 17,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en",
     "es"
   ],
   "learningObjectives": [
-    "Apply advanced methods for hvac systems diagnostics in high-constraint environments",
-    "Design robust systems for hvac operations and execution design with measurable control gates",
-    "Evaluate interventions in hvac impact and tradeoff analysis with research-grade rigor",
-    "Operationalize hvac governance and leadership with accountable governance and escalation pathways",
-    "Lead cross-functional decision reviews with explicit tradeoff communication",
-    "Defend recommendations under expert critique using evidence and uncertainty bounds"
+    "Apply advanced diagnostic methods for HVAC systems in high-constraint environments.",
+    "Design robust operational systems for HVAC with measurable controls and clear oversight.",
+    "Evaluate the impact and trade-offs of HVAC interventions using rigorous, evidence-based analysis.",
+    "Implement effective HVAC governance structures with clear accountability and escalation paths.",
+    "Lead cross-functional teams in making complex decisions, clearly communicating trade-offs.",
+    "Confidently defend technical and strategic recommendations to expert panels, citing evidence and acknowledging uncertainty."
   ],
   "lessons": [
     {
       "id": "hvac-601-l01",
-      "title": "Hvac Advanced Foundations",
+      "title": "Advanced HVAC Foundations",
       "type": "video",
       "duration": 14,
       "learningAids": [
         {
           "id": "hvac-601-l01-a1",
-          "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "download",
+          "title": "Diagnostic Principles Checklist",
+          "content": "A PDF checklist summarizing the core principles of advanced diagnostics: defining scope, modeling causality, and setting evidence thresholds.",
+          "visualPrompt": "Icon of a checklist with a magnifying glass."
         }
       ],
       "chunks": [
         {
           "id": "hvac-601-l01-c1",
           "kind": "concept",
-          "title": "Scope and Boundary Design",
-          "content": "In this lesson, we will delve into the advanced boundaries of HVAC systems. We will learn how to effectively diagnose HVAC systems, which means figuring out what might be wrong and how to fix it. Additionally, we will discuss how to design operations that ensure everything runs smoothly and efficiently. Understanding these boundaries is essential for anyone who wants to excel in the field of HVAC technology and management, as it helps in creating safe and effective environments for everyone.\nContext recap: In this lesson, we will delve into the advanced boundaries of HVAC systems. We will learn how to effectively diagnose HVAC systems, which means figuring out what might be wrong and how to fix it. Additionally, we will discuss how to design operations that ensure everything runs smoothly and efficiently. Understanding these boundaries is essential for anyone who wants to excel in the field of HVAC technology and management, as it helps in creating safe and effective environments for everyone."
+          "title": "Defining System Scope and Boundaries",
+          "content": "In this lesson, we will establish the advanced boundaries of HVAC systems. We will learn to effectively diagnose complex issues by defining what is in and out of scope for our analysis. We will also cover how to design operational plans that ensure systems run smoothly and efficiently, forming the foundation for expert-level management.",
+          "visualPrompt": "An animated diagram showing an HVAC system for a large building, with dotted lines appearing to define the boundaries for a specific diagnostic task (e.g., a single air handling unit)."
         },
         {
           "id": "hvac-601-l01-c2",
           "kind": "concept",
-          "title": "Causal and Uncertainty Modeling",
-          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different factors in HVAC systems. We will also look at uncertainty ranges and how various system components depend on each other. This foundational knowledge is essential for planning effective interventions in HVAC operations.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different factors in HVAC systems. We will also look at uncertainty ranges and how various system components depend on each other. This foundational knowledge is essential for planning effective interventions in HVAC operations."
+          "title": "Modeling Cause-and-Effect and Uncertainty",
+          "content": "Here, we will map the cause-and-effect relationships within HVAC systems. You will learn to identify how different components depend on each other and how to model the range of uncertainty in their performance. This knowledge is critical for planning effective interventions and predicting their outcomes.",
+          "visualPrompt": "A flowchart animation where clicking on one component (e.g., 'Clogged Filter') highlights the downstream effects ('Increased Fan Power,' 'Reduced Airflow,' 'Higher Energy Cost') with variable percentages indicating uncertainty."
         },
         {
           "id": "hvac-601-l01-c3",
           "kind": "recap",
-          "title": "Evidence Thresholds",
-          "content": "In this recap, we will emphasize that all claims made in HVAC diagnostics must be linked to measurable indicators. We will discuss the importance of establishing confidence bounds and setting up review checkpoints to ensure that our findings are reliable and actionable.\nContext recap: In this recap, we will emphasize that all claims made in HVAC diagnostics must be linked to measurable indicators. We will discuss the importance of establishing confidence bounds and setting up review checkpoints to ensure that our findings are reliable and actionable."
+          "title": "Setting Evidence Thresholds",
+          "content": "In this recap, we will reinforce that all claims in HVAC diagnostics must be supported by measurable evidence. We will discuss the importance of defining confidence levels for your data and establishing clear review checkpoints to ensure your findings are reliable and lead to sound decisions.",
+          "visualPrompt": "A graphic of a dashboard with several key performance indicators (KPIs). Green, yellow, and red threshold lines are clearly marked for each metric."
         }
       ],
       "flashcards": [
         {
           "id": "hvac-601-l01-f1",
-          "front": "hvac systems diagnostics",
-          "back": "A specialization axis requiring explicit assumptions and measurable constraints."
+          "front": "HVAC Systems Diagnostics",
+          "back": "The systematic process of identifying faults by defining clear assumptions, working within known constraints, and using measurable data."
         },
         {
           "id": "hvac-601-l01-f2",
-          "front": "hvac operations and execution design",
-          "back": "Execution architecture that determines reliability under stress."
+          "front": "HVAC Operations Design",
+          "back": "The design of operational processes that ensures a system remains reliable, especially during high-demand or stressful situations."
         },
         {
           "id": "hvac-601-l01-f3",
-          "front": "hvac impact and tradeoff analysis",
-          "back": "Evaluation discipline for identifying true gains and hidden costs."
+          "front": "Impact and Trade-off Analysis",
+          "back": "The discipline of evaluating interventions to identify their true benefits, hidden costs, and unintended consequences."
         }
       ]
     },
     {
       "id": "hvac-601-l02",
-      "title": "Hvac Specialist Methods Lab",
+      "title": "HVAC Specialist Methods Lab",
       "type": "interactive",
       "duration": 17,
       "learningAids": [
         {
           "id": "hvac-601-l02-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "download",
+          "title": "Lab Worksheet: Workflow Design",
+          "content": "A structured worksheet to guide you through designing and stress-testing a specialized HVAC workflow.",
+          "visualPrompt": "Icon of a worksheet with flowchart symbols."
         }
       ],
       "chunks": [
@@ -98,37 +103,39 @@ export const Hvac601Module: LearningModule = {
           "id": "hvac-601-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "In this interactive lab, learners will have the opportunity to design specialized workflows for HVAC systems. They will also conduct stress tests on these workflows to see how they perform under challenging scenarios. This hands-on experience is vital for understanding real-world applications of HVAC methods.\nContext recap: In this interactive lab, learners will have the opportunity to design specialized workflows for HVAC systems. They will also conduct stress tests on these workflows to see how they perform under challenging scenarios. This hands-on experience is vital for understanding real-world applications of HVAC methods."
+          "content": "In this interactive lab, you will design a specialized workflow for managing a critical HVAC process. You will then run a stress test simulation to evaluate its performance under challenging conditions, providing vital, hands-on experience with real-world system pressures.",
+          "visualPrompt": "A split-screen view: on the left, a drag-and-drop interface for building a workflow; on the right, a simulation dashboard showing system metrics under a 'heatwave' stress test."
         },
         {
           "id": "hvac-601-l02-c2",
           "kind": "recap",
-          "title": "Control Gate Architecture",
-          "content": "In this recap, we will review how workflows should be structured to include important checkpoints, criteria for rolling back changes, and escalation procedures based on specific thresholds. This architecture is essential for maintaining control and ensuring safety in HVAC operations.\nContext recap: In this recap, we will review how workflows should be structured to include important checkpoints, criteria for rolling back changes, and escalation procedures based on specific thresholds. This architecture is essential for maintaining control and ensuring safety in HVAC operations."
+          "title": "Designing Control Gates",
+          "content": "In this recap, we will review how to structure workflows with essential control gates. These include quality checkpoints, criteria for rolling back a change if something goes wrong, and clear procedures for escalating issues. This structure is essential for maintaining control and ensuring safety.",
+          "visualPrompt": "A simplified diagram of a process flow with distinct 'gate' icons, each labeled with a decision point (e.g., 'Pressure > 50 PSI?') and arrows pointing to 'Proceed' or 'Rollback'."
         }
       ],
       "interactiveActivities": [
         {
           "id": "hvac-601-l02-act1",
           "type": "matching_pairs",
-          "title": "Control-to-Outcome Mapping",
-          "description": "Match specialist controls with their strongest reliability and governance effects.",
+          "title": "Matching Controls to Outcomes",
+          "description": "Match each operational control with its primary effect on system reliability and governance.",
           "pairs": [
             {
-              "left": "Pre-commit gate",
-              "right": "Prevents avoidable downstream failures"
+              "left": "Pre-Commit Gate",
+              "right": "Prevents predictable failures before they happen."
             },
             {
-              "left": "Rollback trigger",
-              "right": "Limits blast radius under adverse outcomes"
+              "left": "Rollback Trigger",
+              "right": "Limits the negative impact of an unexpected failure."
             },
             {
-              "left": "Baseline dashboard",
-              "right": "Supports defensible impact attribution"
+              "left": "Performance Dashboard",
+              "right": "Provides evidence to attribute success or failure to a specific change."
             },
             {
-              "left": "Retrospective loop",
-              "right": "Improves next-cycle decision quality"
+              "left": "Post-Mortem Review",
+              "right": "Improves the quality of future decisions and processes."
             }
           ]
         }
@@ -142,259 +149,165 @@ export const Hvac601Module: LearningModule = {
       "learningAids": [
         {
           "id": "hvac-601-l03-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "download",
+          "title": "Key Terminology Review Sheet",
+          "content": "A one-page summary of key terms and concepts from the first two lessons to help you prepare for the checkpoint.",
+          "visualPrompt": "Icon of a document with key terms highlighted."
         }
       ],
       "questions": [
         {
           "id": "hvac-601-l03-q1",
-          "text": "Which practice most improves hvac systems diagnostics decision quality?",
+          "text": "Which practice most improves the quality of a decision in HVAC systems diagnostics?",
           "skillId": "hvac-601-skill-core",
           "options": [
             {
               "id": "a",
-              "text": "Proceed without baseline or assumptions"
+              "text": "Proceeding without a baseline or stated assumptions."
             },
             {
               "id": "b",
-              "text": "Define assumptions, constraints, and measurable indicators"
+              "text": "Defining assumptions, constraints, and measurable indicators upfront."
             },
             {
               "id": "c",
-              "text": "Optimize only for speed in every context"
+              "text": "Optimizing only for speed in every situation."
             },
             {
               "id": "d",
-              "text": "Ignore uncertainty and edge conditions"
+              "text": "Ignoring uncertainty and potential edge cases."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Advanced decisions improve when assumptions, constraints, and metrics are explicit."
+          "explanation": "High-quality decisions are improved when assumptions, constraints, and metrics are made explicit from the start."
         },
         {
           "id": "hvac-601-l03-q2",
-          "text": "At level 601, strong execution for hvac operations and execution design requires:",
+          "text": "At an advanced level, strong execution design for HVAC operations requires:",
           "skillId": "hvac-601-skill-execution",
           "options": [
             {
               "id": "a",
-              "text": "Owner mapping, checkpoint cadence, and escalation thresholds"
+              "text": "Clear ownership, a regular cadence for checkpoints, and defined escalation thresholds."
             },
             {
               "id": "b",
-              "text": "No role clarity and ad-hoc process changes"
+              "text": "Vague role definitions and process changes made on the fly."
             },
             {
               "id": "c",
-              "text": "No retrospective or post-run review"
+              "text": "No process for reviewing performance after a project is complete."
             },
             {
               "id": "d",
-              "text": "No rollback or fallback conditions"
+              "text": "No pre-defined conditions for rolling back a change."
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Reliable advanced execution needs ownership clarity and threshold-driven governance."
+          "explanation": "Reliable advanced execution requires clarity on ownership and governance driven by pre-defined thresholds."
         },
         {
           "id": "hvac-601-l03-q3",
-          "text": "A defensible approach to hvac impact and tradeoff analysis includes:",
+          "text": "A defensible approach to analyzing the impact and trade-offs of an HVAC project includes:",
           "skillId": "hvac-601-skill-eval",
           "options": [
             {
               "id": "a",
-              "text": "Anecdotes without comparison"
+              "text": "Using anecdotes without a comparison group."
             },
             {
               "id": "b",
-              "text": "Baseline comparisons, side-effect analysis, and uncertainty bounds"
+              "text": "Baseline comparisons, analysis of side-effects, and stating the bounds of uncertainty."
             },
             {
               "id": "c",
-              "text": "Changing success criteria after outcomes"
+              "text": "Changing the criteria for success after the results are in."
             },
             {
               "id": "d",
-              "text": "Excluding difficult scenarios from analysis"
+              "text": "Excluding difficult or inconvenient scenarios from the analysis."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible analysis combines comparative baselines, side-effect checks, and uncertainty disclosure."
+          "explanation": "Defensible analysis combines comparisons to a baseline, checking for side-effects, and being transparent about uncertainty."
         },
         {
           "id": "hvac-601-l03-q4",
-          "text": "Mature governance systems connect:",
+          "text": "Mature governance systems effectively connect:",
           "skillId": "hvac-601-skill-governance",
           "options": [
             {
               "id": "a",
-              "text": "Policy intent, measurable controls, and remediation pathways"
+              "text": "The intent of a policy, the controls to measure it, and the pathways to fix deviations."
             },
             {
               "id": "b",
-              "text": "Policy language with no measurable enforcement"
+              "text": "Policy language that has no measurable enforcement."
             },
             {
               "id": "c",
-              "text": "Targets without ownership or escalation design"
+              "text": "Performance targets without clear ownership or an escalation plan."
             },
             {
               "id": "d",
-              "text": "Operations without transparent accountability"
+              "text": "Operations that lack transparent accountability."
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Governance maturity is the operational link between intent, measurement, and corrective action."
-        },
-        {
-          "id": "hvac-601-l03-q5",
-          "text": "What is the best way to compare competing interventions in advanced HVAC?",
-          "skillId": "hvac-601-skill-advanced-5",
-          "options": [
-            {
-              "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
-            },
-            {
-              "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
-            },
-            {
-              "id": "c",
-              "text": "Switch metrics after results arrive"
-            },
-            {
-              "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
-        },
-        {
-          "id": "hvac-601-l03-q6",
-          "text": "In high-stakes Hvac Research and Leadership execution, which communication protocol is strongest?",
-          "skillId": "hvac-601-skill-advanced-6",
-          "options": [
-            {
-              "id": "a",
-              "text": "Broadcast conclusions without assumptions"
-            },
-            {
-              "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
-            },
-            {
-              "id": "c",
-              "text": "Share only final outcomes after completion"
-            },
-            {
-              "id": "d",
-              "text": "Limit updates to a single informal channel"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
-        },
-        {
-          "id": "hvac-601-l03-q7",
-          "text": "A mature remediation loop in advanced HVAC should prioritize:",
-          "skillId": "hvac-601-skill-advanced-7",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blame assignment without system updates"
-            },
-            {
-              "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
-            },
-            {
-              "id": "c",
-              "text": "One-time fixes without retesting"
-            },
-            {
-              "id": "d",
-              "text": "Issue closure based on elapsed time"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
-        },
-        {
-          "id": "hvac-601-l03-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Hvac Research and Leadership?",
-          "skillId": "hvac-601-skill-advanced-8",
-          "options": [
-            {
-              "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
-            },
-            {
-              "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
-            },
-            {
-              "id": "c",
-              "text": "Ignore correlated failure modes"
-            },
-            {
-              "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "explanation": "Mature governance creates an operational link between intent, measurement, and corrective action."
         }
       ]
     },
     {
       "id": "hvac-601-l04",
-      "title": "Hvac Advanced Case Analysis",
+      "title": "Advanced HVAC Case Analysis",
       "type": "video",
       "duration": 14,
       "learningAids": [
         {
           "id": "hvac-601-l04-a1",
-          "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "download",
+          "title": "Case Study: Hospital HVAC Upgrade",
+          "content": "The full text of the case study to be analyzed in this lesson, including technical specs, budget constraints, and stakeholder interviews.",
+          "visualPrompt": "Icon of a detailed report or case file."
         }
       ],
       "chunks": [
         {
           "id": "hvac-601-l04-c1",
           "kind": "concept",
-          "title": "Scenario Architecture",
-          "content": "In this lesson, we will frame a case study that highlights the competing constraints faced in HVAC systems diagnostics. We will analyze the impacts and trade-offs involved in making decisions about HVAC systems, which is crucial for effective problem-solving in this field.\nContext recap: In this lesson, we will frame a case study that highlights the competing constraints faced in HVAC systems diagnostics. We will analyze the impacts and trade-offs involved in making decisions about HVAC systems, which is crucial for effective problem-solving in this field."
+          "title": "Structuring the Case Study",
+          "content": "In this lesson, we will dissect a complex case study that highlights the competing constraints common in HVAC systems diagnostics. We will analyze the impacts and trade-offs of different potential solutions, which is a crucial skill for effective problem-solving in high-stakes environments.",
+          "visualPrompt": "A mind map on a whiteboard, with the central problem ('Hospital HVAC Upgrade') branching out to key constraints like 'Budget,' 'Uptime Requirement,' 'Patient Safety,' and 'Energy Efficiency'."
         },
         {
           "id": "hvac-601-l04-c2",
           "kind": "practice",
-          "title": "Tradeoff Framing",
-          "content": "In this practice session, learners will compare different options available to them, focusing on key dimensions such as safety, reliability, cost, equity, and governance. This comparative analysis will help them understand the complexities involved in making informed decisions in HVAC scenarios.\nContext recap: In this practice session, learners will compare different options available to them, focusing on key dimensions such as safety, reliability, cost, equity, and governance. This comparative analysis will help them understand the complexities involved in making informed decisions in HVAC scenarios."
+          "title": "Framing the Trade-offs",
+          "content": "Using the case study, we will practice comparing different upgrade options. We will score them across key dimensions such as safety, reliability, cost, and regulatory compliance. This comparative analysis will help you understand the complexities of making fully-informed decisions.",
+          "visualPrompt": "A comparison table on screen, with rows for 'Option A,' 'Option B,' and 'Option C,' and columns for 'Cost,' 'Reliability,' 'Safety,' etc. Cells are being populated with ratings."
         },
         {
           "id": "hvac-601-l04-c3",
           "kind": "recap",
-          "title": "Decision Memo Pattern",
-          "content": "In this recap, we will discuss the essential components of each recommendation made in HVAC decision-making. This includes outlining the assumptions made, the evidence supporting the decision, the risk controls in place, and the fallback plans that ensure safety and accountability.\nContext recap: In this recap, we will discuss the essential components of each recommendation made in HVAC decision-making. This includes outlining the assumptions made, the evidence supporting the decision, the risk controls in place, and the fallback plans that ensure safety and accountability."
+          "title": "The Decision Memo Pattern",
+          "content": "In this recap, we will review the essential components of a professional recommendation. This includes clearly stating your assumptions, presenting the evidence that supports your decision, defining the risk controls you've put in place, and outlining a fallback plan to ensure safety and accountability.",
+          "visualPrompt": "A template for a decision memo, with sections for 'Recommendation,' 'Supporting Evidence,' 'Assumptions,' 'Risks,' and 'Fallback Plan' clearly labeled."
         }
       ]
     },
     {
       "id": "hvac-601-l05",
-      "title": "Hvac Simulation Clinic",
+      "title": "HVAC Simulation Clinic",
       "type": "interactive",
       "duration": 18,
       "learningAids": [
         {
           "id": "hvac-601-l05-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "download",
+          "title": "Simulation Control Panel Guide",
+          "content": "A user guide explaining the controls, metrics, and objectives for the interactive simulation.",
+          "visualPrompt": "Icon of a user manual or guide."
         }
       ],
       "chunks": [
@@ -402,21 +315,23 @@ export const Hvac601Module: LearningModule = {
           "id": "hvac-601-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "In this interactive clinic, learners will have the chance to operate scenario controls while carefully balancing performance with governance constraints. This experience is designed to enhance their practical skills in managing HVAC systems effectively.\nContext recap: In this interactive clinic, learners will have the chance to operate scenario controls while carefully balancing performance with governance constraints. This experience is designed to enhance their practical skills in managing HVAC systems effectively.\nWhy this matters: Live Scenario Controls helps learners in HVAC connect ideas from Hvac Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "In this interactive clinic, you will manage an HVAC system through a live, simulated crisis. You will operate scenario controls to balance system performance with safety and budget constraints. This experience is designed to connect theory to practice, highlighting how your decisions on trade-offs, assumptions, and verification play out in real time.",
+          "visualPrompt": "An interactive dashboard showing rising temperature alerts and declining air quality. The user has access to controls like 'Increase Chiller Output,' 'Divert Power,' and 'Notify Maintenance,' each with an associated cost and risk level."
         },
         {
           "id": "hvac-601-l05-c2",
           "kind": "recap",
-          "title": "Adaptive Response Design",
-          "content": "In this recap, we will focus on the importance of effective responses that update control gates in HVAC systems. We will discuss how to do this while maintaining traceability and accountability, which are critical for ensuring that all actions taken are well-documented and responsible.\nContext recap: In this recap, we will focus on the importance of effective responses that update control gates in HVAC systems. We will discuss how to do this while maintaining traceability and accountability, which are critical for ensuring that all actions taken are well-documented and responsible."
+          "title": "Designing an Adaptive Response",
+          "content": "In this recap, we will focus on how to respond effectively when a system deviates from its expected performance. We will discuss how to update control gates and operational plans mid-stream, while maintaining a clear record of your decisions and rationale for accountability.",
+          "visualPrompt": "An animation showing a process flowchart. An alert flashes, and a new 'Adaptive Response' branch is added to the chart, with a note icon indicating a decision log entry."
         }
       ],
       "interactiveActivities": [
         {
           "id": "hvac-601-l05-act1",
           "type": "scenario",
-          "title": "Adverse-Condition Decision Run",
-          "description": "Run a high-pressure hvac scenario and tune controls under uncertainty."
+          "title": "Adverse-Condition Decision Simulation",
+          "description": "Manage a high-pressure HVAC scenario. Your goal is to maintain critical operations during an unexpected equipment failure while managing costs and risks."
         }
       ]
     },
@@ -428,86 +343,87 @@ export const Hvac601Module: LearningModule = {
       "learningAids": [
         {
           "id": "hvac-601-l06-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "download",
+          "title": "Case & Sim Key Concepts",
+          "content": "A summary of the key decision-making frameworks from the case analysis and simulation lessons.",
+          "visualPrompt": "Icon of a document with a flowchart and a dashboard."
         }
       ],
       "questions": [
         {
           "id": "hvac-601-l06-q1",
-          "text": "In advanced casework, the first requirement for defensible recommendations is:",
+          "text": "In advanced casework, what is the first requirement for a defensible recommendation?",
           "skillId": "hvac-601-skill-case1",
           "options": [
             {
               "id": "a",
-              "text": "A preferred option without explicit assumptions"
+              "text": "A preferred option without explicit assumptions."
             },
             {
               "id": "b",
-              "text": "A clear baseline, explicit constraints, and success criteria"
+              "text": "A clear baseline for comparison, explicit constraints, and pre-defined success criteria."
             },
             {
               "id": "c",
-              "text": "High confidence without evidence logs"
+              "text": "High confidence without any logs of the evidence reviewed."
             },
             {
               "id": "d",
-              "text": "Single-metric optimization only"
+              "text": "Optimizing for a single metric, such as cost, above all others."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible recommendations begin with explicit assumptions, constraints, and measurable targets."
+          "explanation": "Defensible recommendations must begin with explicit assumptions, constraints, and measurable targets to be credible."
         },
         {
           "id": "hvac-601-l06-q2",
-          "text": "A resilient strategy for hvac operations and execution design should include:",
+          "text": "A resilient strategy for HVAC operations should always include:",
           "skillId": "hvac-601-skill-case2",
           "options": [
             {
               "id": "a",
-              "text": "Checkpointed execution with fallback and escalation criteria"
+              "text": "A plan with checkpoints, as well as criteria for falling back and escalating issues."
             },
             {
               "id": "b",
-              "text": "One-way execution with no rollback capability"
+              "text": "A one-way execution plan with no capability to roll back changes."
             },
             {
               "id": "c",
-              "text": "No ownership mapping across teams"
+              "text": "No mapping of ownership or responsibilities across teams."
             },
             {
               "id": "d",
-              "text": "Hidden assumptions and undocumented decisions"
+              "text": "Hidden assumptions and undocumented decisions to maintain flexibility."
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Resilience depends on checkpoints, fallback options, and explicit escalation design."
+          "explanation": "Resilience in operations depends on having checkpoints, fallback options, and an explicit escalation design."
         },
         {
           "id": "hvac-601-l06-q3",
-          "text": "When evaluating hvac impact and tradeoff analysis, which method is most rigorous?",
+          "text": "When evaluating HVAC project trade-offs, which method is the most rigorous?",
           "skillId": "hvac-601-skill-case3",
           "options": [
             {
               "id": "a",
-              "text": "Single success story without controls"
+              "text": "A single success story without any control or comparison group."
             },
             {
               "id": "b",
-              "text": "Comparative baselines plus side-effect and uncertainty analysis"
+              "text": "Comparing to a baseline, plus analyzing side-effects and uncertainty."
             },
             {
               "id": "c",
-              "text": "Outcome-only narrative without process evidence"
+              "text": "A narrative focusing only on the outcome, without evidence from the process."
             },
             {
               "id": "d",
-              "text": "Retrospective scope changes to fit outcomes"
+              "text": "Changing the scope of the analysis after the fact to better fit the outcomes."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Rigorous evaluation requires comparisons, side-effect analysis, and uncertainty disclosure."
+          "explanation": "Rigorous evaluation requires comparisons against a baseline, a thorough analysis of side-effects, and a transparent disclosure of uncertainty."
         },
         {
           "id": "hvac-601-l06-q4",
@@ -516,210 +432,217 @@ export const Hvac601Module: LearningModule = {
           "options": [
             {
               "id": "a",
-              "text": "Aligns authority, measurement, and remediation obligations"
+              "text": "Aligns decision-making authority, performance measurement, and the obligation to fix problems."
             },
             {
               "id": "b",
-              "text": "Separates policy from operational controls"
+              "text": "Separates high-level policy from the operational controls that enforce it."
             },
             {
               "id": "c",
-              "text": "Avoids external review and transparency"
+              "text": "Avoids external review and transparency to speed up decisions."
             },
             {
               "id": "d",
-              "text": "Treats accountability as optional under pressure"
+              "text": "Treats accountability as optional when under pressure."
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Mature governance links authority, measurable controls, and corrective action."
+          "explanation": "Mature governance links authority, measurable controls, and the responsibility for corrective action into a single, coherent system."
         },
         {
           "id": "hvac-601-l06-q5",
-          "text": "What is the best way to compare competing interventions in advanced HVAC?",
+          "text": "In the hospital case study, if two upgrade options have similar costs, what is the best way to decide between them?",
           "skillId": "hvac-601-skill-advanced-5",
           "options": [
             {
               "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
+              "text": "Choose the option presented by the most senior engineer."
             },
             {
               "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
+              "text": "Choose the option that uses the newest technology."
             },
             {
               "id": "c",
-              "text": "Switch metrics after results arrive"
+              "text": "Compare them based on non-cost factors like patient safety impact and system reliability."
             },
             {
               "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
+              "text": "Select one at random to avoid analysis paralysis."
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
+          "correctOptionId": "c",
+          "explanation": "When primary constraints like cost are equal, decisions should be based on a structured comparison of other critical factors and trade-offs."
         },
         {
           "id": "hvac-601-l06-q6",
-          "text": "In high-stakes Hvac Research and Leadership execution, which communication protocol is strongest?",
+          "text": "During the HVAC simulation, an unexpected power surge occurs. What is the most critical immediate action?",
           "skillId": "hvac-601-skill-advanced-6",
           "options": [
             {
               "id": "a",
-              "text": "Broadcast conclusions without assumptions"
+              "text": "Wait to see if the system corrects itself."
             },
             {
               "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
+              "text": "Follow the pre-defined emergency protocol for power surges, which prioritizes safety."
             },
             {
               "id": "c",
-              "text": "Share only final outcomes after completion"
+              "text": "Increase cooling output to compensate for any potential heat increase."
             },
             {
               "id": "d",
-              "text": "Limit updates to a single informal channel"
+              "text": "Document the event in the log but take no other action."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
+          "explanation": "In a crisis simulation, the primary goal is to test adherence to safety and emergency protocols, which are designed to manage risk effectively."
         },
         {
           "id": "hvac-601-l06-q7",
-          "text": "A mature remediation loop in advanced HVAC should prioritize:",
+          "text": "A key part of the Decision Memo Pattern is the 'Fallback Plan'. What is its purpose?",
           "skillId": "hvac-601-skill-advanced-7",
           "options": [
             {
               "id": "a",
-              "text": "Blame assignment without system updates"
+              "text": "To assign blame if the primary recommendation fails."
             },
             {
               "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
+              "text": "To provide an alternative that is guaranteed to work."
             },
             {
               "id": "c",
-              "text": "One-time fixes without retesting"
+              "text": "To define a pre-planned course of action to mitigate risk if the primary plan fails."
             },
             {
               "id": "d",
-              "text": "Issue closure based on elapsed time"
+              "text": "To prove that the primary recommendation is the only viable option."
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
+          "correctOptionId": "c",
+          "explanation": "A fallback plan is a critical risk management tool that defines what to do if the initial plan does not succeed, ensuring a safer and more resilient strategy."
         },
         {
           "id": "hvac-601-l06-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Hvac Research and Leadership?",
+          "text": "After running a simulation, you find that your chosen strategy is less efficient than expected. What is the best next step?",
           "skillId": "hvac-601-skill-advanced-8",
           "options": [
             {
               "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
+              "text": "Conclude that the simulation is flawed and ignore the results."
             },
             {
               "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
+              "text": "Analyze the simulation data to understand why the inefficiency occurred and refine your strategy."
             },
             {
               "id": "c",
-              "text": "Ignore correlated failure modes"
+              "text": "Adopt the most efficient strategy shown in the simulation without further analysis."
             },
             {
               "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
+              "text": "Delete the results and run the simulation again until it produces the desired outcome."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "explanation": "Simulations are for learning. The correct response to an unexpected outcome is to analyze the data to improve your understanding and strategy."
         }
       ]
     },
     {
       "id": "hvac-601-l07",
-      "title": "Hvac Governance and Public Impact",
+      "title": "HVAC Governance and Public Impact",
       "type": "video",
       "duration": 13,
       "learningAids": [
         {
           "id": "hvac-601-l07-a1",
-          "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "download",
+          "title": "Ethical Decision-Making Framework",
+          "content": "A PDF guide with a checklist for evaluating the stakeholder and public impact of major HVAC decisions.",
+          "visualPrompt": "Icon of a document with a scale of justice."
         }
       ],
       "chunks": [
         {
           "id": "hvac-601-l07-c1",
           "kind": "concept",
-          "title": "Stakeholder Impact Distribution",
-          "content": "In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects that HVAC decisions have on various stakeholder groups. Understanding these impacts is essential for responsible decision-making in HVAC governance.\nContext recap: In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects that HVAC decisions have on various stakeholder groups. Understanding these impacts is essential for responsible decision-making in HVAC governance.\nWhy this matters: Stakeholder Impact Distribution helps learners in HVAC connect ideas from Hvac Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "Mapping Stakeholder Impacts",
+          "content": "In this lesson, you will learn to map the distribution of benefits, costs, and risks of HVAC decisions across various groups. Understanding who is affected, and how, is essential for responsible governance. This analysis helps connect technical decisions to their real-world consequences for employees, customers, and the public.",
+          "visualPrompt": "An animated map showing a central decision ('New Cooling Plant Location') with arrows pointing to different stakeholder groups ('Local Residents,' 'Environment,' 'Company Finances'), each labeled with positive or negative impacts."
         },
         {
           "id": "hvac-601-l07-c2",
           "kind": "concept",
-          "title": "Accountability Architecture",
-          "content": "In this section, we will explore the architecture of accountability in HVAC governance. This includes understanding how decision traceability, review rights, and remediation obligations are integrated into the decision-making process, ensuring that all actions are accountable and transparent.\nContext recap: In this section, we will explore the architecture of accountability in HVAC governance. This includes understanding how decision traceability, review rights, and remediation obligations are integrated into the decision-making process, ensuring that all actions are accountable and transparent."
+          "title": "Designing for Accountability",
+          "content": "Here, we will explore the architecture of accountability. This includes creating clear records of why decisions were made, defining who has the right to review those decisions, and establishing who is responsible for fixing problems. This ensures all actions are transparent and answerable.",
+          "visualPrompt": "A diagram showing three interconnected pillars: 'Decision Traceability' (a logbook icon), 'Review Rights' (an eye icon), and 'Remediation Duty' (a wrench icon)."
         },
         {
           "id": "hvac-601-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "At the end of our lesson, we have a helpful checklist that connects important outcomes with ethical considerations, ensures we are following policies, and promotes resilience in our leadership practices. This checklist serves as a guide to help us make responsible decisions in the HVAC field.\nContext recap: At the end of our lesson, we have a helpful checklist that connects important outcomes with ethical considerations, ensures we are following policies, and promotes resilience in our leadership practices. This checklist serves as a guide to help us make responsible decisions in the HVAC field."
+          "content": "We will conclude with a practical checklist for responsible leadership. This tool connects project outcomes with ethical guidelines, ensures compliance with policy, and promotes long-term resilience. It serves as a final check to help you make sound and responsible decisions in the HVAC field.",
+          "visualPrompt": "A simple, elegant checklist graphic with items like 'Impacts Assessed,' 'Accountability Clear,' and 'Ethical Review Complete' being checked off."
         }
       ],
       "flashcards": [
         {
           "id": "hvac-601-l07-f1",
-          "front": "Impact distribution",
-          "back": "How outcomes are allocated across populations and timescales."
+          "front": "Impact Distribution",
+          "back": "An analysis of how the positive and negative outcomes of a decision are allocated across different groups and over time."
         },
         {
           "id": "hvac-601-l07-f2",
-          "front": "Decision traceability",
-          "back": "An auditable record of evidence, ownership, and rationale."
+          "front": "Decision Traceability",
+          "back": "An auditable record that shows what decision was made, by whom, when, and based on what evidence and rationale."
         },
         {
           "id": "hvac-601-l07-f3",
-          "front": "Responsible leadership",
-          "back": "Decision behavior balancing performance, accountability, and ethics."
+          "front": "Responsible Leadership",
+          "back": "A decision-making approach that balances high performance with accountability and ethical considerations."
         }
       ]
     },
     {
       "id": "hvac-601-l08",
-      "title": "Hvac Capstone Defense Lab",
+      "title": "HVAC Capstone Defense Lab",
       "type": "interactive",
       "duration": 16,
       "learningAids": [
         {
           "id": "hvac-601-l08-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "download",
+          "title": "Capstone Defense Template",
+          "content": "A presentation template to help you structure your final defense brief, with sections for claims, evidence, uncertainty, and remediation.",
+          "visualPrompt": "Icon of a presentation slide deck."
         }
       ],
       "chunks": [
         {
           "id": "hvac-601-l08-c1",
           "kind": "practice",
-          "title": "Defense Brief Assembly",
-          "content": "In this interactive activity, learners will work together to create a comprehensive brief. This brief will include well-supported claims, evidence to back them up, an understanding of the uncertainties involved, and clear pathways for remediation. This exercise helps us practice critical thinking and effective communication.\nContext recap: In this interactive activity, learners will work together to create a comprehensive brief. This brief will include well-supported claims, evidence to back them up, an understanding of the uncertainties involved, and clear pathways for remediation. This exercise helps us practice critical thinking and effective communication."
+          "title": "Assembling Your Defense Brief",
+          "content": "In this interactive activity, you will assemble a comprehensive defense brief for a complex HVAC proposal. Your brief must include a clear claim, supporting evidence, an honest assessment of uncertainties, and a well-defined plan for remediation if things go wrong. This exercise hones your critical thinking and communication skills.",
+          "visualPrompt": "A user interface where the learner populates fields in a defense brief template by dragging and dropping evidence files and writing summaries."
         },
         {
           "id": "hvac-601-l08-c2",
           "kind": "recap",
-          "title": "Expert Panel Rehearsal",
-          "content": "During this session, learners will practice their responses to various critiques that may come from technical experts, governance bodies, and stakeholders. This rehearsal is essential for building confidence and ensuring that we can effectively address concerns and questions in a real-world setting.\nContext recap: During this session, learners will practice their responses to various critiques that may come from technical experts, governance bodies, and stakeholders. This rehearsal is essential for building confidence and ensuring that we can effectively address concerns and questions in a real-world setting."
+          "title": "Rehearsing for Expert Review",
+          "content": "During this session, you will practice responding to critiques from different perspectives: a technical expert questioning your data, a governance officer challenging your process, and a stakeholder concerned about the impact. This rehearsal is essential for building the confidence to defend your work effectively.",
+          "visualPrompt": "A video simulation of a panel review, with text prompts showing different types of challenging questions for the learner to practice answering."
         }
       ],
       "interactiveActivities": [
         {
           "id": "hvac-601-l08-act1",
           "type": "debate_simulator",
-          "title": "Expert Defense Panel",
-          "description": "Defend specialization recommendations under adversarial cross-examination."
+          "title": "Expert Defense Panel Simulation",
+          "description": "Present and defend your final recommendations to a simulated panel of experts who will challenge your assumptions, evidence, and conclusions."
         }
       ]
     }

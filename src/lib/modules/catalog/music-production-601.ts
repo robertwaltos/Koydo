@@ -1,9 +1,9 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const MusicProduction601Module: LearningModule = {
+export const music_production_601_Module: LearningModule = {
   "id": "music-production-601",
   "title": "Music Production Research and Leadership",
-  "description": "Post-401 specialization in Music Production, focused on music systems diagnostics, music operations and execution design, music impact and tradeoff analysis, and music governance and leadership through advanced casework, simulation, and defense-based checkpoints.",
+  "description": "A specialization for advanced producers focusing on diagnosing complex studio systems, designing efficient recording and mixing workflows, analyzing the impact of production choices, and leading creative projects. The module uses advanced case studies, hands-on simulations, and defense-based checkpoints to build leadership skills.",
   "subject": "Music",
   "tags": [
     "core",
@@ -14,121 +14,121 @@ export const MusicProduction601Module: LearningModule = {
   ],
   "minAge": 17,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en",
     "es"
   ],
   "learningObjectives": [
-    "Apply advanced methods for music systems diagnostics in high-constraint environments",
-    "Design robust systems for music operations and execution design with measurable control gates",
-    "Evaluate interventions in music impact and tradeoff analysis with research-grade rigor",
-    "Operationalize music governance and leadership with accountable governance and escalation pathways",
-    "Lead cross-functional decision reviews with explicit tradeoff communication",
-    "Defend recommendations under expert critique using evidence and uncertainty bounds"
+    "Diagnose and resolve complex issues in professional audio signal chains and DAW environments.",
+    "Design and manage robust workflows for large-scale recording, mixing, and mastering projects.",
+    "Analyze the sonic and emotional impact of production techniques, weighing creative tradeoffs with research-grade rigor.",
+    "Develop and implement fair governance models for collaborative music projects, including clear roles and conflict resolution pathways.",
+    "Lead project review sessions, clearly communicating technical decisions and their creative tradeoffs to diverse stakeholders.",
+    "Defend production choices and strategic recommendations against expert critique using evidence from audio analysis and project data."
   ],
   "lessons": [
     {
       "id": "music-production-601-l01",
-      "title": "Music Production Advanced Foundations",
+      "title": "Advanced Studio Systems Diagnostics",
       "type": "video",
       "duration": 14,
       "learningAids": [
         {
           "id": "music-production-601-l01-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Complex Signal Flow Diagram",
+          "content": "A visual schematic of a hybrid analog/digital studio setup for a full band recording, highlighting potential points of latency, phase issues, and gain staging problems."
         }
       ],
       "chunks": [
         {
           "id": "music-production-601-l01-c1",
           "kind": "concept",
-          "title": "Scope and Boundary Design",
-          "content": "In this lesson, we will delve into the advanced boundaries of music production. Our focus will be on learning how to effectively diagnose music systems, which means understanding how different components of music production work together. Additionally, we will design effective music operations and execution strategies. By doing this, you will create a clear framework for your music projects, ensuring that every aspect is well-defined, organized, and ready for successful execution. This structured approach will not only enhance your creativity but also improve the overall quality of your music productions.\nContext recap: In this lesson, we will delve into the advanced boundaries of music production. Our focus will be on learning how to effectively diagnose music systems, which means understanding how different components of music production work together. Additionally, we will design effective music operations and execution strategies. By doing this, you will create a clear framework for your music projects, ensuring that every aspect is well-defined, organized, and ready for successful execution."
+          "title": "Defining the Production Ecosystem",
+          "content": "In this lesson, we move beyond basic production to view the studio as a complex system. We'll learn to map out every component—from microphone choice and placement to DAW routing, plugin chains, and analog hardware. This systematic approach is the first step to diagnosing and solving high-level production challenges."
         },
         {
           "id": "music-production-601-l01-c2",
           "kind": "concept",
-          "title": "Causal and Uncertainty Modeling",
-          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different elements in music production. Additionally, we will examine uncertainty ranges and system dependencies. This foundational knowledge is crucial for planning interventions effectively, allowing you to anticipate challenges and make informed decisions.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different elements in music production. Additionally, we will examine uncertainty ranges and system dependencies. This foundational knowledge is crucial for planning interventions effectively, allowing you to anticipate challenges and make informed decisions."
+          "title": "Causal Chains and Uncertainty in Audio",
+          "content": "Every production choice has a ripple effect. We'll explore how to trace these causal chains, like how a compressor setting on a drum bus affects the clarity of the lead vocal. We will also model uncertainty, such as unpredictable room acoustics or performer variations, to build more resilient production plans."
         },
         {
           "id": "music-production-601-l01-c3",
           "kind": "recap",
-          "title": "Evidence Thresholds",
-          "content": "In our recap, we will emphasize the importance of linking all claims to measurable indicators. This means that every assertion you make should be supported by evidence that can be quantified. We will also discuss the significance of establishing confidence bounds and review checkpoints to ensure that your findings are reliable and can be revisited for verification.\nContext recap: In our recap, we will emphasize the importance of linking all claims to measurable indicators. This means that every assertion you make should be supported by evidence that can be quantified. We will also discuss the significance of establishing confidence bounds and review checkpoints to ensure that your findings are reliable and can be revisited for verification."
+          "title": "Evidence-Based Production",
+          "content": "We'll recap the importance of linking claims to measurable evidence. Instead of saying a mix 'sounds better,' we'll use tools like spectrum analyzers and loudness meters to support our decisions. This involves establishing clear sonic goals and checkpoints to verify our progress."
         }
       ],
       "flashcards": [
         {
           "id": "music-production-601-l01-f1",
-          "front": "music systems diagnostics",
-          "back": "A specialization axis requiring explicit assumptions and measurable constraints."
+          "front": "Systems Diagnostics",
+          "back": "The methodical process of identifying and resolving issues within a complex audio production environment by understanding how all components interact."
         },
         {
           "id": "music-production-601-l01-f2",
-          "front": "music operations and execution design",
-          "back": "Execution architecture that determines reliability under stress."
+          "front": "Production Workflow",
+          "back": "The end-to-end process for a music project, including pre-production, tracking, editing, mixing, and mastering, designed for efficiency and reliability."
         },
         {
           "id": "music-production-601-l01-f3",
-          "front": "music impact and tradeoff analysis",
-          "back": "Evaluation discipline for identifying true gains and hidden costs."
+          "front": "Tradeoff Analysis",
+          "back": "The discipline of evaluating production choices by identifying their sonic benefits versus their costs, such as CPU load, time, or compromising another element in the mix."
         }
       ]
     },
     {
       "id": "music-production-601-l02",
-      "title": "Music Production Specialist Methods Lab",
+      "title": "Workflow Design and Stress-Testing Lab",
       "type": "interactive",
       "duration": 17,
       "learningAids": [
         {
           "id": "music-production-601-l02-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "DAW Template Builder",
+          "content": "An interactive module where you design a DAW template for a 48-track orchestral recording session, including routing, submixes, and effect sends, with prompts to anticipate potential problems."
         }
       ],
       "chunks": [
         {
           "id": "music-production-601-l02-c1",
           "kind": "practice",
-          "title": "Method Design and Stress Test",
-          "content": "In this interactive lab, learners will have the opportunity to design specialized workflows tailored to their music production needs. After creating these workflows, you will stress-test them by simulating adverse scenarios. This practice will help you understand how your designs hold up under pressure and identify areas for improvement.\nContext recap: In this interactive lab, learners will have the opportunity to design specialized workflows tailored to their music production needs. After creating these workflows, you will stress-test them by simulating adverse scenarios. This practice will help you understand how your designs hold up under pressure and identify areas for improvement."
+          "title": "Building and Breaking Workflows",
+          "content": "In this interactive lab, you will design a complete production workflow for a specific genre, from file management to final delivery. Then, you'll stress-test it by introducing simulated challenges like a corrupted project file, a sudden change in song tempo, or a key piece of hardware failing."
         },
         {
           "id": "music-production-601-l02-c2",
           "kind": "recap",
-          "title": "Control Gate Architecture",
-          "content": "In our recap, we will review how workflows can be enhanced by integrating checkpoints, rollback criteria, and threshold-based escalation. These elements are essential for maintaining control over your music production processes, ensuring that you can respond effectively to any issues that may arise.\nContext recap: In our recap, we will review how workflows can be enhanced by integrating checkpoints, rollback criteria, and threshold-based escalation. These elements are essential for maintaining control over your music production processes, ensuring that you can respond effectively to any issues that may arise."
+          "title": "Designing for Resilience",
+          "content": "We'll review how to build resilient workflows using control gates. This includes creating regular project backups (checkpoints), defining conditions for when to revert to a previous mix version (rollback criteria), and establishing rules for when a problem needs to be escalated to the whole team."
         }
       ],
       "interactiveActivities": [
         {
           "id": "music-production-601-l02-act1",
           "type": "matching_pairs",
-          "title": "Control-to-Outcome Mapping",
-          "description": "Match specialist controls with their strongest reliability and governance effects.",
+          "title": "Technique to Outcome Mapping",
+          "description": "Match the production control with its primary benefit for project reliability and quality.",
           "pairs": [
             {
-              "left": "Pre-commit gate",
-              "right": "Prevents avoidable downstream failures"
+              "left": "Pre-tracking gain staging",
+              "right": "Prevents clipping and ensures a clean signal path downstream."
             },
             {
-              "left": "Rollback trigger",
-              "right": "Limits blast radius under adverse outcomes"
+              "left": "Versioned project saves (e.g., 'Song_Mix_v03')",
+              "right": "Allows for non-destructive experimentation and easy rollbacks."
             },
             {
-              "left": "Baseline dashboard",
-              "right": "Supports defensible impact attribution"
+              "left": "Using a reference track for mixing",
+              "right": "Provides an objective baseline for EQ, dynamics, and loudness."
             },
             {
-              "left": "Retrospective loop",
-              "right": "Improves next-cycle decision quality"
+              "left": "Creating stems for collaboration",
+              "right": "Improves workflow efficiency and reduces compatibility issues."
             }
           ]
         }
@@ -136,287 +136,187 @@ export const MusicProduction601Module: LearningModule = {
     },
     {
       "id": "music-production-601-l03",
-      "title": "Checkpoint 1: Specialist Methods",
+      "title": "Checkpoint 1: Systems and Methods",
       "type": "quiz",
       "duration": 10,
       "learningAids": [
         {
           "id": "music-production-601-l03-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Review Checklist",
+          "content": "A checklist summarizing key concepts from the first two lessons: systematic diagnosis, causal chains in audio, workflow resilience, and evidence-based decision making."
         }
       ],
       "questions": [
         {
           "id": "music-production-601-l03-q1",
-          "text": "Which practice most improves music systems diagnostics decision quality?",
-          "skillId": "music-production-601-skill-core",
+          "text": "When diagnosing a complex mix issue where the bass disappears on small speakers, what is the most systematic first step?",
+          "skillId": "music-production-601-skill-diagnostics",
           "options": [
             {
               "id": "a",
-              "text": "Proceed without baseline or assumptions"
+              "text": "Add more high-end EQ to the bass track immediately."
             },
             {
               "id": "b",
-              "text": "Define assumptions, constraints, and measurable indicators"
+              "text": "Use a phase correlation meter and a spectrum analyzer to check for phase cancellation and frequency masking."
             },
             {
               "id": "c",
-              "text": "Optimize only for speed in every context"
+              "text": "Turn up the volume of the bass track until it's audible."
             },
             {
               "id": "d",
-              "text": "Ignore uncertainty and edge conditions"
+              "text": "Assume the small speakers are broken."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Advanced decisions improve when assumptions, constraints, and metrics are explicit."
+          "explanation": "Systematic diagnosis starts with measurement and evidence, not immediate adjustments. Analyzing phase and frequency content is the correct first step."
         },
         {
           "id": "music-production-601-l03-q2",
-          "text": "At level 601, strong execution for music operations and execution design requires:",
-          "skillId": "music-production-601-skill-execution",
+          "text": "A robust workflow for a multi-producer collaboration should prioritize:",
+          "skillId": "music-production-601-skill-workflow",
           "options": [
             {
               "id": "a",
-              "text": "Owner mapping, checkpoint cadence, and escalation thresholds"
+              "text": "A shared folder with clearly defined naming conventions, sample rates, and a schedule for delivering stems."
             },
             {
               "id": "b",
-              "text": "No role clarity and ad-hoc process changes"
+              "text": "Each producer using their preferred DAW and settings without coordination."
             },
             {
               "id": "c",
-              "text": "No retrospective or post-run review"
+              "text": "Only sharing the final stereo mix file at the very end of the project."
             },
             {
               "id": "d",
-              "text": "No rollback or fallback conditions"
+              "text": "Communicating exclusively through social media DMs."
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Reliable advanced execution needs ownership clarity and threshold-driven governance."
+          "explanation": "Reliable collaborative workflows require clear standards for file management and communication to prevent technical issues and delays."
         },
         {
           "id": "music-production-601-l03-q3",
-          "text": "A defensible approach to music impact and tradeoff analysis includes:",
-          "skillId": "music-production-601-skill-eval",
+          "text": "What is the primary tradeoff when applying heavy compression to a lead vocal?",
+          "skillId": "music-production-601-skill-tradeoffs",
           "options": [
             {
               "id": "a",
-              "text": "Anecdotes without comparison"
+              "text": "There is no tradeoff; it always makes the vocal sound better."
             },
             {
               "id": "b",
-              "text": "Baseline comparisons, side-effect analysis, and uncertainty bounds"
+              "text": "You gain dynamic consistency and presence, but risk losing natural performance nuances and introducing artifacts."
             },
             {
               "id": "c",
-              "text": "Changing success criteria after outcomes"
+              "text": "You make the vocal quieter, but it uses less CPU."
             },
             {
               "id": "d",
-              "text": "Excluding difficult scenarios from analysis"
+              "text": "You increase the dynamic range, making it harder to hear."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible analysis combines comparative baselines, side-effect checks, and uncertainty disclosure."
+          "explanation": "Defensible analysis involves weighing the pros (consistency) against the cons (loss of naturalness, potential artifacts). This is a classic production tradeoff."
         },
         {
           "id": "music-production-601-l03-q4",
-          "text": "Mature governance systems connect:",
+          "text": "A 'control gate' in a mixing workflow is best described as:",
           "skillId": "music-production-601-skill-governance",
           "options": [
             {
               "id": "a",
-              "text": "Policy intent, measurable controls, and remediation pathways"
+              "text": "A noise gate plugin on the drum tracks."
             },
             {
               "id": "b",
-              "text": "Policy language with no measurable enforcement"
+              "text": "A pre-defined checkpoint, like 'client must approve the rough mix before proceeding to vocal tuning'."
             },
             {
               "id": "c",
-              "text": "Targets without ownership or escalation design"
+              "text": "The lead producer's ability to veto any idea."
             },
             {
               "id": "d",
-              "text": "Operations without transparent accountability"
-            }
-          ],
-          "correctOptionId": "a",
-          "explanation": "Governance maturity is the operational link between intent, measurement, and corrective action."
-        },
-        {
-          "id": "music-production-601-l03-q5",
-          "text": "What is the best way to compare competing interventions in advanced Music?",
-          "skillId": "music-production-601-skill-advanced-5",
-          "options": [
-            {
-              "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
-            },
-            {
-              "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
-            },
-            {
-              "id": "c",
-              "text": "Switch metrics after results arrive"
-            },
-            {
-              "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
+              "text": "The final mastering stage."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
-        },
-        {
-          "id": "music-production-601-l03-q6",
-          "text": "In high-stakes Music Production Research and Leadership execution, which communication protocol is strongest?",
-          "skillId": "music-production-601-skill-advanced-6",
-          "options": [
-            {
-              "id": "a",
-              "text": "Broadcast conclusions without assumptions"
-            },
-            {
-              "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
-            },
-            {
-              "id": "c",
-              "text": "Share only final outcomes after completion"
-            },
-            {
-              "id": "d",
-              "text": "Limit updates to a single informal channel"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
-        },
-        {
-          "id": "music-production-601-l03-q7",
-          "text": "A mature remediation loop in advanced Music should prioritize:",
-          "skillId": "music-production-601-skill-advanced-7",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blame assignment without system updates"
-            },
-            {
-              "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
-            },
-            {
-              "id": "c",
-              "text": "One-time fixes without retesting"
-            },
-            {
-              "id": "d",
-              "text": "Issue closure based on elapsed time"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
-        },
-        {
-          "id": "music-production-601-l03-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Music Production Research and Leadership?",
-          "skillId": "music-production-601-skill-advanced-8",
-          "options": [
-            {
-              "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
-            },
-            {
-              "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
-            },
-            {
-              "id": "c",
-              "text": "Ignore correlated failure modes"
-            },
-            {
-              "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "explanation": "In workflow governance, a control gate is a planned checkpoint that requires a specific condition to be met before the project can move forward, ensuring quality and alignment."
         }
       ]
     },
     {
       "id": "music-production-601-l04",
-      "title": "Music Production Advanced Case Analysis",
+      "title": "Case Study: The Production of a Landmark Album",
       "type": "video",
       "duration": 14,
       "learningAids": [
         {
           "id": "music-production-601-l04-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Album Production Timeline",
+          "content": "An infographic detailing the production timeline of a famous, complex album (e.g., Pink Floyd's 'The Wall'), showing key decisions, technical innovations, and personnel conflicts."
         }
       ],
       "chunks": [
         {
           "id": "music-production-601-l04-c1",
           "kind": "concept",
-          "title": "Scenario Architecture",
-          "content": "In this lesson, we will frame a case that highlights the competing constraints involved in music systems diagnostics. You will learn how to analyze the impact of music and the trade-offs that come with different decisions. This understanding will help you navigate complex situations in music production.\nContext recap: In this lesson, we will frame a case that highlights the competing constraints involved in music systems diagnostics. You will learn how to analyze the impact of music and the trade-offs that come with different decisions. This understanding will help you navigate complex situations in music production."
+          "title": "Deconstructing a Masterpiece",
+          "content": "In this lesson, we will analyze a landmark album known for its innovative production. We'll frame the case by examining the competing constraints the producers faced: artistic vision, technological limitations of the era, budget, and deadlines. This sets the stage for understanding their choices."
         },
         {
           "id": "music-production-601-l04-c2",
           "kind": "practice",
-          "title": "Tradeoff Framing",
-          "content": "In this practice session, learners will compare various options based on important dimensions such as safety, reliability, cost, equity, and governance. This comparative analysis will equip you with the skills to make informed decisions that balance these critical factors in music production.\nContext recap: In this practice session, learners will compare various options based on important dimensions such as safety, reliability, cost, equity, and governance. This comparative analysis will equip you with the skills to make informed decisions that balance these critical factors in music production.\nContext recap: In this practice session, learners will compare various options based on important dimensions such as safety, reliability, cost, equity, and governance. This comparative analysis will equip you with the skills to make informed decisions that balance these critical factors in music production. Context recap: In this practice session, learners will compare various options based on important dimensions such as safety, reliability, cost, equity, and governance. This comparative analysis will equip you with the skills to make informed decisions that balance these critical factors in music production."
+          "title": "Analyzing Key Production Tradeoffs",
+          "content": "We will listen to specific tracks and identify key production decisions. For example, why did they choose a dry, tight drum sound when the trend was for big, ambient drums? We'll analyze this as a tradeoff between rhythmic punch and sonic grandeur, considering its impact on the album's overall mood."
         },
         {
           "id": "music-production-601-l04-c3",
           "kind": "recap",
-          "title": "Decision Memo Pattern",
-          "content": "In our recap, we will discuss the structure of a decision memo. Each recommendation you make should include clear assumptions, supporting evidence, risk controls, and fallback plans. This comprehensive approach ensures that your decisions are well-founded and prepared for any potential challenges.\nContext recap: In our recap, we will discuss the structure of a decision memo. Each recommendation you make should include clear assumptions, supporting evidence, risk controls, and fallback plans. This comprehensive approach ensures that your decisions are well-founded and prepared for any potential challenges.\nContext recap: In our recap, we will discuss the structure of a decision memo. Each recommendation you make should include clear assumptions, supporting evidence, risk controls, and fallback plans. This comprehensive approach ensures that your decisions are well-founded and prepared for any potential challenges. Context recap: In our recap, we will discuss the structure of a decision memo.\nWhy this matters: Decision Memo Pattern helps learners in Music connect ideas from Music Production Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "The Decision Memo Framework",
+          "content": "We'll recap by structuring a 'decision memo' for one of the album's key production choices. This memo will state the goal, list the options considered, provide evidence for the chosen path (e.g., 'A/B tests showed this mic captured more emotion'), and outline the risks, solidifying a framework for your own decisions."
         }
       ]
     },
     {
       "id": "music-production-601-l05",
-      "title": "Music Production Simulation Clinic",
+      "title": "Live Session Simulation Clinic",
       "type": "interactive",
       "duration": 18,
       "learningAids": [
         {
           "id": "music-production-601-l05-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Interactive Studio Console",
+          "content": "A simplified graphical interface of a recording studio where learners must make decisions in response to pop-up scenarios, such as 'The guitarist's amp is buzzing loudly. What do you check first?'"
         }
       ],
       "chunks": [
         {
           "id": "music-production-601-l05-c1",
           "kind": "practice",
-          "title": "Live Scenario Controls",
-          "content": "In this interactive clinic, learners will operate scenario controls while balancing performance and governance constraints. This hands-on experience will help you understand how to manage different aspects of music production effectively, ensuring that you can deliver high-quality results.\nContext recap: In this interactive clinic, learners will operate scenario controls while balancing performance and governance constraints. This hands-on experience will help you understand how to manage different aspects of music production effectively, ensuring that you can deliver high-quality results.\nContext recap: In this interactive clinic, learners will operate scenario controls while balancing performance and governance constraints. This hands-on experience will help you understand how to manage different aspects of music production effectively, ensuring that you can deliver high-quality results. Context recap: In this interactive clinic, learners will operate scenario controls while balancing performance and governance constraints. This hands-on experience will help you understand how to manage different aspects of music production effectively, ensuring that you can deliver high-quality results."
+          "title": "Managing a High-Pressure Session",
+          "content": "In this interactive clinic, you will lead a simulated recording session. You'll be presented with real-time challenges, such as a vocalist struggling with pitch, a DAW crashing mid-take, or the band disagreeing on a creative direction. Your goal is to make decisions that balance technical quality, project timeline, and artist morale."
         },
         {
           "id": "music-production-601-l05-c2",
           "kind": "recap",
-          "title": "Adaptive Response Design",
-          "content": "In our recap, we will focus on the design of effective responses that update control gates. It is important to do this without losing traceability or accountability. This practice will help you maintain a clear record of changes and ensure that all actions taken are responsible and transparent.\nContext recap: In our recap, we will focus on the design of effective responses that update control gates. It is important to do this without losing traceability or accountability. This practice will help you maintain a clear record of changes and ensure that all actions taken are responsible and transparent."
+          "title": "Adaptive Leadership in the Studio",
+          "content": "We'll recap the simulation by analyzing the decisions made. The focus is on adaptive responses: how do you adjust your plan on the fly without losing control of the session? We'll discuss the importance of clear communication and maintaining a traceable record of changes for later review."
         }
       ],
       "interactiveActivities": [
         {
           "id": "music-production-601-l05-act1",
           "type": "scenario",
-          "title": "Adverse-Condition Decision Run",
-          "description": "Run a high-pressure music production scenario and tune controls under uncertainty."
+          "title": "The 'Everything Goes Wrong' Session",
+          "description": "Run a high-pressure recording session simulation. You have 4 hours to get a perfect vocal take, but you'll face technical glitches, artist fatigue, and creative disagreements. Manage your time and resources to succeed."
         }
       ]
     },
@@ -429,297 +329,197 @@ export const MusicProduction601Module: LearningModule = {
         {
           "id": "music-production-601-l06-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Decision Analysis Flowchart",
+          "content": "A flowchart showing a structured process for making a high-stakes production decision, from identifying the problem to analyzing tradeoffs, simulating outcomes, and documenting the final choice."
         }
       ],
       "questions": [
         {
           "id": "music-production-601-l06-q1",
-          "text": "In advanced casework, the first requirement for defensible recommendations is:",
-          "skillId": "music-production-601-skill-case1",
+          "text": "In analyzing the production of a classic album, the most insightful approach is to:",
+          "skillId": "music-production-601-skill-case-analysis",
           "options": [
             {
               "id": "a",
-              "text": "A preferred option without explicit assumptions"
+              "text": "Simply copy the gear list they used."
             },
             {
               "id": "b",
-              "text": "A clear baseline, explicit constraints, and success criteria"
+              "text": "Understand the artistic goals and technical constraints that led to their specific production choices."
             },
             {
               "id": "c",
-              "text": "High confidence without evidence logs"
+              "text": "Assume every choice they made was perfect and without tradeoffs."
             },
             {
               "id": "d",
-              "text": "Single-metric optimization only"
+              "text": "Focus only on the song's lyrics."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible recommendations begin with explicit assumptions, constraints, and measurable targets."
+          "explanation": "Advanced case analysis requires understanding the 'why' behind the 'what'—connecting decisions to the context of goals and constraints."
         },
         {
           "id": "music-production-601-l06-q2",
-          "text": "A resilient strategy for music operations and execution design should include:",
-          "skillId": "music-production-601-skill-case2",
+          "text": "During the live session simulation, the artist wants to try a completely different vocal approach, but you're running out of time. What is the best leadership action?",
+          "skillId": "music-production-601-skill-simulation-leadership",
           "options": [
             {
               "id": "a",
-              "text": "Checkpointed execution with fallback and escalation criteria"
+              "text": "Refuse immediately, stating you don't have time."
             },
             {
               "id": "b",
-              "text": "One-way execution with no rollback capability"
+              "text": "Time-box the experiment: 'Great idea. Let's try it for 15 minutes. If it's working, we'll re-evaluate the schedule. If not, we'll return to the original plan.'"
             },
             {
               "id": "c",
-              "text": "No ownership mapping across teams"
+              "text": "Agree to the new approach without considering the schedule, hoping for the best."
             },
             {
               "id": "d",
-              "text": "Hidden assumptions and undocumented decisions"
+              "text": "Tell the artist their original performance was bad anyway."
             }
           ],
-          "correctOptionId": "a",
-          "explanation": "Resilience depends on checkpoints, fallback options, and explicit escalation design."
+          "correctOptionId": "b",
+          "explanation": "This response balances encouraging creativity (validating the artist's idea) with responsible project management (controlling for the risk of running out of time)."
         },
         {
           "id": "music-production-601-l06-q3",
-          "text": "When evaluating music impact and tradeoff analysis, which method is most rigorous?",
-          "skillId": "music-production-601-skill-case3",
+          "text": "A 'decision memo' for choosing a mix revision is most effective when it includes:",
+          "skillId": "music-production-601-skill-decision-documentation",
           "options": [
             {
               "id": "a",
-              "text": "Single success story without controls"
+              "text": "A vague statement like 'Mix B sounds better'."
             },
             {
               "id": "b",
-              "text": "Comparative baselines plus side-effect and uncertainty analysis"
+              "text": "The specific goal (e.g., 'Increase vocal clarity'), the options considered, and evidence for the choice (e.g., 'Mix B has less masking in the 2-4kHz range')."
             },
             {
               "id": "c",
-              "text": "Outcome-only narrative without process evidence"
+              "text": "Only the opinion of the loudest person in the room."
             },
             {
               "id": "d",
-              "text": "Retrospective scope changes to fit outcomes"
+              "text": "A note saying a decision was made, with no rationale."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Rigorous evaluation requires comparisons, side-effect analysis, and uncertainty disclosure."
+          "explanation": "Rigorous decision-making is documented with a clear goal, an analysis of options, and evidence to support the final choice, making it defensible and repeatable."
         },
         {
           "id": "music-production-601-l06-q4",
-          "text": "Advanced governance is strongest when it:",
-          "skillId": "music-production-601-skill-case4",
+          "text": "What does a resilient production strategy prioritize?",
+          "skillId": "music-production-601-skill-resilience",
           "options": [
             {
               "id": "a",
-              "text": "Aligns authority, measurement, and remediation obligations"
+              "text": "Having only one way of doing things to ensure consistency."
             },
             {
               "id": "b",
-              "text": "Separates policy from operational controls"
+              "text": "Having contingency plans, such as backup microphones and alternative workflow ideas, for when things go wrong."
             },
             {
               "id": "c",
-              "text": "Avoids external review and transparency"
+              "text": "Ignoring potential problems until they happen."
             },
             {
               "id": "d",
-              "text": "Treats accountability as optional under pressure"
-            }
-          ],
-          "correctOptionId": "a",
-          "explanation": "Mature governance links authority, measurable controls, and corrective action."
-        },
-        {
-          "id": "music-production-601-l06-q5",
-          "text": "What is the best way to compare competing interventions in advanced Music?",
-          "skillId": "music-production-601-skill-advanced-5",
-          "options": [
-            {
-              "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
-            },
-            {
-              "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
-            },
-            {
-              "id": "c",
-              "text": "Switch metrics after results arrive"
-            },
-            {
-              "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
+              "text": "Using the oldest, most outdated equipment possible."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
-        },
-        {
-          "id": "music-production-601-l06-q6",
-          "text": "In high-stakes Music Production Research and Leadership execution, which communication protocol is strongest?",
-          "skillId": "music-production-601-skill-advanced-6",
-          "options": [
-            {
-              "id": "a",
-              "text": "Broadcast conclusions without assumptions"
-            },
-            {
-              "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
-            },
-            {
-              "id": "c",
-              "text": "Share only final outcomes after completion"
-            },
-            {
-              "id": "d",
-              "text": "Limit updates to a single informal channel"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
-        },
-        {
-          "id": "music-production-601-l06-q7",
-          "text": "A mature remediation loop in advanced Music should prioritize:",
-          "skillId": "music-production-601-skill-advanced-7",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blame assignment without system updates"
-            },
-            {
-              "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
-            },
-            {
-              "id": "c",
-              "text": "One-time fixes without retesting"
-            },
-            {
-              "id": "d",
-              "text": "Issue closure based on elapsed time"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
-        },
-        {
-          "id": "music-production-601-l06-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Music Production Research and Leadership?",
-          "skillId": "music-production-601-skill-advanced-8",
-          "options": [
-            {
-              "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
-            },
-            {
-              "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
-            },
-            {
-              "id": "c",
-              "text": "Ignore correlated failure modes"
-            },
-            {
-              "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "explanation": "Resilience in production, as in any complex system, depends on having fallback options and the ability to adapt to unexpected challenges."
         }
       ]
     },
     {
       "id": "music-production-601-l07",
-      "title": "Music Production Governance and Public Impact",
+      "title": "Project Governance and Ethical Considerations",
       "type": "video",
       "duration": 13,
       "learningAids": [
         {
           "id": "music-production-601-l07-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Stakeholder Map",
+          "content": "A diagram showing the stakeholders in a typical album project (artist, label, producer, mixing engineer, session musicians, fans) and their differing interests and concerns."
         }
       ],
       "chunks": [
         {
           "id": "music-production-601-l07-c1",
           "kind": "concept",
-          "title": "Stakeholder Impact Distribution",
-          "content": "In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. Understanding these dynamics is essential for recognizing how decisions in music production can impact various individuals and communities.\nContext recap: In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. Understanding these dynamics is essential for recognizing how decisions in music production can impact various individuals and communities.\nWhy this matters: Stakeholder Impact Distribution helps learners in Music connect ideas from Music Production Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "Mapping the Impact on Stakeholders",
+          "content": "A production decision is never just technical; it affects people. We will map how choices about budget, timeline, and creative direction distribute benefits and burdens. For example, a rushed schedule might benefit the label but burn out the engineering team and compromise the artist's performance."
         },
         {
           "id": "music-production-601-l07-c2",
           "kind": "concept",
-          "title": "Accountability Architecture",
-          "content": "In this section, we will explore the architecture of accountability. This includes understanding decision traceability, review rights, and remediation obligations. By integrating these elements, you will learn how to create a responsible framework for decision-making in music production.\nContext recap: In this section, we will explore the architecture of accountability. This includes understanding decision traceability, review rights, and remediation obligations. By integrating these elements, you will learn how to create a responsible framework for decision-making in music production.\nContext recap: In this section, we will explore the architecture of accountability. This includes understanding decision traceability, review rights, and remediation obligations. By integrating these elements, you will learn how to create a responsible framework for decision-making in music production. Context recap: In this section, we will explore the architecture of accountability.\nWhy this matters: Accountability Architecture helps learners in Music connect ideas from Music Production Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "Designing Accountable Systems",
+          "content": "This section focuses on building fair and transparent project governance. We'll discuss how to clearly define roles, establish who has final say on creative decisions (review rights), and create a process for resolving disputes. This includes ensuring proper credit and compensation for all contributors."
         },
         {
           "id": "music-production-601-l07-c3",
           "kind": "recap",
-          "title": "Responsible Leadership Checklist",
-          "content": "As we wrap up our lesson today, we will take some time to explore a very important checklist that will help us connect key outcomes with essential ethical considerations. This checklist is designed to ensure that we are adhering to the necessary policies and guidelines that govern our work in music production. Additionally, it promotes resilience in our leadership practices, which is crucial for navigating the challenges we may face in this field. By utilizing this checklist, we can make informed and responsible decisions that not only reflect our values but also consider the impact our choices have on others and the wider community. This tool will serve as a constant reminder of our responsibilities as leaders in music production, guiding us toward making positive contributions to the industry and society as a whole.\nContext recap: As we wrap up our lesson today, we will take some time to explore a very important checklist that will help us connect key outcomes with essential ethical considerations. This checklist is designed to ensure that we are adhering to the necessary policies and guidelines that govern our work in music production. Additionally, it promotes resilience in our leadership practices, which is crucial for navigating the challenges we may face in this field. By utilizing this checklist, we can make informed and responsible decisions that not only reflect our values but also consider the impact our choices have on others and the wider community."
+          "title": "The Responsible Producer's Checklist",
+          "content": "We'll conclude with a checklist for responsible leadership. It prompts questions like: 'Are all collaborators being credited fairly?' 'Have we cleared all samples legally and ethically?' 'Does our final master meet accessibility standards for listeners with hearing impairments?' This connects technical work to its real-world impact."
         }
       ],
       "flashcards": [
         {
           "id": "music-production-601-l07-f1",
-          "front": "Impact distribution",
-          "back": "How outcomes are allocated across populations and timescales."
+          "front": "Stakeholder",
+          "back": "Any individual or group with a vested interest in a project's outcome, including artists, engineers, labels, and even the audience."
         },
         {
           "id": "music-production-601-l07-f2",
-          "front": "Decision traceability",
-          "back": "An auditable record of evidence, ownership, and rationale."
+          "front": "Decision Traceability",
+          "back": "An auditable record of who made a key decision, when, and why, which is crucial for accountability and learning from past projects."
         },
         {
           "id": "music-production-601-l07-f3",
-          "front": "Responsible leadership",
-          "back": "Decision behavior balancing performance, accountability, and ethics."
+          "front": "Ethical Production",
+          "back": "A practice that balances achieving high-quality sonic results with fair treatment of collaborators, respect for intellectual property, and social responsibility."
         }
       ]
     },
     {
       "id": "music-production-601-l08",
-      "title": "Music Production Capstone Defense Lab",
+      "title": "Capstone: Project Defense Lab",
       "type": "interactive",
       "duration": 16,
       "learningAids": [
         {
           "id": "music-production-601-l08-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Defense Presentation Template",
+          "content": "A slide deck template guiding learners to structure their final project defense, with sections for Project Goals, Key Challenges, Solutions and Tradeoffs, Final Outcome, and Future Recommendations."
         }
       ],
       "chunks": [
         {
           "id": "music-production-601-l08-c1",
           "kind": "practice",
-          "title": "Defense Brief Assembly",
-          "content": "In this engaging interactive activity, you will collaborate with your peers to create a detailed and comprehensive brief. This brief will encompass your main claims, the evidence that supports those claims, and an exploration of any uncertainties or limitations in your arguments. Additionally, you will brainstorm possible solutions to any challenges you might encounter. This exercise is designed to enhance your critical thinking and communication skills, which are essential for success in music production and beyond. Working together will also help you learn from each other and develop teamwork skills. By sharing ideas and perspectives, you will gain a deeper understanding of the music production process and how to effectively present your thoughts. Remember, the goal is not just to complete the brief, but to engage in meaningful discussions that will prepare you for real-world challenges in the music industry.\nContext recap: In this engaging interactive activity, you will collaborate with your peers to create a detailed and comprehensive brief. This brief will encompass your main claims, the evidence that supports those claims, and an exploration of any uncertainties or limitations in your arguments. Additionally, you will brainstorm possible solutions to any challenges you might encounter. This exercise is designed to enhance your critical thinking and communication skills, which are essential for success in music production and beyond.\nWhy this matters: Defense Brief Assembly helps learners in Music connect ideas from Music Production Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "Assembling Your Defense Brief",
+          "content": "In this lab, you will prepare a defense for a production project you've completed. You will structure your argument, starting with your main artistic and technical goals. You will then present the evidence—audio examples, session screenshots, project data—and explicitly state the tradeoffs you made and why."
         },
         {
           "id": "music-production-601-l08-c2",
           "kind": "recap",
-          "title": "Expert Panel Rehearsal",
-          "content": "In this crucial session, you will engage in a valuable practice where you will respond to questions and feedback from a panel of experienced experts in the field of music production. This is a fantastic opportunity for you to prepare thoughtful and well-structured answers to a variety of critiques that may focus on the technical aspects of your projects, governance issues that affect the music industry, and the diverse perspectives of stakeholders who play a role in music production. By participating in this rehearsal, you will not only build your confidence but also enhance your presentation skills significantly. Simulating this experience will equip you with the tools you need to effectively articulate your ideas and defend your work in front of an audience, ensuring that you are well-prepared for any challenges that may arise during your actual presentation. Remember, practice makes perfect, and this session is designed to help you shine!\nContext recap: In this crucial session, you will engage in a valuable practice where you will respond to questions and feedback from a panel of experienced experts in the field of music production. This is a fantastic opportunity for you to prepare thoughtful and well-structured answers to a variety of critiques that may focus on the technical aspects of your projects, governance issues that affect the music industry, and the diverse perspectives of stakeholders who play a role in music production. By participating in this rehearsal, you will not only build your confidence but also enhance your presentation skills significantly. Simulating this experience will equip you with the tools you need to effectively articulate your ideas and defend your work in front of an audience, ensuring that you are well-prepared for any challenges that may arise during your actual presentation."
+          "title": "Rehearsing for Expert Critique",
+          "content": "To prepare for the final defense, we will simulate a Q&A with an expert panel. You will practice responding to challenging questions about your technical choices ('Why did you use parallel compression instead of serial?'), your project management ('How did you handle creative disagreements?'), and the ethical implications of your work."
         }
       ],
       "interactiveActivities": [
         {
           "id": "music-production-601-l08-act1",
           "type": "debate_simulator",
-          "title": "Expert Defense Panel",
-          "description": "Defend specialization recommendations under adversarial cross-examination."
+          "title": "The Producer's Hot Seat",
+          "description": "Present your capstone project to a simulated panel of experts (a label executive, a mastering engineer, and a music critic). Defend your production choices against their tough, cross-disciplinary questions."
         }
       ]
     }

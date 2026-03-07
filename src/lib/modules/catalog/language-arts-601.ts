@@ -1,9 +1,9 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const LanguageArts601Module: LearningModule = {
+export const language_arts_601_Module: LearningModule = {
   "id": "language-arts-601",
   "title": "Language Arts Research and Leadership",
-  "description": "Post-401 specialization in Language Arts, focused on language arts systems diagnostics, language arts operations and execution design, language arts impact and tradeoff analysis, and language arts governance and leadership through advanced casework, simulation, and defense-based checkpoints.",
+  "description": "An advanced course for leaders in education. Learn to analyze language arts programs, design effective operational strategies, evaluate their impact, and lead with accountability. This module uses case studies, simulations, and expert critiques to build high-level strategic skills.",
   "subject": "Language Arts",
   "tags": [
     "core",
@@ -14,32 +14,32 @@ export const LanguageArts601Module: LearningModule = {
   ],
   "minAge": 17,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en",
     "es"
   ],
   "learningObjectives": [
-    "Apply advanced methods for language arts systems diagnostics in high-constraint environments",
-    "Design robust systems for language arts operations and execution design with measurable control gates",
-    "Evaluate interventions in language arts impact and tradeoff analysis with research-grade rigor",
-    "Operationalize language arts governance and leadership with accountable governance and escalation pathways",
-    "Lead cross-functional decision reviews with explicit tradeoff communication",
-    "Defend recommendations under expert critique using evidence and uncertainty bounds"
+    "Analyze complex language arts programs to identify strengths and weaknesses under specific constraints.",
+    "Design and implement robust operational plans for language arts initiatives with clear success metrics.",
+    "Evaluate the impact and trade-offs of educational interventions using rigorous, evidence-based methods.",
+    "Develop and apply governance frameworks for language arts programs that ensure accountability and clear leadership.",
+    "Lead strategic discussions, clearly communicating trade-offs and rationale to diverse stakeholders.",
+    "Formulate and defend strategic recommendations based on evidence, acknowledging uncertainty and potential risks."
   ],
   "lessons": [
     {
       "id": "language-arts-601-l01",
-      "title": "Language Arts Advanced Foundations",
+      "title": "Advanced Foundations in Language Arts Systems",
       "type": "video",
       "duration": 14,
       "learningAids": [
         {
           "id": "language-arts-601-l01-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "System Mapping",
+          "content": "Visualize a language arts program as an interconnected system, showing how curriculum, instruction, assessment, and student support influence each other."
         }
       ],
       "chunks": [
@@ -47,50 +47,50 @@ export const LanguageArts601Module: LearningModule = {
           "id": "language-arts-601-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "In this lesson, we will delve into the advanced boundaries of Language Arts. Our focus will be on understanding how to assess and evaluate language arts systems. This means we will look closely at how these systems operate and how we can create effective strategies for their execution. By doing this, we will be able to identify areas that need improvement, ensuring that our approaches are not only well-structured but also effective in enhancing learning outcomes. This exploration will empower us to make informed decisions that positively impact our language arts practices."
+          "content": "This lesson introduces the core concepts for analyzing complex language arts programs. We will focus on defining the scope of our analysis, identifying key components of the system, and understanding the environment in which it operates. This helps establish a clear foundation for effective evaluation and strategic planning."
         },
         {
           "id": "language-arts-601-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "In this part of the lesson, learners will work on mapping out causal pathways, which means identifying how different factors influence each other. They will also explore uncertainty ranges, which help us understand the limits of our knowledge, and system dependencies, which show how various elements rely on one another. This foundational work is essential before we plan any interventions or changes.\nContext recap: In this part of the lesson, learners will work on mapping out causal pathways, which means identifying how different factors influence each other. They will also explore uncertainty ranges, which help us understand the limits of our knowledge, and system dependencies, which show how various elements rely on one another. This foundational work is essential before we plan any interventions or changes."
+          "content": "Here, we will learn to map cause-and-effect relationships within a language arts system. We will also practice identifying sources of uncertainty and understanding how different parts of the system depend on one another. This foundational analysis is crucial for predicting the potential impact of any changes we might propose."
         },
         {
           "id": "language-arts-601-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "In our recap, we emphasize that all claims made during our analysis should be linked to measurable indicators. This means we need to have clear evidence to support our statements. Additionally, we will establish confidence bounds and review checkpoints to ensure that our findings are reliable and can be verified through systematic checks.\nContext recap: In our recap, we emphasize that all claims made during our analysis should be linked to measurable indicators. This means we need to have clear evidence to support our statements. Additionally, we will establish confidence bounds and review checkpoints to ensure that our findings are reliable and can be verified through systematic checks."
+          "content": "In this recap, we'll reinforce the importance of backing up all claims with measurable evidence. We will review how to set clear standards for what constitutes sufficient proof and establish checkpoints to ensure our analysis remains rigorous and credible throughout the process."
         }
       ],
       "flashcards": [
         {
           "id": "language-arts-601-l01-f1",
-          "front": "language arts systems diagnostics",
-          "back": "A specialization axis requiring explicit assumptions and measurable constraints."
+          "front": "Language Arts Systems Diagnostics",
+          "back": "The systematic process of evaluating a language arts program by clearly stating assumptions and using measurable data."
         },
         {
           "id": "language-arts-601-l01-f2",
-          "front": "language arts operations and execution design",
-          "back": "Execution architecture that determines reliability under stress."
+          "front": "Language Arts Operations Design",
+          "back": "The design of processes and workflows that ensure a language arts program can be implemented reliably and effectively, even under pressure."
         },
         {
           "id": "language-arts-601-l01-f3",
-          "front": "language arts impact and tradeoff analysis",
-          "back": "Evaluation discipline for identifying true gains and hidden costs."
+          "front": "Impact and Tradeoff Analysis",
+          "back": "A structured method for evaluating the positive outcomes of an intervention against its hidden costs and unintended consequences."
         }
       ]
     },
     {
       "id": "language-arts-601-l02",
-      "title": "Language Arts Specialist Methods Lab",
+      "title": "Developing and Testing Specialist Methods",
       "type": "interactive",
       "duration": 17,
       "learningAids": [
         {
           "id": "language-arts-601-l02-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Workflow Designer",
+          "content": "Use an interactive tool to build a process flowchart for a new reading initiative, including decision points, quality checks, and escalation paths."
         }
       ],
       "chunks": [
@@ -98,13 +98,13 @@ export const LanguageArts601Module: LearningModule = {
           "id": "language-arts-601-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "In this interactive segment, learners will have the opportunity to design specialized workflows. This means creating step-by-step processes tailored to specific tasks. They will also conduct stress tests, which involve putting these workflows through challenging scenarios to see how they hold up under pressure. This practice is crucial for ensuring that our methods are robust and effective.\nContext recap: In this interactive segment, learners will have the opportunity to design specialized workflows. This means creating step-by-step processes tailored to specific tasks. They will also conduct stress tests, which involve putting these workflows through challenging scenarios to see how they hold up under pressure. This practice is crucial for ensuring that our methods are robust and effective."
+          "content": "In this interactive lab, you will design specialized workflows for common language arts challenges. You will then 'stress test' these workflows by running them through challenging scenarios to identify potential weaknesses and ensure they are robust and reliable in practice."
         },
         {
           "id": "language-arts-601-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "In our recap, we will discuss the architecture of control gates within our workflows. This includes integrating important checkpoints, which are points where we can assess progress, as well as rollback criteria that allow us to revert to previous steps if necessary. We will also explore threshold-based escalation, which helps us determine when to escalate issues based on specific criteria.\nContext recap: In our recap, we will discuss the architecture of control gates within our workflows. This includes integrating important checkpoints, which are points where we can assess progress, as well as rollback criteria that allow us to revert to previous steps if necessary. We will also explore threshold-based escalation, which helps us determine when to escalate issues based on specific criteria."
+          "content": "We will recap the key elements of a strong workflow. This includes building in 'control gates' or checkpoints to review progress, defining clear criteria for when to pause or reverse a process ('rollback'), and establishing rules for when to escalate a problem to leadership."
         }
       ],
       "interactiveActivities": [
@@ -112,23 +112,23 @@ export const LanguageArts601Module: LearningModule = {
           "id": "language-arts-601-l02-act1",
           "type": "matching_pairs",
           "title": "Control-to-Outcome Mapping",
-          "description": "Match specialist controls with their strongest reliability and governance effects.",
+          "description": "Match operational controls with their primary purpose in ensuring reliability and good governance.",
           "pairs": [
             {
-              "left": "Pre-commit gate",
-              "right": "Prevents avoidable downstream failures"
+              "left": "Quality Checkpoint",
+              "right": "Prevents common errors from moving forward"
             },
             {
-              "left": "Rollback trigger",
-              "right": "Limits blast radius under adverse outcomes"
+              "left": "Contingency Plan",
+              "right": "Minimizes negative impact when a failure occurs"
             },
             {
-              "left": "Baseline dashboard",
-              "right": "Supports defensible impact attribution"
+              "left": "Performance Dashboard",
+              "right": "Allows for clear comparison of 'before' and 'after' results"
             },
             {
-              "left": "Retrospective loop",
-              "right": "Improves next-cycle decision quality"
+              "left": "After-Action Review",
+              "right": "Uses lessons from the past to improve future projects"
             }
           ]
         }
@@ -144,18 +144,18 @@ export const LanguageArts601Module: LearningModule = {
           "id": "language-arts-601-l03-a1",
           "type": "practice",
           "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "content": "Apply a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
         }
       ],
       "questions": [
         {
           "id": "language-arts-601-l03-q1",
-          "text": "Which practice most improves language arts systems diagnostics decision quality?",
+          "text": "Which practice most improves the quality of decisions when diagnosing a language arts system?",
           "skillId": "language-arts-601-skill-core",
           "options": [
             {
               "id": "a",
-              "text": "Proceed without baseline or assumptions"
+              "text": "Proceed without a baseline or assumptions"
             },
             {
               "id": "b",
@@ -167,200 +167,100 @@ export const LanguageArts601Module: LearningModule = {
             },
             {
               "id": "d",
-              "text": "Ignore uncertainty and edge conditions"
+              "text": "Ignore uncertainty and potential edge cases"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Advanced decisions improve when assumptions, constraints, and metrics are explicit."
+          "explanation": "High-quality decisions improve when assumptions, constraints, and metrics are made explicit from the start."
         },
         {
           "id": "language-arts-601-l03-q2",
-          "text": "At level 601, strong execution for language arts operations and execution design requires:",
+          "text": "For an advanced language arts program, strong operational design requires:",
           "skillId": "language-arts-601-skill-execution",
           "options": [
             {
               "id": "a",
-              "text": "Owner mapping, checkpoint cadence, and escalation thresholds"
+              "text": "Clear ownership, regular checkpoints, and escalation thresholds"
             },
             {
               "id": "b",
-              "text": "No role clarity and ad-hoc process changes"
+              "text": "Vague role clarity and ad-hoc process changes"
             },
             {
               "id": "c",
-              "text": "No retrospective or post-run review"
+              "text": "No after-action review or learning loop"
             },
             {
               "id": "d",
-              "text": "No rollback or fallback conditions"
+              "text": "No plan for rollbacks or contingencies"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Reliable advanced execution needs ownership clarity and threshold-driven governance."
+          "explanation": "Reliable execution at an advanced level needs clear ownership and governance based on pre-defined thresholds."
         },
         {
           "id": "language-arts-601-l03-q3",
-          "text": "A defensible approach to language arts impact and tradeoff analysis includes:",
+          "text": "A defensible analysis of a program's impact and trade-offs must include:",
           "skillId": "language-arts-601-skill-eval",
           "options": [
             {
               "id": "a",
-              "text": "Anecdotes without comparison"
+              "text": "Anecdotes without a comparison group"
             },
             {
               "id": "b",
-              "text": "Baseline comparisons, side-effect analysis, and uncertainty bounds"
+              "text": "Baseline comparisons, side-effect analysis, and acknowledging uncertainty"
             },
             {
               "id": "c",
-              "text": "Changing success criteria after outcomes"
+              "text": "Changing the success criteria after seeing the outcomes"
             },
             {
               "id": "d",
-              "text": "Excluding difficult scenarios from analysis"
+              "text": "Excluding difficult-to-measure scenarios from the analysis"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible analysis combines comparative baselines, side-effect checks, and uncertainty disclosure."
+          "explanation": "Defensible analysis combines comparisons to a baseline, checks for unintended consequences, and transparently discloses uncertainty."
         },
         {
           "id": "language-arts-601-l03-q4",
-          "text": "Mature governance systems connect:",
+          "text": "Mature governance systems in education connect:",
           "skillId": "language-arts-601-skill-governance",
           "options": [
             {
               "id": "a",
-              "text": "Policy intent, measurable controls, and remediation pathways"
+              "text": "The intent of a policy, measurable controls, and clear paths for remediation"
             },
             {
               "id": "b",
-              "text": "Policy language with no measurable enforcement"
+              "text": "Policy language with no measurable way to enforce it"
             },
             {
               "id": "c",
-              "text": "Targets without ownership or escalation design"
+              "text": "Ambitious targets without clear ownership or an escalation plan"
             },
             {
               "id": "d",
-              "text": "Operations without transparent accountability"
+              "text": "Operations without transparent accountability for outcomes"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Governance maturity is the operational link between intent, measurement, and corrective action."
-        },
-        {
-          "id": "language-arts-601-l03-q5",
-          "text": "What is the best way to compare competing interventions in advanced Language Arts?",
-          "skillId": "language-arts-601-skill-advanced-5",
-          "options": [
-            {
-              "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
-            },
-            {
-              "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
-            },
-            {
-              "id": "c",
-              "text": "Switch metrics after results arrive"
-            },
-            {
-              "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
-        },
-        {
-          "id": "language-arts-601-l03-q6",
-          "text": "In high-stakes Language Arts Research and Leadership execution, which communication protocol is strongest?",
-          "skillId": "language-arts-601-skill-advanced-6",
-          "options": [
-            {
-              "id": "a",
-              "text": "Broadcast conclusions without assumptions"
-            },
-            {
-              "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
-            },
-            {
-              "id": "c",
-              "text": "Share only final outcomes after completion"
-            },
-            {
-              "id": "d",
-              "text": "Limit updates to a single informal channel"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
-        },
-        {
-          "id": "language-arts-601-l03-q7",
-          "text": "A mature remediation loop in advanced Language Arts should prioritize:",
-          "skillId": "language-arts-601-skill-advanced-7",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blame assignment without system updates"
-            },
-            {
-              "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
-            },
-            {
-              "id": "c",
-              "text": "One-time fixes without retesting"
-            },
-            {
-              "id": "d",
-              "text": "Issue closure based on elapsed time"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
-        },
-        {
-          "id": "language-arts-601-l03-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Language Arts Research and Leadership?",
-          "skillId": "language-arts-601-skill-advanced-8",
-          "options": [
-            {
-              "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
-            },
-            {
-              "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
-            },
-            {
-              "id": "c",
-              "text": "Ignore correlated failure modes"
-            },
-            {
-              "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "explanation": "Mature governance creates an operational link between the goal, how it's measured, and what to do when it's not being met."
         }
       ]
     },
     {
       "id": "language-arts-601-l04",
-      "title": "Language Arts Advanced Case Analysis",
+      "title": "Advanced Case Study: A Systems Analysis",
       "type": "video",
       "duration": 14,
       "learningAids": [
         {
           "id": "language-arts-601-l04-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Trade-off Matrix",
+          "content": "A visual grid comparing three proposed curriculum changes across key dimensions like student impact, teacher training cost, equity, and implementation time."
         }
       ],
       "chunks": [
@@ -368,33 +268,33 @@ export const LanguageArts601Module: LearningModule = {
           "id": "language-arts-601-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "In this lesson, we will frame a case that highlights competing constraints within language arts systems. This involves analyzing diagnostics and understanding the impacts and trade-offs associated with different decisions. By examining these factors, we can better understand the complexities involved in language arts and how to navigate them effectively.\nContext recap: In this lesson, we will frame a case that highlights competing constraints within language arts systems. This involves analyzing diagnostics and understanding the impacts and trade-offs associated with different decisions. By examining these factors, we can better understand the complexities involved in language arts and how to navigate them effectively."
+          "content": "In this lesson, we will analyze a case study of a school district facing competing priorities for its language arts program. We will diagnose the situation, identify the core challenges, and begin to map out the potential impacts and trade-offs of different strategic choices."
         },
         {
           "id": "language-arts-601-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "In this practice segment, learners will compare various options available to them. They will evaluate these options based on several important dimensions, including safety, reliability, cost, equity, and governance. This comparison will help them make informed decisions that consider all aspects of the situation.\nContext recap: In this practice segment, learners will compare various options available to them. They will evaluate these options based on several important dimensions, including safety, reliability, cost, equity, and governance. This comparison will help them make informed decisions that consider all aspects of the situation."
+          "content": "In this practice segment, you will evaluate several potential solutions presented in the case study. You will compare the options across multiple dimensions, such as effectiveness, cost, equity for all students, and the complexity of implementation, to determine the most balanced approach."
         },
         {
           "id": "language-arts-601-l04-c3",
           "kind": "recap",
           "title": "Decision Memo Pattern",
-          "content": "In our recap, we will outline the essential components of a decision memo. Each recommendation made should include clear assumptions, which are the beliefs we hold to be true, as well as evidence that supports our claims. Additionally, we will discuss the importance of risk controls and fallback plans to ensure that we are prepared for any unforeseen circumstances.\nContext recap: In our recap, we will outline the essential components of a decision memo. Each recommendation made should include clear assumptions, which are the beliefs we hold to be true, as well as evidence that supports our claims. Additionally, we will discuss the importance of risk controls and fallback plans to ensure that we are prepared for any unforeseen circumstances."
+          "content": "We will recap by outlining a standard format for a 'decision memo.' A strong recommendation must always include the underlying assumptions, the evidence supporting the choice, an analysis of potential risks, and a clear fallback plan in case things don't go as expected."
         }
       ]
     },
     {
       "id": "language-arts-601-l05",
-      "title": "Language Arts Simulation Clinic",
+      "title": "Interactive Simulation: Managing a Language Arts Program",
       "type": "interactive",
       "duration": 18,
       "learningAids": [
         {
           "id": "language-arts-601-l05-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Simulation Dashboard",
+          "content": "An interactive dashboard showing key program metrics like student reading scores, budget allocation, and teacher morale. Your decisions will cause these metrics to change in real-time."
         }
       ],
       "chunks": [
@@ -402,13 +302,13 @@ export const LanguageArts601Module: LearningModule = {
           "id": "language-arts-601-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "In this interactive practice, learners will operate scenario controls, which means they will manage different situations in real-time. They will need to balance performance, which refers to how well they are achieving their goals, with governance constraints, which are the rules and guidelines they must follow. This exercise will help them develop critical thinking and decision-making skills.\nContext recap: In this interactive practice, learners will operate scenario controls, which means they will manage different situations in real-time. They will need to balance performance, which refers to how well they are achieving their goals, with governance constraints, which are the rules and guidelines they must follow. This exercise will help them develop critical thinking and decision-making skills."
+          "content": "In this live simulation, you will take on the role of a program manager. You will make real-time decisions to balance program performance with budget and policy constraints, responding to unexpected events and challenges as they arise."
         },
         {
           "id": "language-arts-601-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "In our recap, we will focus on the design of effective responses. This involves updating control gates, which are mechanisms that help us manage processes, without losing traceability or accountability. It is important that our responses remain clear and responsible, ensuring that we can track decisions and their outcomes.\nContext recap: In our recap, we will focus on the design of effective responses. This involves updating control gates, which are mechanisms that help us manage processes, without losing traceability or accountability. It is important that our responses remain clear and responsible, ensuring that we can track decisions and their outcomes."
+          "content": "We will recap how to make adaptive decisions under pressure. This involves adjusting your operational plan and controls in response to new information, while maintaining a clear record of your decisions and the reasons behind them to ensure accountability."
         }
       ],
       "interactiveActivities": [
@@ -430,223 +330,123 @@ export const LanguageArts601Module: LearningModule = {
           "id": "language-arts-601-l06-a1",
           "type": "practice",
           "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "content": "Apply a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
         }
       ],
       "questions": [
         {
           "id": "language-arts-601-l06-q1",
-          "text": "In advanced casework, the first requirement for defensible recommendations is:",
+          "text": "In a case study, a school district has a limited budget. They can either invest in a new digital reading platform for all students or intensive, small-group tutoring for struggling readers. What is the most critical trade-off to analyze?",
           "skillId": "language-arts-601-skill-case1",
           "options": [
             {
               "id": "a",
-              "text": "A preferred option without explicit assumptions"
+              "text": "Teacher preference vs. student preference"
             },
             {
               "id": "b",
-              "text": "A clear baseline, explicit constraints, and success criteria"
+              "text": "Broad-based access vs. targeted, high-impact support"
             },
             {
               "id": "c",
-              "text": "High confidence without evidence logs"
+              "text": "Short-term cost vs. long-term maintenance"
             },
             {
               "id": "d",
-              "text": "Single-metric optimization only"
+              "text": "Marketing appeal vs. technical stability"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible recommendations begin with explicit assumptions, constraints, and measurable targets."
+          "explanation": "This choice represents a classic trade-off between providing a resource to everyone (equity of access) and concentrating resources on those with the greatest need (equity of outcome)."
         },
         {
           "id": "language-arts-601-l06-q2",
-          "text": "A resilient strategy for language arts operations and execution design should include:",
+          "text": "During a simulation, student test scores unexpectedly drop after you implement a new curriculum. What is the best first step?",
           "skillId": "language-arts-601-skill-case2",
           "options": [
             {
               "id": "a",
-              "text": "Checkpointed execution with fallback and escalation criteria"
+              "text": "Immediately revert to the old curriculum"
             },
             {
               "id": "b",
-              "text": "One-way execution with no rollback capability"
+              "text": "Analyze the data to see if the drop is widespread or isolated to specific groups"
             },
             {
               "id": "c",
-              "text": "No ownership mapping across teams"
+              "text": "Increase the budget for the new curriculum, assuming it's under-resourced"
             },
             {
               "id": "d",
-              "text": "Hidden assumptions and undocumented decisions"
+              "text": "Publicly blame the curriculum designers"
             }
           ],
-          "correctOptionId": "a",
-          "explanation": "Resilience depends on checkpoints, fallback options, and explicit escalation design."
+          "correctOptionId": "b",
+          "explanation": "The first step in adaptive response is to diagnose the problem with data before taking corrective action. A hasty rollback or budget change could make things worse."
         },
         {
           "id": "language-arts-601-l06-q3",
-          "text": "When evaluating language arts impact and tradeoff analysis, which method is most rigorous?",
+          "text": "When presenting a case study recommendation, how should you address the risks of your proposed solution?",
           "skillId": "language-arts-601-skill-case3",
           "options": [
             {
               "id": "a",
-              "text": "Single success story without controls"
+              "text": "Avoid mentioning risks to make the proposal sound more confident"
             },
             {
               "id": "b",
-              "text": "Comparative baselines plus side-effect and uncertainty analysis"
+              "text": "Mention the risks but offer no plan to manage them"
             },
             {
               "id": "c",
-              "text": "Outcome-only narrative without process evidence"
+              "text": "Acknowledge the primary risks and present specific mitigation and contingency plans"
             },
             {
               "id": "d",
-              "text": "Retrospective scope changes to fit outcomes"
+              "text": "Claim the solution is risk-free"
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "Rigorous evaluation requires comparisons, side-effect analysis, and uncertainty disclosure."
+          "correctOptionId": "c",
+          "explanation": "A credible recommendation demonstrates foresight by identifying potential problems and proactively planning how to address them."
         },
         {
           "id": "language-arts-601-l06-q4",
-          "text": "Advanced governance is strongest when it:",
+          "text": "Your simulation shows that a popular new program is improving outcomes for high-achieving students but widening the gap for English Language Learners. This is an example of a negative...",
           "skillId": "language-arts-601-skill-case4",
           "options": [
             {
               "id": "a",
-              "text": "Aligns authority, measurement, and remediation obligations"
+              "text": "Budget overrun"
             },
             {
               "id": "b",
-              "text": "Separates policy from operational controls"
+              "text": "Implementation failure"
             },
             {
               "id": "c",
-              "text": "Avoids external review and transparency"
+              "text": "Side-effect on equity"
             },
             {
               "id": "d",
-              "text": "Treats accountability as optional under pressure"
+              "text": "Stakeholder misalignment"
             }
           ],
-          "correctOptionId": "a",
-          "explanation": "Mature governance links authority, measurable controls, and corrective action."
-        },
-        {
-          "id": "language-arts-601-l06-q5",
-          "text": "What is the best way to compare competing interventions in advanced Language Arts?",
-          "skillId": "language-arts-601-skill-advanced-5",
-          "options": [
-            {
-              "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
-            },
-            {
-              "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
-            },
-            {
-              "id": "c",
-              "text": "Switch metrics after results arrive"
-            },
-            {
-              "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
-        },
-        {
-          "id": "language-arts-601-l06-q6",
-          "text": "In high-stakes Language Arts Research and Leadership execution, which communication protocol is strongest?",
-          "skillId": "language-arts-601-skill-advanced-6",
-          "options": [
-            {
-              "id": "a",
-              "text": "Broadcast conclusions without assumptions"
-            },
-            {
-              "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
-            },
-            {
-              "id": "c",
-              "text": "Share only final outcomes after completion"
-            },
-            {
-              "id": "d",
-              "text": "Limit updates to a single informal channel"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
-        },
-        {
-          "id": "language-arts-601-l06-q7",
-          "text": "A mature remediation loop in advanced Language Arts should prioritize:",
-          "skillId": "language-arts-601-skill-advanced-7",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blame assignment without system updates"
-            },
-            {
-              "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
-            },
-            {
-              "id": "c",
-              "text": "One-time fixes without retesting"
-            },
-            {
-              "id": "d",
-              "text": "Issue closure based on elapsed time"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
-        },
-        {
-          "id": "language-arts-601-l06-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Language Arts Research and Leadership?",
-          "skillId": "language-arts-601-skill-advanced-8",
-          "options": [
-            {
-              "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
-            },
-            {
-              "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
-            },
-            {
-              "id": "c",
-              "text": "Ignore correlated failure modes"
-            },
-            {
-              "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "correctOptionId": "c",
+          "explanation": "Rigorous impact analysis requires looking beyond the average outcome to identify unintended consequences, especially those affecting equity."
         }
       ]
     },
     {
       "id": "language-arts-601-l07",
-      "title": "Language Arts Governance and Public Impact",
+      "title": "Language Arts, Governance, and Ethical Leadership",
       "type": "video",
       "duration": 13,
       "learningAids": [
         {
           "id": "language-arts-601-l07-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Stakeholder Impact Map",
+          "content": "A diagram showing how a new standardized testing policy would affect different groups: students, teachers, parents, administrators, and the community."
         }
       ],
       "chunks": [
@@ -654,50 +454,50 @@ export const LanguageArts601Module: LearningModule = {
           "id": "language-arts-601-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "In this lesson, learners will map out the distribution of impacts among various stakeholders. This means identifying who benefits, who bears burdens, and any delayed effects that may arise from decisions made. Understanding these dynamics is crucial for ensuring that all voices are heard and considered in the decision-making process.\nContext recap: In this lesson, learners will map out the distribution of impacts among various stakeholders. This means identifying who benefits, who bears burdens, and any delayed effects that may arise from decisions made. Understanding these dynamics is crucial for ensuring that all voices are heard and considered in the decision-making process."
+          "content": "In this lesson, we will analyze how decisions impact various stakeholders. This involves mapping out who benefits from a program, who might be negatively affected, and considering any long-term or delayed consequences. This ensures a more equitable and responsible decision-making process."
         },
         {
           "id": "language-arts-601-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "In this segment, we will discuss the architecture of accountability. This includes ensuring that decisions can be traced back to their origins, understanding the rights of individuals to review decisions, and outlining obligations for remediation if issues arise. Integrating these elements is essential for fostering trust and transparency in our processes.\nContext recap: In this segment, we will discuss the architecture of accountability. This includes ensuring that decisions can be traced back to their origins, understanding the rights of individuals to review decisions, and outlining obligations for remediation if issues arise. Integrating these elements is essential for fostering trust and transparency in our processes."
+          "content": "Here, we will design systems for accountability. This means creating clear records of why decisions were made, establishing processes for stakeholders to appeal or question a decision, and defining the responsibilities for correcting any problems that arise."
         },
         {
           "id": "language-arts-601-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "At the end of our lesson, we will create a comprehensive checklist that connects important outcomes with ethical considerations, ensures we follow policies correctly, and builds our ability to adapt and be resilient in various situations. This checklist will help guide us in making responsible decisions as leaders.\nContext recap: At the end of our lesson, we will create a comprehensive checklist that connects important outcomes with ethical considerations, ensures we follow policies correctly, and builds our ability to adapt and be resilient in various situations. This checklist will help guide us in making responsible decisions as leaders."
+          "content": "We will conclude by creating a 'Responsible Leadership Checklist.' This tool helps ensure that decisions align with ethical principles, comply with relevant policies, and contribute to the long-term health and resilience of the educational system."
         }
       ],
       "flashcards": [
         {
           "id": "language-arts-601-l07-f1",
-          "front": "Impact distribution",
-          "back": "How outcomes are allocated across populations and timescales."
+          "front": "Impact Distribution",
+          "back": "An analysis of how the benefits and burdens of a decision are spread across different groups of people over time."
         },
         {
           "id": "language-arts-601-l07-f2",
-          "front": "Decision traceability",
-          "back": "An auditable record of evidence, ownership, and rationale."
+          "front": "Decision Traceability",
+          "back": "The ability to trace a decision back to its origin, including the evidence used, the people involved, and the rationale."
         },
         {
           "id": "language-arts-601-l07-f3",
-          "front": "Responsible leadership",
-          "back": "Decision behavior balancing performance, accountability, and ethics."
+          "front": "Responsible Leadership",
+          "back": "A leadership approach that balances achieving performance goals with ethical conduct and accountability to all stakeholders."
         }
       ]
     },
     {
       "id": "language-arts-601-l08",
-      "title": "Language Arts Capstone Defense Lab",
+      "title": "Capstone Defense and Leadership Synthesis",
       "type": "interactive",
       "duration": 16,
       "learningAids": [
         {
           "id": "language-arts-601-l08-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Executive Briefing Template",
+          "content": "A one-page slide template for presenting your final recommendation, with sections for the problem, analysis, proposed solution, risks, and expected impact."
         }
       ],
       "chunks": [
@@ -705,13 +505,13 @@ export const LanguageArts601Module: LearningModule = {
           "id": "language-arts-601-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "In this activity, you will work on assembling a detailed brief. This brief will include your main claims, supporting evidence, the limits of what we know, and possible solutions for any challenges that arise. This exercise will help you practice organizing your thoughts and presenting them clearly.\nContext recap: In this activity, you will work on assembling a detailed brief. This brief will include your main claims, supporting evidence, the limits of what we know, and possible solutions for any challenges that arise. This exercise will help you practice organizing your thoughts and presenting them clearly."
+          "content": "In this final practice lab, you will synthesize your analysis into a concise and persuasive defense brief. You will clearly state your recommendation, present the supporting evidence, acknowledge the limitations of your analysis, and propose concrete next steps."
         },
         {
           "id": "language-arts-601-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "During this session, you will have the opportunity to practice your responses to questions and feedback from an expert panel. You will prepare for critiques related to technical aspects, governance issues, and the perspectives of various stakeholders. This rehearsal will help you feel more confident and ready for real discussions.\nContext recap: During this session, you will have the opportunity to practice your responses to questions and feedback from an expert panel. You will prepare for critiques related to technical aspects, governance issues, and the perspectives of various stakeholders. This rehearsal will help you feel more confident and ready for real discussions."
+          "content": "To prepare for the final simulation, you will rehearse presenting your brief and responding to challenging questions from an expert panel. This practice will focus on defending your technical analysis, explaining your governance plan, and addressing diverse stakeholder concerns."
         }
       ],
       "interactiveActivities": [
@@ -719,7 +519,7 @@ export const LanguageArts601Module: LearningModule = {
           "id": "language-arts-601-l08-act1",
           "type": "debate_simulator",
           "title": "Expert Defense Panel",
-          "description": "Defend specialization recommendations under adversarial cross-examination."
+          "description": "Defend your strategic recommendations under cross-examination from a panel of experts."
         }
       ]
     }

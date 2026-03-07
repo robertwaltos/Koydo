@@ -1,17 +1,18 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const Nursing201Module: LearningModule = {
+export const nursing_201_Module: LearningModule = {
   "id": "nursing-201",
   "title": "Nursing Clinical Practice",
   "description": "Intermediate nursing: assessment workflows, medication safety, care planning, and clinical reasoning.",
   "subject": "Nursing",
   "tags": [
-    "curriculum",
-    "interactive"
+    "clinical skills",
+    "patient safety",
+    "care planning"
   ],
   "minAge": 17,
   "maxAge": 99,
-  "version": "1.0.0",
+  "version": "1.1.0",
   "difficultyBand": "intermediate",
   "localeSupport": [
     "en",
@@ -25,489 +26,246 @@ export const Nursing201Module: LearningModule = {
     "ko",
     "ru"
   ],
-  "thumbnail": "/placeholders/lesson-robot.svg",
+  "thumbnail": "/images/thumbnails/nursing-clinical-practice.svg",
   "learningObjectives": [
-    "Understand core concepts in Nursing",
-    "Apply Nursing skills through guided practice",
-    "Demonstrate mastery through checkpoint quizzes"
+    "Perform a systematic head-to-toe patient assessment.",
+    "Apply the 'Five Rights' of medication administration to ensure patient safety.",
+    "Develop a patient-centered nursing care plan using the ADPIE framework.",
+    "Utilize clinical reasoning to prioritize patient care in various scenarios."
   ],
   "lessons": [
     {
       "id": "nursing-201-l01",
-      "title": "Nursing Concepts 1",
+      "title": "Patient Assessment Workflows",
       "type": "video",
-      "duration": 9,
+      "duration": 15,
       "learningAids": [
         {
           "id": "nursing-201-l01-a1",
           "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary for Nursing."
+          "title": "Infographic: Head-to-Toe Assessment",
+          "content": "A visual guide showing the sequence and key focus areas for a comprehensive patient assessment."
         },
         {
           "id": "nursing-201-l01-a2",
           "type": "animation",
-          "title": "Animated Example",
-          "content": "Step-by-step walkthrough for Nursing."
+          "title": "Auscultating Lung Sounds",
+          "content": "Animated diagram demonstrating correct stethoscope placement for identifying normal and adventitious breath sounds."
         }
       ]
     },
     {
       "id": "nursing-201-l02",
-      "title": "Nursing Practice 2",
+      "title": "Practice: Virtual Patient Assessment",
       "type": "interactive",
-      "duration": 12,
+      "duration": 20,
       "metadata": {
         "prompts": [
-          "State the key concept in one sentence.",
-          "Apply it to one example.",
-          "Explain your improvement step for next time."
+          "Review the virtual patient's chart and vital signs. What is your initial impression?",
+          "Perform a focused respiratory assessment. Document your findings (e.g., breath sounds, respiratory rate, oxygen saturation).",
+          "Based on your assessment, identify two priority nursing concerns for this patient."
         ]
       },
       "learningAids": [
         {
           "id": "nursing-201-l02-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Follow the challenge flow and record your approach."
+          "title": "Guided Simulation",
+          "content": "Interact with a virtual patient to practice your assessment skills in a safe environment."
         }
       ]
     },
     {
       "id": "nursing-201-l03",
-      "title": "Checkpoint 1: Nursing",
+      "title": "Checkpoint 1: Assessment",
       "type": "quiz",
       "duration": 10,
       "questions": [
         {
           "id": "nursing-201-l03-q1",
-          "text": "Which choice best matches the main idea of Nursing?",
-          "skillId": "nursing-201-skill-core",
+          "text": "When performing an abdominal assessment, which action should be performed first?",
+          "skillId": "nursing-assessment",
           "options": [
             {
               "id": "a",
-              "text": "A complete, evidence-based explanation"
+              "text": "Palpation"
             },
             {
               "id": "b",
-              "text": "An unrelated claim"
+              "text": "Auscultation"
             },
             {
               "id": "c",
-              "text": "A random guess"
+              "text": "Percussion"
             },
             {
               "id": "d",
-              "text": "A conflicting idea"
+              "text": "Inspection"
             }
           ],
-          "correctOptionId": "a"
-        },
-        {
-          "id": "nursing-201-l03-q2",
-          "text": "What should a learner do after getting an answer wrong?",
-          "skillId": "nursing-201-skill-review",
-          "options": [
-            {
-              "id": "a",
-              "text": "Review error cause and retry with strategy"
-            },
-            {
-              "id": "b",
-              "text": "Skip all corrections"
-            },
-            {
-              "id": "c",
-              "text": "Memorize only the answer letter"
-            },
-            {
-              "id": "d",
-              "text": "Stop practicing"
-            }
-          ],
-          "correctOptionId": "a"
-        },
-        {
-          "id": "nursing-201-l03-q3",
-          "text": "Which strategy most improves long-term retention for Nursing Clinical Practice?",
-          "skillId": "nursing-201-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "Use spaced retrieval and mixed practice over multiple sessions."
-            },
-            {
-              "id": "b",
-              "text": "Cram once and avoid later practice."
-            },
-            {
-              "id": "c",
-              "text": "Read notes passively without self-testing."
-            },
-            {
-              "id": "d",
-              "text": "Rely on confidence alone instead of evidence."
-            }
-          ],
-          "correctOptionId": "a",
-          "explanation": "Spaced retrieval with varied practice strengthens durable memory and flexible application."
-        }
-      ],
-      "learningAids": [
-        {
-          "id": "nursing-201-l03-a1",
-          "type": "mnemonic",
-          "title": "Memory Cue",
-          "content": "Use Plan, Solve, Explain to structure each response."
+          "correctOptionId": "d",
+          "explanation": "The correct order for abdominal assessment is Inspection, Auscultation, Percussion, then Palpation (IAPP). Palpating first can alter bowel sounds."
         }
       ]
     },
     {
       "id": "nursing-201-l04",
-      "title": "Nursing Practice 4",
-      "type": "interactive",
+      "title": "Medication Safety and Administration",
+      "type": "video",
       "duration": 12,
-      "metadata": {
-        "prompts": [
-          "State the key concept in one sentence.",
-          "Apply it to one example.",
-          "Explain your improvement step for next time."
-        ]
-      },
       "learningAids": [
         {
           "id": "nursing-201-l04-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Follow the challenge flow and record your approach."
+          "type": "image",
+          "title": "Chart: The Five Rights",
+          "content": "A downloadable chart detailing the Five Rights of Medication Administration: Right Patient, Right Drug, Right Dose, Right Route, Right Time."
         }
       ]
     },
     {
       "id": "nursing-201-l05",
-      "title": "Nursing Concepts 5",
-      "type": "video",
-      "duration": 9,
+      "title": "Practice: Medication Pass Simulation",
+      "type": "interactive",
+      "duration": 15,
+      "metadata": {
+        "prompts": [
+          "Review the Medication Administration Record (MAR) for your assigned patient.",
+          "Identify the correct medication from the virtual pharmacy. Verify the dose and expiration date.",
+          "Document the administration, including the time and your initials, on the MAR."
+        ]
+      },
       "learningAids": [
         {
           "id": "nursing-201-l05-a1",
-          "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary for Nursing."
-        },
-        {
-          "id": "nursing-201-l05-a2",
-          "type": "animation",
-          "title": "Animated Example",
-          "content": "Step-by-step walkthrough for Nursing."
+          "type": "practice",
+          "title": "Virtual Medication Cart",
+          "content": "Use a simulated medication cart and electronic MAR to practice safe medication administration procedures."
         }
       ]
     },
     {
       "id": "nursing-201-l06",
-      "title": "Checkpoint 2: Nursing",
+      "title": "Checkpoint 2: Medication Safety",
       "type": "quiz",
       "duration": 10,
       "questions": [
         {
           "id": "nursing-201-l06-q1",
-          "text": "Which choice best matches the main idea of Nursing?",
-          "skillId": "nursing-201-skill-core",
+          "text": "A physician orders 'Digoxin .125 mg PO daily'. The pharmacy supplies tablets that are 0.25 mg each. How many tablets should the nurse administer?",
+          "skillId": "medication-safety",
           "options": [
             {
               "id": "a",
-              "text": "A complete, evidence-based explanation"
+              "text": "2 tablets"
             },
             {
               "id": "b",
-              "text": "An unrelated claim"
+              "text": "1 tablet"
             },
             {
               "id": "c",
-              "text": "A random guess"
+              "text": "0.5 tablets"
             },
             {
               "id": "d",
-              "text": "A conflicting idea"
+              "text": "0.25 tablets"
             }
           ],
-          "correctOptionId": "a"
-        },
-        {
-          "id": "nursing-201-l06-q2",
-          "text": "What should a learner do after getting an answer wrong?",
-          "skillId": "nursing-201-skill-review",
-          "options": [
-            {
-              "id": "a",
-              "text": "Review error cause and retry with strategy"
-            },
-            {
-              "id": "b",
-              "text": "Skip all corrections"
-            },
-            {
-              "id": "c",
-              "text": "Memorize only the answer letter"
-            },
-            {
-              "id": "d",
-              "text": "Stop practicing"
-            }
-          ],
-          "correctOptionId": "a"
-        },
-        {
-          "id": "nursing-201-l06-q3",
-          "text": "Which strategy most improves long-term retention for Nursing Clinical Practice?",
-          "skillId": "nursing-201-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "Use spaced retrieval and mixed practice over multiple sessions."
-            },
-            {
-              "id": "b",
-              "text": "Cram once and avoid later practice."
-            },
-            {
-              "id": "c",
-              "text": "Read notes passively without self-testing."
-            },
-            {
-              "id": "d",
-              "text": "Rely on confidence alone instead of evidence."
-            }
-          ],
-          "correctOptionId": "a",
-          "explanation": "Spaced retrieval with varied practice strengthens durable memory and flexible application."
-        }
-      ],
-      "learningAids": [
-        {
-          "id": "nursing-201-l06-a1",
-          "type": "mnemonic",
-          "title": "Memory Cue",
-          "content": "Use Plan, Solve, Explain to structure each response."
+          "correctOptionId": "c",
+          "explanation": "Dosage calculation: (Dose Ordered / Dose on Hand) = (0.125 mg / 0.25 mg) = 0.5 tablets."
         }
       ]
     },
     {
       "id": "nursing-201-l07",
-      "title": "Nursing Concepts 7",
+      "title": "Developing a Nursing Care Plan",
       "type": "video",
-      "duration": 9,
+      "duration": 18,
       "learningAids": [
         {
           "id": "nursing-201-l07-a1",
           "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary for Nursing."
-        },
-        {
-          "id": "nursing-201-l07-a2",
-          "type": "animation",
-          "title": "Animated Example",
-          "content": "Step-by-step walkthrough for Nursing."
+          "title": "Diagram: The ADPIE Process",
+          "content": "A circular flow diagram illustrating the five stages of the nursing process: Assessment, Diagnosis, Planning, Implementation, and Evaluation."
         }
       ]
     },
     {
       "id": "nursing-201-l08",
-      "title": "Nursing Practice 8",
+      "title": "Practice: Building a Care Plan",
       "type": "interactive",
-      "duration": 12,
+      "duration": 25,
       "metadata": {
         "prompts": [
-          "State the key concept in one sentence.",
-          "Apply it to one example.",
-          "Explain your improvement step for next time."
+          "Based on the patient scenario, formulate one priority nursing diagnosis (e.g., 'Ineffective Airway Clearance').",
+          "Write one SMART (Specific, Measurable, Achievable, Relevant, Time-bound) goal for your diagnosis.",
+          "List three nursing interventions you would implement to help the patient achieve this goal."
         ]
       },
       "learningAids": [
         {
           "id": "nursing-201-l08-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Follow the challenge flow and record your approach."
+          "title": "Interactive Care Plan Template",
+          "content": "Fill out a guided digital template to construct a complete nursing care plan for a case study patient."
         }
       ]
     },
     {
       "id": "nursing-201-l09",
-      "title": "Checkpoint 3: Nursing",
+      "title": "Final Checkpoint: Clinical Reasoning",
       "type": "quiz",
-      "duration": 10,
+      "duration": 15,
       "questions": [
         {
           "id": "nursing-201-l09-q1",
-          "text": "Which choice best matches the main idea of Nursing?",
-          "skillId": "nursing-201-skill-core",
+          "text": "You are caring for four patients. Which patient should you assess first?",
+          "skillId": "clinical-reasoning",
           "options": [
             {
               "id": "a",
-              "text": "A complete, evidence-based explanation"
+              "text": "A patient scheduled for discharge who needs teaching materials."
             },
             {
               "id": "b",
-              "text": "An unrelated claim"
+              "text": "A patient with a post-operative wound who is requesting pain medication."
             },
             {
               "id": "c",
-              "text": "A random guess"
+              "text": "A patient with asthma who is reporting sudden shortness of breath."
             },
             {
               "id": "d",
-              "text": "A conflicting idea"
+              "text": "An elderly patient who is confused and trying to get out of bed."
             }
           ],
-          "correctOptionId": "a"
+          "correctOptionId": "c",
+          "explanation": "Prioritization is based on the Airway, Breathing, Circulation (ABC) framework. The patient with shortness of breath has a potential airway/breathing compromise, which is the highest priority."
         },
         {
           "id": "nursing-201-l09-q2",
-          "text": "What should a learner do after getting an answer wrong?",
-          "skillId": "nursing-201-skill-review",
+          "text": "Which of the following is an example of a correctly written nursing diagnosis?",
+          "skillId": "care-planning",
           "options": [
             {
               "id": "a",
-              "text": "Review error cause and retry with strategy"
+              "text": "Pneumonia."
             },
             {
               "id": "b",
-              "text": "Skip all corrections"
+              "text": "Patient is short of breath."
             },
             {
               "id": "c",
-              "text": "Memorize only the answer letter"
+              "text": "Ineffective Breathing Pattern related to alveolar-capillary membrane changes as evidenced by dyspnea and O2 saturation of 88%."
             },
             {
               "id": "d",
-              "text": "Stop practicing"
+              "text": "Administer oxygen at 2L/min via nasal cannula."
             }
           ],
-          "correctOptionId": "a"
-        },
-        {
-          "id": "nursing-201-l09-q3",
-          "text": "Which strategy most improves long-term retention for Nursing Clinical Practice?",
-          "skillId": "nursing-201-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "Use spaced retrieval and mixed practice over multiple sessions."
-            },
-            {
-              "id": "b",
-              "text": "Cram once and avoid later practice."
-            },
-            {
-              "id": "c",
-              "text": "Read notes passively without self-testing."
-            },
-            {
-              "id": "d",
-              "text": "Rely on confidence alone instead of evidence."
-            }
-          ],
-          "correctOptionId": "a",
-          "explanation": "Spaced retrieval with varied practice strengthens durable memory and flexible application."
-        }
-      ],
-      "learningAids": [
-        {
-          "id": "nursing-201-l09-a1",
-          "type": "mnemonic",
-          "title": "Memory Cue",
-          "content": "Use Plan, Solve, Explain to structure each response."
-        }
-      ]
-    },
-    {
-      "id": "nursing-201-l10",
-      "title": "Checkpoint 4: Nursing",
-      "type": "quiz",
-      "duration": 10,
-      "questions": [
-        {
-          "id": "nursing-201-l10-q1",
-          "text": "Which choice best matches the main idea of Nursing?",
-          "skillId": "nursing-201-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "A complete, evidence-based explanation"
-            },
-            {
-              "id": "b",
-              "text": "An unrelated claim"
-            },
-            {
-              "id": "c",
-              "text": "A random guess"
-            },
-            {
-              "id": "d",
-              "text": "A conflicting idea"
-            }
-          ],
-          "correctOptionId": "a"
-        },
-        {
-          "id": "nursing-201-l10-q2",
-          "text": "What should a learner do after getting an answer wrong?",
-          "skillId": "nursing-201-skill-review",
-          "options": [
-            {
-              "id": "a",
-              "text": "Review error cause and retry with strategy"
-            },
-            {
-              "id": "b",
-              "text": "Skip all corrections"
-            },
-            {
-              "id": "c",
-              "text": "Memorize only the answer letter"
-            },
-            {
-              "id": "d",
-              "text": "Stop practicing"
-            }
-          ],
-          "correctOptionId": "a"
-        },
-        {
-          "id": "nursing-201-l10-q3",
-          "text": "Which strategy most improves long-term retention for Nursing Clinical Practice?",
-          "skillId": "nursing-201-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "Use spaced retrieval and mixed practice over multiple sessions."
-            },
-            {
-              "id": "b",
-              "text": "Cram once and avoid later practice."
-            },
-            {
-              "id": "c",
-              "text": "Read notes passively without self-testing."
-            },
-            {
-              "id": "d",
-              "text": "Rely on confidence alone instead of evidence."
-            }
-          ],
-          "correctOptionId": "a",
-          "explanation": "Spaced retrieval with varied practice strengthens durable memory and flexible application."
-        }
-      ],
-      "learningAids": [
-        {
-          "id": "nursing-201-l10-a1",
-          "type": "mnemonic",
-          "title": "Memory Cue",
-          "content": "Use Plan, Solve, Explain to structure each response."
+          "correctOptionId": "c",
+          "explanation": "A correct nursing diagnosis includes the problem, etiology ('related to'), and defining characteristics ('as evidenced by'). 'Pneumonia' is a medical diagnosis, 'short of breath' is a symptom, and administering oxygen is an intervention."
         }
       ]
     }

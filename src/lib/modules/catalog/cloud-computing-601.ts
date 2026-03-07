@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const CloudComputing601Module: LearningModule = {
+export const cloud_computing_601_Module: LearningModule = {
   "id": "cloud-computing-601",
   "title": "Cloud Computing Research and Leadership",
   "description": "Post-401 specialization in Cloud Computing, focused on platform architecture, resilience engineering, cost-performance strategy, and risk governance through advanced casework, simulation, and capstone-level defense.",
@@ -14,7 +14,7 @@ export const CloudComputing601Module: LearningModule = {
   ],
   "minAge": 17,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en"
@@ -33,6 +33,8 @@ export const CloudComputing601Module: LearningModule = {
       "title": "Cloud Computing Advanced Foundations",
       "type": "video",
       "duration": 14,
+      "lessonImagePrompt": "A futuristic, high-tech cloud computing architecture diagram glowing with neon blue and white nodes, representing advanced platform foundations, photorealistic, 8k.",
+      "conceptVideoPrompt": "A dynamic 3D animation zooming through a complex network of glowing servers and data streams in a massive cloud data center, illustrating causal structures and resilience engineering under uncertainty, cinematic lighting.",
       "learningAids": [
         {
           "id": "cloud-computing-601-l01-a1",
@@ -46,44 +48,47 @@ export const CloudComputing601Module: LearningModule = {
           "id": "cloud-computing-601-l01-c1",
           "kind": "concept",
           "title": "Advanced Scope and Decision Boundaries",
-          "content": "In this lesson, we will delve into the advanced boundaries of Cloud Computing. We will examine how the architecture of cloud platforms interacts with the principles of resilience engineering. This interaction is essential for creating cloud solutions that can effectively respond to different challenges and ensure reliability in complex systems. By understanding these concepts, you will be better equipped to design robust cloud applications that can withstand various operational hurdles and maintain performance under stress.\nContext recap: In this lesson, we will delve into the advanced boundaries of Cloud Computing. We will examine how the architecture of cloud platforms interacts with the principles of resilience engineering. This interaction is essential for creating cloud solutions that can effectively respond to different challenges and ensure reliability in complex systems. By understanding these concepts, you will be better equipped to design robust cloud applications that can withstand various operational hurdles and maintain performance under stress."
+          "content": "In this lesson, we will delve into the advanced boundaries of Cloud Computing. We will examine how the architecture of cloud platforms interacts with the principles of resilience engineering. This interaction is essential for creating cloud solutions that can effectively respond to different challenges and ensure reliability in complex systems. By understanding these concepts, you will be better equipped to design robust cloud applications that can withstand various operational hurdles and maintain performance under stress."
         },
         {
           "id": "cloud-computing-601-l01-c2",
           "kind": "concept",
           "title": "Causal Structure Under Uncertainty",
-          "content": "In this part of the lesson, learners will engage in modeling causal pathways. This involves identifying the ranges of uncertainty and uncovering hidden assumptions that may affect the design of interventions. By doing this, students will gain a deeper understanding of how to approach problem-solving in uncertain environments.\nContext recap: In this part of the lesson, learners will engage in modeling causal pathways. This involves identifying the ranges of uncertainty and uncovering hidden assumptions that may affect the design of interventions. By doing this, students will gain a deeper understanding of how to approach problem-solving in uncertain environments."
+          "content": "Learners will engage in modeling causal pathways to navigate complex cloud environments. This involves identifying the ranges of uncertainty and uncovering hidden assumptions that may affect the design of interventions. By doing this, you will gain a deeper understanding of how to approach problem-solving and system architecture in highly unpredictable operational environments."
         },
         {
           "id": "cloud-computing-601-l01-c3",
           "kind": "recap",
           "title": "Evidence and Rigor Standards",
-          "content": "It is essential that all advanced claims we make are supported by measurable indicators. This means we will establish confidence bounds and set up review checkpoints to ensure our findings are rigorous and reliable. This practice helps maintain high standards in our work and builds trust in our conclusions.\nContext recap: It is essential that all advanced claims we make are supported by measurable indicators. This means we will establish confidence bounds and set up review checkpoints to ensure our findings are rigorous and reliable. This practice helps maintain high standards in our work and builds trust in our conclusions."
+          "content": "It is essential that all advanced claims regarding platform performance and resilience are supported by measurable indicators. This means establishing strict confidence bounds and setting up review checkpoints to ensure findings are rigorous and reliable. This practice helps maintain high standards in architectural design and builds stakeholder trust in your conclusions."
         }
       ],
       "flashcards": [
         {
           "id": "cloud-computing-601-l01-f1",
-          "front": "platform architecture",
+          "front": "Platform Architecture",
           "back": "A specialization axis in Cloud Computing requiring explicit assumptions and measured tradeoff choices."
         },
         {
           "id": "cloud-computing-601-l01-f2",
-          "front": "resilience engineering",
-          "back": "Operational design capability that governs whether complex workflows remain reliable."
+          "front": "Resilience Engineering",
+          "back": "Operational design capability that governs whether complex workflows remain reliable under stress."
         },
         {
           "id": "cloud-computing-601-l01-f3",
-          "front": "cost-performance strategy",
-          "back": "Evaluation practice for validating outcomes beyond headline metrics."
+          "front": "Cost-Performance Strategy",
+          "back": "Evaluation practice for validating outcomes beyond headline metrics, ensuring sustainable scaling."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/cloud-computing-601-l01.png"
     },
     {
       "id": "cloud-computing-601-l02",
       "title": "Cloud Computing Specialist Methods Lab",
       "type": "interactive",
       "duration": 17,
+      "lessonImagePrompt": "A modern tech laboratory with holographic displays showing workflow diagrams, stress tests, and data analytics, sleek and professional, 8k resolution.",
+      "conceptVideoPrompt": "A time-lapse style animation of a digital workflow being constructed block by block, followed by a simulated stress test where red warning signals are successfully mitigated by automated control gates.",
       "learningAids": [
         {
           "id": "cloud-computing-601-l02-a1",
@@ -97,13 +102,13 @@ export const CloudComputing601Module: LearningModule = {
           "id": "cloud-computing-601-l02-c1",
           "kind": "practice",
           "title": "Method Sequence and Stress Test",
-          "content": "In this engaging interactive lab, students will have the opportunity to design and construct a specialized workflow. This workflow will focus on developing strong research-grade reasoning skills and making high-quality leadership decisions. Additionally, learners will prepare a capstone project that is suitable for publication, showcasing their findings and insights. Once their workflows are complete, they will put them to the test by simulating challenging scenarios, including adversarial situations and edge cases. This process will help ensure that their workflows are not only effective but also resilient in the face of unexpected challenges."
+          "content": "In this interactive lab, you will design and construct a specialized workflow focused on developing strong research-grade reasoning skills and making high-quality leadership decisions. You will prepare a capstone project framework suitable for publication, showcasing your findings and insights. Once your workflows are complete, you will put them to the test by simulating challenging scenarios, including adversarial situations and edge cases. This process ensures that your workflows are not only effective but also resilient in the face of unexpected challenges."
         },
         {
           "id": "cloud-computing-601-l02-c2",
           "kind": "recap",
           "title": "Controls and Failure Gates",
-          "content": "To ensure that our specialist workflows are effective, we need to incorporate control gates, rollback criteria, and accountability checkpoints. These elements are crucial for monitoring progress and ensuring that we can respond appropriately to any issues that arise during the workflow process.\nContext recap: To ensure that our specialist workflows are effective, we need to incorporate control gates, rollback criteria, and accountability checkpoints. These elements are crucial for monitoring progress and ensuring that we can respond appropriately to any issues that arise during the workflow process."
+          "content": "To ensure that specialist workflows are effective, we must incorporate control gates, rollback criteria, and accountability checkpoints. These elements are crucial for monitoring progress, containing blast radiuses during failures, and ensuring that we can respond appropriately to any systemic issues that arise during the workflow process."
         }
       ],
       "interactiveActivities": [
@@ -160,13 +165,16 @@ export const CloudComputing601Module: LearningModule = {
             }
           ]
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/cloud-computing-601-l02.png"
     },
     {
       "id": "cloud-computing-601-l03",
       "title": "Checkpoint 1: Specialist Methods",
       "type": "quiz",
       "duration": 11,
+      "lessonImagePrompt": "A sleek, minimalist digital checkpoint interface with a glowing lock and key symbol, representing knowledge verification in a cloud environment.",
+      "conceptVideoPrompt": "A smooth, abstract animation of puzzle pieces coming together to form a secure cloud infrastructure, symbolizing the consolidation of specialist methods.",
       "learningAids": [
         {
           "id": "cloud-computing-601-l03-a1",
@@ -208,7 +216,7 @@ export const CloudComputing601Module: LearningModule = {
           "options": [
             {
               "id": "a",
-              "text": "research-grade reasoning, leadership decision quality, and publishable capstone defense"
+              "text": "Research-grade reasoning, leadership decision quality, and publishable capstone defense"
             },
             {
               "id": "b",
@@ -376,13 +384,16 @@ export const CloudComputing601Module: LearningModule = {
           "correctOptionId": "b",
           "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/cloud-computing-601-l03.png"
     },
     {
       "id": "cloud-computing-601-l04",
       "title": "Cloud Computing Advanced Case Analysis",
       "type": "video",
       "duration": 14,
+      "lessonImagePrompt": "A diverse group of tech professionals in a modern boardroom analyzing a glowing, interactive 3D map of global cloud regions on a smart table, cinematic lighting.",
+      "conceptVideoPrompt": "A visual breakdown of a tradeoff matrix, showing different cloud architecture options being weighed on a digital scale, balancing cost, reliability, and compliance.",
       "learningAids": [
         {
           "id": "cloud-computing-601-l04-a1",
@@ -396,35 +407,35 @@ export const CloudComputing601Module: LearningModule = {
           "id": "cloud-computing-601-l04-c1",
           "kind": "example",
           "title": "Case Stakes and Competing Objectives",
-          "content": "In this engaging case study, we will explore a multi-region cloud platform that faces the challenge of balancing several important objectives. These include ensuring high reliability, managing cost pressures, and adhering to compliance requirements. As learners, you will have the opportunity to map out the strategic objectives that guide the platform's operations. Additionally, you will identify potential risks that could lead to failures and gain an understanding of the governance constraints that must be taken into account before making any decisions. This analysis will help you develop critical thinking skills and a deeper understanding of cloud computing dynamics."
+          "content": "In this case study, we will explore a multi-region cloud platform that faces the challenge of balancing several critical objectives. These include ensuring high reliability, managing cost pressures, and adhering to strict compliance requirements. You will map out the strategic objectives that guide the platform's operations, identify potential risks that could lead to cascading failures, and gain an understanding of the governance constraints that must be taken into account before making architectural decisions."
         },
         {
           "id": "cloud-computing-601-l04-c2",
           "kind": "concept",
           "title": "Tradeoff Matrix and Option Scoring",
-          "content": "In this section, we will learn about scoring options using a tradeoff matrix. Each option will be evaluated based on its effectiveness, reliability, equity, feasibility, and long-term maintainability. This scoring process helps us make informed decisions by comparing the strengths and weaknesses of different choices.\nContext recap: In this section, we will learn about scoring options using a tradeoff matrix. Each option will be evaluated based on its effectiveness, reliability, equity, feasibility, and long-term maintainability. This scoring process helps us make informed decisions by comparing the strengths and weaknesses of different choices."
+          "content": "We will learn how to score architectural options using a tradeoff matrix. Each option will be evaluated based on its effectiveness, reliability, equity, feasibility, and long-term maintainability. This rigorous scoring process helps leaders make informed, defensible decisions by objectively comparing the strengths and weaknesses of competing choices under real-world constraints."
         },
         {
           "id": "cloud-computing-601-l04-c3",
           "kind": "recap",
           "title": "Recovery and Adaptation Design",
-          "content": "When we encounter failures, it is important to translate those experiences into actionable safeguards. This includes creating response playbooks and measurable adaptation loops that allow us to learn from our mistakes and improve our systems over time.\nContext recap: When we encounter failures, it is important to translate those experiences into actionable safeguards. This includes creating response playbooks and measurable adaptation loops that allow us to learn from our mistakes and improve our systems over time.\nWhy this matters: Recovery and Adaptation Design helps learners in Computer Science connect ideas from Cloud Computing Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "When we encounter systemic failures, it is vital to translate those experiences into actionable safeguards. This includes creating response playbooks and measurable adaptation loops that allow organizations to learn from incidents and structurally improve their systems over time. Highlighting tradeoffs, assumptions, and verification steps ensures that recovery designs are both practical and resilient."
         }
       ],
       "flashcards": [
         {
           "id": "cloud-computing-601-l04-f1",
-          "front": "Tradeoff matrix",
+          "front": "Tradeoff Matrix",
           "back": "A scoring framework for choosing among competing options under real constraints."
         },
         {
           "id": "cloud-computing-601-l04-f2",
-          "front": "Failure signature",
+          "front": "Failure Signature",
           "back": "A recurrent signal indicating a predictable class of breakdown risk."
         },
         {
           "id": "cloud-computing-601-l04-f3",
-          "front": "Adaptation loop",
+          "front": "Adaptation Loop",
           "back": "A measured process for converting incident learning into improved future behavior."
         }
       ]
@@ -434,6 +445,8 @@ export const CloudComputing601Module: LearningModule = {
       "title": "Cloud Computing Simulation and Response Studio",
       "type": "interactive",
       "duration": 17,
+      "lessonImagePrompt": "A high-tech command center with multiple large screens displaying real-time cloud network simulations, warning alerts, and mitigation pathways, photorealistic.",
+      "conceptVideoPrompt": "A fast-paced simulation of a cyber incident in a cloud network, showing automated response pathways activating and neutralizing the threat in real-time.",
       "learningAids": [
         {
           "id": "cloud-computing-601-l05-a1",
@@ -447,13 +460,13 @@ export const CloudComputing601Module: LearningModule = {
           "id": "cloud-computing-601-l05-c1",
           "kind": "practice",
           "title": "Scenario Modeling",
-          "content": "In this practice session, learners will configure various assumptions, thresholds, and intervention pathways for simulation scenarios that involve high-stakes conditions. This hands-on experience will help students understand how to prepare for and respond to critical situations in cloud computing.\nContext recap: In this practice session, learners will configure various assumptions, thresholds, and intervention pathways for simulation scenarios that involve high-stakes conditions. This hands-on experience will help students understand how to prepare for and respond to critical situations in cloud computing."
+          "content": "In this practice session, you will configure various assumptions, thresholds, and intervention pathways for simulation scenarios that involve high-stakes conditions. This hands-on experience will help you understand how to prepare for, model, and respond to critical situations in enterprise cloud computing, ensuring that theoretical designs hold up under simulated operational stress."
         },
         {
           "id": "cloud-computing-601-l05-c2",
           "kind": "recap",
           "title": "Debrief and Decision Quality Review",
-          "content": "After each simulation run, teams will conduct a debriefing session. During this time, they will review whether they met their targets, examine any side effects that occurred, and identify any gaps in governance compliance. This reflective practice is essential for continuous improvement.\nContext recap: After each simulation run, teams will conduct a debriefing session. During this time, they will review whether they met their targets, examine any side effects that occurred, and identify any gaps in governance compliance. This reflective practice is essential for continuous improvement."
+          "content": "After each simulation run, teams will conduct a structured debriefing session. During this time, you will review whether you met your targets, examine any unintended side effects that occurred, and identify any gaps in governance compliance. This reflective practice is essential for continuous improvement and calibrating leadership judgment."
         }
       ],
       "interactiveActivities": [
@@ -492,13 +505,16 @@ export const CloudComputing601Module: LearningModule = {
             }
           ]
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/cloud-computing-601-l05.png"
     },
     {
       "id": "cloud-computing-601-l06",
       "title": "Checkpoint 2: Research and Systems Decisions",
       "type": "quiz",
       "duration": 11,
+      "lessonImagePrompt": "A futuristic digital dashboard displaying system analytics, decision trees, and research data, glowing in a dark tech environment.",
+      "conceptVideoPrompt": "An abstract animation of a decision tree branching out, with glowing nodes representing different research and system choices leading to successful outcomes.",
       "learningAids": [
         {
           "id": "cloud-computing-601-l06-a1",
@@ -510,211 +526,214 @@ export const CloudComputing601Module: LearningModule = {
       "questions": [
         {
           "id": "cloud-computing-601-l06-q1",
-          "text": "Which practice most improves specialist performance in platform architecture?",
-          "skillId": "cloud-computing-601-skill-specialist",
+          "text": "What is the primary purpose of using a tradeoff matrix in advanced cloud architecture?",
+          "skillId": "cloud-computing-601-skill-tradeoff",
           "options": [
             {
               "id": "a",
-              "text": "Rely on undocumented assumptions"
+              "text": "To eliminate all risks associated with a deployment"
             },
             {
               "id": "b",
-              "text": "Define constraints, monitor leading indicators, and test edge cases"
+              "text": "To objectively score competing options against constraints like cost, reliability, and compliance"
             },
             {
               "id": "c",
-              "text": "Avoid post-decision review"
+              "text": "To bypass governance approvals by presenting a single solution"
             },
             {
               "id": "d",
-              "text": "Optimize only for speed"
+              "text": "To automate the deployment of cloud resources"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Advanced performance depends on explicit constraints, monitoring, and stress testing."
+          "explanation": "A tradeoff matrix provides a structured framework for evaluating competing options under real-world constraints."
         },
         {
           "id": "cloud-computing-601-l06-q2",
-          "text": "At level 601, the curriculum emphasizes:",
-          "skillId": "cloud-computing-601-skill-level",
+          "text": "In resilience engineering, what does a 'failure signature' indicate?",
+          "skillId": "cloud-computing-601-skill-failure-signature",
           "options": [
             {
               "id": "a",
-              "text": "research-grade reasoning, leadership decision quality, and publishable capstone defense"
+              "text": "A recurrent signal pointing to a predictable class of breakdown risk"
             },
             {
               "id": "b",
-              "text": "Unbounded iteration with no controls"
+              "text": "The digital signature required to authorize a rollback"
             },
             {
               "id": "c",
-              "text": "Single-metric decision making"
+              "text": "A log entry confirming a successful system boot"
             },
             {
               "id": "d",
-              "text": "No uncertainty communication"
+              "text": "An isolated, unrepeatable error in the code"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "The 601 design is built around research-grade reasoning, leadership decision quality, and publishable capstone defense."
+          "explanation": "A failure signature is a recognizable pattern or signal that precedes a specific type of system failure."
         },
         {
           "id": "cloud-computing-601-l06-q3",
-          "text": "What best strengthens resilience engineering execution quality?",
-          "skillId": "cloud-computing-601-skill-execution",
+          "text": "What is the function of an adaptation loop following a systemic incident?",
+          "skillId": "cloud-computing-601-skill-adaptation",
           "options": [
             {
               "id": "a",
-              "text": "No owner mapping or escalation path"
+              "text": "To assign blame to the responsible engineer"
             },
             {
               "id": "b",
-              "text": "Explicit ownership, checkpoints, and governance thresholds"
+              "text": "To convert incident learning into measurable improvements in future system behavior"
             },
             {
               "id": "c",
-              "text": "Ad-hoc process changes without logs"
+              "text": "To automatically restart failed servers without logging"
             },
             {
               "id": "d",
-              "text": "Skipping retrospective review"
+              "text": "To hide the incident from external stakeholders"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Quality execution needs ownership clarity, checkpoints, and threshold-driven governance."
+          "explanation": "Adaptation loops ensure that lessons learned from incidents are systematically applied to improve future resilience."
         },
         {
           "id": "cloud-computing-601-l06-q4",
-          "text": "A rigorous approach to cost-performance strategy should include:",
-          "skillId": "cloud-computing-601-skill-evaluation",
+          "text": "Why is scenario modeling critical in high-stakes cloud environments?",
+          "skillId": "cloud-computing-601-skill-modeling",
           "options": [
             {
               "id": "a",
-              "text": "Outcome claims without baselines"
+              "text": "It guarantees that no failures will occur in production"
             },
             {
               "id": "b",
-              "text": "Baseline comparison, side-effect checks, and uncertainty bounds"
+              "text": "It allows teams to test assumptions, thresholds, and intervention pathways under simulated stress"
             },
             {
               "id": "c",
-              "text": "Removal of difficult scenarios"
+              "text": "It replaces the need for actual system monitoring"
             },
             {
               "id": "d",
-              "text": "Changing criteria after seeing results"
+              "text": "It reduces the overall cost of cloud infrastructure"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Baselines, side-effect checks, and uncertainty disclosure make results defensible."
+          "explanation": "Scenario modeling helps teams prepare for critical situations by testing their designs and responses in a safe, simulated environment."
         },
         {
           "id": "cloud-computing-601-l06-q5",
-          "text": "A mature risk governance system should connect:",
-          "skillId": "cloud-computing-601-skill-governance",
+          "text": "During a post-simulation debrief, what should be the primary focus of the review?",
+          "skillId": "cloud-computing-601-skill-debrief",
           "options": [
             {
               "id": "a",
-              "text": "Policy and practice without measurement"
+              "text": "Evaluating target achievement, unintended side effects, and governance compliance gaps"
             },
             {
               "id": "b",
-              "text": "Policy, measurable thresholds, and remediation pathways"
+              "text": "Praising the team for completing the simulation quickly"
             },
             {
               "id": "c",
-              "text": "Technical delivery with no accountability"
+              "text": "Deleting the simulation logs to save storage space"
             },
             {
               "id": "d",
-              "text": "Performance targets with no risk controls"
+              "text": "Drafting marketing materials based on the simulation success"
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "Governance quality comes from linking policy intent to measurable controls and action."
+          "correctOptionId": "a",
+          "explanation": "A quality debrief focuses on objective outcomes, side effects, and compliance to drive continuous improvement."
         },
         {
           "id": "cloud-computing-601-l06-q6",
-          "text": "In high-stakes Cloud Computing Research and Leadership execution, which communication protocol is strongest?",
-          "skillId": "cloud-computing-601-skill-advanced-6",
+          "text": "If a cloud platform suffers from an 'ambiguous ownership chain', what is the strongest mitigation action?",
+          "skillId": "cloud-computing-601-skill-mitigation",
           "options": [
             {
               "id": "a",
-              "text": "Broadcast conclusions without assumptions"
+              "text": "Increase the frequency of automated backups"
             },
             {
               "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
+              "text": "Define an accountable owner map and clear escalation rights"
             },
             {
               "id": "c",
-              "text": "Share only final outcomes after completion"
+              "text": "Migrate the platform to a different cloud provider"
             },
             {
               "id": "d",
-              "text": "Limit updates to a single informal channel"
+              "text": "Implement stricter password policies"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
+          "explanation": "Ambiguous ownership is a governance issue that must be solved by clearly defining accountability and escalation paths."
         },
         {
           "id": "cloud-computing-601-l06-q7",
-          "text": "A mature remediation loop in advanced Computer Science should prioritize:",
-          "skillId": "cloud-computing-601-skill-advanced-7",
+          "text": "How should a team address 'policy-execution drift' in a cloud environment?",
+          "skillId": "cloud-computing-601-skill-drift",
           "options": [
             {
               "id": "a",
-              "text": "Blame assignment without system updates"
+              "text": "By ignoring the policy if the execution is faster"
             },
             {
               "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
+              "text": "By re-aligning operational controls to explicit governance standards"
             },
             {
               "id": "c",
-              "text": "One-time fixes without retesting"
+              "text": "By rewriting the policy to match whatever the current execution is"
             },
             {
               "id": "d",
-              "text": "Issue closure based on elapsed time"
+              "text": "By disabling monitoring alerts related to the policy"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
+          "explanation": "Policy-execution drift occurs when practice diverges from rules; it is corrected by re-aligning controls to the established standards."
         },
         {
           "id": "cloud-computing-601-l06-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Cloud Computing Research and Leadership?",
-          "skillId": "cloud-computing-601-skill-advanced-8",
+          "text": "When balancing competing objectives in a multi-region cloud platform, what must leaders prioritize?",
+          "skillId": "cloud-computing-601-skill-objectives",
           "options": [
             {
               "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
+              "text": "Minimizing costs at the expense of all compliance requirements"
             },
             {
               "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
+              "text": "Mapping strategic objectives against potential cascading risks and governance constraints"
             },
             {
               "id": "c",
-              "text": "Ignore correlated failure modes"
+              "text": "Deploying to as many regions as possible regardless of user demand"
             },
             {
               "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
+              "text": "Keeping all architecture decisions secret from stakeholders"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "explanation": "Effective leadership requires balancing objectives by mapping them against risks and constraints to make defensible decisions."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/cloud-computing-601-l06.png"
     },
     {
       "id": "cloud-computing-601-l07",
       "title": "Cloud Computing Governance and Public Impact",
       "type": "video",
       "duration": 13,
+      "lessonImagePrompt": "A conceptual image of a glowing digital globe protected by a transparent shield, representing global cloud governance, ethics, and public impact, 8k.",
+      "conceptVideoPrompt": "An animation showing the ripple effect of a digital decision, spreading outward through a network to represent stakeholder impact, followed by a glowing checklist of responsible leadership.",
       "learningAids": [
         {
           "id": "cloud-computing-601-l07-a1",
@@ -728,44 +747,47 @@ export const CloudComputing601Module: LearningModule = {
           "id": "cloud-computing-601-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "In this lesson, learners will evaluate how the outcomes of cloud computing projects are distributed among different stakeholders. This includes examining both immediate and delayed effects, as well as any indirect consequences that may arise. Understanding these impacts is crucial for responsible decision-making.\nContext recap: In this lesson, learners will evaluate how the outcomes of cloud computing projects are distributed among different stakeholders. This includes examining both immediate and delayed effects, as well as any indirect consequences that may arise. Understanding these impacts is crucial for responsible decision-making."
+          "content": "In this lesson, you will evaluate how the outcomes of cloud computing projects are distributed among different stakeholders. This includes examining both immediate and delayed effects, as well as any indirect consequences that may arise from architectural choices. Understanding these impacts is crucial for responsible decision-making and ensuring equitable technological deployment."
         },
         {
           "id": "cloud-computing-601-l07-c2",
           "kind": "concept",
           "title": "Accountability System Design",
-          "content": "To ensure accountability in cloud computing projects, we will implement traceability standards, establish review rights, and outline remediation obligations. These measures are vital for maintaining transparency and trust among all stakeholders involved.\nContext recap: To ensure accountability in cloud computing projects, we will implement traceability standards, establish review rights, and outline remediation obligations. These measures are vital for maintaining transparency and trust among all stakeholders involved.\nWhy this matters: Accountability System Design helps learners in Computer Science connect ideas from Cloud Computing Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "To ensure accountability in enterprise cloud projects, we must implement strict traceability standards, establish review rights, and outline clear remediation obligations. These measures are vital for maintaining transparency, auditing decision pathways, and building trust among all stakeholders involved in the ecosystem."
         },
         {
           "id": "cloud-computing-601-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "A responsible leadership checklist is an important tool that helps connect various elements such as strategy, ethics, policy, and operational controls. This checklist serves as a comprehensive review document that ensures leaders consider all necessary aspects when making decisions. By using this checklist, leaders can better understand how their choices impact their organization and the community.\nContext recap: A responsible leadership checklist is an important tool that helps connect various elements such as strategy, ethics, policy, and operational controls. This checklist serves as a comprehensive review document that ensures leaders consider all necessary aspects when making decisions. By using this checklist, leaders can better understand how their choices impact their organization and the community."
+          "content": "A responsible leadership checklist is a critical tool that connects strategy, ethics, policy, and operational controls. This checklist serves as a comprehensive review document ensuring leaders consider all necessary aspects—such as risk, compliance, and public impact—before finalizing decisions. By utilizing this framework, leaders can better navigate the complex consequences of their technological choices."
         }
       ],
       "flashcards": [
         {
           "id": "cloud-computing-601-l07-f1",
-          "front": "Impact distribution",
+          "front": "Impact Distribution",
           "back": "How benefits and harms are allocated across groups and timeframes."
         },
         {
           "id": "cloud-computing-601-l07-f2",
-          "front": "Decision traceability",
+          "front": "Decision Traceability",
           "back": "An auditable explanation of evidence, rationale, and ownership behind a decision."
         },
         {
           "id": "cloud-computing-601-l07-f3",
-          "front": "Responsible leadership",
+          "front": "Responsible Leadership",
           "back": "Decision practice that balances performance, risk, ethics, and accountability."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/cloud-computing-601-l07.png"
     },
     {
       "id": "cloud-computing-601-l08",
       "title": "Cloud Computing Capstone Defense Lab",
       "type": "interactive",
       "duration": 16,
+      "lessonImagePrompt": "A professional academic defense setting, a confident tech leader presenting a complex cloud architecture diagram to a panel of experts, modern and well-lit.",
+      "conceptVideoPrompt": "A dynamic presentation sequence showing a capstone charter being built, followed by a simulated Q&A session with digital avatars representing expert panelists.",
       "learningAids": [
         {
           "id": "cloud-computing-601-l08-a1",
@@ -779,13 +801,13 @@ export const CloudComputing601Module: LearningModule = {
           "id": "cloud-computing-601-l08-c1",
           "kind": "practice",
           "title": "Capstone Charter and Evidence Pack",
-          "content": "In this activity, learners will work together to create a capstone charter. This charter will include important components such as clear objectives, constraints that may limit their project, metrics for measuring success, governance controls to ensure proper oversight, and a plan for gathering evidence to support their work. This process encourages collaboration and critical thinking as learners define their project goals and how to achieve them.\nContext recap: In this activity, learners will work together to create a capstone charter. This charter will include important components such as clear objectives, constraints that may limit their project, metrics for measuring success, governance controls to ensure proper oversight, and a plan for gathering evidence to support their work. This process encourages collaboration and critical thinking as learners define their project goals and how to achieve them."
+          "content": "In this culminating activity, you will synthesize your knowledge to create a comprehensive capstone charter. This charter must include clear objectives, operational constraints, metrics for measuring success, governance controls, and a robust plan for gathering evidence to support your architectural decisions. This process demands critical thinking as you define your project goals and the rigorous methodologies required to achieve them."
         },
         {
           "id": "cloud-computing-601-l08-c2",
           "kind": "recap",
           "title": "Defense Rehearsal",
-          "content": "During the final practice round, learners will engage in a defense rehearsal. This exercise is designed to prepare them to confidently defend their decisions and project plans against various critiques. They will practice responding to questions and feedback from technical experts, governance representatives, and stakeholders. This rehearsal is crucial for building their communication skills and ensuring they can effectively advocate for their work in real-world scenarios.\nContext recap: During the final practice round, learners will engage in a defense rehearsal. This exercise is designed to prepare them to confidently defend their decisions and project plans against various critiques. They will practice responding to questions and feedback from technical experts, governance representatives, and stakeholders. This rehearsal is crucial for building their communication skills and ensuring they can effectively advocate for their work in real-world scenarios."
+          "content": "During the final phase, you will engage in a defense rehearsal. This exercise is designed to prepare you to confidently articulate and defend your decisions against expert critique. You will practice responding to rigorous questioning from technical experts, governance representatives, and stakeholders. This rehearsal is crucial for solidifying your communication skills and proving your readiness for high-stakes leadership roles."
         }
       ],
       "interactiveActivities": [
@@ -806,7 +828,8 @@ export const CloudComputing601Module: LearningModule = {
           "title": "Capstone Defense Panel",
           "description": "Defend your capstone against expert critique on rigor, risk, and accountability."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/cloud-computing-601-l08.png"
     }
   ]
 };

@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const Entrepreneurship601Module: LearningModule = {
+export const entrepreneurship_601_Module: LearningModule = {
   "id": "entrepreneurship-601",
   "title": "Entrepreneurship Research and Leadership",
   "description": "Post-401 specialization in Entrepreneurship, focused on venture hypothesis testing, capital strategy, operating model design, and leadership governance through advanced casework, simulation, and capstone-level defense.",
@@ -14,7 +14,7 @@ export const Entrepreneurship601Module: LearningModule = {
   ],
   "minAge": 17,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en"
@@ -38,7 +38,8 @@ export const Entrepreneurship601Module: LearningModule = {
           "id": "entrepreneurship-601-l01-a1",
           "type": "image",
           "title": "Guided Practice",
-          "content": "Use a structured method, log assumptions, and verify conclusions against constraints and metrics."
+          "content": "Use a structured method, log assumptions, and verify conclusions against constraints and metrics.",
+          "visualPrompt": "A flowchart showing the iterative cycle of hypothesis generation, constraint logging, and metric verification."
         }
       ],
       "chunks": [
@@ -46,35 +47,35 @@ export const Entrepreneurship601Module: LearningModule = {
           "id": "entrepreneurship-601-l01-c1",
           "kind": "concept",
           "title": "Advanced Scope and Decision Boundaries",
-          "content": "In this lesson, we will explore the advanced boundaries of entrepreneurship. We will learn how to frame the interaction between testing our business ideas and planning our financial strategies. This understanding is crucial as we navigate through complex systems in the business world, helping us make informed decisions that can lead to successful ventures.\nContext recap: In this lesson, we will explore the advanced boundaries of entrepreneurship. We will learn how to frame the interaction between testing our business ideas and planning our financial strategies. This understanding is crucial as we navigate through complex systems in the business world, helping us make informed decisions that can lead to successful ventures."
+          "content": "This module examines the advanced theoretical and practical boundaries of entrepreneurship, focusing on the intersection of venture hypothesis testing and capital strategy. Understanding this dynamic is crucial for navigating complex market systems, allowing leaders to frame strategic interactions and make empirically backed decisions that drive sustainable venture growth."
         },
         {
           "id": "entrepreneurship-601-l01-c2",
           "kind": "concept",
           "title": "Causal Structure Under Uncertainty",
-          "content": "In this section, learners will practice modeling the pathways of cause and effect in uncertain situations. We will discuss how to identify ranges of uncertainty and uncover hidden assumptions that may affect our designs. This skill is essential for creating effective interventions that can lead to better outcomes in our entrepreneurial projects.\nContext recap: In this section, learners will practice modeling the pathways of cause and effect in uncertain situations. We will discuss how to identify ranges of uncertainty and uncover hidden assumptions that may affect our designs. This skill is essential for creating effective interventions that can lead to better outcomes in our entrepreneurial projects."
+          "content": "Learners will practice modeling probabilistic pathways of cause and effect in highly uncertain environments. We will analyze how to identify ranges of uncertainty, uncover latent assumptions, and map causal structures. This analytical rigor is essential for engineering effective interventions that optimize outcomes in complex entrepreneurial ecosystems."
         },
         {
           "id": "entrepreneurship-601-l01-c3",
           "kind": "recap",
           "title": "Evidence and Rigor Standards",
-          "content": "In our recap, we will emphasize that all advanced claims we make in entrepreneurship must be supported by measurable indicators. We will discuss the importance of establishing confidence bounds and setting up review checkpoints to ensure that our claims are valid and reliable. This practice helps maintain rigor in our entrepreneurial efforts.\nContext recap: In our recap, we will emphasize that all advanced claims we make in entrepreneurship must be supported by measurable indicators. We will discuss the importance of establishing confidence bounds and setting up review checkpoints to ensure that our claims are valid and reliable. This practice helps maintain rigor in our entrepreneurial efforts."
+          "content": "All advanced claims in entrepreneurship must be substantiated by measurable, leading indicators. We emphasize the necessity of establishing strict confidence bounds and instituting rigorous review checkpoints to ensure validity and reliability. This disciplined practice maintains the integrity of our strategic initiatives and operational models."
         }
       ],
       "flashcards": [
         {
           "id": "entrepreneurship-601-l01-f1",
-          "front": "venture hypothesis testing",
+          "front": "Venture hypothesis testing",
           "back": "A specialization axis in Entrepreneurship requiring explicit assumptions and measured tradeoff choices."
         },
         {
           "id": "entrepreneurship-601-l01-f2",
-          "front": "capital strategy",
+          "front": "Capital strategy",
           "back": "Operational design capability that governs whether complex workflows remain reliable."
         },
         {
           "id": "entrepreneurship-601-l01-f3",
-          "front": "operating model design",
+          "front": "Operating model design",
           "back": "Evaluation practice for validating outcomes beyond headline metrics."
         }
       ]
@@ -89,7 +90,8 @@ export const Entrepreneurship601Module: LearningModule = {
           "id": "entrepreneurship-601-l02-a1",
           "type": "practice",
           "title": "Guided Practice",
-          "content": "Use a structured method, log assumptions, and verify conclusions against constraints and metrics."
+          "content": "Use a structured method, log assumptions, and verify conclusions against constraints and metrics.",
+          "visualPrompt": "An interactive dashboard interface displaying workflow nodes, stress-test parameters, and real-time performance metrics."
         }
       ],
       "chunks": [
@@ -97,13 +99,13 @@ export const Entrepreneurship601Module: LearningModule = {
           "id": "entrepreneurship-601-l02-c1",
           "kind": "practice",
           "title": "Method Sequence and Stress Test",
-          "content": "In this engaging interactive lab, learners will have the opportunity to design a specialized workflow that highlights the importance of using research-grade reasoning and making effective leadership decisions. We will also focus on how to present and defend our capstone projects in a way that is suitable for publication. Once we have constructed this workflow, we will put it to the test by challenging it with difficult scenarios. This will help us understand how well our ideas can withstand pressure and adapt to unexpected situations, which is a crucial skill in entrepreneurship."
+          "content": "In this interactive lab, learners will architect specialized workflows that demand research-grade reasoning and high-fidelity leadership decisions. We will focus on structuring capstone-level projects suitable for peer defense. Once constructed, these workflows will be subjected to rigorous stress tests against edge-case scenarios, evaluating their resilience and adaptability under severe operational pressure."
         },
         {
           "id": "entrepreneurship-601-l02-c2",
           "kind": "recap",
           "title": "Controls and Failure Gates",
-          "content": "In our recap, we will highlight that effective specialist workflows must include control gates, rollback criteria, and accountability checkpoints. These elements are crucial for ensuring that our processes are robust and can handle unexpected challenges, allowing us to maintain high standards in our entrepreneurial practices.\nContext recap: In our recap, we will highlight that effective specialist workflows must include control gates, rollback criteria, and accountability checkpoints. These elements are crucial for ensuring that our processes are robust and can handle unexpected challenges, allowing us to maintain high standards in our entrepreneurial practices."
+          "content": "Effective specialist workflows must integrate robust control gates, explicit rollback criteria, and definitive accountability checkpoints. These architectural elements are non-negotiable for ensuring process integrity, containing downstream defects, and maintaining high governance standards during rapid entrepreneurial iteration."
         }
       ],
       "interactiveActivities": [
@@ -172,7 +174,8 @@ export const Entrepreneurship601Module: LearningModule = {
           "id": "entrepreneurship-601-l03-a1",
           "type": "practice",
           "title": "Guided Practice",
-          "content": "Use a structured method, log assumptions, and verify conclusions against constraints and metrics."
+          "content": "Use a structured method, log assumptions, and verify conclusions against constraints and metrics.",
+          "visualPrompt": "A digital checklist overlaying a complex business model canvas, highlighting verified constraints."
         }
       ],
       "questions": [
@@ -208,7 +211,7 @@ export const Entrepreneurship601Module: LearningModule = {
           "options": [
             {
               "id": "a",
-              "text": "research-grade reasoning, leadership decision quality, and publishable capstone defense"
+              "text": "Research-grade reasoning, leadership decision quality, and publishable capstone defense"
             },
             {
               "id": "b",
@@ -388,7 +391,8 @@ export const Entrepreneurship601Module: LearningModule = {
           "id": "entrepreneurship-601-l04-a1",
           "type": "mnemonic",
           "title": "Guided Practice",
-          "content": "Use a structured method, log assumptions, and verify conclusions against constraints and metrics."
+          "content": "Use a structured method, log assumptions, and verify conclusions against constraints and metrics.",
+          "visualPrompt": "A split-screen visual comparing a tradeoff matrix on the left with a failure signature graph on the right."
         }
       ],
       "chunks": [
@@ -396,19 +400,19 @@ export const Entrepreneurship601Module: LearningModule = {
           "id": "entrepreneurship-601-l04-c1",
           "kind": "example",
           "title": "Case Stakes and Competing Objectives",
-          "content": "In this engaging case study, we will explore a dynamic and growing business that is encountering several important challenges. These challenges include finding the right fit for their product in the market, dealing with limited financial resources, and overcoming obstacles in their execution processes. As learners, you will have the opportunity to actively participate in mapping out the strategic objectives of this venture. You will also identify potential risks that could lead to failure and gain insights into the governance constraints that might influence decision-making. This preparation will be crucial before any actions are taken to address these challenges."
+          "content": "This case study analyzes a high-growth venture confronting critical constraints: product-market fit friction, capital scarcity, and execution bottlenecks. Learners will map the venture's strategic imperatives, identify systemic failure risks, and evaluate the governance constraints dictating executive decision-making prior to intervention."
         },
         {
           "id": "entrepreneurship-601-l04-c2",
           "kind": "concept",
           "title": "Tradeoff Matrix and Option Scoring",
-          "content": "In this section, we will learn about scoring different options based on various criteria. We will evaluate each option's effectiveness, reliability, fairness, feasibility, and long-term sustainability. This scoring process will help us make informed decisions when selecting the best course of action for our entrepreneurial ventures.\nContext recap: In this section, we will learn about scoring different options based on various criteria. We will evaluate each option's effectiveness, reliability, fairness, feasibility, and long-term sustainability. This scoring process will help us make informed decisions when selecting the best course of action for our entrepreneurial ventures."
+          "content": "We will utilize multi-criteria decision analysis (MCDA) to score competing strategic options. By evaluating efficacy, reliability, fairness, feasibility, and long-term sustainability, this matrix provides a quantitative foundation for selecting optimal pathways in complex entrepreneurial environments."
         },
         {
           "id": "entrepreneurship-601-l04-c3",
           "kind": "recap",
           "title": "Recovery and Adaptation Design",
-          "content": "In our recap, we will discuss how to translate the signs of failure into actionable safeguards. We will create response playbooks and measurable adaptation loops that can help us recover from setbacks and adapt our strategies effectively. This approach will ensure that we are prepared for challenges and can learn from our experiences.\nContext recap: In our recap, we will discuss how to translate the signs of failure into actionable safeguards. We will create response playbooks and measurable adaptation loops that can help us recover from setbacks and adapt our strategies effectively. This approach will ensure that we are prepared for challenges and can learn from our experiences."
+          "content": "Translating failure signatures into systemic safeguards is a hallmark of advanced leadership. We will design response playbooks and measurable adaptation loops that convert operational setbacks into structural resilience, ensuring the venture continuously evolves its defensive posture."
         }
       ],
       "flashcards": [
@@ -439,7 +443,8 @@ export const Entrepreneurship601Module: LearningModule = {
           "id": "entrepreneurship-601-l05-a1",
           "type": "practice",
           "title": "Guided Practice",
-          "content": "Use a structured method, log assumptions, and verify conclusions against constraints and metrics."
+          "content": "Use a structured method, log assumptions, and verify conclusions against constraints and metrics.",
+          "visualPrompt": "A simulation control panel showing intervention pathways, escalation triggers, and live metric tracking."
         }
       ],
       "chunks": [
@@ -447,13 +452,13 @@ export const Entrepreneurship601Module: LearningModule = {
           "id": "entrepreneurship-601-l05-c1",
           "kind": "practice",
           "title": "Scenario Modeling",
-          "content": "In this practice session, learners will set up simulation assumptions, define thresholds, and outline intervention pathways while working under high-stakes conditions. This hands-on experience will help us understand how to navigate complex scenarios and make strategic decisions that can impact the success of our entrepreneurial initiatives.\nContext recap: In this practice session, learners will set up simulation assumptions, define thresholds, and outline intervention pathways while working under high-stakes conditions. This hands-on experience will help us understand how to navigate complex scenarios and make strategic decisions that can impact the success of our entrepreneurial initiatives."
+          "content": "During this simulation, learners will configure operational assumptions, define critical thresholds, and map intervention pathways under high-stakes constraints. This immersive modeling exercise develops the strategic foresight required to navigate compounding crises and execute decisive leadership actions."
         },
         {
           "id": "entrepreneurship-601-l05-c2",
           "kind": "recap",
           "title": "Debrief and Decision Quality Review",
-          "content": "After each simulation run, teams will come together to review how well they achieved their targets. We will discuss any side effects that occurred and identify any gaps in governance compliance. This debriefing process is essential for improving our decision-making and ensuring that we learn from each experience.\nContext recap: After each simulation run, teams will come together to review how well they achieved their targets. We will discuss any side effects that occurred and identify any gaps in governance compliance. This debriefing process is essential for improving our decision-making and ensuring that we learn from each experience."
+          "content": "Post-simulation, teams will conduct a rigorous decision quality review. We will evaluate target efficacy, analyze unintended systemic side effects, and audit governance compliance. This debriefing protocol is vital for calibrating executive judgment and refining future intervention strategies."
         }
       ],
       "interactiveActivities": [
@@ -504,209 +509,210 @@ export const Entrepreneurship601Module: LearningModule = {
           "id": "entrepreneurship-601-l06-a1",
           "type": "practice",
           "title": "Guided Practice",
-          "content": "Use a structured method, log assumptions, and verify conclusions against constraints and metrics."
+          "content": "Use a structured method, log assumptions, and verify conclusions against constraints and metrics.",
+          "visualPrompt": "A radar chart evaluating decision quality across efficacy, risk, and governance compliance."
         }
       ],
       "questions": [
         {
           "id": "entrepreneurship-601-l06-q1",
-          "text": "Which practice most improves specialist performance in venture hypothesis testing?",
-          "skillId": "entrepreneurship-601-skill-specialist",
+          "text": "What is the primary function of a tradeoff matrix in advanced venture analysis?",
+          "skillId": "entrepreneurship-601-skill-tradeoff",
           "options": [
             {
               "id": "a",
-              "text": "Rely on undocumented assumptions"
+              "text": "To eliminate all risks associated with a decision."
             },
             {
               "id": "b",
-              "text": "Define constraints, monitor leading indicators, and test edge cases"
+              "text": "To systematically score competing options against real-world constraints and criteria."
             },
             {
               "id": "c",
-              "text": "Avoid post-decision review"
+              "text": "To justify decisions already made by executive leadership."
             },
             {
               "id": "d",
-              "text": "Optimize only for speed"
+              "text": "To reduce the number of stakeholders involved in the process."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Advanced performance depends on explicit constraints, monitoring, and stress testing."
+          "explanation": "A tradeoff matrix provides a quantitative framework for evaluating competing options against multiple constraints."
         },
         {
           "id": "entrepreneurship-601-l06-q2",
-          "text": "At level 601, the curriculum emphasizes:",
-          "skillId": "entrepreneurship-601-skill-level",
+          "text": "How should a leadership team utilize a 'failure signature'?",
+          "skillId": "entrepreneurship-601-skill-failure-signature",
           "options": [
             {
               "id": "a",
-              "text": "research-grade reasoning, leadership decision quality, and publishable capstone defense"
+              "text": "As a recurrent signal to identify and preempt predictable classes of breakdown risk."
             },
             {
               "id": "b",
-              "text": "Unbounded iteration with no controls"
+              "text": "As a metric to penalize underperforming team members."
             },
             {
               "id": "c",
-              "text": "Single-metric decision making"
+              "text": "As a post-mortem document filed after a venture closes."
             },
             {
               "id": "d",
-              "text": "No uncertainty communication"
+              "text": "As a marketing tool to demonstrate transparency."
             }
           ],
           "correctOptionId": "a",
-          "explanation": "The 601 design is built around research-grade reasoning, leadership decision quality, and publishable capstone defense."
+          "explanation": "Failure signatures are early warning indicators that allow leaders to preemptively address systemic risks."
         },
         {
           "id": "entrepreneurship-601-l06-q3",
-          "text": "What best strengthens capital strategy execution quality?",
-          "skillId": "entrepreneurship-601-skill-execution",
+          "text": "A robust adaptation loop is best characterized by:",
+          "skillId": "entrepreneurship-601-skill-adaptation",
           "options": [
             {
               "id": "a",
-              "text": "No owner mapping or escalation path"
+              "text": "Frequent changes to the core product vision."
             },
             {
               "id": "b",
-              "text": "Explicit ownership, checkpoints, and governance thresholds"
+              "text": "A measured process for converting incident learning into improved future behavior and systemic safeguards."
             },
             {
               "id": "c",
-              "text": "Ad-hoc process changes without logs"
+              "text": "Ignoring minor incidents to focus on catastrophic failures."
             },
             {
               "id": "d",
-              "text": "Skipping retrospective review"
+              "text": "Automated responses that require no human oversight."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Quality execution needs ownership clarity, checkpoints, and threshold-driven governance."
+          "explanation": "Adaptation loops ensure that organizations learn from failures and structurally improve their resilience."
         },
         {
           "id": "entrepreneurship-601-l06-q4",
-          "text": "A rigorous approach to operating model design should include:",
-          "skillId": "entrepreneurship-601-skill-evaluation",
+          "text": "When modeling high-stakes scenarios, what is the most critical initial step?",
+          "skillId": "entrepreneurship-601-skill-scenario",
           "options": [
             {
               "id": "a",
-              "text": "Outcome claims without baselines"
+              "text": "Executing the first available intervention."
             },
             {
               "id": "b",
-              "text": "Baseline comparison, side-effect checks, and uncertainty bounds"
+              "text": "Defining explicit simulation assumptions, constraints, and escalation triggers."
             },
             {
               "id": "c",
-              "text": "Removal of difficult scenarios"
+              "text": "Securing additional venture capital."
             },
             {
               "id": "d",
-              "text": "Changing criteria after seeing results"
+              "text": "Drafting the final public relations statement."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Baselines, side-effect checks, and uncertainty disclosure make results defensible."
+          "explanation": "Accurate scenario modeling requires a strict definition of assumptions, constraints, and triggers before any action is taken."
         },
         {
           "id": "entrepreneurship-601-l06-q5",
-          "text": "A mature leadership governance system should connect:",
-          "skillId": "entrepreneurship-601-skill-governance",
+          "text": "In a decision quality review, evaluating 'side effects' primarily ensures:",
+          "skillId": "entrepreneurship-601-skill-review",
           "options": [
             {
               "id": "a",
-              "text": "Policy and practice without measurement"
+              "text": "That the marketing team has enough material for case studies."
             },
             {
               "id": "b",
-              "text": "Policy, measurable thresholds, and remediation pathways"
+              "text": "That interventions do not create unmeasured negative impacts on adjacent systems or stakeholders."
             },
             {
               "id": "c",
-              "text": "Technical delivery with no accountability"
+              "text": "That the primary target metric was achieved faster than anticipated."
             },
             {
               "id": "d",
-              "text": "Performance targets with no risk controls"
+              "text": "That competitors are negatively impacted by the venture's success."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Governance quality comes from linking policy intent to measurable controls and action."
+          "explanation": "Evaluating side effects prevents localized optimizations from causing systemic harm elsewhere in the organization."
         },
         {
           "id": "entrepreneurship-601-l06-q6",
-          "text": "In high-stakes Entrepreneurship Research and Leadership execution, which communication protocol is strongest?",
-          "skillId": "entrepreneurship-601-skill-advanced-6",
+          "text": "If a venture experiences 'policy-execution drift', the most appropriate mitigation is to:",
+          "skillId": "entrepreneurship-601-skill-mitigation",
           "options": [
             {
               "id": "a",
-              "text": "Broadcast conclusions without assumptions"
+              "text": "Abolish the original policy to match current execution."
             },
             {
               "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
+              "text": "Re-align operational controls to explicit governance standards and monitor compliance."
             },
             {
               "id": "c",
-              "text": "Share only final outcomes after completion"
+              "text": "Increase the marketing budget to distract from operational flaws."
             },
             {
               "id": "d",
-              "text": "Limit updates to a single informal channel"
+              "text": "Delegate the issue to external consultants without internal oversight."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
+          "explanation": "Policy-execution drift requires re-anchoring operations to governance standards through strengthened controls."
         },
         {
           "id": "entrepreneurship-601-l06-q7",
-          "text": "A mature remediation loop in advanced Business should prioritize:",
-          "skillId": "entrepreneurship-601-skill-advanced-7",
+          "text": "To rebuild stakeholder trust after a critical execution failure, leadership must:",
+          "skillId": "entrepreneurship-601-skill-trust",
           "options": [
             {
               "id": "a",
-              "text": "Blame assignment without system updates"
+              "text": "Increase transparency, establish corrective feedback cadences, and demonstrate measurable remediation."
             },
             {
               "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
+              "text": "Deny the severity of the failure to prevent panic."
             },
             {
               "id": "c",
-              "text": "One-time fixes without retesting"
+              "text": "Immediately rebrand the venture."
             },
             {
               "id": "d",
-              "text": "Issue closure based on elapsed time"
+              "text": "Limit communication to internal channels only."
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
+          "correctOptionId": "a",
+          "explanation": "Trust is rebuilt through transparent accountability and verifiable corrective actions."
         },
         {
           "id": "entrepreneurship-601-l06-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Entrepreneurship Research and Leadership?",
-          "skillId": "entrepreneurship-601-skill-advanced-8",
+          "text": "Which factor is most crucial when selecting an intervention pathway under severe capital constraints?",
+          "skillId": "entrepreneurship-601-skill-capital",
           "options": [
             {
               "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
+              "text": "Choosing the option with the highest theoretical upside, regardless of risk."
             },
             {
               "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
+              "text": "Selecting the pathway that balances efficacy with the lowest risk of irreversible capital depletion."
             },
             {
               "id": "c",
-              "text": "Ignore correlated failure modes"
+              "text": "Opting for the most technologically complex solution."
             },
             {
               "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
+              "text": "Following the exact strategy of well-funded competitors."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "explanation": "Under severe constraints, avoiding irreversible capital depletion (ruin) is paramount while seeking efficacy."
         }
       ]
     },
@@ -720,7 +726,8 @@ export const Entrepreneurship601Module: LearningModule = {
           "id": "entrepreneurship-601-l07-a1",
           "type": "image",
           "title": "Guided Practice",
-          "content": "Use a structured method, log assumptions, and verify conclusions against constraints and metrics."
+          "content": "Use a structured method, log assumptions, and verify conclusions against constraints and metrics.",
+          "visualPrompt": "A conceptual diagram mapping stakeholder impact distribution over time, highlighting direct and indirect effects."
         }
       ],
       "chunks": [
@@ -728,19 +735,19 @@ export const Entrepreneurship601Module: LearningModule = {
           "id": "entrepreneurship-601-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "In this section, learners will evaluate how the outcomes of our entrepreneurial efforts are distributed among different stakeholders. We will consider not only the direct effects but also any delayed or indirect impacts that may arise. Understanding this distribution is vital for ensuring that our ventures create positive value for all involved.\nContext recap: In this section, learners will evaluate how the outcomes of our entrepreneurial efforts are distributed among different stakeholders. We will consider not only the direct effects but also any delayed or indirect impacts that may arise. Understanding this distribution is vital for ensuring that our ventures create positive value for all involved."
+          "content": "Learners will evaluate the temporal and cross-sectional distribution of venture outcomes across diverse stakeholder groups. We will analyze both direct consequences and second-order impacts, ensuring that value creation is sustainable and equitable within the broader market ecosystem."
         },
         {
           "id": "entrepreneurship-601-l07-c2",
           "kind": "concept",
           "title": "Accountability System Design",
-          "content": "In our discussion on accountability, we will explore how to design systems that ensure traceability of actions, establish review rights, and set up obligations for remediation when necessary. Implementing these accountability measures is crucial for maintaining trust and integrity in our entrepreneurial practices.\nContext recap: In our discussion on accountability, we will explore how to design systems that ensure traceability of actions, establish review rights, and set up obligations for remediation when necessary. Implementing these accountability measures is crucial for maintaining trust and integrity in our entrepreneurial practices."
+          "content": "We will architect accountability frameworks that guarantee decision traceability, establish formal review rights, and mandate remediation obligations. Implementing these structural measures is critical for preserving institutional integrity and stakeholder trust during rapid scaling phases."
         },
         {
           "id": "entrepreneurship-601-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "A responsible leadership checklist is an important tool that helps leaders connect their strategies, ethical considerations, policies, and operational controls. By using this checklist, leaders can ensure that they are making well-rounded decisions that take into account various aspects of their organization. This review artifact serves as a guide to help leaders reflect on their actions and align them with their values and goals.\nContext recap: A responsible leadership checklist is an important tool that helps leaders connect their strategies, ethical considerations, policies, and operational controls. By using this checklist, leaders can ensure that they are making well-rounded decisions that take into account various aspects of their organization. This review artifact serves as a guide to help leaders reflect on their actions and align them with their values and goals."
+          "content": "The responsible leadership checklist serves as a vital governance artifact, integrating strategic imperatives with ethical frameworks, policy mandates, and operational controls. This tool forces executive reflection, ensuring decisions remain aligned with core organizational values and long-term viability."
         }
       ],
       "flashcards": [
@@ -771,7 +778,8 @@ export const Entrepreneurship601Module: LearningModule = {
           "id": "entrepreneurship-601-l08-a1",
           "type": "practice",
           "title": "Guided Practice",
-          "content": "Use a structured method, log assumptions, and verify conclusions against constraints and metrics."
+          "content": "Use a structured method, log assumptions, and verify conclusions against constraints and metrics.",
+          "visualPrompt": "A digital canvas displaying a comprehensive capstone charter, including scope boundaries, confidence thresholds, and escalation criteria."
         }
       ],
       "chunks": [
@@ -779,13 +787,13 @@ export const Entrepreneurship601Module: LearningModule = {
           "id": "entrepreneurship-601-l08-c1",
           "kind": "practice",
           "title": "Capstone Charter and Evidence Pack",
-          "content": "In this activity, learners will work together to create a capstone charter. This charter will outline important objectives, identify any constraints they might face, establish metrics for measuring success, and define governance controls. Additionally, they will develop an evidence plan to support their project. This hands-on experience will help learners understand how to structure their ideas and prepare for real-world challenges in entrepreneurship.\nContext recap: In this activity, learners will work together to create a capstone charter. This charter will outline important objectives, identify any constraints they might face, establish metrics for measuring success, and define governance controls. Additionally, they will develop an evidence plan to support their project. This hands-on experience will help learners understand how to structure their ideas and prepare for real-world challenges in entrepreneurship."
+          "content": "Learners will synthesize their expertise to construct a comprehensive capstone charter. This document will delineate strategic objectives, operational constraints, success metrics, and governance controls. Concurrently, an evidence plan will be developed to empirically substantiate the project's viability against real-world market friction."
         },
         {
           "id": "entrepreneurship-601-l08-c2",
           "kind": "recap",
           "title": "Defense Rehearsal",
-          "content": "During the final practice round, learners will engage in a defense rehearsal. This session is designed to prepare them to confidently defend their decisions and ideas against various critiques. They will practice responding to questions related to technical aspects, governance issues, and stakeholder concerns. This exercise will enhance their critical thinking and communication skills, allowing them to articulate their reasoning effectively in a supportive environment.\nContext recap: During the final practice round, learners will engage in a defense rehearsal. This session is designed to prepare them to confidently defend their decisions and ideas against various critiques. They will practice responding to questions related to technical aspects, governance issues, and stakeholder concerns. This exercise will enhance their critical thinking and communication skills, allowing them to articulate their reasoning effectively in a supportive environment."
+          "content": "In this culminating exercise, learners will simulate a rigorous panel defense. They will articulate their technical rationale, justify governance frameworks, and defend their strategic choices against expert critique. This rehearsal hones the executive communication skills necessary to secure stakeholder buy-in under intense scrutiny."
         }
       ],
       "interactiveActivities": [

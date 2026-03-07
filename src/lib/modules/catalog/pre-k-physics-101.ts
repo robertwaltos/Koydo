@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const PreKPhysics101Module: LearningModule = {
+export const pre_k_physics_101_Module: LearningModule = {
   "id": "pre-k-physics-101",
   "title": "Pre-K Push, Pull & Play! Physics Fun",
   "description": "Discover the amazing world of pushes, pulls, gravity, and motion! Children ages 3-5 explore how things move, why balls roll downhill, what makes magnets stick, and how to build the tallest tower — all through playful experiments and silly stories.",
@@ -8,11 +8,13 @@ export const PreKPhysics101Module: LearningModule = {
   "tags": [
     "pre-k",
     "curriculum",
-    "interactive"
+    "interactive",
+    "forces",
+    "stem"
   ],
   "minAge": 3,
   "maxAge": 5,
-  "version": "4.0.0",
+  "version": "1.1.0",
   "difficultyBand": "beginner",
   "localeSupport": [
     "en",
@@ -20,56 +22,56 @@ export const PreKPhysics101Module: LearningModule = {
   ],
   "thumbnail": "/placeholders/lesson-robot.svg",
   "learningObjectives": [
-    "Identify pushes and pulls as forces that make things move",
-    "Describe what gravity does and why things fall down",
-    "Predict which way a ball will roll on a ramp",
-    "Explain what happens when you push harder versus softer",
-    "Explore how magnets attract and repel",
-    "Build a stable tower and explain why some shapes are stronger"
+    "Tell the difference between a push and a pull",
+    "Show that a big push makes things go fast and a little push makes things go slow",
+    "Explain that gravity is a force that pulls things down to the ground",
+    "Guess if an object will roll or slide down a ramp",
+    "Discover that magnets stick to some metals",
+    "Build a strong tower using a wide base and triangles"
   ],
   "lessons": [
     {
       "id": "prek-physics-l01",
-      "title": "Pushes and Pulls Make Things Move!",
+      "title": "Meet Push and Pull!",
       "type": "video",
       "duration": 8,
       "objectives": [
-        "Define a push as a force that moves something away from you",
+        "Define a push as a force that moves something away",
         "Define a pull as a force that moves something toward you",
-        "Name three examples of pushes and three examples of pulls"
+        "Give examples of pushes and pulls in everyday life"
       ],
       "chunks": [
         {
           "id": "prek-physics-l01-c1",
           "title": "What Is a Push?",
-          "content": "A push is when you move something away from yourself! Imagine you are on a swing. When you give it a big push, it goes flying forward, swinging high up into the air! Isn’t that exciting? Now think about a toy car. When you give it a push, it zooms across the floor, racing away from you like a speedy little race car! And what about a door? When you push it open, it swings away from your hands, making space for you to walk through. It’s like magic! 🌟 But did you know that even blowing air on a pinwheel is a kind of push? Yes! When you blow air, it pushes the blades of the pinwheel around and around, making it spin and twirl. Isn’t that fun to watch? 🌬️ So remember, a push can make things move in lots of exciting ways!\nContext recap: A push is when you move something away from yourself! Imagine you are on a swing. When you give it a big push, it goes flying forward, swinging high up into the air! Isn’t that exciting?\nWhy this matters: What Is a Push? helps learners in Physics connect ideas from Pre-K Push, Pull & Play! Physics Fun to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "A push moves something AWAY from you. Imagine pushing a friend on a swing. Whee! They go flying forward! 🚀 Or when you push a toy car... Vroom! It races away from you! Even blowing bubbles is a gentle push with your breath! 🌬️"
         },
         {
           "id": "prek-physics-l01-c2",
           "title": "What Is a Pull?",
-          "content": "A pull is a special way to move things closer to you! Think about when you pull a wagon. As you grab the handle and pull, the wagon rolls right up to you, making it easier to play with! Now, picture opening a drawer. When you pull on the handle, the drawer slides out toward you, and you can reach in to grab your favorite toys or books. It’s like magic! 🎩✨\nHave you ever played tug-of-war? When you pull on the rope, you’re using all your strength to bring it closer to your side. It’s a fun game that shows how strong a pull can be! 💪\nAnd guess what? Even a magnet on the fridge is doing a pull! It holds your colorful drawings and pictures without any hands. Isn’t that cool? It shows us that pulls can be very strong and help us in many ways! So remember, a pull is all about bringing things closer to you, and it can be super fun!\nContext recap: A pull is a special way to move things closer to you! Think about when you pull a wagon. As you grab the handle and pull, the wagon rolls right up to you, making it easier to play with! Now, picture opening a drawer.\nWhy this matters: What Is a Pull? helps learners in Physics connect ideas from Pre-K Push, Pull & Play! Physics Fun to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "A pull brings something TOWARD you. Think about pulling your favorite wagon by its handle. Clack, clack, clack! It follows right behind you! Or when you pull open a drawer to get your toys. You are pulling it closer! Even pulling on your socks to get them on your feet is a pull! 🧦"
         },
         {
           "id": "prek-physics-l01-c3",
-          "title": "Push or Pull? The Guessing Game",
-          "content": "Let’s have some fun with a guessing game! When you open a jar lid, do you push or pull? That’s right, you PULL! ✅ Now, let’s think about kicking a soccer ball. What do you do? You PUSH it with your foot! ⚽ And when you zip up your jacket, you are doing a PULL going up! Isn’t that interesting? Every time something moves, remember that there is either a push or a pull making it happen. It’s like a secret code of movement all around us! So, the next time you play, think about how you are using pushes and pulls to make things move. Can you find other examples of pushes and pulls in your day? Let’s keep exploring together!\nContext recap: Let’s have some fun with a guessing game! When you open a jar lid, do you push or pull? That’s right, you PULL! ✅ Now, let’s think about kicking a soccer ball.\nWhy this matters: Push or Pull? The Guessing Game helps learners in Physics connect ideas from Pre-K Push, Pull & Play! Physics Fun to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "title": "Push or Pull? A Fun Game!",
+          "content": "Let's play a game! When you kick a soccer ball, is that a push or a pull? It's a PUSH with your foot! ⚽ When you pull a zipper up on your coat, is that a push or a pull? It's a PULL! Great job! Look around you. Can you find five things you can push and five things you can pull?"
         }
       ],
       "flashcards": [
         {
           "id": "prek-physics-l01-f1",
           "front": "What is a push?",
-          "back": "A force that moves something AWAY from you — like pushing a swing! 🏋️"
+          "back": "Moves something AWAY from you, like pushing a car! 🚗💨"
         },
         {
           "id": "prek-physics-l01-f2",
           "front": "What is a pull?",
-          "back": "A force that moves something TOWARD you — like pulling a wagon! 🚂"
+          "back": "Brings something TOWARD you, like pulling a wagon! ❤️"
         },
         {
           "id": "prek-physics-l01-f3",
           "front": "What is a force?",
-          "back": "A push or a pull that makes something move, stop, or change direction!"
+          "back": "A push or a pull that makes things move!"
         }
       ],
       "questions": [
@@ -126,58 +128,124 @@ export const PreKPhysics101Module: LearningModule = {
         {
           "id": "prek-physics-l01-a1",
           "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary of the lesson's main concept."
+          "title": "Push & Pull Picture Chart",
+          "content": "A colorful chart with pictures of kids pushing swings and pulling wagons."
         }
       ]
     },
     {
       "id": "prek-physics-l02",
-      "title": "Gravity: Why Things Fall Down!",
+      "title": "Big Push, Little Push",
       "type": "video",
       "duration": 8,
       "objectives": [
-        "Explain that gravity is a force that pulls everything toward the ground",
-        "Predict that a dropped object will fall down, not up",
-        "Describe why jumping always brings you back to Earth"
+        "Show that a big push makes things move faster and farther",
+        "Show that a little push makes things move slowly and a short distance",
+        "Describe how you can control the strength of a push"
       ],
       "chunks": [
         {
           "id": "prek-physics-l02-c1",
-          "title": "The Invisible Pull",
-          "content": "There is a special force called GRAVITY that you cannot see, but it is always working! 🌍 Gravity is like an invisible friend that pulls everything toward the center of the Earth. Imagine when you drop a ball; gravity is the reason it falls down to the ground with a little 'bonk!' And when you jump up high, guess what? Gravity is right there to pull you back down again, just like a gentle hug! Without gravity, you would float away like an astronaut in space, soaring through the stars and exploring the universe! 🧑‍🚀 Isn’t that amazing? Gravity helps keep us safe on the ground, so we can run, play, and have fun without floating away! So next time you drop something or jump up, remember that gravity is always there, helping us stay grounded and connected to our wonderful planet! 🌟\nContext recap: There is a special force called GRAVITY that you cannot see, but it is always working! 🌍 Gravity is like an invisible friend that pulls everything toward the center of the Earth. Imagine when you drop a ball; gravity is the reason it falls down to the ground with a little 'bonk!' And when you jump up high, guess what? Gravity is right there to pull you back down again, just like a gentle hug!\nWhy this matters: The Invisible Pull helps learners in Physics connect ideas from Pre-K Push, Pull & Play! Physics Fun to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "title": "Gentle Tap vs. Big Push",
+          "content": "Let's play with a toy car! 🚗 First, give it a tiny, gentle tap with your finger. Boop! It moves just a little bit. Now, give it a BIG push! WHOOSH! It zooms all the way across the floor! A big push gives it more power to go fast and far!"
         },
         {
           "id": "prek-physics-l02-c2",
-          "title": "The Feather and the Rock",
-          "content": "Let's have some fun with a cool experiment! Find a rock and a feather, and drop them at the same time. What do you think will happen? You might notice that the rock hits the ground first! That's because the feather is light and flat, which makes it float and dance around in the air as it falls. 🪶 The air slows the feather down, making it take longer to reach the ground. But don’t forget, gravity is working on both the rock and the feather, pulling them down toward the Earth! Now, here’s something really amazing: if you were on the Moon, where there is no air at all, the rock and the feather would land at the same time! Isn’t that fascinating? It shows us how gravity works differently in different places. So, next time you see a feather floating, remember how special it is!\nContext recap: Let's have some fun with a cool experiment! Find a rock and a feather, and drop them at the same time. What do you think will happen? You might notice that the rock hits the ground first!\nWhy this matters: The Feather and the Rock helps learners in Physics connect ideas from Pre-K Push, Pull & Play! Physics Fun to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "title": "The Bowling Game",
+          "content": "Have you ever seen bowling? 🎳 If you roll the ball very softly, it might stop before it gets to the pins. But if you give it a strong, powerful roll, it goes super fast and... CRASH! It knocks all the pins down! A stronger push makes a bigger crash!"
         },
         {
           "id": "prek-physics-l02-c3",
-          "title": "Gravity Is Your Friend",
-          "content": "Gravity is like a special friend that helps us every day! It makes sure that your yummy food stays on your plate, your refreshing drink stays in your cup, and your feet stay on the ground where they belong! 🥤 Have you ever wondered how the Moon stays close to the Earth? It's gravity that helps the Moon go around our planet, just like gravity helps the Earth go around the Sun! Imagine if there was no gravity — everything would float away into space, even your tasty lunch! So, the next time you sit down to eat, take a moment to think about how important gravity is. It keeps everything safe and sound right where it should be, so we can enjoy our meals and play without worry! Thank you, gravity, for being such a great friend!\nContext recap: Gravity is like a special friend that helps us every day! It makes sure that your yummy food stays on your plate, your refreshing drink stays in your cup, and your feet stay on the ground where they belong! 🥤 Have you ever wondered how the Moon stays close to the Earth? It's gravity that helps the Moon go around our planet, just like gravity helps the Earth go around the Sun!\nWhy this matters: Gravity Is Your Friend helps learners in Physics connect ideas from Pre-K Push, Pull & Play! Physics Fun to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "title": "You're in Control!",
+          "content": "You are a force expert! You know how to use a gentle push when you pet a soft kitten. 🐱 And you know how to use a big push when you're trying to win a race! You choose how much force to use every day. That's your superpower!"
         }
       ],
       "flashcards": [
         {
           "id": "prek-physics-l02-f1",
-          "front": "What is gravity?",
-          "back": "An invisible force that pulls everything toward the ground! It is why things fall down. 🌍"
+          "front": "What happens with a BIG push?",
+          "back": "Things go FASTER and FARTHER! 💨"
         },
         {
           "id": "prek-physics-l02-f2",
-          "front": "Why don't we float away?",
-          "back": "Gravity keeps our feet on the ground! It pulls us toward the Earth."
-        },
-        {
-          "id": "prek-physics-l02-f3",
-          "front": "Why does a feather fall slower than a rock?",
-          "back": "Air slows the feather down because it is light and flat. Gravity pulls both down!"
+          "front": "What happens with a LITTLE push?",
+          "back": "Things go SLOWLY and not very far. 🐢"
         }
       ],
       "questions": [
         {
           "id": "prek-physics-l02-q1",
+          "text": "You give a toy car a BIG push. It will...",
+          "options": [
+            {
+              "id": "a",
+              "text": "Move just a little"
+            },
+            {
+              "id": "b",
+              "text": "Go far and fast!"
+            },
+            {
+              "id": "c",
+              "text": "Float up"
+            },
+            {
+              "id": "d",
+              "text": "Sing a song"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "A big push has lots of force and makes things zoom!"
+        }
+      ]
+    },
+    {
+      "id": "prek-physics-l03",
+      "title": "Gravity: The Downward Pull",
+      "type": "video",
+      "duration": 8,
+      "objectives": [
+        "Explain that gravity is a force that pulls everything to the ground",
+        "Guess that a dropped toy will fall down, not up",
+        "Describe why jumping always brings you back to Earth"
+      ],
+      "chunks": [
+        {
+          "id": "prek-physics-l03-c1",
+          "title": "The Invisible String",
+          "content": "There's a secret, invisible force all around us called GRAVITY! 🌍 It's like a giant, invisible string pulling everything down to the ground. When you drop your favorite ball, boink! Gravity pulls it down. When you jump up high, gravity pulls you right back down to your feet. Whee! Thump!"
+        },
+        {
+          "id": "prek-physics-l03-c2",
+          "title": "The Feather and the Block",
+          "content": "Let's try an experiment! Find a feather (or a small piece of paper) and a block. Drop them at the same time. The block falls straight down, THUD! The feather floats and wiggles its way down. 🪶 Why? The air pushes up on the feather, slowing it down. But gravity is pulling them BOTH down!"
+        },
+        {
+          "id": "prek-physics-l03-c3",
+          "title": "Gravity is Our Friend",
+          "content": "Gravity is a super helper! It keeps our food on our plate and our juice in our cup. 🥤 It keeps our feet on the ground so we don't float away into space like an astronaut! 🧑‍🚀 Thank you, gravity, for keeping us safe on Earth!"
+        }
+      ],
+      "flashcards": [
+        {
+          "id": "prek-physics-l03-f1",
+          "front": "What is gravity?",
+          "back": "An invisible force that pulls everything DOWN to the ground! 🌍"
+        },
+        {
+          "id": "prek-physics-l03-f2",
+          "front": "Why don't we float away into space?",
+          "back": "Gravity keeps our feet on the ground!"
+        },
+        {
+          "id": "prek-physics-l03-f3",
+          "front": "If you jump up, what happens?",
+          "back": "Gravity pulls you back down!"
+        }
+      ],
+      "questions": [
+        {
+          "id": "prek-physics-l03-q1",
           "text": "If you drop a toy, what does gravity do?",
           "options": [
             {
@@ -200,64 +268,56 @@ export const PreKPhysics101Module: LearningModule = {
           "correctOptionId": "b",
           "explanation": "Gravity pulls everything down toward the ground!"
         }
-      ],
-      "learningAids": [
-        {
-          "id": "prek-physics-l02-a1",
-          "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary of the lesson's main concept."
-        }
       ]
     },
     {
-      "id": "prek-physics-l03",
-      "title": "Ramps: Watch Things Roll and Slide!",
+      "id": "prek-physics-l04",
+      "title": "Ramps: Let's Roll and Slide!",
       "type": "video",
       "duration": 8,
       "objectives": [
-        "Predict that objects roll faster down steep ramps",
-        "Explain that round things roll and flat things slide",
-        "Describe how a ramp makes it easier to move heavy things"
+        "Show that things go faster down a steep ramp",
+        "Tell the difference between rolling and sliding",
+        "Explain that ramps are simple machines that help us"
       ],
       "chunks": [
         {
-          "id": "prek-physics-l03-c1",
-          "title": "Steep vs. Gentle Ramps",
-          "content": "A ramp is a special flat surface that can go up or down at an angle, and it can be so much fun to play with! Imagine you have a toy car. If you place it at the very top of a steep ramp, get ready to watch it go ZOOM down super fast! 🏎️ It's like a thrilling race! Now, let’s try something different. If you take the same toy car and put it on a gentle, low ramp, what do you think will happen? That’s right! It will roll down slowly and smoothly. Isn’t that interesting? The steeper the ramp is, the faster things go because gravity is working hard to pull them down the slope! Ramps can turn a simple slide into an exciting race, making it a great way to learn about how things move. So, next time you see a ramp, think about how steep or gentle it is and how that might change the speed of your toy car! Ramps are not just fun; they help us understand the magic of physics too!\nContext recap: A ramp is a special flat surface that can go up or down at an angle, and it can be so much fun to play with! Imagine you have a toy car. If you place it at the very top of a steep ramp, get ready to watch it go ZOOM down super fast! 🏎️ It's like a thrilling race!\nWhy this matters: Steep vs. Gentle Ramps helps learners in Physics connect ideas from Pre-K Push, Pull & Play! Physics Fun to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "id": "prek-physics-l04-c1",
+          "title": "Steep Ramps are Fast!",
+          "content": "A ramp is like a slide for your toys! Let's make a ramp with a book. If you make the ramp very steep (high up), your toy car will go ZOOM! Super fast! 🏎️ If you make the ramp gentle (low down), the car will roll slowly. You can control the speed!"
         },
         {
-          "id": "prek-physics-l03-c2",
-          "title": "Rollers vs. Sliders",
-          "content": "Have you ever noticed how round things, like balls and wheels, can ROLL down a ramp? It's like they are having a fun race! 🎉 But what about flat things, like books and blocks? They SLIDE down the ramp instead! 📦 Can you guess why that happens? Well, round shapes are special because they can turn over and over as they move, and they don't rub against the ramp very much. This makes it easy for them to roll! On the other hand, flat shapes have a harder time. They drag along the surface of the ramp, and this rubbing is called friction. Friction is what slows them down. So, the next time you play with different shapes on a ramp, pay attention to how they move! You might discover some exciting things about rolling and sliding!\nContext recap: Have you ever noticed how round things, like balls and wheels, can ROLL down a ramp? It's like they are having a fun race! 🎉 But what about flat things, like books and blocks? They SLIDE down the ramp instead!\nWhy this matters: Rollers vs. Sliders helps learners in Physics connect ideas from Pre-K Push, Pull & Play! Physics Fun to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "id": "prek-physics-l04-c2",
+          "title": "Rollers and Sliders",
+          "content": "Some things ROLL and some things SLIDE. Round things, like a ball or a marble, love to roll! They tumble over and over. ⚽ But flat things, like a block or a book, can't roll. They just SLIDE down. Whoosh! Try it! What things in your room can roll? What things can slide?"
         },
         {
-          "id": "prek-physics-l03-c3",
-          "title": "Ramps Are Helpers",
-          "content": "Have you ever noticed a wheelchair ramp outside a building? 🏗️ Ramps are really helpful because they let people go up without needing to climb stairs, which can be tough for some. You might see moving vans using ramps to easily roll heavy boxes inside, making it safer and simpler for everyone. Did you know that even the ancient Egyptians might have used ramps to help build the big pyramids? Ramps are amazing tools that make hard jobs easier and show us how physics can help us in our everyday lives! Next time you see a ramp, think about all the ways it helps people and makes things easier! Ramps are not just for fun; they are important helpers in our world!\nContext recap: Have you ever noticed a wheelchair ramp outside a building? 🏗️ Ramps are really helpful because they let people go up without needing to climb stairs, which can be tough for some. You might see moving vans using ramps to easily roll heavy boxes inside, making it safer and simpler for everyone. Did you know that even the ancient Egyptians might have used ramps to help build the big pyramids?\nWhy this matters: Ramps Are Helpers helps learners in Physics connect ideas from Pre-K Push, Pull & Play! Physics Fun to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "id": "prek-physics-l04-c3",
+          "title": "Ramps are Helpers",
+          "content": "Ramps are super helpful! They help people in wheelchairs go up without using stairs. They help movers slide heavy boxes into a truck. Ramps make hard work easier by letting things roll or slide instead of being lifted. They are amazing helpers!"
         }
       ],
       "flashcards": [
         {
-          "id": "prek-physics-l03-f1",
-          "front": "What makes a toy car go faster on a ramp?",
-          "back": "A steeper ramp! Gravity pulls harder along steep slopes. 🏎️"
+          "id": "prek-physics-l04-f1",
+          "front": "How do you make a toy car go faster on a ramp?",
+          "back": "Make the ramp STEEPER! 🏎️"
         },
         {
-          "id": "prek-physics-l03-f2",
-          "front": "What is friction?",
-          "back": "The rubbing between two surfaces that slows things down. Flat things have more friction than round things!"
+          "id": "prek-physics-l04-f2",
+          "front": "What's the difference between rolling and sliding?",
+          "back": "Round things ROLL. Flat things SLIDE!"
         },
         {
-          "id": "prek-physics-l03-f3",
+          "id": "prek-physics-l04-f3",
           "front": "Why are ramps helpful?",
-          "back": "They make it easier to move heavy things up without lifting. Wheelchair ramps help people too!"
+          "back": "They make it easier to move things up and down!"
         }
       ],
       "questions": [
         {
-          "id": "prek-physics-l03-q1",
-          "text": "A ball on a steep ramp will roll...",
+          "id": "prek-physics-l04-q1",
+          "text": "A ball on a very steep ramp will roll...",
           "options": [
             {
               "id": "a",
@@ -277,44 +337,35 @@ export const PreKPhysics101Module: LearningModule = {
             }
           ],
           "correctOptionId": "c",
-          "explanation": "Steep ramps make things roll fast because gravity pulls harder!"
-        }
-      ],
-      "learningAids": [
-        {
-          "id": "prek-physics-l03-a1",
-          "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary of the lesson's main concept."
+          "explanation": "Steep ramps make things roll fast because gravity pulls them down harder!"
         }
       ]
     },
     {
-      "id": "prek-physics-l04",
-      "title": "Ramp Lab: Predict and Test!",
+      "id": "prek-physics-l05",
+      "title": "Ramp Race! (Interactive)",
       "type": "interactive",
       "duration": 10,
       "objectives": [
-        "Predict which ramp will make a ball go farthest",
-        "Sort objects into rollers and sliders"
+        "Sort objects into things that roll and things that slide"
       ],
       "interactiveActivities": [
         {
-          "id": "prek-physics-l04-ia1",
+          "id": "prek-physics-l05-ia1",
           "type": "sorting_buckets",
           "title": "Roller or Slider?",
-          "description": "Sort each object into the correct group!",
+          "description": "Drag each object to the right box. Will it roll or slide?",
           "estimatedMinutes": 5,
           "difficultyLevel": "easy",
           "data": {
             "buckets": [
               {
                 "id": "rollers",
-                "label": "Rollers (round things)"
+                "label": "Rollers ⚽"
               },
               {
                 "id": "sliders",
-                "label": "Sliders (flat things)"
+                "label": "Sliders 🧱"
               }
             ],
             "items": [
@@ -345,7 +396,7 @@ export const PreKPhysics101Module: LearningModule = {
               },
               {
                 "id": "i6",
-                "label": "Phone 📱",
+                "label": "Toy Phone 📱",
                 "correctBucketId": "sliders"
               }
             ]
@@ -354,21 +405,21 @@ export const PreKPhysics101Module: LearningModule = {
       ],
       "learningAids": [
         {
-          "id": "prek-physics-l04-a1",
+          "id": "prek-physics-l05-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Follow the prompt sequence and document your reasoning."
+          "title": "Let's Experiment Sheet",
+          "content": "A printable sheet prompting kids to find 3 rollers and 3 sliders in their room and draw them."
         }
       ]
     },
     {
-      "id": "prek-physics-l05",
-      "title": "Checkpoint: Forces, Gravity & Ramps",
+      "id": "prek-physics-l06",
+      "title": "Checkpoint: Forces and Rolling",
       "type": "quiz",
       "duration": 8,
       "questions": [
         {
-          "id": "prek-physics-l05-q1",
+          "id": "prek-physics-l06-q1",
           "text": "Opening a drawer is a...",
           "options": [
             {
@@ -392,7 +443,31 @@ export const PreKPhysics101Module: LearningModule = {
           "explanation": "You pull a drawer toward you to open it!"
         },
         {
-          "id": "prek-physics-l05-q2",
+          "id": "prek-physics-l06-q2",
+          "text": "A BIG push makes a ball go...",
+          "options": [
+            {
+              "id": "a",
+              "text": "Slowly"
+            },
+            {
+              "id": "b",
+              "text": "Fast!"
+            },
+            {
+              "id": "c",
+              "text": "Nowhere"
+            },
+            {
+              "id": "d",
+              "text": "Quiet"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "A big push has more force, so it makes things go fast!"
+        },
+        {
+          "id": "prek-physics-l06-q3",
           "text": "Gravity pulls things...",
           "options": [
             {
@@ -416,31 +491,7 @@ export const PreKPhysics101Module: LearningModule = {
           "explanation": "Gravity always pulls things down toward the Earth!"
         },
         {
-          "id": "prek-physics-l05-q3",
-          "text": "Which ramp makes a ball go FASTEST?",
-          "options": [
-            {
-              "id": "a",
-              "text": "A flat table"
-            },
-            {
-              "id": "b",
-              "text": "A very steep ramp"
-            },
-            {
-              "id": "c",
-              "text": "A tiny bump"
-            },
-            {
-              "id": "d",
-              "text": "A bowl of soup"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Steep ramps make things go fast — gravity pulls harder along the slope!"
-        },
-        {
-          "id": "prek-physics-l05-q4",
+          "id": "prek-physics-l06-q4",
           "text": "Which object would ROLL down a ramp?",
           "options": [
             {
@@ -466,60 +517,60 @@ export const PreKPhysics101Module: LearningModule = {
       ],
       "learningAids": [
         {
-          "id": "prek-physics-l05-a1",
+          "id": "prek-physics-l06-a1",
           "type": "mnemonic",
-          "title": "Memory Cue",
-          "content": "Use Plan, Solve, Explain to structure each response."
+          "title": "Think and Draw!",
+          "content": "Draw a picture of a push, a pull, and something rolling down a ramp."
         }
       ]
     },
     {
-      "id": "prek-physics-l06",
-      "title": "Magnets: The Mystery of Stick and Push!",
+      "id": "prek-physics-l07",
+      "title": "Magical Magnets",
       "type": "video",
       "duration": 8,
       "objectives": [
         "Explain that magnets pull some metal objects toward them",
-        "Describe that magnets have two ends called poles",
+        "Describe that magnets have two ends called poles that can attract or repel",
         "Predict whether a magnet will stick to an object or not"
       ],
       "chunks": [
         {
-          "id": "prek-physics-l06-c1",
-          "title": "What Can Magnets Do?",
-          "content": "Magnets are like magic, but they are real science! 🧲 Have you ever seen a magnet pull a paperclip toward it without even touching it? Isn’t that amazing? Magnets can stick to the fridge door and hold up your beautiful artwork, making it look even more special! But here’s something important to remember: magnets do NOT stick to everything. They really love metal things like iron and steel, which is why they can hold up those paperclips. However, they ignore materials like wood, plastic, and paper. So, when you’re playing with magnets, try to find out what they can stick to and what they can’t! Let’s explore the exciting world of magnets together and discover all the fun things they can do! You might even find some surprises along the way!\nContext recap: Magnets are like magic, but they are real science! 🧲 Have you ever seen a magnet pull a paperclip toward it without even touching it? Isn’t that amazing? Magnets can stick to the fridge door and hold up your beautiful artwork, making it look even more special!\nWhy this matters: What Can Magnets Do? helps learners in Physics connect ideas from Pre-K Push, Pull & Play! Physics Fun to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "id": "prek-physics-l07-c1",
+          "title": "The Sticking Power!",
+          "content": "Magnets are so cool! 🧲 They have a special power to pull things toward them. It's like magic! They can stick to your fridge and hold up your drawings. But magnets are picky! They only like to stick to special metals, like iron and steel. They don't stick to wood, plastic, or your teddy bear."
         },
         {
-          "id": "prek-physics-l06-c2",
-          "title": "Attract and Repel",
-          "content": "Every magnet has two special ends called poles: one is the North pole and the other is the South pole. When you bring a North pole and a South pole together, they will SNAP and stick to each other! 🧲❤️🧲 It’s like they are best friends who can’t help but hug! But if you try to put two North poles together or two South poles together, they will PUSH each other away! It’s like they are having a little fight, saying, 'No, I don’t want to be near you!' This pushing away is called repelling, and it’s a fun way to see how magnets work! You can try it with different magnets and see how they act. Isn’t it exciting to discover how magnets can attract and repel each other? Let’s explore more about these magical magnets together!\nContext recap: Every magnet has two special ends called poles: one is the North pole and the other is the South pole. When you bring a North pole and a South pole together, they will SNAP and stick to each other! 🧲❤️🧲 It’s like they are best friends who can’t help but hug! But if you try to put two North poles together or two South poles together, they will PUSH each other away!\nWhy this matters: Attract and Repel helps learners in Physics connect ideas from Pre-K Push, Pull & Play! Physics Fun to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "id": "prek-physics-l07-c2",
+          "title": "Friends and Not-Friends",
+          "content": "Every magnet has two ends, a North pole and a South pole. When a North and a South get close, they are best friends! They SNAP together! ❤️ But if you try to push two Norths together, they say 'No way!' and push each other apart. This is called repelling. It's like they want their own space."
         },
         {
-          "id": "prek-physics-l06-c3",
-          "title": "Magnet Treasure Hunt",
-          "content": "Let’s go on an exciting magnet treasure hunt around your house! 🏠 This is a fun adventure where we can discover which objects are magnetic! First, can you find a spoon? Try to see if a magnet will stick to it. If the spoon is made of metal, it will stick! Now, what about a plastic cup? Give it a try! Oh no, it won’t stick because plastic isn’t magnetic. Now let’s check the fridge door! Wow, it sticks! That’s because it’s made of metal. How about a wooden table? Nope, it won’t stick either! You can explore and test lots of different things around your home. After you test them, you can sort them into two piles: one for 'magnetic' items and another for 'not magnetic' items. This is a super fun way to learn about how magnets work and what they can stick to! Enjoy your treasure hunt!\nContext recap: Let’s go on an exciting magnet treasure hunt around your house! 🏠 This is a fun adventure where we can discover which objects are magnetic! First, can you find a spoon? Try to see if a magnet will stick to it.\nWhy this matters: Magnet Treasure Hunt helps learners in Physics connect ideas from Pre-K Push, Pull & Play! Physics Fun to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "id": "prek-physics-l07-c3",
+          "title": "Let's Go on a Magnet Hunt!",
+          "content": "Let's be detectives! Take a magnet and walk around your room. Will it stick to a spoon? (Yes, if it's metal!) Will it stick to your bed? (No!) Will it stick to a paperclip? (Yes!) See how many magnetic things you can find!"
         }
       ],
       "flashcards": [
         {
-          "id": "prek-physics-l06-f1",
-          "front": "What do magnets attract?",
-          "back": "Metal things made of iron or steel! They do NOT attract wood, plastic, or paper. 🧲"
+          "id": "prek-physics-l07-f1",
+          "front": "What do magnets stick to?",
+          "back": "Metal things like iron and steel! Not wood or plastic. 🧲"
         },
         {
-          "id": "prek-physics-l06-f2",
-          "front": "What are the two poles of a magnet?",
-          "back": "North and South! Opposite poles attract (stick), same poles repel (push away)."
+          "id": "prek-physics-l07-f2",
+          "front": "What are the two ends of a magnet?",
+          "back": "North and South poles! Opposite poles stick together."
         },
         {
-          "id": "prek-physics-l06-f3",
+          "id": "prek-physics-l07-f3",
           "front": "What does 'repel' mean?",
-          "back": "To push away! Two North poles or two South poles repel each other. 🧲💨🧲"
+          "back": "To push away! Two North poles or two South poles push each other away. 🧲💨🧲"
         }
       ],
       "questions": [
         {
-          "id": "prek-physics-l06-q1",
+          "id": "prek-physics-l07-q1",
           "text": "Will a magnet stick to a wooden block?",
           "options": [
             {
@@ -528,7 +579,7 @@ export const PreKPhysics101Module: LearningModule = {
             },
             {
               "id": "b",
-              "text": "No, magnets only stick to metal"
+              "text": "No, magnets only stick to some metals"
             },
             {
               "id": "c",
@@ -540,36 +591,35 @@ export const PreKPhysics101Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Magnets only attract metal like iron and steel — not wood!"
+          "explanation": "Magnets only attract special metals like iron and steel — not wood!"
         }
       ]
     },
     {
-      "id": "prek-physics-l07",
-      "title": "Magnet Lab: Stick or Skip?",
+      "id": "prek-physics-l08",
+      "title": "Magnet Hunt! (Interactive)",
       "type": "interactive",
       "duration": 10,
       "objectives": [
-        "Sort objects into magnetic and non-magnetic groups",
-        "Predict whether a magnet will attract an unfamiliar object"
+        "Sort objects into magnetic and non-magnetic groups"
       ],
       "interactiveActivities": [
         {
-          "id": "prek-physics-l07-ia1",
+          "id": "prek-physics-l08-ia1",
           "type": "sorting_buckets",
           "title": "Magnetic or Not?",
-          "description": "Sort each item: will a magnet stick to it or not?",
+          "description": "Will a magnet stick to it or not? Drag each item to the right box!",
           "estimatedMinutes": 5,
           "difficultyLevel": "easy",
           "data": {
             "buckets": [
               {
                 "id": "magnetic",
-                "label": "Magnet sticks! 🧲"
+                "label": "Sticks! 🧲"
               },
               {
                 "id": "not-magnetic",
-                "label": "Magnet does NOT stick"
+                "label": "Doesn't Stick!"
               }
             ],
             "items": [
@@ -609,47 +659,47 @@ export const PreKPhysics101Module: LearningModule = {
       ]
     },
     {
-      "id": "prek-physics-l08",
-      "title": "Build It Strong: Why Triangles Are Tough!",
+      "id": "prek-physics-l09",
+      "title": "Build a Super Strong Tower!",
       "type": "video",
       "duration": 8,
       "objectives": [
-        "Explain that wide bases make towers more stable",
+        "Explain that a wide base makes a tower more stable",
         "Describe why triangles are the strongest shape for building",
-        "Predict which tower design will stand the longest"
+        "Predict which tower design will stand up the longest"
       ],
       "chunks": [
         {
-          "id": "prek-physics-l08-c1",
-          "title": "The Wobbly Tower Problem",
-          "content": "Let's have some fun with our building blocks! When we stack them straight up, we might notice them wobbling a bit and then, oh no, they CRASH down! 💥 Have you ever wondered why this happens? It's all because of something called gravity. Gravity is like an invisible force that pulls everything down towards the ground. If our tower is tall and skinny, even a little push can make it fall over. But here’s a cool secret: if we want to build a really strong tower, we need to make the bottom wide, just like a pyramid! The wider the base of our tower, the harder it is to tip over. So, if you want your tower to stand tall and proud without falling down, remember to give it a strong, wide base! Let’s try building some towers together and see how tall we can make them without them crashing down!\nContext recap: Let's have some fun with our building blocks! When we stack them straight up, we might notice them wobbling a bit and then, oh no, they CRASH down! 💥 Have you ever wondered why this happens? It's all because of something called gravity.\nWhy this matters: The Wobbly Tower Problem helps learners in Physics connect ideas from Pre-K Push, Pull & Play! Physics Fun to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "id": "prek-physics-l09-c1",
+          "title": "The Wobbly Tower",
+          "content": "Let's build with blocks! If you stack them up, up, up in a tall, skinny line, what happens? It gets wobbly! And... CRASH! 💥 It falls down. Why? Because a skinny tower is easy to tip over."
         },
         {
-          "id": "prek-physics-l08-c2",
+          "id": "prek-physics-l09-c2",
+          "title": "The Super Strong Base",
+          "content": "Here's a secret! To build a strong tower, make the bottom WIDE. Like a pyramid! A wide base is strong and stable. It's very hard to push over. Try building a tower with a big, wide bottom. See how tall you can make it!"
+        },
+        {
+          "id": "prek-physics-l09-c3",
           "title": "Triangle Power!",
-          "content": "Have you ever noticed a triangle? Engineers think it’s a super cool shape! 🔺 Triangles are special because they are the strongest shape around. When you push on a square, it can change into a diamond shape and become floppy, which means it can bend and lose its shape. But when you push on a triangle, it stays strong and firm! This is why you see triangles in many important places like bridges, tall towers, and even in playgrounds where we play. They help these structures stay strong and not fall down, making sure we can have fun safely. So next time you see a triangle, remember how powerful it is! It’s like a superhero shape that helps keep everything standing tall and strong! Isn’t that amazing? Triangles are everywhere, helping us every day!\nContext recap: Have you ever noticed a triangle? Engineers think it’s a super cool shape! 🔺 Triangles are special because they are the strongest shape around. When you push on a square, it can change into a diamond shape and become floppy, which means it can bend and lose its shape.\nWhy this matters: Triangle Power! helps learners in Physics connect ideas from Pre-K Push, Pull & Play! Physics Fun to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
-        },
-        {
-          "id": "prek-physics-l08-c3",
-          "title": "Your Turn to Build!",
-          "content": "Now it's your turn to be a builder! At home, gather your blocks and create two different towers. For the first tower, stack your blocks in a tall, skinny column. For the second tower, build a pyramid shape, making it wide at the bottom and narrow at the top. Once you have both towers built, take a gentle breath and blow on each one. Can you see which tower stands tall and strong? That's right, it's the pyramid tower! 🏗️ This is just like how real buildings are designed. Engineers use similar shapes to make sure buildings are strong and safe. By building these towers, you are practicing engineering just like the professionals do! Keep exploring and building, little engineer!\nContext recap: Now it's your turn to be a builder! At home, gather your blocks and create two different towers. For the first tower, stack your blocks in a tall, skinny column. For the second tower, build a pyramid shape, making it wide at the bottom and narrow at the top.\nWhy this matters: Your Turn to Build! helps learners in Physics connect ideas from Pre-K Push, Pull & Play! Physics Fun to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "Look for triangles! 🔺 Triangles are the strongest shape. You can't squish them easily. Squares can get floppy, but triangles stay strong. That's why you see triangles on big bridges and tall towers. They keep everything from falling down!"
         }
       ],
       "flashcards": [
         {
-          "id": "prek-physics-l08-f1",
-          "front": "Why do wide towers stand better?",
-          "back": "A wide base spreads out the weight, making it harder to tip over!"
+          "id": "prek-physics-l09-f1",
+          "front": "How do you make a tower strong?",
+          "back": "Give it a wide base! This makes it harder to tip over."
         },
         {
-          "id": "prek-physics-l08-f2",
+          "id": "prek-physics-l09-f2",
           "front": "What is the strongest shape?",
           "back": "The triangle! It cannot be squished flat like a square can. 🔺"
         }
       ],
       "questions": [
         {
-          "id": "prek-physics-l08-q1",
+          "id": "prek-physics-l09-q1",
           "text": "Which tower is hardest to knock over?",
           "options": [
             {
@@ -675,79 +725,67 @@ export const PreKPhysics101Module: LearningModule = {
       ]
     },
     {
-      "id": "prek-physics-l09",
-      "title": "Hard Push vs. Soft Push: What Changes?",
-      "type": "video",
+      "id": "prek-physics-l10",
+      "title": "Building Challenge! (Interactive)",
+      "type": "interactive",
       "duration": 8,
       "objectives": [
-        "Predict that a harder push makes something move faster or farther",
-        "Explain that a softer push makes something move slowly or a short distance",
-        "Describe how push strength changes the result"
+        "Choose a wide base for a stable tower",
+        "Pick triangles to make a structure strong"
       ],
-      "chunks": [
+      "interactiveActivities": [
         {
-          "id": "prek-physics-l09-c1",
-          "title": "Gentle Tap vs. Big Shove",
-          "content": "Let’s have some fun with a toy car! First, try giving it a gentle tap. What happens? That’s right! It barely moves at all. Now, let’s try something different. Give the car a BIG push! Whoosh! Look at it zoom across the room! 🚗💨 This is really cool because it teaches us something important about how we can use our strength. When you push harder, the car goes farther and faster. But when you push softly, it doesn’t move much at all. You are in charge of how much force you use! Isn’t that exciting? You can make things go fast or slow just by how hard you push! So, let’s experiment and see what happens when we change how we push. What will you try next?\nContext recap: Let’s have some fun with a toy car! First, try giving it a gentle tap. What happens? That’s right!\nWhy this matters: Gentle Tap vs. Big Shove helps learners in Physics connect ideas from Pre-K Push, Pull & Play! Physics Fun to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
-        },
-        {
-          "id": "prek-physics-l09-c2",
-          "title": "The Bowling Ball Test",
-          "content": "Imagine rolling a big, shiny bowling ball down the lane. If you give it just a tiny little roll, it barely moves at all! But if you give it a strong, powerful roll, it can zoom down the lane and crash into all the pins, getting you a big STRIKE! 🎳 This happens because when you use more force, the ball goes faster and with more power. Just like how athletes throw balls! They know that when they use big pushes, they can send the balls flying far away. But when they want to place the ball gently, like when they are aiming for a target, they use gentle pushes instead. It’s all about using the right amount of force for what you want to do! So remember, whether you’re rolling a bowling ball or playing with your toys, the way you push can change everything!\nContext recap: Imagine rolling a big, shiny bowling ball down the lane. If you give it just a tiny little roll, it barely moves at all! But if you give it a strong, powerful roll, it can zoom down the lane and crash into all the pins, getting you a big STRIKE! 🎳 This happens because when you use more force, the ball goes faster and with more power.\nWhy this matters: The Bowling Ball Test helps learners in Physics connect ideas from Pre-K Push, Pull & Play! Physics Fun to decisions they make during practice and assessment. Keep the explanation friendly and practical."
-        },
-        {
-          "id": "prek-physics-l09-c3",
-          "title": "Force Control in Real Life",
-          "content": "Did you know that you already control force every day in many fun ways? When you gently pet a fluffy cat, you use a soft and gentle force so you don’t hurt it. 🐱 This is important because we want our furry friends to feel loved and safe! Now, think about when you hammer a nail into a piece of wood. You need to use a strong force to push it in all the way. 🔨 That’s a big push! And what about when you press a button on a remote control? You only need a tiny little push to make it work. Knowing how hard to push in different situations is like having a superpower! You can decide how much force to use, and that makes you a great little scientist! Every time you play, you are practicing your force control skills, and that’s really exciting!\nContext recap: Did you know that you already control force every day in many fun ways? When you gently pet a fluffy cat, you use a soft and gentle force so you don’t hurt it. 🐱 This is important because we want our furry friends to feel loved and safe! Now, think about when you hammer a nail into a piece of wood.\nWhy this matters: Force Control in Real Life helps learners in Physics connect ideas from Pre-K Push, Pull & Play! Physics Fun to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
-        }
-      ],
-      "flashcards": [
-        {
-          "id": "prek-physics-l09-f1",
-          "front": "What happens with a harder push?",
-          "back": "Things move FASTER and FARTHER! More force = more movement. 💨"
-        },
-        {
-          "id": "prek-physics-l09-f2",
-          "front": "What happens with a softer push?",
-          "back": "Things move SLOWLY and a SHORT distance. Less force = less movement."
-        }
-      ],
-      "questions": [
-        {
-          "id": "prek-physics-l09-q1",
-          "text": "You give a ball a BIG push. What happens?",
-          "options": [
-            {
-              "id": "a",
-              "text": "It barely moves"
-            },
-            {
-              "id": "b",
-              "text": "It zooms far and fast!"
-            },
-            {
-              "id": "c",
-              "text": "It floats up"
-            },
-            {
-              "id": "d",
-              "text": "It gets smaller"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "A big push = lots of force = the ball goes far and fast!"
+          "id": "prek-physics-l10-ia1",
+          "type": "sorting_buckets",
+          "title": "Strong or Wobbly?",
+          "description": "Which of these will stand up strong? Which will fall down?",
+          "estimatedMinutes": 5,
+          "difficultyLevel": "easy",
+          "data": {
+            "buckets": [
+              {
+                "id": "strong",
+                "label": "Stands Strong 💪"
+              },
+              {
+                "id": "wobbly",
+                "label": "Falls Down 😮"
+              }
+            ],
+            "items": [
+              {
+                "id": "i1",
+                "label": "Pyramid Tower (wide base)",
+                "correctBucketId": "strong"
+              },
+              {
+                "id": "i2",
+                "label": "Tall Skinny Tower",
+                "correctBucketId": "wobbly"
+              },
+              {
+                "id": "i3",
+                "label": "Bridge with Triangles",
+                "correctBucketId": "strong"
+              },
+              {
+                "id": "i4",
+                "label": "Bridge with Squares",
+                "correctBucketId": "wobbly"
+              }
+            ]
+          }
         }
       ]
     },
     {
-      "id": "prek-physics-l10",
-      "title": "Celebration Quiz: Physics Superstar!",
+      "id": "prek-physics-l11",
+      "title": "Final Quiz: You're a Physics Star!",
       "type": "quiz",
       "duration": 10,
       "questions": [
         {
-          "id": "prek-physics-l10-q1",
+          "id": "prek-physics-l11-q1",
           "text": "Pushing a door open is a...",
           "options": [
             {
@@ -771,8 +809,8 @@ export const PreKPhysics101Module: LearningModule = {
           "explanation": "Pushing a door moves it away from you — that is a push!"
         },
         {
-          "id": "prek-physics-l10-q2",
-          "text": "Why does a ball fall when you drop it?",
+          "id": "prek-physics-l11-q2",
+          "text": "Why does an apple fall from a tree?",
           "options": [
             {
               "id": "a",
@@ -780,7 +818,7 @@ export const PreKPhysics101Module: LearningModule = {
             },
             {
               "id": "b",
-              "text": "It is scared"
+              "text": "It is sleepy"
             },
             {
               "id": "c",
@@ -795,7 +833,31 @@ export const PreKPhysics101Module: LearningModule = {
           "explanation": "Gravity is the force that pulls everything down toward Earth!"
         },
         {
-          "id": "prek-physics-l10-q3",
+          "id": "prek-physics-l11-q3",
+          "text": "To make a car go faster down a ramp, you should make the ramp...",
+          "options": [
+            {
+              "id": "a",
+              "text": "Flatter"
+            },
+            {
+              "id": "b",
+              "text": "Steeper"
+            },
+            {
+              "id": "c",
+              "text": "Wider"
+            },
+            {
+              "id": "d",
+              "text": "Softer"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Steeper ramps let gravity pull things down faster!"
+        },
+        {
+          "id": "prek-physics-l11-q4",
           "text": "Which will a magnet stick to?",
           "options": [
             {
@@ -804,7 +866,7 @@ export const PreKPhysics101Module: LearningModule = {
             },
             {
               "id": "b",
-              "text": "A metal paperclip"
+              "text": "A metal key"
             },
             {
               "id": "c",
@@ -816,10 +878,10 @@ export const PreKPhysics101Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Magnets attract metal! Paperclips are made of steel."
+          "explanation": "Magnets attract metal! Keys are usually made of metal."
         },
         {
-          "id": "prek-physics-l10-q4",
+          "id": "prek-physics-l11-q5",
           "text": "What is the strongest shape for building?",
           "options": [
             {
@@ -843,8 +905,8 @@ export const PreKPhysics101Module: LearningModule = {
           "explanation": "Triangles cannot be squished flat — they are the strongest!"
         },
         {
-          "id": "prek-physics-l10-q5",
-          "text": "A gentle push makes a toy car go...",
+          "id": "prek-physics-l11-q6",
+          "text": "A very GENTLE push makes a toy go...",
           "options": [
             {
               "id": "a",
@@ -852,7 +914,7 @@ export const PreKPhysics101Module: LearningModule = {
             },
             {
               "id": "b",
-              "text": "Slowly, just a little"
+              "text": "Slowly, just a little bit"
             },
             {
               "id": "c",
@@ -865,30 +927,6 @@ export const PreKPhysics101Module: LearningModule = {
           ],
           "correctOptionId": "b",
           "explanation": "Less force means less movement — a gentle push = a short, slow roll!"
-        },
-        {
-          "id": "prek-physics-l10-q6",
-          "text": "Two North magnet poles together will...",
-          "options": [
-            {
-              "id": "a",
-              "text": "Stick together"
-            },
-            {
-              "id": "b",
-              "text": "Push each other away"
-            },
-            {
-              "id": "c",
-              "text": "Disappear"
-            },
-            {
-              "id": "d",
-              "text": "Turn into a bird"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Same poles repel — they push each other away!"
         }
       ]
     }

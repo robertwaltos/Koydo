@@ -1,9 +1,9 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const Geography101Module: LearningModule = {
+export const geography_101_Module: LearningModule = {
   "id": "geography-101",
   "title": "Geography: Our Amazing World",
-  "description": "Explore Earth's continents and oceans, learn to read maps, discover landforms and climate zones, navigate world rivers and lakes, and study countries and capitals from every region.",
+  "description": "Embark on a global adventure! Explore Earth's continents and oceans, master map-reading skills, discover towering mountains and vast plains, understand different climates, trace the paths of world rivers, and journey through countries and their capitals.",
   "subject": "Geography",
   "tags": [
     "geography",
@@ -13,7 +13,7 @@ export const Geography101Module: LearningModule = {
   ],
   "minAge": 7,
   "maxAge": 18,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "learningObjectives": [
     "Name and locate the seven continents and five oceans",
     "Read maps using a compass rose, scale, and legend",
@@ -32,17 +32,17 @@ export const Geography101Module: LearningModule = {
         {
           "id": "geography-101-l01-c1",
           "title": "The Seven Continents",
-          "content": "The Earth is an amazing place, and it has seven incredible continents for us to explore! The largest of these is Asia, which is home to many different cultures and landscapes. Next, we have Africa, known for its vast deserts and rich wildlife. Then there’s North America, where you can find everything from snowy mountains to sunny beaches. South America is famous for its rainforests and the Andes mountains. Antarctica is the coldest continent, and it’s unique because it doesn’t have any permanent residents—just scientists visiting for research! Europe is filled with history and beautiful cities, while Australia/Oceania is the smallest continent, known for its unique animals and stunning coastlines. Together, these seven continents cover about 29% of the Earth's surface, and the rest is made up of oceans and other bodies of water. Isn’t it fascinating how diverse and wonderful our planet is? There’s so much to learn about each continent and the amazing things they have to offer!"
+          "content": "Our Earth has seven incredible continents to explore! The largest is Asia, home to many different cultures. Africa is known for its vast deserts and amazing wildlife. North America has everything from snowy mountains to sunny beaches, while South America is famous for its rainforests. Antarctica is the coldest continent, mostly visited by scientists. Europe is filled with history and famous cities. The smallest continent is Australia, which is also a country. It's often grouped with nearby islands into a region called Oceania. Together, these continents are like giant puzzle pieces on our planet."
         },
         {
           "id": "geography-101-l01-c2",
           "title": "The Five Oceans",
-          "content": "Did you know that our planet is surrounded by five incredible oceans? Let's explore them together! The Pacific Ocean is the largest and deepest of all, stretching across a vast area of the Earth. Next, we have the Atlantic Ocean, which is known for its rich history and important trade routes. The Indian Ocean comes next, located between Africa, Asia, and Australia, and is famous for its warm waters. Then, there's the Southern Ocean, which wraps around Antarctica and is unique because it helps regulate the Earth's temperature. Finally, we have the Arctic Ocean, the smallest and coldest of the five, located at the top of the world. Together, these oceans cover about 71% of our planet's surface and hold an astonishing 97% of all the water on Earth! They are not just big bodies of water; they are vital to our climate, weather patterns, and the many ecosystems that thrive within them. Understanding our oceans helps us appreciate the amazing world we live in!"
+          "content": "Surrounding the continents are five massive oceans. The Pacific Ocean is the largest and deepest. The Atlantic Ocean separates the Americas from Europe and Africa. The Indian Ocean is the warmest, nestled between Africa, Asia, and Australia. The Southern Ocean circles Antarctica and helps regulate Earth's temperature. Finally, the Arctic Ocean is the smallest and coldest, located at the North Pole. These oceans cover about 71% of our planet and are vital for our climate, weather, and all life on Earth."
         },
         {
           "id": "geography-101-l01-c3",
           "title": "How Continents Formed",
-          "content": "Did you know that around 200 million years ago, all the continents were joined together in a massive landmass called Pangaea? This supercontinent was like a giant puzzle piece made up of all the land we see today. Over millions of years, the Earth's surface has changed a lot! Tectonic plates, which are huge pieces of the Earth's crust, began to move and shift, causing the continents to drift apart. This movement is still happening today! That's why if you look closely, South America and Africa seem to fit together like two pieces of a puzzle. Isn't it fascinating to think about how our planet has transformed over such a long time? Understanding how continents formed helps us appreciate the incredible history of our Earth and how it continues to change. So, next time you look at a map, remember that those shapes were once all connected!"
+          "content": "Did you know that about 200 million years ago, all the continents were joined together in one supercontinent called Pangaea? Over millions of years, huge pieces of the Earth's crust, called tectonic plates, started to move. This movement caused Pangaea to break apart and the continents to drift to where they are today. This process is still happening! If you look at a map, you can see how South America and Africa seem to fit together like two puzzle pieces. It's amazing to think about how our planet is always changing."
         }
       ],
       "flashcards": [
@@ -145,8 +145,8 @@ export const Geography101Module: LearningModule = {
         {
           "id": "geography-101-l01-act1",
           "type": "drag_and_drop",
-          "title": "Label the map",
-          "description": "On a blank world map, write the name of each continent and ocean in the correct location. Color each continent a different color."
+          "title": "Label the World Map",
+          "description": "Drag the names of the seven continents and five oceans to their correct locations on a world map. Color each continent a different color to make your map vibrant!"
         }
       ],
       "learningAids": [
@@ -154,7 +154,7 @@ export const Geography101Module: LearningModule = {
           "id": "geography-101-l01-a1",
           "type": "image",
           "title": "Concept Card",
-          "content": "Visual summary of the lesson's main concept."
+          "content": "A colorful world map with all continents and oceans clearly labeled, perfect for a quick review."
         }
       ]
     },
@@ -167,17 +167,17 @@ export const Geography101Module: LearningModule = {
         {
           "id": "geography-101-l02-c1",
           "title": "Compass Rose and Directions",
-          "content": "When you look at a map, you will often see a special symbol called a compass rose. This compass rose is very important because it shows us the four main directions: North, South, East, and West. To help you remember these directions easily, you can use a fun phrase: 'Never Eat Soggy Waffles.' Just think of this phrase as you go around the compass in a clockwise direction! But wait, there’s more! There are also in-between directions that we can use, which are called northeast, southeast, southwest, and northwest. These extra directions help us understand exactly where things are located on a map, making it easier for us to find our way around the world. So, the next time you use a map, remember to look for the compass rose and think about those tasty waffles to help you remember your directions!"
+          "content": "When you look at a map, you'll often see a symbol called a compass rose. It shows the four main directions: North, South, East, and West. A fun way to remember them in order is 'Never Eat Soggy Waffles.' Maps also show in-between directions like northeast, southeast, southwest, and northwest. These help us be more precise about where things are. The compass rose is your main tool for navigating a map."
         },
         {
           "id": "geography-101-l02-c2",
           "title": "Map Scale",
-          "content": "A map scale is an important tool that helps us understand how distances on a map compare to actual distances in the real world. Imagine you have a map that shows a scale where 1 inch equals 100 miles. This means that if you measure the distance between two cities on the map and find that they are 3 inches apart, you can calculate that in real life, those two cities are actually 300 miles apart! Knowing how to read and use map scales is super helpful, especially when you are planning a trip or trying to figure out how far away different places are from each other. It allows you to visualize the distance and helps you make better decisions about travel routes and times. So, next time you look at a map, remember to check the scale—it’s like having a secret code that unlocks the real distances between places!"
+          "content": "A map is much smaller than the real world, so we use a map scale to understand distances. The scale might say '1 inch = 100 miles.' This means if you measure 3 inches between two cities on the map, the real distance is 300 miles! Reading the scale is key to figuring out how far apart places really are, which is very helpful for planning a trip."
         },
         {
           "id": "geography-101-l02-c3",
           "title": "Map Legend (Key)",
-          "content": "Have you ever looked at a map and wondered what all those symbols mean? That's where a map legend, which is also called a key, comes in handy! The legend is like a special guide that explains what different symbols represent on the map. For example, if you see a blue line, it usually indicates a river flowing through the area. A small black dot might represent a city, showing you where people live and work. And if you spot a star on the map, it typically marks a capital city, which is often an important place for the country. It's really important to always check the legend before you start reading a map. This way, you can understand what you're looking at and find your way around more easily! Maps can be fun and exciting to explore, especially when you know how to read them well!"
+          "content": "Have you ever wondered what all the symbols on a map mean? That's what the map legend, or key, is for! The legend is a box that explains what each symbol represents. For example, a blue line is usually a river, a small dot might be a city, and a star often marks a capital city. Always check the legend first so you can understand what the map is showing you."
         }
       ],
       "flashcards": [
@@ -280,8 +280,8 @@ export const Geography101Module: LearningModule = {
         {
           "id": "geography-101-l02-act1",
           "type": "project_builder",
-          "title": "Treasure map",
-          "description": "Draw a map of your room or backyard. Include a compass rose, a scale (1 inch = 1 foot), and a legend with symbols for furniture or landmarks. Mark an X for hidden treasure!"
+          "title": "Create a Treasure Map",
+          "description": "Draw a map of your room, backyard, or an imaginary island. Be sure to include a compass rose, a scale (e.g., 1 inch = 1 foot), and a legend with symbols for furniture or landmarks. Mark an 'X' for the hidden treasure!"
         }
       ],
       "learningAids": [
@@ -289,7 +289,7 @@ export const Geography101Module: LearningModule = {
           "id": "geography-101-l02-a1",
           "type": "image",
           "title": "Concept Card",
-          "content": "Visual summary of the lesson's main concept."
+          "content": "An illustrated guide showing a compass rose, a map scale, and a sample legend with symbols for a city, river, and capital."
         }
       ]
     },
@@ -302,17 +302,17 @@ export const Geography101Module: LearningModule = {
         {
           "id": "geography-101-l03-c1",
           "title": "Mountains and Valleys",
-          "content": "Mountains are fascinating and majestic landforms that rise high above the surrounding areas. They are formed through the movement of tectonic plates, which are huge pieces of the Earth's crust that shift and collide over time. The tallest mountain in the world is Mount Everest, which is located in the Himalayas. It reaches an astonishing height of 29,032 feet, making it a popular destination for adventurous climbers! On the other hand, valleys are the low-lying areas found between mountains or hills. These valleys are often shaped by the flowing water of rivers, which carve through the land over many years. A well-known example of a valley is the Grand Canyon, which was formed by the Colorado River cutting through rock over millions of years. Both mountains and valleys play important roles in our planet's landscape, providing habitats for various plants and animals and influencing weather patterns. Understanding these landforms helps us appreciate the beauty and complexity of our Earth!"
+          "content": "Mountains are landforms that rise high above the surrounding area. They are often formed when tectonic plates push against each other. The tallest mountain in the world is Mount Everest, which is over 29,000 feet high! Valleys are the low areas between mountains or hills. They are often carved out by rivers over millions of years. The Grand Canyon is a famous example of a deep valley formed by the Colorado River."
         },
         {
           "id": "geography-101-l03-c2",
           "title": "Plateaus and Plains",
-          "content": "A plateau is a fascinating type of landform that looks like a flat-topped table, but it is actually much higher than the land around it. Imagine standing on a giant table that stretches for miles! One of the most well-known plateaus in the world is the Tibetan Plateau, which is often called the 'Roof of the World.' This incredible place is located at an astonishing height of 15,000 feet above sea level! This means it is really high up in the mountains, where the air is thin and the views are breathtaking.\nOn the other hand, we have plains, which are large, flat areas of land that can stretch as far as the eye can see. These flat lands are perfect for farming because they have rich soil that helps crops grow. A great example of this is the Great Plains in the United States. This region is known for its vast fields of wheat and corn, making it one of the most important agricultural areas in the country. Both plateaus and plains are essential parts of our planet's geography, each with its unique features and importance!"
+          "content": "A plateau is a large, flat area of land that is higher than the land around it, like a flat-topped mountain. The Tibetan Plateau is so high it's called the 'Roof of the World.' Plains, on the other hand, are large areas of flat land with few trees. Because their soil is often rich, plains are perfect for farming. The Great Plains in the United States is a huge agricultural region."
         },
         {
           "id": "geography-101-l03-c3",
           "title": "Islands and Peninsulas",
-          "content": "Islands and peninsulas are two amazing types of landforms that are surrounded by water. An island is a piece of land that is completely surrounded by water on all sides. The largest island in the world is Greenland, which is so big that it has its own unique ecosystems and wildlife! On the other hand, a peninsula is a piece of land that is surrounded by water on three sides. A great example of a peninsula is the state of Florida in the United States, which is known for its beautiful beaches and warm weather. Another famous peninsula is Italy, which is shaped like a boot and is rich in history and culture. These landforms not only make our planet more interesting but also play important roles in the environment and human activities, such as tourism and fishing."
+          "content": "Islands and peninsulas are landforms defined by water. An island is a piece of land that is completely surrounded by water on all sides. Greenland is the world's largest island. A peninsula is a piece of land that is surrounded by water on three sides, but still connected to a larger landmass. Florida in the United States and Italy in Europe are both famous peninsulas."
         }
       ],
       "flashcards": [
@@ -415,8 +415,8 @@ export const Geography101Module: LearningModule = {
         {
           "id": "geography-101-l03-act1",
           "type": "drawing_canvas",
-          "title": "Landform diorama sketch",
-          "description": "Draw a landscape that includes at least 4 landforms: a mountain, a valley, a plateau, and an island in a surrounding lake. Label each one."
+          "title": "Landform Landscape",
+          "description": "Draw a creative landscape that includes at least four different landforms you learned about. Try to include a mountain, a valley, a plateau, and an island in a lake. Label each one."
         }
       ],
       "learningAids": [
@@ -424,7 +424,7 @@ export const Geography101Module: LearningModule = {
           "id": "geography-101-l03-a1",
           "type": "image",
           "title": "Concept Card",
-          "content": "Visual summary of the lesson's main concept."
+          "content": "A dynamic illustration showcasing a mountain, valley, plateau, and island in one landscape, with each landform clearly labeled."
         }
       ]
     },
@@ -437,17 +437,17 @@ export const Geography101Module: LearningModule = {
         {
           "id": "geography-101-l04-c1",
           "title": "Continents and Maps Review",
-          "content": "Let's review what we've learned! There are seven continents and five oceans on our planet. Maps use important tools like compass roses, scales, and legends to help us understand the information they present. Knowing these basics is essential for navigating and exploring our world!\nContext recap: Let's review what we've learned! There are seven continents and five oceans on our planet. Maps use important tools like compass roses, scales, and legends to help us understand the information they present. Knowing these basics is essential for navigating and exploring our world!"
+          "content": "Time to check our progress! Remember, our world has seven continents and five oceans. To explore them, we use maps with special tools: a compass rose for direction, a scale for distance, and a legend to understand the symbols."
         },
         {
           "id": "geography-101-l04-c2",
           "title": "Landforms Review",
-          "content": "In our exploration of landforms, we discovered that mountains, valleys, plateaus, plains, islands, and peninsulas each have their own unique characteristics. These landforms are shaped by the movement of tectonic plates, which continuously change the Earth's surface. Understanding these features helps us appreciate the beauty and complexity of our planet!\nContext recap: In our exploration of landforms, we discovered that mountains, valleys, plateaus, plains, islands, and peninsulas each have their own unique characteristics. These landforms are shaped by the movement of tectonic plates, which continuously change the Earth's surface. Understanding these features helps us appreciate the beauty and complexity of our planet!"
+          "content": "We've also learned about the amazing shapes of our land. From towering mountains and the low-lying valleys between them, to flat-topped plateaus and wide-open plains. We also explored islands and peninsulas, which are defined by the water around them."
         },
         {
           "id": "geography-101-l04-c3",
           "title": "Great Progress!",
-          "content": "Congratulations on your progress! You now have the skills to read maps and identify various landforms. Next, we will dive into exciting topics such as climate zones, rivers, lakes, and world capitals. Keep up the great work as we continue our journey through geography!\nContext recap: Congratulations on your progress! You now have the skills to read maps and identify various landforms. Next, we will dive into exciting topics such as climate zones, rivers, lakes, and world capitals. Keep up the great work as we continue our journey through geography!"
+          "content": "You're doing a fantastic job! You can now read a map and identify key landforms. Get ready, because next we'll explore what the weather is like in different parts of the world, discover major rivers and lakes, and visit countries and their capitals."
         }
       ],
       "flashcards": [
@@ -463,7 +463,7 @@ export const Geography101Module: LearningModule = {
         },
         {
           "id": "geography-101-l04-f3",
-          "front": "Grand Canyon was carved by this river",
+          "front": "The Grand Canyon was carved by this river",
           "back": "Colorado River"
         },
         {
@@ -550,16 +550,16 @@ export const Geography101Module: LearningModule = {
         {
           "id": "geography-101-l04-act1",
           "type": "drawing_canvas",
-          "title": "Map and landform review sheet",
-          "description": "Draw a mini world map with all 7 continents labeled. Below it, draw and label 3 landforms you learned about."
+          "title": "Map and Landform Review Sheet",
+          "description": "On a single page, draw a mini world map and label all 7 continents. Below it, draw and label 3 different landforms you learned about."
         }
       ],
       "learningAids": [
         {
           "id": "geography-101-l04-a1",
-          "type": "mnemonic",
-          "title": "Memory Cue",
-          "content": "Use Plan, Solve, Explain to structure each response."
+          "type": "infographic",
+          "title": "Key Concepts Infographic",
+          "content": "A one-page visual summary of the key concepts from the first three lessons: continents, map tools, and landforms."
         }
       ]
     },
@@ -571,18 +571,23 @@ export const Geography101Module: LearningModule = {
       "chunks": [
         {
           "id": "geography-101-l05-c1",
-          "title": "Tropical Zone",
-          "content": "The tropical zone is a warm and lively area located close to the equator, where the sun shines brightly all year long. In this special region, temperatures are high, and there is plenty of rainfall, which creates the perfect conditions for beautiful and lush tropical rainforests. One of the most famous rainforests in the world, the Amazon rainforest, can be found in this zone. The equator itself is an imaginary line that runs around the middle of our planet, dividing it into two halves: the Northern Hemisphere, which is above the equator, and the Southern Hemisphere, which is below it. Learning about the tropical zone helps us understand the amazing variety of plants and animals that live in these warm climates, and why they are so important to our Earth."
+          "title": "What is Climate?",
+          "content": "Have you ever wondered why some places are hot all year and others have snowy winters? That's because of climate! Climate is the usual weather pattern in a place over a long time. It's affected by how close a place is to the equator (latitude), how high it is (altitude), and how near it is to an ocean. These factors create different climate zones around the world."
         },
         {
           "id": "geography-101-l05-c2",
-          "title": "Temperate Zone",
-          "content": "Temperate zones are really interesting places that sit between the warm tropics and the cold polar regions. In these zones, we get to enjoy four different seasons: spring, summer, fall, and winter. Each season has its own special weather and changes in nature, like flowers blooming in spring or leaves changing colors in fall. Many regions, such as most of the United States, Europe, and eastern China, are located in temperate zones. This variety in climate creates different ecosystems, where many plants and animals thrive. It also allows people to grow a wide range of crops, making temperate zones important for both nature and human life."
+          "title": "Tropical Zone",
+          "content": "The tropical zone is located near the equator, an imaginary line around the middle of the Earth. This zone gets the most direct sunlight, so it's warm all year round. With high temperatures and lots of rain, this zone is home to lush tropical rainforests, like the Amazon. The equator divides the Earth into the Northern and Southern Hemispheres."
         },
         {
           "id": "geography-101-l05-c3",
+          "title": "Temperate Zone",
+          "content": "The temperate zones lie between the warm tropics and the cold polar regions. If you live here, you likely experience four distinct seasons: spring, summer, fall, and winter. The weather changes throughout the year, creating a wide variety of environments. Most of the United States, Europe, and eastern China are in temperate zones."
+        },
+        {
+          "id": "geography-101-l05-c4",
           "title": "Polar Zone",
-          "content": "Polar zones are fascinating areas located near the North and South Poles, where the climate is known for being extremely cold. In these unique regions, winters can last a long time and are often very harsh, while summers are much shorter and tend to be cool. The Arctic, which is found in the Northern Hemisphere, and Antarctica, located in the Southern Hemisphere, are two of the most well-known polar regions. These areas are characterized by vast expanses of ice and snow, creating a stunning yet challenging environment for the plants and animals that live there. The climate in polar zones is influenced by several important factors, including latitude (how far north or south you are), altitude (how high you are above sea level), and the distance from the ocean. Understanding polar zones is not only interesting but also crucial for learning about climate change and how it affects the delicate ecosystems found in these cold regions of our planet."
+          "content": "The polar zones are near the North and South Poles. These are the coldest places on Earth because they receive the least direct sunlight. Winters are very long and harsh, while summers are short and cool. The Arctic (in the north) and Antarctica (in the south) are the two main polar regions, known for their vast ice and snow."
         }
       ],
       "flashcards": [
@@ -685,8 +690,16 @@ export const Geography101Module: LearningModule = {
         {
           "id": "geography-101-l05-act1",
           "type": "drawing_canvas",
-          "title": "Climate zone map",
-          "description": "On a world map, color the tropical zone red, the temperate zones green, and the polar zones blue. Draw the equator and label each zone."
+          "title": "Climate Zone Map",
+          "description": "On a world map, color the tropical zone red, the temperate zones green, and the polar zones blue. Draw and label the equator to show the center of the tropical zone."
+        }
+      ],
+      "learningAids": [
+        {
+          "id": "geography-101-l05-a1",
+          "type": "image",
+          "title": "Concept Card",
+          "content": "A diagram of the Earth showing how the sun's rays create the hot Tropical, mild Temperate, and cold Polar zones."
         }
       ]
     },
@@ -699,17 +712,17 @@ export const Geography101Module: LearningModule = {
         {
           "id": "geography-101-l06-c1",
           "title": "Major World Rivers",
-          "content": "The Nile River, which flows through northeastern Africa, is known as the longest river in the world, measuring about 4,130 miles long! This incredible river is not just a long stretch of water; it has been essential for the people and wildlife in the region for thousands of years. Next, we have the Amazon River, located in South America. This river is special because it carries more water than any other river on the planet and flows through the Amazon Rainforest, which is the largest rainforest in the world. The Amazon is home to countless species of plants and animals, making it a vital ecosystem. In North America, the Mississippi River is very important as it drains water from 31 states, providing water for many communities and supporting a variety of wildlife. Lastly, the Yangtze River in China is the longest river in Asia, playing a crucial role in the culture and economy of the region. Each of these rivers is not only a natural wonder but also a lifeline for the people and ecosystems that depend on them."
+          "content": "The Nile River in Africa is the longest river in the world, flowing for about 4,130 miles. In South America, the Amazon River carries more water than any other river and runs through the world's largest rainforest. The Mississippi River is a vital waterway in North America, and the Yangtze River is the longest river in Asia, playing a huge role in China's history and economy."
         },
         {
           "id": "geography-101-l06-c2",
           "title": "Major World Lakes",
-          "content": "Let's explore some of the most important lakes in the world! The Caspian Sea, which is found on the border between Asia and Europe, holds the title of the largest lake by area. This means it covers a vast space! Moving over to North America, we have Lake Superior, which is the largest freshwater lake when we look at its surface area. That means it has more water on top than any other freshwater lake! Now, if we travel all the way to Russia, we find Lake Baikal. This lake is special because it is the deepest lake in the world, reaching incredible depths. It also contains about 20% of all the unfrozen freshwater on our planet! These lakes are not just stunning to look at; they play a crucial role in supporting wildlife, providing places for people to enjoy activities like fishing and swimming, and supplying water for our daily needs. Understanding these lakes helps us appreciate the beauty and importance of our planet's natural resources."
+          "content": "The Caspian Sea, located between Europe and Asia, is the world's largest lake by area. In North America, Lake Superior is the largest freshwater lake by surface area. And in Russia, Lake Baikal is the deepest lake in the world and holds about 20% of the world's unfrozen fresh water. These lakes are important for wildlife, recreation, and as a source of fresh water."
         },
         {
           "id": "geography-101-l06-c3",
           "title": "Why Rivers and Lakes Matter",
-          "content": "Rivers and lakes are incredibly important to our planet. They provide essential resources such as drinking water, irrigation for farms, and transportation routes for people and goods. Additionally, they create habitats for a wide variety of wildlife. For example, ancient civilizations, like the one in Egypt, flourished along the banks of the Nile River due to its fertile flood plains, which supported agriculture and trade. Understanding the significance of rivers and lakes helps us appreciate their role in sustaining life.\nContext recap: Rivers and lakes are incredibly important to our planet. They provide essential resources such as drinking water, irrigation for farms, and transportation routes for people and goods. Additionally, they create habitats for a wide variety of wildlife. For example, ancient civilizations, like the one in Egypt, flourished along the banks of the Nile River due to its fertile flood plains, which supported agriculture and trade."
+          "content": "Rivers and lakes are vital for life. They provide drinking water for people and animals, water for growing crops (irrigation), and paths for boats to travel. Many ancient civilizations, like Egypt along the Nile, grew strong because they had a reliable source of water for farming and trade. These bodies of water are essential for our planet's health."
         }
       ],
       "flashcards": [
@@ -812,8 +825,16 @@ export const Geography101Module: LearningModule = {
         {
           "id": "geography-101-l06-act1",
           "type": "drawing_canvas",
-          "title": "River and lake map",
-          "description": "On a world map, draw and label the Nile, Amazon, Mississippi, and Yangtze rivers in blue. Mark Lake Baikal, Lake Superior, and the Caspian Sea. Add arrows showing which direction each river flows."
+          "title": "River and Lake Map",
+          "description": "On a world map, draw and label the Nile, Amazon, Mississippi, and Yangtze rivers in blue. Mark the locations of Lake Baikal, Lake Superior, and the Caspian Sea. Add small arrows to show the direction each river flows."
+        }
+      ],
+      "learningAids": [
+        {
+          "id": "geography-101-l06-a1",
+          "type": "image",
+          "title": "Concept Card",
+          "content": "A world map highlighting the major rivers and lakes from the lesson, with a small fact box for each."
         }
       ]
     },
@@ -826,17 +847,17 @@ export const Geography101Module: LearningModule = {
         {
           "id": "geography-101-l07-c1",
           "title": "The Americas",
-          "content": "In the Americas, we find many fascinating capitals that are important to their countries. The capital of the United States is Washington, D.C. This city is not only the political center of the country but also a place filled with history, monuments, and museums that tell the story of the nation. Moving north, we reach Canada, where the capital is Ottawa. Ottawa is known for its stunning buildings, including the Parliament Hill, and it hosts many cultural events throughout the year. Next, we travel to Mexico City, the capital of Mexico. This vibrant city is one of the largest in the world and is famous for its rich culture, delicious food, and lively atmosphere. Finally, we have Brazil, the largest country in South America, with its capital in Brasília. Brasília is unique because it was designed with modern architecture and is laid out in a way that resembles an airplane from above. Learning about these capitals helps us understand the heart and identity of each country in the Americas."
+          "content": "Let's visit some capitals in the Americas! The capital of the United States is Washington, D.C., a city full of monuments and museums. In Canada, the capital is Ottawa. Mexico's capital is Mexico City, one of the largest and most vibrant cities in the world. In South America, the capital of Brazil is Brasília, a city famous for its modern architecture that looks like an airplane from above."
         },
         {
           "id": "geography-101-l07-c2",
           "title": "Europe, Asia, and Africa",
-          "content": "In Europe, the capital of France is Paris, often called the 'City of Light.' The United Kingdom's capital is London, a city famous for its history and landmarks. Germany's capital is Berlin, known for its vibrant culture and history. Russia, the largest country in the world, has its capital in Moscow, a city rich in history and architecture. In Asia, China’s capital is Beijing, while India’s capital is New Delhi. Japan’s capital is Tokyo, a bustling metropolis. Lastly, Egypt’s capital is Cairo, and South Africa has three capitals: Pretoria, Cape Town, and Bloemfontein, each serving different governmental functions."
+          "content": "Let's take a quick tour of other major capitals! In Europe, Paris is the capital of France, and London is the capital of the United Kingdom. In Asia, you'll find Beijing in China and Tokyo in Japan. Moscow is the capital of the vast country of Russia. In Africa, Cairo is the capital of Egypt. Some countries, like South Africa, even have multiple capitals for different government functions!"
         },
         {
           "id": "geography-101-l07-c3",
           "title": "Australia and Fun Facts",
-          "content": "Australia's capital city is Canberra, which many people mistakenly think is Sydney, the largest city in Australia. It's important to know that there are about 195 countries in the world, and each one has its own special culture, traditions, and history that make it unique. For example, the smallest country in the world is Vatican City, which is a tiny independent state located right in the heart of Rome, Italy. It’s fascinating to learn that the newest country is South Sudan, which became independent in 2011. By exploring these countries and their capitals, we can appreciate the rich diversity and variety of life around our planet, helping us to understand and respect different ways of living."
+          "content": "The capital of Australia is Canberra, a city chosen as a compromise between the two largest cities, Sydney and Melbourne. Did you know there are about 195 countries in the world? The smallest is Vatican City, an independent state inside Rome, Italy. The newest country is South Sudan, which was formed in 2011. Each country has its own unique culture and history."
         }
       ],
       "flashcards": [
@@ -939,8 +960,16 @@ export const Geography101Module: LearningModule = {
         {
           "id": "geography-101-l07-act1",
           "type": "matching_pairs",
-          "title": "Capital city match",
+          "title": "Capital City Match",
           "description": "Match each country to its capital: USA→Washington D.C., Japan→Tokyo, France→Paris, Brazil→Brasília, Australia→Canberra, Egypt→Cairo. Try to do it from memory!"
+        }
+      ],
+      "learningAids": [
+        {
+          "id": "geography-101-l07-a1",
+          "type": "image",
+          "title": "Capital City Postcards",
+          "content": "A collection of digital 'postcards' from key capital cities like Paris, Tokyo, and Brasília, each showing a famous landmark."
         }
       ]
     },
@@ -953,17 +982,17 @@ export const Geography101Module: LearningModule = {
         {
           "id": "geography-101-l08-c1",
           "title": "Continents, Maps, and Landforms Review",
-          "content": "In geography, we learn that there are seven continents and five oceans on our planet. Maps are essential tools that help us navigate and understand our world; they often include features like compass roses, scales, and legends to guide us. Major landforms include mountains, valleys, plateaus, plains, islands, and peninsulas, each with its own unique characteristics and importance. Understanding these concepts is crucial for exploring the geography of our amazing world.\nContext recap: In geography, we learn that there are seven continents and five oceans on our planet. Maps are essential tools that help us navigate and understand our world; they often include features like compass roses, scales, and legends to guide us. Major landforms include mountains, valleys, plateaus, plains, islands, and peninsulas, each with its own unique characteristics and importance. Understanding these concepts is crucial for exploring the geography of our amazing world."
+          "content": "Let's review our journey! We started with the big picture: seven continents and five oceans. We learned to use maps as our guide, using the compass rose, scale, and legend. We then explored Earth's amazing landforms, from the highest mountains to the flattest plains."
         },
         {
           "id": "geography-101-l08-c2",
           "title": "Climate, Rivers, and Lakes Review",
-          "content": "There are three main climate zones on Earth: tropical, temperate, and polar. The Nile River is recognized as the longest river in the world, while Lake Baikal is known for being the deepest lake, holding a significant portion of the world's unfrozen freshwater. Rivers play a crucial role in supporting agriculture, providing drinking water, and facilitating transportation. Understanding these elements helps us appreciate the interconnectedness of our planet's ecosystems.\nContext recap: There are three main climate zones on Earth: tropical, temperate, and polar. The Nile River is recognized as the longest river in the world, while Lake Baikal is known for being the deepest lake, holding a significant portion of the world's unfrozen freshwater. Rivers play a crucial role in supporting agriculture, providing drinking water, and facilitating transportation. Understanding these elements helps us appreciate the interconnectedness of our planet's ecosystems."
+          "content": "Next, we investigated climate, learning why tropical zones are hot, polar zones are cold, and temperate zones have four seasons. We traced the paths of the world's longest rivers, like the Nile, and discovered the deepest lakes, like Lake Baikal, learning why they are so important for life."
         },
         {
           "id": "geography-101-l08-c3",
           "title": "Countries and Capitals Review",
-          "content": "There are 195 countries in the world, and each country has its own capital city that serves as the center of government. Vatican City is the smallest country, known for its rich history and significance in the Catholic Church. By learning about these countries and their capitals, you are becoming a world geography expert, equipped with knowledge about the diverse cultures and places that make up our planet!\nContext recap: There are 195 countries in the world, and each country has its own capital city that serves as the center of government. Vatican City is the smallest country, known for its rich history and significance in the Catholic Church. By learning about these countries and their capitals, you are becoming a world geography expert, equipped with knowledge about the diverse cultures and places that make up our planet!"
+          "content": "Finally, we visited some of the world's 195 countries and their capital cities, from Washington, D.C. to Canberra. You've learned so much about our planet. Congratulations on becoming a world geography expert!"
         }
       ],
       "flashcards": [
@@ -1066,8 +1095,16 @@ export const Geography101Module: LearningModule = {
         {
           "id": "geography-101-l08-act1",
           "type": "project_builder",
-          "title": "Geography journal",
-          "description": "Create a geography journal with one page per lesson topic: Continents, Maps, Landforms, Climate, Rivers/Lakes, and Countries. Write 2-3 facts and draw a picture for each. Share your journal with someone and quiz them!"
+          "title": "My Geography Journal",
+          "description": "Create a geography journal to show what you've learned! Dedicate one page to each major topic: Continents, Maps, Landforms, Climate, Rivers/Lakes, and Countries. On each page, write 2-3 key facts and draw a picture. Share your journal with family or friends!"
+        }
+      ],
+      "learningAids": [
+        {
+          "id": "geography-101-l08-a1",
+          "type": "printable",
+          "title": "Geography Expert Certificate",
+          "content": "A printable certificate of completion to celebrate your new geography knowledge. Fill in your name and date!"
         }
       ]
     }

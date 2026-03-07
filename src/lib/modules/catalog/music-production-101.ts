@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const MusicProduction101Module: LearningModule = {
+export const music_production_101_Module: LearningModule = {
   "id": "music-production-101",
   "title": "Introduction to Music Production",
   "description": "Learn to create music with digital tools — from setting up a DAW and recording audio to mixing, beat making, and sound design. No instruments required.",
@@ -14,7 +14,7 @@ export const MusicProduction101Module: LearningModule = {
   ],
   "minAge": 13,
   "maxAge": 18,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "learningObjectives": [
     "Navigate a DAW (Digital Audio Workstation) interface and its core features",
     "Record audio using a microphone and understand signal flow",
@@ -22,7 +22,8 @@ export const MusicProduction101Module: LearningModule = {
     "Apply EQ, compression, and reverb to shape a mix",
     "Arrange a song with intro, verse, chorus, and outro sections",
     "Understand basic sound design with synthesizers",
-    "Export a finished track in standard audio formats"
+    "Export a finished track in standard audio formats",
+    "Produce and export a short, original musical piece combining beats, audio/MIDI, and mixing techniques"
   ],
   "lessons": [
     {
@@ -39,47 +40,47 @@ export const MusicProduction101Module: LearningModule = {
         {
           "id": "music-production-101-l01-c1",
           "title": "The Digital Audio Workstation",
-          "content": "A Digital Audio Workstation, commonly known as a DAW, is a powerful software tool that enables you to create and produce music directly on your computer. With a DAW, you can perform a variety of tasks: you can record sounds, edit them to make them just right, arrange different sections of your song in a way that flows well, mix all the elements together to create a polished sound, and finally, export your completed music so you can share it with friends or even the world!\nIn the past, making music was a complex process that required a lot of expensive equipment and a large studio filled with various machines, such as tape recorders and mixing consoles. These setups could take up entire rooms and were often only accessible to professional musicians and producers. However, thanks to advancements in technology, you can now have all of that capability right on your laptop!\nIn fact, the features and power of a modern DAW can actually exceed what was available in a million-dollar studio back in the 1980s! This means that almost every popular song you hear today has been created using a DAW, making it an essential tool for anyone who wants to dive into music production. Whether you're a beginner or an experienced musician, learning how to use a DAW can open up a world of creative possibilities for you in music-making.\nContext recap: A Digital Audio Workstation, commonly known as a DAW, is a powerful software tool that enables you to create and produce music directly on your computer. With a DAW, you can perform a variety of tasks: you can record sounds, edit them to make them just right, arrange different sections of your song in a way that flows well, mix all the elements together to create a polished sound, and finally, export your completed music so you can share it with friends or even the world! In the past, making music was a complex process that required a lot of expensive equipment and a large studio filled with various machines, such as tape recorders and mixing consoles. These setups could take up entire rooms and were often only accessible to professional musicians and producers."
+          "content": "A Digital Audio Workstation, or DAW, is the software that lets you create and produce music on your computer. With a DAW, you can record sounds, edit them, arrange them into a song, mix all the parts together for a polished sound, and export your finished music to share with the world. In the past, this required a large studio full of expensive equipment like tape machines and mixing consoles. Today, a modern DAW on a laptop can do everything a million-dollar studio from the 1980s could do, and more! Nearly every popular song you hear today was made using a DAW, making it the essential tool for modern music production."
         },
         {
           "id": "music-production-101-l01-c2",
           "title": "Core Interface Elements",
-          "content": "Every Digital Audio Workstation (DAW) has four main parts that are essential for creating music. First, we have the Timeline or Arrangement View. This is where you can see your song laid out in tracks from left to right. It helps you organize your music and visualize how different sections fit together, just like a blueprint for a house. Next is the Mixer. This is a powerful tool that allows you to control the volume, panning, and effects for each track. Think of it as the control center where you blend different sounds together to create the perfect mix. The third part is the Piano Roll or MIDI Editor. This is where you can draw or edit musical notes for virtual instruments. It’s a fantastic way to create melodies and harmonies, allowing your creativity to shine. Finally, we have the Browser. This is your treasure chest where you can find sounds, samples, and plugins to use in your music. It’s like a library filled with all the tools you need to bring your musical ideas to life. Learning these four areas is similar to getting to know the different rooms in a new house; each room has its own purpose and contributes to making your musical masterpiece come together beautifully.\nContext recap: Every Digital Audio Workstation (DAW) has four main parts that are essential for creating music. First, we have the Timeline or Arrangement View. This is where you can see your song laid out in tracks from left to right. It helps you organize your music and visualize how different sections fit together, just like a blueprint for a house.\nWhy this matters: Core Interface Elements helps learners in Music connect ideas from Introduction to Music Production to decisions they make during practice and assessment. Connect ideas to real decisions and evidence.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "Every DAW has four main parts. First is the Timeline or Arrangement View, where you see your song laid out in tracks from left to right, like a blueprint for your music. Next is the Mixer, which is the control center for adjusting the volume, panning (left/right placement), and effects for each track. The third part is the Piano Roll or MIDI Editor, a grid where you can draw or edit musical notes for virtual instruments to create melodies and harmonies. Finally, there's the Browser, which is your library for finding sounds, samples, and plugins to use in your music. Learning these four areas is like getting to know the rooms in a new house; each has a purpose in helping you build your song."
         },
         {
           "id": "music-production-101-l01-c3",
           "title": "Choosing a DAW",
-          "content": "When it comes to creating music, choosing the right Digital Audio Workstation (DAW) is an important step. There are several popular DAWs, each designed to cater to different needs and styles of music production. For instance, Ableton Live is known for its excellent capabilities in beat making and is especially favored by musicians who perform live. If you're a Mac user looking to write songs, Logic Pro is a powerful tool that offers a wide range of features to help you craft your music. On the other hand, FL Studio is a favorite among hip-hop and electronic dance music producers, and it works on both Windows and Mac platforms, making it quite versatile. If you're just starting out, GarageBand is a fantastic option because it's free for Mac and iOS users, providing a user-friendly interface that’s perfect for beginners. Lastly, Reaper is an affordable DAW that allows for extensive customization, making it suitable for those who want to tailor their music production experience. While all these DAWs share similar core functions, the most important thing is to choose one that you enjoy using and feel comfortable mastering. Remember, the best DAW is the one that inspires you to create music!\nContext recap: When it comes to creating music, choosing the right Digital Audio Workstation (DAW) is an important step. There are several popular DAWs, each designed to cater to different needs and styles of music production. For instance, Ableton Live is known for its excellent capabilities in beat making and is especially favored by musicians who perform live. If you're a Mac user looking to write songs, Logic Pro is a powerful tool that offers a wide range of features to help you craft your music.\nWhy this matters: Choosing a DAW helps learners in Music connect ideas from Introduction to Music Production to decisions they make during practice and assessment. Connect ideas to real decisions and evidence."
+          "content": "There are many popular DAWs, each with its own strengths. Ableton Live is great for beat making and live performance. Logic Pro is a powerful choice for Mac users who want to write and produce songs. FL Studio is a favorite among hip-hop and electronic producers and works on both Windows and Mac. For beginners, GarageBand is a fantastic free option for Mac and iOS users. Reaper is an affordable and highly customizable choice. While they all share the same core functions, the best DAW is the one you enjoy using and feel inspired to master."
         }
       ],
       "flashcards": [
         {
           "id": "music-production-101-l01-f1",
           "front": "DAW",
-          "back": "Digital Audio Workstation — software for recording, editing, arranging, mixing, and exporting music"
+          "back": "Digital Audio Workstation — software for recording, editing, arranging, mixing, and exporting music."
         },
         {
           "id": "music-production-101-l01-f2",
-          "front": "Timeline / Arrangement view",
-          "back": "The main view in a DAW showing tracks laid out horizontally over time"
+          "front": "Timeline / Arrangement View",
+          "back": "The main view in a DAW showing tracks laid out horizontally over time."
         },
         {
           "id": "music-production-101-l01-f3",
-          "front": "Piano roll",
-          "back": "A grid editor in a DAW where you draw and edit MIDI notes for virtual instruments"
+          "front": "Piano Roll",
+          "back": "A grid editor in a DAW where you draw and edit MIDI notes for virtual instruments."
         },
         {
           "id": "music-production-101-l01-f4",
-          "front": "MIDI",
-          "back": "Musical Instrument Digital Interface — a protocol that transmits note data (pitch, velocity, duration) rather than audio"
+          "front": "Mixer",
+          "back": "A view in a DAW with faders and knobs to control the volume, panning, and effects for each track."
         }
       ],
       "learningAids": [
         {
           "id": "music-production-101-l01-a1",
           "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary of the lesson's main concept."
+          "title": "DAW Interface Diagram",
+          "content": "An annotated screenshot of a typical DAW, highlighting the Timeline, Mixer, Piano Roll, and Browser."
         }
       ]
     },
@@ -97,17 +98,17 @@ export const MusicProduction101Module: LearningModule = {
         {
           "id": "music-production-101-l02-c1",
           "title": "Audio: Capturing Sound",
-          "content": "When we discuss audio recordings, we are really talking about the process of capturing real sound waves. This fascinating process begins when a microphone picks up vibrations in the air, which are created by sounds around us. The microphone then converts these vibrations into an electrical signal. This signal is sent to a Digital Audio Workstation (DAW), which is a special software used for music production. The DAW stores this electrical signal as a digital file, and you might recognize some common file formats like WAV, AIFF, or MP3.\nIt's important to understand that audio recordings are fixed once they are made. This means that if you want to change the pitch or timing of a note after it has been recorded, it can be quite challenging without using special tools designed for this purpose, such as Flex Time or Melodyne.\nAudio recordings are particularly great for capturing the essence of vocals, live instruments, and sound effects. They allow you to preserve the unique qualities of a performance, making it sound authentic and true to life. This is why many musicians and producers choose to use audio recordings in their projects, as they bring a rich, organic feel to the music.\nContext recap: When we discuss audio recordings, we are really talking about the process of capturing real sound waves. This fascinating process begins when a microphone picks up vibrations in the air, which are created by sounds around us. The microphone then converts these vibrations into an electrical signal. This signal is sent to a Digital Audio Workstation (DAW), which is a special software used for music production.\nWhy this matters: Audio: Capturing Sound helps learners in Music connect ideas from Introduction to Music Production to decisions they make during practice and assessment. Connect ideas to real decisions and evidence.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "Audio recording is the process of capturing real sound waves. A microphone picks up vibrations in the air and converts them into an electrical signal. Your DAW then stores this signal as a digital file, like a WAV or MP3. Think of it like taking a photograph of a sound. Once an audio recording is made, it's fixed. Changing the pitch or timing of a note is difficult without special tools. Audio is perfect for capturing the unique character of vocals, live instruments like guitars, and real-world sound effects."
         },
         {
           "id": "music-production-101-l02-c2",
-          "title": "MIDI: Capturing Performance",
-          "content": "MIDI, which stands for Musical Instrument Digital Interface, is a fascinating tool in music production that works differently from traditional audio recording. Instead of capturing actual sound, MIDI records your performance as data. This data includes important details like which notes you played, how hard you pressed each key, and how long you held them down. This means that when you play a note on your keyboard, MIDI takes note of all these aspects and stores them as information.\nOnce you have recorded your performance, this data can trigger a virtual instrument. Virtual instruments can be anything from a software synthesizer that creates electronic sounds, to a digital piano that mimics the sound of a real piano, or even a drum machine that produces rhythmic beats.\nOne of the most exciting features of MIDI is its flexibility. After you record, you can easily change the instrument you used to play the notes. If you made a mistake and played the wrong note, you can fix it without having to start over. You can also adjust the timing of your notes to make them fit better with the music, or even change the key of the entire piece. This means you can experiment and explore different sounds and styles without the pressure of re-recording everything.\nMIDI is particularly great for creating beats, synthesizer sounds, and even simulating a full orchestra with virtual instruments. It opens up a world of possibilities for musicians and producers, allowing for creativity and innovation in music production.\nContext recap: MIDI, which stands for Musical Instrument Digital Interface, is a fascinating tool in music production that works differently from traditional audio recording. Instead of capturing actual sound, MIDI records your performance as data. This data includes important details like which notes you played, how hard you pressed each key, and how long you held them down. This means that when you play a note on your keyboard, MIDI takes note of all these aspects and stores them as information.\nWhy this matters: MIDI: Capturing Performance helps learners in Music connect ideas from Introduction to Music Production to decisions they make during practice and assessment. Connect ideas to real decisions and evidence."
+          "title": "MIDI: Capturing Instructions",
+          "content": "MIDI, which stands for Musical Instrument Digital Interface, doesn't record sound. Instead, it records performance data—the instructions for what to play. This data includes which notes you played, how hard you pressed the keys (velocity), and how long you held them. This MIDI data then triggers a virtual instrument, like a software synthesizer or a digital piano. The biggest advantage of MIDI is its flexibility. After recording, you can easily fix wrong notes, change the timing, or even switch the instrument entirely without re-recording. MIDI is ideal for creating beats, synthesizer parts, and basslines."
         },
         {
           "id": "music-production-101-l02-c3",
           "title": "When to Use Each",
-          "content": "When you're making music, it's important to think about whether to use audio or MIDI, as each has its own strengths. Audio is great for capturing real performances, like when you record vocals, acoustic guitar, live drums, or even sounds from the environment, known as field recordings. These sounds have a unique quality that can really bring your music to life. On the flip side, MIDI is perfect for creating elements like drum beats, synthesizer pads, piano parts, and orchestral arrangements. The cool thing about MIDI is that it gives you the flexibility to edit your music after you've recorded it, allowing you to experiment and make changes easily. In fact, many professional music producers use a mix of both audio and MIDI in their work. They might use MIDI for programmed elements, which can be adjusted and tweaked, and audio for those special live performances. When you combine these two in a Digital Audio Workstation (DAW), you can create a polished and professional-sounding final product that showcases the best of both worlds.\nContext recap: When you're making music, it's important to think about whether to use audio or MIDI, as each has its own strengths. Audio is great for capturing real performances, like when you record vocals, acoustic guitar, live drums, or even sounds from the environment, known as field recordings. These sounds have a unique quality that can really bring your music to life. On the flip side, MIDI is perfect for creating elements like drum beats, synthesizer pads, piano parts, and orchestral arrangements.\nWhy this matters: When to Use Each helps learners in Music connect ideas from Introduction to Music Production to decisions they make during practice and assessment. Connect ideas to real decisions and evidence."
+          "content": "Knowing when to use audio or MIDI is key. Use audio for capturing unique, real-world performances: vocals, acoustic guitars, live drums, or environmental sounds. Use MIDI when you want flexibility and control over programmed elements: drum machine beats, synthesizer pads, piano parts, and orchestral arrangements. Most professional productions use a hybrid approach, combining the organic feel of recorded audio with the editable power of MIDI to get the best of both worlds."
         }
       ],
       "interactiveActivities": [
@@ -158,26 +159,26 @@ export const MusicProduction101Module: LearningModule = {
       "flashcards": [
         {
           "id": "music-production-101-l02-f1",
-          "front": "Audio recording",
-          "back": "A digital capture of actual sound waves — fixed once recorded; used for vocals and live instruments"
+          "front": "Audio Recording",
+          "back": "A digital capture of actual sound waves. It's fixed once recorded and is used for vocals and live instruments."
         },
         {
           "id": "music-production-101-l02-f2",
-          "front": "MIDI recording",
-          "back": "A capture of performance data (notes, velocity, duration) — fully editable; triggers virtual instruments"
+          "front": "MIDI",
+          "back": "Musical Instrument Digital Interface. A capture of performance data (notes, velocity, duration) that is fully editable and triggers virtual instruments."
         },
         {
           "id": "music-production-101-l02-f3",
-          "front": "Virtual instrument (VSTi)",
-          "back": "Software that generates sound from MIDI data — synthesizers, samplers, drum machines"
+          "front": "Virtual Instrument (VSTi)",
+          "back": "Software that generates sound from MIDI data, such as synthesizers, samplers, and drum machines."
         }
       ],
       "learningAids": [
         {
-          "id": "music-production-101-l02-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Follow the prompt sequence and document your reasoning."
+          "id": "music-production-101-l02-a2",
+          "type": "diagram",
+          "title": "Audio vs. MIDI Comparison",
+          "content": "A side-by-side visual chart comparing the properties of audio waveforms and MIDI note data."
         }
       ]
     },
@@ -213,7 +214,7 @@ export const MusicProduction101Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": ""
+          "explanation": "MIDI doesn't record sound itself, but the instructions for playing a sound: which note, how hard (velocity), and for how long (duration)."
         },
         {
           "id": "music-production-101-l03-q2",
@@ -222,7 +223,7 @@ export const MusicProduction101Module: LearningModule = {
           "options": [
             {
               "id": "a",
-              "text": "Piano roll"
+              "text": "Piano Roll"
             },
             {
               "id": "b",
@@ -238,7 +239,7 @@ export const MusicProduction101Module: LearningModule = {
             }
           ],
           "correctOptionId": "c",
-          "explanation": ""
+          "explanation": "The Timeline, also called the Arrangement view, is the main workspace where you see all your audio and MIDI tracks laid out horizontally, representing the progression of the song over time."
         },
         {
           "id": "music-production-101-l03-q3",
@@ -263,7 +264,7 @@ export const MusicProduction101Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": ""
+          "explanation": "Audio recording is the process of capturing actual sound waves. This makes it ideal for sources with unique, complex nuances like the human voice or an acoustic instrument."
         },
         {
           "id": "music-production-101-l03-q4",
@@ -288,7 +289,7 @@ export const MusicProduction101Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": ""
+          "explanation": "Because MIDI is just data, you can easily change any aspect of the performance—the notes, the timing, or even the virtual instrument playing the notes—without having to re-record."
         }
       ],
       "quizBlueprint": {
@@ -297,15 +298,7 @@ export const MusicProduction101Module: LearningModule = {
           "remember": 2,
           "understand": 2
         }
-      },
-      "learningAids": [
-        {
-          "id": "music-production-101-l03-a1",
-          "type": "mnemonic",
-          "title": "Memory Cue",
-          "content": "Use Plan, Solve, Explain to structure each response."
-        }
-      ]
+      }
     },
     {
       "id": "music-production-101-l04",
@@ -321,47 +314,47 @@ export const MusicProduction101Module: LearningModule = {
         {
           "id": "music-production-101-l04-c1",
           "title": "The Drum Kit Breakdown",
-          "content": "Every great beat begins with three essential sounds that serve as the backbone of rhythm in music production. First, we have the Kick, which is the deep, low thump that drives the rhythm forward. You can usually hear it on the first and third beats of a measure, giving the music its pulse. Next is the Snare, which produces a sharp, cracking sound that adds a punch to the beat. This sound typically lands on the second and fourth beats, creating a strong backbeat that makes you want to move. Finally, we have the Hi-hat, which creates a sizzling metallic pulse that helps keep time. The Hi-hat often plays faster notes, like eighth or sixteenth notes, adding texture and energy to the rhythm. Together, these three sounds—the Kick, Snare, and Hi-hat—form the rhythmic skeleton that supports nearly every genre of music. Understanding how to use these elements effectively is crucial for any aspiring music producer, as they lay the groundwork for creating engaging and dynamic beats that resonate with listeners. By mastering these sounds, you can start to explore your own unique style and make music that truly reflects your creativity.\nContext recap: Every great beat begins with three essential sounds that serve as the backbone of rhythm in music production. First, we have the Kick, which is the deep, low thump that drives the rhythm forward. You can usually hear it on the first and third beats of a measure, giving the music its pulse. Next is the Snare, which produces a sharp, cracking sound that adds a punch to the beat.\nWhy this matters: The Drum Kit Breakdown helps learners in Music connect ideas from Introduction to Music Production to decisions they make during practice and assessment. Connect ideas to real decisions and evidence."
+          "content": "Every great beat starts with three core sounds. The Kick is the deep, low thump that drives the rhythm, often landing on beats 1 and 3. The Snare is the sharp, cracking sound that provides the 'backbeat,' typically hitting on beats 2 and 4. Finally, the Hi-hat creates a sizzling metallic pulse that keeps time, often playing faster eighth or sixteenth notes. Together, the kick, snare, and hi-hat form the rhythmic skeleton that supports nearly every genre of modern music."
         },
         {
           "id": "music-production-101-l04-c2",
           "title": "Programming Patterns",
-          "content": "When you're diving into music production, one of the first things you'll encounter is the step sequencer in most Digital Audio Workstations (DAWs). This is a helpful tool that looks like a grid, where you can easily click to place different drum hits. Alternatively, you might use a piano roll, which is another way to program your drums. Let's explore how to create some basic beats!\nFor instance, if you want to make a simple hip-hop beat, you can place the kick drum on beats 1 and 3. The snare drum would go on beats 2 and 4, while the hi-hats play on every eighth note. This creates a solid foundation for your track.\nNow, if you're interested in electronic dance music (EDM), you might want to try a classic beat called four-on-the-floor. In this pattern, the kick drum hits on every beat—1, 2, 3, and 4. You can add a snare or clap on beats 2 and 4, and keep the hi-hats playing on every eighth note. Often, producers will include an open hi-hat on the 'and' of beat 4 to give it a little extra flair.\nStarting with these simple patterns is a great way to build your confidence. As you get more comfortable with the basics, don't hesitate to experiment by adding fills and variations. This will help you create more dynamic and interesting beats that showcase your unique style!\nContext recap: When you're diving into music production, one of the first things you'll encounter is the step sequencer in most Digital Audio Workstations (DAWs). This is a helpful tool that looks like a grid, where you can easily click to place different drum hits. Alternatively, you might use a piano roll, which is another way to program your drums. Let's explore how to create some basic beats!\nWhy this matters: Programming Patterns helps learners in Music connect ideas from Introduction to Music Production to decisions they make during practice and assessment. Connect ideas to real decisions and evidence.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "You can program drum patterns using a step sequencer (a simple grid) or the piano roll. A basic hip-hop beat might have the kick on 1 and 3, the snare on 2 and 4, and hi-hats on every eighth note. A classic electronic dance music (EDM) beat is 'four-on-the-floor,' where the kick hits on every beat (1, 2, 3, and 4), with a snare or clap on 2 and 4. Starting with these simple patterns is a great way to learn, and you can add your own fills and variations as you get more comfortable."
         },
         {
           "id": "music-production-101-l04-c3",
-          "title": "Humanizing Beats",
-          "content": "When beats are perfectly aligned to the grid, they can sound robotic and lack the human touch that makes music feel alive. To give your beats a more natural and expressive quality, you can use two important techniques: (1) Swing, which involves slightly delaying every other hit in your rhythm. This creates a laid-back groove that feels more relaxed and organic. Swing is a popular technique in genres like hip-hop and jazz, where the rhythm flows smoothly. On the other hand, electronic dance music (EDM) often uses less swing to maintain a more driving beat. (2) Velocity variation is another key technique. This means that not every hit in your rhythm should be played at the same volume. By accenting certain beats, like the second and fourth beats in a measure, or by making some hi-hats softer than others, you can add depth and dynamics to your music. This variation helps your beats to breathe and feel more alive, making them more engaging for listeners. By incorporating these techniques, you can transform your beats from mechanical to something that truly resonates with the human experience of music-making.\nContext recap: When beats are perfectly aligned to the grid, they can sound robotic and lack the human touch that makes music feel alive. To give your beats a more natural and expressive quality, you can use two important techniques: (1) Swing, which involves slightly delaying every other hit in your rhythm. This creates a laid-back groove that feels more relaxed and organic. Swing is a popular technique in genres like hip-hop and jazz, where the rhythm flows smoothly.\nWhy this matters: Humanizing Beats helps learners in Music connect ideas from Introduction to Music Production to decisions they make during practice and assessment. Connect ideas to real decisions and evidence."
+          "title": "Humanizing Your Beats",
+          "content": "Beats that are perfectly aligned to the grid can sound robotic. To make them feel more natural, use two key techniques. First, Swing slightly delays every other note, creating a laid-back, groovy feel common in hip-hop and jazz. Second, Velocity Variation means that not every hit should have the same volume. By making some hi-hats softer than others or accenting the main snare hits, you add dynamics and life to your beat, making it feel like it was played by a real person."
         }
       ],
       "flashcards": [
         {
           "id": "music-production-101-l04-f1",
-          "front": "Kick drum",
-          "back": "The deep, low-frequency drum that drives the rhythm — typically on beats 1 and 3 (or every beat in EDM)"
+          "front": "Kick Drum",
+          "back": "The deep, low-frequency drum that drives the rhythm — typically on beats 1 and 3 (or every beat in EDM)."
         },
         {
           "id": "music-production-101-l04-f2",
-          "front": "Snare / backbeat",
-          "back": "The sharp, cracking hit on beats 2 and 4 — provides the rhythmic spine of pop, rock, and hip-hop"
+          "front": "Snare / Backbeat",
+          "back": "The sharp, cracking hit on beats 2 and 4 that provides the rhythmic spine of pop, rock, and hip-hop."
         },
         {
           "id": "music-production-101-l04-f3",
           "front": "Swing",
-          "back": "Slightly delaying every other note to create a laid-back, groovy feel — essential in hip-hop and jazz"
+          "back": "Slightly delaying every other note to create a laid-back, groovy feel. Essential in hip-hop and jazz."
         },
         {
           "id": "music-production-101-l04-f4",
           "front": "Quantize",
-          "back": "Snapping notes to the grid so they are perfectly on time — useful but can sound robotic if overdone"
+          "back": "Snapping notes to the grid so they are perfectly on time. Useful, but can sound robotic if overused."
         }
       ],
       "learningAids": [
         {
           "id": "music-production-101-l04-a1",
           "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary of the lesson's main concept."
+          "title": "Basic Drum Pattern Grid",
+          "content": "A visual grid (step sequencer) showing a common rock/pop beat with kick on 1 & 3, snare on 2 & 4, and eighth-note hi-hats."
         }
       ]
     },
@@ -379,18 +372,18 @@ export const MusicProduction101Module: LearningModule = {
         {
           "id": "music-production-101-l05-c1",
           "title": "Step-by-Step Beat Building",
-          "content": "Let's embark on an exciting journey to create a classic hip-hop beat in 4/4 time! This is a fun and interactive way to learn about rhythm and music production. Here’s how we can do it step by step:\n**Step 1:** Begin by placing the kick drum on the first beat of the measure. This is the strong beat that sets the foundation for our rhythm. Next, add another kick drum on the 'and' of beat 2. This placement gives our beat a syncopated bounce, making it feel lively and engaging.\n**Step 2:** Now, let’s introduce the snare drum! Place the snare on beats 2 and 4. This creates what we call the backbeat, which is essential in hip-hop music and helps to drive the rhythm forward.\n**Step 3:** It’s time to add some hi-hats! Place hi-hats on every eighth note, which means you will have a total of 8 hi-hat hits in each measure. This adds texture and keeps the beat moving.\n**Step 4:** For an extra boost of energy, let’s add a second kick drum on beat 3. This will enhance the drive of our beat and make it even more exciting!\n**Step 5:** To give our hi-hats a more relaxed and groovy feel, we can apply a swing of 50-60%. This means that the timing of the hi-hats will feel a bit more laid-back, which is a signature element in many hip-hop tracks.\n**Step 6:** Finally, let’s adjust the velocity of the off-beat hi-hats. Lowering their velocity to about 70% will create a dynamic rhythm, making the beat feel more interesting and varied.\nEnjoy the process of building your beat! Remember, music production is all about experimenting and having fun. Don’t be afraid to try different sounds and patterns to make your beat unique!\nContext recap: Let's embark on an exciting journey to create a classic hip-hop beat in 4/4 time! This is a fun and interactive way to learn about rhythm and music production. Here’s how we can do it step by step:\n**Step 1:** Begin by placing the kick drum on the first beat of the measure. This is the strong beat that sets the foundation for our rhythm.\nWhy this matters: Step-by-Step Beat Building helps learners in Music connect ideas from Introduction to Music Production to decisions they make during practice and assessment. Connect ideas to real decisions and evidence.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "Let's build a classic hip-hop beat in 4/4 time. Step 1: Place a kick drum on beat 1 and another on the 'and' of beat 2 for a syncopated bounce. Step 2: Place the snare on beats 2 and 4 to create the backbeat. Step 3: Add hi-hats on every eighth note (8 hits per measure). Step 4: Add a second kick on beat 3 for more drive. Step 5: Apply 50-60% swing to the hi-hats for a groovy feel. Step 6: Lower the velocity of the off-beat hi-hats to about 70% to create a more dynamic rhythm. Experiment and have fun!"
         },
         {
           "id": "music-production-101-l05-c2",
           "title": "Adding Percussion and Fills",
-          "content": "After you've successfully created your core beat, it's time to take your music to the next level by adding some extra percussion elements. Think about incorporating sounds like shakers, rim shots, tambourines, or congas into your track. These additional percussion sounds are like the icing on a cake; they can really enhance the overall flavor of your music. However, it's crucial to keep these sounds subtle. You want them to add depth and texture without overpowering the main elements of your beat, which typically consist of the kick, snare, and hi-hat.\nMoreover, every 4 or 8 bars, you have the opportunity to introduce a fill. A fill is a short rhythmic variation that helps signal a change in the music, keeping things interesting for your listeners. For example, you might use a simple snare roll or create a break in the kick pattern. These little surprises can capture the listener's attention and make them excited about what’s coming next in your song. Remember, the goal is to create a dynamic and engaging listening experience that keeps your audience wanting more!\nSo, as you layer your percussion and add fills, think about how each element contributes to the overall vibe of your track. Experiment with different sounds and rhythms to find what works best for your unique style.\nContext recap: After you've successfully created your core beat, it's time to take your music to the next level by adding some extra percussion elements. Think about incorporating sounds like shakers, rim shots, tambourines, or congas into your track. These additional percussion sounds are like the icing on a cake; they can really enhance the overall flavor of your music. However, it's crucial to keep these sounds subtle.\nWhy this matters: Adding Percussion and Fills helps learners in Music connect ideas from Introduction to Music Production to decisions they make during practice and assessment. Connect ideas to real decisions and evidence.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "Once your core beat is solid, add extra percussion like shakers, tambourines, or congas to add texture. Keep these sounds subtle so they don't overpower the main kick, snare, and hi-hat. To keep your beat interesting, add a fill every 4 or 8 bars. A fill is a short rhythmic variation, like a simple snare roll or a break in the kick pattern, that signals a change in the music and keeps the listener engaged."
         }
       ],
       "interactiveActivities": [
         {
           "id": "music-production-101-l05-a1",
-          "title": "Drag and Drop",
+          "title": "Drag and Drop Beat Builder",
           "type": "drag_and_drop",
           "prompt": "Place each drum sound on the correct beats for a basic rock beat in 4/4 time:",
           "items": [
@@ -413,25 +406,17 @@ export const MusicProduction101Module: LearningModule = {
         {
           "id": "music-production-101-l05-f1",
           "front": "Four-on-the-floor",
-          "back": "A kick drum pattern hitting on every beat (1-2-3-4) — signature of EDM, disco, and house music"
+          "back": "A kick drum pattern hitting on every beat (1-2-3-4). The signature of EDM, disco, and house music."
         },
         {
           "id": "music-production-101-l05-f2",
           "front": "Fill",
-          "back": "A short rhythmic variation that signals a transition between sections — keeps the beat from sounding repetitive"
+          "back": "A short rhythmic variation that signals a transition between sections and keeps the beat from sounding repetitive."
         },
         {
           "id": "music-production-101-l05-f3",
           "front": "Velocity",
-          "back": "How hard a MIDI note is played (0-127) — controls volume and often timbre of the triggered sound"
-        }
-      ],
-      "learningAids": [
-        {
-          "id": "music-production-101-l05-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Follow the prompt sequence and document your reasoning."
+          "back": "How hard a MIDI note is played (0-127). It controls the volume and often the character of the triggered sound."
         }
       ]
     },
@@ -467,7 +452,7 @@ export const MusicProduction101Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": ""
+          "explanation": "This pattern, with the snare on beats 2 and 4, is called the 'backbeat' and is the rhythmic foundation of countless songs in popular music."
         },
         {
           "id": "music-production-101-l06-q2",
@@ -492,7 +477,7 @@ export const MusicProduction101Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": ""
+          "explanation": "Swing nudges every second note (the 'off-beat') slightly later, creating a less rigid, more groovy or 'shuffled' feel common in jazz and hip-hop."
         },
         {
           "id": "music-production-101-l06-q3",
@@ -517,7 +502,7 @@ export const MusicProduction101Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": ""
+          "explanation": "'Four-on-the-floor' is a driving rhythm pattern where the kick drum plays on every quarter note (1, 2, 3, and 4), characteristic of disco and electronic dance music."
         },
         {
           "id": "music-production-101-l06-q4",
@@ -542,7 +527,7 @@ export const MusicProduction101Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": ""
+          "explanation": "By varying the velocity (how hard each note is hit), you mimic the natural inconsistencies of a human drummer, making the beat sound more dynamic and less mechanical."
         }
       ],
       "quizBlueprint": {
@@ -551,15 +536,7 @@ export const MusicProduction101Module: LearningModule = {
           "remember": 2,
           "understand": 2
         }
-      },
-      "learningAids": [
-        {
-          "id": "music-production-101-l06-a1",
-          "type": "mnemonic",
-          "title": "Memory Cue",
-          "content": "Use Plan, Solve, Explain to structure each response."
-        }
-      ]
+      }
     },
     {
       "id": "music-production-101-l07",
@@ -575,47 +552,53 @@ export const MusicProduction101Module: LearningModule = {
         {
           "id": "music-production-101-l07-c1",
           "title": "The Signal Chain",
-          "content": "When we record audio, we follow a clear and simple process known as the signal chain. This process begins with the sound source, which can be anything from your own voice to an instrument like a guitar. The first step is capturing that sound with a microphone. The microphone's job is to take the sound waves—those vibrations in the air—and convert them into an electrical signal that can be processed.\nOnce the microphone has done its job, the electrical signal travels to an audio interface. This device is crucial because it transforms the analog signal (the electrical signal) into a digital format that your computer can understand. This transformation is important because computers work with digital data, allowing us to edit and manipulate the sound in various ways.\nFinally, the Digital Audio Workstation (DAW) comes into play. The DAW is the software where we can record, edit, and mix our audio. It captures the digital signal from the audio interface, enabling us to create our music.\nThink of the audio interface as a bridge connecting the analog world of sound to the digital world of music production. It includes a preamp, which amplifies the microphone signal to make it stronger, and an analog-to-digital converter that ensures the sound is accurately transformed. The audio interface connects to your computer using USB or Thunderbolt, making it easy to integrate into your music setup. Understanding this signal chain is essential for anyone interested in music production, as it lays the foundation for creating high-quality recordings.\nContext recap: When we record audio, we follow a clear and simple process known as the signal chain. This process begins with the sound source, which can be anything from your own voice to an instrument like a guitar. The first step is capturing that sound with a microphone. The microphone's job is to take the sound waves—those vibrations in the air—and convert them into an electrical signal that can be processed.\nWhy this matters: The Signal Chain helps learners in Music connect ideas from Introduction to Music Production to decisions they make during practice and assessment. Connect ideas to real decisions and evidence."
+          "content": "The path your audio takes is called the signal chain. It starts with the sound source (your voice or instrument). A microphone captures the sound waves and turns them into an electrical signal. This signal travels to an audio interface, which acts as a bridge to your computer. The interface uses a preamp to boost the signal and an analog-to-digital converter to change it into a digital format the computer understands. Finally, the digital signal is recorded in your DAW. Understanding this flow is key to troubleshooting any recording issues."
         },
         {
           "id": "music-production-101-l07-c2",
           "title": "Setting Levels",
-          "content": "One of the most important skills you can learn in music recording is how to set the right input level for your audio. This is crucial because if your recording level is too quiet, you might end up with unwanted background noise when you try to make it louder later on. Imagine trying to listen to a whisper; if you turn it up, you might hear all sorts of distracting sounds in the background. On the flip side, if your recording level is too loud, you risk something called clipping. Clipping is a type of distortion that happens when the audio signal is too strong, and unfortunately, once that happens, you can't fix it. A good rule of thumb is to aim for peaks around -12 to -6 dBFS on your Digital Audio Workstation (DAW) meter. This range helps ensure that your recordings sound clear and professional. Additionally, it's important to leave some headroom in your levels. This means you should allow a little extra space in your recordings. You can always turn up the volume later if needed, but once a recording is clipped, it’s permanently distorted. This careful management of your audio levels is known as 'gain staging,' and mastering this technique will greatly improve the quality of your recordings.\nContext recap: One of the most important skills you can learn in music recording is how to set the right input level for your audio. This is crucial because if your recording level is too quiet, you might end up with unwanted background noise when you try to make it louder later on. Imagine trying to listen to a whisper; if you turn it up, you might hear all sorts of distracting sounds in the background. On the flip side, if your recording level is too loud, you risk something called clipping.\nWhy this matters: Setting Levels helps learners in Music connect ideas from Introduction to Music Production to decisions they make during practice and assessment. Connect ideas to real decisions and evidence."
+          "content": "Setting the right recording level is critical. If it's too quiet, you'll hear background noise when you turn it up later. If it's too loud, you'll get clipping—a harsh digital distortion that can't be fixed. This is called 'gain staging.' A good rule is to aim for your signal to peak around -12 to -6 dBFS on your DAW's meter. This leaves plenty of 'headroom' and ensures a clean, professional recording. You can always make it louder later, but you can never undo clipping."
         },
         {
           "id": "music-production-101-l07-c3",
           "title": "Microphone Types",
-          "content": "Microphones are essential tools in music production, and there are several types, each with unique features suited for different recording situations. One popular type is the dynamic microphone, like the Shure SM58. These microphones are known for being tough and affordable, making them a favorite among performers. They excel at capturing loud sounds, which is why they are often used for live vocals, guitar amplifiers, and snare drums. Their durability means they can withstand the rigors of live performances without easily breaking.\nIn contrast, condenser microphones are designed to be more sensitive and can capture a wider range of sound details. This makes them perfect for studio recordings, especially for vocals and acoustic instruments, where clarity and nuance are important. However, condenser mics require phantom power, which is a special type of electrical power (usually 48V) that is provided by your audio interface to operate correctly.\nFor those just starting out in music production, USB microphones offer a fantastic option. They combine the microphone and audio interface into one easy-to-use device, which simplifies the recording process. This makes USB mics a great choice for beginners who want to get started without the complexity of setting up multiple pieces of equipment. Understanding these different types of microphones will help you choose the right one for your recording needs and improve your music production skills.\nContext recap: Microphones are essential tools in music production, and there are several types, each with unique features suited for different recording situations. One popular type is the dynamic microphone, like the Shure SM58. These microphones are known for being tough and affordable, making them a favorite among performers. They excel at capturing loud sounds, which is why they are often used for live vocals, guitar amplifiers, and snare drums.\nWhy this matters: Microphone Types helps learners in Music connect ideas from Introduction to Music Production to decisions they make during practice and assessment. Connect ideas to real decisions and evidence.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "The two most common microphone types are dynamic and condenser. Dynamic mics (like the Shure SM58) are durable, affordable, and great for loud sources like guitar amps, snare drums, and live vocals. Condenser mics are more sensitive and detailed, making them ideal for studio vocals and acoustic instruments. They require 'phantom power,' a 48V charge supplied by your audio interface. For beginners, a USB microphone is a great all-in-one option that combines a mic and interface into one device."
         }
       ],
       "flashcards": [
         {
           "id": "music-production-101-l07-f1",
-          "front": "Audio interface",
-          "back": "Hardware that converts analog audio to digital for the computer and vice versa — the bridge between mic and DAW"
+          "front": "Audio Interface",
+          "back": "Hardware that converts analog audio to digital for the computer and vice versa. The bridge between your mic and DAW."
         },
         {
           "id": "music-production-101-l07-f2",
           "front": "Clipping",
-          "back": "Digital distortion that occurs when the signal is too loud — irreversible; avoid by leaving headroom"
+          "back": "Digital distortion that occurs when the signal is too loud. It's irreversible, so always avoid it by leaving headroom."
         },
         {
           "id": "music-production-101-l07-f3",
-          "front": "Gain staging",
-          "back": "Setting proper volume levels at each stage of the signal chain to avoid noise and clipping"
+          "front": "Gain Staging",
+          "back": "The process of setting proper volume levels at each stage of the signal chain to avoid noise and clipping."
         },
         {
           "id": "music-production-101-l07-f4",
-          "front": "Phantom power (48V)",
-          "back": "Electrical power sent from the interface to condenser microphones through the mic cable"
+          "front": "Phantom Power (48V)",
+          "back": "Electrical power sent from the audio interface to power condenser microphones through the mic cable."
         }
       ],
       "learningAids": [
         {
           "id": "music-production-101-l07-a1",
+          "type": "diagram",
+          "title": "Signal Flow Diagram",
+          "content": "A simple flowchart: Sound Source -> Microphone -> Audio Interface (Preamp & A/D Converter) -> USB/Thunderbolt -> DAW."
+        },
+        {
+          "id": "music-production-101-l07-a2",
           "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary of the lesson's main concept."
+          "title": "DAW Meter Showing Clipping",
+          "content": "A visual of a DAW's master fader, one side showing a healthy level (peaking at -6dB) and the other showing a clipped signal (hitting 0dB and red)."
         }
       ]
     },
@@ -633,48 +616,48 @@ export const MusicProduction101Module: LearningModule = {
         {
           "id": "music-production-101-l08-c1",
           "title": "EQ: Sculpting Frequencies",
-          "content": "Equalization, often referred to as EQ, is an essential tool in music production that allows you to fine-tune the sound of your audio tracks by adjusting specific frequency ranges. Understanding how to use EQ effectively can greatly enhance the quality of your mixes. Let's break down the different frequency ranges:\n- **Bass Frequencies (20-250 Hz)**: These lower frequencies provide warmth and depth to your sound. They are crucial for creating a solid foundation in your music, making it feel rich and full.\n- **Midrange Frequencies (250 Hz - 4 kHz)**: This range is where most of the melodic content and vocals reside. It’s important for clarity in your music, as it carries the main elements that listeners focus on.\n- **Treble Frequencies (4-20 kHz)**: These higher frequencies add brightness and clarity to your sound, giving it an airy feel. They help to make certain elements stand out in the mix.\nA fundamental principle to keep in mind when mixing is to cut frequencies before you boost them. For instance, if your vocals sound muddy or unclear, it’s often more effective to reduce the low-mid frequencies (around 200-400 Hz) rather than increasing the high frequencies. This approach helps to clean up the mix and allows each track to shine without competing for attention. Remember, each track should have its own unique frequency range to create a balanced and harmonious mix.\nContext recap: Equalization, often referred to as EQ, is an essential tool in music production that allows you to fine-tune the sound of your audio tracks by adjusting specific frequency ranges. Understanding how to use EQ effectively can greatly enhance the quality of your mixes. Let's break down the different frequency ranges:\n- **Bass Frequencies (20-250 Hz)**: These lower frequencies provide warmth and depth to your sound. They are crucial for creating a solid foundation in your music, making it feel rich and full.\nWhy this matters: EQ: Sculpting Frequencies helps learners in Music connect ideas from Introduction to Music Production to decisions they make during practice and assessment. Connect ideas to real decisions and evidence."
+          "content": "Equalization, or EQ, is like a volume control for specific frequencies. It lets you shape the tone of an instrument. Frequencies are split into Bass (20-250 Hz) for warmth and weight, Mids (250 Hz - 4 kHz) for body and presence, and Treble (4-20 kHz) for brightness and air. The goal of EQ in a mix is to give each instrument its own space so they don't clash. A key principle is to 'cut before you boost.' If a vocal sounds muddy, try cutting the low-mid frequencies from it instead of just boosting the highs. This creates a cleaner mix."
         },
         {
           "id": "music-production-101-l08-c2",
           "title": "Compression: Controlling Dynamics",
-          "content": "Compression is an important technique in music production that helps manage the dynamics of your audio tracks. Essentially, a compressor is a tool that automatically lowers the volume of a sound when it goes above a certain level, known as the threshold. This process helps to balance out the dynamics of your music. For example, it makes the quieter sections of your track a bit louder, while also keeping the louder sections from becoming overwhelming.\nWhen you start working with a compressor, you'll notice several key controls that are essential for effective use. The first is the Threshold, which determines the volume level at which the compressor begins to work. Next is the Ratio, which indicates how much compression is applied once the threshold is exceeded. Another important control is the Attack, which defines how quickly the compressor responds to a loud sound. Finally, there's the Release, which controls how quickly the compressor stops working after the sound falls below the threshold.\nFor elements like vocals and bass, it's often best to use gentle compression settings, typically in the range of 2:1 to 4:1. This helps to maintain a consistent sound in your mix, ensuring that these important elements are clear and balanced without sounding squashed or unnatural. Understanding and mastering compression can greatly enhance your music production skills, allowing you to create polished and professional-sounding tracks.\nContext recap: Compression is an important technique in music production that helps manage the dynamics of your audio tracks. Essentially, a compressor is a tool that automatically lowers the volume of a sound when it goes above a certain level, known as the threshold. This process helps to balance out the dynamics of your music. For example, it makes the quieter sections of your track a bit louder, while also keeping the louder sections from becoming overwhelming.\nWhy this matters: Compression: Controlling Dynamics helps learners in Music connect ideas from Introduction to Music Production to decisions they make during practice and assessment. Connect ideas to real decisions and evidence.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "Compression is an automatic volume controller. It reduces the dynamic range of a sound, making the quiet parts louder and the loud parts quieter. This creates a more consistent and punchy sound. Key controls are Threshold (the level at which compression starts) and Ratio (how much the volume is reduced). Gentle compression (2:1 to 4:1 ratio) is great for evening out vocals and bass, helping them sit perfectly in the mix without jumping out or getting lost."
         },
         {
           "id": "music-production-101-l08-c3",
           "title": "Reverb: Creating Space",
-          "content": "Reverb is a fascinating audio effect that helps us understand how sound behaves in different environments. Imagine you're in a small room where your voice bounces off the walls, or in a grand cathedral where every note echoes beautifully. This effect is what we call reverb, and it adds a sense of space and richness to your music recordings, making them feel more alive and engaging. There are several types of reverb that you can use to achieve different sounds. For example, plate reverb is known for its bright and smooth quality, making it a classic choice for enhancing vocal tracks. Room reverb, on the other hand, offers a more natural and subtle sound, perfect for creating an intimate atmosphere. Then there's hall reverb, which gives a large and dramatic effect, ideal for orchestral music or powerful ballads. However, it's crucial to use reverb wisely. If you add too much, your mix can become muddy and unclear, losing its impact. A smart technique is to use sends, or auxiliary channels, for applying reverb. This method allows you to control the balance between the wet (the reverb effect) and dry (the original sound) signals, ensuring that your music remains clear and well-defined. By mastering reverb, you can create a more immersive listening experience that captivates your audience and enhances your musical storytelling.\nContext recap: Reverb is a fascinating audio effect that helps us understand how sound behaves in different environments. Imagine you're in a small room where your voice bounces off the walls, or in a grand cathedral where every note echoes beautifully. This effect is what we call reverb, and it adds a sense of space and richness to your music recordings, making them feel more alive and engaging. There are several types of reverb that you can use to achieve different sounds.\nWhy this matters: Reverb: Creating Space helps learners in Music connect ideas from Introduction to Music Production to decisions they make during practice and assessment. Connect ideas to real decisions and evidence."
+          "content": "Reverb simulates the sound of a room or space, adding depth and dimension to your mix. It makes your music sound like it's happening in a real environment, not a vacuum. Different types of reverb create different feelings: Room reverb is subtle and natural, Plate reverb is bright and smooth (great for vocals), and Hall reverb is large and epic. It's best to use reverb on a 'send' or 'aux' channel. This lets you send multiple instruments to the same reverb, creating a cohesive space and giving you better control over the wet (effect) and dry (original) signal balance."
         }
       ],
       "interactiveActivities": [
         {
           "id": "music-production-101-l08-a1",
-          "title": "Match the Pairs",
+          "title": "Match the Mixing Tool to its Job",
           "type": "matching_pairs",
           "pairs": [
             {
               "left": "EQ",
-              "right": "Boosts or cuts specific frequency ranges"
+              "right": "Boosts or cuts specific frequency ranges to shape tone."
             },
             {
               "left": "Compression",
-              "right": "Reduces volume when signal exceeds a threshold"
+              "right": "Reduces the volume of loud sounds to even out dynamics."
             },
             {
               "left": "Reverb",
-              "right": "Simulates sound reflections in a space"
+              "right": "Simulates sound reflections in a space to add depth."
             },
             {
               "left": "Threshold",
-              "right": "The level at which compression begins"
+              "right": "The volume level at which a compressor begins to work."
             },
             {
-              "left": "High-pass filter",
-              "right": "Cuts frequencies below a set point (removes rumble)"
+              "left": "High-Pass Filter",
+              "right": "An EQ that cuts low frequencies (rumble) below a set point."
             },
             {
-              "left": "Send / aux channel",
-              "right": "Routes signal to a shared effect without replacing the dry sound"
+              "left": "Send / Aux Channel",
+              "right": "A way to route signal to a shared effect like reverb."
             }
           ]
         }
@@ -683,30 +666,22 @@ export const MusicProduction101Module: LearningModule = {
         {
           "id": "music-production-101-l08-f1",
           "front": "EQ (Equalization)",
-          "back": "A tool that boosts or cuts specific frequency ranges — used to carve space in a mix so each instrument is clear"
+          "back": "A tool that boosts or cuts specific frequency ranges, used to carve space in a mix so each instrument is clear."
         },
         {
           "id": "music-production-101-l08-f2",
           "front": "Compressor",
-          "back": "Reduces dynamic range by attenuating signal above a threshold — evens out volume for consistency"
+          "back": "Reduces dynamic range by turning down signal above a threshold. Evens out volume for consistency."
         },
         {
           "id": "music-production-101-l08-f3",
           "front": "Reverb",
-          "back": "An effect simulating sound reflections in a physical space — adds depth and spatial dimension to a mix"
+          "back": "An effect simulating sound reflections in a physical space. Adds depth and spatial dimension to a mix."
         },
         {
           "id": "music-production-101-l08-f4",
-          "front": "High-pass filter",
-          "back": "An EQ filter that removes frequencies below a set point — commonly used to cut rumble from non-bass tracks"
-        }
-      ],
-      "learningAids": [
-        {
-          "id": "music-production-101-l08-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Follow the prompt sequence and document your reasoning."
+          "front": "High-Pass Filter (HPF)",
+          "back": "An EQ filter that removes frequencies below a set point. Commonly used to cut rumble from non-bass tracks."
         }
       ]
     },
@@ -742,7 +717,7 @@ export const MusicProduction101Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": ""
+          "explanation": "It's often better to 'carve out' space for an instrument by cutting clashing frequencies from another track, rather than just boosting the frequencies you want to hear. This leads to a cleaner, less cluttered mix."
         },
         {
           "id": "music-production-101-l09-q2",
@@ -767,7 +742,7 @@ export const MusicProduction101Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": ""
+          "explanation": "The threshold is the volume level you set. Any part of the audio signal that is louder than the threshold will be turned down (compressed) by the compressor."
         },
         {
           "id": "music-production-101-l09-q3",
@@ -780,7 +755,7 @@ export const MusicProduction101Module: LearningModule = {
             },
             {
               "id": "b",
-              "text": "It lets you blend wet and dry independently and share one reverb across multiple tracks"
+              "text": "It lets you blend wet and dry signals and share one reverb across multiple tracks"
             },
             {
               "id": "c",
@@ -792,7 +767,7 @@ export const MusicProduction101Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": ""
+          "explanation": "Using a send allows multiple tracks to share the same reverb effect, saving CPU power and creating a cohesive sense of space. It also lets you control the wet/dry balance for each track independently."
         },
         {
           "id": "music-production-101-l09-q4",
@@ -817,139 +792,19 @@ export const MusicProduction101Module: LearningModule = {
             }
           ],
           "correctOptionId": "c",
-          "explanation": ""
+          "explanation": "Clipping is a harsh digital distortion that happens when an audio signal's level tries to go above the maximum possible level in a digital system, which is 0 decibels Full Scale (dBFS)."
         }
       ],
       "quizBlueprint": {
         "totalQuestions": 4,
         "bloomProfile": {
           "remember": 1,
-          "understand": 2,
-          "apply": 1
+          "understand": 3
         }
       }
     },
     {
       "id": "music-production-101-l10",
-      "title": "Mastery Quiz: Production Foundations",
-      "type": "quiz",
-      "duration": 12,
-      "objectives": [
-        "Synthesize all production concepts learned so far"
-      ],
-      "questions": [
-        {
-          "id": "music-production-101-l10-q1",
-          "text": "The recording signal chain in order is:",
-          "skillId": "music-production-101-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "DAW → Interface → Microphone → Sound"
-            },
-            {
-              "id": "b",
-              "text": "Sound → Microphone → Audio Interface → DAW"
-            },
-            {
-              "id": "c",
-              "text": "Microphone → DAW → Interface → Speaker"
-            },
-            {
-              "id": "d",
-              "text": "Sound → DAW → Microphone → Interface"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": ""
-        },
-        {
-          "id": "music-production-101-l10-q2",
-          "text": "MIDI is preferable to audio when you need to:",
-          "skillId": "music-production-101-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "Record a vocalist's performance"
-            },
-            {
-              "id": "b",
-              "text": "Capture field recordings from nature"
-            },
-            {
-              "id": "c",
-              "text": "Change the instrument or fix notes after recording"
-            },
-            {
-              "id": "d",
-              "text": "Record a live drum kit"
-            }
-          ],
-          "correctOptionId": "c",
-          "explanation": ""
-        },
-        {
-          "id": "music-production-101-l10-q3",
-          "text": "Which microphone type requires phantom power?",
-          "skillId": "music-production-101-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "Dynamic"
-            },
-            {
-              "id": "b",
-              "text": "Condenser"
-            },
-            {
-              "id": "c",
-              "text": "Ribbon"
-            },
-            {
-              "id": "d",
-              "text": "USB"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": ""
-        },
-        {
-          "id": "music-production-101-l10-q4",
-          "text": "In a mix, bass frequencies (20-250 Hz) provide:",
-          "skillId": "music-production-101-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "Clarity and air"
-            },
-            {
-              "id": "b",
-              "text": "Warmth and weight"
-            },
-            {
-              "id": "c",
-              "text": "Vocal presence"
-            },
-            {
-              "id": "d",
-              "text": "Stereo width"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": ""
-        }
-      ],
-      "quizBlueprint": {
-        "totalQuestions": 4,
-        "bloomProfile": {
-          "remember": 1,
-          "understand": 2,
-          "apply": 1
-        }
-      }
-    },
-    {
-      "id": "music-production-101-l11",
       "title": "Sound Design: Synths and Samplers",
       "type": "interactive",
       "duration": 14,
@@ -960,24 +815,24 @@ export const MusicProduction101Module: LearningModule = {
       ],
       "chunks": [
         {
-          "id": "music-production-101-l11-c1",
+          "id": "music-production-101-l10-c1",
           "title": "Subtractive Synthesis",
-          "content": "Subtractive synthesis is a fundamental technique in sound design that many musicians and producers use to create unique sounds. This method starts with a raw waveform produced by an oscillator. There are several types of waveforms you can choose from, including saw, square, triangle, and sine waves. Each of these waveforms has its own distinct character. For instance, a sawtooth wave is known for its bright and buzzy sound, making it very lively and energetic. On the other hand, a sine wave is smooth and pure, often used for softer sounds. A square wave has a hollow quality that can add depth to your music.\nOnce you have selected your waveform, the next step is to shape the sound using a filter. This filter works by removing certain frequencies from the sound, much like an equalizer (EQ) but with a more focused approach. One common type of filter is the low-pass filter, which allows lower bass frequencies to pass through while cutting off higher treble frequencies. By adjusting the settings of this filter, you can create fascinating effects. For example, moving the filter can produce a 'wah' sound, which is often used in various music genres to add expression and movement to the sound. Understanding how to manipulate these elements is key to mastering sound design in music production.\nContext recap: Subtractive synthesis is a fundamental technique in sound design that many musicians and producers use to create unique sounds. This method starts with a raw waveform produced by an oscillator. There are several types of waveforms you can choose from, including saw, square, triangle, and sine waves. Each of these waveforms has its own distinct character.\nWhy this matters: Subtractive Synthesis helps learners in Music connect ideas from Introduction to Music Production to decisions they make during practice and assessment. Connect ideas to real decisions and evidence.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "Subtractive synthesis is a way to create sounds by starting with a harmonically rich waveform and carving parts of it away. It begins with an Oscillator, which generates a raw waveform like a bright, buzzy Saw wave or a hollow Square wave. Next, that sound passes through a Filter, which 'subtracts' or removes certain frequencies. A low-pass filter, for example, cuts high frequencies, making the sound darker or more muffled. By moving the filter's cutoff point, you can create expressive, evolving sounds."
         },
         {
-          "id": "music-production-101-l11-c2",
+          "id": "music-production-101-l10-c2",
           "title": "ADSR Envelopes",
-          "content": "Every sound we hear has its own unique shape over time, and this shape is controlled by something called the ADSR envelope. The ADSR envelope is made up of four important stages: Attack, Decay, Sustain, and Release. Let's break these down one by one.\n1. **Attack**: This is the first stage, and it determines how quickly the sound reaches its maximum volume. For instance, if you hit a piano key, the sound comes on very quickly, which means it has a fast attack.\n2. **Decay**: After the sound reaches its peak volume, it doesn't stay there forever. The decay stage controls how fast the sound drops after that initial peak. A piano also has a fast decay, meaning it quickly decreases in volume after the initial sound.\n3. **Sustain**: This stage is all about the volume level that is maintained while you hold down the key. For a piano, this is usually at a medium level, which means it stays at a steady volume for as long as you keep the key pressed.\n4. **Release**: Finally, we have the release stage. This controls how quickly the sound fades away after you let go of the key. A piano has a medium release, so it doesn't stop abruptly but fades out gradually.\nNow, let's compare this to a pad sound, which is often used in electronic music. A pad typically has a slow attack, meaning it takes a while to reach full volume. It has no decay, which means it holds that volume steady without dropping. The sustain is full, so it maintains that sound for as long as you want, and it has a long release, creating a smooth and flowing sound that lingers in the air. Understanding these stages helps us create and manipulate sounds in exciting ways!\nBy learning about ADSR envelopes, you can start to think about how different instruments create their unique sounds and how you can use this knowledge in your own music production journey.\nContext recap: Every sound we hear has its own unique shape over time, and this shape is controlled by something called the ADSR envelope. The ADSR envelope is made up of four important stages: Attack, Decay, Sustain, and Release. Let's break these down one by one. 1.\nWhy this matters: ADSR Envelopes helps learners in Music connect ideas from Introduction to Music Production to decisions they make during practice and assessment. Connect ideas to real decisions and evidence.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "The ADSR envelope shapes a sound's volume over time. It has four stages: Attack (how quickly the sound fades in), Decay (how it drops from the initial peak), Sustain (the level it holds at while a key is pressed), and Release (how long it takes to fade out after the key is let go). A percussive sound like a piano has a fast attack and decay. A soft, atmospheric pad sound has a slow attack and a long release. ADSR gives sounds their unique character and shape."
         },
         {
-          "id": "music-production-101-l11-c3",
+          "id": "music-production-101-l10-c3",
           "title": "Synthesizers vs. Samplers",
-          "content": "Synthesizers and samplers are two essential tools in the world of music production, and each has its own unique role. A synthesizer is a device that creates sound from the ground up. It uses oscillators, which are electronic circuits that generate waveforms, along with mathematical principles to shape those sounds. This means that synthesizers can produce entirely new and innovative sounds that have never been heard before! On the other hand, a sampler is a tool that plays back recordings of real instruments or any other sounds you can think of. For example, when you use a 'realistic piano' plugin in your music software, it is typically a sampler that plays back recordings of a real piano being played at different volumes and notes. While synthesizers are fantastic for inventing new sounds, samplers excel at recreating sounds that already exist. Interestingly, many modern musical instruments combine both synthesizer and sampler features, using a sampled core sound enhanced with synthesized layers to create a richer and more dynamic audio experience. This blending of technologies allows musicians to explore a wide range of creative possibilities in their compositions.\nContext recap: Synthesizers and samplers are two essential tools in the world of music production, and each has its own unique role. A synthesizer is a device that creates sound from the ground up. It uses oscillators, which are electronic circuits that generate waveforms, along with mathematical principles to shape those sounds. This means that synthesizers can produce entirely new and innovative sounds that have never been heard before!\nWhy this matters: Synthesizers vs. Samplers helps learners in Music connect ideas from Introduction to Music Production to decisions they make during practice and assessment. Connect ideas to real decisions and evidence."
+          "content": "A synthesizer creates sound from the ground up using oscillators and math. It's for designing new, electronic sounds. A sampler, on the other hand, plays back pre-recorded audio files, called samples. A 'realistic piano' plugin is a sampler playing back recordings of a real piano. A drum machine plugin is often a sampler playing back recordings of real drum hits. Synthesizers invent sounds; samplers recreate them."
         }
       ],
       "interactiveActivities": [
         {
-          "id": "music-production-101-l11-a1",
+          "id": "music-production-101-l10-a1",
           "title": "Sort into Categories",
           "type": "sorting_buckets",
           "buckets": [
@@ -1014,148 +869,43 @@ export const MusicProduction101Module: LearningModule = {
       ],
       "flashcards": [
         {
-          "id": "music-production-101-l11-f1",
+          "id": "music-production-101-l10-f1",
           "front": "Oscillator",
-          "back": "The sound source in a synthesizer — generates raw waveforms (saw, square, sine, triangle)"
+          "back": "The sound source in a synthesizer that generates raw waveforms (saw, square, sine, triangle)."
         },
         {
-          "id": "music-production-101-l11-f2",
-          "front": "ADSR envelope",
-          "back": "Attack, Decay, Sustain, Release — controls how a sound evolves over time from key press to key release"
+          "id": "music-production-101-l10-f2",
+          "front": "ADSR Envelope",
+          "back": "Attack, Decay, Sustain, Release. Controls how a sound's volume evolves over time from key press to key release."
         },
         {
-          "id": "music-production-101-l11-f3",
-          "front": "Low-pass filter",
-          "back": "Removes frequencies above a cutoff point — the most common filter in subtractive synthesis"
+          "id": "music-production-101-l10-f3",
+          "front": "Low-Pass Filter",
+          "back": "Removes frequencies above a cutoff point. The most common filter in subtractive synthesis."
         },
         {
-          "id": "music-production-101-l11-f4",
+          "id": "music-production-101-l10-f4",
           "front": "Sampler",
-          "back": "A virtual instrument that plays back recordings of real sounds, mapped across the keyboard"
+          "back": "A virtual instrument that plays back recordings of real sounds, mapped across a keyboard."
+        }
+      ],
+      "learningAids": [
+        {
+          "id": "music-production-101-l10-a2",
+          "type": "diagram",
+          "title": "Subtractive Synthesis Flowchart",
+          "content": "A visual flowchart: Oscillator (generates rich waveform) -> Filter (subtracts frequencies) -> Amplifier (controls volume via ADSR) -> Output."
+        },
+        {
+          "id": "music-production-101-l10-a3",
+          "type": "image",
+          "title": "Visual ADSR Envelope",
+          "content": "A graph showing the four stages of an ADSR envelope shaping a sound over time."
         }
       ]
     },
     {
-      "id": "music-production-101-l12",
-      "title": "Mastery Retest",
-      "type": "quiz",
-      "duration": 10,
-      "objectives": [
-        "Demonstrate comprehensive production knowledge"
-      ],
-      "questions": [
-        {
-          "id": "music-production-101-l12-q1",
-          "text": "In subtractive synthesis, sound starts with a:",
-          "skillId": "music-production-101-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "Filter"
-            },
-            {
-              "id": "b",
-              "text": "Raw waveform from an oscillator"
-            },
-            {
-              "id": "c",
-              "text": "Recorded sample"
-            },
-            {
-              "id": "d",
-              "text": "Reverb effect"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": ""
-        },
-        {
-          "id": "music-production-101-l12-q2",
-          "text": "The 'Attack' in an ADSR envelope controls:",
-          "skillId": "music-production-101-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "How fast the sound reaches full volume"
-            },
-            {
-              "id": "b",
-              "text": "The volume while the key is held"
-            },
-            {
-              "id": "c",
-              "text": "How fast the sound fades after release"
-            },
-            {
-              "id": "d",
-              "text": "The frequency cutoff of the filter"
-            }
-          ],
-          "correctOptionId": "a",
-          "explanation": ""
-        },
-        {
-          "id": "music-production-101-l12-q3",
-          "text": "A high-pass filter removes:",
-          "skillId": "music-production-101-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "Frequencies above a cutoff point"
-            },
-            {
-              "id": "b",
-              "text": "Frequencies below a cutoff point"
-            },
-            {
-              "id": "c",
-              "text": "All mid-range frequencies"
-            },
-            {
-              "id": "d",
-              "text": "Reverb from the signal"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": ""
-        },
-        {
-          "id": "music-production-101-l12-q4",
-          "text": "Gain staging is the practice of:",
-          "skillId": "music-production-101-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "Adding gain at every stage for maximum volume"
-            },
-            {
-              "id": "b",
-              "text": "Setting proper levels at each stage to avoid noise and clipping"
-            },
-            {
-              "id": "c",
-              "text": "Using a noise gate on every track"
-            },
-            {
-              "id": "d",
-              "text": "Boosting EQ at the final mix stage"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": ""
-        }
-      ],
-      "quizBlueprint": {
-        "totalQuestions": 4,
-        "bloomProfile": {
-          "remember": 1,
-          "understand": 2,
-          "apply": 1
-        }
-      }
-    },
-    {
-      "id": "music-production-101-l13",
+      "id": "music-production-101-l11",
       "title": "Song Arrangement: From Loop to Full Track",
       "type": "video",
       "duration": 12,
@@ -1166,46 +916,54 @@ export const MusicProduction101Module: LearningModule = {
       ],
       "chunks": [
         {
-          "id": "music-production-101-l13-c1",
-          "title": "Beyond the Loop",
-          "content": "One common challenge that many beginners face in music production is creating an amazing 8-bar loop but then feeling stuck when it comes to turning that loop into a complete song. This is where the concept of arrangement comes into play. Arrangement is essentially the art of deciding which parts of your music will play at different times throughout the song. For example, a typical structure for a pop song might look like this: you start with an Intro that lasts for about 4 to 8 bars, then move into Verse 1, followed by the Chorus, then Verse 2, another Chorus, a Bridge, and finally, the Final Chorus before wrapping up with an Outro. On the other hand, electronic dance music (EDM) often follows a different structure, which might include an Intro, a Build-up, a Drop, a Break, another Build-up, another Drop, and then the Outro. The important thing to remember is that each section of your song should feel unique and different from the others, but they should all work together to create a cohesive piece of music. This way, listeners can enjoy the variety while still feeling connected to the overall song.\nContext recap: One common challenge that many beginners face in music production is creating an amazing 8-bar loop but then feeling stuck when it comes to turning that loop into a complete song. This is where the concept of arrangement comes into play. Arrangement is essentially the art of deciding which parts of your music will play at different times throughout the song. For example, a typical structure for a pop song might look like this: you start with an Intro that lasts for about 4 to 8 bars, then move into Verse 1, followed by the Chorus, then Verse 2, another Chorus, a Bridge, and finally, the Final Chorus before wrapping up with an Outro."
+          "id": "music-production-101-l11-c1",
+          "title": "Beyond the 8-Bar Loop",
+          "content": "A common challenge is turning a great loop into a full song. This is where arrangement comes in—deciding what plays when. A typical pop song structure is Intro -> Verse -> Chorus -> Verse -> Chorus -> Bridge -> Final Chorus -> Outro. Each section serves a different purpose to tell a story and keep the listener engaged. The key is to create contrast and momentum, so the song feels like it's going somewhere."
         },
         {
-          "id": "music-production-101-l13-c2",
+          "id": "music-production-101-l11-c2",
           "title": "The Add/Subtract Principle",
-          "content": "One of the most effective techniques for arranging your music is known as the Add/Subtract Principle. This method is all about creating a dynamic listening experience by carefully choosing when to add or remove musical elements. You start with your complete loop, which is the full version of your song, and then you strategically take away certain instruments during quieter sections. This helps to create a sense of space and allows the listener to focus on the main elements of the music.\nFor instance, during the verse of your song, you might choose to use fewer instruments. A simple combination of bass, drums, and vocals can create a solid foundation. As you move into the pre-chorus, you can begin to add in additional sounds, like synths or strings, to build up the energy and excitement. When you reach the chorus, this is your moment to let everything play together, creating a powerful and full sound that really grabs the listener's attention.\nFinally, during the bridge, you can strip back the arrangement once again to provide contrast. This back-and-forth between adding and subtracting elements not only creates dynamics in your music but also keeps your audience engaged and interested throughout the entire track. By mastering this principle, you can enhance your songwriting and make your music more captivating!\nContext recap: One of the most effective techniques for arranging your music is known as the Add/Subtract Principle. This method is all about creating a dynamic listening experience by carefully choosing when to add or remove musical elements. You start with your complete loop, which is the full version of your song, and then you strategically take away certain instruments during quieter sections. This helps to create a sense of space and allows the listener to focus on the main elements of the music.\nWhy this matters: The Add/Subtract Principle helps learners in Music connect ideas from Introduction to Music Production to decisions they make during practice and assessment. Connect ideas to real decisions and evidence."
+          "content": "The simplest way to arrange is the Add/Subtract Principle. Start with your full loop, which will be your high-energy section, like the chorus. For the verse, subtract elements—maybe take out the main melody and some percussion to make it sparser. For the intro, start with even fewer elements. As you move from verse to chorus, add elements back in to build energy. This creates natural dynamics and makes your chorus hit harder."
         },
         {
-          "id": "music-production-101-l13-c3",
-          "title": "Automation",
-          "content": "Automation is an essential and exciting tool in the world of music production. It allows you to program changes in your music over time, which can include things like volume fades, filter sweeps, panning movements, and effects sends. For example, imagine you have a big drop in your song; using a filter sweep right before that drop can create a sense of anticipation and excitement for the listener. Similarly, if you want to end your track smoothly, a volume fade at the end can help achieve that seamless outro. Another creative use of automation is during vocal phrases. By automating the reverb send, you can add emotional depth to certain key words, making them stand out and resonate more with your audience. Overall, automation is what helps turn a static mix into a lively and engaging production. It’s a technique that every professional music producer uses extensively to enhance the overall listening experience, making their tracks more captivating and enjoyable for everyone. Learning to master automation can take your music to the next level, so it's definitely worth exploring in your own productions!\nContext recap: Automation is an essential and exciting tool in the world of music production. It allows you to program changes in your music over time, which can include things like volume fades, filter sweeps, panning movements, and effects sends. For example, imagine you have a big drop in your song; using a filter sweep right before that drop can create a sense of anticipation and excitement for the listener. Similarly, if you want to end your track smoothly, a volume fade at the end can help achieve that seamless outro.\nWhy this matters: Automation helps learners in Music connect ideas from Introduction to Music Production to decisions they make during practice and assessment. Connect ideas to real decisions and evidence."
+          "id": "music-production-101-l11-c3",
+          "title": "Automation: Bringing Your Mix to Life",
+          "content": "Automation lets you program changes to almost any parameter over time. This is what turns a static mix into a dynamic performance. You can automate volume for fade-ins and fade-outs. You can automate a filter sweep to build tension before a drop. You can automate panning to make sounds move around the listener. Subtle automation on things like reverb sends or synth parameters can add constant, subtle movement that keeps the track feeling alive."
         }
       ],
       "flashcards": [
         {
-          "id": "music-production-101-l13-f1",
+          "id": "music-production-101-l11-f1",
           "front": "Arrangement",
-          "back": "The organization of a song's sections and instrumentation over time — deciding what plays when"
+          "back": "The organization of a song's sections and instrumentation over time—deciding what plays when."
         },
         {
-          "id": "music-production-101-l13-f2",
+          "id": "music-production-101-l11-f2",
           "front": "Automation",
-          "back": "Programming parameter changes over time in a DAW — volume, panning, filter cutoff, effects"
+          "back": "Programming parameter changes over time in a DAW, such as volume, panning, filter cutoff, and effects."
         },
         {
-          "id": "music-production-101-l13-f3",
+          "id": "music-production-101-l11-f3",
           "front": "Drop",
-          "back": "In EDM, the moment after a build where the full beat and bass return with maximum energy"
+          "back": "In EDM, the moment after a build-up where the full beat and bass return with maximum energy."
         },
         {
-          "id": "music-production-101-l13-f4",
-          "front": "Add/subtract principle",
-          "back": "Arranging by adding instruments for energy and removing them for contrast — the simplest way to create dynamics"
+          "id": "music-production-101-l11-f4",
+          "front": "Add/Subtract Principle",
+          "back": "Arranging by adding instruments for energy and removing them for contrast. The simplest way to create dynamics."
+        }
+      ],
+      "learningAids": [
+        {
+          "id": "music-production-101-l11-a1",
+          "type": "diagram",
+          "title": "Common Song Structures",
+          "content": "Visual timelines for a typical Pop song (Verse-Chorus-Verse-Chorus-Bridge-Chorus) and an EDM track (Intro-Build-Drop-Breakdown-Build-Drop-Outro)."
         }
       ]
     },
     {
-      "id": "music-production-101-l14",
+      "id": "music-production-101-l12",
       "title": "Export, Mastering Basics, and Release",
       "type": "interactive",
       "duration": 13,
@@ -1216,31 +974,31 @@ export const MusicProduction101Module: LearningModule = {
       ],
       "chunks": [
         {
-          "id": "music-production-101-l14-c1",
+          "id": "music-production-101-l12-c1",
           "title": "Exporting Your Mix",
-          "content": "After you have finished mixing your song, the next important step is to export it. This process is sometimes called bouncing or rendering. To create a high-quality version of your music, you should export your mix as a stereo WAV file. Make sure to set the quality to 24-bit and choose either 44.1 kHz or 48 kHz for the best sound. This WAV file will be your master copy, which means it’s the best version of your song that you can use for further distribution.\nIf you want to share your music online, it’s also wise to create an MP3 version. When exporting to MP3, select a bitrate of 320 kbps, which is the highest quality for compressed audio files. This will help ensure that your music sounds great even when it’s shared on various platforms.\nBefore you click the export button, take a moment to double-check a few important details. First, make sure that none of your tracks are accidentally muted, as this could result in parts of your song being silent. Next, check for any clipping on the master bus, which can cause distortion in your audio. Finally, confirm that your song starts and ends cleanly, without any unwanted clicks or pops. These steps will help you create a polished final product that you can be proud of!\nContext recap: After you have finished mixing your song, the next important step is to export it. This process is sometimes called bouncing or rendering. To create a high-quality version of your music, you should export your mix as a stereo WAV file. Make sure to set the quality to 24-bit and choose either 44.1 kHz or 48 kHz for the best sound.\nWhy this matters: Exporting Your Mix helps learners in Music connect ideas from Introduction to Music Production to decisions they make during practice and assessment. Connect ideas to real decisions and evidence.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "When your song is finished, you need to export it (also called bouncing or rendering) into a single audio file. For your high-quality master copy, export a 24-bit, 44.1 kHz WAV file. For sharing online, also create a high-quality MP3 (320 kbps). Before you export, do a final check: make sure no tracks are accidentally muted, check that your master fader isn't clipping, and ensure your song starts and ends cleanly."
         },
         {
-          "id": "music-production-101-l14-c2",
+          "id": "music-production-101-l12-c2",
           "title": "Basic Mastering",
-          "content": "Mastering is a crucial step in the music production process that helps ensure your song sounds its absolute best. You can think of mastering like putting the final touches on a beautiful painting; it’s all about making sure every detail shines. During the mastering phase, your goal is to make your song loud enough so that it can be enjoyed clearly on any device, whether someone is listening on their phone, computer, or a big speaker system.\nTo begin mastering, you should first check for any tonal imbalances in your music. This is where EQ, or equalization, comes into play. EQ allows you to adjust the different frequencies in your track, helping to create a balanced sound where no particular element overpowers another. After you’ve balanced the tones, the next step is to use a limiter. A limiter is a special tool that helps increase the overall loudness of your track while preventing distortion. Distortion is when the sound becomes fuzzy or unclear, which is something you definitely want to avoid. For platforms like Spotify, the recommended loudness level is around -14 LUFS, which is a specific measurement of loudness that helps your music sound great in a streaming environment.\nIf you’re aiming for a truly professional sound, it can be very beneficial to hire a mastering engineer. These experts have trained ears and can provide valuable feedback, ensuring that your music is polished and ready for listeners everywhere. They can help take your track to the next level, making sure it stands out in the competitive world of music. Remember, mastering is not just about making your song loud; it’s about making it sound amazing!\nContext recap: Mastering is a crucial step in the music production process that helps ensure your song sounds its absolute best. You can think of mastering like putting the final touches on a beautiful painting; it’s all about making sure every detail shines. During the mastering phase, your goal is to make your song loud enough so that it can be enjoyed clearly on any device, whether someone is listening on their phone, computer, or a big speaker system. To begin mastering, you should first check for any tonal imbalances in your music.\nWhy this matters: Basic Mastering helps learners in Music connect ideas from Introduction to Music Production to decisions they make during practice and assessment. Connect ideas to real decisions and evidence."
+          "content": "Mastering is the final step of quality control. Its main goals are to make your song commercially loud and ensure it sounds good on all playback systems. The main tool for loudness is a Limiter, a type of compressor that prevents the signal from ever going over 0 dBFS while raising the overall level. Streaming services like Spotify have loudness targets (around -14 LUFS) to ensure a consistent listening experience. Mastering also involves final EQ tweaks to correct any tonal imbalances."
         },
         {
-          "id": "music-production-101-l14-c3",
+          "id": "music-production-101-l12-c3",
           "title": "Releasing Your Music",
-          "content": "If you're excited about sharing your music with listeners around the globe on popular platforms like Spotify and Apple Music, you'll need to partner with a music distributor. Distributors such as DistroKid, TuneCore, CD Baby, and Amuse are here to help you! They will assist you in uploading your music along with important details about it, including the title of your song, your artist name, the genre of your music, and even your cover art. Speaking of cover art, it's really important to create an eye-catching image that meets the size requirement of 3000 by 3000 pixels, as this is the standard size that most streaming services expect. When you're planning to release your music, it's wise to start this process 2 to 4 weeks ahead of your desired release date. This extra time allows your music to gain some attention and increases the chances of it being featured in playlists, which can help you reach more listeners. Additionally, think about registering with a Performance Rights Organization, often called a PRO. This organization is crucial because it helps you collect royalties, which are payments you earn whenever your music is played in public spaces. By following these steps, you can successfully share your music and connect with a wider audience, making your musical dreams come true!\nContext recap: If you're excited about sharing your music with listeners around the globe on popular platforms like Spotify and Apple Music, you'll need to partner with a music distributor. Distributors such as DistroKid, TuneCore, CD Baby, and Amuse are here to help you! They will assist you in uploading your music along with important details about it, including the title of your song, your artist name, the genre of your music, and even your cover art. Speaking of cover art, it's really important to create an eye-catching image that meets the size requirement of 3000 by 3000 pixels, as this is the standard size that most streaming services expect."
+          "content": "To get your music on platforms like Spotify and Apple Music, you need a digital distributor (e.g., DistroKid, TuneCore, CD Baby). You upload your master WAV file, cover art (typically 3000x3000 pixels), and metadata (artist name, song title). The distributor sends your music to all the stores and collects royalties for you. It's best to upload your music 2-4 weeks before your release date to allow time for processing and potential playlist pitching."
         }
       ],
       "interactiveActivities": [
         {
-          "id": "music-production-101-l14-a1",
-          "title": "Drag and Drop",
+          "id": "music-production-101-l12-a1",
+          "title": "Order the Production Steps",
           "type": "drag_and_drop",
           "prompt": "Put these production steps in the correct order from start to finish:",
           "items": [
-            "Record / program MIDI tracks",
-            "Mix (EQ, compression, reverb)",
+            "Record / program MIDI & audio tracks",
             "Arrange song sections",
+            "Mix (EQ, compression, reverb)",
             "Master (limiter, loudness)",
             "Export final WAV/MP3"
           ],
@@ -1255,38 +1013,89 @@ export const MusicProduction101Module: LearningModule = {
       ],
       "flashcards": [
         {
-          "id": "music-production-101-l14-f1",
+          "id": "music-production-101-l12-f1",
           "front": "LUFS",
-          "back": "Loudness Units relative to Full Scale — the standard loudness measurement for streaming (-14 LUFS target for Spotify)"
+          "back": "Loudness Units relative to Full Scale. The standard loudness measurement for streaming (-14 LUFS is the target for Spotify)."
         },
         {
-          "id": "music-production-101-l14-f2",
+          "id": "music-production-101-l12-f2",
           "front": "Limiter",
-          "back": "A compressor with a very high ratio that prevents signal from exceeding a ceiling — used in mastering to maximize loudness"
+          "back": "A compressor with a very high ratio that prevents a signal from exceeding a set ceiling. Used in mastering to maximize loudness without clipping."
         },
         {
-          "id": "music-production-101-l14-f3",
+          "id": "music-production-101-l12-f3",
           "front": "Distributor",
-          "back": "A service (DistroKid, TuneCore, etc.) that uploads your music to streaming platforms and manages royalties"
+          "back": "A service (like DistroKid or TuneCore) that uploads your music to streaming platforms and manages royalties."
         },
         {
-          "id": "music-production-101-l14-f4",
-          "front": "Bounce / render / export",
-          "back": "The process of converting your DAW project into a final audio file (WAV, MP3) for listening outside the DAW"
+          "id": "music-production-101-l12-f4",
+          "front": "Bounce / Render / Export",
+          "back": "The process of converting your DAW project into a final audio file (like WAV or MP3) for listening outside the DAW."
         }
       ]
     },
     {
-      "id": "music-production-101-l15",
-      "title": "Mastery Sprint",
+      "id": "music-production-101-l13",
+      "title": "Final Project: Create Your First Track",
+      "type": "interactive",
+      "duration": 25,
+      "objectives": [
+        "Synthesize all learned skills to produce a 1-minute musical piece",
+        "Arrange the piece with at least three distinct sections",
+        "Apply basic mixing and automation to enhance the track"
+      ],
+      "chunks": [
+        {
+          "id": "music-production-101-l13-c1",
+          "title": "Project Brief: Your Mission",
+          "content": "Your challenge is to create a 1-minute song from scratch. It must include: a core drum beat, at least one MIDI instrument (like a bassline or synth melody), and one audio element (this can be a recorded sound, a vocal, or a downloaded sample). Your song should have an intro, a main section (like a verse/chorus), and an outro."
+        },
+        {
+          "id": "music-production-101-l13-c2",
+          "title": "Step 1: Lay the Foundation",
+          "content": "Start by creating your drum beat. Use the techniques from the beat making lessons. Program a 4 or 8-bar loop with a kick, snare, and hi-hats. Don't forget to add a little swing or velocity variation to make it feel human."
+        },
+        {
+          "id": "music-production-101-l13-c3",
+          "title": "Step 2: Add Musical Layers",
+          "content": "Now, add your MIDI instruments. Create a new track with a virtual instrument. Program a simple bassline that complements your kick drum pattern. Then, add another instrument for a melody or chords. Use the piano roll to edit your notes until you have a loop you like."
+        },
+        {
+          "id": "music-production-101-l13-c4",
+          "title": "Step 3: Arrange Your Track",
+          "content": "It's time to break out of the loop! Use the Add/Subtract principle. Copy your loop across the timeline for one minute. Create an intro by starting with just one or two elements. Build energy by adding more parts for the main section. Create an outro by fading elements out."
+        },
+        {
+          "id": "music-production-101-l13-c5",
+          "title": "Step 4: Mix and Polish",
+          "content": "Balance the volume levels of your tracks. Use EQ to give each instrument its own space. Apply light compression to your drums or bass to even them out. Add a touch of reverb to your melody to give it depth. Use automation to create a filter sweep into your main section or a fade-out at the end."
+        },
+        {
+          "id": "music-production-101-l13-c6",
+          "title": "Step 5: Export and Share",
+          "content": "Follow the steps from the previous lesson to export your finished track as a high-quality WAV file and a 320kbps MP3. Congratulations, you've produced your first track!"
+        }
+      ],
+      "learningAids": [
+        {
+          "id": "music-production-101-l13-a1",
+          "type": "checklist",
+          "title": "Project Checklist",
+          "content": "A checklist of all required elements for the final project: 1-minute length, drum beat, MIDI instrument, audio element, intro/main/outro structure, basic mixing, automation, and final export."
+        }
+      ]
+    },
+    {
+      "id": "music-production-101-l14",
+      "title": "Final Mastery Quiz",
       "type": "quiz",
-      "duration": 10,
+      "duration": 12,
       "objectives": [
         "Demonstrate comprehensive mastery of music production fundamentals"
       ],
       "questions": [
         {
-          "id": "music-production-101-l15-q1",
+          "id": "music-production-101-l14-q1",
           "text": "The recommended loudness target for Spotify is approximately:",
           "skillId": "music-production-101-skill-core",
           "options": [
@@ -1308,10 +1117,10 @@ export const MusicProduction101Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": ""
+          "explanation": "Streaming services normalize audio to a standard loudness level to provide a consistent listening experience. For Spotify, the target is approximately -14 LUFS (Loudness Units Full Scale)."
         },
         {
-          "id": "music-production-101-l15-q2",
+          "id": "music-production-101-l14-q2",
           "text": "The 'add/subtract' arrangement principle means:",
           "skillId": "music-production-101-skill-core",
           "options": [
@@ -1333,10 +1142,10 @@ export const MusicProduction101Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": ""
+          "explanation": "This technique creates dynamic interest by building energy when instruments are added (e.g., in a chorus) and creating space or tension when they are removed (e.g., in a verse or bridge)."
         },
         {
-          "id": "music-production-101-l15-q3",
+          "id": "music-production-101-l14-q3",
           "text": "Before exporting your final mix, you should check for:",
           "skillId": "music-production-101-skill-core",
           "options": [
@@ -1358,10 +1167,10 @@ export const MusicProduction101Module: LearningModule = {
             }
           ],
           "correctOptionId": "a",
-          "explanation": ""
+          "explanation": "These are crucial final checks. Muted tracks mean parts of your song will be missing, and clipping on the master bus will cause irreversible digital distortion in your final exported file."
         },
         {
-          "id": "music-production-101-l15-q4",
+          "id": "music-production-101-l14-q4",
           "text": "A sawtooth waveform sounds:",
           "skillId": "music-production-101-skill-core",
           "options": [
@@ -1383,14 +1192,64 @@ export const MusicProduction101Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": ""
+          "explanation": "A sawtooth wave is rich in both even and odd harmonics, giving it a full, bright, and often aggressive or 'buzzy' character, making it a versatile starting point for synthesis."
+        },
+        {
+          "id": "music-production-101-l14-q5",
+          "text": "The recording signal chain, in the correct order, is:",
+          "skillId": "music-production-101-skill-core",
+          "options": [
+            {
+              "id": "a",
+              "text": "DAW → Interface → Microphone → Sound"
+            },
+            {
+              "id": "b",
+              "text": "Sound → Microphone → Audio Interface → DAW"
+            },
+            {
+              "id": "c",
+              "text": "Microphone → DAW → Interface → Speaker"
+            },
+            {
+              "id": "d",
+              "text": "Sound → DAW → Microphone → Interface"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "The sound wave is captured by the microphone, converted from analog to digital by the audio interface, and then recorded and manipulated in the Digital Audio Workstation (DAW)."
+        },
+        {
+          "id": "music-production-101-l14-q6",
+          "text": "A key advantage of MIDI over audio is:",
+          "skillId": "music-production-101-skill-core",
+          "options": [
+            {
+              "id": "a",
+              "text": "It always has higher sound quality"
+            },
+            {
+              "id": "b",
+              "text": "The ability to edit notes, timing, and instrument after recording"
+            },
+            {
+              "id": "c",
+              "text": "It captures the sound of the room"
+            },
+            {
+              "id": "d",
+              "text": "It requires less hard drive space than a text file"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Since MIDI is instructional data and not a fixed audio recording, you have complete flexibility to change every aspect of the performance non-destructively."
         }
       ],
       "quizBlueprint": {
-        "totalQuestions": 4,
+        "totalQuestions": 6,
         "bloomProfile": {
-          "remember": 1,
-          "understand": 1,
+          "remember": 2,
+          "understand": 2,
           "apply": 1,
           "analyze": 1
         }

@@ -73,7 +73,11 @@ function collectTsFiles(dir) {
     const fullPath = path.join(dir, entry.name);
     if (entry.isDirectory()) {
       files = files.concat(collectTsFiles(fullPath));
-    } else if (entry.name.endsWith(".ts") && !entry.name.endsWith(".d.ts")) {
+    } else if (
+      entry.name.endsWith(".ts") &&
+      !entry.name.endsWith(".d.ts") &&
+      !entry.name.includes(".example.")
+    ) {
       files.push(fullPath);
     }
   }

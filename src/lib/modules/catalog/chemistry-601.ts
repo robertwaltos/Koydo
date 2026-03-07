@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const Chemistry601Module: LearningModule = {
+export const chemistry_601_Module: LearningModule = {
   "id": "chemistry-601",
   "title": "Chemistry Research and Leadership",
   "description": "Post-401 specialization in Chemistry, focused on chemistry systems diagnostics, chemistry operations and execution design, chemistry impact and tradeoff analysis, and chemistry governance and leadership through advanced casework, simulation, and defense-based checkpoints.",
@@ -14,7 +14,7 @@ export const Chemistry601Module: LearningModule = {
   ],
   "minAge": 17,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en",
@@ -34,6 +34,8 @@ export const Chemistry601Module: LearningModule = {
       "title": "Chemistry Advanced Foundations",
       "type": "video",
       "duration": 14,
+      "lessonImagePrompt": "Imagen 4 prompt: A sleek, high-tech chemistry laboratory with glowing holographic data visualizations of molecular structures and causal loop diagrams floating above a central glass table. Cinematic lighting, photorealistic, 8k resolution.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A dynamic 3D animation showing a complex chemical reaction network. Nodes light up to represent causal links and uncertainty bounds, transitioning into a clean, modern dashboard displaying evidence thresholds and diagnostic metrics. 4k, professional documentary style.",
       "learningAids": [
         {
           "id": "chemistry-601-l01-a1",
@@ -47,19 +49,19 @@ export const Chemistry601Module: LearningModule = {
           "id": "chemistry-601-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "In this lesson, we will delve into the advanced boundaries of chemistry, which are essential for understanding complex chemical systems. We will focus on how to effectively diagnose these systems, which means identifying any issues or inefficiencies they may have. Additionally, we will learn how to design operations and execution strategies that can enhance these processes. By mastering these concepts, we will be better equipped to analyze and improve various chemical processes, leading to more efficient and innovative solutions in the field of chemistry.\nContext recap: In this lesson, we will delve into the advanced boundaries of chemistry, which are essential for understanding complex chemical systems. We will focus on how to effectively diagnose these systems, which means identifying any issues or inefficiencies they may have. Additionally, we will learn how to design operations and execution strategies that can enhance these processes. By mastering these concepts, we will be better equipped to analyze and improve various chemical processes, leading to more efficient and innovative solutions in the field of chemistry."
+          "content": "This module establishes the advanced boundaries of chemistry systems diagnostics. Learners will identify systemic inefficiencies and design robust execution strategies to enhance complex chemical processes, moving beyond theoretical models to operational realities."
         },
         {
           "id": "chemistry-601-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "In this section, learners will create maps that show how different factors influence each other in chemistry. We will also identify areas of uncertainty and understand how various systems depend on one another. This preparation is essential before planning any interventions in chemical processes.\nContext recap: In this section, learners will create maps that show how different factors influence each other in chemistry. We will also identify areas of uncertainty and understand how various systems depend on one another. This preparation is essential before planning any interventions in chemical processes."
+          "content": "Learners will construct causal maps illustrating interdependencies within chemical systems. By quantifying uncertainty and identifying critical dependencies, practitioners can establish a rigorous foundation prior to planning any systemic interventions."
         },
         {
           "id": "chemistry-601-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "It is important to ensure that all claims we make are supported by measurable indicators. We will discuss how to establish confidence bounds and set up review checkpoints to validate our findings. This process helps us maintain accuracy and reliability in our work.\nContext recap: It is important to ensure that all claims we make are supported by measurable indicators. We will discuss how to establish confidence bounds and set up review checkpoints to validate our findings. This process helps us maintain accuracy and reliability in our work."
+          "content": "All operational claims must be supported by measurable indicators. This section covers the establishment of strict confidence bounds and review checkpoints to validate findings, ensuring accuracy and reliability in high-stakes environments."
         }
       ],
       "flashcards": [
@@ -78,13 +80,16 @@ export const Chemistry601Module: LearningModule = {
           "front": "chemistry impact and tradeoff analysis",
           "back": "Evaluation discipline for identifying true gains and hidden costs."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/chemistry-601-l01.png"
     },
     {
       "id": "chemistry-601-l02",
       "title": "Chemistry Specialist Methods Lab",
       "type": "interactive",
       "duration": 17,
+      "lessonImagePrompt": "Imagen 4 prompt: A top-down view of a modern digital workstation in a chemistry lab, featuring multiple monitors displaying stress-test graphs, control gate architectures, and workflow schematics. Professional, crisp, highly detailed.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: Time-lapse style video of a digital simulation running stress tests on a chemical manufacturing process. Red warning indicators trigger automated rollback protocols, demonstrating control gate architecture in real-time. Sleek, corporate tech aesthetic.",
       "learningAids": [
         {
           "id": "chemistry-601-l02-a1",
@@ -98,13 +103,13 @@ export const Chemistry601Module: LearningModule = {
           "id": "chemistry-601-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "In this interactive lab, learners will design specialized workflows for chemistry experiments. They will also conduct stress tests to see how these workflows perform under challenging scenarios. This hands-on practice will enhance their problem-solving skills.\nContext recap: In this interactive lab, learners will design specialized workflows for chemistry experiments. They will also conduct stress tests to see how these workflows perform under challenging scenarios. This hands-on practice will enhance their problem-solving skills.\nWhy this matters: Method Design and Stress Test helps learners in Chemistry connect ideas from Chemistry Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "In this interactive lab, learners design specialized workflows for complex chemistry experiments and subject them to rigorous stress tests. This hands-on practice evaluates workflow resilience under challenging, high-constraint scenarios."
         },
         {
           "id": "chemistry-601-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "In this recap, we will review how workflows can be structured to include important checkpoints, criteria for rolling back to previous steps, and methods for escalating issues based on set thresholds. This architecture is crucial for maintaining control during experiments.\nContext recap: In this recap, we will review how workflows can be structured to include important checkpoints, criteria for rolling back to previous steps, and methods for escalating issues based on set thresholds. This architecture is crucial for maintaining control during experiments."
+          "content": "Workflows must be structured with robust control gate architectures. This includes defining pre-commit checkpoints, criteria for rolling back to previous states, and automated escalation pathways based on predefined risk thresholds."
         }
       ],
       "interactiveActivities": [
@@ -132,13 +137,16 @@ export const Chemistry601Module: LearningModule = {
             }
           ]
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/chemistry-601-l02.png"
     },
     {
       "id": "chemistry-601-l03",
       "title": "Checkpoint 1: Specialist Methods",
       "type": "quiz",
       "duration": 10,
+      "lessonImagePrompt": "Imagen 4 prompt: A minimalist, brightly lit examination room with a single sleek digital tablet on a desk displaying a complex chemistry diagnostic question. Soft focus background, photorealistic.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A slow, smooth pan across a digital interface showing various chemistry diagnostic charts and multiple-choice nodes, symbolizing a checkpoint or assessment. Clean, modern, and focused.",
       "learningAids": [
         {
           "id": "chemistry-601-l03-a1",
@@ -348,13 +356,16 @@ export const Chemistry601Module: LearningModule = {
           "correctOptionId": "b",
           "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/chemistry-601-l03.png"
     },
     {
       "id": "chemistry-601-l04",
       "title": "Chemistry Advanced Case Analysis",
       "type": "video",
       "duration": 14,
+      "lessonImagePrompt": "Imagen 4 prompt: A diverse group of professional chemists and engineers in a modern boardroom, analyzing a large glowing screen displaying a complex chemical tradeoff matrix and scenario architecture. Cinematic, professional lighting.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A visual breakdown of a decision memo. Text blocks and data charts slide into place, comparing safety, cost, and reliability metrics for competing chemical interventions. Professional corporate presentation style.",
       "learningAids": [
         {
           "id": "chemistry-601-l04-a1",
@@ -368,27 +379,30 @@ export const Chemistry601Module: LearningModule = {
           "id": "chemistry-601-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "In this case study, we will explore the various competing constraints that arise in the field of chemistry systems diagnostics. By examining these constraints, we will gain insights into how different chemical processes can affect one another. Additionally, we will analyze the impacts and trade-offs associated with these processes, which will empower us to make informed and responsible decisions in our chemical analyses.\nContext recap: In this case study, we will explore the various competing constraints that arise in the field of chemistry systems diagnostics. By examining these constraints, we will gain insights into how different chemical processes can affect one another. Additionally, we will analyze the impacts and trade-offs associated with these processes, which will empower us to make informed and responsible decisions in our chemical analyses."
+          "content": "This case study explores the competing constraints inherent in chemistry systems diagnostics. By analyzing these constraints, learners gain insights into systemic interdependencies and the cascading impacts of localized chemical processes."
         },
         {
           "id": "chemistry-601-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "In this practice session, learners will compare different options based on various important factors such as safety, reliability, cost, fairness, and governance. This analysis will help them understand the complexities involved in decision-making.\nContext recap: In this practice session, learners will compare different options based on various important factors such as safety, reliability, cost, fairness, and governance. This analysis will help them understand the complexities involved in decision-making.\nWhy this matters: Tradeoff Framing helps learners in Chemistry connect ideas from Chemistry Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "Learners will evaluate competing operational options against critical factors including safety, reliability, cost, and governance. This rigorous tradeoff analysis is essential for navigating the complexities of advanced decision-making."
         },
         {
           "id": "chemistry-601-l04-c3",
           "kind": "recap",
           "title": "Decision Memo Pattern",
-          "content": "In our recap, we will discuss how each recommendation should include assumptions, supporting evidence, risk management strategies, and fallback plans. This structured approach ensures that we are prepared for any uncertainties.\nContext recap: In our recap, we will discuss how each recommendation should include assumptions, supporting evidence, risk management strategies, and fallback plans. This structured approach ensures that we are prepared for any uncertainties.\nWhy this matters: Decision Memo Pattern helps learners in Chemistry connect ideas from Chemistry Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "A professional decision memo must explicitly state assumptions, supporting evidence, risk management strategies, and fallback plans. This structured pattern ensures comprehensive preparation for operational uncertainties."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/chemistry-601-l04.png"
     },
     {
       "id": "chemistry-601-l05",
       "title": "Chemistry Simulation Clinic",
       "type": "interactive",
       "duration": 18,
+      "lessonImagePrompt": "Imagen 4 prompt: A high-fidelity virtual reality simulation setup in a chemistry lab. A user interacts with floating holographic control panels, tuning parameters for a volatile chemical reaction. Futuristic, highly detailed.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: First-person perspective of interacting with a complex digital control panel for a chemical reactor. The operator adjusts dials to stabilize fluctuating pressure and temperature readings, demonstrating adaptive response design. High tension, realistic.",
       "learningAids": [
         {
           "id": "chemistry-601-l05-a1",
@@ -402,13 +416,13 @@ export const Chemistry601Module: LearningModule = {
           "id": "chemistry-601-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "During this interactive session, learners will operate scenario controls while balancing performance with governance constraints. This experience will help them understand the importance of maintaining standards while achieving results.\nContext recap: During this interactive session, learners will operate scenario controls while balancing performance with governance constraints. This experience will help them understand the importance of maintaining standards while achieving results.\nWhy this matters: Live Scenario Controls helps learners in Chemistry connect ideas from Chemistry Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "Learners will operate live scenario controls, balancing operational performance with strict governance constraints. This simulation emphasizes the critical need to maintain rigorous standards while achieving target outcomes under pressure."
         },
         {
           "id": "chemistry-601-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "In this recap, we will emphasize the importance of effective responses that can update control gates while ensuring traceability and accountability. This principle is vital for maintaining integrity in our chemical processes.\nContext recap: In this recap, we will emphasize the importance of effective responses that can update control gates while ensuring traceability and accountability. This principle is vital for maintaining integrity in our chemical processes.\nWhy this matters: Adaptive Response Design helps learners in Chemistry connect ideas from Chemistry Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "Effective adaptive responses require dynamic updates to control gates while ensuring complete traceability and accountability. This principle is vital for maintaining systemic integrity during unforeseen chemical process deviations."
         }
       ],
       "interactiveActivities": [
@@ -418,13 +432,16 @@ export const Chemistry601Module: LearningModule = {
           "title": "Adverse-Condition Decision Run",
           "description": "Run a high-pressure chemistry scenario and tune controls under uncertainty."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/chemistry-601-l05.png"
     },
     {
       "id": "chemistry-601-l06",
       "title": "Checkpoint 2: Case and Simulation Mastery",
       "type": "quiz",
       "duration": 11,
+      "lessonImagePrompt": "Imagen 4 prompt: A glowing digital lock icon superimposed over a complex chemical engineering blueprint, symbolizing mastery and security in advanced chemistry simulations. Deep blue and gold color palette.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A fast-paced montage of chemical simulations successfully resolving, green checkmarks appearing on data dashboards, culminating in a 'Mastery Achieved' digital badge. High-tech, rewarding aesthetic.",
       "learningAids": [
         {
           "id": "chemistry-601-l06-a1",
@@ -536,111 +553,114 @@ export const Chemistry601Module: LearningModule = {
         },
         {
           "id": "chemistry-601-l06-q5",
-          "text": "What is the best way to compare competing interventions in advanced Chemistry?",
+          "text": "When designing a scenario architecture for a complex chemical system, what is the primary function of mapping competing constraints?",
           "skillId": "chemistry-601-skill-advanced-5",
           "options": [
             {
               "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
+              "text": "To ensure the project is completed under budget regardless of safety"
             },
             {
               "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
+              "text": "To identify hidden interdependencies and potential cascading failures"
             },
             {
               "id": "c",
-              "text": "Switch metrics after results arrive"
+              "text": "To eliminate the need for a formal decision memo"
             },
             {
               "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
+              "text": "To justify bypassing standard governance protocols"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
+          "explanation": "Mapping competing constraints reveals how optimizing one variable might negatively impact another, exposing hidden interdependencies."
         },
         {
           "id": "chemistry-601-l06-q6",
-          "text": "In high-stakes Chemistry Research and Leadership execution, which communication protocol is strongest?",
+          "text": "In advanced tradeoff framing, how should a practitioner handle a highly efficient chemical intervention that carries a low-probability, catastrophic environmental risk?",
           "skillId": "chemistry-601-skill-advanced-6",
           "options": [
             {
               "id": "a",
-              "text": "Broadcast conclusions without assumptions"
+              "text": "Ignore the risk since the probability is low"
             },
             {
               "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
+              "text": "Quantify the risk, establish strict uncertainty bounds, and design mandatory rollback triggers before proceeding"
             },
             {
               "id": "c",
-              "text": "Share only final outcomes after completion"
+              "text": "Proceed immediately to maximize efficiency gains"
             },
             {
               "id": "d",
-              "text": "Limit updates to a single informal channel"
+              "text": "Delegate the risk assessment to a junior team member"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
+          "explanation": "High-stakes tradeoffs require explicit quantification of risk, uncertainty bounds, and robust rollback mechanisms."
         },
         {
           "id": "chemistry-601-l06-q7",
-          "text": "A mature remediation loop in advanced Chemistry should prioritize:",
+          "text": "During a live simulation, if a chemical process unexpectedly breaches a secondary safety threshold, what is the most appropriate adaptive response?",
           "skillId": "chemistry-601-skill-advanced-7",
           "options": [
             {
               "id": "a",
-              "text": "Blame assignment without system updates"
+              "text": "Wait to see if the system self-corrects before taking action"
             },
             {
               "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
+              "text": "Immediately activate the predefined fallback plan and escalate to the governance review board"
             },
             {
               "id": "c",
-              "text": "One-time fixes without retesting"
+              "text": "Manually override the safety threshold to continue the simulation"
             },
             {
               "id": "d",
-              "text": "Issue closure based on elapsed time"
+              "text": "Delete the log entry to avoid triggering an audit"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
+          "explanation": "Breaching safety thresholds requires immediate adherence to predefined fallback plans and proper escalation."
         },
         {
           "id": "chemistry-601-l06-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Chemistry Research and Leadership?",
+          "text": "What is the defining characteristic of a mature adaptive response design in chemistry operations?",
           "skillId": "chemistry-601-skill-advanced-8",
           "options": [
             {
               "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
+              "text": "It relies entirely on manual intervention without automated triggers"
             },
             {
               "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
+              "text": "It dynamically updates control gates based on real-time data while maintaining an auditable trail of all interventions"
             },
             {
               "id": "c",
-              "text": "Ignore correlated failure modes"
+              "text": "It prevents any changes to the original operational plan"
             },
             {
               "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
+              "text": "It prioritizes speed of response over traceability and accountability"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "explanation": "Mature adaptive responses balance dynamic, real-time adjustments with strict traceability and accountability."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/chemistry-601-l06.png"
     },
     {
       "id": "chemistry-601-l07",
       "title": "Chemistry Governance and Public Impact",
       "type": "video",
       "duration": 13,
+      "lessonImagePrompt": "Imagen 4 prompt: A conceptual illustration of a chemical plant integrated harmoniously with a green city and clean water sources. Overlay of data nodes showing impact distribution. Bright, optimistic, photorealistic.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: An animated infographic showing the lifecycle of a chemical product, tracing its environmental and public health impacts across different demographics and timescales. Clean, educational, vector-style animation.",
       "learningAids": [
         {
           "id": "chemistry-601-l07-a1",
@@ -654,19 +674,19 @@ export const Chemistry601Module: LearningModule = {
           "id": "chemistry-601-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "In this section, learners will explore how to map the benefits, burdens, and delayed effects of chemical processes across different stakeholder groups. Understanding these impacts is crucial for responsible decision-making.\nContext recap: In this section, learners will explore how to map the benefits, burdens, and delayed effects of chemical processes across different stakeholder groups. Understanding these impacts is crucial for responsible decision-making.\nWhy this matters: Stakeholder Impact Distribution helps learners in Chemistry connect ideas from Chemistry Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "Learners will map the distribution of benefits, burdens, and delayed effects of chemical processes across diverse stakeholder groups. Quantifying these impacts is a prerequisite for responsible, ethical decision-making."
         },
         {
           "id": "chemistry-601-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "We will discuss the architecture of accountability, which includes ensuring that decisions can be traced, that review rights are established, and that obligations for remediation are clear. This framework is essential for ethical governance in chemistry.\nContext recap: We will discuss the architecture of accountability, which includes ensuring that decisions can be traced, that review rights are established, and that obligations for remediation are clear. This framework is essential for ethical governance in chemistry.\nWhy this matters: Accountability Architecture helps learners in Chemistry connect ideas from Chemistry Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "Accountability architecture ensures that all decisions are fully traceable, review rights are formally established, and obligations for remediation are explicitly defined. This framework is the bedrock of ethical chemistry governance."
         },
         {
           "id": "chemistry-601-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "At the end of our lesson, we will create a helpful checklist that connects important outcomes with ethical considerations, ensures we follow policies, and promotes resilience in our leadership approach. This checklist will serve as a guide to make responsible decisions in chemistry governance.\nContext recap: At the end of our lesson, we will create a helpful checklist that connects important outcomes with ethical considerations, ensures we follow policies, and promotes resilience in our leadership approach. This checklist will serve as a guide to make responsible decisions in chemistry governance."
+          "content": "The responsible leadership checklist operationalizes ethical considerations, ensuring policy compliance and promoting resilience. It serves as a definitive guide for balancing performance targets with public and environmental accountability."
         }
       ],
       "flashcards": [
@@ -685,13 +705,16 @@ export const Chemistry601Module: LearningModule = {
           "front": "Responsible leadership",
           "back": "Decision behavior balancing performance, accountability, and ethics."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/chemistry-601-l07.png"
     },
     {
       "id": "chemistry-601-l08",
       "title": "Chemistry Capstone Defense Lab",
       "type": "interactive",
       "duration": 16,
+      "lessonImagePrompt": "Imagen 4 prompt: A professional chemist standing confidently at a podium in a modern auditorium, presenting a complex chemical systems defense brief to a panel of experts. Dramatic lighting, photorealistic.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A simulated defense panel scenario. The camera switches between a presenter showing data on a large screen and a panel of experts nodding and taking notes. Professional, high-stakes atmosphere.",
       "learningAids": [
         {
           "id": "chemistry-601-l08-a1",
@@ -705,13 +728,13 @@ export const Chemistry601Module: LearningModule = {
           "id": "chemistry-601-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "In this activity, you will work on putting together a comprehensive brief. This brief will include your main claims, the evidence that supports them, the boundaries of uncertainty in your findings, and possible pathways for remediation if needed. This exercise will help you practice articulating your ideas clearly and effectively.\nContext recap: In this activity, you will work on putting together a comprehensive brief. This brief will include your main claims, the evidence that supports them, the boundaries of uncertainty in your findings, and possible pathways for remediation if needed. This exercise will help you practice articulating your ideas clearly and effectively."
+          "content": "Learners will assemble a comprehensive defense brief synthesizing primary claims, empirical evidence, uncertainty boundaries, and explicit remediation pathways. This exercise hones the ability to articulate complex technical strategies effectively."
         },
         {
           "id": "chemistry-601-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "During this rehearsal session, you will practice responding to questions and critiques from an expert panel. You will prepare answers to technical inquiries, governance-related questions, and feedback from stakeholders. This practice will help you build confidence and improve your communication skills in a professional setting.\nContext recap: During this rehearsal session, you will practice responding to questions and critiques from an expert panel. You will prepare answers to technical inquiries, governance-related questions, and feedback from stakeholders. This practice will help you build confidence and improve your communication skills in a professional setting."
+          "content": "During this rehearsal, learners will defend their recommendations against adversarial critiques from an expert panel. Anticipating technical inquiries and governance challenges builds the confidence required for high-stakes professional environments."
         }
       ],
       "interactiveActivities": [
@@ -721,7 +744,8 @@ export const Chemistry601Module: LearningModule = {
           "title": "Expert Defense Panel",
           "description": "Defend specialization recommendations under adversarial cross-examination."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/chemistry-601-l08.png"
     }
   ]
 };

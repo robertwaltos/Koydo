@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const WorldHistory201Module: LearningModule = {
+export const world_history_201_Module: LearningModule = {
   "id": "world-history-201",
   "title": "World History Themes and Turning Points",
   "description": "Trace long-term historical themes using sources, causation, and continuity/change analysis.",
@@ -8,15 +8,16 @@ export const WorldHistory201Module: LearningModule = {
   "tags": [
     "core",
     "curriculum",
-    "interactive"
+    "interactive",
+    "history"
   ],
   "minAge": 7,
   "maxAge": 18,
   "version": "1.1.0",
   "learningObjectives": [
-    "Understand core concepts in History Worldwide",
-    "Apply Evidence and Argument strategies through guided practice",
-    "Demonstrate mastery with subject-specific quizzes"
+    "Understand core concepts like causation, continuity, and change in World History.",
+    "Apply evidence and argument strategies by analyzing primary and secondary sources.",
+    "Demonstrate mastery of historical thinking skills through interactive scenarios and quizzes."
   ],
   "lessons": [
     {
@@ -27,59 +28,59 @@ export const WorldHistory201Module: LearningModule = {
       "chunks": [
         {
           "id": "world-history-201-l01-c1",
-          "title": "Causation in Historical Events Overview",
-          "content": "In this lesson, we will explore the idea of causation, which means understanding how certain events in history lead to other events. We will learn how to analyze historical events and interpret their significance. Our goal is to recognize what strong reasoning looks like, which will help us think critically and solve problems effectively. By the end of this lesson, you will be better equipped to understand the connections between different historical events.\nContext recap: In this lesson, we will explore the idea of causation, which means understanding how certain events in history lead to other events. We will learn how to analyze historical events and interpret their significance. Our goal is to recognize what strong reasoning looks like, which will help us think critically and solve problems effectively. By the end of this lesson, you will be better equipped to understand the connections between different historical events.\nContext recap: In this lesson, we will explore the idea of causation, which means understanding how certain events in history lead to other events. We will learn how to analyze historical events and interpret their significance. Our goal is to recognize what strong reasoning looks like, which will help us think critically and solve problems effectively. By the end of this lesson, you will be better equipped to understand the connections between different historical events.\nWhy this matters: Causation in Historical Events Overview helps learners in History Worldwide connect ideas from World History Themes and Turning Points to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "title": "The Domino Effect of History",
+          "content": "Have you ever wondered why big events happen? In history, events rarely happen out of nowhere. They are connected like falling dominoes. This is called causation, which means understanding how certain events (causes) lead to other events (effects). [Visual Prompt: An animation of colorful dominoes falling, with the first domino labeled 'Cause' and the final domino labeled 'Effect'.] By the end of this lesson, you will be a history detective, able to trace the clues of why things happened the way they did."
         },
         {
           "id": "world-history-201-l01-c2",
-          "title": "Core Concept",
-          "content": "Causation, along with the concepts of continuity and change, work together to help us understand history better. To start, we will identify the main focus of our analysis. After that, we will look for evidence or steps that support our main idea. This process will help us see how different events are connected and how they influence each other over time. By practicing this, you will become more skilled at analyzing historical information.\nContext recap: Causation, along with the concepts of continuity and change, work together to help us understand history better. To start, we will identify the main focus of our analysis. After that, we will look for evidence or steps that support our main idea. This process will help us see how different events are connected and how they influence each other over time."
+          "title": "Core Concept: Cause and Effect",
+          "content": "Causation works together with continuity (things staying the same) and change (things shifting). To analyze history, we first identify the main event. Then, we look for evidence of what triggered it. Was it a new invention? A change in leadership? A natural disaster? [Visual Prompt: A magnifying glass hovering over a timeline, highlighting a specific spark that starts a fire.] This process helps us see how different events influence each other over time."
         },
         {
           "id": "world-history-201-l01-c3",
-          "title": "Worked Example",
-          "content": "Let's walk through a guided example together! First, we will define our main goal for this analysis. Next, we will apply a strategy that helps us understand continuity and change in the historical context we are studying. Finally, we will verify our results with a quick check to ensure that our reasoning is sound. This step-by-step approach will help you feel more confident in your ability to analyze historical events.\nContext recap: Let's walk through a guided example together! First, we will define our main goal for this analysis. Next, we will apply a strategy that helps us understand continuity and change in the historical context we are studying. Finally, we will verify our results with a quick check to ensure that our reasoning is sound."
+          "title": "Worked Example: The Printing Press",
+          "content": "Let's walk through an example! Goal: Understand the impact of the printing press. Cause: Johannes Gutenberg invents a machine that can print books quickly in the 1400s. Effect: Books become cheaper, more people learn to read, and new ideas spread rapidly across the world. [Visual Prompt: A split screen showing a slow, hand-written book on the left, and a fast-moving printing press churning out pages on the right.] We verify our reasoning by checking historical records from that time."
         },
         {
           "id": "world-history-201-l01-c4",
-          "title": "Transfer Prompt",
-          "content": "Now it's your turn! Apply the same process we just practiced to a new scenario. As you do this, make sure to explain why your approach is valid in one clear sentence. This exercise will help reinforce your understanding of causation and how to analyze historical events effectively. Remember, being able to articulate your reasoning is an important skill in history and beyond!\nContext recap: Now it's your turn! Apply the same process we just practiced to a new scenario. As you do this, make sure to explain why your approach is valid in one clear sentence. This exercise will help reinforce your understanding of causation and how to analyze historical events effectively.\nContext recap: Now it's your turn! Apply the same process we just practiced to a new scenario. As you do this, make sure to explain why your approach is valid in one clear sentence. This exercise will help reinforce your understanding of causation and how to analyze historical events effectively.\nWhy this matters: Transfer Prompt helps learners in History Worldwide connect ideas from World History Themes and Turning Points to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "title": "Transfer Prompt: Your Turn",
+          "content": "Now it's your turn! Think of a major event you've learned about, like the building of the pyramids or the first moon landing. What was one cause, and what was one effect? [Visual Prompt: A blank flowchart with boxes for 'Cause', 'Event', and 'Effect' waiting to be filled.] Step-by-step: (1) Name the event, (2) Identify the cause, (3) Explain the effect, and (4) Check if the evidence supports your claim."
         }
       ],
       "flashcards": [
         {
           "id": "world-history-201-l01-f1",
-          "front": "causation",
-          "back": "A central target skill in this module. Name it before solving."
+          "front": "Causation",
+          "back": "The relationship between cause and effect; how one event leads to another."
         },
         {
           "id": "world-history-201-l01-f2",
-          "front": "continuity and change",
-          "back": "Use this as the method step after defining the goal."
+          "front": "Continuity",
+          "back": "Things that remain the same over a long period of time in history."
         },
         {
           "id": "world-history-201-l01-f3",
-          "front": "Verification",
-          "back": "Check that your result matches the original goal and constraints."
+          "front": "Change",
+          "back": "Things that shift, evolve, or become different over time."
         },
         {
           "id": "world-history-201-l01-f4",
-          "front": "Transfer",
-          "back": "Use the same strategy on a new item to confirm true mastery."
+          "front": "Evidence",
+          "back": "Facts, objects, or documents that prove a historical event happened."
         }
       ],
       "learningAids": [
         {
           "id": "world-history-201-l01-a1",
           "type": "image",
-          "title": "Concept Poster",
-          "content": "A colorful infographic about causation and continuity and change."
+          "title": "Concept Poster: Causation",
+          "content": "A colorful infographic showing a tree. The roots are the 'Causes', the trunk is the 'Event', and the branches/leaves are the 'Effects'."
         },
         {
           "id": "world-history-201-l01-a2",
           "type": "animation",
           "title": "Warm-up Animation",
-          "content": "Short animation introducing History Worldwide vocabulary."
+          "content": "Short animation introducing a friendly history detective character who uses a magnifying glass to find clues."
         }
       ]
     },
@@ -90,49 +91,50 @@ export const WorldHistory201Module: LearningModule = {
       "duration": 12,
       "metadata": {
         "prompts": [
-          "Identify one core idea about causation from this lesson.",
-          "Explain where continuity and change appears in real life.",
-          "Describe one question you still have about historical analysis and interpretation."
+          "Identify one thing in your town that has stayed the same for 50 years (Continuity).",
+          "Identify one thing in your town that has changed recently (Change).",
+          "Why is it important for historians to study both?"
         ]
       },
       "interactiveActivities": [
         {
           "id": "world-history-201-l02-ia1",
           "type": "drag_and_drop",
-          "title": "Practice Flow Builder",
-          "description": "Sort each action into Plan, Execute, or Reflect.",
+          "title": "Sort the Eras: Continuity vs. Change",
+          "description": "Sort each historical scenario into Continuity or Change.",
           "estimatedMinutes": 8,
           "difficultyLevel": "easy",
           "data": {
             "targets": [
               {
-                "id": "plan",
-                "label": "Plan"
+                "id": "continuity",
+                "label": "Continuity (Stayed the Same)"
               },
               {
-                "id": "execute",
-                "label": "Execute"
-              },
-              {
-                "id": "reflect",
-                "label": "Reflect"
+                "id": "change",
+                "label": "Change (Shifted/Evolved)"
               }
             ],
             "draggables": [
               {
                 "id": "d1",
-                "label": "Set a goal for causation",
-                "correctTargetId": "plan"
+                "label": "People continuing to farm wheat for thousands of years",
+                "correctTargetId": "continuity"
               },
               {
                 "id": "d2",
-                "label": "Try one strategy for continuity and change",
-                "correctTargetId": "execute"
+                "label": "The invention of the steam engine replacing horse-drawn carts",
+                "correctTargetId": "change"
               },
               {
                 "id": "d3",
-                "label": "Record what worked and what to improve",
-                "correctTargetId": "reflect"
+                "label": "Using the same trade routes across the desert for centuries",
+                "correctTargetId": "continuity"
+              },
+              {
+                "id": "d4",
+                "label": "The transition from writing on clay tablets to writing on paper",
+                "correctTargetId": "change"
               }
             ]
           }
@@ -143,7 +145,7 @@ export const WorldHistory201Module: LearningModule = {
           "id": "world-history-201-l02-a1",
           "type": "practice",
           "title": "Try It Board",
-          "content": "Complete a guided activity on continuity and change and write one reflection."
+          "content": "[Visual Prompt: A digital whiteboard split into two columns: 'Then' and 'Now'.] Complete a guided activity comparing transportation in the 1800s to today."
         }
       ]
     },
@@ -155,24 +157,24 @@ export const WorldHistory201Module: LearningModule = {
       "questions": [
         {
           "id": "world-history-201-l03-q1",
-          "text": "Which statement best explains causation in History Worldwide?",
+          "text": "Which of the following best describes 'causation' in history?",
           "skillId": "world-history-201-skill-core",
           "options": [
             {
               "id": "a",
-              "text": "It explains causation using evidence from the lesson."
+              "text": "How one event directly leads to or influences another event."
             },
             {
               "id": "b",
-              "text": "It ignores how causation works in practice."
+              "text": "A list of random dates and names."
             },
             {
               "id": "c",
-              "text": "It focuses on an unrelated topic outside History Worldwide."
+              "text": "When everything in a society stays exactly the same."
             },
             {
               "id": "d",
-              "text": "It repeats terms without showing meaning."
+              "text": "Ignoring evidence to make up a fun story."
             }
           ],
           "correctOptionId": "a"
@@ -184,67 +186,67 @@ export const WorldHistory201Module: LearningModule = {
           "options": [
             {
               "id": "a",
-              "text": "Define the goal and examine evidence for continuity and change."
+              "text": "Look at a specific time period and identify what stayed the same and what shifted."
             },
             {
               "id": "b",
-              "text": "Guess quickly without checking evidence."
+              "text": "Guess what happened without looking at any historical documents."
             },
             {
               "id": "c",
-              "text": "Use data unrelated to continuity and change."
+              "text": "Only focus on the things that changed and ignore the rest."
             },
             {
               "id": "d",
-              "text": "Skip the context and jump to a conclusion."
+              "text": "Assume that people in the past lived exactly like we do today."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "world-history-201-l03-q3",
-          "text": "Which option shows strong reasoning about historical analysis and interpretation?",
+          "text": "Which option shows strong reasoning when looking at historical evidence?",
           "skillId": "world-history-201-skill-reasoning",
           "options": [
             {
               "id": "a",
-              "text": "Use examples and verify assumptions step by step."
+              "text": "Using multiple sources to verify facts step by step."
             },
             {
               "id": "b",
-              "text": "Ignore important details and edge cases."
+              "text": "Ignoring details that don't fit your favorite theory."
             },
             {
               "id": "c",
-              "text": "Use assumptions unrelated to historical analysis and interpretation."
+              "text": "Believing the very first thing you read without checking."
             },
             {
               "id": "d",
-              "text": "Change the topic when evidence gets hard."
+              "text": "Changing the topic when the evidence gets hard to understand."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "world-history-201-l03-q4",
-          "text": "Why is spaced review useful for History Worldwide mastery?",
+          "text": "Why is it important to study both causes AND effects?",
           "skillId": "world-history-201-skill-review",
           "options": [
             {
               "id": "a",
-              "text": "It strengthens memory and transfer over time"
+              "text": "It gives us the full picture of why history unfolded the way it did."
             },
             {
               "id": "b",
-              "text": "It creates confusion"
+              "text": "It creates unnecessary confusion."
             },
             {
               "id": "c",
-              "text": "It removes key facts"
+              "text": "Effects are the only things that actually matter."
             },
             {
               "id": "d",
-              "text": "It has no value"
+              "text": "Causes are usually just myths."
             }
           ],
           "correctOptionId": "a"
@@ -254,42 +256,41 @@ export const WorldHistory201Module: LearningModule = {
         {
           "id": "world-history-201-l03-ia1",
           "type": "matching_pairs",
-          "title": "Reasoning Match: Checkpoint: Historical Thinking II",
-          "description": "Match each error signal to the strongest correction strategy.",
+          "title": "Concept Match: Historical Thinking",
+          "description": "Match the historical term to its real-world example.",
           "estimatedMinutes": 7,
           "difficultyLevel": "medium",
           "instructions": [
-            "Review each left-side signal.",
-            "Pick the best response on the right.",
-            "Use your matches to plan the next drill."
+            "Read the historical term on the left.",
+            "Find the matching example on the right."
           ],
           "data": {
             "left": [
               {
                 "id": "l1",
-                "label": "Confusion about causation"
+                "label": "Causation"
               },
               {
                 "id": "l2",
-                "label": "Inconsistent approach to continuity and change"
+                "label": "Continuity"
               },
               {
                 "id": "l3",
-                "label": "Weak transfer of historical analysis and interpretation under timing"
+                "label": "Change"
               }
             ],
             "right": [
               {
                 "id": "r1",
-                "label": "Create a one-step concept summary with one worked example"
+                "label": "A drought leads to a poor harvest, which causes people to migrate."
               },
               {
                 "id": "r2",
-                "label": "Use a checklist before choosing the final answer"
+                "label": "A village uses the same river for fishing for 500 years."
               },
               {
                 "id": "r3",
-                "label": "Retest the same target with a short timed sprint"
+                "label": "A kingdom switches from trading gold to using paper money."
               }
             ],
             "pairs": [
@@ -340,7 +341,7 @@ export const WorldHistory201Module: LearningModule = {
           "id": "world-history-201-l03-a1",
           "type": "mnemonic",
           "title": "Memory Tip",
-          "content": "Use the phrase Plan, Check, Explain for each question."
+          "content": "Remember the 3 C's of History: Causation, Continuity, and Change!"
         }
       ]
     },
@@ -352,53 +353,53 @@ export const WorldHistory201Module: LearningModule = {
       "chunks": [
         {
           "id": "world-history-201-l04-c1",
-          "title": "Using Sources and Corroboration Focus",
-          "content": "In this lesson, we will deepen our understanding of historical evidence by using structured reasoning. We will move from simply understanding concepts to making informed decisions based on the evidence we gather. This will help you become a more critical thinker and a better historian. By the end of this lesson, you will be able to apply these skills to analyze historical sources more effectively.\nContext recap: In this lesson, we will deepen our understanding of historical evidence by using structured reasoning. We will move from simply understanding concepts to making informed decisions based on the evidence we gather. This will help you become a more critical thinker and a better historian. By the end of this lesson, you will be able to apply these skills to analyze historical sources more effectively.\nContext recap: In this lesson, we will deepen our understanding of historical evidence by using structured reasoning. We will move from simply understanding concepts to making informed decisions based on the evidence we gather. This will help you become a more critical thinker and a better historian. By the end of this lesson, you will be able to apply these skills to analyze historical sources more effectively.\nWhy this matters: Using Sources and Corroboration Focus helps learners in History Worldwide connect ideas from World History Themes and Turning Points to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "title": "The Historian's Toolkit",
+          "content": "In this lesson, we will learn how to use historical evidence like a detective. Historians don't just guess what happened; they look at sources. A 'Primary Source' is something from the actual time period, like a diary or a photograph. A 'Secondary Source' is written later, like a textbook. [Visual Prompt: An animation showing a dusty old diary (Primary) next to a modern history textbook (Secondary).] By the end of this lesson, you will know how to weigh evidence to find the truth."
         },
         {
           "id": "world-history-201-l04-c2",
-          "title": "Method Steps",
-          "content": "Let's break down the method we will use in this lesson into three clear steps. Step 1: Identify what is being asked in the historical question or scenario. Step 2: Choose a strategy that aligns with the historical evidence you have. Step 3: Justify your conclusions with solid evidence. Following these steps will help you build strong arguments and support your historical analyses.\nContext recap: Let's break down the method we will use in this lesson into three clear steps. Step 1: Identify what is being asked in the historical question or scenario. Step 2: Choose a strategy that aligns with the historical evidence you have. Step 3: Justify your conclusions with solid evidence."
+          "title": "Corroboration: Checking the Facts",
+          "content": "What happens if one person says a battle started at dawn, but another says it started at noon? We use a skill called 'Corroboration'. This means checking multiple sources to see where they agree and disagree. [Visual Prompt: Three different witnesses pointing in different directions, until the detective finds the clues that overlap.] Step 1: Read Source A. Step 2: Read Source B. Step 3: Find the overlapping facts to build a strong argument."
         },
         {
           "id": "world-history-201-l04-c3",
-          "title": "Common Mistakes",
-          "content": "As we learn, it's important to be aware of common mistakes that can happen during analysis. Some common errors include skipping the setup of your analysis, using assumptions that are not related to the evidence, or failing to verify the final results of your reasoning. By recognizing these pitfalls, you can improve your analytical skills and avoid making the same mistakes in your own work.\nContext recap: As we learn, it's important to be aware of common mistakes that can happen during analysis. Some common errors include skipping the setup of your analysis, using assumptions that are not related to the evidence, or failing to verify the final results of your reasoning. By recognizing these pitfalls, you can improve your analytical skills and avoid making the same mistakes in your own work."
+          "title": "Common Mistakes: Believing Everything",
+          "content": "A common mistake is believing the very first source you read. Sometimes, people in history lied, exaggerated, or only saw part of the event. If you skip corroboration, you might end up with a false conclusion. Always ask: 'Who wrote this? Why did they write it? What might they be leaving out?' [Visual Prompt: A cartoon character reading a sign that says 'Free Gold Here!' and running into a trap, showing the danger of not questioning sources.]"
         },
         {
           "id": "world-history-201-l04-c4",
-          "title": "Independent Try",
-          "content": "Now, it's time for you to try solving a similar item on your own! After you complete it, take a moment to compare your process to the lesson sequence we discussed. This will help you see how well you understood the steps and where you might need to improve. Remember, practice is key to mastering these skills!\nContext recap: Now, it's time for you to try solving a similar item on your own! After you complete it, take a moment to compare your process to the lesson sequence we discussed. This will help you see how well you understood the steps and where you might need to improve. Remember, practice is key to mastering these skills!\nContext recap: Now, it's time for you to try solving a similar item on your own! After you complete it, take a moment to compare your process to the lesson sequence we discussed. This will help you see how well you understood the steps and where you might need to improve. Remember, practice is key to mastering these skills!\nWhy this matters: Independent Try helps learners in History Worldwide connect ideas from World History Themes and Turning Points to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "title": "Independent Try: Be the Detective",
+          "content": "Now it's your turn! Imagine you find a letter from a king saying he is loved by all his people. Then, you find a diary from a farmer saying the king is cruel. How do you find the truth? You need more sources! [Visual Prompt: A scale weighing the king's letter on one side and the farmer's diary on the other.] Practice asking 'Who, What, When, Where, and Why' for every document you read."
         }
       ],
       "flashcards": [
         {
           "id": "world-history-201-l04-f1",
-          "front": "historical evidence",
-          "back": "State the target and pick a strategy before solving."
+          "front": "Primary Source",
+          "back": "A document or object written or created during the time under study (e.g., a diary, photograph, or artifact)."
         },
         {
           "id": "world-history-201-l04-f2",
-          "front": "Step Sequence",
-          "back": "Goal -> Strategy -> Evidence -> Check."
+          "front": "Secondary Source",
+          "back": "An account or interpretation of events created by someone without firsthand experience (e.g., a textbook)."
         },
         {
           "id": "world-history-201-l04-f3",
-          "front": "Assumption Check",
-          "back": "Remove assumptions that are not supported by the prompt."
+          "front": "Corroboration",
+          "back": "Comparing different sources to confirm facts and find where they agree or disagree."
         },
         {
           "id": "world-history-201-l04-f4",
-          "front": "Process Match",
-          "back": "Your explanation should match the steps you actually used."
+          "front": "Sourcing",
+          "back": "Asking who wrote a document, when it was written, and why it was created before trusting it."
         }
       ],
       "learningAids": [
         {
           "id": "world-history-201-l04-a1",
           "type": "image",
-          "title": "Worked Example Sheet",
-          "content": "Step-by-step visuals for historical evidence scenarios."
+          "title": "Source Detective Sheet",
+          "content": "[Visual Prompt: A graphic organizer shaped like a magnifying glass with sections for 'Who?', 'When?', 'Why?', and 'Do others agree?']"
         }
       ]
     },
@@ -409,49 +410,54 @@ export const WorldHistory201Module: LearningModule = {
       "duration": 13,
       "metadata": {
         "prompts": [
-          "Pick one challenge and outline your approach.",
-          "Test your approach and record the result.",
-          "Revise your approach and explain the change."
+          "How might a king and a peasant view a new tax differently?",
+          "Can you think of a time when you and a friend saw the same event but remembered it differently?",
+          "Why is it important to spot bias in historical documents?"
         ]
       },
       "interactiveActivities": [
         {
           "id": "world-history-201-l05-ia1",
           "type": "sorting_buckets",
-          "title": "Strategy Sort",
-          "description": "Sort study actions into Concept, Process, or Review lanes.",
+          "title": "Fact, Opinion, or Bias?",
+          "description": "Sort the historical statements into Fact, Opinion, or Bias.",
           "estimatedMinutes": 9,
           "difficultyLevel": "medium",
           "data": {
             "buckets": [
               {
-                "id": "concept",
-                "label": "historical evidence Concept"
+                "id": "fact",
+                "label": "Historical Fact"
               },
               {
-                "id": "process",
-                "label": "perspective Process"
+                "id": "opinion",
+                "label": "Personal Opinion"
               },
               {
-                "id": "review",
-                "label": "Review Loop"
+                "id": "bias",
+                "label": "Strong Bias"
               }
             ],
             "items": [
               {
                 "id": "i1",
-                "label": "Write one definition in your own words",
-                "correctBucketId": "concept"
+                "label": "The treaty was signed on July 4, 1776.",
+                "correctBucketId": "fact"
               },
               {
                 "id": "i2",
-                "label": "Follow the step-by-step method on a new example",
-                "correctBucketId": "process"
+                "label": "I believe the treaty was a good idea for our country.",
+                "correctBucketId": "opinion"
               },
               {
                 "id": "i3",
-                "label": "Retest the same skill tomorrow",
-                "correctBucketId": "review"
+                "label": "Our glorious leader is perfect and our enemies are evil monsters.",
+                "correctBucketId": "bias"
+              },
+              {
+                "id": "i4",
+                "label": "The battle lasted for three days.",
+                "correctBucketId": "fact"
               }
             ]
           }
@@ -461,8 +467,8 @@ export const WorldHistory201Module: LearningModule = {
         {
           "id": "world-history-201-l05-a1",
           "type": "animation",
-          "title": "Challenge Walkthrough",
-          "content": "Animated sequence for solving a historical evidence challenge."
+          "title": "The Two Sides of the Story",
+          "content": "[Visual Prompt: An animation showing two people looking at a number on the ground. One sees a '6', the other sees a '9'. It explains how perspective changes history.]"
         }
       ]
     },
@@ -474,96 +480,96 @@ export const WorldHistory201Module: LearningModule = {
       "questions": [
         {
           "id": "world-history-201-l06-q1",
-          "text": "Which statement best explains historical evidence in History Worldwide?",
+          "text": "Which of the following is an example of a Primary Source?",
           "skillId": "world-history-201-skill-core",
           "options": [
             {
               "id": "a",
-              "text": "It explains historical evidence using evidence from the lesson."
+              "text": "A soldier's handwritten diary from the battlefield."
             },
             {
               "id": "b",
-              "text": "It ignores how historical evidence works in practice."
+              "text": "A modern history textbook."
             },
             {
               "id": "c",
-              "text": "It focuses on an unrelated topic outside History Worldwide."
+              "text": "A movie made last year about a historical event."
             },
             {
               "id": "d",
-              "text": "It repeats terms without showing meaning."
+              "text": "An encyclopedia article written by a historian."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "world-history-201-l06-q2",
-          "text": "What is the best first step when analyzing perspective?",
+          "text": "What does it mean to 'corroborate' historical sources?",
           "skillId": "world-history-201-skill-process",
           "options": [
             {
               "id": "a",
-              "text": "Define the goal and examine evidence for perspective."
+              "text": "To compare multiple sources to see where they agree and disagree."
             },
             {
               "id": "b",
-              "text": "Guess quickly without checking evidence."
+              "text": "To throw away sources you don't like."
             },
             {
               "id": "c",
-              "text": "Use data unrelated to perspective."
+              "text": "To only read the longest document."
             },
             {
               "id": "d",
-              "text": "Skip the context and jump to a conclusion."
+              "text": "To assume the oldest source is always 100% correct."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "world-history-201-l06-q3",
-          "text": "Which option shows strong reasoning about historical analysis and interpretation?",
+          "text": "Why do historians need to look out for 'bias'?",
           "skillId": "world-history-201-skill-reasoning",
           "options": [
             {
               "id": "a",
-              "text": "Use examples and verify assumptions step by step."
+              "text": "Because writers often favor one side and might leave out facts that make them look bad."
             },
             {
               "id": "b",
-              "text": "Ignore important details and edge cases."
+              "text": "Because bias makes documents completely useless."
             },
             {
               "id": "c",
-              "text": "Use assumptions unrelated to historical analysis and interpretation."
+              "text": "Because historians want to copy the bias into their own books."
             },
             {
               "id": "d",
-              "text": "Change the topic when evidence gets hard."
+              "text": "Because bias is a type of ancient language."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "world-history-201-l06-q4",
-          "text": "Why is spaced review useful for History Worldwide mastery?",
+          "text": "If two primary sources disagree about how a fire started, what should you do?",
           "skillId": "world-history-201-skill-review",
           "options": [
             {
               "id": "a",
-              "text": "It strengthens memory and transfer over time"
+              "text": "Look for a third source and analyze the perspectives of the writers."
             },
             {
               "id": "b",
-              "text": "It creates confusion"
+              "text": "Flip a coin to decide who is right."
             },
             {
               "id": "c",
-              "text": "It removes key facts"
+              "text": "Assume the fire never happened."
             },
             {
               "id": "d",
-              "text": "It has no value"
+              "text": "Pick the source with the best handwriting."
             }
           ],
           "correctOptionId": "a"
@@ -573,42 +579,41 @@ export const WorldHistory201Module: LearningModule = {
         {
           "id": "world-history-201-l06-ia1",
           "type": "matching_pairs",
-          "title": "Reasoning Match: Checkpoint: Evidence and Argument",
-          "description": "Match each error signal to the strongest correction strategy.",
+          "title": "Fix the Historian's Mistake",
+          "description": "Match the historian's error to the best correction strategy.",
           "estimatedMinutes": 7,
           "difficultyLevel": "medium",
           "instructions": [
-            "Review each left-side signal.",
-            "Pick the best response on the right.",
-            "Use your matches to plan the next drill."
+            "Review the mistake on the left.",
+            "Pick the best way to fix it on the right."
           ],
           "data": {
             "left": [
               {
                 "id": "l1",
-                "label": "Confusion about historical evidence"
+                "label": "Only reading one diary to understand a war."
               },
               {
                 "id": "l2",
-                "label": "Inconsistent approach to perspective"
+                "label": "Believing a king's letter that says he is perfect."
               },
               {
                 "id": "l3",
-                "label": "Weak transfer of historical analysis and interpretation under timing"
+                "label": "Using a 2020 movie as proof of how Romans lived."
               }
             ],
             "right": [
               {
                 "id": "r1",
-                "label": "Create a one-step concept summary with one worked example"
+                "label": "Find more sources to corroborate the story."
               },
               {
                 "id": "r2",
-                "label": "Use a checklist before choosing the final answer"
+                "label": "Check for bias and ask why he wrote it."
               },
               {
                 "id": "r3",
-                "label": "Retest the same target with a short timed sprint"
+                "label": "Find a primary source from Ancient Rome instead."
               }
             ],
             "pairs": [
@@ -659,7 +664,7 @@ export const WorldHistory201Module: LearningModule = {
           "id": "world-history-201-l06-a1",
           "type": "mnemonic",
           "title": "Memory Tip",
-          "content": "Use the phrase Plan, Check, Explain for each question."
+          "content": "Use the 3 S's: Source it, Study it, Synthesize it!"
         }
       ]
     },
@@ -671,53 +676,53 @@ export const WorldHistory201Module: LearningModule = {
       "chunks": [
         {
           "id": "world-history-201-l07-c1",
-          "title": "Global Interconnections Across Eras Setup",
-          "content": "Before you start your analysis, it's helpful to use perspective to organize your approach. Planning your steps in advance can improve both the quality of your work and the speed at which you complete it. By taking the time to think through your strategy, you will set yourself up for success in understanding global interconnections across different eras.\nContext recap: Before you start your analysis, it's helpful to use perspective to organize your approach. Planning your steps in advance can improve both the quality of your work and the speed at which you complete it. By taking the time to think through your strategy, you will set yourself up for success in understanding global interconnections across different eras."
+          "title": "The Woven Threads of History",
+          "content": "History isn't just about isolated countries; it's about how the world connects. Think of history as a giant woven blanket. Trade routes, like the famous Silk Road, connected Asia, Africa, and Europe. People didn't just trade silk and spices; they traded ideas, religions, and even diseases. [Visual Prompt: An animated map of the world with glowing lines connecting different continents, showing the flow of goods and ideas.]"
         },
         {
           "id": "world-history-201-l07-c2",
-          "title": "Decision Rules",
-          "content": "When faced with competing choices in your analysis, it's important to use a simple rule to guide your decision-making. Choose the option that has the strongest evidence and the clearest connection to your main goal. This approach will help you make informed decisions and strengthen your arguments as you explore global interconnections throughout history.\nContext recap: When faced with competing choices in your analysis, it's important to use a simple rule to guide your decision-making. Choose the option that has the strongest evidence and the clearest connection to your main goal. This approach will help you make informed decisions and strengthen your arguments as you explore global interconnections throughout history."
+          "title": "Cultural Exchange",
+          "content": "When different cultures meet, they influence each other. This is called cultural exchange. For example, paper was invented in China, but through trade, the knowledge spread to the Middle East and eventually to Europe. When analyzing global interconnections, always look for the 'ripple effect'—how an idea in one place changes life in another. [Visual Prompt: A drop of water hitting a pond, with ripples spreading out to touch different shores.]"
         },
         {
           "id": "world-history-201-l07-c3",
-          "title": "Quality Control",
-          "content": "As you work through your analysis, it's essential to check for three important factors: accuracy, completeness, and alignment with your original objective. By ensuring that your work meets these criteria, you will enhance the quality of your analysis and provide a more robust understanding of the historical context you are studying.\nContext recap: As you work through your analysis, it's essential to check for three important factors: accuracy, completeness, and alignment with your original objective. By ensuring that your work meets these criteria, you will enhance the quality of your analysis and provide a more robust understanding of the historical context you are studying."
+          "title": "Quality Control: Seeing the Big Picture",
+          "content": "As you study these connections, make sure you are looking at the big picture. Don't just focus on the goods being traded. Ask yourself: How did this trade change the daily lives of the people? Did it bring wealth? Did it cause conflict? Ensuring your analysis is complete means looking at both the positive and negative impacts of global connections."
         },
         {
           "id": "world-history-201-l07-c4",
-          "title": "Next-Step Plan",
-          "content": "After completing your analysis, take a moment to write down one action you would like to repeat in your next practice round and one action you would like to improve. This reflection will help you identify areas for growth and reinforce the skills you have developed. By continuously evaluating your process, you will become a more effective learner and historian.\nContext recap: After completing your analysis, take a moment to write down one action you would like to repeat in your next practice round and one action you would like to improve. This reflection will help you identify areas for growth and reinforce the skills you have developed. By continuously evaluating your process, you will become a more effective learner and historian."
+          "title": "Next-Step Plan: Mapping Connections",
+          "content": "After learning about a trade route or an explorer, take a moment to map it out. Write down one good thing that came from the connection (like new foods) and one challenge (like the spread of illness). This reflection will help you understand the complex reality of our interconnected world. [Visual Prompt: A split chart showing 'Benefits of Connection' and 'Challenges of Connection'.]"
         }
       ],
       "flashcards": [
         {
           "id": "world-history-201-l07-f1",
-          "front": "perspective",
-          "back": "Use this as your organizing framework before execution."
+          "front": "Global Interconnection",
+          "back": "How different parts of the world are linked through trade, communication, and travel."
         },
         {
           "id": "world-history-201-l07-f2",
-          "front": "Decision Rule",
-          "back": "Choose the option with strongest evidence-to-goal alignment."
+          "front": "Cultural Exchange",
+          "back": "The sharing of ideas, traditions, and knowledge between different groups of people."
         },
         {
           "id": "world-history-201-l07-f3",
-          "front": "Quality Control",
-          "back": "Accuracy + completeness + objective match."
+          "front": "Trade Route",
+          "back": "A network of pathways and stops used for the commercial transport of cargo."
         },
         {
           "id": "world-history-201-l07-f4",
-          "front": "Iteration",
-          "back": "Repeat what works; refine one weak step each cycle."
+          "front": "Ripple Effect",
+          "back": "How a single event or invention in one place can spread and impact the whole world."
         }
       ],
       "learningAids": [
         {
           "id": "world-history-201-l07-a1",
           "type": "practice",
-          "title": "Project Planner",
-          "content": "Template for planning a mini project focused on perspective."
+          "title": "Connection Mapper",
+          "content": "[Visual Prompt: A blank world map where students can draw lines connecting regions and label what was traded.]"
         }
       ]
     },
@@ -728,46 +733,46 @@ export const WorldHistory201Module: LearningModule = {
       "duration": 10,
       "metadata": {
         "prompts": [
-          "What did you learn most clearly?",
-          "Where did you struggle and why?",
-          "What is your next improvement target?"
+          "What historical concept makes the most sense to you so far?",
+          "Which skill (causation, sourcing, bias) is the trickiest?",
+          "How will you practice your trickiest skill this week?"
         ]
       },
       "interactiveActivities": [
         {
           "id": "world-history-201-l08-ia1",
           "type": "matching_pairs",
-          "title": "Reflection Match",
-          "description": "Match each reflection prompt with the best follow-up action.",
+          "title": "Historian's Reflection Match",
+          "description": "Match your study struggle with the best historian's action plan.",
           "estimatedMinutes": 7,
           "difficultyLevel": "easy",
           "data": {
             "left": [
               {
                 "id": "l1",
-                "label": "I keep missing one skill pattern"
+                "label": "I keep confusing primary and secondary sources."
               },
               {
                 "id": "l2",
-                "label": "I rush and make avoidable mistakes"
+                "label": "I forget to check for bias before believing a document."
               },
               {
                 "id": "l3",
-                "label": "I understand in notes but miss in quizzes"
+                "label": "I struggle to see how events are connected (causation)."
               }
             ],
             "right": [
               {
                 "id": "r1",
-                "label": "Do a focused drill on that exact pattern"
+                "label": "Practice sorting 5 documents by when they were written."
               },
               {
                 "id": "r2",
-                "label": "Use a short checklist before submitting answers"
+                "label": "Use a 'Who wrote this and why?' checklist every time."
               },
               {
                 "id": "r3",
-                "label": "Repeat the skill in a timed re-check"
+                "label": "Draw a cause-and-effect flowchart for the next event."
               }
             ],
             "pairs": [
@@ -792,7 +797,7 @@ export const WorldHistory201Module: LearningModule = {
           "id": "world-history-201-l08-a1",
           "type": "mnemonic",
           "title": "Reflection Cycle",
-          "content": "Remember Observe, Adjust, Repeat while practicing."
+          "content": "Remember: Observe the evidence, Adjust your theory, Repeat the process!"
         }
       ]
     },
@@ -804,96 +809,96 @@ export const WorldHistory201Module: LearningModule = {
       "questions": [
         {
           "id": "world-history-201-l09-q1",
-          "text": "Which statement best explains continuity and change in History Worldwide?",
+          "text": "Which scenario is the best example of 'Cultural Exchange'?",
           "skillId": "world-history-201-skill-core",
           "options": [
             {
               "id": "a",
-              "text": "It explains continuity and change using evidence from the lesson."
+              "text": "Merchants from Asia bringing noodles to Italy, inspiring pasta."
             },
             {
               "id": "b",
-              "text": "It ignores how continuity and change works in practice."
+              "text": "A village building a wall to keep everyone out."
             },
             {
               "id": "c",
-              "text": "It focuses on an unrelated topic outside History Worldwide."
+              "text": "A king writing a diary about his daily meals."
             },
             {
               "id": "d",
-              "text": "It repeats terms without showing meaning."
+              "text": "A storm destroying a local crop."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "world-history-201-l09-q2",
-          "text": "What is the best first step when analyzing perspective?",
+          "text": "When analyzing a historical trade route, what should a historian look for?",
           "skillId": "world-history-201-skill-process",
           "options": [
             {
               "id": "a",
-              "text": "Define the goal and examine evidence for perspective."
+              "text": "Both the goods traded and the ideas/diseases that spread."
             },
             {
               "id": "b",
-              "text": "Guess quickly without checking evidence."
+              "text": "Only the gold and silver that was moved."
             },
             {
               "id": "c",
-              "text": "Use data unrelated to perspective."
+              "text": "Just the names of the merchants."
             },
             {
               "id": "d",
-              "text": "Skip the context and jump to a conclusion."
+              "text": "Evidence that trade never actually happened."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "world-history-201-l09-q3",
-          "text": "Which option shows strong reasoning about historical analysis and interpretation?",
+          "text": "Why is understanding 'perspective' crucial when studying global history?",
           "skillId": "world-history-201-skill-reasoning",
           "options": [
             {
               "id": "a",
-              "text": "Use examples and verify assumptions step by step."
+              "text": "Because an event like a new trade route might be great for one country but harmful to another."
             },
             {
               "id": "b",
-              "text": "Ignore important details and edge cases."
+              "text": "Because everyone in history always agreed on everything."
             },
             {
               "id": "c",
-              "text": "Use assumptions unrelated to historical analysis and interpretation."
+              "text": "Because perspective helps you memorize dates faster."
             },
             {
               "id": "d",
-              "text": "Change the topic when evidence gets hard."
+              "text": "Because it allows you to ignore primary sources."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "world-history-201-l09-q4",
-          "text": "Why is spaced review useful for History Worldwide mastery?",
+          "text": "What is the difference between continuity and change?",
           "skillId": "world-history-201-skill-review",
           "options": [
             {
               "id": "a",
-              "text": "It strengthens memory and transfer over time"
+              "text": "Continuity is what stays the same; change is what shifts over time."
             },
             {
               "id": "b",
-              "text": "It creates confusion"
+              "text": "Continuity is about the future; change is about the past."
             },
             {
               "id": "c",
-              "text": "It removes key facts"
+              "text": "They mean the exact same thing."
             },
             {
               "id": "d",
-              "text": "It has no value"
+              "text": "Continuity is a primary source; change is a secondary source."
             }
           ],
           "correctOptionId": "a"
@@ -903,42 +908,41 @@ export const WorldHistory201Module: LearningModule = {
         {
           "id": "world-history-201-l09-ia1",
           "type": "matching_pairs",
-          "title": "Reasoning Match: Review: World History Themes",
-          "description": "Match each error signal to the strongest correction strategy.",
+          "title": "Theme Match: World History",
+          "description": "Match the historical theme to its definition.",
           "estimatedMinutes": 7,
           "difficultyLevel": "medium",
           "instructions": [
-            "Review each left-side signal.",
-            "Pick the best response on the right.",
-            "Use your matches to plan the next drill."
+            "Review the theme on the left.",
+            "Pick the correct definition on the right."
           ],
           "data": {
             "left": [
               {
                 "id": "l1",
-                "label": "Confusion about continuity and change"
+                "label": "Global Interconnections"
               },
               {
                 "id": "l2",
-                "label": "Inconsistent approach to perspective"
+                "label": "Causation"
               },
               {
                 "id": "l3",
-                "label": "Weak transfer of historical analysis and interpretation under timing"
+                "label": "Corroboration"
               }
             ],
             "right": [
               {
                 "id": "r1",
-                "label": "Create a one-step concept summary with one worked example"
+                "label": "How different regions link through trade and ideas."
               },
               {
                 "id": "r2",
-                "label": "Use a checklist before choosing the final answer"
+                "label": "How one event triggers another event."
               },
               {
                 "id": "r3",
-                "label": "Retest the same target with a short timed sprint"
+                "label": "Checking multiple sources to confirm facts."
               }
             ],
             "pairs": [
@@ -989,7 +993,7 @@ export const WorldHistory201Module: LearningModule = {
           "id": "world-history-201-l09-a1",
           "type": "mnemonic",
           "title": "Memory Tip",
-          "content": "Use the phrase Plan, Check, Explain for each question."
+          "content": "History is a web! Pull one string (cause) and watch the whole web move (effect)."
         }
       ]
     },
@@ -1001,96 +1005,96 @@ export const WorldHistory201Module: LearningModule = {
       "questions": [
         {
           "id": "world-history-201-l10-q1",
-          "text": "Which statement best explains causation in History Worldwide?",
+          "text": "A historian finds a letter from a general claiming his army won a battle easily. What is the best next step?",
           "skillId": "world-history-201-skill-core",
           "options": [
             {
               "id": "a",
-              "text": "It explains causation using evidence from the lesson."
+              "text": "Find letters from enemy soldiers or ordinary citizens to corroborate the story."
             },
             {
               "id": "b",
-              "text": "It ignores how causation works in practice."
+              "text": "Publish a book saying the general was the greatest in history."
             },
             {
               "id": "c",
-              "text": "It focuses on an unrelated topic outside History Worldwide."
+              "text": "Throw the letter away because it is probably biased."
             },
             {
               "id": "d",
-              "text": "It repeats terms without showing meaning."
+              "text": "Assume the battle never happened."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "world-history-201-l10-q2",
-          "text": "What is the best first step when analyzing historical evidence?",
+          "text": "Which of the following is an example of a 'Ripple Effect' in history?",
           "skillId": "world-history-201-skill-process",
           "options": [
             {
               "id": "a",
-              "text": "Define the goal and examine evidence for historical evidence."
+              "text": "The invention of the compass in China leading to European explorers crossing the ocean."
             },
             {
               "id": "b",
-              "text": "Guess quickly without checking evidence."
+              "text": "A king eating an apple for breakfast."
             },
             {
               "id": "c",
-              "text": "Use data unrelated to historical evidence."
+              "text": "A local river flooding and receding the next day."
             },
             {
               "id": "d",
-              "text": "Skip the context and jump to a conclusion."
+              "text": "A diary being locked in a chest for 100 years."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "world-history-201-l10-q3",
-          "text": "Which option shows strong reasoning about historical analysis and interpretation?",
+          "text": "Why do historians study 'Continuity'?",
           "skillId": "world-history-201-skill-reasoning",
           "options": [
             {
               "id": "a",
-              "text": "Use examples and verify assumptions step by step."
+              "text": "To understand the deep traditions and daily habits that shape a society over centuries."
             },
             {
               "id": "b",
-              "text": "Ignore important details and edge cases."
+              "text": "Because change is too difficult to track."
             },
             {
               "id": "c",
-              "text": "Use assumptions unrelated to historical analysis and interpretation."
+              "text": "To prove that history is boring."
             },
             {
               "id": "d",
-              "text": "Change the topic when evidence gets hard."
+              "text": "Because primary sources only talk about things that stay the same."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "world-history-201-l10-q4",
-          "text": "Why is spaced review useful for History Worldwide mastery?",
+          "text": "If a textbook (Secondary Source) disagrees with a diary (Primary Source), what should you do?",
           "skillId": "world-history-201-skill-review",
           "options": [
             {
               "id": "a",
-              "text": "It strengthens memory and transfer over time"
+              "text": "Analyze the bias of the diary writer and check the sources the textbook used."
             },
             {
               "id": "b",
-              "text": "It creates confusion"
+              "text": "Always trust the textbook because it is newer."
             },
             {
               "id": "c",
-              "text": "It removes key facts"
+              "text": "Always trust the diary because it is older."
             },
             {
               "id": "d",
-              "text": "It has no value"
+              "text": "Ignore both and guess."
             }
           ],
           "correctOptionId": "a"
@@ -1100,42 +1104,41 @@ export const WorldHistory201Module: LearningModule = {
         {
           "id": "world-history-201-l10-ia1",
           "type": "matching_pairs",
-          "title": "Reasoning Match: Mastery: World History II",
-          "description": "Match each error signal to the strongest correction strategy.",
+          "title": "Mastery Match: Historical Scenarios",
+          "description": "Match the historical scenario to the skill being used.",
           "estimatedMinutes": 7,
           "difficultyLevel": "medium",
           "instructions": [
-            "Review each left-side signal.",
-            "Pick the best response on the right.",
-            "Use your matches to plan the next drill."
+            "Read the scenario on the left.",
+            "Match it to the historical skill on the right."
           ],
           "data": {
             "left": [
               {
                 "id": "l1",
-                "label": "Confusion about causation"
+                "label": "Tracing how a drought led to a revolution."
               },
               {
                 "id": "l2",
-                "label": "Inconsistent approach to historical evidence"
+                "label": "Comparing a Roman coin to a Greek text."
               },
               {
                 "id": "l3",
-                "label": "Weak transfer of historical analysis and interpretation under timing"
+                "label": "Noticing that farming methods didn't change for 200 years."
               }
             ],
             "right": [
               {
                 "id": "r1",
-                "label": "Create a one-step concept summary with one worked example"
+                "label": "Causation"
               },
               {
                 "id": "r2",
-                "label": "Use a checklist before choosing the final answer"
+                "label": "Corroboration"
               },
               {
                 "id": "r3",
-                "label": "Retest the same target with a short timed sprint"
+                "label": "Continuity"
               }
             ],
             "pairs": [
@@ -1185,8 +1188,8 @@ export const WorldHistory201Module: LearningModule = {
         {
           "id": "world-history-201-l10-a1",
           "type": "mnemonic",
-          "title": "Memory Tip",
-          "content": "Use the phrase Plan, Check, Explain for each question."
+          "title": "Mastery Tip",
+          "content": "A true historian questions everything! Who, What, When, Where, and Why?"
         }
       ]
     },
@@ -1197,49 +1200,49 @@ export const WorldHistory201Module: LearningModule = {
       "duration": 14,
       "metadata": {
         "prompts": [
-          "Select one weak pattern from recent quizzes.",
-          "Apply a step-by-step correction using historical evidence.",
-          "Document your transfer plan for the next timed check."
+          "Select one historical skill you want to improve (e.g., finding bias).",
+          "Apply a step-by-step check to a new historical document.",
+          "Document your plan for the next quiz."
         ]
       },
       "interactiveActivities": [
         {
           "id": "world-history-201-l11-ia1",
           "type": "sorting_buckets",
-          "title": "Transfer Ladder",
-          "description": "Sort actions into Diagnose, Fix, and Transfer phases.",
+          "title": "The Historian's Process",
+          "description": "Sort the actions into the correct phase of historical research: Gather, Analyze, or Conclude.",
           "estimatedMinutes": 9,
           "difficultyLevel": "medium",
           "data": {
             "buckets": [
               {
-                "id": "diagnose",
-                "label": "Diagnose"
+                "id": "gather",
+                "label": "Gather Evidence"
               },
               {
-                "id": "fix",
-                "label": "Fix"
+                "id": "analyze",
+                "label": "Analyze Sources"
               },
               {
-                "id": "transfer",
-                "label": "Transfer"
+                "id": "conclude",
+                "label": "Draw Conclusions"
               }
             ],
             "items": [
               {
                 "id": "i1",
-                "label": "Tag repeated mistakes in continuity and change",
-                "correctBucketId": "diagnose"
+                "label": "Find three different diaries from the 1800s.",
+                "correctBucketId": "gather"
               },
               {
                 "id": "i2",
-                "label": "Rework one missed item with full reasoning",
-                "correctBucketId": "fix"
+                "label": "Check the diaries for bias and compare their stories.",
+                "correctBucketId": "analyze"
               },
               {
                 "id": "i3",
-                "label": "Retest with a timed mini-check on perspective",
-                "correctBucketId": "transfer"
+                "label": "Write an essay explaining what most likely happened.",
+                "correctBucketId": "conclude"
               }
             ]
           }
@@ -1249,8 +1252,8 @@ export const WorldHistory201Module: LearningModule = {
         {
           "id": "world-history-201-l11-a1",
           "type": "practice",
-          "title": "Correction Loop Card",
-          "content": "Use Diagnose, Fix, Transfer for each difficult problem."
+          "title": "Research Loop Card",
+          "content": "[Visual Prompt: A circular diagram showing Gather -> Analyze -> Conclude -> Repeat.]"
         }
       ]
     },
@@ -1262,96 +1265,96 @@ export const WorldHistory201Module: LearningModule = {
       "questions": [
         {
           "id": "world-history-201-l12-q1",
-          "text": "Which statement best explains causation in History Worldwide?",
+          "text": "Which of the following is the best example of 'Change' in history?",
           "skillId": "world-history-201-skill-core",
           "options": [
             {
               "id": "a",
-              "text": "It explains causation using evidence from the lesson."
+              "text": "A country replacing its king with an elected president."
             },
             {
               "id": "b",
-              "text": "It ignores how causation works in practice."
+              "text": "A family passing down a cooking recipe for generations."
             },
             {
               "id": "c",
-              "text": "It focuses on an unrelated topic outside History Worldwide."
+              "text": "The sun rising every morning."
             },
             {
               "id": "d",
-              "text": "It repeats terms without showing meaning."
+              "text": "People continuing to speak the same language."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "world-history-201-l12-q2",
-          "text": "What is the best first step when analyzing perspective?",
+          "text": "When looking at a painting of a battle made 200 years AFTER the battle, what is it?",
           "skillId": "world-history-201-skill-process",
           "options": [
             {
               "id": "a",
-              "text": "Define the goal and examine evidence for perspective."
+              "text": "A Secondary Source."
             },
             {
               "id": "b",
-              "text": "Guess quickly without checking evidence."
+              "text": "A Primary Source."
             },
             {
               "id": "c",
-              "text": "Use data unrelated to perspective."
+              "text": "A Corroboration."
             },
             {
               "id": "d",
-              "text": "Skip the context and jump to a conclusion."
+              "text": "A Causation."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "world-history-201-l12-q3",
-          "text": "Which option shows strong reasoning about historical analysis and interpretation?",
+          "text": "How does 'Perspective' change how history is written?",
           "skillId": "world-history-201-skill-reasoning",
           "options": [
             {
               "id": "a",
-              "text": "Use examples and verify assumptions step by step."
+              "text": "People write about events based on their own beliefs, culture, and experiences."
             },
             {
               "id": "b",
-              "text": "Ignore important details and edge cases."
+              "text": "It doesn't; history is always written exactly the same way by everyone."
             },
             {
               "id": "c",
-              "text": "Use assumptions unrelated to historical analysis and interpretation."
+              "text": "Perspective only matters in math, not history."
             },
             {
               "id": "d",
-              "text": "Change the topic when evidence gets hard."
+              "text": "It makes all primary sources completely false."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "world-history-201-l12-q4",
-          "text": "Why is spaced review useful for History Worldwide mastery?",
+          "text": "Why is it useful to review historical concepts regularly?",
           "skillId": "world-history-201-skill-review",
           "options": [
             {
               "id": "a",
-              "text": "It strengthens memory and transfer over time"
+              "text": "It strengthens your ability to connect past events to the present day."
             },
             {
               "id": "b",
-              "text": "It creates confusion"
+              "text": "It makes you forget the dates."
             },
             {
               "id": "c",
-              "text": "It removes key facts"
+              "text": "It is only useful for passing a single test."
             },
             {
               "id": "d",
-              "text": "It has no value"
+              "text": "It has no value in real life."
             }
           ],
           "correctOptionId": "a"
@@ -1361,42 +1364,41 @@ export const WorldHistory201Module: LearningModule = {
         {
           "id": "world-history-201-l12-ia1",
           "type": "matching_pairs",
-          "title": "Reasoning Match: World History II Mastery Applied Retest",
-          "description": "Match each error signal to the strongest correction strategy.",
+          "title": "Skill Check: Applied Retest",
+          "description": "Match the historical action to the skill it demonstrates.",
           "estimatedMinutes": 7,
           "difficultyLevel": "medium",
           "instructions": [
-            "Review each left-side signal.",
-            "Pick the best response on the right.",
-            "Use your matches to plan the next drill."
+            "Review the action on the left.",
+            "Pick the correct skill on the right."
           ],
           "data": {
             "left": [
               {
                 "id": "l1",
-                "label": "Confusion about causation"
+                "label": "Figuring out why an empire fell."
               },
               {
                 "id": "l2",
-                "label": "Inconsistent approach to perspective"
+                "label": "Noticing how a culture's art stayed the same."
               },
               {
                 "id": "l3",
-                "label": "Weak transfer of historical analysis and interpretation under timing"
+                "label": "Reading a diary to see how a peasant felt."
               }
             ],
             "right": [
               {
                 "id": "r1",
-                "label": "Create a one-step concept summary with one worked example"
+                "label": "Causation"
               },
               {
                 "id": "r2",
-                "label": "Use a checklist before choosing the final answer"
+                "label": "Continuity"
               },
               {
                 "id": "r3",
-                "label": "Retest the same target with a short timed sprint"
+                "label": "Perspective"
               }
             ],
             "pairs": [
@@ -1447,7 +1449,7 @@ export const WorldHistory201Module: LearningModule = {
           "id": "world-history-201-l12-a1",
           "type": "mnemonic",
           "title": "Memory Tip",
-          "content": "Use the phrase Plan, Check, Explain for each question."
+          "content": "Primary = Present at the time. Secondary = Second-hand knowledge."
         }
       ]
     },
@@ -1459,45 +1461,45 @@ export const WorldHistory201Module: LearningModule = {
       "chunks": [
         {
           "id": "world-history-201-l13-c1",
-          "title": "Scenario Brief",
-          "content": "In this scenario, we will explore how different events in history are connected. We will look at the reasons behind these events, the evidence that supports them, and how different people might view these events differently. This challenge will help us understand the complexity of history and the various factors that influence it.\nContext recap: In this scenario, we will explore how different events in history are connected. We will look at the reasons behind these events, the evidence that supports them, and how different people might view these events differently. This challenge will help us understand the complexity of history and the various factors that influence it."
+          "title": "Scenario Brief: The Columbian Exchange",
+          "content": "In this scenario, we will explore a massive turning point: The Columbian Exchange. When explorers from Europe traveled to the Americas, they didn't just bring flags; they brought horses, wheat, and diseases. In return, they took back potatoes, tomatoes, and corn. [Visual Prompt: An animated map showing ships crossing the Atlantic, with icons of horses going West and tomatoes going East.] This challenge will help us understand how one event changed the whole world."
         },
         {
           "id": "world-history-201-l13-c2",
           "title": "Plan the Approach",
-          "content": "To tackle this scenario effectively, we should break it down into smaller, manageable decisions. For each decision point, we will think of a specific strategy that we can use. This way, we can systematically approach the scenario and ensure that we consider all aspects before making a final choice.\nContext recap: To tackle this scenario effectively, we should break it down into smaller, manageable decisions. For each decision point, we will think of a specific strategy that we can use. This way, we can systematically approach the scenario and ensure that we consider all aspects before making a final choice."
+          "content": "To tackle this scenario, we break it down. First, we look at Causation: Why did the explorers sail? Second, we look at Change: How did diets change in Europe when they got potatoes? Third, we look at Perspective: How did the Native Americans view this arrival compared to the Europeans? [Visual Prompt: A detective's notebook with three tabs: Causes, Changes, Perspectives.]"
         },
         {
           "id": "world-history-201-l13-c3",
           "title": "Execute and Justify",
-          "content": "Once we have our plan ready, it’s time to put it into action! As we execute our plan, we need to explain each step we take. It’s important to support our decisions with solid evidence rather than just making guesses. This will help us understand why we chose certain actions and how they relate to the historical context.\nContext recap: Once we have our plan ready, it’s time to put it into action! As we execute our plan, we need to explain each step we take. It’s important to support our decisions with solid evidence rather than just making guesses. This will help us understand why we chose certain actions and how they relate to the historical context.\nContext recap: Once we have our plan ready, it’s time to put it into action! As we execute our plan, we need to explain each step we take. It’s important to support our decisions with solid evidence rather than just making guesses. This will help us understand why we chose certain actions and how they relate to the historical context.\nWhy this matters: Execute and Justify helps learners in History Worldwide connect ideas from World History Themes and Turning Points to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "Now we put our plan into action. If we claim that potatoes changed European history, we must justify it with evidence. We can look at population records (Primary Sources) showing that populations grew because potatoes were easy to farm. We don't just guess; we link our claims directly to the historical evidence. [Visual Prompt: A glowing line connecting a picture of a potato to a chart showing population growth.]"
         },
         {
           "id": "world-history-201-l13-c4",
           "title": "Evaluate Outcome",
-          "content": "After we have completed our scenario, we will evaluate the outcome. We will compare what we achieved with our original goals. This will help us identify which parts of our plan worked well and which parts might need some changes. Reflecting on our results is an important step in learning and improving our decision-making skills.\nContext recap: After we have completed our scenario, we will evaluate the outcome. We will compare what we achieved with our original goals. This will help us identify which parts of our plan worked well and which parts might need some changes. Reflecting on our results is an important step in learning and improving our decision-making skills.\nContext recap: After we have completed our scenario, we will evaluate the outcome. We will compare what we achieved with our original goals. This will help us identify which parts of our plan worked well and which parts might need some changes. Reflecting on our results is an important step in learning and improving our decision-making skills.\nWhy this matters: Evaluate Outcome helps learners in History Worldwide connect ideas from World History Themes and Turning Points to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "Finally, we evaluate our findings. Did the Columbian Exchange have only positive effects? No. While diets improved in Europe, diseases devastated Native American populations. A good historian looks at the whole picture. Reflecting on both the good and the bad helps us understand the true complexity of history."
         }
       ],
       "flashcards": [
         {
           "id": "world-history-201-l13-f1",
           "front": "Scenario Planning",
-          "back": "Split a complex task into clear decision points."
+          "back": "Breaking a large historical event into smaller questions: Causes, Changes, and Perspectives."
         },
         {
           "id": "world-history-201-l13-f2",
           "front": "Evidence Link",
-          "back": "Each step should connect to evidence in the scenario."
+          "back": "Connecting every historical claim you make to a specific primary or secondary source."
         },
         {
           "id": "world-history-201-l13-f3",
-          "front": "Adjustment Loop",
-          "back": "Use outcome checks to refine your next attempt."
+          "front": "Columbian Exchange",
+          "back": "The global transfer of plants, animals, and diseases that occurred after European arrival in the Americas."
         },
         {
           "id": "world-history-201-l13-f4",
-          "front": "Applied Mastery",
-          "back": "Mastery means transferring the process to a new context."
+          "front": "Holistic View",
+          "back": "Looking at both the positive and negative impacts of a historical event."
         }
       ],
       "learningAids": [
@@ -1505,13 +1507,13 @@ export const WorldHistory201Module: LearningModule = {
           "id": "world-history-201-l13-a1",
           "type": "image",
           "title": "Scenario Map",
-          "content": "A real-world scenario map connecting causation, historical evidence, and perspective."
+          "content": "[Visual Prompt: A real-world scenario map connecting causation (ships sailing), historical evidence (diaries), and perspective (two different viewpoints).]"
         },
         {
           "id": "world-history-201-l13-a2",
           "type": "practice",
           "title": "Mini Case Prompt",
-          "content": "Apply one strategy to a new case and explain your reasoning."
+          "content": "Apply the 'Evidence Link' strategy to a new case: The invention of the airplane. Explain your reasoning."
         }
       ]
     },
@@ -1522,9 +1524,9 @@ export const WorldHistory201Module: LearningModule = {
       "duration": 13,
       "metadata": {
         "prompts": [
-          "Identify one repeated error pattern from your recent work.",
-          "Choose the best correction routine for that pattern.",
-          "Write a transfer goal for your next timed check."
+          "Identify one mistake you made in the last quiz.",
+          "Choose the best way to fix that mistake for next time.",
+          "Write a goal for your final Mastery Sprint."
         ]
       },
       "interactiveActivities": [
@@ -1532,36 +1534,36 @@ export const WorldHistory201Module: LearningModule = {
           "id": "world-history-201-l14-ia1",
           "type": "matching_pairs",
           "title": "Error to Fix Match",
-          "description": "Match each error signal to the highest-impact correction action.",
+          "description": "Match the common historian's mistake to the best correction action.",
           "estimatedMinutes": 8,
           "difficultyLevel": "medium",
           "data": {
             "left": [
               {
                 "id": "l1",
-                "label": "Repeated miss on causation setup"
+                "label": "I keep confusing causes with effects."
               },
               {
                 "id": "l2",
-                "label": "Losses due to rushed perspective decisions"
+                "label": "I trust biased sources too quickly."
               },
               {
                 "id": "l3",
-                "label": "Correct in notes but weak transfer in new tasks"
+                "label": "I forget to look at both continuity and change."
               }
             ],
             "right": [
               {
                 "id": "r1",
-                "label": "Rebuild setup steps and retest one parallel item"
+                "label": "Draw a timeline: Cause comes BEFORE the event, Effect comes AFTER."
               },
               {
                 "id": "r2",
-                "label": "Use checkpoint pacing + verify before submit"
+                "label": "Always ask 'Who wrote this and what do they want?' first."
               },
               {
                 "id": "r3",
-                "label": "Pair correction with one timed transfer item"
+                "label": "Use a T-chart: 'What stayed the same' vs 'What shifted'."
               }
             ],
             "pairs": [
@@ -1586,7 +1588,7 @@ export const WorldHistory201Module: LearningModule = {
           "id": "world-history-201-l14-a1",
           "type": "mnemonic",
           "title": "Clinic Loop",
-          "content": "Diagnose, Correct, Transfer."
+          "content": "Diagnose the error, Correct the habit, Transfer the skill!"
         }
       ]
     },
@@ -1598,96 +1600,96 @@ export const WorldHistory201Module: LearningModule = {
       "questions": [
         {
           "id": "world-history-201-l15-q1",
-          "text": "Which statement best explains continuity and change in History Worldwide?",
+          "text": "Which statement best explains 'Continuity' in World History?",
           "skillId": "world-history-201-skill-core",
           "options": [
             {
               "id": "a",
-              "text": "It explains continuity and change using evidence from the lesson."
+              "text": "It refers to traditions, beliefs, or practices that remain the same over long periods."
             },
             {
               "id": "b",
-              "text": "It ignores how continuity and change works in practice."
+              "text": "It refers to sudden, violent revolutions."
             },
             {
               "id": "c",
-              "text": "It focuses on an unrelated topic outside History Worldwide."
+              "text": "It is a type of primary source written by a king."
             },
             {
               "id": "d",
-              "text": "It repeats terms without showing meaning."
+              "text": "It means that history is completely unpredictable."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "world-history-201-l15-q2",
-          "text": "What is the best first step when analyzing historical evidence?",
+          "text": "What is the best first step when analyzing a newly discovered historical document?",
           "skillId": "world-history-201-skill-process",
           "options": [
             {
               "id": "a",
-              "text": "Define the goal and examine evidence for historical evidence."
+              "text": "Determine who wrote it, when it was written, and why (Sourcing)."
             },
             {
               "id": "b",
-              "text": "Guess quickly without checking evidence."
+              "text": "Assume everything in it is 100% true."
             },
             {
               "id": "c",
-              "text": "Use data unrelated to historical evidence."
+              "text": "Throw away all other documents because this one is new."
             },
             {
               "id": "d",
-              "text": "Skip the context and jump to a conclusion."
+              "text": "Skip reading it and just look at the pictures."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "world-history-201-l15-q3",
-          "text": "Which option shows strong reasoning about historical analysis and interpretation?",
+          "text": "Which option shows strong reasoning when discussing 'Global Interconnections'?",
           "skillId": "world-history-201-skill-reasoning",
           "options": [
             {
               "id": "a",
-              "text": "Use examples and verify assumptions step by step."
+              "text": "Explaining how a trade route spread both new technologies and new diseases."
             },
             {
               "id": "b",
-              "text": "Ignore important details and edge cases."
+              "text": "Claiming that countries never interacted with each other before the internet."
             },
             {
               "id": "c",
-              "text": "Use assumptions unrelated to historical analysis and interpretation."
+              "text": "Focusing only on one small village and ignoring the rest of the world."
             },
             {
               "id": "d",
-              "text": "Change the topic when evidence gets hard."
+              "text": "Saying that trade only ever brings positive results."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "world-history-201-l15-q4",
-          "text": "Why is spaced review useful for History Worldwide mastery?",
+          "text": "Why is understanding 'Causation' essential for a historian?",
           "skillId": "world-history-201-skill-review",
           "options": [
             {
               "id": "a",
-              "text": "It strengthens memory and transfer over time"
+              "text": "It helps explain WHY events happened, rather than just memorizing WHEN they happened."
             },
             {
               "id": "b",
-              "text": "It creates confusion"
+              "text": "It makes reading primary sources unnecessary."
             },
             {
               "id": "c",
-              "text": "It removes key facts"
+              "text": "It proves that all historical events are random."
             },
             {
               "id": "d",
-              "text": "It has no value"
+              "text": "It is only used to study modern history, not ancient history."
             }
           ],
           "correctOptionId": "a"
@@ -1697,42 +1699,41 @@ export const WorldHistory201Module: LearningModule = {
         {
           "id": "world-history-201-l15-ia1",
           "type": "matching_pairs",
-          "title": "Reasoning Match: World History II Mastery Mastery Sprint",
-          "description": "Match each error signal to the strongest correction strategy.",
+          "title": "Final Sprint: Skill Match",
+          "description": "Match the historical term to its ultimate definition.",
           "estimatedMinutes": 7,
-          "difficultyLevel": "medium",
+          "difficultyLevel": "hard",
           "instructions": [
-            "Review each left-side signal.",
-            "Pick the best response on the right.",
-            "Use your matches to plan the next drill."
+            "Review the term on the left.",
+            "Pick the best definition on the right."
           ],
           "data": {
             "left": [
               {
                 "id": "l1",
-                "label": "Confusion about continuity and change"
+                "label": "Corroboration"
               },
               {
                 "id": "l2",
-                "label": "Inconsistent approach to historical evidence"
+                "label": "Perspective"
               },
               {
                 "id": "l3",
-                "label": "Weak transfer of historical analysis and interpretation under timing"
+                "label": "Causation"
               }
             ],
             "right": [
               {
                 "id": "r1",
-                "label": "Create a one-step concept summary with one worked example"
+                "label": "Cross-checking multiple sources to find the truth."
               },
               {
                 "id": "r2",
-                "label": "Use a checklist before choosing the final answer"
+                "label": "The unique point of view of the person writing the source."
               },
               {
                 "id": "r3",
-                "label": "Retest the same target with a short timed sprint"
+                "label": "The chain reaction of events leading to an outcome."
               }
             ],
             "pairs": [
@@ -1782,8 +1783,8 @@ export const WorldHistory201Module: LearningModule = {
         {
           "id": "world-history-201-l15-a1",
           "type": "mnemonic",
-          "title": "Memory Tip",
-          "content": "Use the phrase Plan, Check, Explain for each question."
+          "title": "Final Tip",
+          "content": "You are now a History Detective! Always look for the Cause, check the Source, and find the Connection."
         }
       ]
     }

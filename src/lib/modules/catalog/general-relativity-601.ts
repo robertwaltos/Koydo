@@ -1,9 +1,9 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const GeneralRelativity601Module: LearningModule = {
+export const general_relativity_601_Module: LearningModule = {
   "id": "general-relativity-601",
   "title": "General Relativity Research and Leadership",
-  "description": "Post-401 specialization in General Relativity, focused on general relativity systems diagnostics, general relativity operations and execution design, general relativity impact and tradeoff analysis, and general relativity governance and leadership through advanced casework, simulation, and defense-based checkpoints.",
+  "description": "A post-401 specialization in General Relativity, focusing on the analysis of relativistic systems, design of observational and computational projects, and leadership within large-scale scientific collaborations. The curriculum uses advanced casework, numerical simulations, and proposal defense checkpoints to build expert-level skills.",
   "subject": "General Relativity",
   "tags": [
     "core",
@@ -14,121 +14,121 @@ export const GeneralRelativity601Module: LearningModule = {
   ],
   "minAge": 17,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en",
     "es"
   ],
   "learningObjectives": [
-    "Apply advanced methods for general relativity systems diagnostics in high-constraint environments",
-    "Design robust systems for general relativity operations and execution design with measurable control gates",
-    "Evaluate interventions in general relativity impact and tradeoff analysis with research-grade rigor",
-    "Operationalize general relativity governance and leadership with accountable governance and escalation pathways",
-    "Lead cross-functional decision reviews with explicit tradeoff communication",
-    "Defend recommendations under expert critique using evidence and uncertainty bounds"
+    "Apply tensor calculus and differential geometry to analyze complex relativistic phenomena.",
+    "Design and diagnose numerical relativity simulations for systems like binary black hole mergers.",
+    "Evaluate the scientific trade-offs and engineering constraints of major astrophysics projects.",
+    "Develop governance models for large-scale scientific collaborations, ensuring data integrity and equitable credit.",
+    "Lead cross-functional reviews of experimental designs, communicating complex trade-offs effectively.",
+    "Defend a novel research proposal against expert critique, using theoretical evidence and uncertainty analysis."
   ],
   "lessons": [
     {
       "id": "general-relativity-601-l01",
-      "title": "General Relativity Advanced Foundations",
+      "title": "Advanced Foundations of General Relativity",
       "type": "video",
-      "duration": 14,
+      "duration": 18,
       "learningAids": [
         {
           "id": "general-relativity-601-l01-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "The Einstein Field Equations",
+          "content": "A visual representation of the Einstein Field Equations, showing the relationship between the Einstein tensor (geometry of spacetime) and the stress-energy tensor (matter and energy)."
         }
       ],
       "chunks": [
         {
           "id": "general-relativity-601-l01-c1",
           "kind": "concept",
-          "title": "Scope and Boundary Design",
-          "content": "In this lesson, we will delve into the advanced boundaries of General Relativity. Our focus will be on understanding how to diagnose systems that are related to General Relativity. We will also learn how to design effective operations and execution plans. By doing so, we aim to grasp the complexities involved in these systems and develop strategies to manage them efficiently. This understanding is crucial for anyone looking to work in the field of General Relativity, as it lays the groundwork for more advanced studies and applications.\nContext recap: In this lesson, we will delve into the advanced boundaries of General Relativity. Our focus will be on understanding how to diagnose systems that are related to General Relativity. We will also learn how to design effective operations and execution plans. By doing so, we aim to grasp the complexities involved in these systems and develop strategies to manage them efficiently.\nWhy this matters: Scope and Boundary Design helps learners in General Relativity connect ideas from General Relativity Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "Spacetime Geometry and the Einstein Field Equations",
+          "content": "We begin by exploring the mathematical heart of General Relativity: the Einstein Field Equations. This lesson will cover the core concepts of differential geometry, tensors, and how the distribution of mass and energy dictates the curvature of spacetime, which in turn dictates how matter moves."
         },
         {
           "id": "general-relativity-601-l01-c2",
           "kind": "concept",
-          "title": "Causal and Uncertainty Modeling",
-          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between events or actions, as well as identifying ranges of uncertainty and dependencies within systems. This foundational work is crucial for planning effective interventions in General Relativity, ensuring that we understand the potential outcomes and risks involved.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between events or actions, as well as identifying ranges of uncertainty and dependencies within systems. This foundational work is crucial for planning effective interventions in General Relativity, ensuring that we understand the potential outcomes and risks involved."
+          "title": "Causal Structure and Penrose Diagrams",
+          "content": "Understanding the causal relationships in spacetime is critical. We will introduce Penrose diagrams as a tool to visualize the global structure of spacetimes, including singularities and horizons, allowing us to map out the causal connections between events in universes containing black holes or cosmological models."
         },
         {
           "id": "general-relativity-601-l01-c3",
           "kind": "recap",
-          "title": "Evidence Thresholds",
-          "content": "It is essential that all claims made in our analysis are supported by measurable indicators. This means we will establish confidence bounds and set up review checkpoints to ensure our findings are reliable. By doing this, we can maintain a high standard of evidence in our work and make informed decisions based on solid data.\nContext recap: It is essential that all claims made in our analysis are supported by measurable indicators. This means we will establish confidence bounds and set up review checkpoints to ensure our findings are reliable. By doing this, we can maintain a high standard of evidence in our work and make informed decisions based on solid data."
+          "title": "Observational Evidence and Model Validation",
+          "content": "Theory must be validated by observation. This section recaps key experimental confirmations of General Relativity, from the 1919 solar eclipse expedition to modern gravitational wave astronomy. We will discuss how observational data sets the evidence thresholds for accepting or refining our theoretical models."
         }
       ],
       "flashcards": [
         {
           "id": "general-relativity-601-l01-f1",
-          "front": "general relativity systems diagnostics",
-          "back": "A specialization axis requiring explicit assumptions and measurable constraints."
+          "front": "Einstein Field Equations",
+          "back": "A set of ten equations that relate the geometry of spacetime (using the Einstein tensor) to the distribution of matter and energy within it (using the stress-energy tensor)."
         },
         {
           "id": "general-relativity-601-l01-f2",
-          "front": "general relativity operations and execution design",
-          "back": "Execution architecture that determines reliability under stress."
+          "front": "Geodesic",
+          "back": "The straightest possible path that an object can follow through curved spacetime. For massive particles, it is the path of free-fall."
         },
         {
           "id": "general-relativity-601-l01-f3",
-          "front": "general relativity impact and tradeoff analysis",
-          "back": "Evaluation discipline for identifying true gains and hidden costs."
+          "front": "Penrose Diagram",
+          "back": "A two-dimensional diagram that captures the causal relations between different points in spacetime, compressing infinite distances and times into a finite map."
         }
       ]
     },
     {
       "id": "general-relativity-601-l02",
-      "title": "General Relativity Specialist Methods Lab",
+      "title": "Computational Methods in General Relativity Lab",
       "type": "interactive",
-      "duration": 17,
+      "duration": 20,
       "learningAids": [
         {
           "id": "general-relativity-601-l02-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "image",
+          "title": "Binary Black Hole Merger Simulation",
+          "content": "A visualization from a numerical relativity simulation showing the distorted spacetime and gravitational waves emanating from two merging black holes."
         }
       ],
       "chunks": [
         {
           "id": "general-relativity-601-l02-c1",
           "kind": "practice",
-          "title": "Method Design and Stress Test",
-          "content": "In this interactive lab, learners will have the opportunity to design specialized workflows that are tailored to specific tasks in General Relativity. Additionally, they will stress-test these workflows by simulating adverse scenarios to see how well they perform under pressure. This hands-on experience is vital for understanding the practical applications of theoretical concepts.\nContext recap: In this interactive lab, learners will have the opportunity to design specialized workflows that are tailored to specific tasks in General Relativity. Additionally, they will stress-test these workflows by simulating adverse scenarios to see how well they perform under pressure. This hands-on experience is vital for understanding the practical applications of theoretical concepts."
+          "title": "Numerical Relativity Simulations",
+          "content": "In this interactive lab, learners will set up the initial conditions for a numerical relativity simulation of a binary black hole system. They will learn about the 3+1 formalism for splitting spacetime and the challenges of evolving the Einstein equations on a computer, including managing singularities and numerical stability."
         },
         {
           "id": "general-relativity-601-l02-c2",
           "kind": "recap",
-          "title": "Control Gate Architecture",
-          "content": "In this recap, we will discuss how workflows can be enhanced by integrating various checkpoints, rollback criteria, and threshold-based escalation procedures. These elements are crucial for ensuring that our processes are robust and can adapt to changing circumstances while maintaining control and oversight.\nContext recap: In this recap, we will discuss how workflows can be enhanced by integrating various checkpoints, rollback criteria, and threshold-based escalation procedures. These elements are crucial for ensuring that our processes are robust and can adapt to changing circumstances while maintaining control and oversight."
+          "title": "Simulation Diagnostics and Parameter Tuning",
+          "content": "A successful simulation requires constant monitoring. We will review key diagnostic tools, such as monitoring constraint violations, and discuss how to tune simulation parameters like grid resolution and boundary conditions to ensure accurate and physically meaningful results."
         }
       ],
       "interactiveActivities": [
         {
           "id": "general-relativity-601-l02-act1",
           "type": "matching_pairs",
-          "title": "Control-to-Outcome Mapping",
-          "description": "Match specialist controls with their strongest reliability and governance effects.",
+          "title": "Matching Initial Conditions to Waveforms",
+          "description": "Match the initial parameters of a binary black hole system to the resulting gravitational waveform features.",
           "pairs": [
             {
-              "left": "Pre-commit gate",
-              "right": "Prevents avoidable downstream failures"
+              "left": "High mass ratio (e.g., 10:1)",
+              "right": "Lower amplitude signal with a prolonged 'chirp'"
             },
             {
-              "left": "Rollback trigger",
-              "right": "Limits blast radius under adverse outcomes"
+              "left": "High, aligned black hole spins",
+              "right": "Stronger gravitational wave emission and a more energetic merger"
             },
             {
-              "left": "Baseline dashboard",
-              "right": "Supports defensible impact attribution"
+              "left": "Highly eccentric orbit",
+              "right": "Pulsating bursts of gravitational waves at closest approach"
             },
             {
-              "left": "Retrospective loop",
-              "right": "Improves next-cycle decision quality"
+              "left": "Low total mass",
+              "right": "Higher frequency gravitational waves"
             }
           ]
         }
@@ -136,287 +136,148 @@ export const GeneralRelativity601Module: LearningModule = {
     },
     {
       "id": "general-relativity-601-l03",
-      "title": "Checkpoint 1: Specialist Methods",
+      "title": "Checkpoint 1: Theoretical and Computational Methods",
       "type": "quiz",
-      "duration": 10,
-      "learningAids": [
-        {
-          "id": "general-relativity-601-l03-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
-        }
-      ],
+      "duration": 12,
+      "learningAids": [],
       "questions": [
         {
           "id": "general-relativity-601-l03-q1",
-          "text": "Which practice most improves general relativity systems diagnostics decision quality?",
+          "text": "What fundamental principle is expressed by the Einstein Field Equations?",
           "skillId": "general-relativity-601-skill-core",
           "options": [
             {
               "id": "a",
-              "text": "Proceed without baseline or assumptions"
+              "text": "Energy is conserved in all reference frames."
             },
             {
               "id": "b",
-              "text": "Define assumptions, constraints, and measurable indicators"
+              "text": "Spacetime tells matter how to move; matter tells spacetime how to curve."
             },
             {
               "id": "c",
-              "text": "Optimize only for speed in every context"
+              "text": "The speed of light is constant for all observers."
             },
             {
               "id": "d",
-              "text": "Ignore uncertainty and edge conditions"
+              "text": "Quantum mechanics and gravity are two aspects of the same force."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Advanced decisions improve when assumptions, constraints, and metrics are explicit."
+          "explanation": "This statement, coined by John Archibald Wheeler, perfectly encapsulates the interactive relationship between spacetime geometry and the distribution of mass-energy described by the equations."
         },
         {
           "id": "general-relativity-601-l03-q2",
-          "text": "At level 601, strong execution for general relativity operations and execution design requires:",
+          "text": "In numerical relativity, what is the primary purpose of monitoring 'constraint violations'?",
           "skillId": "general-relativity-601-skill-execution",
           "options": [
             {
               "id": "a",
-              "text": "Owner mapping, checkpoint cadence, and escalation thresholds"
+              "text": "To ensure the simulation does not use too much computing power."
             },
             {
               "id": "b",
-              "text": "No role clarity and ad-hoc process changes"
+              "text": "To check if the numerical solution is drifting away from a true solution to the Einstein equations."
             },
             {
               "id": "c",
-              "text": "No retrospective or post-run review"
+              "text": "To determine the final mass of the merged black hole."
             },
             {
               "id": "d",
-              "text": "No rollback or fallback conditions"
+              "text": "To measure the frequency of the emitted gravitational waves."
             }
           ],
-          "correctOptionId": "a",
-          "explanation": "Reliable advanced execution needs ownership clarity and threshold-driven governance."
+          "correctOptionId": "b",
+          "explanation": "The Einstein equations include constraints that must be satisfied at all times. Numerical errors can cause the simulation to violate these constraints, indicating a deviation from the correct physical evolution."
         },
         {
           "id": "general-relativity-601-l03-q3",
-          "text": "A defensible approach to general relativity impact and tradeoff analysis includes:",
+          "text": "A Penrose diagram is most useful for analyzing which property of a spacetime?",
           "skillId": "general-relativity-601-skill-eval",
           "options": [
             {
               "id": "a",
-              "text": "Anecdotes without comparison"
+              "text": "The precise gravitational force at a specific point."
             },
             {
               "id": "b",
-              "text": "Baseline comparisons, side-effect analysis, and uncertainty bounds"
+              "text": "The local curvature in a small region."
             },
             {
               "id": "c",
-              "text": "Changing success criteria after outcomes"
+              "text": "The global causal structure, including singularities and horizons."
             },
             {
               "id": "d",
-              "text": "Excluding difficult scenarios from analysis"
+              "text": "The chemical composition of stars within that spacetime."
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "Defensible analysis combines comparative baselines, side-effect checks, and uncertainty disclosure."
-        },
-        {
-          "id": "general-relativity-601-l03-q4",
-          "text": "Mature governance systems connect:",
-          "skillId": "general-relativity-601-skill-governance",
-          "options": [
-            {
-              "id": "a",
-              "text": "Policy intent, measurable controls, and remediation pathways"
-            },
-            {
-              "id": "b",
-              "text": "Policy language with no measurable enforcement"
-            },
-            {
-              "id": "c",
-              "text": "Targets without ownership or escalation design"
-            },
-            {
-              "id": "d",
-              "text": "Operations without transparent accountability"
-            }
-          ],
-          "correctOptionId": "a",
-          "explanation": "Governance maturity is the operational link between intent, measurement, and corrective action."
-        },
-        {
-          "id": "general-relativity-601-l03-q5",
-          "text": "What is the best way to compare competing interventions in advanced General Relativity?",
-          "skillId": "general-relativity-601-skill-advanced-5",
-          "options": [
-            {
-              "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
-            },
-            {
-              "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
-            },
-            {
-              "id": "c",
-              "text": "Switch metrics after results arrive"
-            },
-            {
-              "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
-        },
-        {
-          "id": "general-relativity-601-l03-q6",
-          "text": "In high-stakes General Relativity Research and Leadership execution, which communication protocol is strongest?",
-          "skillId": "general-relativity-601-skill-advanced-6",
-          "options": [
-            {
-              "id": "a",
-              "text": "Broadcast conclusions without assumptions"
-            },
-            {
-              "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
-            },
-            {
-              "id": "c",
-              "text": "Share only final outcomes after completion"
-            },
-            {
-              "id": "d",
-              "text": "Limit updates to a single informal channel"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
-        },
-        {
-          "id": "general-relativity-601-l03-q7",
-          "text": "A mature remediation loop in advanced General Relativity should prioritize:",
-          "skillId": "general-relativity-601-skill-advanced-7",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blame assignment without system updates"
-            },
-            {
-              "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
-            },
-            {
-              "id": "c",
-              "text": "One-time fixes without retesting"
-            },
-            {
-              "id": "d",
-              "text": "Issue closure based on elapsed time"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
-        },
-        {
-          "id": "general-relativity-601-l03-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in General Relativity Research and Leadership?",
-          "skillId": "general-relativity-601-skill-advanced-8",
-          "options": [
-            {
-              "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
-            },
-            {
-              "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
-            },
-            {
-              "id": "c",
-              "text": "Ignore correlated failure modes"
-            },
-            {
-              "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "correctOptionId": "c",
+          "explanation": "Penrose diagrams excel at showing the overall causal relationships, such as what regions can send or receive signals from other regions, and the ultimate fate of observers."
         }
       ]
     },
     {
       "id": "general-relativity-601-l04",
-      "title": "General Relativity Advanced Case Analysis",
+      "title": "Case Study: The LIGO-Virgo-KAGRA Collaboration",
       "type": "video",
-      "duration": 14,
+      "duration": 15,
       "learningAids": [
         {
           "id": "general-relativity-601-l04-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "LIGO Interferometer Diagram",
+          "content": "A schematic of a Laser Interferometer Gravitational-Wave Observatory (LIGO), showing the laser, beam splitter, and long perpendicular arms."
         }
       ],
       "chunks": [
         {
           "id": "general-relativity-601-l04-c1",
           "kind": "concept",
-          "title": "Scenario Architecture",
-          "content": "This case study will frame the competing constraints we face in General Relativity systems diagnostics. We will analyze the impacts and trade-offs involved in our decisions, helping us understand the complexities of balancing different factors in our analyses and the importance of making informed choices.\nContext recap: This case study will frame the competing constraints we face in General Relativity systems diagnostics. We will analyze the impacts and trade-offs involved in our decisions, helping us understand the complexities of balancing different factors in our analyses and the importance of making informed choices."
+          "title": "The Challenge: Detecting Gravitational Waves",
+          "content": "This case study examines the monumental effort to directly detect gravitational waves. We will analyze the core challenge: measuring a distortion in spacetime smaller than the width of a proton over a 4-kilometer distance, and the competing sources of noise that had to be overcome."
         },
         {
           "id": "general-relativity-601-l04-c2",
           "kind": "practice",
-          "title": "Tradeoff Framing",
-          "content": "In this practice session, learners will compare different options available to them across several important dimensions, including safety, reliability, cost, equity, and governance. This comparative analysis will help them understand the implications of their choices and the importance of considering multiple factors in decision-making.\nContext recap: In this practice session, learners will compare different options available to them across several important dimensions, including safety, reliability, cost, equity, and governance. This comparative analysis will help them understand the implications of their choices and the importance of considering multiple factors in decision-making."
+          "title": "Engineering Trade-offs and Analysis",
+          "content": "Learners will analyze the key design decisions made by the LIGO team. This includes trade-offs between arm length and cost, laser power versus thermal noise on the mirrors, and the complex seismic isolation systems required. We will frame these as leadership and project management challenges."
         },
         {
           "id": "general-relativity-601-l04-c3",
           "kind": "recap",
-          "title": "Decision Memo Pattern",
-          "content": "In this recap, we will emphasize that each recommendation made in our analyses should include clear assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that our decisions are well-founded and that we are prepared for any unforeseen circumstances.\nContext recap: In this recap, we will emphasize that each recommendation made in our analyses should include clear assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that our decisions are well-founded and that we are prepared for any unforeseen circumstances."
+          "title": "Interpreting the Signal: From Data to Discovery",
+          "content": "We recap the process of discovery, from the raw data stream to the matched-filtering technique used to compare the signal against a bank of theoretical waveforms from numerical relativity. This highlights the crucial link between theory, computation, and experiment."
         }
       ]
     },
     {
       "id": "general-relativity-601-l05",
-      "title": "General Relativity Simulation Clinic",
+      "title": "Black Hole Merger Simulation Clinic",
       "type": "interactive",
       "duration": 18,
-      "learningAids": [
-        {
-          "id": "general-relativity-601-l05-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
-        }
-      ],
+      "learningAids": [],
       "chunks": [
         {
           "id": "general-relativity-601-l05-c1",
           "kind": "practice",
-          "title": "Live Scenario Controls",
-          "content": "During this interactive clinic, learners will operate scenario controls while carefully balancing performance and governance constraints. This exercise will provide them with practical experience in managing real-time situations and understanding the importance of adhering to established guidelines.\nContext recap: During this interactive clinic, learners will operate scenario controls while carefully balancing performance and governance constraints. This exercise will provide them with practical experience in managing real-time situations and understanding the importance of adhering to established guidelines."
+          "title": "Interactive Simulation: Binary Black Hole Inspiral",
+          "content": "In this interactive clinic, learners will use a simplified web-based tool to control the initial parameters of a binary black hole system, such as mass ratio and spin. They will launch the simulation and observe the orbital decay and resulting gravitational waveform in real-time."
         },
         {
           "id": "general-relativity-601-l05-c2",
           "kind": "recap",
-          "title": "Adaptive Response Design",
-          "content": "In this recap, we will discuss how effective responses can be designed to update control gates while ensuring that traceability and accountability are maintained. This is crucial for ensuring that all actions taken are documented and can be reviewed later, promoting transparency in our processes.\nContext recap: In this recap, we will discuss how effective responses can be designed to update control gates while ensuring that traceability and accountability are maintained. This is crucial for ensuring that all actions taken are documented and can be reviewed later, promoting transparency in our processes."
+          "title": "Analyzing Simulation Output and Waveform Extraction",
+          "content": "After running their simulations, learners will analyze the output. We will recap how to identify the key phases of the waveform—inspiral, merger, and ringdown—and discuss how these features directly relate to the physical parameters of the black holes they configured."
         }
       ],
       "interactiveActivities": [
         {
           "id": "general-relativity-601-l05-act1",
           "type": "scenario",
-          "title": "Adverse-Condition Decision Run",
-          "description": "Run a high-pressure general relativity scenario and tune controls under uncertainty."
+          "title": "Simulating Extreme Mass Ratios",
+          "description": "Configure and run a simulation with an extreme mass ratio (e.g., 30:1) to observe the unique waveform signature and understand the increased computational challenges associated with such systems."
         }
       ]
     },
@@ -424,302 +285,170 @@ export const GeneralRelativity601Module: LearningModule = {
       "id": "general-relativity-601-l06",
       "title": "Checkpoint 2: Case and Simulation Mastery",
       "type": "quiz",
-      "duration": 11,
-      "learningAids": [
-        {
-          "id": "general-relativity-601-l06-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
-        }
-      ],
+      "duration": 12,
+      "learningAids": [],
       "questions": [
         {
           "id": "general-relativity-601-l06-q1",
-          "text": "In advanced casework, the first requirement for defensible recommendations is:",
+          "text": "In the context of LIGO, what was a primary engineering trade-off in designing the interferometers?",
           "skillId": "general-relativity-601-skill-case1",
           "options": [
             {
               "id": "a",
-              "text": "A preferred option without explicit assumptions"
+              "text": "Choosing between optical and radio telescopes."
             },
             {
               "id": "b",
-              "text": "A clear baseline, explicit constraints, and success criteria"
+              "text": "Balancing longer arm length (for higher sensitivity) against construction cost and geographical constraints."
             },
             {
               "id": "c",
-              "text": "High confidence without evidence logs"
+              "text": "Deciding whether to build the facility on the moon or on Earth."
             },
             {
               "id": "d",
-              "text": "Single-metric optimization only"
+              "text": "Using liquid nitrogen versus liquid helium to cool the mirrors."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible recommendations begin with explicit assumptions, constraints, and measurable targets."
+          "explanation": "Longer arms make the interferometer more sensitive to gravitational waves, but they are exponentially more expensive and difficult to build. This was a central trade-off."
         },
         {
           "id": "general-relativity-601-l06-q2",
-          "text": "A resilient strategy for general relativity operations and execution design should include:",
+          "text": "What is the 'ringdown' phase of a gravitational waveform from a binary black hole merger?",
           "skillId": "general-relativity-601-skill-case2",
           "options": [
             {
               "id": "a",
-              "text": "Checkpointed execution with fallback and escalation criteria"
+              "text": "The initial, quiet phase before the black holes begin to spiral."
             },
             {
               "id": "b",
-              "text": "One-way execution with no rollback capability"
+              "text": "The period when the two black holes are orbiting each other at a stable distance."
             },
             {
               "id": "c",
-              "text": "No ownership mapping across teams"
+              "text": "The final stage where the newly formed, distorted black hole settles into a stable state, emitting characteristic waves."
             },
             {
               "id": "d",
-              "text": "Hidden assumptions and undocumented decisions"
+              "text": "The background noise from the detector after the signal has passed."
             }
           ],
-          "correctOptionId": "a",
-          "explanation": "Resilience depends on checkpoints, fallback options, and explicit escalation design."
+          "correctOptionId": "c",
+          "explanation": "The ringdown is analogous to a bell ringing. The newly merged black hole is highly distorted and radiates away this distortion as gravitational waves until it settles into a stable Kerr black hole."
         },
         {
           "id": "general-relativity-601-l06-q3",
-          "text": "When evaluating general relativity impact and tradeoff analysis, which method is most rigorous?",
+          "text": "The technique of 'matched filtering' used by LIGO is most effective for what purpose?",
           "skillId": "general-relativity-601-skill-case3",
           "options": [
             {
               "id": "a",
-              "text": "Single success story without controls"
+              "text": "Filtering out seismic noise from the detector data."
             },
             {
               "id": "b",
-              "text": "Comparative baselines plus side-effect and uncertainty analysis"
+              "text": "Increasing the power of the main laser."
             },
             {
               "id": "c",
-              "text": "Outcome-only narrative without process evidence"
+              "text": "Pulling a known signal shape (a theoretical waveform) out of noisy data."
             },
             {
               "id": "d",
-              "text": "Retrospective scope changes to fit outcomes"
+              "text": "Calibrating the position of the mirrors."
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "Rigorous evaluation requires comparisons, side-effect analysis, and uncertainty disclosure."
-        },
-        {
-          "id": "general-relativity-601-l06-q4",
-          "text": "Advanced governance is strongest when it:",
-          "skillId": "general-relativity-601-skill-case4",
-          "options": [
-            {
-              "id": "a",
-              "text": "Aligns authority, measurement, and remediation obligations"
-            },
-            {
-              "id": "b",
-              "text": "Separates policy from operational controls"
-            },
-            {
-              "id": "c",
-              "text": "Avoids external review and transparency"
-            },
-            {
-              "id": "d",
-              "text": "Treats accountability as optional under pressure"
-            }
-          ],
-          "correctOptionId": "a",
-          "explanation": "Mature governance links authority, measurable controls, and corrective action."
-        },
-        {
-          "id": "general-relativity-601-l06-q5",
-          "text": "What is the best way to compare competing interventions in advanced General Relativity?",
-          "skillId": "general-relativity-601-skill-advanced-5",
-          "options": [
-            {
-              "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
-            },
-            {
-              "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
-            },
-            {
-              "id": "c",
-              "text": "Switch metrics after results arrive"
-            },
-            {
-              "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
-        },
-        {
-          "id": "general-relativity-601-l06-q6",
-          "text": "In high-stakes General Relativity Research and Leadership execution, which communication protocol is strongest?",
-          "skillId": "general-relativity-601-skill-advanced-6",
-          "options": [
-            {
-              "id": "a",
-              "text": "Broadcast conclusions without assumptions"
-            },
-            {
-              "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
-            },
-            {
-              "id": "c",
-              "text": "Share only final outcomes after completion"
-            },
-            {
-              "id": "d",
-              "text": "Limit updates to a single informal channel"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
-        },
-        {
-          "id": "general-relativity-601-l06-q7",
-          "text": "A mature remediation loop in advanced General Relativity should prioritize:",
-          "skillId": "general-relativity-601-skill-advanced-7",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blame assignment without system updates"
-            },
-            {
-              "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
-            },
-            {
-              "id": "c",
-              "text": "One-time fixes without retesting"
-            },
-            {
-              "id": "d",
-              "text": "Issue closure based on elapsed time"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
-        },
-        {
-          "id": "general-relativity-601-l06-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in General Relativity Research and Leadership?",
-          "skillId": "general-relativity-601-skill-advanced-8",
-          "options": [
-            {
-              "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
-            },
-            {
-              "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
-            },
-            {
-              "id": "c",
-              "text": "Ignore correlated failure modes"
-            },
-            {
-              "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "correctOptionId": "c",
+          "explanation": "Matched filtering is a signal processing technique that correlates a noisy data stream with a known template to find instances of that template, making it ideal for finding faint gravitational wave signals."
         }
       ]
     },
     {
       "id": "general-relativity-601-l07",
-      "title": "General Relativity Governance and Public Impact",
+      "title": "GR, Ethics, and Project Leadership",
       "type": "video",
-      "duration": 13,
+      "duration": 15,
       "learningAids": [
         {
           "id": "general-relativity-601-l07-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "First Image of a Black Hole (EHT)",
+          "content": "The iconic image of the supermassive black hole at the center of galaxy M87, captured by the Event Horizon Telescope (EHT) collaboration."
         }
       ],
       "chunks": [
         {
           "id": "general-relativity-601-l07-c1",
           "kind": "concept",
-          "title": "Stakeholder Impact Distribution",
-          "content": "In this section, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. This activity will help them understand the broader impact of their decisions and the importance of considering how various groups are affected by changes in General Relativity systems.\nContext recap: In this section, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. This activity will help them understand the broader impact of their decisions and the importance of considering how various groups are affected by changes in General Relativity systems."
+          "title": "Managing Large-Scale Scientific Collaborations",
+          "content": "Using the Event Horizon Telescope (EHT) as a case study, we will analyze the leadership and governance challenges of coordinating hundreds of scientists across dozens of institutions worldwide. Topics include data sharing policies, publication authorship, and equitable credit assignment."
         },
         {
           "id": "general-relativity-601-l07-c2",
           "kind": "concept",
-          "title": "Accountability Architecture",
-          "content": "In this lesson, we will explore the concept of accountability architecture. This includes understanding how decision traceability, review rights, and remediation obligations are integrated into our processes. By doing so, we can ensure that our actions are responsible and that we are held accountable for the outcomes of our decisions.\nContext recap: In this lesson, we will explore the concept of accountability architecture. This includes understanding how decision traceability, review rights, and remediation obligations are integrated into our processes. By doing so, we can ensure that our actions are responsible and that we are held accountable for the outcomes of our decisions."
+          "title": "Data Release Policies and Scientific Integrity",
+          "content": "This lesson explores the ethical obligations of large scientific projects. We will discuss the importance of transparent data release policies, allowing for independent verification. We will also cover methods like 'blind analysis' to prevent experimenter bias from influencing results."
         },
         {
           "id": "general-relativity-601-l07-c3",
           "kind": "recap",
-          "title": "Responsible Leadership Checklist",
-          "content": "As we conclude our discussion, it's important to have a checklist that connects the outcomes of our work with ethical considerations, adherence to policies, and the ability to adapt to challenges. This checklist serves as a guide to ensure that our leadership is responsible and impactful.\nContext recap: As we conclude our discussion, it's important to have a checklist that connects the outcomes of our work with ethical considerations, adherence to policies, and the ability to adapt to challenges. This checklist serves as a guide to ensure that our leadership is responsible and impactful."
+          "title": "Communicating General Relativity to the Public",
+          "content": "We conclude by discussing the responsibility of scientists to communicate complex and often mind-bending topics to the public and policymakers. This includes conveying the excitement of discovery while being transparent about uncertainties and the limits of our knowledge."
         }
       ],
       "flashcards": [
         {
           "id": "general-relativity-601-l07-f1",
-          "front": "Impact distribution",
-          "back": "How outcomes are allocated across populations and timescales."
+          "front": "Event Horizon Telescope (EHT)",
+          "back": "A global network of radio telescopes that uses Very-Long-Baseline Interferometry to function as a single, Earth-sized virtual telescope, capable of imaging a black hole's event horizon."
         },
         {
           "id": "general-relativity-601-l07-f2",
-          "front": "Decision traceability",
-          "back": "An auditable record of evidence, ownership, and rationale."
+          "front": "Blind Analysis",
+          "back": "A research practice where scientists analyze data without knowing the true outcome or specific details until the analysis is complete, to prevent conscious or unconscious bias."
         },
         {
           "id": "general-relativity-601-l07-f3",
-          "front": "Responsible leadership",
-          "back": "Decision behavior balancing performance, accountability, and ethics."
+          "front": "Scientific Collaboration Governance",
+          "back": "The set of rules, roles, and processes that a large scientific project uses to manage decision-making, data sharing, authorship, and internal communication."
         }
       ]
     },
     {
       "id": "general-relativity-601-l08",
-      "title": "General Relativity Capstone Defense Lab",
+      "title": "Capstone: Proposing a Next-Generation GR Experiment",
       "type": "interactive",
-      "duration": 16,
+      "duration": 25,
       "learningAids": [
         {
           "id": "general-relativity-601-l08-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "image",
+          "title": "LISA Mission Concept",
+          "content": "An artist's conception of the Laser Interferometer Space Antenna (LISA), a future space-based gravitational wave observatory."
         }
       ],
       "chunks": [
         {
           "id": "general-relativity-601-l08-c1",
           "kind": "practice",
-          "title": "Defense Brief Assembly",
-          "content": "In this activity, learners will work together to create a comprehensive brief. This brief will include well-supported claims, relevant evidence, an understanding of the uncertainties involved, and proposed pathways for addressing any potential issues. This process helps develop critical thinking and communication skills.\nContext recap: In this activity, learners will work together to create a comprehensive brief. This brief will include well-supported claims, relevant evidence, an understanding of the uncertainties involved, and proposed pathways for addressing any potential issues. This process helps develop critical thinking and communication skills."
+          "title": "Developing a Mission Concept",
+          "content": "In this capstone lab, learners will develop a proposal for a next-generation experiment to test General Relativity or observe a new class of astrophysical objects. They must define the key science goals, justify the experimental approach, identify major technical and logistical challenges, and propose a collaboration structure."
         },
         {
           "id": "general-relativity-601-l08-c2",
           "kind": "recap",
-          "title": "Expert Panel Rehearsal",
-          "content": "During this rehearsal, learners will practice their responses to a variety of critiques that may come from experts in the field, governance representatives, and stakeholders. This exercise is designed to enhance their ability to articulate their ideas clearly and confidently while addressing different perspectives.\nContext recap: During this rehearsal, learners will practice their responses to a variety of critiques that may come from experts in the field, governance representatives, and stakeholders. This exercise is designed to enhance their ability to articulate their ideas clearly and confidently while addressing different perspectives."
+          "title": "Peer Review and Proposal Defense",
+          "content": "Learners will present their mission concepts to their peers for critique. This exercise simulates the rigorous peer-review process that real scientific proposals undergo. The goal is to practice defending design choices, addressing weaknesses, and communicating a compelling scientific vision."
         }
       ],
       "interactiveActivities": [
         {
           "id": "general-relativity-601-l08-act1",
           "type": "debate_simulator",
-          "title": "Expert Defense Panel",
-          "description": "Defend specialization recommendations under adversarial cross-examination."
+          "title": "Simulated Funding Panel Review",
+          "description": "Defend your proposed mission concept against critiques from a simulated panel of scientific, engineering, and funding experts."
         }
       ]
     }

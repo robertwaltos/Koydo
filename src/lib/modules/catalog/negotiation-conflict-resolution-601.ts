@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const NegotiationConflictResolution601Module: LearningModule = {
+export const negotiation_conflict_resolution_601_Module: LearningModule = {
   "id": "negotiation-conflict-resolution-601",
   "title": "Negotiation and Conflict Resolution Research and Leadership",
   "description": "Post-401 specialization in Negotiation and Conflict Resolution, focused on multi-party negotiation architecture, conflict de-escalation and mediation strategy, power-interest mapping and agreement design, and institutional trust and durable governance through advanced casework, simulation, and defense-based checkpoints.",
@@ -14,7 +14,7 @@ export const NegotiationConflictResolution601Module: LearningModule = {
   ],
   "minAge": 17,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en",
@@ -31,7 +31,7 @@ export const NegotiationConflictResolution601Module: LearningModule = {
   "lessons": [
     {
       "id": "negotiation-conflict-resolution-601-l01",
-      "title": "Negotiation and Conflict Resolution Advanced Foundations",
+      "title": "Advanced Foundations of Negotiation and Conflict Resolution",
       "type": "video",
       "duration": 14,
       "learningAids": [
@@ -47,42 +47,45 @@ export const NegotiationConflictResolution601Module: LearningModule = {
           "id": "negotiation-conflict-resolution-601-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "In this lesson, we will dive into the essential ideas of scope and boundaries within the world of Negotiation and Conflict Resolution. Understanding these concepts is crucial because they help us define the limits and extent of our discussions and agreements. We will learn how to effectively structure negotiations that involve several parties, which can often be quite intricate and require careful planning. This means thinking about who is involved, what issues are at stake, and how to ensure that everyone has a voice in the process. Additionally, we will discuss various strategies for calming down conflicts. This is important because conflicts can escalate quickly, and knowing how to de-escalate them can lead to more productive conversations. We will also explore the important role that mediation plays in helping different parties come to an agreement. Mediation is a process where a neutral third party helps facilitate discussions and find common ground. By understanding these advanced concepts, you will be better equipped to handle challenging negotiations with confidence and skill. This knowledge will empower you to create a more collaborative atmosphere where everyone's needs can be addressed, leading to more successful outcomes for all involved. Remember, effective negotiation is not just about winning; it's about finding solutions that work for everyone.\nContext recap: In this lesson, we will dive into the essential ideas of scope and boundaries within the world of Negotiation and Conflict Resolution. Understanding these concepts is crucial because they help us define the limits and extent of our discussions and agreements. We will learn how to effectively structure negotiations that involve several parties, which can often be quite intricate and require careful planning. This means thinking about who is involved, what issues are at stake, and how to ensure that everyone has a voice in the process.\nWhy this matters: Scope and Boundary Design helps learners in Social Studies connect ideas from Negotiation and Conflict Resolution Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "Scope and boundary design is the process of defining the 'what' and 'who' of a negotiation. It involves clearly outlining the issues on the table (the scope) and identifying all relevant parties (the boundaries). In complex, multi-party negotiations, a well-defined scope prevents 'scope creep'—where new issues derail progress. Establishing clear boundaries ensures all key stakeholders are included and their roles are understood. We will also explore how these design choices influence strategies for de-escalation and mediation, as a clear framework is the first step toward managing conflict constructively.",
+          "visualPrompt": "An animated diagram showing a central circle labeled 'Core Issues.' As more parties are added around it, the circle's boundary is tested and redrawn. Text labels appear, such as 'In Scope,' 'Out of Scope,' and 'Stakeholder Roles.'"
         },
         {
           "id": "negotiation-conflict-resolution-601-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "In this section, learners will actively participate in mapping out causal pathways. These pathways represent the connections between different events or actions that can influence one another. For example, if one event occurs, it may lead to another event happening as a result. Understanding these connections is essential for grasping how various systems interact and depend on each other. Additionally, learners will identify ranges of uncertainty, which means recognizing that not everything can be predicted with complete accuracy. This understanding is crucial before planning any interventions, as it prepares learners to anticipate potential outcomes and be ready for different scenarios. By engaging in this process, learners will develop critical thinking skills that will aid them in making informed decisions in complex situations. They will learn to analyze different factors that could affect the outcome of their decisions, allowing them to approach challenges with greater confidence and insight. This foundational knowledge will empower them to navigate the complexities of negotiation and conflict resolution more effectively.\nContext recap: In this section, learners will actively participate in mapping out causal pathways. These pathways represent the connections between different events or actions that can influence one another. For example, if one event occurs, it may lead to another event happening as a result. Understanding these connections is essential for grasping how various systems interact and depend on each other.\nWhy this matters: Causal and Uncertainty Modeling helps learners in Social Studies connect ideas from Negotiation and Conflict Resolution Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "Before intervening in a conflict, it's critical to understand its dynamics. Causal modeling helps us map the cause-and-effect relationships between different factors and actions. For example, how does a change in trade policy (cause) affect local employment (effect)? We also model uncertainty by identifying what we don't know and expressing it as a range of possible outcomes. This prevents overconfidence and prepares us to adapt our strategy. By creating these models, we can anticipate the likely consequences of our actions and design more effective, resilient negotiation strategies.",
+          "visualPrompt": "A dynamic flowchart where clicking on a node (e.g., 'Introduce Mediator') highlights the potential causal pathways and shows a range of outcomes on a probability graph (e.g., 'Agreement Chance: 40-70%')."
         },
         {
           "id": "negotiation-conflict-resolution-601-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "In our recap, we want to emphasize how crucial it is to connect all claims made during negotiations to measurable indicators. This means that every statement we make should be backed by clear and reliable evidence. Having solid evidence not only strengthens our arguments but also helps to build trust and credibility among all parties involved. When everyone knows that claims are supported by facts, it creates a more respectful and open environment for discussion.\nFurthermore, we will explore the importance of establishing confidence bounds and setting up review checkpoints throughout the negotiation process. Confidence bounds help us understand the range within which we can be sure our claims are accurate, while review checkpoints allow us to pause and assess our progress. These practices ensure that our claims remain credible and can be verified at any point during negotiations. By focusing on evidence and accountability, we can foster a transparent negotiation atmosphere where everyone feels valued and heard. This approach not only enhances the negotiation process but also contributes to more successful outcomes for all parties involved.\nContext recap: In our recap, we want to emphasize how crucial it is to connect all claims made during negotiations to measurable indicators. This means that every statement we make should be backed by clear and reliable evidence. Having solid evidence not only strengthens our arguments but also helps to build trust and credibility among all parties involved. When everyone knows that claims are supported by facts, it creates a more respectful and open environment for discussion.\nWhy this matters: Evidence Thresholds helps learners in Social Studies connect ideas from Negotiation and Conflict Resolution Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "A strong argument is built on strong evidence. In advanced negotiation, every claim must be backed by measurable indicators. Instead of saying 'This will have a major impact,' we say 'This is projected to increase efficiency by 15-20%.' This requires setting evidence thresholds—the minimum quality and quantity of data needed to support a claim. We also establish confidence bounds to communicate the level of certainty in our data. Finally, review checkpoints are built into the process to regularly verify that our claims still hold true as the negotiation evolves, ensuring a foundation of trust and credibility.",
+          "visualPrompt": "An infographic comparing a weak claim ('This is better') with a strong claim. The strong claim is accompanied by a data chart, a source citation, and a confidence interval bar labeled '95% Confidence.'"
         }
       ],
       "flashcards": [
         {
           "id": "negotiation-conflict-resolution-601-l01-f1",
           "front": "Multi-Party Negotiation Architecture",
-          "back": "A specialization axis requiring explicit assumptions and measurable constraints."
+          "back": "The strategic framework for designing complex negotiations, defining who participates, what issues are discussed, and the rules of engagement."
         },
         {
           "id": "negotiation-conflict-resolution-601-l01-f2",
-          "front": "Conflict De-Escalation And Mediation Strategy",
-          "back": "Execution architecture that determines reliability under stress."
+          "front": "Conflict De-Escalation and Mediation Strategy",
+          "back": "A planned approach to reduce tension and guide conflicting parties toward a resolution, often involving a neutral third party."
         },
         {
           "id": "negotiation-conflict-resolution-601-l01-f3",
-          "front": "Power-Interest Mapping And Agreement Design",
-          "back": "Evaluation discipline for identifying true gains and hidden costs."
+          "front": "Power-Interest Mapping and Agreement Design",
+          "back": "A method of analyzing stakeholders based on their level of power and interest to design agreements that are both viable and durable."
         }
       ]
     },
     {
       "id": "negotiation-conflict-resolution-601-l02",
-      "title": "Negotiation and Conflict Resolution Specialist Methods Lab",
+      "title": "Specialist Methods Lab",
       "type": "interactive",
       "duration": 17,
       "learningAids": [
@@ -98,13 +101,15 @@ export const NegotiationConflictResolution601Module: LearningModule = {
           "id": "negotiation-conflict-resolution-601-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "In this engaging interactive practice session, learners will have the exciting opportunity to design specialized workflows that are specifically tailored to various negotiation scenarios. This means they will think creatively about how to approach different situations where negotiation is key. After creating these workflows, participants will conduct stress tests on their designs. This involves simulating challenging situations to see how well their workflows can handle pressure and unexpected obstacles. This hands-on experience is crucial as it not only enhances their problem-solving skills but also prepares them for real-world challenges they may encounter in negotiations. By experimenting with different approaches and strategies, learners will gain valuable insights into how to adapt their methods effectively. They will learn that flexibility and creativity are important in negotiations, helping them to become more confident and capable negotiators. Overall, this session aims to empower learners with the skills they need to navigate complex negotiation scenarios successfully.\nContext recap: In this engaging interactive practice session, learners will have the exciting opportunity to design specialized workflows that are specifically tailored to various negotiation scenarios. This means they will think creatively about how to approach different situations where negotiation is key. After creating these workflows, participants will conduct stress tests on their designs. This involves simulating challenging situations to see how well their workflows can handle pressure and unexpected obstacles.\nWhy this matters: Method Design and Stress Test helps learners in Social Studies connect ideas from Negotiation and Conflict Resolution Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "In this lab, you will act as a negotiation architect. Your task is to design a custom workflow for a specific conflict scenario. This includes defining stages, decision points, and communication protocols. Once your workflow is designed, you will stress-test it by introducing unexpected events, such as a key stakeholder withdrawing or new information coming to light. The goal is to see how your design holds up under pressure and identify its vulnerabilities. This practice builds the skill of creating robust, adaptable negotiation processes that can withstand real-world complexities.",
+          "visualPrompt": "An interactive screen where the user drags and drops elements (like 'Initial Meeting,' 'Data Review,' 'Decision Gate') to build a workflow. A 'Stress Test' button introduces a random event, like a 'Data Leak' icon, forcing the user to adapt their workflow."
         },
         {
           "id": "negotiation-conflict-resolution-601-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "In our recap, we will dive into the architecture of control gates within workflows. Control gates play a crucial role in managing the flow of negotiations and decision-making processes. They serve as important checkpoints that help teams assess their progress and determine whether to continue, adjust, or even reverse their decisions based on specific criteria. Additionally, these gates establish clear thresholds for escalating issues, ensuring that problems are addressed promptly and effectively. By understanding how to design and implement these elements, learners will be better equipped to develop negotiation strategies that are not only robust but also adaptable to various situations. This knowledge will enable them to create structured negotiation processes that can respond to changing circumstances, ultimately leading to more favorable outcomes for everyone involved.\nContext recap: In our recap, we will dive into the architecture of control gates within workflows. Control gates play a crucial role in managing the flow of negotiations and decision-making processes. They serve as important checkpoints that help teams assess their progress and determine whether to continue, adjust, or even reverse their decisions based on specific criteria. Additionally, these gates establish clear thresholds for escalating issues, ensuring that problems are addressed promptly and effectively.\nWhy this matters: Control Gate Architecture helps learners in Social Studies connect ideas from Negotiation and Conflict Resolution Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "Control gates are formal checkpoints in a negotiation process where key decisions are made. Think of them as toll booths on a highway; you can't proceed without meeting specific criteria. A control gate might require, for example, that all parties agree on the data before moving to the solution-building phase. This architecture ensures discipline and prevents premature commitments. It also includes clear thresholds for escalation, defining exactly when a problem needs to be raised to a higher authority. Well-designed gates make the process transparent, accountable, and manageable.",
+          "visualPrompt": "A project timeline visualized as a road. Along the road are several 'gates' labeled 'Phase 1 Complete,' 'Budget Approved,' etc. At each gate, a checklist must be ticked off before the timeline can continue."
         }
       ],
       "interactiveActivities": [
@@ -352,7 +357,7 @@ export const NegotiationConflictResolution601Module: LearningModule = {
     },
     {
       "id": "negotiation-conflict-resolution-601-l04",
-      "title": "Negotiation and Conflict Resolution Advanced Case Analysis",
+      "title": "Advanced Case Analysis",
       "type": "video",
       "duration": 14,
       "learningAids": [
@@ -368,25 +373,28 @@ export const NegotiationConflictResolution601Module: LearningModule = {
           "id": "negotiation-conflict-resolution-601-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "In this lesson, we will dive into a fascinating case study that illustrates the various challenges and competing interests that arise in multi-party negotiations. We will carefully examine the structure, or architecture, of these negotiations, which involves understanding the different interests and power dynamics of each party involved. This means we will look at what each party wants and how much influence they have in the negotiation process. Furthermore, we will discuss how to create agreements that thoughtfully consider these complexities, ensuring that every participant's voice is acknowledged and valued. By gaining insight into these dynamics, learners will be better equipped to tackle the difficulties that come with multi-party negotiations. They will learn how to craft solutions that are fair and equitable for everyone involved, fostering a collaborative environment where all parties can work together towards a common goal. This understanding is crucial for anyone looking to excel in negotiation and conflict resolution, as it empowers them to create positive outcomes that respect the needs and perspectives of all stakeholders.\nContext recap: In this lesson, we will dive into a fascinating case study that illustrates the various challenges and competing interests that arise in multi-party negotiations. We will carefully examine the structure, or architecture, of these negotiations, which involves understanding the different interests and power dynamics of each party involved. This means we will look at what each party wants and how much influence they have in the negotiation process. Furthermore, we will discuss how to create agreements that thoughtfully consider these complexities, ensuring that every participant's voice is acknowledged and valued."
+          "content": "We will now deconstruct a real-world case study of a complex multi-party negotiation. We'll analyze its scenario architecture: the web of relationships, power dynamics, and competing interests among the stakeholders. By mapping out who held power, what each party truly wanted (their interests, not just their stated positions), and the external constraints they faced, we can understand why the negotiation unfolded as it did. This analysis will equip you to design agreements that are not just acceptable on the surface, but are strategically sound and durable because they account for the underlying structure of the conflict.",
+          "visualPrompt": "A stakeholder map from a historical case study (e.g., the Camp David Accords). Circles represent stakeholders (Carter, Begin, Sadat), with their size indicating power and lines between them indicating relationships and interests."
         },
         {
           "id": "negotiation-conflict-resolution-601-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "In this engaging practice session, learners will have the opportunity to explore and compare various options available to them during negotiations. They will carefully evaluate these options based on several important dimensions, which include safety, reliability, cost, equity, and governance. By considering these factors, learners will be able to conduct a thorough comparative analysis that will empower them to make informed decisions. This process is crucial as it helps them to balance different aspects effectively. Furthermore, by actively participating in this evaluation, learners will enhance their critical thinking and evaluation skills, which are essential for achieving successful outcomes in negotiations. This thoughtful approach will enable them to weigh the advantages and disadvantages of each option, leading to more strategic and effective negotiation practices.\nContext recap: In this engaging practice session, learners will have the opportunity to explore and compare various options available to them during negotiations. They will carefully evaluate these options based on several important dimensions, which include safety, reliability, cost, equity, and governance. By considering these factors, learners will be able to conduct a thorough comparative analysis that will empower them to make informed decisions. This process is crucial as it helps them to balance different aspects effectively.\nWhy this matters: Tradeoff Framing helps learners in Social Studies connect ideas from Negotiation and Conflict Resolution Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "Negotiation rarely has a single 'perfect' solution. Instead, it involves making difficult choices between competing values. This is the art of tradeoff framing. In this practice, you will evaluate several proposed solutions from our case study. You will score each option against key dimensions: cost, equity, long-term stability, public trust, and implementation risk. The goal is not to find a flawless option, but to clearly and explicitly articulate the pros and cons of each. This structured comparison allows leaders to make defensible decisions by transparently communicating what is being gained and what is being given up.",
+          "visualPrompt": "An interactive comparison table where learners can rate different policy options on a 1-5 scale for criteria like 'Cost,' 'Equity,' and 'Risk.' As they adjust ratings, a summary chart updates to show the strongest overall option."
         },
         {
           "id": "negotiation-conflict-resolution-601-l04-c3",
           "kind": "recap",
           "title": "Decision Memo Pattern",
-          "content": "In our recap, we will outline the essential components of a decision memo. A decision memo is a crucial tool in negotiations, as it helps clarify and communicate the recommendations made during discussions. Each recommendation should include several key elements: first, clear assumptions that explain the basis of the recommendation; second, supporting evidence that backs up the claims made; third, risk controls that identify potential challenges and how to address them; and finally, fallback plans that outline alternative actions if the initial recommendation does not work out. This structured approach ensures that all decisions are well-founded and can be revisited if necessary. By understanding how to create effective decision memos, learners will be better equipped to communicate their ideas clearly and persuasively during negotiations. This fosters a more organized and transparent process, making it easier for everyone involved to understand the reasoning behind decisions and to work collaboratively towards a resolution.\nContext recap: In our recap, we will outline the essential components of a decision memo. A decision memo is a crucial tool in negotiations, as it helps clarify and communicate the recommendations made during discussions. Each recommendation should include several key elements: first, clear assumptions that explain the basis of the recommendation; second, supporting evidence that backs up the claims made; third, risk controls that identify potential challenges and how to address them; and finally, fallback plans that outline alternative actions if the initial recommendation does not work out. This structured approach ensures that all decisions are well-founded and can be revisited if necessary.\nWhy this matters: Decision Memo Pattern helps learners in Social Studies connect ideas from Negotiation and Conflict Resolution Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "A decision memo is a structured document that formalizes a recommendation for action. It serves as a clear record of the thinking behind a choice. We will review a standard pattern for these memos, which includes four essential components: 1) Assumptions: The foundational beliefs upon which the recommendation is based. 2) Evidence: The key data and analysis supporting the conclusion. 3) Risk Controls: Acknowledgment of potential downsides and the measures in place to mitigate them. 4) Fallback Plans: A contingency plan if the primary recommendation fails. Mastering this pattern ensures your recommendations are clear, persuasive, and accountable.",
+          "visualPrompt": "A template of a one-page decision memo with clearly marked sections: 'Recommendation,' 'Key Assumptions,' 'Supporting Evidence,' 'Risk Mitigation,' and 'Contingency Plan.'"
         }
       ]
     },
     {
       "id": "negotiation-conflict-resolution-601-l05",
-      "title": "Negotiation and Conflict Resolution Simulation Clinic",
+      "title": "Simulation Clinic",
       "type": "interactive",
       "duration": 18,
       "learningAids": [
@@ -402,13 +410,15 @@ export const NegotiationConflictResolution601Module: LearningModule = {
           "id": "negotiation-conflict-resolution-601-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "In this engaging interactive practice, learners will step into the shoes of operators in a dynamic live scenario. They will be responsible for managing various scenario controls while carefully balancing performance expectations and governance constraints. This hands-on experience is designed to deepen their understanding of the critical importance of maintaining oversight and accountability throughout the negotiation process. By actively participating in this simulation, learners will not only enhance their decision-making skills but also gain valuable practical insights into how to effectively navigate real-time challenges. This will empower them to make informed decisions that align with their negotiation objectives, fostering a sense of confidence and competence in their abilities as negotiators.\nContext recap: In this engaging interactive practice, learners will step into the shoes of operators in a dynamic live scenario. They will be responsible for managing various scenario controls while carefully balancing performance expectations and governance constraints. This hands-on experience is designed to deepen their understanding of the critical importance of maintaining oversight and accountability throughout the negotiation process. By actively participating in this simulation, learners will not only enhance their decision-making skills but also gain valuable practical insights into how to effectively navigate real-time challenges."
+          "content": "This clinic places you in the driver's seat of a live, unfolding negotiation simulation. As events progress, you will be responsible for managing the scenario controls. This involves making real-time decisions: Do you release information to build trust, or withhold it to maintain leverage? Do you escalate a conflict to leadership, or try to mediate it locally? You must constantly balance the need to achieve your objectives (performance) with the rules of engagement and ethical limits (governance). This simulation is designed to test your judgment under pressure and highlight the importance of active, accountable oversight.",
+          "visualPrompt": "A simulation dashboard with a news feed of incoming events on one side and a control panel on the other with buttons like 'Call Emergency Meeting,' 'Release Statement,' and 'Request Data.' A 'Trust Meter' and 'Progress Bar' react to the user's choices."
         },
         {
           "id": "negotiation-conflict-resolution-601-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "In our recap, we will explore the concept of adaptive responses in negotiation scenarios. Adaptive responses are crucial because they allow negotiators to adjust their strategies as situations evolve. This means that when new information or unexpected developments arise, negotiators can modify their approach without losing track of their previous decisions. It's important for effective responses to update control gates, which are like checkpoints that help keep everything organized and accountable. By learning how to design these adaptive responses, you will be better equipped to navigate the complexities of negotiations. This skill will help you stay flexible and responsive, ensuring that you can make informed decisions even when circumstances change rapidly. Understanding this process not only enhances your negotiation skills but also builds your confidence in handling challenging discussions. Remember, being adaptable is key to successful negotiation outcomes.\nContext recap: In our recap, we will explore the concept of adaptive responses in negotiation scenarios. Adaptive responses are crucial because they allow negotiators to adjust their strategies as situations evolve. This means that when new information or unexpected developments arise, negotiators can modify their approach without losing track of their previous decisions. It's important for effective responses to update control gates, which are like checkpoints that help keep everything organized and accountable.\nWhy this matters: Adaptive Response Design helps learners in Social Studies connect ideas from Negotiation and Conflict Resolution Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "The best negotiation plans are adaptable. An adaptive response is a pre-planned adjustment to your strategy based on new information or changing circumstances. Instead of being caught off guard, you can pivot effectively. For example, 'If the other party rejects our initial offer, we will shift to Proposal B.' A key part of this design is ensuring that any adaptation is properly documented and approved through the established control gates. This maintains accountability and prevents chaotic, ad-hoc changes. We will recap how to design these responses to ensure your strategy is both flexible and disciplined.",
+          "visualPrompt": "A decision tree diagram showing a primary path ('Plan A'). At a certain point, a new event ('Competitor Enters Market') triggers a branch to a pre-planned 'Plan B' path, which has its own set of actions."
         }
       ],
       "interactiveActivities": [
@@ -638,7 +648,7 @@ export const NegotiationConflictResolution601Module: LearningModule = {
     },
     {
       "id": "negotiation-conflict-resolution-601-l07",
-      "title": "Negotiation and Conflict Resolution Governance and Public Impact",
+      "title": "Governance and Public Impact",
       "type": "video",
       "duration": 13,
       "learningAids": [
@@ -654,42 +664,45 @@ export const NegotiationConflictResolution601Module: LearningModule = {
           "id": "negotiation-conflict-resolution-601-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "In this lesson, learners will focus on mapping the distribution of impacts among various stakeholders involved in a negotiation. They will analyze the benefits, burdens, and any delayed effects that may arise for different groups. This understanding is crucial for ensuring that negotiations are fair and equitable for all parties. By examining the perspectives of all stakeholders, learners will develop a more comprehensive view of the negotiation landscape, enabling them to advocate for solutions that benefit everyone involved. Additionally, learners will engage in activities that encourage critical thinking and empathy, allowing them to appreciate the diverse viewpoints that exist in any negotiation scenario. This approach not only fosters a sense of fairness but also prepares learners to become effective negotiators who can navigate complex social dynamics with confidence and integrity.\nContext recap: In this lesson, learners will focus on mapping the distribution of impacts among various stakeholders involved in a negotiation. They will analyze the benefits, burdens, and any delayed effects that may arise for different groups. This understanding is crucial for ensuring that negotiations are fair and equitable for all parties. By examining the perspectives of all stakeholders, learners will develop a more comprehensive view of the negotiation landscape, enabling them to advocate for solutions that benefit everyone involved.\nWhy this matters: Stakeholder Impact Distribution helps learners in Social Studies connect ideas from Negotiation and Conflict Resolution Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "A negotiated agreement is never just a document; it has real-world consequences. In this lesson, we analyze stakeholder impact distribution—how the benefits and burdens of an agreement are spread across different groups, both now and in the future. Who wins? Who loses? Are the impacts concentrated on a vulnerable population? Are there hidden, long-term costs? By systematically mapping these effects, we can move beyond a simple 'win-win' narrative to a more nuanced understanding of fairness and equity, which is a cornerstone of responsible leadership and creating durable, publicly supported agreements.",
+          "visualPrompt": "A map of a community. A proposed policy (e.g., 'New Factory') is introduced, and different areas of the map light up in green (benefits, like jobs) or red (burdens, like pollution), showing the uneven distribution of impact."
         },
         {
           "id": "negotiation-conflict-resolution-601-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "In this section, we will delve into the important concept of accountability architecture within decision-making processes. Accountability architecture refers to the framework that ensures decisions are made transparently and responsibly. This includes several key components: first, the traceability of decisions, which means that every decision can be tracked back to its origin, allowing everyone involved to understand how and why choices were made. Second, there are rights for review, which give individuals the opportunity to examine decisions and provide feedback or challenge them if necessary. Lastly, there are obligations for remediation, meaning that if a decision leads to negative outcomes, there are clear steps in place to address and correct those issues. By integrating these elements, learners will gain the skills needed to create a negotiation environment that is not only transparent but also fosters trust among all parties involved. This understanding will empower them to ensure that every decision is made with integrity and accountability, which is essential for effective negotiation and conflict resolution.\nContext recap: In this section, we will delve into the important concept of accountability architecture within decision-making processes. Accountability architecture refers to the framework that ensures decisions are made transparently and responsibly. This includes several key components: first, the traceability of decisions, which means that every decision can be tracked back to its origin, allowing everyone involved to understand how and why choices were made. Second, there are rights for review, which give individuals the opportunity to examine decisions and provide feedback or challenge them if necessary."
+          "content": "Trust in institutions is built on accountability. An accountability architecture is the formal system that ensures decisions are transparent and leaders are answerable for them. We will examine its key pillars: 1) Traceability: The ability to follow a decision back to its origin, reviewing the evidence and rationale used. 2) Right to Review: Formal channels for stakeholders to question or appeal a decision. 3) Obligation for Remediation: A clear process for correcting course and addressing harm if a decision proves to be flawed. Designing these systems is essential for building durable governance and maintaining public legitimacy.",
+          "visualPrompt": "An infographic flowchart titled 'The Lifecycle of an Accountable Decision.' It shows a decision moving from 'Proposal' to 'Evidence Review,' 'Public Comment,' 'Final Decision,' and then branching to 'Impact Audit' and 'Remediation Loop.'"
         },
         {
           "id": "negotiation-conflict-resolution-601-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "At the end of our discussion, we will use a helpful checklist that connects important outcomes to ethical considerations, ensures that we are following the right policies, and builds our ability to bounce back from challenges. This checklist will guide us in making responsible decisions as leaders.\nContext recap: At the end of our discussion, we will use a helpful checklist that connects important outcomes to ethical considerations, ensures that we are following the right policies, and builds our ability to bounce back from challenges. This checklist will guide us in making responsible decisions as leaders."
+          "content": "To conclude, we will synthesize our learnings into a practical tool: the Responsible Leadership Checklist. This checklist serves as a final review before committing to a course of action. It prompts you to confirm that your decision aligns with ethical principles, complies with relevant policies, and includes mechanisms for resilience and accountability. Using this checklist helps institutionalize best practices and ensures that leadership decisions are not just effective, but also principled and defensible.",
+          "visualPrompt": "A clean, modern checklist graphic with three main sections: 'Ethical Alignment' (e.g., fairness, transparency), 'Policy Compliance' (e.g., legal review, procedural adherence), and 'Resilience & Accountability' (e.g., fallback plan, audit trail)."
         }
       ],
       "flashcards": [
         {
           "id": "negotiation-conflict-resolution-601-l07-f1",
-          "front": "Impact distribution",
-          "back": "How outcomes are allocated across populations and timescales."
+          "front": "Impact Distribution",
+          "back": "The analysis of how the positive and negative consequences of a decision are spread across different stakeholder groups and over time."
         },
         {
           "id": "negotiation-conflict-resolution-601-l07-f2",
-          "front": "Decision traceability",
-          "back": "An auditable record of evidence, ownership, and rationale."
+          "front": "Decision Traceability",
+          "back": "The ability to create and maintain a clear, auditable record of who made a decision, when, and based on what evidence and rationale."
         },
         {
           "id": "negotiation-conflict-resolution-601-l07-f3",
-          "front": "Responsible leadership",
-          "back": "Decision behavior balancing performance, accountability, and ethics."
+          "front": "Responsible Leadership",
+          "back": "A leadership style that prioritizes ethical conduct, accountability, and long-term stakeholder well-being alongside performance goals."
         }
       ]
     },
     {
       "id": "negotiation-conflict-resolution-601-l08",
-      "title": "Negotiation and Conflict Resolution Capstone Defense Lab",
+      "title": "Capstone Defense Lab",
       "type": "interactive",
       "duration": 16,
       "learningAids": [
@@ -705,13 +718,15 @@ export const NegotiationConflictResolution601Module: LearningModule = {
           "id": "negotiation-conflict-resolution-601-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "In this activity, you will work on creating a defense brief. This brief will include your main claims, the evidence that supports those claims, the areas where there might be uncertainty, and the steps we can take to address any issues that arise. This exercise will help you practice organizing your thoughts and presenting them clearly.\nContext recap: In this activity, you will work on creating a defense brief. This brief will include your main claims, the evidence that supports those claims, the areas where there might be uncertainty, and the steps we can take to address any issues that arise. This exercise will help you practice organizing your thoughts and presenting them clearly."
+          "content": "Your capstone challenge begins here. You will assemble a comprehensive defense brief for a complex policy recommendation. This document is the foundation of your final presentation. It must concisely articulate your central claim, present the strongest supporting evidence, explicitly state your assumptions, quantify the range of uncertainty, and detail your plans for mitigating risks. This structured process forces clarity of thought and prepares you to defend your position under rigorous scrutiny.",
+          "visualPrompt": "An animation showing different documents and charts (evidence, risk matrix, assumption list) being compiled into a single, professional-looking report binder labeled 'Defense Brief.'"
         },
         {
           "id": "negotiation-conflict-resolution-601-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "During this session, you will practice responding to questions and critiques from an expert panel. You will prepare answers to address technical issues, governance concerns, and feedback from stakeholders. This rehearsal will help you gain confidence in your ability to communicate effectively and handle challenging discussions.\nContext recap: During this session, you will practice responding to questions and critiques from an expert panel. You will prepare answers to address technical issues, governance concerns, and feedback from stakeholders. This rehearsal will help you gain confidence in your ability to communicate effectively and handle challenging discussions."
+          "content": "In this lab, you will rehearse your defense in front of a simulated expert panel. You will face pointed questions designed to test the weak spots in your argument. The panel will challenge your technical analysis, question your governance model, and probe the stakeholder impacts of your recommendation. This is a safe environment to practice thinking on your feet, responding to criticism constructively, and refining your arguments before the final defense. The goal is to build your confidence and ensure your recommendation is truly robust.",
+          "visualPrompt": "An illustration of a student standing at a lectern, with several challenging questions appearing in speech bubbles from a diverse panel of experts shown in silhouette."
         }
       ],
       "interactiveActivities": [

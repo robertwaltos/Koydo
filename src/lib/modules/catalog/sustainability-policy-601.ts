@@ -1,9 +1,9 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const SustainabilityPolicy601Module: LearningModule = {
+export const sustainability_policy_601_Module: LearningModule = {
   "id": "sustainability-policy-601",
   "title": "Sustainability Policy Research and Leadership",
-  "description": "Post-401 specialization in Sustainability Policy, focused on policy instrument design for sustainability transitions, cross-sector implementation and compliance systems, equity-impact and cost-effectiveness evaluation, and long-horizon accountability and governance through advanced casework, simulation, and defense-based checkpoints.",
+  "description": "A specialization in Sustainability Policy, focusing on designing effective policy instruments, ensuring cross-sector compliance, evaluating equity impacts, and establishing long-term governance. This module uses advanced case studies, simulations, and defense-based checkpoints to build leadership skills.",
   "subject": "Social Studies",
   "tags": [
     "core",
@@ -14,97 +14,103 @@ export const SustainabilityPolicy601Module: LearningModule = {
   ],
   "minAge": 17,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en",
     "es"
   ],
   "learningObjectives": [
-    "Apply advanced methods for policy instrument design for sustainability transitions in high-constraint environments",
-    "Design robust systems for cross-sector implementation and compliance systems with measurable control gates",
-    "Evaluate interventions in equity-impact and cost-effectiveness evaluation with research-grade rigor",
-    "Operationalize long-horizon accountability and governance with accountable governance and escalation pathways",
-    "Lead cross-functional decision reviews with explicit tradeoff communication",
-    "Defend recommendations under expert critique using evidence and uncertainty bounds"
+    "Design effective policy instruments for sustainability transitions in complex environments.",
+    "Develop robust systems for cross-sector policy implementation and compliance.",
+    "Evaluate policy interventions for their equity impact and cost-effectiveness with research-grade rigor.",
+    "Establish long-term accountability and governance structures with clear escalation pathways.",
+    "Lead cross-functional decision-making, clearly communicating tradeoffs and uncertainties.",
+    "Defend policy recommendations against expert critique using evidence and well-defined uncertainty bounds."
   ],
   "lessons": [
     {
       "id": "sustainability-policy-601-l01",
-      "title": "Sustainability Policy Advanced Foundations",
+      "title": "Advanced Foundations of Sustainability Policy",
       "type": "video",
-      "duration": 14,
+      "duration": 15,
       "learningAids": [
         {
           "id": "sustainability-policy-601-l01-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Policy Scope Diagram",
+          "content": "A diagram illustrating how to define policy boundaries across geographical, sectoral, and temporal dimensions."
+        },
+        {
+          "id": "sustainability-policy-601-l01-a2",
+          "type": "image",
+          "title": "Causal Loop Model",
+          "content": "A simple causal loop diagram showing the relationships between economic activity, emissions, and public health."
         }
       ],
       "chunks": [
         {
           "id": "sustainability-policy-601-l01-c1",
           "kind": "concept",
-          "title": "Scope and Boundary Design",
-          "content": "In this lesson, we will dive into the crucial idea of defining advanced boundaries for Sustainability Policy. Understanding these boundaries is essential for creating effective policies that promote sustainability. We will focus on how to design policy instruments that facilitate a smooth transition to more sustainable practices. Furthermore, we will examine how these policies can be applied across various sectors, such as energy, transportation, and agriculture. It is also important to discuss how we can ensure that everyone adheres to the rules and guidelines established by these policies, fostering a culture of compliance and cooperation for a sustainable future.\nContext recap: In this lesson, we will dive into the crucial idea of defining advanced boundaries for Sustainability Policy. Understanding these boundaries is essential for creating effective policies that promote sustainability. We will focus on how to design policy instruments that facilitate a smooth transition to more sustainable practices. Furthermore, we will examine how these policies can be applied across various sectors, such as energy, transportation, and agriculture.\nWhy this matters: Scope and Boundary Design helps learners in Social Studies connect ideas from Sustainability Policy Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "Defining Policy Scope and Boundaries",
+          "content": "Effective sustainability policy begins with clearly defining its scope. We will explore how to set practical boundaries for a policy, design instruments that encourage a transition to sustainable practices, and ensure these policies can be implemented across diverse sectors like energy, transportation, and agriculture. Clearly defining the scope helps connect policy goals to real-world decisions and highlights important tradeoffs and assumptions from the start."
         },
         {
           "id": "sustainability-policy-601-l01-c2",
           "kind": "concept",
-          "title": "Causal and Uncertainty Modeling",
-          "content": "In this part of the lesson, learners will engage in mapping out causal pathways, which means understanding how different factors influence each other. They will also explore uncertainty ranges, which help us understand the limits of our knowledge about these factors. Finally, learners will identify system dependencies, which are the connections between different elements in a system, before planning any interventions to improve sustainability.\nContext recap: In this part of the lesson, learners will engage in mapping out causal pathways, which means understanding how different factors influence each other. They will also explore uncertainty ranges, which help us understand the limits of our knowledge about these factors. Finally, learners will identify system dependencies, which are the connections between different elements in a system, before planning any interventions to improve sustainability."
+          "title": "Modeling Causality and Uncertainty",
+          "content": "Before intervening in a complex system, we must understand its dynamics. This involves mapping causal pathways to see how different factors influence each other, defining uncertainty ranges to acknowledge the limits of our knowledge, and identifying key system dependencies. This modeling is crucial for planning effective and predictable interventions."
         },
         {
           "id": "sustainability-policy-601-l01-c3",
           "kind": "recap",
-          "title": "Evidence Thresholds",
-          "content": "In this recap, we emphasize that all claims made in our sustainability policies should be linked to measurable indicators. This means we need to have clear evidence that supports our claims. Additionally, we will discuss the importance of establishing confidence bounds, which help us understand how certain we are about our findings, and review checkpoints that allow us to assess our progress and make necessary adjustments.\nContext recap: In this recap, we emphasize that all claims made in our sustainability policies should be linked to measurable indicators. This means we need to have clear evidence that supports our claims. Additionally, we will discuss the importance of establishing confidence bounds, which help us understand how certain we are about our findings, and review checkpoints that allow us to assess our progress and make necessary adjustments."
+          "title": "Establishing Evidence Thresholds",
+          "content": "In this recap, we emphasize that all policy claims must be supported by measurable evidence. We will discuss the importance of linking claims to specific indicators, establishing confidence bounds to communicate our level of certainty, and using review checkpoints to assess progress and make necessary adjustments."
         }
       ],
       "flashcards": [
         {
           "id": "sustainability-policy-601-l01-f1",
-          "front": "Policy Instrument Design For Sustainability Transitions",
-          "back": "A specialization axis requiring explicit assumptions and measurable constraints."
+          "front": "Policy Instrument Design",
+          "back": "The process of creating tools (e.g., taxes, regulations, incentives) to achieve sustainability goals, based on explicit assumptions and measurable constraints."
         },
         {
           "id": "sustainability-policy-601-l01-f2",
-          "front": "Cross-Sector Implementation And Compliance Systems",
-          "back": "Execution architecture that determines reliability under stress."
+          "front": "Cross-Sector Implementation",
+          "back": "The operational plan for how a policy will be executed across different industries or government departments, determining its reliability under stress."
         },
         {
           "id": "sustainability-policy-601-l01-f3",
-          "front": "Equity-Impact And Cost-Effectiveness Evaluation",
-          "back": "Evaluation discipline for identifying true gains and hidden costs."
+          "front": "Equity-Impact Evaluation",
+          "back": "A method for assessing how a policy's benefits and burdens are distributed among different groups, identifying true gains and hidden costs."
         }
       ]
     },
     {
       "id": "sustainability-policy-601-l02",
-      "title": "Sustainability Policy Specialist Methods Lab",
+      "title": "Specialist Methods Lab",
       "type": "interactive",
       "duration": 17,
       "learningAids": [
         {
           "id": "sustainability-policy-601-l02-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "image",
+          "title": "Workflow with Control Gates",
+          "content": "A flowchart showing a policy implementation process with clear checkpoints (control gates), decision points, and escalation paths."
         }
       ],
       "chunks": [
         {
           "id": "sustainability-policy-601-l02-c1",
           "kind": "practice",
-          "title": "Method Design and Stress Test",
-          "content": "In this interactive session, learners will have the opportunity to design specialized workflows, which are step-by-step processes that help us achieve our sustainability goals. They will also stress-test these workflows by putting them through challenging scenarios to see how well they hold up under pressure. This practice will help learners understand the importance of resilience in sustainability planning.\nContext recap: In this interactive session, learners will have the opportunity to design specialized workflows, which are step-by-step processes that help us achieve our sustainability goals. They will also stress-test these workflows by putting them through challenging scenarios to see how well they hold up under pressure. This practice will help learners understand the importance of resilience in sustainability planning."
+          "title": "Method Design and Stress-Testing",
+          "content": "In this interactive session, you will design a specialized workflow for implementing a sustainability policy. You will then stress-test this workflow against challenging scenarios, such as budget cuts or unexpected public opposition, to evaluate its resilience and identify potential failure points."
         },
         {
           "id": "sustainability-policy-601-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "In this recap, we will discuss how workflows should include control gates. These are important checkpoints that help us monitor progress and ensure that we are on the right track. We will also talk about rollback criteria, which are guidelines for going back to a previous state if something goes wrong, and threshold-based escalation, which means knowing when to take action if certain limits are reached.\nContext recap: In this recap, we will discuss how workflows should include control gates. These are important checkpoints that help us monitor progress and ensure that we are on the right track. We will also talk about rollback criteria, which are guidelines for going back to a previous state if something goes wrong, and threshold-based escalation, which means knowing when to take action if certain limits are reached."
+          "content": "In this recap, we will review how effective workflows include control gates, which are predefined checkpoints for monitoring progress. We will also cover the importance of having clear rollback criteria for reversing course if needed, and threshold-based escalation for knowing when to involve senior leadership."
         }
       ],
       "interactiveActivities": [
@@ -112,23 +118,23 @@ export const SustainabilityPolicy601Module: LearningModule = {
           "id": "sustainability-policy-601-l02-act1",
           "type": "matching_pairs",
           "title": "Control-to-Outcome Mapping",
-          "description": "Match specialist controls with their strongest reliability and governance effects.",
+          "description": "Match each governance control with its primary effect on policy reliability.",
           "pairs": [
             {
-              "left": "Pre-commit gate",
-              "right": "Prevents avoidable downstream failures"
+              "left": "Pre-commitment gate",
+              "right": "Prevents avoidable downstream failures by ensuring readiness."
             },
             {
               "left": "Rollback trigger",
-              "right": "Limits blast radius under adverse outcomes"
+              "right": "Limits negative impact when adverse outcomes occur."
             },
             {
               "left": "Baseline dashboard",
-              "right": "Supports defensible impact attribution"
+              "right": "Supports defensible attribution of a policy's impact."
             },
             {
               "left": "Retrospective loop",
-              "right": "Improves next-cycle decision quality"
+              "right": "Improves the quality of future policy cycles."
             }
           ]
         }
@@ -139,284 +145,183 @@ export const SustainabilityPolicy601Module: LearningModule = {
       "title": "Checkpoint 1: Specialist Methods",
       "type": "quiz",
       "duration": 10,
-      "learningAids": [
-        {
-          "id": "sustainability-policy-601-l03-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
-        }
-      ],
+      "learningAids": [],
       "questions": [
         {
           "id": "sustainability-policy-601-l03-q1",
-          "text": "Which practice most improves policy instrument design for sustainability transitions decision quality?",
-          "skillId": "sustainability-policy-601-skill-core",
+          "text": "Which practice most improves the quality of a new sustainability policy's design?",
+          "skillId": "sustainability-policy-601-skill-design",
           "options": [
             {
               "id": "a",
-              "text": "Proceed without baseline or assumptions"
+              "text": "Proceeding without a baseline or stated assumptions"
             },
             {
               "id": "b",
-              "text": "Define assumptions, constraints, and measurable indicators"
+              "text": "Defining clear assumptions, constraints, and measurable indicators"
             },
             {
               "id": "c",
-              "text": "Optimize only for speed in every context"
+              "text": "Optimizing only for the speed of implementation"
             },
             {
               "id": "d",
-              "text": "Ignore uncertainty and edge conditions"
+              "text": "Ignoring uncertainty and potential edge cases"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Advanced decisions improve when assumptions, constraints, and metrics are explicit."
+          "explanation": "High-quality decisions are based on explicit assumptions, constraints, and metrics, which allow for rigorous evaluation and adaptation."
         },
         {
           "id": "sustainability-policy-601-l03-q2",
-          "text": "At level 601, strong execution for cross-sector implementation and compliance systems requires:",
-          "skillId": "sustainability-policy-601-skill-execution",
+          "text": "Strong cross-sector policy implementation requires:",
+          "skillId": "sustainability-policy-601-skill-implementation",
           "options": [
             {
               "id": "a",
-              "text": "Owner mapping, checkpoint cadence, and escalation thresholds"
+              "text": "Clear role ownership, a regular checkpoint cadence, and escalation thresholds"
             },
             {
               "id": "b",
-              "text": "No role clarity and ad-hoc process changes"
+              "text": "Vague roles and frequent, undocumented process changes"
             },
             {
               "id": "c",
-              "text": "No retrospective or post-run review"
+              "text": "Skipping retrospectives or post-implementation reviews"
             },
             {
               "id": "d",
-              "text": "No rollback or fallback conditions"
+              "text": "No pre-defined conditions for rolling back a failing policy"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Reliable advanced execution needs ownership clarity and threshold-driven governance."
+          "explanation": "Reliable execution depends on clear ownership and threshold-driven governance to manage complexity and risk."
         },
         {
           "id": "sustainability-policy-601-l03-q3",
-          "text": "A defensible approach to equity-impact and cost-effectiveness evaluation includes:",
-          "skillId": "sustainability-policy-601-skill-eval",
+          "text": "A defensible evaluation of a policy's equity impact and cost-effectiveness includes:",
+          "skillId": "sustainability-policy-601-skill-evaluation",
           "options": [
             {
               "id": "a",
-              "text": "Anecdotes without comparison"
+              "text": "Relying on anecdotes without a comparison group"
             },
             {
               "id": "b",
-              "text": "Baseline comparisons, side-effect analysis, and uncertainty bounds"
+              "text": "Baseline comparisons, side-effect analysis, and stated uncertainty bounds"
             },
             {
               "id": "c",
-              "text": "Changing success criteria after outcomes"
+              "text": "Changing the success criteria after the results are known"
             },
             {
               "id": "d",
-              "text": "Excluding difficult scenarios from analysis"
+              "text": "Excluding inconvenient scenarios from the analysis"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible analysis combines comparative baselines, side-effect checks, and uncertainty disclosure."
+          "explanation": "Defensible analysis combines comparative baselines, a check for unintended consequences (side effects), and honest disclosure of uncertainty."
         },
         {
           "id": "sustainability-policy-601-l03-q4",
-          "text": "Mature governance systems connect:",
+          "text": "A mature governance system effectively connects:",
           "skillId": "sustainability-policy-601-skill-governance",
           "options": [
             {
               "id": "a",
-              "text": "Policy intent, measurable controls, and remediation pathways"
+              "text": "The policy's intent, measurable controls, and clear remediation pathways"
             },
             {
               "id": "b",
-              "text": "Policy language with no measurable enforcement"
+              "text": "Policy language that has no measurable enforcement mechanism"
             },
             {
               "id": "c",
-              "text": "Targets without ownership or escalation design"
+              "text": "Ambitious targets without assigning ownership or designing escalation paths"
             },
             {
               "id": "d",
-              "text": "Operations without transparent accountability"
+              "text": "Operations that lack transparent accountability for outcomes"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Governance maturity is the operational link between intent, measurement, and corrective action."
-        },
-        {
-          "id": "sustainability-policy-601-l03-q5",
-          "text": "What is the best way to compare competing interventions in advanced Social Studies?",
-          "skillId": "sustainability-policy-601-skill-advanced-5",
-          "options": [
-            {
-              "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
-            },
-            {
-              "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
-            },
-            {
-              "id": "c",
-              "text": "Switch metrics after results arrive"
-            },
-            {
-              "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
-        },
-        {
-          "id": "sustainability-policy-601-l03-q6",
-          "text": "In high-stakes Sustainability Policy Research and Leadership execution, which communication protocol is strongest?",
-          "skillId": "sustainability-policy-601-skill-advanced-6",
-          "options": [
-            {
-              "id": "a",
-              "text": "Broadcast conclusions without assumptions"
-            },
-            {
-              "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
-            },
-            {
-              "id": "c",
-              "text": "Share only final outcomes after completion"
-            },
-            {
-              "id": "d",
-              "text": "Limit updates to a single informal channel"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
-        },
-        {
-          "id": "sustainability-policy-601-l03-q7",
-          "text": "A mature remediation loop in advanced Social Studies should prioritize:",
-          "skillId": "sustainability-policy-601-skill-advanced-7",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blame assignment without system updates"
-            },
-            {
-              "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
-            },
-            {
-              "id": "c",
-              "text": "One-time fixes without retesting"
-            },
-            {
-              "id": "d",
-              "text": "Issue closure based on elapsed time"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
-        },
-        {
-          "id": "sustainability-policy-601-l03-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Sustainability Policy Research and Leadership?",
-          "skillId": "sustainability-policy-601-skill-advanced-8",
-          "options": [
-            {
-              "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
-            },
-            {
-              "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
-            },
-            {
-              "id": "c",
-              "text": "Ignore correlated failure modes"
-            },
-            {
-              "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "explanation": "Mature governance creates an operational link between the policy's goal, how it's measured, and what happens when it goes off track."
         }
       ]
     },
     {
       "id": "sustainability-policy-601-l04",
-      "title": "Sustainability Policy Advanced Case Analysis",
+      "title": "Advanced Case Analysis",
       "type": "video",
       "duration": 14,
       "learningAids": [
         {
           "id": "sustainability-policy-601-l04-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Tradeoff Analysis Matrix",
+          "content": "A table comparing three policy options across multiple criteria like cost, equity, reliability, and political feasibility."
+        },
+        {
+          "id": "sustainability-policy-601-l04-a2",
+          "type": "image",
+          "title": "Decision Memo Template",
+          "content": "A structured template for a policy recommendation, with sections for Background, Options Analyzed, Recommendation, Evidence, and Risks."
         }
       ],
       "chunks": [
         {
           "id": "sustainability-policy-601-l04-c1",
           "kind": "concept",
-          "title": "Scenario Architecture",
-          "content": "In this lesson, we will frame a case that highlights the competing constraints involved in designing policy instruments for sustainability transitions. We will also evaluate the impacts of these policies on equity, which means fairness in how benefits and burdens are distributed, as well as their cost-effectiveness, which refers to how efficiently resources are used to achieve desired outcomes.\nContext recap: In this lesson, we will frame a case that highlights the competing constraints involved in designing policy instruments for sustainability transitions. We will also evaluate the impacts of these policies on equity, which means fairness in how benefits and burdens are distributed, as well as their cost-effectiveness, which refers to how efficiently resources are used to achieve desired outcomes."
+          "title": "Deconstructing a Policy Scenario",
+          "content": "In this lesson, we will analyze a complex case study involving competing constraints, such as economic growth versus environmental protection. We will frame the problem and evaluate potential policy instruments for their impact on equity and their overall cost-effectiveness."
         },
         {
           "id": "sustainability-policy-601-l04-c2",
           "kind": "practice",
-          "title": "Tradeoff Framing",
-          "content": "In this practice session, learners will compare different options available to them by examining various dimensions such as safety, reliability, cost, equity, and governance. This comparison will help them understand the trade-offs involved in making decisions and how to choose the best option for sustainability.\nContext recap: In this practice session, learners will compare different options available to them by examining various dimensions such as safety, reliability, cost, equity, and governance. This comparison will help them understand the trade-offs involved in making decisions and how to choose the best option for sustainability."
+          "title": "Framing Tradeoffs",
+          "content": "Using the case study, you will practice comparing different policy options. This involves mapping the tradeoffs between dimensions such as public safety, implementation cost, social equity, and governance complexity. This skill is essential for making balanced and defensible recommendations."
         },
         {
           "id": "sustainability-policy-601-l04-c3",
           "kind": "recap",
-          "title": "Decision Memo Pattern",
-          "content": "In this recap, we will highlight that each recommendation made in our decision-making process should include key components such as assumptions, which are the beliefs we hold to be true, evidence that supports our recommendations, risk controls that help us manage potential problems, and fallback plans that outline what to do if things do not go as expected.\nContext recap: In this recap, we will highlight that each recommendation made in our decision-making process should include key components such as assumptions, which are the beliefs we hold to be true, evidence that supports our recommendations, risk controls that help us manage potential problems, and fallback plans that outline what to do if things do not go as expected."
+          "title": "The Decision Memo Pattern",
+          "content": "We will recap the structure of a professional policy recommendation. Every recommendation should be presented in a clear format that includes the core assumptions, the evidence supporting the choice, the risk controls in place, and the fallback plans if conditions change."
         }
       ]
     },
     {
       "id": "sustainability-policy-601-l05",
-      "title": "Sustainability Policy Simulation Clinic",
+      "title": "Simulation Clinic",
       "type": "interactive",
       "duration": 18,
       "learningAids": [
         {
           "id": "sustainability-policy-601-l05-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "image",
+          "title": "Policy Simulation Dashboard",
+          "content": "An interactive dashboard with sliders for policy inputs (e.g., funding levels, enforcement) and readouts for outcomes (e.g., emissions, cost, public approval)."
         }
       ],
       "chunks": [
         {
           "id": "sustainability-policy-601-l05-c1",
           "kind": "practice",
-          "title": "Live Scenario Controls",
-          "content": "In this interactive clinic, learners will operate scenario controls, which are tools that allow them to manage different situations as they arise. They will learn how to balance performance, which refers to how well they are achieving their goals, with governance constraints, which are the rules and guidelines they must follow.\nContext recap: In this interactive clinic, learners will operate scenario controls, which are tools that allow them to manage different situations as they arise. They will learn how to balance performance, which refers to how well they are achieving their goals, with governance constraints, which are the rules and guidelines they must follow."
+          "title": "Navigating a Live Scenario",
+          "content": "In this interactive clinic, you will manage a policy scenario in real-time. Using a simulation dashboard, you will adjust policy controls to balance performance targets against governance constraints, such as budget limits or legal requirements, as new information and events unfold."
         },
         {
           "id": "sustainability-policy-601-l05-c2",
           "kind": "recap",
-          "title": "Adaptive Response Design",
-          "content": "In this recap, we will discuss the importance of effective responses that can update control gates without losing traceability or accountability. This means that when changes are made, it is crucial to keep track of what was done and ensure that everyone is responsible for their actions.\nContext recap: In this recap, we will discuss the importance of effective responses that can update control gates without losing traceability or accountability. This means that when changes are made, it is crucial to keep track of what was done and ensure that everyone is responsible for their actions."
+          "title": "Designing Adaptive Responses",
+          "content": "This recap focuses on how to respond effectively when a policy is failing or when external conditions change. A strong response involves updating controls or changing course without losing traceability or accountability, ensuring that all decisions are documented and defensible."
         }
       ],
       "interactiveActivities": [
         {
           "id": "sustainability-policy-601-l05-act1",
           "type": "scenario",
-          "title": "Adverse-Condition Decision Run",
-          "description": "Run a high-pressure sustainability policy scenario and tune controls under uncertainty."
+          "title": "High-Pressure Policy Simulation",
+          "description": "Manage a complex sustainability policy through a series of unexpected events. Make critical decisions to tune controls, manage resources, and maintain stakeholder trust under pressure."
         }
       ]
     },
@@ -425,301 +330,200 @@ export const SustainabilityPolicy601Module: LearningModule = {
       "title": "Checkpoint 2: Case and Simulation Mastery",
       "type": "quiz",
       "duration": 11,
-      "learningAids": [
-        {
-          "id": "sustainability-policy-601-l06-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
-        }
-      ],
+      "learningAids": [],
       "questions": [
         {
           "id": "sustainability-policy-601-l06-q1",
-          "text": "In advanced casework, the first requirement for defensible recommendations is:",
-          "skillId": "sustainability-policy-601-skill-case1",
+          "text": "In a case study about reforesting a watershed, what is the most critical first step for a defensible recommendation?",
+          "skillId": "sustainability-policy-601-skill-case-analysis",
           "options": [
             {
               "id": "a",
-              "text": "A preferred option without explicit assumptions"
+              "text": "Immediately select the fastest-growing tree species."
             },
             {
               "id": "b",
-              "text": "A clear baseline, explicit constraints, and success criteria"
+              "text": "Establish a clear baseline of the current ecosystem health and define success criteria."
             },
             {
               "id": "c",
-              "text": "High confidence without evidence logs"
+              "text": "Assume high confidence in the outcome without collecting preliminary data."
             },
             {
               "id": "d",
-              "text": "Single-metric optimization only"
+              "text": "Focus only on the single metric of 'number of trees planted'."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible recommendations begin with explicit assumptions, constraints, and measurable targets."
+          "explanation": "Defensible recommendations begin with understanding the starting point (baseline) and defining what success looks like with measurable targets."
         },
         {
           "id": "sustainability-policy-601-l06-q2",
-          "text": "A resilient strategy for cross-sector implementation and compliance systems should include:",
-          "skillId": "sustainability-policy-601-skill-case2",
+          "text": "While simulating a carbon tax implementation, a sudden economic downturn occurs. What is the most resilient response?",
+          "skillId": "sustainability-policy-601-skill-simulation-response",
           "options": [
             {
               "id": "a",
-              "text": "Checkpointed execution with fallback and escalation criteria"
+              "text": "Activate a pre-planned fallback, such as a temporary tax reduction, and escalate for review."
             },
             {
               "id": "b",
-              "text": "One-way execution with no rollback capability"
+              "text": "Continue with the original plan without any changes."
             },
             {
               "id": "c",
-              "text": "No ownership mapping across teams"
+              "text": "Abandon the policy entirely without a formal review process."
             },
             {
               "id": "d",
-              "text": "Hidden assumptions and undocumented decisions"
+              "text": "Hide the negative economic data from stakeholders."
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Resilience depends on checkpoints, fallback options, and explicit escalation design."
+          "explanation": "Resilience in policy execution depends on having pre-defined fallback options and clear escalation criteria for unexpected events."
         },
         {
           "id": "sustainability-policy-601-l06-q3",
-          "text": "When evaluating equity-impact and cost-effectiveness evaluation, which method is most rigorous?",
-          "skillId": "sustainability-policy-601-skill-case3",
+          "text": "When evaluating a new public transit policy, you find it reduces emissions but increases commute times for low-income neighborhoods. How should you report this?",
+          "skillId": "sustainability-policy-601-skill-evaluation-tradeoffs",
           "options": [
             {
               "id": "a",
-              "text": "Single success story without controls"
+              "text": "Report only the positive emissions data."
             },
             {
               "id": "b",
-              "text": "Comparative baselines plus side-effect and uncertainty analysis"
+              "text": "Present both the positive and negative impacts, highlighting the equity tradeoff."
             },
             {
               "id": "c",
-              "text": "Outcome-only narrative without process evidence"
+              "text": "Dismiss the increased commute times as an unimportant side effect."
             },
             {
               "id": "d",
-              "text": "Retrospective scope changes to fit outcomes"
+              "text": "Change the scope of the evaluation to exclude commute times."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Rigorous evaluation requires comparisons, side-effect analysis, and uncertainty disclosure."
+          "explanation": "Rigorous and ethical evaluation requires transparently reporting all significant outcomes, especially tradeoffs related to cost and equity."
         },
         {
           "id": "sustainability-policy-601-l06-q4",
-          "text": "Advanced governance is strongest when it:",
-          "skillId": "sustainability-policy-601-skill-case4",
+          "text": "In a long-term policy simulation, which governance feature is most crucial for ensuring the policy adapts over time?",
+          "skillId": "sustainability-policy-601-skill-governance-adaptation",
           "options": [
             {
               "id": "a",
-              "text": "Aligns authority, measurement, and remediation obligations"
+              "text": "A governance structure that aligns authority, measurement, and a mandate for periodic review."
             },
             {
               "id": "b",
-              "text": "Separates policy from operational controls"
+              "text": "A rigid policy that cannot be changed regardless of performance."
             },
             {
               "id": "c",
-              "text": "Avoids external review and transparency"
+              "text": "A system that avoids external review to prevent criticism."
             },
             {
               "id": "d",
-              "text": "Treats accountability as optional under pressure"
+              "text": "Treating accountability as optional when the policy is underperforming."
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Mature governance links authority, measurable controls, and corrective action."
-        },
-        {
-          "id": "sustainability-policy-601-l06-q5",
-          "text": "What is the best way to compare competing interventions in advanced Social Studies?",
-          "skillId": "sustainability-policy-601-skill-advanced-5",
-          "options": [
-            {
-              "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
-            },
-            {
-              "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
-            },
-            {
-              "id": "c",
-              "text": "Switch metrics after results arrive"
-            },
-            {
-              "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
-        },
-        {
-          "id": "sustainability-policy-601-l06-q6",
-          "text": "In high-stakes Sustainability Policy Research and Leadership execution, which communication protocol is strongest?",
-          "skillId": "sustainability-policy-601-skill-advanced-6",
-          "options": [
-            {
-              "id": "a",
-              "text": "Broadcast conclusions without assumptions"
-            },
-            {
-              "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
-            },
-            {
-              "id": "c",
-              "text": "Share only final outcomes after completion"
-            },
-            {
-              "id": "d",
-              "text": "Limit updates to a single informal channel"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
-        },
-        {
-          "id": "sustainability-policy-601-l06-q7",
-          "text": "A mature remediation loop in advanced Social Studies should prioritize:",
-          "skillId": "sustainability-policy-601-skill-advanced-7",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blame assignment without system updates"
-            },
-            {
-              "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
-            },
-            {
-              "id": "c",
-              "text": "One-time fixes without retesting"
-            },
-            {
-              "id": "d",
-              "text": "Issue closure based on elapsed time"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
-        },
-        {
-          "id": "sustainability-policy-601-l06-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Sustainability Policy Research and Leadership?",
-          "skillId": "sustainability-policy-601-skill-advanced-8",
-          "options": [
-            {
-              "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
-            },
-            {
-              "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
-            },
-            {
-              "id": "c",
-              "text": "Ignore correlated failure modes"
-            },
-            {
-              "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "explanation": "Adaptive governance links authority with measurable controls and requires corrective action based on performance reviews, ensuring the policy evolves."
         }
       ]
     },
     {
       "id": "sustainability-policy-601-l07",
-      "title": "Sustainability Policy Governance and Public Impact",
+      "title": "Governance and Public Impact",
       "type": "video",
       "duration": 13,
       "learningAids": [
         {
           "id": "sustainability-policy-601-l07-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Stakeholder Impact Map",
+          "content": "A visual map showing different stakeholder groups (e.g., citizens, industry, government) and the distribution of a policy's costs and benefits among them."
+        },
+        {
+          "id": "sustainability-policy-601-l07-a2",
+          "type": "image",
+          "title": "Accountability Flowchart",
+          "content": "A diagram illustrating an accountability process, from a decision log to a public review board and finally to a remediation plan."
         }
       ],
       "chunks": [
         {
           "id": "sustainability-policy-601-l07-c1",
           "kind": "concept",
-          "title": "Stakeholder Impact Distribution",
-          "content": "In this lesson, learners will map out how benefits and burdens are distributed among different stakeholder groups. This means understanding who gains from certain policies and who may face challenges as a result. Additionally, they will explore any delayed effects that may occur over time, ensuring a comprehensive understanding of the impacts of sustainability policies.\nContext recap: In this lesson, learners will map out how benefits and burdens are distributed among different stakeholder groups. This means understanding who gains from certain policies and who may face challenges as a result. Additionally, they will explore any delayed effects that may occur over time, ensuring a comprehensive understanding of the impacts of sustainability policies."
+          "title": "Mapping Stakeholder Impact",
+          "content": "In this lesson, you will learn to map how a policy's benefits and burdens are distributed among different stakeholder groups. This includes identifying who gains, who may face challenges, and any delayed effects that may appear over time, ensuring a comprehensive view of the policy's real-world impact."
         },
         {
           "id": "sustainability-policy-601-l07-c2",
           "kind": "concept",
-          "title": "Accountability Architecture",
-          "content": "In this lesson, we will explore the concept of accountability architecture. This involves ensuring that there is clear traceability of decisions made, which means being able to track who made what decision and why. We will also discuss the importance of review rights, which allow stakeholders to question decisions, and remediation obligations, which are responsibilities to correct any issues that arise.\nContext recap: In this lesson, we will explore the concept of accountability architecture. This involves ensuring that there is clear traceability of decisions made, which means being able to track who made what decision and why. We will also discuss the importance of review rights, which allow stakeholders to question decisions, and remediation obligations, which are responsibilities to correct any issues that arise."
+          "title": "Designing for Accountability",
+          "content": "Here, we will explore accountability architecture. This involves creating systems that ensure clear traceability of decisions, so it's always known who made what decision and why. We will also discuss the importance of review rights for stakeholders and clear remediation obligations to correct any negative outcomes."
         },
         {
           "id": "sustainability-policy-601-l07-c3",
           "kind": "recap",
-          "title": "Responsible Leadership Checklist",
-          "content": "At the end of our lesson, we will create a helpful checklist that connects important outcomes, ethical considerations, adherence to policies, and the ability to adapt and recover from challenges. This checklist will serve as a guide for responsible leadership in sustainability.\nContext recap: At the end of our lesson, we will create a helpful checklist that connects important outcomes, ethical considerations, adherence to policies, and the ability to adapt and recover from challenges. This checklist will serve as a guide for responsible leadership in sustainability.\nContext recap: At the end of our lesson, we will create a helpful checklist that connects important outcomes, ethical considerations, adherence to policies, and the ability to adapt and recover from challenges. This checklist will serve as a guide for responsible leadership in sustainability. Context recap: At the end of our lesson, we will create a helpful checklist that connects important outcomes, ethical considerations, adherence to policies, and the ability to adapt and recover from challenges. This checklist will serve as a guide for responsible leadership in sustainability."
+          "title": "The Responsible Leadership Checklist",
+          "content": "We will conclude by creating a practical checklist for responsible leadership. This guide will connect key decision-making elements, including performance outcomes, ethical guardrails, policy compliance, and the capacity to adapt and recover from challenges."
         }
       ],
       "flashcards": [
         {
           "id": "sustainability-policy-601-l07-f1",
-          "front": "Impact distribution",
-          "back": "How outcomes are allocated across populations and timescales."
+          "front": "Impact Distribution",
+          "back": "The way policy outcomes, both positive and negative, are allocated across different populations and over various timescales."
         },
         {
           "id": "sustainability-policy-601-l07-f2",
-          "front": "Decision traceability",
-          "back": "An auditable record of evidence, ownership, and rationale."
+          "front": "Decision Traceability",
+          "back": "An auditable record of a decision, including the evidence used, who was responsible, and the rationale behind it."
         },
         {
           "id": "sustainability-policy-601-l07-f3",
-          "front": "Responsible leadership",
-          "back": "Decision behavior balancing performance, accountability, and ethics."
+          "front": "Responsible Leadership",
+          "back": "Making decisions that strategically balance performance goals with accountability to stakeholders and strong ethical principles."
         }
       ]
     },
     {
       "id": "sustainability-policy-601-l08",
-      "title": "Sustainability Policy Capstone Defense Lab",
+      "title": "Capstone Defense Lab",
       "type": "interactive",
       "duration": 16,
       "learningAids": [
         {
           "id": "sustainability-policy-601-l08-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "image",
+          "title": "Policy Defense Brief Structure",
+          "content": "A visual outline of a defense brief, showing key sections: Executive Summary, Problem Statement, Alternatives Analysis, Recommendation, and Risk Mitigation."
         }
       ],
       "chunks": [
         {
           "id": "sustainability-policy-601-l08-c1",
           "kind": "practice",
-          "title": "Defense Brief Assembly",
-          "content": "In this activity, you will work together to put together a comprehensive brief. This brief will include your main arguments, supporting evidence, areas of uncertainty, and possible solutions to address any issues. This exercise will help you practice critical thinking and effective communication.\nContext recap: In this activity, you will work together to put together a comprehensive brief. This brief will include your main arguments, supporting evidence, areas of uncertainty, and possible solutions to address any issues. This exercise will help you practice critical thinking and effective communication.\nContext recap: In this activity, you will work together to put together a comprehensive brief. This brief will include your main arguments, supporting evidence, areas of uncertainty, and possible solutions to address any issues. This exercise will help you practice critical thinking and effective communication. Context recap: In this activity, you will work together to put together a comprehensive brief.\nWhy this matters: Defense Brief Assembly helps learners in Social Studies connect ideas from Sustainability Policy Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "Assembling the Defense Brief",
+          "content": "In this activity, you will assemble a comprehensive policy brief for your final recommendation. This brief must synthesize your core argument, supporting evidence, acknowledged uncertainties, and proposed risk mitigation strategies. This exercise sharpens critical thinking and communication skills, preparing you to present a defensible case."
         },
         {
           "id": "sustainability-policy-601-l08-c2",
           "kind": "recap",
-          "title": "Expert Panel Rehearsal",
-          "content": "During this rehearsal, you will practice answering questions and responding to feedback from an expert panel. You will prepare for critiques related to technical aspects, governance issues, and the perspectives of various stakeholders. This will help you build confidence and improve your presentation skills.\nContext recap: During this rehearsal, you will practice answering questions and responding to feedback from an expert panel. You will prepare for critiques related to technical aspects, governance issues, and the perspectives of various stakeholders. This will help you build confidence and improve your presentation skills."
+          "title": "Rehearsing for the Expert Panel",
+          "content": "During this rehearsal, you will practice answering challenging questions and responding to feedback from a simulated expert panel. You will prepare for critiques related to your technical analysis, governance plan, and stakeholder impact assessment, helping you build confidence for the final defense."
         }
       ],
       "interactiveActivities": [
         {
           "id": "sustainability-policy-601-l08-act1",
           "type": "debate_simulator",
-          "title": "Expert Defense Panel",
-          "description": "Defend specialization recommendations under adversarial cross-examination."
+          "title": "Expert Defense Panel Simulation",
+          "description": "Present and defend your capstone policy recommendation to a panel of simulated experts who will conduct an adversarial cross-examination of your work."
         }
       ]
     }

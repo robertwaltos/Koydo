@@ -1,17 +1,20 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const Plumbing401Module: LearningModule = {
+export const plumbing_401_Module: LearningModule = {
   "id": "plumbing-401",
   "title": "Plumbing Master Practice",
-  "description": "Master-level plumbing operations, code leadership, quality assurance, and project supervision.",
+  "description": "Master-level plumbing operations, focusing on advanced code interpretation, project supervision, and quality assurance.",
   "subject": "Plumbing",
   "tags": [
     "curriculum",
-    "interactive"
+    "interactive",
+    "master plumber",
+    "code compliance",
+    "project management"
   ],
   "minAge": 18,
   "maxAge": 99,
-  "version": "1.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en",
@@ -25,489 +28,303 @@ export const Plumbing401Module: LearningModule = {
     "ko",
     "ru"
   ],
-  "thumbnail": "/placeholders/lesson-robot.svg",
+  "thumbnail": "/placeholders/lesson-wrench.svg",
   "learningObjectives": [
-    "Understand core concepts in Plumbing",
-    "Apply Plumbing skills through guided practice",
-    "Demonstrate mastery through checkpoint quizzes"
+    "Interpret and apply advanced sections of the International Plumbing Code (IPC) and Uniform Plumbing Code (UPC).",
+    "Design complex, multi-story plumbing systems, including water supply, drainage, and venting.",
+    "Supervise plumbing projects, manage crews, and create effective project timelines.",
+    "Implement quality assurance protocols and diagnose complex system failures."
   ],
   "lessons": [
     {
       "id": "plumbing-401-l01",
-      "title": "Plumbing Concepts 1",
+      "title": "Advanced Plumbing Codes and System Design",
       "type": "video",
-      "duration": 9,
+      "duration": 15,
       "learningAids": [
         {
           "id": "plumbing-401-l01-a1",
-          "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary for Plumbing."
+          "type": "document",
+          "title": "Code Compliance Checklist (PDF)",
+          "content": "A downloadable checklist covering key IPC/UPC sections for commercial buildings."
         },
         {
           "id": "plumbing-401-l01-a2",
           "type": "animation",
-          "title": "Animated Example",
-          "content": "Step-by-step walkthrough for Plumbing."
+          "title": "Sizing a Multi-Story DWV System",
+          "content": "Animated walkthrough of calculating drainage fixture units (DFUs) and sizing stacks and vents."
         }
       ]
     },
     {
       "id": "plumbing-401-l02",
-      "title": "Plumbing Practice 2",
+      "title": "Interactive Blueprint Analysis",
       "type": "interactive",
-      "duration": 12,
+      "duration": 25,
       "metadata": {
         "prompts": [
-          "State the key concept in one sentence.",
-          "Apply it to one example.",
-          "Explain your improvement step for next time."
+          "Identify three potential code violations in the provided commercial blueprint.",
+          "Propose a revised layout for the primary vent stack to improve performance.",
+          "Calculate the required water supply pipe size for the main line based on the fixture count."
         ]
       },
       "learningAids": [
         {
           "id": "plumbing-401-l02-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Follow the challenge flow and record your approach."
+          "type": "simulation",
+          "title": "Virtual Blueprint Table",
+          "content": "Analyze a multi-page commercial plumbing blueprint with tools to measure, annotate, and highlight sections."
         }
       ]
     },
     {
       "id": "plumbing-401-l03",
-      "title": "Checkpoint 1: Plumbing",
+      "title": "Checkpoint: Code & Design Mastery",
       "type": "quiz",
-      "duration": 10,
+      "duration": 15,
       "questions": [
         {
           "id": "plumbing-401-l03-q1",
-          "text": "Which choice best matches the main idea of Plumbing?",
-          "skillId": "plumbing-401-skill-core",
+          "text": "For a commercial kitchen with 3 high-temperature dishwashers and 4 food prep sinks, which backflow prevention device is required on the main water supply?",
+          "skillId": "plumbing-401-skill-code",
           "options": [
             {
               "id": "a",
-              "text": "A complete, evidence-based explanation"
+              "text": "Double Check Valve Assembly (DCVA)"
             },
             {
               "id": "b",
-              "text": "An unrelated claim"
+              "text": "Reduced Pressure Zone Assembly (RPZ)"
             },
             {
               "id": "c",
-              "text": "A random guess"
+              "text": "Atmospheric Vacuum Breaker (AVB)"
             },
             {
               "id": "d",
-              "text": "A conflicting idea"
+              "text": "Pressure Vacuum Breaker (PVB)"
             }
           ],
-          "correctOptionId": "a"
+          "correctOptionId": "b",
+          "explanation": "An RPZ is required for high-hazard applications like commercial kitchens to protect the potable water supply from contamination."
         },
         {
           "id": "plumbing-401-l03-q2",
-          "text": "What should a learner do after getting an answer wrong?",
-          "skillId": "plumbing-401-skill-review",
+          "text": "According to the IPC, what is the minimum size for a building sewer serving a facility with a calculated load of 200 DFUs?",
+          "skillId": "plumbing-401-skill-sizing",
           "options": [
             {
               "id": "a",
-              "text": "Review error cause and retry with strategy"
+              "text": "3 inches"
             },
             {
               "id": "b",
-              "text": "Skip all corrections"
+              "text": "4 inches"
             },
             {
               "id": "c",
-              "text": "Memorize only the answer letter"
+              "text": "6 inches"
             },
             {
               "id": "d",
-              "text": "Stop practicing"
+              "text": "8 inches"
             }
           ],
-          "correctOptionId": "a"
-        },
-        {
-          "id": "plumbing-401-l03-q3",
-          "text": "Which strategy most improves long-term retention for Plumbing Master Practice?",
-          "skillId": "plumbing-401-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "Use spaced retrieval and mixed practice over multiple sessions."
-            },
-            {
-              "id": "b",
-              "text": "Cram once and avoid later practice."
-            },
-            {
-              "id": "c",
-              "text": "Read notes passively without self-testing."
-            },
-            {
-              "id": "d",
-              "text": "Rely on confidence alone instead of evidence."
-            }
-          ],
-          "correctOptionId": "a",
-          "explanation": "Spaced retrieval with varied practice strengthens durable memory and flexible application."
+          "correctOptionId": "b",
+          "explanation": "Based on IPC Table 710.1(2), a 4-inch pipe with a 1/4-inch per foot slope can handle up to 216 DFUs."
         }
       ],
       "learningAids": [
         {
           "id": "plumbing-401-l03-a1",
-          "type": "mnemonic",
-          "title": "Memory Cue",
-          "content": "Use Plan, Solve, Explain to structure each response."
+          "type": "document",
+          "title": "Pipe Sizing & Friction Loss Charts",
+          "content": "Reference charts for common pipe materials and fixture unit tables."
         }
       ]
     },
     {
       "id": "plumbing-401-l04",
-      "title": "Plumbing Practice 4",
-      "type": "interactive",
+      "title": "Project Management for Master Plumbers",
+      "type": "video",
       "duration": 12,
-      "metadata": {
-        "prompts": [
-          "State the key concept in one sentence.",
-          "Apply it to one example.",
-          "Explain your improvement step for next time."
-        ]
-      },
       "learningAids": [
         {
           "id": "plumbing-401-l04-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Follow the challenge flow and record your approach."
+          "type": "document",
+          "title": "Sample Project Timeline (Gantt Chart)",
+          "content": "Example of a project schedule for a mid-sized commercial installation."
+        },
+        {
+          "id": "plumbing-401-l04-a2",
+          "type": "image",
+          "title": "Toolbox Talk Outline",
+          "content": "A visual guide for structuring effective daily safety and planning meetings with a crew."
         }
       ]
     },
     {
       "id": "plumbing-401-l05",
-      "title": "Plumbing Concepts 5",
-      "type": "video",
-      "duration": 9,
+      "title": "Project Simulation: Commercial High-Rise",
+      "type": "interactive",
+      "duration": 30,
+      "metadata": {
+        "prompts": [
+          "A critical material delivery is delayed by 48 hours. Adjust your project schedule to minimize impact.",
+          "Two crew members have a conflict over installation methods. How do you resolve it?",
+          "The general contractor requests a change order to add a new restroom. Draft a response outlining the cost and time implications."
+        ]
+      },
       "learningAids": [
         {
           "id": "plumbing-401-l05-a1",
-          "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary for Plumbing."
-        },
-        {
-          "id": "plumbing-401-l05-a2",
-          "type": "animation",
-          "title": "Animated Example",
-          "content": "Step-by-step walkthrough for Plumbing."
+          "type": "simulation",
+          "title": "Project Management Dashboard",
+          "content": "An interactive dashboard to manage budget, schedule, and crew assignments in response to scenarios."
         }
       ]
     },
     {
       "id": "plumbing-401-l06",
-      "title": "Checkpoint 2: Plumbing",
+      "title": "Checkpoint: Project Supervision",
       "type": "quiz",
-      "duration": 10,
+      "duration": 15,
       "questions": [
         {
           "id": "plumbing-401-l06-q1",
-          "text": "Which choice best matches the main idea of Plumbing?",
-          "skillId": "plumbing-401-skill-core",
+          "text": "You observe a crew member working in a 6-foot trench without proper shoring. What is your immediate first step as the supervising master plumber?",
+          "skillId": "plumbing-401-skill-safety",
           "options": [
             {
               "id": "a",
-              "text": "A complete, evidence-based explanation"
+              "text": "Report the incident to the general contractor."
             },
             {
               "id": "b",
-              "text": "An unrelated claim"
+              "text": "Order the worker out of the trench immediately."
             },
             {
               "id": "c",
-              "text": "A random guess"
+              "text": "Take a photo for documentation purposes."
             },
             {
               "id": "d",
-              "text": "A conflicting idea"
+              "text": "Consult the project blueprints for trench specifications."
             }
           ],
-          "correctOptionId": "a"
-        },
-        {
-          "id": "plumbing-401-l06-q2",
-          "text": "What should a learner do after getting an answer wrong?",
-          "skillId": "plumbing-401-skill-review",
-          "options": [
-            {
-              "id": "a",
-              "text": "Review error cause and retry with strategy"
-            },
-            {
-              "id": "b",
-              "text": "Skip all corrections"
-            },
-            {
-              "id": "c",
-              "text": "Memorize only the answer letter"
-            },
-            {
-              "id": "d",
-              "text": "Stop practicing"
-            }
-          ],
-          "correctOptionId": "a"
-        },
-        {
-          "id": "plumbing-401-l06-q3",
-          "text": "Which strategy most improves long-term retention for Plumbing Master Practice?",
-          "skillId": "plumbing-401-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "Use spaced retrieval and mixed practice over multiple sessions."
-            },
-            {
-              "id": "b",
-              "text": "Cram once and avoid later practice."
-            },
-            {
-              "id": "c",
-              "text": "Read notes passively without self-testing."
-            },
-            {
-              "id": "d",
-              "text": "Rely on confidence alone instead of evidence."
-            }
-          ],
-          "correctOptionId": "a",
-          "explanation": "Spaced retrieval with varied practice strengthens durable memory and flexible application."
+          "correctOptionId": "b",
+          "explanation": "Immediate safety of personnel is the top priority. All other actions, while potentially necessary, come after ensuring the worker is out of danger."
         }
       ],
       "learningAids": [
         {
           "id": "plumbing-401-l06-a1",
-          "type": "mnemonic",
-          "title": "Memory Cue",
-          "content": "Use Plan, Solve, Explain to structure each response."
+          "type": "document",
+          "title": "Change Order Request Form",
+          "content": "A standard template for documenting and submitting change orders."
         }
       ]
     },
     {
       "id": "plumbing-401-l07",
-      "title": "Plumbing Concepts 7",
+      "title": "Quality Assurance and System Commissioning",
       "type": "video",
-      "duration": 9,
+      "duration": 13,
       "learningAids": [
         {
           "id": "plumbing-401-l07-a1",
           "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary for Plumbing."
+          "title": "Pressure Test Manifold Diagram",
+          "content": "A detailed schematic of a proper setup for hydrostatic and pneumatic testing."
         },
         {
           "id": "plumbing-401-l07-a2",
           "type": "animation",
-          "title": "Animated Example",
-          "content": "Step-by-step walkthrough for Plumbing."
+          "title": "Smoke Testing a DWV System",
+          "content": "Step-by-step animation showing how to conduct a smoke test to find leaks in a drain, waste, and vent system."
         }
       ]
     },
     {
       "id": "plumbing-401-l08",
-      "title": "Plumbing Practice 8",
+      "title": "Virtual System Diagnostics",
       "type": "interactive",
-      "duration": 12,
+      "duration": 25,
       "metadata": {
         "prompts": [
-          "State the key concept in one sentence.",
-          "Apply it to one example.",
-          "Explain your improvement step for next time."
+          "Diagnose the cause of a persistent water hammer in the simulated hot water system.",
+          "Use the virtual drain camera to locate a partial blockage in a 4-inch sewer line.",
+          "Identify the source of sewer gas odor in a multi-story building based on system readings."
         ]
       },
       "learningAids": [
         {
           "id": "plumbing-401-l08-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Follow the challenge flow and record your approach."
+          "type": "simulation",
+          "title": "Diagnostic Toolkit Simulation",
+          "content": "Use virtual tools like pressure gauges, drain cameras, and leak detectors to troubleshoot a complex plumbing system."
         }
       ]
     },
     {
       "id": "plumbing-401-l09",
-      "title": "Checkpoint 3: Plumbing",
+      "title": "Checkpoint: QA & Diagnostics",
       "type": "quiz",
-      "duration": 10,
+      "duration": 15,
       "questions": [
         {
           "id": "plumbing-401-l09-q1",
-          "text": "Which choice best matches the main idea of Plumbing?",
-          "skillId": "plumbing-401-skill-core",
+          "text": "During a hydrostatic test of a new copper water line, the pressure drops from 150 psi to 140 psi over 15 minutes. What is the most likely cause?",
+          "skillId": "plumbing-401-skill-diagnostics",
           "options": [
             {
               "id": "a",
-              "text": "A complete, evidence-based explanation"
+              "text": "A major pipe burst."
             },
             {
               "id": "b",
-              "text": "An unrelated claim"
+              "text": "A small, weeping leak at a solder joint."
             },
             {
               "id": "c",
-              "text": "A random guess"
+              "text": "Normal pressure fluctuation due to temperature change."
             },
             {
               "id": "d",
-              "text": "A conflicting idea"
+              "text": "A faulty pressure gauge."
             }
           ],
-          "correctOptionId": "a"
-        },
-        {
-          "id": "plumbing-401-l09-q2",
-          "text": "What should a learner do after getting an answer wrong?",
-          "skillId": "plumbing-401-skill-review",
-          "options": [
-            {
-              "id": "a",
-              "text": "Review error cause and retry with strategy"
-            },
-            {
-              "id": "b",
-              "text": "Skip all corrections"
-            },
-            {
-              "id": "c",
-              "text": "Memorize only the answer letter"
-            },
-            {
-              "id": "d",
-              "text": "Stop practicing"
-            }
-          ],
-          "correctOptionId": "a"
-        },
-        {
-          "id": "plumbing-401-l09-q3",
-          "text": "Which strategy most improves long-term retention for Plumbing Master Practice?",
-          "skillId": "plumbing-401-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "Use spaced retrieval and mixed practice over multiple sessions."
-            },
-            {
-              "id": "b",
-              "text": "Cram once and avoid later practice."
-            },
-            {
-              "id": "c",
-              "text": "Read notes passively without self-testing."
-            },
-            {
-              "id": "d",
-              "text": "Rely on confidence alone instead of evidence."
-            }
-          ],
-          "correctOptionId": "a",
-          "explanation": "Spaced retrieval with varied practice strengthens durable memory and flexible application."
+          "correctOptionId": "b",
+          "explanation": "A slow, steady pressure drop is characteristic of a small leak, whereas a major burst would cause a rapid drop to zero. While other options are possible, a weeping joint is the most probable plumbing-related cause."
         }
       ],
       "learningAids": [
         {
           "id": "plumbing-401-l09-a1",
-          "type": "mnemonic",
-          "title": "Memory Cue",
-          "content": "Use Plan, Solve, Explain to structure each response."
+          "type": "document",
+          "title": "Troubleshooting Flowchart",
+          "content": "A logical flowchart for diagnosing common and complex plumbing issues."
         }
       ]
     },
     {
       "id": "plumbing-401-l10",
-      "title": "Checkpoint 4: Plumbing",
-      "type": "quiz",
-      "duration": 10,
-      "questions": [
-        {
-          "id": "plumbing-401-l10-q1",
-          "text": "Which choice best matches the main idea of Plumbing?",
-          "skillId": "plumbing-401-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "A complete, evidence-based explanation"
-            },
-            {
-              "id": "b",
-              "text": "An unrelated claim"
-            },
-            {
-              "id": "c",
-              "text": "A random guess"
-            },
-            {
-              "id": "d",
-              "text": "A conflicting idea"
-            }
-          ],
-          "correctOptionId": "a"
-        },
-        {
-          "id": "plumbing-401-l10-q2",
-          "text": "What should a learner do after getting an answer wrong?",
-          "skillId": "plumbing-401-skill-review",
-          "options": [
-            {
-              "id": "a",
-              "text": "Review error cause and retry with strategy"
-            },
-            {
-              "id": "b",
-              "text": "Skip all corrections"
-            },
-            {
-              "id": "c",
-              "text": "Memorize only the answer letter"
-            },
-            {
-              "id": "d",
-              "text": "Stop practicing"
-            }
-          ],
-          "correctOptionId": "a"
-        },
-        {
-          "id": "plumbing-401-l10-q3",
-          "text": "Which strategy most improves long-term retention for Plumbing Master Practice?",
-          "skillId": "plumbing-401-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "Use spaced retrieval and mixed practice over multiple sessions."
-            },
-            {
-              "id": "b",
-              "text": "Cram once and avoid later practice."
-            },
-            {
-              "id": "c",
-              "text": "Read notes passively without self-testing."
-            },
-            {
-              "id": "d",
-              "text": "Rely on confidence alone instead of evidence."
-            }
-          ],
-          "correctOptionId": "a",
-          "explanation": "Spaced retrieval with varied practice strengthens durable memory and flexible application."
-        }
-      ],
+      "title": "Capstone: Restaurant Plumbing System Plan",
+      "type": "interactive",
+      "duration": 45,
+      "metadata": {
+        "prompts": [
+          "Develop a complete DWV plan for the provided restaurant blueprint, including grease trap sizing and placement.",
+          "Create a material take-off list and estimated labor hours for the project.",
+          "Write a one-page quality assurance plan for the installation and final inspection."
+        ]
+      },
       "learningAids": [
         {
           "id": "plumbing-401-l10-a1",
-          "type": "mnemonic",
-          "title": "Memory Cue",
-          "content": "Use Plan, Solve, Explain to structure each response."
+          "type": "simulation",
+          "title": "Capstone Design Workspace",
+          "content": "A workspace with a restaurant blueprint, material cost sheet, and project planning templates to complete the final project."
         }
       ]
     }

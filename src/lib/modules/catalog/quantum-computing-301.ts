@@ -1,81 +1,94 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const QuantumComputing301Module: LearningModule = {
+export const quantum_computing_301_Module: LearningModule = {
   "id": "quantum-computing-301",
   "title": "Quantum Computing Systems and Governance",
-  "description": "Level 301 curriculum in Quantum Computing, focused on qubit state modeling, quantum circuit design, noise and error mitigation, and algorithmic advantage evaluation through case analysis, simulation practice, and mastery checkpoints.",
+  "description": "An advanced curriculum on Quantum Computing, focusing on qubit state modeling, quantum circuit design, noise mitigation, and algorithmic advantage evaluation through case analysis, simulation, and governance practices.",
   "subject": "Computer Science",
   "tags": [
     "core",
     "curriculum",
     "interactive",
     "quantum",
-    "computing"
+    "computing",
+    "governance"
   ],
   "minAge": 16,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en"
   ],
   "learningObjectives": [
-    "Apply qubit state modeling using explicit assumptions and constraints",
-    "Design and execute workflows for quantum circuit design with reliable control points",
-    "Evaluate noise and error mitigation decisions using baseline and side-effect analysis",
-    "Strengthen algorithmic advantage evaluation with accountable governance mechanisms",
-    "Communicate uncertainty and tradeoffs across stakeholder groups",
-    "Build defensible recommendations resilient to critical review"
+    "Model qubit states using explicit assumptions and constraints.",
+    "Design and execute quantum circuit workflows with reliable control points.",
+    "Evaluate noise and error mitigation strategies using baseline and side-effect analysis.",
+    "Develop algorithmic advantage evaluations with accountable governance mechanisms.",
+    "Communicate uncertainty and tradeoffs effectively to diverse stakeholder groups.",
+    "Construct defensible recommendations for quantum system design and deployment."
   ],
   "lessons": [
     {
       "id": "quantum-computing-301-l01",
-      "title": "Quantum Computing Core Foundations",
+      "title": "Core Principles of Quantum Systems",
       "type": "video",
-      "duration": 13,
+      "duration": 15,
       "learningAids": [
         {
           "id": "quantum-computing-301-l01-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Document assumptions, show your reasoning chain, and verify your conclusions before submission."
+          "title": "Bloch Sphere Visualization",
+          "content": "A 3D model representing the state space of a single qubit, used to visualize superposition and phase."
         }
       ],
       "chunks": [
         {
           "id": "quantum-computing-301-l01-c1",
           "kind": "concept",
-          "title": "Scope and Shared Vocabulary",
-          "content": "In this lesson, we will explore the fascinating world of Quantum Computing. We will define what Quantum Computing is, introduce important terms that you will need to understand, and discuss how qubit state modeling and quantum circuit design work together in real-life applications. By the end of this lesson, you will have a clearer understanding of the scope of Quantum Computing and its significance in technology today.\nContext recap: In this lesson, we will explore the fascinating world of Quantum Computing. We will define what Quantum Computing is, introduce important terms that you will need to understand, and discuss how qubit state modeling and quantum circuit design work together in real-life applications. By the end of this lesson, you will have a clearer understanding of the scope of Quantum Computing and its significance in technology today."
+          "title": "Introduction to Quantum Principles",
+          "content": "This lesson establishes the foundation for the course. We'll define quantum computing and introduce core concepts like superposition, entanglement, and measurement. We will differentiate quantum bits (qubits) from classical bits and explore how these principles enable new forms of computation. This shared vocabulary is essential for understanding qubit state modeling and circuit design.",
+          "visualPrompts": [
+            "Animation comparing a classical bit (0 or 1) to a qubit in superposition.",
+            "Diagram illustrating entanglement with two linked particles whose fates are correlated."
+          ]
         },
         {
           "id": "quantum-computing-301-l01-c2",
           "kind": "concept",
-          "title": "Causal Structure and Constraints",
-          "content": "In this section, learners will engage in mapping out causal pathways, which means understanding how different events or actions lead to specific outcomes. Before making any decisions or selecting interventions, it is crucial to test hidden assumptions. This process helps ensure that the choices we make are based on solid reasoning and evidence, leading to better outcomes in our projects.\nContext recap: In this section, learners will engage in mapping out causal pathways, which means understanding how different events or actions lead to specific outcomes. Before making any decisions or selecting interventions, it is crucial to test hidden assumptions. This process helps ensure that the choices we make are based on solid reasoning and evidence, leading to better outcomes in our projects."
+          "title": "Modeling Qubit States and Systems",
+          "content": "Building on quantum principles, we'll explore how to mathematically model the state of a qubit. This involves understanding the Bloch sphere as a geometric representation and using vectors and matrices to describe state transformations. We will emphasize the importance of defining clear assumptions and constraints when building these models to ensure they accurately reflect a physical system.",
+          "visualPrompts": [
+            "Interactive Bloch sphere showing how quantum gates (like X, Y, Z) rotate the state vector.",
+            "Side-by-side comparison of a simple system model with and without explicit constraints listed."
+          ]
         },
         {
           "id": "quantum-computing-301-l01-c3",
           "kind": "recap",
-          "title": "Evidence Discipline",
-          "content": "In this recap, we will emphasize the importance of connecting claims to observable indicators. This means that any statements we make should be backed by evidence that we can see or measure. Additionally, we will discuss the significance of noting uncertainties and establishing review checkpoints. These practices help us maintain clarity and accuracy in our work, ensuring that we are on the right track.\nContext recap: In this recap, we will emphasize the importance of connecting claims to observable indicators. This means that any statements we make should be backed by evidence that we can see or measure. Additionally, we will discuss the significance of noting uncertainties and establishing review checkpoints. These practices help us maintain clarity and accuracy in our work, ensuring that we are on the right track.\nContext recap: In this recap, we will emphasize the importance of connecting claims to observable indicators. This means that any statements we make should be backed by evidence that we can see or measure. Additionally, we will discuss the significance of noting uncertainties and establishing review checkpoints. These practices help us maintain clarity and accuracy in our work, ensuring that we are on the right track.\nWhy this matters: Evidence Discipline helps learners in Computer Science connect ideas from Quantum Computing Systems and Governance to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "Verifying Circuit Outcomes",
+          "content": "We conclude by focusing on the discipline of evidence. In quantum computing, the outcome of a measurement is probabilistic. We'll discuss how to connect theoretical claims about a circuit's performance to observable data from simulations or hardware runs. This includes noting uncertainties, establishing review checkpoints, and understanding the role of statistical analysis in verifying results.",
+          "visualPrompts": [
+            "A simple quantum circuit diagram (e.g., creating a Bell state).",
+            "Histogram showing the probability distribution of measurement outcomes from a simulated circuit."
+          ]
         }
       ],
       "flashcards": [
         {
           "id": "quantum-computing-301-l01-f1",
-          "front": "qubit state modeling",
-          "back": "A core analytical lens in Quantum Computing requiring careful assumption control."
+          "front": "Qubit State Modeling",
+          "back": "The process of mathematically representing a qubit's state, often using the Bloch sphere, while managing assumptions about the system."
         },
         {
           "id": "quantum-computing-301-l01-f2",
-          "front": "quantum circuit design",
-          "back": "Operational design practices that determine system reliability and execution quality."
+          "front": "Quantum Circuit Design",
+          "back": "The practice of arranging quantum gates in a sequence to perform a specific computation or algorithm."
         },
         {
           "id": "quantum-computing-301-l01-f3",
-          "front": "noise and error mitigation",
-          "back": "The evaluation framework used to validate outcomes and detect hidden costs."
+          "front": "Noise and Error Mitigation",
+          "back": "Techniques used to reduce the impact of environmental interference and hardware imperfections on quantum computations."
         }
       ]
     },
@@ -88,22 +101,30 @@ export const QuantumComputing301Module: LearningModule = {
         {
           "id": "quantum-computing-301-l02-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Document assumptions, show your reasoning chain, and verify your conclusions before submission."
+          "title": "Workflow Design Template",
+          "content": "A structured template for documenting your quantum workflow, including goals, evidence, decision points, and verification steps."
         }
       ],
       "chunks": [
         {
           "id": "quantum-computing-301-l02-c1",
           "kind": "practice",
-          "title": "Workflow Construction and Test",
-          "content": "In this interactive activity, learners will have the opportunity to design a workflow that focuses on analyzing system trade-offs. This means considering the pros and cons of different choices. You will also integrate metrics-governance, which involves using specific measurements to guide decisions, and ensure cross-functional coordination, meaning working together with different teams. After creating your workflow, you will stress-test its reliability under uncertain conditions to see how well it holds up.\nContext recap: In this interactive activity, learners will have the opportunity to design a workflow that focuses on analyzing system trade-offs. This means considering the pros and cons of different choices. You will also integrate metrics-governance, which involves using specific measurements to guide decisions, and ensure cross-functional coordination, meaning working together with different teams. After creating your workflow, you will stress-test its reliability under uncertain conditions to see how well it holds up.\nContext recap: In this interactive activity, learners will have the opportunity to design a workflow that focuses on analyzing system trade-offs. This means considering the pros and cons of different choices. You will also integrate metrics-governance, which involves using specific measurements to guide decisions, and ensure cross-functional coordination, meaning working together with different teams. After creating your workflow, you will stress-test its reliability under uncertain conditions to see how well it holds up.\nWhy this matters: Workflow Construction and Test helps learners in Computer Science connect ideas from Quantum Computing Systems and Governance to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "title": "From Algorithm to Executable Circuit",
+          "content": "In this interactive lab, you will design a complete workflow for a simple quantum algorithm. This involves analyzing system trade-offs (e.g., circuit depth vs. qubit count), integrating governance metrics (e.g., fidelity thresholds), and planning for cross-functional coordination (e.g., between algorithm designers and hardware engineers). You will then stress-test your workflow's reliability under simulated uncertainty.",
+          "visualPrompts": [
+            "Flowchart of a quantum workflow: Problem -> Algorithm -> Circuit -> Execution -> Analysis.",
+            "A mock dashboard showing key governance metrics like gate fidelity and coherence time."
+          ]
         },
         {
           "id": "quantum-computing-301-l02-c2",
           "kind": "recap",
-          "title": "Control Gates and Readiness",
-          "content": "In this recap, we will discuss the concept of readiness in your workflows. This involves mapping out who is responsible for what, establishing criteria for control gates, defining rollback conditions, and identifying verification signals. Understanding these elements is essential for ensuring that your workflow is prepared for any situation and can adapt as needed.\nContext recap: In this recap, we will discuss the concept of readiness in your workflows. This involves mapping out who is responsible for what, establishing criteria for control gates, defining rollback conditions, and identifying verification signals. Understanding these elements is essential for ensuring that your workflow is prepared for any situation and can adapt as needed."
+          "title": "Implementing Control Gates and Readiness",
+          "content": "This recap focuses on ensuring your workflow is robust and ready for execution. We'll discuss how to implement 'control gates'—formal review points in your process. This includes mapping responsibilities, defining criteria for proceeding (or rolling back), and identifying clear verification signals that confirm the system is behaving as expected before committing to expensive runs.",
+          "visualPrompts": [
+            "Diagram of a project timeline with explicit Go/No-Go decision points (control gates).",
+            "A responsibility assignment matrix (RACI chart) for a quantum computing project."
+          ]
         }
       ],
       "interactiveActivities": [
@@ -143,11 +164,11 @@ export const QuantumComputing301Module: LearningModule = {
           ],
           "items": [
             {
-              "text": "Throughput budget",
+              "text": "Qubit coherence time",
               "bucket": "Technical"
             },
             {
-              "text": "Regulatory retention requirement",
+              "text": "Regulatory data retention requirement",
               "bucket": "Policy"
             },
             {
@@ -155,8 +176,8 @@ export const QuantumComputing301Module: LearningModule = {
               "bucket": "Stakeholder Impact"
             },
             {
-              "text": "Audit evidence requirement",
-              "bucket": "Policy"
+              "text": "Computational budget limit",
+              "bucket": "Technical"
             }
           ]
         }
@@ -203,12 +224,12 @@ export const QuantumComputing301Module: LearningModule = {
         },
         {
           "id": "quantum-computing-301-l03-q2",
-          "text": "The 301 level should emphasize:",
+          "text": "An effective quantum computing workflow should primarily emphasize:",
           "skillId": "quantum-computing-301-skill-level",
           "options": [
             {
               "id": "a",
-              "text": "system tradeoff analysis, metrics-governance integration, and cross-functional coordination"
+              "text": "System tradeoff analysis, metrics-governance integration, and cross-functional coordination"
             },
             {
               "id": "b",
@@ -250,56 +271,6 @@ export const QuantumComputing301Module: LearningModule = {
           ],
           "correctOptionId": "b",
           "explanation": "Reliability depends on clear controls, owners, and threshold-driven responses."
-        },
-        {
-          "id": "quantum-computing-301-l03-q4",
-          "text": "For noise and error mitigation, which practice is most defensible?",
-          "skillId": "quantum-computing-301-skill-eval",
-          "options": [
-            {
-              "id": "a",
-              "text": "Use anecdotal wins only"
-            },
-            {
-              "id": "b",
-              "text": "Compare against baselines and include side-effect checks"
-            },
-            {
-              "id": "c",
-              "text": "Ignore difficult scenarios"
-            },
-            {
-              "id": "d",
-              "text": "Adjust criteria after results"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Baseline and side-effect analysis prevents biased or incomplete conclusions."
-        },
-        {
-          "id": "quantum-computing-301-l03-q5",
-          "text": "A mature algorithmic advantage evaluation model should include:",
-          "skillId": "quantum-computing-301-skill-governance",
-          "options": [
-            {
-              "id": "a",
-              "text": "Policy disconnected from measurement"
-            },
-            {
-              "id": "b",
-              "text": "Policy links, measurable thresholds, and corrective pathways"
-            },
-            {
-              "id": "c",
-              "text": "No transparency obligations"
-            },
-            {
-              "id": "d",
-              "text": "No remediation expectations"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Governance maturity connects intention, measurement, and corrective response."
         }
       ]
     },
@@ -312,45 +283,57 @@ export const QuantumComputing301Module: LearningModule = {
         {
           "id": "quantum-computing-301-l04-a1",
           "type": "mnemonic",
-          "title": "Guided Practice",
-          "content": "Document assumptions, show your reasoning chain, and verify your conclusions before submission."
+          "title": "Case Analysis Framework",
+          "content": "Use the IDEA framework: Identify the problem, Define the options, Evaluate the tradeoffs, Act with a recommendation."
         }
       ],
       "chunks": [
         {
           "id": "quantum-computing-301-l04-c1",
           "kind": "example",
-          "title": "Case Context and Decision Stakes",
-          "content": "In this case study, we will focus on a hybrid workflow that combines classical computing with quantum computing. You will explore the decision-making process when choosing between noisy quantum runs, which can be unpredictable, and stable classical alternatives, which are more reliable. As part of this analysis, learners will map out high-impact risks and competing constraints to understand the stakes involved in these decisions.\nContext recap: In this case study, we will focus on a hybrid workflow that combines classical computing with quantum computing. You will explore the decision-making process when choosing between noisy quantum runs, which can be unpredictable, and stable classical alternatives, which are more reliable. As part of this analysis, learners will map out high-impact risks and competing constraints to understand the stakes involved in these decisions."
+          "title": "Case: Hybrid Classical-Quantum Optimization",
+          "content": "This case study examines a hybrid workflow for a complex optimization problem. You must decide when to use a noisy, potentially powerful quantum processor versus a stable, predictable classical alternative. We will map high-impact risks (e.g., inaccurate quantum results) and competing constraints (e.g., budget, timeline) to understand the high stakes of this decision.",
+          "visualPrompts": [
+            "Decision tree showing the choice between a quantum and classical computation path.",
+            "A risk matrix plotting the likelihood and impact of potential failures in the hybrid system."
+          ]
         },
         {
           "id": "quantum-computing-301-l04-c2",
           "kind": "concept",
-          "title": "Tradeoff Matrix",
-          "content": "In this section, we will introduce the concept of a tradeoff matrix. This tool helps you evaluate different intervention options by scoring them based on several criteria, including effectiveness, reliability, equity, and how feasible they are to implement. By using this matrix, you can make informed decisions that balance various factors effectively.\nContext recap: In this section, we will introduce the concept of a tradeoff matrix. This tool helps you evaluate different intervention options by scoring them based on several criteria, including effectiveness, reliability, equity, and how feasible they are to implement. By using this matrix, you can make informed decisions that balance various factors effectively."
+          "title": "The Tradeoff Matrix",
+          "content": "We introduce the tradeoff matrix as a tool for structured decision-making. This matrix helps you evaluate different options by scoring them against key criteria such as computational effectiveness, reliability, cost, and implementation feasibility. Using this tool, you can make a transparent and defensible choice between the quantum and classical approaches.",
+          "visualPrompts": [
+            "A filled-out tradeoff matrix comparing 'Quantum Solver' vs. 'Classical Heuristic' across multiple criteria.",
+            "Infographic explaining each criterion in the matrix (e.g., what 'reliability' means in this context)."
+          ]
         },
         {
           "id": "quantum-computing-301-l04-c3",
           "kind": "recap",
           "title": "Failure Learning and Recovery",
-          "content": "In this recap, we will discuss how to learn from failures. The lesson will focus on transforming patterns of failure into valuable safeguards, creating response playbooks that outline steps to take when things go wrong, and establishing monitoring updates to keep track of progress. This proactive approach helps ensure that we are prepared for challenges and can recover effectively.\nContext recap: In this recap, we will discuss how to learn from failures. The lesson will focus on transforming patterns of failure into valuable safeguards, creating response playbooks that outline steps to take when things go wrong, and establishing monitoring updates to keep track of progress. This proactive approach helps ensure that we are prepared for challenges and can recover effectively."
+          "content": "This recap focuses on learning from potential failures. We discuss how to analyze patterns of failure (e.g., specific types of quantum noise) to design better safeguards. We'll also introduce the concept of creating response playbooks—pre-defined action plans for when things go wrong—to ensure effective and timely recovery.",
+          "visualPrompts": [
+            "A flowchart illustrating a response playbook for a 'low-fidelity result' incident.",
+            "Chart showing how a safeguard (e.g., error correction code) reduces the failure rate over time."
+          ]
         }
       ],
       "flashcards": [
         {
           "id": "quantum-computing-301-l04-f1",
-          "front": "Tradeoff matrix",
-          "back": "A structured comparison of alternatives under competing priorities."
+          "front": "Tradeoff Matrix",
+          "back": "A structured tool for comparing alternative solutions against a set of competing priorities or criteria."
         },
         {
           "id": "quantum-computing-301-l04-f2",
-          "front": "Failure pattern",
-          "back": "A recurring risk signature used to design targeted mitigations."
+          "front": "Failure Pattern",
+          "back": "A recurring risk signature or type of error that can be analyzed to design targeted mitigations."
         },
         {
           "id": "quantum-computing-301-l04-f3",
-          "front": "Response playbook",
-          "back": "A predefined action sequence for safe and timely recovery."
+          "front": "Response Playbook",
+          "back": "A predefined sequence of actions to ensure a safe, timely, and consistent recovery from a known failure mode."
         }
       ]
     },
@@ -363,22 +346,30 @@ export const QuantumComputing301Module: LearningModule = {
         {
           "id": "quantum-computing-301-l05-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Document assumptions, show your reasoning chain, and verify your conclusions before submission."
+          "title": "Simulation Log",
+          "content": "A template to record your simulation setup, expected outcomes, actual results, and analysis of any deviations."
         }
       ],
       "chunks": [
         {
           "id": "quantum-computing-301-l05-c1",
           "kind": "practice",
-          "title": "Simulation Setup",
-          "content": "In this interactive practice, learners will set up simulation scenarios. This involves configuring various intervention scenarios, determining uncertainty parameters, and establishing measurable success thresholds. By doing this, you will gain hands-on experience in preparing for real-world applications of Quantum Computing.\nContext recap: In this interactive practice, learners will set up simulation scenarios. This involves configuring various intervention scenarios, determining uncertainty parameters, and establishing measurable success thresholds. By doing this, you will gain hands-on experience in preparing for real-world applications of Quantum Computing.\nContext recap: In this interactive practice, learners will set up simulation scenarios. This involves configuring various intervention scenarios, determining uncertainty parameters, and establishing measurable success thresholds. By doing this, you will gain hands-on experience in preparing for real-world applications of Quantum Computing. Context recap: In this interactive practice, learners will set up simulation scenarios.\nWhy this matters: Simulation Setup helps learners in Computer Science connect ideas from Quantum Computing Systems and Governance to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "Simulation Setup and Execution",
+          "content": "In this interactive practice, you will configure and run simulation scenarios based on the case study. This involves setting up different noise models, defining intervention strategies (e.g., applying an error mitigation technique), and establishing measurable success thresholds (e.g., result must be within 5% of the optimal solution). This provides hands-on experience in testing quantum strategies before deployment.",
+          "visualPrompts": [
+            "A mock UI of a simulation environment with sliders for noise parameters and toggles for mitigation techniques.",
+            "A dashboard displaying the success metrics and constraints for the simulation run."
+          ]
         },
         {
           "id": "quantum-computing-301-l05-c2",
           "kind": "recap",
-          "title": "Simulation Debrief",
-          "content": "In this recap, we will conduct a post-run review of the simulation outcomes. This review will evaluate the results, identify any side effects, and assess how well the outcomes align with governance constraints. This reflective process is crucial for understanding the effectiveness of your interventions and making necessary adjustments.\nContext recap: In this recap, we will conduct a post-run review of the simulation outcomes. This review will evaluate the results, identify any side effects, and assess how well the outcomes align with governance constraints. This reflective process is crucial for understanding the effectiveness of your interventions and making necessary adjustments."
+          "title": "Simulation Debrief and Analysis",
+          "content": "After the simulation, we will conduct a structured post-run review. This debrief involves evaluating the quantitative results against your success thresholds, identifying any unintended side effects (e.g., increased computational cost), and assessing how well the outcomes align with the project's governance constraints. This reflective process is crucial for refining your strategy.",
+          "visualPrompts": [
+            "Graphs comparing simulation outcomes: 'No Mitigation' vs. 'With Mitigation'.",
+            "A summary table highlighting the key findings and recommendations from the debrief."
+          ]
         }
       ],
       "interactiveActivities": [
@@ -386,11 +377,11 @@ export const QuantumComputing301Module: LearningModule = {
           "id": "quantum-computing-301-l05-act1",
           "type": "scenario_practice",
           "title": "Intervention Simulation",
-          "description": "Evaluate three strategies and justify which best advances qubit state modeling and algorithmic advantage evaluation.",
+          "description": "Evaluate three noise mitigation strategies and justify which one best balances performance improvement with resource cost.",
           "instructions": [
-            "Define objective and guardrails before selecting interventions.",
-            "Record near-term and long-term tradeoffs for each option.",
-            "Select confirmation metrics and escalation triggers."
+            "Define your primary objective (e.g., maximize result accuracy) and guardrails (e.g., stay within compute budget).",
+            "For each strategy, record the expected performance gain and any potential negative side effects.",
+            "Select the best strategy and provide a data-backed justification for your choice."
           ]
         },
         {
@@ -435,128 +426,78 @@ export const QuantumComputing301Module: LearningModule = {
       "questions": [
         {
           "id": "quantum-computing-301-l06-q1",
-          "text": "Which approach most improves decisions in qubit state modeling?",
-          "skillId": "quantum-computing-301-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "Rely on assumptions that are never tested"
-            },
-            {
-              "id": "b",
-              "text": "Define constraints, test failure modes, and monitor indicators"
-            },
-            {
-              "id": "c",
-              "text": "Treat all contexts as identical"
-            },
-            {
-              "id": "d",
-              "text": "Avoid uncertainty analysis"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Reliable decisions require explicit constraints, failure tests, and measured signals."
-        },
-        {
-          "id": "quantum-computing-301-l06-q2",
-          "text": "The 301 level should emphasize:",
-          "skillId": "quantum-computing-301-skill-level",
-          "options": [
-            {
-              "id": "a",
-              "text": "system tradeoff analysis, metrics-governance integration, and cross-functional coordination"
-            },
-            {
-              "id": "b",
-              "text": "Execution speed without review"
-            },
-            {
-              "id": "c",
-              "text": "No baselines or controls"
-            },
-            {
-              "id": "d",
-              "text": "Single perspective decision-making"
-            }
-          ],
-          "correctOptionId": "a",
-          "explanation": "This level is explicitly structured around system tradeoff analysis, metrics-governance integration, and cross-functional coordination."
-        },
-        {
-          "id": "quantum-computing-301-l06-q3",
-          "text": "What best strengthens quantum circuit design reliability?",
-          "skillId": "quantum-computing-301-skill-reliability",
-          "options": [
-            {
-              "id": "a",
-              "text": "Unowned workflows and unclear escalation"
-            },
-            {
-              "id": "b",
-              "text": "Control checkpoints, ownership mapping, and response thresholds"
-            },
-            {
-              "id": "c",
-              "text": "Untracked changes"
-            },
-            {
-              "id": "d",
-              "text": "No incident review"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Reliability depends on clear controls, owners, and threshold-driven responses."
-        },
-        {
-          "id": "quantum-computing-301-l06-q4",
-          "text": "For noise and error mitigation, which practice is most defensible?",
+          "text": "In a hybrid quantum-classical workflow, what is the primary purpose of a tradeoff matrix?",
           "skillId": "quantum-computing-301-skill-eval",
           "options": [
             {
               "id": "a",
-              "text": "Use anecdotal wins only"
+              "text": "To prove quantum advantage definitively"
             },
             {
               "id": "b",
-              "text": "Compare against baselines and include side-effect checks"
+              "text": "To provide a structured, evidence-based way to compare different computational strategies against key criteria"
             },
             {
               "id": "c",
-              "text": "Ignore difficult scenarios"
+              "text": "To exclusively measure the speed of the quantum processor"
             },
             {
               "id": "d",
-              "text": "Adjust criteria after results"
+              "text": "To eliminate the need for classical computing resources"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Baseline and side-effect analysis prevents biased or incomplete conclusions."
+          "explanation": "A tradeoff matrix is a decision-making tool used to systematically evaluate options based on multiple, often competing, criteria like cost, reliability, and performance."
         },
         {
-          "id": "quantum-computing-301-l06-q5",
-          "text": "A mature algorithmic advantage evaluation model should include:",
+          "id": "quantum-computing-301-l06-q2",
+          "text": "When simulating a quantum algorithm, what is the most critical reason to model environmental noise?",
+          "skillId": "quantum-computing-301-skill-reliability",
+          "options": [
+            {
+              "id": "a",
+              "text": "To make the simulation run faster"
+            },
+            {
+              "id": "b",
+              "text": "To guarantee the algorithm will work perfectly on real hardware"
+            },
+            {
+              "id": "c",
+              "text": "To estimate the algorithm's performance and robustness on real, imperfect quantum hardware"
+            },
+            {
+              "id": "d",
+              "text": "To increase the number of qubits in the simulation"
+            }
+          ],
+          "correctOptionId": "c",
+          "explanation": "Simulating noise helps predict how an algorithm will behave in the real world, allowing for the testing of error mitigation strategies and setting realistic performance expectations."
+        },
+        {
+          "id": "quantum-computing-301-l06-q3",
+          "text": "A recurring error pattern is discovered in your quantum circuit simulations. According to the principles of failure learning, what is the best next step?",
           "skillId": "quantum-computing-301-skill-governance",
           "options": [
             {
               "id": "a",
-              "text": "Policy disconnected from measurement"
+              "text": "Ignore the pattern as it only occurs in simulation"
             },
             {
               "id": "b",
-              "text": "Policy links, measurable thresholds, and corrective pathways"
+              "text": "Analyze the pattern to design a targeted mitigation or safeguard and create a response playbook"
             },
             {
               "id": "c",
-              "text": "No transparency obligations"
+              "text": "Immediately switch to a different quantum algorithm"
             },
             {
               "id": "d",
-              "text": "No remediation expectations"
+              "text": "Blame the simulation software for being inaccurate"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Governance maturity connects intention, measurement, and corrective response."
+          "explanation": "Effective governance and reliability practices involve analyzing failure patterns to proactively design safeguards and prepare standardized responses."
         }
       ]
     },
@@ -569,8 +510,8 @@ export const QuantumComputing301Module: LearningModule = {
         {
           "id": "quantum-computing-301-l07-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Document assumptions, show your reasoning chain, and verify your conclusions before submission."
+          "title": "Stakeholder Impact Map",
+          "content": "A diagram illustrating how different groups are affected by a quantum computing application, considering both positive and negative impacts."
         }
       ],
       "chunks": [
@@ -578,36 +519,48 @@ export const QuantumComputing301Module: LearningModule = {
           "id": "quantum-computing-301-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Mapping",
-          "content": "In this section, learners will examine how the benefits and burdens of Quantum Computing are distributed among different stakeholders. This includes considering how these impacts vary over time. Understanding this distribution is essential for making ethical decisions and ensuring that technology serves the greater good.\nContext recap: In this section, learners will examine how the benefits and burdens of Quantum Computing are distributed among different stakeholders. This includes considering how these impacts vary over time. Understanding this distribution is essential for making ethical decisions and ensuring that technology serves the greater good."
+          "content": "This section explores the ethical dimensions of quantum computing. We will learn how to map the distribution of benefits and burdens across different stakeholder groups, such as users, non-users, and society at large. Considering how these impacts evolve over time is essential for developing technology responsibly and equitably.",
+          "visualPrompts": [
+            "A stakeholder map diagram for a hypothetical quantum-powered drug discovery platform.",
+            "A timeline showing the short-term vs. long-term impacts of a new technology."
+          ]
         },
         {
           "id": "quantum-computing-301-l07-c2",
           "kind": "concept",
-          "title": "Accountability Architecture",
-          "content": "In this section, we will discuss the concept of accountability in the context of Quantum Computing. This includes understanding traceability, which means being able to track decisions and actions, review rights that stakeholders have, and remediation obligations that ensure any issues are addressed. This framework helps establish trust and responsibility in technology development.\nContext recap: In this section, we will discuss the concept of accountability in the context of Quantum Computing. This includes understanding traceability, which means being able to track decisions and actions, review rights that stakeholders have, and remediation obligations that ensure any issues are addressed. This framework helps establish trust and responsibility in technology development."
+          "title": "Designing an Accountability Architecture",
+          "content": "Accountability ensures that quantum systems are developed and used responsibly. We will discuss the key pillars of an accountability architecture: traceability of decisions, the right for stakeholders to review outcomes, and clear obligations for remediation when issues arise. This framework helps build trust and establishes clear lines of responsibility.",
+          "visualPrompts": [
+            "Flowchart illustrating an accountability process: Decision -> Log -> Review -> Remediation.",
+            "An example of a 'decision log' that provides transparency into a system's design choices."
+          ]
         },
         {
           "id": "quantum-computing-301-l07-c3",
           "kind": "recap",
-          "title": "Responsible Execution Checklist",
-          "content": "At the end of our lesson, we will provide a comprehensive checklist that connects the technical performance of quantum computing systems with important aspects such as policy guidelines, ethical considerations, and the trust of stakeholders involved. This checklist will help ensure that we are not only focusing on the technology itself but also on how it impacts society and the people who use it.\nContext recap: At the end of our lesson, we will provide a comprehensive checklist that connects the technical performance of quantum computing systems with important aspects such as policy guidelines, ethical considerations, and the trust of stakeholders involved. This checklist will help ensure that we are not only focusing on the technology itself but also on how it impacts society and the people who use it."
+          "title": "The Responsible Execution Checklist",
+          "content": "We conclude with a practical checklist for responsible execution. This tool connects technical performance metrics with essential governance elements, including adherence to policy, ethical principles, and stakeholder trust. Using this checklist helps ensure a holistic view of success, balancing technological innovation with societal well-being.",
+          "visualPrompts": [
+            "Infographic of the responsible execution checklist, with categories for Technical, Ethical, and Policy checks.",
+            "A 'green/yellow/red' status dashboard based on the checklist items."
+          ]
         }
       ],
       "flashcards": [
         {
           "id": "quantum-computing-301-l07-f1",
-          "front": "Impact distribution",
-          "back": "How outcomes differ across stakeholder groups and timescales."
+          "front": "Impact Distribution",
+          "back": "An analysis of how the positive and negative outcomes of a system are spread across different stakeholder groups and timescales."
         },
         {
           "id": "quantum-computing-301-l07-f2",
-          "front": "Decision traceability",
-          "back": "The evidence chain showing how and why a decision was made."
+          "front": "Decision Traceability",
+          "back": "The ability to reconstruct the evidence and reasoning chain that led to a specific design or operational decision."
         },
         {
           "id": "quantum-computing-301-l07-f3",
-          "front": "Responsible execution",
-          "back": "Delivery behavior that balances effectiveness with ethical and policy safeguards."
+          "front": "Responsible Execution",
+          "back": "The practice of delivering a system in a way that balances technical effectiveness with ethical, policy, and safety safeguards."
         }
       ]
     },
@@ -620,22 +573,30 @@ export const QuantumComputing301Module: LearningModule = {
         {
           "id": "quantum-computing-301-l08-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Document assumptions, show your reasoning chain, and verify your conclusions before submission."
+          "title": "Capstone Charter Template",
+          "content": "A fillable document to structure your capstone project, including sections for objectives, metrics, risks, and governance."
         }
       ],
       "chunks": [
         {
           "id": "quantum-computing-301-l08-c1",
           "kind": "practice",
-          "title": "Capstone Charter",
-          "content": "In this interactive session, learners will have the opportunity to create a detailed capstone charter. This document will outline the main objective of their project, identify any constraints they might face, establish metrics for success, and define governance gates that will guide their decision-making process. This exercise will help learners think critically about their projects and prepare them for real-world applications.\nContext recap: In this interactive session, learners will have the opportunity to create a detailed capstone charter. This document will outline the main objective of their project, identify any constraints they might face, establish metrics for success, and define governance gates that will guide their decision-making process. This exercise will help learners think critically about their projects and prepare them for real-world applications."
+          "title": "Building the Capstone Charter",
+          "content": "In this interactive session, you will create a detailed charter for a hypothetical quantum computing project. This document will serve as your project's constitution, defining its core objective, key constraints, measurable success metrics, and the governance gates that will guide your decision-making. This exercise synthesizes all the course concepts into a single planning document.",
+          "visualPrompts": [
+            "An animated walkthrough of filling out each section of the capstone charter template.",
+            "Examples of well-defined vs. poorly-defined success metrics."
+          ]
         },
         {
           "id": "quantum-computing-301-l08-c2",
           "kind": "recap",
-          "title": "Defense Readiness",
-          "content": "As part of our recap, learners will focus on preparing strong, evidence-based defenses for their projects. This means they will gather and present information that supports their technical choices, addresses policy implications, and responds to critiques from stakeholders. This practice will enhance their ability to communicate effectively and defend their work in a professional setting.\nContext recap: As part of our recap, learners will focus on preparing strong, evidence-based defenses for their projects. This means they will gather and present information that supports their technical choices, addresses policy implications, and responds to critiques from stakeholders. This practice will enhance their ability to communicate effectively and defend their work in a professional setting."
+          "title": "Preparing for Defense and Review",
+          "content": "This recap prepares you to defend your capstone charter. You will practice anticipating and preparing evidence-based responses to critical questions regarding your technical choices, policy implications, and stakeholder considerations. This skill is crucial for securing buy-in and ensuring your project is resilient to professional scrutiny.",
+          "visualPrompts": [
+            "A diagram showing a 'Red Team' review process, where a project is challenged from different perspectives.",
+            "A checklist for 'Defense Readiness' covering key areas to prepare for."
+          ]
         }
       ],
       "interactiveActivities": [
@@ -645,16 +606,21 @@ export const QuantumComputing301Module: LearningModule = {
           "title": "Capstone Charter Builder",
           "description": "Build a capstone charter with objectives, metrics, risks, and remediation pathways.",
           "instructions": [
-            "Define objective and boundary conditions.",
-            "List at least three measurable success indicators.",
-            "Define escalation and corrective action criteria."
+            "Define a clear, single-sentence project objective and its boundary conditions.",
+            "List at least three measurable success indicators (e.g., 'achieve X fidelity with Y circuit depth').",
+            "Define criteria for escalating issues and triggering corrective action plans."
           ]
         },
         {
           "id": "quantum-computing-301-l08-act2",
           "type": "debate_simulator",
           "title": "Decision Defense Panel",
-          "description": "Defend your capstone decisions against technical, policy, and stakeholder objections."
+          "description": "Defend your capstone decisions against simulated objections from technical, policy, and stakeholder panels.",
+          "instructions": [
+            "Receive a challenge from a simulated panel member (e.g., 'Your chosen error mitigation technique is too expensive').",
+            "Select the best evidence-based response from a list of options.",
+            "Receive feedback on the strength of your defense."
+          ]
         }
       ]
     }

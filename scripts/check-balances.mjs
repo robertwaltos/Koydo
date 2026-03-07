@@ -26,16 +26,15 @@ async function checkOpenAI(key, name) {
 async function checkHeyGen(key, name) {
     if (!key) return `${name}: NOT CONFIGURED`;
     try {
-      const res = await fetch("https://api.heygen.com/v1/user/info", {
+      const res = await fetch("https://api.heygen.com/v2/avatars", {
         headers: { "X-Api-Key": key }
       });
       if (res.status === 401) return `${name}: INVALID_KEY / EXPIRED`;
       if (res.status === 402 || res.status === 403 || res.status === 429) return `${name}: OUT_OF_CREDITS (Error ${res.status})`;
       if (res.ok) {
           const data = await res.json();
-          // Heygen sometimes returns credits in the response
-          const quota = data.data?.quota ?? 'Unknown';
-          return `${name}: ACTIVE (Quota: ${quota})`;
+          // We don't get quota from /v2/avatars, but if it returns 200, the key works.
+          return `${name}: ACTIVE & VALID`;
       }
       return `${name}: ERROR ${res.status}`;
     } catch (e) {

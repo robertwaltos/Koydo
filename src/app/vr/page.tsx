@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import AdaptiveBackground from "@/app/components/ui/adaptive-background";
@@ -28,6 +30,14 @@ type VoyagerAccess = {
   reason: string;
 };
 
+type ShowcaseItem = {
+  id: string;
+  title: string;
+  category: string;
+  description: string;
+  imagePath: string;
+};
+
 const DIFFICULTY_COLORS: Record<string, string> = {
   Beginner: "bg-emerald-100 text-emerald-700 shadow-sm",
   Intermediate: "bg-amber-100 text-amber-700 shadow-sm",
@@ -36,6 +46,8 @@ const DIFFICULTY_COLORS: Record<string, string> = {
 
 export default function VRPage() {
   const [simulations, setSimulations] = useState<Simulation[]>([]);
+  const [showcase, setShowcase] = useState<ShowcaseItem[]>([]);
+  const [showcaseOffset, setShowcaseOffset] = useState(0);
   const [platform, setPlatform] = useState<PlatformInfo | null>(null);
   const [access, setAccess] = useState<VoyagerAccess | null>(null);
   const [loading, setLoading] = useState(true);
@@ -45,6 +57,7 @@ export default function VRPage() {
       .then((r) => r.json())
       .then((d) => {
         setSimulations(d.simulations ?? []);
+        setShowcase(d.showcase ?? []);
         setPlatform(d.platformInfo ?? null);
         setAccess(d.access ?? null);
       })
@@ -151,7 +164,7 @@ export default function VRPage() {
                 <div className="mt-8 flex items-center justify-between">
                   {sim.status === "coming_soon" ? (
                     <span className="rounded-full border border-dashed border-zinc-300 px-4 py-1.5 text-[10px] font-black uppercase tracking-widest text-zinc-400 shadow-inner">
-                      Coming Soon
+                      Preview
                     </span>
                   ) : (
                     <button className="rounded-full bg-indigo-600 px-6 py-2 text-xs font-black uppercase tracking-widest text-white shadow-lg shadow-indigo-500/30 transition-transform hover:scale-105 active:scale-95">
@@ -164,6 +177,50 @@ export default function VRPage() {
           </div>
         )}
       </div>
+
+      {showcase.length > 0 && (
+        <section className="relative mx-auto mt-12 w-full max-w-6xl">
+          <div className="mb-5 flex items-center justify-between gap-3">
+            <div>
+              <h2 className="text-2xl font-black tracking-tight text-zinc-900">Diverse Immersive Library</h2>
+              <p className="text-sm font-medium text-zinc-600">
+                Generated concept scenes ready for beta exploration. More drops continue daily.
+              </p>
+            </div>
+            <button
+              type="button"
+              onClick={() => {
+                const next = showcaseOffset + 12;
+                setShowcaseOffset(next >= showcase.length ? 0 : next);
+              }}
+              className="rounded-full border border-zinc-200 bg-white/70 px-4 py-2 text-xs font-black uppercase tracking-widest text-zinc-600 shadow-sm backdrop-blur-md hover:bg-white"
+            >
+              Show Different Set
+            </button>
+          </div>
+
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            {showcase.slice(showcaseOffset, showcaseOffset + 12).map((item) => (
+              <article
+                key={item.id}
+                className="overflow-hidden rounded-3xl border border-white/70 bg-white/70 shadow-[0_10px_30px_rgba(0,0,0,0.06)] backdrop-blur-xl"
+              >
+                <img
+                  src={item.imagePath}
+                  alt={item.title}
+                  loading="lazy"
+                  className="h-40 w-full object-cover"
+                />
+                <div className="p-4">
+                  <p className="text-[10px] font-black uppercase tracking-widest text-indigo-600">{item.category}</p>
+                  <h3 className="mt-1 text-sm font-black leading-snug text-zinc-900">{item.title}</h3>
+                  <p className="mt-2 text-xs font-medium leading-relaxed text-zinc-600 line-clamp-2">{item.description}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+      )}
     </main>
   );
 }

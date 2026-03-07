@@ -22,35 +22,70 @@ interface ParentalGateProps {
   onCancel: () => void;
 }
 
-function generateChallenge() {
-  const a = Math.floor(Math.random() * 30) + 12; // 12–41
-  const b = Math.floor(Math.random() * 9) + 3;   // 3–11
-  return { a, b, answer: a * b };
-}
-
 export default function ParentalGate({ onVerified, onCancel }: ParentalGateProps) {
-  const [challenge] = useState(generateChallenge);
+  const [challenge, setChallenge] = useState<{ question: string; token: string } | null>(null);
   const [input, setInput] = useState("");
-  const [error, setError] = useState(false);
+  const [status, setStatus] = useState<"idle" | "verifying" | "error" | "loading">("loading");
+  const [errorMsg, setErrorMsg] = useState<string | null>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
-  useEffect(() => {
-    inputRef.current?.focus();
+  const fetchChallenge = useCallback(async () => {
+    setStatus("loading");
+    try {
+      const res = await fetch("/api/parent-gate");
+      if (!res.ok) throw new Error("Failed to load challenge");
+      const data = await res.json();
+      setChallenge(data);
+      setStatus("idle");
+      setTimeout(() => inputRef.current?.focus(), 100);
+    } catch (err) {
+      console.error("Parent gate fetch error:", err);
+      setStatus("error");
+      setErrorMsg("Could not load security challenge. Please check your connection.");
+    }
   }, []);
 
+  useEffect(() => {
+    fetchChallenge();
+  }, [fetchChallenge]);
+
   const handleSubmit = useCallback(
-    (e: React.FormEvent) => {
+    async (e: React.FormEvent) => {
       e.preventDefault();
-      if (Number(input) === challenge.answer) {
-        onVerified();
-      } else {
-        setError(true);
-        setInput("");
-        inputRef.current?.focus();
+      if (!challenge || !input) return;
+
+      setStatus("verifying");
+      try {
+        const res = await fetch("/api/parent-gate", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            token: challenge.token,
+            answer: Number(input),
+          }),
+        });
+
+        const data = await res.json();
+        if (data.verified) {
+          onVerified();
+        } else {
+          setStatus("error");
+          setErrorMsg(data.reason === "Incorrect answer" ? "That's not right. Please try again." : "Challenge expired. Getting a new one...");
+          setInput("");
+          if (data.reason !== "Incorrect answer") {
+            setTimeout(fetchChallenge, 1500);
+          } else {
+            setTimeout(() => inputRef.current?.focus(), 100);
+          }
+        }
+      } catch (err) {
+        setStatus("error");
+        setErrorMsg("Verification failed. Please try again.");
       }
     },
-    [input, challenge.answer, onVerified],
+    [input, challenge, onVerified, fetchChallenge],
   );
+
 
   return (
     <div
@@ -69,7 +104,7 @@ export default function ParentalGate({ onVerified, onCancel }: ParentalGateProps
 
         <form onSubmit={handleSubmit} className="mt-5">
           <label className="block text-center text-2xl font-mono font-bold text-foreground">
-            {challenge.a} &times; {challenge.b} = ?
+            {status === "loading" ? "..." : challenge?.question} = ?
           </label>
 
           <input
@@ -77,18 +112,19 @@ export default function ParentalGate({ onVerified, onCancel }: ParentalGateProps
             type="number"
             inputMode="numeric"
             value={input}
+            disabled={status === "loading" || status === "verifying"}
             onChange={(e) => {
               setInput(e.target.value);
-              setError(false);
+              setErrorMsg(null);
             }}
-            className="mt-4 w-full rounded-xl border border-border bg-surface-muted px-4 py-3 text-center text-xl font-mono text-foreground outline-none focus:ring-2 focus:ring-accent"
+            className="mt-4 w-full rounded-xl border border-border bg-surface-muted px-4 py-3 text-center text-xl font-mono text-foreground outline-none focus:ring-2 focus:ring-accent disabled:opacity-50"
             aria-label="Your answer"
             autoComplete="off"
           />
 
-          {error && (
+          {errorMsg && (
             <p className="mt-2 text-center text-sm text-red-500">
-              That&apos;s not right. Please try again.
+              {errorMsg}
             </p>
           )}
 
@@ -102,10 +138,10 @@ export default function ParentalGate({ onVerified, onCancel }: ParentalGateProps
             </button>
             <button
               type="submit"
-              disabled={!input}
+              disabled={!input || status === "verifying" || status === "loading"}
               className="flex-1 rounded-full bg-accent px-4 py-2.5 min-h-11 text-sm font-semibold text-white hover:brightness-110 disabled:opacity-40"
             >
-              Continue
+              {status === "verifying" ? "Verifying..." : "Continue"}
             </button>
           </div>
         </form>

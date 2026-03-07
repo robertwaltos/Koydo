@@ -58,10 +58,34 @@ export async function POST(request: Request) {
     }
 
     const admin = createSupabaseAdminClient();
+    
+    // Auto-Bootstrap: If this is the designated initial owner and no owners exist yet, grant admin/owner.
+    let isInitialOwner = false;
+    const envOwner = process.env.INITIAL_OWNER_EMAIL ? process.env.INITIAL_OWNER_EMAIL.toLowerCase() : null;
+    const fallbackOwners = [
+      "robert@waltos.net",
+      "robertwaltos@outlook.com",
+      "robert@koydo.com"
+    ];
+    const designatedOwnerEmails = envOwner ? [envOwner, ...fallbackOwners] : fallbackOwners;
+    
+    if (designatedOwnerEmails.includes(user.email.toLowerCase())) {
+      const { count } = await admin
+        .from("user_profiles")
+        .select("*", { count: "exact", head: true })
+        .eq("is_owner", true);
+      
+      if (count === 0) {
+        isInitialOwner = true;
+        console.log(`[Auto-Bootstrap] Crowned ${user.email} as the initial system owner.`);
+      }
+    }
+
     const { error: profileError } = await admin.from("user_profiles").upsert(
       {
         user_id: user.id,
         billing_state: billingState,
+        ...(isInitialOwner ? { is_admin: true, is_owner: true } : {}),
       },
       { onConflict: "user_id" },
     );

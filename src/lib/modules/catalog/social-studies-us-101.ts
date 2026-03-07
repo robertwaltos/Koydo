@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const SocialStudiesUs101Module: LearningModule = {
+export const social_studies_us_101_Module: LearningModule = {
   "id": "social-studies-us-101",
   "title": "Social Studies: United States",
   "description": "Learn about the US government, Constitution, Bill of Rights, geography, regions, American history milestones, and civic participation.",
@@ -12,7 +12,7 @@ export const SocialStudiesUs101Module: LearningModule = {
   ],
   "minAge": 7,
   "maxAge": 18,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "learningObjectives": [
     "Explain why the US Constitution was written and what it establishes",
     "Describe the three branches of government and the system of checks and balances",
@@ -31,59 +31,65 @@ export const SocialStudiesUs101Module: LearningModule = {
       "duration": 10,
       "objectives": [
         "Explain why the American colonies declared independence from Britain",
-        "Identify the purpose of the US Constitution",
-        "Describe what 'We the People' means in practice"
+        "Describe the purpose of the US Constitution",
+        "Understand what 'We the People' means"
       ],
       "chunks": [
         {
           "id": "social-studies-us-101-l01-c1",
           "title": "Why a New Government?",
-          "content": "Before the year 1776, the 13 American colonies were under the control of Great Britain. The colonists were required to pay taxes to the British king, but they did not have anyone representing them in the British Parliament. This situation was known as 'taxation without representation,' and it made many colonists very frustrated. Important leaders of the time, such as Thomas Jefferson, Benjamin Franklin, and John Adams, began to speak out and advocate for independence from British rule. They believed that the colonies should have the right to govern themselves and make their own decisions. This desire for self-governance was fueled by the belief that everyone should have a voice in the laws that affect their lives. As more colonists joined the call for independence, they started to imagine a new nation where they could create their own government based on fairness and equality. This was the beginning of a significant change in history, leading to the creation of the United States of America, where the people would have a say in their own governance.\nContext recap: Before the year 1776, the 13 American colonies were under the control of Great Britain. The colonists were required to pay taxes to the British king, but they did not have anyone representing them in the British Parliament. This situation was known as 'taxation without representation,' and it made many colonists very frustrated. Important leaders of the time, such as Thomas Jefferson, Benjamin Franklin, and John Adams, began to speak out and advocate for independence from British rule.\nWhy this matters: Why a New Government? helps learners in Social Studies US connect ideas from Social Studies: United States to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "Before 1776, the 13 American colonies were ruled by Great Britain. Colonists had to pay taxes to the British king but had no representatives in the British government to speak for them. This was called 'taxation without representation,' and it made many colonists angry. Leaders like Thomas Jefferson, Benjamin Franklin, and John Adams began to speak up for independence. They believed the colonies should govern themselves. This idea grew, leading to the creation of a new nation where the people would have the power."
         },
         {
           "id": "social-studies-us-101-l01-c2",
           "title": "The Declaration of Independence",
-          "content": "On July 4, 1776, a very important event happened in American history. The Continental Congress, which was a group of representatives from the thirteen colonies, officially adopted a document called the Declaration of Independence. This document was mainly written by a man named Thomas Jefferson, who was a key figure in the early United States. The Declaration of Independence is famous for its powerful and inspiring words. One of the most well-known phrases from this document says: 'We hold these truths to be self-evident, that all men are created equal, that they are endowed by their Creator with certain unalienable Rights, that among these are Life, Liberty and the pursuit of Happiness.' This statement emphasizes the belief that everyone deserves equal rights and opportunities. By adopting this declaration, the colonies were making a bold announcement to the world that they were no longer under British rule and wanted to create their own independent nation. This moment marked the beginning of a new chapter in history, where the colonies sought to establish a government that would protect the rights and freedoms of its people. The Declaration of Independence is still celebrated today as a symbol of freedom and democracy, reminding us of the importance of standing up for our rights and the rights of others.\nContext recap: On July 4, 1776, a very important event happened in American history. The Continental Congress, which was a group of representatives from the thirteen colonies, officially adopted a document called the Declaration of Independence. This document was mainly written by a man named Thomas Jefferson, who was a key figure in the early United States. The Declaration of Independence is famous for its powerful and inspiring words.\nWhy this matters: The Declaration of Independence helps learners in Social Studies US connect ideas from Social Studies: United States to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "On July 4, 1776, leaders from the colonies adopted the Declaration of Independence. Written mostly by Thomas Jefferson, this document announced that the colonies were now free and independent states. It famously says that 'all men are created equal' and have rights to 'Life, Liberty and the pursuit of Happiness.' This was a bold statement to the world that America was forming its own nation based on freedom and the rights of its citizens."
         },
         {
           "id": "social-studies-us-101-l01-c3",
           "title": "The US Constitution",
-          "content": "After the American colonies successfully won the Revolutionary War, the new nation faced the important task of creating rules for how to govern itself. In 1787, a group of delegates gathered in Philadelphia to draft the Constitution, which would become the supreme law of the United States. The Constitution begins with the phrase 'We the People,' which emphasizes that the government derives its power from the citizens, rather than from a king. This foundational document outlines the structure of the government, defines its powers, and includes protections for individual rights, ensuring that the voices of the people are heard. The Constitution is not just a set of rules; it is a living document that can be amended or changed to meet the needs of the country as it grows and evolves. This means that the Constitution can adapt to new ideas and challenges, making it a vital part of American democracy. Understanding the Constitution helps us appreciate the rights we have today and the responsibilities we share as citizens in a democratic society. It reminds us that we all have a role in shaping our government and protecting our freedoms.\nContext recap: After the American colonies successfully won the Revolutionary War, the new nation faced the important task of creating rules for how to govern itself. In 1787, a group of delegates gathered in Philadelphia to draft the Constitution, which would become the supreme law of the United States. The Constitution begins with the phrase 'We the People,' which emphasizes that the government derives its power from the citizens, rather than from a king. This foundational document outlines the structure of the government, defines its powers, and includes protections for individual rights, ensuring that the voices of the people are heard."
+          "content": "After winning the Revolutionary War, the new country needed a plan for its government. The first attempt, called the Articles of Confederation, was too weak. So, in 1787, leaders met to write the Constitution. This document is the supreme law of the United States. It starts with the words 'We the People,' showing that the government gets its power from the citizens, not a king. The Constitution creates the structure for our government and protects the rights of the people."
         },
         {
           "id": "social-studies-us-101-l01-c4",
           "title": "A Living Document",
-          "content": "The Founding Fathers of the United States were very wise. They realized that as the world changes, the rules and laws that govern us might also need to change. To make sure the Constitution could adapt to new ideas and needs, they created a special process for adding amendments. An amendment is like a change or an addition to the Constitution. The first ten amendments were added in 1791 and are known as the Bill of Rights. These amendments are super important because they protect our individual freedoms, like the right to speak our minds and practice our own beliefs. Since then, 17 more amendments have been added to the Constitution. Some of these amendments brought about major changes in our society. For example, the 13th Amendment ended slavery, which means that no one can be forced to work against their will. The 14th Amendment made sure that anyone born in the United States is a citizen, which is a big deal because it gives people rights and protections. Lastly, the 19th Amendment was a huge step forward for equality because it gave women the right to vote. All these amendments show how our country is always growing and changing, reflecting the values and beliefs of its people over time.\nContext recap: The Founding Fathers of the United States were very wise. They realized that as the world changes, the rules and laws that govern us might also need to change. To make sure the Constitution could adapt to new ideas and needs, they created a special process for adding amendments. An amendment is like a change or an addition to the Constitution.\nWhy this matters: A Living Document helps learners in Social Studies US connect ideas from Social Studies: United States to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "The writers of the Constitution knew that the world would change, so they created a way to update it through amendments, or official changes. The first ten amendments are called the Bill of Rights, added in 1791 to protect basic freedoms like freedom of speech and religion. Since then, 17 more amendments have been added. For example, the 13th Amendment ended slavery, and the 19th Amendment gave women the right to vote. These changes show that the Constitution can grow and adapt with the country."
         }
       ],
       "flashcards": [
         {
           "id": "social-studies-us-101-l01-f1",
           "front": "Declaration of Independence",
-          "back": "Document adopted July 4, 1776, declaring the 13 colonies free from British rule; written primarily by Thomas Jefferson"
+          "back": "Document adopted July 4, 1776, declaring the 13 colonies free from British rule; written primarily by Thomas Jefferson."
         },
         {
           "id": "social-studies-us-101-l01-f2",
           "front": "US Constitution",
-          "back": "The supreme law of the United States, written in 1787; establishes the structure of government and protects citizens' rights"
+          "back": "The supreme law of the United States, written in 1787; it establishes the structure of government and protects citizens' rights."
         },
         {
           "id": "social-studies-us-101-l01-f3",
           "front": "'Taxation without representation'",
-          "back": "The colonists' complaint that they paid British taxes but had no voice in the British Parliament"
+          "back": "The colonists' complaint that they paid British taxes but had no voice in the British Parliament."
         },
         {
           "id": "social-studies-us-101-l01-f4",
           "front": "Amendment",
-          "back": "A formal change or addition to the Constitution; 27 amendments have been ratified so far"
+          "back": "A formal change or addition to the Constitution. There are 27 amendments in total."
         }
       ],
       "learningAids": [
         {
           "id": "social-studies-us-101-l01-a1",
           "type": "image",
-          "title": "Timeline: Road to Independence",
-          "content": "Timeline from the Stamp Act (1765) → Boston Tea Party (1773) → Declaration of Independence (1776) → Constitution (1787)."
+          "title": "Timeline: Road to a New Nation",
+          "content": "Illustrated timeline showing key events: Stamp Act (1765) → Boston Tea Party (1773) → Declaration of Independence (1776) → Constitution (1787)."
+        },
+        {
+          "id": "social-studies-us-101-l01-a2",
+          "type": "image",
+          "title": "From a King to 'We the People'",
+          "content": "Infographic comparing rule by a monarch (power flows from the top down) to a democracy (power flows from the people up to the government)."
         }
       ]
     },
@@ -176,11 +182,11 @@ export const SocialStudiesUs101Module: LearningModule = {
               },
               {
                 "id": "l2",
-                "label": "Congress overrides a veto with 2/3 vote"
+                "label": "Congress overrides a veto with a 2/3 vote"
               },
               {
                 "id": "l3",
-                "label": "Supreme Court strikes down a law as unconstitutional"
+                "label": "Supreme Court declares a law unconstitutional"
               },
               {
                 "id": "l4",
@@ -231,7 +237,13 @@ export const SocialStudiesUs101Module: LearningModule = {
           "id": "social-studies-us-101-l02-a1",
           "type": "mnemonic",
           "title": "Branch Jobs",
-          "content": "Legislative = Laws, Executive = Enforce, Judicial = Judge. Remember: L-E-J."
+          "content": "Legislative = Laws, Executive = Enforces, Judicial = Judges. Remember: L-E-J."
+        },
+        {
+          "id": "social-studies-us-101-l02-a2",
+          "type": "image",
+          "title": "Diagram: Checks and Balances",
+          "content": "A visual diagram showing the three branches in a triangle, with arrows pointing between them labeled with specific powers (e.g., arrow from President to Congress labeled 'Vetoes bills')."
         }
       ]
     },
@@ -264,7 +276,7 @@ export const SocialStudiesUs101Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Colonists objected to paying British taxes when they had no elected representatives in the British Parliament."
+          "explanation": "Colonists objected to paying British taxes when they had no elected representatives in the British Parliament to vote on their behalf."
         },
         {
           "id": "social-studies-us-101-l03-q2",
@@ -289,7 +301,7 @@ export const SocialStudiesUs101Module: LearningModule = {
             }
           ],
           "correctOptionId": "c",
-          "explanation": "The judicial branch (Supreme Court) has the power of judicial review — it can strike down laws that violate the Constitution."
+          "explanation": "The judicial branch, led by the Supreme Court, has the power of judicial review, which allows it to strike down laws that violate the Constitution."
         },
         {
           "id": "social-studies-us-101-l03-q3",
@@ -314,7 +326,7 @@ export const SocialStudiesUs101Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": "'We the People' means popular sovereignty — the government gets its authority from the people, not from a monarch or ruling class."
+          "explanation": "'We the People' establishes the principle of popular sovereignty — the idea that the government gets its authority from the people."
         },
         {
           "id": "social-studies-us-101-l03-q4",
@@ -368,14 +380,7 @@ export const SocialStudiesUs101Module: LearningModule = {
         "adaptive": false,
         "masteryThreshold": 0.75
       },
-      "learningAids": [
-        {
-          "id": "social-studies-us-101-l03-a1",
-          "type": "mnemonic",
-          "title": "Three Branches",
-          "content": "Congress makes laws, the President enforces laws, the Supreme Court interprets laws."
-        }
-      ]
+      "learningAids": []
     },
     {
       "id": "social-studies-us-101-l04",
@@ -391,44 +396,44 @@ export const SocialStudiesUs101Module: LearningModule = {
         {
           "id": "social-studies-us-101-l04-c1",
           "title": "The Bill of Rights",
-          "content": "The Bill of Rights is a very important part of the United States Constitution. It is made up of the first ten amendments, which were officially approved in 1791. These amendments are designed to protect the rights of individuals and ensure that everyone is treated fairly under the law. For instance, the 1st Amendment is particularly significant because it guarantees several freedoms that are essential to a democratic society. This includes the freedom of speech, which allows people to express their thoughts and opinions openly. It also protects the freedom of religion, meaning that individuals can practice any faith they choose or none at all. Additionally, it covers the freedom of the press, the right to assemble peacefully, and the right to petition the government for changes. The 2nd Amendment is another key part of the Bill of Rights, as it protects the right of individuals to own and carry weapons, known as the right to bear arms. The 4th Amendment plays a crucial role in protecting citizens from unreasonable searches and seizures, ensuring that law enforcement must have a good reason to search someone's property. The 5th Amendment is also vital because it guarantees the right to due process, which means that everyone is entitled to fair treatment in the legal system. It also protects individuals from being forced to testify against themselves, which is an important safeguard against self-incrimination. Finally, the 6th Amendment ensures that anyone accused of a crime has the right to a speedy and public trial. This is essential for maintaining fairness and transparency in the justice system, allowing the accused to defend themselves in front of a jury of their peers. Overall, the Bill of Rights is fundamental in protecting individual freedoms and ensuring justice in the United States.\nContext recap: The Bill of Rights is a very important part of the United States Constitution. It is made up of the first ten amendments, which were officially approved in 1791. These amendments are designed to protect the rights of individuals and ensure that everyone is treated fairly under the law. For instance, the 1st Amendment is particularly significant because it guarantees several freedoms that are essential to a democratic society.\nWhy this matters: The Bill of Rights helps learners in Social Studies US connect ideas from Social Studies: United States to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "The Bill of Rights is the first ten amendments to the Constitution, added in 1791. They protect our most important individual freedoms. The 1st Amendment protects five key freedoms: speech, religion, the press, peaceful assembly, and the right to petition the government. The 2nd Amendment protects the right to bear arms. The 4th Amendment protects us from unreasonable searches. The 5th and 6th Amendments guarantee fair treatment in the legal system, including the right to a speedy trial and the right to remain silent."
         },
         {
           "id": "social-studies-us-101-l04-c2",
-          "title": "Rights vs Responsibilities",
-          "content": "Rights are the freedoms that every person has, and it is the government's job to protect these rights for all citizens. This means that the government must ensure that everyone can enjoy their freedoms without fear or unfair treatment. On the other hand, responsibilities are the important duties that each citizen must take on to help keep our democracy strong and working well. For example, some of these responsibilities include obeying the laws that are in place to keep everyone safe, paying taxes to support public services, serving on a jury when asked, voting in elections to choose our leaders, and staying informed about what is happening in our communities. It is very important to remember that rights and responsibilities are connected; a healthy democracy depends on both citizens using their rights and fulfilling their responsibilities to one another and to society as a whole.\nContext recap: Rights are the freedoms that every person has, and it is the government's job to protect these rights for all citizens. This means that the government must ensure that everyone can enjoy their freedoms without fear or unfair treatment. On the other hand, responsibilities are the important duties that each citizen must take on to help keep our democracy strong and working well. For example, some of these responsibilities include obeying the laws that are in place to keep everyone safe, paying taxes to support public services, serving on a jury when asked, voting in elections to choose our leaders, and staying informed about what is happening in our communities."
+          "title": "Rights vs. Responsibilities",
+          "content": "In a democracy, citizens have both rights and responsibilities. Rights are freedoms the government must protect, like freedom of speech. Responsibilities are duties we perform to help our country run well. These include obeying laws, paying taxes, serving on a jury if called, and voting in elections. A healthy democracy needs citizens who both exercise their rights and fulfill their responsibilities."
         },
         {
           "id": "social-studies-us-101-l04-c3",
           "title": "Landmark Amendments",
-          "content": "In addition to the Bill of Rights, which outlines many important freedoms, there are several other amendments to the Constitution that have significantly shaped our nation. One of the most important is the 13th Amendment, which was ratified in 1865. This amendment abolished slavery, which means it made it illegal to own another person as property. This was a huge step toward achieving equality for all people in the United States.\nNext, we have the 14th Amendment, adopted in 1868. This amendment guarantees that all citizens are treated equally under the law, meaning everyone has the same rights and protections, regardless of their background. This was a vital change that helped to ensure fairness in our legal system.\nThe 15th Amendment, ratified in 1870, made it illegal to deny someone the right to vote based on their race. This was an important advancement in the fight for civil rights, as it aimed to ensure that all citizens could participate in choosing their leaders.\nThen, in 1920, the 19th Amendment was passed, which granted women the right to vote. This was a major milestone in the movement for gender equality and allowed women to have a voice in democracy.\nFinally, the 26th Amendment, ratified in 1971, lowered the voting age to 18. This change allowed younger citizens to engage in the democratic process and have a say in the decisions that affect their lives. Each of these amendments plays a crucial role in expanding rights and ensuring that everyone has a voice in our democracy.\nContext recap: In addition to the Bill of Rights, which outlines many important freedoms, there are several other amendments to the Constitution that have significantly shaped our nation. One of the most important is the 13th Amendment, which was ratified in 1865. This amendment abolished slavery, which means it made it illegal to own another person as property. This was a huge step toward achieving equality for all people in the United States.\nWhy this matters: Landmark Amendments helps learners in Social Studies US connect ideas from Social Studies: United States to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "Beyond the Bill of Rights, other amendments have made America more free and fair. The 13th Amendment (1865) abolished slavery. The 14th Amendment (1868) granted citizenship and equal protection under the law to all people born in the US. The 15th Amendment (1870) gave voting rights to men of all races. The 19th Amendment (1920) gave women the right to vote. And the 26th Amendment (1971) lowered the voting age to 18. These amendments expanded freedom to more people."
         },
         {
           "id": "social-studies-us-101-l04-c4",
           "title": "Rights in Daily Life",
-          "content": "Every day, you have the opportunity to exercise your rights in many different ways. For example, when you read a newspaper or browse a website, you are enjoying your freedom of the press, which allows information to be shared openly. If you go to a church, mosque, or synagogue, you are practicing your freedom of religion, which lets you choose how to express your beliefs. Joining a school club is another way to use your freedom of assembly, where you can come together with others who share your interests. Additionally, when you share your thoughts about a school policy or any topic, you are exercising your freedom of speech, which is important for voicing your opinions. Understanding your rights is very important because it helps you know how to protect them. When you are aware of your rights, you can participate actively and confidently in your community and society, making your voice heard and contributing to positive change.\nContext recap: Every day, you have the opportunity to exercise your rights in many different ways. For example, when you read a newspaper or browse a website, you are enjoying your freedom of the press, which allows information to be shared openly. If you go to a church, mosque, or synagogue, you are practicing your freedom of religion, which lets you choose how to express your beliefs. Joining a school club is another way to use your freedom of assembly, where you can come together with others who share your interests.\nWhy this matters: Rights in Daily Life helps learners in Social Studies US connect ideas from Social Studies: United States to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "You use your rights every day, maybe without even realizing it! When you share your opinion in class, you're using your freedom of speech. When you read the news online, you're benefiting from freedom of the press. If you attend a religious service or join a school club, you are using your freedoms of religion and assembly. Understanding your rights helps you become an active and engaged citizen who can stand up for yourself and others."
         }
       ],
       "flashcards": [
         {
           "id": "social-studies-us-101-l04-f1",
           "front": "1st Amendment",
-          "back": "Protects five freedoms: speech, religion, press, assembly, and petition"
+          "back": "Protects five freedoms: speech, religion, press, assembly, and petition."
         },
         {
           "id": "social-studies-us-101-l04-f2",
           "front": "13th Amendment",
-          "back": "Abolished slavery in the United States (1865)"
+          "back": "Abolished slavery in the United States (1865)."
         },
         {
           "id": "social-studies-us-101-l04-f3",
           "front": "19th Amendment",
-          "back": "Gave women the right to vote (1920)"
+          "back": "Gave women the right to vote (1920)."
         },
         {
           "id": "social-studies-us-101-l04-f4",
-          "front": "Civic responsibility",
-          "back": "Duties of citizens: obey laws, pay taxes, vote, serve on juries, stay informed"
+          "front": "Civic Responsibility",
+          "back": "Duties of citizens, such as obeying laws, paying taxes, voting, and serving on juries."
         }
       ],
       "learningAids": [
@@ -436,7 +441,13 @@ export const SocialStudiesUs101Module: LearningModule = {
           "id": "social-studies-us-101-l04-a1",
           "type": "mnemonic",
           "title": "1st Amendment Freedoms",
-          "content": "RAPPS: Religion, Assembly, Press, Petition, Speech."
+          "content": "Remember RAPPS: Religion, Assembly, Press, Petition, Speech."
+        },
+        {
+          "id": "social-studies-us-101-l04-a2",
+          "type": "image",
+          "title": "T-Chart: Rights vs. Responsibilities",
+          "content": "A simple T-chart graphic. The left column is titled 'Rights (Freedoms You Have)' with examples like 'Free Speech' and 'Fair Trial'. The right column is titled 'Responsibilities (Duties You Do)' with examples like 'Vote' and 'Obey Laws'."
         }
       ]
     },
@@ -446,8 +457,8 @@ export const SocialStudiesUs101Module: LearningModule = {
       "type": "interactive",
       "duration": 12,
       "objectives": [
-        "Describe how US presidential elections work",
-        "Explain what the Electoral College does",
+        "Describe the basic steps of a US presidential election",
+        "Explain the role of the Electoral College",
         "Give reasons why voting is important in a democracy"
       ],
       "metadata": {
@@ -457,6 +468,13 @@ export const SocialStudiesUs101Module: LearningModule = {
           "Describe what happens on Election Day from a voter's perspective."
         ]
       },
+      "chunks": [
+        {
+          "id": "social-studies-us-101-l05-c1",
+          "title": "Why Voting Matters",
+          "content": "In a democracy, the power of the government comes from the people. The most important way people use that power is by voting. When you vote, you help choose the leaders who will make decisions about your community, state, and country. Elections are how we hold leaders accountable and make our voices heard on important issues. It is both a right and a key responsibility of being a citizen."
+        }
+      ],
       "interactiveActivities": [
         {
           "id": "social-studies-us-101-l05-ia1",
@@ -520,7 +538,7 @@ export const SocialStudiesUs101Module: LearningModule = {
         {
           "id": "social-studies-us-101-l05-ia2",
           "type": "sorting_buckets",
-          "title": "Rights vs Responsibilities Sort",
+          "title": "Rights vs. Responsibilities Sort",
           "description": "Classify each item as a right or a civic responsibility.",
           "estimatedMinutes": 6,
           "difficultyLevel": "easy",
@@ -575,7 +593,7 @@ export const SocialStudiesUs101Module: LearningModule = {
           "id": "social-studies-us-101-l05-a1",
           "type": "image",
           "title": "Electoral College Map",
-          "content": "US map showing Electoral College votes per state, with total of 538 and 270 needed to win."
+          "content": "US map showing Electoral College votes per state, with a total of 538 and the 'magic number' of 270 needed to win highlighted."
         }
       ]
     },
@@ -633,7 +651,7 @@ export const SocialStudiesUs101Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": "The right to bear arms is the 2nd Amendment. The 1st Amendment covers speech, religion, press, assembly, and petition (RAPPS)."
+          "explanation": "The right to bear arms is protected by the 2nd Amendment. The 1st Amendment covers speech, religion, press, assembly, and petition (RAPPS)."
         },
         {
           "id": "social-studies-us-101-l06-q3",
@@ -717,7 +735,7 @@ export const SocialStudiesUs101Module: LearningModule = {
           "id": "social-studies-us-101-l06-a1",
           "type": "mnemonic",
           "title": "Electoral Math",
-          "content": "538 total electors = 435 House + 100 Senate + 3 DC. Need 270 to win."
+          "content": "538 total electors = 435 House + 100 Senate + 3 for D.C. You need 270 to win!"
         }
       ]
     },
@@ -735,44 +753,44 @@ export const SocialStudiesUs101Module: LearningModule = {
         {
           "id": "social-studies-us-101-l07-c1",
           "title": "Five Regions of the United States",
-          "content": "The United States is divided into five distinct regions, each showcasing its own unique features and characteristics. These regions are known as the Northeast, Southeast, Midwest, Southwest, and West. In the Northeast, you can find beautiful mountains and bustling cities, while the Southeast is known for its warm climate and rich history. The Midwest is often called the 'Heartland' and is famous for its flat plains and agriculture. The Southwest is characterized by deserts and canyons, while the West boasts stunning mountains and coastlines. Each region has its own climate, landforms, and cultural influences, which are all shaped by geography. By learning about these regions, we can better appreciate the wonderful diversity of our country and understand how geography impacts the lives of the people who live there.\nContext recap: The United States is divided into five distinct regions, each showcasing its own unique features and characteristics. These regions are known as the Northeast, Southeast, Midwest, Southwest, and West. In the Northeast, you can find beautiful mountains and bustling cities, while the Southeast is known for its warm climate and rich history. The Midwest is often called the 'Heartland' and is famous for its flat plains and agriculture.\nWhy this matters: Five Regions of the United States helps learners in Social Studies US connect ideas from Social Studies: United States to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "The United States is a huge country, often divided into five main regions: the Northeast, Southeast, Midwest, Southwest, and West. Each region has its own unique geography, climate, and culture. For example, the landforms and weather in a region often shape the jobs people have and the way they live. Learning about these regions helps us understand the diversity of America."
         },
         {
           "id": "social-studies-us-101-l07-c2",
           "title": "Northeast and Southeast",
-          "content": "The Northeast region of the United States is home to some of the most famous cities, including New York City and Boston. This area experiences cold winters, which can bring snow and chilly temperatures. The coastlines here are rocky and beautiful, making it a unique place to visit. Historically, the Northeast played a crucial role in the early development of America, as many important events took place here. On the other hand, the Southeast region stretches all the way from Virginia down to sunny Florida. This region is known for its warm and humid climate, which is perfect for growing a variety of crops. The Appalachian Mountains run through this area, providing stunning views and outdoor activities. The Mississippi River delta is also located in the Southeast, which is an important area for wildlife and nature. Agriculture is a big part of life here, with farmers growing crops like cotton, tobacco, and delicious citrus fruits. Additionally, tourism is a key industry, as many people come to explore the beautiful landscapes and learn about the rich history of this region.\nContext recap: The Northeast region of the United States is home to some of the most famous cities, including New York City and Boston. This area experiences cold winters, which can bring snow and chilly temperatures. The coastlines here are rocky and beautiful, making it a unique place to visit. Historically, the Northeast played a crucial role in the early development of America, as many important events took place here.\nWhy this matters: Northeast and Southeast helps learners in Social Studies US connect ideas from Social Studies: United States to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "The Northeast has big cities like New York City and Boston, rocky coastlines, and cold, snowy winters. Its many ports and rivers led to early growth in shipping and industry. The Southeast, stretching from Virginia to Florida, is known for its warm, humid climate. This weather is perfect for farming crops like cotton and citrus fruits. The region also includes the Appalachian Mountains and the Mississippi River delta, making tourism a major industry."
         },
         {
           "id": "social-studies-us-101-l07-c3",
           "title": "Midwest and Southwest",
-          "content": "The Midwest region of the United States stretches from Ohio all the way to the Dakotas and is often called 'America's Breadbasket.' This nickname comes from the region's flat Great Plains, which provide excellent conditions for growing important crops such as wheat, corn, and soybeans. These crops are vital for feeding people not just in the United States, but around the world! Additionally, the Midwest is home to the Great Lakes, which are a group of five large lakes: Superior, Michigan, Huron, Erie, and Ontario. These lakes are incredibly important because they hold about 20% of the world's fresh surface water, making them a crucial resource for drinking water and recreation. On the other hand, the Southwest region includes states like Texas, New Mexico, and Arizona. This area is famous for its unique landscapes, which feature deserts, canyons, and hot, dry climates. One of the most remarkable natural wonders in the Southwest is the Grand Canyon. This massive canyon is not only stunning to look at, but it also attracts millions of visitors each year who come to hike, take pictures, and learn about its geological history. Both the Midwest and Southwest regions offer diverse environments and play important roles in the culture and economy of the United States.\nContext recap: The Midwest region of the United States stretches from Ohio all the way to the Dakotas and is often called 'America's Breadbasket.' This nickname comes from the region's flat Great Plains, which provide excellent conditions for growing important crops such as wheat, corn, and soybeans. These crops are vital for feeding people not just in the United States, but around the world! Additionally, the Midwest is home to the Great Lakes, which are a group of five large lakes: Superior, Michigan, Huron, Erie, and Ontario. These lakes are incredibly important because they hold about 20% of the world's fresh surface water, making them a crucial resource for drinking water and recreation."
+          "content": "The Midwest is often called 'America's Breadbasket' because its flat, fertile plains are perfect for growing corn and wheat. It's also home to the Great Lakes, which provide fresh water and shipping routes. The Southwest, including states like Arizona and Texas, is known for its deserts, canyons, and hot, dry climate. Natural wonders like the Grand Canyon attract tourists, while resources like oil and natural gas are important to its economy."
         },
         {
           "id": "social-studies-us-101-l07-c4",
           "title": "The West",
-          "content": "The West region of the United States is a fascinating and diverse area filled with incredible natural features and vibrant cities. It includes the majestic Rocky Mountains, the beautiful Pacific coast, the vast wilderness of Alaska, and the tropical paradise of Hawaii. Among these states, California stands out as the most populous state in the entire country, bustling with people and activities. The geography of the West is truly varied; you can find snowy mountains perfect for skiing, lush green forests that are home to many animals, volcanic islands that are unique and beautiful, and dry deserts that are full of surprises. This region is also known for its major industries that help drive the economy. For example, Silicon Valley is famous for its technology companies, Hollywood is the heart of the entertainment industry, and there are also important activities like fishing and timber harvesting that play a significant role in the local economy. Exploring the West offers a glimpse into the rich and varied landscape of the United States, making it a unique place to learn about and visit.\nContext recap: The West region of the United States is a fascinating and diverse area filled with incredible natural features and vibrant cities. It includes the majestic Rocky Mountains, the beautiful Pacific coast, the vast wilderness of Alaska, and the tropical paradise of Hawaii. Among these states, California stands out as the most populous state in the entire country, bustling with people and activities. The geography of the West is truly varied; you can find snowy mountains perfect for skiing, lush green forests that are home to many animals, volcanic islands that are unique and beautiful, and dry deserts that are full of surprises."
+          "content": "The West is a region of dramatic landscapes, including the Rocky Mountains, the Pacific coast, and the volcanoes of Hawaii. California is the most populous state in the country. The region's diverse geography supports many industries. Technology thrives in Silicon Valley, movies are made in Hollywood, and fishing and logging are important in the Pacific Northwest. The West's wide-open spaces and natural beauty have always attracted people seeking new opportunities."
         }
       ],
       "flashcards": [
         {
           "id": "social-studies-us-101-l07-f1",
           "front": "America's Breadbasket",
-          "back": "The Midwest region — its Great Plains produce much of the nation's wheat, corn, and soybeans"
+          "back": "A nickname for the Midwest region, where its Great Plains produce much of the nation's wheat, corn, and soybeans."
         },
         {
           "id": "social-studies-us-101-l07-f2",
           "front": "Great Lakes (HOMES)",
-          "back": "Huron, Ontario, Michigan, Erie, Superior — the five Great Lakes on the US-Canada border"
+          "back": "Huron, Ontario, Michigan, Erie, Superior — the five large freshwater lakes on the US-Canada border."
         },
         {
           "id": "social-studies-us-101-l07-f3",
           "front": "Grand Canyon",
-          "back": "A massive canyon in Arizona carved by the Colorado River; one of the Southwest's most famous landmarks"
+          "back": "A massive canyon in Arizona carved by the Colorado River; one of the Southwest's most famous landmarks."
         },
         {
           "id": "social-studies-us-101-l07-f4",
           "front": "Five US Regions",
-          "back": "Northeast, Southeast, Midwest, Southwest, West"
+          "back": "Northeast, Southeast, Midwest, Southwest, and West."
         }
       ],
       "learningAids": [
@@ -780,7 +798,13 @@ export const SocialStudiesUs101Module: LearningModule = {
           "id": "social-studies-us-101-l07-a1",
           "type": "image",
           "title": "US Regions Map",
-          "content": "Color-coded map of the five US regions with major states, landforms, and cities labeled."
+          "content": "A color-coded map of the five US regions with major states, landforms, and cities labeled."
+        },
+        {
+          "id": "social-studies-us-101-l07-a2",
+          "type": "image",
+          "title": "A Glimpse into Each Region",
+          "content": "A photo collage with one iconic image for each region: a skyscraper for the Northeast, a sunny beach for the Southeast, a wheat field for the Midwest, a desert canyon for the Southwest, and a mountain range for the West."
         }
       ]
     },
@@ -801,6 +825,13 @@ export const SocialStudiesUs101Module: LearningModule = {
           "Name one national landmark you would like to visit and explain why it is important to American history."
         ]
       },
+      "chunks": [
+        {
+          "id": "social-studies-us-101-l08-c1",
+          "title": "What Are National Symbols?",
+          "content": "Every country has symbols—special objects, images, or songs that represent its identity, values, and history. In the United States, these symbols help unite people from different backgrounds and remind us of our shared story. The American flag, the bald eagle, and the national anthem are all symbols that stand for the ideas of freedom, strength, and patriotism."
+        }
+      ],
       "interactiveActivities": [
         {
           "id": "social-studies-us-101-l08-ia1",
@@ -924,7 +955,13 @@ export const SocialStudiesUs101Module: LearningModule = {
           "id": "social-studies-us-101-l08-a1",
           "type": "image",
           "title": "Map Reading Guide",
-          "content": "Annotated map showing compass rose (N/S/E/W), map legend, and scale bar with example distances."
+          "content": "An annotated map showing a compass rose (N/S/E/W), a map legend (explaining what symbols like stars and lines mean), and a scale bar with example distances."
+        },
+        {
+          "id": "social-studies-us-101-l08-a2",
+          "type": "image",
+          "title": "Image Gallery: US National Symbols",
+          "content": "A gallery of high-quality images showing the American Flag, a Bald Eagle, and the Liberty Bell, each with a short caption explaining its meaning."
         }
       ]
     },
@@ -1084,44 +1121,44 @@ export const SocialStudiesUs101Module: LearningModule = {
         {
           "id": "social-studies-us-101-l10-c1",
           "title": "Colonial America (1600s–1770s)",
-          "content": "In the early 1600s, a group of brave English settlers made a remarkable decision that would change history forever. They founded Jamestown, Virginia in 1607, marking it as the very first permanent English colony in America. This was an important moment because it opened the door for more settlers to come to the New World. Then, in 1620, another group known as the Pilgrims arrived at Plymouth, Massachusetts. They were on a quest for religious freedom, hoping to find a place where they could practice their beliefs without fear. By the time we reached the 1770s, there were 13 colonies that stretched along the East Coast of what we now call the United States. These colonies were not just waiting for orders from Britain; they started to create their own self-governing assemblies. This meant they could make decisions about their own lives and communities. However, as the years went by, disagreements began to grow between the colonies and Britain, especially over important issues like taxes and who should control the colonies' affairs. This growing tension would eventually lead to significant changes in American history.\nContext recap: In the early 1600s, a group of brave English settlers made a remarkable decision that would change history forever. They founded Jamestown, Virginia in 1607, marking it as the very first permanent English colony in America. This was an important moment because it opened the door for more settlers to come to the New World. Then, in 1620, another group known as the Pilgrims arrived at Plymouth, Massachusetts.\nWhy this matters: Colonial America (1600s–1770s) helps learners in Social Studies US connect ideas from Social Studies: United States to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "In the 1600s, settlers from England began building colonies in North America. Jamestown, Virginia (1607) was the first permanent English settlement. In 1620, the Pilgrims arrived at Plymouth, Massachusetts, seeking religious freedom. Over time, 13 colonies grew along the East Coast. These colonies developed their own local governments, but they were still ruled by Great Britain, which eventually led to conflict."
         },
         {
           "id": "social-studies-us-101-l10-c2",
           "title": "Revolution and a New Nation (1775–1800)",
-          "content": "The Revolutionary War, which lasted from 1775 to 1783, was a very important event in American history. This war was fought by the American colonies to gain their independence from British rule. During this time, several remarkable leaders stepped forward to guide the colonies. One of the most famous was George Washington, who was the Commander-in-Chief of the Continental Army. He later became the first President of the United States, helping to shape the new nation. Another key figure was Benjamin Franklin, who was not only a talented inventor but also an important diplomat who helped secure support for the colonies. Thomas Jefferson played a crucial role as well; he wrote the Declaration of Independence, which declared the colonies' freedom from Britain. In 1788, the United States ratified the Constitution, which set up the rules for how the government would work. Then, in 1791, the Bill of Rights was added to ensure that individual freedoms were protected. Finally, Washington, D.C. was chosen as the capital of the new nation, marking the start of a new chapter in American history.\nContext recap: The Revolutionary War, which lasted from 1775 to 1783, was a very important event in American history. This war was fought by the American colonies to gain their independence from British rule. During this time, several remarkable leaders stepped forward to guide the colonies. One of the most famous was George Washington, who was the Commander-in-Chief of the Continental Army.\nWhy this matters: Revolution and a New Nation (1775–1800) helps learners in Social Studies US connect ideas from Social Studies: United States to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "The American Revolutionary War (1775–1783) was fought for independence from Britain. George Washington led the Continental Army and became the first president. Thomas Jefferson wrote the Declaration of Independence, and Benjamin Franklin served as a key diplomat. After the war, the new nation created the Constitution in 1787 and added the Bill of Rights in 1791, establishing a government that has lasted for over 200 years."
         },
         {
           "id": "social-studies-us-101-l10-c3",
           "title": "Westward Expansion (1800s)",
-          "content": "The 1800s were a remarkable time in American history, marked by significant changes and expansion. One of the most important events was the Louisiana Purchase in 1803, which doubled the size of the United States. This vast new land was explored by the famous explorers Lewis and Clark, who traveled through the territory and shared their discoveries with the nation. During this time, many people believed in the idea of 'Manifest Destiny.' This belief held that the United States was meant to grow from the Atlantic Ocean all the way to the Pacific Ocean. Because of this belief, many settlers were inspired to move westward in search of new opportunities and adventures. The Oregon Trail became a well-known path for those heading west, and the Gold Rush of 1849 brought thousands of hopeful miners looking to find gold and become wealthy. The completion of the transcontinental railroad in 1869 was another major milestone, as it connected the eastern and western parts of the country like never before. However, it is important to remember that this expansion had serious consequences for Native American peoples, who were often forcibly removed from their lands. One of the most tragic events during this time was the Trail of Tears in the 1830s, where many Native Americans were displaced from their homes. Understanding these events helps us learn about the complexities of our nation's history and the impact of expansion on different communities.\nContext recap: The 1800s were a remarkable time in American history, marked by significant changes and expansion. One of the most important events was the Louisiana Purchase in 1803, which doubled the size of the United States. This vast new land was explored by the famous explorers Lewis and Clark, who traveled through the territory and shared their discoveries with the nation. During this time, many people believed in the idea of 'Manifest Destiny.' This belief held that the United States was meant to grow from the Atlantic Ocean all the way to the Pacific Ocean.\nWhy this matters: Westward Expansion (1800s) helps learners in Social Studies US connect ideas from Social Studies: United States to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "In 1803, the Louisiana Purchase doubled the size of the United States. This kicked off a period of westward expansion, as explorers like Lewis and Clark mapped the new territory. Many Americans believed in 'Manifest Destiny'—the idea that the country was meant to stretch from the Atlantic to the Pacific. Settlers traveled west on trails like the Oregon Trail, but this expansion came at a great cost to Native American peoples, who were often forced from their lands, such as during the Trail of Tears."
         },
         {
           "id": "social-studies-us-101-l10-c4",
           "title": "The Civil War (1861–1865)",
-          "content": "The Civil War, which took place from 1861 to 1865, was a very important time in American history. This conflict was mainly about slavery, a practice that many people believed was wrong. As tensions grew, several Southern states decided to leave the United States and create their own government, called the Confederacy. This decision led to a fierce battle between the Union, which represented the Northern states, and the Confederacy, which represented the Southern states. The fighting lasted for four long years, filled with many struggles and sacrifices. One of the most important leaders during this time was President Abraham Lincoln. He worked hard to end slavery and took a major step by issuing the Emancipation Proclamation in 1863. This document declared that all enslaved people in the Confederate states should be freed. Another key figure was General Ulysses S. Grant, who led the Union army to victory. The Civil War eventually resulted in the 13th Amendment being passed in 1865, which made slavery illegal across the entire country. This was a huge step forward in the fight for equality and justice for all people in America.\nContext recap: The Civil War, which took place from 1861 to 1865, was a very important time in American history. This conflict was mainly about slavery, a practice that many people believed was wrong. As tensions grew, several Southern states decided to leave the United States and create their own government, called the Confederacy. This decision led to a fierce battle between the Union, which represented the Northern states, and the Confederacy, which represented the Southern states.\nWhy this matters: The Civil War (1861–1865) helps learners in Social Studies US connect ideas from Social Studies: United States to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "Deep disagreements over slavery led to the Civil War. Southern states seceded, or left, the United States to form the Confederacy. The war was fought between the Union (the North) and the Confederacy (the South). President Abraham Lincoln led the Union, issuing the Emancipation Proclamation in 1863 to free enslaved people in the Confederate states. The Union won the war, preserving the nation and leading to the 13th Amendment, which ended slavery everywhere in the US."
         }
       ],
       "flashcards": [
         {
           "id": "social-studies-us-101-l10-f1",
           "front": "Jamestown, 1607",
-          "back": "The first permanent English settlement in North America, in Virginia"
+          "back": "The first permanent English settlement in North America, located in Virginia."
         },
         {
           "id": "social-studies-us-101-l10-f2",
           "front": "Louisiana Purchase, 1803",
-          "back": "The US bought 828,000 square miles from France, doubling the nation's size; cost about $15 million"
+          "back": "The US bought a huge territory from France, doubling the nation's size and sparking westward expansion."
         },
         {
           "id": "social-studies-us-101-l10-f3",
           "front": "Emancipation Proclamation, 1863",
-          "back": "Executive order by President Lincoln that declared enslaved people in Confederate states to be free"
+          "back": "An order by President Lincoln that declared enslaved people in Confederate states to be free."
         },
         {
           "id": "social-studies-us-101-l10-f4",
           "front": "Trail of Tears",
-          "back": "Forced relocation of Native American nations (especially Cherokee) from southeastern US to Oklahoma in the 1830s"
+          "back": "The forced relocation of Native American nations from the southeastern US to Oklahoma in the 1830s, causing thousands of deaths."
         }
       ],
       "learningAids": [
@@ -1130,6 +1167,12 @@ export const SocialStudiesUs101Module: LearningModule = {
           "type": "image",
           "title": "US History Timeline",
           "content": "Illustrated timeline: Jamestown (1607) → Pilgrims (1620) → Revolution (1776) → Constitution (1787) → Louisiana Purchase (1803) → Civil War (1861–1865)."
+        },
+        {
+          "id": "social-studies-us-101-l10-a2",
+          "type": "image",
+          "title": "Portraits of Key Leaders",
+          "content": "A gallery of portraits for George Washington, Thomas Jefferson, and Abraham Lincoln, each with a one-sentence caption describing their main contribution."
         }
       ]
     },
@@ -1145,11 +1188,18 @@ export const SocialStudiesUs101Module: LearningModule = {
       ],
       "metadata": {
         "prompts": [
-          "What does 'E Pluribus Unum' mean, and why is it the US motto?",
+          "What does 'E Pluribus Unum' mean, and why is it a fitting motto for the US?",
           "Name one cultural tradition in your community that came from another country.",
           "Why is the United States sometimes called a 'nation of immigrants'?"
         ]
       },
+      "chunks": [
+        {
+          "id": "social-studies-us-101-l11-c1",
+          "title": "A Nation of Immigrants",
+          "content": "The United States has always been a nation of immigrants—people who move from other countries to make a new home here. From the first colonists to people arriving today, immigrants have brought their unique foods, music, languages, and traditions. This has created a rich and diverse American culture. The US motto, 'E Pluribus Unum,' is Latin for 'Out of Many, One.' It means that out of many different peoples and cultures, we come together to form one nation."
+        }
+      ],
       "interactiveActivities": [
         {
           "id": "social-studies-us-101-l11-ia1",
@@ -1278,6 +1328,12 @@ export const SocialStudiesUs101Module: LearningModule = {
           "type": "mnemonic",
           "title": "US Motto",
           "content": "E Pluribus Unum = 'Out of Many, One' — many people and cultures united as one nation."
+        },
+        {
+          "id": "social-studies-us-101-l11-a2",
+          "type": "image",
+          "title": "Infographic: A Nation of Immigrants",
+          "content": "A visual showing a map of the world with arrows pointing to the United States, surrounded by icons representing food, music, and art, illustrating cultural contributions from around the globe."
         }
       ]
     },
@@ -1335,7 +1391,7 @@ export const SocialStudiesUs101Module: LearningModule = {
             }
           ],
           "correctOptionId": "c",
-          "explanation": "The Louisiana Purchase bought 828,000 square miles from France for about $15 million, doubling the nation's territory."
+          "explanation": "The Louisiana Purchase from France for about $15 million doubled the nation's territory and spurred westward expansion."
         },
         {
           "id": "social-studies-us-101-l12-q3",
@@ -1437,44 +1493,44 @@ export const SocialStudiesUs101Module: LearningModule = {
         {
           "id": "social-studies-us-101-l13-c1",
           "title": "The Scenario",
-          "content": "Imagine that your town council has found an extra $500,000 in their budget this year! This is a wonderful opportunity to make some improvements in your community. The council is considering three exciting proposals that could really make a difference. The first option is to build a brand new community park, which would include a fun playground where children can play and families can spend time together. The second option is to hire five more police officers, which could help keep our town safe and secure for everyone. The third option is to repair the roads and sidewalks that many people use every day, making it easier and safer for everyone to walk or ride their bikes. To decide which proposal to support, the town will hold a public hearing. At this hearing, every citizen will have the chance to speak for two minutes about which proposal they think is the best. How would you present your ideas and make your case to the council? What reasons would you give to support your choice? Think about how each option could impact your community and the people who live there. This is a great chance to share your thoughts and help shape the future of your town!\nContext recap: Imagine that your town council has found an extra $500,000 in their budget this year! This is a wonderful opportunity to make some improvements in your community. The council is considering three exciting proposals that could really make a difference. The first option is to build a brand new community park, which would include a fun playground where children can play and families can spend time together.\nWhy this matters: The Scenario helps learners in Social Studies US connect ideas from Social Studies: United States to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "Imagine your town council has an extra $500,000 in its budget. They are considering three options: 1) Build a new community park with a playground, 2) Hire five more police officers to improve safety, or 3) Repair crumbling roads and sidewalks. The council will hold a public hearing where any citizen can speak for two minutes to support one of the proposals. Which option would you choose, and how would you convince the council?"
         },
         {
           "id": "social-studies-us-101-l13-c2",
           "title": "Gathering Evidence",
-          "content": "When we make decisions that impact our community, it's really important to use evidence instead of just relying on what we think or feel. For instance, if you're supporting the idea of building a new park, research indicates that communities with parks often see a 20% decrease in youth crime. This is a big deal because it means safer places for kids to play and grow. On the other hand, if you're in favor of hiring more police officers, you could highlight that the average time it takes for police to respond to emergencies in our town is 12 minutes. This is longer than the state average of just 8 minutes, which suggests we might need more help to keep everyone safe. Alternatively, if you believe we should focus on fixing our roads, you can point out that 34% of the roads in our town are considered to be in 'poor condition.' This means that many roads are not safe to drive on, which can lead to accidents. Each of these proposals is backed by real data, which can help our town council make better decisions for everyone in the community.\nContext recap: When we make decisions that impact our community, it's really important to use evidence instead of just relying on what we think or feel. For instance, if you're supporting the idea of building a new park, research indicates that communities with parks often see a 20% decrease in youth crime. This is a big deal because it means safer places for kids to play and grow. On the other hand, if you're in favor of hiring more police officers, you could highlight that the average time it takes for police to respond to emergencies in our town is 12 minutes."
+          "content": "A strong argument uses evidence, not just opinions. For the park, you could cite studies showing that parks can reduce youth crime by 20%. For more police, you could point out that your town's emergency response time is 12 minutes, while the state average is only 8. For road repair, you could mention that a recent report found 34% of your town's roads are in 'poor condition.' Using facts makes your argument much more persuasive."
         },
         {
           "id": "social-studies-us-101-l13-c3",
           "title": "Making Your Argument",
-          "content": "When it's your turn to speak at the public hearing, it's really important to organize your two-minute speech in a clear and effective way. First, start by stating your position clearly. This means you should tell everyone which proposal you support and why you think it's the best choice. Next, you should provide two specific reasons that explain your viewpoint. Make sure to include evidence to back up your claims, like facts or statistics that help others understand why your opinion matters. It's also a good idea to think about one counter-argument, which is a point that someone who disagrees with you might make. Addressing this shows that you understand the other side of the issue and can respond thoughtfully. Finally, wrap up your speech with a strong call to action. This is where you encourage the council to consider your perspective seriously. For example, you might say, 'I support the road repair proposal because 34% of our roads are in poor condition, which causes an average of $200 in damage to each car every year. While I understand that the park is important, I believe that fixing our roads affects every resident on a daily basis.' This way, you make your argument clear and persuasive! Remember, speaking confidently and respectfully can make a big difference in how your message is received.\nContext recap: When it's your turn to speak at the public hearing, it's really important to organize your two-minute speech in a clear and effective way. First, start by stating your position clearly. This means you should tell everyone which proposal you support and why you think it's the best choice. Next, you should provide two specific reasons that explain your viewpoint.\nWhy this matters: Making Your Argument helps learners in Social Studies US connect ideas from Social Studies: United States to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "To make an effective two-minute speech, structure it clearly. First, state your position. Second, give two reasons supported by evidence. Third, acknowledge a counter-argument (what someone who disagrees might say) and explain why your choice is still better. Finally, end with a strong call to action, urging the council to vote for your proposal. For example: 'I support road repair because 34% of our roads are unsafe. While a park would be nice, safe roads benefit every single resident every day.'"
         },
         {
           "id": "social-studies-us-101-l13-c4",
           "title": "How the Vote Works",
-          "content": "In our local government, the town council plays an important role in making decisions that affect our community. When there is a proposal or idea that needs to be discussed, the council first listens to the opinions and concerns of the citizens during a public hearing. This is a chance for everyone to share their thoughts! After hearing from the community, the town council will hold a vote to decide which proposal they will support. To win this vote, a proposal needs to get a simple majority, which means that more than half of the council members must agree on it. The council members are elected by the residents of the town, which means they are chosen to represent the voices and opinions of the people living there. If you disagree with the decision made by the council, don’t worry! You have several ways to make your voice heard. You can attend the next council meeting to share your thoughts, write a letter to your council member to express your opinion, or even participate in the next election to help influence future decisions. This whole process is a wonderful example of democracy in action at the local level, where every person's voice truly matters and can make a difference.\nContext recap: In our local government, the town council plays an important role in making decisions that affect our community. When there is a proposal or idea that needs to be discussed, the council first listens to the opinions and concerns of the citizens during a public hearing. This is a chance for everyone to share their thoughts! After hearing from the community, the town council will hold a vote to decide which proposal they will support.\nWhy this matters: How the Vote Works helps learners in Social Studies US connect ideas from Social Studies: United States to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "After the public hearing, the elected town council members will vote. A proposal usually needs a simple majority (more than half the votes) to pass. These council members were elected to represent the citizens, so public input is very important. If you disagree with the council's final decision, you can continue to participate by attending future meetings, writing to your representative, or voting in the next election. This is democracy in action at the local level."
         }
       ],
       "flashcards": [
         {
           "id": "social-studies-us-101-l13-f1",
-          "front": "Town council",
-          "back": "A group of elected officials who govern a town or city; they pass local laws and set budgets"
+          "front": "Town Council",
+          "back": "A group of elected officials who govern a town or city; they pass local laws and set budgets."
         },
         {
           "id": "social-studies-us-101-l13-f2",
-          "front": "Public hearing",
-          "back": "A meeting where citizens can speak to government officials about proposed decisions"
+          "front": "Public Hearing",
+          "back": "A meeting where citizens can speak to government officials about proposed decisions."
         },
         {
           "id": "social-studies-us-101-l13-f3",
-          "front": "Simple majority",
-          "back": "More than half of the votes — the threshold for most local government decisions"
+          "front": "Simple Majority",
+          "back": "More than half of the votes — the number needed to pass most local government decisions."
         },
         {
           "id": "social-studies-us-101-l13-f4",
-          "front": "Evidence-based argument",
-          "back": "A position supported by facts and data, not just personal opinion"
+          "front": "Evidence-Based Argument",
+          "back": "A position supported by facts and data, not just personal opinion."
         }
       ],
       "learningAids": [
@@ -1482,7 +1538,13 @@ export const SocialStudiesUs101Module: LearningModule = {
           "id": "social-studies-us-101-l13-a1",
           "type": "practice",
           "title": "Speech Builder",
-          "content": "Write a 2-minute speech for one of the three proposals. Include: position, two evidence-backed reasons, one counter-argument response, and a call to action."
+          "content": "Write a 2-minute speech for one of the three proposals. Include: your position, two evidence-backed reasons, a response to a counter-argument, and a call to action."
+        },
+        {
+          "id": "social-studies-us-101-l13-a2",
+          "type": "image",
+          "title": "Flowchart: Local Decision-Making Process",
+          "content": "A simple flowchart showing the steps: 1. Issue Identified → 2. Public Hearing (Citizen Input) → 3. Town Council Vote → 4. Decision Made."
         }
       ]
     },
@@ -1715,7 +1777,7 @@ export const SocialStudiesUs101Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": "President Jefferson sent Lewis and Clark to explore the territory acquired in the Louisiana Purchase (1803) from France."
+          "explanation": "President Jefferson sent Lewis and Clark to explore the vast territory acquired in the Louisiana Purchase (1803) from France."
         },
         {
           "id": "social-studies-us-101-l15-q5",

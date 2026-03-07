@@ -17,11 +17,20 @@ export async function GET(request: Request) {
   const gate = await requireFeature("goal_setting", request);
   if (gate) return gate;
 
+  const supabase = await createSupabaseServerClient();
+  const {
+    data: { user },
+    error: authError,
+  } = await supabase.auth.getUser();
+
+  if (authError || !user) {
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  }
+
   const url = new URL(request.url);
   const profileId = url.searchParams.get("profileId");
   if (!profileId) return NextResponse.json({ error: "profileId required" }, { status: 400 });
 
-  const supabase = await createSupabaseServerClient();
   const { data } = await supabase
     .from("learning_goals")
     .select("id, goal_type, target, current, period_start")
@@ -39,6 +48,16 @@ export async function POST(request: Request) {
   const gate = await requireFeature("goal_setting", request);
   if (gate) return gate;
 
+  const supabase = await createSupabaseServerClient();
+  const {
+    data: { user },
+    error: authError,
+  } = await supabase.auth.getUser();
+
+  if (authError || !user) {
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  }
+
   const body = await request.json().catch(() => ({}));
   const parsed = createSchema.safeParse(body);
   if (!parsed.success) {
@@ -46,10 +65,21 @@ export async function POST(request: Request) {
   }
 
   const { profileId, goalType, target } = parsed.data;
-  const admin = createSupabaseAdminClient();
+
+  // Verify profile ownership via query (RLS will also handle this if policies exist)
+  const { data: profile } = await supabase
+    .from("student_profiles")
+    .select("id")
+    .eq("id", profileId)
+    .eq("account_id", user.id)
+    .maybeSingle();
+
+  if (!profile) {
+    return NextResponse.json({ error: "Forbidden" }, { status: 403 });
+  }
 
   // Deactivate existing goals of same type
-  await admin
+  await supabase
     .from("learning_goals")
     .update({ is_active: false })
     .eq("profile_id", profileId)
@@ -57,7 +87,7 @@ export async function POST(request: Request) {
 
   // Create new goal
   const periodStart = new Date().toISOString().slice(0, 10);
-  const { data, error } = await admin
+  const { data, error } = await supabase
     .from("learning_goals")
     .insert({
       profile_id: profileId,

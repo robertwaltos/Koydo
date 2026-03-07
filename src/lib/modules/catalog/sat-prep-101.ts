@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const SatPrep101Module: LearningModule = {
+export const sat_prep_101_Module: LearningModule = {
   "id": "sat-prep-101",
   "title": "SAT Prep Foundations",
   "description": "Master the math, reading, and writing skills tested on the SAT. Covers Heart of Algebra, Problem Solving & Data Analysis, Evidence-Based Reading & Writing, and proven test-taking strategies to maximize your score.",
@@ -14,7 +14,7 @@ export const SatPrep101Module: LearningModule = {
   ],
   "minAge": 14,
   "maxAge": 19,
-  "version": "3.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en",
@@ -44,29 +44,32 @@ export const SatPrep101Module: LearningModule = {
         {
           "id": "sat-prep-101-l01-c1",
           "title": "Linear Equations and Inequalities",
-          "content": "The Heart of Algebra is a key component of the SAT math section, representing about one-third of all the math questions you will face on the test. This section focuses on linear equations and inequalities, which are essential concepts in algebra. A linear equation is a mathematical expression that can be represented in the form ax + b = c. In this equation, 'x' is the variable we want to solve for, and it has an exponent of 1, which means it is not squared or cubed. To find the value of 'x', we need to isolate it by performing inverse operations on both sides of the equation.\nFor example, consider the equation 2x + 5 = 13. To solve for 'x', we start by subtracting 5 from both sides. This simplifies the equation to 2x = 8. Next, we divide both sides by 2, which gives us the solution x = 4. This process of isolating the variable is crucial for solving linear equations effectively.\nNow, let's talk about linear inequalities, which are similar to linear equations but have a key difference. When you work with inequalities, you must remember one important rule: if you multiply or divide both sides of an inequality by a negative number, you must flip the inequality sign. For instance, if you start with the inequality -3x > 12 and divide both sides by -3, the inequality sign flips, resulting in x < -4.\nUnderstanding how to solve both linear equations and inequalities is essential for doing well on the SAT. These concepts will help you tackle a variety of problems, so make sure to practice them thoroughly. With a solid grasp of these topics, you'll be better prepared to succeed on the math section of the SAT and achieve your academic goals.\nContext recap: The Heart of Algebra is a key component of the SAT math section, representing about one-third of all the math questions you will face on the test. This section focuses on linear equations and inequalities, which are essential concepts in algebra. A linear equation is a mathematical expression that can be represented in the form ax + b = c. In this equation, 'x' is the variable we want to solve for, and it has an exponent of 1, which means it is not squared or cubed.\nWhy this matters: Linear Equations and Inequalities helps learners in Exam Prep connect ideas from SAT Prep Foundations to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "The 'Heart of Algebra' section makes up about a third of the SAT math test. It focuses on linear equations and inequalities. A linear equation, like `2x + 5 = 13`, involves a variable (like 'x') that isn't squared or cubed. To solve it, your goal is to get the variable by itself. For `2x + 5 = 13`, you'd first subtract 5 from both sides to get `2x = 8`, then divide by 2 to find that `x = 4`. Linear inequalities are similar, but use symbols like < or >. There's one crucial rule to remember: if you multiply or divide both sides of an inequality by a negative number, you must flip the inequality sign. For example, solving `-3x > 12` requires dividing by -3, which flips the sign to get `x < -4`. Mastering these skills is the first step to acing the SAT math section.",
+          "visualPrompt": "An animation showing the steps to solve `2x + 5 = 13`. The '-5' appears on both sides, then the '/2' appears on both sides, isolating 'x'."
         },
         {
           "id": "sat-prep-101-l01-c2",
           "title": "Translating Word Problems",
-          "content": "The SAT often presents algebra problems in the context of real-life situations, which can make them seem more relatable and easier to understand. To tackle these problems effectively, it's important to translate the words into mathematical expressions. For example, when you see the word 'is,' it indicates equality, which is represented by the symbol '='. Similarly, phrases like 'more than' or 'greater than' suggest that you should add numbers together, while 'less than' indicates that you should subtract one number from another. The word 'of' typically means you will multiply, and 'per' indicates that you will divide.\nLet’s look at a practical example: if a plumber charges $50 for a service call and then $35 for each hour of work, you can express this situation mathematically as C = 50 + 35h. In this equation, C represents the total cost, and h represents the number of hours the plumber works. This way, you can easily calculate the total cost based on the hours worked.\nAdditionally, you may come across systems of equations in some problems. These occur when two conditions must be true at the same time. For example, if you have two different equations that describe a situation, you will need to set them up and solve them using methods like substitution or elimination. Understanding how to translate words into math and how to work with systems of equations is crucial for success on the SAT math section. By practicing these skills, you will become more confident in solving various types of algebra problems.\nContext recap: The SAT often presents algebra problems in the context of real-life situations, which can make them seem more relatable and easier to understand. To tackle these problems effectively, it's important to translate the words into mathematical expressions. For example, when you see the word 'is,' it indicates equality, which is represented by the symbol '='. Similarly, phrases like 'more than' or 'greater than' suggest that you should add numbers together, while 'less than' indicates that you should subtract one number from another.\nWhy this matters: Translating Word Problems helps learners in Exam Prep connect ideas from SAT Prep Foundations to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "The SAT uses word problems to test your algebra skills in real-world scenarios. The key is to translate words into math. Look for keywords: 'is' usually means '=', 'of' means multiply, 'per' means divide, 'more than' means add, and 'less than' means subtract. For example, if a plumber charges a $50 flat fee plus $35 per hour, you can model the total cost (C) for 'h' hours with the equation `C = 35h + 50`. Sometimes, a problem will have two conditions that must be true at the same time, which means you'll need to set up and solve a system of two equations using methods like substitution or elimination.",
+          "visualPrompt": "A graphic organizer with two columns. Left column: 'Keywords' (is, of, per, more than). Right column: 'Math Symbol' (=, x, /, +)."
         },
         {
           "id": "sat-prep-101-l01-c3",
           "title": "Functions and Notation",
-          "content": "In mathematics, a function is a unique relationship that connects each input to exactly one output. This means that for every value you put into the function, there is one specific result that comes out. For example, when you see the notation f(x) = 2x + 3, it tells you that f(x) is the output of the function f when you use x as the input. To find out what f(4) is, you simply replace every instance of 'x' in the equation with 4. So, you would calculate it like this: f(4) = 2(4) + 3. When you do the math, you find that f(4) equals 11. Understanding functions is important for the SAT, as it may include questions about function composition, which is when you combine two functions together, written as f(g(x)). You will also need to be able to read and interpret graphs of functions, as well as grasp concepts like domain and range. On a graph, the point where f(x) = 0 is significant because it shows where the curve crosses the x-axis; these points are called the zeros or roots of the function. Additionally, to find the y-intercept, you evaluate f(0), which tells you the output when the input x is zero. This knowledge is essential for solving various problems on the SAT and will help you understand how functions work in different contexts.\nContext recap: In mathematics, a function is a unique relationship that connects each input to exactly one output. This means that for every value you put into the function, there is one specific result that comes out. For example, when you see the notation f(x) = 2x + 3, it tells you that f(x) is the output of the function f when you use x as the input. To find out what f(4) is, you simply replace every instance of 'x' in the equation with 4.\nWhy this matters: Functions and Notation helps learners in Exam Prep connect ideas from SAT Prep Foundations to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "A function is like a machine: you put in a number (the input), and it gives you exactly one number back (the output). We use function notation like `f(x)` to describe this. For example, if you have the function `f(x) = 2x + 3`, the `f(x)` represents the output. To find `f(4)`, you just plug 4 in for 'x': `f(4) = 2(4) + 3`, which simplifies to `8 + 3 = 11`. On the SAT, you'll also need to understand function graphs. The points where a graph crosses the x-axis are its 'zeros' or 'roots'—this is where `f(x) = 0`. The point where it crosses the y-axis is the y-intercept, which you find by calculating `f(0)`.",
+          "visualPrompt": "An animation of a 'function machine'. The number 4 goes in one side, the machine shows '2(x) + 3', and the number 11 comes out the other side."
         }
       ],
       "flashcards": [
         {
           "id": "sat-prep-101-l01-f1",
           "front": "Slope-intercept form",
-          "back": "y = mx + b, where m is the slope (rise over run) and b is the y-intercept (where the line crosses the y-axis)"
+          "back": "y = mx + b, where m is the slope (rise over run) and b is the y-intercept (where the line crosses the y-axis)."
         },
         {
           "id": "sat-prep-101-l01-f2",
           "front": "Systems of equations",
-          "back": "Two or more equations with the same variables that must be true simultaneously. Solve by substitution (solve one equation for a variable, plug into the other) or elimination (add/subtract equations to cancel a variable)."
+          "back": "Two or more equations with the same variables. Solve by substitution (solve one equation for a variable, plug into the other) or elimination (add/subtract equations to cancel a variable)."
         },
         {
           "id": "sat-prep-101-l01-f3",
@@ -75,21 +78,21 @@ export const SatPrep101Module: LearningModule = {
         },
         {
           "id": "sat-prep-101-l01-f4",
-          "front": "Linear equation",
-          "back": "An equation whose graph is a straight line. Standard form: ax + b = c. Slope-intercept form: y = mx + b."
+          "front": "Inequality Rule",
+          "back": "When you multiply or divide both sides of an inequality by a negative number, you must flip the direction of the inequality sign."
         },
         {
           "id": "sat-prep-101-l01-f5",
           "front": "Y-intercept",
-          "back": "The point where a line crosses the y-axis (x = 0). In y = mx + b, the y-intercept is b."
+          "back": "The point where a line crosses the y-axis (where x = 0). In y = mx + b, the y-intercept is b. To find it from a function, calculate f(0)."
         }
       ],
       "learningAids": [
         {
           "id": "sat-prep-101-l01-a1",
           "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary of the lesson's main concept."
+          "title": "Algebra Cheat Sheet",
+          "content": "A one-page visual summary of key formulas and rules from the lesson, including slope-intercept form and function notation."
         }
       ]
     },
@@ -107,52 +110,55 @@ export const SatPrep101Module: LearningModule = {
         {
           "id": "sat-prep-101-l02-c1",
           "title": "Ratios, Proportions, and Percentages",
-          "content": "Understanding ratios, proportions, and percentages is essential in mathematics, as these concepts allow us to compare different quantities and analyze relationships effectively. Let's start with ratios. A ratio is a way to express the relationship between two quantities. For example, if you have 3 cats and 5 dogs, you can express this relationship as a ratio of 3:5 or as a fraction 3/5. This means that for every 3 cats, there are 5 dogs.\nNext, we have proportions. A proportion is an equation that states that two ratios are equal. This can be written in the form a/b = c/d, where a and b are the first ratio, and c and d are the second ratio. To solve for unknowns in proportions, we often use a method called cross-multiplication. This means you multiply the numbers diagonally across the equal sign, leading to the equation ad = bc. This technique is very useful for finding missing values in proportional relationships.\nNow, let’s talk about percentages. The term 'percent' literally means 'per hundred.' This means that when we talk about percentages, we are referring to a part of a whole that is divided into 100 equal parts. For example, to find 15% of 200, you would multiply 200 by 0.15, which gives you 30. This tells you that 15% of 200 is 30.\nAdditionally, understanding how to calculate percentage change is crucial. The formula for percentage change is ((new value - old value) / old value) × 100. For instance, if the price of an item increases from $40 to $50, you would calculate the percentage increase as follows: ((50 - 40) / 40) × 100, which results in a 25% increase.\nThe SAT often includes multi-step problems involving percentages, so it’s vital to carefully identify the base quantity, which is the 'of' quantity in these problems. Mastering these concepts will not only help you on the SAT but also in real-life situations where you need to compare and analyze data effectively.\nContext recap: Understanding ratios, proportions, and percentages is essential in mathematics, as these concepts allow us to compare different quantities and analyze relationships effectively. Let's start with ratios. A ratio is a way to express the relationship between two quantities. For example, if you have 3 cats and 5 dogs, you can express this relationship as a ratio of 3:5 or as a fraction 3/5.\nWhy this matters: Ratios, Proportions, and Percentages helps learners in Exam Prep connect ideas from SAT Prep Foundations to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "Ratios, proportions, and percentages are all about comparing quantities. A ratio compares two numbers, like 3 cats to 5 dogs (written as 3:5 or 3/5). A proportion is an equation stating that two ratios are equal, like `a/b = c/d`. You can solve these by cross-multiplying to get `ad = bc`. A percentage is just a special ratio that means 'per hundred.' To find 15% of 200, you convert 15% to a decimal (0.15) and multiply: `0.15 * 200 = 30`. You'll also need to calculate percentage change using the formula: `((New - Old) / Old) * 100`. For example, if a price goes from $40 to $50, the change is `((50 - 40) / 40) * 100`, which is a 25% increase.",
+          "visualPrompt": "A simple infographic showing the relationship: Ratio (3/5) -> Proportion (3/5 = 6/10) -> Percentage (60/100 = 60%)."
         },
         {
           "id": "sat-prep-101-l02-c2",
           "title": "Reading Tables, Charts, and Scatterplots",
-          "content": "When preparing for the SAT, you will come across different ways that data is presented. These include bar graphs, line graphs, pie charts, two-way tables, and scatterplots. Understanding how to read these visuals is crucial for answering questions accurately.\nFor tables, it's important to pay close attention to the headers of both rows and columns. Many students make mistakes by reading the wrong row or column, which can lead to incorrect answers. Take your time to ensure you are looking at the right information.\nWhen you encounter scatterplots, focus on the overall trend of the data points. If the points are moving upwards from left to right, this indicates a positive correlation. This means that as one variable increases, the other variable also increases. On the other hand, if the points are moving downwards, this indicates a negative correlation, where one variable increases while the other decreases. If the points do not show a clear pattern, it suggests that there is no correlation between the variables.\nA line of best fit can be drawn to help visualize the trend in the data. This line helps you see the general direction of the data points. To make predictions using a scatterplot, find the x-value on the line and then look for the corresponding y-value. This can help you estimate outcomes based on the data presented.\nFinally, always check the labels on the axes and the units of measurement. This ensures that you fully understand what the data represents and helps you avoid mistakes in interpretation. Being careful with these details will improve your performance on the SAT and help you feel more confident in your math skills.\nContext recap: When preparing for the SAT, you will come across different ways that data is presented. These include bar graphs, line graphs, pie charts, two-way tables, and scatterplots. Understanding how to read these visuals is crucial for answering questions accurately. For tables, it's important to pay close attention to the headers of both rows and columns.\nWhy this matters: Reading Tables, Charts, and Scatterplots helps learners in Exam Prep connect ideas from SAT Prep Foundations to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "The SAT uses various graphs and tables to present data. When you see a table, always read the row and column headers carefully to avoid simple mistakes. For scatterplots, look at the overall trend of the points. If they go up from left to right, it's a positive correlation (as one variable increases, so does the other). If they go down, it's a negative correlation. If they're scattered randomly, there's no correlation. A 'line of best fit' is often drawn on a scatterplot to show this trend and help you make predictions. Always double-check the labels on the x and y axes to understand what is being measured.",
+          "visualPrompt": "Side-by-side images of three scatterplots labeled 'Positive Correlation,' 'Negative Correlation,' and 'No Correlation'."
         },
         {
           "id": "sat-prep-101-l02-c3",
           "title": "Probability and Statistics Basics",
-          "content": "Understanding the basics of probability and statistics is essential for doing well on the SAT. Let's break down some important concepts! First, we have the mean, which is also known as the average. To find the mean, you add up all the values in a set and then divide that total by the number of values you added together. For example, if you have the numbers 2, 3, and 5, you would calculate the mean like this: (2 + 3 + 5) ÷ 3 = 10 ÷ 3 = approximately 3.33.\nNext, we have the median. The median is the middle value in a list of numbers that are arranged in order from the smallest to the largest. If there is an odd number of values, the median is simply the middle one. However, if there is an even number of values, you find the median by averaging the two middle numbers. For instance, in the set {2, 3, 5, 7}, the median would be (3 + 5) ÷ 2 = 4.\nThen, we have the mode, which is the number that appears most frequently in a data set. For example, in the set {1, 2, 2, 3, 4}, the mode is 2 because it appears more times than any other number.\nOn the SAT, you will need to know when to use these different measures of central tendency. The mean can be influenced by outliers, which are values that are much higher or lower than the rest. In contrast, the median is more stable and less affected by these outliers.\nNow, let’s talk about probability! Probability helps us understand how likely an event is to happen. It is calculated by dividing the number of favorable outcomes by the total number of possible outcomes. For example, if you have a bag with 4 red marbles and 6 blue marbles, the total number of marbles is 10. The probability of picking a red marble would be calculated as P(red) = 4 (favorable outcomes) ÷ 10 (total outcomes) = 0.4 or 40%.\nRemember, probabilities always range from 0, which means an event is impossible, to 1, which means an event is certain to happen. Understanding these concepts will help you tackle the math section of the SAT with confidence!\nContext recap: Understanding the basics of probability and statistics is essential for doing well on the SAT. Let's break down some important concepts! First, we have the mean, which is also known as the average. To find the mean, you add up all the values in a set and then divide that total by the number of values you added together.\nWhy this matters: Probability and Statistics Basics helps learners in Exam Prep connect ideas from SAT Prep Foundations to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "You'll need to know three key statistical measures: mean, median, and mode. Let's use the dataset {2, 3, 3, 6, 11}. The **mean** is the average; you add all the numbers and divide by how many there are: `(2+3+3+6+11) / 5 = 5`. The **median** is the middle number when the data is in order. In our set, the middle number is 3. If there were an even number of values, you'd average the two middle ones. The **mode** is the number that appears most often, which is 3 in our example. The mean can be skewed by very high or low numbers (outliers), while the median is not. Probability is the chance of an event happening, calculated as `Favorable Outcomes / Total Possible Outcomes`. If a bag has 4 red and 6 blue marbles (10 total), the probability of picking a red one is 4/10, or 40%.",
+          "visualPrompt": "A graphic showing the dataset {2, 3, 3, 6, 11} with arrows pointing to the 'Mean (5)', 'Median (3)', and 'Mode (3)' with brief calculation callouts."
         }
       ],
       "flashcards": [
         {
           "id": "sat-prep-101-l02-f1",
           "front": "Percentage change formula",
-          "back": "((New Value - Old Value) / Old Value) × 100. A positive result is a percentage increase; negative is a decrease."
+          "back": "((New Value - Old Value) / Old Value) × 100. A positive result is a percentage increase; a negative result is a decrease."
         },
         {
           "id": "sat-prep-101-l02-f2",
           "front": "Median vs. Mean",
-          "back": "Mean is the arithmetic average (sum ÷ count). Median is the middle value in sorted data. Median is preferred when outliers are present because it is not affected by extreme values."
+          "back": "Mean is the average. Median is the middle value in a sorted list. The median is less affected by extreme outliers."
         },
         {
           "id": "sat-prep-101-l02-f3",
           "front": "Scatterplot correlation",
-          "back": "Positive correlation: points trend upward (both variables increase together). Negative correlation: points trend downward (one increases, the other decreases). No correlation: no visible pattern."
+          "back": "Positive correlation: points trend upward. Negative correlation: points trend downward. No correlation: no visible pattern."
         },
         {
           "id": "sat-prep-101-l02-f4",
-          "front": "Ratio",
-          "back": "A comparison of two quantities. If there are 3 cats and 5 dogs, the ratio is 3:5 or 3/5."
+          "front": "Proportion",
+          "back": "An equation where two ratios are equal (e.g., a/b = c/d). Solve by cross-multiplying."
         },
         {
           "id": "sat-prep-101-l02-f5",
           "front": "Probability",
-          "back": "The chance of an event occurring. P = favorable outcomes ÷ total outcomes. Always between 0 (impossible) and 1 (certain)."
+          "back": "The chance of an event occurring. P = (Favorable Outcomes) / (Total Possible Outcomes). Always a value between 0 (impossible) and 1 (certain)."
         }
       ],
       "learningAids": [
         {
           "id": "sat-prep-101-l02-a1",
           "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary of the lesson's main concept."
+          "title": "Data Viz Guide",
+          "content": "A visual guide showing examples of a scatterplot, bar chart, and two-way table with labels pointing out key features to read."
         }
       ]
     },
@@ -293,7 +299,7 @@ export const SatPrep101Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Substitute x = 3 into y = 2(3) + 5 = 6 + 5 = 11."
+          "explanation": "Substitute x = 3 into the equation: y = 2(3) + 5 = 6 + 5 = 11."
         },
         {
           "id": "sat-prep-101-l03-q5",
@@ -318,14 +324,14 @@ export const SatPrep101Module: LearningModule = {
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Probability = favorable outcomes ÷ total outcomes = 5/20 = 1/4."
+          "explanation": "Total marbles = 5 + 15 = 20. Probability = (favorable outcomes) / (total outcomes) = 5/20 = 1/4."
         }
       ],
       "quizBlueprint": {
-        "totalQuestions": 3,
+        "totalQuestions": 5,
         "bloomProfile": {
-          "remember": 1,
-          "apply": 2
+          "remember": 2,
+          "apply": 3
         }
       },
       "learningAids": [
@@ -351,34 +357,47 @@ export const SatPrep101Module: LearningModule = {
         {
           "id": "sat-prep-101-l04-c1",
           "title": "Evidence-Based Reading",
-          "content": "The Reading section of the SAT is specifically designed to evaluate your ability to understand and analyze complex written passages, rather than simply memorizing facts. This means that each correct answer you select should be backed up by evidence that you can find within the text itself. When you encounter main idea questions, it's important to focus on the first and last sentences of each paragraph. These sentences often contain key information that reveals the author's central argument or main point.\nFor inference questions, you will need to think beyond the text's literal meaning. These questions ask you to understand what the passage implies, rather than what it states directly. To answer these questions effectively, look for clues within the text and use them to draw logical conclusions based on the information provided.\nVocabulary-in-context questions will present you with a specific word and ask you to choose the meaning that fits best within the context of the passage. To approach these questions successfully, try not to rely solely on the definition you are most familiar with. Instead, take a moment to re-read the sentence where the word appears and consider each answer choice carefully. Substitute each option into the sentence to see which one preserves the original meaning and makes the most sense in context. This strategy will help you select the correct answer and improve your overall performance on the SAT Reading section.\nContext recap: The Reading section of the SAT is specifically designed to evaluate your ability to understand and analyze complex written passages, rather than simply memorizing facts. This means that each correct answer you select should be backed up by evidence that you can find within the text itself. When you encounter main idea questions, it's important to focus on the first and last sentences of each paragraph. These sentences often contain key information that reveals the author's central argument or main point.\nWhy this matters: Evidence-Based Reading helps learners in Exam Prep connect ideas from SAT Prep Foundations to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "The SAT Reading section tests your ability to understand and analyze passages, not just memorize facts. Every correct answer is supported by direct evidence in the text. For 'main idea' questions, pay close attention to the first and last sentences of each paragraph, as they often summarize the key points. 'Inference' questions ask you to read between the lines—use clues from the text to make a logical conclusion. For 'vocabulary-in-context' questions, don't just pick the definition you know. Instead, substitute each answer choice into the sentence to see which one fits the meaning of the passage best.",
+          "visualPrompt": "An excerpt from a reading passage with the first and last sentences of a paragraph highlighted, with a callout box saying 'Look here for the main idea!'"
         },
         {
           "id": "sat-prep-101-l04-c2",
           "title": "Writing Conventions",
-          "content": "In the Writing section of the SAT, you will be evaluated on your grasp of standard English conventions, which are the rules that help us communicate clearly and effectively. One key concept you need to understand is subject-verb agreement. This means that the verb in a sentence must match the subject in number. For instance, we say, 'The list of items is long' instead of 'are,' because the subject here is 'list,' which is singular, not 'items,' which is plural.\nAnother important aspect is the use of commas. Commas help us separate items in a list, set off introductory phrases, and enclose non-essential information that adds detail but isn't crucial to the main point. For example, in the sentence 'After dinner, we went for a walk,' the phrase 'After dinner' is set off by a comma because it introduces the main action.\nSemicolons are another useful punctuation mark. They connect two independent clauses that are closely related but do not use a conjunction. For example, you might say, 'She studied hard; she earned an A.' This shows a strong connection between her effort and her success.\nIt's also crucial to recognize sentence fragments. These are incomplete sentences that lack either a subject or a verb, and they are always considered incorrect on the SAT. For example, 'Running through the park' is a fragment because it doesn't tell us who is running.\nLastly, be aware of run-on sentences. These occur when two independent clauses are improperly joined without the correct punctuation. You can fix run-on sentences by using a period, a semicolon, or a comma followed by a conjunction. For instance, instead of writing 'I love to read I go to the library often,' you could say, 'I love to read, and I go to the library often.' Understanding these conventions will help you perform better in the Writing section of the SAT and improve your overall writing skills.\nContext recap: In the Writing section of the SAT, you will be evaluated on your grasp of standard English conventions, which are the rules that help us communicate clearly and effectively. One key concept you need to understand is subject-verb agreement. This means that the verb in a sentence must match the subject in number. For instance, we say, 'The list of items is long' instead of 'are,' because the subject here is 'list,' which is singular, not 'items,' which is plural.\nWhy this matters: Writing Conventions helps learners in Exam Prep connect ideas from SAT Prep Foundations to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "The Writing section tests your knowledge of standard English grammar rules. A key rule is **subject-verb agreement**: a singular subject needs a singular verb. For example, 'The *list* of items *is* long' (the subject is 'list,' not 'items'). You also need to know punctuation. **Commas** separate items in a list and set off introductory or non-essential phrases. **Semicolons** connect two closely related complete sentences without a conjunction (like 'and' or 'but'). For example: 'She studied hard; she earned an A.' Finally, watch out for **sentence fragments** (incomplete thoughts) and **run-on sentences** (two sentences improperly joined), as they are always incorrect.",
+          "visualPrompt": "A split-screen graphic. Left side shows a red 'X' over a sentence fragment: 'Running through the park.' Right side shows a green checkmark next to a complete sentence: 'The dog was running through the park.'"
         },
         {
           "id": "sat-prep-101-l04-c3",
           "title": "Command of Evidence",
-          "content": "When you take the SAT, you will encounter many questions that ask you to find the part of a passage that best supports your previous answer. These questions are known as 'command of evidence' questions, and they usually come in pairs. The first question will ask you what the passage says or implies, while the second question will ask you to choose the specific lines that provide proof for your answer. This means that understanding the passage is crucial for answering these questions correctly.\nA useful strategy to tackle these questions is to focus on the evidence question first. When you read the cited portions of the passage, think carefully about which one directly supports the claim you made in your first answer. If you notice that none of the answer choices seem to back up your initial response, it might be a good idea to rethink your answer. This is a normal part of the test-taking process, and it shows that you are critically analyzing the information.\nTo make your reading and answering process smoother, consider underlining or annotating key phrases as you go through the passage. This technique will help you locate important evidence more quickly and accurately when you are answering the questions. Remember, the SAT is not just about what you know; it’s also about how well you can find and use evidence from the text to support your answers. By practicing these strategies, you will become more confident in your reading and writing skills, which will serve you well not only on the SAT but in your academic journey ahead.\nContext recap: When you take the SAT, you will encounter many questions that ask you to find the part of a passage that best supports your previous answer. These questions are known as 'command of evidence' questions, and they usually come in pairs. The first question will ask you what the passage says or implies, while the second question will ask you to choose the specific lines that provide proof for your answer. This means that understanding the passage is crucial for answering these questions correctly.\nWhy this matters: Command of Evidence helps learners in Exam Prep connect ideas from SAT Prep Foundations to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "Many SAT Reading questions come in pairs. The first asks about the passage, and the second, a 'command of evidence' question, asks you to identify which lines from the text best support your answer to the first question. A great strategy is to look at the evidence choices for the second question *first*. Read the four quoted options and see which one provides clear support for a specific claim. Then, go back and answer the first question. This ensures your answer is directly backed by the text. If none of the evidence choices support your initial idea, you may need to reconsider your answer to the first question.",
+          "visualPrompt": "An image showing a sample SAT question pair. An arrow points from the second (evidence) question to the first question with the text 'Use this to help answer this!'"
         }
       ],
       "flashcards": [
         {
           "id": "sat-prep-101-l04-f1",
           "front": "Inference (reading)",
-          "back": "A conclusion drawn from evidence in the text that is not explicitly stated. On the SAT, the correct inference is always strongly supported by specific details in the passage."
+          "back": "A conclusion drawn from evidence in the text that is not explicitly stated. The correct inference is always strongly supported by details in the passage."
         },
         {
           "id": "sat-prep-101-l04-f2",
           "front": "Subject-verb agreement",
-          "back": "The verb must match its subject in number. Watch for tricky cases: prepositional phrases between subject and verb ('The box of chocolates is here'), and inverted sentence order."
+          "back": "The verb must match its subject in number. Watch for prepositional phrases between the subject and verb (e.g., 'The box of chocolates is here')."
         },
         {
           "id": "sat-prep-101-l04-f3",
           "front": "Semicolon rule",
-          "back": "A semicolon joins two independent clauses (complete sentences) without a coordinating conjunction. Each side of the semicolon must be able to stand alone as a sentence."
+          "back": "A semicolon joins two independent clauses (complete sentences) that are closely related. Each side of the semicolon must be able to stand alone."
+        },
+        {
+          "id": "sat-prep-101-l04-f4",
+          "front": "Vocabulary-in-Context",
+          "back": "A question type that asks for the meaning of a word as it's used in the passage. Strategy: substitute the answer choices into the sentence to see which one fits best."
+        },
+        {
+          "id": "sat-prep-101-l04-f5",
+          "front": "Comma Splice",
+          "back": "An error where two independent clauses are joined only by a comma. Fix it with a period, semicolon, or a comma plus a conjunction (e.g., and, but, so)."
         }
       ]
     },
@@ -396,29 +415,32 @@ export const SatPrep101Module: LearningModule = {
         {
           "id": "sat-prep-101-l05-c1",
           "title": "Test Structure and Scoring",
-          "content": "The SAT is an important test that helps colleges understand your skills in different subjects. It is divided into two main sections: Evidence-Based Reading and Writing (often called EBRW) and Math. Each of these sections is scored on a scale from 200 to 800. This means that when you combine your scores from both sections, your total score can range from 400 to 1600.\nIn the Reading and Writing section, you will find passages that test how well you can understand what you read. You will also answer questions that focus on grammar and editing skills, which are essential for clear communication. This section challenges you to think critically about the text and to demonstrate your understanding of language mechanics.\nThe Math section is equally important and covers a variety of topics. You will encounter questions related to algebra, problem solving, data analysis, and even some advanced math concepts. It’s crucial to know that part of this section allows you to use a calculator, which can be a helpful tool for solving more complex problems. However, there is also a portion where you will need to solve problems without a calculator, so practicing both types is essential.\nOne of the best strategies for taking the SAT is to remember that there is no penalty for incorrect answers. This means you should never leave a question blank. If you are unsure of an answer, it’s better to make an educated guess. In fact, even a random guess gives you a 25% chance of getting it right! This approach can help you maximize your score and make the most of your test-taking time.\nUnderstanding the structure and scoring of the SAT can help you feel more prepared and confident on test day. Make sure to practice these strategies as you study, and remember that every question is an opportunity to showcase your knowledge and skills!\nContext recap: The SAT is an important test that helps colleges understand your skills in different subjects. It is divided into two main sections: Evidence-Based Reading and Writing (often called EBRW) and Math. Each of these sections is scored on a scale from 200 to 800. This means that when you combine your scores from both sections, your total score can range from 400 to 1600.\nWhy this matters: Test Structure and Scoring helps learners in Exam Prep connect ideas from SAT Prep Foundations to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "The SAT has two main sections: Evidence-Based Reading & Writing (EBRW) and Math. Each is scored from 200 to 800, making the total score range from 400 to 1600. The Math section has two parts: one where you can use a calculator and one where you can't. A crucial rule to know is that there is **no penalty for guessing**. You don't lose points for wrong answers. This means you should never leave a question blank. Even a random guess gives you a 1-in-4 chance of being right, so always fill in an answer for every question.",
+          "visualPrompt": "A simple diagram showing 'SAT Score = (EBRW Score: 200-800) + (Math Score: 200-800) = Total: 400-1600'."
         },
         {
           "id": "sat-prep-101-l05-c2",
           "title": "Pacing Strategies",
-          "content": "Effective time management is essential for success on the SAT, and understanding how to pace yourself can make a big difference in your performance. Let's break down the timing for each section so you can plan accordingly. In the Reading section, you will encounter 5 passages, and you have about 13 minutes to read each passage and answer the related questions. This means you need to stay focused and manage your time wisely to complete all the passages within the total of 65 minutes.\nMoving on to the Writing section, you will face 4 passages, and you should aim to spend around 9 minutes on each one. This totals 35 minutes for the entire section. It’s important to read carefully and think critically about the questions, but also to keep an eye on the clock.\nIn the Math section, the timing is a bit different. For the no-calculator part, you should aim to spend about 75 seconds on each question. In the calculator section, you can take a little more time, about 85 seconds per question.\nOne of the most important strategies to remember is to avoid getting stuck on any one question. If you find that a question is taking you longer than 90 seconds, it’s a smart move to mark it, make your best guess, and then move on to the next question. This way, you can maximize your score by answering as many questions as possible. If you have time left at the end, you can always go back to the questions you marked.\nLastly, keep in mind that easier questions are worth the same number of points as the harder ones. So, it’s a good strategy to answer all the questions you feel confident about first. This approach will help you build momentum and ensure that you make the most of your time on the test.\nContext recap: Effective time management is essential for success on the SAT, and understanding how to pace yourself can make a big difference in your performance. Let's break down the timing for each section so you can plan accordingly. In the Reading section, you will encounter 5 passages, and you have about 13 minutes to read each passage and answer the related questions. This means you need to stay focused and manage your time wisely to complete all the passages within the total of 65 minutes.\nWhy this matters: Pacing Strategies helps learners in Exam Prep connect ideas from SAT Prep Foundations to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "Good pacing is key to finishing the SAT on time. As a general guideline, aim to spend about 75-90 seconds per question across all sections. For the Reading section, this means about 13 minutes per passage. For Writing, it's about 9 minutes per passage. The most important strategy is to not get stuck. If a question is taking too long, mark it, make your best educated guess, and move on. You can always come back if you have time at the end. Remember, easy questions are worth the same as hard ones, so answer all the ones you know first to secure those points.",
+          "visualPrompt": "A simple table showing the SAT sections (Reading, Writing, Math No-Calc, Math Calc) and the recommended time per question for each."
         },
         {
           "id": "sat-prep-101-l05-c3",
           "title": "Process of Elimination",
-          "content": "When you encounter multiple-choice questions that offer four different answer choices, it's helpful to understand how guessing works. If you guess randomly, you have a 25% chance of picking the right answer. However, if you can identify and eliminate just one wrong answer, your chances of choosing the correct one increase to 33%. If you can eliminate two incorrect answers, your odds improve even further to 50%. This is why using a smart strategy is so important!\nTo give yourself the best chance of success, start by carefully reading all four answer choices before making your final selection. Look for answers that seem obviously incorrect and cross them out. Pay attention to extreme words like 'always' or 'never,' as these can often indicate an answer that is too absolute to be correct. Additionally, if an answer contradicts information provided in the passage or question, it’s likely not the right choice. Sometimes, you might find options that sound true but don’t actually answer the specific question being asked — those should also be eliminated.\nFor math questions, there's a useful technique called backsolving. This means you take the answer choices and plug them back into the original problem to see which one fits correctly. This method can help you find the right answer more efficiently. Remember, the goal is to narrow down your options as much as possible to increase your chances of success on the test!\nContext recap: When you encounter multiple-choice questions that offer four different answer choices, it's helpful to understand how guessing works. If you guess randomly, you have a 25% chance of picking the right answer. However, if you can identify and eliminate just one wrong answer, your chances of choosing the correct one increase to 33%. If you can eliminate two incorrect answers, your odds improve even further to 50%.\nWhy this matters: Process of Elimination helps learners in Exam Prep connect ideas from SAT Prep Foundations to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "Process of elimination is your most powerful tool on a multiple-choice test. With four options, a random guess has a 25% chance of being correct. If you can confidently eliminate just one wrong answer, your odds jump to 33%. Eliminate two, and you have a 50/50 shot. Look for answer choices that are obviously wrong. These might contain extreme words like 'always' or 'never,' contradict the passage, or be true but not actually answer the question being asked. For math problems, you can sometimes use a technique called 'backsolving'—plug the answer choices back into the problem to see which one works.",
+          "visualPrompt": "A multiple-choice question with four options (A, B, C, D). Options B and D are crossed out with a red 'X', and a caption reads: 'Now it's a 50/50 guess!'"
         }
       ],
       "flashcards": [
         {
           "id": "sat-prep-101-l05-f1",
           "front": "Process of elimination",
-          "back": "A test-taking strategy where you remove clearly wrong answers before guessing. Eliminating even one choice increases your odds from 25% to 33%; eliminating two raises it to 50%."
+          "back": "A test-taking strategy where you remove clearly wrong answers before guessing. Eliminating one choice increases your odds from 25% to 33%; eliminating two raises it to 50%."
         },
         {
           "id": "sat-prep-101-l05-f2",
           "front": "Pacing strategy",
-          "back": "Budget roughly 75–90 seconds per question. If a question takes longer, mark it, guess, and move on. Answer all questions you know first — every question is worth the same number of points."
+          "back": "Budget roughly 75–90 seconds per question. If a question takes longer, mark it, guess, and move on. Answer easy questions first, as all questions are worth the same."
         },
         {
           "id": "sat-prep-101-l05-f3",
@@ -461,7 +483,7 @@ export const SatPrep101Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": "A semicolon correctly joins two independent clauses ('The experiment failed' and 'the researchers revised their hypothesis'). Option A is a comma splice. Option C is a run-on. Option D misuses the colon before a conjunction."
+          "explanation": "A semicolon correctly joins two independent clauses ('The experiment failed' and 'the researchers revised their hypothesis'). Option A is a comma splice. Option C is a run-on sentence. Option D misuses the colon."
         },
         {
           "id": "sat-prep-101-l06-q2",
@@ -486,7 +508,7 @@ export const SatPrep101Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Distribute: 2x - 6 + 4 = 18. Simplify: 2x - 2 = 18. Add 2: 2x = 20. Divide by 2: x = 10."
+          "explanation": "Distribute the 2: 2x - 6 + 4 = 18. Simplify: 2x - 2 = 18. Add 2 to both sides: 2x = 20. Divide by 2: x = 10."
         },
         {
           "id": "sat-prep-101-l06-q3",
@@ -495,19 +517,19 @@ export const SatPrep101Module: LearningModule = {
           "options": [
             {
               "id": "a",
-              "text": "Choose the longest quoted passage because it contains the most detail"
+              "text": "Choose the longest quoted passage because it contains the most detail."
             },
             {
               "id": "b",
-              "text": "Read the evidence choices first to see which one directly supports a claim, then answer both questions together"
+              "text": "Read the evidence choices first to see which one directly supports a claim, then answer both questions together."
             },
             {
               "id": "c",
-              "text": "Skip the evidence question and focus only on the first question"
+              "text": "Skip the evidence question and focus only on the first question."
             },
             {
               "id": "d",
-              "text": "Always pick the first evidence choice that mentions a keyword from the question"
+              "text": "Always pick the first evidence choice that mentions a keyword from the question."
             }
           ],
           "correctOptionId": "b",
@@ -545,32 +567,40 @@ export const SatPrep101Module: LearningModule = {
           "options": [
             {
               "id": "a",
-              "text": "Leave it blank"
+              "text": "Leave it blank."
             },
             {
               "id": "b",
-              "text": "Spend as much time as needed"
+              "text": "Spend as much time as needed to solve it."
             },
             {
               "id": "c",
-              "text": "Mark it, make your best guess, and move on"
+              "text": "Mark it, make your best guess, and move on."
             },
             {
               "id": "d",
-              "text": "Skip all remaining questions"
+              "text": "Skip the rest of the section."
             }
           ],
           "correctOptionId": "c",
-          "explanation": "Mark it, guess, and return later if time permits. There is no penalty for wrong answers, so never leave a question blank."
+          "explanation": "The best strategy is to mark the question, make an educated guess, and move on to ensure you have time for other questions. You can return later if time permits. Never leave a question blank, as there is no penalty for wrong answers."
         }
       ],
       "quizBlueprint": {
-        "totalQuestions": 3,
+        "totalQuestions": 5,
         "bloomProfile": {
-          "apply": 2,
+          "apply": 4,
           "analyze": 1
         }
-      }
+      },
+      "learningAids": [
+        {
+          "id": "sat-prep-101-l06-a1",
+          "type": "image",
+          "title": "Final Checklist",
+          "content": "A visual checklist summarizing key strategies: Pace yourself, Process of Elimination, No blank answers, Check your work."
+        }
+      ]
     }
   ]
 };

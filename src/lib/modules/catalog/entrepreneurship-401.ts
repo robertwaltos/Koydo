@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const Entrepreneurship401Module: LearningModule = {
+export const entrepreneurship_401_Module: LearningModule = {
   "id": "entrepreneurship-401",
   "title": "Entrepreneurship Mastery and Leadership",
   "description": "Level 401 curriculum in Entrepreneurship, emphasizing opportunity discovery, business modeling, capital strategy, venture operations, and real-world decision quality through structured practice and assessment.",
@@ -10,11 +10,12 @@ export const Entrepreneurship401Module: LearningModule = {
     "curriculum",
     "interactive",
     "business",
-    "innovation"
+    "innovation",
+    "leadership"
   ],
   "minAge": 16,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en"
@@ -37,8 +38,8 @@ export const Entrepreneurship401Module: LearningModule = {
         {
           "id": "entrepreneurship-401-l01-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use the structured prompt and write your reasoning before finalizing answers."
+          "title": "Visual Prompt: Constraint Map",
+          "content": "Visual: A dynamic mind map showing a central business idea surrounded by nodes representing constraints (budget, time, regulations) with connecting arrows highlighting dependencies."
         }
       ],
       "chunks": [
@@ -46,19 +47,19 @@ export const Entrepreneurship401Module: LearningModule = {
           "id": "entrepreneurship-401-l01-c1",
           "kind": "concept",
           "title": "Operating Vocabulary and Scope",
-          "content": "In Entrepreneurship at level 401, it's essential to use clear and precise language. This means we need to define the boundaries of our work, identify the specific unit we are analyzing, and ensure that everyone is using the same terms. By doing this, we can make better decisions and compare our results across different teams effectively. Clear communication helps us all stay on the same page and work towards our common goals.\nContext recap: In Entrepreneurship at level 401, it's essential to use clear and precise language. This means we need to define the boundaries of our work, identify the specific unit we are analyzing, and ensure that everyone is using the same terms. By doing this, we can make better decisions and compare our results across different teams effectively. Clear communication helps us all stay on the same page and work towards our common goals."
+          "content": "In Entrepreneurship 401, precision in language is foundational. We must clearly define the boundaries of our work and identify the specific 'unit of analysis' we are evaluating. By establishing a shared operating vocabulary, teams can make defensible decisions, compare results accurately, and maintain alignment across complex projects. Clear communication ensures that strategic intent translates directly into operational execution."
         },
         {
           "id": "entrepreneurship-401-l01-c2",
           "kind": "concept",
           "title": "Causal Thinking and Constraints",
-          "content": "To succeed in Entrepreneurship, it is crucial to understand not just the results of our actions but also the reasons behind them. This lesson focuses on mapping out our assumptions, dependencies, and any limitations we might face. By identifying the root causes of issues, we can create solutions that address the real problems instead of just treating the symptoms. This approach helps us make informed decisions that lead to better outcomes.\nContext recap: To succeed in Entrepreneurship, it is crucial to understand not just the results of our actions but also the reasons behind them. This lesson focuses on mapping out our assumptions, dependencies, and any limitations we might face. By identifying the root causes of issues, we can create solutions that address the real problems instead of just treating the symptoms. This approach helps us make informed decisions that lead to better outcomes."
+          "content": "To build resilient ventures, entrepreneurs must understand not just the results of their actions, but the underlying mechanisms driving them. This requires mapping out assumptions, dependencies, and operational constraints. By identifying the root causes of friction rather than merely treating symptoms, leaders can design robust solutions that scale effectively under pressure."
         },
         {
           "id": "entrepreneurship-401-l01-c3",
           "kind": "recap",
           "title": "Evidence and Accountability",
-          "content": "In this section, we introduce important practices that are essential for reliable execution in our projects. These include setting clear standards for evidence, maintaining a disciplined approach to logging our activities, and establishing accountability loops. These practices ensure that we can track our progress and hold ourselves responsible for our actions, which is vital for achieving success in any entrepreneurial endeavor.\nContext recap: In this section, we introduce important practices that are essential for reliable execution in our projects. These include setting clear standards for evidence, maintaining a disciplined approach to logging our activities, and establishing accountability loops. These practices ensure that we can track our progress and hold ourselves responsible for our actions, which is vital for achieving success in any entrepreneurial endeavor."
+          "content": "Reliable execution demands strict standards for evidence and accountability. This involves setting minimum quality thresholds for data before taking action, maintaining a disciplined approach to decision logging, and establishing tight accountability loops. These practices ensure that progress is measurable and that teams remain responsible for their strategic choices."
         }
       ],
       "flashcards": [
@@ -88,8 +89,8 @@ export const Entrepreneurship401Module: LearningModule = {
         {
           "id": "entrepreneurship-401-l02-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use the structured prompt and write your reasoning before finalizing answers."
+          "title": "Visual Prompt: Workflow Builder",
+          "content": "Visual: A drag-and-drop interface showing raw inputs on the left, processing stages in the middle, and output metrics on the right, with warning icons for missing checkpoints."
         }
       ],
       "chunks": [
@@ -97,13 +98,13 @@ export const Entrepreneurship401Module: LearningModule = {
           "id": "entrepreneurship-401-l02-c1",
           "kind": "practice",
           "title": "Workflow Construction",
-          "content": "In this interactive lab, learners will have the opportunity to create a comprehensive workflow for discovering business opportunities and developing business models. This includes identifying the necessary inputs, setting up checkpoints to monitor progress, defining expected outputs, and establishing rollback triggers to address any issues that arise. This hands-on experience will help learners understand the importance of structured processes in entrepreneurship.\nContext recap: In this interactive lab, learners will have the opportunity to create a comprehensive workflow for discovering business opportunities and developing business models. This includes identifying the necessary inputs, setting up checkpoints to monitor progress, defining expected outputs, and establishing rollback triggers to address any issues that arise. This hands-on experience will help learners understand the importance of structured processes in entrepreneurship."
+          "content": "In this interactive lab, you will architect a comprehensive workflow for discovering opportunities and validating business models. You will identify necessary inputs, establish quality checkpoints to monitor progress, define expected outputs, and set rollback triggers to mitigate risks. This hands-on experience demonstrates how structured processes transform chaotic ideas into predictable, scalable operations."
         },
         {
           "id": "entrepreneurship-401-l02-c2",
           "kind": "recap",
           "title": "Decision Logging",
-          "content": "In this recap, we emphasize the importance of logging every decision made during the entrepreneurial process. Each decision should be accompanied by a clear rationale, an expected effect, and a verification point. This practice allows us to analyze our choices after the fact, helping us learn from our experiences and improve our decision-making skills in future projects.\nContext recap: In this recap, we emphasize the importance of logging every decision made during the entrepreneurial process. Each decision should be accompanied by a clear rationale, an expected effect, and a verification point. This practice allows us to analyze our choices after the fact, helping us learn from our experiences and improve our decision-making skills in future projects."
+          "content": "A critical component of workflow management is the decision log. Every strategic choice must be documented with its underlying rationale, expected effect, and a specific verification point. This practice creates an institutional memory, allowing teams to conduct post-mortems, learn from miscalculations, and continuously refine their decision-making frameworks."
         }
       ],
       "interactiveActivities": [
@@ -171,8 +172,8 @@ export const Entrepreneurship401Module: LearningModule = {
         {
           "id": "entrepreneurship-401-l03-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use the structured prompt and write your reasoning before finalizing answers."
+          "title": "Visual Prompt: Decision Matrix",
+          "content": "Visual: A 2x2 decision matrix highlighting 'High Impact / Low Effort' in the top right quadrant to guide strategic prioritization."
         }
       ],
       "questions": [
@@ -287,8 +288,8 @@ export const Entrepreneurship401Module: LearningModule = {
         {
           "id": "entrepreneurship-401-l04-a1",
           "type": "mnemonic",
-          "title": "Guided Practice",
-          "content": "Use the structured prompt and write your reasoning before finalizing answers."
+          "title": "Visual Prompt: Metric Dashboard",
+          "content": "Visual: A dashboard with three gauges: Leading (speedometer), Lagging (finish line flag), and Diagnostic (check-engine light)."
         }
       ],
       "chunks": [
@@ -296,19 +297,19 @@ export const Entrepreneurship401Module: LearningModule = {
           "id": "entrepreneurship-401-l04-c1",
           "kind": "concept",
           "title": "Method Selection",
-          "content": "When selecting methods for our entrepreneurial projects, we must consider various factors such as constraints, the quality of information available, and the potential cost of making mistakes. In this lesson, learners will compare different alternatives and justify their chosen methods based on specific scenarios in entrepreneurship. This critical thinking process is essential for making informed decisions that can lead to successful outcomes.\nContext recap: When selecting methods for our entrepreneurial projects, we must consider various factors such as constraints, the quality of information available, and the potential cost of making mistakes. In this lesson, learners will compare different alternatives and justify their chosen methods based on specific scenarios in entrepreneurship. This critical thinking process is essential for making informed decisions that can lead to successful outcomes."
+          "content": "Selecting the right operational methods requires balancing constraints, information quality, and the cost of error. In this module, you will learn to evaluate competing methodologies and justify your selections based on specific entrepreneurial scenarios. Critical thinking at this stage prevents costly pivots later and ensures resource allocation aligns with strategic priorities."
         },
         {
           "id": "entrepreneurship-401-l04-c2",
           "kind": "example",
           "title": "Metric Architecture",
-          "content": "A well-structured metric architecture is crucial for any entrepreneurial team. It connects leading indicators, which predict future performance, with lagging outcomes, which reflect past results, and diagnostic measures that help us understand our current situation. By establishing this framework, teams can detect any deviations from their goals early on and respond thoughtfully, ensuring they stay on track toward success.\nContext recap: A well-structured metric architecture is crucial for any entrepreneurial team. It connects leading indicators, which predict future performance, with lagging outcomes, which reflect past results, and diagnostic measures that help us understand our current situation. By establishing this framework, teams can detect any deviations from their goals early on and respond thoughtfully, ensuring they stay on track toward success."
+          "content": "A robust metric architecture is the nervous system of a venture. It links leading indicators (which predict future performance) with lagging outcomes (which confirm past results) and diagnostic measures (which explain the 'why' behind the data). This tri-fold framework enables leaders to detect deviations early and pivot proactively rather than reacting to stale data."
         },
         {
           "id": "entrepreneurship-401-l04-c3",
           "kind": "recap",
           "title": "Failure Taxonomy",
-          "content": "In this recap, we categorize failures into four main groups: data-related issues, process problems, execution errors, and governance challenges. By organizing failures this way, we can create specific plans to address each type of issue rather than using generic solutions. This targeted approach helps us learn from our mistakes and improve our processes in the future.\nContext recap: In this recap, we categorize failures into four main groups: data-related issues, process problems, execution errors, and governance challenges. By organizing failures this way, we can create specific plans to address each type of issue rather than using generic solutions. This targeted approach helps us learn from our mistakes and improve our processes in the future."
+          "content": "Not all failures are created equal. By categorizing failures into a taxonomy—such as data-related issues, process breakdowns, execution errors, and governance gaps—teams can design highly targeted interventions. This structured approach to failure analysis transforms setbacks into systemic upgrades, fostering a culture of continuous, intelligent iteration."
         }
       ],
       "flashcards": [
@@ -331,15 +332,15 @@ export const Entrepreneurship401Module: LearningModule = {
     },
     {
       "id": "entrepreneurship-401-l05",
-      "title": "Case Studio: Improve a Entrepreneurship System",
+      "title": "Case Studio: Improve an Entrepreneurship System",
       "type": "interactive",
       "duration": 16,
       "learningAids": [
         {
           "id": "entrepreneurship-401-l05-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use the structured prompt and write your reasoning before finalizing answers."
+          "title": "Visual Prompt: Case Decomposition",
+          "content": "Visual: A magnifying glass hovering over a business case document, revealing hidden layers of constraints and trade-offs underneath."
         }
       ],
       "chunks": [
@@ -347,13 +348,13 @@ export const Entrepreneurship401Module: LearningModule = {
           "id": "entrepreneurship-401-l05-c1",
           "kind": "practice",
           "title": "Case Decomposition",
-          "content": "In this interactive case study, learners will break down a realistic entrepreneurial scenario into its key components. This includes identifying the main objective, understanding the context in which the business operates, recognizing any constraints that may limit options, and exploring various intervention strategies. Additionally, learners will take notes on the trade-offs involved in each option, which is crucial for making informed decisions.\nContext recap: In this interactive case study, learners will break down a realistic entrepreneurial scenario into its key components. This includes identifying the main objective, understanding the context in which the business operates, recognizing any constraints that may limit options, and exploring various intervention strategies. Additionally, learners will take notes on the trade-offs involved in each option, which is crucial for making informed decisions."
+          "content": "In this interactive studio, you will deconstruct a complex entrepreneurial scenario. Your task is to isolate the primary objective, map the operational context, and identify binding constraints. You will evaluate multiple intervention strategies, explicitly documenting the trade-offs of each. This mirrors the high-stakes, ambiguous environments founders navigate daily."
         },
         {
           "id": "entrepreneurship-401-l05-c2",
           "kind": "recap",
           "title": "Improvement Proposal",
-          "content": "In this recap, learners will present a structured improvement proposal based on their analysis of the case study. This proposal will include clear success criteria, mapping out who is responsible for each part of the plan, and establishing a timeline for follow-up actions. This exercise helps learners practice articulating their ideas and ensures they understand the importance of planning and accountability in entrepreneurship.\nContext recap: In this recap, learners will present a structured improvement proposal based on their analysis of the case study. This proposal will include clear success criteria, mapping out who is responsible for each part of the plan, and establishing a timeline for follow-up actions. This exercise helps learners practice articulating their ideas and ensures they understand the importance of planning and accountability in entrepreneurship."
+          "content": "Following your analysis, you will synthesize your findings into a formal improvement proposal. This requires defining unambiguous success criteria, assigning clear ownership for execution, and establishing a timeline for post-implementation review. Mastering this format ensures your strategic insights translate into accountable, measurable action."
         }
       ],
       "interactiveActivities": [
@@ -403,110 +404,110 @@ export const Entrepreneurship401Module: LearningModule = {
         {
           "id": "entrepreneurship-401-l06-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use the structured prompt and write your reasoning before finalizing answers."
+          "title": "Visual Prompt: System Feedback Loop",
+          "content": "Visual: An infinity loop diagram showing 'Action', 'Measurement', 'Failure Analysis', and 'Adjustment' flowing seamlessly into one another."
         }
       ],
       "questions": [
         {
           "id": "entrepreneurship-401-l06-q1",
-          "text": "Which action best improves decisions in opportunity discovery work?",
-          "skillId": "entrepreneurship-401-skill-core",
+          "text": "Which of the following best describes a leading indicator in a new venture?",
+          "skillId": "entrepreneurship-401-skill-metrics",
           "options": [
             {
               "id": "a",
-              "text": "Rely on one unverified example"
+              "text": "Total revenue earned last quarter"
             },
             {
               "id": "b",
-              "text": "Define criteria, compare alternatives, and test assumptions"
+              "text": "Number of qualified customer discovery interviews scheduled"
             },
             {
               "id": "c",
-              "text": "Skip metrics and move directly to execution"
+              "text": "The final cost of goods sold"
             },
             {
               "id": "d",
-              "text": "Avoid documenting rationale"
+              "text": "Employee turnover rate over the past year"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Explicit criteria and testable assumptions improve reliability and transferability."
+          "explanation": "Leading indicators predict future performance and allow for proactive adjustments before final outcomes are realized."
         },
         {
           "id": "entrepreneurship-401-l06-q2",
-          "text": "In business modeling, what is the strongest indicator of process quality?",
-          "skillId": "entrepreneurship-401-skill-process",
+          "text": "When diagnosing a recurring defect in product delivery, applying a failure taxonomy helps a team to:",
+          "skillId": "entrepreneurship-401-skill-failure-analysis",
           "options": [
             {
               "id": "a",
-              "text": "Output speed only"
+              "text": "Assign personal blame to the lowest-performing employee"
             },
             {
               "id": "b",
-              "text": "Traceable steps, checkpoints, and measurable outcomes"
+              "text": "Categorize the root cause to design a specific, targeted fix"
             },
             {
               "id": "c",
-              "text": "Unstructured iteration without logs"
+              "text": "Ignore data-related issues"
             },
             {
               "id": "d",
-              "text": "One-time performance anecdotes"
+              "text": "Increase the marketing budget to offset losses"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Quality processes are observable, repeatable, and measurable."
+          "explanation": "A failure taxonomy structures the analysis of errors, moving teams from generic reactions to targeted systemic fixes."
         },
         {
           "id": "entrepreneurship-401-l06-q3",
-          "text": "When evaluating capital strategy, which practice supports trustworthy conclusions?",
-          "skillId": "entrepreneurship-401-skill-eval",
+          "text": "During case decomposition, why is it critical to document the trade-offs of a proposed intervention?",
+          "skillId": "entrepreneurship-401-skill-tradeoffs",
           "options": [
             {
               "id": "a",
-              "text": "Ignore edge cases"
+              "text": "To prove that the chosen intervention has zero risks"
             },
             {
               "id": "b",
-              "text": "Use baseline comparisons and failure analysis"
+              "text": "To ensure stakeholders understand what is being sacrificed to achieve the primary goal"
             },
             {
               "id": "c",
-              "text": "Change targets after results are known"
+              "text": "To delay the decision-making process"
             },
             {
               "id": "d",
-              "text": "Remove context from findings"
+              "text": "To hide operational constraints from investors"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Baselines and failure analysis prevent overclaiming and improve design quality."
+          "explanation": "Every strategic choice involves trade-offs; documenting them ensures transparent, informed decision-making and manages expectations."
         },
         {
           "id": "entrepreneurship-401-l06-q4",
-          "text": "A mature venture operations strategy should prioritize:",
-          "skillId": "entrepreneurship-401-skill-strategy",
+          "text": "Implementing a 'post-run retrospective' after a product launch primarily improves the system by:",
+          "skillId": "entrepreneurship-401-skill-systems",
           "options": [
             {
               "id": "a",
-              "text": "Single-metric optimization at any cost"
+              "text": "Capturing lessons learned to enhance adaptation in future cycles"
             },
             {
               "id": "b",
-              "text": "Balanced outcomes across quality, risk, and sustainability"
+              "text": "Automatically generating new sales leads"
             },
             {
               "id": "c",
-              "text": "Decisions based only on intuition"
+              "text": "Preventing any future defects from occurring"
             },
             {
               "id": "d",
-              "text": "No post-implementation review"
+              "text": "Reducing the need for leading indicators"
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "Balanced scorecards align long-term performance with accountability."
+          "correctOptionId": "a",
+          "explanation": "Retrospectives create a feedback loop that captures insights, driving continuous improvement and adaptation in subsequent iterations."
         }
       ]
     }

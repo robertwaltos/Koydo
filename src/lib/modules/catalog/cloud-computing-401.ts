@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const CloudComputing401Module: LearningModule = {
+export const cloud_computing_401_Module: LearningModule = {
   "id": "cloud-computing-401",
   "title": "Cloud Strategy, Governance, and Platform Leadership",
   "description": "Expert-level cloud curriculum on enterprise platform strategy, governance operating models, reliability economics, regulatory controls, and executive decision frameworks for large-scale cloud programs.",
@@ -15,7 +15,7 @@ export const CloudComputing401Module: LearningModule = {
   ],
   "minAge": 17,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en"
@@ -35,6 +35,8 @@ export const CloudComputing401Module: LearningModule = {
       "title": "Enterprise Cloud Operating Models",
       "type": "video",
       "duration": 14,
+      "lessonImagePrompt": "Imagen 4: A futuristic, abstract representation of a corporate cloud network with glowing nodes and interconnected pathways, professional corporate style, deep blues and bright cyan accents.",
+      "conceptVideoPrompt": "Veo 3.1: A sleek 3D animation showing three distinct organizational structures—centralized, federated, and product-aligned—morphing into one another with glowing data streams, demonstrating the flow of authority and innovation.",
       "objectives": [
         "Compare centralized, federated, and product-aligned platform models",
         "Define responsibilities across platform, security, and application teams",
@@ -45,19 +47,19 @@ export const CloudComputing401Module: LearningModule = {
           "id": "cloud-computing-401-l01-c1",
           "kind": "concept",
           "title": "Operating Model Archetypes",
-          "content": "In the exciting field of cloud computing, businesses often grow and adapt through three main types of cloud operating models. The first model is called the centralized model. In this approach, a single team is responsible for setting strict standards to ensure everything is consistent and high-quality. However, while this model helps maintain quality, it can sometimes slow down how quickly services are delivered to users. The second model is known as the federated model. This model allows different teams within the organization to take charge of their own areas, while still adhering to some common guidelines. This flexibility can lead to quicker responses and more innovative solutions. Finally, we have the platform product model. In this model, the internal capabilities of the cloud are treated like products. Each capability has its own roadmap, commitments to service quality, and methods for gathering feedback from users. This approach helps ensure that the services provided are continually improving based on user needs. Many successful organizations find that by combining the federated model with a strong platform product core, they can achieve the best outcomes. This combination allows for both flexibility and high-quality service delivery, making it a powerful strategy in the cloud computing landscape.\nContext recap: In the exciting field of cloud computing, businesses often grow and adapt through three main types of cloud operating models. The first model is called the centralized model. In this approach, a single team is responsible for setting strict standards to ensure everything is consistent and high-quality. However, while this model helps maintain quality, it can sometimes slow down how quickly services are delivered to users.\nWhy this matters: Operating Model Archetypes helps learners in Computer Science connect ideas from Cloud Strategy, Governance, and Platform Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "In enterprise cloud computing, organizations typically evolve through three primary operating models. The 'Centralized' model relies on a single team to dictate strict standards, ensuring high consistency and security, but often creating bottlenecks that slow down delivery. The 'Federated' model distributes authority, allowing individual teams to manage their own environments within broad guidelines, which boosts innovation but can lead to fragmented security and duplicated efforts. Finally, the 'Platform Product' model treats internal cloud capabilities as actual products. In this model, a dedicated platform team provides self-service tools, APIs, and clear SLAs to internal developers (their 'customers'). Many successful enterprises find that combining a federated approach for application teams with a strong platform product core yields the best balance of developer velocity, security, and scalability."
         },
         {
           "id": "cloud-computing-401-l01-c2",
           "kind": "concept",
           "title": "Decision Rights and Accountability",
-          "content": "To ensure that cloud governance works effectively, it is essential to have clear definitions of who makes decisions. When roles and responsibilities are not clearly outlined, it can create confusion and lead to poor governance outcomes. Organizations must establish explicit ownership for important areas, such as making exceptions to architectural standards, approving budgets, and classifying incidents based on how serious they are. One helpful tool for clarifying these roles is RACI mapping, which identifies who is responsible, accountable, consulted, and informed for each task. This approach can help speed up the resolution of issues by making it clear who needs to take action. Additionally, governance boards should concentrate on setting the overall policy direction, while the teams that manage platforms and products should work within well-defined guidelines. This structure helps ensure that everything runs smoothly and efficiently.\nContext recap: To ensure that cloud governance works effectively, it is essential to have clear definitions of who makes decisions. When roles and responsibilities are not clearly outlined, it can create confusion and lead to poor governance outcomes. Organizations must establish explicit ownership for important areas, such as making exceptions to architectural standards, approving budgets, and classifying incidents based on how serious they are. One helpful tool for clarifying these roles is RACI mapping, which identifies who is responsible, accountable, consulted, and informed for each task.\nWhy this matters: Decision Rights and Accountability helps learners in Computer Science connect ideas from Cloud Strategy, Governance, and Platform Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "Effective cloud governance requires explicit definitions of who holds decision-making authority. Ambiguity in roles leads to delayed deployments, security vulnerabilities, and organizational friction. Enterprises must establish clear ownership for critical actions, such as approving architectural exceptions, managing cloud budgets, and classifying incident severity. A highly effective tool for this is the RACI matrix, which maps out who is Responsible, Accountable, Consulted, and Informed for every major cloud operation. In a mature model, governance boards focus on setting high-level policy direction and risk appetite, while platform and product teams are empowered to execute autonomously within those well-defined guardrails."
         },
         {
           "id": "cloud-computing-401-l01-c3",
           "kind": "recap",
           "title": "From Framework to Weekly Rhythm",
-          "content": "To ensure that cloud operating models work well, it's essential to create a consistent schedule of activities. This means holding weekly meetings to review architectural choices, monthly check-ins to confirm that everything is running reliably, quarterly assessments to prioritize which projects are most important, and annual planning sessions to prepare for future capabilities. By sticking to this regular rhythm, organizations can spot potential problems early. This proactive approach allows leaders to address issues before they escalate into serious challenges, such as service outages, audit concerns, or budget overruns that could affect the entire organization.\nContext recap: To ensure that cloud operating models work well, it's essential to create a consistent schedule of activities. This means holding weekly meetings to review architectural choices, monthly check-ins to confirm that everything is running reliably, quarterly assessments to prioritize which projects are most important, and annual planning sessions to prepare for future capabilities. By sticking to this regular rhythm, organizations can spot potential problems early. This proactive approach allows leaders to address issues before they escalate into serious challenges, such as service outages, audit concerns, or budget overruns that could affect the entire organization.\nContext recap: To ensure that cloud operating models work well, it's essential to create a consistent schedule of activities. This means holding weekly meetings to review architectural choices, monthly check-ins to confirm that everything is running reliably, quarterly assessments to prioritize which projects are most important, and annual planning sessions to prepare for future capabilities. By sticking to this regular rhythm, organizations can spot potential problems early. This proactive approach allows leaders to address issues before they escalate into serious challenges, such as service outages, audit concerns, or budget overruns that could affect the entire organization.\nWhy this matters: From Framework to Weekly Rhythm helps learners in Computer Science connect ideas from Cloud Strategy, Governance, and Platform Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "A governance framework is only as good as its execution. To ensure cloud operating models function effectively, organizations must establish a consistent operational cadence. This rhythm typically includes weekly technical reviews for architectural decisions, monthly operational check-ins to assess reliability and security metrics, quarterly business reviews to prioritize roadmap investments, and annual strategic planning to forecast future capabilities. By adhering to this structured cadence, leadership can proactively identify and mitigate risks—such as architectural drift, budget overruns, or compliance gaps—long before they escalate into critical outages or audit failures."
         }
       ],
       "flashcards": [
@@ -84,13 +86,16 @@ export const CloudComputing401Module: LearningModule = {
           "title": "Operating Model Matrix",
           "content": "Comparison matrix of centralized, federated, and platform-product cloud models with strengths and risks."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/cloud-computing-401-l01.png"
     },
     {
       "id": "cloud-computing-401-l02",
       "title": "Policy-as-Code and Compliance by Design Lab",
       "type": "interactive",
       "duration": 17,
+      "lessonImagePrompt": "Imagen 4: A glowing digital shield over a server rack with lines of code wrapping around it, representing policy-as-code, cyberpunk corporate aesthetic, high contrast.",
+      "conceptVideoPrompt": "Veo 3.1: A dynamic visualization of code moving through a CI/CD pipeline, passing through glowing green checkpoints that represent automated compliance guardrails, rejecting red anomalous code blocks.",
       "objectives": [
         "Translate regulatory controls into technical guardrails",
         "Design policy evaluation points in CI/CD and runtime",
@@ -101,13 +106,13 @@ export const CloudComputing401Module: LearningModule = {
           "id": "cloud-computing-401-l02-c1",
           "kind": "concept",
           "title": "Compliance as System Behavior",
-          "content": "In well-developed organizations, compliance is seen as a continuous part of how the system operates, rather than just a task to complete once a year. This method, called policy-as-code, makes sure that rules and standards are applied right from the start when resources are created and put into use. For instance, if certain rules are not followed, important security measures like encryption, limits on who can access information publicly, and the use of only approved software images can be automatically prevented. This ongoing enforcement of policies is crucial for keeping the environment safe and compliant, ensuring that all operations align with established standards and regulations. By integrating compliance into everyday processes, organizations can better protect their data and resources, making it a fundamental part of their operational strategy.\nContext recap: In well-developed organizations, compliance is seen as a continuous part of how the system operates, rather than just a task to complete once a year. This method, called policy-as-code, makes sure that rules and standards are applied right from the start when resources are created and put into use. For instance, if certain rules are not followed, important security measures like encryption, limits on who can access information publicly, and the use of only approved software images can be automatically prevented. This ongoing enforcement of policies is crucial for keeping the environment safe and compliant, ensuring that all operations align with established standards and regulations."
+          "content": "In mature cloud organizations, compliance is not an annual checklist; it is a continuous, automated behavior embedded directly into the system. This paradigm, known as 'Policy-as-Code', ensures that security and regulatory standards are enforced at the moment resources are provisioned. By writing governance rules in code (using tools like OPA or HashiCorp Sentinel), organizations can automatically block non-compliant actions during the CI/CD pipeline. For example, if a developer attempts to deploy an unencrypted database, expose a storage bucket to the public internet, or use an unapproved container image, the deployment is instantly halted. This 'shift-left' approach to compliance drastically reduces risk while allowing developers to move fast with confidence."
         },
         {
           "id": "cloud-computing-401-l02-c2",
           "kind": "practice",
           "title": "Evidence Supply Chain",
-          "content": "When it comes to audits, having evidence of control generated continuously can really help reduce stress. Instead of scrambling to gather everything at the last minute, you can rely on ongoing documentation. Some important types of documents to keep include logs that track how policies are evaluated, approvals for any changes made, records that show when keys were rotated, confirmations from access reviews, and notes on how incidents were resolved. The key point to remember is that there should always be a clear connection, or traceability, from the control requirements to how they are technically enforced. This means you need to have proof artifacts that clearly demonstrate compliance with those requirements. By maintaining this continuous evidence supply chain, you can make the audit process smoother and more efficient.\nContext recap: When it comes to audits, having evidence of control generated continuously can really help reduce stress. Instead of scrambling to gather everything at the last minute, you can rely on ongoing documentation. Some important types of documents to keep include logs that track how policies are evaluated, approvals for any changes made, records that show when keys were rotated, confirmations from access reviews, and notes on how incidents were resolved. The key point to remember is that there should always be a clear connection, or traceability, from the control requirements to how they are technically enforced."
+          "content": "Audits are traditionally stressful, manual, and disruptive. By building an 'Evidence Supply Chain', organizations can automate the continuous generation of compliance artifacts, turning audits into a frictionless process. Instead of scrambling for screenshots, teams rely on immutable logs that track policy evaluations, automated change approvals, cryptographic key rotations, and access recertifications. The critical principle here is traceability: there must be an unbroken, verifiable link from the high-level regulatory requirement down to the specific technical control and its corresponding automated evidence artifact. Maintaining this continuous pipeline ensures that the organization is always in a state of audit-readiness."
         }
       ],
       "interactiveActivities": [
@@ -160,13 +165,16 @@ export const CloudComputing401Module: LearningModule = {
           "title": "Compliance Traceability Canvas",
           "content": "Template linking requirement, policy control, enforcement point, and evidence artifact."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/cloud-computing-401-l02.png"
     },
     {
       "id": "cloud-computing-401-l03",
       "title": "Checkpoint 1: Governance and Controls",
       "type": "quiz",
       "duration": 10,
+      "lessonImagePrompt": "Imagen 4: A futuristic digital checkpoint gate with glowing blue and green lights, symbolizing secure cloud governance, sleek metallic textures.",
+      "conceptVideoPrompt": "Veo 3.1: A fast-paced montage of digital locks clicking open and closed as data flows securely through a futuristic network, ending with a green checkmark hologram.",
       "questions": [
         {
           "id": "cloud-computing-401-l03-q1",
@@ -276,13 +284,16 @@ export const CloudComputing401Module: LearningModule = {
           "title": "PACE Governance",
           "content": "Policy, Automation, Cadence, Evidence."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/cloud-computing-401-l03.png"
     },
     {
       "id": "cloud-computing-401-l04",
       "title": "Reliability Economics and Portfolio Prioritization",
       "type": "video",
       "duration": 14,
+      "lessonImagePrompt": "Imagen 4: A high-tech financial dashboard with holographic charts and graphs showing cloud reliability metrics, modern corporate style, dark mode with neon accents.",
+      "conceptVideoPrompt": "Veo 3.1: An animated scale balancing a stack of glowing coins on one side and a glowing server rack on the other, illustrating the cost of downtime versus prevention, with dynamic numbers ticking up.",
       "objectives": [
         "Quantify reliability investment trade-offs",
         "Use error-budget and incident-cost signals for roadmap prioritization",
@@ -293,19 +304,19 @@ export const CloudComputing401Module: LearningModule = {
           "id": "cloud-computing-401-l04-c1",
           "kind": "concept",
           "title": "Cost of Downtime vs Cost of Prevention",
-          "content": "When leaders make decisions about the reliability of cloud services, it's important to think about the economics involved. The cost of downtime is not just about losing money right away; it also includes other factors. For example, when services go down, companies may face expenses related to getting everything back up and running. Additionally, there is a risk of losing customers who might choose to go elsewhere if they experience too many outages. Companies also need to consider any fines or penalties they might face from regulators if they fail to meet certain standards. On the flip side, the costs associated with preventing downtime include the hard work of engineers who build and maintain the systems, necessary upgrades to the technology, and investments in keeping everything running smoothly. Instead of trying to eliminate all risks, the best approach is to invest in areas where reducing risk will make the biggest difference for the company and its customers.\nContext recap: When leaders make decisions about the reliability of cloud services, it's important to think about the economics involved. The cost of downtime is not just about losing money right away; it also includes other factors. For example, when services go down, companies may face expenses related to getting everything back up and running. Additionally, there is a risk of losing customers who might choose to go elsewhere if they experience too many outages.\nWhy this matters: Cost of Downtime vs Cost of Prevention helps learners in Computer Science connect ideas from Cloud Strategy, Governance, and Platform Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "When executives evaluate cloud reliability, they must weigh the economics of failure against the economics of prevention. The 'Cost of Downtime' extends far beyond immediate lost revenue; it encompasses incident response labor, SLA penalties, regulatory fines, and long-term brand damage resulting in customer churn. Conversely, the 'Cost of Prevention' includes engineering hours spent on resilience, redundant infrastructure costs, and the opportunity cost of delaying new product features. The goal of platform leadership is not to achieve 100% uptime—which is economically unfeasible—but to optimize investments where the marginal cost of preventing an outage is lower than the expected financial impact of that outage."
         },
         {
           "id": "cloud-computing-401-l04-c2",
           "kind": "concept",
           "title": "Portfolio View of Reliability Debt",
-          "content": "When we only look at one service, we might miss important details that could affect our decisions. That's why it's crucial to consider all services together, like a big picture, when we decide which ones need more attention. We should think about how important each service is to the business, how often problems happen with them, how hard it is to fix those problems, and the risks that come from services relying on each other. For example, even if a service doesn't get much traffic, it can still be very important if it supports other key tasks that the business relies on. This way, we can make smarter choices about where to focus our efforts to keep everything running smoothly.\nContext recap: When we only look at one service, we might miss important details that could affect our decisions. That's why it's crucial to consider all services together, like a big picture, when we decide which ones need more attention. We should think about how important each service is to the business, how often problems happen with them, how hard it is to fix those problems, and the risks that come from services relying on each other. For example, even if a service doesn't get much traffic, it can still be very important if it supports other key tasks that the business relies on."
+          "content": "Evaluating reliability on a per-service basis often obscures systemic risks. Platform leaders must adopt a 'Portfolio View' to prioritize technical debt remediation across the entire enterprise. This involves assessing each service based on its business criticality, historical incident frequency, mean time to recovery (MTTR), and its blast radius (how many other services depend on it). For instance, an internal authentication service might have low direct user traffic, but if it fails, it could bring down the entire customer-facing application suite. By mapping these dependencies and quantifying the risk, leaders can direct engineering resources to the architectural bottlenecks that pose the greatest economic threat to the business."
         },
         {
           "id": "cloud-computing-401-l04-c3",
           "kind": "example",
           "title": "Executive Narrative",
-          "content": "A strong executive narrative is essential for connecting recommendations to measurable outcomes in a way that everyone can understand. For instance, you might say, 'If we invest in two dedicated teams for one quarter to enhance the resilience of our service mesh, we anticipate that this will lead to a 35% reduction in the hours we spend dealing with severe incidents. This improvement could result in substantial savings in downtime costs over the course of the year.' It's important to clearly outline the assumptions that support these recommendations and to provide a range of confidence in the expected outcomes. This transparency helps to build trust and credibility with stakeholders, ensuring that everyone is on the same page regarding the potential benefits of the investment. By communicating effectively, we can foster a collaborative environment where informed decisions can be made based on shared understanding and clear expectations.\nContext recap: A strong executive narrative is essential for connecting recommendations to measurable outcomes in a way that everyone can understand. For instance, you might say, 'If we invest in two dedicated teams for one quarter to enhance the resilience of our service mesh, we anticipate that this will lead to a 35% reduction in the hours we spend dealing with severe incidents. This improvement could result in substantial savings in downtime costs over the course of the year.' It's important to clearly outline the assumptions that support these recommendations and to provide a range of confidence in the expected outcomes. This transparency helps to build trust and credibility with stakeholders, ensuring that everyone is on the same page regarding the potential benefits of the investment."
+          "content": "Securing budget for technical debt requires translating engineering metrics into a compelling executive narrative. Business leaders respond to risk reduction and ROI, not architectural jargon. A strong narrative connects a specific technical investment to a measurable business outcome. For example: 'By dedicating two engineering squads for one quarter to implement automated failover in our core payment gateway, we project a 40% reduction in Severity-1 incident duration. Based on last year's outage data, this will save the company approximately $1.2M in SLA penalties and lost transaction revenue annually.' This approach clearly outlines the investment, the expected outcome, and the financial justification, building trust and alignment with non-technical stakeholders."
         }
       ],
       "flashcards": [
@@ -332,13 +343,16 @@ export const CloudComputing401Module: LearningModule = {
           "title": "Reliability ROI Chart",
           "content": "Quadrant view plotting expected risk reduction versus engineering effort for candidate investments."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/cloud-computing-401-l04.png"
     },
     {
       "id": "cloud-computing-401-l05",
       "title": "Platform Strategy Simulation",
       "type": "interactive",
       "duration": 18,
+      "lessonImagePrompt": "Imagen 4: A strategic war room table with a glowing holographic map of global cloud regions and data flows, cinematic lighting, professional corporate environment.",
+      "conceptVideoPrompt": "Veo 3.1: A time-lapse animation of a digital roadmap building itself block by block, showing milestones lighting up as they are achieved, with dependencies connecting like glowing threads.",
       "objectives": [
         "Create a 12-month platform roadmap under budget and risk constraints",
         "Defend sequencing decisions to technical and executive stakeholders",
@@ -349,13 +363,13 @@ export const CloudComputing401Module: LearningModule = {
           "id": "cloud-computing-401-l05-c1",
           "kind": "practice",
           "title": "Case: Regulated Multi-Region Expansion",
-          "content": "Picture yourself as the leader of cloud strategy for a company that is planning to grow into three new markets that have strict rules and regulations. This is an exciting opportunity, but it also comes with some challenges that you need to tackle. Right now, your company is facing a few significant issues: there are inconsistent identity controls, which means that verifying who has access to what is not as reliable as it should be. Additionally, the number of incidents, or problems that arise, is increasing, and this can lead to potential risks. Lastly, there are delays in gathering audit evidence, which is important for proving that the company is following all the necessary regulations. You have a budget that allows for only four major projects this year, so it’s crucial to think strategically about the order in which you will implement these initiatives. Your goal is to reduce compliance risks, which are the chances of not following the rules, while still keeping up the speed of your product releases. This requires careful planning and prioritization to ensure that your company can grow successfully and responsibly.\nContext recap: Picture yourself as the leader of cloud strategy for a company that is planning to grow into three new markets that have strict rules and regulations. This is an exciting opportunity, but it also comes with some challenges that you need to tackle. Right now, your company is facing a few significant issues: there are inconsistent identity controls, which means that verifying who has access to what is not as reliable as it should be. Additionally, the number of incidents, or problems that arise, is increasing, and this can lead to potential risks.\nWhy this matters: Case: Regulated Multi-Region Expansion helps learners in Computer Science connect ideas from Cloud Strategy, Governance, and Platform Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "Imagine you are the VP of Cloud Strategy for a fintech enterprise expanding into three highly regulated international markets. You face a complex set of challenges: inconsistent identity and access management (IAM) controls across your current infrastructure, a rising trend of Severity-2 incidents due to manual deployments, and a slow, painful audit process that threatens to delay your market entry. You have the budget to execute only four major platform initiatives this year. Your task is to sequence these initiatives strategically. You must balance the urgent need to mitigate compliance risks and satisfy regulators with the business mandate to maintain high product release velocity. Every decision will require a trade-off between security, reliability, and speed."
         },
         {
           "id": "cloud-computing-401-l05-c2",
           "kind": "recap",
           "title": "Roadmap Evaluation Criteria",
-          "content": "Roadmaps are most effective when they clearly outline initiatives that are connected to measurable outcomes. This means that each step in the roadmap should have specific goals that can be tracked and evaluated. Additionally, it is important for the roadmap to explicitly state any dependencies, which are the relationships between different tasks or projects. This helps everyone understand what needs to happen first and what might be affected by changes. Furthermore, the sequencing of tasks should reflect the risks involved, meaning that more risky tasks should be planned carefully. Common indicators to monitor include the rate at which policies are successfully passed, the average time it takes to restore services after an issue, the frequency of failures during changes, and the time required to gather evidence for audits. By paying attention to these indicators, organizations can effectively manage their projects and work towards achieving successful outcomes.\nContext recap: Roadmaps are most effective when they clearly outline initiatives that are connected to measurable outcomes. This means that each step in the roadmap should have specific goals that can be tracked and evaluated. Additionally, it is important for the roadmap to explicitly state any dependencies, which are the relationships between different tasks or projects. This helps everyone understand what needs to happen first and what might be affected by changes.\nWhy this matters: Roadmap Evaluation Criteria helps learners in Computer Science connect ideas from Cloud Strategy, Governance, and Platform Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "A successful platform roadmap is more than a list of projects; it is a sequenced plan driven by measurable outcomes and clear dependencies. When evaluating your roadmap, you must ensure that foundational capabilities (like centralized identity) precede advanced automation (like multi-region failover). Furthermore, you must define 'leading indicators'—metrics that provide early signals of success or failure before the project is fully complete. Examples of strong leading indicators include the percentage of deployments passing automated policy checks, the reduction in manual audit evidence collection hours, and the adoption rate of self-service developer APIs. Tracking these metrics allows you to pivot your strategy proactively rather than reacting to lagging indicators like quarterly revenue or major outages."
         }
       ],
       "interactiveActivities": [
@@ -399,13 +413,16 @@ export const CloudComputing401Module: LearningModule = {
           "title": "Strategy Scorecard",
           "content": "One-page scorecard template linking initiative, owner, KPI, and quarterly target."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/cloud-computing-401-l05.png"
     },
     {
       "id": "cloud-computing-401-l06",
       "title": "Checkpoint 2: Strategy and Economics",
       "type": "quiz",
       "duration": 11,
+      "lessonImagePrompt": "Imagen 4: A glowing digital compass pointing towards a bright future, symbolizing strategic direction in cloud computing, set against a dark, tech-inspired background.",
+      "conceptVideoPrompt": "Veo 3.1: A dynamic fly-through of a futuristic data center with floating holographic metrics showing ROI, reliability scores, and strategic alignment indicators.",
       "questions": [
         {
           "id": "cloud-computing-401-l06-q1",
@@ -540,13 +557,16 @@ export const CloudComputing401Module: LearningModule = {
           "title": "CLEAR Decisions",
           "content": "Context, Levers, Economics, Accountability, Risk."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/cloud-computing-401-l06.png"
     },
     {
       "id": "cloud-computing-401-l07",
       "title": "Capstone: Cloud Transformation Boardroom",
       "type": "interactive",
       "duration": 20,
+      "lessonImagePrompt": "Imagen 4: A modern, sleek corporate boardroom with a large holographic display showing a comprehensive cloud transformation plan, professional lighting, high-end corporate aesthetic.",
+      "conceptVideoPrompt": "Veo 3.1: A cinematic zoom-out from a single glowing server node to a massive, interconnected global cloud network, symbolizing a complete and successful enterprise transformation.",
       "objectives": [
         "Synthesize architecture, governance, and economics into one transformation proposal",
         "Communicate strategy for technical and non-technical stakeholders",
@@ -557,13 +577,13 @@ export const CloudComputing401Module: LearningModule = {
           "id": "cloud-computing-401-l07-c1",
           "kind": "practice",
           "title": "Capstone Scenario",
-          "content": "Your mission is to develop a comprehensive proposal for a cloud transformation that is suitable for presentation to a board of directors. This proposal is intended for a large global company that must adhere to strict compliance regulations, is dealing with challenges related to outdated technology platforms, and has set ambitious goals for growth. In your proposal, you should clearly define the operating model, which outlines how the cloud services will be structured and managed. Additionally, include a strategy for controls that ensures all operations meet necessary standards and regulations. It's also important to prioritize resilience, which means planning for how the company will maintain operations during unexpected events or disruptions. Finally, outline the guidelines for financial operations, known as FinOps, to ensure that the transformation is not only effective but also financially responsible and compliant with all regulations. This proposal will be a crucial step in guiding the company through its cloud transformation journey.\nContext recap: Your mission is to develop a comprehensive proposal for a cloud transformation that is suitable for presentation to a board of directors. This proposal is intended for a large global company that must adhere to strict compliance regulations, is dealing with challenges related to outdated technology platforms, and has set ambitious goals for growth. In your proposal, you should clearly define the operating model, which outlines how the cloud services will be structured and managed. Additionally, include a strategy for controls that ensures all operations meet necessary standards and regulations.\nWhy this matters: Capstone Scenario helps learners in Computer Science connect ideas from Cloud Strategy, Governance, and Platform Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "You have reached the final challenge: presenting a comprehensive cloud transformation proposal to the Board of Directors. Your organization is a global enterprise burdened by legacy technical debt, facing aggressive growth targets, and operating under strict new data sovereignty regulations. Your proposal must synthesize everything you've learned. You need to define a scalable operating model, establish a policy-as-code governance strategy, outline a reliability economics framework to prioritize technical debt, and introduce FinOps practices to ensure cost efficiency. The board is not interested in technical minutiae; they need to see a cohesive strategy that balances risk mitigation with business agility, backed by hard numbers and a clear execution timeline."
         },
         {
           "id": "cloud-computing-401-l07-c2",
           "kind": "recap",
           "title": "Evaluation Rubric",
-          "content": "High-quality proposals are essential for successful projects. These proposals should clearly outline the expected outcomes, which are the goals we want to achieve. They also need to explain the assumptions we are making, which are the things we believe to be true for the project to succeed. It's important to identify the risks involved, which are potential problems that could arise, and the dependencies, which are other factors or resources that the project relies on. A good proposal balances ambitious goals with realistic plans for execution, ensuring that we aim high but also have a clear path to get there. Furthermore, the proposal should detail the first actions to be taken in the initial 90 days. These actions should be significant steps that help us make real progress toward our long-term architecture goals, setting a strong foundation for future success.\nContext recap: High-quality proposals are essential for successful projects. These proposals should clearly outline the expected outcomes, which are the goals we want to achieve. They also need to explain the assumptions we are making, which are the things we believe to be true for the project to succeed. It's important to identify the risks involved, which are potential problems that could arise, and the dependencies, which are other factors or resources that the project relies on.\nWhy this matters: Evaluation Rubric helps learners in Computer Science connect ideas from Cloud Strategy, Governance, and Platform Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "Your boardroom proposal will be evaluated on its strategic clarity and economic justification. A top-tier proposal clearly articulates the expected business outcomes (e.g., 30% faster time-to-market, 50% reduction in compliance audit findings). It must explicitly state the underlying assumptions and identify critical dependencies that could derail the timeline. Furthermore, you must present a candid assessment of the top risks and your proposed mitigation strategies. Finally, the board will look closely at your 'First 90 Days' execution plan. This immediate action plan must demonstrate quick wins that build momentum while laying the foundational architecture required for the long-term transformation."
         }
       ],
       "metadata": {
@@ -580,7 +600,8 @@ export const CloudComputing401Module: LearningModule = {
           "title": "Board Memo Template",
           "content": "Structured memo format covering objectives, options considered, recommended path, economics, and risk controls."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/cloud-computing-401-l07.png"
     }
   ]
 };

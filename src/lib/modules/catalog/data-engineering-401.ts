@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const DataEngineering401Module: LearningModule = {
+export const data_engineering_401_Module: LearningModule = {
   "id": "data-engineering-401",
   "title": "Data Engineering Leadership and Capstone",
   "description": "Level 401 curriculum in Data Engineering, focused on pipeline architecture, data quality contracts, orchestration reliability, and cost-performance tuning, with rigorous scenario analysis and assessment-backed mastery.",
@@ -14,7 +14,7 @@ export const DataEngineering401Module: LearningModule = {
   ],
   "minAge": 16,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en"
@@ -33,6 +33,8 @@ export const DataEngineering401Module: LearningModule = {
       "title": "Data Engineering Core Concepts",
       "type": "video",
       "duration": 13,
+      "lessonImagePrompt": "A futuristic blueprint of a glowing data pipeline architecture, showing interconnected nodes and data quality checkpoints, high-tech, clean vector style.",
+      "conceptVideoPrompt": "A dynamic 3D animation zooming through a glowing digital data pipeline, showing raw data being filtered, validated at checkpoints, and flowing smoothly into a structured database.",
       "learningAids": [
         {
           "id": "data-engineering-401-l01-a1",
@@ -46,19 +48,19 @@ export const DataEngineering401Module: LearningModule = {
           "id": "data-engineering-401-l01-c1",
           "kind": "concept",
           "title": "Vocabulary and System Boundaries",
-          "content": "In this lesson, we will work together to build a common vocabulary that everyone in the field of Data Engineering can easily understand. This shared language is important because it helps us communicate clearly and work effectively as a team. We will also define the boundaries of our operations, which means understanding what we can and cannot do within our projects. Additionally, we will explore how the architecture of data pipelines connects with data quality agreements in real-world situations. Understanding these interactions is essential for ensuring that our data is reliable and meets the necessary standards. This foundational knowledge will help us collaborate better and achieve our goals more efficiently."
+          "content": "Welcome to Data Engineering Core Concepts. We begin by establishing a shared vocabulary essential for cross-functional collaboration. You will learn to define strict operational boundaries, understanding exactly what falls within our project scope. We will also explore how pipeline architecture directly integrates with data quality contracts in real-world scenarios, ensuring our data remains reliable and meets rigorous standards."
         },
         {
           "id": "data-engineering-401-l01-c2",
           "kind": "concept",
           "title": "Causal Structures and Constraints",
-          "content": "In this section, learners will practice modeling causal paths, which are the connections between different events or actions. They will also work on identifying hidden assumptions that might affect their conclusions. Additionally, students will learn to apply checks for constraints, which are the limits or rules that must be followed, before suggesting any changes or interventions. This process helps ensure that proposed solutions are well thought out and based on solid reasoning.\nContext recap: In this section, learners will practice modeling causal paths, which are the connections between different events or actions. They will also work on identifying hidden assumptions that might affect their conclusions. Additionally, students will learn to apply checks for constraints, which are the limits or rules that must be followed, before suggesting any changes or interventions. This process helps ensure that proposed solutions are well thought out and based on solid reasoning."
+          "content": "Here, you will practice modeling causal paths—the direct connections between different system events. We will focus on identifying hidden assumptions that can skew conclusions and apply rigorous constraint checks before proposing architectural changes. This ensures all interventions are grounded in solid, defensible reasoning."
         },
         {
           "id": "data-engineering-401-l01-c3",
           "kind": "recap",
           "title": "Evidence Discipline",
-          "content": "This module introduces a workflow that prioritizes evidence, meaning that every claim made must be supported by observable indicators and an understanding of the uncertainties involved. By focusing on evidence first, learners can make more informed decisions and develop a clearer understanding of the data they are working with. This approach encourages critical thinking and helps students learn how to substantiate their ideas effectively.\nContext recap: This module introduces a workflow that prioritizes evidence, meaning that every claim made must be supported by observable indicators and an understanding of the uncertainties involved. By focusing on evidence first, learners can make more informed decisions and develop a clearer understanding of the data they are working with. This approach encourages critical thinking and helps students learn how to substantiate their ideas effectively."
+          "content": "We introduce an evidence-first workflow, requiring every architectural claim to be backed by observable indicators and a clear understanding of system uncertainties. By prioritizing evidence, you will make informed decisions, substantiate your designs effectively, and build highly resilient data pipelines."
         }
       ],
       "flashcards": [
@@ -77,13 +79,16 @@ export const DataEngineering401Module: LearningModule = {
           "front": "orchestration reliability",
           "back": "The evaluation layer that determines whether interventions truly improve outcomes."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/data-engineering-401-l01.png"
     },
     {
       "id": "data-engineering-401-l02",
       "title": "Data Engineering Methods Lab",
       "type": "interactive",
       "duration": 15,
+      "lessonImagePrompt": "A modern command center dashboard displaying data pipeline stress tests, with green and red indicators showing system resilience, sleek UI design.",
+      "conceptVideoPrompt": "A time-lapse style animation of a digital dashboard where various data engineering methods are dragged and dropped into a sequence, followed by a simulated stress test showing nodes glowing green.",
       "learningAids": [
         {
           "id": "data-engineering-401-l02-a1",
@@ -97,13 +102,13 @@ export const DataEngineering401Module: LearningModule = {
           "id": "data-engineering-401-l02-c1",
           "kind": "practice",
           "title": "Method Sequence Construction",
-          "content": "In this interactive lab, learners will construct a sequence of methods that are optimized for effective leadership, collaboration across different teams, and preparing for their capstone project defense. After building their method sequence, they will stress-test each step to see how it holds up under uncertain conditions. This practice helps students understand the importance of resilience and adaptability in their strategies.\nContext recap: In this interactive lab, learners will construct a sequence of methods that are optimized for effective leadership, collaboration across different teams, and preparing for their capstone project defense. After building their method sequence, they will stress-test each step to see how it holds up under uncertain conditions. This practice helps students understand the importance of resilience and adaptability in their strategies."
+          "content": "In this interactive lab, you will construct a sequence of engineering methods optimized for leadership, cross-team collaboration, and capstone defense preparation. After building your sequence, you will stress-test each step against simulated uncertain conditions to build resilience and adaptability into your strategies."
         },
         {
           "id": "data-engineering-401-l02-c2",
           "kind": "recap",
           "title": "Operational Readiness Checks",
-          "content": "To ensure that everything is ready for action, learners will assess operational readiness through various checks. This includes mapping out who is responsible for different tasks, establishing a schedule for regular checkpoints, identifying triggers for rolling back decisions if necessary, and maintaining logs of evidence. These practices help ensure that all aspects of a project are well-prepared and that any potential issues can be addressed promptly.\nContext recap: To ensure that everything is ready for action, learners will assess operational readiness through various checks. This includes mapping out who is responsible for different tasks, establishing a schedule for regular checkpoints, identifying triggers for rolling back decisions if necessary, and maintaining logs of evidence. These practices help ensure that all aspects of a project are well-prepared and that any potential issues can be addressed promptly."
+          "content": "To guarantee deployment readiness, you will assess operational checks. This involves mapping task responsibilities, establishing regular checkpoint schedules, defining rollback triggers, and maintaining immutable evidence logs. These practices ensure your pipeline is prepared for production and resilient to unexpected failures."
         }
       ],
       "interactiveActivities": [
@@ -160,13 +165,16 @@ export const DataEngineering401Module: LearningModule = {
             }
           ]
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/data-engineering-401-l02.png"
     },
     {
       "id": "data-engineering-401-l03",
       "title": "Checkpoint 1: Core Methods",
       "type": "quiz",
       "duration": 10,
+      "lessonImagePrompt": "A stylized glowing padlock and a checklist on a digital tablet, representing data quality contracts and core method validation, cyber-security aesthetic.",
+      "conceptVideoPrompt": "A sleek animation of a digital checklist being ticked off one by one, with a glowing padlock securing a data stream in the background.",
       "learningAids": [
         {
           "id": "data-engineering-401-l03-a1",
@@ -301,13 +309,16 @@ export const DataEngineering401Module: LearningModule = {
           "correctOptionId": "b",
           "explanation": "Effective governance connects policy intent to measurement and response action."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/data-engineering-401-l03.png"
     },
     {
       "id": "data-engineering-401-l04",
       "title": "Data Engineering Case Analysis",
       "type": "video",
       "duration": 14,
+      "lessonImagePrompt": "A split-screen digital illustration showing a smooth-flowing data pipeline on one side and a bottlenecked, red-glowing pipeline on the other, representing tradeoff analysis.",
+      "conceptVideoPrompt": "An animated decision matrix materializing in 3D space, with different data engineering interventions being weighed on a glowing digital scale.",
       "learningAids": [
         {
           "id": "data-engineering-401-l04-a1",
@@ -321,19 +332,19 @@ export const DataEngineering401Module: LearningModule = {
           "id": "data-engineering-401-l04-c1",
           "kind": "example",
           "title": "Case Setup and Stakes",
-          "content": "In this engaging case study, we will delve into the workings of a multi-source analytics platform that encounters difficulties due to late-arriving events and has strict service level agreement (SLA) targets to meet. As learners, you will be tasked with identifying and differentiating between various elements such as evidence, assumptions, and potential risks that could lead to significant consequences if not addressed properly. This exercise is designed to enhance your understanding of the complexities involved in real-world data engineering scenarios and to highlight the critical importance of thorough analysis and decision-making in the field."
+          "content": "We delve into a multi-source analytics platform struggling with late-arriving events and strict SLA targets. You will be tasked with separating hard evidence from assumptions and identifying critical risks that could lead to cascading failures. This exercise highlights the complexities of real-world data engineering and the necessity of rigorous decision-making."
         },
         {
           "id": "data-engineering-401-l04-c2",
           "kind": "concept",
           "title": "Decision Tradeoff Matrix",
-          "content": "In this section, learners will use a decision tradeoff matrix to evaluate different alternatives. Each option will be scored based on its performance, reliability, cost, and fairness implications. This structured approach helps students make informed choices about which intervention path to take, ensuring that they consider all relevant factors before making a decision.\nContext recap: In this section, learners will use a decision tradeoff matrix to evaluate different alternatives. Each option will be scored based on its performance, reliability, cost, and fairness implications. This structured approach helps students make informed choices about which intervention path to take, ensuring that they consider all relevant factors before making a decision."
+          "content": "You will utilize a decision tradeoff matrix to evaluate competing architectural alternatives. Each option is scored based on performance, reliability, cost, and fairness implications. This structured approach guarantees that all relevant factors are weighed before committing to an intervention path."
         },
         {
           "id": "data-engineering-401-l04-c3",
           "kind": "recap",
           "title": "Lessons from Failure Modes",
-          "content": "In this recap, we will categorize different failure patterns to help transform isolated incidents into valuable design safeguards. By analyzing what went wrong in past situations, learners can develop strategies to prevent similar issues in the future. This practice emphasizes the importance of learning from mistakes and using those lessons to improve future designs.\nContext recap: In this recap, we will categorize different failure patterns to help transform isolated incidents into valuable design safeguards. By analyzing what went wrong in past situations, learners can develop strategies to prevent similar issues in the future. This practice emphasizes the importance of learning from mistakes and using those lessons to improve future designs."
+          "content": "We will categorize common failure patterns to transform isolated incidents into robust design safeguards. By analyzing historical system failures, you will develop proactive strategies to prevent recurrence, emphasizing the importance of continuous learning and iterative design improvement."
         }
       ],
       "flashcards": [
@@ -352,13 +363,16 @@ export const DataEngineering401Module: LearningModule = {
           "front": "Escalation threshold",
           "back": "A predefined condition that triggers higher-level review or corrective action."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/data-engineering-401-l04.png"
     },
     {
       "id": "data-engineering-401-l05",
       "title": "Data Engineering Simulation Studio",
       "type": "interactive",
       "duration": 16,
+      "lessonImagePrompt": "A virtual reality simulation room with floating holographic data charts, cost-performance graphs, and interactive sliders, futuristic tech aesthetic.",
+      "conceptVideoPrompt": "A first-person view of interacting with a holographic control panel, adjusting sliders for cost and performance, watching a simulated data pipeline react in real-time.",
       "learningAids": [
         {
           "id": "data-engineering-401-l05-a1",
@@ -372,13 +386,13 @@ export const DataEngineering401Module: LearningModule = {
           "id": "data-engineering-401-l05-c1",
           "kind": "practice",
           "title": "Simulation Setup",
-          "content": "In this interactive simulation, learners will set up a scenario model that includes clear assumptions about uncertainties and defines success metrics related to cost and performance. This setup is crucial for understanding how different variables can affect outcomes and helps students practice making data-driven decisions in a controlled environment.\nContext recap: In this interactive simulation, learners will set up a scenario model that includes clear assumptions about uncertainties and defines success metrics related to cost and performance. This setup is crucial for understanding how different variables can affect outcomes and helps students practice making data-driven decisions in a controlled environment."
+          "content": "Step into the simulation studio to set up a scenario model with explicit assumptions about system uncertainties. You will define success metrics tied directly to cost and performance. This environment allows you to practice data-driven decision-making and observe how variable shifts impact overall pipeline health."
         },
         {
           "id": "data-engineering-401-l05-c2",
           "kind": "recap",
           "title": "Decision Review Loop",
-          "content": "At the end of each simulation round, learners will engage in a review process where they examine the evidence collected, check for alignment with established policies, and identify actions for improvement. This reflective practice encourages continuous learning and adaptation, ensuring that students are always looking for ways to enhance their strategies and outcomes.\nContext recap: At the end of each simulation round, learners will engage in a review process where they examine the evidence collected, check for alignment with established policies, and identify actions for improvement. This reflective practice encourages continuous learning and adaptation, ensuring that students are always looking for ways to enhance their strategies and outcomes."
+          "content": "Following each simulation round, you will engage in a rigorous review loop. You will examine the collected evidence, verify alignment with governance policies, and identify concrete actions for architectural improvement. This reflective practice drives continuous adaptation and strategic enhancement."
         }
       ],
       "interactiveActivities": [
@@ -417,13 +431,16 @@ export const DataEngineering401Module: LearningModule = {
             }
           ]
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/data-engineering-401-l05.png"
     },
     {
       "id": "data-engineering-401-l06",
       "title": "Checkpoint 2: Systems and Decisions",
       "type": "quiz",
       "duration": 10,
+      "lessonImagePrompt": "A glowing digital brain connected to a complex network of servers, symbolizing advanced decision-making and system analysis in data engineering.",
+      "conceptVideoPrompt": "A fast-paced animation of data packets traveling through a complex server maze, with automated gates opening and closing based on real-time decision algorithms.",
       "learningAids": [
         {
           "id": "data-engineering-401-l06-a1",
@@ -435,128 +452,128 @@ export const DataEngineering401Module: LearningModule = {
       "questions": [
         {
           "id": "data-engineering-401-l06-q1",
-          "text": "Which practice most strengthens pipeline architecture in real deployments?",
-          "skillId": "data-engineering-401-skill-risk",
-          "options": [
-            {
-              "id": "a",
-              "text": "Use assumptions without documenting them"
-            },
-            {
-              "id": "b",
-              "text": "Define failure criteria and monitor leading indicators"
-            },
-            {
-              "id": "c",
-              "text": "Evaluate outcomes only once per year"
-            },
-            {
-              "id": "d",
-              "text": "Avoid stress-testing edge cases"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Explicit failure criteria and leading indicators improve early detection and response."
-        },
-        {
-          "id": "data-engineering-401-l06-q2",
-          "text": "At level 401, Data Engineering work should prioritize:",
-          "skillId": "data-engineering-401-skill-level",
-          "options": [
-            {
-              "id": "a",
-              "text": "strategic leadership, cross-functional alignment, and capstone defense"
-            },
-            {
-              "id": "b",
-              "text": "Speed over traceability in all cases"
-            },
-            {
-              "id": "c",
-              "text": "No validation loops after release"
-            },
-            {
-              "id": "d",
-              "text": "Single-metric optimization without context"
-            }
-          ],
-          "correctOptionId": "a",
-          "explanation": "The 401 sequence is designed around strategic leadership, cross-functional alignment, and capstone defense."
-        },
-        {
-          "id": "data-engineering-401-l06-q3",
-          "text": "What is the strongest indicator of healthy data quality contracts?",
-          "skillId": "data-engineering-401-skill-ops",
-          "options": [
-            {
-              "id": "a",
-              "text": "Untracked interventions and ad-hoc approvals"
-            },
-            {
-              "id": "b",
-              "text": "Clear owner mapping, review cadence, and measurable thresholds"
-            },
-            {
-              "id": "c",
-              "text": "Skipping post-incident analysis"
-            },
-            {
-              "id": "d",
-              "text": "Changing targets after observing results"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Stable systems require clear ownership, decision cadence, and measurable controls."
-        },
-        {
-          "id": "data-engineering-401-l06-q4",
-          "text": "When improving orchestration reliability, which approach is most defensible?",
+          "text": "When evaluating competing data pipeline interventions, what is the primary purpose of a decision tradeoff matrix?",
           "skillId": "data-engineering-401-skill-eval",
           "options": [
             {
               "id": "a",
-              "text": "Use anecdotal wins as sole evidence"
+              "text": "To guarantee the lowest possible cloud infrastructure cost"
             },
             {
               "id": "b",
-              "text": "Compare against baselines and include failure analysis"
+              "text": "To systematically compare options across competing priorities like cost, reliability, and performance"
             },
             {
               "id": "c",
-              "text": "Remove difficult test scenarios"
+              "text": "To eliminate the need for human review in the deployment process"
             },
             {
               "id": "d",
-              "text": "Ignore lagging outcomes"
+              "text": "To automatically generate data quality contracts"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Baselines and failure analysis reduce bias and reveal true system performance."
+          "explanation": "A tradeoff matrix provides a structured framework to weigh competing priorities, ensuring balanced and defensible architectural decisions."
+        },
+        {
+          "id": "data-engineering-401-l06-q2",
+          "text": "How should a data engineering team utilize identified failure modes?",
+          "skillId": "data-engineering-401-skill-risk",
+          "options": [
+            {
+              "id": "a",
+              "text": "As repeatable patterns to design proactive safeguards and prevent future incidents"
+            },
+            {
+              "id": "b",
+              "text": "As a way to assign blame to individual engineers"
+            },
+            {
+              "id": "c",
+              "text": "To justify lowering service level agreements (SLAs)"
+            },
+            {
+              "id": "d",
+              "text": "To hide system vulnerabilities from stakeholders"
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Failure modes are critical learning tools that help teams build resilience by anticipating and mitigating known vulnerabilities."
+        },
+        {
+          "id": "data-engineering-401-l06-q3",
+          "text": "In a cost-performance simulation, why is it critical to define success metrics before running the intervention?",
+          "skillId": "data-engineering-401-skill-ops",
+          "options": [
+            {
+              "id": "a",
+              "text": "To ensure the simulation runs faster"
+            },
+            {
+              "id": "b",
+              "text": "To prevent confirmation bias and ensure outcomes are measured against objective baselines"
+            },
+            {
+              "id": "c",
+              "text": "To satisfy legal compliance requirements only"
+            },
+            {
+              "id": "d",
+              "text": "To avoid having to write documentation later"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Pre-defining metrics ensures that the evaluation of an intervention is objective and not retroactively fitted to match the results."
+        },
+        {
+          "id": "data-engineering-401-l06-q4",
+          "text": "If a pipeline suffers from an unreliable input stream, which mitigation strategy is most effective?",
+          "skillId": "data-engineering-401-skill-eval",
+          "options": [
+            {
+              "id": "a",
+              "text": "Increasing the compute power of the downstream database"
+            },
+            {
+              "id": "b",
+              "text": "Ignoring the errors and filtering them out at the visualization layer"
+            },
+            {
+              "id": "c",
+              "text": "Introducing strict data quality contracts and quarantine checks at the ingestion point"
+            },
+            {
+              "id": "d",
+              "text": "Deleting the unreliable data source entirely"
+            }
+          ],
+          "correctOptionId": "c",
+          "explanation": "Quarantine checks and quality contracts catch bad data early, preventing it from corrupting downstream systems."
         },
         {
           "id": "data-engineering-401-l06-q5",
-          "text": "A mature cost-performance tuning strategy should include:",
+          "text": "What defines a well-structured escalation threshold in a data pipeline?",
           "skillId": "data-engineering-401-skill-governance",
           "options": [
             {
               "id": "a",
-              "text": "No escalation path for critical defects"
+              "text": "A vague guideline that encourages engineers to ask for help"
             },
             {
               "id": "b",
-              "text": "Policy, measurement, and escalation pathways linked to impact tiers"
+              "text": "A predefined, measurable condition that automatically triggers higher-level review or corrective action"
             },
             {
               "id": "c",
-              "text": "One-time governance review only"
+              "text": "A manual process that requires executive approval for every code commit"
             },
             {
               "id": "d",
-              "text": "Separation between metrics and decisions"
+              "text": "A metric that is only reviewed during annual performance evaluations"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Effective governance connects policy intent to measurement and response action."
+          "explanation": "Effective escalation thresholds are objective, measurable, and tied to automated or clear procedural triggers to ensure rapid response."
         }
       ]
     },
@@ -565,6 +582,8 @@ export const DataEngineering401Module: LearningModule = {
       "title": "Data Engineering Ethics, Policy, and Public Impact",
       "type": "video",
       "duration": 12,
+      "lessonImagePrompt": "A diverse group of professionals standing around a glowing holographic globe, discussing data ethics and global policy impact, modern corporate environment.",
+      "conceptVideoPrompt": "A conceptual animation showing a single data point rippling out to affect various human silhouettes, illustrating the real-world impact and ethical considerations of data engineering.",
       "learningAids": [
         {
           "id": "data-engineering-401-l07-a1",
@@ -578,19 +597,19 @@ export const DataEngineering401Module: LearningModule = {
           "id": "data-engineering-401-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Analysis",
-          "content": "In this section, learners will conduct a stakeholder analysis to identify who benefits from various decisions, who might face risks, and how different policy choices can influence outcomes for different groups. Understanding these dynamics is essential for making ethical and informed decisions in data engineering.\nContext recap: In this section, learners will conduct a stakeholder analysis to identify who benefits from various decisions, who might face risks, and how different policy choices can influence outcomes for different groups. Understanding these dynamics is essential for making ethical and informed decisions in data engineering."
+          "content": "You will conduct a comprehensive stakeholder analysis to identify who benefits from architectural decisions and who bears the risks. Understanding how different policy choices influence outcomes for various groups is essential for ethical, informed, and equitable data engineering."
         },
         {
           "id": "data-engineering-401-l07-c2",
           "kind": "concept",
           "title": "Governance and Accountability",
-          "content": "This lesson will explore governance and accountability in data engineering. Learners will discover how governance mechanisms are connected to measurable controls, obligations for transparency, and pathways for remediation. Understanding these concepts is vital for ensuring responsible and ethical practices in the field.\nContext recap: This lesson will explore governance and accountability in data engineering. Learners will discover how governance mechanisms are connected to measurable controls, obligations for transparency, and pathways for remediation. Understanding these concepts is vital for ensuring responsible and ethical practices in the field."
+          "content": "Explore the critical role of governance and accountability in data systems. You will learn how governance mechanisms connect to measurable controls, transparency obligations, and remediation pathways, ensuring your engineering practices remain responsible and compliant."
         },
         {
           "id": "data-engineering-401-l07-c3",
           "kind": "recap",
           "title": "Responsible Execution Checklist",
-          "content": "Before making any decisions about deploying a data project, it is important to use a final checklist. This checklist should include important factors such as legal requirements, ethical considerations, technical aspects, and how the project will impact users. By reviewing these criteria, we can ensure that our decisions are responsible and beneficial for everyone involved.\nContext recap: Before making any decisions about deploying a data project, it is important to use a final checklist. This checklist should include important factors such as legal requirements, ethical considerations, technical aspects, and how the project will impact users. By reviewing these criteria, we can ensure that our decisions are responsible and beneficial for everyone involved."
+          "content": "Before deploying any data project, you must complete a Responsible Execution Checklist. This covers legal requirements, ethical considerations, technical constraints, and user impact. Reviewing these criteria ensures your deployments are not only performant but also safe and beneficial for all stakeholders."
         }
       ],
       "flashcards": [
@@ -609,13 +628,16 @@ export const DataEngineering401Module: LearningModule = {
           "front": "Responsible execution",
           "back": "Delivery practice that balances performance with safety, fairness, and transparency."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/data-engineering-401-l07.png"
     },
     {
       "id": "data-engineering-401-l08",
       "title": "Data Engineering Capstone Planning Lab",
       "type": "interactive",
       "duration": 15,
+      "lessonImagePrompt": "A sleek, modern presentation stage with a large screen displaying a comprehensive data engineering capstone architecture, ready for defense.",
+      "conceptVideoPrompt": "A dynamic camera sweep over a highly detailed, 3D architectural blueprint of a data system, culminating in a glowing 'Approved' stamp.",
       "learningAids": [
         {
           "id": "data-engineering-401-l08-a1",
@@ -629,13 +651,13 @@ export const DataEngineering401Module: LearningModule = {
           "id": "data-engineering-401-l08-c1",
           "kind": "practice",
           "title": "Capstone Scope Definition",
-          "content": "In this activity, learners will create a detailed capstone charter. This document will outline the main objectives of the project, identify potential risks, establish success metrics to measure progress, and set governance checkpoints to ensure everything stays on track. This practice will help students think critically about their projects and plan effectively.\nContext recap: In this activity, learners will create a detailed capstone charter. This document will outline the main objectives of the project, identify potential risks, establish success metrics to measure progress, and set governance checkpoints to ensure everything stays on track. This practice will help students think critically about their projects and plan effectively."
+          "content": "You will draft a comprehensive capstone charter outlining your project's primary objectives, potential risks, and success metrics. You will also establish governance checkpoints to maintain alignment. This practice solidifies your strategic planning and critical thinking skills."
         },
         {
           "id": "data-engineering-401-l08-c2",
           "kind": "recap",
           "title": "Defense Preparation",
-          "content": "At the conclusion of this lesson, students will receive a defense preparation template. This template will guide them in making claims that are supported by evidence and require them to explain the reasoning behind any tradeoffs they make. This exercise will help learners develop their argumentation skills and prepare them for presenting their projects confidently.\nContext recap: At the conclusion of this lesson, students will receive a defense preparation template. This template will guide them in making claims that are supported by evidence and require them to explain the reasoning behind any tradeoffs they make. This exercise will help learners develop their argumentation skills and prepare them for presenting their projects confidently."
+          "content": "You will receive a defense preparation template to guide you in structuring evidence-backed claims. You will practice articulating the reasoning behind your architectural tradeoffs, honing the argumentation skills required to confidently present and defend your capstone project."
         }
       ],
       "interactiveActivities": [
@@ -656,7 +678,8 @@ export const DataEngineering401Module: LearningModule = {
           "title": "Decision Defense Drill",
           "description": "Defend your capstone approach against cost, risk, and equity critiques."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/data-engineering-401-l08.png"
     }
   ]
 };

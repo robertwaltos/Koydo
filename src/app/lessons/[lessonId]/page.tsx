@@ -4,24 +4,35 @@ import Link from "next/link";
 import { buildSeedanceAnimationPrompt, buildSeedanceVideoPrompt } from "@/lib/media/seedance-prompts";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { toLessonPath } from "@/lib/routing/paths";
+import { getAppId } from "@/lib/platform/app-manifest";
 import LessonSessionTracker from "./lesson-session-tracker";
 import LessonExperience from "./lesson-experience";
 import OfflineLessonPackPill from "@/app/components/offline-lesson-pack-pill";
+import FocusModeReader from "@/tenants/koydo-university/components/FocusModeReader";
 
 export default function LessonPage({
   params,
+  searchParams,
 }: {
   params: Promise<{ lessonId: string }>;
+  searchParams?: Promise<Record<string, string | string[] | undefined>>;
 }) {
-  return <LessonPageContent params={params} />;
+  return <LessonPageContent params={params} searchParams={searchParams} />;
 }
 
 async function LessonPageContent({
   params,
+  searchParams,
 }: {
   params: Promise<{ lessonId: string }>;
+  searchParams?: Promise<Record<string, string | string[] | undefined>>;
 }) {
   const resolvedParams = await params;
+  const resolvedSearchParams = searchParams ? await searchParams : {};
+  const focusQueryValue = resolvedSearchParams.focus;
+  const isFocusMode = Array.isArray(focusQueryValue)
+    ? focusQueryValue.includes("1")
+    : focusQueryValue === "1";
   const resolvedLesson = getLessonByLookupKey(resolvedParams.lessonId);
 
   if (!resolvedLesson) {
@@ -36,11 +47,58 @@ async function LessonPageContent({
   const lessonIndex = learningModule.lessons.findIndex((entry) => entry.id === lesson.id);
   const nextLesson = lessonIndex >= 0 ? learningModule.lessons[lessonIndex + 1] ?? null : null;
   const nextLessonHref = nextLesson ? toLessonPath(nextLesson.id) : null;
+  const currentLessonHref = toLessonPath(lesson.id);
+  const focusModeHref = `${currentLessonHref}?focus=1`;
   const offlinePackRoutes = [
-    toLessonPath(lesson.id),
+    currentLessonHref,
     "/dashboard",
     ...(nextLessonHref ? [nextLessonHref] : []),
   ];
+  const appId = getAppId();
+  const isUniversityApp = appId === "koydo_university";
+
+  if (isUniversityApp && isFocusMode) {
+    return (
+      <>
+        <LessonSessionTracker moduleId={learningModule.id} lessonId={lesson.id} />
+        <FocusModeReader
+          title={lesson.title}
+          eyebrow={`${learningModule.subject} Focus Session`}
+          metadata={`${lesson.duration} min read`}
+          exitHref={currentLessonHref}
+          exitLabel="Exit Focus"
+        >
+          {Array.isArray(lesson.chunks) && lesson.chunks.length > 0 ? (
+            lesson.chunks.map((chunk) => (
+              <section key={chunk.id} className="mb-8">
+                <h2 className="text-2xl font-semibold tracking-tight">{chunk.title}</h2>
+                <p className="mt-3 whitespace-pre-line text-[#1f2937] dark:text-[#d4dff0]">{chunk.content}</p>
+              </section>
+            ))
+          ) : (
+            <section className="mb-8">
+              <p className="whitespace-pre-line text-[#1f2937] dark:text-[#d4dff0]">
+                Focus mode content will appear here once lesson chunks are available.
+              </p>
+            </section>
+          )}
+
+          {Array.isArray(lesson.objectives) && lesson.objectives.length > 0 ? (
+            <section className="mt-10 border-t border-[#d8e0ea] pt-6 dark:border-[#2d3a50]">
+              <h2 className="text-xl font-semibold tracking-tight">Session Objectives</h2>
+              <ul className="mt-3 list-disc space-y-2 pl-5">
+                {lesson.objectives.map((objective, index) => (
+                  <li key={`${lesson.id}-objective-${index}`} className="text-[#1f2937] dark:text-[#d4dff0]">
+                    {objective}
+                  </li>
+                ))}
+              </ul>
+            </section>
+          ) : null}
+        </FocusModeReader>
+      </>
+    );
+  }
 
   const supabase = await createSupabaseServerClient();
   const {
@@ -77,6 +135,15 @@ async function LessonPageContent({
             <span aria-hidden>🧭</span>
             <span>Back to Dashboard</span>
           </Link>
+          {isUniversityApp ? (
+            <Link
+              href={focusModeHref}
+              className="ui-focus-ring ml-2 inline-flex min-h-11 items-center gap-2 rounded-full border border-[#cdd7e5] bg-[#f8fafc]/90 px-4 py-2 text-sm font-semibold text-[#1d3557] transition-colors hover:bg-white"
+            >
+              <span aria-hidden>📖</span>
+              <span>Focus Mode</span>
+            </Link>
+          ) : null}
           
           <p className="mt-6 text-[10px] font-black uppercase tracking-widest text-indigo-600">
             Adventure Path: {learningModule.subject}

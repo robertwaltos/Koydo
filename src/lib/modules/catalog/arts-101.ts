@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const Arts101Module: LearningModule = {
+export const arts_101_Module: LearningModule = {
   "id": "arts-101",
   "title": "Creative Arts Studio",
   "description": "Explore the elements of art, color theory, drawing techniques, famous artists, sculpture, and nature art through hands-on projects and real-world examples.",
@@ -13,7 +13,7 @@ export const Arts101Module: LearningModule = {
   ],
   "minAge": 7,
   "maxAge": 18,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "learningObjectives": [
     "Identify the seven elements of art: line, shape, color, texture, space, form, and value",
     "Understand the color wheel including primary, secondary, complementary, and warm/cool colors",
@@ -28,21 +28,23 @@ export const Arts101Module: LearningModule = {
       "title": "Elements of Art",
       "type": "video",
       "duration": 12,
+      "lessonImagePrompt": "Imagen 4 prompt: A vibrant, stylized 3D illustration of an artist's palette surrounded by floating geometric and organic shapes, colorful lines, and textured spheres, bright and inspiring studio lighting.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A dynamic 3D animation showing a single pencil line drawing itself across a white canvas, transforming into a geometric shape, filling with bright primary colors, and popping into a 3D textured sphere.",
       "chunks": [
         {
           "id": "arts-101-l01-c1",
           "title": "Line and Shape",
-          "content": "Lines are the most basic and important building blocks of art. Imagine a line as a mark made by a point that moves across a surface, like a pencil gliding on paper. Lines can be straight, like the edge of a ruler, or curved, like a gentle wave. They can also be zigzag, thick, or thin, each giving a different feeling to the artwork. When lines come together and connect, they form shapes. There are two main types of shapes that artists use: geometric shapes and organic shapes. Geometric shapes, such as circles, squares, and triangles, have specific measurements and are very precise. On the other hand, organic shapes, like the fluffy clouds in the sky or the unique outline of a leaf, are more freeform and irregular, just like things we see in nature. By learning about lines and shapes, artists can better express their thoughts and feelings through their creations, making their artwork more interesting and meaningful."
+          "content": "Lines are the most basic and important building blocks of art. Imagine a line as a mark made by a point that moves across a surface, like a pencil gliding on paper. Lines can be straight, curved, zigzag, thick, or thin, each giving a different feeling to the artwork. When lines connect, they form shapes. There are two main types of shapes: geometric and organic. Geometric shapes, like circles and squares, are precise and measurable. Organic shapes, like clouds or leaves, are freeform and irregular, just like things we see in nature. Mastering lines and shapes is the first step to expressing your creativity!"
         },
         {
           "id": "arts-101-l01-c2",
           "title": "Color, Value, and Texture",
-          "content": "Color is an exciting and important part of art! It has three main properties that help us understand it better. The first property is called hue, which is simply the name of the color, like red, blue, or green. The second property is value, which tells us how light or dark a color is. For example, a light blue is a different value than a dark blue. The third property is intensity, which describes how bright or dull a color looks. A bright red is high in intensity, while a faded red is low in intensity.\nAnother cool element of art is texture. Texture is all about how a surface feels or how it looks like it would feel if you touched it. Textures can be smooth, like a polished stone; rough, like tree bark; bumpy, like a popcorn kernel; or soft, like a fluffy pillow. Artists can create texture in their drawings and paintings using different techniques. They might use dots, lines, or shading to give the illusion of texture. A great example of this is the famous artist Vincent van Gogh. He used thick paint strokes in his artwork, which created a texture that you can almost feel just by looking at it! Understanding color and texture can help you express your creativity in amazing ways."
+          "content": "Color brings art to life! It has three main properties: hue (the color's name, like red or blue), value (how light or dark it is), and intensity (how bright or dull it is). Another amazing element is texture, which is how a surface feels or looks like it would feel. Textures can be smooth, rough, bumpy, or soft. Artists create the illusion of texture using dots, lines, or shading. The famous artist Vincent van Gogh used thick paint strokes to create a texture you can almost feel just by looking at it!"
         },
         {
           "id": "arts-101-l01-c3",
           "title": "Space and Form",
-          "content": "Space is a very important idea in art that helps us understand how objects relate to each other and their surroundings. When we talk about space, we mean the area that is around, between, and even inside objects. Positive space is where the main subject of the artwork is found; this is what we focus on and what draws our attention. On the other hand, negative space is the empty area that surrounds the subject. It might seem like just empty space, but it plays a crucial role in how we perceive the artwork.\nNow, let’s talk about form! Form refers to three-dimensional shapes. For example, a sphere is a round shape that you can hold in your hand, while a circle is flat and only seen on paper. Similarly, a cube is a solid shape, whereas a square is just a flat outline. Artists use different techniques to create the illusion of form on flat surfaces like paper. They often use shading, which is adding darker and lighter areas, and perspective, which helps to show depth and distance. These techniques make their artwork look more realistic and three-dimensional, allowing viewers to feel as if they can reach out and touch the objects depicted."
+          "content": "Space helps us understand how objects relate to each other. Positive space is the main subject of the artwork, while negative space is the empty area surrounding it. Both are crucial for a balanced picture! Form refers to three-dimensional shapes. While a circle is a flat shape, a sphere is a 3D form. Artists use techniques like shading and perspective to create the illusion of form and depth on a flat piece of paper, making their drawings look incredibly realistic."
         }
       ],
       "flashcards": [
@@ -53,7 +55,7 @@ export const Arts101Module: LearningModule = {
         },
         {
           "id": "arts-101-l01-f2",
-          "front": "Area enclosed when lines connect",
+          "front": "An area enclosed when lines connect",
           "back": "Shape"
         },
         {
@@ -90,7 +92,7 @@ export const Arts101Module: LearningModule = {
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Texture is how a surface feels — rough, smooth, bumpy!"
+          "explanation": "Texture is how a surface feels—rough, smooth, or bumpy!"
         },
         {
           "id": "arts-101-l01-q2",
@@ -114,11 +116,11 @@ export const Arts101Module: LearningModule = {
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Negative space is the empty area around objects!"
+          "explanation": "Negative space is the empty area around objects, while positive space is the object itself."
         },
         {
           "id": "arts-101-l01-q3",
-          "text": "Geometric shapes like circles and squares have",
+          "text": "Geometric shapes like circles and squares have:",
           "options": [
             {
               "id": "a",
@@ -138,14 +140,14 @@ export const Arts101Module: LearningModule = {
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Geometric shapes are precise and measurable!"
+          "explanation": "Geometric shapes are precise and measurable, unlike organic shapes which are freeform."
         }
       ],
       "interactiveActivities": [
         {
           "id": "arts-101-l01-act1",
           "type": "drawing_canvas",
-          "title": "Elements scavenger hunt",
+          "title": "Elements Scavenger Hunt",
           "description": "Look around your room and find one example each of line, shape, color, texture, space, and form. Draw or photograph each one and label it."
         }
       ],
@@ -153,31 +155,34 @@ export const Arts101Module: LearningModule = {
         {
           "id": "arts-101-l01-a1",
           "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary of the lesson's main concept."
+          "title": "The 7 Elements of Art",
+          "content": "A visual chart displaying Line, Shape, Color, Value, Form, Texture, and Space with simple visual examples for each."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/arts-101-l01.png"
     },
     {
       "id": "arts-101-l02",
       "title": "The Color Wheel",
       "type": "interactive",
       "duration": 12,
+      "lessonImagePrompt": "Imagen 4 prompt: A glowing, magical color wheel floating in a dark art studio, with bright neon paint splashing between primary and secondary colors, cinematic lighting, highly detailed.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A mesmerizing top-down view of liquid paint mixing. Red and yellow merge to form bright orange, then blue and yellow swirl into vibrant green, creating a perfect color wheel.",
       "chunks": [
         {
           "id": "arts-101-l02-c1",
           "title": "Primary and Secondary Colors",
-          "content": "Primary colors are the building blocks of all other colors, and they include red, yellow, and blue. These colors are special because they cannot be made by mixing any other colors together. Think of them as the original colors that artists use to create a whole rainbow of shades! Now, when we mix two primary colors together, we create what are called secondary colors. For example, if you take red and mix it with yellow, you will get a bright and cheerful orange. If you mix yellow with blue, you will see a lovely green color appear. Lastly, when you combine blue and red, you create a rich purple. It's fascinating to see how these colors interact! The first color wheel was invented by the famous scientist Sir Isaac Newton in 1666. He took the colors of light and arranged them in a circle, showing how they relate to one another. This color wheel helps artists and designers understand how to mix colors and create beautiful artworks!"
+          "content": "Primary colors are the building blocks of all other colors: red, yellow, and blue. They are special because they cannot be made by mixing any other colors together! When we mix two primary colors, we create secondary colors. Red and yellow make a cheerful orange. Yellow and blue make a lovely green. Blue and red create a rich purple. The first color wheel was invented by Sir Isaac Newton in 1666 to show how these colors relate to one another."
         },
         {
           "id": "arts-101-l02-c2",
           "title": "Warm and Cool Colors",
-          "content": "Colors can be divided into two main categories: warm colors and cool colors. Warm colors include shades like red, orange, and yellow. These colors remind us of things that are hot, like fire and sunlight. Because of this, warm colors tend to stand out in a painting, making them feel like they are coming forward towards us. On the other hand, we have cool colors, which include blue, green, and purple. These colors remind us of cooler things, such as water and ice. As a result, cool colors often seem to recede or move back in space, creating a sense of distance. Artists use these warm and cool colors in clever ways to add depth to their artwork and to set different moods. By choosing specific colors, they can influence how we feel when we look at their creations, making us feel warm and energetic or calm and relaxed."
+          "content": "Colors can be divided into warm and cool categories. Warm colors include red, orange, and yellow. They remind us of fire and sunlight, and they tend to stand out or 'come forward' in a painting. Cool colors include blue, green, and purple. They remind us of water and ice, and they often seem to recede or 'move back' in space. Artists use warm and cool colors to create depth and set different moods in their artwork."
         },
         {
           "id": "arts-101-l02-c3",
           "title": "Complementary Colors",
-          "content": "Complementary colors are special pairs of colors that sit directly across from each other on the color wheel. For instance, if you look at the color wheel, you will see that red is opposite green, blue is opposite orange, and yellow is opposite purple. When you place these complementary colors next to each other, something magical happens! They make each other look even brighter and more lively. This effect can really make your artwork pop! A famous artist named Claude Monet loved to use complementary colors in his beautiful paintings, especially in his series called Water Lilies. By using these colors, he was able to create a glowing effect that made his paintings look stunning and full of life. Next time you paint, try using complementary colors to see how they can transform your artwork!"
+          "content": "Complementary colors are pairs that sit directly across from each other on the color wheel. Red is opposite green, blue is opposite orange, and yellow is opposite purple. When placed next to each other, they create a magical contrast, making each other look incredibly bright and lively! The famous artist Claude Monet loved using complementary colors to make his paintings glow with life."
         }
       ],
       "flashcards": [
@@ -193,7 +198,7 @@ export const Arts101Module: LearningModule = {
         },
         {
           "id": "arts-101-l02-f3",
-          "front": "Colors opposite on the color wheel",
+          "front": "Colors opposite each other on the color wheel",
           "back": "Complementary colors"
         },
         {
@@ -225,11 +230,11 @@ export const Arts101Module: LearningModule = {
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Red + yellow = orange — a secondary color!"
+          "explanation": "Red + yellow = orange, which is a secondary color!"
         },
         {
           "id": "arts-101-l02-q2",
-          "text": "Which pair are complementary colors?",
+          "text": "Which pair represents complementary colors?",
           "options": [
             {
               "id": "a",
@@ -249,11 +254,11 @@ export const Arts101Module: LearningModule = {
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Red and green are opposite on the color wheel!"
+          "explanation": "Red and green are directly opposite each other on the color wheel."
         },
         {
           "id": "arts-101-l02-q3",
-          "text": "Warm colors like red and orange seem to",
+          "text": "Warm colors like red and orange seem to:",
           "options": [
             {
               "id": "a",
@@ -273,46 +278,49 @@ export const Arts101Module: LearningModule = {
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Warm colors pop forward while cool colors recede!"
+          "explanation": "Warm colors pop forward, while cool colors recede into the background."
         }
       ],
       "interactiveActivities": [
         {
           "id": "arts-101-l02-act1",
           "type": "drawing_canvas",
-          "title": "Color wheel painting",
-          "description": "Using only red, yellow, and blue paint, mix and paint a full 12-color wheel. Label each slice with its color name and whether it is primary, secondary, or tertiary."
+          "title": "Color Wheel Painting",
+          "description": "Using only red, yellow, and blue paint (or digital brushes), mix and paint a full 12-color wheel. Label each slice with its color name."
         }
       ],
       "learningAids": [
         {
           "id": "arts-101-l02-a1",
           "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary of the lesson's main concept."
+          "title": "The Color Wheel Map",
+          "content": "A diagram showing primary, secondary, and tertiary colors, with arrows pointing to complementary pairs."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/arts-101-l02.png"
     },
     {
       "id": "arts-101-l03",
       "title": "Drawing Techniques",
       "type": "video",
       "duration": 12,
+      "lessonImagePrompt": "Imagen 4 prompt: A close-up of an open sketchbook on a wooden desk with a beautifully shaded graphite drawing of an apple, showing hatching and cross-hatching techniques, soft natural window lighting.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A time-lapse animation of a hand drawing a realistic face, starting with basic proportion lines, moving to contour outlines, and finishing with smooth sfumato shading.",
       "chunks": [
         {
           "id": "arts-101-l03-c1",
           "title": "Contour Drawing",
-          "content": "Contour drawing is a special drawing technique that focuses on capturing the outline and edges of an object without lifting your pencil from the paper. This method is fantastic for helping you train your eye to really notice the details of what you are drawing. By practicing contour drawing, you can improve your observation skills and become a better artist. One exciting variation of this technique is called blind contour drawing. In this practice, you look only at the object you are drawing and do not glance at your paper at all! This can lead to some surprising and fun results. A well-known artist named Egon Schiele was famous for using bold contour lines in his expressive figure drawings. His unique style made his artwork stand out and showed how contour drawing can add character and emotion to your pieces. So grab your pencil and try contour drawing today to see the world in a new way!"
+          "content": "Contour drawing focuses on capturing the outline and edges of an object. It's a fantastic way to train your eye to notice details! A fun variation is 'blind contour drawing,' where you look only at the object and never at your paper. It leads to surprising and expressive results. The artist Egon Schiele was famous for using bold contour lines to add character and emotion to his figure drawings."
         },
         {
           "id": "arts-101-l03-c2",
           "title": "Shading and Value",
-          "content": "Shading is a fantastic technique that artists use to make their drawings look more realistic and three-dimensional! When you add shading to a flat image, it can create the illusion of depth and form. There are several fun methods to try out when shading. One is called hatching, where you draw a series of parallel lines close together. Another method is cross-hatching, which involves overlapping lines to create darker areas. You can also use stippling, which is when you make lots of tiny dots to build up shadows. Blending is another technique that allows you to create smooth transitions between light and dark areas, and you can do this with a pencil or even your finger! A famous artist known for his incredible shading skills is Leonardo da Vinci. He used a special technique called sfumato, which means 'smoky' in Italian. This technique creates soft, gentle transitions between colors and tones, and you can see it beautifully in his painting, the Mona Lisa. By practicing these shading techniques, you can add depth and life to your own drawings!"
+          "content": "Shading makes flat drawings look three-dimensional by adding shadows and light. You can use 'hatching' (parallel lines), 'cross-hatching' (overlapping lines), or 'stippling' (tiny dots) to build up dark areas. Leonardo da Vinci used a famous blending technique called 'sfumato' (meaning 'smoky' in Italian) to create soft, gentle transitions between light and dark, as seen in the Mona Lisa."
         },
         {
           "id": "arts-101-l03-c3",
           "title": "Proportion",
-          "content": "Proportion is an important concept in art that helps us understand how different parts of a drawing relate to each other in size. When we draw a human face, there are some useful guidelines that can help us get it just right! For instance, if you look closely, you'll notice that the eyes are usually positioned halfway down the head. This means that if you were to measure from the top of the head to the chin, the eyes would sit right in the middle. Next, the nose is placed halfway between the eyes and the chin, which helps to create a balanced look. Lastly, the mouth is about one-third of the way down from the nose to the chin. By following these simple proportion guidelines, artists can create faces that look more realistic and lifelike. Remember, practicing these techniques will help you improve your drawing skills and make your artwork even more impressive! So grab your pencils and start experimenting with proportions in your drawings today!"
+          "content": "Proportion is how different parts of a drawing relate to each other in size. When drawing a human face, guidelines help get it right! For example, the eyes are usually positioned exactly halfway down the head. The bottom of the nose is halfway between the eyes and the chin, and the mouth is about one-third of the way down from the nose to the chin. Practicing these rules helps create realistic, lifelike portraits."
         }
       ],
       "flashcards": [
@@ -323,17 +331,17 @@ export const Arts101Module: LearningModule = {
         },
         {
           "id": "arts-101-l03-f2",
-          "front": "Technique using parallel lines to create value",
+          "front": "A shading technique using parallel lines",
           "back": "Hatching"
         },
         {
           "id": "arts-101-l03-f3",
-          "front": "Size relationship between parts of a drawing",
+          "front": "The size relationship between parts of a drawing",
           "back": "Proportion"
         },
         {
           "id": "arts-101-l03-f4",
-          "front": "Soft, smoky shading technique used by da Vinci",
+          "front": "A soft, smoky shading technique used by da Vinci",
           "back": "Sfumato"
         }
       ],
@@ -360,11 +368,11 @@ export const Arts101Module: LearningModule = {
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Contour drawing captures the outline of objects!"
+          "explanation": "Contour drawing captures the outline and edges of objects."
         },
         {
           "id": "arts-101-l03-q2",
-          "text": "Shading with tiny dots is called",
+          "text": "Shading with tiny dots is called:",
           "options": [
             {
               "id": "a",
@@ -384,11 +392,11 @@ export const Arts101Module: LearningModule = {
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Stippling uses many small dots to create value!"
+          "explanation": "Stippling uses many small dots clustered together to create darker values."
         },
         {
           "id": "arts-101-l03-q3",
-          "text": "On the average human face, the eyes are located",
+          "text": "On the average human face, the eyes are located:",
           "options": [
             {
               "id": "a",
@@ -408,57 +416,60 @@ export const Arts101Module: LearningModule = {
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Eyes sit at the midpoint of the head height!"
+          "explanation": "The eyes sit right at the midpoint of the total head height."
         }
       ],
       "interactiveActivities": [
         {
           "id": "arts-101-l03-act1",
           "type": "drawing_canvas",
-          "title": "Shading sampler",
-          "description": "Draw four squares. Fill each with a different shading technique: hatching, cross-hatching, stippling, and blending. Then draw a sphere and shade it with your favorite technique to make it look 3D."
+          "title": "Shading Sampler",
+          "description": "Draw four squares. Fill each with a different shading technique: hatching, cross-hatching, stippling, and blending. Then draw a sphere and shade it to look 3D."
         }
       ],
       "learningAids": [
         {
           "id": "arts-101-l03-a1",
           "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary of the lesson's main concept."
+          "title": "Facial Proportions Guide",
+          "content": "A diagram of a human face showing the horizontal guidelines for the eyes, nose, and mouth."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/arts-101-l03.png"
     },
     {
       "id": "arts-101-l04",
       "title": "Art Checkpoint",
       "type": "quiz",
       "duration": 8,
+      "lessonImagePrompt": "Imagen 4 prompt: A colorful gallery wall displaying various framed artworks, including a color wheel, a contour drawing, and a textured painting, warm gallery lighting, photorealistic.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A fast-paced, energetic montage reviewing art concepts: a color wheel spinning, a pencil sketching a 3D cube, and a brush applying thick impasto paint.",
       "chunks": [
         {
           "id": "arts-101-l04-c1",
           "title": "Elements and Color Review",
-          "content": "In this lesson, we explored the seven essential elements of art that every artist should know: line, shape, color, texture, space, form, and value. Each of these elements plays a crucial role in how we create and appreciate art. You learned that primary colors, which are red, blue, and yellow, can be mixed together to create secondary colors like green, orange, and purple. This mixing process is exciting because it allows you to create a whole new palette of colors! Furthermore, we discussed complementary colors, which are colors that sit directly opposite each other on the color wheel. When you place these colors next to each other, they make each other look even brighter and more vibrant. Understanding these concepts is fundamental to both creating and enjoying art, as they help you see the world in a more colorful and creative way."
+          "content": "Let's review! The seven essential elements of art are line, shape, color, texture, space, form, and value. You learned that primary colors (red, blue, yellow) mix to create secondary colors. We also explored complementary colors—opposites on the color wheel that make each other pop when placed side by side. These are the fundamental tools every artist uses to build a masterpiece."
         },
         {
           "id": "arts-101-l04-c2",
           "title": "Drawing Techniques Review",
-          "content": "In our review of drawing techniques, we discussed contour drawing, which focuses on capturing the outlines of objects. We also explored shading techniques, including hatching, cross-hatching, stippling, and blending, which add depth and dimension to your drawings. Finally, we talked about how proportion guidelines can help you draw realistic faces and figures, making your artwork more lifelike and engaging.\nContext recap: In our review of drawing techniques, we discussed contour drawing, which focuses on capturing the outlines of objects. We also explored shading techniques, including hatching, cross-hatching, stippling, and blending, which add depth and dimension to your drawings. Finally, we talked about how proportion guidelines can help you draw realistic faces and figures, making your artwork more lifelike and engaging."
+          "content": "We also practiced drawing techniques. Contour drawing trains your eye to follow edges. Shading techniques like hatching, cross-hatching, and stippling add depth and dimension, turning flat shapes into 3D forms. Finally, understanding proportion helps you draw realistic faces by knowing exactly where features like the eyes and nose belong."
         },
         {
           "id": "arts-101-l04-c3",
           "title": "You Are Growing as an Artist!",
-          "content": "Congratulations! You have now learned the essential building blocks of all visual art. Every painting, drawing, and sculpture uses these same elements and techniques. As you continue to practice and explore your creativity, you will grow as an artist and develop your own unique style. Remember, art is all about experimenting and expressing yourself! So, don't be afraid to try new things and let your imagination soar. Keep creating and have fun with your art journey!\nContext recap: Congratulations! You have now learned the essential building blocks of all visual art. Every painting, drawing, and sculpture uses these same elements and techniques. As you continue to practice and explore your creativity, you will grow as an artist and develop your own unique style.\nWhy this matters: You Are Growing as an Artist! helps learners in Arts connect ideas from Creative Arts Studio to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "Congratulations on mastering the basics! Every painting, drawing, and sculpture in the world uses these exact same elements and techniques. As you continue to practice, you will develop your own unique style. Remember, art is about experimenting, making mistakes, and expressing yourself. Keep your imagination wide open!"
         }
       ],
       "flashcards": [
         {
           "id": "arts-101-l04-f1",
-          "front": "Three primary colors",
+          "front": "The three primary colors",
           "back": "Red, yellow, blue"
         },
         {
           "id": "arts-101-l04-f2",
-          "front": "Element that describes how light or dark",
+          "front": "The element that describes how light or dark a color is",
           "back": "Value"
         },
         {
@@ -468,7 +479,7 @@ export const Arts101Module: LearningModule = {
         },
         {
           "id": "arts-101-l04-f4",
-          "front": "Colors opposite on the color wheel",
+          "front": "Colors opposite each other on the color wheel",
           "back": "Complementary colors"
         }
       ],
@@ -495,11 +506,11 @@ export const Arts101Module: LearningModule = {
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Primary colors cannot be made by mixing others!"
+          "explanation": "Red, yellow, and blue are the primary colors that make up all other colors."
         },
         {
           "id": "arts-101-l04-q2",
-          "text": "What shading technique uses overlapping sets of lines?",
+          "text": "What shading technique uses overlapping sets of parallel lines?",
           "options": [
             {
               "id": "a",
@@ -519,11 +530,11 @@ export const Arts101Module: LearningModule = {
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Cross-hatching layers lines in different directions!"
+          "explanation": "Cross-hatching layers lines in different directions to build shadows."
         },
         {
           "id": "arts-101-l04-q3",
-          "text": "Negative space is",
+          "text": "Negative space is:",
           "options": [
             {
               "id": "a",
@@ -543,14 +554,14 @@ export const Arts101Module: LearningModule = {
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Negative space is the area surrounding the subject!"
+          "explanation": "Negative space is the empty area surrounding the main subject."
         }
       ],
       "interactiveActivities": [
         {
           "id": "arts-101-l04-act1",
           "type": "drawing_canvas",
-          "title": "Mini gallery review",
+          "title": "Mini Gallery Review",
           "description": "Collect your best drawing from each of the first three lessons. Write one sentence about which element or technique you used in each piece."
         }
       ],
@@ -558,59 +569,62 @@ export const Arts101Module: LearningModule = {
         {
           "id": "arts-101-l04-a1",
           "type": "mnemonic",
-          "title": "Memory Cue",
-          "content": "Use Plan, Solve, Explain to structure each response."
+          "title": "Elements Memory Cue",
+          "content": "Remember the 7 elements with: Little (Line) Shapes Can (Color) Value True (Texture) Space & Form!"
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/arts-101-l04.png"
     },
     {
       "id": "arts-101-l05",
       "title": "Famous Artists",
       "type": "video",
       "duration": 12,
+      "lessonImagePrompt": "Imagen 4 prompt: An imaginative studio space blending three art styles: a Monet-style water lily pond on the floor, a Van Gogh starry night sky on the ceiling, and a Frida Kahlo inspired tropical portrait on the easel, highly detailed.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A visual journey transitioning through famous paintings: starting with the soft, shimmering water lilies of Monet, morphing into the thick, swirling stars of Van Gogh, and ending on the vibrant, symbolic flora of Frida Kahlo.",
       "chunks": [
         {
           "id": "arts-101-l05-c1",
           "title": "Claude Monet — Impressionism",
-          "content": "Claude Monet was a talented French painter who lived from 1840 to 1926. He is well-known for being one of the founders of the Impressionist movement, which was a new way of looking at art that focused on capturing moments in time. Monet loved to paint outdoors, where he could see the beautiful changes in light and color as the day went on. One of his most famous series of paintings is called Water Lilies. This series includes over 250 different paintings of the pond in his garden, where he spent a lot of time observing nature. Monet's unique painting style features loose and visible brushstrokes, which create a shimmering and dreamlike effect. This technique makes it feel like you are stepping right into the scene he painted. Through his artwork, Monet encourages us to appreciate the beauty of nature and the world around us, reminding us to take a moment to enjoy the sights and colors in our own lives."
+          "content": "Claude Monet (1840–1926) was a French painter and a founder of Impressionism. This movement focused on capturing quick moments in time, especially how sunlight changes colors outdoors. Monet is famous for his 'Water Lilies' series, featuring over 250 paintings of his garden pond. He used loose, visible brushstrokes to create a shimmering, dreamlike effect, encouraging us to appreciate the fleeting beauty of nature."
         },
         {
           "id": "arts-101-l05-c2",
           "title": "Vincent van Gogh — Post-Impressionism",
-          "content": "Vincent van Gogh was a truly extraordinary artist who lived from 1853 to 1890. He is best known for his unique style that features thick, swirling brushstrokes, a technique called impasto. This method allows the paint to stand out from the canvas, creating a lively texture that draws the viewer in. One of his most famous paintings is The Starry Night, which he created in 1889. In this artwork, you can see a beautiful night sky filled with swirling clouds and shining stars. The vibrant blues and yellows he used express strong feelings and a sense of movement, making the painting feel alive. Interestingly, during his lifetime, van Gogh only sold one painting, which is quite surprising! However, today, his artwork is incredibly valuable and can sell for tens of millions of dollars! His journey reminds us of the importance of pursuing our passions, even when we face difficulties or don't receive recognition right away. It teaches us to believe in ourselves and our creativity, no matter what others may think."
+          "content": "Vincent van Gogh (1853–1890) was an extraordinary artist known for his emotional use of color and a technique called 'impasto'. Impasto involves applying paint so thickly that it stands out from the canvas, creating a swirling, lively texture. In his famous 1889 painting 'The Starry Night', vibrant blues and yellows express strong feelings and movement. Though he only sold one painting in his lifetime, his work is now celebrated worldwide."
         },
         {
           "id": "arts-101-l05-c3",
           "title": "Frida Kahlo — Self-Portraits",
-          "content": "Frida Kahlo was a remarkable Mexican artist who was born in 1907 and became famous for her expressive self-portraits. She had a unique way of using bright colors and powerful symbols in her artwork to share her feelings and life experiences. One of her most famous paintings is called Self-Portrait with Thorn Necklace and Hummingbird. In this artwork, she includes various plants and animals, using vibrant colors to show deep themes of pain and strength. Frida's art is not just beautiful; it tells a story about who she was and what she went through in her life. Her creativity encourages us to think about our own identities and to express our emotions through our own art. Frida Kahlo is celebrated as one of the most important artists of the 20th century, and her work continues to inspire people around the world to explore their own creativity and feelings."
+          "content": "Frida Kahlo (1907–1954) was a remarkable Mexican artist famous for her bold, expressive self-portraits. She used bright colors and powerful symbols—like tropical plants and animals—to share her personal feelings, pain, and strength. In paintings like 'Self-Portrait with Thorn Necklace and Hummingbird', she tells a deep story about her identity. Her work inspires people to express their true emotions through art."
         }
       ],
       "flashcards": [
         {
           "id": "arts-101-l05-f1",
-          "front": "Painted Water Lilies with loose brushstrokes",
+          "front": "Painted 'Water Lilies' with loose brushstrokes",
           "back": "Claude Monet"
         },
         {
           "id": "arts-101-l05-f2",
-          "front": "Thick paint technique using swirling brushstrokes",
+          "front": "A thick paint technique using swirling brushstrokes",
           "back": "Impasto (Van Gogh)"
         },
         {
           "id": "arts-101-l05-f3",
-          "front": "Mexican artist known for bold self-portraits",
+          "front": "Mexican artist known for bold, symbolic self-portraits",
           "back": "Frida Kahlo"
         },
         {
           "id": "arts-101-l05-f4",
-          "front": "Painting of a swirling night sky from 1889",
+          "front": "A famous painting of a swirling night sky from 1889",
           "back": "The Starry Night (Van Gogh)"
         }
       ],
       "questions": [
         {
           "id": "arts-101-l05-q1",
-          "text": "Which artist started the Impressionist movement and painted Water Lilies?",
+          "text": "Which artist helped start the Impressionist movement and painted Water Lilies?",
           "options": [
             {
               "id": "a",
@@ -630,7 +644,7 @@ export const Arts101Module: LearningModule = {
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Monet is the father of Impressionism!"
+          "explanation": "Monet is considered the father of Impressionism and painted the famous Water Lilies."
         },
         {
           "id": "arts-101-l05-q2",
@@ -654,11 +668,11 @@ export const Arts101Module: LearningModule = {
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Impasto means thick, textured paint applied with bold strokes!"
+          "explanation": "Impasto means applying thick, textured paint with bold strokes."
         },
         {
           "id": "arts-101-l05-q3",
-          "text": "Frida Kahlo is best known for her",
+          "text": "Frida Kahlo is best known for her:",
           "options": [
             {
               "id": "a",
@@ -678,15 +692,23 @@ export const Arts101Module: LearningModule = {
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Kahlo created powerful symbolic self-portraits!"
+          "explanation": "Kahlo created powerful, symbolic self-portraits to express her identity and emotions."
         }
       ],
       "interactiveActivities": [
         {
           "id": "arts-101-l05-act1",
           "type": "drawing_canvas",
-          "title": "Artist style study",
-          "description": "Pick one famous artist from the lesson. Create a short artwork inspired by their style. If you pick Monet, use loose brushstrokes. If Van Gogh, use thick swirls. If Kahlo, create a symbolic self-portrait."
+          "title": "Artist Style Study",
+          "description": "Pick one famous artist from the lesson. Create a short artwork inspired by their style. If Monet, use loose brushstrokes. If Van Gogh, use thick swirls. If Kahlo, create a symbolic self-portrait."
+        }
+      ],
+      "learningAids": [
+        {
+          "id": "arts-101-l05-a1",
+          "type": "mnemonic",
+          "title": "Artist Memory Cue",
+          "content": "Monet = Moments (Impressionism), Van Gogh = Vibrant swirls (Impasto), Kahlo = Keen self-portraits."
         }
       ]
     },
@@ -695,21 +717,23 @@ export const Arts101Module: LearningModule = {
       "title": "Sculpture and 3D Art",
       "type": "video",
       "duration": 12,
+      "lessonImagePrompt": "Imagen 4 prompt: A messy, creative art table covered in clay pinch pots, colorful paper mâché masks, and a quirky robot made from recycled bottle caps and cardboard, bright studio lighting.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A stop-motion style animation showing a lump of clay shaping itself into a bowl, followed by newspaper strips wrapping around a balloon, and finally recycled objects assembling into a toy robot.",
       "chunks": [
         {
           "id": "arts-101-l06-c1",
           "title": "Clay Sculpture",
-          "content": "Clay is a wonderful material that can be shaped in many ways, such as pinching, rolling, or coiling. Ancient Greek artists were skilled in creating beautiful clay vases and figures that are still admired today. You can try making a simple pinch pot by using your fingers to shape the clay into a bowl. Once you have your pot, you can add fun textures using a pencil or a fork to create interesting designs. Working with clay allows you to express your creativity and make something unique!\nContext recap: Clay is a wonderful material that can be shaped in many ways, such as pinching, rolling, or coiling. Ancient Greek artists were skilled in creating beautiful clay vases and figures that are still admired today. You can try making a simple pinch pot by using your fingers to shape the clay into a bowl. Once you have your pot, you can add fun textures using a pencil or a fork to create interesting designs."
+          "content": "Clay is a wonderful, earthy material that can be shaped by pinching, rolling, or coiling. Ancient artists created beautiful clay vases and figures that we still admire today. You can make a simple 'pinch pot' by pressing your thumb into a ball of clay and pinching the sides to form a bowl. Once shaped, you can carve fun textures into it using a pencil or fork. Working with clay is a very hands-on way to express your creativity!"
         },
         {
           "id": "arts-101-l06-c2",
           "title": "Paper Mâché",
-          "content": "Paper mâché is an exciting and imaginative art technique that lets you create wonderful sculptures using simple materials! To start, you take strips of newspaper and dip them into a mixture of glue and water. This mixture helps the paper stick together. You can layer these strips over a balloon or a cardboard shape to form your sculpture. Once it dries, it becomes hard and sturdy! The famous sculptor Auguste Rodin often worked with real models to create his art, but with paper mâché, you have the freedom to make colorful masks or fun animal shapes. After your creation is dry, you can paint it in any colors you like! This technique is a fantastic way to express your creativity and make unique three-dimensional art pieces that you can show off to your friends and family!"
+          "content": "Paper mâché is an imaginative technique that uses simple materials to build sturdy sculptures. You dip strips of newspaper into a mixture of glue and water, then layer them over a base, like a balloon or cardboard shape. When it dries, it becomes a hard shell! You can use paper mâché to make colorful masks, piñatas, or animal shapes. Once dry, it's a perfect canvas for bright paints."
         },
         {
           "id": "arts-101-l06-c3",
           "title": "Assemblage",
-          "content": "Assemblage is a fascinating form of sculpture that uses found objects to create new artworks. The famous artist Pablo Picasso was known for his innovative techniques, such as gluing together newspaper, string, and wood in his piece Still Life with Chair Caning. You can try your hand at assemblage by collecting safe, recycled items from around your home, like bottle caps, old toys, or cardboard. With these materials, you can build a robot or a creature, letting your imagination run wild! This art form encourages creativity and resourcefulness.\nContext recap: Assemblage is a fascinating form of sculpture that uses found objects to create new artworks. The famous artist Pablo Picasso was known for his innovative techniques, such as gluing together newspaper, string, and wood in his piece Still Life with Chair Caning. You can try your hand at assemblage by collecting safe, recycled items from around your home, like bottle caps, old toys, or cardboard. With these materials, you can build a robot or a creature, letting your imagination run wild!"
+          "content": "Assemblage is a fascinating form of 3D art made by gathering and gluing together 'found objects'. The famous artist Pablo Picasso used this technique, combining newspaper, string, and wood in his artworks. You can create your own assemblage by collecting safe, recycled items from home—like bottle caps, cardboard tubes, and old toys. By assembling these random pieces, you can build a robot, a creature, or an abstract sculpture!"
         }
       ],
       "flashcards": [
@@ -720,18 +744,18 @@ export const Arts101Module: LearningModule = {
         },
         {
           "id": "arts-101-l06-f2",
-          "front": "Sculpture made from newspaper and glue",
+          "front": "Sculpture made from layered newspaper and glue",
           "back": "Paper mâché"
         },
         {
           "id": "arts-101-l06-f3",
-          "front": "Art made by gluing found objects together",
+          "front": "Art made by gluing found or recycled objects together",
           "back": "Assemblage"
         },
         {
           "id": "arts-101-l06-f4",
-          "front": "Famous for Still Life with Chair Caning assemblage",
-          "back": "Pablo Picasso"
+          "front": "A simple clay bowl made by pressing and squeezing",
+          "back": "Pinch pot"
         }
       ],
       "questions": [
@@ -757,11 +781,11 @@ export const Arts101Module: LearningModule = {
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Paper mâché uses wet newspaper strips!"
+          "explanation": "Paper mâché uses wet newspaper strips layered over a form."
         },
         {
           "id": "arts-101-l06-q2",
-          "text": "What 3D art is made by gluing recycled objects?",
+          "text": "What 3D art is made by gluing recycled or found objects together?",
           "options": [
             {
               "id": "a",
@@ -781,11 +805,11 @@ export const Arts101Module: LearningModule = {
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Assemblage uses found objects!"
+          "explanation": "Assemblage is the art of assembling found objects into a new sculpture."
         },
         {
           "id": "arts-101-l06-q3",
-          "text": "Pinch pots and coils are made with",
+          "text": "Pinch pots and coils are made with:",
           "options": [
             {
               "id": "a",
@@ -805,66 +829,77 @@ export const Arts101Module: LearningModule = {
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Clay is soft and perfect for pinching!"
+          "explanation": "Clay is soft and perfect for pinching and coiling into shapes."
         }
       ],
       "interactiveActivities": [
         {
           "id": "arts-101-l06-act1",
           "type": "project_builder",
-          "title": "Recycled robot assemblage",
+          "title": "Recycled Robot Assemblage",
           "description": "Gather clean cardboard tubes, bottle caps, egg cartons, glue, tape, and markers. Build and decorate a standing robot or creature."
         }
-      ]
+      ],
+      "learningAids": [
+        {
+          "id": "arts-101-l06-a1",
+          "type": "image",
+          "title": "3D Art Guide",
+          "content": "Visual guide showing the difference between Clay (a pot), Paper Mâché (a mask), and Assemblage (a junk robot)."
+        }
+      ],
+      "imageUrl": "/generated-images/refinery/arts-101-l06.png"
     },
     {
       "id": "arts-101-l07",
       "title": "Art in Nature",
       "type": "video",
       "duration": 12,
+      "lessonImagePrompt": "Imagen 4 prompt: A beautiful outdoor nature mandala made of perfectly arranged colorful autumn leaves, smooth river stones, and bright flower petals, showing perfect symmetry and fractal patterns, photorealistic.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A cinematic macro video zooming into a green fern leaf to reveal its fractal patterns, then panning to a perfectly symmetrical butterfly resting on a vibrant flower.",
       "chunks": [
         {
           "id": "arts-101-l07-c1",
           "title": "Patterns in Nature",
-          "content": "Nature is full of beautiful patterns that can inspire artists. For example, leaves have repeating vein patterns, and sunflowers display stunning spiral shapes. The artist Andy Goldsworthy is known for arranging natural materials like leaves and stones into temporary art pieces that highlight these perfect patterns. By observing nature closely, we can find inspiration for our own artwork and learn to appreciate the beauty that surrounds us every day.\nContext recap: Nature is full of beautiful patterns that can inspire artists. For example, leaves have repeating vein patterns, and sunflowers display stunning spiral shapes. The artist Andy Goldsworthy is known for arranging natural materials like leaves and stones into temporary art pieces that highlight these perfect patterns. By observing nature closely, we can find inspiration for our own artwork and learn to appreciate the beauty that surrounds us every day."
+          "content": "Nature is the ultimate artist, full of beautiful, repeating patterns. Leaves have intricate vein networks, and sunflowers display stunning spiral shapes. The artist Andy Goldsworthy is famous for 'land art'. He arranges natural materials like leaves, ice, and stones into temporary, beautiful patterns outdoors. By observing nature closely, we can find endless inspiration for our own artwork."
         },
         {
           "id": "arts-101-l07-c2",
           "title": "Symmetry",
-          "content": "Symmetry is a really interesting idea that you can find both in art and in nature! It happens when one side of something looks just like the other side. A great example of symmetry is a butterfly's wings, which are identical on both sides. Another example is a snowflake, which has a beautiful and complex pattern that is the same all around. You can try this out yourself by taking a real leaf and folding it in half. When you do this, you'll notice that both sides of the leaf match perfectly, showing off nature's symmetry! An artist named Georgia O'Keeffe is well-known for her paintings of large flowers that often have these lovely symmetrical shapes. Learning about symmetry can help you make your own artwork feel balanced and harmonious, making it even more beautiful!"
+          "content": "Symmetry happens when one half of something is a perfect mirror image of the other half. A classic example is a butterfly's wings or a snowflake. If you fold a perfectly symmetrical leaf in half, the edges will match exactly! The artist Georgia O'Keeffe often painted large, beautiful flowers that highlighted these symmetrical shapes. Using symmetry in your art creates a sense of balance and harmony."
         },
         {
           "id": "arts-101-l07-c3",
           "title": "Fractals and Repeating Shapes",
-          "content": "Fractals are fascinating shapes that repeat themselves in smaller and smaller versions, creating beautiful and intricate patterns. You can find examples of fractals all around us in nature! For instance, look at the branches of a tree; they spread out and keep dividing into smaller branches. Another great example is the spirals you see in seashells, which also follow this repeating pattern. To create your very own fractal pattern, grab some paper and start drawing a tree. Begin with a big trunk and then add smaller branches coming off of it. Keep going by adding even tinier branches! This fun exercise not only helps you learn about fractals but also encourages you to express your creativity through your artwork. Fractals show us how repetition and complexity can create stunning beauty in the world around us."
+          "content": "Fractals are fascinating shapes that repeat themselves in smaller and smaller versions. Look at a tree: a large trunk splits into branches, which split into smaller branches, and then into tiny twigs. That repeating pattern is a fractal! You also see them in fern leaves and seashells. Drawing fractals is a fun way to see how simple repetition can create incredibly complex and beautiful designs."
         }
       ],
       "flashcards": [
         {
           "id": "arts-101-l07-f1",
-          "front": "Repeating shapes that get smaller",
+          "front": "Repeating shapes that get smaller and smaller",
           "back": "Fractals"
         },
         {
           "id": "arts-101-l07-f2",
-          "front": "One side mirrors the other",
+          "front": "When one side perfectly mirrors the other",
           "back": "Symmetry"
         },
         {
           "id": "arts-101-l07-f3",
-          "front": "Repeating lines in leaves or petals",
+          "front": "Repeating lines or shapes, like in leaves or petals",
           "back": "Patterns"
         },
         {
           "id": "arts-101-l07-f4",
-          "front": "Artist who arranges leaves and stones outdoors",
+          "front": "An artist who arranges leaves and stones outdoors",
           "back": "Andy Goldsworthy"
         }
       ],
       "questions": [
         {
           "id": "arts-101-l07-q1",
-          "text": "When one side of a butterfly's wings matches the other, it has",
+          "text": "When one side of a butterfly's wings matches the other, it has:",
           "options": [
             {
               "id": "a",
@@ -884,11 +919,11 @@ export const Arts101Module: LearningModule = {
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Symmetry means mirror halves!"
+          "explanation": "Symmetry means the two halves are mirror images of each other."
         },
         {
           "id": "arts-101-l07-q2",
-          "text": "Repeating smaller and smaller branches in a tree is an example of",
+          "text": "Repeating smaller and smaller branches in a tree is an example of:",
           "options": [
             {
               "id": "a",
@@ -908,11 +943,11 @@ export const Arts101Module: LearningModule = {
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Fractals repeat at smaller scales!"
+          "explanation": "Fractals are patterns that repeat at smaller and smaller scales."
         },
         {
           "id": "arts-101-l07-q3",
-          "text": "Repeating vein lines in a leaf create a",
+          "text": "Repeating vein lines in a leaf create a:",
           "options": [
             {
               "id": "a",
@@ -932,66 +967,77 @@ export const Arts101Module: LearningModule = {
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Patterns repeat over and over!"
+          "explanation": "Patterns are created when lines, shapes, or colors repeat."
         }
       ],
       "interactiveActivities": [
         {
           "id": "arts-101-l07-act1",
           "type": "drawing_canvas",
-          "title": "Nature symmetry print",
-          "description": "Go outside and collect flat leaves or flowers. Paint one side, fold paper over it, press, and open to see the mirror image. Label it 'Nature Symmetry'."
+          "title": "Nature Symmetry Print",
+          "description": "Go outside and collect flat leaves. Paint one side of a leaf, press it onto paper, and lift it to see the symmetrical print. Label it 'Nature Symmetry'."
         }
-      ]
+      ],
+      "learningAids": [
+        {
+          "id": "arts-101-l07-a1",
+          "type": "image",
+          "title": "Symmetry vs Asymmetry",
+          "content": "A visual diagram showing a perfectly symmetrical butterfly next to an asymmetrical rock formation."
+        }
+      ],
+      "imageUrl": "/generated-images/refinery/arts-101-l07.png"
     },
     {
       "id": "arts-101-l08",
       "title": "Final Portfolio Assessment",
       "type": "quiz",
       "duration": 10,
+      "lessonImagePrompt": "Imagen 4 prompt: A proud student's art portfolio laid open on a wooden desk, showcasing a diverse collection of colorful drawings, paintings, and a small clay sculpture, bathed in warm sunlight.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A celebratory animation of an art portfolio opening up, with 3D elements like color wheels, shaded spheres, and paper mâché figures magically popping out of the pages.",
       "chunks": [
         {
           "id": "arts-101-l08-c1",
           "title": "Review All Elements and Techniques",
-          "content": "Throughout this course, you have learned about various important elements and techniques in art, including line, shape, color, texture, space, contour, shading, and proportion. You also explored how famous artists use these elements in their work to create stunning pieces. Understanding these concepts will help you express your creativity and develop your own unique style as an artist.\nContext recap: Throughout this course, you have learned about various important elements and techniques in art, including line, shape, color, texture, space, contour, shading, and proportion. You also explored how famous artists use these elements in their work to create stunning pieces. Understanding these concepts will help you express your creativity and develop your own unique style as an artist."
+          "content": "You've made it to the end of the Creative Arts Studio! Let's reflect on what you've learned. You mastered the elements of art (line, shape, color, texture, space, form, value) and drawing techniques like contour, shading, and proportion. You also studied how masters like Monet, Van Gogh, and Kahlo used these tools to create their legendary styles."
         },
         {
           "id": "arts-101-l08-c2",
           "title": "Review 3D and Nature Art",
-          "content": "In this course, you had the opportunity to create exciting three-dimensional art using techniques like clay modeling, paper mâché, and assemblage. You also discovered the beauty of symmetry and patterns found in nature, which can inspire your artwork. These experiences have allowed you to explore different materials and methods, helping you grow as an artist and encouraging you to express your creativity in new ways.\nContext recap: In this course, you had the opportunity to create exciting three-dimensional art using techniques like clay modeling, paper mâché, and assemblage. You also discovered the beauty of symmetry and patterns found in nature, which can inspire your artwork. These experiences have allowed you to explore different materials and methods, helping you grow as an artist and encouraging you to express your creativity in new ways."
+          "content": "Beyond flat paper, you explored the 3D world through clay, paper mâché, and assemblage. You learned that art isn't just in museums—it's in nature, too! By recognizing symmetry, patterns, and fractals in the world around you, you now have an endless supply of inspiration for your future projects."
         },
         {
           "id": "arts-101-l08-c3",
           "title": "Your Artist Statement",
-          "content": "As you reflect on your artistic journey, think about your favorite piece of art that you created. Write or share a sentence about it, such as, 'I used shading and complementary colors to make my drawing look three-dimensional and bright.' This artist statement helps you express your thoughts and feelings about your work, and it’s a great way to communicate your artistic vision to others.\nContext recap: As you reflect on your artistic journey, think about your favorite piece of art that you created. Write or share a sentence about it, such as, 'I used shading and complementary colors to make my drawing look three-dimensional and bright.' This artist statement helps you express your thoughts and feelings about your work, and it’s a great way to communicate your artistic vision to others."
+          "content": "Every great artist has a portfolio—a collection of their best work. As you put yours together, think about your favorite piece. Write an 'Artist Statement' explaining it. For example: 'I used shading and complementary colors to make my drawing pop.' Sharing your thoughts helps others understand your unique artistic vision. Keep creating!"
         }
       ],
       "flashcards": [
         {
           "id": "arts-101-l08-f1",
-          "front": "Thick paint technique Van Gogh used",
+          "front": "The thick paint technique Van Gogh used",
           "back": "Impasto"
         },
         {
           "id": "arts-101-l08-f2",
-          "front": "Mirror-image balance in nature",
+          "front": "Mirror-image balance found in nature",
           "back": "Symmetry"
         },
         {
           "id": "arts-101-l08-f3",
-          "front": "Self-portrait artist with thorn necklace",
+          "front": "The artist famous for symbolic self-portraits",
           "back": "Frida Kahlo"
         },
         {
           "id": "arts-101-l08-f4",
-          "front": "Art made from glued found objects",
+          "front": "3D art made from glued found objects",
           "back": "Assemblage"
         }
       ],
       "questions": [
         {
           "id": "arts-101-l08-q1",
-          "text": "Which artist painted Water Lilies with loose brushstrokes?",
+          "text": "Which artist painted 'Water Lilies' with loose brushstrokes?",
           "options": [
             {
               "id": "a",
@@ -1011,11 +1057,11 @@ export const Arts101Module: LearningModule = {
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Claude Monet is the impressionist who painted Water Lilies!"
+          "explanation": "Claude Monet is the Impressionist master who painted Water Lilies."
         },
         {
           "id": "arts-101-l08-q2",
-          "text": "What technique uses thick swirls of paint?",
+          "text": "What technique uses thick, textured swirls of paint?",
           "options": [
             {
               "id": "a",
@@ -1035,11 +1081,11 @@ export const Arts101Module: LearningModule = {
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Impasto is thick, textured paint!"
+          "explanation": "Impasto is the technique of applying thick, textured paint."
         },
         {
           "id": "arts-101-l08-q3",
-          "text": "Art made by gluing recycled objects is called",
+          "text": "Art made by gluing recycled or found objects together is called:",
           "options": [
             {
               "id": "a",
@@ -1059,17 +1105,26 @@ export const Arts101Module: LearningModule = {
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Assemblage uses found objects!"
+          "explanation": "Assemblage uses found objects to build a new 3D artwork."
         }
       ],
       "interactiveActivities": [
         {
           "id": "arts-101-l08-act1",
           "type": "project_builder",
-          "title": "Final portfolio",
-          "description": "Collect your best 6 pieces from the whole module (drawing, color wheel, sculpture, nature print, etc.). Add a cover with your name and 'My Arts 101 Portfolio'. Present it to family or teacher and explain one thing you learned from each piece."
+          "title": "Final Portfolio",
+          "description": "Collect your best 6 pieces from the whole module. Add a cover with your name and 'My Arts 101 Portfolio'. Present it to family or a teacher and explain one thing you learned from each piece."
         }
-      ]
+      ],
+      "learningAids": [
+        {
+          "id": "arts-101-l08-a1",
+          "type": "image",
+          "title": "Portfolio Checklist",
+          "content": "A visual checklist reminding students to include: 1 Drawing, 1 Color Wheel, 1 Sculpture, 1 Nature Art, and 1 Artist Statement."
+        }
+      ],
+      "imageUrl": "/generated-images/refinery/arts-101-l08.png"
     }
   ]
 };

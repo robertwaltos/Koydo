@@ -18,13 +18,22 @@ export async function GET(request: Request) {
   const gate = await requireFeature("reflection_journal", request);
   if (gate) return gate;
 
+  const supabase = await createSupabaseServerClient();
+  const {
+    data: { user },
+    error: authError,
+  } = await supabase.auth.getUser();
+
+  if (authError || !user) {
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  }
+
   const url = new URL(request.url);
   const profileId = url.searchParams.get("profileId");
   const lessonId = url.searchParams.get("lessonId");
 
   if (!profileId) return NextResponse.json({ error: "profileId required" }, { status: 400 });
 
-  const supabase = await createSupabaseServerClient();
   let query = supabase
     .from("reflection_journal")
     .select("id, prompt, response, lesson_id, created_at")
@@ -47,14 +56,35 @@ export async function POST(request: Request) {
   const gate = await requireFeature("reflection_journal", request);
   if (gate) return gate;
 
+  const supabase = await createSupabaseServerClient();
+  const {
+    data: { user },
+    error: authError,
+  } = await supabase.auth.getUser();
+
+  if (authError || !user) {
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  }
+
   const body = await request.json().catch(() => ({}));
   const parsed = createSchema.safeParse(body);
   if (!parsed.success) {
     return NextResponse.json({ error: "Invalid request" }, { status: 400 });
   }
 
-  const admin = createSupabaseAdminClient();
-  const { data, error } = await admin
+  // Verify profile ownership
+  const { data: profile } = await supabase
+    .from("student_profiles")
+    .select("id")
+    .eq("id", parsed.data.profileId)
+    .eq("account_id", user.id)
+    .maybeSingle();
+
+  if (!profile) {
+    return NextResponse.json({ error: "Forbidden" }, { status: 403 });
+  }
+
+  const { data, error } = await supabase
     .from("reflection_journal")
     .insert({
       profile_id: parsed.data.profileId,

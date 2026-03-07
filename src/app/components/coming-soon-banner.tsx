@@ -19,8 +19,8 @@ export default function ComingSoonBanner({
 }: ComingSoonBannerProps) {
   return (
     <section className="mx-auto my-8 w-full max-w-3xl rounded-3xl border border-amber-300/40 bg-amber-50/90 p-8 text-zinc-900 shadow-sm dark:border-amber-700/40 dark:bg-amber-950/30 dark:text-foreground">
-      <span className="inline-flex rounded-full border border-amber-300 bg-amber-100 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-amber-800 dark:border-amber-700 dark:bg-amber-900/40 dark:text-amber-200">
-        Coming Soon
+      <span className="inline-flex rounded-full border border-indigo-300 bg-indigo-100 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-indigo-800 dark:border-indigo-700 dark:bg-indigo-900/40 dark:text-indigo-200">
+        Preview
       </span>
       <h1 className="mt-4 text-3xl font-black tracking-tight">{title}</h1>
       <p className="mt-3 text-sm leading-relaxed text-zinc-700 dark:text-foreground/80">{description}</p>

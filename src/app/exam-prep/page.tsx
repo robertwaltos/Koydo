@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { getAllLearningModules } from "@/lib/modules";
 import ModuleCoverImage from "@/app/components/module-cover-image";
@@ -6,6 +7,15 @@ import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { type ExamRegion, getExamTrackProfileByModuleId } from "@/lib/exam/tracks";
 import SoftCard from "@/app/components/ui/soft-card";
 import PageHeader from "@/app/components/page-header";
+
+export const metadata: Metadata = {
+  title: "Exam Prep — SAT, ACT, AP & A-Level Practice | Koydo",
+  description: "Prepare for SAT, ACT, AP, A-Level, and IB exams with adaptive practice tests, AI tutoring, and personalized study plans. Track your progress and target weak areas.",
+  openGraph: {
+    title: "Exam Prep — SAT, ACT, AP & A-Level Practice | Koydo",
+    description: "Adaptive exam preparation with AI-powered practice tests and personalized study plans.",
+  },
+};
 
 export const dynamic = "force-dynamic";
 

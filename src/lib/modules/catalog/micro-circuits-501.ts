@@ -1,9 +1,9 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const MicroCircuits501Module: LearningModule = {
+export const micro_circuits_501_Module: LearningModule = {
   "id": "micro-circuits-501",
   "title": "Micro Circuits Specialization Studio",
-  "description": "Post-401 specialization in Micro Circuits, focused on micro circuits systems diagnostics, micro circuits operations and execution design, micro circuits impact and tradeoff analysis, and micro circuits governance and leadership through advanced casework, simulation, and defense-based checkpoints.",
+  "description": "This advanced specialization studio builds on core concepts to develop mastery in micro circuit systems. Learners will engage with complex case studies, high-fidelity simulations, and defense-style critiques to master diagnostics, operational design, impact analysis, and governance.",
   "subject": "Micro Circuits",
   "tags": [
     "core",
@@ -14,121 +14,121 @@ export const MicroCircuits501Module: LearningModule = {
   ],
   "minAge": 17,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en",
     "es"
   ],
   "learningObjectives": [
-    "Apply advanced methods for micro circuits systems diagnostics in high-constraint environments",
-    "Design robust systems for micro circuits operations and execution design with measurable control gates",
-    "Evaluate interventions in micro circuits impact and tradeoff analysis with research-grade rigor",
-    "Operationalize micro circuits governance and leadership with accountable governance and escalation pathways",
-    "Lead cross-functional decision reviews with explicit tradeoff communication",
-    "Defend recommendations under expert critique using evidence and uncertainty bounds"
+    "Diagnose complex issues in micro circuit systems under realistic constraints.",
+    "Design reliable operational workflows for micro circuits, including clear checkpoints and quality gates.",
+    "Analyze the impacts and tradeoffs of different micro circuit interventions using evidence-based methods.",
+    "Develop and implement governance frameworks for micro circuit projects, including clear accountability and escalation procedures.",
+    "Lead decision-making meetings, clearly communicating complex tradeoffs to diverse stakeholders.",
+    "Justify and defend technical and strategic recommendations to expert panels, using data and acknowledging uncertainty."
   ],
   "lessons": [
     {
       "id": "micro-circuits-501-l01",
-      "title": "Micro Circuits Advanced Foundations",
+      "title": "Advanced Foundations in Micro Circuit Analysis",
       "type": "video",
       "duration": 14,
       "learningAids": [
         {
           "id": "micro-circuits-501-l01-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "System Diagnostic Flowchart",
+          "content": "A visual flowchart illustrating the process of diagnosing a micro circuit, from defining the problem scope to identifying root causes with evidence."
         }
       ],
       "chunks": [
         {
           "id": "micro-circuits-501-l01-c1",
           "kind": "concept",
-          "title": "Scope and Boundary Design",
-          "content": "In this lesson, we will delve into the advanced boundaries of scope in Micro Circuits. Our primary focus will be on learning how to effectively diagnose micro circuit systems. This involves identifying any issues that may arise within these systems and understanding how to troubleshoot them. Additionally, we will discuss how to design operations and execution plans tailored specifically for these micro circuits. Mastering these concepts is crucial for ensuring that our micro circuits operate at their best and adhere to the necessary standards for performance and safety.\nContext recap: In this lesson, we will delve into the advanced boundaries of scope in Micro Circuits. Our primary focus will be on learning how to effectively diagnose micro circuit systems. This involves identifying any issues that may arise within these systems and understanding how to troubleshoot them. Additionally, we will discuss how to design operations and execution plans tailored specifically for these micro circuits.\nWhy this matters: Scope and Boundary Design helps learners in Micro Circuits connect ideas from Micro Circuits Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "Defining the System: Scope and Boundaries",
+          "content": "To analyze a complex micro circuit system, we first need to define its boundaries. This involves identifying the key components, inputs, and outputs, and understanding the operational constraints. This lesson teaches you how to map out a system clearly, which is the first step to effective troubleshooting and design."
         },
         {
           "id": "micro-circuits-501-l01-c2",
           "kind": "concept",
-          "title": "Causal and Uncertainty Modeling",
-          "content": "In this part of the lesson, learners will engage in mapping out causal pathways, which are the connections between different factors that can influence outcomes. Additionally, we will explore uncertainty ranges and system dependencies, which help us understand the various elements that may affect our plans before we take action. This foundational knowledge is crucial for effective intervention planning.\nContext recap: In this part of the lesson, learners will engage in mapping out causal pathways, which are the connections between different factors that can influence outcomes. Additionally, we will explore uncertainty ranges and system dependencies, which help us understand the various elements that may affect our plans before we take action. This foundational knowledge is crucial for effective intervention planning."
+          "title": "Modeling Cause-and-Effect and Uncertainty",
+          "content": "Nearly every system has variables that can affect its performance. Here, you'll learn to map cause-and-effect relationships and estimate potential uncertainty. Understanding these connections helps predict system behavior and plan for a range of possible outcomes, preventing surprises down the line."
         },
         {
           "id": "micro-circuits-501-l01-c3",
           "kind": "recap",
-          "title": "Evidence Thresholds",
-          "content": "In our recap, we will emphasize that all claims made during our analysis must be linked to measurable indicators. This means we will establish confidence bounds and set up review checkpoints to ensure that our findings are reliable and can be verified. This practice helps us maintain a high standard of evidence in our work.\nContext recap: In our recap, we will emphasize that all claims made during our analysis must be linked to measurable indicators. This means we will establish confidence bounds and set up review checkpoints to ensure that our findings are reliable and can be verified. This practice helps us maintain a high standard of evidence in our work."
+          "title": "Recap: The Role of Evidence",
+          "content": "In this recap, we'll reinforce a core principle: every claim must be backed by measurable evidence. We'll review how to establish clear metrics and checkpoints to ensure your analysis is both accurate and credible."
         }
       ],
       "flashcards": [
         {
           "id": "micro-circuits-501-l01-f1",
-          "front": "micro circuits systems diagnostics",
-          "back": "A specialization axis requiring explicit assumptions and measurable constraints."
+          "front": "System Diagnostics",
+          "back": "The structured process of identifying the root cause of a problem in a micro circuit system by defining scope, constraints, and evidence."
         },
         {
           "id": "micro-circuits-501-l01-f2",
-          "front": "micro circuits operations and execution design",
-          "back": "Execution architecture that determines reliability under stress."
+          "front": "Operational Design",
+          "back": "The plan for how a micro circuit system will function reliably, especially under stress or unexpected conditions."
         },
         {
           "id": "micro-circuits-501-l01-f3",
-          "front": "micro circuits impact and tradeoff analysis",
-          "back": "Evaluation discipline for identifying true gains and hidden costs."
+          "front": "Tradeoff Analysis",
+          "back": "The process of evaluating choices by comparing their potential benefits against their costs and risks."
         }
       ]
     },
     {
       "id": "micro-circuits-501-l02",
-      "title": "Micro Circuits Specialist Methods Lab",
+      "title": "Lab: Designing and Testing Specialist Methods",
       "type": "interactive",
       "duration": 17,
       "learningAids": [
         {
           "id": "micro-circuits-501-l02-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Workflow Builder",
+          "content": "Use an interactive tool to drag and drop components (checkpoints, rollback triggers) to build a resilient operational workflow for a given scenario."
         }
       ],
       "chunks": [
         {
           "id": "micro-circuits-501-l02-c1",
           "kind": "practice",
-          "title": "Method Design and Stress Test",
-          "content": "In this interactive segment, learners will have the opportunity to design specialized workflows tailored to their specific needs. They will also conduct stress tests on these workflows by simulating adverse scenarios to see how well they perform under pressure. This hands-on practice is vital for developing robust systems that can withstand challenges.\nContext recap: In this interactive segment, learners will have the opportunity to design specialized workflows tailored to their specific needs. They will also conduct stress tests on these workflows by simulating adverse scenarios to see how well they perform under pressure. This hands-on practice is vital for developing robust systems that can withstand challenges."
+          "title": "Practice: Designing a Resilient Workflow",
+          "content": "In this interactive lab, you'll design a specialized workflow for managing a micro circuit system. You will then stress-test your design by simulating challenging scenarios, like component failures or unexpected inputs, to identify and fix weaknesses."
         },
         {
           "id": "micro-circuits-501-l02-c2",
           "kind": "recap",
-          "title": "Control Gate Architecture",
-          "content": "In our recap, we will discuss how workflows should include essential components such as checkpoints, rollback criteria, and threshold-based escalation. These elements are crucial for ensuring that we can monitor progress effectively and respond to any issues that arise during the execution of our workflows.\nContext recap: In our recap, we will discuss how workflows should include essential components such as checkpoints, rollback criteria, and threshold-based escalation. These elements are crucial for ensuring that we can monitor progress effectively and respond to any issues that arise during the execution of our workflows."
+          "title": "Recap: Building Reliable Workflows",
+          "content": "A recap of the key elements of a reliable workflow. We'll cover the importance of checkpoints to review progress, rollback plans to safely undo changes, and clear escalation paths for when problems exceed defined limits."
         }
       ],
       "interactiveActivities": [
         {
           "id": "micro-circuits-501-l02-act1",
           "type": "matching_pairs",
-          "title": "Control-to-Outcome Mapping",
-          "description": "Match specialist controls with their strongest reliability and governance effects.",
+          "title": "Mapping Controls to Outcomes",
+          "description": "Match the workflow control to the problem it is best suited to solve.",
           "pairs": [
             {
               "left": "Pre-commit gate",
-              "right": "Prevents avoidable downstream failures"
+              "right": "Prevents predictable errors from moving forward."
             },
             {
               "left": "Rollback trigger",
-              "right": "Limits blast radius under adverse outcomes"
+              "right": "Contains the damage when something goes wrong."
             },
             {
               "left": "Baseline dashboard",
-              "right": "Supports defensible impact attribution"
+              "right": "Provides a clear 'before and after' to measure impact."
             },
             {
               "left": "Retrospective loop",
-              "right": "Improves next-cycle decision quality"
+              "right": "Feeds lessons from one cycle into the next."
             }
           ]
         }
@@ -136,7 +136,7 @@ export const MicroCircuits501Module: LearningModule = {
     },
     {
       "id": "micro-circuits-501-l03",
-      "title": "Checkpoint 1: Specialist Methods",
+      "title": "Checkpoint 1: Methods and Design",
       "type": "quiz",
       "duration": 10,
       "learningAids": [
@@ -150,12 +150,12 @@ export const MicroCircuits501Module: LearningModule = {
       "questions": [
         {
           "id": "micro-circuits-501-l03-q1",
-          "text": "Which practice most improves micro circuits systems diagnostics decision quality?",
+          "text": "Which practice most improves the quality of micro circuit system diagnostics?",
           "skillId": "micro-circuits-501-skill-core",
           "options": [
             {
               "id": "a",
-              "text": "Proceed without baseline or assumptions"
+              "text": "Proceed without a baseline or assumptions"
             },
             {
               "id": "b",
@@ -175,12 +175,12 @@ export const MicroCircuits501Module: LearningModule = {
         },
         {
           "id": "micro-circuits-501-l03-q2",
-          "text": "At level 501, strong execution for micro circuits operations and execution design requires:",
+          "text": "At an advanced level, strong operational design for micro circuits requires:",
           "skillId": "micro-circuits-501-skill-execution",
           "options": [
             {
               "id": "a",
-              "text": "Owner mapping, checkpoint cadence, and escalation thresholds"
+              "text": "Clear ownership, regular checkpoints, and escalation thresholds"
             },
             {
               "id": "b",
@@ -200,7 +200,7 @@ export const MicroCircuits501Module: LearningModule = {
         },
         {
           "id": "micro-circuits-501-l03-q3",
-          "text": "A defensible approach to micro circuits impact and tradeoff analysis includes:",
+          "text": "A defensible approach to impact and tradeoff analysis includes:",
           "skillId": "micro-circuits-501-skill-eval",
           "options": [
             {
@@ -230,7 +230,7 @@ export const MicroCircuits501Module: LearningModule = {
           "options": [
             {
               "id": "a",
-              "text": "Policy intent, measurable controls, and remediation pathways"
+              "text": "Policy goals, measurable controls, and clear remediation paths"
             },
             {
               "id": "b",
@@ -247,168 +247,68 @@ export const MicroCircuits501Module: LearningModule = {
           ],
           "correctOptionId": "a",
           "explanation": "Governance maturity is the operational link between intent, measurement, and corrective action."
-        },
-        {
-          "id": "micro-circuits-501-l03-q5",
-          "text": "What is the best way to compare competing interventions in advanced Micro Circuits?",
-          "skillId": "micro-circuits-501-skill-advanced-5",
-          "options": [
-            {
-              "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
-            },
-            {
-              "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
-            },
-            {
-              "id": "c",
-              "text": "Switch metrics after results arrive"
-            },
-            {
-              "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
-        },
-        {
-          "id": "micro-circuits-501-l03-q6",
-          "text": "In high-stakes Micro Circuits Specialization Studio execution, which communication protocol is strongest?",
-          "skillId": "micro-circuits-501-skill-advanced-6",
-          "options": [
-            {
-              "id": "a",
-              "text": "Broadcast conclusions without assumptions"
-            },
-            {
-              "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
-            },
-            {
-              "id": "c",
-              "text": "Share only final outcomes after completion"
-            },
-            {
-              "id": "d",
-              "text": "Limit updates to a single informal channel"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
-        },
-        {
-          "id": "micro-circuits-501-l03-q7",
-          "text": "A mature remediation loop in advanced Micro Circuits should prioritize:",
-          "skillId": "micro-circuits-501-skill-advanced-7",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blame assignment without system updates"
-            },
-            {
-              "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
-            },
-            {
-              "id": "c",
-              "text": "One-time fixes without retesting"
-            },
-            {
-              "id": "d",
-              "text": "Issue closure based on elapsed time"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
-        },
-        {
-          "id": "micro-circuits-501-l03-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Micro Circuits Specialization Studio?",
-          "skillId": "micro-circuits-501-skill-advanced-8",
-          "options": [
-            {
-              "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
-            },
-            {
-              "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
-            },
-            {
-              "id": "c",
-              "text": "Ignore correlated failure modes"
-            },
-            {
-              "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
         }
       ]
     },
     {
       "id": "micro-circuits-501-l04",
-      "title": "Micro Circuits Advanced Case Analysis",
+      "title": "Case Study: High-Stakes Tradeoffs",
       "type": "video",
       "duration": 14,
       "learningAids": [
         {
           "id": "micro-circuits-501-l04-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Decision Matrix",
+          "content": "An example of a decision matrix used to compare three potential solutions for the case study, scored against criteria like cost, performance, and safety."
         }
       ],
       "chunks": [
         {
           "id": "micro-circuits-501-l04-c1",
           "kind": "concept",
-          "title": "Scenario Architecture",
-          "content": "In this lesson, we will explore a case study that illustrates the various competing constraints present in the diagnostics of micro circuit systems. We will delve into the impacts and trade-offs associated with these systems, providing learners with the tools to effectively navigate complex scenarios where multiple factors need to be balanced. This understanding is crucial for making informed decisions in the field of micro circuits.\nContext recap: In this lesson, we will explore a case study that illustrates the various competing constraints present in the diagnostics of micro circuit systems. We will delve into the impacts and trade-offs associated with these systems, providing learners with the tools to effectively navigate complex scenarios where multiple factors need to be balanced. This understanding is crucial for making informed decisions in the field of micro circuits."
+          "title": "Analyzing a Complex Case Study",
+          "content": "This lesson walks through a real-world case study of a micro circuit system facing competing demands—like performance vs. power consumption, or speed vs. safety. We'll dissect the scenario to understand the technical and ethical constraints at play."
         },
         {
           "id": "micro-circuits-501-l04-c2",
           "kind": "practice",
-          "title": "Tradeoff Framing",
-          "content": "In this practice segment, learners will compare various options based on important dimensions such as safety, reliability, cost, equity, and governance. This comparison will help them understand the trade-offs involved in decision-making and how to prioritize different factors effectively.\nContext recap: In this practice segment, learners will compare various options based on important dimensions such as safety, reliability, cost, equity, and governance. This comparison will help them understand the trade-offs involved in decision-making and how to prioritize different factors effectively."
+          "title": "Practice: Framing the Tradeoffs",
+          "content": "Using the case study, you'll practice comparing different solutions. You will evaluate each option against key criteria like safety, reliability, cost, and fairness to make a well-rounded decision."
         },
         {
           "id": "micro-circuits-501-l04-c3",
           "kind": "recap",
-          "title": "Decision Memo Pattern",
-          "content": "In our recap, we will highlight that each recommendation made should include clear assumptions, evidence supporting the decision, risk controls to mitigate potential issues, and fallback plans in case things do not go as expected. This structured approach ensures that we are prepared for various outcomes.\nContext recap: In our recap, we will highlight that each recommendation made should include clear assumptions, evidence supporting the decision, risk controls to mitigate potential issues, and fallback plans in case things do not go as expected. This structured approach ensures that we are prepared for various outcomes."
+          "title": "Recap: Structuring a Recommendation",
+          "content": "We'll recap how to structure a professional recommendation. A strong recommendation always states its assumptions, presents the supporting evidence, outlines risk mitigation plans, and includes a fallback option."
         }
       ]
     },
     {
       "id": "micro-circuits-501-l05",
-      "title": "Micro Circuits Simulation Clinic",
+      "title": "Clinic: Interactive Simulation",
       "type": "interactive",
       "duration": 18,
       "learningAids": [
         {
           "id": "micro-circuits-501-l05-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Simulation Dashboard",
+          "content": "Interact with a dashboard to monitor a micro circuit's performance, adjust control parameters, and respond to simulated system alerts in real-time."
         }
       ],
       "chunks": [
         {
           "id": "micro-circuits-501-l05-c1",
           "kind": "practice",
-          "title": "Live Scenario Controls",
-          "content": "In this interactive practice, learners will operate scenario controls, which involves managing different variables while balancing performance and governance constraints. This experience will help them understand how to make decisions that align with both operational goals and regulatory requirements.\nContext recap: In this interactive practice, learners will operate scenario controls, which involves managing different variables while balancing performance and governance constraints. This experience will help them understand how to make decisions that align with both operational goals and regulatory requirements."
+          "title": "Practice: Managing a Live Scenario",
+          "content": "In this hands-on simulation, you'll take the controls of a micro circuit system. Your challenge is to manage its performance and meet operational targets while navigating unexpected events and adhering to governance rules."
         },
         {
           "id": "micro-circuits-501-l05-c2",
           "kind": "recap",
-          "title": "Adaptive Response Design",
-          "content": "In our recap, we will discuss how effective responses should be designed to update control gates while maintaining traceability and accountability. This means that any changes made should be documented clearly, ensuring that we can track decisions and their impacts over time.\nContext recap: In our recap, we will discuss how effective responses should be designed to update control gates while maintaining traceability and accountability. This means that any changes made should be documented clearly, ensuring that we can track decisions and their impacts over time."
+          "title": "Recap: Designing Adaptive Responses",
+          "content": "After the simulation, we'll discuss how to design adaptive systems. Effective responses involve updating your operational rules based on new information, while ensuring every change is tracked and justified."
         }
       ],
       "interactiveActivities": [
@@ -422,7 +322,7 @@ export const MicroCircuits501Module: LearningModule = {
     },
     {
       "id": "micro-circuits-501-l06",
-      "title": "Checkpoint 2: Case and Simulation Mastery",
+      "title": "Checkpoint 2: Application and Analysis",
       "type": "quiz",
       "duration": 11,
       "learningAids": [
@@ -461,7 +361,7 @@ export const MicroCircuits501Module: LearningModule = {
         },
         {
           "id": "micro-circuits-501-l06-q2",
-          "text": "A resilient strategy for micro circuits operations and execution design should include:",
+          "text": "A resilient strategy for micro circuits operations should include:",
           "skillId": "micro-circuits-501-skill-case2",
           "options": [
             {
@@ -486,12 +386,12 @@ export const MicroCircuits501Module: LearningModule = {
         },
         {
           "id": "micro-circuits-501-l06-q3",
-          "text": "When evaluating micro circuits impact and tradeoff analysis, which method is most rigorous?",
+          "text": "When evaluating micro circuit impacts, which method is most rigorous?",
           "skillId": "micro-circuits-501-skill-case3",
           "options": [
             {
               "id": "a",
-              "text": "Single success story without controls"
+              "text": "A single success story without controls"
             },
             {
               "id": "b",
@@ -499,7 +399,7 @@ export const MicroCircuits501Module: LearningModule = {
             },
             {
               "id": "c",
-              "text": "Outcome-only narrative without process evidence"
+              "text": "An outcome-only narrative without process evidence"
             },
             {
               "id": "d",
@@ -536,182 +436,182 @@ export const MicroCircuits501Module: LearningModule = {
         },
         {
           "id": "micro-circuits-501-l06-q5",
-          "text": "What is the best way to compare competing interventions in advanced Micro Circuits?",
+          "text": "When analyzing a case study with multiple stakeholders, what is the most critical first step?",
           "skillId": "micro-circuits-501-skill-advanced-5",
           "options": [
             {
               "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
+              "text": "Choose the solution that benefits the most powerful stakeholder."
             },
             {
               "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
+              "text": "Identify the goals and constraints of each stakeholder group."
             },
             {
               "id": "c",
-              "text": "Switch metrics after results arrive"
+              "text": "Ignore stakeholders who are not technical experts."
             },
             {
               "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
+              "text": "Assume all stakeholders have the same priorities."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
+          "explanation": "Understanding the unique needs and constraints of each stakeholder is essential for finding a balanced and defensible solution."
         },
         {
           "id": "micro-circuits-501-l06-q6",
-          "text": "In high-stakes Micro Circuits Specialization Studio execution, which communication protocol is strongest?",
+          "text": "In a simulation where a system is performing unexpectedly, what is the best immediate action?",
           "skillId": "micro-circuits-501-skill-advanced-6",
           "options": [
             {
               "id": "a",
-              "text": "Broadcast conclusions without assumptions"
+              "text": "Immediately shut down the entire system."
             },
             {
               "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
+              "text": "Ignore the anomaly and hope it resolves itself."
             },
             {
               "id": "c",
-              "text": "Share only final outcomes after completion"
+              "text": "Consult the operational playbook and escalate according to pre-defined thresholds."
             },
             {
               "id": "d",
-              "text": "Limit updates to a single informal channel"
+              "text": "Make random adjustments to controls to see what happens."
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
+          "correctOptionId": "c",
+          "explanation": "A mature operational approach relies on established procedures and escalation paths to handle anomalies safely and effectively."
         },
         {
           "id": "micro-circuits-501-l06-q7",
-          "text": "A mature remediation loop in advanced Micro Circuits should prioritize:",
+          "text": "A 'decision memo' is used to recommend a course of action. What key element makes the recommendation trustworthy?",
           "skillId": "micro-circuits-501-skill-advanced-7",
           "options": [
             {
               "id": "a",
-              "text": "Blame assignment without system updates"
+              "text": "Using complex jargon to sound authoritative."
             },
             {
               "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
+              "text": "Presenting only the data that supports the preferred option."
             },
             {
               "id": "c",
-              "text": "One-time fixes without retesting"
+              "text": "Clearly stating the assumptions, evidence, and potential risks."
             },
             {
               "id": "d",
-              "text": "Issue closure based on elapsed time"
+              "text": "Keeping the recommendation as brief as possible by omitting details."
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
+          "correctOptionId": "c",
+          "explanation": "Transparency about assumptions, evidence, and risks is crucial for building trust and making a defensible recommendation."
         },
         {
           "id": "micro-circuits-501-l06-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Micro Circuits Specialization Studio?",
+          "text": "What does 'tradeoff analysis' in a micro circuits context primarily involve?",
           "skillId": "micro-circuits-501-skill-advanced-8",
           "options": [
             {
               "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
+              "text": "Finding a perfect solution with no downsides."
             },
             {
               "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
+              "text": "Choosing the cheapest option regardless of consequences."
             },
             {
               "id": "c",
-              "text": "Ignore correlated failure modes"
+              "text": "Systematically evaluating what is gained and lost with each potential choice."
             },
             {
               "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
+              "text": "Following the opinion of the most senior person in the room."
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "correctOptionId": "c",
+          "explanation": "Tradeoff analysis is the disciplined process of weighing the pros and cons of different options to make an informed decision."
         }
       ]
     },
     {
       "id": "micro-circuits-501-l07",
-      "title": "Micro Circuits Governance and Public Impact",
+      "title": "Governance and Ethical Impact",
       "type": "video",
       "duration": 13,
       "learningAids": [
         {
           "id": "micro-circuits-501-l07-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Stakeholder Impact Map",
+          "content": "A diagram showing a central micro circuit project and its ripple effects on various stakeholders, color-coded for positive, negative, and neutral impacts."
         }
       ],
       "chunks": [
         {
           "id": "micro-circuits-501-l07-c1",
           "kind": "concept",
-          "title": "Stakeholder Impact Distribution",
-          "content": "In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. This mapping is essential for understanding how decisions impact various individuals and communities, ensuring that we consider everyone's perspective.\nContext recap: In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. This mapping is essential for understanding how decisions impact various individuals and communities, ensuring that we consider everyone's perspective."
+          "title": "Analyzing Impact on Different Groups",
+          "content": "Decisions about technology are never neutral. In this lesson, you'll learn to map how the benefits and burdens of a micro circuit system are distributed among different groups of people, including users, operators, and the public."
         },
         {
           "id": "micro-circuits-501-l07-c2",
           "kind": "concept",
-          "title": "Accountability Architecture",
-          "content": "In this segment, we will explore the architecture of accountability, which includes decision traceability, review rights, and remediation obligations. These components are integrated to ensure that all decisions made are transparent and that there are clear processes for addressing any issues that may arise.\nContext recap: In this segment, we will explore the architecture of accountability, which includes decision traceability, review rights, and remediation obligations. These components are integrated to ensure that all decisions made are transparent and that there are clear processes for addressing any issues that may arise."
+          "title": "Building Accountable Systems",
+          "content": "Accountability means that decisions can be traced and reviewed. We'll explore how to design systems where every key decision is documented, subject to review, and includes clear responsibility for fixing problems."
         },
         {
           "id": "micro-circuits-501-l07-c3",
           "kind": "recap",
-          "title": "Responsible Leadership Checklist",
-          "content": "At the end of our lesson, we have a helpful checklist that connects important outcomes with ethical considerations, ensures we follow policies, and promotes resilience in our leadership practices. This checklist serves as a guide to help us make responsible decisions.\nContext recap: At the end of our lesson, we have a helpful checklist that connects important outcomes with ethical considerations, ensures we follow policies, and promotes resilience in our leadership practices. This checklist serves as a guide to help us make responsible decisions."
+          "title": "Recap: A Checklist for Responsible Leadership",
+          "content": "We'll conclude with a practical checklist for responsible leadership. This guide helps you connect your technical decisions to ethical principles, policy compliance, and long-term system resilience."
         }
       ],
       "flashcards": [
         {
           "id": "micro-circuits-501-l07-f1",
-          "front": "Impact distribution",
-          "back": "How outcomes are allocated across populations and timescales."
+          "front": "Impact Distribution",
+          "back": "An analysis of how a system's positive and negative effects are spread across different groups of people over time."
         },
         {
           "id": "micro-circuits-501-l07-f2",
-          "front": "Decision traceability",
-          "back": "An auditable record of evidence, ownership, and rationale."
+          "front": "Decision Traceability",
+          "back": "A clear, auditable record showing who made a decision, when, and based on what evidence and reasoning."
         },
         {
           "id": "micro-circuits-501-l07-f3",
-          "front": "Responsible leadership",
-          "back": "Decision behavior balancing performance, accountability, and ethics."
+          "front": "Responsible Leadership",
+          "back": "Making decisions that balance high performance with ethical considerations and accountability."
         }
       ]
     },
     {
       "id": "micro-circuits-501-l08",
-      "title": "Micro Circuits Capstone Defense Lab",
+      "title": "Capstone: Defending Your Recommendation",
       "type": "interactive",
       "duration": 16,
       "learningAids": [
         {
           "id": "micro-circuits-501-l08-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Briefing Document Template",
+          "content": "Fill out a structured template to build your capstone defense, with sections for your claim, evidence, risk assessment, and fallback plans."
         }
       ],
       "chunks": [
         {
           "id": "micro-circuits-501-l08-c1",
           "kind": "practice",
-          "title": "Defense Brief Assembly",
-          "content": "In this activity, you will work on creating a comprehensive brief. This brief will include your claims, the evidence that supports those claims, the uncertainty bounds that outline any limitations, and the pathways for remediation that suggest how to address any issues. This exercise will help you think critically and organize your ideas effectively.\nContext recap: In this activity, you will work on creating a comprehensive brief. This brief will include your claims, the evidence that supports those claims, the uncertainty bounds that outline any limitations, and the pathways for remediation that suggest how to address any issues. This exercise will help you think critically and organize your ideas effectively."
+          "title": "Practice: Assembling Your Defense",
+          "content": "In this final lab, you will synthesize everything you've learned. You'll prepare a comprehensive brief for a complex scenario, outlining your recommendation, supporting evidence, risk analysis, and remediation plans."
         },
         {
           "id": "micro-circuits-501-l08-c2",
           "kind": "recap",
-          "title": "Expert Panel Rehearsal",
-          "content": "During this rehearsal session, you will practice responding to various critiques that may come from experts in the field. These critiques will focus on technical aspects, governance issues, and the perspectives of different stakeholders. This practice will help you prepare for real-world discussions and enhance your communication skills.\nContext recap: During this rehearsal session, you will practice responding to various critiques that may come from experts in the field. These critiques will focus on technical aspects, governance issues, and the perspectives of different stakeholders. This practice will help you prepare for real-world discussions and enhance your communication skills."
+          "title": "Rehearsal: Facing an Expert Panel",
+          "content": "Prepare to defend your brief. This rehearsal simulates a review with an expert panel. You'll practice responding to challenging questions about your technical choices, governance plan, and stakeholder considerations."
         }
       ],
       "interactiveActivities": [

@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const Farming601Module: LearningModule = {
+export const farming_601_Module: LearningModule = {
   "id": "farming-601",
   "title": "Farming Research and Leadership",
   "description": "Post-401 specialization in Farming, focused on farming systems diagnostics, farming operations and execution design, farming impact and tradeoff analysis, and farming governance and leadership through advanced casework, simulation, and defense-based checkpoints.",
@@ -14,7 +14,7 @@ export const Farming601Module: LearningModule = {
   ],
   "minAge": 17,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en",
@@ -38,8 +38,8 @@ export const Farming601Module: LearningModule = {
         {
           "id": "farming-601-l01-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Core Pillars of Advanced Farming Analysis",
+          "content": "A diagram showing the relationship between Systems Diagnostics, Operations Design, and Impact Analysis."
         }
       ],
       "chunks": [
@@ -47,35 +47,35 @@ export const Farming601Module: LearningModule = {
           "id": "farming-601-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "In this lesson, we will delve into the advanced concepts of scope and boundaries in the field of farming. Understanding these concepts is crucial for anyone looking to improve their farming practices. We will focus on how to effectively diagnose farming systems, which involves analyzing various components of the farming process. Additionally, we will learn how to design operations and execution strategies that not only enhance productivity but also promote sustainability in farming practices. By the end of this lesson, you will have a clearer understanding of how to apply these advanced principles to real-world farming scenarios."
+          "content": "Introduces the core disciplines of advanced farming analysis: diagnosing complex farming systems, designing robust operational workflows, and evaluating the resulting impacts and tradeoffs."
         },
         {
           "id": "farming-601-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different factors in farming. They will also identify ranges of uncertainty and understand how different systems depend on one another. This foundational knowledge is essential for planning effective interventions in farming practices.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different factors in farming. They will also identify ranges of uncertainty and understand how different systems depend on one another. This foundational knowledge is essential for planning effective interventions in farming practices."
+          "content": "Focuses on building causal models to understand system dynamics. Learners will map cause-and-effect relationships, quantify uncertainty ranges, and identify interdependencies between subsystems, such as soil health, water availability, and market prices."
         },
         {
           "id": "farming-601-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "It is important to ensure that all claims made in farming practices are supported by measurable indicators. This lesson emphasizes the need for confidence bounds and regular review checkpoints to validate these claims, ensuring that decisions are based on solid evidence.\nContext recap: It is important to ensure that all claims made in farming practices are supported by measurable indicators. This lesson emphasizes the need for confidence bounds and regular review checkpoints to validate these claims, ensuring that decisions are based on solid evidence."
+          "content": "Establishes the importance of evidence-based decision-making. This involves setting clear evidence thresholds, using confidence bounds to express uncertainty, and implementing regular review checkpoints to validate claims and adapt strategies."
         }
       ],
       "flashcards": [
         {
           "id": "farming-601-l01-f1",
-          "front": "farming systems diagnostics",
+          "front": "Farming systems diagnostics",
           "back": "A specialization axis requiring explicit assumptions and measurable constraints."
         },
         {
           "id": "farming-601-l01-f2",
-          "front": "farming operations and execution design",
+          "front": "Farming operations and execution design",
           "back": "Execution architecture that determines reliability under stress."
         },
         {
           "id": "farming-601-l01-f3",
-          "front": "farming impact and tradeoff analysis",
+          "front": "Farming impact and tradeoff analysis",
           "back": "Evaluation discipline for identifying true gains and hidden costs."
         }
       ]
@@ -88,9 +88,9 @@ export const Farming601Module: LearningModule = {
       "learningAids": [
         {
           "id": "farming-601-l02-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "image",
+          "title": "Workflow with Control Gates",
+          "content": "A flowchart illustrating a specialized farming workflow (e.g., integrated pest management) with embedded checkpoints, rollback triggers, and escalation thresholds."
         }
       ],
       "chunks": [
@@ -98,13 +98,13 @@ export const Farming601Module: LearningModule = {
           "id": "farming-601-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "In this interactive lab, learners will have the opportunity to design specialized workflows tailored to specific farming tasks. They will also conduct stress tests on these workflows to see how they perform under challenging conditions, helping to ensure that they are robust and effective.\nContext recap: In this interactive lab, learners will have the opportunity to design specialized workflows tailored to specific farming tasks. They will also conduct stress tests on these workflows to see how they perform under challenging conditions, helping to ensure that they are robust and effective."
+          "content": "Learners design a specialized workflow for a specific farming challenge, such as nutrient management or water conservation. They then apply simulated stress factors (e.g., drought, supply chain disruption) to test the workflow's resilience and identify failure points."
         },
         {
           "id": "farming-601-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "This recap focuses on the importance of integrating control gates within workflows. These gates will include checkpoints to monitor progress, criteria for rolling back to previous steps if necessary, and thresholds that trigger escalation when certain limits are reached.\nContext recap: This recap focuses on the importance of integrating control gates within workflows. These gates will include checkpoints to monitor progress, criteria for rolling back to previous steps if necessary, and thresholds that trigger escalation when certain limits are reached."
+          "content": "Recaps the architectural principles of reliable systems. Focuses on integrating control gates into workflows, including pre-mortem checkpoints, criteria for rolling back failed interventions, and clear thresholds that trigger escalation to leadership."
         }
       ],
       "interactiveActivities": [
@@ -142,16 +142,16 @@ export const Farming601Module: LearningModule = {
       "learningAids": [
         {
           "id": "farming-601-l03-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "image",
+          "title": "Knowledge Check",
+          "content": "An icon representing a quiz or assessment, reinforcing the key concepts from the first two lessons."
         }
       ],
       "questions": [
         {
           "id": "farming-601-l03-q1",
           "text": "Which practice most improves farming systems diagnostics decision quality?",
-          "skillId": "farming-601-skill-core",
+          "skillId": "farming-601-skill-diagnostics",
           "options": [
             {
               "id": "a",
@@ -176,7 +176,7 @@ export const Farming601Module: LearningModule = {
         {
           "id": "farming-601-l03-q2",
           "text": "At level 601, strong execution for farming operations and execution design requires:",
-          "skillId": "farming-601-skill-execution",
+          "skillId": "farming-601-skill-operations",
           "options": [
             {
               "id": "a",
@@ -201,7 +201,7 @@ export const Farming601Module: LearningModule = {
         {
           "id": "farming-601-l03-q3",
           "text": "A defensible approach to farming impact and tradeoff analysis includes:",
-          "skillId": "farming-601-skill-eval",
+          "skillId": "farming-601-skill-analysis",
           "options": [
             {
               "id": "a",
@@ -251,7 +251,7 @@ export const Farming601Module: LearningModule = {
         {
           "id": "farming-601-l03-q5",
           "text": "What is the best way to compare competing interventions in advanced Farming?",
-          "skillId": "farming-601-skill-advanced-5",
+          "skillId": "farming-601-skill-tradeoff-comparison",
           "options": [
             {
               "id": "a",
@@ -276,7 +276,7 @@ export const Farming601Module: LearningModule = {
         {
           "id": "farming-601-l03-q6",
           "text": "In high-stakes Farming Research and Leadership execution, which communication protocol is strongest?",
-          "skillId": "farming-601-skill-advanced-6",
+          "skillId": "farming-601-skill-stakeholder-communication",
           "options": [
             {
               "id": "a",
@@ -301,7 +301,7 @@ export const Farming601Module: LearningModule = {
         {
           "id": "farming-601-l03-q7",
           "text": "A mature remediation loop in advanced Farming should prioritize:",
-          "skillId": "farming-601-skill-advanced-7",
+          "skillId": "farming-601-skill-remediation-design",
           "options": [
             {
               "id": "a",
@@ -326,7 +326,7 @@ export const Farming601Module: LearningModule = {
         {
           "id": "farming-601-l03-q8",
           "text": "Which portfolio decision rule best balances performance and resilience in Farming Research and Leadership?",
-          "skillId": "farming-601-skill-advanced-8",
+          "skillId": "farming-601-skill-portfolio-strategy",
           "options": [
             {
               "id": "a",
@@ -359,8 +359,8 @@ export const Farming601Module: LearningModule = {
         {
           "id": "farming-601-l04-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Case Study Dossier",
+          "content": "An icon of a folder or document representing a detailed case study, including data sets, stakeholder interviews, and environmental reports."
         }
       ],
       "chunks": [
@@ -368,19 +368,36 @@ export const Farming601Module: LearningModule = {
           "id": "farming-601-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "In this lesson, we will explore the different challenges that farmers face when making decisions about their practices. We will look at how to diagnose the impacts of farming on the environment and the community. Additionally, we will analyze the trade-offs that farmers must consider, such as balancing productivity with sustainability. Understanding these competing constraints is essential for effective farming systems management.\nContext recap: In this lesson, we will explore the different challenges that farmers face when making decisions about their practices. We will look at how to diagnose the impacts of farming on the environment and the community. Additionally, we will analyze the trade-offs that farmers must consider, such as balancing productivity with sustainability. Understanding these competing constraints is essential for effective farming systems management."
+          "content": "Deconstructs a complex, multi-faceted farming scenario. Learners diagnose the interplay of agronomic, economic, and social constraints, such as water rights disputes, soil degradation, and market volatility."
         },
         {
           "id": "farming-601-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "Learners will engage in comparing different options available to them in farming. They will evaluate these options based on several important dimensions, including safety, reliability, cost, fairness, and governance, to make informed decisions.\nContext recap: Learners will engage in comparing different options available to them in farming. They will evaluate these options based on several important dimensions, including safety, reliability, cost, fairness, and governance, to make informed decisions.\nWhy this matters: Tradeoff Framing helps learners in Farming connect ideas from Farming Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "Learners practice framing and evaluating decisions with competing objectives. They compare potential interventions across key dimensions like yield, cost, environmental impact, and community fairness, making tradeoffs explicit."
         },
         {
           "id": "farming-601-l04-c3",
           "kind": "recap",
           "title": "Decision Memo Pattern",
-          "content": "In this recap, we will discuss the structure of decision memos. Each recommendation made should clearly outline the assumptions behind it, the evidence supporting it, the controls in place to manage risks, and the fallback plans that can be implemented if things do not go as expected.\nContext recap: In this recap, we will discuss the structure of decision memos. Each recommendation made should clearly outline the assumptions behind it, the evidence supporting it, the controls in place to manage risks, and the fallback plans that can be implemented if things do not go as expected."
+          "content": "Introduces a structured format for communicating complex recommendations. The 'Decision Memo' pattern requires a clear problem statement, explicit assumptions, supporting evidence, risk mitigation controls, and pre-planned fallback options."
+        }
+      ],
+      "flashcards": [
+        {
+          "id": "farming-601-l04-f1",
+          "front": "Competing constraints",
+          "back": "Multiple, often conflicting, goals or limits that must be balanced in a decision, such as maximizing profit while minimizing water usage."
+        },
+        {
+          "id": "farming-601-l04-f2",
+          "front": "Tradeoff framing",
+          "back": "The process of explicitly defining and comparing the pros and cons of different options across a shared set of criteria."
+        },
+        {
+          "id": "farming-601-l04-f3",
+          "front": "Decision memo",
+          "back": "A structured document that outlines a recommendation, its rationale, evidence, assumptions, and risks to support transparent decision-making."
         }
       ]
     },
@@ -392,9 +409,9 @@ export const Farming601Module: LearningModule = {
       "learningAids": [
         {
           "id": "farming-601-l05-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "image",
+          "title": "Interactive Simulation Dashboard",
+          "content": "A mock-up of a computer dashboard showing real-time data feeds for a simulated farm (e.g., weather, crop growth, market prices) with controls for the user to adjust."
         }
       ],
       "chunks": [
@@ -402,21 +419,21 @@ export const Farming601Module: LearningModule = {
           "id": "farming-601-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "In this interactive session, learners will take on the role of operators managing scenario controls. They will learn how to balance performance goals with governance constraints, ensuring that their decisions are both effective and responsible.\nContext recap: In this interactive session, learners will take on the role of operators managing scenario controls. They will learn how to balance performance goals with governance constraints, ensuring that their decisions are both effective and responsible.\nWhy this matters: Live Scenario Controls helps learners in Farming connect ideas from Farming Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "In a dynamic simulation, learners act as farm managers facing an unfolding crisis (e.g., a pest outbreak). They must make time-sensitive decisions, adjusting operational controls to balance short-term performance with long-term sustainability and governance rules."
         },
         {
           "id": "farming-601-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "This recap emphasizes the importance of designing effective responses that can adapt to changing circumstances. It is crucial that these responses update control gates while maintaining traceability and accountability throughout the process.\nContext recap: This recap emphasizes the importance of designing effective responses that can adapt to changing circumstances. It is crucial that these responses update control gates while maintaining traceability and accountability throughout the process.\nWhy this matters: Adaptive Response Design helps learners in Farming connect ideas from Farming Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "Recaps the principles of adaptive management. Focuses on how to modify operational plans and control gates in response to new information, while ensuring all changes are documented for traceability and accountability."
         }
       ],
       "interactiveActivities": [
         {
           "id": "farming-601-l05-act1",
           "type": "scenario",
-          "title": "Adverse-Condition Decision Run",
-          "description": "Run a high-pressure farming scenario and tune controls under uncertainty."
+          "title": "Drought Crisis Simulation",
+          "description": "Manage a multi-crop farm through a simulated multi-year drought. Make resource allocation decisions, tune irrigation controls, and manage financial and environmental impacts under high uncertainty."
         }
       ]
     },
@@ -428,116 +445,116 @@ export const Farming601Module: LearningModule = {
       "learningAids": [
         {
           "id": "farming-601-l06-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "image",
+          "title": "Knowledge Check",
+          "content": "An icon representing a quiz or assessment, focusing on the application of knowledge in case studies and simulations."
         }
       ],
       "questions": [
         {
           "id": "farming-601-l06-q1",
-          "text": "In advanced casework, the first requirement for defensible recommendations is:",
-          "skillId": "farming-601-skill-case1",
+          "text": "When analyzing a case study involving a new irrigation technology, what is the most critical first step for a defensible analysis?",
+          "skillId": "farming-601-skill-case-setup",
           "options": [
             {
               "id": "a",
-              "text": "A preferred option without explicit assumptions"
+              "text": "Immediately calculate the potential profit increase"
             },
             {
               "id": "b",
-              "text": "A clear baseline, explicit constraints, and success criteria"
+              "text": "Establish a baseline of current water usage and yield to enable comparison"
             },
             {
               "id": "c",
-              "text": "High confidence without evidence logs"
+              "text": "Survey local farmers for their opinions"
             },
             {
               "id": "d",
-              "text": "Single-metric optimization only"
+              "text": "Assume the manufacturer's performance claims are accurate"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible recommendations begin with explicit assumptions, constraints, and measurable targets."
+          "explanation": "A rigorous case analysis requires establishing a clear, measurable baseline before evaluating the impact of any new intervention."
         },
         {
           "id": "farming-601-l06-q2",
-          "text": "A resilient strategy for farming operations and execution design should include:",
-          "skillId": "farming-601-skill-case2",
+          "text": "In a farm simulation, you notice soil moisture levels are dropping faster than projected despite following the plan. What is the best adaptive response?",
+          "skillId": "farming-601-skill-simulation-response",
           "options": [
             {
               "id": "a",
-              "text": "Checkpointed execution with fallback and escalation criteria"
+              "text": "Ignore the data and continue with the original plan"
             },
             {
               "id": "b",
-              "text": "One-way execution with no rollback capability"
+              "text": "Double the irrigation immediately without further analysis"
             },
             {
               "id": "c",
-              "text": "No ownership mapping across teams"
+              "text": "Investigate the cause (e.g., sensor error, unexpected heat), adjust the irrigation plan based on new data, and document the change"
             },
             {
               "id": "d",
-              "text": "Hidden assumptions and undocumented decisions"
+              "text": "End the simulation because the model is flawed"
             }
           ],
-          "correctOptionId": "a",
-          "explanation": "Resilience depends on checkpoints, fallback options, and explicit escalation design."
+          "correctOptionId": "c",
+          "explanation": "Effective adaptive response involves diagnosing the anomaly, making an evidence-based adjustment, and maintaining traceability for accountability."
         },
         {
           "id": "farming-601-l06-q3",
-          "text": "When evaluating farming impact and tradeoff analysis, which method is most rigorous?",
-          "skillId": "farming-601-skill-case3",
+          "text": "A case study presents a choice between a low-cost pesticide with minor environmental risks and a high-cost organic alternative. How should this tradeoff be framed in a decision memo?",
+          "skillId": "farming-601-skill-tradeoff-framing",
           "options": [
             {
               "id": "a",
-              "text": "Single success story without controls"
+              "text": "Recommend the cheaper option to maximize profit"
             },
             {
               "id": "b",
-              "text": "Comparative baselines plus side-effect and uncertainty analysis"
+              "text": "Only mention the benefits of the preferred option"
             },
             {
               "id": "c",
-              "text": "Outcome-only narrative without process evidence"
+              "text": "Quantify the economic costs and environmental risks of both options, and state the assumption about the value of environmental protection"
             },
             {
               "id": "d",
-              "text": "Retrospective scope changes to fit outcomes"
+              "text": "Recommend the organic option because it is more ethical"
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "Rigorous evaluation requires comparisons, side-effect analysis, and uncertainty disclosure."
+          "correctOptionId": "c",
+          "explanation": "Proper tradeoff framing requires quantifying all relevant dimensions for each option and making the underlying values and assumptions explicit."
         },
         {
           "id": "farming-601-l06-q4",
-          "text": "Advanced governance is strongest when it:",
-          "skillId": "farming-601-skill-case4",
+          "text": "During a simulation, a sudden market crash makes your high-value crop unprofitable. Your governance protocol includes a 'financial distress' escalation trigger. When should you activate it?",
+          "skillId": "farming-601-skill-governance-application",
           "options": [
             {
               "id": "a",
-              "text": "Aligns authority, measurement, and remediation obligations"
+              "text": "Wait until the farm is bankrupt"
             },
             {
               "id": "b",
-              "text": "Separates policy from operational controls"
+              "text": "As soon as the projected losses cross the pre-defined threshold specified in the protocol"
             },
             {
               "id": "c",
-              "text": "Avoids external review and transparency"
+              "text": "Never, because it shows a lack of confidence"
             },
             {
               "id": "d",
-              "text": "Treats accountability as optional under pressure"
+              "text": "Only after trying several undocumented, ad-hoc strategies"
             }
           ],
-          "correctOptionId": "a",
-          "explanation": "Mature governance links authority, measurable controls, and corrective action."
+          "correctOptionId": "b",
+          "explanation": "Mature governance relies on adhering to pre-defined control gates and escalation thresholds to manage risk systematically."
         },
         {
           "id": "farming-601-l06-q5",
           "text": "What is the best way to compare competing interventions in advanced Farming?",
-          "skillId": "farming-601-skill-advanced-5",
+          "skillId": "farming-601-skill-tradeoff-comparison",
           "options": [
             {
               "id": "a",
@@ -562,7 +579,7 @@ export const Farming601Module: LearningModule = {
         {
           "id": "farming-601-l06-q6",
           "text": "In high-stakes Farming Research and Leadership execution, which communication protocol is strongest?",
-          "skillId": "farming-601-skill-advanced-6",
+          "skillId": "farming-601-skill-stakeholder-communication",
           "options": [
             {
               "id": "a",
@@ -587,7 +604,7 @@ export const Farming601Module: LearningModule = {
         {
           "id": "farming-601-l06-q7",
           "text": "A mature remediation loop in advanced Farming should prioritize:",
-          "skillId": "farming-601-skill-advanced-7",
+          "skillId": "farming-601-skill-remediation-design",
           "options": [
             {
               "id": "a",
@@ -612,7 +629,7 @@ export const Farming601Module: LearningModule = {
         {
           "id": "farming-601-l06-q8",
           "text": "Which portfolio decision rule best balances performance and resilience in Farming Research and Leadership?",
-          "skillId": "farming-601-skill-advanced-8",
+          "skillId": "farming-601-skill-portfolio-strategy",
           "options": [
             {
               "id": "a",
@@ -645,8 +662,8 @@ export const Farming601Module: LearningModule = {
         {
           "id": "farming-601-l07-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Stakeholder Impact Map",
+          "content": "A diagram showing a central farming decision with radiating lines to various stakeholders (e.g., farm workers, local community, consumers, ecosystem) detailing the positive and negative impacts for each."
         }
       ],
       "chunks": [
@@ -654,19 +671,19 @@ export const Farming601Module: LearningModule = {
           "id": "farming-601-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "In this lesson, learners will map out how benefits and burdens are distributed among different stakeholder groups in farming. They will also consider the delayed effects of decisions, ensuring a comprehensive understanding of stakeholder impact.\nContext recap: In this lesson, learners will map out how benefits and burdens are distributed among different stakeholder groups in farming. They will also consider the delayed effects of decisions, ensuring a comprehensive understanding of stakeholder impact.\nWhy this matters: Stakeholder Impact Distribution helps learners in Farming connect ideas from Farming Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "Analyzes how the benefits (e.g., food production, profit) and burdens (e.g., pollution, water use) of farming decisions are distributed across different stakeholder groups and over time. Considers both immediate and delayed, second-order effects."
         },
         {
           "id": "farming-601-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "This section focuses on the architecture of accountability in farming decisions. It is important to integrate elements such as decision traceability, the rights of stakeholders to review decisions, and the obligations to remediate any negative impacts that arise.\nContext recap: This section focuses on the architecture of accountability in farming decisions. It is important to integrate elements such as decision traceability, the rights of stakeholders to review decisions, and the obligations to remediate any negative impacts that arise."
+          "content": "Examines the structures that ensure accountability. This includes creating auditable records of decisions (traceability), establishing rights for stakeholders to review and appeal decisions, and defining clear obligations to remediate negative impacts."
         },
         {
           "id": "farming-601-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "At the end of our lesson, we have a helpful checklist that connects important outcomes with ethical considerations, ensures we follow policies correctly, and promotes resilience in our farming practices. This checklist serves as a guide to help us make responsible decisions in our leadership roles.\nContext recap: At the end of our lesson, we have a helpful checklist that connects important outcomes with ethical considerations, ensures we follow policies correctly, and promotes resilience in our farming practices. This checklist serves as a guide to help us make responsible decisions in our leadership roles."
+          "content": "Synthesizes the lesson into a practical checklist for responsible leadership. This tool guides decision-makers to align operational outcomes with ethical principles, policy compliance, and long-term system resilience."
         }
       ],
       "flashcards": [
@@ -695,9 +712,9 @@ export const Farming601Module: LearningModule = {
       "learningAids": [
         {
           "id": "farming-601-l08-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "image",
+          "title": "Capstone Defense Presentation",
+          "content": "An icon of a presentation slide with a title, a chart, and bullet points, representing the assembly of a defense brief."
         }
       ],
       "chunks": [
@@ -705,21 +722,21 @@ export const Farming601Module: LearningModule = {
           "id": "farming-601-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "In this interactive activity, learners will work together to create a comprehensive brief. This brief will include well-supported claims, solid evidence, clear boundaries of uncertainty, and pathways for remediation. This process helps us understand how to present our ideas effectively and prepare for discussions about our findings.\nContext recap: In this interactive activity, learners will work together to create a comprehensive brief. This brief will include well-supported claims, solid evidence, clear boundaries of uncertainty, and pathways for remediation. This process helps us understand how to present our ideas effectively and prepare for discussions about our findings."
+          "content": "Learners synthesize their analysis of a complex farming problem into a formal defense brief. They must articulate a clear recommendation, support it with evidence, define the uncertainty bounds of their projections, and propose a robust remediation plan."
         },
         {
           "id": "farming-601-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "During this recap session, learners will practice their responses to questions and critiques from experts in technical fields, governance, and stakeholder perspectives. This rehearsal is essential for building confidence and ensuring that we can communicate our ideas clearly and effectively when facing challenging questions.\nContext recap: During this recap session, learners will practice their responses to questions and critiques from experts in technical fields, governance, and stakeholder perspectives. This rehearsal is essential for building confidence and ensuring that we can communicate our ideas clearly and effectively when facing challenging questions."
+          "content": "Learners participate in a mock defense panel. They practice responding to critical questions and challenges from instructors role-playing as technical experts, governance officers, and community stakeholders, honing their ability to defend their work under pressure."
         }
       ],
       "interactiveActivities": [
         {
           "id": "farming-601-l08-act1",
           "type": "debate_simulator",
-          "title": "Expert Defense Panel",
-          "description": "Defend specialization recommendations under adversarial cross-examination."
+          "title": "Capstone Defense Panel Simulation",
+          "description": "Present and defend your capstone recommendation to a simulated expert panel. Respond to adversarial cross-examination on your data, assumptions, and tradeoff analysis."
         }
       ]
     }

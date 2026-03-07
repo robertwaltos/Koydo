@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const Physics101Module: LearningModule = {
+export const physics_101_Module: LearningModule = {
   "id": "physics-101",
   "title": "Physics Essentials",
   "description": "Study motion, forces, energy, waves, electricity, and simple machines through hands-on activities and real-world examples.",
@@ -13,7 +13,7 @@ export const Physics101Module: LearningModule = {
   ],
   "minAge": 7,
   "maxAge": 18,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "learningObjectives": [
     "Describe motion using speed, velocity, and acceleration",
     "Apply Newton's three laws of motion to real-world situations",
@@ -27,39 +27,52 @@ export const Physics101Module: LearningModule = {
   "lessons": [
     {
       "id": "physics-101-l01",
-      "title": "Motion and Speed",
+      "title": "Motion, Speed, and Acceleration",
       "type": "video",
-      "duration": 10,
+      "duration": 11,
       "objectives": [
         "Define position, distance, and displacement",
         "Calculate speed using the formula speed = distance ÷ time",
-        "Distinguish between speed and velocity"
+        "Distinguish between speed and velocity",
+        "Define and identify examples of acceleration"
       ],
+      "metadata": {
+        "prompts": [
+          "If you are on a spinning merry-go-round at a constant speed, is your velocity changing? Are you accelerating?",
+          "Describe the motion of a ball thrown straight up into the air, from the moment it leaves your hand to the moment it lands.",
+          "Think of a time you traveled in a car. What was your reference point for motion?"
+        ]
+      },
       "chunks": [
         {
           "id": "physics-101-l01-c1",
           "title": "What Is Motion?",
-          "content": "Motion is an exciting concept in physics! When we say an object is in motion, we mean that its position is changing compared to something else, which we call a reference point. For example, if you are sitting on a bus, you might feel like you are not moving at all because you are in the same spot as your seat. However, if you look out the window, you can see that you are moving along the road. This shows us that motion is always about comparing one thing to another. Understanding motion helps us learn how things move in our world! It’s like when you watch a friend running on a playground; they are moving fast compared to the trees around them, but if you are standing still, you can see their speed more clearly. So, motion is all around us, and it helps us understand how everything from cars to planets travels through space!\nContext recap: Motion is an exciting concept in physics! When we say an object is in motion, we mean that its position is changing compared to something else, which we call a reference point. For example, if you are sitting on a bus, you might feel like you are not moving at all because you are in the same spot as your seat. However, if you look out the window, you can see that you are moving along the road.\nWhy this matters: What Is Motion? helps learners in Physics connect ideas from Physics Essentials to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "What does it mean for something to be in motion? It simply means its position is changing. To know if something is moving, we must compare it to a 'reference point'—an object that we assume is stationary. For example, if you're on a bus, you feel still compared to your seat. But looking out the window, you see you're moving past trees and buildings. The trees are your reference point. Motion is always relative to a reference point, helping us describe how everything from a thrown ball to a planet moves."
         },
         {
           "id": "physics-101-l01-c2",
-          "title": "Distance vs Displacement",
-          "content": "When we explore the concepts of distance and displacement, we discover two unique ways to measure how far an object has moved. Distance refers to the total length of the path that has been traveled, and it is always a positive number. For instance, imagine you walk 3 blocks north and then 4 blocks east. In this case, you have covered a distance of 7 blocks in total. However, displacement is a little different; it measures the shortest straight-line distance from your starting point to your ending point, along with the direction you took. In our example, your displacement would be 5 blocks. We can calculate this using the Pythagorean theorem, which is a special rule in math that helps us find the length of the sides of a right triangle. This understanding not only tells us how far we traveled but also gives us insight into the path we took to get there, making it easier to visualize our journey!\nContext recap: When we explore the concepts of distance and displacement, we discover two unique ways to measure how far an object has moved. Distance refers to the total length of the path that has been traveled, and it is always a positive number. For instance, imagine you walk 3 blocks north and then 4 blocks east. In this case, you have covered a distance of 7 blocks in total.\nWhy this matters: Distance vs Displacement helps learners in Physics connect ideas from Physics Essentials to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "title": "Distance vs. Displacement",
+          "content": "Distance and displacement are two different ways to measure how far something has moved. Distance is the total length of the path traveled. If you walk 3 blocks north and 4 blocks east, your total distance is 7 blocks. Displacement, however, is the shortest straight-line distance from your starting point to your ending point, including the direction. In the same example, your displacement would be 5 blocks to the northeast. Displacement is a vector, meaning it has both a size and a direction, while distance is a scalar, with only size."
         },
         {
           "id": "physics-101-l01-c3",
           "title": "Speed and Velocity",
-          "content": "Speed and velocity are two important ideas that help us understand how things move. Speed tells us how fast something is going, but it doesn’t tell us where it’s headed. We can find out the speed of an object by using a simple formula: Speed = distance ÷ time. This means if we know how far something has traveled and how long it took, we can calculate its speed!\nNow, let’s talk about velocity. Velocity is a bit more special because it includes both how fast something is moving and the direction it’s going. For example, imagine a car driving in a circle at a speed of 30 kilometers per hour. While the speed stays the same, the velocity changes because the car is always turning.\nWhen we measure speed and velocity, we often use units like meters per second (m/s), kilometers per hour (km/h), and miles per hour (mph). Knowing the difference between speed and velocity helps us describe how things move in a clearer way! Understanding these concepts is essential for studying motion in physics and can help us in real-life situations, like driving or playing sports.\nContext recap: Speed and velocity are two important ideas that help us understand how things move. Speed tells us how fast something is going, but it doesn’t tell us where it’s headed. We can find out the speed of an object by using a simple formula: Speed = distance ÷ time. This means if we know how far something has traveled and how long it took, we can calculate its speed!\nWhy this matters: Speed and Velocity helps learners in Physics connect ideas from Physics Essentials to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "Speed tells us how fast something is moving. We calculate it with the formula: Speed = Distance ÷ Time. If a car travels 100 kilometers in 2 hours, its speed is 50 km/h. Velocity is more specific: it's an object's speed in a particular direction. For example, saying a car is moving at 50 km/h *east* describes its velocity. If the car turns a corner, its speed might stay the same, but its velocity changes because its direction changed. This difference is key to understanding motion."
         },
         {
           "id": "physics-101-l01-c4",
-          "title": "Worked Example",
-          "content": "Let’s explore a fun example to help us understand the concept of speed! Imagine a cyclist who rides her bicycle and travels a distance of 600 meters in just 2 minutes. To find out how fast she is going, we need to convert the time from minutes to seconds because speed is typically measured in meters per second. So, we start by converting 2 minutes into seconds. We know that there are 60 seconds in a minute, so we multiply: 2 minutes × 60 seconds/minute = 120 seconds. Now that we have the time in seconds, we can use the formula for speed, which is: Speed = distance ÷ time. Let’s plug in the numbers we have: Speed = 600 meters ÷ 120 seconds. When we do the math, we find that her speed is 5 meters per second. But wait, we can also convert this speed into kilometers per hour to see how fast that really is! When we do the conversion, we find that 5 meters per second is approximately 18 kilometers per hour. That’s a nice, comfortable speed for a cyclist, making it easy to enjoy a ride while exploring the outdoors!\nContext recap: Let’s explore a fun example to help us understand the concept of speed! Imagine a cyclist who rides her bicycle and travels a distance of 600 meters in just 2 minutes. To find out how fast she is going, we need to convert the time from minutes to seconds because speed is typically measured in meters per second. So, we start by converting 2 minutes into seconds.\nWhy this matters: Worked Example helps learners in Physics connect ideas from Physics Essentials to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "title": "Understanding Acceleration",
+          "content": "Acceleration is any change in velocity. This can mean speeding up, slowing down, or even just changing direction. If a car speeds up from a stoplight, it's accelerating. If it slows down for a red light, that's also acceleration (sometimes called deceleration). Even a car turning a corner at a constant speed is accelerating because its direction—and therefore its velocity—is changing. We measure acceleration in meters per second squared (m/s²). It's the key link between motion and the forces that cause it."
         },
         {
           "id": "physics-101-l01-c5",
+          "title": "Worked Example: Calculating Speed",
+          "content": "Let's calculate speed with an example. A cyclist travels 600 meters in 2 minutes. To find her speed in meters per second (m/s), we first need consistent units. Since there are 60 seconds in a minute, 2 minutes is 2 × 60 = 120 seconds. Now, we use the formula: Speed = Distance ÷ Time. Plugging in our values: Speed = 600 meters ÷ 120 seconds. This gives us a speed of 5 m/s. To put that in perspective, 5 m/s is equal to 18 kilometers per hour (km/h), a comfortable pace for a bike ride."
+        },
+        {
+          "id": "physics-101-l01-c6",
           "title": "The Cosmic Speed Limit",
-          "content": "Have you ever heard about the cosmic speed limit? It's a fascinating concept in physics! According to Albert Einstein's theory of special relativity, the speed of light is the fastest speed at which anything can travel in our universe. This speed is about 300,000 kilometers per second, which is incredibly fast! To put that into perspective, light can travel around the Earth more than seven times in just one second!\nThis idea might seem surprising because in our daily lives, we usually deal with much slower speeds. For example, when we walk, run, or even drive a car, we are moving at speeds that are tiny compared to the speed of light. Physicist Brian Greene points out that our experiences with speed can make it difficult to understand how space and time behave when things move really fast.\nAs objects get closer to the speed of light, something amazing happens: time starts to slow down for them! This effect is called time dilation. Imagine if you could travel at such high speeds; you would age more slowly compared to someone who stayed on Earth! Additionally, distances can appear to shrink for those moving at these incredible speeds. This means that motion can actually change how we perceive space and time.\nThis idea is a big change from what Sir Isaac Newton believed. Newton thought of space and time as absolute, meaning they were the same for everyone, everywhere. But Einstein showed us that they are much more flexible and can change depending on how fast you are moving. Isn't that mind-blowing? Understanding these concepts helps us learn more about the universe and our place in it!\nContext recap: Have you ever heard about the cosmic speed limit? It's a fascinating concept in physics! According to Albert Einstein's theory of special relativity, the speed of light is the fastest speed at which anything can travel in our universe. This speed is about 300,000 kilometers per second, which is incredibly fast!\nWhy this matters: The Cosmic Speed Limit helps learners in Physics connect ideas from Physics Essentials to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "Did you know there's a speed limit for the entire universe? According to Albert Einstein's theory of special relativity, nothing can travel faster than the speed of light, which is about 300,000 kilometers per second. At speeds close to this limit, strange things happen. Time slows down for the moving object (time dilation), and distances appear to shrink. This was a revolutionary idea that showed space and time are not absolute, as Isaac Newton thought, but are flexible and depend on your motion. This concept is mind-blowing and fundamental to modern physics."
         }
       ],
       "flashcards": [
@@ -70,28 +83,28 @@ export const Physics101Module: LearningModule = {
         },
         {
           "id": "physics-101-l01-f2",
-          "front": "Distance vs Displacement",
+          "front": "Distance vs. Displacement",
           "back": "Distance = total path length (scalar); Displacement = straight-line start-to-finish with direction (vector)"
         },
         {
           "id": "physics-101-l01-f3",
           "front": "Velocity",
-          "back": "Displacement ÷ time; like speed but includes direction"
+          "back": "Speed in a specific direction. It changes if speed or direction changes."
         },
         {
           "id": "physics-101-l01-f4",
-          "front": "Reference point",
-          "back": "The object or location you compare against to decide whether something is moving"
+          "front": "Acceleration",
+          "back": "The rate of change of velocity. It can be speeding up, slowing down, or changing direction."
         },
         {
           "id": "physics-101-l01-f5",
           "front": "What is the cosmic speed limit?",
-          "back": "The speed of light (~300,000 km/s or ~3×10⁸ m/s). Einstein's special relativity shows nothing with mass can reach or exceed this speed."
+          "back": "The speed of light (~300,000 km/s). Einstein's special relativity shows nothing with mass can reach or exceed this speed."
         },
         {
           "id": "physics-101-l01-f6",
-          "front": "Time dilation (special relativity)",
-          "back": "Time passes more slowly for objects moving at speeds close to the speed of light. A clock on a fast-moving spaceship ticks slower than one on Earth."
+          "front": "Time dilation",
+          "back": "A consequence of special relativity where time passes more slowly for objects moving at very high speeds compared to a stationary observer."
         }
       ],
       "learningAids": [
@@ -99,13 +112,13 @@ export const Physics101Module: LearningModule = {
           "id": "physics-101-l01-a1",
           "type": "image",
           "title": "Motion Diagram",
-          "content": "A diagram showing a runner with distance markers, displacement arrow, and speed calculation."
+          "content": "A diagram showing a runner with distance markers, a displacement arrow, and a speed calculation."
         },
         {
           "id": "physics-101-l01-a2",
           "type": "animation",
-          "title": "Speed vs Velocity",
-          "content": "Animation of a car on a circular track — constant speed, changing velocity."
+          "title": "Speed vs. Velocity",
+          "content": "Animation of a car on a circular track — its speed is constant, but its velocity is always changing because its direction is changing."
         }
       ]
     },
@@ -115,7 +128,7 @@ export const Physics101Module: LearningModule = {
       "type": "interactive",
       "duration": 12,
       "objectives": [
-        "Define force and identify contact vs non-contact forces",
+        "Define force and identify contact vs. non-contact forces",
         "State Newton's three laws of motion",
         "Draw a simple free-body diagram"
       ],
@@ -238,6 +251,12 @@ export const Physics101Module: LearningModule = {
           "type": "mnemonic",
           "title": "Newton's Laws Memory Aid",
           "content": "1st: Stay (objects resist change), 2nd: Push (F = ma), 3rd: Bounce Back (every action has an equal and opposite reaction)."
+        },
+        {
+          "id": "physics-101-l02-a2",
+          "type": "image",
+          "title": "Free-Body Diagram Example",
+          "content": "A simple diagram of a book on a table, with an arrow pointing down for gravity (Weight) and an equal-sized arrow pointing up for the normal force from the table."
         }
       ]
     },
@@ -393,31 +412,38 @@ export const Physics101Module: LearningModule = {
         "Calculate work using W = F × d",
         "Explain the law of conservation of energy"
       ],
+      "metadata": {
+        "prompts": [
+          "Are you doing 'work' in the physics sense if you push against a solid wall that doesn't move?",
+          "A fast baseball and a slow bowling ball can have the same kinetic energy. How is this possible?",
+          "Where in a roller coaster ride is the potential energy highest? Where is the kinetic energy highest?"
+        ]
+      },
       "chunks": [
         {
           "id": "physics-101-l04-c1",
           "title": "What Is Work?",
-          "content": "In the world of physics, the word 'work' means something very specific! Work happens when a force, like a push or a pull, moves an object in the same direction that the force is applied. To figure out how much work is done, we can use a simple formula: Work = Force × Distance. This means that to find out the work, you multiply the amount of force you use by the distance the object moves. The unit we use to measure work is called a joule, which is often represented by the letter 'J'. For instance, if you push a box with a force of 10 newtons (which is a way to measure how strong your push is) and you push it for a distance of 3 meters, you have done 30 joules of work! But here’s something interesting: if you are holding a heavy bag and standing still, you are not doing any work at all because the bag isn’t moving. This concept of work is important because it helps us understand how forces can change the way things move in our everyday lives, from pushing a friend on a swing to lifting your backpack!\nContext recap: In the world of physics, the word 'work' means something very specific! Work happens when a force, like a push or a pull, moves an object in the same direction that the force is applied. To figure out how much work is done, we can use a simple formula: Work = Force × Distance. This means that to find out the work, you multiply the amount of force you use by the distance the object moves.\nWhy this matters: What Is Work? helps learners in Physics connect ideas from Physics Essentials to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "In physics, 'work' has a very specific meaning. Work is done when a force causes an object to move a certain distance in the direction of the force. The formula is simple: Work = Force × Distance. The unit for work is the joule (J). If you push a box with 10 newtons of force for 3 meters, you've done 30 joules of work. Interestingly, if you hold a heavy bag perfectly still, you're not doing any work on the bag, because it isn't moving. Work is all about force causing motion."
         },
         {
           "id": "physics-101-l04-c2",
           "title": "Kinetic Energy",
-          "content": "Kinetic energy is a really interesting idea in physics! It describes the energy that an object has when it is moving. We can figure out how much kinetic energy something has by using a special formula: KE = ½ × mass × velocity². Let’s break that down a bit. Here, 'mass' is how heavy the object is, and 'velocity' is how fast it is going. For example, imagine we have a ball that weighs 2 kilograms, and it’s rolling along at a speed of 3 meters per second. To find out its kinetic energy, we can use our formula: KE = ½ × 2 × (3)². When we do the math, we find that the kinetic energy is 9 joules! Isn’t that cool? Now, here’s something really surprising: if we make the ball go twice as fast, its kinetic energy doesn’t just double — it actually becomes four times greater! This is super important to understand, especially when we think about car accidents. When cars crash at high speeds, the energy involved is much higher, which is why those crashes can be so much more dangerous! Understanding kinetic energy helps us learn about safety and the effects of speed in our everyday lives.\nContext recap: Kinetic energy is a really interesting idea in physics! It describes the energy that an object has when it is moving. We can figure out how much kinetic energy something has by using a special formula: KE = ½ × mass × velocity². Let’s break that down a bit.\nWhy this matters: Kinetic Energy helps learners in Physics connect ideas from Physics Essentials to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "Kinetic energy is the energy of motion. Anything that moves has kinetic energy. The formula is KE = ½ × mass × velocity². This means an object's kinetic energy depends on both its mass and its speed. What's surprising is the velocity is squared. This means if you double an object's speed, you quadruple its kinetic energy! This is why high-speed car crashes are so much more dangerous—the energy involved increases dramatically with speed."
         },
         {
           "id": "physics-101-l04-c3",
           "title": "Potential Energy",
-          "content": "Potential energy is a fascinating type of energy that is all about what we call stored energy. This means that energy can be kept in an object based on where it is located or how it is arranged. One of the most common forms of potential energy is called gravitational potential energy. We can figure out how much gravitational potential energy something has by using a special formula: PE = mass × gravity × height. Let's think about a fun example! Imagine you have a book that weighs 5 kilograms, and it is sitting on a shelf that is 2 meters high. To find out how much gravitational potential energy this book has, we can plug the numbers into our formula: PE = 5 × 9.8 × 2. When we do the math, we find that the book has 98 joules of potential energy! Isn't that cool? Another type of potential energy is called elastic potential energy. This energy is stored in objects that can be stretched or squished, like rubber bands and springs. Learning about potential energy helps us understand how energy can be stored and then released in different situations, which is super important in physics!\nContext recap: Potential energy is a fascinating type of energy that is all about what we call stored energy. This means that energy can be kept in an object based on where it is located or how it is arranged. One of the most common forms of potential energy is called gravitational potential energy. We can figure out how much gravitational potential energy something has by using a special formula: PE = mass × gravity × height.\nWhy this matters: Potential Energy helps learners in Physics connect ideas from Physics Essentials to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "Potential energy is stored energy, ready to be used. The most common type is gravitational potential energy, which an object has due to its height. The formula is PE = mass × gravity × height. A book on a high shelf has more potential energy than one on the floor. Another type is elastic potential energy, which is stored in stretched or compressed objects like a rubber band or a spring. Potential energy is all about an object's position or condition."
         },
         {
           "id": "physics-101-l04-c4",
           "title": "Conservation of Energy",
-          "content": "One of the most fascinating ideas in physics is called the conservation of energy. This means that energy cannot just appear out of nowhere or vanish into thin air; instead, it changes from one form to another. Let's think about a simple example: when a ball falls off a shelf, it starts with something called gravitational potential energy (PE) because it is high up. As the ball drops, that potential energy transforms into kinetic energy (KE), which is the energy of motion. At the very top of the shelf, the ball has all its energy as potential energy and none as kinetic energy because it isn't moving yet. But when the ball reaches the ground, it has converted all that energy into kinetic energy, moving fast and having no potential energy left. Throughout this whole process, the total energy stays the same, as long as we don’t consider things like air resistance that can slow it down. Another great example of energy transformation is a pendulum. When it swings back and forth, it constantly changes between potential energy when it’s at the highest points and kinetic energy when it’s at the lowest point. Isn’t it amazing how energy works?\nContext recap: One of the most fascinating ideas in physics is called the conservation of energy. This means that energy cannot just appear out of nowhere or vanish into thin air; instead, it changes from one form to another. Let's think about a simple example: when a ball falls off a shelf, it starts with something called gravitational potential energy (PE) because it is high up. As the ball drops, that potential energy transforms into kinetic energy (KE), which is the energy of motion.\nWhy this matters: Conservation of Energy helps learners in Physics connect ideas from Physics Essentials to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "The law of conservation of energy is one of the most important principles in physics. It states that energy cannot be created or destroyed, only transformed from one form to another. For example, as a ball falls from a shelf, its potential energy (from its height) is converted into kinetic energy (from its motion). At the top, it's all PE; at the bottom, just before it hits, it's all KE. The total energy remains the same. A swinging pendulum is a perfect example of this constant PE ↔ KE conversion."
         },
         {
           "id": "physics-101-l04-c5",
-          "title": "E = mc² — Mass as Concentrated Energy",
-          "content": "One of the most famous equations in physics is Einstein's E = mc². This equation teaches us that mass and energy are actually two forms of the same thing! Imagine that everything around us, including you, is made up of tiny particles that have mass. Now, what’s really cool is that even a small amount of mass can hold a huge amount of energy. For example, think about a cup of coffee. According to physicist Marcus Chown, when your coffee is hot, it actually weighs a tiny bit more than when it is cold. Why? Because the heat energy, or thermal energy, that it contains adds to its mass! Isn’t that fascinating?\nNow, let’s talk about the 'c²' in the equation. This stands for the speed of light squared, which is an incredibly large number (around 9 × 10¹⁶). This large number is important because it shows us why nuclear reactions can release so much more energy than chemical reactions. In nuclear reactions, a tiny bit of nuclear mass is transformed directly into energy, which is why they can produce millions of times more energy than the reactions that happen when you burn wood or fuel.\nUnderstanding the relationship between mass and energy is key to grasping some of the most powerful processes in the universe, like how stars shine and how nuclear power works. So, the next time you think about energy, remember that it’s all connected to mass in ways that are truly amazing!\nContext recap: One of the most famous equations in physics is Einstein's E = mc². This equation teaches us that mass and energy are actually two forms of the same thing! Imagine that everything around us, including you, is made up of tiny particles that have mass. Now, what’s really cool is that even a small amount of mass can hold a huge amount of energy.\nWhy this matters: E = mc² — Mass as Concentrated Energy helps learners in Physics connect ideas from Physics Essentials to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "title": "E = mc²: Mass as Concentrated Energy",
+          "content": "Einstein's famous equation, E = mc², reveals a stunning connection: mass and energy are two forms of the same thing. It tells us that a small amount of mass can be converted into a huge amount of energy. The 'c²' is the speed of light squared, an enormous number. This is why nuclear reactions, which convert a tiny fraction of an atom's mass into energy, release millions of times more energy than chemical reactions like burning wood. This principle powers stars and nuclear power plants."
         }
       ],
       "flashcards": [
@@ -444,12 +470,12 @@ export const Physics101Module: LearningModule = {
         {
           "id": "physics-101-l04-f5",
           "front": "E = mc² (mass-energy equivalence)",
-          "back": "Energy equals mass times the speed of light squared. A small amount of mass converts to an enormous amount of energy because c² ≈ 9×10¹⁶ m²/s²."
+          "back": "Energy equals mass times the speed of light squared. A small amount of mass converts to an enormous amount of energy because c² is a huge number."
         },
         {
           "id": "physics-101-l04-f6",
           "front": "Why do nuclear reactions release so much energy?",
-          "back": "Nuclear reactions convert a fraction of the mass of atomic nuclei directly into energy via E = mc². Even a tiny mass loss produces enormous energy because the speed of light squared is so large."
+          "back": "They convert a fraction of the mass of atomic nuclei directly into energy via E = mc². Even a tiny mass loss produces enormous energy."
         }
       ],
       "learningAids": [
@@ -457,7 +483,7 @@ export const Physics101Module: LearningModule = {
           "id": "physics-101-l04-a1",
           "type": "animation",
           "title": "Pendulum Energy",
-          "content": "Animation showing PE ↔ KE conversion in a swinging pendulum with energy bar graph."
+          "content": "Animation showing PE ↔ KE conversion in a swinging pendulum with an energy bar graph that shows total energy remaining constant."
         }
       ]
     },
@@ -684,7 +710,7 @@ export const Physics101Module: LearningModule = {
             }
           ],
           "correctOptionId": "c",
-          "explanation": "Sound is a longitudinal (mechanical) wave — it needs particles to vibrate through. Light, radio, and X-rays are electromagnetic waves that can travel through a vacuum."
+          "explanation": "Sound is a mechanical wave — it needs particles to vibrate through. Light, radio, and X-rays are electromagnetic waves that can travel through a vacuum."
         },
         {
           "id": "physics-101-l06-q4",
@@ -757,31 +783,38 @@ export const Physics101Module: LearningModule = {
         "Apply Ohm's law: V = I × R",
         "Compare series and parallel circuits"
       ],
+      "metadata": {
+        "prompts": [
+          "Why does a thin wire get hotter than a thick wire when the same current flows through them?",
+          "If you add another light bulb to a simple series circuit, what happens to the brightness of the other bulbs? Why?",
+          "Are the lights in your house wired in series or parallel? How do you know?"
+        ]
+      },
       "chunks": [
         {
           "id": "physics-101-l07-c1",
           "title": "Electric Charge and Current",
-          "content": "Electric charge and current are two very important ideas in the world of electricity! Everything around us is made up of tiny building blocks called atoms. These atoms contain even smaller particles: protons, which have a positive charge, and electrons, which have a negative charge. When we talk about electric current, we are referring to the movement of these electrons through a material that can carry electricity, such as a copper wire. This flow of electrons is what we call electric current. We measure how much current is flowing in a circuit using a unit called amperes, often shortened to 'amps' (A). To help visualize this, think about water flowing through a pipe. If more water is flowing, that means there is more current. Just like water can power things like water wheels, electric current powers our lights, computers, and many other devices in our homes! Understanding these concepts helps us see how electricity is a part of our daily lives and how it makes many of our favorite gadgets work.\nContext recap: Electric charge and current are two very important ideas in the world of electricity! Everything around us is made up of tiny building blocks called atoms. These atoms contain even smaller particles: protons, which have a positive charge, and electrons, which have a negative charge. When we talk about electric current, we are referring to the movement of these electrons through a material that can carry electricity, such as a copper wire.\nWhy this matters: Electric Charge and Current helps learners in Physics connect ideas from Physics Essentials to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "Everything is made of atoms, which contain charged particles: positive protons and negative electrons. Electric current is the flow of these electrons through a material, like a copper wire. We measure current in amperes (A), or amps. Think of it like water flowing in a pipe: more water flow means a stronger current. This flow of charge is what powers everything from your phone to your lights."
         },
         {
           "id": "physics-101-l07-c2",
           "title": "Voltage and Resistance",
-          "content": "Voltage and resistance are two important ideas that help us understand how electricity moves in a circuit. Let's start with voltage! Voltage, which we measure in volts (V), is like the 'push' that makes electrons travel through a circuit. You can think of it like water pressure in a hose: just as higher pressure pushes more water through, higher voltage pushes more electrons through the wires. Now, let's talk about resistance. Resistance is measured in ohms (Ω) and it is what slows down or opposes the flow of electricity. Some materials, like thin wires or very long wires, have high resistance, which means they make it harder for the current to flow. A great example of resistance in action is a light bulb. Inside the light bulb, there is a thin wire called a filament that has high resistance. When electricity flows through this filament, it gets very hot and produces light and heat. By understanding both voltage and resistance, we can better appreciate how our electrical devices work every day, from our lights to our computers!\nContext recap: Voltage and resistance are two important ideas that help us understand how electricity moves in a circuit. Let's start with voltage! Voltage, which we measure in volts (V), is like the 'push' that makes electrons travel through a circuit. You can think of it like water pressure in a hose: just as higher pressure pushes more water through, higher voltage pushes more electrons through the wires.\nWhy this matters: Voltage and Resistance helps learners in Physics connect ideas from Physics Essentials to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "Voltage is the 'push' or 'pressure' that makes electric current flow. Measured in volts (V), it's like the water pressure in a hose—higher voltage pushes more current. Resistance is a measure of how much a material opposes the flow of current, measured in ohms (Ω). A thin wire has more resistance than a thick wire. A light bulb's filament has high resistance, causing it to heat up and glow when current passes through it."
         },
         {
           "id": "physics-101-l07-c3",
           "title": "Ohm's Law",
-          "content": "Ohm's Law is a key concept in the study of electricity that helps us understand how three important parts of a circuit work together: voltage, current, and resistance. We can express this relationship with a simple formula: V = I × R. In this formula, V stands for voltage, I represents current, and R is the resistance. Let's break this down with an example! Imagine we have a circuit where the current flowing through it is 2 Amperes (A), and the resistance is 6 Ohms (Ω). To find the voltage, we can use our formula: V = 2 × 6. When we do the math, we find that the voltage is 12 Volts (V). This equation is super important in both physics and electronics because it helps us figure out other values too! If we want to know the current, we can rearrange the formula to I = V/R, and if we need to find the resistance, we can use R = V/I. Learning about Ohm's Law is really important for anyone who wants to understand how electrical circuits function and how electricity powers our world!\nContext recap: Ohm's Law is a key concept in the study of electricity that helps us understand how three important parts of a circuit work together: voltage, current, and resistance. We can express this relationship with a simple formula: V = I × R. In this formula, V stands for voltage, I represents current, and R is the resistance. Let's break this down with an example!\nWhy this matters: Ohm's Law helps learners in Physics connect ideas from Physics Essentials to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "Ohm's Law is a fundamental rule that connects voltage, current, and resistance in a simple formula: V = I × R. This means Voltage = Current × Resistance. If you know any two of these values, you can find the third. For example, if a circuit has a 12-volt battery (V) and a 6-ohm resistor (R), the current (I) flowing through it would be I = V/R = 12/6 = 2 amps. This law is essential for designing and analyzing any electric circuit."
         },
         {
           "id": "physics-101-l07-c4",
-          "title": "Series vs Parallel Circuits",
-          "content": "When we explore the fascinating world of electricity, we can find two main types of circuits: series circuits and parallel circuits. Let's start with series circuits. In a series circuit, all the components, like light bulbs, are connected one after another in a single line. This means that the electric current has only one path to follow. Imagine if you have a string of old Christmas lights; if one bulb burns out, the entire string goes dark because the current can't flow anymore. Now, let's look at parallel circuits. In a parallel circuit, the components are connected on different branches, almost like a tree with many limbs. This setup allows the electric current to split and flow through multiple paths at the same time. So, if one light bulb in a parallel circuit stops working, the other bulbs will keep shining brightly, just like the outlets in your home where you can plug in multiple devices. Most of the electrical systems we use today, like in our houses and schools, are designed with parallel circuits because they are more reliable and efficient, ensuring that we have power where we need it most.\nContext recap: When we explore the fascinating world of electricity, we can find two main types of circuits: series circuits and parallel circuits. Let's start with series circuits. In a series circuit, all the components, like light bulbs, are connected one after another in a single line. This means that the electric current has only one path to follow.\nWhy this matters: Series vs Parallel Circuits helps learners in Physics connect ideas from Physics Essentials to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "title": "Series vs. Parallel Circuits",
+          "content": "There are two basic ways to wire a circuit. In a series circuit, components are connected in a single loop. The current has only one path. If one bulb in a string of old holiday lights burns out, the whole string goes dark because the path is broken. In a parallel circuit, components are on separate branches. The current splits to flow through each branch. If one bulb burns out, the others stay lit because their paths are still complete. Your home is wired in parallel so you can use multiple appliances at once."
         },
         {
           "id": "physics-101-l07-c5",
           "title": "Maxwell's Electromagnetic Unification",
-          "content": "In the mid-1800s, a brilliant scientist named James Clerk Maxwell made a groundbreaking discovery that changed our understanding of physics forever. He successfully combined the concepts of electricity and magnetism into a single theory known as the electromagnetic field. This unification was so significant that it inspired future scientists, including Albert Einstein, who sought to create a theory that would explain all forces in nature. Maxwell's work revealed that light itself is an electromagnetic wave, which means it consists of oscillating electric and magnetic fields that travel through space. This idea opened up new avenues of research and understanding, leading to the development of modern physics and theories like string theory, which continues to be explored by scientists today. Maxwell's discoveries help us understand how electricity powers our homes, how magnets can attract or repel each other, and even how we can send information through the air using radio waves. By studying Maxwell's work, we learn not just about electricity and magnetism, but also about the fundamental forces that shape our universe. His legacy reminds us of the importance of curiosity and exploration in science, encouraging young minds to ask questions and seek answers about the world around them. As we continue to explore these concepts, we can appreciate how interconnected everything is in the universe, from the smallest particles to the vastness of light and energy that surrounds us.\nContext recap: In the mid-1800s, a brilliant scientist named James Clerk Maxwell made a groundbreaking discovery that changed our understanding of physics forever. He successfully combined the concepts of electricity and magnetism into a single theory known as the electromagnetic field. This unification was so significant that it inspired future scientists, including Albert Einstein, who sought to create a theory that would explain all forces in nature. Maxwell's work revealed that light itself is an electromagnetic wave, which means it consists of oscillating electric and magnetic fields that travel through space.\nWhy this matters: Maxwell's Electromagnetic Unification helps learners in Physics connect ideas from Physics Essentials to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "In the 1800s, scientist James Clerk Maxwell discovered something amazing: electricity and magnetism are not separate forces. They are two aspects of a single force called electromagnetism. His equations showed that a changing electric field creates a magnetic field, and a changing magnetic field creates an electric field. This relationship allows energy to travel through space as an electromagnetic wave. Most importantly, he proved that light itself is an electromagnetic wave, unifying optics with electricity and magnetism in one of the greatest achievements in physics."
         }
       ],
       "flashcards": [
@@ -808,12 +841,12 @@ export const Physics101Module: LearningModule = {
         {
           "id": "physics-101-l07-f5",
           "front": "Maxwell's electromagnetic unification",
-          "back": "James Clerk Maxwell showed that electricity and magnetism are aspects of a single force — electromagnetism. He proved that light is an electromagnetic wave."
+          "back": "James Clerk Maxwell showed that electricity and magnetism are aspects of a single force—electromagnetism. He proved that light is an electromagnetic wave."
         },
         {
           "id": "physics-101-l07-f6",
           "front": "What is an electromagnetic field?",
-          "back": "A region of space permeated by electric and magnetic lines of force. Moving charges create magnetic fields; changing magnetic fields create electric fields. Together they propagate as electromagnetic waves (including light)."
+          "back": "A field created by moving electric charges that exerts a force on other charges. It consists of intertwined electric and magnetic fields that can propagate as waves."
         }
       ],
       "learningAids": [
@@ -821,7 +854,7 @@ export const Physics101Module: LearningModule = {
           "id": "physics-101-l07-a1",
           "type": "image",
           "title": "Circuit Diagrams",
-          "content": "Side-by-side diagrams of a series circuit and a parallel circuit with labeled components."
+          "content": "Side-by-side diagrams of a series circuit and a parallel circuit with labeled components (battery, wires, bulbs)."
         }
       ]
     },
@@ -969,7 +1002,7 @@ export const Physics101Module: LearningModule = {
           "id": "physics-101-l08-a1",
           "type": "image",
           "title": "Six Simple Machines Poster",
-          "content": "Illustrated poster showing all six simple machines with labeled parts and everyday examples."
+          "content": "Illustrated poster showing all six simple machines (lever, pulley, wheel and axle, inclined plane, wedge, screw) with labeled parts and everyday examples."
         }
       ]
     },
@@ -1125,31 +1158,38 @@ export const Physics101Module: LearningModule = {
         "Identify the visible spectrum and how we see color",
         "Compare convex and concave lenses"
       ],
+      "metadata": {
+        "prompts": [
+          "Why does a black car get hotter in the sun than a white car?",
+          "If you look at your reflection in a spoon, why do you look different on the front side versus the back side?",
+          "What color would a blue shirt appear to be under a pure red light?"
+        ]
+      },
       "chunks": [
         {
           "id": "physics-101-l10-c1",
           "title": "How Light Behaves",
-          "content": "Light is a fascinating form of energy that travels incredibly fast—about 300,000 kilometers per second in a vacuum! This means that light can travel from the Moon to Earth in just over one second! When light encounters an object, it can behave in three different ways: it can be reflected, absorbed, or transmitted. Reflection occurs when light bounces off a surface, just like how you can see your reflection in a mirror. Mirrors are special because they reflect most of the light that hits them, which is why we can see ourselves so clearly. Absorption happens when an object takes in light and converts it into heat. For example, if you wear a black shirt on a sunny day, it will absorb most of the sunlight and feel warm. Lastly, transmission is when light passes through an object, like how clear glass allows light to come through. Most objects we see do a combination of these three behaviors, which is why we experience different colors and brightness in our environment. Understanding how light interacts with different materials helps us learn about the world around us and the science of optics!\nContext recap: Light is a fascinating form of energy that travels incredibly fast—about 300,000 kilometers per second in a vacuum! This means that light can travel from the Moon to Earth in just over one second! When light encounters an object, it can behave in three different ways: it can be reflected, absorbed, or transmitted. Reflection occurs when light bounces off a surface, just like how you can see your reflection in a mirror.\nWhy this matters: How Light Behaves helps learners in Physics connect ideas from Physics Essentials to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "Light is a form of energy that travels in waves. When light hits an object, one of three things can happen. Reflection is when light bounces off a surface, like with a mirror. Absorption is when an object soaks up the light, converting it to heat, which is why dark-colored shirts feel hot in the sun. Transmission is when light passes through an object, like a clear window. Most objects do a combination of these, which determines how we see them."
         },
         {
           "id": "physics-101-l10-c2",
           "title": "Reflection and Refraction",
-          "content": "When light interacts with different surfaces, it follows some important rules that help us understand how we see things around us. One of these rules is known as the law of reflection. This law tells us that when light hits a surface, the angle at which it strikes the surface (called the angle of incidence) is equal to the angle at which it bounces off (known as the angle of reflection). This is the reason we can see our own reflection in a flat mirror; the light bounces back to our eyes in a way that allows us to see ourselves clearly.\nNow, let’s talk about refraction, which is another fascinating behavior of light. Refraction happens when light travels from one material to another, like when it moves from air into water. As light enters a denser material, it slows down and bends. This bending is why a straw looks like it’s bent when you put it in a glass of water. The light is changing direction because it is moving from a less dense medium (air) to a denser one (water). Understanding these concepts helps us see the world in a whole new way and explains many everyday phenomena!\nContext recap: When light interacts with different surfaces, it follows some important rules that help us understand how we see things around us. One of these rules is known as the law of reflection. This law tells us that when light hits a surface, the angle at which it strikes the surface (called the angle of incidence) is equal to the angle at which it bounces off (known as the angle of reflection). This is the reason we can see our own reflection in a flat mirror; the light bounces back to our eyes in a way that allows us to see ourselves clearly."
+          "content": "The law of reflection states that light bounces off a smooth surface at the same angle it hits it. This predictable bounce is what allows mirrors to form clear images. Refraction is the bending of light as it passes from one material to another, like from air to water. This happens because light changes speed. Refraction is why a straw in a glass of water looks bent at the surface. Lenses work by using refraction to focus or spread light."
         },
         {
           "id": "physics-101-l10-c3",
-          "title": "The Visible Spectrum",
-          "content": "Did you know that white light is actually made up of all the colors of the rainbow? It's true! When white light passes through a special piece of glass called a prism, it splits into a beautiful spectrum of colors. These colors are Red, Orange, Yellow, Green, Blue, Indigo, and Violet. You can remember these colors easily with the fun acronym ROY G. BIV! Each color represents a different wavelength of light. The colors we see in everyday objects depend on how those objects interact with light. For example, when you look at a red apple, it appears red because it reflects red light while absorbing all the other colors. This amazing interaction between light and objects is what allows us to see the vibrant colors that brighten our world every day. Isn’t it fascinating how light works?\nContext recap: Did you know that white light is actually made up of all the colors of the rainbow? It's true! When white light passes through a special piece of glass called a prism, it splits into a beautiful spectrum of colors. These colors are Red, Orange, Yellow, Green, Blue, Indigo, and Violet.\nWhy this matters: The Visible Spectrum helps learners in Physics connect ideas from Physics Essentials to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "title": "The Visible Spectrum and Color",
+          "content": "What we see as white light is actually a mix of all the colors of the rainbow. You can see this by passing light through a prism, which separates the colors into a spectrum: Red, Orange, Yellow, Green, Blue, Indigo, and Violet (ROY G. BIV). The color of an object is determined by which colors of light it reflects. A red apple looks red because it reflects red light and absorbs all the other colors. A white object reflects all colors, and a black object absorbs all colors."
         },
         {
           "id": "physics-101-l10-c4",
           "title": "Lenses",
-          "content": "Lenses are fascinating tools made from glass or plastic that help us see things more clearly by bending light. There are two main types of lenses: convex and concave. A convex lens is thicker in the middle and is designed to focus light rays to a single point. This type of lens is commonly used in devices like magnifying glasses, which allow us to see tiny details up close, and in camera lenses, which help us capture beautiful photographs. On the other hand, a concave lens is thinner in the middle and works by spreading light rays apart. This type of lens is particularly useful for people who are nearsighted, as it helps them see distant objects more clearly. It's interesting to note that our own eyes have a natural convex lens that plays a crucial role in focusing images onto the retina, which is the part of our eye that sends visual information to our brain, allowing us to enjoy the world around us.\nContext recap: Lenses are fascinating tools made from glass or plastic that help us see things more clearly by bending light. There are two main types of lenses: convex and concave. A convex lens is thicker in the middle and is designed to focus light rays to a single point. This type of lens is commonly used in devices like magnifying glasses, which allow us to see tiny details up close, and in camera lenses, which help us capture beautiful photographs.\nWhy this matters: Lenses helps learners in Physics connect ideas from Physics Essentials to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "Lenses are curved pieces of glass or plastic that use refraction to form images. There are two main types. A convex lens is thicker in the middle and converges (focuses) light rays to a point. They are used in magnifying glasses and cameras to make things look bigger. A concave lens is thinner in the middle and diverges (spreads out) light rays. They are used in glasses to help nearsighted people see distant objects more clearly."
         },
         {
           "id": "physics-101-l10-c5",
           "title": "Wave-Particle Duality: Light's Quantum Nature",
-          "content": "At a tiny scale, light behaves in some very interesting ways! It can act both like a wave and like a particle, which is a concept known as wave-particle duality. Imagine throwing a stone into a pond; the ripples that spread out are like waves. Now, think of light as being able to do something similar! In a famous experiment called the double-slit experiment, scientists discovered that even single particles of light, called photons, can create patterns that suggest they are behaving like waves. This means that each photon seems to pass through both slits at the same time, creating an interference pattern, which looks like a series of bright and dark stripes. This strange behavior is a key part of quantum mechanics, which studies the smallest particles in the universe. As physicist Marcus Chown explains, this means that atoms can exist in many places at once, similar to the idea of being in two cities at the same time! Imagine if you could be in New York and London at the same moment — that’s how peculiar the world of tiny particles can be! However, this unusual behavior is only noticeable at very small scales, which is why we don't see it in our everyday lives. In our daily experiences, light seems to travel in straight lines, and we don’t notice its wave-like properties. Understanding wave-particle duality helps scientists unlock the mysteries of the universe and has led to many exciting discoveries in technology and physics. So, the next time you see light, remember that it has a secret life as both a wave and a particle!\nContext recap: At a tiny scale, light behaves in some very interesting ways! It can act both like a wave and like a particle, which is a concept known as wave-particle duality. Imagine throwing a stone into a pond; the ripples that spread out are like waves. Now, think of light as being able to do something similar!\nWhy this matters: Wave-Particle Duality: Light's Quantum Nature helps learners in Physics connect ideas from Physics Essentials to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "At the smallest scales, light has a strange secret: it acts like both a wave and a particle. This is called wave-particle duality. In some experiments, light behaves like a continuous wave, creating interference patterns. In others, it behaves like a stream of tiny energy packets called photons. This bizarre dual nature is a cornerstone of quantum mechanics, the physics of the very small. It shows that the universe is much stranger and more wonderful than it appears in our everyday lives."
         }
       ],
       "flashcards": [
@@ -1176,17 +1216,17 @@ export const Physics101Module: LearningModule = {
         {
           "id": "physics-101-l10-f5",
           "front": "Wave-particle duality",
-          "back": "Light (and all quantum particles) exhibits both wave-like behavior (interference, diffraction) and particle-like behavior (photoelectric effect). This dual nature is fundamental to quantum mechanics."
+          "back": "Light (and all quantum particles) exhibits both wave-like behavior (interference) and particle-like behavior (photoelectric effect)."
         },
         {
           "id": "physics-101-l10-f6",
           "front": "Double-slit experiment",
-          "back": "When particles (photons or electrons) pass through two slits, they create an interference pattern on a screen — even when sent one at a time — demonstrating their wave-like nature."
+          "back": "When particles like photons pass through two slits, they create an interference pattern on a screen—even one at a time—demonstrating their wave-like nature."
         },
         {
           "id": "physics-101-l10-f7",
           "front": "Quantum superposition",
-          "back": "A quantum particle can exist in multiple states simultaneously until measured. An atom can be in many places at once — the act of observation 'collapses' it to a single state."
+          "back": "A quantum particle can exist in multiple states or locations at once until it is measured. The act of observation 'collapses' it to a single state."
         }
       ],
       "learningAids": [
@@ -1200,7 +1240,7 @@ export const Physics101Module: LearningModule = {
           "id": "physics-101-l10-a2",
           "type": "animation",
           "title": "Refraction Demo",
-          "content": "Animation showing light bending as it passes from air to water."
+          "content": "Animation showing a light ray bending as it passes from air into water, making a submerged object appear shifted."
         }
       ]
     },
@@ -1349,6 +1389,12 @@ export const Physics101Module: LearningModule = {
           "type": "mnemonic",
           "title": "Heat Transfer Memory",
           "content": "Conduction = Contact, Convection = Currents (fluids move), Radiation = Rays (no medium needed)."
+        },
+        {
+          "id": "physics-101-l11-a2",
+          "type": "image",
+          "title": "Heat Transfer Methods",
+          "content": "An illustration of a campfire. An arrow showing heat traveling up a metal poker represents conduction. Swirling arrows in the air above the fire represent convection. Wavy lines moving out from the fire to a person's hands represent radiation."
         }
       ]
     },
@@ -1504,31 +1550,38 @@ export const Physics101Module: LearningModule = {
         "Explain how forces, speed, and height interact in a coaster",
         "Evaluate trade-offs in a physics-based design challenge"
       ],
+      "metadata": {
+        "prompts": [
+          "If you make the first hill of your roller coaster twice as high, what happens to the marble's potential energy?",
+          "Why can't the second hill in a roller coaster be taller than the first hill (without an extra motor)?",
+          "What role does friction play in your roller coaster design? Is it helpful or harmful?"
+        ]
+      },
       "chunks": [
         {
           "id": "physics-101-l13-c1",
           "title": "The Challenge",
-          "content": "Imagine you are taking on an exciting challenge: designing a marble roller coaster for a science fair! Your goal is to create a track that allows a marble to start at the top of a hill, roll through a loop, go over a second hill, and finally land safely in a cup at the end. You have a total of 2 meters of track material to work with. How can you design your roller coaster to make sure the marble completes all these tasks? This project will require you to think creatively and apply your knowledge of physics!\nAs you start brainstorming, consider the different shapes and angles you can use for your track. Think about how gravity will help the marble move and how you can use energy to make it go through the loop and over the hills. You might want to sketch your ideas on paper first, and then build a model to test your design. Remember, the key is to have fun while learning about the forces at play in your roller coaster! Good luck, and let your imagination run wild!\nContext recap: Imagine you are taking on an exciting challenge: designing a marble roller coaster for a science fair! Your goal is to create a track that allows a marble to start at the top of a hill, roll through a loop, go over a second hill, and finally land safely in a cup at the end. You have a total of 2 meters of track material to work with. How can you design your roller coaster to make sure the marble completes all these tasks?\nWhy this matters: The Challenge helps learners in Physics connect ideas from Physics Essentials to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "Your challenge is to design and build a marble roller coaster. The marble must start from a hill, go through a loop, travel over a second, smaller hill, and land safely in a cup. You have a limited amount of track material. This project will test your understanding of energy, forces, and motion. Let's think like a physics engineer and build something amazing!"
         },
         {
           "id": "physics-101-l13-c2",
           "title": "Energy Budget",
-          "content": "When you're designing your very own marble roller coaster, it's super important to understand how energy works! Imagine the marble sitting at the very top of the first hill. At this point, it has something called gravitational potential energy (PE). This type of energy is all about how high the marble is above the ground. The higher it is, the more potential energy it has! Now, as the marble starts to roll down the hill, that potential energy begins to change into kinetic energy (KE). Kinetic energy is the energy of motion, and it's what makes the marble go faster as it rolls down.\nBut here's a fun fact: for the marble to make it all the way through a loop, the first hill needs to be tall enough! Specifically, the height of that first hill should be at least 2.5 times the height of the loop. This is really important because some energy gets lost due to friction, which is like a little bit of resistance that slows things down. So, if your loop is 20 centimeters tall, you need to make sure your starting hill is at least 50 centimeters high. This way, the marble will have enough energy to zoom through the loop and keep on rolling!\nUnderstanding these energy transformations will help you create a thrilling and successful roller coaster design!\nContext recap: When you're designing your very own marble roller coaster, it's super important to understand how energy works! Imagine the marble sitting at the very top of the first hill. At this point, it has something called gravitational potential energy (PE). This type of energy is all about how high the marble is above the ground.\nWhy this matters: Energy Budget helps learners in Physics connect ideas from Physics Essentials to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "To design a successful coaster, you must manage its energy. The marble starts at the top of the first hill with maximum gravitational potential energy (PE). As it rolls down, this PE converts into kinetic energy (KE), the energy of motion. To make it through a loop, the starting hill must be high enough to provide sufficient energy. A good rule of thumb is that the starting hill must be at least 2.5 times the height of the loop to overcome energy losses from friction."
         },
         {
           "id": "physics-101-l13-c3",
           "title": "Forces in Action",
-          "content": "When you design a roller coaster, it's essential to understand how forces work, especially when the marble goes through a loop. At the very top of the loop, two main forces are acting on the marble: gravity and the normal force from the track. Gravity is a force that pulls everything towards the Earth, so it pulls the marble downwards. On the other hand, the normal force is the force that the track exerts on the marble, pushing it down as well. These two forces work together to create what we call centripetal force, which is necessary for keeping the marble moving in a circular path. If the marble is moving too slowly, gravity will be stronger than the normal force, and this can cause the marble to fall off the track. That's why it's so important to make sure your roller coaster design allows the marble to maintain the right speed throughout the loop. By understanding these forces, you can create a fun and safe roller coaster experience for everyone!\nContext recap: When you design a roller coaster, it's essential to understand how forces work, especially when the marble goes through a loop. At the very top of the loop, two main forces are acting on the marble: gravity and the normal force from the track. Gravity is a force that pulls everything towards the Earth, so it pulls the marble downwards. On the other hand, the normal force is the force that the track exerts on the marble, pushing it down as well.\nWhy this matters: Forces in Action helps learners in Physics connect ideas from Physics Essentials to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "As the marble goes through the loop, two forces keep it on the track: gravity pulling it down, and the normal force from the track pushing on it. Together, these provide the centripetal force needed to move in a circle. If the marble is too slow at the top of the loop, gravity will win and it will fall off. Your design must ensure the marble maintains enough speed to complete the loop safely."
         },
         {
           "id": "physics-101-l13-c4",
-          "title": "Design Decisions",
-          "content": "When you start designing your roller coaster, you will encounter some important choices, known as trade-offs. For instance, if you decide to make the first hill taller, this will give the marble more energy as it rolls down, which can make the ride more exciting. However, this taller hill will also require a longer piece of track to accommodate it. On the flip side, if you choose to create a wider loop, it will be easier for the marble to go through, but it might not be as thrilling for the riders. Additionally, if you want to add a second hill after the loop, you must make sure that there is enough leftover kinetic energy from the marble to help it climb back up that hill. Professional roller coaster engineers use advanced computer simulations to test and fine-tune these trade-offs before they start building the actual coaster. This careful planning helps them create rides that are both fun and safe for everyone to enjoy.\nContext recap: When you start designing your roller coaster, you will encounter some important choices, known as trade-offs. For instance, if you decide to make the first hill taller, this will give the marble more energy as it rolls down, which can make the ride more exciting. However, this taller hill will also require a longer piece of track to accommodate it. On the flip side, if you choose to create a wider loop, it will be easier for the marble to go through, but it might not be as thrilling for the riders."
+          "title": "Design Trade-offs",
+          "content": "Engineering is all about trade-offs. A taller first hill gives the marble more energy and speed, but it uses more track. A wider, gentler loop is easier for the marble to complete, but less exciting. A second hill must be lower than the first because the marble will have lost some energy to friction. You must balance these factors—speed, safety, and your track budget—to create the best possible design."
         },
         {
           "id": "physics-101-l13-c5",
-          "title": "Beyond Classical Physics: Strings and Extra Dimensions",
-          "content": "While classical physics does a fantastic job of explaining how roller coasters work, scientists believe that there might be even more exciting ideas about how the universe operates at a deeper level. One fascinating idea is called string theory, proposed by physicist Brian Greene. According to this theory, everything in the universe, including tiny particles like electrons and photons, is made up of incredibly small strings of energy that vibrate. Just like how different vibrations of a guitar string create different musical notes, these tiny strings vibrate in various ways to form different particles. Greene describes this microscopic world as filled with these tiny strings, and their unique patterns of vibration help shape everything we see in the universe.\nImagine if you could see these strings! They would be so tiny that they are much smaller than anything we can see with our eyes or even with powerful microscopes. This is where it gets even more interesting: string theory suggests that there are more dimensions in space than the three we can see and experience every day. We live in a world with length, width, and height, but string theory proposes that there could be as many as 10 or 11 dimensions! These extra dimensions are curled up so small that we can't detect them, but they might play a crucial role in how everything in the universe works together.\nThis idea opens up a whole new way of thinking about the universe and how everything is connected, making physics even more exciting and mysterious! It encourages us to explore and ask questions about the world around us, pushing the boundaries of what we know. Who knows what other amazing discoveries await us in the future? Learning about concepts like string theory can inspire us to think big and dream about the possibilities of science!\nContext recap: While classical physics does a fantastic job of explaining how roller coasters work, scientists believe that there might be even more exciting ideas about how the universe operates at a deeper level. One fascinating idea is called string theory, proposed by physicist Brian Greene. According to this theory, everything in the universe, including tiny particles like electrons and photons, is made up of incredibly small strings of energy that vibrate. Just like how different vibrations of a guitar string create different musical notes, these tiny strings vibrate in various ways to form different particles.\nWhy this matters: Beyond Classical Physics: Strings and Extra Dimensions helps learners in Physics connect ideas from Physics Essentials to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "title": "Beyond Classical Physics: String Theory",
+          "content": "While our roller coaster is governed by classical physics, at the most fundamental level, the universe may be even stranger. String theory suggests that all particles—like electrons and photons—are actually tiny, vibrating strings of energy. Different vibrations create different particles, like different notes from a guitar string. This theory also requires extra dimensions of space, curled up too small for us to see. It's a mind-bending idea that shows how much more there is to discover about the rules of our universe."
         }
       ],
       "flashcards": [
@@ -1545,22 +1598,22 @@ export const Physics101Module: LearningModule = {
         {
           "id": "physics-101-l13-f3",
           "front": "Loop height rule",
-          "back": "Starting height must be at least 2.5× the loop height to ensure the marble completes the loop (with friction)"
+          "back": "Starting height must be at least 2.5× the loop height to ensure the marble completes the loop (accounting for friction)"
         },
         {
           "id": "physics-101-l13-f4",
           "front": "Design trade-off",
-          "back": "Choosing between competing physics constraints: height vs track length, speed vs safety, energy vs friction losses"
+          "back": "Choosing between competing constraints: a taller hill gives more energy but uses more track; a gentle loop is safer but less thrilling."
         },
         {
           "id": "physics-101-l13-f5",
           "front": "String theory (basic idea)",
-          "back": "All fundamental particles are actually tiny one-dimensional vibrating strings of energy. Different vibrational patterns produce different particles — like different notes from a guitar string."
+          "back": "All fundamental particles are actually tiny, one-dimensional vibrating strings of energy. Different vibrational patterns produce different particles."
         },
         {
           "id": "physics-101-l13-f6",
           "front": "Extra dimensions in string theory",
-          "back": "String theory requires 10 or 11 total dimensions (not just the 3 spatial + 1 time we experience). The extra dimensions may be curled up at scales too small to observe directly."
+          "back": "String theory requires 10 or 11 total dimensions. The extra dimensions may be curled up at scales too small to observe directly."
         }
       ],
       "learningAids": [
@@ -1568,13 +1621,13 @@ export const Physics101Module: LearningModule = {
           "id": "physics-101-l13-a1",
           "type": "image",
           "title": "Roller Coaster Energy Diagram",
-          "content": "Diagram showing PE and KE at each point along a roller coaster: top hill, bottom, loop, second hill, finish."
+          "content": "Diagram showing PE and KE bar graphs at each point along a roller coaster: top hill, bottom, loop, second hill, finish."
         },
         {
           "id": "physics-101-l13-a2",
           "type": "practice",
           "title": "Design Sketch Prompt",
-          "content": "Sketch your roller coaster and label the PE and KE at each point. Calculate the minimum starting height for a 15 cm loop."
+          "content": "Sketch your roller coaster and label the points of maximum PE and maximum KE. Calculate the minimum starting height for a 15 cm loop."
         }
       ]
     },
@@ -1600,7 +1653,7 @@ export const Physics101Module: LearningModule = {
           "id": "physics-101-l14-ia1",
           "type": "drag_and_drop",
           "title": "Build an Experiment",
-          "description": "Drag each element to the correct part of the experimental design.",
+          "description": "Drag each element to the correct part of the experimental design for testing how ramp angle affects a toy car's travel distance.",
           "estimatedMinutes": 8,
           "difficultyLevel": "medium",
           "data": {
@@ -1699,7 +1752,7 @@ export const Physics101Module: LearningModule = {
           "id": "physics-101-l14-a1",
           "type": "practice",
           "title": "Lab Report Template",
-          "content": "Question → Hypothesis → Variables → Procedure → Data → Conclusion"
+          "content": "A simple template with sections: Question → Hypothesis → Variables → Procedure → Data → Conclusion."
         }
       ]
     },
@@ -1732,7 +1785,7 @@ export const Physics101Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Acceleration = change in velocity ÷ time = (20 − 0) ÷ 5 = 4 m/s²."
+          "explanation": "Acceleration = change in velocity ÷ time = (20 m/s − 0 m/s) ÷ 5 s = 4 m/s²."
         },
         {
           "id": "physics-101-l15-q2",
@@ -1761,7 +1814,7 @@ export const Physics101Module: LearningModule = {
         },
         {
           "id": "physics-101-l15-q3",
-          "text": "A 3 kg book falls from a 4 m shelf. How much PE did it have at the top? (use g = 10 m/s²)",
+          "text": "A 3 kg book falls from a 4 m shelf. How much PE did it have at the top? (use g ≈ 10 m/s²)",
           "skillId": "physics-101-skill-pe",
           "options": [
             {
@@ -1807,7 +1860,7 @@ export const Physics101Module: LearningModule = {
             }
           ],
           "correctOptionId": "c",
-          "explanation": "In a parallel circuit, voltage is the same across every branch. Each branch carries its own current. Adding branches actually decreases total resistance."
+          "explanation": "In a parallel circuit, voltage is the same across every branch. Each branch provides a separate path for current. Adding branches actually decreases total resistance."
         },
         {
           "id": "physics-101-l15-q5",
@@ -1832,7 +1885,7 @@ export const Physics101Module: LearningModule = {
             }
           ],
           "correctOptionId": "c",
-          "explanation": "A convex lens is thicker in the middle and bends light inward, focusing it to a point. This makes objects appear larger when viewed through it."
+          "explanation": "A convex lens is thicker in the middle and bends light inward, focusing (converging) it to a point. This makes objects appear larger when viewed through it."
         },
         {
           "id": "physics-101-l15-q6",
@@ -1857,7 +1910,7 @@ export const Physics101Module: LearningModule = {
             }
           ],
           "correctOptionId": "d",
-          "explanation": "Conservation of energy: all 50 J of PE converts to KE at the bottom (ignoring friction). Total energy stays at 50 J."
+          "explanation": "By the law of conservation of energy, all 50 J of potential energy is converted to kinetic energy at the bottom (ignoring friction). Total energy stays at 50 J."
         }
       ],
       "interactiveActivities": [

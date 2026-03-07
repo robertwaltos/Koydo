@@ -1,17 +1,18 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const ProjectManagement201Module: LearningModule = {
+export const project_management_201_Module: LearningModule = {
   "id": "project-management-201",
   "title": "Project Delivery Practice",
-  "description": "Intermediate project delivery across scope, schedule, budgets, dependencies, and stakeholder alignment.",
+  "description": "A practical guide to intermediate project delivery, covering how to manage scope, create schedules, control budgets, map dependencies, and align stakeholders.",
   "subject": "Project Management",
   "tags": [
     "curriculum",
-    "interactive"
+    "interactive",
+    "project planning"
   ],
   "minAge": 15,
   "maxAge": 99,
-  "version": "1.0.0",
+  "version": "1.1.0",
   "difficultyBand": "intermediate",
   "localeSupport": [
     "en",
@@ -25,43 +26,44 @@ export const ProjectManagement201Module: LearningModule = {
     "ko",
     "ru"
   ],
-  "thumbnail": "/placeholders/lesson-robot.svg",
+  "thumbnail": "/placeholders/lesson-gantt-chart.svg",
   "learningObjectives": [
-    "Understand core concepts in Project Management",
-    "Apply Project Management skills through guided practice",
-    "Demonstrate mastery through checkpoint quizzes"
+    "Define and document project scope using a Work Breakdown Structure (WBS).",
+    "Develop a project schedule using critical path analysis and Gantt charts.",
+    "Create and manage a project budget, tracking costs against baselines.",
+    "Identify project dependencies and create a stakeholder communication plan."
   ],
   "lessons": [
     {
       "id": "project-management-201-l01",
-      "title": "Project Management Concepts 1",
+      "title": "Mastering Project Scope",
       "type": "video",
-      "duration": 9,
+      "duration": 8,
       "learningAids": [
         {
           "id": "project-management-201-l01-a1",
           "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary for Project Management."
+          "title": "The Iron Triangle",
+          "content": "A visual diagram showing the relationship between Scope, Time, and Cost. Stored at /visuals/iron-triangle.svg"
         },
         {
           "id": "project-management-201-l01-a2",
           "type": "animation",
-          "title": "Animated Example",
-          "content": "Step-by-step walkthrough for Project Management."
+          "title": "Creating a WBS",
+          "content": "An animated walkthrough of breaking a large project into smaller deliverables using a Work Breakdown Structure. Stored at /animations/wbs-creation.mp4"
         }
       ]
     },
     {
       "id": "project-management-201-l02",
-      "title": "Project Management Practice 2",
+      "title": "Practice: Drafting a Scope Statement",
       "type": "interactive",
-      "duration": 12,
+      "duration": 15,
       "metadata": {
         "prompts": [
-          "State the key concept in one sentence.",
-          "Apply it to one example.",
-          "Explain your improvement step for next time."
+          "1. Define the primary objective for the 'Mobile App Launch' project.",
+          "2. List three key deliverables for the app.",
+          "3. Identify two major exclusions (what is out of scope)."
         ]
       },
       "learningAids": [
@@ -69,445 +71,346 @@ export const ProjectManagement201Module: LearningModule = {
           "id": "project-management-201-l02-a1",
           "type": "practice",
           "title": "Guided Practice",
-          "content": "Follow the challenge flow and record your approach."
+          "content": "Use the provided template to draft a scope statement for the fictional 'Mobile App Launch' project. Stored at /templates/scope-statement.docx"
         }
       ]
     },
     {
       "id": "project-management-201-l03",
-      "title": "Checkpoint 1: Project Management",
+      "title": "Checkpoint: Scope Management",
       "type": "quiz",
       "duration": 10,
       "questions": [
         {
           "id": "project-management-201-l03-q1",
-          "text": "Which choice best matches the main idea of Project Management?",
-          "skillId": "project-management-201-skill-core",
+          "text": "What is the primary purpose of a Work Breakdown Structure (WBS)?",
+          "skillId": "project-management-201-skill-scope",
           "options": [
             {
               "id": "a",
-              "text": "A complete, evidence-based explanation"
+              "text": "To decompose project deliverables into smaller, manageable components."
             },
             {
               "id": "b",
-              "text": "An unrelated claim"
+              "text": "To assign a final budget to the project."
             },
             {
               "id": "c",
-              "text": "A random guess"
+              "text": "To list all project stakeholders."
             },
             {
               "id": "d",
-              "text": "A conflicting idea"
-            }
-          ],
-          "correctOptionId": "a"
-        },
-        {
-          "id": "project-management-201-l03-q2",
-          "text": "What should a learner do after getting an answer wrong?",
-          "skillId": "project-management-201-skill-review",
-          "options": [
-            {
-              "id": "a",
-              "text": "Review error cause and retry with strategy"
-            },
-            {
-              "id": "b",
-              "text": "Skip all corrections"
-            },
-            {
-              "id": "c",
-              "text": "Memorize only the answer letter"
-            },
-            {
-              "id": "d",
-              "text": "Stop practicing"
-            }
-          ],
-          "correctOptionId": "a"
-        },
-        {
-          "id": "project-management-201-l03-q3",
-          "text": "Which strategy most improves long-term retention for Project Delivery Practice?",
-          "skillId": "project-management-201-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "Use spaced retrieval and mixed practice over multiple sessions."
-            },
-            {
-              "id": "b",
-              "text": "Cram once and avoid later practice."
-            },
-            {
-              "id": "c",
-              "text": "Read notes passively without self-testing."
-            },
-            {
-              "id": "d",
-              "text": "Rely on confidence alone instead of evidence."
+              "text": "To create the final project schedule."
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Spaced retrieval with varied practice strengthens durable memory and flexible application."
-        }
-      ],
-      "learningAids": [
+          "explanation": "The WBS is a foundational tool used to break down the total scope of work into manageable sections, ensuring all deliverables are accounted for."
+        },
         {
-          "id": "project-management-201-l03-a1",
-          "type": "mnemonic",
-          "title": "Memory Cue",
-          "content": "Use Plan, Solve, Explain to structure each response."
+          "id": "project-management-201-l03-q2",
+          "text": "A client asks to add a new feature not in the original plan, without increasing time or budget. This is a classic example of:",
+          "skillId": "project-management-201-skill-scope",
+          "options": [
+            {
+              "id": "a",
+              "text": "Risk mitigation."
+            },
+            {
+              "id": "b",
+              "text": "Scope creep."
+            },
+            {
+              "id": "c",
+              "text": "A project milestone."
+            },
+            {
+              "id": "d",
+              "text": "Resource allocation."
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Scope creep refers to uncontrolled changes or continuous growth in a project's scope, which can jeopardize the project's success."
         }
       ]
     },
     {
       "id": "project-management-201-l04",
-      "title": "Project Management Practice 4",
-      "type": "interactive",
-      "duration": 12,
-      "metadata": {
-        "prompts": [
-          "State the key concept in one sentence.",
-          "Apply it to one example.",
-          "Explain your improvement step for next time."
-        ]
-      },
+      "title": "Building the Project Schedule",
+      "type": "video",
+      "duration": 9,
       "learningAids": [
         {
           "id": "project-management-201-l04-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Follow the challenge flow and record your approach."
+          "type": "image",
+          "title": "Critical Path Method",
+          "content": "A diagram illustrating the longest sequence of tasks that determines the project's minimum duration. Stored at /visuals/critical-path.svg"
+        },
+        {
+          "id": "project-management-201-l04-a2",
+          "type": "animation",
+          "title": "Linking Tasks in a Gantt Chart",
+          "content": "An animation showing how to create dependencies (e.g., Finish-to-Start) between tasks on a Gantt chart. Stored at /animations/gantt-linking.mp4"
         }
       ]
     },
     {
       "id": "project-management-201-l05",
-      "title": "Project Management Concepts 5",
-      "type": "video",
-      "duration": 9,
+      "title": "Practice: Constructing a Gantt Chart",
+      "type": "interactive",
+      "duration": 15,
+      "metadata": {
+        "prompts": [
+          "1. List the main tasks for building a new website.",
+          "2. Estimate the duration for each task.",
+          "3. Identify a dependency (e.g., 'Design Mockups' must finish before 'Develop Frontend')."
+        ]
+      },
       "learningAids": [
         {
           "id": "project-management-201-l05-a1",
-          "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary for Project Management."
-        },
-        {
-          "id": "project-management-201-l05-a2",
-          "type": "animation",
-          "title": "Animated Example",
-          "content": "Step-by-step walkthrough for Project Management."
+          "type": "practice",
+          "title": "Gantt Chart Builder",
+          "content": "Drag and drop tasks onto the timeline to build a simple Gantt chart for the website project. Stored at /interactives/gantt-builder.html"
         }
       ]
     },
     {
       "id": "project-management-201-l06",
-      "title": "Checkpoint 2: Project Management",
+      "title": "Checkpoint: Schedule Management",
       "type": "quiz",
       "duration": 10,
       "questions": [
         {
           "id": "project-management-201-l06-q1",
-          "text": "Which choice best matches the main idea of Project Management?",
-          "skillId": "project-management-201-skill-core",
+          "text": "On a Gantt chart, what does the 'critical path' represent?",
+          "skillId": "project-management-201-skill-schedule",
           "options": [
             {
               "id": "a",
-              "text": "A complete, evidence-based explanation"
+              "text": "The shortest path to project completion."
             },
             {
               "id": "b",
-              "text": "An unrelated claim"
+              "text": "The tasks with the lowest cost."
             },
             {
               "id": "c",
-              "text": "A random guess"
+              "text": "The longest sequence of tasks that determines the minimum project duration."
             },
             {
               "id": "d",
-              "text": "A conflicting idea"
+              "text": "The tasks that can be delayed without affecting the project timeline."
             }
           ],
-          "correctOptionId": "a"
+          "correctOptionId": "c",
+          "explanation": "Any delay in a task on the critical path will directly delay the project's completion date, making it critical to monitor."
         },
         {
           "id": "project-management-201-l06-q2",
-          "text": "What should a learner do after getting an answer wrong?",
-          "skillId": "project-management-201-skill-review",
+          "text": "What is 'task dependency' in project scheduling?",
+          "skillId": "project-management-201-skill-schedule",
           "options": [
             {
               "id": "a",
-              "text": "Review error cause and retry with strategy"
+              "text": "A relationship where one task cannot start or finish until another has."
             },
             {
               "id": "b",
-              "text": "Skip all corrections"
+              "text": "Two tasks that are completely unrelated."
             },
             {
               "id": "c",
-              "text": "Memorize only the answer letter"
+              "text": "A task that depends on the project manager's approval."
             },
             {
               "id": "d",
-              "text": "Stop practicing"
-            }
-          ],
-          "correctOptionId": "a"
-        },
-        {
-          "id": "project-management-201-l06-q3",
-          "text": "Which strategy most improves long-term retention for Project Delivery Practice?",
-          "skillId": "project-management-201-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "Use spaced retrieval and mixed practice over multiple sessions."
-            },
-            {
-              "id": "b",
-              "text": "Cram once and avoid later practice."
-            },
-            {
-              "id": "c",
-              "text": "Read notes passively without self-testing."
-            },
-            {
-              "id": "d",
-              "text": "Rely on confidence alone instead of evidence."
+              "text": "A task that has no impact on other tasks."
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Spaced retrieval with varied practice strengthens durable memory and flexible application."
-        }
-      ],
-      "learningAids": [
-        {
-          "id": "project-management-201-l06-a1",
-          "type": "mnemonic",
-          "title": "Memory Cue",
-          "content": "Use Plan, Solve, Explain to structure each response."
+          "explanation": "Dependencies define the logical sequence of work. The most common type is 'Finish-to-Start,' where one task must finish before the next can begin."
         }
       ]
     },
     {
       "id": "project-management-201-l07",
-      "title": "Project Management Concepts 7",
+      "title": "Controlling Project Costs",
       "type": "video",
-      "duration": 9,
+      "duration": 8,
       "learningAids": [
         {
           "id": "project-management-201-l07-a1",
           "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary for Project Management."
+          "title": "Cost Baseline S-Curve",
+          "content": "A chart showing the planned budget (baseline) versus actual spending over time. Stored at /visuals/s-curve.svg"
         },
         {
           "id": "project-management-201-l07-a2",
           "type": "animation",
-          "title": "Animated Example",
-          "content": "Step-by-step walkthrough for Project Management."
+          "title": "Calculating Cost Variance",
+          "content": "A step-by-step animation explaining the formula for Cost Variance (CV = EV - AC) to determine if a project is over or under budget. Stored at /animations/cost-variance.mp4"
         }
       ]
     },
     {
       "id": "project-management-201-l08",
-      "title": "Project Management Practice 8",
+      "title": "Practice: Creating a Project Budget",
       "type": "interactive",
-      "duration": 12,
+      "duration": 15,
       "metadata": {
         "prompts": [
-          "State the key concept in one sentence.",
-          "Apply it to one example.",
-          "Explain your improvement step for next time."
+          "1. List three cost categories for an office relocation project (e.g., Labor, Materials, Permits).",
+          "2. Assign an estimated cost to each category.",
+          "3. Add a 10% contingency reserve to the total."
         ]
       },
       "learningAids": [
         {
           "id": "project-management-201-l08-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Follow the challenge flow and record your approach."
+          "title": "Budget Spreadsheet",
+          "content": "Fill out a budget spreadsheet template for the office relocation project. Stored at /templates/budget-spreadsheet.xlsx"
         }
       ]
     },
     {
       "id": "project-management-201-l09",
-      "title": "Checkpoint 3: Project Management",
+      "title": "Checkpoint: Budget Management",
       "type": "quiz",
       "duration": 10,
       "questions": [
         {
           "id": "project-management-201-l09-q1",
-          "text": "Which choice best matches the main idea of Project Management?",
-          "skillId": "project-management-201-skill-core",
+          "text": "What is a 'contingency reserve' used for in a project budget?",
+          "skillId": "project-management-201-skill-budget",
           "options": [
             {
               "id": "a",
-              "text": "A complete, evidence-based explanation"
+              "text": "To pay for new features requested by the client."
             },
             {
               "id": "b",
-              "text": "An unrelated claim"
+              "text": "To cover costs from identified risks ('known unknowns')."
             },
             {
               "id": "c",
-              "text": "A random guess"
+              "text": "To give the project team a performance bonus."
             },
             {
               "id": "d",
-              "text": "A conflicting idea"
+              "text": "To cover costs from unforeseen events ('unknown unknowns')."
             }
           ],
-          "correctOptionId": "a"
+          "correctOptionId": "b",
+          "explanation": "Contingency reserves are allocated for identified risks. A separate 'management reserve' is used for unforeseen events."
         },
         {
           "id": "project-management-201-l09-q2",
-          "text": "What should a learner do after getting an answer wrong?",
-          "skillId": "project-management-201-skill-review",
+          "text": "A 'cost baseline' is:",
+          "skillId": "project-management-201-skill-budget",
           "options": [
             {
               "id": "a",
-              "text": "Review error cause and retry with strategy"
+              "text": "The initial, rough estimate of the project's cost."
             },
             {
               "id": "b",
-              "text": "Skip all corrections"
+              "text": "The total amount of money the project has spent to date."
             },
             {
               "id": "c",
-              "text": "Memorize only the answer letter"
+              "text": "The approved, time-phased budget used to measure and monitor cost performance."
             },
             {
               "id": "d",
-              "text": "Stop practicing"
+              "text": "A forecast of the final project cost."
             }
           ],
-          "correctOptionId": "a"
-        },
-        {
-          "id": "project-management-201-l09-q3",
-          "text": "Which strategy most improves long-term retention for Project Delivery Practice?",
-          "skillId": "project-management-201-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "Use spaced retrieval and mixed practice over multiple sessions."
-            },
-            {
-              "id": "b",
-              "text": "Cram once and avoid later practice."
-            },
-            {
-              "id": "c",
-              "text": "Read notes passively without self-testing."
-            },
-            {
-              "id": "d",
-              "text": "Rely on confidence alone instead of evidence."
-            }
-          ],
-          "correctOptionId": "a",
-          "explanation": "Spaced retrieval with varied practice strengthens durable memory and flexible application."
-        }
-      ],
-      "learningAids": [
-        {
-          "id": "project-management-201-l09-a1",
-          "type": "mnemonic",
-          "title": "Memory Cue",
-          "content": "Use Plan, Solve, Explain to structure each response."
+          "correctOptionId": "c",
+          "explanation": "The cost baseline is the official, approved budget that actual costs are measured against throughout the project lifecycle."
         }
       ]
     },
     {
       "id": "project-management-201-l10",
-      "title": "Checkpoint 4: Project Management",
+      "title": "Final Capstone: Integrated Delivery",
       "type": "quiz",
-      "duration": 10,
+      "duration": 12,
       "questions": [
         {
           "id": "project-management-201-l10-q1",
-          "text": "Which choice best matches the main idea of Project Management?",
+          "text": "Your project is behind schedule. According to the Iron Triangle, what is the MOST likely trade-off to get back on track without sacrificing scope?",
           "skillId": "project-management-201-skill-core",
           "options": [
             {
               "id": "a",
-              "text": "A complete, evidence-based explanation"
+              "text": "Reducing the quality of deliverables."
             },
             {
               "id": "b",
-              "text": "An unrelated claim"
+              "text": "Increasing the budget to add more resources."
             },
             {
               "id": "c",
-              "text": "A random guess"
+              "text": "Removing a key stakeholder from the project."
             },
             {
               "id": "d",
-              "text": "A conflicting idea"
+              "text": "Ignoring the schedule and hoping for the best."
             }
           ],
-          "correctOptionId": "a"
+          "correctOptionId": "b",
+          "explanation": "The Iron Triangle shows that scope, time, and cost are interrelated. To shorten time (schedule) without reducing scope, you typically need to increase cost (e.g., for overtime or more staff)."
         },
         {
           "id": "project-management-201-l10-q2",
-          "text": "What should a learner do after getting an answer wrong?",
-          "skillId": "project-management-201-skill-review",
+          "text": "The marketing team must approve designs before the development team can start coding. This is an example of a(n):",
+          "skillId": "project-management-201-skill-dependencies",
           "options": [
             {
               "id": "a",
-              "text": "Review error cause and retry with strategy"
+              "text": "Project risk."
             },
             {
               "id": "b",
-              "text": "Skip all corrections"
+              "text": "External dependency."
             },
             {
               "id": "c",
-              "text": "Memorize only the answer letter"
+              "text": "Project assumption."
             },
             {
               "id": "d",
-              "text": "Stop practicing"
+              "text": "Budget constraint."
             }
           ],
-          "correctOptionId": "a"
+          "correctOptionId": "b",
+          "explanation": "This is an external dependency because the development team's work depends on a team outside of their direct control (marketing)."
         },
         {
           "id": "project-management-201-l10-q3",
-          "text": "Which strategy most improves long-term retention for Project Delivery Practice?",
-          "skillId": "project-management-201-skill-core",
+          "text": "A high-power, low-interest stakeholder should typically be:",
+          "skillId": "project-management-201-skill-stakeholders",
           "options": [
             {
               "id": "a",
-              "text": "Use spaced retrieval and mixed practice over multiple sessions."
+              "text": "Managed closely with frequent, detailed updates."
             },
             {
               "id": "b",
-              "text": "Cram once and avoid later practice."
+              "text": "Kept satisfied, but not overwhelmed with information."
             },
             {
               "id": "c",
-              "text": "Read notes passively without self-testing."
+              "text": "Kept informed with general communications."
             },
             {
               "id": "d",
-              "text": "Rely on confidence alone instead of evidence."
+              "text": "Monitored with minimal effort."
             }
           ],
-          "correctOptionId": "a",
-          "explanation": "Spaced retrieval with varied practice strengthens durable memory and flexible application."
-        }
-      ],
-      "learningAids": [
-        {
-          "id": "project-management-201-l10-a1",
-          "type": "mnemonic",
-          "title": "Memory Cue",
-          "content": "Use Plan, Solve, Explain to structure each response."
+          "correctOptionId": "b",
+          "explanation": "According to the Power/Interest grid, high-power/low-interest stakeholders have significant influence but don't need constant updates. The strategy is to keep them satisfied to prevent them from becoming a problem."
         }
       ]
     }

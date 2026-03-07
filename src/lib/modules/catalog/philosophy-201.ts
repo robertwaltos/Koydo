@@ -1,9 +1,9 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const Philosophy201Module: LearningModule = {
+export const philosophy_201_Module: LearningModule = {
   "id": "philosophy-201",
   "title": "Philosophy Applied Practice",
-  "description": "Level 201 curriculum in Philosophy, emphasizing argument structure, epistemology, ethics and politics, applied reasoning, and real-world decision quality through structured practice and assessment.",
+  "description": "A level 201 curriculum in Philosophy, emphasizing argument structure, epistemology, ethics, and politics. This course focuses on applied reasoning and improving real-world decision quality through structured practice and assessment.",
   "subject": "Humanities",
   "tags": [
     "core",
@@ -14,68 +14,77 @@ export const Philosophy201Module: LearningModule = {
   ],
   "minAge": 14,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "intermediate",
   "localeSupport": [
     "en"
   ],
   "learningObjectives": [
-    "Develop rigorous mental models for argument structure and epistemology",
-    "Apply structured methods to plan, execute, and review ethics and politics tasks",
-    "Interpret evidence using metrics, constraints, and context",
-    "Diagnose common failure modes and design recovery actions",
-    "Communicate tradeoffs clearly to technical and non-technical audiences",
-    "Build repeatable systems for sustained improvement in Philosophy"
+    "Develop rigorous mental models for argument structure and knowledge evaluation.",
+    "Apply structured methods to plan, execute, and review tasks in ethics and politics.",
+    "Interpret evidence using metrics, constraints, and context.",
+    "Diagnose common types of errors and design effective recovery actions.",
+    "Communicate complex ideas and trade-offs clearly to various audiences.",
+    "Build repeatable systems for sustained improvement in philosophical reasoning."
   ],
   "lessons": [
     {
       "id": "philosophy-201-l01",
-      "title": "Core Models for Philosophy",
+      "title": "Core Models for Philosophical Inquiry",
       "type": "video",
       "duration": 13,
       "learningAids": [
         {
           "id": "philosophy-201-l01-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use the structured prompt and write your reasoning before finalizing answers."
+          "title": "Scope Diagram",
+          "content": "Visualize a Venn diagram showing what is 'In Scope,' 'Out of Scope,' and 'Related but Excluded' for a given philosophical problem."
         }
       ],
       "chunks": [
         {
           "id": "philosophy-201-l01-c1",
           "kind": "concept",
-          "title": "Operating Vocabulary and Scope",
-          "content": "In our Philosophy 201 course, using clear and precise language is very important. We will learn how to define the boundaries of our discussions, which means understanding what topics we will focus on and what we will not include. Additionally, we will identify what we are analyzing, which helps us know exactly what we are talking about. It is also essential to agree on the terms we use, so everyone understands each other. This way, we can make sure that our decisions can be compared fairly across different groups. By mastering these concepts, we will improve our communication skills and enhance our ability to think critically about philosophical ideas. This will not only help us in our studies but also in our everyday conversations and debates, allowing us to express our thoughts more clearly and effectively.\nContext recap: In our Philosophy 201 course, using clear and precise language is very important. We will learn how to define the boundaries of our discussions, which means understanding what topics we will focus on and what we will not include. Additionally, we will identify what we are analyzing, which helps us know exactly what we are talking about. It is also essential to agree on the terms we use, so everyone understands each other.\nWhy this matters: Operating Vocabulary and Scope helps learners in Humanities connect ideas from Philosophy Applied Practice to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "Defining Your Terms and Scope",
+          "content": "In any philosophical discussion, clarity is key. We will learn to define the boundaries of our inquiry by specifying what topics we are focusing on. This includes identifying the 'unit of analysis'—the specific thing we are examining—and agreeing on a shared vocabulary. This ensures our arguments are consistent and can be fairly compared, preventing people from talking past one another.",
+          "whyThisMatters": "Without a clear scope and shared definitions, arguments can become confusing and unproductive. This skill helps you build a solid foundation for any debate or analysis."
         },
         {
           "id": "philosophy-201-l01-c2",
           "kind": "concept",
           "title": "Causal Thinking and Constraints",
-          "content": "To do well in Philosophy, it's essential to understand the reasons behind events, not just what happens as a result. In this lesson, we will explore how to identify our assumptions, dependencies, and limitations. By focusing on the root causes of issues, we can create solutions that address the real problems instead of just treating the symptoms. This approach will help us think more deeply and effectively about philosophical questions.\nContext recap: To do well in Philosophy, it's essential to understand the reasons behind events, not just what happens as a result. In this lesson, we will explore how to identify our assumptions, dependencies, and limitations. By focusing on the root causes of issues, we can create solutions that address the real problems instead of just treating the symptoms. This approach will help us think more deeply and effectively about philosophical questions.\nContext recap: To do well in Philosophy, it's essential to understand the reasons behind events, not just what happens as a result. In this lesson, we will explore how to identify our assumptions, dependencies, and limitations. By focusing on the root causes of issues, we can create solutions that address the real problems instead of just treating the symptoms. This approach will help us think more deeply and effectively about philosophical questions.\nWhy this matters: Causal Thinking and Constraints helps learners in Humanities connect ideas from Philosophy Applied Practice to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "To think deeply, we must understand the root causes of events, not just their effects. This involves questioning our own assumptions, identifying dependencies, and recognizing the limitations or 'constraints' we are working within. By focusing on the 'why' behind an issue, we can develop more effective and lasting solutions instead of just addressing superficial symptoms.",
+          "whyThisMatters": "Causal thinking moves you from simply describing a problem to truly understanding it, which is the first step toward solving it effectively.",
+          "stepByStepApproach": [
+            "1. State the problem or question clearly.",
+            "2. Ask 'Why?' multiple times to trace the chain of causes backward.",
+            "3. Identify the root cause(s) that, if addressed, would prevent the problem.",
+            "4. List the constraints (e.g., time, resources, rules) that limit your possible solutions."
+          ]
         },
         {
           "id": "philosophy-201-l01-c3",
           "kind": "recap",
           "title": "Evidence and Accountability",
-          "content": "In this section, we will discuss the importance of evidence in our philosophical work. We will introduce standards for gathering evidence, maintaining discipline in our documentation, and establishing clear accountability practices. These elements are crucial for ensuring that our philosophical inquiries are reliable and trustworthy. By following these practices, we can strengthen our arguments and enhance our understanding of philosophical concepts.\nContext recap: In this section, we will discuss the importance of evidence in our philosophical work. We will introduce standards for gathering evidence, maintaining discipline in our documentation, and establishing clear accountability practices. These elements are crucial for ensuring that our philosophical inquiries are reliable and trustworthy. By following these practices, we can strengthen our arguments and enhance our understanding of philosophical concepts.\nContext recap: In this section, we will discuss the importance of evidence in our philosophical work. We will introduce standards for gathering evidence, maintaining discipline in our documentation, and establishing clear accountability practices. These elements are crucial for ensuring that our philosophical inquiries are reliable and trustworthy. By following these practices, we can strengthen our arguments and enhance our understanding of philosophical concepts.\nWhy this matters: Evidence and Accountability helps learners in Humanities connect ideas from Philosophy Applied Practice to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "Strong arguments are built on solid evidence. In this section, we'll cover the importance of setting standards for the evidence you collect, keeping clear records of your reasoning, and establishing accountability. These practices ensure that our philosophical work is reliable, trustworthy, and open to constructive review. This discipline strengthens our arguments and deepens our understanding.",
+          "whyThisMatters": "Evidence separates a well-reasoned argument from a mere opinion. Accountability ensures intellectual honesty and continuous improvement in your thinking process."
         }
       ],
       "flashcards": [
         {
           "id": "philosophy-201-l01-f1",
-          "front": "Unit of analysis",
-          "back": "The specific entity or process you evaluate to make defensible decisions."
+          "front": "Unit of Analysis",
+          "back": "The primary object, entity, or process you are studying to make a well-supported decision."
         },
         {
           "id": "philosophy-201-l01-f2",
-          "front": "Constraint mapping",
-          "back": "A method for identifying boundaries that shape feasible options."
+          "front": "Constraint Mapping",
+          "back": "The process of identifying the boundaries, rules, or limitations that shape your available options."
         },
         {
           "id": "philosophy-201-l01-f3",
-          "front": "Evidence standard",
-          "back": "The minimum quality threshold data must meet before action is taken."
+          "front": "Evidence Standard",
+          "back": "A pre-defined rule for the minimum quality or amount of data required before you can confidently draw a conclusion."
         }
       ]
     },
@@ -88,46 +97,46 @@ export const Philosophy201Module: LearningModule = {
         {
           "id": "philosophy-201-l02-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use the structured prompt and write your reasoning before finalizing answers."
+          "title": "Workflow Blueprint",
+          "content": "Use a flowchart template to map out the steps of a philosophical argument, from initial question to final conclusion."
         }
       ],
       "chunks": [
         {
           "id": "philosophy-201-l02-c1",
           "kind": "practice",
-          "title": "Workflow Construction",
-          "content": "In this interactive activity, you will create a complete workflow that outlines how to structure arguments and understand knowledge. This will include identifying the inputs you need, setting up checkpoints to assess your progress, determining the outputs of your work, and establishing rollback triggers to revisit earlier steps if necessary. This hands-on experience will help you grasp the complexities of philosophical reasoning.\nContext recap: In this interactive activity, you will create a complete workflow that outlines how to structure arguments and understand knowledge. This will include identifying the inputs you need, setting up checkpoints to assess your progress, determining the outputs of your work, and establishing rollback triggers to revisit earlier steps if necessary. This hands-on experience will help you grasp the complexities of philosophical reasoning."
+          "title": "Constructing a Reasoning Workflow",
+          "content": "In this activity, you will design a step-by-step process for analyzing an argument. This workflow will include defining your necessary inputs (like facts and principles), setting up review checkpoints to assess your progress, defining your desired outputs (like a conclusion or decision), and identifying criteria for when to go back and revise an earlier step. This helps make your reasoning systematic and repeatable."
         },
         {
           "id": "philosophy-201-l02-c2",
           "kind": "recap",
-          "title": "Decision Logging",
-          "content": "In this recap, we will emphasize the importance of logging every decision you make during your philosophical inquiries. Each decision should be accompanied by a clear rationale, an expected effect, and a point for verification. This practice will enable you to analyze your work after it is completed, helping you understand what worked well and what could be improved in future discussions.\nContext recap: In this recap, we will emphasize the importance of logging every decision you make during your philosophical inquiries. Each decision should be accompanied by a clear rationale, an expected effect, and a point for verification. This practice will enable you to analyze your work after it is completed, helping you understand what worked well and what could be improved in future discussions."
+          "title": "The Importance of a Decision Log",
+          "content": "We will review the practice of logging your key decisions as you work through a problem. For each major decision, you should note your reasoning, what you expect to happen as a result, and how you will verify if you were right. This habit allows you to review your thought process later, helping you learn from both your successes and mistakes."
         }
       ],
       "interactiveActivities": [
         {
           "id": "philosophy-201-l02-act1",
           "type": "matching_pairs",
-          "title": "Workflow Match",
-          "description": "Match each workflow component to its strongest governance function.",
+          "title": "Workflow Component Match",
+          "description": "Match each workflow component to its primary function.",
           "pairs": [
             {
-              "left": "Input audit",
-              "right": "Prevents low-quality data from entering the system"
+              "left": "Checking Your Sources",
+              "right": "Prevents low-quality information from weakening your argument"
             },
             {
-              "left": "Checkpoint gate",
-              "right": "Stops propagation of known defects"
+              "left": "Mid-Point Review",
+              "right": "Stops you from continuing down a flawed path"
             },
             {
-              "left": "Outcome metric",
-              "right": "Measures whether the objective was met"
+              "left": "Measuring Success",
+              "right": "Confirms whether you achieved your original goal"
             },
             {
-              "left": "Retrospective log",
-              "right": "Captures lessons for next iteration"
+              "left": "Post-Argument Reflection",
+              "right": "Captures lessons to improve your process next time"
             }
           ]
         },
@@ -135,7 +144,7 @@ export const Philosophy201Module: LearningModule = {
           "id": "philosophy-201-l02-act2",
           "type": "sorting_buckets",
           "title": "Risk Classification",
-          "description": "Sort items into strategic, operational, and quality-risk groups.",
+          "description": "Sort each potential problem into its correct risk category.",
           "buckets": [
             "Strategic",
             "Operational",
@@ -143,19 +152,19 @@ export const Philosophy201Module: LearningModule = {
           ],
           "items": [
             {
-              "text": "Misaligned goals",
+              "text": "Arguing about the wrong question",
               "bucket": "Strategic"
             },
             {
-              "text": "Unclear handoff timing",
+              "text": "Unclear steps in the process",
               "bucket": "Operational"
             },
             {
-              "text": "Inconsistent acceptance criteria",
+              "text": "Inconsistent standards for evidence",
               "bucket": "Quality"
             },
             {
-              "text": "No benchmark baseline",
+              "text": "No baseline for comparison",
               "bucket": "Quality"
             }
           ]
@@ -171,94 +180,94 @@ export const Philosophy201Module: LearningModule = {
         {
           "id": "philosophy-201-l03-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use the structured prompt and write your reasoning before finalizing answers."
+          "title": "Justify Your Answer",
+          "content": "Before selecting an option, write one sentence explaining why you believe it is the correct choice."
         }
       ],
       "questions": [
         {
           "id": "philosophy-201-l03-q1",
-          "text": "Which action best improves decisions in argument structure work?",
-          "skillId": "philosophy-201-skill-core",
+          "text": "Which action best improves the quality of a philosophical argument?",
+          "skillId": "argument-structure",
           "options": [
             {
               "id": "a",
-              "text": "Rely on one unverified example"
+              "text": "Rely on a single, unverified example"
             },
             {
               "id": "b",
-              "text": "Define criteria, compare alternatives, and test assumptions"
+              "text": "Define clear criteria, compare alternatives, and test assumptions"
             },
             {
               "id": "c",
-              "text": "Skip metrics and move directly to execution"
+              "text": "Focus only on evidence that supports your initial belief"
             },
             {
               "id": "d",
-              "text": "Avoid documenting rationale"
+              "text": "Avoid documenting your reasoning to save time"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Explicit criteria and testable assumptions improve reliability and transferability."
+          "explanation": "Defining criteria, comparing options, and testing assumptions are core practices for building a reliable and transferable argument."
         },
         {
           "id": "philosophy-201-l03-q2",
-          "text": "In epistemology, what is the strongest indicator of process quality?",
-          "skillId": "philosophy-201-skill-process",
+          "text": "In evaluating knowledge, what is the strongest indicator of a high-quality process?",
+          "skillId": "process-quality",
           "options": [
             {
               "id": "a",
-              "text": "Output speed only"
+              "text": "How quickly a conclusion is reached"
             },
             {
               "id": "b",
-              "text": "Traceable steps, checkpoints, and measurable outcomes"
+              "text": "Traceable steps, review checkpoints, and measurable outcomes"
             },
             {
               "id": "c",
-              "text": "Unstructured iteration without logs"
+              "text": "An unstructured process that relies on intuition alone"
             },
             {
               "id": "d",
-              "text": "One-time performance anecdotes"
+              "text": "A single story of past success"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Quality processes are observable, repeatable, and measurable."
+          "explanation": "A quality process is observable, repeatable, and measurable, allowing for verification and improvement."
         },
         {
           "id": "philosophy-201-l03-q3",
-          "text": "When evaluating ethics and politics, which practice supports trustworthy conclusions?",
-          "skillId": "philosophy-201-skill-eval",
+          "text": "When analyzing an ethical problem, which practice supports a trustworthy conclusion?",
+          "skillId": "evaluation-methods",
           "options": [
             {
               "id": "a",
-              "text": "Ignore edge cases"
+              "text": "Ignoring inconvenient or complex edge cases"
             },
             {
               "id": "b",
-              "text": "Use baseline comparisons and failure analysis"
+              "text": "Using baseline comparisons and analyzing potential failures"
             },
             {
               "id": "c",
-              "text": "Change targets after results are known"
+              "text": "Changing your success criteria after the results are in"
             },
             {
               "id": "d",
-              "text": "Remove context from findings"
+              "text": "Removing important context from your final report"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Baselines and failure analysis prevent overclaiming and improve design quality."
+          "explanation": "Baselines provide context for judgment, and failure analysis helps identify weaknesses, preventing overconfidence and improving the final design."
         },
         {
           "id": "philosophy-201-l03-q4",
           "text": "A mature applied reasoning strategy should prioritize:",
-          "skillId": "philosophy-201-skill-strategy",
+          "skillId": "reasoning-strategy",
           "options": [
             {
               "id": "a",
-              "text": "Single-metric optimization at any cost"
+              "text": "Achieving one specific goal, no matter the side effects"
             },
             {
               "id": "b",
@@ -266,94 +275,95 @@ export const Philosophy201Module: LearningModule = {
             },
             {
               "id": "c",
-              "text": "Decisions based only on intuition"
+              "text": "Decisions based only on gut feelings"
             },
             {
               "id": "d",
-              "text": "No post-implementation review"
+              "text": "Avoiding any review after a decision is made"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Balanced scorecards align long-term performance with accountability."
+          "explanation": "A sophisticated strategy considers the long-term and balances multiple important factors, rather than focusing on a single metric at any cost."
         }
       ]
     },
     {
       "id": "philosophy-201-l04",
-      "title": "Methods, Metrics, and Failure Modes in Philosophy",
+      "title": "Methods, Metrics, and Failure Modes",
       "type": "video",
       "duration": 14,
       "learningAids": [
         {
           "id": "philosophy-201-l04-a1",
           "type": "mnemonic",
-          "title": "Guided Practice",
-          "content": "Use the structured prompt and write your reasoning before finalizing answers."
+          "title": "Classifying Failures",
+          "content": "To remember the four main failure types, think 'DEEP': Data, Execution, Environment, Process."
         }
       ],
       "chunks": [
         {
           "id": "philosophy-201-l04-c1",
           "kind": "concept",
-          "title": "Method Selection",
-          "content": "When selecting methods for our philosophical inquiries, we must consider various factors such as constraints, the quality of information available, and the potential costs of making mistakes. In this lesson, you will learn how to compare different methods and justify why a particular approach is suitable for specific philosophical scenarios. This critical thinking skill will be valuable in your future studies.\nContext recap: When selecting methods for our philosophical inquiries, we must consider various factors such as constraints, the quality of information available, and the potential costs of making mistakes. In this lesson, you will learn how to compare different methods and justify why a particular approach is suitable for specific philosophical scenarios. This critical thinking skill will be valuable in your future studies."
+          "title": "Selecting the Right Method",
+          "content": "There are many ways to approach a philosophical problem. The best method depends on factors like your constraints (e.g., time), the quality of your information, and the potential consequences of being wrong. In this lesson, you will learn how to compare different analytical methods and justify why one approach is better suited for a specific scenario than another."
         },
         {
           "id": "philosophy-201-l04-c2",
           "kind": "example",
-          "title": "Metric Architecture",
-          "content": "In this example, we will delve into a metric architecture that links three important components: leading indicators, lagging outcomes, and diagnostic measures. This framework is essential because it enables teams to spot early signs of drifting away from their objectives. By recognizing these signs, teams can respond in a thoughtful and deliberate manner. Understanding how this architecture works will empower you to effectively monitor your progress and make informed decisions in your philosophical endeavors, ensuring that you stay on track towards achieving your goals.\nContext recap: In this example, we will delve into a metric architecture that links three important components: leading indicators, lagging outcomes, and diagnostic measures. This framework is essential because it enables teams to spot early signs of drifting away from their objectives. By recognizing these signs, teams can respond in a thoughtful and deliberate manner. Understanding how this architecture works will empower you to effectively monitor your progress and make informed decisions in your philosophical endeavors, ensuring that you stay on track towards achieving your goals.\nContext recap: In this example, we will delve into a metric architecture that links three important components: leading indicators, lagging outcomes, and diagnostic measures. This framework is essential because it enables teams to spot early signs of drifting away from their objectives. By recognizing these signs, teams can respond in a thoughtful and deliberate manner. Understanding how this architecture works will empower you to effectively monitor your progress and make informed decisions in your philosophical endeavors, ensuring that you stay on track towards achieving your goals.\nWhy this matters: Metric Architecture helps learners in Humanities connect ideas from Philosophy Applied Practice to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "How to Measure Progress",
+          "content": "We will explore a system for measurement that connects three key components: 'leading indicators' (early warnings), 'lagging outcomes' (final results), and 'diagnostic measures' (tools to find the cause). This framework helps you spot when you are drifting off course early on, allowing you to make thoughtful corrections before it's too late. Understanding this helps you monitor your progress and make better-informed decisions.",
+          "whyThisMatters": "Good metrics act like an early-warning system. They help you see problems developing and fix them proactively, rather than being surprised by a poor outcome."
         },
         {
           "id": "philosophy-201-l04-c3",
           "kind": "recap",
-          "title": "Failure Taxonomy",
-          "content": "In this recap, we will categorize failures into four main groups: data, process, execution, and governance. By organizing failures in this way, we can create specific plans to address each type of issue rather than using generic solutions. This approach will enhance your ability to think critically about challenges in philosophical discussions and improve your problem-solving skills.\nContext recap: In this recap, we will categorize failures into four main groups: data, process, execution, and governance. By organizing failures in this way, we can create specific plans to address each type of issue rather than using generic solutions. This approach will enhance your ability to think critically about challenges in philosophical discussions and improve your problem-solving skills."
+          "title": "Understanding Why Things Go Wrong",
+          "content": "In this recap, we will categorize failures into distinct groups, such as errors in data, process, execution, or judgment. By classifying the type of failure, we can design specific, targeted fixes instead of relying on generic, one-size-fits-all solutions. This structured approach enhances your ability to learn from mistakes and improve your problem-solving skills."
         }
       ],
       "flashcards": [
         {
           "id": "philosophy-201-l04-f1",
-          "front": "Leading indicator",
-          "back": "A metric that signals probable future outcomes before final results appear."
+          "front": "Leading Indicator",
+          "back": "An early metric that signals probable future outcomes before the final results are clear."
         },
         {
           "id": "philosophy-201-l04-f2",
-          "front": "Failure taxonomy",
-          "back": "A structured classification of failure types used to design targeted fixes."
+          "front": "Failure Taxonomy",
+          "back": "A structured classification of different types of errors, used to design targeted and effective solutions."
         },
         {
           "id": "philosophy-201-l04-f3",
-          "front": "Cost of error",
-          "back": "The operational, financial, or social impact caused by an incorrect decision."
+          "front": "Cost of Error",
+          "back": "The total negative impact (e.g., operational, social, financial) caused by an incorrect decision or action."
         }
       ]
     },
     {
       "id": "philosophy-201-l05",
-      "title": "Case Studio: Improve a Philosophy System",
+      "title": "Case Study: Improving a System",
       "type": "interactive",
       "duration": 16,
       "learningAids": [
         {
           "id": "philosophy-201-l05-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use the structured prompt and write your reasoning before finalizing answers."
+          "title": "Trade-off Analysis",
+          "content": "For each potential solution in the case study, list one primary benefit and one significant drawback in a simple two-column table."
         }
       ],
       "chunks": [
         {
           "id": "philosophy-201-l05-c1",
           "kind": "practice",
-          "title": "Case Decomposition",
-          "content": "In this interactive case study, you will break down a realistic scenario into its key components: the objective, the context, the constraints, and the options for intervention. You will also note the trade-offs involved in each option. This exercise will help you develop analytical skills and understand how to approach complex philosophical problems systematically.\nContext recap: In this interactive case study, you will break down a realistic scenario into its key components: the objective, the context, the constraints, and the options for intervention. You will also note the trade-offs involved in each option. This exercise will help you develop analytical skills and understand how to approach complex philosophical problems systematically."
+          "title": "Breaking Down the Case",
+          "content": "In this interactive case study, you will analyze a realistic scenario by breaking it down into its core components: the main objective, the surrounding context, the key constraints, and the available options for intervention. For each option, you will identify the trade-offs involved. This exercise will help you develop a systematic approach to complex, real-world problems."
         },
         {
           "id": "philosophy-201-l05-c2",
           "kind": "recap",
-          "title": "Improvement Proposal",
-          "content": "In this recap, you will present a staged improvement proposal based on your analysis of the case study. Your proposal should include clear success criteria, a mapping of who is responsible for each part of the plan, and a timeline for follow-up actions. This structured approach will help you communicate your ideas effectively and demonstrate your understanding of how to improve philosophical systems.\nContext recap: In this recap, you will present a staged improvement proposal based on your analysis of the case study. Your proposal should include clear success criteria, a mapping of who is responsible for each part of the plan, and a timeline for follow-up actions. This structured approach will help you communicate your ideas effectively and demonstrate your understanding of how to improve philosophical systems."
+          "title": "Proposing an Improvement",
+          "content": "Based on your analysis, you will outline a staged improvement plan. Your proposal must include clear success criteria, a simple map of who is responsible for each action, and a timeline for follow-up. This structured approach will help you communicate your recommendations effectively and demonstrate your ability to turn analysis into a concrete plan."
         }
       ],
       "interactiveActivities": [
@@ -361,34 +371,34 @@ export const Philosophy201Module: LearningModule = {
           "id": "philosophy-201-l05-act1",
           "type": "scenario_practice",
           "title": "Decision Path Simulation",
-          "description": "Choose among three interventions to improve ethics and politics outcomes under time and quality constraints.",
+          "description": "Choose among three interventions to improve ethical outcomes in a system, balancing time and quality constraints.",
           "instructions": [
-            "Define success criteria before selecting an intervention.",
-            "Document one short-term tradeoff and one long-term benefit.",
-            "Specify a metric that confirms success in the next cycle."
+            "First, define what a 'successful' outcome would look like.",
+            "For your chosen intervention, document one short-term trade-off and one long-term benefit.",
+            "Specify one metric you would use to confirm that your intervention worked."
           ]
         },
         {
           "id": "philosophy-201-l05-act2",
           "type": "matching_pairs",
           "title": "Intervention to Outcome Mapping",
-          "description": "Connect interventions with the most likely system-level effects.",
+          "description": "Connect each intervention with its most likely system-level effect.",
           "pairs": [
             {
-              "left": "Tighter intake criteria",
-              "right": "Higher signal quality and lower downstream rework"
+              "left": "Being more selective with initial information",
+              "right": "Higher quality inputs and less corrective work later"
             },
             {
-              "left": "Checkpoint automation",
-              "right": "Faster detection of preventable defects"
+              "left": "Automated quality checks",
+              "right": "Faster detection of common, preventable errors"
             },
             {
-              "left": "Post-run retrospective",
-              "right": "Improved adaptation in later cycles"
+              "left": "Team review after a project",
+              "right": "Better adaptation and learning for future cycles"
             },
             {
-              "left": "Cross-team briefing",
-              "right": "Reduced ambiguity at handoff boundaries"
+              "left": "Clear communication between groups",
+              "right": "Reduced confusion and errors during handoffs"
             }
           ]
         }
@@ -403,110 +413,110 @@ export const Philosophy201Module: LearningModule = {
         {
           "id": "philosophy-201-l06-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use the structured prompt and write your reasoning before finalizing answers."
+          "title": "Explain the 'Why'",
+          "content": "For each question, briefly explain why the incorrect answers are worse choices than the correct one."
         }
       ],
       "questions": [
         {
           "id": "philosophy-201-l06-q1",
-          "text": "Which action best improves decisions in argument structure work?",
-          "skillId": "philosophy-201-skill-core",
+          "text": "When choosing a method to analyze a complex problem, what is the most important first step?",
+          "skillId": "method-selection",
           "options": [
             {
               "id": "a",
-              "text": "Rely on one unverified example"
+              "text": "Pick the method that is fastest, regardless of accuracy"
             },
             {
               "id": "b",
-              "text": "Define criteria, compare alternatives, and test assumptions"
+              "text": "Use the same method you used last time, without question"
             },
             {
               "id": "c",
-              "text": "Skip metrics and move directly to execution"
+              "text": "Understand the constraints, goals, and cost of error"
             },
             {
               "id": "d",
-              "text": "Avoid documenting rationale"
+              "text": "Choose the most complicated method to seem thorough"
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "Explicit criteria and testable assumptions improve reliability and transferability."
+          "correctOptionId": "c",
+          "explanation": "The best method depends on the specific context. Understanding your goals, limits, and the stakes involved is critical for making a wise choice."
         },
         {
           "id": "philosophy-201-l06-q2",
-          "text": "In epistemology, what is the strongest indicator of process quality?",
-          "skillId": "philosophy-201-skill-process",
+          "text": "A team notices that customer complaints (a lagging outcome) have increased. What type of metric should they investigate to find the root cause?",
+          "skillId": "metrics-analysis",
           "options": [
             {
               "id": "a",
-              "text": "Output speed only"
+              "text": "Another lagging outcome, like quarterly profit"
             },
             {
               "id": "b",
-              "text": "Traceable steps, checkpoints, and measurable outcomes"
+              "text": "Leading indicators, like recent changes in product quality or support wait times"
             },
             {
               "id": "c",
-              "text": "Unstructured iteration without logs"
+              "text": "Vanity metrics, like total website visits"
             },
             {
               "id": "d",
-              "text": "One-time performance anecdotes"
+              "text": "Historical metrics from five years ago"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Quality processes are observable, repeatable, and measurable."
+          "explanation": "Leading indicators are early warnings that can help diagnose why a lagging outcome has changed. They point to the potential cause of the problem."
         },
         {
           "id": "philosophy-201-l06-q3",
-          "text": "When evaluating ethics and politics, which practice supports trustworthy conclusions?",
-          "skillId": "philosophy-201-skill-eval",
+          "text": "An argument was found to be flawed because it was based on outdated statistics. According to the 'DEEP' model, how would you classify this failure?",
+          "skillId": "failure-classification",
           "options": [
             {
               "id": "a",
-              "text": "Ignore edge cases"
+              "text": "Execution failure (the argument was delivered poorly)"
             },
             {
               "id": "b",
-              "text": "Use baseline comparisons and failure analysis"
+              "text": "Process failure (the steps for checking sources were not followed)"
             },
             {
               "id": "c",
-              "text": "Change targets after results are known"
+              "text": "Data failure (the input information was low-quality)"
             },
             {
               "id": "d",
-              "text": "Remove context from findings"
+              "text": "Environment failure (an external event changed the facts)"
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "Baselines and failure analysis prevent overclaiming and improve design quality."
+          "correctOptionId": "c",
+          "explanation": "The problem originated with the input material itself. A data failure occurs when the evidence or information used as a foundation is flawed."
         },
         {
           "id": "philosophy-201-l06-q4",
-          "text": "A mature applied reasoning strategy should prioritize:",
-          "skillId": "philosophy-201-skill-strategy",
+          "text": "When proposing an improvement to a system, what element is crucial for ensuring accountability?",
+          "skillId": "system-improvement",
           "options": [
             {
               "id": "a",
-              "text": "Single-metric optimization at any cost"
+              "text": "A vague goal without any way to measure it"
             },
             {
               "id": "b",
-              "text": "Balanced outcomes across quality, risk, and sustainability"
+              "text": "A plan with no deadlines or assigned responsibilities"
             },
             {
               "id": "c",
-              "text": "Decisions based only on intuition"
+              "text": "Clear success criteria and a timeline for follow-up"
             },
             {
               "id": "d",
-              "text": "No post-implementation review"
+              "text": "A focus only on the benefits, ignoring any potential trade-offs"
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "Balanced scorecards align long-term performance with accountability."
+          "correctOptionId": "c",
+          "explanation": "Accountability requires clarity. Knowing what success looks like, who is responsible, and when it should be reviewed are essential for a plan to be effective."
         }
       ]
     }

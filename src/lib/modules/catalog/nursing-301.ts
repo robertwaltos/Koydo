@@ -1,17 +1,18 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const Nursing301Module: LearningModule = {
+export const nursing_301_Module: LearningModule = {
   "id": "nursing-301",
   "title": "Nursing Advanced Clinical Practice",
-  "description": "Advanced nursing clinical reasoning, care coordination, and high-acuity patient management workflows.",
+  "description": "A module on advanced clinical reasoning, care coordination, and managing high-acuity patients, designed for experienced nursing professionals.",
   "subject": "Nursing",
   "tags": [
-    "curriculum",
-    "interactive"
+    "clinical reasoning",
+    "advanced practice",
+    "patient management"
   ],
-  "minAge": 18,
+  "minAge": 22,
   "maxAge": 99,
-  "version": "1.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en",
@@ -25,489 +26,366 @@ export const Nursing301Module: LearningModule = {
     "ko",
     "ru"
   ],
-  "thumbnail": "/placeholders/lesson-robot.svg",
+  "thumbnail": "/placeholders/lesson-stethoscope.svg",
   "learningObjectives": [
-    "Understand core concepts in Nursing",
-    "Apply Nursing skills through guided practice",
-    "Demonstrate mastery through checkpoint quizzes"
+    "Formulate differential diagnoses for complex patient presentations.",
+    "Develop evidence-based pharmacotherapeutic plans for patients with multi-morbidity.",
+    "Lead an interprofessional team in managing high-acuity patient care scenarios.",
+    "Evaluate patient outcomes and refine care plans based on continuous assessment."
   ],
   "lessons": [
     {
       "id": "nursing-301-l01",
-      "title": "Nursing Concepts 1",
+      "title": "Advanced Health Assessment and Diagnostic Reasoning",
       "type": "video",
-      "duration": 9,
+      "duration": 15,
       "learningAids": [
         {
           "id": "nursing-301-l01-a1",
           "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary for Nursing."
+          "title": "Diagnostic Reasoning Model",
+          "content": "A flowchart illustrating the cyclical process of cue acquisition, hypothesis generation, and problem synthesis."
         },
         {
           "id": "nursing-301-l01-a2",
           "type": "animation",
-          "title": "Animated Example",
-          "content": "Step-by-step walkthrough for Nursing."
+          "title": "Animated Patient Interview",
+          "content": "A step-by-step animation showing how to use therapeutic communication to gather a comprehensive patient history."
         }
       ]
     },
     {
       "id": "nursing-301-l02",
-      "title": "Nursing Practice 2",
+      "title": "Interactive Case Study: Differential Diagnosis",
       "type": "interactive",
-      "duration": 12,
+      "duration": 20,
       "metadata": {
         "prompts": [
-          "State the key concept in one sentence.",
-          "Apply it to one example.",
-          "Explain your improvement step for next time."
+          "List three potential differential diagnoses for a 68-year-old male with acute dyspnea and a history of COPD.",
+          "Justify your primary diagnosis using evidence from the provided patient chart and lab results.",
+          "Outline the next diagnostic tests you would order to confirm your diagnosis."
         ]
       },
       "learningAids": [
         {
           "id": "nursing-301-l02-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Follow the challenge flow and record your approach."
+          "title": "Simulated Patient Chart",
+          "content": "Access a realistic electronic health record with patient history, vital signs, and initial lab work to inform your decisions."
         }
       ]
     },
     {
       "id": "nursing-301-l03",
-      "title": "Checkpoint 1: Nursing",
+      "title": "Checkpoint: Diagnostic Reasoning",
       "type": "quiz",
-      "duration": 10,
+      "duration": 12,
       "questions": [
         {
           "id": "nursing-301-l03-q1",
-          "text": "Which choice best matches the main idea of Nursing?",
-          "skillId": "nursing-301-skill-core",
+          "text": "In a patient with chest pain, which finding is most indicative of a life-threatening condition requiring immediate intervention?",
+          "skillId": "nursing-301-skill-triage",
           "options": [
             {
               "id": "a",
-              "text": "A complete, evidence-based explanation"
+              "text": "ST-segment elevation on a 12-lead ECG"
             },
             {
               "id": "b",
-              "text": "An unrelated claim"
+              "text": "Pain reproducible on palpation"
             },
             {
               "id": "c",
-              "text": "A random guess"
+              "text": "History of gastroesophageal reflux disease"
             },
             {
               "id": "d",
-              "text": "A conflicting idea"
-            }
-          ],
-          "correctOptionId": "a"
-        },
-        {
-          "id": "nursing-301-l03-q2",
-          "text": "What should a learner do after getting an answer wrong?",
-          "skillId": "nursing-301-skill-review",
-          "options": [
-            {
-              "id": "a",
-              "text": "Review error cause and retry with strategy"
-            },
-            {
-              "id": "b",
-              "text": "Skip all corrections"
-            },
-            {
-              "id": "c",
-              "text": "Memorize only the answer letter"
-            },
-            {
-              "id": "d",
-              "text": "Stop practicing"
-            }
-          ],
-          "correctOptionId": "a"
-        },
-        {
-          "id": "nursing-301-l03-q3",
-          "text": "Which strategy most improves long-term retention for Nursing Advanced Clinical Practice?",
-          "skillId": "nursing-301-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "Use spaced retrieval and mixed practice over multiple sessions."
-            },
-            {
-              "id": "b",
-              "text": "Cram once and avoid later practice."
-            },
-            {
-              "id": "c",
-              "text": "Read notes passively without self-testing."
-            },
-            {
-              "id": "d",
-              "text": "Rely on confidence alone instead of evidence."
+              "text": "Normal troponin levels on admission"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Spaced retrieval with varied practice strengthens durable memory and flexible application."
+          "explanation": "ST-segment elevation is a classic sign of an acute myocardial infarction, a medical emergency."
+        },
+        {
+          "id": "nursing-301-l03-q2",
+          "text": "When formulating a differential diagnosis, what is the primary purpose of the 'review of systems'?",
+          "skillId": "nursing-301-skill-assessment",
+          "options": [
+            {
+              "id": "a",
+              "text": "To uncover associated symptoms and rule out other conditions"
+            },
+            {
+              "id": "b",
+              "text": "To document the patient's family medical history"
+            },
+            {
+              "id": "c",
+              "text": "To finalize the primary diagnosis immediately"
+            },
+            {
+              "id": "d",
+              "text": "To prescribe initial medications"
+            }
+          ],
+          "correctOptionId": "a"
         }
       ],
       "learningAids": [
         {
           "id": "nursing-301-l03-a1",
           "type": "mnemonic",
-          "title": "Memory Cue",
-          "content": "Use Plan, Solve, Explain to structure each response."
+          "title": "VINDICATE Mnemonic",
+          "content": "Use VINDICATE (Vascular, Inflammatory/Infectious, Neoplastic, etc.) to build a comprehensive differential diagnosis list."
         }
       ]
     },
     {
       "id": "nursing-301-l04",
-      "title": "Nursing Practice 4",
-      "type": "interactive",
-      "duration": 12,
-      "metadata": {
-        "prompts": [
-          "State the key concept in one sentence.",
-          "Apply it to one example.",
-          "Explain your improvement step for next time."
-        ]
-      },
+      "title": "Complex Pharmacotherapeutics in Multi-Morbidity",
+      "type": "video",
+      "duration": 18,
       "learningAids": [
         {
           "id": "nursing-301-l04-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Follow the challenge flow and record your approach."
+          "type": "image",
+          "title": "Polypharmacy Interaction Matrix",
+          "content": "A visual guide to common drug-drug and drug-disease interactions in elderly patients with multiple chronic conditions."
+        },
+        {
+          "id": "nursing-301-l04-a2",
+          "type": "animation",
+          "title": "Mechanism of Action: SGLT2 Inhibitors",
+          "content": "An animation detailing how SGLT2 inhibitors work in the kidneys to manage type 2 diabetes and heart failure."
         }
       ]
     },
     {
       "id": "nursing-301-l05",
-      "title": "Nursing Concepts 5",
-      "type": "video",
-      "duration": 9,
+      "title": "Interactive Scenario: Medication Reconciliation",
+      "type": "interactive",
+      "duration": 20,
+      "metadata": {
+        "prompts": [
+          "Identify three potential medication-related problems in the provided patient's medication list.",
+          "Propose a modification to the treatment plan to mitigate the risk of an adverse drug event.",
+          "Draft a patient education script explaining the medication changes in clear, simple language."
+        ]
+      },
       "learningAids": [
         {
           "id": "nursing-301-l05-a1",
-          "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary for Nursing."
-        },
-        {
-          "id": "nursing-301-l05-a2",
-          "type": "animation",
-          "title": "Animated Example",
-          "content": "Step-by-step walkthrough for Nursing."
+          "type": "practice",
+          "title": "Virtual Medication Administration Record (MAR)",
+          "content": "Analyze a complex MAR for a patient with diabetes, hypertension, and chronic kidney disease to identify safety risks."
         }
       ]
     },
     {
       "id": "nursing-301-l06",
-      "title": "Checkpoint 2: Nursing",
+      "title": "Checkpoint: Advanced Pharmacology",
       "type": "quiz",
-      "duration": 10,
+      "duration": 12,
       "questions": [
         {
           "id": "nursing-301-l06-q1",
-          "text": "Which choice best matches the main idea of Nursing?",
-          "skillId": "nursing-301-skill-core",
+          "text": "A patient with an estimated GFR of 25 mL/min is prescribed a renally-cleared antibiotic. What is the most appropriate action?",
+          "skillId": "nursing-301-skill-pharmacology",
           "options": [
             {
               "id": "a",
-              "text": "A complete, evidence-based explanation"
+              "text": "Consult pharmacology resources to determine the correct dose adjustment."
             },
             {
               "id": "b",
-              "text": "An unrelated claim"
+              "text": "Administer the standard dose as prescribed."
             },
             {
               "id": "c",
-              "text": "A random guess"
+              "text": "Hold the medication indefinitely."
             },
             {
               "id": "d",
-              "text": "A conflicting idea"
-            }
-          ],
-          "correctOptionId": "a"
-        },
-        {
-          "id": "nursing-301-l06-q2",
-          "text": "What should a learner do after getting an answer wrong?",
-          "skillId": "nursing-301-skill-review",
-          "options": [
-            {
-              "id": "a",
-              "text": "Review error cause and retry with strategy"
-            },
-            {
-              "id": "b",
-              "text": "Skip all corrections"
-            },
-            {
-              "id": "c",
-              "text": "Memorize only the answer letter"
-            },
-            {
-              "id": "d",
-              "text": "Stop practicing"
-            }
-          ],
-          "correctOptionId": "a"
-        },
-        {
-          "id": "nursing-301-l06-q3",
-          "text": "Which strategy most improves long-term retention for Nursing Advanced Clinical Practice?",
-          "skillId": "nursing-301-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "Use spaced retrieval and mixed practice over multiple sessions."
-            },
-            {
-              "id": "b",
-              "text": "Cram once and avoid later practice."
-            },
-            {
-              "id": "c",
-              "text": "Read notes passively without self-testing."
-            },
-            {
-              "id": "d",
-              "text": "Rely on confidence alone instead of evidence."
+              "text": "Advise the patient to double their fluid intake."
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Spaced retrieval with varied practice strengthens durable memory and flexible application."
+          "explanation": "Renal impairment requires dose adjustment for many medications to prevent toxicity. Always consult reliable resources."
+        },
+        {
+          "id": "nursing-301-l06-q2",
+          "text": "What is the primary safety concern when a patient is taking both an ACE inhibitor and spironolactone?",
+          "skillId": "nursing-301-skill-pharmacology",
+          "options": [
+            {
+              "id": "a",
+              "text": "Hyperkalemia"
+            },
+            {
+              "id": "b",
+              "text": "Hypoglycemia"
+            },
+            {
+              "id": "c",
+              "text": "Respiratory depression"
+            },
+            {
+              "id": "d",
+              "text": "Thrombocytopenia"
+            }
+          ],
+          "correctOptionId": "a"
         }
       ],
-      "learningAids": [
-        {
-          "id": "nursing-301-l06-a1",
-          "type": "mnemonic",
-          "title": "Memory Cue",
-          "content": "Use Plan, Solve, Explain to structure each response."
-        }
-      ]
+      "learningAids": []
     },
     {
       "id": "nursing-301-l07",
-      "title": "Nursing Concepts 7",
+      "title": "Management of High-Acuity Patients: Sepsis Protocol",
       "type": "video",
-      "duration": 9,
+      "duration": 15,
       "learningAids": [
         {
           "id": "nursing-301-l07-a1",
           "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary for Nursing."
+          "title": "Surviving Sepsis Campaign: 1-Hour Bundle",
+          "content": "An infographic detailing the critical interventions to be completed within one hour of recognizing sepsis."
         },
         {
           "id": "nursing-301-l07-a2",
           "type": "animation",
-          "title": "Animated Example",
-          "content": "Step-by-step walkthrough for Nursing."
+          "title": "Pathophysiology of Septic Shock",
+          "content": "An animated sequence showing the progression from systemic inflammatory response to vasodilation and organ dysfunction."
         }
       ]
     },
     {
       "id": "nursing-301-l08",
-      "title": "Nursing Practice 8",
+      "title": "Simulation: Rapid Response Team Activation",
       "type": "interactive",
-      "duration": 12,
+      "duration": 25,
       "metadata": {
         "prompts": [
-          "State the key concept in one sentence.",
-          "Apply it to one example.",
-          "Explain your improvement step for next time."
+          "Based on the patient's deteriorating vital signs, what is your immediate priority?",
+          "Delegate specific tasks to the members of the rapid response team using closed-loop communication.",
+          "Document the key events and interventions using the SBAR (Situation, Background, Assessment, Recommendation) format."
         ]
       },
       "learningAids": [
         {
           "id": "nursing-301-l08-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Follow the challenge flow and record your approach."
+          "title": "Virtual Crash Cart",
+          "content": "Select the correct emergency equipment and medications from a virtual crash cart for a patient in respiratory distress."
         }
       ]
     },
     {
       "id": "nursing-301-l09",
-      "title": "Checkpoint 3: Nursing",
-      "type": "quiz",
-      "duration": 10,
-      "questions": [
-        {
-          "id": "nursing-301-l09-q1",
-          "text": "Which choice best matches the main idea of Nursing?",
-          "skillId": "nursing-301-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "A complete, evidence-based explanation"
-            },
-            {
-              "id": "b",
-              "text": "An unrelated claim"
-            },
-            {
-              "id": "c",
-              "text": "A random guess"
-            },
-            {
-              "id": "d",
-              "text": "A conflicting idea"
-            }
-          ],
-          "correctOptionId": "a"
-        },
-        {
-          "id": "nursing-301-l09-q2",
-          "text": "What should a learner do after getting an answer wrong?",
-          "skillId": "nursing-301-skill-review",
-          "options": [
-            {
-              "id": "a",
-              "text": "Review error cause and retry with strategy"
-            },
-            {
-              "id": "b",
-              "text": "Skip all corrections"
-            },
-            {
-              "id": "c",
-              "text": "Memorize only the answer letter"
-            },
-            {
-              "id": "d",
-              "text": "Stop practicing"
-            }
-          ],
-          "correctOptionId": "a"
-        },
-        {
-          "id": "nursing-301-l09-q3",
-          "text": "Which strategy most improves long-term retention for Nursing Advanced Clinical Practice?",
-          "skillId": "nursing-301-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "Use spaced retrieval and mixed practice over multiple sessions."
-            },
-            {
-              "id": "b",
-              "text": "Cram once and avoid later practice."
-            },
-            {
-              "id": "c",
-              "text": "Read notes passively without self-testing."
-            },
-            {
-              "id": "d",
-              "text": "Rely on confidence alone instead of evidence."
-            }
-          ],
-          "correctOptionId": "a",
-          "explanation": "Spaced retrieval with varied practice strengthens durable memory and flexible application."
-        }
-      ],
+      "title": "Leadership and Interprofessional Collaboration",
+      "type": "video",
+      "duration": 12,
       "learningAids": [
         {
           "id": "nursing-301-l09-a1",
-          "type": "mnemonic",
-          "title": "Memory Cue",
-          "content": "Use Plan, Solve, Explain to structure each response."
+          "type": "image",
+          "title": "TeamSTEPPS Communication Model",
+          "content": "A diagram illustrating key principles for effective team communication in healthcare, such as SBAR, call-outs, and check-backs."
+        },
+        {
+          "id": "nursing-301-l09-a2",
+          "type": "animation",
+          "title": "Scenario: Resolving Inter-departmental Conflict",
+          "content": "An animated scenario showing an advanced practice nurse facilitating a conversation between surgery and ICU staff to improve patient handoffs."
         }
       ]
     },
     {
       "id": "nursing-301-l10",
-      "title": "Checkpoint 4: Nursing",
+      "title": "Final Capstone: Integrated Clinical Scenario",
       "type": "quiz",
-      "duration": 10,
+      "duration": 25,
       "questions": [
         {
           "id": "nursing-301-l10-q1",
-          "text": "Which choice best matches the main idea of Nursing?",
-          "skillId": "nursing-301-skill-core",
+          "text": "A 72-year-old patient with heart failure presents to the ED with worsening shortness of breath and a 3kg weight gain in 3 days. Which order should you prioritize?",
+          "skillId": "nursing-301-skill-integration",
           "options": [
             {
               "id": "a",
-              "text": "A complete, evidence-based explanation"
+              "text": "Administer IV furosemide"
             },
             {
               "id": "b",
-              "text": "An unrelated claim"
+              "text": "Obtain a dietary consult"
             },
             {
               "id": "c",
-              "text": "A random guess"
+              "text": "Administer a scheduled beta-blocker"
             },
             {
               "id": "d",
-              "text": "A conflicting idea"
+              "text": "Request a chest X-ray"
             }
           ],
-          "correctOptionId": "a"
+          "correctOptionId": "a",
+          "explanation": "In acute decompensated heart failure with fluid overload, the priority is diuresis to reduce preload and improve respiratory status."
         },
         {
           "id": "nursing-301-l10-q2",
-          "text": "What should a learner do after getting an answer wrong?",
-          "skillId": "nursing-301-skill-review",
+          "text": "For the patient in the previous question, you note their potassium is 3.2 mEq/L. How does this finding affect your plan?",
+          "skillId": "nursing-301-skill-integration",
           "options": [
             {
               "id": "a",
-              "text": "Review error cause and retry with strategy"
+              "text": "Administer potassium replacement before or concurrently with the diuretic."
             },
             {
               "id": "b",
-              "text": "Skip all corrections"
+              "text": "It does not affect the plan; proceed with the diuretic."
             },
             {
               "id": "c",
-              "text": "Memorize only the answer letter"
+              "text": "Hold the diuretic and administer a fluid bolus."
             },
             {
               "id": "d",
-              "text": "Stop practicing"
+              "text": "Switch the diuretic to spironolactone."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "nursing-301-l10-q3",
-          "text": "Which strategy most improves long-term retention for Nursing Advanced Clinical Practice?",
-          "skillId": "nursing-301-skill-core",
+          "text": "When coordinating this patient's discharge, which action best demonstrates effective interprofessional leadership?",
+          "skillId": "nursing-301-skill-leadership",
           "options": [
             {
               "id": "a",
-              "text": "Use spaced retrieval and mixed practice over multiple sessions."
+              "text": "Initiating a care conference with the physician, pharmacist, and social worker to align the discharge plan."
             },
             {
               "id": "b",
-              "text": "Cram once and avoid later practice."
+              "text": "Writing all discharge orders without consulting other team members."
             },
             {
               "id": "c",
-              "text": "Read notes passively without self-testing."
+              "text": "Providing the patient with a stack of educational pamphlets."
             },
             {
               "id": "d",
-              "text": "Rely on confidence alone instead of evidence."
+              "text": "Delegating all discharge planning to the case manager."
             }
           ],
-          "correctOptionId": "a",
-          "explanation": "Spaced retrieval with varied practice strengthens durable memory and flexible application."
+          "correctOptionId": "a"
         }
       ],
       "learningAids": [
         {
           "id": "nursing-301-l10-a1",
           "type": "mnemonic",
-          "title": "Memory Cue",
-          "content": "Use Plan, Solve, Explain to structure each response."
+          "title": "ADPIE Framework",
+          "content": "Use the ADPIE (Assessment, Diagnosis, Planning, Implementation, Evaluation) nursing process to structure your approach to the final scenario."
         }
       ]
     }

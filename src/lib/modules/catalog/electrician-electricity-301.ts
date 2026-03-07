@@ -1,17 +1,20 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const ElectricianElectricity301Module: LearningModule = {
+export const electrician_electricity_301_Module: LearningModule = {
   "id": "electrician-electricity-301",
   "title": "Electricity for Electricians III",
   "description": "Advanced industrial controls, motors, three-phase systems, fault analysis, and commissioning for field electricians.",
   "subject": "Electricity",
   "tags": [
     "curriculum",
-    "interactive"
+    "interactive",
+    "industrial",
+    "motors",
+    "troubleshooting"
   ],
   "minAge": 17,
   "maxAge": 99,
-  "version": "1.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en",
@@ -25,489 +28,489 @@ export const ElectricianElectricity301Module: LearningModule = {
     "ko",
     "ru"
   ],
-  "thumbnail": "/placeholders/lesson-robot.svg",
+  "thumbnail": "/placeholders/lesson-industrial-motor.svg",
   "learningObjectives": [
-    "Understand core concepts in Electricity",
-    "Apply Electricity skills through guided practice",
-    "Demonstrate mastery through checkpoint quizzes"
+    "Analyze and configure three-phase systems and motor controls.",
+    "Program and troubleshoot Variable Frequency Drives (VFDs) and PLCs.",
+    "Perform advanced fault analysis and commissioning procedures safely."
   ],
   "lessons": [
     {
       "id": "electrician-electricity-301-l01",
-      "title": "Electricity Concepts 1",
+      "title": "Three-Phase Power & Motor Theory",
       "type": "video",
-      "duration": 9,
+      "duration": 12,
       "learningAids": [
         {
           "id": "electrician-electricity-301-l01-a1",
           "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary for Electricity."
+          "title": "Delta vs. Wye Configurations",
+          "content": "A detailed schematic diagram comparing Delta and Wye transformer connections, annotated with phase and line voltage/current formulas."
         },
         {
           "id": "electrician-electricity-301-l01-a2",
           "type": "animation",
-          "title": "Animated Example",
-          "content": "Step-by-step walkthrough for Electricity."
+          "title": "Three-Phase Sine Wave Animation",
+          "content": "An animated graph showing three AC sine waves offset by 120 degrees, demonstrating how rotating magnetic fields are generated in a stator."
         }
       ]
     },
     {
       "id": "electrician-electricity-301-l02",
-      "title": "Electricity Practice 2",
+      "title": "Wiring & Configuring Three-Phase Motors",
       "type": "interactive",
-      "duration": 12,
+      "duration": 15,
       "metadata": {
         "prompts": [
-          "State the key concept in one sentence.",
-          "Apply it to one example.",
-          "Explain your improvement step for next time."
+          "Identify the correct lead connections for a 9-lead dual-voltage motor on high voltage.",
+          "Calculate the expected full-load amperage (FLA) based on the provided nameplate.",
+          "Determine the correct overload heater size for the motor starter."
         ]
       },
       "learningAids": [
         {
           "id": "electrician-electricity-301-l02-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Follow the challenge flow and record your approach."
+          "title": "Virtual Motor Peckerhead",
+          "content": "An interactive 3D motor junction box where learners drag and drop wire nuts to connect T-leads for specific voltage requirements."
         }
       ]
     },
     {
       "id": "electrician-electricity-301-l03",
-      "title": "Checkpoint 1: Electricity",
+      "title": "Checkpoint 1: Three-Phase Systems",
       "type": "quiz",
       "duration": 10,
       "questions": [
         {
           "id": "electrician-electricity-301-l03-q1",
-          "text": "Which choice best matches the main idea of Electricity?",
-          "skillId": "electrician-electricity-301-skill-core",
+          "text": "In a balanced Wye (Star) system, what is the relationship between line voltage and phase voltage?",
+          "skillId": "electrician-electricity-301-skill-three-phase",
           "options": [
             {
               "id": "a",
-              "text": "A complete, evidence-based explanation"
+              "text": "Line voltage equals phase voltage multiplied by the square root of 3."
             },
             {
               "id": "b",
-              "text": "An unrelated claim"
+              "text": "Line voltage is equal to phase voltage."
             },
             {
               "id": "c",
-              "text": "A random guess"
+              "text": "Phase voltage equals line voltage multiplied by the square root of 3."
             },
             {
               "id": "d",
-              "text": "A conflicting idea"
+              "text": "Line voltage is half of the phase voltage."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "electrician-electricity-301-l03-q2",
-          "text": "What should a learner do after getting an answer wrong?",
-          "skillId": "electrician-electricity-301-skill-review",
+          "text": "How do you reverse the direction of rotation of a three-phase induction motor?",
+          "skillId": "electrician-electricity-301-skill-motors",
           "options": [
             {
               "id": "a",
-              "text": "Review error cause and retry with strategy"
+              "text": "Swap any two of the three line leads."
             },
             {
               "id": "b",
-              "text": "Skip all corrections"
+              "text": "Reverse the polarity of the neutral wire."
             },
             {
               "id": "c",
-              "text": "Memorize only the answer letter"
+              "text": "Increase the frequency of the supply voltage."
             },
             {
               "id": "d",
-              "text": "Stop practicing"
+              "text": "Swap all three line leads simultaneously."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "electrician-electricity-301-l03-q3",
-          "text": "Which strategy most improves long-term retention for Electricity for Electricians III?",
-          "skillId": "electrician-electricity-301-skill-core",
+          "text": "What is the synchronous speed of a 4-pole motor operating on a 60 Hz supply?",
+          "skillId": "electrician-electricity-301-skill-motors",
           "options": [
             {
               "id": "a",
-              "text": "Use spaced retrieval and mixed practice over multiple sessions."
+              "text": "1800 RPM"
             },
             {
               "id": "b",
-              "text": "Cram once and avoid later practice."
+              "text": "3600 RPM"
             },
             {
               "id": "c",
-              "text": "Read notes passively without self-testing."
+              "text": "1200 RPM"
             },
             {
               "id": "d",
-              "text": "Rely on confidence alone instead of evidence."
+              "text": "900 RPM"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Spaced retrieval with varied practice strengthens durable memory and flexible application."
+          "explanation": "Synchronous speed = (120 * Frequency) / Number of Poles. (120 * 60) / 4 = 1800 RPM."
         }
       ],
       "learningAids": [
         {
           "id": "electrician-electricity-301-l03-a1",
           "type": "mnemonic",
-          "title": "Memory Cue",
-          "content": "Use Plan, Solve, Explain to structure each response."
+          "title": "Speed Formula Memory Cue",
+          "content": "Remember '120 times Hertz over Poles' to quickly calculate synchronous RPM."
         }
       ]
     },
     {
       "id": "electrician-electricity-301-l04",
-      "title": "Electricity Practice 4",
-      "type": "interactive",
-      "duration": 12,
-      "metadata": {
-        "prompts": [
-          "State the key concept in one sentence.",
-          "Apply it to one example.",
-          "Explain your improvement step for next time."
-        ]
-      },
+      "title": "Industrial Controls: PLCs & VFDs",
+      "type": "video",
+      "duration": 14,
       "learningAids": [
         {
           "id": "electrician-electricity-301-l04-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Follow the challenge flow and record your approach."
+          "type": "image",
+          "title": "VFD Block Diagram",
+          "content": "A visual block diagram of a Variable Frequency Drive showing the rectifier, DC bus, and IGBT inverter stages."
+        },
+        {
+          "id": "electrician-electricity-301-l04-a2",
+          "type": "animation",
+          "title": "Pulse Width Modulation (PWM)",
+          "content": "An animation demonstrating how PWM creates a simulated AC waveform by rapidly switching DC voltage on and off to control motor speed."
         }
       ]
     },
     {
       "id": "electrician-electricity-301-l05",
-      "title": "Electricity Concepts 5",
-      "type": "video",
-      "duration": 9,
+      "title": "VFD Parameter Setup & Wiring",
+      "type": "interactive",
+      "duration": 15,
+      "metadata": {
+        "prompts": [
+          "Input the motor nameplate data (Voltage, FLA, RPM) into the VFD parameters.",
+          "Configure the acceleration and deceleration ramp times.",
+          "Establish the control wiring for a 2-wire start/stop circuit."
+        ]
+      },
       "learningAids": [
         {
           "id": "electrician-electricity-301-l05-a1",
-          "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary for Electricity."
-        },
-        {
-          "id": "electrician-electricity-301-l05-a2",
-          "type": "animation",
-          "title": "Animated Example",
-          "content": "Step-by-step walkthrough for Electricity."
+          "type": "practice",
+          "title": "Virtual VFD Keypad",
+          "content": "A simulated VFD interface allowing the user to navigate menus, input parameter values, and test motor response."
         }
       ]
     },
     {
       "id": "electrician-electricity-301-l06",
-      "title": "Checkpoint 2: Electricity",
+      "title": "Checkpoint 2: Industrial Controls",
       "type": "quiz",
       "duration": 10,
       "questions": [
         {
           "id": "electrician-electricity-301-l06-q1",
-          "text": "Which choice best matches the main idea of Electricity?",
-          "skillId": "electrician-electricity-301-skill-core",
+          "text": "What is the primary function of the DC bus in a Variable Frequency Drive (VFD)?",
+          "skillId": "electrician-electricity-301-skill-vfd",
           "options": [
             {
               "id": "a",
-              "text": "A complete, evidence-based explanation"
+              "text": "To smooth the rectified DC voltage and store energy for the inverter section."
             },
             {
               "id": "b",
-              "text": "An unrelated claim"
+              "text": "To convert the incoming AC voltage directly to a lower AC voltage."
             },
             {
               "id": "c",
-              "text": "A random guess"
+              "text": "To provide a grounding point for the motor chassis."
             },
             {
               "id": "d",
-              "text": "A conflicting idea"
+              "text": "To step up the frequency of the incoming power supply."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "electrician-electricity-301-l06-q2",
-          "text": "What should a learner do after getting an answer wrong?",
-          "skillId": "electrician-electricity-301-skill-review",
+          "text": "In PLC ladder logic, what does an XIC (Examine If Closed) instruction look for?",
+          "skillId": "electrician-electricity-301-skill-plc",
           "options": [
             {
               "id": "a",
-              "text": "Review error cause and retry with strategy"
+              "text": "A true (logical 1) condition at the specified address."
             },
             {
               "id": "b",
-              "text": "Skip all corrections"
+              "text": "A false (logical 0) condition at the specified address."
             },
             {
               "id": "c",
-              "text": "Memorize only the answer letter"
+              "text": "An analog voltage drop across a resistor."
             },
             {
               "id": "d",
-              "text": "Stop practicing"
+              "text": "A physical normally closed switch."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "electrician-electricity-301-l06-q3",
-          "text": "Which strategy most improves long-term retention for Electricity for Electricians III?",
-          "skillId": "electrician-electricity-301-skill-core",
+          "text": "Why is shielded cable recommended for the output wiring between a VFD and a motor?",
+          "skillId": "electrician-electricity-301-skill-vfd",
           "options": [
             {
               "id": "a",
-              "text": "Use spaced retrieval and mixed practice over multiple sessions."
+              "text": "To mitigate Electromagnetic Interference (EMI) caused by high-frequency switching."
             },
             {
               "id": "b",
-              "text": "Cram once and avoid later practice."
+              "text": "To increase the voltage delivered to the motor."
             },
             {
               "id": "c",
-              "text": "Read notes passively without self-testing."
+              "text": "To prevent the motor from overheating during low-speed operation."
             },
             {
               "id": "d",
-              "text": "Rely on confidence alone instead of evidence."
+              "text": "To allow the cable to carry higher amperage than unshielded wire."
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Spaced retrieval with varied practice strengthens durable memory and flexible application."
+          "explanation": "The rapid switching of IGBTs in a VFD creates high-frequency noise (EMI). Shielded cables contain this noise, preventing interference with nearby sensitive electronics."
         }
       ],
       "learningAids": [
         {
           "id": "electrician-electricity-301-l06-a1",
           "type": "mnemonic",
-          "title": "Memory Cue",
-          "content": "Use Plan, Solve, Explain to structure each response."
+          "title": "VFD Stages",
+          "content": "Remember the VFD process: Rectify (AC to DC), Filter (DC Bus), Invert (DC to AC)."
         }
       ]
     },
     {
       "id": "electrician-electricity-301-l07",
-      "title": "Electricity Concepts 7",
+      "title": "Advanced Fault Analysis & Commissioning",
       "type": "video",
-      "duration": 9,
+      "duration": 15,
       "learningAids": [
         {
           "id": "electrician-electricity-301-l07-a1",
           "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary for Electricity."
+          "title": "Infrared Thermography",
+          "content": "An infrared thermal image showing a hot spot on a three-phase breaker, indicating a loose connection or unbalanced load."
         },
         {
           "id": "electrician-electricity-301-l07-a2",
           "type": "animation",
-          "title": "Animated Example",
-          "content": "Step-by-step walkthrough for Electricity."
+          "title": "Megger Testing Procedure",
+          "content": "A step-by-step animation demonstrating how to safely perform an insulation resistance (megger) test on motor windings to ground."
         }
       ]
     },
     {
       "id": "electrician-electricity-301-l08",
-      "title": "Electricity Practice 8",
+      "title": "Troubleshooting & Commissioning Simulation",
       "type": "interactive",
-      "duration": 12,
+      "duration": 20,
       "metadata": {
         "prompts": [
-          "State the key concept in one sentence.",
-          "Apply it to one example.",
-          "Explain your improvement step for next time."
+          "Perform a step-by-step lockout/tagout (LOTO) procedure before opening the cabinet.",
+          "Analyze the multimeter readings to identify the open phase.",
+          "Document the commissioning baseline data for future maintenance."
         ]
       },
       "learningAids": [
         {
           "id": "electrician-electricity-301-l08-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Follow the challenge flow and record your approach."
+          "title": "Virtual Diagnostic Tools",
+          "content": "A simulated environment where learners use a virtual multimeter and megohmmeter to test a faulted motor circuit and identify a short to ground."
         }
       ]
     },
     {
       "id": "electrician-electricity-301-l09",
-      "title": "Checkpoint 3: Electricity",
+      "title": "Checkpoint 3: Fault Analysis",
       "type": "quiz",
       "duration": 10,
       "questions": [
         {
           "id": "electrician-electricity-301-l09-q1",
-          "text": "Which choice best matches the main idea of Electricity?",
-          "skillId": "electrician-electricity-301-skill-core",
+          "text": "When performing an insulation resistance test on a 480V motor, what is the generally accepted minimum reading for safe operation?",
+          "skillId": "electrician-electricity-301-skill-troubleshooting",
           "options": [
             {
               "id": "a",
-              "text": "A complete, evidence-based explanation"
+              "text": "1 Megohm plus 1 Megohm per kilovolt of operating voltage."
             },
             {
               "id": "b",
-              "text": "An unrelated claim"
+              "text": "0 Ohms."
             },
             {
               "id": "c",
-              "text": "A random guess"
+              "text": "100 Ohms."
             },
             {
               "id": "d",
-              "text": "A conflicting idea"
+              "text": "500 Kilohms."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "electrician-electricity-301-l09-q2",
-          "text": "What should a learner do after getting an answer wrong?",
-          "skillId": "electrician-electricity-301-skill-review",
+          "text": "What is the most likely result of a three-phase motor experiencing a 'single-phasing' condition while running fully loaded?",
+          "skillId": "electrician-electricity-301-skill-troubleshooting",
           "options": [
             {
               "id": "a",
-              "text": "Review error cause and retry with strategy"
+              "text": "The motor will draw excessive current on the remaining phases and eventually trip the overload relay."
             },
             {
               "id": "b",
-              "text": "Skip all corrections"
+              "text": "The motor will immediately reverse direction."
             },
             {
               "id": "c",
-              "text": "Memorize only the answer letter"
+              "text": "The motor will continue to run normally with reduced efficiency."
             },
             {
               "id": "d",
-              "text": "Stop practicing"
+              "text": "The motor will generate power back into the grid."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "electrician-electricity-301-l09-q3",
-          "text": "Which strategy most improves long-term retention for Electricity for Electricians III?",
-          "skillId": "electrician-electricity-301-skill-core",
+          "text": "Which issue is most commonly associated with high levels of harmonic distortion in an industrial facility?",
+          "skillId": "electrician-electricity-301-skill-power-quality",
           "options": [
             {
               "id": "a",
-              "text": "Use spaced retrieval and mixed practice over multiple sessions."
+              "text": "Overheating of neutral conductors and transformers."
             },
             {
               "id": "b",
-              "text": "Cram once and avoid later practice."
+              "text": "Increased lifespan of incandescent lighting."
             },
             {
               "id": "c",
-              "text": "Read notes passively without self-testing."
+              "text": "Decreased voltage drop across long cable runs."
             },
             {
               "id": "d",
-              "text": "Rely on confidence alone instead of evidence."
+              "text": "Improved power factor without the need for capacitors."
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Spaced retrieval with varied practice strengthens durable memory and flexible application."
+          "explanation": "Non-linear loads like VFDs create harmonics. Triplen harmonics add together in the neutral conductor, causing severe overheating even if phase currents are balanced."
         }
       ],
       "learningAids": [
         {
           "id": "electrician-electricity-301-l09-a1",
           "type": "mnemonic",
-          "title": "Memory Cue",
-          "content": "Use Plan, Solve, Explain to structure each response."
+          "title": "Troubleshooting Steps",
+          "content": "Verify symptoms, Isolate the circuit, Test components, Repair, and Document."
         }
       ]
     },
     {
       "id": "electrician-electricity-301-l10",
-      "title": "Checkpoint 4: Electricity",
+      "title": "Final Master Checkpoint",
       "type": "quiz",
-      "duration": 10,
+      "duration": 15,
       "questions": [
         {
           "id": "electrician-electricity-301-l10-q1",
-          "text": "Which choice best matches the main idea of Electricity?",
-          "skillId": "electrician-electricity-301-skill-core",
+          "text": "A VFD trips on an 'Overvoltage' fault during deceleration. What is the most likely cause and solution?",
+          "skillId": "electrician-electricity-301-skill-vfd-troubleshooting",
           "options": [
             {
               "id": "a",
-              "text": "A complete, evidence-based explanation"
+              "text": "The motor is regenerating power; increase the deceleration time or add a dynamic braking resistor."
             },
             {
               "id": "b",
-              "text": "An unrelated claim"
+              "text": "The incoming line voltage is too low; install a boost transformer."
             },
             {
               "id": "c",
-              "text": "A random guess"
+              "text": "The motor bearings are failing; replace the motor."
             },
             {
               "id": "d",
-              "text": "A conflicting idea"
+              "text": "The VFD is undersized; replace it with a larger drive."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "electrician-electricity-301-l10-q2",
-          "text": "What should a learner do after getting an answer wrong?",
-          "skillId": "electrician-electricity-301-skill-review",
+          "text": "When commissioning a new industrial control panel, which NFPA 70E requirement must be met before verifying voltage with a meter?",
+          "skillId": "electrician-electricity-301-skill-safety",
           "options": [
             {
               "id": "a",
-              "text": "Review error cause and retry with strategy"
+              "text": "Don the appropriate Personal Protective Equipment (PPE) based on the arc flash risk assessment."
             },
             {
               "id": "b",
-              "text": "Skip all corrections"
+              "text": "Bypass all safety interlocks to ensure continuous power."
             },
             {
               "id": "c",
-              "text": "Memorize only the answer letter"
+              "text": "Ensure the panel is grounded to a nearby water pipe only."
             },
             {
               "id": "d",
-              "text": "Stop practicing"
+              "text": "Remove all fuses to prevent accidental short circuits."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "electrician-electricity-301-l10-q3",
-          "text": "Which strategy most improves long-term retention for Electricity for Electricians III?",
-          "skillId": "electrician-electricity-301-skill-core",
+          "text": "You measure 480V between L1-L2, 480V between L2-L3, and 0V between L1-L3 at the line side of a motor starter. What is the condition?",
+          "skillId": "electrician-electricity-301-skill-troubleshooting",
           "options": [
             {
               "id": "a",
-              "text": "Use spaced retrieval and mixed practice over multiple sessions."
+              "text": "L1 and L3 are being fed from the same phase (shorted or miswired upstream)."
             },
             {
               "id": "b",
-              "text": "Cram once and avoid later practice."
+              "text": "The system is operating normally for a Delta configuration."
             },
             {
               "id": "c",
-              "text": "Read notes passively without self-testing."
+              "text": "L2 is open."
             },
             {
               "id": "d",
-              "text": "Rely on confidence alone instead of evidence."
+              "text": "The motor has a dead short to ground."
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Spaced retrieval with varied practice strengthens durable memory and flexible application."
+          "explanation": "If there is 0V potential difference between L1 and L3, they are at the same electrical potential, meaning they are the same phase. This is a critical wiring error."
         }
       ],
       "learningAids": [
         {
           "id": "electrician-electricity-301-l10-a1",
           "type": "mnemonic",
-          "title": "Memory Cue",
-          "content": "Use Plan, Solve, Explain to structure each response."
+          "title": "Safety First",
+          "content": "Test Before You Touch: Always verify your meter on a known live source before and after checking a de-energized circuit."
         }
       ]
     }

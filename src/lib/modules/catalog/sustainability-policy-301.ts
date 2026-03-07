@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const SustainabilityPolicy301Module: LearningModule = {
+export const sustainability_policy_301_Module: LearningModule = {
   "id": "sustainability-policy-301",
   "title": "Sustainability Policy Systems and Governance",
   "description": "Level 301 curriculum in Sustainability Policy, focused on policy instrument design, transition economics, stakeholder governance, and long-term impact accountability through case-driven analysis, simulations, and assessment-backed mastery.",
@@ -14,7 +14,7 @@ export const SustainabilityPolicy301Module: LearningModule = {
   ],
   "minAge": 16,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en"
@@ -36,9 +36,9 @@ export const SustainabilityPolicy301Module: LearningModule = {
       "learningAids": [
         {
           "id": "sustainability-policy-301-l01-a1",
-          "type": "image",
-          "title": "Guided Practice",
-          "content": "Use the lesson structure, document assumptions, and validate your conclusions before final submission."
+          "type": "diagram",
+          "title": "Core Concepts Map",
+          "content": "A diagram showing the interconnectedness of policy instruments, transition economics, and stakeholder governance."
         }
       ],
       "chunks": [
@@ -46,35 +46,35 @@ export const SustainabilityPolicy301Module: LearningModule = {
           "id": "sustainability-policy-301-l01-c1",
           "kind": "concept",
           "title": "Language, Scope, and Boundaries",
-          "content": "In this lesson, we will explore important concepts related to sustainability policy. We will define the specific language used in this field, understand the boundaries of its scope, and learn how the design of policy instruments connects with the economics of transitioning to sustainable practices. This understanding will help us see how these elements work together in real-world systems.\nContext recap: In this lesson, we will explore important concepts related to sustainability policy. We will define the specific language used in this field, understand the boundaries of its scope, and learn how the design of policy instruments connects with the economics of transitioning to sustainable practices. This understanding will help us see how these elements work together in real-world systems."
+          "content": "Define key terminology, scope, and boundaries for sustainability policy. Understand the critical link between the design of policy instruments and the economics of transitioning to sustainable practices."
         },
         {
           "id": "sustainability-policy-301-l01-c2",
           "kind": "concept",
           "title": "Causal Reasoning Under Constraints",
-          "content": "In this part of the lesson, students will learn how to model cause-and-effect pathways. This means we will look at how different actions can lead to various outcomes. Additionally, we will identify assumptions that might lead to failure in our plans. By doing this, learners will be better prepared to choose the right interventions that can help achieve our sustainability goals.\nContext recap: In this part of the lesson, students will learn how to model cause-and-effect pathways. This means we will look at how different actions can lead to various outcomes. Additionally, we will identify assumptions that might lead to failure in our plans. By doing this, learners will be better prepared to choose the right interventions that can help achieve our sustainability goals.\nContext recap: In this part of the lesson, students will learn how to model cause-and-effect pathways. This means we will look at how different actions can lead to various outcomes. Additionally, we will identify assumptions that might lead to failure in our plans. By doing this, learners will be better prepared to choose the right interventions that can help achieve our sustainability goals.\nWhy this matters: Causal Reasoning Under Constraints helps learners in Policy Studies connect ideas from Sustainability Policy Systems and Governance to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "Learn to model cause-and-effect pathways under real-world constraints. This involves identifying critical assumptions and potential failure points to select the most effective policy interventions, while explicitly highlighting tradeoffs and methods for verification."
         },
         {
           "id": "sustainability-policy-301-l01-c3",
           "kind": "recap",
           "title": "Evidence Standards",
-          "content": "Throughout this module, it is essential that all claims we make are supported by observable indicators. This means we need to have clear evidence that can be measured. We will also consider uncertainty bounds, which help us understand the limits of our knowledge, and establish review checkpoints to ensure our findings are accurate and reliable.\nContext recap: Throughout this module, it is essential that all claims we make are supported by observable indicators. This means we need to have clear evidence that can be measured. We will also consider uncertainty bounds, which help us understand the limits of our knowledge, and establish review checkpoints to ensure our findings are accurate and reliable."
+          "content": "Establish the standards for evidence used throughout this module. All claims must be supported by observable indicators, account for uncertainty bounds, and pass regular review checkpoints to ensure reliability."
         }
       ],
       "flashcards": [
         {
           "id": "sustainability-policy-301-l01-f1",
-          "front": "policy instrument design",
+          "front": "Policy Instrument Design",
           "back": "A central decision axis in Sustainability Policy requiring explicit tradeoff treatment."
         },
         {
           "id": "sustainability-policy-301-l01-f2",
-          "front": "transition economics",
+          "front": "Transition Economics",
           "back": "The reliability layer that determines whether plans survive real-world variability."
         },
         {
           "id": "sustainability-policy-301-l01-f3",
-          "front": "stakeholder governance",
+          "front": "Stakeholder Governance",
           "back": "The analytical process for assessing intervention quality and consequence spread."
         }
       ]
@@ -87,9 +87,9 @@ export const SustainabilityPolicy301Module: LearningModule = {
       "learningAids": [
         {
           "id": "sustainability-policy-301-l02-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use the lesson structure, document assumptions, and validate your conclusions before final submission."
+          "type": "flowchart",
+          "title": "Workflow Template",
+          "content": "A template of a policy workflow, showing decision points, control gates, and feedback loops."
         }
       ],
       "chunks": [
@@ -97,13 +97,13 @@ export const SustainabilityPolicy301Module: LearningModule = {
           "id": "sustainability-policy-301-l02-c1",
           "kind": "practice",
           "title": "Workflow Construction",
-          "content": "In this engaging interactive lab, students will embark on a journey to design their own workflow. The focus will be on analyzing the trade-offs that exist within various systems. This means understanding how different metrics can be effectively integrated into governance structures and how decisions are collaboratively made across different teams. Once the students have crafted their workflows, they will have the chance to test their designs to evaluate how resilient they are when confronted with uncertainty and unexpected challenges. This hands-on experience will not only enhance their understanding of sustainability policies but also equip them with valuable skills for future decision-making processes.\nContext recap: In this engaging interactive lab, students will embark on a journey to design their own workflow. The focus will be on analyzing the trade-offs that exist within various systems. This means understanding how different metrics can be effectively integrated into governance structures and how decisions are collaboratively made across different teams. Once the students have crafted their workflows, they will have the chance to test their designs to evaluate how resilient they are when confronted with uncertainty and unexpected challenges."
+          "content": "In this interactive lab, you will design and test a policy implementation workflow. Focus on analyzing system tradeoffs, integrating key metrics into governance structures, and testing your workflow's resilience against uncertainty."
         },
         {
           "id": "sustainability-policy-301-l02-c2",
           "kind": "recap",
           "title": "Readiness and Control Gates",
-          "content": "To ensure that our operations are ready for implementation, we need to focus on several key components. This includes mapping out who is responsible for each part of the process, establishing control gates to monitor progress, and creating verification steps after decisions are made. These elements help us maintain control and ensure that our projects are on track.\nContext recap: To ensure that our operations are ready for implementation, we need to focus on several key components. This includes mapping out who is responsible for each part of the process, establishing control gates to monitor progress, and creating verification steps after decisions are made. These elements help us maintain control and ensure that our projects are on track."
+          "content": "Map out operational readiness by defining clear ownership for each process, establishing control gates to monitor progress, and implementing post-decision verification steps to ensure quality and accountability."
         }
       ],
       "interactiveActivities": [
@@ -170,9 +170,9 @@ export const SustainabilityPolicy301Module: LearningModule = {
       "learningAids": [
         {
           "id": "sustainability-policy-301-l03-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use the lesson structure, document assumptions, and validate your conclusions before final submission."
+          "type": "checklist",
+          "title": "Concepts Review",
+          "content": "A checklist of core concepts from Lessons 1 & 2: Policy Instruments, Transition Economics, Causal Reasoning, and Workflow Controls."
         }
       ],
       "questions": [
@@ -203,7 +203,7 @@ export const SustainabilityPolicy301Module: LearningModule = {
         },
         {
           "id": "sustainability-policy-301-l03-q2",
-          "text": "At level 301, the strongest emphasis is:",
+          "text": "At level 301, the strongest emphasis is on:",
           "skillId": "sustainability-policy-301-skill-level",
           "options": [
             {
@@ -212,19 +212,19 @@ export const SustainabilityPolicy301Module: LearningModule = {
             },
             {
               "id": "b",
-              "text": "Fast execution with no review loops"
+              "text": "fast execution with no review loops"
             },
             {
               "id": "c",
-              "text": "Single stakeholder perspective only"
+              "text": "a single stakeholder perspective only"
             },
             {
               "id": "d",
-              "text": "Outcome claims without baselines"
+              "text": "outcome claims without baselines"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "The 301 layer is explicitly designed around system tradeoff analysis, metrics and governance integration, and cross-team decision design."
+          "explanation": "The 301 level is explicitly designed around system tradeoff analysis, metrics and governance integration, and cross-team decision design."
         },
         {
           "id": "sustainability-policy-301-l03-q3",
@@ -250,56 +250,6 @@ export const SustainabilityPolicy301Module: LearningModule = {
           ],
           "correctOptionId": "b",
           "explanation": "Reliability improves when control, ownership, and escalation are explicit and repeatable."
-        },
-        {
-          "id": "sustainability-policy-301-l03-q4",
-          "text": "When evaluating stakeholder governance, which approach is most defensible?",
-          "skillId": "sustainability-policy-301-skill-eval",
-          "options": [
-            {
-              "id": "a",
-              "text": "Use anecdotal examples only"
-            },
-            {
-              "id": "b",
-              "text": "Compare interventions against baseline and monitor side effects"
-            },
-            {
-              "id": "c",
-              "text": "Remove difficult scenarios from evaluation"
-            },
-            {
-              "id": "d",
-              "text": "Change target definitions after results are known"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Baseline comparison and side-effect monitoring reduce overclaiming and hidden risk."
-        },
-        {
-          "id": "sustainability-policy-301-l03-q5",
-          "text": "A mature long-term impact accountability model should include:",
-          "skillId": "sustainability-policy-301-skill-governance",
-          "options": [
-            {
-              "id": "a",
-              "text": "One-time review with no corrective pathway"
-            },
-            {
-              "id": "b",
-              "text": "Policy links, measurable thresholds, and remediation triggers"
-            },
-            {
-              "id": "c",
-              "text": "No public or stakeholder transparency"
-            },
-            {
-              "id": "d",
-              "text": "Unbounded discretion without guardrails"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature governance connects policy goals to measurable thresholds and corrective pathways."
         }
       ]
     },
@@ -311,9 +261,9 @@ export const SustainabilityPolicy301Module: LearningModule = {
       "learningAids": [
         {
           "id": "sustainability-policy-301-l04-a1",
-          "type": "mnemonic",
-          "title": "Guided Practice",
-          "content": "Use the lesson structure, document assumptions, and validate your conclusions before final submission."
+          "type": "image",
+          "title": "Case Study Context",
+          "content": "An image of a city map overlaid with data layers representing carbon emissions, infrastructure, and demographic information."
         }
       ],
       "chunks": [
@@ -321,35 +271,35 @@ export const SustainabilityPolicy301Module: LearningModule = {
           "id": "sustainability-policy-301-l04-c1",
           "kind": "example",
           "title": "Case Context and Stakes",
-          "content": "In this case study, we will explore a city's plan to reduce carbon emissions, which is often referred to as a decarbonization roadmap. This plan requires careful consideration of several important factors, including how to keep costs affordable, ensure reliable services, and meet environmental goals. Students will engage in mapping out the various stakes involved in these decisions, which means they will identify what is at risk and what benefits are at stake. Additionally, they will learn to recognize potential risks that may not be immediately obvious, which will deepen their understanding of the complexities involved in sustainability planning and decision-making.\nContext recap: In this case study, we will explore a city's plan to reduce carbon emissions, which is often referred to as a decarbonization roadmap. This plan requires careful consideration of several important factors, including how to keep costs affordable, ensure reliable services, and meet environmental goals. Students will engage in mapping out the various stakes involved in these decisions, which means they will identify what is at risk and what benefits are at stake. Additionally, they will learn to recognize potential risks that may not be immediately obvious, which will deepen their understanding of the complexities involved in sustainability planning and decision-making.\nContext recap: In this case study, we will explore a city's plan to reduce carbon emissions, which is often referred to as a decarbonization roadmap. This plan requires careful consideration of several important factors, including how to keep costs affordable, ensure reliable services, and meet environmental goals. Students will engage in mapping out the various stakes involved in these decisions, which means they will identify what is at risk and what benefits are at stake. Additionally, they will learn to recognize potential risks that may not be immediately obvious, which will deepen their understanding of the complexities involved in sustainability planning and decision-making.\nWhy this matters: Case Context and Stakes helps learners in Policy Studies connect ideas from Sustainability Policy Systems and Governance to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "Analyze a real-world case study: a city's decarbonization roadmap. Map the competing stakes of affordability, service reliability, and environmental targets. Identify both obvious and hidden risks in the proposed plan."
         },
         {
           "id": "sustainability-policy-301-l04-c2",
           "kind": "concept",
           "title": "Tradeoff Matrix Construction",
-          "content": "In this section, we will construct a trade-off matrix to compare different interventions. This matrix will help us evaluate each option based on its effectiveness, reliability, fairness, and how feasible it is to implement. By comparing these factors, learners will gain a clearer understanding of which interventions might be the best choices for achieving sustainability goals.\nContext recap: In this section, we will construct a trade-off matrix to compare different interventions. This matrix will help us evaluate each option based on its effectiveness, reliability, fairness, and how feasible it is to implement. By comparing these factors, learners will gain a clearer understanding of which interventions might be the best choices for achieving sustainability goals."
+          "content": "Construct a tradeoff matrix to systematically compare different policy interventions. Evaluate options against criteria like effectiveness, reliability, equity, and implementation feasibility to make a defensible choice."
         },
         {
           "id": "sustainability-policy-301-l04-c3",
           "kind": "recap",
           "title": "Failure Lessons and Recovery",
-          "content": "In this recap, we will discuss how to learn from failures in our projects. We will convert the lessons learned from these failures into safeguards that can protect future efforts. Additionally, we will create response playbooks that outline steps to take in case of setbacks and establish monitoring updates to keep track of our progress and make necessary adjustments.\nContext recap: In this recap, we will discuss how to learn from failures in our projects. We will convert the lessons learned from these failures into safeguards that can protect future efforts. Additionally, we will create response playbooks that outline steps to take in case of setbacks and establish monitoring updates to keep track of our progress and make necessary adjustments."
+          "content": "Analyze past policy failures to identify recurring patterns or 'failure signatures.' Convert these lessons into preventative safeguards, response playbooks, and enhanced monitoring protocols for future projects."
         }
       ],
       "flashcards": [
         {
           "id": "sustainability-policy-301-l04-f1",
-          "front": "Tradeoff matrix",
+          "front": "Tradeoff Matrix",
           "back": "A structured comparison of options under conflicting priorities."
         },
         {
           "id": "sustainability-policy-301-l04-f2",
-          "front": "Failure signature",
+          "front": "Failure Signature",
           "back": "A recurring observable pattern indicating a class of system risk."
         },
         {
           "id": "sustainability-policy-301-l04-f3",
-          "front": "Recovery playbook",
+          "front": "Recovery Playbook",
           "back": "A documented sequence for safe and timely response during adverse events."
         }
       ]
@@ -362,9 +312,9 @@ export const SustainabilityPolicy301Module: LearningModule = {
       "learningAids": [
         {
           "id": "sustainability-policy-301-l05-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use the lesson structure, document assumptions, and validate your conclusions before final submission."
+          "type": "dashboard",
+          "title": "Simulation Interface",
+          "content": "A mock-up of a simulation dashboard with sliders for uncertainty parameters and graphs for outcome metrics."
         }
       ],
       "chunks": [
@@ -372,13 +322,13 @@ export const SustainabilityPolicy301Module: LearningModule = {
           "id": "sustainability-policy-301-l05-c1",
           "kind": "practice",
           "title": "Scenario Simulation Setup",
-          "content": "In this interactive simulation setup, learners will configure various interventions aimed at promoting sustainability. They will define parameters of uncertainty, which will help them understand the risks involved, and set measurable thresholds for success. This hands-on experience will allow students to see how different variables can affect outcomes.\nContext recap: In this interactive simulation setup, learners will configure various interventions aimed at promoting sustainability. They will define parameters of uncertainty, which will help them understand the risks involved, and set measurable thresholds for success. This hands-on experience will allow students to see how different variables can affect outcomes."
+          "content": "Configure and run a policy simulation. Set parameters for different interventions, define uncertainty variables, and establish measurable success thresholds to test policy resilience and potential outcomes."
         },
         {
           "id": "sustainability-policy-301-l05-c2",
           "kind": "recap",
           "title": "Simulation Debrief",
-          "content": "After each simulation run, we will conduct a debriefing session to review the results. During this time, we will analyze the expected gains from our interventions, discuss any side effects that may have occurred, and ensure that our actions comply with governance standards. This reflective process is crucial for improving future simulations.\nContext recap: After each simulation run, we will conduct a debriefing session to review the results. During this time, we will analyze the expected gains from our interventions, discuss any side effects that may have occurred, and ensure that our actions comply with governance standards. This reflective process is crucial for improving future simulations."
+          "content": "Conduct a structured debrief after each simulation run. Analyze the results, including expected gains, unintended side effects, and compliance with governance standards, to refine your policy approach."
         }
       ],
       "interactiveActivities": [
@@ -421,156 +371,106 @@ export const SustainabilityPolicy301Module: LearningModule = {
     },
     {
       "id": "sustainability-policy-301-l06",
-      "title": "Checkpoint 2: Systems Decisions",
+      "title": "Checkpoint 2: Application and Analysis",
       "type": "quiz",
       "duration": 10,
       "learningAids": [
         {
           "id": "sustainability-policy-301-l06-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use the lesson structure, document assumptions, and validate your conclusions before final submission."
+          "type": "case_study_brief",
+          "title": "Case Study Review",
+          "content": "A one-page summary of the decarbonization case study, highlighting the key tradeoffs and intervention options analyzed."
         }
       ],
       "questions": [
         {
           "id": "sustainability-policy-301-l06-q1",
-          "text": "Which action most improves policy instrument design quality in practice?",
-          "skillId": "sustainability-policy-301-skill-core",
+          "text": "When constructing a tradeoff matrix for policy options, what is its primary purpose?",
+          "skillId": "sustainability-policy-301-skill-analysis",
           "options": [
             {
               "id": "a",
-              "text": "Skip explicit constraints and rely on intuition"
+              "text": "To prove one option is universally superior"
             },
             {
               "id": "b",
-              "text": "Define assumptions, monitor indicators, and test failure cases"
+              "text": "To systematically compare diverse interventions against a common set of critical criteria"
             },
             {
               "id": "c",
-              "text": "Treat all outcomes as equivalent"
+              "text": "To eliminate the need for stakeholder input"
             },
             {
               "id": "d",
-              "text": "Ignore uncertainty and variance"
+              "text": "To focus only on the financial costs of each option"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "High-quality decisions require explicit assumptions and measurable stress tests."
+          "explanation": "A tradeoff matrix is a tool for structured comparison across multiple, often conflicting, criteria like cost, equity, and effectiveness."
         },
         {
           "id": "sustainability-policy-301-l06-q2",
-          "text": "At level 301, the strongest emphasis is:",
-          "skillId": "sustainability-policy-301-skill-level",
+          "text": "What is the main benefit of defining uncertainty parameters in a policy simulation?",
+          "skillId": "sustainability-policy-301-skill-simulation",
           "options": [
             {
               "id": "a",
-              "text": "system tradeoff analysis, metrics and governance integration, and cross-team decision design"
+              "text": "To guarantee a successful outcome"
             },
             {
               "id": "b",
-              "text": "Fast execution with no review loops"
+              "text": "To make the model simpler to build"
             },
             {
               "id": "c",
-              "text": "Single stakeholder perspective only"
+              "text": "To test the policy's resilience and identify potential failure points under various conditions"
             },
             {
               "id": "d",
-              "text": "Outcome claims without baselines"
+              "text": "To generate more data for the final report"
             }
           ],
-          "correctOptionId": "a",
-          "explanation": "The 301 layer is explicitly designed around system tradeoff analysis, metrics and governance integration, and cross-team decision design."
+          "correctOptionId": "c",
+          "explanation": "Simulations with uncertainty help stress-test a policy against real-world variability, revealing weaknesses before implementation."
         },
         {
           "id": "sustainability-policy-301-l06-q3",
-          "text": "What best strengthens transition economics reliability?",
-          "skillId": "sustainability-policy-301-skill-reliability",
-          "options": [
-            {
-              "id": "a",
-              "text": "No ownership for incident response"
-            },
-            {
-              "id": "b",
-              "text": "Clear control points, owner mapping, and escalation thresholds"
-            },
-            {
-              "id": "c",
-              "text": "Ad-hoc changes without logs"
-            },
-            {
-              "id": "d",
-              "text": "No postmortem process"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Reliability improves when control, ownership, and escalation are explicit and repeatable."
-        },
-        {
-          "id": "sustainability-policy-301-l06-q4",
-          "text": "When evaluating stakeholder governance, which approach is most defensible?",
+          "text": "A 'failure signature' in policy analysis refers to:",
           "skillId": "sustainability-policy-301-skill-eval",
           "options": [
             {
               "id": "a",
-              "text": "Use anecdotal examples only"
+              "text": "A legally binding document admitting failure"
             },
             {
               "id": "b",
-              "text": "Compare interventions against baseline and monitor side effects"
+              "text": "The specific person responsible for a mistake"
             },
             {
               "id": "c",
-              "text": "Remove difficult scenarios from evaluation"
+              "text": "A recurring pattern of observable indicators that precedes a specific type of system failure"
             },
             {
               "id": "d",
-              "text": "Change target definitions after results are known"
+              "text": "A one-time, unpredictable event"
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "Baseline comparison and side-effect monitoring reduce overclaiming and hidden risk."
-        },
-        {
-          "id": "sustainability-policy-301-l06-q5",
-          "text": "A mature long-term impact accountability model should include:",
-          "skillId": "sustainability-policy-301-skill-governance",
-          "options": [
-            {
-              "id": "a",
-              "text": "One-time review with no corrective pathway"
-            },
-            {
-              "id": "b",
-              "text": "Policy links, measurable thresholds, and remediation triggers"
-            },
-            {
-              "id": "c",
-              "text": "No public or stakeholder transparency"
-            },
-            {
-              "id": "d",
-              "text": "Unbounded discretion without guardrails"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature governance connects policy goals to measurable thresholds and corrective pathways."
+          "correctOptionId": "c",
+          "explanation": "Identifying failure signatures allows for the creation of proactive monitoring and preventative safeguards."
         }
       ]
     },
     {
       "id": "sustainability-policy-301-l07",
-      "title": "Sustainability Policy Ethics and Policy Integration",
+      "title": "Sustainability Policy Ethics and Integration",
       "type": "video",
       "duration": 12,
       "learningAids": [
         {
           "id": "sustainability-policy-301-l07-a1",
-          "type": "image",
-          "title": "Guided Practice",
-          "content": "Use the lesson structure, document assumptions, and validate your conclusions before final submission."
+          "type": "diagram",
+          "title": "Stakeholder Impact Map",
+          "content": "A stakeholder map showing the distribution of benefits and burdens of a sample policy across different community groups."
         }
       ],
       "chunks": [
@@ -578,35 +478,35 @@ export const SustainabilityPolicy301Module: LearningModule = {
           "id": "sustainability-policy-301-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Mapping",
-          "content": "In this lesson, we will focus on mapping the impacts of our policies on different stakeholders. It is important to identify how benefits and burdens are distributed among various groups, especially when they do not align. Understanding these dynamics will help us create more equitable and effective sustainability policies.\nContext recap: In this lesson, we will focus on mapping the impacts of our policies on different stakeholders. It is important to identify how benefits and burdens are distributed among various groups, especially when they do not align. Understanding these dynamics will help us create more equitable and effective sustainability policies."
+          "content": "Map the distribution of policy impacts across all stakeholder groups. Analyze how benefits and burdens are allocated, paying close attention to equity and fairness, especially where outcomes are misaligned."
         },
         {
           "id": "sustainability-policy-301-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "To ensure accountability in our sustainability efforts, we need to establish a clear architecture for decision-making. This includes having traceability for decisions made, rights for reviews, and standards for remediation when issues arise. By setting these structures in place, we can foster trust and responsibility in our policy processes.\nContext recap: To ensure accountability in our sustainability efforts, we need to establish a clear architecture for decision-making. This includes having traceability for decisions made, rights for reviews, and standards for remediation when issues arise. By setting these structures in place, we can foster trust and responsibility in our policy processes."
+          "content": "Design an accountability architecture for policy governance. Ensure all decisions are traceable, establish clear rights for review and appeal, and define standards for remediation when policies cause harm."
         },
         {
           "id": "sustainability-policy-301-l07-c3",
           "kind": "recap",
           "title": "Responsible Execution Checklist",
-          "content": "To ensure that our sustainability policies are effective and ethical, we can use a final checklist. This checklist will help us evaluate important aspects such as the integration of policy and ethics, the reliability of technical solutions, and the level of trust we have built with stakeholders. By considering these criteria, we can make responsible decisions that benefit everyone involved.\nContext recap: To ensure that our sustainability policies are effective and ethical, we can use a final checklist. This checklist will help us evaluate important aspects such as the integration of policy and ethics, the reliability of technical solutions, and the level of trust we have built with stakeholders. By considering these criteria, we can make responsible decisions that benefit everyone involved."
+          "content": "Use a final checklist to ensure responsible execution. Verify the integration of policy and ethics, the technical reliability of the implementation, and the level of stakeholder trust before deployment."
         }
       ],
       "flashcards": [
         {
           "id": "sustainability-policy-301-l07-f1",
-          "front": "Impact distribution",
+          "front": "Impact Distribution",
           "back": "How benefits and harms are allocated across stakeholders."
         },
         {
           "id": "sustainability-policy-301-l07-f2",
-          "front": "Decision traceability",
+          "front": "Decision Traceability",
           "back": "The ability to explain why a decision was made, by whom, and with what evidence."
         },
         {
           "id": "sustainability-policy-301-l07-f3",
-          "front": "Responsible execution",
+          "front": "Responsible Execution",
           "back": "A delivery mode that combines effectiveness, fairness, and corrective capacity."
         }
       ]
@@ -619,9 +519,9 @@ export const SustainabilityPolicy301Module: LearningModule = {
       "learningAids": [
         {
           "id": "sustainability-policy-301-l08-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use the lesson structure, document assumptions, and validate your conclusions before final submission."
+          "type": "template",
+          "title": "Capstone Charter",
+          "content": "A downloadable Capstone Charter template with sections for Objective, Scope, Constraints, Metrics, and Governance."
         }
       ],
       "chunks": [
@@ -629,13 +529,13 @@ export const SustainabilityPolicy301Module: LearningModule = {
           "id": "sustainability-policy-301-l08-c1",
           "kind": "practice",
           "title": "Capstone Charter Drafting",
-          "content": "In this activity, learners will have the opportunity to draft a comprehensive charter for their capstone project. This charter will outline the scope of the project, identify any constraints that may arise, establish metrics for measuring success, and set governance checkpoints to ensure that the project stays on track. This process encourages critical thinking and careful planning, which are essential skills in policy development.\nContext recap: In this activity, learners will have the opportunity to draft a comprehensive charter for their capstone project. This charter will outline the scope of the project, identify any constraints that may arise, establish metrics for measuring success, and set governance checkpoints to ensure that the project stays on track. This process encourages critical thinking and careful planning, which are essential skills in policy development."
+          "content": "Draft a formal charter for your capstone project. Define the project's scope, constraints, success metrics, and key governance checkpoints to guide your work and ensure a successful outcome."
         },
         {
           "id": "sustainability-policy-301-l08-c2",
           "kind": "recap",
           "title": "Defense Readiness",
-          "content": "As we prepare for the final presentation of our capstone projects, it is crucial to focus on creating strong justifications for our decisions. This preparation involves gathering evidence to support our ideas and developing a solid strategy to respond to any critical feedback we may receive. By being well-prepared, we can confidently defend our work and demonstrate our understanding of sustainability policy.\nContext recap: As we prepare for the final presentation of our capstone projects, it is crucial to focus on creating strong justifications for our decisions. This preparation involves gathering evidence to support our ideas and developing a solid strategy to respond to any critical feedback we may receive. By being well-prepared, we can confidently defend our work and demonstrate our understanding of sustainability policy."
+          "content": "Prepare to defend your capstone proposal. Assemble the evidence supporting your chosen approach and develop a strategy for responding to critical feedback from technical, policy, and stakeholder perspectives."
         }
       ],
       "interactiveActivities": [
@@ -655,6 +555,139 @@ export const SustainabilityPolicy301Module: LearningModule = {
           "type": "debate_simulator",
           "title": "Decision Defense Panel",
           "description": "Defend your capstone approach against technical, policy, and stakeholder critiques."
+        }
+      ]
+    },
+    {
+      "id": "sustainability-policy-301-l09",
+      "title": "Capstone Project: Submission & Peer Review",
+      "type": "interactive",
+      "duration": 20,
+      "learningAids": [
+        {
+          "id": "sustainability-policy-301-l09-a1",
+          "type": "rubric",
+          "title": "Evaluation Rubric",
+          "content": "The official rubric for grading the capstone project, covering analysis, justification, and communication."
+        }
+      ],
+      "chunks": [
+        {
+          "id": "sustainability-policy-301-l09-c1",
+          "kind": "practice",
+          "title": "Final Report and Presentation",
+          "content": "Finalize and submit your capstone project, including a detailed policy recommendation report and a summary presentation. Ensure your work meets all the criteria outlined in the project charter and evaluation rubric."
+        },
+        {
+          "id": "sustainability-policy-301-l09-c2",
+          "kind": "practice",
+          "title": "Peer Review and Feedback",
+          "content": "Engage in a structured peer review process. Evaluate the capstone projects of two other learners using the official rubric, providing constructive feedback on their analysis and recommendations. Integrate the feedback you receive to reflect on your own work."
+        }
+      ],
+      "interactiveActivities": [
+        {
+          "id": "sustainability-policy-301-l09-act1",
+          "type": "document_upload",
+          "title": "Capstone Project Submission",
+          "description": "Upload your final capstone report and presentation slides."
+        },
+        {
+          "id": "sustainability-policy-301-l09-act2",
+          "type": "peer_review",
+          "title": "Peer Evaluation",
+          "description": "Review and provide structured feedback on two anonymized peer submissions based on the course rubric."
+        }
+      ]
+    },
+    {
+      "id": "sustainability-policy-301-l10",
+      "title": "Final Assessment",
+      "type": "quiz",
+      "duration": 15,
+      "learningAids": [
+        {
+          "id": "sustainability-policy-301-l10-a1",
+          "type": "summary_sheet",
+          "title": "Module Key Concepts",
+          "content": "A one-page summary of all key concepts, frameworks, and vocabulary from the module."
+        }
+      ],
+      "questions": [
+        {
+          "id": "sustainability-policy-301-l10-q1",
+          "text": "A policy has high technical reliability but creates significant burdens for a marginalized community. What core concept has been overlooked?",
+          "skillId": "sustainability-policy-301-skill-ethics",
+          "options": [
+            {
+              "id": "a",
+              "text": "Transition economics"
+            },
+            {
+              "id": "b",
+              "text": "Responsible execution, which requires balancing effectiveness with fairness"
+            },
+            {
+              "id": "c",
+              "text": "Causal reasoning"
+            },
+            {
+              "id": "d",
+              "text": "A recovery playbook"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Responsible execution demands that policies are not only effective but also fair and equitable in their impact distribution."
+        },
+        {
+          "id": "sustainability-policy-301-l10-q2",
+          "text": "Decision traceability is a core component of accountability architecture because it:",
+          "skillId": "sustainability-policy-301-skill-governance",
+          "options": [
+            {
+              "id": "a",
+              "text": "guarantees the policy will be successful"
+            },
+            {
+              "id": "b",
+              "text": "automates the decision-making process"
+            },
+            {
+              "id": "c",
+              "text": "allows stakeholders to understand why a decision was made and on what evidence"
+            },
+            {
+              "id": "d",
+              "text": "eliminates the need for future reviews"
+            }
+          ],
+          "correctOptionId": "c",
+          "explanation": "Traceability provides transparency, which is fundamental for holding decision-makers accountable for their choices."
+        },
+        {
+          "id": "sustainability-policy-301-l10-q3",
+          "text": "A key takeaway from this module is that effective sustainability governance primarily depends on:",
+          "skillId": "sustainability-policy-301-skill-synthesis",
+          "options": [
+            {
+              "id": "a",
+              "text": "finding a single perfect technical solution"
+            },
+            {
+              "id": "b",
+              "text": "integrating system analysis, stakeholder equity, and transparent, repeatable processes"
+            },
+            {
+              "id": "c",
+              "text": "acting quickly without extensive analysis"
+            },
+            {
+              "id": "d",
+              "text": "prioritizing economic factors above all others"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "The module emphasizes a holistic approach that combines technical analysis, ethical considerations, and robust governance structures."
         }
       ]
     }

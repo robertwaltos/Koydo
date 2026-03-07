@@ -1,9 +1,9 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const SocialStudiesWorld601Module: LearningModule = {
+export const social_studies_world_601_Module: LearningModule = {
   "id": "social-studies-world-601",
   "title": "Social Studies World Research and Leadership",
-  "description": "Post-401 specialization in Social Studies World, focused on social studies world systems diagnostics, social studies world operations and execution design, social studies world impact and tradeoff analysis, and social studies world governance and leadership through advanced casework, simulation, and defense-based checkpoints.",
+  "description": "A post-401 specialization focused on diagnosing world systems, designing operational execution, analyzing impacts and tradeoffs, and exercising governance. This module uses advanced casework, dynamic simulations, and defense-based checkpoints to build expert-level leadership skills.",
   "subject": "Social Studies World",
   "tags": [
     "core",
@@ -14,7 +14,7 @@ export const SocialStudiesWorld601Module: LearningModule = {
   ],
   "minAge": 17,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en",
@@ -31,15 +31,15 @@ export const SocialStudiesWorld601Module: LearningModule = {
   "lessons": [
     {
       "id": "social-studies-world-601-l01",
-      "title": "Social Studies World Advanced Foundations",
+      "title": "Advanced Foundations in World Systems",
       "type": "video",
       "duration": 14,
       "learningAids": [
         {
           "id": "social-studies-world-601-l01-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Systems Thinking Diagram",
+          "content": "A diagram illustrating a complex social system with inputs (e.g., policy, funding), processes (e.g., institutions, public behavior), and outputs (e.g., economic growth, social equity), highlighting feedback loops and key diagnostic points."
         }
       ],
       "chunks": [
@@ -47,50 +47,50 @@ export const SocialStudiesWorld601Module: LearningModule = {
           "id": "social-studies-world-601-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "In this lesson, we will dive into the advanced boundaries that help define the scope of Social Studies World. We will take a closer look at how social systems function and learn about the methods we can use to identify and diagnose problems within these systems. Additionally, we will discuss how to design effective strategies for operations and execution. By building this foundational knowledge, we will be better equipped to understand the complexities of social studies, allowing us to analyze situations more effectively and implement thoughtful solutions to the challenges we encounter.\nContext recap: In this lesson, we will dive into the advanced boundaries that help define the scope of Social Studies World. We will take a closer look at how social systems function and learn about the methods we can use to identify and diagnose problems within these systems. Additionally, we will discuss how to design effective strategies for operations and execution. By building this foundational knowledge, we will be better equipped to understand the complexities of social studies, allowing us to analyze situations more effectively and implement thoughtful solutions to the challenges we encounter.\nContext recap: In this lesson, we will dive into the advanced boundaries that help define the scope of Social Studies World. We will take a closer look at how social systems function and learn about the methods we can use to identify and diagnose problems within these systems. Additionally, we will discuss how to design effective strategies for operations and execution. By building this foundational knowledge, we will be better equipped to understand the complexities of social studies, allowing us to analyze situations more effectively and implement thoughtful solutions to the challenges we encounter.\nWhy this matters: Scope and Boundary Design helps learners in Social Studies World connect ideas from Social Studies World Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "This lesson establishes the advanced boundaries for analyzing complex social systems. We will explore methods for diagnosing systemic problems and designing effective operational strategies. Mastering these foundations is critical for understanding the intricate dynamics of social studies and implementing thoughtful, evidence-based solutions. Effective analysis requires clearly defining the scope of a problem to manage tradeoffs, surface assumptions, and verify outcomes."
         },
         {
           "id": "social-studies-world-601-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different events or actions. They will also identify ranges of uncertainty and understand how various systems depend on one another. This preparation is crucial before planning any interventions, as it allows us to visualize potential outcomes and make informed decisions.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different events or actions. They will also identify ranges of uncertainty and understand how various systems depend on one another. This preparation is crucial before planning any interventions, as it allows us to visualize potential outcomes and make informed decisions."
+          "content": "Here, you will learn to map causal pathways that connect actions to outcomes, identify interdependencies between systems, and quantify ranges of uncertainty. This modeling is a crucial prerequisite for planning any intervention, as it allows for the visualization of potential consequences and supports more robust, informed decision-making."
         },
         {
           "id": "social-studies-world-601-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "In our recap, we emphasize that every claim we make should be supported by measurable indicators. This means we need to establish confidence bounds and set up review checkpoints to ensure our findings are reliable. By doing this, we can maintain a high standard of evidence in our work and ensure that our conclusions are well-founded.\nContext recap: In our recap, we emphasize that every claim we make should be supported by measurable indicators. This means we need to establish confidence bounds and set up review checkpoints to ensure our findings are reliable. By doing this, we can maintain a high standard of evidence in our work and ensure that our conclusions are well-founded."
+          "content": "We conclude by emphasizing a core principle: all claims must be supported by measurable indicators. This involves establishing clear confidence bounds for your data and implementing review checkpoints to ensure analytical rigor. This discipline maintains a high standard of evidence, ensuring that your conclusions are defensible and well-founded."
         }
       ],
       "flashcards": [
         {
           "id": "social-studies-world-601-l01-f1",
-          "front": "social studies world systems diagnostics",
-          "back": "A specialization axis requiring explicit assumptions and measurable constraints."
+          "front": "What are social studies world systems diagnostics?",
+          "back": "A specialization axis requiring explicit assumptions and measurable constraints to analyze complex social systems."
         },
         {
           "id": "social-studies-world-601-l01-f2",
-          "front": "social studies world operations and execution design",
-          "back": "Execution architecture that determines reliability under stress."
+          "front": "What is social studies world operations and execution design?",
+          "back": "The design of an execution architecture that determines a system's reliability and performance under stress."
         },
         {
           "id": "social-studies-world-601-l01-f3",
-          "front": "social studies world impact and tradeoff analysis",
-          "back": "Evaluation discipline for identifying true gains and hidden costs."
+          "front": "What is social studies world impact and tradeoff analysis?",
+          "back": "An evaluation discipline for identifying the true gains, hidden costs, and secondary effects of an intervention."
         }
       ]
     },
     {
       "id": "social-studies-world-601-l02",
-      "title": "Social Studies World Specialist Methods Lab",
+      "title": "Specialist Methods Lab",
       "type": "interactive",
       "duration": 17,
       "learningAids": [
         {
           "id": "social-studies-world-601-l02-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Workflow Designer",
+          "content": "An interactive dashboard where users design a process workflow by dragging and dropping components like 'Data Input,' 'Risk Assessment Checkpoint,' and 'Automated Escalation Trigger' onto a canvas."
         }
       ],
       "chunks": [
@@ -98,13 +98,13 @@ export const SocialStudiesWorld601Module: LearningModule = {
           "id": "social-studies-world-601-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "In this interactive practice, learners will have the opportunity to design specialized workflows. These workflows will be put to the test through various challenging scenarios to see how they hold up under pressure. This hands-on experience will help learners understand the importance of resilience and adaptability in their designs.\nContext recap: In this interactive practice, learners will have the opportunity to design specialized workflows. These workflows will be put to the test through various challenging scenarios to see how they hold up under pressure. This hands-on experience will help learners understand the importance of resilience and adaptability in their designs."
+          "content": "In this interactive lab, you will design specialized operational workflows. These designs will then be stress-tested against challenging scenarios to evaluate their resilience and adaptability. This hands-on experience will demonstrate the importance of building robust systems that can withstand unexpected pressures."
         },
         {
           "id": "social-studies-world-601-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "In our recap, we will discuss how workflows should include essential elements such as checkpoints, rollback criteria, and threshold-based escalation procedures. This architecture ensures that we can monitor progress effectively and respond appropriately if things do not go as planned.\nContext recap: In our recap, we will discuss how workflows should include essential elements such as checkpoints, rollback criteria, and threshold-based escalation procedures. This architecture ensures that we can monitor progress effectively and respond appropriately if things do not go as planned.\nContext recap: In our recap, we will discuss how workflows should include essential elements such as checkpoints, rollback criteria, and threshold-based escalation procedures. This architecture ensures that we can monitor progress effectively and respond appropriately if things do not go as planned. Context recap: In our recap, we will discuss how workflows should include essential elements such as checkpoints, rollback criteria, and threshold-based escalation procedures. This architecture ensures that we can monitor progress effectively and respond appropriately if things do not go as planned."
+          "content": "We will recap the essential elements of a resilient workflow. A strong control gate architecture includes predefined checkpoints for review, clear rollback criteria to contain failures, and threshold-based escalation procedures. This structure ensures effective progress monitoring and enables rapid, appropriate responses when events deviate from the plan."
         }
       ],
       "interactiveActivities": [
@@ -143,8 +143,8 @@ export const SocialStudiesWorld601Module: LearningModule = {
         {
           "id": "social-studies-world-601-l03-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Core Principles Checklist",
+          "content": "A checklist graphic with four key principles: 1. Define Assumptions & Constraints. 2. Use Measurable Indicators. 3. Validate with Evidence. 4. Plan for Contingencies."
         }
       ],
       "questions": [
@@ -352,15 +352,15 @@ export const SocialStudiesWorld601Module: LearningModule = {
     },
     {
       "id": "social-studies-world-601-l04",
-      "title": "Social Studies World Advanced Case Analysis",
+      "title": "Advanced Case Analysis",
       "type": "video",
       "duration": 14,
       "learningAids": [
         {
           "id": "social-studies-world-601-l04-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Tradeoff Analysis Matrix",
+          "content": "A visual matrix comparing two policy options across multiple criteria like Cost, Equity, and Reliability. Cells are color-coded (green for positive, red for negative) to show the tradeoffs of each choice."
         }
       ],
       "chunks": [
@@ -368,33 +368,33 @@ export const SocialStudiesWorld601Module: LearningModule = {
           "id": "social-studies-world-601-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "In this lesson, we will explore a case that illustrates the various competing constraints found in social studies world systems diagnostics. We will carefully analyze the impacts and trade-offs that come with different decision-making processes. By understanding these dynamics, we can enhance our analytical skills and gain a deeper appreciation for the complexities involved in social systems. This knowledge is essential for anyone looking to make informed decisions in the field of social studies.\nContext recap: In this lesson, we will explore a case that illustrates the various competing constraints found in social studies world systems diagnostics. We will carefully analyze the impacts and trade-offs that come with different decision-making processes. By understanding these dynamics, we can enhance our analytical skills and gain a deeper appreciation for the complexities involved in social systems. This knowledge is essential for anyone looking to make informed decisions in the field of social studies.\nContext recap: In this lesson, we will explore a case that illustrates the various competing constraints found in social studies world systems diagnostics. We will carefully analyze the impacts and trade-offs that come with different decision-making processes. By understanding these dynamics, we can enhance our analytical skills and gain a deeper appreciation for the complexities involved in social systems. This knowledge is essential for anyone looking to make informed decisions in the field of social studies.\nWhy this matters: Scenario Architecture helps learners in Social Studies World connect ideas from Social Studies World Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "We will deconstruct a complex case study featuring competing constraints common in world systems diagnostics. By analyzing the impacts and tradeoffs inherent in different decision pathways, you will sharpen your analytical skills and deepen your understanding of social system dynamics. Our step-by-step approach is: (1) define the goal, (2) identify supporting evidence, (3) explain how evidence shapes the conclusion, and (4) verify the answer against the original goal."
         },
         {
           "id": "social-studies-world-601-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "In this practice session, learners will compare different options based on several important dimensions, including safety, reliability, cost, equity, and governance. This comparative analysis will help learners develop critical thinking skills and understand the multifaceted nature of decision-making.\nContext recap: In this practice session, learners will compare different options based on several important dimensions, including safety, reliability, cost, equity, and governance. This comparative analysis will help learners develop critical thinking skills and understand the multifaceted nature of decision-making.\nContext recap: In this practice session, learners will compare different options based on several important dimensions, including safety, reliability, cost, equity, and governance. This comparative analysis will help learners develop critical thinking skills and understand the multifaceted nature of decision-making. Context recap: In this practice session, learners will compare different options based on several important dimensions, including safety, reliability, cost, equity, and governance. This comparative analysis will help learners develop critical thinking skills and understand the multifaceted nature of decision-making."
+          "content": "In this guided practice, you will compare competing options across critical dimensions such as safety, reliability, cost, equity, and governance. This comparative analysis develops the critical thinking skills needed to navigate multifaceted decisions where no single option is perfect."
         },
         {
           "id": "social-studies-world-601-l04-c3",
           "kind": "recap",
           "title": "Decision Memo Pattern",
-          "content": "In our recap, we will highlight that each recommendation made should include clear assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that our decisions are well-informed and that we are prepared for any potential challenges that may arise.\nContext recap: In our recap, we will highlight that each recommendation made should include clear assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that our decisions are well-informed and that we are prepared for any potential challenges that may arise.\nContext recap: In our recap, we will highlight that each recommendation made should include clear assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that our decisions are well-informed and that we are prepared for any potential challenges that may arise. Context recap: In our recap, we will highlight that each recommendation made should include clear assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that our decisions are well-informed and that we are prepared for any potential challenges that may arise."
+          "content": "We conclude by reviewing a structured pattern for decision-making. Every recommendation must be accompanied by explicit assumptions, supporting evidence, risk controls, and pre-planned fallbacks. This disciplined approach ensures that decisions are well-informed, transparent, and prepared for potential challenges."
         }
       ]
     },
     {
       "id": "social-studies-world-601-l05",
-      "title": "Social Studies World Simulation Clinic",
+      "title": "Simulation Clinic",
       "type": "interactive",
       "duration": 18,
       "learningAids": [
         {
           "id": "social-studies-world-601-l05-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Policy Simulation Dashboard",
+          "content": "A screenshot of a simulation dashboard with sliders to adjust policy variables (e.g., 'Funding Allocation,' 'Regulatory Oversight') and real-time graphs showing the impact on social metrics like 'Unemployment Rate' and 'Public Trust'."
         }
       ],
       "chunks": [
@@ -402,13 +402,13 @@ export const SocialStudiesWorld601Module: LearningModule = {
           "id": "social-studies-world-601-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "In this interactive practice, learners will operate scenario controls while balancing performance and governance constraints. This experience will teach them how to manage competing priorities effectively and make decisions that align with both operational goals and ethical standards.\nContext recap: In this interactive practice, learners will operate scenario controls while balancing performance and governance constraints. This experience will teach them how to manage competing priorities effectively and make decisions that align with both operational goals and ethical standards.\nContext recap: In this interactive practice, learners will operate scenario controls while balancing performance and governance constraints. This experience will teach them how to manage competing priorities effectively and make decisions that align with both operational goals and ethical standards. Context recap: In this interactive practice, learners will operate scenario controls while balancing performance and governance constraints. This experience will teach them how to manage competing priorities effectively and make decisions that align with both operational goals and ethical standards."
+          "content": "In this interactive simulation, you will operate scenario controls in a dynamic environment, balancing performance targets with governance constraints. This experience will train you to manage competing priorities effectively and make decisions that align with both operational goals and ethical standards under pressure."
         },
         {
           "id": "social-studies-world-601-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "In our recap, we will discuss the importance of effective responses that can update control gates while maintaining traceability and accountability. This ensures that all actions taken are transparent and can be tracked back to their origins, which is vital for responsible governance.\nContext recap: In our recap, we will discuss the importance of effective responses that can update control gates while maintaining traceability and accountability. This ensures that all actions taken are transparent and can be tracked back to their origins, which is vital for responsible governance.\nContext recap: In our recap, we will discuss the importance of effective responses that can update control gates while maintaining traceability and accountability. This ensures that all actions taken are transparent and can be tracked back to their origins, which is vital for responsible governance. Context recap: In our recap, we will discuss the importance of effective responses that can update control gates while maintaining traceability and accountability. This ensures that all actions taken are transparent and can be tracked back to their origins, which is vital for responsible governance."
+          "content": "This recap focuses on designing effective responses in a changing environment. A key skill is the ability to update control gates and operational parameters mid-stream while maintaining full traceability and accountability. This ensures that all actions are transparent, auditable, and aligned with principles of responsible governance."
         }
       ],
       "interactiveActivities": [
@@ -429,8 +429,8 @@ export const SocialStudiesWorld601Module: LearningModule = {
         {
           "id": "social-studies-world-601-l06-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Core Principles Checklist",
+          "content": "A checklist graphic with four key principles: 1. Define Assumptions & Constraints. 2. Use Measurable Indicators. 3. Validate with Evidence. 4. Plan for Contingencies."
         }
       ],
       "questions": [
@@ -638,15 +638,15 @@ export const SocialStudiesWorld601Module: LearningModule = {
     },
     {
       "id": "social-studies-world-601-l07",
-      "title": "Social Studies World Governance and Public Impact",
+      "title": "Governance and Public Impact",
       "type": "video",
       "duration": 13,
       "learningAids": [
         {
           "id": "social-studies-world-601-l07-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Accountability Flowchart",
+          "content": "An infographic illustrating the flow of accountability, from a policy decision at the top, through implementation checkpoints, to an impact assessment on different stakeholder groups at the bottom."
         }
       ],
       "chunks": [
@@ -654,50 +654,50 @@ export const SocialStudiesWorld601Module: LearningModule = {
           "id": "social-studies-world-601-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across various stakeholder groups. This mapping is essential for understanding how different decisions impact different people and helps ensure that all voices are considered in the decision-making process.\nContext recap: In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across various stakeholder groups. This mapping is essential for understanding how different decisions impact different people and helps ensure that all voices are considered in the decision-making process."
+          "content": "This lesson focuses on mapping the distribution of benefits, burdens, and delayed effects across various stakeholder groups. This analysis is essential for equitable decision-making, ensuring that all impacted populations are considered, especially those who may be underrepresented."
         },
         {
           "id": "social-studies-world-601-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "In this section, we will explore the concept of accountability architecture. This includes understanding how decision traceability, review rights, and remediation obligations are integrated into our processes. By doing so, we can ensure that everyone involved is held accountable for their actions and that there are clear paths for addressing any issues that arise.\nContext recap: In this section, we will explore the concept of accountability architecture. This includes understanding how decision traceability, review rights, and remediation obligations are integrated into our processes. By doing so, we can ensure that everyone involved is held accountable for their actions and that there are clear paths for addressing any issues that arise."
+          "content": "Here, we explore the architecture of accountability. This includes integrating decision traceability, stakeholder review rights, and clear remediation obligations into operational processes. A strong architecture ensures that decision-makers are answerable for their actions and provides clear pathways for addressing issues."
         },
         {
           "id": "social-studies-world-601-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "As we conclude our exploration of responsible leadership, it's important to remember a final checklist. This checklist connects important outcomes, ethical considerations, adherence to policies, and the ability to bounce back from challenges. Each of these elements is crucial for effective leadership in any community or organization.\nContext recap: As we conclude our exploration of responsible leadership, it's important to remember a final checklist. This checklist connects important outcomes, ethical considerations, adherence to policies, and the ability to bounce back from challenges. Each of these elements is crucial for effective leadership in any community or organization."
+          "content": "We conclude with a checklist for responsible leadership. This framework connects mission-critical outcomes with ethical principles, policy adherence, and systemic resilience. These elements are the cornerstones of effective and trustworthy leadership in any complex system."
         }
       ],
       "flashcards": [
         {
           "id": "social-studies-world-601-l07-f1",
-          "front": "Impact distribution",
-          "back": "How outcomes are allocated across populations and timescales."
+          "front": "What is impact distribution?",
+          "back": "The analysis of how outcomes, both positive and negative, are allocated across different populations and timescales."
         },
         {
           "id": "social-studies-world-601-l07-f2",
-          "front": "Decision traceability",
-          "back": "An auditable record of evidence, ownership, and rationale."
+          "front": "What is decision traceability?",
+          "back": "An auditable and transparent record of the evidence, ownership, and rationale behind a decision."
         },
         {
           "id": "social-studies-world-601-l07-f3",
-          "front": "Responsible leadership",
-          "back": "Decision behavior balancing performance, accountability, and ethics."
+          "front": "What is responsible leadership?",
+          "back": "A mode of decision-making that actively balances performance goals with accountability and ethical considerations."
         }
       ]
     },
     {
       "id": "social-studies-world-601-l08",
-      "title": "Social Studies World Capstone Defense Lab",
+      "title": "Capstone Defense Lab",
       "type": "interactive",
       "duration": 16,
       "learningAids": [
         {
           "id": "social-studies-world-601-l08-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Capstone Defense Slide",
+          "content": "An example of a capstone presentation slide titled 'Recommendation & Defense,' with sections for 'Core Claim,' 'Key Evidence,' 'Risk Analysis,' and 'Contingency Plan'."
         }
       ],
       "chunks": [
@@ -705,13 +705,13 @@ export const SocialStudiesWorld601Module: LearningModule = {
           "id": "social-studies-world-601-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "In this activity, learners will work together to create a comprehensive brief. This brief will include well-supported claims, solid evidence, an understanding of uncertainty, and clear pathways for remediation. By assembling these components, learners will develop critical thinking skills and learn how to present their ideas effectively.\nContext recap: In this activity, learners will work together to create a comprehensive brief. This brief will include well-supported claims, solid evidence, an understanding of uncertainty, and clear pathways for remediation. By assembling these components, learners will develop critical thinking skills and learn how to present their ideas effectively."
+          "content": "In this capstone activity, you will assemble a comprehensive defense brief for a major strategic recommendation. Your brief must integrate a defensible claim, supporting evidence, a clear articulation of uncertainty, and robust remediation pathways. This exercise synthesizes all the skills learned in the module."
         },
         {
           "id": "social-studies-world-601-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "During this rehearsal session, learners will practice their responses to various critiques. These critiques may come from experts in technical fields, governance, and stakeholders. This practice is essential for building confidence and ensuring that learners can articulate their ideas clearly and effectively in front of an audience.\nContext recap: During this rehearsal session, learners will practice their responses to various critiques. These critiques may come from experts in technical fields, governance, and stakeholders. This practice is essential for building confidence and ensuring that learners can articulate their ideas clearly and effectively in front of an audience."
+          "content": "To prepare for the final simulation, you will rehearse responses to critiques from multiple perspectives, including technical experts, governance officers, and key stakeholders. This practice is essential for building confidence and honing your ability to articulate and defend your position effectively under scrutiny."
         }
       ],
       "interactiveActivities": [

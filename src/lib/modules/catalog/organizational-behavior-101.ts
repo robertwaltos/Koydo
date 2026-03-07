@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const OrganizationalBehavior101Module: LearningModule = {
+export const organizational_behavior_101_Module: LearningModule = {
   "id": "organizational-behavior-101",
   "title": "Foundations of Organizational Behavior",
   "description": "Explore how individuals think, feel, and act within organizations. Master key theories of motivation, personality, perception, and job satisfaction that explain why people behave the way they do at work.",
@@ -14,7 +14,7 @@ export const OrganizationalBehavior101Module: LearningModule = {
   ],
   "minAge": 18,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "beginner",
   "localeSupport": [
     "en",
@@ -22,13 +22,13 @@ export const OrganizationalBehavior101Module: LearningModule = {
   ],
   "thumbnail": "/placeholders/lesson-robot.svg",
   "learningObjectives": [
-    "Define organizational behavior and explain its importance for managers",
-    "Describe how perception and attribution shape workplace judgments",
-    "Identify the Big Five personality traits and their relevance to job performance",
-    "Compare and contrast major motivation theories including Maslow, Herzberg, and expectancy theory",
-    "Explain the determinants and consequences of job satisfaction",
-    "Analyze how attitudes and emotions influence workplace behavior",
-    "Apply OB concepts to real organizational scenarios"
+    "Define organizational behavior and explain its importance for managers.",
+    "Describe how perception and attribution shape workplace judgments.",
+    "Identify the Big Five personality traits and their relevance to job performance.",
+    "Compare and contrast major motivation theories including Maslow, Herzberg, and expectancy theory.",
+    "Explain the determinants and consequences of job satisfaction.",
+    "Analyze how attitudes and emotions influence workplace behavior.",
+    "Apply OB concepts to real organizational scenarios."
   ],
   "lessons": [
     {
@@ -37,50 +37,50 @@ export const OrganizationalBehavior101Module: LearningModule = {
       "type": "video",
       "duration": 12,
       "objectives": [
-        "Define organizational behavior as a field of study",
-        "Explain why OB matters for effective management",
-        "Identify the three levels of analysis in OB"
+        "Define organizational behavior as a field of study.",
+        "Explain why OB matters for effective management.",
+        "Identify the three levels of analysis in OB."
       ],
       "chunks": [
         {
           "id": "organizational-behavior-101-l01-c1",
           "title": "Defining Organizational Behavior",
-          "content": "Organizational behavior, commonly known as OB, is a fascinating field that explores how people act and interact in their workplaces. It examines the behaviors of individuals and groups, as well as how the overall structure of an organization can shape these behaviors. This study is not just based on personal opinions or instincts; instead, it relies on scientific research and evidence to understand what truly influences workplace dynamics. By integrating knowledge from various disciplines like psychology, which studies the mind and behavior; sociology, which looks at social relationships; social psychology, which focuses on how individuals influence and are influenced by others; and anthropology, which examines cultures and societies, OB provides a comprehensive view of human behavior in professional settings. The ultimate goal of studying organizational behavior is to enhance the effectiveness of organizations and foster a positive work environment where everyone can thrive and succeed together.\nContext recap: Organizational behavior, commonly known as OB, is a fascinating field that explores how people act and interact in their workplaces. It examines the behaviors of individuals and groups, as well as how the overall structure of an organization can shape these behaviors. This study is not just based on personal opinions or instincts; instead, it relies on scientific research and evidence to understand what truly influences workplace dynamics. By integrating knowledge from various disciplines like psychology, which studies the mind and behavior; sociology, which looks at social relationships; social psychology, which focuses on how individuals influence and are influenced by others; and anthropology, which examines cultures and societies, OB provides a comprehensive view of human behavior in professional settings."
+          "content": "Organizational behavior (OB) is the field of study that investigates the impact that individuals, groups, and structure have on behavior within organizations. It's not based on intuition; instead, OB uses systematic, evidence-based research to understand and predict workplace dynamics. [Visual: A central circle labeled 'Organizational Behavior' with arrows pointing to it from circles labeled 'Psychology,' 'Sociology,' 'Social Psychology,' and 'Anthropology.'] This interdisciplinary approach provides a comprehensive view of human behavior at work. The ultimate goal is to apply this knowledge toward improving an organization's effectiveness and creating a positive environment where employees can thrive."
         },
         {
           "id": "organizational-behavior-101-l01-c2",
-          "title": "Why OB Matters",
-          "content": "Understanding organizational behavior (OB) is incredibly important for managers because it helps them develop the skills necessary to inspire and motivate their teams effectively. For instance, a fascinating study conducted by Google, known as Project Oxygen, discovered that the most successful managers were not just those with technical expertise, but rather those who excelled in behavioral skills. These skills included coaching their team members, empowering them to take initiative, and showing genuine concern for their well-being. This means that a manager who takes the time to listen to their employees and support them can create a more positive and productive work environment. Furthermore, companies that invest in understanding human behavior and how it impacts the workplace often see better results than those that focus solely on financial metrics or operational efficiency. By prioritizing the human element, organizations can foster a culture of collaboration and innovation, leading to greater overall success. In summary, mastering organizational behavior is key for managers who want to lead their teams effectively and drive their organizations forward.\nContext recap: Understanding organizational behavior (OB) is incredibly important for managers because it helps them develop the skills necessary to inspire and motivate their teams effectively. For instance, a fascinating study conducted by Google, known as Project Oxygen, discovered that the most successful managers were not just those with technical expertise, but rather those who excelled in behavioral skills. These skills included coaching their team members, empowering them to take initiative, and showing genuine concern for their well-being. This means that a manager who takes the time to listen to their employees and support them can create a more positive and productive work environment."
+          "title": "Why OB Matters for Managers",
+          "content": "Understanding organizational behavior is critical for any manager. It provides the tools to motivate employees, lead teams, and manage change effectively. For example, Google's 'Project Oxygen' study found that their best managers weren't necessarily the ones with the most technical expertise. Instead, the most successful leaders excelled at behavioral skills like coaching, empowering their teams, and showing genuine concern for employee well-being. [Visual: A simple bar chart comparing 'Technical Skill' and 'Behavioral Skill' importance for top managers, with the behavioral skill bar being higher.] Companies that prioritize this human element often achieve better financial performance and higher rates of innovation. Mastering OB principles is key to becoming a more effective leader."
         },
         {
           "id": "organizational-behavior-101-l01-c3",
           "title": "Three Levels of Analysis",
-          "content": "Organizational behavior, often referred to as OB, is a fascinating field that studies how people behave within organizations. This examination occurs at three distinct levels: the individual, the group, and the organization as a whole. At the individual level, we explore important factors such as personality traits, motivation, and the ways in which individuals learn and adapt to their environments. Moving to the group level, we delve into the dynamics of teams, including how team members communicate with one another, the roles of leaders, and the nature of conflicts that may arise within groups and how they can be resolved effectively. Lastly, at the organizational level, we analyze the broader culture of the organization, its structural framework, and how it manages change over time. By understanding these three interconnected levels, managers can more accurately diagnose issues that may arise and design interventions that lead to positive outcomes for everyone involved in the organization.\nContext recap: Organizational behavior, often referred to as OB, is a fascinating field that studies how people behave within organizations. This examination occurs at three distinct levels: the individual, the group, and the organization as a whole. At the individual level, we explore important factors such as personality traits, motivation, and the ways in which individuals learn and adapt to their environments. Moving to the group level, we delve into the dynamics of teams, including how team members communicate with one another, the roles of leaders, and the nature of conflicts that may arise within groups and how they can be resolved effectively.\nWhy this matters: Three Levels of Analysis helps learners in Business connect ideas from Foundations of Organizational Behavior to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "To understand behavior in organizations, OB looks at three distinct levels. [Visual: A diagram showing three concentric circles or stacked blocks labeled 'Individual,' 'Group,' and 'Organizational.'] The first is the individual level, which focuses on topics like personality, perception, and motivation. The second is the group level, which explores team dynamics, communication, leadership, and conflict. Finally, the organizational level examines the bigger picture, including company culture, organizational structure, and how the organization adapts to change. By analyzing all three interconnected levels, managers can better diagnose problems and develop effective solutions."
         }
       ],
       "flashcards": [
         {
           "id": "organizational-behavior-101-l01-f1",
           "front": "Organizational Behavior (OB)",
-          "back": "The systematic study of how individuals, groups, and structures influence behavior within organizations — drawing from psychology, sociology, and anthropology"
+          "back": "The systematic study of how individuals, groups, and structures influence behavior within organizations, drawing from psychology, sociology, and anthropology."
         },
         {
           "id": "organizational-behavior-101-l01-f2",
           "front": "Why does OB matter for managers?",
-          "back": "It provides evidence-based tools for motivating employees, building teams, managing conflict, and leading change — going beyond intuition to improve organizational effectiveness"
+          "back": "It provides evidence-based tools for motivating employees, building teams, managing conflict, and leading change, improving overall organizational effectiveness."
         },
         {
           "id": "organizational-behavior-101-l01-f3",
           "front": "Three levels of OB analysis",
-          "back": "Individual (personality, motivation), Group (teams, leadership, conflict), and Organizational (culture, structure, change)"
+          "back": "Individual (personality, motivation), Group (teams, leadership, conflict), and Organizational (culture, structure, change)."
         }
       ],
       "learningAids": [
         {
           "id": "organizational-behavior-101-l01-a1",
           "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary of the lesson's main concept."
+          "title": "The Three Levels of OB",
+          "content": "A visual diagram illustrating the individual, group, and organizational levels of analysis."
         }
       ]
     },
@@ -90,50 +90,50 @@ export const OrganizationalBehavior101Module: LearningModule = {
       "type": "video",
       "duration": 13,
       "objectives": [
-        "Explain how perception influences workplace judgments",
-        "Describe common perceptual biases and errors",
-        "Apply attribution theory to explain behavior"
+        "Explain how perception influences workplace judgments.",
+        "Describe common perceptual biases and errors.",
+        "Apply attribution theory to explain behavior."
       ],
       "chunks": [
         {
           "id": "organizational-behavior-101-l02-c1",
           "title": "The Perception Process",
-          "content": "Perception is an intriguing process that helps us understand the world around us. It involves three key steps: selecting, organizing, and interpreting sensory information. This process is essential for making sense of our environment. In the context of a workplace, perception significantly influences how we view our coworkers, interpret feedback, and make important decisions. For example, imagine two managers observing the same employee during a meeting. Even though they are witnessing the same behavior, they might come to very different conclusions about the employee's performance. This difference arises because each manager's perception is shaped by their unique experiences, expectations, and biases. Understanding this concept is crucial, as it reminds us to be mindful of how our perceptions can affect our judgments and interactions with others. By recognizing the role of perception, we can strive to be more objective and fair in our evaluations of others, ultimately fostering a more positive and collaborative work environment.\nContext recap: Perception is an intriguing process that helps us understand the world around us. It involves three key steps: selecting, organizing, and interpreting sensory information. This process is essential for making sense of our environment. In the context of a workplace, perception significantly influences how we view our coworkers, interpret feedback, and make important decisions.\nWhy this matters: The Perception Process helps learners in Business connect ideas from Foundations of Organizational Behavior to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "Perception is the process by which we select, organize, and interpret sensory information to understand our environment. It's our personal lens for viewing reality. In the workplace, perception is crucial because it shapes how we judge coworkers, interpret feedback, and make decisions. [Visual: An illustration showing two managers observing an employee give a presentation. One manager's thought bubble says 'Confident and prepared!' while the other's says 'Arrogant and rehearsed!'] Even when observing the same event, two people can form very different conclusions because their perceptions are influenced by their unique experiences, expectations, and biases. Recognizing this helps us strive for more objective and fair evaluations."
         },
         {
           "id": "organizational-behavior-101-l02-c2",
           "title": "Common Perceptual Biases",
-          "content": "In a workplace setting, it's important to recognize that our perceptions can be influenced by various common biases, which may lead to misunderstandings about our colleagues. One of these biases is known as the halo effect. This occurs when we focus on one positive trait of a person, such as their friendliness or charm, and allow that trait to influence our overall judgment of them. For example, if someone is very charismatic, we might overlook their shortcomings because we are so impressed by their likable nature. On the flip side, we have the horns effect, which is when a single negative trait, like being unpunctual, can overshadow all of a person's positive qualities. This can lead us to unfairly judge someone based on just one aspect of their behavior. Another important bias is confirmation bias. This happens when we tend to look for information that supports our existing beliefs while ignoring any evidence that might contradict them. For instance, if we believe that a certain team member is not a good communicator, we might only pay attention to instances that confirm this belief, rather than considering the times they have communicated effectively. Recency bias is another factor to consider; it occurs when we give too much weight to recent events, which can skew our perception of someone's overall performance. Lastly, stereotyping involves applying general characteristics of a group to individuals, which can prevent us from seeing their unique qualities. By being aware of these biases, we can strive to make fairer and more accurate assessments of our colleagues, leading to a more harmonious and productive workplace environment.\nContext recap: In a workplace setting, it's important to recognize that our perceptions can be influenced by various common biases, which may lead to misunderstandings about our colleagues. One of these biases is known as the halo effect. This occurs when we focus on one positive trait of a person, such as their friendliness or charm, and allow that trait to influence our overall judgment of them. For example, if someone is very charismatic, we might overlook their shortcomings because we are so impressed by their likable nature.\nWhy this matters: Common Perceptual Biases helps learners in Business connect ideas from Foundations of Organizational Behavior to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "Our perceptions are often distorted by mental shortcuts, or biases, that can lead to inaccurate judgments. [Visual: A grid of icons representing different biases: a halo, devil horns, a magnifying glass over confirming evidence, and a person pointing to themselves.] Key biases include: the Halo Effect, where one positive trait colors our entire view of a person; the Horns Effect, where one negative trait does the opposite; Confirmation Bias, the tendency to seek out information that supports our existing beliefs; and Stereotyping, judging someone based on our perception of the group they belong to. Awareness of these biases is the first step toward overcoming them."
         },
         {
           "id": "organizational-behavior-101-l02-c3",
           "title": "Attribution Theory",
-          "content": "Attribution theory, created by Fritz Heider, is a fascinating concept that helps us understand how we make sense of why people behave the way they do. When we observe someone's actions, we often try to figure out if their behavior is influenced by internal factors, such as their personality traits or the amount of effort they put in, or if it is shaped by external factors, like the circumstances they find themselves in or even a bit of luck. To build on Heider's ideas, Harold Kelley introduced three key criteria that we can use to analyze behavior more effectively. The first criterion is consistency, which asks whether the person behaves this way all the time or only sometimes. The second is distinctiveness, which looks at whether the person acts this way only in this particular situation or in many different situations. Lastly, we have consensus, which examines whether other people behave similarly in the same context. It's important to be aware of a common mistake known as the fundamental attribution error. This is when we tend to focus too much on internal factors when judging others' behaviors, while we often blame external factors for our own mistakes. Understanding these concepts can help us improve our interactions and relationships with others, as we become more mindful of the reasons behind their actions and our own perceptions.\nContext recap: Attribution theory, created by Fritz Heider, is a fascinating concept that helps us understand how we make sense of why people behave the way they do. When we observe someone's actions, we often try to figure out if their behavior is influenced by internal factors, such as their personality traits or the amount of effort they put in, or if it is shaped by external factors, like the circumstances they find themselves in or even a bit of luck. To build on Heider's ideas, Harold Kelley introduced three key criteria that we can use to analyze behavior more effectively. The first criterion is consistency, which asks whether the person behaves this way all the time or only sometimes."
+          "content": "Attribution theory explains how we determine the causes of other people's behavior. We try to figure out if their actions were caused by internal factors (like their personality or effort) or external factors (like the situation or luck). To do this, we often unconsciously assess three criteria: consistency (do they always act this way?), distinctiveness (do they act this way in other situations?), and consensus (do others act this way in this situation?). However, we often fall prey to the fundamental attribution error: the tendency to overestimate internal factors when judging others, while blaming external factors for our own failures. [Visual: A split-screen image. On one side, a person points at a coworker who missed a deadline, with a thought bubble 'Lazy!'. On the other side, the same person misses a deadline, with a thought bubble 'The instructions were unclear!']"
         }
       ],
       "flashcards": [
         {
           "id": "organizational-behavior-101-l02-f1",
           "front": "Perception in OB",
-          "back": "The process of selecting, organizing, and interpreting information — it shapes how we evaluate coworkers, interpret feedback, and make workplace decisions"
+          "back": "The process of selecting, organizing, and interpreting information. It shapes how we evaluate coworkers, interpret feedback, and make workplace decisions."
         },
         {
           "id": "organizational-behavior-101-l02-f2",
           "front": "Halo effect vs. Horns effect",
-          "back": "Halo effect: one positive trait inflates overall evaluation. Horns effect: one negative trait unfairly lowers overall evaluation"
+          "back": "Halo effect: one positive trait inflates our overall evaluation. Horns effect: one negative trait unfairly lowers our overall evaluation."
         },
         {
           "id": "organizational-behavior-101-l02-f3",
           "front": "Fundamental attribution error",
-          "back": "The tendency to overemphasize internal causes (personality, effort) when explaining others' behavior while attributing our own failures to external circumstances"
+          "back": "The tendency to overemphasize internal causes (personality, effort) when explaining others' behavior while attributing our own failures to external circumstances."
         }
       ],
       "learningAids": [
         {
           "id": "organizational-behavior-101-l02-a1",
           "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary of the lesson's main concept."
+          "title": "Perceptual Biases Cheat Sheet",
+          "content": "A visual summary of common perceptual biases with simple icons and definitions."
         }
       ]
     },
@@ -143,50 +143,55 @@ export const OrganizationalBehavior101Module: LearningModule = {
       "type": "interactive",
       "duration": 14,
       "objectives": [
-        "Describe the Big Five personality model",
-        "Explain how personality traits predict job performance",
-        "Distinguish between Type A and Type B behavior patterns"
+        "Describe the Big Five personality model.",
+        "Explain how personality traits predict job performance.",
+        "Distinguish between Type A and Type B behavior patterns."
       ],
       "chunks": [
         {
           "id": "organizational-behavior-101-l03-c1",
           "title": "The Big Five Personality Traits",
-          "content": "The Big Five personality traits, often referred to as the OCEAN model, are essential concepts in understanding how individuals behave in organizations. These five dimensions help us to categorize and understand different personality types. The first trait, Openness to experience, is all about creativity and curiosity. People who score high in this area are often imaginative and willing to try new things. The second trait, Conscientiousness, relates to how dependable and organized a person is. Individuals who are high in this trait tend to be responsible and good at planning. The third trait is Extraversion, which describes how sociable and assertive someone is. Extraverts usually enjoy being around others and are often seen as outgoing. The fourth trait, Agreeableness, reflects a person's tendency to cooperate and build trust with others. Those who score high in this area are usually friendly and compassionate. Finally, Neuroticism refers to emotional instability and anxiety. Individuals with high levels of this trait may experience mood swings and stress more frequently. It’s important to remember that each of these traits exists on a spectrum, meaning everyone has different levels of each trait, which contributes to the rich variety of personalities we encounter in the workplace. Understanding these traits can help us work better with others and create a more harmonious work environment.\nContext recap: The Big Five personality traits, often referred to as the OCEAN model, are essential concepts in understanding how individuals behave in organizations. These five dimensions help us to categorize and understand different personality types. The first trait, Openness to experience, is all about creativity and curiosity. People who score high in this area are often imaginative and willing to try new things.\nWhy this matters: The Big Five Personality Traits helps learners in Business connect ideas from Foundations of Organizational Behavior to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "The most widely accepted personality framework is the Big Five model, often remembered by the acronym OCEAN. [Visual: The word OCEAN displayed vertically, with each letter starting a trait name and a simple icon next to it.] The five dimensions are: Openness to Experience (curiosity, creativity), Conscientiousness (organization, dependability), Extraversion (sociability, assertiveness), Agreeableness (cooperation, trustworthiness), and Neuroticism (emotional stability, anxiety). Each trait exists on a spectrum, and an individual's unique combination of these traits makes up their personality."
         },
         {
           "id": "organizational-behavior-101-l03-c2",
           "title": "Personality and Job Performance",
-          "content": "Research conducted by scholars Murray Barrick and Michael Mount has shown that conscientiousness is the strongest predictor of job performance across nearly all job types. This means that individuals who are dependable, organized, and responsible tend to perform better in their roles. For instance, if someone is conscientious, they are more likely to meet deadlines and produce high-quality work, which is essential in any job. Additionally, extraversion plays a significant role in success, especially in sales and management positions where social interaction is key. Extraverted individuals are often more outgoing and comfortable engaging with others, which helps them build relationships and motivate their teams. Openness to experience is another important trait; it is linked to how well someone adapts to new training and challenges. People who are open to new ideas and experiences are often more innovative and flexible in their work. Furthermore, emotional stability, which is the opposite of neuroticism, is crucial for handling high-stress jobs. Individuals with high emotional stability can manage their emotions effectively, which helps them stay calm and focused under pressure. Companies like Zappos have recognized the importance of personality assessments alongside skills evaluations to make better hiring decisions. By understanding the personality traits of potential employees, organizations can create teams that work well together and achieve greater success. This approach not only benefits the company but also helps employees find roles that suit their strengths and preferences, leading to a more satisfying work experience.\nContext recap: Research conducted by scholars Murray Barrick and Michael Mount has shown that conscientiousness is the strongest predictor of job performance across nearly all job types. This means that individuals who are dependable, organized, and responsible tend to perform better in their roles. For instance, if someone is conscientious, they are more likely to meet deadlines and produce high-quality work, which is essential in any job. Additionally, extraversion plays a significant role in success, especially in sales and management positions where social interaction is key.\nWhy this matters: Personality and Job Performance helps learners in Business connect ideas from Foundations of Organizational Behavior to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "Decades of research show a clear link between personality and job performance. The strongest predictor across almost all jobs is Conscientiousness. [Visual: A bar chart showing the predictive power of each Big Five trait on job performance, with the 'Conscientiousness' bar significantly taller than the others.] Dependable, organized, and persistent individuals simply perform better. Other traits are important for specific roles. For example, Extraversion is a good predictor of success in sales and management jobs, while Openness is linked to creativity and adaptability to training. Many companies now use personality assessments in hiring to improve job fit and team effectiveness."
         },
         {
           "id": "organizational-behavior-101-l03-c3",
-          "title": "Other Personality Frameworks",
-          "content": "In addition to the well-known Big Five personality traits, there are several other frameworks that help us understand how personality affects behavior in organizations. One of these is the Myers-Briggs Type Indicator (MBTI). This tool categorizes people into different personality types based on four key dimensions: how they focus their attention, how they take in information, how they make decisions, and how they approach the outside world. While the MBTI can be helpful for understanding different personality types, it is important to remember that it has not been supported by as much research as the Big Five model.\nAnother important concept is the locus of control, which was introduced by psychologist Julian Rotter. This idea helps us understand how people view their ability to influence events in their lives. Those with an internal locus of control believe that they can control their own outcomes through their actions and decisions. In contrast, individuals with an external locus of control feel that their lives are largely influenced by external factors like luck or fate.\nLastly, we have the concept of self-efficacy, developed by Albert Bandura. Self-efficacy refers to a person's belief in their ability to succeed in specific tasks. This belief can significantly impact motivation and performance in various situations, as individuals with high self-efficacy are more likely to take on challenges and persist in the face of difficulties. Understanding these frameworks can provide valuable insights into how personality influences behavior in the workplace and beyond.\nContext recap: In addition to the well-known Big Five personality traits, there are several other frameworks that help us understand how personality affects behavior in organizations. One of these is the Myers-Briggs Type Indicator (MBTI). This tool categorizes people into different personality types based on four key dimensions: how they focus their attention, how they take in information, how they make decisions, and how they approach the outside world. While the MBTI can be helpful for understanding different personality types, it is important to remember that it has not been supported by as much research as the Big Five model."
+          "title": "Type A and Type B Personalities",
+          "content": "Another way to look at personality is through Type A and Type B behavior patterns. [Visual: A split-screen graphic. Left side shows a stressed person looking at a clock, labeled 'Type A.' Right side shows a relaxed person, labeled 'Type B.'] Type A individuals are characterized by being competitive, impatient, and driven. They are often ambitious and work quickly, but can be prone to stress and conflict. In contrast, Type B individuals are more relaxed, patient, and easy-going. They tend to be less stressed and more reflective. While Type A's ambition can lead to success, especially in competitive fields, they may face greater health risks and interpersonal challenges than their Type B counterparts."
+        },
+        {
+          "id": "organizational-behavior-101-l03-c4",
+          "title": "Other Key Personality Concepts",
+          "content": "Beyond the Big Five, other concepts offer valuable insights. Locus of Control refers to the degree to which people believe they control their own fate. 'Internals' believe they control their destiny, while 'Externals' believe their lives are shaped by luck or outside forces. Self-Efficacy, a concept from Albert Bandura, is an individual's belief in their ability to succeed at a specific task. High self-efficacy is a powerful predictor of motivation and performance. While frameworks like the Myers-Briggs Type Indicator (MBTI) are popular, they have less research support for predicting job performance compared to the Big Five model."
         }
       ],
       "flashcards": [
         {
           "id": "organizational-behavior-101-l03-f1",
           "front": "Big Five (OCEAN) personality traits",
-          "back": "Openness, Conscientiousness, Extraversion, Agreeableness, Neuroticism — the most research-supported personality framework in organizational behavior"
+          "back": "Openness, Conscientiousness, Extraversion, Agreeableness, Neuroticism — the most research-supported personality framework in organizational behavior."
         },
         {
           "id": "organizational-behavior-101-l03-f2",
           "front": "Which Big Five trait best predicts job performance?",
-          "back": "Conscientiousness — research by Barrick and Mount shows it predicts performance across virtually all job types"
+          "back": "Conscientiousness. Research shows it predicts performance across virtually all job types due to its links with dependability, organization, and achievement-orientation."
         },
         {
           "id": "organizational-behavior-101-l03-f3",
-          "front": "Self-efficacy (Bandura)",
-          "back": "An individual's belief in their capacity to execute behaviors necessary to produce specific outcomes — strongly predicts motivation and performance"
+          "front": "Type A vs. Type B Personality",
+          "back": "Type A: Competitive, impatient, aggressive, and prone to stress. Type B: Relaxed, patient, and easy-going."
         }
       ],
       "learningAids": [
         {
           "id": "organizational-behavior-101-l03-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Follow the prompt sequence and document your reasoning."
+          "title": "Guided Practice: Personality Assessment",
+          "content": "Follow the prompt sequence to analyze a case study character's personality using the Big Five and Type A/B frameworks."
         }
       ]
     },
@@ -196,50 +201,50 @@ export const OrganizationalBehavior101Module: LearningModule = {
       "type": "video",
       "duration": 15,
       "objectives": [
-        "Explain Maslow's hierarchy of needs",
-        "Compare Herzberg's two-factor theory with Maslow's model",
-        "Apply Vroom's expectancy theory to workplace motivation"
+        "Explain Maslow's hierarchy of needs.",
+        "Compare Herzberg's two-factor theory with Maslow's model.",
+        "Apply Vroom's expectancy theory to workplace motivation."
       ],
       "chunks": [
         {
           "id": "organizational-behavior-101-l04-c1",
           "title": "Maslow's Hierarchy of Needs",
-          "content": "Abraham Maslow, a well-known psychologist, developed a theory that organizes human needs into a hierarchy with five distinct levels. At the base of this pyramid are physiological needs, which include essential requirements for survival such as food, water, and shelter. The next level is safety needs, which encompass the desire for security and stability in our lives, including personal safety and financial security. Moving up the hierarchy, we find social needs, which emphasize the importance of relationships, belonging, and friendship with others. The fourth level consists of esteem needs, which relate to our self-worth and the recognition we receive from others for our achievements. Finally, at the top of the pyramid is self-actualization, which represents the aspiration to reach our fullest potential and pursue personal growth. According to Maslow, individuals must first satisfy their lower-level needs before they can effectively focus on higher-level needs. In the workplace, for instance, providing fair wages can help meet physiological and safety needs, while creating an environment that offers meaningful work and opportunities for personal autonomy can help fulfill esteem and self-actualization needs, leading to a more motivated and engaged workforce.\nContext recap: Abraham Maslow, a well-known psychologist, developed a theory that organizes human needs into a hierarchy with five distinct levels. At the base of this pyramid are physiological needs, which include essential requirements for survival such as food, water, and shelter. The next level is safety needs, which encompass the desire for security and stability in our lives, including personal safety and financial security. Moving up the hierarchy, we find social needs, which emphasize the importance of relationships, belonging, and friendship with others.\nWhy this matters: Maslow's Hierarchy of Needs helps learners in Business connect ideas from Foundations of Organizational Behavior to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "Abraham Maslow proposed that human motivation is based on a hierarchy of five needs. [Visual: A pyramid diagram with five levels, from bottom to top: Physiological, Safety, Social, Esteem, Self-Actualization.] At the bottom are basic Physiological needs (food, water) and Safety needs (security, stability). Once these are met, we are motivated by Social needs (belonging, friendship), followed by Esteem needs (self-respect, recognition). At the very top is Self-Actualization, the drive to become the best version of ourselves. According to Maslow, a lower-level need must be substantially satisfied before the next level up becomes a primary motivator. For managers, this means understanding which needs their employees are trying to satisfy."
         },
         {
           "id": "organizational-behavior-101-l04-c2",
           "title": "Herzberg's Two-Factor Theory",
-          "content": "Frederick Herzberg, a well-known psychologist, identified two important types of factors that affect how satisfied people feel in their jobs: hygiene factors and motivators. Hygiene factors are things like salary, working conditions, job security, and company policies. These factors are essential because they help to prevent dissatisfaction among employees. For example, if a worker feels that their salary is too low or that their workplace is unsafe, they are likely to be unhappy. However, just having good hygiene factors does not guarantee that employees will feel satisfied or motivated in their roles.\nOn the other hand, motivators are the elements that truly inspire people and lead to a sense of fulfillment in their work. These include achievements, recognition for hard work, a sense of responsibility, opportunities for personal and professional growth, and the enjoyment of the work itself. When employees experience these motivators, they are more likely to feel satisfied and motivated to perform at their best.\nFor instance, simply giving employees a raise might solve some complaints about pay, but it doesn't necessarily encourage them to go above and beyond in their work. A great example of a company that understands this concept is 3M. They allow their engineers to spend a portion of their work time on creative projects, a practice known as the 15% rule. This approach has led to the development of innovative products, such as the famous Post-it Notes, showing how fostering creativity can lead to great results.\nContext recap: Frederick Herzberg, a well-known psychologist, identified two important types of factors that affect how satisfied people feel in their jobs: hygiene factors and motivators. Hygiene factors are things like salary, working conditions, job security, and company policies. These factors are essential because they help to prevent dissatisfaction among employees. For example, if a worker feels that their salary is too low or that their workplace is unsafe, they are likely to be unhappy.\nWhy this matters: Herzberg's Two-Factor Theory helps learners in Business connect ideas from Foundations of Organizational Behavior to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "Frederick Herzberg proposed a different view, suggesting that job satisfaction and dissatisfaction are not opposites. He identified two sets of factors. [Visual: A two-column chart. Left column is 'Hygiene Factors' leading to 'No Dissatisfaction' or 'Dissatisfaction.' Right column is 'Motivators' leading to 'Satisfaction' or 'No Satisfaction.'] Hygiene Factors, such as salary, company policies, and working conditions, can cause dissatisfaction if they are poor. However, improving them only brings an employee to a neutral state; it doesn't create satisfaction. True satisfaction comes from Motivators, which are intrinsic to the work itself, like achievement, recognition, responsibility, and personal growth. To motivate employees, managers must focus on enriching the job itself."
         },
         {
           "id": "organizational-behavior-101-l04-c3",
           "title": "Expectancy Theory",
-          "content": "Victor Vroom's expectancy theory provides an insightful way to understand what drives people to be motivated in their work. This theory highlights three important beliefs that influence motivation. The first belief is called expectancy. This is about whether a person thinks that if they put in the effort, they will be able to perform well. For instance, if a student studies hard for a test, they might believe that their effort will lead to a good grade. The second belief is known as instrumentality. This belief focuses on whether a person believes that performing well will lead to a reward. For example, if that same student thinks that getting a good grade will help them earn praise from their parents or a scholarship, they have high instrumentality. The last belief is called valence, which refers to how much a person values the reward they expect to receive. If the student really wants to impress their parents or achieve their academic goals, they have high valence. According to Vroom, motivation is the result of these three beliefs working together. If any one of these beliefs is missing or not strong enough, a person's motivation can drop significantly. For example, a sales representative might feel very confident in their ability to close deals (high expectancy) and really desire the bonus that comes with it (high valence), but if they are unsure whether the company will actually give them that bonus (low instrumentality), their motivation to work hard may decrease. Understanding these concepts can help individuals and organizations create environments that foster motivation and success.\nContext recap: Victor Vroom's expectancy theory provides an insightful way to understand what drives people to be motivated in their work. This theory highlights three important beliefs that influence motivation. The first belief is called expectancy. This is about whether a person thinks that if they put in the effort, they will be able to perform well.\nWhy this matters: Expectancy Theory helps learners in Business connect ideas from Foundations of Organizational Behavior to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "Victor Vroom's expectancy theory argues that an individual's motivation is a conscious choice based on three beliefs. [Visual: A simple flowchart: Effort → (Expectancy) → Performance → (Instrumentality) → Reward → (Valence).] The first is Expectancy: the belief that effort will lead to successful performance. The second is Instrumentality: the belief that successful performance will lead to a desired reward. The third is Valence: the value an individual places on that reward. Motivation is a product of all three (Motivation = E × I × V). If any one of these factors is zero, the overall motivation will be zero. Managers can boost motivation by strengthening these links, for example, by providing training (improving expectancy) or ensuring rewards are fair and valued (improving instrumentality and valence)."
         }
       ],
       "flashcards": [
         {
           "id": "organizational-behavior-101-l04-f1",
           "front": "Maslow's hierarchy of needs (5 levels)",
-          "back": "Physiological → Safety → Social → Esteem → Self-actualization. Lower needs must be substantially met before higher needs become motivating"
+          "back": "Physiological → Safety → Social → Esteem → Self-actualization. Lower needs must be substantially met before higher needs become motivating."
         },
         {
           "id": "organizational-behavior-101-l04-f2",
           "front": "Herzberg's two-factor theory",
-          "back": "Hygiene factors (salary, conditions) prevent dissatisfaction; Motivators (achievement, recognition, growth) create genuine satisfaction. Improving hygiene alone does not motivate"
+          "back": "Hygiene factors (salary, conditions) prevent dissatisfaction. Motivators (achievement, recognition, growth) create genuine satisfaction. Improving hygiene alone does not motivate."
         },
         {
           "id": "organizational-behavior-101-l04-f3",
           "front": "Vroom's expectancy theory (E × I × V)",
-          "back": "Motivation = Expectancy (can I do it?) × Instrumentality (will it lead to reward?) × Valence (do I value the reward?). If any factor is zero, motivation is zero"
+          "back": "Motivation = Expectancy (Can I do it?) × Instrumentality (Will it lead to a reward?) × Valence (Do I value the reward?). If any factor is zero, motivation is zero."
         }
       ],
       "learningAids": [
         {
           "id": "organizational-behavior-101-l04-a1",
           "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary of the lesson's main concept."
+          "title": "Comparing Motivation Theories",
+          "content": "A table comparing the core concepts of Maslow's, Herzberg's, and Vroom's theories side-by-side."
         }
       ]
     },
@@ -251,7 +256,7 @@ export const OrganizationalBehavior101Module: LearningModule = {
       "questions": [
         {
           "id": "organizational-behavior-101-l05-q1",
-          "text": "Which perceptual bias occurs when a single positive characteristic influences overall evaluation of a person?",
+          "text": "Which perceptual bias occurs when a single positive characteristic influences the overall evaluation of a person?",
           "options": [
             {
               "id": "a",
@@ -295,7 +300,7 @@ export const OrganizationalBehavior101Module: LearningModule = {
             }
           ],
           "correctOptionId": "d",
-          "explanation": "Herzberg classified achievement, recognition, growth, and the work itself as motivators that create genuine satisfaction. Salary, office space, and job security are hygiene factors — their absence causes dissatisfaction, but their presence does not truly motivate."
+          "explanation": "Herzberg classified achievement, recognition, growth, and the work itself as motivators that create genuine satisfaction. Salary, office space, and job security are hygiene factors—their absence causes dissatisfaction, but their presence does not truly motivate."
         },
         {
           "id": "organizational-behavior-101-l05-q3",
@@ -319,7 +324,7 @@ export const OrganizationalBehavior101Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Instrumentality is the belief that successful performance will actually result in the promised reward. Expectancy is the effort-to-performance link, valence is the value placed on the reward, and tools/resources are not part of Vroom's model."
+          "explanation": "Instrumentality is the belief that successful performance will actually result in the promised reward. Expectancy is the effort-to-performance link, and valence is the value placed on the reward."
         },
         {
           "id": "organizational-behavior-101-l05-q4",
@@ -343,7 +348,7 @@ export const OrganizationalBehavior101Module: LearningModule = {
             }
           ],
           "correctOptionId": "d",
-          "explanation": "Meta-analytic research by Barrick and Mount found that conscientiousness — being organized, dependable, and achievement-oriented — predicts performance across virtually all job types. Extraversion predicts performance mainly in social roles like sales."
+          "explanation": "Meta-analytic research has consistently found that conscientiousness—being organized, dependable, and achievement-oriented—predicts performance across virtually all job types. Extraversion predicts performance mainly in social roles like sales."
         }
       ]
     },
@@ -353,42 +358,42 @@ export const OrganizationalBehavior101Module: LearningModule = {
       "type": "video",
       "duration": 14,
       "objectives": [
-        "Define job satisfaction and its key determinants",
-        "Explain the relationship between attitudes and behavior",
-        "Describe the role of emotions and emotional labor at work"
+        "Define job satisfaction and its key determinants.",
+        "Explain the relationship between attitudes and behavior.",
+        "Describe the role of emotions and emotional labor at work."
       ],
       "chunks": [
         {
           "id": "organizational-behavior-101-l06-c1",
           "title": "Understanding Job Satisfaction",
-          "content": "Job satisfaction is a really important feeling that people have about their work. It describes the positive emotions that come up when someone thinks about their job and feels good about it. Edwin Locke, a well-known researcher in this area, explained job satisfaction as the happy feeling you get when you believe your job meets your important needs and values. There are several key factors that can influence how satisfied someone feels with their job.\nFirst, the type of work you do plays a big role. If your job is interesting, allows you to make choices, and feels meaningful, you are more likely to feel satisfied. Additionally, fair pay is crucial; when people feel they are compensated fairly for their efforts, they tend to be happier at work. Opportunities for promotions also matter a lot because they give employees a sense of growth and advancement in their careers.\nMoreover, the quality of supervision you receive is another important factor. Having a supportive and understanding manager can make a significant difference in how engaged and satisfied you feel at work. Lastly, the relationships you build with your coworkers can greatly impact your job satisfaction. Positive interactions and teamwork can create a more enjoyable work environment. Research by Gallup has shown that your immediate manager is often the single largest factor influencing your engagement and satisfaction at work. This means that having a good relationship with your manager can really enhance your overall job experience and make your work life much more fulfilling.\nContext recap: Job satisfaction is a really important feeling that people have about their work. It describes the positive emotions that come up when someone thinks about their job and feels good about it. Edwin Locke, a well-known researcher in this area, explained job satisfaction as the happy feeling you get when you believe your job meets your important needs and values. There are several key factors that can influence how satisfied someone feels with their job.\nWhy this matters: Understanding Job Satisfaction helps learners in Business connect ideas from Foundations of Organizational Behavior to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "Job satisfaction is a positive feeling about one's job resulting from an evaluation of its characteristics. It's how content an individual is with their work. [Visual: A central circle labeled 'Job Satisfaction' with arrows pointing to it from factors like 'The Work Itself,' 'Pay,' 'Supervision,' 'Coworkers,' and 'Promotion Opportunities.'] Key drivers include the nature of the work itself (is it interesting and meaningful?), fair pay and promotion opportunities, supportive supervision, and positive relationships with coworkers. Research consistently shows that a supportive immediate manager is one of the single largest factors influencing an employee's job satisfaction and engagement."
         },
         {
           "id": "organizational-behavior-101-l06-c2",
           "title": "Attitudes and Behavior at Work",
-          "content": "An attitude is a way of thinking or feeling about something, and it consists of three main parts: cognitive, affective, and behavioral. The cognitive part refers to what we believe or think about a situation. The affective part relates to how we feel about it, such as whether we are happy, sad, or excited. Lastly, the behavioral part is about how we act based on our beliefs and feelings. Sometimes, people experience a situation called cognitive dissonance. This happens when there is a conflict between what they believe and how they act, leading to an uncomfortable feeling. This discomfort can encourage individuals to change either their beliefs or their actions so that they feel more in harmony with themselves. Another important attitude in the workplace is organizational commitment. This term describes how attached someone feels to their organization. There are three forms of this commitment: affective commitment, which is the emotional bond you have with your workplace; continuance commitment, which considers what you would lose if you decided to leave; and normative commitment, which is the feeling of obligation to stay with the organization. Research shows that affective commitment is the strongest predictor of positive behaviors at work. This means that when people feel emotionally connected to their organization, they are more likely to perform well and contribute positively to their team and workplace environment.\nContext recap: An attitude is a way of thinking or feeling about something, and it consists of three main parts: cognitive, affective, and behavioral. The cognitive part refers to what we believe or think about a situation. The affective part relates to how we feel about it, such as whether we are happy, sad, or excited. Lastly, the behavioral part is about how we act based on our beliefs and feelings.\nWhy this matters: Attitudes and Behavior at Work helps learners in Business connect ideas from Foundations of Organizational Behavior to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "Attitudes are evaluative statements—either favorable or unfavorable—about objects, people, or events. They have three components: cognitive (a belief), affective (a feeling), and behavioral (an intention to act). [Visual: A triangle diagram with vertices labeled 'Cognitive,' 'Affective,' and 'Behavioral.'] Sometimes, our attitudes and behaviors are inconsistent, which creates a state of tension called cognitive dissonance. To reduce this discomfort, we may change our attitude or our behavior. A key work attitude is organizational commitment, which is the degree to which an employee identifies with an organization and its goals. Employees with strong affective commitment (an emotional attachment) are more likely to perform well and stay with the company."
         },
         {
           "id": "organizational-behavior-101-l06-c3",
           "title": "Emotions and Emotional Labor",
-          "content": "Emotions are powerful feelings that arise quickly in response to specific situations or events. For instance, you might feel joy when you receive good news or sadness when something disappointing happens. On the other hand, moods are broader feelings that can linger for a longer period of time. You might feel generally happy or a bit down for several hours or even days. A key concept introduced by researcher Arlie Hochschild is known as emotional labor. This term refers to the effort that individuals put into expressing the emotions that their jobs require, even if those emotions do not reflect their true feelings. For example, flight attendants are often expected to smile and maintain a cheerful demeanor, even when they are feeling tired or stressed. Similarly, nurses must remain calm and composed during emergencies, even if they are feeling anxious inside. Engaging in emotional labor over extended periods can lead to burnout and emotional exhaustion. This is especially true when there is a significant difference between how someone truly feels and how they are expected to behave. Recognizing this gap is crucial, as it can have a serious impact on employees' mental health and overall well-being. Workplaces should strive to understand and support their employees in managing emotional labor effectively, ensuring a healthier work environment for everyone.\nContext recap: Emotions are powerful feelings that arise quickly in response to specific situations or events. For instance, you might feel joy when you receive good news or sadness when something disappointing happens. On the other hand, moods are broader feelings that can linger for a longer period of time. You might feel generally happy or a bit down for several hours or even days.\nWhy this matters: Emotions and Emotional Labor helps learners in Business connect ideas from Foundations of Organizational Behavior to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "Emotions are intense, short-lived feelings directed at someone or something, while moods are longer-lasting and less intense feelings without a specific cause. In many jobs, employees are expected to manage their emotions. This is called emotional labor: the effort of displaying organizationally required emotions during interpersonal transactions. [Visual: An illustration of a service worker wearing a smiling mask, while their true face behind the mask looks tired or sad.] For example, flight attendants are expected to be cheerful and nurses must remain calm, regardless of their true feelings. A prolonged gap between felt emotions and displayed emotions can lead to stress, burnout, and emotional exhaustion."
         }
       ],
       "flashcards": [
         {
           "id": "organizational-behavior-101-l06-f1",
           "front": "Job satisfaction",
-          "back": "A positive emotional state from appraising one's job experience — influenced by work itself, pay equity, promotion chances, supervision quality, and coworker relationships"
+          "back": "A positive emotional state from appraising one's job experience. It's influenced by the work itself, pay, promotion chances, supervision, and coworkers."
         },
         {
           "id": "organizational-behavior-101-l06-f2",
           "front": "Three components of an attitude",
-          "back": "Cognitive (beliefs about the object), Affective (feelings toward it), and Behavioral (intention to act). Cognitive dissonance arises when these conflict"
+          "back": "Cognitive (beliefs), Affective (feelings), and Behavioral (intention to act). Cognitive dissonance arises when these conflict."
         },
         {
           "id": "organizational-behavior-101-l06-f3",
-          "front": "Emotional labor (Hochschild)",
-          "back": "The effort of displaying organizationally required emotions regardless of actual feelings — prolonged gaps between felt and displayed emotions can cause burnout"
+          "front": "Emotional labor",
+          "back": "The effort of displaying organizationally required emotions regardless of one's actual feelings. A prolonged gap between felt and displayed emotions can cause burnout."
         }
       ]
     },
@@ -448,7 +453,7 @@ export const OrganizationalBehavior101Module: LearningModule = {
         },
         {
           "id": "organizational-behavior-101-l07-q3",
-          "text": "Which form of organizational commitment is based on emotional attachment to the organization?",
+          "text": "Which form of organizational commitment is based on an emotional attachment to the organization?",
           "options": [
             {
               "id": "a",
@@ -468,7 +473,7 @@ export const OrganizationalBehavior101Module: LearningModule = {
             }
           ],
           "correctOptionId": "c",
-          "explanation": "Affective commitment reflects genuine emotional attachment and identification with the organization. Continuance commitment is based on the perceived costs of leaving, and normative commitment stems from a sense of obligation. Behavioral commitment is not a standard category in this model."
+          "explanation": "Affective commitment reflects genuine emotional attachment and identification with the organization. Continuance commitment is based on the perceived costs of leaving, and normative commitment stems from a sense of obligation."
         },
         {
           "id": "organizational-behavior-101-l07-q4",
@@ -492,7 +497,7 @@ export const OrganizationalBehavior101Module: LearningModule = {
             }
           ],
           "correctOptionId": "c",
-          "explanation": "Emotional labor (Hochschild) is the requirement to display certain emotions as part of one's job, regardless of actual feelings. This differs from cognitive dissonance (conflicting beliefs) and role ambiguity (unclear expectations)."
+          "explanation": "Emotional labor is the requirement to display certain emotions as part of one's job, regardless of actual feelings. This differs from cognitive dissonance (conflicting beliefs) and role ambiguity (unclear expectations)."
         }
       ]
     }

@@ -1,9 +1,9 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const MusicHistory201Module: LearningModule = {
+export const music_history_201_Module: LearningModule = {
   "id": "music-history-201",
-  "title": "Music History Applied Practice",
-  "description": "Level 201 curriculum in Music History, emphasizing historical periods, cultural exchange, style analysis, critical listening, and real-world decision quality through structured practice and assessment.",
+  "title": "Music History: Applied Practice",
+  "description": "A Level 201 curriculum in Music History, emphasizing the analysis of historical periods, cultural influences, and musical styles through critical listening and structured research methods.",
   "subject": "Music",
   "tags": [
     "core",
@@ -14,149 +14,149 @@ export const MusicHistory201Module: LearningModule = {
   ],
   "minAge": 14,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "intermediate",
   "localeSupport": [
     "en"
   ],
   "learningObjectives": [
-    "Develop rigorous mental models for historical periods and cultural exchange",
-    "Apply structured methods to plan, execute, and review style analysis tasks",
-    "Interpret evidence using metrics, constraints, and context",
-    "Diagnose common failure modes and design recovery actions",
-    "Communicate tradeoffs clearly to technical and non-technical audiences",
-    "Build repeatable systems for sustained improvement in Music History"
+    "Accurately define and differentiate major musical periods (e.g., Baroque, Classical, Romantic).",
+    "Apply structured research methods to analyze musical pieces and identify stylistic characteristics.",
+    "Evaluate primary and secondary sources to understand the cultural context of music.",
+    "Identify and avoid common errors in historical interpretation, such as anachronism.",
+    "Articulate how social, technological, and economic factors influenced musical development.",
+    "Develop a consistent methodology for forming and defending a historical argument."
   ],
   "lessons": [
     {
       "id": "music-history-201-l01",
-      "title": "Core Models for Music History",
+      "title": "Foundations of Music History Analysis",
       "type": "video",
       "duration": 13,
       "learningAids": [
         {
           "id": "music-history-201-l01-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use the structured prompt and write your reasoning before finalizing answers."
+          "title": "Historical Timeline",
+          "content": "Visualize a timeline of major musical periods. Note the overlapping years and consider why the boundaries are not always sharp."
         }
       ],
       "chunks": [
         {
           "id": "music-history-201-l01-c1",
           "kind": "concept",
-          "title": "Operating Vocabulary and Scope",
-          "content": "In our Music History 201 course, using clear and precise language is very important. This helps us communicate effectively and understand each other better. We will explore the boundaries of our study, which means we will define what topics we will cover and what we will not. Additionally, we will identify the main focus of our analysis, which is the specific aspect of music history we will be examining closely. To make sure everyone is on the same page, we will ensure that all teams use the same terms and vocabulary. This way, we can make fair comparisons and informed decisions across different teams working on music history, leading to a richer understanding of the subject. By establishing a common language, we can collaborate more effectively and deepen our insights into the fascinating world of music history."
+          "title": "Defining Periods, Styles, and Key Terms",
+          "content": "To study music history effectively, we need a shared vocabulary. We'll define the major historical periods (Baroque, Classical, Romantic, etc.) and discuss the key musical characteristics of each. This ensures that when we analyze a piece, we're all using the same framework to describe its style, form, and instrumentation, allowing for clear and accurate discussion."
         },
         {
           "id": "music-history-201-l01-c2",
           "kind": "concept",
-          "title": "Causal Thinking and Constraints",
-          "content": "To truly excel in Music History, it's essential to grasp the reasons behind historical events, not just their outcomes. In this lesson, we will explore our assumptions, dependencies, and constraints that shape our understanding of music. By doing this, we will learn how to focus on the root causes of issues rather than merely addressing the symptoms. This approach will lead us to a richer and deeper understanding of the evolution of music throughout history, allowing us to appreciate the intricate connections between different musical styles and cultural influences."
+          "title": "Cause and Effect in Musical Evolution",
+          "content": "Music doesn't change in a vacuum. We'll explore the 'why' behind musical evolution, examining the social, technological, and political factors that influenced composers. By understanding the root causes—like the invention of a new instrument or a shift in audience tastes—we can gain a much deeper appreciation for why music sounds the way it does in different eras."
         },
         {
           "id": "music-history-201-l01-c3",
           "kind": "recap",
-          "title": "Evidence and Accountability",
-          "content": "In this section, we will introduce the importance of evidence standards, maintaining a disciplined approach to logging information, and establishing clear accountability practices. These are essential for ensuring that our work in music history is reliable and trustworthy, allowing us to make informed decisions based on solid evidence.\nContext recap: In this section, we will introduce the importance of evidence standards, maintaining a disciplined approach to logging information, and establishing clear accountability practices. These are essential for ensuring that our work in music history is reliable and trustworthy, allowing us to make informed decisions based on solid evidence."
+          "title": "Working with Historical Evidence",
+          "content": "A historian's claims are only as strong as their evidence. We'll introduce the difference between primary sources (like a composer's original score) and secondary sources (like a biography). You'll learn the importance of citing your sources and building arguments based on verifiable facts, which is the foundation of trustworthy historical analysis."
         }
       ],
       "flashcards": [
         {
           "id": "music-history-201-l01-f1",
-          "front": "Unit of analysis",
-          "back": "The specific entity or process you evaluate to make defensible decisions."
+          "front": "Stylistic Analysis",
+          "back": "The process of identifying the characteristic features of a musical piece (harmony, melody, rhythm, form) to place it within a historical and cultural context."
         },
         {
           "id": "music-history-201-l01-f2",
-          "front": "Constraint mapping",
-          "back": "A method for identifying boundaries that shape feasible options."
+          "front": "Cultural Context",
+          "back": "The social, political, economic, and technological environment that shapes the creation and reception of music in a particular time and place."
         },
         {
           "id": "music-history-201-l01-f3",
-          "front": "Evidence standard",
-          "back": "The minimum quality threshold data must meet before action is taken."
+          "front": "Primary Source",
+          "back": "An original, first-hand account or artifact from the historical period being studied, such as a musical score, a letter from a composer, or a concert review."
         }
       ]
     },
     {
       "id": "music-history-201-l02",
-      "title": "Music History Workflow Lab",
+      "title": "A Historian's Workflow: From Question to Conclusion",
       "type": "interactive",
       "duration": 15,
       "learningAids": [
         {
           "id": "music-history-201-l02-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use the structured prompt and write your reasoning before finalizing answers."
+          "type": "image",
+          "title": "Research Flowchart",
+          "content": "Visualize the research process: Start with a question, gather evidence, analyze the evidence, form a conclusion, and review your argument."
         }
       ],
       "chunks": [
         {
           "id": "music-history-201-l02-c1",
           "kind": "practice",
-          "title": "Workflow Construction",
-          "content": "In this engaging interactive lab, students will work together to develop a detailed workflow that highlights the various historical periods and cultural exchanges that have influenced music over time. They will identify important inputs, such as significant musical styles and influential artists, and establish checkpoints to monitor their progress throughout the project. Additionally, students will define the expected outputs, like presentations or reports, and set up rollback triggers to help them troubleshoot and resolve any challenges they encounter along the way. This hands-on experience will deepen their understanding of how music evolves through different cultures and eras."
+          "title": "Building a Research Plan",
+          "content": "In this interactive lab, you will create a research plan to answer a historical question. You'll start by identifying what you need to know (e.g., key composers, influential pieces) and where to find information. You'll set checkpoints to review your progress and define what a successful final analysis (your 'output') will look like. This structured approach prevents wasted effort and leads to stronger conclusions."
         },
         {
           "id": "music-history-201-l02-c2",
           "kind": "recap",
-          "title": "Decision Logging",
-          "content": "In this recap, we will emphasize the importance of logging every decision made during our workflow. Each decision should be accompanied by a clear rationale, an expected outcome, and a verification point. This practice will enable us to analyze our decisions after the project is completed, helping us learn and improve for future projects.\nContext recap: In this recap, we will emphasize the importance of logging every decision made during our workflow. Each decision should be accompanied by a clear rationale, an expected outcome, and a verification point. This practice will enable us to analyze our decisions after the project is completed, helping us learn and improve for future projects."
+          "title": "Documenting Your Analysis",
+          "content": "As you research, it's crucial to document your findings and thought process. For every piece of evidence you collect, you should note why it's important and how it supports your ideas. This 'research log' not only helps you build a stronger final argument but also allows you to retrace your steps and learn from your process on future projects."
         }
       ],
       "interactiveActivities": [
         {
           "id": "music-history-201-l02-act1",
           "type": "matching_pairs",
-          "title": "Workflow Match",
-          "description": "Match each workflow component to its strongest governance function.",
+          "title": "Event and Impact",
+          "description": "Match the historical event to its most likely impact on music.",
           "pairs": [
             {
-              "left": "Input audit",
-              "right": "Prevents low-quality data from entering the system"
+              "left": "Invention of the printing press",
+              "right": "Wider distribution of sheet music to amateurs"
             },
             {
-              "left": "Checkpoint gate",
-              "right": "Stops propagation of known defects"
+              "left": "Rise of the public concert hall",
+              "right": "Composers write larger-scale symphonies"
             },
             {
-              "left": "Outcome metric",
-              "right": "Measures whether the objective was met"
+              "left": "Invention of the valved trumpet",
+              "right": "Orchestral brass sections can play more complex melodies"
             },
             {
-              "left": "Retrospective log",
-              "right": "Captures lessons for next iteration"
+              "left": "The Protestant Reformation",
+              "right": "Development of the chorale and congregational singing"
             }
           ]
         },
         {
           "id": "music-history-201-l02-act2",
           "type": "sorting_buckets",
-          "title": "Risk Classification",
-          "description": "Sort items into strategic, operational, and quality-risk groups.",
+          "title": "Period Characteristics",
+          "description": "Sort these musical characteristics into the correct historical period.",
           "buckets": [
-            "Strategic",
-            "Operational",
-            "Quality"
+            "Baroque",
+            "Classical",
+            "Romantic"
           ],
           "items": [
             {
-              "text": "Misaligned goals",
-              "bucket": "Strategic"
+              "text": "Use of Basso Continuo",
+              "bucket": "Baroque"
             },
             {
-              "text": "Unclear handoff timing",
-              "bucket": "Operational"
+              "text": "Clear, balanced phrases and form (e.g., sonata form)",
+              "bucket": "Classical"
             },
             {
-              "text": "Inconsistent acceptance criteria",
-              "bucket": "Quality"
+              "text": "Emphasis on emotional expression and individualism",
+              "bucket": "Romantic"
             },
             {
-              "text": "No benchmark baseline",
-              "bucket": "Quality"
+              "text": "Highly ornate and decorated melodies",
+              "bucket": "Baroque"
             }
           ]
         }
@@ -171,224 +171,224 @@ export const MusicHistory201Module: LearningModule = {
         {
           "id": "music-history-201-l03-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use the structured prompt and write your reasoning before finalizing answers."
+          "title": "Review Your Reasoning",
+          "content": "Before selecting an answer, briefly write down why you believe it is correct. This reinforces the concepts from the first two lessons."
         }
       ],
       "questions": [
         {
           "id": "music-history-201-l03-q1",
-          "text": "Which action best improves decisions in historical periods work?",
+          "text": "When analyzing a newly discovered manuscript, what is the best first step?",
           "skillId": "music-history-201-skill-core",
           "options": [
             {
               "id": "a",
-              "text": "Rely on one unverified example"
+              "text": "Assume it was written by a famous composer."
             },
             {
               "id": "b",
-              "text": "Define criteria, compare alternatives, and test assumptions"
+              "text": "Define criteria for analysis (e.g., harmony, form) and compare it to known styles."
             },
             {
               "id": "c",
-              "text": "Skip metrics and move directly to execution"
+              "text": "Immediately schedule a public performance."
             },
             {
               "id": "d",
-              "text": "Avoid documenting rationale"
+              "text": "Decide you like it, so its origin doesn't matter."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Explicit criteria and testable assumptions improve reliability and transferability."
+          "explanation": "A systematic approach using clear criteria ensures a reliable and defensible conclusion about the music's origin and style."
         },
         {
           "id": "music-history-201-l03-q2",
-          "text": "In cultural exchange, what is the strongest indicator of process quality?",
+          "text": "What is the strongest indicator of a high-quality research process in music history?",
           "skillId": "music-history-201-skill-process",
           "options": [
             {
               "id": "a",
-              "text": "Output speed only"
+              "text": "Finishing the research as quickly as possible."
             },
             {
               "id": "b",
-              "text": "Traceable steps, checkpoints, and measurable outcomes"
+              "text": "A research log showing clear steps, cited evidence, and a logical argument."
             },
             {
               "id": "c",
-              "text": "Unstructured iteration without logs"
+              "text": "Using only one secondary source for all information."
             },
             {
               "id": "d",
-              "text": "One-time performance anecdotes"
+              "text": "A conclusion based only on the historian's personal feelings."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Quality processes are observable, repeatable, and measurable."
+          "explanation": "A quality process is transparent, repeatable, and based on verifiable evidence, as documented in a research log."
         },
         {
           "id": "music-history-201-l03-q3",
-          "text": "When evaluating style analysis, which practice supports trustworthy conclusions?",
+          "text": "When arguing that a composer was influenced by another, what is the most trustworthy practice?",
           "skillId": "music-history-201-skill-eval",
           "options": [
             {
               "id": "a",
-              "text": "Ignore edge cases"
+              "text": "Ignore any evidence that contradicts your theory."
             },
             {
               "id": "b",
-              "text": "Use baseline comparisons and failure analysis"
+              "text": "Compare specific musical examples and cite letters or documents showing a connection."
             },
             {
               "id": "c",
-              "text": "Change targets after results are known"
+              "text": "State that since the composers lived at the same time, they must have been influenced."
             },
             {
               "id": "d",
-              "text": "Remove context from findings"
+              "text": "Change your definition of 'influence' after seeing the evidence."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Baselines and failure analysis prevent overclaiming and improve design quality."
+          "explanation": "Strong historical arguments rely on specific, verifiable evidence from both musical and documentary sources."
         },
         {
           "id": "music-history-201-l03-q4",
-          "text": "A mature critical listening strategy should prioritize:",
+          "text": "A mature approach to studying the music of a historical period should prioritize:",
           "skillId": "music-history-201-skill-strategy",
           "options": [
             {
               "id": "a",
-              "text": "Single-metric optimization at any cost"
+              "text": "Focusing only on the one most famous composer."
             },
             {
               "id": "b",
-              "text": "Balanced outcomes across quality, risk, and sustainability"
+              "text": "A balanced understanding of the music, its cultural context, and its historical significance."
             },
             {
               "id": "c",
-              "text": "Decisions based only on intuition"
+              "text": "Listening to the music without any historical context."
             },
             {
               "id": "d",
-              "text": "No post-implementation review"
+              "text": "Never reviewing or questioning initial conclusions."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Balanced scorecards align long-term performance with accountability."
+          "explanation": "A comprehensive understanding connects the music itself with the world in which it was created."
         }
       ]
     },
     {
       "id": "music-history-201-l04",
-      "title": "Methods, Metrics, and Failure Modes in Music History",
+      "title": "Analytical Tools and Common Pitfalls",
       "type": "video",
       "duration": 14,
       "learningAids": [
         {
           "id": "music-history-201-l04-a1",
-          "type": "mnemonic",
-          "title": "Guided Practice",
-          "content": "Use the structured prompt and write your reasoning before finalizing answers."
+          "type": "image",
+          "title": "Analytical Lenses",
+          "content": "Imagine looking at a piece of music through different lenses: one for harmony, one for form, and one for social context. Each lens reveals something new."
         }
       ],
       "chunks": [
         {
           "id": "music-history-201-l04-c1",
           "kind": "concept",
-          "title": "Method Selection",
-          "content": "When we choose methods for our music history projects, it's important to think about several key factors. First, we should consider any constraints we might face, such as time limits or available resources. Next, we need to evaluate the quality of the information we have; is it reliable and accurate? Lastly, we must think about the potential cost of errors—what could go wrong if we choose the wrong method? In this lesson, students will explore and compare different methods, discussing why certain approaches are better suited for specific situations in music history. This will help us make informed decisions in our projects."
+          "title": "Choosing Your Analytical Lens",
+          "content": "There are many ways to analyze music. You could focus on the notes themselves (formal analysis), the composer's life (biographical analysis), or the society it came from (socio-cultural analysis). We'll explore these different 'lenses' and discuss how to choose the best one for your research question. The right tool helps you uncover the most relevant insights."
         },
         {
           "id": "music-history-201-l04-c2",
           "kind": "example",
-          "title": "Metric Architecture",
-          "content": "In this example, we will delve into the concept of metric architecture and how it serves as a vital tool in music history projects. A metric architecture connects three important elements: leading indicators, which are early signs of progress; lagging outcomes, which reflect the results of our efforts; and diagnostic measures, which help us understand what is happening. By using this framework, teams can spot any changes or deviations from their goals early on. This allows them to respond thoughtfully and make necessary adjustments, ensuring they remain focused and successful in their exploration of music history."
+          "title": "Tracking Musical Change Over Time",
+          "content": "How can we measure the evolution from Classical to Romantic music? We can track specific musical 'metrics.' For example, we can observe the increasing use of chromaticism (leading indicator), which results in more emotionally intense music (lagging outcome). By tracking these changes systematically, we can pinpoint when and how stylistic shifts occurred."
         },
         {
           "id": "music-history-201-l04-c3",
           "kind": "recap",
-          "title": "Failure Taxonomy",
-          "content": "In this recap, we will categorize failures into four main groups: data, process, execution, and governance. By organizing failures this way, we can create specific plans to address each type of failure, rather than using a one-size-fits-all approach. This targeted strategy will help us improve our music history practices.\nContext recap: In this recap, we will categorize failures into four main groups: data, process, execution, and governance. By organizing failures this way, we can create specific plans to address each type of failure, rather than using a one-size-fits-all approach. This targeted strategy will help us improve our music history practices."
+          "title": "Avoiding Common Errors in Interpretation",
+          "content": "Good historians are aware of common traps. We'll create a 'taxonomy of errors' including anachronism (judging the past by modern standards), oversimplification (ignoring complexity), and confirmation bias (only seeing evidence that supports your theory). By learning to recognize these pitfalls, you can make your own analysis more accurate and nuanced."
         }
       ],
       "flashcards": [
         {
           "id": "music-history-201-l04-f1",
-          "front": "Leading indicator",
-          "back": "A metric that signals probable future outcomes before final results appear."
+          "front": "Formal Analysis",
+          "back": "The study of a musical work's structure, including its melody, harmony, rhythm, and form, independent of its external context."
         },
         {
           "id": "music-history-201-l04-f2",
-          "front": "Failure taxonomy",
-          "back": "A structured classification of failure types used to design targeted fixes."
+          "front": "Anachronism",
+          "back": "A common historical error where ideas, terms, or values from the present are incorrectly applied to the past."
         },
         {
           "id": "music-history-201-l04-f3",
-          "front": "Cost of error",
-          "back": "The operational, financial, or social impact caused by an incorrect decision."
+          "front": "Leitmotif",
+          "back": "A recurring musical theme, associated with a particular person, place, or idea, often used as a tool for tracking narrative and dramatic development."
         }
       ]
     },
     {
       "id": "music-history-201-l05",
-      "title": "Case Studio: Improve a Music History System",
+      "title": "Case Study: The Transition from Baroque to Classical",
       "type": "interactive",
       "duration": 16,
       "learningAids": [
         {
           "id": "music-history-201-l05-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use the structured prompt and write your reasoning before finalizing answers."
+          "title": "Build Your Argument",
+          "content": "Use the provided evidence to construct a short, structured argument. State your claim, provide two pieces of supporting evidence, and write a concluding sentence."
         }
       ],
       "chunks": [
         {
           "id": "music-history-201-l05-c1",
           "kind": "practice",
-          "title": "Case Decomposition",
-          "content": "In this interactive case study, we will break down a realistic scenario into its key components: objectives, context, constraints, and possible intervention options. We will also include notes on the trade-offs involved in each option, helping learners understand the complexities of decision-making in music history.\nContext recap: In this interactive case study, we will break down a realistic scenario into its key components: objectives, context, constraints, and possible intervention options. We will also include notes on the trade-offs involved in each option, helping learners understand the complexities of decision-making in music history."
+          "title": "Analyzing the Transition",
+          "content": "In this interactive case study, we'll examine music from the mid-18th century, a time of great change. You'll be presented with musical excerpts and historical documents from composers like C.P.E. Bach. Your task is to analyze the evidence to identify both lingering Baroque traits and emerging Classical characteristics, understanding the trade-offs composers made."
         },
         {
           "id": "music-history-201-l05-c2",
           "kind": "recap",
-          "title": "Improvement Proposal",
-          "content": "In this recap, learners will present a structured improvement proposal based on the case study. This proposal will include clear success criteria, a mapping of responsibilities, and a timeline for follow-up actions. This exercise will help learners practice how to effectively communicate their ideas for improvement in music history systems.\nContext recap: In this recap, learners will present a structured improvement proposal based on the case study. This proposal will include clear success criteria, a mapping of responsibilities, and a timeline for follow-up actions. This exercise will help learners practice how to effectively communicate their ideas for improvement in music history systems."
+          "title": "Formulating a Historical Argument",
+          "content": "Based on your analysis, you will formulate a clear historical argument. Your proposal will state a thesis about the Baroque-Classical transition, define the criteria you used to judge the music, and outline the key evidence that supports your conclusion. This exercise hones your ability to turn raw analysis into a persuasive, evidence-based narrative."
         }
       ],
       "interactiveActivities": [
         {
           "id": "music-history-201-l05-act1",
           "type": "scenario_practice",
-          "title": "Decision Path Simulation",
-          "description": "Choose among three interventions to improve style analysis outcomes under time and quality constraints.",
+          "title": "Classify a Transitional Piece",
+          "description": "You are analyzing a keyboard sonata by C.P.E. Bach. Based on the evidence, argue whether it is best classified as late Baroque or early Classical.",
           "instructions": [
-            "Define success criteria before selecting an intervention.",
-            "Document one short-term tradeoff and one long-term benefit.",
-            "Specify a metric that confirms success in the next cycle."
+            "Define your criteria for 'Baroque' and 'Classical' before you begin.",
+            "Document one musical feature that supports a 'Baroque' classification and one that supports a 'Classical' one.",
+            "State your final conclusion and briefly justify your choice."
           ]
         },
         {
           "id": "music-history-201-l05-act2",
           "type": "matching_pairs",
-          "title": "Intervention to Outcome Mapping",
-          "description": "Connect interventions with the most likely system-level effects.",
+          "title": "Style to Period Mapping",
+          "description": "Connect the musical characteristic with its primary historical style.",
           "pairs": [
             {
-              "left": "Tighter intake criteria",
-              "right": "Higher signal quality and lower downstream rework"
+              "left": "Terraced dynamics (abrupt shifts from loud to soft)",
+              "right": "Baroque"
             },
             {
-              "left": "Checkpoint automation",
-              "right": "Faster detection of preventable defects"
+              "left": "Alberti bass accompaniment",
+              "right": "Classical"
             },
             {
-              "left": "Post-run retrospective",
-              "right": "Improved adaptation in later cycles"
+              "left": "Long, flowing, and complex melodic lines",
+              "right": "Baroque"
             },
             {
-              "left": "Cross-team briefing",
-              "right": "Reduced ambiguity at handoff boundaries"
+              "left": "Symmetrical and balanced melodic phrases",
+              "right": "Classical"
             }
           ]
         }
@@ -396,117 +396,117 @@ export const MusicHistory201Module: LearningModule = {
     },
     {
       "id": "music-history-201-l06",
-      "title": "Checkpoint 2: Systems Reasoning",
+      "title": "Checkpoint 2: Systems and Reasoning",
       "type": "quiz",
       "duration": 10,
       "learningAids": [
         {
           "id": "music-history-201-l06-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use the structured prompt and write your reasoning before finalizing answers."
+          "title": "Justify Your Answer",
+          "content": "For each question, identify the key analytical skill being tested (e.g., identifying bias, selecting evidence, forming a conclusion)."
         }
       ],
       "questions": [
         {
           "id": "music-history-201-l06-q1",
-          "text": "Which action best improves decisions in historical periods work?",
+          "text": "When analyzing a symphony, which 'analytical lens' would be best for understanding its overall structure and key relationships?",
           "skillId": "music-history-201-skill-core",
           "options": [
             {
               "id": "a",
-              "text": "Rely on one unverified example"
+              "text": "Biographical, focusing only on the composer's personal life."
             },
             {
               "id": "b",
-              "text": "Define criteria, compare alternatives, and test assumptions"
+              "text": "Formal, focusing on sonata form, thematic development, and key areas."
             },
             {
               "id": "c",
-              "text": "Skip metrics and move directly to execution"
+              "text": "Economic, focusing only on how much the composer was paid."
             },
             {
               "id": "d",
-              "text": "Avoid documenting rationale"
+              "text": "Anachronistic, focusing on how it sounds like a modern film score."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Explicit criteria and testable assumptions improve reliability and transferability."
+          "explanation": "Formal analysis is the tool specifically designed to understand the internal structure and logic of a musical work."
         },
         {
           "id": "music-history-201-l06-q2",
-          "text": "In cultural exchange, what is the strongest indicator of process quality?",
+          "text": "A historian claims Beethoven's 5th Symphony is about 'fate knocking at the door' based only on a story told after his death. This conclusion is weak because it lacks:",
           "skillId": "music-history-201-skill-process",
           "options": [
             {
               "id": "a",
-              "text": "Output speed only"
+              "text": "A good story."
             },
             {
               "id": "b",
-              "text": "Traceable steps, checkpoints, and measurable outcomes"
+              "text": "Corroboration from a primary source, like a letter or note from Beethoven himself."
             },
             {
               "id": "c",
-              "text": "Unstructured iteration without logs"
+              "text": "A faster tempo."
             },
             {
               "id": "d",
-              "text": "One-time performance anecdotes"
+              "text": "A more famous person to tell the story."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Quality processes are observable, repeatable, and measurable."
+          "explanation": "Historical claims are strongest when supported by primary sources from the period, rather than later anecdotes."
         },
         {
           "id": "music-history-201-l06-q3",
-          "text": "When evaluating style analysis, which practice supports trustworthy conclusions?",
+          "text": "Which of the following is an example of an anachronistic error in analysis?",
           "skillId": "music-history-201-skill-eval",
           "options": [
             {
               "id": "a",
-              "text": "Ignore edge cases"
+              "text": "Analyzing the harmony of a Bach fugue."
             },
             {
               "id": "b",
-              "text": "Use baseline comparisons and failure analysis"
+              "text": "Criticizing a 16th-century composer for not using the complex harmonies of the Romantic era."
             },
             {
               "id": "c",
-              "text": "Change targets after results are known"
+              "text": "Noting the influence of folk music on a Classical symphony."
             },
             {
               "id": "d",
-              "text": "Remove context from findings"
+              "text": "Comparing the orchestration of two composers from the same period."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Baselines and failure analysis prevent overclaiming and improve design quality."
+          "explanation": "Anachronism is the error of judging a past work by the standards and knowledge of a later period."
         },
         {
           "id": "music-history-201-l06-q4",
-          "text": "A mature critical listening strategy should prioritize:",
+          "text": "A mature strategy for analyzing a complex historical period like the early 20th century should prioritize:",
           "skillId": "music-history-201-skill-strategy",
           "options": [
             {
               "id": "a",
-              "text": "Single-metric optimization at any cost"
+              "text": "Deciding on one 'correct' style and ignoring all others."
             },
             {
               "id": "b",
-              "text": "Balanced outcomes across quality, risk, and sustainability"
+              "text": "Understanding the multiple, often conflicting, styles (e.g., Impressionism, Expressionism, Neoclassicism) that co-existed."
             },
             {
               "id": "c",
-              "text": "Decisions based only on intuition"
+              "text": "Assuming all composers were trying to do the same thing."
             },
             {
               "id": "d",
-              "text": "No post-implementation review"
+              "text": "Focusing only on music written before the year 1900."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Balanced scorecards align long-term performance with accountability."
+          "explanation": "Mature historical analysis acknowledges and explores the complexity and diversity of a period, rather than oversimplifying it."
         }
       ]
     }

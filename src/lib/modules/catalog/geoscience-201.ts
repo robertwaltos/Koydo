@@ -1,9 +1,9 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const Geoscience201Module: LearningModule = {
+export const geoscience_201_Module: LearningModule = {
   "id": "geoscience-201",
   "title": "Geoscience Applied Practice",
-  "description": "Level 201 curriculum in Geoscience, centered on tectonic and surface processes, earth materials analysis, hazard and risk interpretation, and resource and stewardship governance through case analysis, simulation, and checkpoint-driven mastery.",
+  "description": "A level 201 curriculum in Geoscience focusing on how Earth's crust moves and its surface changes. You'll learn to analyze earth materials, interpret natural hazards, and manage resources responsibly through case studies and simulations.",
   "subject": "Earth Science",
   "tags": [
     "core",
@@ -14,19 +14,19 @@ export const Geoscience201Module: LearningModule = {
   ],
   "minAge": 15,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "intermediate",
   "localeSupport": [
     "en",
     "es"
   ],
   "learningObjectives": [
-    "Explain and apply tectonic and surface processes under practical constraints",
-    "Build repeatable workflows for earth materials analysis with measurable controls",
-    "Evaluate interventions in hazard and risk interpretation using comparative evidence",
-    "Operationalize resource and stewardship governance with transparent governance loops",
-    "Communicate uncertainty, risk, and tradeoffs clearly to mixed stakeholders",
-    "Defend decisions through evidence-backed reasoning and post-run review"
+    "Explain how tectonic forces and surface processes shape the Earth and apply this knowledge to real-world scenarios.",
+    "Develop a systematic process for analyzing rocks and minerals, ensuring your results are reliable.",
+    "Assess different strategies for managing natural hazards, like earthquakes or landslides, by comparing their effectiveness.",
+    "Create fair and transparent plans for managing natural resources, considering the needs of the environment and community.",
+    "Clearly explain geological risks and the pros and cons of different decisions to various audiences.",
+    "Justify your geological recommendations using scientific evidence and reflect on the outcomes."
   ],
   "lessons": [
     {
@@ -37,9 +37,9 @@ export const Geoscience201Module: LearningModule = {
       "learningAids": [
         {
           "id": "geoscience-201-l01-a1",
-          "type": "image",
-          "title": "Guided Practice",
-          "content": "Use structured reasoning, map tradeoffs, and verify outcomes with metrics before finalizing."
+          "type": "diagram",
+          "title": "Core Concepts Map",
+          "content": "A concept map showing the core areas of Geoscience: Tectonic Processes, Surface Processes, Earth Materials, and Hazard Analysis."
         }
       ],
       "chunks": [
@@ -47,36 +47,36 @@ export const Geoscience201Module: LearningModule = {
           "id": "geoscience-201-l01-c1",
           "kind": "concept",
           "title": "Scope and Vocabulary",
-          "content": "In this lesson, we will work together to build a common vocabulary that everyone can use when discussing Geoscience. This shared language is essential for clear communication and understanding. We will also outline the key areas we will explore throughout our studies. These areas include tectonic movements, which are the shifts and changes in the Earth's crust, surface processes that shape our landscapes, and the examination of various earth materials, such as rocks and minerals. By defining these topics, we can better understand the scope of our discussions and the exciting concepts we will learn about in Geoscience."
+          "content": "In this lesson, we will build a common vocabulary for discussing Geoscience. This shared language is essential for clear communication. We will outline the key areas we will explore, including the movement of Earth's crust (tectonics), the processes that shape our landscapes, and the analysis of materials like rocks and minerals. Defining these topics helps us understand the scope of our studies."
         },
         {
           "id": "geoscience-201-l01-c2",
           "kind": "concept",
-          "title": "Causal Reasoning",
-          "content": "In this part of the lesson, students will learn how to identify and map out the relationships between different causes and effects. They will explore the assumptions we make and the limitations we face when designing interventions. This understanding is crucial for developing effective solutions in Geoscience.\nContext recap: In this part of the lesson, students will learn how to identify and map out the relationships between different causes and effects. They will explore the assumptions we make and the limitations we face when designing interventions. This understanding is crucial for developing effective solutions in Geoscience."
+          "title": "Cause and Effect",
+          "content": "In this part of the lesson, you will learn how to identify and map the relationships between causes and effects in geological systems. We will explore the assumptions we make and the limitations we face when planning actions or solutions. This understanding is crucial for developing effective strategies in Geoscience."
         },
         {
           "id": "geoscience-201-l01-c3",
           "kind": "recap",
-          "title": "Evidence Standards",
-          "content": "In Geoscience, it is important to support our claims with solid evidence. This means that we will use measurable indicators to back up what we say. Additionally, we will establish confidence ranges and set up review checkpoints to ensure that our findings are reliable and can be trusted.\nContext recap: In Geoscience, it is important to support our claims with solid evidence. This means that we will use measurable indicators to back up what we say. Additionally, we will establish confidence ranges and set up review checkpoints to ensure that our findings are reliable and can be trusted."
+          "title": "Using Evidence",
+          "content": "In Geoscience, it is important to support claims with solid evidence. This means using measurable data to back up our statements. We will also learn to establish confidence ranges for our findings and set up review checkpoints to ensure our work is reliable and can be trusted."
         }
       ],
       "flashcards": [
         {
           "id": "geoscience-201-l01-f1",
-          "front": "tectonic and surface processes",
-          "back": "A core decision lens in Geoscience requiring explicit assumption control."
+          "front": "Tectonic and Surface Processes",
+          "back": "The large-scale movements of Earth's crust (tectonics) and the processes like erosion and weathering that shape the land (surface processes)."
         },
         {
           "id": "geoscience-201-l01-f2",
-          "front": "earth materials analysis",
-          "back": "Execution systems that determine reliability and repeatability."
+          "front": "Earth Materials Analysis",
+          "back": "The systematic study of rocks, minerals, and soils to understand their properties and history."
         },
         {
           "id": "geoscience-201-l01-f3",
-          "front": "hazard and risk interpretation",
-          "back": "Evaluation process for distinguishing real gains from superficial wins."
+          "front": "Hazard and Risk Interpretation",
+          "back": "The process of evaluating potential dangers from natural events (hazards) and their potential impact on people and property (risk)."
         }
       ]
     },
@@ -88,31 +88,31 @@ export const Geoscience201Module: LearningModule = {
       "learningAids": [
         {
           "id": "geoscience-201-l02-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use structured reasoning, map tradeoffs, and verify outcomes with metrics before finalizing."
+          "type": "diagram",
+          "title": "Workflow Template",
+          "content": "A blank flowchart template for students to map out a process, including decision points, actions, and outcomes."
         }
       ],
       "chunks": [
         {
           "id": "geoscience-201-l02-c1",
           "kind": "practice",
-          "title": "Workflow Build",
-          "content": "In this interactive activity, students will work together to create a workflow. This involves mapping out who is responsible for different tasks, setting up control gates to monitor progress, and defining measurable outcomes to assess success. This hands-on experience will help students understand how workflows function in real-world scenarios.\nContext recap: In this interactive activity, students will work together to create a workflow. This involves mapping out who is responsible for different tasks, setting up control gates to monitor progress, and defining measurable outcomes to assess success. This hands-on experience will help students understand how workflows function in real-world scenarios."
+          "title": "Building a Process",
+          "content": "In this interactive activity, you will work together to create a workflow. This involves mapping out who is responsible for different tasks, setting up quality-control gates to monitor progress, and defining measurable outcomes to assess success. This hands-on experience will help you understand how organized processes function in real-world scenarios."
         },
         {
           "id": "geoscience-201-l02-c2",
           "kind": "recap",
-          "title": "Readiness and Rollback",
-          "content": "In this recap, we will discuss how systems can be tested under stress to identify potential failure points. Students will learn about rollback decision thresholds, which are important for knowing when to revert to a previous state if things do not go as planned. This knowledge is essential for ensuring the reliability of geoscience systems.\nContext recap: In this recap, we will discuss how systems can be tested under stress to identify potential failure points. Students will learn about rollback decision thresholds, which are important for knowing when to revert to a previous state if things do not go as planned. This knowledge is essential for ensuring the reliability of geoscience systems."
+          "title": "Testing and Safety Nets",
+          "content": "In this recap, we will discuss how systems can be stress-tested to identify potential failure points. You will learn about setting thresholds for when to 'roll back' or revert to a previous state if things do not go as planned. This knowledge is essential for ensuring the reliability of geoscience projects."
         }
       ],
       "interactiveActivities": [
         {
           "id": "geoscience-201-l02-act1",
           "type": "matching_pairs",
-          "title": "Control Mapping",
-          "description": "Match each control to its strongest reliability or governance effect.",
+          "title": "Matching Processes to Goals",
+          "description": "Match each control process to its primary benefit for reliability or governance.",
           "pairs": [
             {
               "left": "Pre-commit review",
@@ -142,99 +142,99 @@ export const Geoscience201Module: LearningModule = {
       "learningAids": [
         {
           "id": "geoscience-201-l03-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use structured reasoning, map tradeoffs, and verify outcomes with metrics before finalizing."
+          "type": "document",
+          "title": "Key Concepts Review",
+          "content": "A one-page summary of the core concepts, vocabulary, and workflow principles covered in the first two lessons."
         }
       ],
       "questions": [
         {
           "id": "geoscience-201-l03-q1",
-          "text": "Which practice most improves decision quality in tectonic and surface processes?",
-          "skillId": "geoscience-201-skill-core",
+          "text": "Which practice most improves decision quality when analyzing tectonic and surface processes?",
+          "skillId": "geoscience-201-tectonic-processes",
           "options": [
             {
               "id": "a",
-              "text": "Use implicit assumptions and no baseline"
+              "text": "Relying on intuition without data"
             },
             {
               "id": "b",
-              "text": "Define assumptions, constraints, and measurable indicators"
+              "text": "Defining assumptions, constraints, and measurable indicators"
             },
             {
               "id": "c",
-              "text": "Prioritize speed over evidence in all cases"
+              "text": "Prioritizing speed over evidence in all cases"
             },
             {
               "id": "d",
-              "text": "Ignore uncertainty and edge cases"
+              "text": "Ignoring uncertainty and potential edge cases"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Decision quality improves when assumptions, constraints, and measurement are explicit."
+          "explanation": "Decision quality improves when assumptions, constraints, and measurement are made clear from the start."
         },
         {
           "id": "geoscience-201-l03-q2",
-          "text": "At level 201, high-quality execution in earth materials analysis should include:",
-          "skillId": "geoscience-201-skill-execution",
+          "text": "A high-quality workflow for earth materials analysis should include:",
+          "skillId": "geoscience-201-materials-analysis",
           "options": [
             {
               "id": "a",
-              "text": "Owner mapping, checkpoints, and escalation thresholds"
+              "text": "Clear roles, quality checkpoints, and criteria for handling problems"
             },
             {
               "id": "b",
-              "text": "No role clarity and ad-hoc decisions"
+              "text": "Vague responsibilities and on-the-spot decisions"
             },
             {
               "id": "c",
-              "text": "No post-implementation review"
+              "text": "No review after the work is completed"
             },
             {
               "id": "d",
-              "text": "Untracked process changes"
+              "text": "Making process changes without tracking them"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Reliable execution needs clear ownership and threshold-driven control points."
+          "explanation": "Reliable execution needs clear ownership of tasks and pre-defined control points for quality."
         },
         {
           "id": "geoscience-201-l03-q3",
-          "text": "A defensible approach to hazard and risk interpretation requires:",
-          "skillId": "geoscience-201-skill-eval",
+          "text": "A defensible approach to interpreting hazard and risk requires:",
+          "skillId": "geoscience-201-hazard-interpretation",
           "options": [
             {
               "id": "a",
-              "text": "Anecdotal wins without comparison"
+              "text": "Using stories without comparative data"
             },
             {
               "id": "b",
-              "text": "Baseline comparison and side-effect analysis"
+              "text": "Comparison against a baseline and analysis of side-effects"
             },
             {
               "id": "c",
-              "text": "Changing criteria after seeing results"
+              "text": "Changing success criteria after seeing the results"
             },
             {
               "id": "d",
-              "text": "Ignoring difficult cases"
+              "text": "Ignoring cases that are difficult to analyze"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Comparison and side-effect analysis prevent biased conclusions."
+          "explanation": "Comparing results to a baseline and analyzing side-effects are key to avoiding biased conclusions."
         },
         {
           "id": "geoscience-201-l03-q4",
-          "text": "Mature resource and stewardship governance systems connect:",
-          "skillId": "geoscience-201-skill-governance",
+          "text": "A mature system for managing resources connects:",
+          "skillId": "geoscience-201-resource-governance",
           "options": [
             {
               "id": "a",
-              "text": "Policy intent, measurable controls, and remediation pathways"
+              "text": "The original goal, measurable controls, and plans for corrective action"
             },
             {
               "id": "b",
-              "text": "Policy statements without accountability"
+              "text": "Policy statements without any accountability"
             },
             {
               "id": "c",
@@ -242,11 +242,11 @@ export const Geoscience201Module: LearningModule = {
             },
             {
               "id": "d",
-              "text": "Governance with no transparency"
+              "text": "A management process that is not transparent"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Effective governance links policy intent to measurable controls and corrective action."
+          "explanation": "Effective resource management links the policy's intent to measurable controls and a clear path for corrective action."
         }
       ]
     },
@@ -258,9 +258,9 @@ export const Geoscience201Module: LearningModule = {
       "learningAids": [
         {
           "id": "geoscience-201-l04-a1",
-          "type": "mnemonic",
-          "title": "Guided Practice",
-          "content": "Use structured reasoning, map tradeoffs, and verify outcomes with metrics before finalizing."
+          "type": "image",
+          "title": "Case Study Map",
+          "content": "A topographical and geological map of a fictional region facing seismic risks, coastal erosion, and water resource challenges."
         }
       ],
       "chunks": [
@@ -268,36 +268,36 @@ export const Geoscience201Module: LearningModule = {
           "id": "geoscience-201-l04-c1",
           "kind": "example",
           "title": "Case Context",
-          "content": "In this engaging case study, we will explore a particular region that is experiencing significant challenges, including the threat of earthquakes, the impact of erosion, and concerns related to groundwater availability. Students will have the opportunity to analyze these issues and identify the competing objectives that different stakeholders might have, as well as the risks associated with making integrated geoscience decisions. This exercise is designed to deepen their understanding of the complexities involved in real-world geoscience problems and the importance of considering multiple perspectives when addressing environmental challenges.\nContext recap: In this engaging case study, we will explore a particular region that is experiencing significant challenges, including the threat of earthquakes, the impact of erosion, and concerns related to groundwater availability. Students will have the opportunity to analyze these issues and identify the competing objectives that different stakeholders might have, as well as the risks associated with making integrated geoscience decisions. This exercise is designed to deepen their understanding of the complexities involved in real-world geoscience problems and the importance of considering multiple perspectives when addressing environmental challenges."
+          "content": "In this case study, we will explore a region facing significant challenges, including earthquake threats, erosion, and groundwater shortages. You will analyze these issues, identify the competing goals of different community groups, and weigh the risks of making integrated geoscience decisions. This exercise will deepen your understanding of real-world geoscience complexities."
         },
         {
           "id": "geoscience-201-l04-c2",
           "kind": "concept",
-          "title": "Tradeoff Matrix",
-          "content": "In this section, we will introduce the concept of a tradeoff matrix. Students will learn how to evaluate different options based on criteria such as effectiveness, feasibility, risk, and the impact on stakeholders. This process will help them make informed decisions in geoscience projects.\nContext recap: In this section, we will introduce the concept of a tradeoff matrix. Students will learn how to evaluate different options based on criteria such as effectiveness, feasibility, risk, and the impact on stakeholders. This process will help them make informed decisions in geoscience projects."
+          "title": "Weighing Pros and Cons",
+          "content": "In this section, we will introduce the tradeoff matrix, a tool for evaluating different options. You will learn how to compare choices based on criteria like effectiveness, cost, risk, and community impact. This structured process will help you make well-informed decisions in geoscience projects."
         },
         {
           "id": "geoscience-201-l04-c3",
           "kind": "recap",
-          "title": "Recovery Design",
-          "content": "In this recap, we will discuss how to turn patterns of failure into proactive measures. Students will learn how to create safeguards and response playbooks that can be used in future situations. This knowledge is vital for improving resilience in geoscience practices.\nContext recap: In this recap, we will discuss how to turn patterns of failure into proactive measures. Students will learn how to create safeguards and response playbooks that can be used in future situations. This knowledge is vital for improving resilience in geoscience practices."
+          "title": "Planning for Problems",
+          "content": "In this recap, we will discuss how to learn from past failures to be more proactive. You will learn how to create safeguards and response playbooks that can be used in future situations. This knowledge is vital for improving resilience and safety in geoscience practices."
         }
       ],
       "flashcards": [
         {
           "id": "geoscience-201-l04-f1",
-          "front": "Tradeoff matrix",
-          "back": "A structured method to compare options under competing priorities."
+          "front": "Tradeoff Matrix",
+          "back": "A table used to compare different choices by scoring them against important criteria, like cost, safety, and environmental impact."
         },
         {
           "id": "geoscience-201-l04-f2",
-          "front": "Failure pattern",
-          "back": "A recurring signal indicating a predictable risk mode."
+          "front": "Failure Pattern",
+          "back": "A repeated type of problem or mistake that points to a weakness in a system or plan."
         },
         {
           "id": "geoscience-201-l04-f3",
-          "front": "Response playbook",
-          "back": "A predefined action pathway for safe and timely recovery."
+          "front": "Response Playbook",
+          "back": "A step-by-step guide created in advance to handle a specific problem, ensuring a quick and effective response."
         }
       ]
     },
@@ -309,9 +309,9 @@ export const Geoscience201Module: LearningModule = {
       "learningAids": [
         {
           "id": "geoscience-201-l05-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use structured reasoning, map tradeoffs, and verify outcomes with metrics before finalizing."
+          "type": "image",
+          "title": "Simulation Dashboard",
+          "content": "An image of a simulation interface showing input variables (e.g., sea wall height, pumping rate) and output monitors (e.g., flood risk, aquifer level)."
         }
       ],
       "chunks": [
@@ -319,13 +319,13 @@ export const Geoscience201Module: LearningModule = {
           "id": "geoscience-201-l05-c1",
           "kind": "practice",
           "title": "Scenario Simulation",
-          "content": "In this interactive simulation, students will have the opportunity to run various intervention scenarios while dealing with uncertainty. They will compare the outcomes of each scenario to understand the potential impacts of their decisions. This practical experience will enhance their problem-solving skills in geoscience.\nContext recap: In this interactive simulation, students will have the opportunity to run various intervention scenarios while dealing with uncertainty. They will compare the outcomes of each scenario to understand the potential impacts of their decisions. This practical experience will enhance their problem-solving skills in geoscience."
+          "content": "In this interactive simulation, you will run various intervention scenarios while dealing with uncertainty. You will compare the outcomes of each scenario to understand the potential impacts of your decisions. This practical experience will enhance your problem-solving skills in geoscience."
         },
         {
           "id": "geoscience-201-l05-c2",
           "kind": "recap",
-          "title": "Debrief",
-          "content": "After running the simulations, we will conduct a debriefing session. During this time, students will evaluate their performance based on target attainment, any side effects that occurred, and whether they adhered to governance standards. This reflection will help them learn from their experiences.\nContext recap: After running the simulations, we will conduct a debriefing session. During this time, students will evaluate their performance based on target attainment, any side effects that occurred, and whether they adhered to governance standards. This reflection will help them learn from their experiences."
+          "title": "Reviewing the Results",
+          "content": "After running the simulations, we will hold a debriefing session. You will evaluate your performance based on whether you met your targets, what side effects occurred, and whether you followed the established rules. This reflection will help you learn from your experience."
         }
       ],
       "interactiveActivities": [
@@ -333,11 +333,11 @@ export const Geoscience201Module: LearningModule = {
           "id": "geoscience-201-l05-act1",
           "type": "scenario_practice",
           "title": "Intervention Simulation",
-          "description": "Compare intervention paths for tectonic and surface processes and resource and stewardship governance.",
+          "description": "Compare different plans for managing tectonic risks and natural resources in a simulated environment.",
           "instructions": [
-            "Define objective and constraints before intervention selection.",
-            "Document near-term and long-term tradeoffs.",
-            "Specify metrics that validate your chosen path."
+            "Define your objective and constraints before choosing a plan.",
+            "Document the short-term and long-term pros and cons of your choice.",
+            "Specify the metrics that will prove your chosen path was successful."
           ]
         }
       ]
@@ -350,111 +350,111 @@ export const Geoscience201Module: LearningModule = {
       "learningAids": [
         {
           "id": "geoscience-201-l06-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use structured reasoning, map tradeoffs, and verify outcomes with metrics before finalizing."
+          "type": "document",
+          "title": "Case Study Review",
+          "content": "A summary of the key challenges, stakeholder perspectives, and decision criteria from the case analysis and simulation lessons."
         }
       ],
       "questions": [
         {
           "id": "geoscience-201-l06-q1",
-          "text": "Which practice most improves decision quality in tectonic and surface processes?",
-          "skillId": "geoscience-201-skill-core",
+          "text": "In a case study involving a coastal community, what is the most critical first step in evaluating the tradeoff between economic development and erosion control?",
+          "skillId": "geoscience-201-case-analysis",
           "options": [
             {
               "id": "a",
-              "text": "Use implicit assumptions and no baseline"
+              "text": "Build a seawall immediately"
             },
             {
               "id": "b",
-              "text": "Define assumptions, constraints, and measurable indicators"
+              "text": "Survey residents' opinions"
             },
             {
               "id": "c",
-              "text": "Prioritize speed over evidence in all cases"
+              "text": "Analyze historical erosion data and geological maps"
             },
             {
               "id": "d",
-              "text": "Ignore uncertainty and edge cases"
+              "text": "Secure funding for the largest possible project"
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "Decision quality improves when assumptions, constraints, and measurement are explicit."
+          "correctOptionId": "c",
+          "explanation": "Understanding the geological context and historical trends with evidence is essential before evaluating any solution."
         },
         {
           "id": "geoscience-201-l06-q2",
-          "text": "At level 201, high-quality execution in earth materials analysis should include:",
-          "skillId": "geoscience-201-skill-execution",
+          "text": "When using a simulation to test a flood mitigation plan, what does a 'side-effect analysis' primarily help you identify?",
+          "skillId": "geoscience-201-simulation-evaluation",
           "options": [
             {
               "id": "a",
-              "text": "Owner mapping, checkpoints, and escalation thresholds"
+              "text": "The total cost of the project"
             },
             {
               "id": "b",
-              "text": "No role clarity and ad-hoc decisions"
+              "text": "Unexpected negative impacts in other areas, like downstream ecosystems"
             },
             {
               "id": "c",
-              "text": "No post-implementation review"
+              "text": "Who to blame if the plan fails"
             },
             {
               "id": "d",
-              "text": "Untracked process changes"
-            }
-          ],
-          "correctOptionId": "a",
-          "explanation": "Reliable execution needs clear ownership and threshold-driven control points."
-        },
-        {
-          "id": "geoscience-201-l06-q3",
-          "text": "A defensible approach to hazard and risk interpretation requires:",
-          "skillId": "geoscience-201-skill-eval",
-          "options": [
-            {
-              "id": "a",
-              "text": "Anecdotal wins without comparison"
-            },
-            {
-              "id": "b",
-              "text": "Baseline comparison and side-effect analysis"
-            },
-            {
-              "id": "c",
-              "text": "Changing criteria after seeing results"
-            },
-            {
-              "id": "d",
-              "text": "Ignoring difficult cases"
+              "text": "The popularity of the plan"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Comparison and side-effect analysis prevent biased conclusions."
+          "explanation": "Simulations help reveal unintended consequences that might not be obvious at first."
         },
         {
-          "id": "geoscience-201-l06-q4",
-          "text": "Mature resource and stewardship governance systems connect:",
-          "skillId": "geoscience-201-skill-governance",
+          "id": "geoscience-201-l06-q3",
+          "text": "A 'tradeoff matrix' is most useful for:",
+          "skillId": "geoscience-201-decision-making",
           "options": [
             {
               "id": "a",
-              "text": "Policy intent, measurable controls, and remediation pathways"
+              "text": "Proving one option is perfect"
             },
             {
               "id": "b",
-              "text": "Policy statements without accountability"
+              "text": "Making a complex decision by systematically comparing choices against key criteria"
             },
             {
               "id": "c",
-              "text": "Performance targets with no risk controls"
+              "text": "Creating a project schedule"
             },
             {
               "id": "d",
-              "text": "Governance with no transparency"
+              "text": "Ignoring stakeholder opinions"
             }
           ],
-          "correctOptionId": "a",
-          "explanation": "Effective governance links policy intent to measurable controls and corrective action."
+          "correctOptionId": "b",
+          "explanation": "A tradeoff matrix provides a structured way to evaluate the pros and cons of different options, especially when there is no single perfect answer."
+        },
+        {
+          "id": "geoscience-201-l06-q4",
+          "text": "Developing a 'response playbook' for a potential landslide is an example of:",
+          "skillId": "geoscience-201-proactive-planning",
+          "options": [
+            {
+              "id": "a",
+              "text": "Reactive problem solving after a disaster"
+            },
+            {
+              "id": "b",
+              "text": "Proactive planning to manage a known risk"
+            },
+            {
+              "id": "c",
+              "text": "Ignoring the risk because it's unlikely"
+            },
+            {
+              "id": "d",
+              "text": "A purely economic analysis"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "A playbook is a proactive tool created in advance to ensure a coordinated and effective response when a hazardous event occurs."
         }
       ]
     },
@@ -466,46 +466,46 @@ export const Geoscience201Module: LearningModule = {
       "learningAids": [
         {
           "id": "geoscience-201-l07-a1",
-          "type": "image",
-          "title": "Guided Practice",
-          "content": "Use structured reasoning, map tradeoffs, and verify outcomes with metrics before finalizing."
+          "type": "diagram",
+          "title": "Stakeholder Impact Map",
+          "content": "An infographic illustrating how a decision to build a dam affects different stakeholders: farmers (irrigation), town residents (power), downstream ecosystems (water flow), and indigenous communities (land rights)."
         }
       ],
       "chunks": [
         {
           "id": "geoscience-201-l07-c1",
           "kind": "concept",
-          "title": "Stakeholder Impact",
-          "content": "In this lesson, students will learn how to map out the distribution of benefits and burdens among different stakeholder groups. This understanding is crucial for ensuring that all voices are heard and considered in geoscience projects, promoting fairness and equity.\nContext recap: In this lesson, students will learn how to map out the distribution of benefits and burdens among different stakeholder groups. This understanding is crucial for ensuring that all voices are heard and considered in geoscience projects, promoting fairness and equity."
+          "title": "Impact on People and Communities",
+          "content": "In this lesson, you will learn how to map out the distribution of benefits and burdens among different groups of people (stakeholders). This is crucial for ensuring that all voices are heard and considered in geoscience projects, promoting fairness and equity."
         },
         {
           "id": "geoscience-201-l07-c2",
           "kind": "concept",
-          "title": "Accountability Architecture",
-          "content": "In this section, we will explore the concept of accountability architecture. Students will learn about the importance of decision traceability, review rights, and obligations for remediation. This knowledge will help them understand how to create transparent and responsible governance structures in geoscience.\nContext recap: In this section, we will explore the concept of accountability architecture. Students will learn about the importance of decision traceability, review rights, and obligations for remediation. This knowledge will help them understand how to create transparent and responsible governance structures in geoscience."
+          "title": "Ensuring Responsibility",
+          "content": "In this section, we will explore how to build accountability into a project. You will learn about the importance of traceable decisions (who made what choice and why), the right for affected parties to review plans, and the obligation to fix problems. This helps create transparent and responsible project governance."
         },
         {
           "id": "geoscience-201-l07-c3",
           "kind": "recap",
-          "title": "Responsible Execution",
-          "content": "At the end of our project, it's important to use a final checklist. This checklist helps us ensure that we are performing well, managing risks effectively, and considering the ethical impact of our actions. By balancing these elements, we can make responsible decisions that benefit everyone involved.\nContext recap: At the end of our project, it's important to use a final checklist. This checklist helps us ensure that we are performing well, managing risks effectively, and considering the ethical impact of our actions. By balancing these elements, we can make responsible decisions that benefit everyone involved."
+          "title": "Putting It All Together Responsibly",
+          "content": "At the end of a project, it's important to use a final checklist. This helps ensure that we are performing well, managing risks effectively, and considering the ethical impact of our actions. By balancing these elements, we can make responsible decisions that benefit everyone involved."
         }
       ],
       "flashcards": [
         {
           "id": "geoscience-201-l07-f1",
-          "front": "Impact distribution",
-          "back": "How outcomes are allocated across people, systems, and time."
+          "front": "Impact Distribution",
+          "back": "How the positive and negative outcomes of a project are spread across different people, natural systems, and periods of time."
         },
         {
           "id": "geoscience-201-l07-f2",
-          "front": "Decision traceability",
-          "back": "An auditable explanation of evidence, ownership, and rationale."
+          "front": "Decision Traceability",
+          "back": "A clear, auditable record of a decision, including the evidence used, who was responsible, and the reasoning behind it."
         },
         {
           "id": "geoscience-201-l07-f3",
-          "front": "Responsible execution",
-          "back": "Delivery mode that combines effectiveness with accountability and fairness."
+          "front": "Responsible Execution",
+          "back": "A way of delivering a project that combines effectiveness with accountability and fairness to all involved."
         }
       ]
     },
@@ -517,23 +517,23 @@ export const Geoscience201Module: LearningModule = {
       "learningAids": [
         {
           "id": "geoscience-201-l08-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use structured reasoning, map tradeoffs, and verify outcomes with metrics before finalizing."
+          "type": "document",
+          "title": "Project Charter Template",
+          "content": "A document template for the Capstone Charter, with sections for Project Goal, Key Metrics, Constraints, Stakeholders, and Review Plan."
         }
       ],
       "chunks": [
         {
           "id": "geoscience-201-l08-c1",
           "kind": "practice",
-          "title": "Capstone Charter",
-          "content": "In this activity, learners will work on creating a detailed capstone charter. This includes writing clear objectives, identifying any constraints we might face, establishing metrics for success, and outlining governance triggers that will guide our project. This process helps ensure that everyone understands the goals and rules of our project.\nContext recap: In this activity, learners will work on creating a detailed capstone charter. This includes writing clear objectives, identifying any constraints we might face, establishing metrics for success, and outlining governance triggers that will guide our project. This process helps ensure that everyone understands the goals and rules of our project."
+          "title": "Planning Your Final Project",
+          "content": "In this activity, you will create a detailed plan, or 'charter,' for your final project. This includes writing clear objectives, identifying constraints, establishing metrics for success, and outlining a review process. This ensures that everyone understands the project's goals and rules."
         },
         {
           "id": "geoscience-201-l08-c2",
           "kind": "recap",
-          "title": "Defense Readiness",
-          "content": "As we move forward, learners will get ready to defend their decisions regarding the project. This means preparing to explain and justify their choices in front of others, addressing any technical questions or governance critiques that may arise. This practice helps build confidence and critical thinking skills.\nContext recap: As we move forward, learners will get ready to defend their decisions regarding the project. This means preparing to explain and justify their choices in front of others, addressing any technical questions or governance critiques that may arise. This practice helps build confidence and critical thinking skills."
+          "title": "Preparing to Present Your Plan",
+          "content": "As we move forward, you will get ready to defend your project decisions. This means preparing to explain and justify your choices, addressing any technical questions or critiques about your plan. This practice helps build confidence and critical thinking skills."
         }
       ],
       "interactiveActivities": [
@@ -541,11 +541,11 @@ export const Geoscience201Module: LearningModule = {
           "id": "geoscience-201-l08-act1",
           "type": "project_builder",
           "title": "Capstone Charter Builder",
-          "description": "Build a capstone charter with measurable outcomes and remediation pathways.",
+          "description": "Build a capstone project charter with measurable outcomes and plans for corrective action.",
           "instructions": [
-            "Define objective and operating boundaries.",
-            "List at least three measurable success indicators.",
-            "Define escalation and corrective-action criteria."
+            "Define the main objective and operating boundaries of your project.",
+            "List at least three measurable indicators of success.",
+            "Define the criteria for when a problem needs to be escalated or a corrective action is needed."
           ]
         }
       ]

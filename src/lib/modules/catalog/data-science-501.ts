@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const DataScience501Module: LearningModule = {
+export const data_science_501_Module: LearningModule = {
   "id": "data-science-501",
   "title": "Data Science Specialization Studio",
   "description": "Post-401 specialization in Data Science, focused on experimental design, causal inference, model interpretability, and decision governance through advanced casework, simulation, and capstone-level defense.",
@@ -14,7 +14,7 @@ export const DataScience501Module: LearningModule = {
   ],
   "minAge": 17,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en"
@@ -37,8 +37,8 @@ export const DataScience501Module: LearningModule = {
         {
           "id": "data-science-501-l01-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, log assumptions, and verify conclusions against constraints and metrics."
+          "title": "Visual Prompt: Causal vs. Correlational Models",
+          "content": "A dual-pane diagram contrasting standard A/B testing with advanced causal inference models, highlighting how confounding variables are isolated and controlled."
         }
       ],
       "chunks": [
@@ -46,36 +46,36 @@ export const DataScience501Module: LearningModule = {
           "id": "data-science-501-l01-c1",
           "kind": "concept",
           "title": "Advanced Scope and Decision Boundaries",
-          "content": "In this lesson, we will dive into the fascinating world of advanced boundaries in Data Science. We will examine how experimental design—the process of planning how to conduct an experiment—interacts with causal inference, which helps us understand the cause-and-effect relationships within complex systems. By grasping these interactions, we can make better decisions and carry out more effective research in the ever-evolving field of Data Science. This knowledge is essential for anyone looking to excel in data-driven environments.\nContext recap: In this lesson, we will dive into the fascinating world of advanced boundaries in Data Science. We will examine how experimental design—the process of planning how to conduct an experiment—interacts with causal inference, which helps us understand the cause-and-effect relationships within complex systems. By grasping these interactions, we can make better decisions and carry out more effective research in the ever-evolving field of Data Science. This knowledge is essential for anyone looking to excel in data-driven environments."
+          "content": "In this lesson, we examine the advanced boundaries of Data Science, specifically how experimental design interacts with causal inference. By mapping these interactions, practitioners can isolate cause-and-effect relationships within complex, noisy systems. This rigorous approach is essential for architecting defensible, data-driven strategies in high-stakes environments."
         },
         {
           "id": "data-science-501-l01-c2",
           "kind": "concept",
           "title": "Causal Structure Under Uncertainty",
-          "content": "In this section, learners will model the pathways of cause and effect, taking into account the uncertainties and hidden assumptions that may exist. This foundational step is essential before designing any interventions, as it helps us understand the potential outcomes and impacts of our decisions.\nContext recap: In this section, learners will model the pathways of cause and effect, taking into account the uncertainties and hidden assumptions that may exist. This foundational step is essential before designing any interventions, as it helps us understand the potential outcomes and impacts of our decisions."
+          "content": "Learners will model causal pathways, explicitly accounting for uncertainties, confounding variables, and hidden assumptions. This foundational mapping is critical before designing interventions, as it quantifies potential downstream impacts and systemic risks."
         },
         {
           "id": "data-science-501-l01-c3",
           "kind": "recap",
           "title": "Evidence and Rigor Standards",
-          "content": "It is important to note that all advanced claims in Data Science must be connected to measurable indicators. This means we need to establish confidence bounds and set up review checkpoints to ensure that our findings are reliable and valid. This rigorous approach helps maintain the integrity of our work.\nContext recap: It is important to note that all advanced claims in Data Science must be connected to measurable indicators. This means we need to establish confidence bounds and set up review checkpoints to ensure that our findings are reliable and valid. This rigorous approach helps maintain the integrity of our work."
+          "content": "All advanced claims in Data Science must be anchored to measurable indicators. Establishing strict confidence bounds and review checkpoints ensures that findings remain reliable, valid, and resilient against statistical anomalies."
         }
       ],
       "flashcards": [
         {
           "id": "data-science-501-l01-f1",
-          "front": "experimental design",
-          "back": "A specialization axis in Data Science requiring explicit assumptions and measured tradeoff choices."
+          "front": "Experimental Design",
+          "back": "A specialization axis in Data Science requiring explicit assumptions, controlled variables, and measured tradeoff choices."
         },
         {
           "id": "data-science-501-l01-f2",
-          "front": "causal inference",
-          "back": "Operational design capability that governs whether complex workflows remain reliable."
+          "front": "Causal Inference",
+          "back": "The process of drawing a conclusion about a causal connection based on the conditions of the occurrence of an effect."
         },
         {
           "id": "data-science-501-l01-f3",
-          "front": "model interpretability",
-          "back": "Evaluation practice for validating outcomes beyond headline metrics."
+          "front": "Model Interpretability",
+          "back": "The degree to which a human can understand the cause of a decision made by a machine learning model."
         }
       ]
     },
@@ -88,8 +88,8 @@ export const DataScience501Module: LearningModule = {
         {
           "id": "data-science-501-l02-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, log assumptions, and verify conclusions against constraints and metrics."
+          "title": "Visual Prompt: Workflow Stress Test",
+          "content": "An interactive dashboard mockup showing control gates, rollback thresholds, and real-time system health metrics during a simulated data pipeline failure."
         }
       ],
       "chunks": [
@@ -97,13 +97,13 @@ export const DataScience501Module: LearningModule = {
           "id": "data-science-501-l02-c1",
           "kind": "practice",
           "title": "Method Sequence and Stress Test",
-          "content": "In this engaging interactive lab, learners will have the opportunity to design a specialized workflow that highlights the execution of specific methods. This exciting process will require them to combine knowledge from various fields, allowing for a richer understanding of how different concepts can work together. Once the workflow is built, learners will put it to the test by challenging it with difficult scenarios that simulate real-world pressures. This will help them evaluate the strength and effectiveness of their workflow, ensuring it can handle unexpected situations and perform reliably under stress."
+          "content": "In this interactive lab, learners will architect specialized workflows that execute advanced analytical methods. This process requires synthesizing cross-domain knowledge to build robust pipelines. Once constructed, learners will stress-test their workflows against simulated real-world pressures, evaluating resilience, edge-case handling, and performance under constraint."
         },
         {
           "id": "data-science-501-l02-c2",
           "kind": "recap",
           "title": "Controls and Failure Gates",
-          "content": "To ensure that our specialized workflows are effective, we need to implement control gates, rollback criteria, and accountability checkpoints. These elements are crucial for maintaining the quality and reliability of our processes, allowing us to identify and address any issues that may arise.\nContext recap: To ensure that our specialized workflows are effective, we need to implement control gates, rollback criteria, and accountability checkpoints. These elements are crucial for maintaining the quality and reliability of our processes, allowing us to identify and address any issues that may arise."
+          "content": "To ensure workflow efficacy, practitioners must implement control gates, rollback criteria, and accountability checkpoints. These governance elements are crucial for containing failures, maintaining data integrity, and enabling rapid remediation when anomalies are detected."
         }
       ],
       "interactiveActivities": [
@@ -171,8 +171,8 @@ export const DataScience501Module: LearningModule = {
         {
           "id": "data-science-501-l03-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, log assumptions, and verify conclusions against constraints and metrics."
+          "title": "Visual Prompt: Decision Tree",
+          "content": "A decision tree highlighting the path from hypothesis generation to rigorous constraint testing and final deployment."
         }
       ],
       "questions": [
@@ -183,44 +183,44 @@ export const DataScience501Module: LearningModule = {
           "options": [
             {
               "id": "a",
-              "text": "Rely on undocumented assumptions"
+              "text": "Relying on undocumented assumptions to speed up delivery"
             },
             {
               "id": "b",
-              "text": "Define constraints, monitor leading indicators, and test edge cases"
+              "text": "Defining constraints, monitoring leading indicators, and testing edge cases"
             },
             {
               "id": "c",
-              "text": "Avoid post-decision review"
+              "text": "Avoiding post-decision reviews to maintain forward momentum"
             },
             {
               "id": "d",
-              "text": "Optimize only for speed"
+              "text": "Optimizing exclusively for computational speed"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Advanced performance depends on explicit constraints, monitoring, and stress testing."
+          "explanation": "Advanced performance depends on explicit constraints, continuous monitoring, and rigorous stress testing of edge cases."
         },
         {
           "id": "data-science-501-l03-q2",
-          "text": "At level 501, the curriculum emphasizes:",
+          "text": "At the 501 level, the data science curriculum primarily emphasizes:",
           "skillId": "data-science-501-skill-level",
           "options": [
             {
               "id": "a",
-              "text": "specialist method execution, cross-domain integration, and high-stakes scenario performance"
+              "text": "Specialist method execution, cross-domain integration, and high-stakes scenario performance"
             },
             {
               "id": "b",
-              "text": "Unbounded iteration with no controls"
+              "text": "Unbounded iteration with no operational controls"
             },
             {
               "id": "c",
-              "text": "Single-metric decision making"
+              "text": "Single-metric decision making without context"
             },
             {
               "id": "d",
-              "text": "No uncertainty communication"
+              "text": "Eliminating uncertainty communication to stakeholders"
             }
           ],
           "correctOptionId": "a",
@@ -233,7 +233,7 @@ export const DataScience501Module: LearningModule = {
           "options": [
             {
               "id": "a",
-              "text": "No owner mapping or escalation path"
+              "text": "Removing owner mapping and escalation paths"
             },
             {
               "id": "b",
@@ -241,15 +241,15 @@ export const DataScience501Module: LearningModule = {
             },
             {
               "id": "c",
-              "text": "Ad-hoc process changes without logs"
+              "text": "Implementing ad-hoc process changes without logging"
             },
             {
               "id": "d",
-              "text": "Skipping retrospective review"
+              "text": "Skipping retrospective reviews to save time"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Quality execution needs ownership clarity, checkpoints, and threshold-driven governance."
+          "explanation": "Quality execution requires ownership clarity, defined checkpoints, and threshold-driven governance."
         },
         {
           "id": "data-science-501-l03-q4",
@@ -258,7 +258,7 @@ export const DataScience501Module: LearningModule = {
           "options": [
             {
               "id": "a",
-              "text": "Outcome claims without baselines"
+              "text": "Outcome claims without historical baselines"
             },
             {
               "id": "b",
@@ -266,15 +266,15 @@ export const DataScience501Module: LearningModule = {
             },
             {
               "id": "c",
-              "text": "Removal of difficult scenarios"
+              "text": "The removal of difficult or noisy scenarios from the test set"
             },
             {
               "id": "d",
-              "text": "Changing criteria after seeing results"
+              "text": "Changing success criteria after observing the results"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Baselines, side-effect checks, and uncertainty disclosure make results defensible."
+          "explanation": "Baselines, side-effect checks, and uncertainty disclosure make interpretability results defensible and scientifically sound."
         },
         {
           "id": "data-science-501-l03-q5",
@@ -283,7 +283,7 @@ export const DataScience501Module: LearningModule = {
           "options": [
             {
               "id": "a",
-              "text": "Policy and practice without measurement"
+              "text": "Policy and practice without requiring measurement"
             },
             {
               "id": "b",
@@ -291,7 +291,7 @@ export const DataScience501Module: LearningModule = {
             },
             {
               "id": "c",
-              "text": "Technical delivery with no accountability"
+              "text": "Technical delivery with zero accountability overhead"
             },
             {
               "id": "d",
@@ -299,82 +299,32 @@ export const DataScience501Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Governance quality comes from linking policy intent to measurable controls and action."
+          "explanation": "Governance quality comes from linking policy intent to measurable controls and actionable remediation pathways."
         },
         {
           "id": "data-science-501-l03-q6",
-          "text": "In high-stakes Data Science Specialization Studio execution, which communication protocol is strongest?",
+          "text": "In high-stakes Data Science execution, which communication protocol is strongest?",
           "skillId": "data-science-501-skill-advanced-6",
           "options": [
             {
               "id": "a",
-              "text": "Broadcast conclusions without assumptions"
+              "text": "Broadcasting conclusions without detailing assumptions"
             },
             {
               "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
+              "text": "Publishing assumptions, confidence ranges, and decision checkpoints to stakeholders"
             },
             {
               "id": "c",
-              "text": "Share only final outcomes after completion"
+              "text": "Sharing only final outcomes after the project is fully completed"
             },
             {
               "id": "d",
-              "text": "Limit updates to a single informal channel"
+              "text": "Limiting updates to a single informal channel"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
-        },
-        {
-          "id": "data-science-501-l03-q7",
-          "text": "A mature remediation loop in advanced Data Science should prioritize:",
-          "skillId": "data-science-501-skill-advanced-7",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blame assignment without system updates"
-            },
-            {
-              "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
-            },
-            {
-              "id": "c",
-              "text": "One-time fixes without retesting"
-            },
-            {
-              "id": "d",
-              "text": "Issue closure based on elapsed time"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
-        },
-        {
-          "id": "data-science-501-l03-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Data Science Specialization Studio?",
-          "skillId": "data-science-501-skill-advanced-8",
-          "options": [
-            {
-              "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
-            },
-            {
-              "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
-            },
-            {
-              "id": "c",
-              "text": "Ignore correlated failure modes"
-            },
-            {
-              "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "explanation": "High-stakes communication must expose assumptions, confidence intervals, and checkpoints to maintain trust and transparency."
         }
       ]
     },
@@ -387,8 +337,8 @@ export const DataScience501Module: LearningModule = {
         {
           "id": "data-science-501-l04-a1",
           "type": "mnemonic",
-          "title": "Guided Practice",
-          "content": "Use a structured method, log assumptions, and verify conclusions against constraints and metrics."
+          "title": "Visual Prompt: 3D Tradeoff Matrix",
+          "content": "A 3D tradeoff matrix plotting effectiveness, reliability, and equity for different data interventions, showing the optimal balance zone."
         }
       ],
       "chunks": [
@@ -396,36 +346,36 @@ export const DataScience501Module: LearningModule = {
           "id": "data-science-501-l04-c1",
           "kind": "example",
           "title": "Case Stakes and Competing Objectives",
-          "content": "In this engaging case study, we will explore a decision-support pipeline that highlights an important challenge: the benefits we gain from observing correlations can sometimes clash with the need for strong causal confidence. This means that while we might see patterns that suggest a relationship between two variables, we must be careful to ensure that these patterns truly indicate a cause-and-effect relationship. As part of this learning experience, you will work on mapping out strategic objectives that guide decision-making. Additionally, you will identify potential risks of failure that could arise from misinterpreting data and understand the governance constraints that are essential to consider before taking any action. This comprehensive approach will help you develop critical thinking skills necessary for effective data analysis."
+          "content": "This case study explores a decision-support pipeline that highlights a critical challenge: the predictive benefits of observing correlations can sometimes clash with the need for strict causal confidence. Learners will map out strategic objectives, identify systemic failure risks arising from misinterpreted data, and define the governance constraints essential for responsible deployment."
         },
         {
           "id": "data-science-501-l04-c2",
           "kind": "concept",
           "title": "Tradeoff Matrix and Option Scoring",
-          "content": "In this section, we will learn how to score different options based on several important criteria. These criteria include effectiveness, reliability, equity, feasibility, and long-term maintainability. By evaluating options in this way, we can make more informed decisions that consider both immediate and future impacts.\nContext recap: In this section, we will learn how to score different options based on several important criteria. These criteria include effectiveness, reliability, equity, feasibility, and long-term maintainability. By evaluating options in this way, we can make more informed decisions that consider both immediate and future impacts."
+          "content": "We will utilize a tradeoff matrix to systematically score competing options against critical criteria, including effectiveness, reliability, equity, feasibility, and long-term maintainability. This multidimensional evaluation ensures decisions account for both immediate gains and future technical debt."
         },
         {
           "id": "data-science-501-l04-c3",
           "kind": "recap",
           "title": "Recovery and Adaptation Design",
-          "content": "When we encounter failures, it is essential to translate those experiences into actionable safeguards. This involves creating response playbooks and measurable adaptation loops that help us learn from our mistakes and improve our processes over time.\nContext recap: When we encounter failures, it is essential to translate those experiences into actionable safeguards. This involves creating response playbooks and measurable adaptation loops that help us learn from our mistakes and improve our processes over time.\nWhy this matters: Recovery and Adaptation Design helps learners in Data Science connect ideas from Data Science Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "When systemic failures occur, they must be translated into actionable safeguards. This involves engineering response playbooks and measurable adaptation loops that convert incident post-mortems into automated controls, continuously improving system resilience."
         }
       ],
       "flashcards": [
         {
           "id": "data-science-501-l04-f1",
-          "front": "Tradeoff matrix",
-          "back": "A scoring framework for choosing among competing options under real constraints."
+          "front": "Tradeoff Matrix",
+          "back": "A scoring framework for systematically choosing among competing options under real-world constraints."
         },
         {
           "id": "data-science-501-l04-f2",
-          "front": "Failure signature",
-          "back": "A recurrent signal indicating a predictable class of breakdown risk."
+          "front": "Failure Signature",
+          "back": "A recurrent, identifiable signal indicating a predictable class of breakdown risk within a system."
         },
         {
           "id": "data-science-501-l04-f3",
-          "front": "Adaptation loop",
-          "back": "A measured process for converting incident learning into improved future behavior."
+          "front": "Adaptation Loop",
+          "back": "A measured process for converting incident learning into improved future behavior and automated safeguards."
         }
       ]
     },
@@ -438,8 +388,8 @@ export const DataScience501Module: LearningModule = {
         {
           "id": "data-science-501-l05-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, log assumptions, and verify conclusions against constraints and metrics."
+          "title": "Visual Prompt: Incident Response Simulator",
+          "content": "A simulated incident response screen showing escalating failure signatures, real-time metric degradation, and available mitigation pathways."
         }
       ],
       "chunks": [
@@ -447,13 +397,13 @@ export const DataScience501Module: LearningModule = {
           "id": "data-science-501-l05-c1",
           "kind": "practice",
           "title": "Scenario Modeling",
-          "content": "In this practice session, learners will configure the assumptions, thresholds, and intervention pathways for simulations under high-stakes conditions. This hands-on experience will help them understand how to effectively manage scenarios that require quick thinking and strategic decision-making.\nContext recap: In this practice session, learners will configure the assumptions, thresholds, and intervention pathways for simulations under high-stakes conditions. This hands-on experience will help them understand how to effectively manage scenarios that require quick thinking and strategic decision-making."
+          "content": "In this practice session, learners will configure assumptions, success thresholds, and intervention pathways for simulations operating under high-stakes conditions. This hands-on modeling develops the strategic foresight required to manage rapidly evolving scenarios and execute decisive, data-backed interventions."
         },
         {
           "id": "data-science-501-l05-c2",
           "kind": "recap",
           "title": "Debrief and Decision Quality Review",
-          "content": "After each simulation run, teams will conduct a thorough review to assess whether they met their targets. They will also analyze any side effects and identify gaps in governance compliance. This debriefing process is crucial for continuous improvement and ensuring that future decisions are well-informed.\nContext recap: After each simulation run, teams will conduct a thorough review to assess whether they met their targets. They will also analyze any side effects and identify gaps in governance compliance. This debriefing process is crucial for continuous improvement and ensuring that future decisions are well-informed."
+          "content": "Following each simulation, teams will conduct a rigorous debrief to assess target attainment. This review process analyzes unintended side effects, identifies governance compliance gaps, and refines the decision-making frameworks for future iterations."
         }
       ],
       "interactiveActivities": [
@@ -503,210 +453,160 @@ export const DataScience501Module: LearningModule = {
         {
           "id": "data-science-501-l06-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, log assumptions, and verify conclusions against constraints and metrics."
+          "title": "Visual Prompt: Adaptation Flowchart",
+          "content": "A flowchart detailing the post-incident adaptation loop, tracing the path from root-cause analysis to control redesign and deployment."
         }
       ],
       "questions": [
         {
           "id": "data-science-501-l06-q1",
-          "text": "Which practice most improves specialist performance in experimental design?",
-          "skillId": "data-science-501-skill-specialist",
+          "text": "What is the primary function of a tradeoff matrix in advanced case analysis?",
+          "skillId": "data-science-501-skill-tradeoffs",
           "options": [
             {
               "id": "a",
-              "text": "Rely on undocumented assumptions"
+              "text": "To guarantee the highest possible predictive accuracy regardless of cost"
             },
             {
               "id": "b",
-              "text": "Define constraints, monitor leading indicators, and test edge cases"
+              "text": "To systematically score competing options against constraints like reliability, equity, and maintainability"
             },
             {
               "id": "c",
-              "text": "Avoid post-decision review"
+              "text": "To eliminate the need for human oversight in decision-making"
             },
             {
               "id": "d",
-              "text": "Optimize only for speed"
+              "text": "To obscure the negative side effects of a chosen intervention"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Advanced performance depends on explicit constraints, monitoring, and stress testing."
+          "explanation": "A tradeoff matrix provides a structured way to evaluate how different options balance competing priorities and constraints."
         },
         {
           "id": "data-science-501-l06-q2",
-          "text": "At level 501, the curriculum emphasizes:",
-          "skillId": "data-science-501-skill-level",
+          "text": "How should a data science team respond to a recurring 'failure signature'?",
+          "skillId": "data-science-501-skill-adaptation",
           "options": [
             {
               "id": "a",
-              "text": "specialist method execution, cross-domain integration, and high-stakes scenario performance"
+              "text": "By designing an adaptation loop that converts incident data into automated safeguards"
             },
             {
               "id": "b",
-              "text": "Unbounded iteration with no controls"
+              "text": "By ignoring it if the primary KPIs are still being met"
             },
             {
               "id": "c",
-              "text": "Single-metric decision making"
+              "text": "By manually restarting the pipeline each time it occurs"
             },
             {
               "id": "d",
-              "text": "No uncertainty communication"
+              "text": "By lowering the success thresholds so the failure is no longer registered"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "The 501 design is built around specialist method execution, cross-domain integration, and high-stakes scenario performance."
+          "explanation": "Failure signatures indicate predictable risks that should be mitigated through structured adaptation loops and automated controls."
         },
         {
           "id": "data-science-501-l06-q3",
-          "text": "What best strengthens causal inference execution quality?",
-          "skillId": "data-science-501-skill-execution",
+          "text": "During a high-stakes simulation, what is the most critical step before deploying an intervention?",
+          "skillId": "data-science-501-skill-simulation",
           "options": [
             {
               "id": "a",
-              "text": "No owner mapping or escalation path"
+              "text": "Ensuring all stakeholders agree on the aesthetic design of the dashboard"
             },
             {
               "id": "b",
-              "text": "Explicit ownership, checkpoints, and governance thresholds"
+              "text": "Configuring explicit assumptions, success thresholds, and rollback triggers"
             },
             {
               "id": "c",
-              "text": "Ad-hoc process changes without logs"
+              "text": "Deleting historical data to free up computational resources"
             },
             {
               "id": "d",
-              "text": "Skipping retrospective review"
+              "text": "Bypassing governance checks to maximize deployment speed"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Quality execution needs ownership clarity, checkpoints, and threshold-driven governance."
+          "explanation": "High-stakes interventions require predefined assumptions, measurable thresholds, and clear rollback plans to manage risk."
         },
         {
           "id": "data-science-501-l06-q4",
-          "text": "A rigorous approach to model interpretability should include:",
-          "skillId": "data-science-501-skill-evaluation",
+          "text": "If a decision-support pipeline exhibits 'policy-execution drift', what is the strongest mitigation?",
+          "skillId": "data-science-501-skill-mitigation",
           "options": [
             {
               "id": "a",
-              "text": "Outcome claims without baselines"
+              "text": "Re-aligning operational controls and model constraints to explicit governance standards"
             },
             {
               "id": "b",
-              "text": "Baseline comparison, side-effect checks, and uncertainty bounds"
+              "text": "Rewriting the policy to match the current execution flaws"
             },
             {
               "id": "c",
-              "text": "Removal of difficult scenarios"
+              "text": "Increasing the latency budget to allow for more processing time"
             },
             {
               "id": "d",
-              "text": "Changing criteria after seeing results"
+              "text": "Assigning blame to the original developers without changing the system"
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "Baselines, side-effect checks, and uncertainty disclosure make results defensible."
+          "correctOptionId": "a",
+          "explanation": "Policy-execution drift occurs when practice diverges from rules; the fix is re-aligning technical controls to enforce the governance standards."
         },
         {
           "id": "data-science-501-l06-q5",
-          "text": "A mature decision governance system should connect:",
-          "skillId": "data-science-501-skill-governance",
+          "text": "What is the main objective of a post-simulation debrief?",
+          "skillId": "data-science-501-skill-debrief",
           "options": [
             {
               "id": "a",
-              "text": "Policy and practice without measurement"
+              "text": "To assign individual performance grades to team members"
             },
             {
               "id": "b",
-              "text": "Policy, measurable thresholds, and remediation pathways"
+              "text": "To evaluate target attainment, analyze unintended side effects, and identify governance gaps"
             },
             {
               "id": "c",
-              "text": "Technical delivery with no accountability"
+              "text": "To celebrate successes while ignoring edge-case failures"
             },
             {
               "id": "d",
-              "text": "Performance targets with no risk controls"
+              "text": "To permanently archive the simulation data without further review"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Governance quality comes from linking policy intent to measurable controls and action."
+          "explanation": "Debriefs are designed to extract systemic learnings, focusing on target attainment, side effects, and governance compliance."
         },
         {
           "id": "data-science-501-l06-q6",
-          "text": "In high-stakes Data Science Specialization Studio execution, which communication protocol is strongest?",
-          "skillId": "data-science-501-skill-advanced-6",
+          "text": "In the context of mitigation alignment, how should a team address a 'weak measurement signal'?",
+          "skillId": "data-science-501-skill-measurement",
           "options": [
             {
               "id": "a",
-              "text": "Broadcast conclusions without assumptions"
+              "text": "Proceed with the intervention and hope the signal improves"
             },
             {
               "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
+              "text": "Strengthen baseline instrumentation and implement rigorous data quality checks"
             },
             {
               "id": "c",
-              "text": "Share only final outcomes after completion"
+              "text": "Switch to a completely different project"
             },
             {
               "id": "d",
-              "text": "Limit updates to a single informal channel"
+              "text": "Rely on anecdotal evidence instead of quantitative data"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
-        },
-        {
-          "id": "data-science-501-l06-q7",
-          "text": "A mature remediation loop in advanced Data Science should prioritize:",
-          "skillId": "data-science-501-skill-advanced-7",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blame assignment without system updates"
-            },
-            {
-              "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
-            },
-            {
-              "id": "c",
-              "text": "One-time fixes without retesting"
-            },
-            {
-              "id": "d",
-              "text": "Issue closure based on elapsed time"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
-        },
-        {
-          "id": "data-science-501-l06-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Data Science Specialization Studio?",
-          "skillId": "data-science-501-skill-advanced-8",
-          "options": [
-            {
-              "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
-            },
-            {
-              "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
-            },
-            {
-              "id": "c",
-              "text": "Ignore correlated failure modes"
-            },
-            {
-              "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "explanation": "A weak signal requires better instrumentation and quality checks to ensure decisions are based on reliable data."
         }
       ]
     },
@@ -719,8 +619,8 @@ export const DataScience501Module: LearningModule = {
         {
           "id": "data-science-501-l07-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, log assumptions, and verify conclusions against constraints and metrics."
+          "title": "Visual Prompt: Impact Distribution Graph",
+          "content": "A stakeholder impact distribution graph showing immediate versus delayed effects across different demographic groups, highlighting equity considerations."
         }
       ],
       "chunks": [
@@ -728,36 +628,36 @@ export const DataScience501Module: LearningModule = {
           "id": "data-science-501-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "In this lesson, learners will evaluate how the outcomes of their decisions are distributed among different stakeholders. This includes considering both immediate effects and those that may be delayed or indirect. Understanding these impacts is vital for responsible decision-making.\nContext recap: In this lesson, learners will evaluate how the outcomes of their decisions are distributed among different stakeholders. This includes considering both immediate effects and those that may be delayed or indirect. Understanding these impacts is vital for responsible decision-making."
+          "content": "Learners will evaluate how decision outcomes are distributed among diverse stakeholders. This analysis requires mapping both immediate effects and delayed, indirect consequences across different populations. Understanding these asymmetric impacts is vital for ethical, responsible decision-making."
         },
         {
           "id": "data-science-501-l07-c2",
           "kind": "concept",
           "title": "Accountability System Design",
-          "content": "To ensure accountability in our processes, we must implement systems that include traceability standards, review rights, and obligations for remediation. These elements help maintain transparency and trust in our work, ensuring that we are held responsible for our decisions.\nContext recap: To ensure accountability in our processes, we must implement systems that include traceability standards, review rights, and obligations for remediation. These elements help maintain transparency and trust in our work, ensuring that we are held responsible for our decisions."
+          "content": "To operationalize accountability, systems must integrate traceability standards, review rights, and explicit obligations for remediation. These architectural elements maintain transparency, foster public trust, and ensure that organizations remain responsible for algorithmic outcomes."
         },
         {
           "id": "data-science-501-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "A responsible leadership checklist is an important tool that helps connect various aspects of leadership, including strategy, ethics, policy, and operational controls. By reviewing these elements together, leaders can ensure that their decisions are well-informed and aligned with their organization's values and goals. This checklist serves as a comprehensive guide for making responsible choices in data science governance.\nContext recap: A responsible leadership checklist is an important tool that helps connect various aspects of leadership, including strategy, ethics, policy, and operational controls. By reviewing these elements together, leaders can ensure that their decisions are well-informed and aligned with their organization's values and goals. This checklist serves as a comprehensive guide for making responsible choices in data science governance."
+          "content": "A responsible leadership checklist bridges strategy, ethics, policy, and operational controls. By systematically reviewing these dimensions, leaders ensure that their data science initiatives are not only technically sound but also aligned with organizational values and societal norms."
         }
       ],
       "flashcards": [
         {
           "id": "data-science-501-l07-f1",
-          "front": "Impact distribution",
-          "back": "How benefits and harms are allocated across groups and timeframes."
+          "front": "Impact Distribution",
+          "back": "The analytical mapping of how benefits and harms are allocated across different stakeholder groups and timeframes."
         },
         {
           "id": "data-science-501-l07-f2",
-          "front": "Decision traceability",
-          "back": "An auditable explanation of evidence, rationale, and ownership behind a decision."
+          "front": "Decision Traceability",
+          "back": "An auditable, transparent explanation of the evidence, rationale, and ownership behind a specific algorithmic decision."
         },
         {
           "id": "data-science-501-l07-f3",
-          "front": "Responsible leadership",
-          "back": "Decision practice that balances performance, risk, ethics, and accountability."
+          "front": "Responsible Leadership",
+          "back": "A decision practice that actively balances technical performance, systemic risk, ethical implications, and accountability."
         }
       ]
     },
@@ -770,8 +670,8 @@ export const DataScience501Module: LearningModule = {
         {
           "id": "data-science-501-l08-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, log assumptions, and verify conclusions against constraints and metrics."
+          "title": "Visual Prompt: Defense Rubric",
+          "content": "A capstone defense rubric highlighting the three pillars of evaluation: methodological rigor, risk management, and accountability standards."
         }
       ],
       "chunks": [
@@ -779,13 +679,13 @@ export const DataScience501Module: LearningModule = {
           "id": "data-science-501-l08-c1",
           "kind": "practice",
           "title": "Capstone Charter and Evidence Pack",
-          "content": "In this activity, learners will create a detailed capstone charter. This document will outline the key objectives of their project, identify any constraints they might face, establish metrics for measuring success, and define governance controls to ensure ethical practices. Additionally, they will develop an evidence plan that will support their findings and conclusions. This process is crucial for organizing their project and preparing for future presentations.\nContext recap: In this activity, learners will create a detailed capstone charter. This document will outline the key objectives of their project, identify any constraints they might face, establish metrics for measuring success, and define governance controls to ensure ethical practices. Additionally, they will develop an evidence plan that will support their findings and conclusions. This process is crucial for organizing their project and preparing for future presentations."
+          "content": "Learners will draft a comprehensive capstone charter outlining project objectives, operational constraints, success metrics, and governance controls. Concurrently, they will compile an evidence pack that substantiates their methodological choices and conclusions, forming the foundation for their final defense."
         },
         {
           "id": "data-science-501-l08-c2",
           "kind": "recap",
           "title": "Defense Rehearsal",
-          "content": "During the final practice round, learners will engage in a defense rehearsal. This session is designed to prepare them to confidently defend their decisions and project outcomes. They will practice responding to critiques from technical experts, governance representatives, and stakeholders. This exercise is essential for building their communication skills and ensuring they can effectively articulate their reasoning and the importance of their work in data science.\nContext recap: During the final practice round, learners will engage in a defense rehearsal. This session is designed to prepare them to confidently defend their decisions and project outcomes. They will practice responding to critiques from technical experts, governance representatives, and stakeholders. This exercise is essential for building their communication skills and ensuring they can effectively articulate their reasoning and the importance of their work in data science."
+          "content": "In the final phase, learners will execute a defense rehearsal. This high-pressure simulation prepares them to articulate their reasoning, justify tradeoffs, and respond to rigorous critiques from technical experts, governance boards, and stakeholder representatives."
         }
       ],
       "interactiveActivities": [
@@ -804,7 +704,12 @@ export const DataScience501Module: LearningModule = {
           "id": "data-science-501-l08-act2",
           "type": "debate_simulator",
           "title": "Capstone Defense Panel",
-          "description": "Defend your capstone against expert critique on rigor, risk, and accountability."
+          "description": "Defend your capstone against expert critique on rigor, risk, and accountability.",
+          "instructions": [
+            "Analyze the simulated expert critiques targeting your methodological choices.",
+            "Formulate a data-backed rebuttal that addresses risk mitigation and accountability.",
+            "Submit your final defense for evaluation against the capstone rubric."
+          ]
         }
       ]
     }

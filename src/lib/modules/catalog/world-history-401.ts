@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const WorldHistory401Module: LearningModule = {
+export const world_history_401_Module: LearningModule = {
   "id": "world-history-401",
   "title": "World History Capstone Interpretation",
   "description": "Construct high-level historical arguments using comparative synthesis and source evidence.",
@@ -8,15 +8,18 @@ export const WorldHistory401Module: LearningModule = {
   "tags": [
     "core",
     "curriculum",
-    "interactive"
+    "interactive",
+    "capstone",
+    "dbq"
   ],
-  "minAge": 7,
+  "minAge": 12,
   "maxAge": 18,
   "version": "1.1.0",
   "learningObjectives": [
-    "Understand core concepts in History Worldwide",
-    "Apply Source-Based Reasoning Quality strategies through guided practice",
-    "Demonstrate mastery with subject-specific quizzes"
+    "Understand core concepts of comparative historical synthesis",
+    "Apply Source-Based Reasoning to evaluate primary and secondary documents",
+    "Structure long-form historical claims with counterarguments",
+    "Demonstrate mastery through scenario-based historical analysis"
   ],
   "lessons": [
     {
@@ -27,59 +30,59 @@ export const WorldHistory401Module: LearningModule = {
       "chunks": [
         {
           "id": "world-history-401-l01-c1",
-          "title": "Comparative Synthesis Across Eras Overview",
-          "content": "In this lesson, we will explore the idea of comparative synthesis, which means looking at different historical events and understanding how they relate to each other. We will use a special method called capstone historical interpretation to help us analyze these connections. Our main goal is to learn how to recognize strong reasoning and arguments before we start solving historical questions. This will help us think critically and make better conclusions about history.\nContext recap: In this lesson, we will explore the idea of comparative synthesis, which means looking at different historical events and understanding how they relate to each other. We will use a special method called capstone historical interpretation to help us analyze these connections. Our main goal is to learn how to recognize strong reasoning and arguments before we start solving historical questions. This will help us think critically and make better conclusions about history.\nContext recap: In this lesson, we will explore the idea of comparative synthesis, which means looking at different historical events and understanding how they relate to each other. We will use a special method called capstone historical interpretation to help us analyze these connections. Our main goal is to learn how to recognize strong reasoning and arguments before we start solving historical questions. This will help us think critically and make better conclusions about history.\nWhy this matters: Comparative Synthesis Across Eras Overview helps learners in History Worldwide connect ideas from World History Capstone Interpretation to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "title": "Comparative Synthesis Overview",
+          "content": "Welcome to your World History Capstone! In this lesson, we will explore comparative synthesis. This means acting like a historical detective to find connections, similarities, and differences between events that happened in completely different times or places. For example, how was the fall of the Roman Empire similar to the fall of the Han Dynasty? By comparing these events, we uncover larger patterns in human history."
         },
         {
           "id": "world-history-401-l01-c2",
-          "title": "Core Concept",
-          "content": "In this section, we will learn about the core concept of comparative synthesis and how it works with source integration. First, we need to clearly state our main focus or target. After that, we will identify the evidence or steps that support our main idea. This process helps us build a strong foundation for our arguments and ensures that we are using reliable information to back up our claims.\nContext recap: In this section, we will learn about the core concept of comparative synthesis and how it works with source integration. First, we need to clearly state our main focus or target. After that, we will identify the evidence or steps that support our main idea. This process helps us build a strong foundation for our arguments and ensures that we are using reliable information to back up our claims.\nContext recap: In this section, we will learn about the core concept of comparative synthesis and how it works with source integration. First, we need to clearly state our main focus or target. After that, we will identify the evidence or steps that support our main idea. This process helps us build a strong foundation for our arguments and ensures that we are using reliable information to back up our claims.\nWhy this matters: Core Concept helps learners in History Worldwide connect ideas from World History Capstone Interpretation to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "title": "Core Concept: Source Integration",
+          "content": "To build a strong comparison, we rely on source integration. This is the skill of weaving together different pieces of evidence—like a letter from a soldier (primary source) and a textbook chapter (secondary source)—to support your main idea. You can't just stack quotes; you have to explain how they connect to your overall argument and to each other."
         },
         {
           "id": "world-history-401-l01-c3",
-          "title": "Worked Example",
-          "content": "Let's go through a guided example together! First, we will define our goal clearly. Next, we will apply a strategy for integrating our sources, which means bringing together different pieces of information to support our argument. Finally, we will verify our result with a quick check to make sure everything makes sense and aligns with our initial goal. This step-by-step approach will help us understand how to effectively analyze historical information.\nContext recap: Let's go through a guided example together! First, we will define our goal clearly. Next, we will apply a strategy for integrating our sources, which means bringing together different pieces of information to support our argument. Finally, we will verify our result with a quick check to make sure everything makes sense and aligns with our initial goal."
+          "title": "Worked Example: Trade Routes",
+          "content": "Let's look at a guided example. Imagine we are comparing the Silk Road to the Trans-Saharan trade routes. First, we define our goal: to show how both routes spread not just goods, but religions. Next, we integrate our sources: we pair a merchant's journal from Mali with an artifact from ancient China. Finally, we verify our conclusion by asking: Does this evidence actually prove that beliefs traveled alongside physical items?"
         },
         {
           "id": "world-history-401-l01-c4",
           "title": "Transfer Prompt",
-          "content": "Now it's your turn! Apply the same process we just learned to a new scenario. Think about how you can use the steps of comparative synthesis and source integration in this different context. After you have done that, explain in one clear sentence why your approach is valid. This will help you practice your reasoning skills and reinforce your understanding of the concepts we've discussed.\nContext recap: Now it's your turn! Apply the same process we just learned to a new scenario. Think about how you can use the steps of comparative synthesis and source integration in this different context. After you have done that, explain in one clear sentence why your approach is valid.\nContext recap: Now it's your turn! Apply the same process we just learned to a new scenario. Think about how you can use the steps of comparative synthesis and source integration in this different context. After you have done that, explain in one clear sentence why your approach is valid.\nWhy this matters: Transfer Prompt helps learners in History Worldwide connect ideas from World History Capstone Interpretation to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "Now it's your turn! Think about the Industrial Revolution and the modern Digital Revolution. How would you use comparative synthesis to connect them? Identify one piece of evidence you might use for each era, and write a single sentence explaining how they show a similar pattern of human progress or disruption."
         }
       ],
       "flashcards": [
         {
           "id": "world-history-401-l01-f1",
-          "front": "comparative synthesis",
-          "back": "A central target skill in this module. Name it before solving."
+          "front": "Comparative Synthesis",
+          "back": "Analyzing similarities and differences between distinct historical events or eras to find larger patterns."
         },
         {
           "id": "world-history-401-l01-f2",
-          "front": "source integration",
-          "back": "Use this as the method step after defining the goal."
+          "front": "Source Integration",
+          "back": "Weaving together multiple primary and secondary sources to support a single historical argument."
         },
         {
           "id": "world-history-401-l01-f3",
-          "front": "Verification",
-          "back": "Check that your result matches the original goal and constraints."
+          "front": "Primary Source",
+          "back": "First-hand accounts or artifacts from the time period being studied (e.g., letters, coins, treaties)."
         },
         {
           "id": "world-history-401-l01-f4",
-          "front": "Transfer",
-          "back": "Use the same strategy on a new item to confirm true mastery."
+          "front": "Secondary Source",
+          "back": "Analysis or interpretation of historical events created after the fact (e.g., textbooks, documentaries)."
         }
       ],
       "learningAids": [
         {
           "id": "world-history-401-l01-a1",
           "type": "image",
-          "title": "Concept Poster",
-          "content": "A colorful infographic about comparative synthesis and source integration."
+          "title": "Concept Poster: The Synthesis Bridge",
+          "content": "A colorful infographic showing a bridge connecting two different historical eras, with 'Sources' acting as the bricks building the bridge."
         },
         {
           "id": "world-history-401-l01-a2",
           "type": "animation",
           "title": "Warm-up Animation",
-          "content": "Short animation introducing History Worldwide vocabulary."
+          "content": "A short animation showing a split screen of a Roman Emperor and a Chinese Emperor, highlighting their shared challenges."
         }
       ]
     },
@@ -91,16 +94,16 @@ export const WorldHistory401Module: LearningModule = {
       "metadata": {
         "prompts": [
           "Identify one core idea about comparative synthesis from this lesson.",
-          "Explain where source integration appears in real life.",
-          "Describe one question you still have about capstone historical interpretation."
+          "Explain how you would combine a diary entry and a map to make a point.",
+          "Describe one challenge you might face when sources disagree."
         ]
       },
       "interactiveActivities": [
         {
           "id": "world-history-401-l02-ia1",
           "type": "drag_and_drop",
-          "title": "Practice Flow Builder",
-          "description": "Sort each action into Plan, Execute, or Reflect.",
+          "title": "Historical Analysis Flow Builder",
+          "description": "Sort each historical research action into Plan, Execute, or Reflect.",
           "estimatedMinutes": 8,
           "difficultyLevel": "easy",
           "data": {
@@ -121,17 +124,17 @@ export const WorldHistory401Module: LearningModule = {
             "draggables": [
               {
                 "id": "d1",
-                "label": "Set a goal for comparative synthesis",
+                "label": "Read the prompt and identify the eras to compare",
                 "correctTargetId": "plan"
               },
               {
                 "id": "d2",
-                "label": "Try one strategy for source integration",
+                "label": "Group primary sources by their main themes",
                 "correctTargetId": "execute"
               },
               {
                 "id": "d3",
-                "label": "Record what worked and what to improve",
+                "label": "Check if your thesis actually answers the prompt",
                 "correctTargetId": "reflect"
               }
             ]
@@ -143,7 +146,7 @@ export const WorldHistory401Module: LearningModule = {
           "id": "world-history-401-l02-a1",
           "type": "practice",
           "title": "Try It Board",
-          "content": "Complete a guided activity on source integration and write one reflection."
+          "content": "A digital whiteboard where students drag source snippets into 'Agree' or 'Disagree' columns."
         }
       ]
     },
@@ -155,96 +158,96 @@ export const WorldHistory401Module: LearningModule = {
       "questions": [
         {
           "id": "world-history-401-l03-q1",
-          "text": "Which statement best explains comparative synthesis in History Worldwide?",
+          "text": "What is the primary goal of comparative synthesis in historical writing?",
           "skillId": "world-history-401-skill-core",
           "options": [
             {
               "id": "a",
-              "text": "It explains comparative synthesis using evidence from the lesson."
+              "text": "To identify broader historical patterns by analyzing similarities and differences across different eras or regions."
             },
             {
               "id": "b",
-              "text": "It ignores how comparative synthesis works in practice."
+              "text": "To memorize exact dates and names from two different centuries."
             },
             {
               "id": "c",
-              "text": "It focuses on an unrelated topic outside History Worldwide."
+              "text": "To prove that modern history is more important than ancient history."
             },
             {
               "id": "d",
-              "text": "It repeats terms without showing meaning."
+              "text": "To summarize a single textbook chapter without using outside sources."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "world-history-401-l03-q2",
-          "text": "What is the best first step when analyzing source integration?",
+          "text": "When integrating sources into an argument, what is the best first step?",
           "skillId": "world-history-401-skill-process",
           "options": [
             {
               "id": "a",
-              "text": "Define the goal and examine evidence for source integration."
+              "text": "Analyze the author's point of view and the historical context of the document."
             },
             {
               "id": "b",
-              "text": "Guess quickly without checking evidence."
+              "text": "Copy the longest quote you can find to make your essay look longer."
             },
             {
               "id": "c",
-              "text": "Use data unrelated to source integration."
+              "text": "Ignore the date the source was written, as it does not matter."
             },
             {
               "id": "d",
-              "text": "Skip the context and jump to a conclusion."
+              "text": "Only use secondary sources because they are easier to read."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "world-history-401-l03-q3",
-          "text": "Which option shows strong reasoning about capstone historical interpretation?",
+          "text": "Which of the following is an example of strong historical reasoning?",
           "skillId": "world-history-401-skill-reasoning",
           "options": [
             {
               "id": "a",
-              "text": "Use examples and verify assumptions step by step."
+              "text": "Connecting a drop in crop yields to political instability using tax records as evidence."
             },
             {
               "id": "b",
-              "text": "Ignore important details and edge cases."
+              "text": "Assuming a king was popular just because he won a single battle."
             },
             {
               "id": "c",
-              "text": "Use assumptions unrelated to capstone historical interpretation."
+              "text": "Stating that the printing press caused the internet."
             },
             {
               "id": "d",
-              "text": "Change the topic when evidence gets hard."
+              "text": "Ignoring a diary entry because it contradicts your main argument."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "world-history-401-l03-q4",
-          "text": "Why is spaced review useful for History Worldwide mastery?",
+          "text": "Why is it important to corroborate sources (check them against each other)?",
           "skillId": "world-history-401-skill-review",
           "options": [
             {
               "id": "a",
-              "text": "It strengthens memory and transfer over time"
+              "text": "It helps verify accuracy and reveals potential biases in individual accounts."
             },
             {
               "id": "b",
-              "text": "It creates confusion"
+              "text": "It guarantees that you will find one source that is 100% true."
             },
             {
               "id": "c",
-              "text": "It removes key facts"
+              "text": "It allows you to skip writing a thesis statement."
             },
             {
               "id": "d",
-              "text": "It has no value"
+              "text": "It makes the research process faster by eliminating reading."
             }
           ],
           "correctOptionId": "a"
@@ -254,42 +257,41 @@ export const WorldHistory401Module: LearningModule = {
         {
           "id": "world-history-401-l03-ia1",
           "type": "matching_pairs",
-          "title": "Reasoning Match: Checkpoint: Capstone Historical Argument",
-          "description": "Match each error signal to the strongest correction strategy.",
+          "title": "Reasoning Match: Fixing Historical Errors",
+          "description": "Match each common historical writing error to the best correction strategy.",
           "estimatedMinutes": 7,
           "difficultyLevel": "medium",
           "instructions": [
-            "Review each left-side signal.",
-            "Pick the best response on the right.",
-            "Use your matches to plan the next drill."
+            "Review the writing error on the left.",
+            "Pick the best correction strategy on the right."
           ],
           "data": {
             "left": [
               {
                 "id": "l1",
-                "label": "Confusion about comparative synthesis"
+                "label": "Stacking quotes without explaining them"
               },
               {
                 "id": "l2",
-                "label": "Inconsistent approach to source integration"
+                "label": "Comparing two events that have no logical connection"
               },
               {
                 "id": "l3",
-                "label": "Weak transfer of capstone historical interpretation under timing"
+                "label": "Relying entirely on one biased author"
               }
             ],
             "right": [
               {
                 "id": "r1",
-                "label": "Create a one-step concept summary with one worked example"
+                "label": "Add a sentence of analysis after every piece of evidence"
               },
               {
                 "id": "r2",
-                "label": "Use a checklist before choosing the final answer"
+                "label": "Establish a clear thematic link (like economics or religion) first"
               },
               {
                 "id": "r3",
-                "label": "Retest the same target with a short timed sprint"
+                "label": "Find a corroborating source from a different perspective"
               }
             ],
             "pairs": [
@@ -339,8 +341,8 @@ export const WorldHistory401Module: LearningModule = {
         {
           "id": "world-history-401-l03-a1",
           "type": "mnemonic",
-          "title": "Memory Tip",
-          "content": "Use the phrase Plan, Check, Explain for each question."
+          "title": "Memory Tip: C.A.P.",
+          "content": "When looking at a source, remember C.A.P.: Context, Audience, Purpose."
         }
       ]
     },
@@ -352,53 +354,53 @@ export const WorldHistory401Module: LearningModule = {
       "chunks": [
         {
           "id": "world-history-401-l04-c1",
-          "title": "Structuring Long-Form Historical Claims Focus",
-          "content": "In this lesson, we will deepen our understanding of how to structure long-form historical claims using structured reasoning. We will move beyond just understanding concepts to making applied decisions based on those concepts. This means we will learn how to create well-organized arguments that clearly express our historical interpretations and analyses.\nContext recap: In this lesson, we will deepen our understanding of how to structure long-form historical claims using structured reasoning. We will move beyond just understanding concepts to making applied decisions based on those concepts. This means we will learn how to create well-organized arguments that clearly express our historical interpretations and analyses."
+          "title": "The Power of the Thesis",
+          "content": "In this lesson, we move from analyzing sources to building your own argument. A long-form historical claim starts with a powerful thesis statement. Your thesis isn't just a summary of what happened; it is a specific, arguable claim that tells the reader exactly how and why an event occurred, based on the evidence you've gathered."
         },
         {
           "id": "world-history-401-l04-c2",
-          "title": "Method Steps",
-          "content": "To effectively structure our arguments, we will follow these method steps: Step 1 is to identify what is being asked in the historical question. Step 2 involves choosing a strategy that aligns with how we want to structure our argument. Finally, Step 3 is to justify our claims with solid evidence that supports our reasoning. By following these steps, we can create strong and convincing historical arguments.\nContext recap: To effectively structure our arguments, we will follow these method steps: Step 1 is to identify what is being asked in the historical question. Step 2 involves choosing a strategy that aligns with how we want to structure our argument. Finally, Step 3 is to justify our claims with solid evidence that supports our reasoning. By following these steps, we can create strong and convincing historical arguments.\nContext recap: To effectively structure our arguments, we will follow these method steps: Step 1 is to identify what is being asked in the historical question. Step 2 involves choosing a strategy that aligns with how we want to structure our argument. Finally, Step 3 is to justify our claims with solid evidence that supports our reasoning. By following these steps, we can create strong and convincing historical arguments.\nWhy this matters: Method Steps helps learners in History Worldwide connect ideas from World History Capstone Interpretation to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "title": "Method Steps: Claim, Evidence, Reasoning",
+          "content": "To structure your argument, use the CER method. Step 1: State your Claim (your thesis or topic sentence). Step 2: Provide Evidence (quotes, data, or facts from your sources). Step 3: Provide Reasoning (explain exactly how the evidence proves your claim). Without reasoning, your evidence is just a random fact floating in space."
         },
         {
           "id": "world-history-401-l04-c3",
-          "title": "Common Mistakes",
-          "content": "As we work on structuring our historical claims, it's important to be aware of common mistakes that can occur. Some of these include skipping the initial setup, using assumptions that are not related to the topic, or failing to verify the final result of our argument. By recognizing these pitfalls, we can improve our writing and ensure that our arguments are clear and well-supported.\nContext recap: As we work on structuring our historical claims, it's important to be aware of common mistakes that can occur. Some of these include skipping the initial setup, using assumptions that are not related to the topic, or failing to verify the final result of our argument. By recognizing these pitfalls, we can improve our writing and ensure that our arguments are clear and well-supported."
+          "title": "Common Mistakes: The 'Laundry List'",
+          "content": "A common mistake in historical writing is the 'laundry list' essay. This happens when a writer just lists facts one after another without connecting them back to the main argument. Another pitfall is ignoring the chronological order of events, which can confuse your reader and weaken your cause-and-effect reasoning."
         },
         {
           "id": "world-history-401-l04-c4",
-          "title": "Independent Try",
-          "content": "Now it's time for you to try solving a similar item on your own! After you complete it, take a moment to compare your process to the lesson sequence we discussed. This will help you reflect on what you learned and identify areas where you can improve your argument structuring skills in the future.\nContext recap: Now it's time for you to try solving a similar item on your own! After you complete it, take a moment to compare your process to the lesson sequence we discussed. This will help you reflect on what you learned and identify areas where you can improve your argument structuring skills in the future."
+          "title": "Independent Try: Draft a Claim",
+          "content": "Let's practice! Imagine you are writing an essay on the impact of the printing press. Draft a one-sentence claim that goes beyond 'it printed books.' Try to argue *how* it changed society, such as its effect on education or religious authority. Compare your draft to the CER method to ensure it's arguable."
         }
       ],
       "flashcards": [
         {
           "id": "world-history-401-l04-f1",
-          "front": "argument structuring",
-          "back": "State the target and pick a strategy before solving."
+          "front": "Thesis Statement",
+          "back": "A clear, arguable claim that outlines the main argument of your historical essay."
         },
         {
           "id": "world-history-401-l04-f2",
-          "front": "Step Sequence",
-          "back": "Goal -> Strategy -> Evidence -> Check."
+          "front": "CER Method",
+          "back": "Claim, Evidence, Reasoning - the structural backbone of a strong historical paragraph."
         },
         {
           "id": "world-history-401-l04-f3",
-          "front": "Assumption Check",
-          "back": "Remove assumptions that are not supported by the prompt."
+          "front": "Historical Causation",
+          "back": "Explaining the direct and indirect reasons why a historical event happened."
         },
         {
           "id": "world-history-401-l04-f4",
-          "front": "Process Match",
-          "back": "Your explanation should match the steps you actually used."
+          "front": "The 'Laundry List' Error",
+          "back": "Listing historical facts without providing analysis or connecting them to a thesis."
         }
       ],
       "learningAids": [
         {
           "id": "world-history-401-l04-a1",
           "type": "image",
-          "title": "Worked Example Sheet",
-          "content": "Step-by-step visuals for argument structuring scenarios."
+          "title": "Essay Skeleton Visual",
+          "content": "A visual diagram showing a thesis as the 'spine' of a skeleton, with evidence and reasoning acting as the 'ribs' supporting it."
         }
       ]
     },
@@ -409,48 +411,48 @@ export const WorldHistory401Module: LearningModule = {
       "duration": 13,
       "metadata": {
         "prompts": [
-          "Pick one challenge and outline your approach.",
-          "Test your approach and record the result.",
-          "Revise your approach and explain the change."
+          "Pick one historical myth and outline how you would debunk it.",
+          "Test your thesis against a piece of contradictory evidence.",
+          "Revise your claim to make it more specific."
         ]
       },
       "interactiveActivities": [
         {
           "id": "world-history-401-l05-ia1",
           "type": "sorting_buckets",
-          "title": "Strategy Sort",
-          "description": "Sort study actions into Concept, Process, or Review lanes.",
+          "title": "Strategy Sort: Building the Essay",
+          "description": "Sort essay-writing actions into Concept, Process, or Review lanes.",
           "estimatedMinutes": 9,
           "difficultyLevel": "medium",
           "data": {
             "buckets": [
               {
                 "id": "concept",
-                "label": "argument structuring Concept"
+                "label": "Concept (The Idea)"
               },
               {
                 "id": "process",
-                "label": "historical evaluation Process"
+                "label": "Process (The Drafting)"
               },
               {
                 "id": "review",
-                "label": "Review Loop"
+                "label": "Review (The Polish)"
               }
             ],
             "items": [
               {
                 "id": "i1",
-                "label": "Write one definition in your own words",
+                "label": "Brainstorming a unique thesis statement",
                 "correctBucketId": "concept"
               },
               {
                 "id": "i2",
-                "label": "Follow the step-by-step method on a new example",
+                "label": "Weaving primary source quotes into your paragraphs",
                 "correctBucketId": "process"
               },
               {
                 "id": "i3",
-                "label": "Retest the same skill tomorrow",
+                "label": "Checking if your conclusion matches your introduction",
                 "correctBucketId": "review"
               }
             ]
@@ -461,8 +463,8 @@ export const WorldHistory401Module: LearningModule = {
         {
           "id": "world-history-401-l05-a1",
           "type": "animation",
-          "title": "Challenge Walkthrough",
-          "content": "Animated sequence for solving a argument structuring challenge."
+          "title": "Drafting Walkthrough",
+          "content": "An animated sequence showing a messy first draft transforming into a polished, structured paragraph using the CER method."
         }
       ]
     },
@@ -474,96 +476,96 @@ export const WorldHistory401Module: LearningModule = {
       "questions": [
         {
           "id": "world-history-401-l06-q1",
-          "text": "Which statement best explains argument structuring in History Worldwide?",
+          "text": "What is the most important characteristic of a strong historical thesis statement?",
           "skillId": "world-history-401-skill-core",
           "options": [
             {
               "id": "a",
-              "text": "It explains argument structuring using evidence from the lesson."
+              "text": "It makes a specific, arguable claim that can be supported by evidence."
             },
             {
               "id": "b",
-              "text": "It ignores how argument structuring works in practice."
+              "text": "It states a universally accepted fact that no one can disagree with."
             },
             {
               "id": "c",
-              "text": "It focuses on an unrelated topic outside History Worldwide."
+              "text": "It asks a question rather than providing an answer."
             },
             {
               "id": "d",
-              "text": "It repeats terms without showing meaning."
+              "text": "It lists every single date and name that will be mentioned in the essay."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "world-history-401-l06-q2",
-          "text": "What is the best first step when analyzing historical evaluation?",
+          "text": "In the CER (Claim, Evidence, Reasoning) method, what is the purpose of 'Reasoning'?",
           "skillId": "world-history-401-skill-process",
           "options": [
             {
               "id": "a",
-              "text": "Define the goal and examine evidence for historical evaluation."
+              "text": "To explain exactly how the provided evidence proves the claim."
             },
             {
               "id": "b",
-              "text": "Guess quickly without checking evidence."
+              "text": "To introduce a completely new topic to keep the reader interested."
             },
             {
               "id": "c",
-              "text": "Use data unrelated to historical evaluation."
+              "text": "To summarize the essay's conclusion early."
             },
             {
               "id": "d",
-              "text": "Skip the context and jump to a conclusion."
+              "text": "To provide a citation for the quote used in the evidence section."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "world-history-401-l06-q3",
-          "text": "Which option shows strong reasoning about capstone historical interpretation?",
+          "text": "Which of the following is an example of the 'laundry list' mistake in historical writing?",
           "skillId": "world-history-401-skill-reasoning",
           "options": [
             {
               "id": "a",
-              "text": "Use examples and verify assumptions step by step."
+              "text": "Listing five different causes of a war without explaining how they interacted or which was most important."
             },
             {
               "id": "b",
-              "text": "Ignore important details and edge cases."
+              "text": "Focusing deeply on one primary source and analyzing its bias."
             },
             {
               "id": "c",
-              "text": "Use assumptions unrelated to capstone historical interpretation."
+              "text": "Comparing the economic policies of two different empires."
             },
             {
               "id": "d",
-              "text": "Change the topic when evidence gets hard."
+              "text": "Writing a conclusion that synthesizes the main points of the essay."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "world-history-401-l06-q4",
-          "text": "Why is spaced review useful for History Worldwide mastery?",
+          "text": "When evaluating a historical interpretation, why must you look at the author's background?",
           "skillId": "world-history-401-skill-review",
           "options": [
             {
               "id": "a",
-              "text": "It strengthens memory and transfer over time"
+              "text": "To determine if their personal experiences or beliefs might have biased their view of the events."
             },
             {
               "id": "b",
-              "text": "It creates confusion"
+              "text": "To see if they are famous enough to be quoted."
             },
             {
               "id": "c",
-              "text": "It removes key facts"
+              "text": "To ensure they lived in the exact same year the event happened."
             },
             {
               "id": "d",
-              "text": "It has no value"
+              "text": "To find out if they wrote other books on different subjects."
             }
           ],
           "correctOptionId": "a"
@@ -573,42 +575,41 @@ export const WorldHistory401Module: LearningModule = {
         {
           "id": "world-history-401-l06-ia1",
           "type": "matching_pairs",
-          "title": "Reasoning Match: Checkpoint: Source-Based Reasoning Quality",
-          "description": "Match each error signal to the strongest correction strategy.",
+          "title": "Reasoning Match: Evaluating Claims",
+          "description": "Match the weak claim to the strategy that makes it stronger.",
           "estimatedMinutes": 7,
           "difficultyLevel": "medium",
           "instructions": [
-            "Review each left-side signal.",
-            "Pick the best response on the right.",
-            "Use your matches to plan the next drill."
+            "Read the weak historical claim on the left.",
+            "Match it to the revision strategy on the right."
           ],
           "data": {
             "left": [
               {
                 "id": "l1",
-                "label": "Confusion about argument structuring"
+                "label": "Weak: 'The French Revolution was bad.'"
               },
               {
                 "id": "l2",
-                "label": "Inconsistent approach to historical evaluation"
+                "label": "Weak: 'Trade routes existed in the past.'"
               },
               {
                 "id": "l3",
-                "label": "Weak transfer of capstone historical interpretation under timing"
+                "label": "Weak: 'George Washington was a leader.'"
               }
             ],
             "right": [
               {
                 "id": "r1",
-                "label": "Create a one-step concept summary with one worked example"
+                "label": "Specify the impact: 'It caused political upheaval that reshaped European governance.'"
               },
               {
                 "id": "r2",
-                "label": "Use a checklist before choosing the final answer"
+                "label": "Add historical context: 'The Silk Road facilitated cultural exchange between East and West.'"
               },
               {
                 "id": "r3",
-                "label": "Retest the same target with a short timed sprint"
+                "label": "Define the role: 'His military strategies were crucial to the success of the Continental Army.'"
               }
             ],
             "pairs": [
@@ -639,9 +640,9 @@ export const WorldHistory401Module: LearningModule = {
             "count": 4,
             "pointsEach": 1,
             "bloomsLevels": [
-              1,
               2,
-              3
+              3,
+              4
             ]
           }
         ],
@@ -658,8 +659,8 @@ export const WorldHistory401Module: LearningModule = {
         {
           "id": "world-history-401-l06-a1",
           "type": "mnemonic",
-          "title": "Memory Tip",
-          "content": "Use the phrase Plan, Check, Explain for each question."
+          "title": "Memory Tip: The 'So What?' Test",
+          "content": "After writing a claim, ask yourself 'So what?' If you can't answer why it matters, your claim needs to be stronger."
         }
       ]
     },
@@ -671,53 +672,53 @@ export const WorldHistory401Module: LearningModule = {
       "chunks": [
         {
           "id": "world-history-401-l07-c1",
-          "title": "Counterargument and Revision in History Setup",
-          "content": "Before we dive into our historical evaluation, it's important to organize our approach. By planning ahead, we can improve both the quality of our work and the speed at which we complete it. This means taking a moment to think about what we want to achieve and how we will go about it before we start writing.\nContext recap: Before we dive into our historical evaluation, it's important to organize our approach. By planning ahead, we can improve both the quality of our work and the speed at which we complete it. This means taking a moment to think about what we want to achieve and how we will go about it before we start writing."
+          "title": "Embracing the Counterargument",
+          "content": "History is rarely simple, and historians often disagree. A truly advanced historical argument doesn't just present one side; it acknowledges the counterargument. By addressing evidence that contradicts your claim and explaining why your interpretation is still stronger, you show deep critical thinking and make your essay much more convincing."
         },
         {
           "id": "world-history-401-l07-c2",
-          "title": "Decision Rules",
-          "content": "When faced with competing choices in our arguments, we can use a simple decision rule to help us. We should pick the option that has the strongest evidence and the clearest connection to our main goal. This approach will help us make informed decisions and strengthen our arguments by ensuring that we are relying on solid information.\nContext recap: When faced with competing choices in our arguments, we can use a simple decision rule to help us. We should pick the option that has the strongest evidence and the clearest connection to our main goal. This approach will help us make informed decisions and strengthen our arguments by ensuring that we are relying on solid information."
+          "title": "Decision Rules: Weighing Evidence",
+          "content": "When faced with competing sources—like a rebel's diary versus a king's official decree—how do you choose? Use decision rules. Ask: Which source was closer to the event? Which has a stronger motive to lie? You should prioritize the evidence that is most reliable and has the clearest connection to your specific thesis."
         },
         {
           "id": "world-history-401-l07-c3",
-          "title": "Quality Control",
-          "content": "As we finalize our historical arguments, it's crucial to check for three important things: accuracy, completeness, and alignment with our original objective. By ensuring that our work meets these criteria, we can enhance the quality of our arguments and make sure they effectively communicate our historical interpretations.\nContext recap: As we finalize our historical arguments, it's crucial to check for three important things: accuracy, completeness, and alignment with our original objective. By ensuring that our work meets these criteria, we can enhance the quality of our arguments and make sure they effectively communicate our historical interpretations."
+          "title": "Quality Control: The Bias Check",
+          "content": "Before finalizing your argument, perform a quality control check. Look for bias in your own writing. Are you ignoring facts that don't fit your narrative? Ensure your argument is accurate, complete, and directly answers the prompt. A good historian follows the evidence, even if it means changing their original thesis."
         },
         {
           "id": "world-history-401-l07-c4",
-          "title": "Next-Step Plan",
-          "content": "After completing your practice, take a moment to write down one action that you want to repeat in your next round and one action that you would like to improve. This reflection will help you set goals for your future practice and continue to develop your skills in historical analysis and argumentation.\nContext recap: After completing your practice, take a moment to write down one action that you want to repeat in your next round and one action that you would like to improve. This reflection will help you set goals for your future practice and continue to develop your skills in historical analysis and argumentation."
+          "title": "Next-Step Plan: The Revision Cycle",
+          "content": "Writing is rewriting. After drafting your essay, take a step back. Read it aloud to catch logical leaps. Identify one paragraph where the reasoning is weak, and revise it by adding more context or a better quote. This cycle of drafting, checking, and revising is what turns a good essay into a capstone-level masterpiece."
         }
       ],
       "flashcards": [
         {
           "id": "world-history-401-l07-f1",
-          "front": "historical evaluation",
-          "back": "Use this as your organizing framework before execution."
+          "front": "Counterargument",
+          "back": "An opposing viewpoint or piece of evidence that challenges your main thesis."
         },
         {
           "id": "world-history-401-l07-f2",
-          "front": "Decision Rule",
-          "back": "Choose the option with strongest evidence-to-goal alignment."
+          "front": "Rebuttal",
+          "back": "Your response to the counterargument, explaining why your original claim is still valid."
         },
         {
           "id": "world-history-401-l07-f3",
-          "front": "Quality Control",
-          "back": "Accuracy + completeness + objective match."
+          "front": "Historical Bias",
+          "back": "A prejudice or preconceived notion that prevents a person from viewing an event objectively."
         },
         {
           "id": "world-history-401-l07-f4",
-          "front": "Iteration",
-          "back": "Repeat what works; refine one weak step each cycle."
+          "front": "Corroboration",
+          "back": "Confirming a piece of evidence by finding the same information in a different, independent source."
         }
       ],
       "learningAids": [
         {
           "id": "world-history-401-l07-a1",
           "type": "practice",
-          "title": "Project Planner",
-          "content": "Template for planning a mini project focused on historical evaluation."
+          "title": "Counterargument Planner",
+          "content": "A visual template with a scale: 'My Argument' on one side, 'Opposing View' on the other, and a box for 'Why My Argument Wins'."
         }
       ]
     },
@@ -728,46 +729,46 @@ export const WorldHistory401Module: LearningModule = {
       "duration": 10,
       "metadata": {
         "prompts": [
-          "What did you learn most clearly?",
-          "Where did you struggle and why?",
-          "What is your next improvement target?"
+          "What was the hardest part of addressing the counterargument?",
+          "Where did your evidence feel weakest, and why?",
+          "What is your next improvement target for essay writing?"
         ]
       },
       "interactiveActivities": [
         {
           "id": "world-history-401-l08-ia1",
           "type": "matching_pairs",
-          "title": "Reflection Match",
-          "description": "Match each reflection prompt with the best follow-up action.",
+          "title": "Reflection Match: Essay Troubleshooting",
+          "description": "Match your writing struggle with the best follow-up action.",
           "estimatedMinutes": 7,
           "difficultyLevel": "easy",
           "data": {
             "left": [
               {
                 "id": "l1",
-                "label": "I keep missing one skill pattern"
+                "label": "I found a source that completely destroys my thesis."
               },
               {
                 "id": "l2",
-                "label": "I rush and make avoidable mistakes"
+                "label": "My paragraphs feel disconnected and jump around."
               },
               {
                 "id": "l3",
-                "label": "I understand in notes but miss in quizzes"
+                "label": "I have lots of quotes but my word count is low."
               }
             ],
             "right": [
               {
                 "id": "r1",
-                "label": "Do a focused drill on that exact pattern"
+                "label": "Revise your thesis to reflect the new, more complex reality."
               },
               {
                 "id": "r2",
-                "label": "Use a short checklist before submitting answers"
+                "label": "Add transition sentences that link the end of one idea to the start of the next."
               },
               {
                 "id": "r3",
-                "label": "Repeat the skill in a timed re-check"
+                "label": "Expand your 'Reasoning' sections to explain the quotes in your own words."
               }
             ],
             "pairs": [
@@ -792,7 +793,7 @@ export const WorldHistory401Module: LearningModule = {
           "id": "world-history-401-l08-a1",
           "type": "mnemonic",
           "title": "Reflection Cycle",
-          "content": "Remember Observe, Adjust, Repeat while practicing."
+          "content": "Remember: Draft, Doubt, Defend, Polish."
         }
       ]
     },
@@ -804,96 +805,96 @@ export const WorldHistory401Module: LearningModule = {
       "questions": [
         {
           "id": "world-history-401-l09-q1",
-          "text": "Which statement best explains source integration in History Worldwide?",
+          "text": "Why is including a counterargument considered a sign of advanced historical writing?",
           "skillId": "world-history-401-skill-core",
           "options": [
             {
               "id": "a",
-              "text": "It explains source integration using evidence from the lesson."
+              "text": "It demonstrates that you have considered multiple perspectives and can defend your thesis against conflicting evidence."
             },
             {
               "id": "b",
-              "text": "It ignores how source integration works in practice."
+              "text": "It proves that history is entirely subjective and no one can ever be right."
             },
             {
               "id": "c",
-              "text": "It focuses on an unrelated topic outside History Worldwide."
+              "text": "It is a trick to make the essay longer without doing more research."
             },
             {
               "id": "d",
-              "text": "It repeats terms without showing meaning."
+              "text": "It allows you to change your thesis halfway through the essay."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "world-history-401-l09-q2",
-          "text": "What is the best first step when analyzing historical evaluation?",
+          "text": "If two primary sources from the same event contradict each other, what is the best approach?",
           "skillId": "world-history-401-skill-process",
           "options": [
             {
               "id": "a",
-              "text": "Define the goal and examine evidence for historical evaluation."
+              "text": "Analyze the authors' motives, audiences, and proximity to the event to weigh their reliability."
             },
             {
               "id": "b",
-              "text": "Guess quickly without checking evidence."
+              "text": "Throw both sources away and find a secondary source instead."
             },
             {
               "id": "c",
-              "text": "Use data unrelated to historical evaluation."
+              "text": "Assume the source written by the person with the highest social status is correct."
             },
             {
               "id": "d",
-              "text": "Skip the context and jump to a conclusion."
+              "text": "Pick the source that agrees with your thesis and ignore the other one."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "world-history-401-l09-q3",
-          "text": "Which option shows strong reasoning about capstone historical interpretation?",
+          "text": "Which of the following best describes 'historical bias'?",
           "skillId": "world-history-401-skill-reasoning",
           "options": [
             {
               "id": "a",
-              "text": "Use examples and verify assumptions step by step."
+              "text": "A perspective shaped by an author's background or beliefs that influences how they record an event."
             },
             {
               "id": "b",
-              "text": "Ignore important details and edge cases."
+              "text": "A deliberate lie told by a historian to sell more books."
             },
             {
               "id": "c",
-              "text": "Use assumptions unrelated to capstone historical interpretation."
+              "text": "The process of organizing historical events in chronological order."
             },
             {
               "id": "d",
-              "text": "Change the topic when evidence gets hard."
+              "text": "A type of primary source that is written in a foreign language."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "world-history-401-l09-q4",
-          "text": "Why is spaced review useful for History Worldwide mastery?",
+          "text": "What is the purpose of the 'rebuttal' in a historical essay?",
           "skillId": "world-history-401-skill-review",
           "options": [
             {
               "id": "a",
-              "text": "It strengthens memory and transfer over time"
+              "text": "To explain why the counterargument is flawed or less significant than your main claim."
             },
             {
               "id": "b",
-              "text": "It creates confusion"
+              "text": "To agree completely with the opposing side and end the essay."
             },
             {
               "id": "c",
-              "text": "It removes key facts"
+              "text": "To introduce a brand new topic in the conclusion."
             },
             {
               "id": "d",
-              "text": "It has no value"
+              "text": "To list the citations for all the sources used."
             }
           ],
           "correctOptionId": "a"
@@ -903,42 +904,41 @@ export const WorldHistory401Module: LearningModule = {
         {
           "id": "world-history-401-l09-ia1",
           "type": "matching_pairs",
-          "title": "Reasoning Match: Review: Advanced Historical Analysis",
-          "description": "Match each error signal to the strongest correction strategy.",
+          "title": "Reasoning Match: Handling Contradictions",
+          "description": "Match the source conflict to the best analytical approach.",
           "estimatedMinutes": 7,
           "difficultyLevel": "medium",
           "instructions": [
-            "Review each left-side signal.",
-            "Pick the best response on the right.",
-            "Use your matches to plan the next drill."
+            "Review the source conflict on the left.",
+            "Pick the best analytical approach on the right."
           ],
           "data": {
             "left": [
               {
                 "id": "l1",
-                "label": "Confusion about source integration"
+                "label": "A general claims victory, but a soldier's diary describes a retreat."
               },
               {
                 "id": "l2",
-                "label": "Inconsistent approach to historical evaluation"
+                "label": "A merchant praises a trade route, but a tax collector calls it a failure."
               },
               {
                 "id": "l3",
-                "label": "Weak transfer of capstone historical interpretation under timing"
+                "label": "Two modern historians disagree on the cause of a revolution."
               }
             ],
             "right": [
               {
                 "id": "r1",
-                "label": "Create a one-step concept summary with one worked example"
+                "label": "Contrast official propaganda with ground-level reality."
               },
               {
                 "id": "r2",
-                "label": "Use a checklist before choosing the final answer"
+                "label": "Analyze how different economic roles shape perspectives on success."
               },
               {
                 "id": "r3",
-                "label": "Retest the same target with a short timed sprint"
+                "label": "Evaluate which historian uses more comprehensive primary evidence."
               }
             ],
             "pairs": [
@@ -969,9 +969,9 @@ export const WorldHistory401Module: LearningModule = {
             "count": 4,
             "pointsEach": 1,
             "bloomsLevels": [
-              1,
-              2,
-              3
+              3,
+              4,
+              5
             ]
           }
         ],
@@ -988,8 +988,8 @@ export const WorldHistory401Module: LearningModule = {
         {
           "id": "world-history-401-l09-a1",
           "type": "mnemonic",
-          "title": "Memory Tip",
-          "content": "Use the phrase Plan, Check, Explain for each question."
+          "title": "Memory Tip: The Scale of Evidence",
+          "content": "Imagine a scale. Your evidence goes on one side, the counterargument on the other. Your reasoning is the weight that tips the scale in your favor."
         }
       ]
     },
@@ -1001,96 +1001,96 @@ export const WorldHistory401Module: LearningModule = {
       "questions": [
         {
           "id": "world-history-401-l10-q1",
-          "text": "Which statement best explains comparative synthesis in History Worldwide?",
+          "text": "When writing a Document-Based Question (DBQ) essay, how should you use the provided documents?",
           "skillId": "world-history-401-skill-core",
           "options": [
             {
               "id": "a",
-              "text": "It explains comparative synthesis using evidence from the lesson."
+              "text": "Group them by theme and use them as evidence to support a cohesive thesis."
             },
             {
               "id": "b",
-              "text": "It ignores how comparative synthesis works in practice."
+              "text": "Summarize each document one by one in chronological order."
             },
             {
               "id": "c",
-              "text": "It focuses on an unrelated topic outside History Worldwide."
+              "text": "Only use the documents that agree with your personal opinion."
             },
             {
               "id": "d",
-              "text": "It repeats terms without showing meaning."
+              "text": "Quote them entirely without adding any of your own words."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "world-history-401-l10-q2",
-          "text": "What is the best first step when analyzing argument structuring?",
+          "text": "What does it mean to 'contextualize' a historical event in an essay introduction?",
           "skillId": "world-history-401-skill-process",
           "options": [
             {
               "id": "a",
-              "text": "Define the goal and examine evidence for argument structuring."
+              "text": "To describe the broader historical background and trends that led up to the event."
             },
             {
               "id": "b",
-              "text": "Guess quickly without checking evidence."
+              "text": "To define all the difficult vocabulary words you will use."
             },
             {
               "id": "c",
-              "text": "Use data unrelated to argument structuring."
+              "text": "To state your thesis as quickly as possible."
             },
             {
               "id": "d",
-              "text": "Skip the context and jump to a conclusion."
+              "text": "To explain why the event is important to modern-day politics."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "world-history-401-l10-q3",
-          "text": "Which option shows strong reasoning about capstone historical interpretation?",
+          "text": "If a prompt asks you to 'evaluate the extent of change' during a time period, what must your thesis do?",
           "skillId": "world-history-401-skill-reasoning",
           "options": [
             {
               "id": "a",
-              "text": "Use examples and verify assumptions step by step."
+              "text": "Acknowledge both what changed and what stayed the same (continuity), while arguing which was more significant."
             },
             {
               "id": "b",
-              "text": "Ignore important details and edge cases."
+              "text": "Only list the things that changed."
             },
             {
               "id": "c",
-              "text": "Use assumptions unrelated to capstone historical interpretation."
+              "text": "Argue that nothing ever really changes in history."
             },
             {
               "id": "d",
-              "text": "Change the topic when evidence gets hard."
+              "text": "Provide a timeline of dates without analyzing them."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "world-history-401-l10-q4",
-          "text": "Why is spaced review useful for History Worldwide mastery?",
+          "text": "Which of the following is the best example of synthesizing outside information?",
           "skillId": "world-history-401-skill-review",
           "options": [
             {
               "id": "a",
-              "text": "It strengthens memory and transfer over time"
+              "text": "Connecting the prompt's topic to a similar historical event in a different era or region to show a broader pattern."
             },
             {
               "id": "b",
-              "text": "It creates confusion"
+              "text": "Mentioning a random fact you memorized that has nothing to do with the prompt."
             },
             {
               "id": "c",
-              "text": "It removes key facts"
+              "text": "Using a dictionary definition to start your essay."
             },
             {
               "id": "d",
-              "text": "It has no value"
+              "text": "Repeating the information from the provided documents in different words."
             }
           ],
           "correctOptionId": "a"
@@ -1100,42 +1100,41 @@ export const WorldHistory401Module: LearningModule = {
         {
           "id": "world-history-401-l10-ia1",
           "type": "matching_pairs",
-          "title": "Reasoning Match: Mastery: World History IV",
-          "description": "Match each error signal to the strongest correction strategy.",
+          "title": "Reasoning Match: DBQ Rubric Skills",
+          "description": "Match the essay action to the historical skill it demonstrates.",
           "estimatedMinutes": 7,
           "difficultyLevel": "medium",
           "instructions": [
-            "Review each left-side signal.",
-            "Pick the best response on the right.",
-            "Use your matches to plan the next drill."
+            "Review the essay action on the left.",
+            "Pick the corresponding historical skill on the right."
           ],
           "data": {
             "left": [
               {
                 "id": "l1",
-                "label": "Confusion about comparative synthesis"
+                "label": "Explaining what was happening in the world right before the event."
               },
               {
                 "id": "l2",
-                "label": "Inconsistent approach to argument structuring"
+                "label": "Noting that a document was written by a wealthy noble to please the king."
               },
               {
                 "id": "l3",
-                "label": "Weak transfer of capstone historical interpretation under timing"
+                "label": "Bringing in a relevant historical fact not mentioned in the provided sources."
               }
             ],
             "right": [
               {
                 "id": "r1",
-                "label": "Create a one-step concept summary with one worked example"
+                "label": "Contextualization"
               },
               {
                 "id": "r2",
-                "label": "Use a checklist before choosing the final answer"
+                "label": "Sourcing / Point of View Analysis"
               },
               {
                 "id": "r3",
-                "label": "Retest the same target with a short timed sprint"
+                "label": "Outside Evidence"
               }
             ],
             "pairs": [
@@ -1166,9 +1165,9 @@ export const WorldHistory401Module: LearningModule = {
             "count": 4,
             "pointsEach": 1,
             "bloomsLevels": [
-              1,
-              2,
-              3
+              3,
+              4,
+              5
             ]
           }
         ],
@@ -1185,8 +1184,8 @@ export const WorldHistory401Module: LearningModule = {
         {
           "id": "world-history-401-l10-a1",
           "type": "mnemonic",
-          "title": "Memory Tip",
-          "content": "Use the phrase Plan, Check, Explain for each question."
+          "title": "Memory Tip: DBQ Checklist",
+          "content": "Context, Thesis, Documents, Outside Evidence, Sourcing, Complexity."
         }
       ]
     },
@@ -1197,48 +1196,48 @@ export const WorldHistory401Module: LearningModule = {
       "duration": 14,
       "metadata": {
         "prompts": [
-          "Select one weak pattern from recent quizzes.",
-          "Apply a step-by-step correction using argument structuring.",
-          "Document your transfer plan for the next timed check."
+          "Select one weak pattern from your recent essays.",
+          "Apply a step-by-step correction using the CER method.",
+          "Document your plan for the next timed writing check."
         ]
       },
       "interactiveActivities": [
         {
           "id": "world-history-401-l11-ia1",
           "type": "sorting_buckets",
-          "title": "Transfer Ladder",
-          "description": "Sort actions into Diagnose, Fix, and Transfer phases.",
+          "title": "Transfer Ladder: The DBQ Workflow",
+          "description": "Sort actions into the Diagnose, Fix, and Transfer phases of essay writing.",
           "estimatedMinutes": 9,
           "difficultyLevel": "medium",
           "data": {
             "buckets": [
               {
                 "id": "diagnose",
-                "label": "Diagnose"
+                "label": "Diagnose (Read & Plan)"
               },
               {
                 "id": "fix",
-                "label": "Fix"
+                "label": "Fix (Drafting)"
               },
               {
                 "id": "transfer",
-                "label": "Transfer"
+                "label": "Transfer (Review & Apply)"
               }
             ],
             "items": [
               {
                 "id": "i1",
-                "label": "Tag repeated mistakes in source integration",
+                "label": "Read the prompt and group the documents by theme",
                 "correctBucketId": "diagnose"
               },
               {
                 "id": "i2",
-                "label": "Rework one missed item with full reasoning",
+                "label": "Write body paragraphs using Claim, Evidence, Reasoning",
                 "correctBucketId": "fix"
               },
               {
                 "id": "i3",
-                "label": "Retest with a timed mini-check on historical evaluation",
+                "label": "Check if your thesis can be applied to a different historical era",
                 "correctBucketId": "transfer"
               }
             ]
@@ -1250,7 +1249,7 @@ export const WorldHistory401Module: LearningModule = {
           "id": "world-history-401-l11-a1",
           "type": "practice",
           "title": "Correction Loop Card",
-          "content": "Use Diagnose, Fix, Transfer for each difficult problem."
+          "content": "A visual flowchart: Read Prompt -> Group Docs -> Draft Thesis -> Write Body -> Review."
         }
       ]
     },
@@ -1262,96 +1261,96 @@ export const WorldHistory401Module: LearningModule = {
       "questions": [
         {
           "id": "world-history-401-l12-q1",
-          "text": "Which statement best explains comparative synthesis in History Worldwide?",
+          "text": "A historian is comparing the Mongol Empire to the Roman Empire. Which approach shows the highest level of comparative synthesis?",
           "skillId": "world-history-401-skill-core",
           "options": [
             {
               "id": "a",
-              "text": "It explains comparative synthesis using evidence from the lesson."
+              "text": "Analyzing how both empires used infrastructure (roads/relay stations) to maintain control over vast, diverse territories."
             },
             {
               "id": "b",
-              "text": "It ignores how comparative synthesis works in practice."
+              "text": "Listing the names of all the Roman Emperors and then all the Mongol Khans."
             },
             {
               "id": "c",
-              "text": "It focuses on an unrelated topic outside History Worldwide."
+              "text": "Stating that the Romans were better because they built stone buildings."
             },
             {
               "id": "d",
-              "text": "It repeats terms without showing meaning."
+              "text": "Focusing entirely on the Mongol Empire and ignoring Rome."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "world-history-401-l12-q2",
-          "text": "What is the best first step when analyzing historical evaluation?",
+          "text": "You are reading a letter from a factory owner during the Industrial Revolution claiming his workers are happy. How should you evaluate this source?",
           "skillId": "world-history-401-skill-process",
           "options": [
             {
               "id": "a",
-              "text": "Define the goal and examine evidence for historical evaluation."
+              "text": "Question the author's motive, as he has a financial interest in making his factory look good."
             },
             {
               "id": "b",
-              "text": "Guess quickly without checking evidence."
+              "text": "Accept it as absolute truth because it is a primary source."
             },
             {
               "id": "c",
-              "text": "Use data unrelated to historical evaluation."
+              "text": "Ignore it because factory owners don't know anything about history."
             },
             {
               "id": "d",
-              "text": "Skip the context and jump to a conclusion."
+              "text": "Assume all workers were happy during the Industrial Revolution."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "world-history-401-l12-q3",
-          "text": "Which option shows strong reasoning about capstone historical interpretation?",
+          "text": "Which of the following thesis statements is the strongest for a capstone essay?",
           "skillId": "world-history-401-skill-reasoning",
           "options": [
             {
               "id": "a",
-              "text": "Use examples and verify assumptions step by step."
+              "text": "Although the Columbian Exchange brought new crops that increased global populations, its introduction of devastating diseases fundamentally destabilized indigenous societies."
             },
             {
               "id": "b",
-              "text": "Ignore important details and edge cases."
+              "text": "The Columbian Exchange happened in 1492 and involved plants, animals, and diseases."
             },
             {
               "id": "c",
-              "text": "Use assumptions unrelated to capstone historical interpretation."
+              "text": "The Columbian Exchange was both good and bad for the people involved."
             },
             {
               "id": "d",
-              "text": "Change the topic when evidence gets hard."
+              "text": "Christopher Columbus sailed the ocean blue in 1492."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "world-history-401-l12-q4",
-          "text": "Why is spaced review useful for History Worldwide mastery?",
+          "text": "Why is it crucial to understand the 'audience' of a historical document?",
           "skillId": "world-history-401-skill-review",
           "options": [
             {
               "id": "a",
-              "text": "It strengthens memory and transfer over time"
+              "text": "Because authors often change their tone or the facts depending on who they are writing for (e.g., a private diary vs. a public speech)."
             },
             {
               "id": "b",
-              "text": "It creates confusion"
+              "text": "Because you need to know if the audience was large or small to cite it properly."
             },
             {
               "id": "c",
-              "text": "It removes key facts"
+              "text": "Because documents without an audience are not considered primary sources."
             },
             {
               "id": "d",
-              "text": "It has no value"
+              "text": "Because it tells you exactly what year the document was published."
             }
           ],
           "correctOptionId": "a"
@@ -1361,42 +1360,41 @@ export const WorldHistory401Module: LearningModule = {
         {
           "id": "world-history-401-l12-ia1",
           "type": "matching_pairs",
-          "title": "Reasoning Match: World History IV Mastery Applied Retest",
-          "description": "Match each error signal to the strongest correction strategy.",
+          "title": "Reasoning Match: Applied Scenarios",
+          "description": "Match the historical scenario to the best analytical tool.",
           "estimatedMinutes": 7,
           "difficultyLevel": "medium",
           "instructions": [
-            "Review each left-side signal.",
-            "Pick the best response on the right.",
-            "Use your matches to plan the next drill."
+            "Review the historical scenario on the left.",
+            "Pick the best analytical tool on the right."
           ],
           "data": {
             "left": [
               {
                 "id": "l1",
-                "label": "Confusion about comparative synthesis"
+                "label": "Comparing the spread of Buddhism and Christianity."
               },
               {
                 "id": "l2",
-                "label": "Inconsistent approach to historical evaluation"
+                "label": "Reading a propaganda poster from WWII."
               },
               {
                 "id": "l3",
-                "label": "Weak transfer of capstone historical interpretation under timing"
+                "label": "Writing an essay on the causes of the French Revolution."
               }
             ],
             "right": [
               {
                 "id": "r1",
-                "label": "Create a one-step concept summary with one worked example"
+                "label": "Comparative Synthesis"
               },
               {
                 "id": "r2",
-                "label": "Use a checklist before choosing the final answer"
+                "label": "Sourcing (Purpose & Audience)"
               },
               {
                 "id": "r3",
-                "label": "Retest the same target with a short timed sprint"
+                "label": "Causation & Argument Structuring"
               }
             ],
             "pairs": [
@@ -1427,16 +1425,16 @@ export const WorldHistory401Module: LearningModule = {
             "count": 4,
             "pointsEach": 1,
             "bloomsLevels": [
-              1,
-              2,
-              3
+              4,
+              5,
+              6
             ]
           }
         ],
         "difficultyDistribution": {
-          "easy": 1,
+          "easy": 0,
           "medium": 2,
-          "hard": 1
+          "hard": 2
         },
         "feedbackMode": "after_submit",
         "adaptive": false,
@@ -1446,8 +1444,8 @@ export const WorldHistory401Module: LearningModule = {
         {
           "id": "world-history-401-l12-a1",
           "type": "mnemonic",
-          "title": "Memory Tip",
-          "content": "Use the phrase Plan, Check, Explain for each question."
+          "title": "Memory Tip: The Historian's Lens",
+          "content": "Always look through the lens of Context, Audience, and Purpose."
         }
       ]
     },
@@ -1459,59 +1457,59 @@ export const WorldHistory401Module: LearningModule = {
       "chunks": [
         {
           "id": "world-history-401-l13-c1",
-          "title": "Scenario Brief",
-          "content": "In this scenario, you will engage in a fun challenge that combines three important skills: comparing different ideas, organizing your arguments clearly, and evaluating historical events. This will help you think critically about history and develop your reasoning skills.\nContext recap: In this scenario, you will engage in a fun challenge that combines three important skills: comparing different ideas, organizing your arguments clearly, and evaluating historical events. This will help you think critically about history and develop your reasoning skills.\nContext recap: In this scenario, you will engage in a fun challenge that combines three important skills: comparing different ideas, organizing your arguments clearly, and evaluating historical events. This will help you think critically about history and develop your reasoning skills. Context recap: In this scenario, you will engage in a fun challenge that combines three important skills: comparing different ideas, organizing your arguments clearly, and evaluating historical events. This will help you think critically about history and develop your reasoning skills."
+          "title": "Scenario Brief: The Information Revolutions",
+          "content": "Welcome to the Scenario Lab! Today's challenge combines everything you've learned. Your task is to compare the impact of the Gutenberg Printing Press (1440s) with the rise of the Internet (1990s). Both revolutionized how information spread, but did they democratize society or just create new elites? You will need to synthesize sources, structure a claim, and evaluate the outcomes."
         },
         {
           "id": "world-history-401-l13-c2",
-          "title": "Plan the Approach",
-          "content": "To tackle this scenario effectively, start by breaking it down into smaller, manageable decisions. For each decision point, think of a strategy that you can use. This will help you stay organized and make thoughtful choices as you work through the challenge.\nContext recap: To tackle this scenario effectively, start by breaking it down into smaller, manageable decisions. For each decision point, think of a strategy that you can use. This will help you stay organized and make thoughtful choices as you work through the challenge.\nContext recap: To tackle this scenario effectively, start by breaking it down into smaller, manageable decisions. For each decision point, think of a strategy that you can use. This will help you stay organized and make thoughtful choices as you work through the challenge. Context recap: To tackle this scenario effectively, start by breaking it down into smaller, manageable decisions.\nWhy this matters: Plan the Approach helps learners in History Worldwide connect ideas from World History Capstone Interpretation to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "title": "Plan the Approach: Selecting Sources",
+          "content": "To tackle this massive topic, break it down. First, select your sources. You might look at a 16th-century church decree banning certain books, and compare it to a modern article about internet censorship. By planning which themes to compare (like censorship or education), you keep your essay focused and organized."
         },
         {
           "id": "world-history-401-l13-c3",
-          "title": "Execute and Justify",
-          "content": "Once you have your plan ready, it's time to put it into action! As you execute your strategies, make sure to explain each step you take. Use evidence from what you have learned to support your decisions, rather than making guesses. This will strengthen your arguments and show your understanding.\nContext recap: Once you have your plan ready, it's time to put it into action! As you execute your strategies, make sure to explain each step you take. Use evidence from what you have learned to support your decisions, rather than making guesses. This will strengthen your arguments and show your understanding.\nContext recap: Once you have your plan ready, it's time to put it into action! As you execute your strategies, make sure to explain each step you take. Use evidence from what you have learned to support your decisions, rather than making guesses. This will strengthen your arguments and show your understanding.\nWhy this matters: Execute and Justify helps learners in History Worldwide connect ideas from World History Capstone Interpretation to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "title": "Execute and Justify: Writing the Synthesis",
+          "content": "Now, execute your plan. Draft a paragraph that integrates both eras. For example: 'Just as the Catholic Church attempted to control the spread of printed Bibles to maintain authority, modern governments use firewalls to restrict internet access, showing a continuous historical pattern of authorities fearing decentralized information.' Justify your claim with specific evidence."
         },
         {
           "id": "world-history-401-l13-c4",
-          "title": "Evaluate Outcome",
-          "content": "After you have completed your scenario, take a moment to evaluate the outcome. Compare what you achieved with your original goals. Identify which parts of your approach worked well and which areas might need some adjustments. This reflection will help you improve your skills for future challenges.\nContext recap: After you have completed your scenario, take a moment to evaluate the outcome. Compare what you achieved with your original goals. Identify which parts of your approach worked well and which areas might need some adjustments. This reflection will help you improve your skills for future challenges.\nContext recap: After you have completed your scenario, take a moment to evaluate the outcome. Compare what you achieved with your original goals. Identify which parts of your approach worked well and which areas might need some adjustments. This reflection will help you improve your skills for future challenges.\nWhy this matters: Evaluate Outcome helps learners in History Worldwide connect ideas from World History Capstone Interpretation to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "title": "Evaluate Outcome: Peer Review",
+          "content": "Finally, evaluate your outcome. Did you actually answer the prompt? Did you rely too heavily on one era and ignore the other? In the real world, historians use peer review. Read your argument from the perspective of a skeptic. If they can easily poke holes in your reasoning, it's time to adjust your thesis and try again."
         }
       ],
       "flashcards": [
         {
           "id": "world-history-401-l13-f1",
           "front": "Scenario Planning",
-          "back": "Split a complex task into clear decision points."
+          "back": "Breaking a complex historical prompt into manageable themes (e.g., economics, politics, culture)."
         },
         {
           "id": "world-history-401-l13-f2",
-          "front": "Evidence Link",
-          "back": "Each step should connect to evidence in the scenario."
+          "front": "Thematic Synthesis",
+          "back": "Connecting different historical events based on a shared theme rather than just chronological order."
         },
         {
           "id": "world-history-401-l13-f3",
-          "front": "Adjustment Loop",
-          "back": "Use outcome checks to refine your next attempt."
+          "front": "Historical Continuity",
+          "back": "Patterns or structures that remain the same over long periods of time, despite other changes."
         },
         {
           "id": "world-history-401-l13-f4",
-          "front": "Applied Mastery",
-          "back": "Mastery means transferring the process to a new context."
+          "front": "Peer Review",
+          "back": "Evaluating and critiquing another historian's work to ensure accuracy and logical strength."
         }
       ],
       "learningAids": [
         {
           "id": "world-history-401-l13-a1",
           "type": "image",
-          "title": "Scenario Map",
-          "content": "A real-world scenario map connecting comparative synthesis, argument structuring, and historical evaluation."
+          "title": "Scenario Map: Information Ages",
+          "content": "A visual timeline showing the Printing Press on top and the Internet on the bottom, with connecting arrows highlighting shared themes like 'Censorship' and 'Mass Education'."
         },
         {
           "id": "world-history-401-l13-a2",
           "type": "practice",
           "title": "Mini Case Prompt",
-          "content": "Apply one strategy to a new case and explain your reasoning."
+          "content": "Write a one-paragraph synthesis comparing a historical revolution to a modern technological shift."
         }
       ]
     },
@@ -1522,46 +1520,46 @@ export const WorldHistory401Module: LearningModule = {
       "duration": 13,
       "metadata": {
         "prompts": [
-          "Identify one repeated error pattern from your recent work.",
+          "Identify one repeated error pattern from your recent DBQ practice.",
           "Choose the best correction routine for that pattern.",
-          "Write a transfer goal for your next timed check."
+          "Write a transfer goal for your final timed check."
         ]
       },
       "interactiveActivities": [
         {
           "id": "world-history-401-l14-ia1",
           "type": "matching_pairs",
-          "title": "Error to Fix Match",
-          "description": "Match each error signal to the highest-impact correction action.",
+          "title": "Error to Fix Match: The DBQ Clinic",
+          "description": "Match each common essay error to the highest-impact correction action.",
           "estimatedMinutes": 8,
           "difficultyLevel": "medium",
           "data": {
             "left": [
               {
                 "id": "l1",
-                "label": "Repeated miss on comparative synthesis setup"
+                "label": "My thesis is just a summary of the prompt."
               },
               {
                 "id": "l2",
-                "label": "Losses due to rushed historical evaluation decisions"
+                "label": "I run out of time before writing my conclusion."
               },
               {
                 "id": "l3",
-                "label": "Correct in notes but weak transfer in new tasks"
+                "label": "I drop quotes into my essay without explaining them."
               }
             ],
             "right": [
               {
                 "id": "r1",
-                "label": "Rebuild setup steps and retest one parallel item"
+                "label": "Add a 'because' clause to your thesis to introduce your specific argument."
               },
               {
                 "id": "r2",
-                "label": "Use checkpoint pacing + verify before submit"
+                "label": "Spend 10 minutes outlining before you write so you stay on track."
               },
               {
                 "id": "r3",
-                "label": "Pair correction with one timed transfer item"
+                "label": "Use the 'Quote Sandwich' method: Introduce, Quote, Analyze."
               }
             ],
             "pairs": [
@@ -1586,108 +1584,108 @@ export const WorldHistory401Module: LearningModule = {
           "id": "world-history-401-l14-a1",
           "type": "mnemonic",
           "title": "Clinic Loop",
-          "content": "Diagnose, Correct, Transfer."
+          "content": "Diagnose the weak paragraph, Correct the reasoning, Transfer the skill to the next essay."
         }
       ]
     },
     {
       "id": "world-history-401-l15",
-      "title": "World History IV Mastery Mastery Sprint",
+      "title": "World History IV Mastery Sprint",
       "type": "quiz",
       "duration": 10,
       "questions": [
         {
           "id": "world-history-401-l15-q1",
-          "text": "Which statement best explains source integration in History Worldwide?",
+          "text": "Which of the following represents the highest level of historical synthesis?",
           "skillId": "world-history-401-skill-core",
           "options": [
             {
               "id": "a",
-              "text": "It explains source integration using evidence from the lesson."
+              "text": "Connecting the arguments of multiple primary sources to a broader global trend not explicitly mentioned in the documents."
             },
             {
               "id": "b",
-              "text": "It ignores how source integration works in practice."
+              "text": "Translating a primary source from its original language into modern English."
             },
             {
               "id": "c",
-              "text": "It focuses on an unrelated topic outside History Worldwide."
+              "text": "Writing a five-page essay using only one textbook as a source."
             },
             {
               "id": "d",
-              "text": "It repeats terms without showing meaning."
+              "text": "Memorizing the exact dates of every major battle in a war."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "world-history-401-l15-q2",
-          "text": "What is the best first step when analyzing argument structuring?",
+          "text": "When structuring a complex historical argument, where should you place your strongest piece of evidence?",
           "skillId": "world-history-401-skill-process",
           "options": [
             {
               "id": "a",
-              "text": "Define the goal and examine evidence for argument structuring."
+              "text": "It depends on the essay's flow, but often it is used to anchor a body paragraph and directly support the most critical part of the thesis."
             },
             {
               "id": "b",
-              "text": "Guess quickly without checking evidence."
+              "text": "Always in the very first sentence of the introduction."
             },
             {
               "id": "c",
-              "text": "Use data unrelated to argument structuring."
+              "text": "Hidden in the conclusion so it surprises the reader."
             },
             {
               "id": "d",
-              "text": "Skip the context and jump to a conclusion."
+              "text": "In the footnotes, so it doesn't interrupt the story."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "world-history-401-l15-q3",
-          "text": "Which option shows strong reasoning about capstone historical interpretation?",
+          "text": "A student writes: 'The revolution was caused by taxes, bad weather, and angry peasants.' How can this claim be improved for a capstone essay?",
           "skillId": "world-history-401-skill-reasoning",
           "options": [
             {
               "id": "a",
-              "text": "Use examples and verify assumptions step by step."
+              "text": "By establishing a hierarchy of causes, explaining how bad weather exacerbated existing tax grievances to push peasants to revolt."
             },
             {
               "id": "b",
-              "text": "Ignore important details and edge cases."
+              "text": "By adding more items to the list, like 'bad kings' and 'swords'."
             },
             {
               "id": "c",
-              "text": "Use assumptions unrelated to capstone historical interpretation."
+              "text": "By removing the peasants from the sentence to make it shorter."
             },
             {
               "id": "d",
-              "text": "Change the topic when evidence gets hard."
+              "text": "It cannot be improved; it is already a perfect thesis."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "world-history-401-l15-q4",
-          "text": "Why is spaced review useful for History Worldwide mastery?",
+          "text": "Why is the ability to evaluate historical interpretations a 'capstone' skill?",
           "skillId": "world-history-401-skill-review",
           "options": [
             {
               "id": "a",
-              "text": "It strengthens memory and transfer over time"
+              "text": "Because it requires you to move beyond memorizing facts to actively judging the validity of how others have constructed history."
             },
             {
               "id": "b",
-              "text": "It creates confusion"
+              "text": "Because it is the only skill tested on multiple-choice exams."
             },
             {
               "id": "c",
-              "text": "It removes key facts"
+              "text": "Because it allows you to write essays without reading any primary sources."
             },
             {
               "id": "d",
-              "text": "It has no value"
+              "text": "Because it proves that all history books are completely accurate."
             }
           ],
           "correctOptionId": "a"
@@ -1697,42 +1695,41 @@ export const WorldHistory401Module: LearningModule = {
         {
           "id": "world-history-401-l15-ia1",
           "type": "matching_pairs",
-          "title": "Reasoning Match: World History IV Mastery Mastery Sprint",
-          "description": "Match each error signal to the strongest correction strategy.",
+          "title": "Reasoning Match: Final Capstone Check",
+          "description": "Match the advanced historical concept to its definition.",
           "estimatedMinutes": 7,
-          "difficultyLevel": "medium",
+          "difficultyLevel": "hard",
           "instructions": [
-            "Review each left-side signal.",
-            "Pick the best response on the right.",
-            "Use your matches to plan the next drill."
+            "Review the advanced concept on the left.",
+            "Pick the correct definition on the right."
           ],
           "data": {
             "left": [
               {
                 "id": "l1",
-                "label": "Confusion about source integration"
+                "label": "Historiography"
               },
               {
                 "id": "l2",
-                "label": "Inconsistent approach to argument structuring"
+                "label": "Historical Contingency"
               },
               {
                 "id": "l3",
-                "label": "Weak transfer of capstone historical interpretation under timing"
+                "label": "Synthesis"
               }
             ],
             "right": [
               {
                 "id": "r1",
-                "label": "Create a one-step concept summary with one worked example"
+                "label": "The study of how history has been written and interpreted over time."
               },
               {
                 "id": "r2",
-                "label": "Use a checklist before choosing the final answer"
+                "label": "The idea that historical events are dependent on multiple prior conditions and were not inevitable."
               },
               {
                 "id": "r3",
-                "label": "Retest the same target with a short timed sprint"
+                "label": "Combining disparate historical elements into a cohesive, original argument."
               }
             ],
             "pairs": [
@@ -1763,16 +1760,15 @@ export const WorldHistory401Module: LearningModule = {
             "count": 4,
             "pointsEach": 1,
             "bloomsLevels": [
-              1,
-              2,
-              3
+              5,
+              6
             ]
           }
         ],
         "difficultyDistribution": {
-          "easy": 1,
-          "medium": 2,
-          "hard": 1
+          "easy": 0,
+          "medium": 1,
+          "hard": 3
         },
         "feedbackMode": "after_submit",
         "adaptive": false,
@@ -1782,8 +1778,8 @@ export const WorldHistory401Module: LearningModule = {
         {
           "id": "world-history-401-l15-a1",
           "type": "mnemonic",
-          "title": "Memory Tip",
-          "content": "Use the phrase Plan, Check, Explain for each question."
+          "title": "Final Thought",
+          "content": "You are no longer just reading history; you are writing it. Trust your evidence and build your case."
         }
       ]
     }

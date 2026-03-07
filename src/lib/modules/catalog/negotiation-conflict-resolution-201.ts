@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const NegotiationConflictResolution201Module: LearningModule = {
+export const negotiation_conflict_resolution_201_Module: LearningModule = {
   "id": "negotiation-conflict-resolution-201",
   "title": "Negotiation and Conflict Resolution Applied Practice",
   "description": "Level 201 curriculum in Negotiation and Conflict Resolution, focused on interest mapping, agreement design, de-escalation methods, and durable relationship repair through case-driven analysis, simulations, and assessment-backed mastery.",
@@ -14,7 +14,7 @@ export const NegotiationConflictResolution201Module: LearningModule = {
   ],
   "minAge": 15,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "intermediate",
   "localeSupport": [
     "en",
@@ -31,15 +31,15 @@ export const NegotiationConflictResolution201Module: LearningModule = {
   "lessons": [
     {
       "id": "negotiation-conflict-resolution-201-l01",
-      "title": "Negotiation and Conflict Resolution Core Foundations",
+      "title": "Core Foundations of Negotiation",
       "type": "video",
       "duration": 13,
       "learningAids": [
         {
           "id": "negotiation-conflict-resolution-201-l01-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use the lesson structure, document assumptions, and validate your conclusions before final submission."
+          "title": "Key Concepts Diagram",
+          "content": "A visual diagram showing how core concepts like 'Interests', 'Scope', and 'Agreement Design' connect to form a successful negotiation strategy."
         }
       ],
       "chunks": [
@@ -47,50 +47,52 @@ export const NegotiationConflictResolution201Module: LearningModule = {
           "id": "negotiation-conflict-resolution-201-l01-c1",
           "kind": "concept",
           "title": "Language, Scope, and Boundaries",
-          "content": "In this lesson, we will explore important concepts such as operational language, which helps us communicate effectively in negotiations. We will also discuss the idea of scope boundaries, which define the limits of our discussions and agreements. Additionally, we will learn how interest mapping and agreement design work together in real-life situations to help us reach better outcomes. Understanding these concepts is essential for successful negotiation and conflict resolution.\nContext recap: In this lesson, we will explore important concepts such as operational language, which helps us communicate effectively in negotiations. We will also discuss the idea of scope boundaries, which define the limits of our discussions and agreements. Additionally, we will learn how interest mapping and agreement design work together in real-life situations to help us reach better outcomes. Understanding these concepts is essential for successful negotiation and conflict resolution.\nContext recap: In this lesson, we will explore important concepts such as operational language, which helps us communicate effectively in negotiations. We will also discuss the idea of scope boundaries, which define the limits of our discussions and agreements. Additionally, we will learn how interest mapping and agreement design work together in real-life situations to help us reach better outcomes. Understanding these concepts is essential for successful negotiation and conflict resolution.\nWhy this matters: Language, Scope, and Boundaries helps learners in Human Development connect ideas from Negotiation and Conflict Resolution Applied Practice to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "In any negotiation, clear communication is key. We'll learn how to use precise language to avoid misunderstandings. We will also define the 'scope' of a negotiation—what's on the table and what's not—to keep discussions focused. Finally, we'll see how mapping out each party's interests and designing a solid agreement work together to achieve better outcomes for everyone.",
+          "notes": "Why this matters: Understanding these foundational concepts helps you build a strong, structured approach to any negotiation, allowing you to make clearer decisions and justify your reasoning."
         },
         {
           "id": "negotiation-conflict-resolution-201-l01-c2",
           "kind": "concept",
-          "title": "Causal Reasoning Under Constraints",
-          "content": "In this part of the lesson, learners will practice modeling cause-and-effect pathways. This means we will look at how one action can lead to another and identify any assumptions that might lead us to make mistakes. By recognizing these potential pitfalls, we can choose the best interventions or solutions to address the issues at hand. This skill is crucial for making informed decisions in negotiations and resolving conflicts effectively.\nContext recap: In this part of the lesson, learners will practice modeling cause-and-effect pathways. This means we will look at how one action can lead to another and identify any assumptions that might lead us to make mistakes. By recognizing these potential pitfalls, we can choose the best interventions or solutions to address the issues at hand. This skill is crucial for making informed decisions in negotiations and resolving conflicts effectively.\nContext recap: In this part of the lesson, learners will practice modeling cause-and-effect pathways. This means we will look at how one action can lead to another and identify any assumptions that might lead us to make mistakes. By recognizing these potential pitfalls, we can choose the best interventions or solutions to address the issues at hand. This skill is crucial for making informed decisions in negotiations and resolving conflicts effectively.\nWhy this matters: Causal Reasoning Under Constraints helps learners in Human Development connect ideas from Negotiation and Conflict Resolution Applied Practice to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "title": "Thinking About Cause and Effect",
+          "content": "Here, you'll practice thinking about cause and effect. We'll look at how one action can lead to another and identify hidden assumptions that might lead to mistakes. By understanding these connections, you can choose the best actions to solve problems effectively. This skill is crucial for making smart decisions when resolving conflicts.",
+          "notes": "Step-by-step approach: (1) State your goal in one sentence. (2) List the evidence supporting your goal. (3) Explain how each piece of evidence shapes your conclusion. (4) Double-check your final plan against your original goal."
         },
         {
           "id": "negotiation-conflict-resolution-201-l01-c3",
           "kind": "recap",
-          "title": "Evidence Standards",
-          "content": "Throughout this module, it is important to remember that all claims we make must be supported by observable evidence. This means we need to connect our statements to clear indicators that can be measured. Additionally, we will establish uncertainty bounds, which help us understand the limits of our knowledge. Finally, we will set up review checkpoints to ensure that our conclusions are valid and reliable. This approach helps us maintain high standards of evidence in our negotiations.\nContext recap: Throughout this module, it is important to remember that all claims we make must be supported by observable evidence. This means we need to connect our statements to clear indicators that can be measured. Additionally, we will establish uncertainty bounds, which help us understand the limits of our knowledge. Finally, we will set up review checkpoints to ensure that our conclusions are valid and reliable."
+          "title": "Using Evidence to Support Claims",
+          "content": "Throughout this course, every claim you make must be backed by observable evidence. This means connecting your statements to facts and data. We will also learn to acknowledge the limits of our knowledge by defining 'uncertainty bounds.' Finally, we'll use review checkpoints to ensure our conclusions are sound. This rigorous approach helps maintain credibility and leads to better agreements."
         }
       ],
       "flashcards": [
         {
           "id": "negotiation-conflict-resolution-201-l01-f1",
-          "front": "interest mapping",
-          "back": "A central decision axis in Negotiation and Conflict Resolution requiring explicit tradeoff treatment."
+          "front": "Interest Mapping",
+          "back": "A method to visually lay out what each party wants and needs in a negotiation, helping to identify common ground and potential trade-offs."
         },
         {
           "id": "negotiation-conflict-resolution-201-l01-f2",
-          "front": "agreement design",
-          "back": "The reliability layer that determines whether plans survive real-world variability."
+          "front": "Agreement Design",
+          "back": "The process of creating a durable plan that accounts for potential problems and real-world changes, ensuring it remains effective over time."
         },
         {
           "id": "negotiation-conflict-resolution-201-l01-f3",
-          "front": "de-escalation methods",
-          "back": "The analytical process for assessing intervention quality and consequence spread."
+          "front": "De-escalation Methods",
+          "back": "Techniques used to reduce tension and hostility in a conflict, analyzed for their effectiveness and potential unintended consequences."
         }
       ]
     },
     {
       "id": "negotiation-conflict-resolution-201-l02",
-      "title": "Negotiation and Conflict Resolution Workflow Lab",
+      "title": "Building Your Negotiation Workflow",
       "type": "interactive",
       "duration": 15,
       "learningAids": [
         {
           "id": "negotiation-conflict-resolution-201-l02-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use the lesson structure, document assumptions, and validate your conclusions before final submission."
+          "title": "Build Your Negotiation Playbook",
+          "content": "Follow the interactive prompts to construct a step-by-step workflow for a sample negotiation scenario. Document your assumptions and check your logic."
         }
       ],
       "chunks": [
@@ -98,13 +100,13 @@ export const NegotiationConflictResolution201Module: LearningModule = {
           "id": "negotiation-conflict-resolution-201-l02-c1",
           "kind": "practice",
           "title": "Workflow Construction",
-          "content": "In this interactive lab, learners will have the opportunity to design a workflow that emphasizes the importance of method execution. This means we will focus on how to carry out our plans in a structured way. We will also practice interpreting evidence based on our workflow. After creating our workflows, we will test their resilience by examining how well they hold up against uncertainty. This hands-on experience will help us understand the practical aspects of negotiation and conflict resolution.\nContext recap: In this interactive lab, learners will have the opportunity to design a workflow that emphasizes the importance of method execution. This means we will focus on how to carry out our plans in a structured way. We will also practice interpreting evidence based on our workflow. After creating our workflows, we will test their resilience by examining how well they hold up against uncertainty."
+          "content": "In this interactive lab, you'll design a step-by-step workflow for handling a negotiation. The focus is on creating a clear, repeatable process. You'll practice interpreting evidence within your workflow and then test its strength by seeing how it holds up when faced with unexpected challenges. This hands-on experience will build your practical negotiation skills."
         },
         {
           "id": "negotiation-conflict-resolution-201-l02-c2",
           "kind": "recap",
-          "title": "Readiness and Control Gates",
-          "content": "To ensure that our operations are ready for action, we need to focus on several key components. This includes mapping out who is responsible for what, which we call owner mapping. We will also establish control gates, which are checkpoints that help us monitor progress and make decisions. Finally, we will implement post-decision verification hooks to confirm that our choices are effective. Understanding these elements is essential for maintaining operational readiness in negotiations.\nContext recap: To ensure that our operations are ready for action, we need to focus on several key components. This includes mapping out who is responsible for what, which we call owner mapping. We will also establish control gates, which are checkpoints that help us monitor progress and make decisions. Finally, we will implement post-decision verification hooks to confirm that our choices are effective."
+          "title": "Decision Points and Safeguards",
+          "content": "A good workflow needs clear roles and responsibilities—who does what. It also needs 'control gates,' which are checkpoints to review progress and make key decisions. Finally, we'll include steps to verify that our decisions are having the intended effect. These elements ensure that your negotiation plan is organized, controlled, and effective."
         }
       ],
       "interactiveActivities": [
@@ -112,23 +114,23 @@ export const NegotiationConflictResolution201Module: LearningModule = {
           "id": "negotiation-conflict-resolution-201-l02-act1",
           "type": "matching_pairs",
           "title": "Control-to-Outcome Mapping",
-          "description": "Match each control mechanism to its strongest expected system benefit.",
+          "description": "Match each control mechanism to its most likely benefit.",
           "pairs": [
             {
-              "left": "Pre-commit review gate",
-              "right": "Reduces preventable defects"
+              "left": "Reviewing a plan before starting",
+              "right": "Helps avoid common mistakes"
             },
             {
-              "left": "Rollback trigger",
-              "right": "Limits blast radius during failures"
+              "left": "Having a 'rollback' plan",
+              "right": "Contains the damage when something goes wrong"
             },
             {
-              "left": "Baseline dashboard",
-              "right": "Supports defensible impact claims"
+              "left": "Tracking key metrics on a dashboard",
+              "right": "Provides evidence to show your impact"
             },
             {
-              "left": "Retrospective cycle",
-              "right": "Improves future decision quality"
+              "left": "Holding a 'lessons learned' meeting",
+              "right": "Improves the quality of future decisions"
             }
           ]
         },
@@ -136,7 +138,7 @@ export const NegotiationConflictResolution201Module: LearningModule = {
           "id": "negotiation-conflict-resolution-201-l02-act2",
           "type": "sorting_buckets",
           "title": "Constraint Classification",
-          "description": "Sort constraints into technical, policy, and stakeholder-impact buckets.",
+          "description": "Sort these real-world constraints into the correct categories.",
           "buckets": [
             "Technical",
             "Policy",
@@ -144,19 +146,19 @@ export const NegotiationConflictResolution201Module: LearningModule = {
           ],
           "items": [
             {
-              "text": "Service latency target",
+              "text": "A website's target loading speed",
               "bucket": "Technical"
             },
             {
-              "text": "Compliance retention rule",
+              "text": "A legal rule for data privacy",
               "bucket": "Policy"
             },
             {
-              "text": "Community trust risk",
+              "text": "The risk of losing community trust",
               "bucket": "Stakeholder Impact"
             },
             {
-              "text": "Incident disclosure protocol",
+              "text": "A required procedure for reporting issues",
               "bucket": "Policy"
             }
           ]
@@ -172,214 +174,214 @@ export const NegotiationConflictResolution201Module: LearningModule = {
         {
           "id": "negotiation-conflict-resolution-201-l03-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use the lesson structure, document assumptions, and validate your conclusions before final submission."
+          "title": "Review Your Notes",
+          "content": "Before starting the quiz, take a moment to review the key concepts from the first two lessons. Pay attention to the flashcard terms and workflow steps."
         }
       ],
       "questions": [
         {
           "id": "negotiation-conflict-resolution-201-l03-q1",
-          "text": "Which action most improves interest mapping quality in practice?",
+          "text": "Which action most improves the quality of interest mapping in a real negotiation?",
           "skillId": "negotiation-conflict-resolution-201-skill-core",
           "options": [
             {
               "id": "a",
-              "text": "Skip explicit constraints and rely on intuition"
+              "text": "Rely on intuition and skip writing down constraints"
             },
             {
               "id": "b",
-              "text": "Define assumptions, monitor indicators, and test failure cases"
+              "text": "Clearly state assumptions, track key indicators, and test for potential problems"
             },
             {
               "id": "c",
-              "text": "Treat all outcomes as equivalent"
+              "text": "Assume all outcomes are equally valuable to all parties"
             },
             {
               "id": "d",
-              "text": "Ignore uncertainty and variance"
+              "text": "Ignore uncertainty and potential variations"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "High-quality decisions require explicit assumptions and measurable stress tests."
+          "explanation": "High-quality decisions require stating your assumptions clearly and testing them with measurable data."
         },
         {
           "id": "negotiation-conflict-resolution-201-l03-q2",
-          "text": "At level 201, the strongest emphasis is:",
+          "text": "At this intermediate level (201), the strongest emphasis is on:",
           "skillId": "negotiation-conflict-resolution-201-skill-level",
           "options": [
             {
               "id": "a",
-              "text": "method execution, structured workflow practice, and evidence-based interpretation"
+              "text": "Executing methods, practicing with structured workflows, and interpreting evidence"
             },
             {
               "id": "b",
-              "text": "Fast execution with no review loops"
+              "text": "Making decisions as quickly as possible, without review"
             },
             {
               "id": "c",
-              "text": "Single stakeholder perspective only"
+              "text": "Considering only one person's perspective"
             },
             {
               "id": "d",
-              "text": "Outcome claims without baselines"
+              "text": "Claiming success without providing baseline data for comparison"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "The 201 layer is explicitly designed around method execution, structured workflow practice, and evidence-based interpretation."
+          "explanation": "The 201 level focuses on the practical application of skills through structured practice and evidence-based analysis."
         },
         {
           "id": "negotiation-conflict-resolution-201-l03-q3",
-          "text": "What best strengthens agreement design reliability?",
+          "text": "What is the best way to make an agreement more reliable and likely to succeed?",
           "skillId": "negotiation-conflict-resolution-201-skill-reliability",
           "options": [
             {
               "id": "a",
-              "text": "No ownership for incident response"
+              "text": "Have no clear owner for responding to problems"
             },
             {
               "id": "b",
-              "text": "Clear control points, owner mapping, and escalation thresholds"
+              "text": "Establish clear decision points, map out responsibilities, and define when to escalate issues"
             },
             {
               "id": "c",
-              "text": "Ad-hoc changes without logs"
+              "text": "Make changes on the fly without documenting them"
             },
             {
               "id": "d",
-              "text": "No postmortem process"
+              "text": "Avoid reviewing what went wrong after a problem occurs"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Reliability improves when control, ownership, and escalation are explicit and repeatable."
+          "explanation": "Reliability improves when control points, ownership, and escalation paths are defined in advance."
         },
         {
           "id": "negotiation-conflict-resolution-201-l03-q4",
-          "text": "When evaluating de-escalation methods, which approach is most defensible?",
+          "text": "When evaluating methods for de-escalating a conflict, which approach is most defensible?",
           "skillId": "negotiation-conflict-resolution-201-skill-eval",
           "options": [
             {
               "id": "a",
-              "text": "Use anecdotal examples only"
+              "text": "Use only personal stories as evidence"
             },
             {
               "id": "b",
-              "text": "Compare interventions against baseline and monitor side effects"
+              "text": "Compare the results against a baseline and watch for unintended side effects"
             },
             {
               "id": "c",
-              "text": "Remove difficult scenarios from evaluation"
+              "text": "Exclude difficult scenarios from the evaluation"
             },
             {
               "id": "d",
-              "text": "Change target definitions after results are known"
+              "text": "Change the definition of success after seeing the results"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Baseline comparison and side-effect monitoring reduce overclaiming and hidden risk."
+          "explanation": "Comparing results to a baseline (what would have happened anyway) and monitoring for side effects prevents exaggerated claims and hidden risks."
         },
         {
           "id": "negotiation-conflict-resolution-201-l03-q5",
-          "text": "A mature durable relationship repair model should include:",
+          "text": "A well-developed model for repairing a damaged relationship should include:",
           "skillId": "negotiation-conflict-resolution-201-skill-governance",
           "options": [
             {
               "id": "a",
-              "text": "One-time review with no corrective pathway"
+              "text": "A one-time review with no path for making corrections"
             },
             {
               "id": "b",
-              "text": "Policy links, measurable thresholds, and remediation triggers"
+              "text": "Links to clear policies, measurable thresholds for action, and triggers for fixing problems"
             },
             {
               "id": "c",
-              "text": "No public or stakeholder transparency"
+              "text": "A lack of transparency with stakeholders or the public"
             },
             {
               "id": "d",
-              "text": "Unbounded discretion without guardrails"
+              "text": "Unlimited freedom for decision-makers without any rules"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Mature governance connects policy goals to measurable thresholds and corrective pathways."
+          "explanation": "Strong governance connects policies to measurable actions and clear pathways for correction when things go wrong."
         }
       ]
     },
     {
       "id": "negotiation-conflict-resolution-201-l04",
-      "title": "Negotiation and Conflict Resolution Case Analysis",
+      "title": "Case Analysis: A Community Dispute",
       "type": "video",
       "duration": 14,
       "learningAids": [
         {
           "id": "negotiation-conflict-resolution-201-l04-a1",
-          "type": "mnemonic",
-          "title": "Guided Practice",
-          "content": "Use the lesson structure, document assumptions, and validate your conclusions before final submission."
+          "type": "case_study_brief",
+          "title": "Case Brief: The Park Proposal",
+          "content": "Review the one-page summary of a dispute between a city council, a local business group, and a neighborhood association over the development of a public park."
         }
       ],
       "chunks": [
         {
           "id": "negotiation-conflict-resolution-201-l04-c1",
           "kind": "example",
-          "title": "Case Context and Stakes",
-          "content": "In this case study, we will focus on a complex situation involving multiple parties who are in conflict. In this scenario, the interests of the parties are at odds, and trust has been damaged due to previous breakdowns in communication. Learners will work to map out the decision stakes involved, which means identifying what is at risk for each party. Additionally, we will look for non-obvious risks that may not be immediately apparent. This analysis will help us understand the dynamics of the conflict better.\nContext recap: In this case study, we will focus on a complex situation involving multiple parties who are in conflict. In this scenario, the interests of the parties are at odds, and trust has been damaged due to previous breakdowns in communication. Learners will work to map out the decision stakes involved, which means identifying what is at risk for each party. Additionally, we will look for non-obvious risks that may not be immediately apparent."
+          "title": "Understanding the Context and Stakes",
+          "content": "In this case study, we'll analyze a complex conflict between multiple groups with competing interests. Trust has been broken due to poor communication. Your first task is to map out what's at stake for each party—what they stand to gain or lose. We will also look for hidden risks that might not be obvious at first glance."
         },
         {
           "id": "negotiation-conflict-resolution-201-l04-c2",
           "kind": "concept",
-          "title": "Tradeoff Matrix Construction",
-          "content": "In this section, we will construct a tradeoff matrix to compare different interventions. This matrix will allow us to evaluate each option based on several important criteria, including effectiveness, reliability, equity, and how feasible it is to implement. By using this structured approach, we can make more informed decisions about which interventions to pursue in our negotiations and conflict resolution efforts.\nContext recap: In this section, we will construct a tradeoff matrix to compare different interventions. This matrix will allow us to evaluate each option based on several important criteria, including effectiveness, reliability, equity, and how feasible it is to implement. By using this structured approach, we can make more informed decisions about which interventions to pursue in our negotiations and conflict resolution efforts."
+          "title": "Building a Trade-off Matrix",
+          "content": "Next, we will build a 'trade-off matrix' to compare different solutions. This tool helps us evaluate each option against key criteria like its effectiveness, cost, fairness, and feasibility. Using this structured approach allows us to make a more informed and defensible recommendation for resolving the conflict."
         },
         {
           "id": "negotiation-conflict-resolution-201-l04-c3",
           "kind": "recap",
-          "title": "Failure Lessons and Recovery",
-          "content": "In this recap, we will focus on the lessons learned from failures in our negotiation processes. We will convert these failure signatures into valuable safeguards, which are strategies designed to prevent similar mistakes in the future. Additionally, we will create response playbooks that outline steps to take when things go wrong. Finally, we will discuss how to implement monitoring updates to keep track of our progress and ensure we are on the right path. Learning from failure is a key part of improving our negotiation skills.\nContext recap: In this recap, we will focus on the lessons learned from failures in our negotiation processes. We will convert these failure signatures into valuable safeguards, which are strategies designed to prevent similar mistakes in the future. Additionally, we will create response playbooks that outline steps to take when things go wrong. Finally, we will discuss how to implement monitoring updates to keep track of our progress and ensure we are on the right path."
+          "title": "Learning from Failure to Plan for Recovery",
+          "content": "In this recap, we'll examine past failures in the negotiation process. We will identify the patterns that led to failure and use them to create safeguards to prevent similar mistakes. We'll also develop 'response playbooks'—step-by-step guides for what to do when things go wrong. Learning from failure is a critical part of becoming a better negotiator."
         }
       ],
       "flashcards": [
         {
           "id": "negotiation-conflict-resolution-201-l04-f1",
-          "front": "Tradeoff matrix",
-          "back": "A structured comparison of options under conflicting priorities."
+          "front": "Trade-off Matrix",
+          "back": "A chart used to compare different options by weighing their pros and cons against a set of important criteria."
         },
         {
           "id": "negotiation-conflict-resolution-201-l04-f2",
-          "front": "Failure signature",
-          "back": "A recurring observable pattern indicating a class of system risk."
+          "front": "Failure Signature",
+          "back": "A specific, repeating pattern of events or data that signals a potential problem or weakness in a system."
         },
         {
           "id": "negotiation-conflict-resolution-201-l04-f3",
-          "front": "Recovery playbook",
-          "back": "A documented sequence for safe and timely response during adverse events."
+          "front": "Recovery Playbook",
+          "back": "A documented, step-by-step plan for responding to a problem safely and quickly to minimize negative impact."
         }
       ]
     },
     {
       "id": "negotiation-conflict-resolution-201-l05",
-      "title": "Negotiation and Conflict Resolution Simulation Studio",
+      "title": "Simulation Studio: Practice Under Pressure",
       "type": "interactive",
       "duration": 16,
       "learningAids": [
         {
           "id": "negotiation-conflict-resolution-201-l05-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use the lesson structure, document assumptions, and validate your conclusions before final submission."
+          "title": "Negotiation Sandbox",
+          "content": "Enter the simulation and apply the techniques you've learned. Make decisions, see the outcomes, and get feedback on your performance."
         }
       ],
       "chunks": [
         {
           "id": "negotiation-conflict-resolution-201-l05-c1",
           "kind": "practice",
-          "title": "Scenario Simulation Setup",
-          "content": "In this interactive simulation studio, learners will have the chance to set up various scenarios for negotiation. This includes configuring different interventions, which are the actions we plan to take. We will also define uncertainty parameters, which help us understand the limits of our predictions. Finally, we will establish measurable success thresholds, which are the criteria we will use to determine whether our interventions are successful. This practical experience will enhance our understanding of negotiation dynamics.\nContext recap: In this interactive simulation studio, learners will have the chance to set up various scenarios for negotiation. This includes configuring different interventions, which are the actions we plan to take. We will also define uncertainty parameters, which help us understand the limits of our predictions. Finally, we will establish measurable success thresholds, which are the criteria we will use to determine whether our interventions are successful."
+          "title": "Setting Up the Scenario",
+          "content": "In this interactive simulation, you'll set up a negotiation scenario. This involves choosing your strategy, defining the limits of what you know (uncertainty), and setting clear, measurable goals for success. This hands-on practice will deepen your understanding of how negotiations unfold in the real world."
         },
         {
           "id": "negotiation-conflict-resolution-201-l05-c2",
           "kind": "recap",
-          "title": "Simulation Debrief",
-          "content": "After each simulation run, we will conduct a debriefing session to review the results. During this time, we will analyze the expected gains from our interventions, as well as any side effects that may have occurred. Additionally, we will check for compliance with governance standards to ensure that our actions align with ethical practices. This reflective process is crucial for improving our negotiation strategies and outcomes.\nContext recap: After each simulation run, we will conduct a debriefing session to review the results. During this time, we will analyze the expected gains from our interventions, as well as any side effects that may have occurred. Additionally, we will check for compliance with governance standards to ensure that our actions align with ethical practices. This reflective process is crucial for improving our negotiation strategies and outcomes.\nContext recap: After each simulation run, we will conduct a debriefing session to review the results. During this time, we will analyze the expected gains from our interventions, as well as any side effects that may have occurred. Additionally, we will check for compliance with governance standards to ensure that our actions align with ethical practices. This reflective process is crucial for improving our negotiation strategies and outcomes.\nWhy this matters: Simulation Debrief helps learners in Human Development connect ideas from Negotiation and Conflict Resolution Applied Practice to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "Debriefing the Simulation",
+          "content": "After each simulation, we'll hold a debrief to review the results. We will analyze the expected benefits of your actions versus the actual outcomes, including any unintended side effects. We will also check whether the actions taken were consistent with ethical guidelines and policies. This reflection is crucial for improving your strategies for the next negotiation."
         }
       ],
       "interactiveActivities": [
@@ -387,34 +389,34 @@ export const NegotiationConflictResolution201Module: LearningModule = {
           "id": "negotiation-conflict-resolution-201-l05-act1",
           "type": "scenario_practice",
           "title": "Intervention Simulation",
-          "description": "Compare three intervention paths and justify which best advances interest mapping and durable relationship repair.",
+          "description": "You are presented with a conflict. Compare three possible courses of action and justify which one best achieves the parties' interests while repairing their relationship.",
           "instructions": [
-            "Define objective and guardrails before selecting interventions.",
-            "Record one near-term and one long-term tradeoff for each option.",
-            "Select metrics that confirm or falsify your choice."
+            "First, define your main objective and any hard limits or rules you must follow.",
+            "For each of the three options, list one short-term and one long-term trade-off.",
+            "Choose specific metrics that would prove whether your chosen option was a success or failure."
           ]
         },
         {
           "id": "negotiation-conflict-resolution-201-l05-act2",
           "type": "matching_pairs",
-          "title": "Mitigation Alignment",
-          "description": "Match each risk condition with the strongest mitigation response.",
+          "title": "Risk and Response",
+          "description": "Match each common negotiation risk with the most effective response.",
           "pairs": [
             {
-              "left": "Ambiguous ownership",
-              "right": "Create explicit role and escalation map"
+              "left": "Unclear who is responsible for what",
+              "right": "Create a map of roles and escalation paths"
             },
             {
-              "left": "Weak signal quality",
-              "right": "Strengthen intake validation and quality checks"
+              "left": "Unreliable or unclear information",
+              "right": "Improve how information is collected and verified"
             },
             {
-              "left": "Policy drift",
-              "right": "Re-anchor controls to documented standards"
+              "left": "The agreement slowly becomes irrelevant",
+              "right": "Schedule regular reviews against documented standards"
             },
             {
-              "left": "Stakeholder backlash",
-              "right": "Increase transparency and two-way communication"
+              "left": "Negative reaction from stakeholders",
+              "right": "Increase transparency and create channels for feedback"
             }
           ]
         }
@@ -422,221 +424,222 @@ export const NegotiationConflictResolution201Module: LearningModule = {
     },
     {
       "id": "negotiation-conflict-resolution-201-l06",
-      "title": "Checkpoint 2: Systems Decisions",
+      "title": "Checkpoint 2: Application and Systems",
       "type": "quiz",
       "duration": 10,
       "learningAids": [
         {
           "id": "negotiation-conflict-resolution-201-l06-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use the lesson structure, document assumptions, and validate your conclusions before final submission."
+          "title": "Review Case Study and Simulation",
+          "content": "Refresh your memory of the case analysis and simulation exercises. The following questions will test your understanding of those applied concepts."
         }
       ],
       "questions": [
         {
           "id": "negotiation-conflict-resolution-201-l06-q1",
-          "text": "Which action most improves interest mapping quality in practice?",
-          "skillId": "negotiation-conflict-resolution-201-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "Skip explicit constraints and rely on intuition"
-            },
-            {
-              "id": "b",
-              "text": "Define assumptions, monitor indicators, and test failure cases"
-            },
-            {
-              "id": "c",
-              "text": "Treat all outcomes as equivalent"
-            },
-            {
-              "id": "d",
-              "text": "Ignore uncertainty and variance"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "High-quality decisions require explicit assumptions and measurable stress tests."
-        },
-        {
-          "id": "negotiation-conflict-resolution-201-l06-q2",
-          "text": "At level 201, the strongest emphasis is:",
-          "skillId": "negotiation-conflict-resolution-201-skill-level",
-          "options": [
-            {
-              "id": "a",
-              "text": "method execution, structured workflow practice, and evidence-based interpretation"
-            },
-            {
-              "id": "b",
-              "text": "Fast execution with no review loops"
-            },
-            {
-              "id": "c",
-              "text": "Single stakeholder perspective only"
-            },
-            {
-              "id": "d",
-              "text": "Outcome claims without baselines"
-            }
-          ],
-          "correctOptionId": "a",
-          "explanation": "The 201 layer is explicitly designed around method execution, structured workflow practice, and evidence-based interpretation."
-        },
-        {
-          "id": "negotiation-conflict-resolution-201-l06-q3",
-          "text": "What best strengthens agreement design reliability?",
-          "skillId": "negotiation-conflict-resolution-201-skill-reliability",
-          "options": [
-            {
-              "id": "a",
-              "text": "No ownership for incident response"
-            },
-            {
-              "id": "b",
-              "text": "Clear control points, owner mapping, and escalation thresholds"
-            },
-            {
-              "id": "c",
-              "text": "Ad-hoc changes without logs"
-            },
-            {
-              "id": "d",
-              "text": "No postmortem process"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Reliability improves when control, ownership, and escalation are explicit and repeatable."
-        },
-        {
-          "id": "negotiation-conflict-resolution-201-l06-q4",
-          "text": "When evaluating de-escalation methods, which approach is most defensible?",
+          "text": "What is the primary purpose of using a trade-off matrix in a case analysis?",
           "skillId": "negotiation-conflict-resolution-201-skill-eval",
           "options": [
             {
               "id": "a",
-              "text": "Use anecdotal examples only"
+              "text": "To choose the fastest and easiest option"
             },
             {
               "id": "b",
-              "text": "Compare interventions against baseline and monitor side effects"
+              "text": "To make a complex decision more structured and transparent by comparing options against key criteria"
             },
             {
               "id": "c",
-              "text": "Remove difficult scenarios from evaluation"
+              "text": "To hide the weaknesses of your preferred solution"
             },
             {
               "id": "d",
-              "text": "Change target definitions after results are known"
+              "text": "To prove that only one option is viable"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Baseline comparison and side-effect monitoring reduce overclaiming and hidden risk."
+          "explanation": "A trade-off matrix provides a structured way to evaluate multiple options based on a consistent set of criteria, making the decision-making process clearer and more defensible."
         },
         {
-          "id": "negotiation-conflict-resolution-201-l06-q5",
-          "text": "A mature durable relationship repair model should include:",
-          "skillId": "negotiation-conflict-resolution-201-skill-governance",
+          "id": "negotiation-conflict-resolution-201-l06-q2",
+          "text": "A 'recovery playbook' is designed to:",
+          "skillId": "negotiation-conflict-resolution-201-skill-reliability",
           "options": [
             {
               "id": "a",
-              "text": "One-time review with no corrective pathway"
+              "text": "Assign blame after a failure"
             },
             {
               "id": "b",
-              "text": "Policy links, measurable thresholds, and remediation triggers"
+              "text": "Document a step-by-step process for responding to problems to ensure a quick and safe recovery"
             },
             {
               "id": "c",
-              "text": "No public or stakeholder transparency"
+              "text": "Prevent any and all failures from ever happening"
             },
             {
               "id": "d",
-              "text": "Unbounded discretion without guardrails"
+              "text": "Be created only after a problem has been fully resolved"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Mature governance connects policy goals to measurable thresholds and corrective pathways."
+          "explanation": "A recovery playbook is a proactive tool that outlines the exact steps to take during an adverse event to minimize damage and restore stability."
+        },
+        {
+          "id": "negotiation-conflict-resolution-201-l06-q3",
+          "text": "When setting up a negotiation simulation, why is it important to define 'measurable success thresholds'?",
+          "skillId": "negotiation-conflict-resolution-201-skill-core",
+          "options": [
+            {
+              "id": "a",
+              "text": "To guarantee that you will win the simulation"
+            },
+            {
+              "id": "b",
+              "text": "To have clear, objective criteria for evaluating whether a strategy worked"
+            },
+            {
+              "id": "c",
+              "text": "To make the simulation more complicated and difficult"
+            },
+            {
+              "id": "d",
+              "text": "To allow you to change your goals halfway through"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Measurable success thresholds provide a clear, data-driven way to determine if the outcomes of the simulation met the initial objectives."
+        },
+        {
+          "id": "negotiation-conflict-resolution-201-l06-q4",
+          "text": "If a simulation debrief reveals that your chosen strategy had significant negative side effects, what is the best next step?",
+          "skillId": "negotiation-conflict-resolution-201-skill-eval",
+          "options": [
+            {
+              "id": "a",
+              "text": "Ignore the side effects if the main goal was achieved"
+            },
+            {
+              "id": "b",
+              "text": "Blame the simulation for being unrealistic"
+            },
+            {
+              "id": "c",
+              "text": "Analyze why the side effects occurred and adjust the strategy to mitigate them in the future"
+            },
+            {
+              "id": "d",
+              "text": "Decide to never use that strategy again, without further analysis"
+            }
+          ],
+          "correctOptionId": "c",
+          "explanation": "The purpose of a debrief is to learn. Analyzing unintended consequences helps refine your strategy for real-world application."
+        },
+        {
+          "id": "negotiation-conflict-resolution-201-l06-q5",
+          "text": "In a negotiation, you realize that information from the other party is often unclear and unreliable. What is the strongest mitigation response?",
+          "skillId": "negotiation-conflict-resolution-201-skill-reliability",
+          "options": [
+            {
+              "id": "a",
+              "text": "End the negotiation immediately"
+            },
+            {
+              "id": "b",
+              "text": "Make assumptions to fill in the gaps and hope for the best"
+            },
+            {
+              "id": "c",
+              "text": "Strengthen your process for collecting and verifying information before accepting it as fact"
+            },
+            {
+              "id": "d",
+              "text": "Accuse the other party of being dishonest"
+            }
+          ],
+          "correctOptionId": "c",
+          "explanation": "When signal quality is weak, the correct response is to improve your validation and quality checks, not to act on bad data or escalate conflict."
         }
       ]
     },
     {
       "id": "negotiation-conflict-resolution-201-l07",
-      "title": "Negotiation and Conflict Resolution Ethics and Policy Integration",
+      "title": "Integrating Ethics and Policy",
       "type": "video",
       "duration": 12,
       "learningAids": [
         {
           "id": "negotiation-conflict-resolution-201-l07-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use the lesson structure, document assumptions, and validate your conclusions before final submission."
+          "title": "Stakeholder Impact Web",
+          "content": "A diagram with a decision at the center, showing lines radiating out to different stakeholders (e.g., employees, customers, community) with notes on how the decision positively or negatively affects each one."
         }
       ],
       "chunks": [
         {
           "id": "negotiation-conflict-resolution-201-l07-c1",
           "kind": "concept",
-          "title": "Stakeholder Impact Mapping",
-          "content": "In this lesson, we will focus on mapping the impact of our decisions on various stakeholders. This means identifying how benefits and burdens are distributed among different groups involved in the negotiation. Understanding this distribution is important, especially when the interests of different parties diverge. By recognizing these impacts, we can work towards more equitable solutions in our negotiations and conflict resolution efforts.\nContext recap: In this lesson, we will focus on mapping the impact of our decisions on various stakeholders. This means identifying how benefits and burdens are distributed among different groups involved in the negotiation. Understanding this distribution is important, especially when the interests of different parties diverge. By recognizing these impacts, we can work towards more equitable solutions in our negotiations and conflict resolution efforts.\nContext recap: In this lesson, we will focus on mapping the impact of our decisions on various stakeholders. This means identifying how benefits and burdens are distributed among different groups involved in the negotiation. Understanding this distribution is important, especially when the interests of different parties diverge. By recognizing these impacts, we can work towards more equitable solutions in our negotiations and conflict resolution efforts.\nWhy this matters: Stakeholder Impact Mapping helps learners in Human Development connect ideas from Negotiation and Conflict Resolution Applied Practice to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "Mapping Stakeholder Impact",
+          "content": "Every decision affects different people in different ways. In this lesson, we'll practice mapping out these impacts, identifying who benefits and who bears the costs of a potential agreement. Understanding this distribution is critical for creating fair and sustainable solutions, especially when the interests of various groups are in conflict.",
+          "notes": "Why this matters: A fair agreement is a durable agreement. Mapping the impact on all stakeholders helps you avoid solutions that seem good on the surface but create hidden problems or injustices."
         },
         {
           "id": "negotiation-conflict-resolution-201-l07-c2",
           "kind": "concept",
-          "title": "Accountability Architecture",
-          "content": "Accountability is a key aspect of effective negotiation and conflict resolution. In this section, we will discuss the importance of having clear decision traceability, which means being able to track how decisions were made. We will also explore the concept of review rights, which allow stakeholders to have a say in the decision-making process. Finally, we will set standards for remediation, which are the steps we will take to correct any mistakes. These elements are essential for maintaining trust and integrity in our negotiations.\nContext recap: Accountability is a key aspect of effective negotiation and conflict resolution. In this section, we will discuss the importance of having clear decision traceability, which means being able to track how decisions were made. We will also explore the concept of review rights, which allow stakeholders to have a say in the decision-making process. Finally, we will set standards for remediation, which are the steps we will take to correct any mistakes."
+          "title": "Building in Accountability",
+          "content": "Accountability builds trust. We will discuss the importance of 'decision traceability'—being able to clearly explain how and why a decision was made. We'll also cover review rights, which give stakeholders a voice in the process, and standards for remediation, which are pre-planned steps to fix mistakes. These elements are essential for maintaining integrity."
         },
         {
           "id": "negotiation-conflict-resolution-201-l07-c3",
           "kind": "recap",
           "title": "Responsible Execution Checklist",
-          "content": "To ensure that our negotiation and conflict resolution efforts are successful and ethical, we can use a helpful checklist. This checklist includes important elements such as following established policies, adhering to ethical standards, ensuring that our technical methods are reliable, and building trust with all stakeholders involved. By considering these criteria, we can make better decisions that positively impact everyone.\nContext recap: To ensure that our negotiation and conflict resolution efforts are successful and ethical, we can use a helpful checklist. This checklist includes important elements such as following established policies, adhering to ethical standards, ensuring that our technical methods are reliable, and building trust with all stakeholders involved. By considering these criteria, we can make better decisions that positively impact everyone."
+          "content": "To ensure our negotiations are both successful and ethical, we can use a simple checklist. Does our plan follow established policies? Does it meet ethical standards? Are our methods reliable? Does it build trust with everyone involved? Asking these questions helps guide us toward better decisions that create positive, lasting outcomes."
         }
       ],
       "flashcards": [
         {
           "id": "negotiation-conflict-resolution-201-l07-f1",
-          "front": "Impact distribution",
-          "back": "How benefits and harms are allocated across stakeholders."
+          "front": "Impact Distribution",
+          "back": "The analysis of how the benefits and harms of a decision are spread across different stakeholder groups."
         },
         {
           "id": "negotiation-conflict-resolution-201-l07-f2",
-          "front": "Decision traceability",
-          "back": "The ability to explain why a decision was made, by whom, and with what evidence."
+          "front": "Decision Traceability",
+          "back": "The ability to reconstruct the history of a decision: who made it, when, and based on what evidence."
         },
         {
           "id": "negotiation-conflict-resolution-201-l07-f3",
-          "front": "Responsible execution",
-          "back": "A delivery mode that combines effectiveness, fairness, and corrective capacity."
+          "front": "Responsible Execution",
+          "back": "An approach that combines being effective with being fair, and includes the ability to correct course when things go wrong."
         }
       ]
     },
     {
       "id": "negotiation-conflict-resolution-201-l08",
-      "title": "Negotiation and Conflict Resolution Capstone Planning Lab",
+      "title": "Capstone Planning Lab",
       "type": "interactive",
       "duration": 15,
       "learningAids": [
         {
           "id": "negotiation-conflict-resolution-201-l08-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use the lesson structure, document assumptions, and validate your conclusions before final submission."
+          "title": "Your Project Blueprint",
+          "content": "Use the provided template to draft a charter for your final capstone project. This structured exercise will prepare you for the final assessment."
         }
       ],
       "chunks": [
         {
           "id": "negotiation-conflict-resolution-201-l08-c1",
           "kind": "practice",
-          "title": "Capstone Charter Drafting",
-          "content": "In this interactive activity, you will have the opportunity to create a detailed draft for your capstone project. This draft will outline the scope of your project, identify any constraints you may face, establish metrics for measuring success, and set governance checkpoints to guide your decision-making process. By drafting this charter, you will clarify your goals and ensure that your project stays on track.\nContext recap: In this interactive activity, you will have the opportunity to create a detailed draft for your capstone project. This draft will outline the scope of your project, identify any constraints you may face, establish metrics for measuring success, and set governance checkpoints to guide your decision-making process. By drafting this charter, you will clarify your goals and ensure that your project stays on track."
+          "title": "Drafting Your Capstone Charter",
+          "content": "In this interactive lab, you will create a charter for your capstone project. This document will outline your project's scope, identify potential constraints, define how you'll measure success, and set up checkpoints for review. Drafting a clear charter is the first step to a successful project."
         },
         {
           "id": "negotiation-conflict-resolution-201-l08-c2",
           "kind": "recap",
-          "title": "Defense Readiness",
-          "content": "As we prepare for the final stages of our project, it is essential to focus on gathering strong evidence to support our decisions. This preparation will involve creating well-reasoned justifications for our choices and developing a solid plan to respond to any critical feedback we might receive. By being ready to defend our ideas with facts and thoughtful responses, we can enhance the credibility of our work and foster constructive discussions.\nContext recap: As we prepare for the final stages of our project, it is essential to focus on gathering strong evidence to support our decisions. This preparation will involve creating well-reasoned justifications for our choices and developing a solid plan to respond to any critical feedback we might receive. By being ready to defend our ideas with facts and thoughtful responses, we can enhance the credibility of our work and foster constructive discussions."
+          "title": "Preparing to Defend Your Plan",
+          "content": "As you finalize your project, it's crucial to prepare to defend your decisions. This involves gathering strong evidence, creating clear justifications for your choices, and anticipating critical feedback. Being ready to explain your reasoning with facts and thoughtful responses will make your work more credible and lead to more constructive discussions."
         }
       ],
       "interactiveActivities": [
@@ -644,18 +647,23 @@ export const NegotiationConflictResolution201Module: LearningModule = {
           "id": "negotiation-conflict-resolution-201-l08-act1",
           "type": "project_builder",
           "title": "Capstone Charter Builder",
-          "description": "Build a capstone charter with measurable objectives, risks, and remediation plans.",
+          "description": "Build a capstone project charter that includes measurable objectives, potential risks, and plans for addressing problems.",
           "instructions": [
-            "State objective and boundary conditions.",
-            "Define at least three measurable success indicators.",
-            "Document a governance escalation pathway for critical failures."
+            "State your main objective and any non-negotiable boundaries or constraints.",
+            "Define at least three measurable indicators that will prove your project is successful.",
+            "Plan who to contact and what steps to take if a major problem occurs."
           ]
         },
         {
           "id": "negotiation-conflict-resolution-201-l08-act2",
           "type": "debate_simulator",
           "title": "Decision Defense Panel",
-          "description": "Defend your capstone approach against technical, policy, and stakeholder critiques."
+          "description": "In this simulation, you will defend your capstone project plan against critiques from different perspectives: technical, policy, and stakeholder.",
+          "instructions": [
+            "Prepare a 2-minute opening statement summarizing your plan and its justification.",
+            "Respond to three rounds of critical questions from the simulated panel.",
+            "Conclude with a 1-minute summary that addresses the feedback you received."
+          ]
         }
       ]
     }

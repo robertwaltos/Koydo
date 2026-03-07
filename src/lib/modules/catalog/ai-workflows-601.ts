@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const AiWorkflows601Module: LearningModule = {
+export const ai_workflows_601_Module: LearningModule = {
   "id": "ai-workflows-601",
   "title": "AI Workflows Research and Leadership",
   "description": "Post-401 specialization in AI Workflows, focused on agent orchestration, retrieval quality, evaluation pipelines, and operational governance through advanced casework, simulation, and capstone-level defense.",
@@ -14,7 +14,7 @@ export const AiWorkflows601Module: LearningModule = {
   ],
   "minAge": 17,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en"
@@ -33,12 +33,14 @@ export const AiWorkflows601Module: LearningModule = {
       "title": "AI Workflows Advanced Foundations",
       "type": "video",
       "duration": 14,
+      "lessonImagePrompt": "A photorealistic, cinematic shot of a diverse team of AI engineers in a dimly lit, modern tech lab, analyzing a glowing, holographic blueprint of interconnected AI nodes. High contrast, volumetric lighting, Unreal Engine 5 style, 8k resolution.",
+      "conceptVideoPrompt": "A cinematic 3D animation sweeping through a complex digital network of AI agents. The camera glides smoothly past glowing neon decision boundaries and causal pathways, illustrating data flow in a high-tech, futuristic environment. 4k resolution, smooth motion.",
       "learningAids": [
         {
           "id": "ai-workflows-601-l01-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, log assumptions, and verify conclusions against constraints and metrics."
+          "title": "Causal Mapping Framework",
+          "content": "Always map the causal pathways of your AI agents before deployment. Identify the trigger, the agent's action, the expected outcome, and the potential hidden variables."
         }
       ],
       "chunks": [
@@ -46,50 +48,53 @@ export const AiWorkflows601Module: LearningModule = {
           "id": "ai-workflows-601-l01-c1",
           "kind": "concept",
           "title": "Advanced Scope and Decision Boundaries",
-          "content": "In this lesson, we will explore the advanced boundaries that define AI Workflows. We will discuss how the orchestration of agents, which are the components that work together in AI systems, interacts with the quality of information retrieval. This interaction is crucial when we are dealing with complex systems, as it helps us understand the limits and possibilities of AI applications.\nContext recap: In this lesson, we will explore the advanced boundaries that define AI Workflows. We will discuss how the orchestration of agents, which are the components that work together in AI systems, interacts with the quality of information retrieval. This interaction is crucial when we are dealing with complex systems, as it helps us understand the limits and possibilities of AI applications."
+          "content": "In this lesson, we explore the advanced boundaries that define AI Workflows. We will examine how the orchestration of agents—the autonomous components that collaborate within AI systems—interacts with the quality of information retrieval. This interaction is crucial when dealing with complex, multi-step systems, as it helps us understand the absolute limits, safety boundaries, and operational possibilities of enterprise-grade AI applications."
         },
         {
           "id": "ai-workflows-601-l01-c2",
           "kind": "concept",
           "title": "Causal Structure Under Uncertainty",
-          "content": "In this section, learners will engage in modeling causal pathways, which are the connections between causes and effects. They will also explore ranges of uncertainty and identify hidden assumptions that may affect their designs. This foundational understanding is essential before creating interventions, as it allows learners to anticipate potential challenges and outcomes.\nContext recap: In this section, learners will engage in modeling causal pathways, which are the connections between causes and effects. They will also explore ranges of uncertainty and identify hidden assumptions that may affect their designs. This foundational understanding is essential before creating interventions, as it allows learners to anticipate potential challenges and outcomes."
+          "content": "Learners will engage in modeling causal pathways, which are the direct and indirect connections between an AI's actions and the resulting effects. We will explore how to navigate ranges of uncertainty and identify hidden assumptions that may compromise system designs. This foundational understanding is essential before creating interventions, allowing you to anticipate potential cascading failures in unpredictable environments."
         },
         {
           "id": "ai-workflows-601-l01-c3",
           "kind": "recap",
           "title": "Evidence and Rigor Standards",
-          "content": "It is important to note that all advanced claims made in our work must be supported by measurable indicators. This means we need to establish confidence bounds and set up review checkpoints to ensure our findings are reliable. By adhering to these standards, we can maintain rigor in our research and ensure that our conclusions are well-founded.\nContext recap: It is important to note that all advanced claims made in our work must be supported by measurable indicators. This means we need to establish confidence bounds and set up review checkpoints to ensure our findings are reliable. By adhering to these standards, we can maintain rigor in our research and ensure that our conclusions are well-founded."
+          "content": "All advanced claims made in AI workflow design must be supported by measurable, empirical indicators. This means establishing strict confidence bounds and setting up review checkpoints to ensure findings are reliable. By adhering to these research-grade standards, we maintain rigor and ensure that our architectural conclusions are well-founded and defensible to stakeholders."
         }
       ],
       "flashcards": [
         {
           "id": "ai-workflows-601-l01-f1",
-          "front": "agent orchestration",
-          "back": "A specialization axis in AI Workflows requiring explicit assumptions and measured tradeoff choices."
+          "front": "Agent Orchestration",
+          "back": "The coordination of multiple AI agents, requiring explicit assumptions and measured tradeoff choices to achieve a unified goal."
         },
         {
           "id": "ai-workflows-601-l01-f2",
-          "front": "retrieval quality",
-          "back": "Operational design capability that governs whether complex workflows remain reliable."
+          "front": "Retrieval Quality",
+          "back": "An operational design capability that governs whether the data fetched by complex workflows remains accurate, relevant, and reliable."
         },
         {
           "id": "ai-workflows-601-l01-f3",
-          "front": "evaluation pipelines",
-          "back": "Evaluation practice for validating outcomes beyond headline metrics."
+          "front": "Evaluation Pipelines",
+          "back": "A systematic practice for validating AI outcomes, ensuring performance is measured beyond superficial headline metrics."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/ai-workflows-601-l01.png"
     },
     {
       "id": "ai-workflows-601-l02",
       "title": "AI Workflows Specialist Methods Lab",
       "type": "interactive",
       "duration": 17,
+      "lessonImagePrompt": "A sleek, modern digital interface displayed on a large curved monitor, showing a complex AI workflow stress test. The left side features red and green status indicators, while the right side displays a control gate dashboard. Photorealistic, macro photography style, shallow depth of field.",
+      "conceptVideoPrompt": "A dynamic, high-fidelity screen-recording style animation of an interactive AI dashboard. A user's cursor smoothly drags and drops control gates into a workflow pipeline, triggering a successful stress test simulation that illuminates the pathway in bright, glowing green. 4k, sleek UI design.",
       "learningAids": [
         {
           "id": "ai-workflows-601-l02-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, log assumptions, and verify conclusions against constraints and metrics."
+          "title": "Stress Test Checklist",
+          "content": "1. Define the edge case. 2. Inject the anomaly. 3. Monitor the control gate. 4. Evaluate the rollback mechanism. 5. Document the failure signature."
         }
       ],
       "chunks": [
@@ -97,13 +102,13 @@ export const AiWorkflows601Module: LearningModule = {
           "id": "ai-workflows-601-l02-c1",
           "kind": "practice",
           "title": "Method Sequence and Stress Test",
-          "content": "In this engaging interactive lab, participants will have the opportunity to design a specialized workflow that focuses on developing strong research reasoning skills, making informed leadership decisions, and preparing to defend their work in a way that is suitable for publication. Once they have constructed their workflows, they will face a series of challenging scenarios, referred to as adversarial or edge-case conditions. This testing phase is crucial as it allows learners to assess the strength and effectiveness of their workflows under pressure, ensuring they are well-prepared for real-world applications."
+          "content": "In this interactive lab, you will design a specialized workflow focused on developing strong research reasoning and making informed leadership decisions. Once your workflow is constructed, you will subject it to a series of challenging scenarios, known as adversarial or edge-case conditions. This testing phase is crucial; it allows you to assess the resilience of your workflows under extreme pressure, ensuring they are prepared for unpredictable real-world applications."
         },
         {
           "id": "ai-workflows-601-l02-c2",
           "kind": "recap",
           "title": "Controls and Failure Gates",
-          "content": "To ensure that our specialized workflows are effective, we must incorporate control gates, rollback criteria, and accountability checkpoints. These elements are essential for managing risks and ensuring that we can respond appropriately if something goes wrong. By having these safeguards in place, we can enhance the reliability of our workflows.\nContext recap: To ensure that our specialized workflows are effective, we must incorporate control gates, rollback criteria, and accountability checkpoints. These elements are essential for managing risks and ensuring that we can respond appropriately if something goes wrong. By having these safeguards in place, we can enhance the reliability of our workflows."
+          "content": "To ensure specialized workflows are safe and effective, we must incorporate control gates, rollback criteria, and accountability checkpoints. These elements act as circuit breakers, essential for managing risks and ensuring the system can respond appropriately—or shut down safely—if something goes wrong. Implementing these safeguards drastically enhances the reliability of autonomous workflows."
         }
       ],
       "interactiveActivities": [
@@ -160,19 +165,22 @@ export const AiWorkflows601Module: LearningModule = {
             }
           ]
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/ai-workflows-601-l02.png"
     },
     {
       "id": "ai-workflows-601-l03",
       "title": "Checkpoint 1: Specialist Methods",
       "type": "quiz",
       "duration": 11,
+      "lessonImagePrompt": "A futuristic digital assessment interface floating in mid-air against a dark, geometric tech background. A glowing, neon-blue checkmark signifies a correct answer. Cinematic lighting, photorealistic, 8k.",
+      "conceptVideoPrompt": "A smooth, sweeping camera shot gliding over a futuristic digital testing environment. Holographic multiple-choice questions float in the air, glowing softly, and lock into place with a satisfying visual pulse as correct answers are selected. 4k, cinematic.",
       "learningAids": [
         {
           "id": "ai-workflows-601-l03-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, log assumptions, and verify conclusions against constraints and metrics."
+          "title": "Review Strategy",
+          "content": "When evaluating AI workflow decisions, always look for the option that balances performance with explicit constraints, monitoring, and accountability."
         }
       ],
       "questions": [
@@ -183,198 +191,123 @@ export const AiWorkflows601Module: LearningModule = {
           "options": [
             {
               "id": "a",
-              "text": "Rely on undocumented assumptions"
+              "text": "Relying on undocumented assumptions to speed up deployment"
             },
             {
               "id": "b",
-              "text": "Define constraints, monitor leading indicators, and test edge cases"
+              "text": "Defining constraints, monitoring leading indicators, and testing edge cases"
             },
             {
               "id": "c",
-              "text": "Avoid post-decision review"
+              "text": "Avoiding post-decision reviews to maintain forward momentum"
             },
             {
               "id": "d",
-              "text": "Optimize only for speed"
+              "text": "Optimizing the system exclusively for processing speed"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Advanced performance depends on explicit constraints, monitoring, and stress testing."
+          "explanation": "Advanced performance depends on explicit constraints, continuous monitoring, and rigorous stress testing."
         },
         {
           "id": "ai-workflows-601-l03-q2",
-          "text": "At level 601, the curriculum emphasizes:",
-          "skillId": "ai-workflows-601-skill-level",
-          "options": [
-            {
-              "id": "a",
-              "text": "research-grade reasoning, leadership decision quality, and publishable capstone defense"
-            },
-            {
-              "id": "b",
-              "text": "Unbounded iteration with no controls"
-            },
-            {
-              "id": "c",
-              "text": "Single-metric decision making"
-            },
-            {
-              "id": "d",
-              "text": "No uncertainty communication"
-            }
-          ],
-          "correctOptionId": "a",
-          "explanation": "The 601 design is built around research-grade reasoning, leadership decision quality, and publishable capstone defense."
-        },
-        {
-          "id": "ai-workflows-601-l03-q3",
-          "text": "What best strengthens retrieval quality execution quality?",
+          "text": "What best strengthens the execution quality of information retrieval in an AI workflow?",
           "skillId": "ai-workflows-601-skill-execution",
           "options": [
             {
               "id": "a",
-              "text": "No owner mapping or escalation path"
+              "text": "Removing owner mapping to decentralize the process"
             },
             {
               "id": "b",
-              "text": "Explicit ownership, checkpoints, and governance thresholds"
+              "text": "Establishing explicit ownership, checkpoints, and governance thresholds"
             },
             {
               "id": "c",
-              "text": "Ad-hoc process changes without logs"
+              "text": "Implementing ad-hoc process changes without maintaining logs"
             },
             {
               "id": "d",
-              "text": "Skipping retrospective review"
+              "text": "Skipping retrospective reviews to save operational time"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Quality execution needs ownership clarity, checkpoints, and threshold-driven governance."
+          "explanation": "Quality execution requires clarity of ownership, regular checkpoints, and threshold-driven governance to remain reliable."
         },
         {
-          "id": "ai-workflows-601-l03-q4",
-          "text": "A rigorous approach to evaluation pipelines should include:",
+          "id": "ai-workflows-601-l03-q3",
+          "text": "A rigorous approach to evaluation pipelines should always include:",
           "skillId": "ai-workflows-601-skill-evaluation",
           "options": [
             {
               "id": "a",
-              "text": "Outcome claims without baselines"
+              "text": "Outcome claims made without historical baselines"
             },
             {
               "id": "b",
-              "text": "Baseline comparison, side-effect checks, and uncertainty bounds"
+              "text": "Baseline comparisons, side-effect checks, and uncertainty bounds"
             },
             {
               "id": "c",
-              "text": "Removal of difficult scenarios"
+              "text": "The removal of difficult or failing scenarios from the test set"
             },
             {
               "id": "d",
-              "text": "Changing criteria after seeing results"
+              "text": "Changing success criteria after observing the initial results"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Baselines, side-effect checks, and uncertainty disclosure make results defensible."
+          "explanation": "Establishing baselines, checking for unintended side-effects, and disclosing uncertainty bounds make evaluation results defensible."
         },
         {
-          "id": "ai-workflows-601-l03-q5",
-          "text": "A mature operational governance system should connect:",
+          "id": "ai-workflows-601-l03-q4",
+          "text": "A mature operational governance system should directly connect:",
           "skillId": "ai-workflows-601-skill-governance",
           "options": [
             {
               "id": "a",
-              "text": "Policy and practice without measurement"
+              "text": "Policy and practice without the need for measurement"
             },
             {
               "id": "b",
-              "text": "Policy, measurable thresholds, and remediation pathways"
+              "text": "Policy intent, measurable thresholds, and clear remediation pathways"
             },
             {
               "id": "c",
-              "text": "Technical delivery with no accountability"
+              "text": "Technical delivery with a blameless, zero-accountability culture"
             },
             {
               "id": "d",
-              "text": "Performance targets with no risk controls"
+              "text": "Aggressive performance targets with no risk controls"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Governance quality comes from linking policy intent to measurable controls and action."
+          "explanation": "True governance quality comes from linking the intent of a policy to measurable controls and actionable remediation steps."
         },
         {
-          "id": "ai-workflows-601-l03-q6",
-          "text": "In high-stakes AI Workflows Research and Leadership execution, which communication protocol is strongest?",
-          "skillId": "ai-workflows-601-skill-advanced-6",
+          "id": "ai-workflows-601-l03-q5",
+          "text": "When designing an AI workflow under high uncertainty, what is the primary benefit of mapping causal pathways?",
+          "skillId": "ai-workflows-601-skill-causal-mapping",
           "options": [
             {
               "id": "a",
-              "text": "Broadcast conclusions without assumptions"
+              "text": "It guarantees the system will never fail in production"
             },
             {
               "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
+              "text": "It identifies hidden variables and potential cascading failures before deployment"
             },
             {
               "id": "c",
-              "text": "Share only final outcomes after completion"
+              "text": "It eliminates the need for human oversight in the workflow"
             },
             {
               "id": "d",
-              "text": "Limit updates to a single informal channel"
+              "text": "It automatically generates the code for the AI agents"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
-        },
-        {
-          "id": "ai-workflows-601-l03-q7",
-          "text": "A mature remediation loop in advanced AI Workflows should prioritize:",
-          "skillId": "ai-workflows-601-skill-advanced-7",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blame assignment without system updates"
-            },
-            {
-              "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
-            },
-            {
-              "id": "c",
-              "text": "One-time fixes without retesting"
-            },
-            {
-              "id": "d",
-              "text": "Issue closure based on elapsed time"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
-        },
-        {
-          "id": "ai-workflows-601-l03-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in AI Workflows Research and Leadership?",
-          "skillId": "ai-workflows-601-skill-advanced-8",
-          "options": [
-            {
-              "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
-            },
-            {
-              "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
-            },
-            {
-              "id": "c",
-              "text": "Ignore correlated failure modes"
-            },
-            {
-              "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "explanation": "Mapping causal pathways helps anticipate how an agent's actions might trigger unintended consequences, allowing engineers to design safer systems."
         }
       ]
     },
@@ -383,12 +316,14 @@ export const AiWorkflows601Module: LearningModule = {
       "title": "AI Workflows Advanced Case Analysis",
       "type": "video",
       "duration": 14,
+      "lessonImagePrompt": "A diverse group of corporate executives and engineers gathered around a glowing, interactive holographic table in a modern boardroom. The table displays a complex enterprise AI workflow. Professional, cinematic lighting, photorealistic, 8k.",
+      "conceptVideoPrompt": "A dramatic, slow-motion zoom-in on a 3D holographic matrix balancing competing objectives like effectiveness and reliability on a digital scale. The scale tips as a simulated system failure occurs, followed by a glowing blue recovery loop that stabilizes the system. 4k, highly detailed.",
       "learningAids": [
         {
           "id": "ai-workflows-601-l04-a1",
           "type": "mnemonic",
-          "title": "Guided Practice",
-          "content": "Use a structured method, log assumptions, and verify conclusions against constraints and metrics."
+          "title": "The E.R.E.F.M. Tradeoff Criteria",
+          "content": "When scoring options, remember EREFM: Effectiveness, Reliability, Equity, Feasibility, and Maintainability."
         }
       ],
       "chunks": [
@@ -396,50 +331,53 @@ export const AiWorkflows601Module: LearningModule = {
           "id": "ai-workflows-601-l04-c1",
           "kind": "example",
           "title": "Case Stakes and Competing Objectives",
-          "content": "In this case study, we will explore an enterprise AI workflow that combines information retrieval, a variety of tools, and the enforcement of policies while operating under a production load. As learners, you will engage in mapping out the strategic objectives that guide the workflow. Additionally, you will identify potential risks that could lead to failures and understand the governance constraints that must be adhered to before taking any action. This thorough approach ensures that we consider all important aspects of the workflow, leading to more effective and responsible outcomes."
+          "content": "In this case study, we explore an enterprise AI workflow that combines information retrieval, diverse tool usage, and policy enforcement under heavy production load. You will map out the strategic objectives guiding the workflow, identify potential risks that could trigger cascading failures, and analyze the governance constraints that must be met before deployment. This holistic approach ensures we balance aggressive performance goals with responsible operational boundaries."
         },
         {
           "id": "ai-workflows-601-l04-c2",
           "kind": "concept",
           "title": "Tradeoff Matrix and Option Scoring",
-          "content": "In this section, we will discuss how to score different options based on several important criteria. These criteria include effectiveness, reliability, equity, feasibility, and long-term maintainability. By evaluating options through this tradeoff matrix, learners can make informed decisions that balance various factors in their workflows.\nContext recap: In this section, we will discuss how to score different options based on several important criteria. These criteria include effectiveness, reliability, equity, feasibility, and long-term maintainability. By evaluating options through this tradeoff matrix, learners can make informed decisions that balance various factors in their workflows."
+          "content": "Decision-making in advanced AI workflows is rarely black and white. We will utilize a tradeoff matrix to score different architectural options based on critical criteria: effectiveness, reliability, equity, feasibility, and long-term maintainability. By evaluating options through this structured matrix, leaders can make informed, defensible decisions that balance competing priorities rather than optimizing for a single metric."
         },
         {
           "id": "ai-workflows-601-l04-c3",
           "kind": "recap",
           "title": "Recovery and Adaptation Design",
-          "content": "When we encounter failures, it is crucial to translate these experiences into actionable safeguards. This involves creating response playbooks and measurable adaptation loops that guide us in improving our processes. By learning from failures, we can design better systems that are more resilient and adaptable to change.\nContext recap: When we encounter failures, it is crucial to translate these experiences into actionable safeguards. This involves creating response playbooks and measurable adaptation loops that guide us in improving our processes. By learning from failures, we can design better systems that are more resilient and adaptable to change."
+          "content": "Failures in complex systems are inevitable; the goal is resilience. When we encounter failures, we must translate these incidents into actionable safeguards. This involves creating automated response playbooks and measurable adaptation loops that guide continuous process improvement. By learning systematically from failure signatures, we design systems that evolve to become more robust over time."
         }
       ],
       "flashcards": [
         {
           "id": "ai-workflows-601-l04-f1",
-          "front": "Tradeoff matrix",
-          "back": "A scoring framework for choosing among competing options under real constraints."
+          "front": "Tradeoff Matrix",
+          "back": "A structured scoring framework used for choosing among competing architectural options under real-world constraints."
         },
         {
           "id": "ai-workflows-601-l04-f2",
-          "front": "Failure signature",
-          "back": "A recurrent signal indicating a predictable class of breakdown risk."
+          "front": "Failure Signature",
+          "back": "A recurrent, identifiable signal or pattern indicating a predictable class of breakdown risk within a system."
         },
         {
           "id": "ai-workflows-601-l04-f3",
-          "front": "Adaptation loop",
-          "back": "A measured process for converting incident learning into improved future behavior."
+          "front": "Adaptation Loop",
+          "back": "A measured, systematic process for converting incident learnings into improved future behavior and system safeguards."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/ai-workflows-601-l04.png"
     },
     {
       "id": "ai-workflows-601-l05",
       "title": "AI Workflows Simulation and Response Studio",
       "type": "interactive",
       "duration": 17,
+      "lessonImagePrompt": "A high-tech command center with massive panoramic screens displaying real-time AI simulation metrics, glowing intervention pathways, and global data maps. Cinematic, moody lighting, photorealistic, highly detailed.",
+      "conceptVideoPrompt": "A fast-paced, cinematic sequence showing a simulated AI crisis on a futuristic dashboard. Red warning lights flash urgently, but a user quickly selects mitigation strategies from a sleek menu, causing the red alerts to smoothly transition into stable blue and green metrics. 4k, smooth transitions.",
       "learningAids": [
         {
           "id": "ai-workflows-601-l05-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, log assumptions, and verify conclusions against constraints and metrics."
+          "title": "Simulation Debrief Protocol",
+          "content": "Post-simulation, always ask: 1. Did we hit the target? 2. What were the unintended side effects? 3. Did we violate any governance constraints?"
         }
       ],
       "chunks": [
@@ -447,13 +385,13 @@ export const AiWorkflows601Module: LearningModule = {
           "id": "ai-workflows-601-l05-c1",
           "kind": "practice",
           "title": "Scenario Modeling",
-          "content": "In this practice session, learners will configure various assumptions, thresholds, and intervention pathways for their simulations. This exercise will take place under high-stakes conditions, allowing learners to understand the complexities and challenges that can arise in real-world scenarios. This hands-on experience is vital for developing practical skills.\nContext recap: In this practice session, learners will configure various assumptions, thresholds, and intervention pathways for their simulations. This exercise will take place under high-stakes conditions, allowing learners to understand the complexities and challenges that can arise in real-world scenarios. This hands-on experience is vital for developing practical skills."
+          "content": "In this practice session, you will configure various assumptions, thresholds, and intervention pathways for live simulations. Operating under high-stakes, time-constrained conditions, you will experience the complexities and cascading challenges that arise in real-world AI deployments. This hands-on modeling is vital for developing the muscle memory required to manage live enterprise systems."
         },
         {
           "id": "ai-workflows-601-l05-c2",
           "kind": "recap",
           "title": "Debrief and Decision Quality Review",
-          "content": "After each simulation run, teams will conduct a thorough review to assess how well they met their targets. They will analyze any side effects that occurred and identify any gaps in governance compliance. This debriefing process is essential for improving future performance and ensuring that all aspects of the workflow are aligned with best practices.\nContext recap: After each simulation run, teams will conduct a thorough review to assess how well they met their targets. They will analyze any side effects that occurred and identify any gaps in governance compliance. This debriefing process is essential for improving future performance and ensuring that all aspects of the workflow are aligned with best practices."
+          "content": "After each simulation run, your team will conduct a thorough retrospective to assess performance against targets. You will analyze any unintended side effects that emerged during the simulation and identify gaps in governance compliance. This rigorous debriefing process is the cornerstone of continuous improvement, ensuring your workflow designs align with both technical and ethical best practices."
         }
       ],
       "interactiveActivities": [
@@ -492,235 +430,166 @@ export const AiWorkflows601Module: LearningModule = {
             }
           ]
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/ai-workflows-601-l05.png"
     },
     {
       "id": "ai-workflows-601-l06",
       "title": "Checkpoint 2: Research and Systems Decisions",
       "type": "quiz",
       "duration": 11,
+      "lessonImagePrompt": "A glowing, intricate digital lock unlocking on a futuristic glass screen, symbolizing the mastery of complex system decisions. Dark background with glowing neon blue and purple accents, photorealistic, 8k.",
+      "conceptVideoPrompt": "A visually stunning journey through a glowing digital maze representing complex decision-making. The camera smoothly navigates through branching paths of light, finally arriving at a brightly lit, pulsating core representing the correct system choice. 4k, cinematic.",
       "learningAids": [
         {
           "id": "ai-workflows-601-l06-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, log assumptions, and verify conclusions against constraints and metrics."
+          "title": "Decision Quality Rubric",
+          "content": "Evaluate decisions based on how well they address root causes, utilize tradeoff matrices, and implement measurable adaptation loops."
         }
       ],
       "questions": [
         {
           "id": "ai-workflows-601-l06-q1",
-          "text": "Which practice most improves specialist performance in agent orchestration?",
-          "skillId": "ai-workflows-601-skill-specialist",
+          "text": "What is the primary purpose of using a tradeoff matrix in AI workflow design?",
+          "skillId": "ai-workflows-601-skill-tradeoff",
           "options": [
             {
               "id": "a",
-              "text": "Rely on undocumented assumptions"
+              "text": "To guarantee that all stakeholders get exactly what they want"
             },
             {
               "id": "b",
-              "text": "Define constraints, monitor leading indicators, and test edge cases"
+              "text": "To score competing options against criteria like reliability, equity, and feasibility"
             },
             {
               "id": "c",
-              "text": "Avoid post-decision review"
+              "text": "To eliminate the need for human oversight in the decision-making process"
             },
             {
               "id": "d",
-              "text": "Optimize only for speed"
+              "text": "To focus solely on maximizing the short-term financial return of the AI system"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Advanced performance depends on explicit constraints, monitoring, and stress testing."
+          "explanation": "A tradeoff matrix provides a structured way to balance competing objectives and constraints when making complex architectural decisions."
         },
         {
           "id": "ai-workflows-601-l06-q2",
-          "text": "At level 601, the curriculum emphasizes:",
-          "skillId": "ai-workflows-601-skill-level",
+          "text": "In the context of AI system failures, what does the term 'failure signature' refer to?",
+          "skillId": "ai-workflows-601-skill-failure",
           "options": [
             {
               "id": "a",
-              "text": "research-grade reasoning, leadership decision quality, and publishable capstone defense"
+              "text": "The digital signature of the engineer who deployed the faulty code"
             },
             {
               "id": "b",
-              "text": "Unbounded iteration with no controls"
+              "text": "A recurrent, identifiable signal indicating a predictable class of breakdown risk"
             },
             {
               "id": "c",
-              "text": "Single-metric decision making"
+              "text": "A legal document signed by stakeholders accepting the risks of the system"
             },
             {
               "id": "d",
-              "text": "No uncertainty communication"
+              "text": "A random, unrepeatable error that cannot be tracked or mitigated"
             }
           ],
-          "correctOptionId": "a",
-          "explanation": "The 601 design is built around research-grade reasoning, leadership decision quality, and publishable capstone defense."
+          "correctOptionId": "b",
+          "explanation": "A failure signature is a recognizable pattern or signal that precedes or accompanies a specific type of system failure, allowing for proactive mitigation."
         },
         {
           "id": "ai-workflows-601-l06-q3",
-          "text": "What best strengthens retrieval quality execution quality?",
-          "skillId": "ai-workflows-601-skill-execution",
+          "text": "During a high-stakes AI simulation, what is the most critical step immediately following an intervention?",
+          "skillId": "ai-workflows-601-skill-simulation",
           "options": [
             {
               "id": "a",
-              "text": "No owner mapping or escalation path"
+              "text": "Deploying the intervention directly to the live production environment"
             },
             {
               "id": "b",
-              "text": "Explicit ownership, checkpoints, and governance thresholds"
+              "text": "Conducting a debrief to assess target metrics, side effects, and governance gaps"
             },
             {
               "id": "c",
-              "text": "Ad-hoc process changes without logs"
+              "text": "Deleting the simulation logs to save storage space"
             },
             {
               "id": "d",
-              "text": "Skipping retrospective review"
+              "text": "Assigning blame to the team member who suggested the intervention"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Quality execution needs ownership clarity, checkpoints, and threshold-driven governance."
+          "explanation": "A rigorous debrief is essential to understand the full impact of an intervention, including unintended consequences and compliance issues."
         },
         {
           "id": "ai-workflows-601-l06-q4",
-          "text": "A rigorous approach to evaluation pipelines should include:",
-          "skillId": "ai-workflows-601-skill-evaluation",
+          "text": "How should an 'adaptation loop' function after an AI incident occurs?",
+          "skillId": "ai-workflows-601-skill-adaptation",
           "options": [
             {
               "id": "a",
-              "text": "Outcome claims without baselines"
+              "text": "It should automatically restart the system without changing any parameters"
             },
             {
               "id": "b",
-              "text": "Baseline comparison, side-effect checks, and uncertainty bounds"
+              "text": "It should convert incident learnings into measurable, improved future behavior and safeguards"
             },
             {
               "id": "c",
-              "text": "Removal of difficult scenarios"
+              "text": "It should generate an automated apology email to affected users"
             },
             {
               "id": "d",
-              "text": "Changing criteria after seeing results"
+              "text": "It should temporarily disable all AI agents until a manual review is completed"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Baselines, side-effect checks, and uncertainty disclosure make results defensible."
+          "explanation": "Adaptation loops are designed to systematically learn from failures and implement structural improvements to prevent recurrence."
         },
         {
           "id": "ai-workflows-601-l06-q5",
-          "text": "A mature operational governance system should connect:",
-          "skillId": "ai-workflows-601-skill-governance",
+          "text": "When facing an 'ambiguous ownership chain' in an AI workflow, what is the strongest mitigation strategy?",
+          "skillId": "ai-workflows-601-skill-mitigation",
           "options": [
             {
               "id": "a",
-              "text": "Policy and practice without measurement"
+              "text": "Ignore the ambiguity as long as the system is currently functioning"
             },
             {
               "id": "b",
-              "text": "Policy, measurable thresholds, and remediation pathways"
+              "text": "Define an accountable owner map and establish clear escalation rights"
             },
             {
               "id": "c",
-              "text": "Technical delivery with no accountability"
+              "text": "Assign all ownership to a single junior developer"
             },
             {
               "id": "d",
-              "text": "Performance targets with no risk controls"
+              "text": "Rely on an external vendor to manage all accountability"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Governance quality comes from linking policy intent to measurable controls and action."
-        },
-        {
-          "id": "ai-workflows-601-l06-q6",
-          "text": "In high-stakes AI Workflows Research and Leadership execution, which communication protocol is strongest?",
-          "skillId": "ai-workflows-601-skill-advanced-6",
-          "options": [
-            {
-              "id": "a",
-              "text": "Broadcast conclusions without assumptions"
-            },
-            {
-              "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
-            },
-            {
-              "id": "c",
-              "text": "Share only final outcomes after completion"
-            },
-            {
-              "id": "d",
-              "text": "Limit updates to a single informal channel"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
-        },
-        {
-          "id": "ai-workflows-601-l06-q7",
-          "text": "A mature remediation loop in advanced AI Workflows should prioritize:",
-          "skillId": "ai-workflows-601-skill-advanced-7",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blame assignment without system updates"
-            },
-            {
-              "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
-            },
-            {
-              "id": "c",
-              "text": "One-time fixes without retesting"
-            },
-            {
-              "id": "d",
-              "text": "Issue closure based on elapsed time"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
-        },
-        {
-          "id": "ai-workflows-601-l06-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in AI Workflows Research and Leadership?",
-          "skillId": "ai-workflows-601-skill-advanced-8",
-          "options": [
-            {
-              "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
-            },
-            {
-              "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
-            },
-            {
-              "id": "c",
-              "text": "Ignore correlated failure modes"
-            },
-            {
-              "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "explanation": "Clear accountability and escalation paths are required to resolve ambiguity and ensure rapid response during critical incidents."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/ai-workflows-601-l06.png"
     },
     {
       "id": "ai-workflows-601-l07",
       "title": "AI Workflows Governance and Public Impact",
       "type": "video",
       "duration": 13,
+      "lessonImagePrompt": "A beautifully rendered, glowing digital scale of justice balancing perfectly, with a diverse, softly blurred crowd of people in the background. Symbolizes public impact, fairness, and ethical AI governance. Cinematic lighting, photorealistic, 8k.",
+      "conceptVideoPrompt": "An abstract, high-fidelity animation showing glowing ripples spreading from a central drop of water, seamlessly transitioning into a luminous digital network. Illustrates the far-reaching, interconnected impacts of AI decisions on society. 4k, smooth, mesmerizing motion.",
       "learningAids": [
         {
           "id": "ai-workflows-601-l07-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, log assumptions, and verify conclusions against constraints and metrics."
+          "title": "Responsible Leadership Checklist",
+          "content": "Ensure your decisions balance: 1. Performance targets. 2. Risk mitigation. 3. Ethical impact. 4. Transparent accountability."
         }
       ],
       "chunks": [
@@ -728,50 +597,53 @@ export const AiWorkflows601Module: LearningModule = {
           "id": "ai-workflows-601-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "In this lesson, learners will evaluate how the outcomes of their workflows are distributed among various stakeholders. This includes considering both delayed and indirect effects that may not be immediately apparent. Understanding these impacts is crucial for ensuring that all voices are heard and that the benefits and drawbacks of AI systems are fairly distributed.\nContext recap: In this lesson, learners will evaluate how the outcomes of their workflows are distributed among various stakeholders. This includes considering both delayed and indirect effects that may not be immediately apparent. Understanding these impacts is crucial for ensuring that all voices are heard and that the benefits and drawbacks of AI systems are fairly distributed."
+          "content": "In this lesson, we evaluate how the outcomes of AI workflows are distributed among various stakeholders. This requires analyzing both delayed and indirect effects that may not be immediately apparent in initial testing. Understanding these broad impacts is crucial for ensuring that the benefits and potential harms of AI systems are equitably distributed, and that marginalized voices are not disproportionately negatively affected."
         },
         {
           "id": "ai-workflows-601-l07-c2",
           "kind": "concept",
           "title": "Accountability System Design",
-          "content": "Designing an accountability system is essential for maintaining trust and transparency in AI workflows. This involves implementing traceability standards, establishing review rights, and defining remediation obligations. By creating a robust accountability framework, we can ensure that all stakeholders are held responsible for their actions and that there is a clear path for addressing any issues that arise.\nContext recap: Designing an accountability system is essential for maintaining trust and transparency in AI workflows. This involves implementing traceability standards, establishing review rights, and defining remediation obligations. By creating a robust accountability framework, we can ensure that all stakeholders are held responsible for their actions and that there is a clear path for addressing any issues that arise."
+          "content": "Designing a robust accountability system is essential for maintaining public trust and operational transparency. This involves implementing strict traceability standards, establishing clear review rights for affected parties, and defining legal and ethical remediation obligations. A strong accountability framework ensures that all stakeholders are held responsible for their actions and provides a clear path for addressing grievances."
         },
         {
           "id": "ai-workflows-601-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "A responsible leadership checklist is an important tool that helps leaders connect their strategies with ethical considerations, policies, and operational controls. This checklist serves as a comprehensive review document that ensures all aspects of leadership are considered and aligned for effective governance.\nContext recap: A responsible leadership checklist is an important tool that helps leaders connect their strategies with ethical considerations, policies, and operational controls. This checklist serves as a comprehensive review document that ensures all aspects of leadership are considered and aligned for effective governance."
+          "content": "A responsible leadership checklist is a vital tool that helps leaders bridge the gap between high-level strategy and ground-level operational controls. It serves as a comprehensive review document, ensuring that ethical considerations, governance policies, and technical realities are aligned before any major AI deployment is authorized."
         }
       ],
       "flashcards": [
         {
           "id": "ai-workflows-601-l07-f1",
-          "front": "Impact distribution",
-          "back": "How benefits and harms are allocated across groups and timeframes."
+          "front": "Impact Distribution",
+          "back": "The analysis of how the benefits and harms of an AI system are allocated across different demographic groups and timeframes."
         },
         {
           "id": "ai-workflows-601-l07-f2",
-          "front": "Decision traceability",
-          "back": "An auditable explanation of evidence, rationale, and ownership behind a decision."
+          "front": "Decision Traceability",
+          "back": "An auditable, transparent explanation of the evidence, rationale, and ownership behind a specific AI system decision."
         },
         {
           "id": "ai-workflows-601-l07-f3",
-          "front": "Responsible leadership",
-          "back": "Decision practice that balances performance, risk, ethics, and accountability."
+          "front": "Responsible Leadership",
+          "back": "A decision-making practice that actively balances technical performance, risk management, ethical implications, and accountability."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/ai-workflows-601-l07.png"
     },
     {
       "id": "ai-workflows-601-l08",
       "title": "AI Workflows Capstone Defense Lab",
       "type": "interactive",
       "duration": 16,
+      "lessonImagePrompt": "A confident professional presenting a glowing, holographic AI architecture diagram to a panel of experts in a sleek, modern boardroom. The atmosphere is serious and academic. Cinematic lighting, photorealistic, 8k.",
+      "conceptVideoPrompt": "A cinematic montage starting with a student building a digital charter on a transparent, glowing screen, transitioning into a dynamic, fast-paced Q&A session with a virtual panel of AI experts, and ending with a glowing green 'Approved' stamp on the digital document. 4k, professional.",
       "learningAids": [
         {
           "id": "ai-workflows-601-l08-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, log assumptions, and verify conclusions against constraints and metrics."
+          "title": "Defense Preparation Guide",
+          "content": "Anticipate critiques on three fronts: 1. Rigor of your evidence. 2. Robustness of your risk controls. 3. Clarity of your accountability structures."
         }
       ],
       "chunks": [
@@ -779,13 +651,13 @@ export const AiWorkflows601Module: LearningModule = {
           "id": "ai-workflows-601-l08-c1",
           "kind": "practice",
           "title": "Capstone Charter and Evidence Pack",
-          "content": "In this activity, learners will work together to create a capstone charter. This charter will outline the main objectives of their project, identify any constraints they might face, establish metrics for success, and define governance controls. Additionally, they will develop a plan for gathering evidence to support their findings and decisions.\nContext recap: In this activity, learners will work together to create a capstone charter. This charter will outline the main objectives of their project, identify any constraints they might face, establish metrics for success, and define governance controls. Additionally, they will develop a plan for gathering evidence to support their findings and decisions."
+          "content": "In this culminating activity, you will synthesize your learning to create a comprehensive capstone charter. This document will outline your project's main objectives, identify operational constraints, establish rigorous success metrics, and define strict governance controls. You will also compile an 'Evidence Pack'—a data-driven portfolio supporting your architectural choices and demonstrating your readiness for enterprise deployment."
         },
         {
           "id": "ai-workflows-601-l08-c2",
           "kind": "recap",
           "title": "Defense Rehearsal",
-          "content": "During the final practice round, learners will have the opportunity to rehearse their defense. This session will prepare them to confidently present their decisions and respond to critiques from technical experts, governance representatives, and stakeholders. It is a crucial step in ensuring they are ready to articulate their reasoning and defend their choices effectively.\nContext recap: During the final practice round, learners will have the opportunity to rehearse their defense. This session will prepare them to confidently present their decisions and respond to critiques from technical experts, governance representatives, and stakeholders. It is a crucial step in ensuring they are ready to articulate their reasoning and defend their choices effectively."
+          "content": "During the final practice round, you will rehearse the defense of your capstone project. This session prepares you to confidently present your decisions and respond to intense critiques from technical experts, governance representatives, and business stakeholders. Mastering this defense is the final step in proving your capability as an AI Workflows Research and Leadership specialist."
         }
       ],
       "interactiveActivities": [
@@ -804,9 +676,15 @@ export const AiWorkflows601Module: LearningModule = {
           "id": "ai-workflows-601-l08-act2",
           "type": "debate_simulator",
           "title": "Capstone Defense Panel",
-          "description": "Defend your capstone against expert critique on rigor, risk, and accountability."
+          "description": "Defend your capstone against expert critique on rigor, risk, and accountability.",
+          "instructions": [
+            "Review the expert panel's critique of your evidence pack.",
+            "Formulate a defense addressing rigor, risk controls, and accountability.",
+            "Submit your final justification for enterprise deployment."
+          ]
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/ai-workflows-601-l08.png"
     }
   ]
 };

@@ -35,7 +35,7 @@ export default function JuicyLevelCard({
         <motion.div
             initial={{ opacity: 0, scale: 0.9, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
-            className="relative group overflow-hidden rounded-[2.5rem] p-[2px]"
+            className="koydo-level-card relative group overflow-hidden rounded-[2.5rem] p-[2px]"
         >
             {/* Animated Border/Ring */}
             <div className="absolute inset-0 bg-gradient-to-r from-sky-400 via-indigo-500 to-purple-600 animate-[spin_4s_linear_infinite] opacity-50 group-hover:opacity-100 transition-opacity" />

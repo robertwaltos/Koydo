@@ -32,13 +32,57 @@ type FeatureEntry = {
   updated_at: string | null;
 };
 
-type Tab = "settings" | "overrides" | "access" | "features";
+type ManifestEntry = {
+  app_id: string;
+  display_name: string;
+  theme_config: Record<string, string>;
+  enabled_subjects: string[];
+  min_age: number;
+  max_age: number;
+  is_active: boolean;
+  supported_locales: string[];
+  default_locale: string;
+  region: string;
+  default_currency: string;
+  pricing_tier: string;
+  store_listing: Record<string, { title: string; subtitle: string; keywords: string[]; description: string }>;
+};
+
+function createEmptyManifest(): ManifestEntry {
+  return {
+    app_id: "",
+    display_name: "",
+    theme_config: {},
+    enabled_subjects: ["*"],
+    min_age: 0,
+    max_age: 99,
+    is_active: true,
+    supported_locales: ["*"],
+    default_locale: "en",
+    region: "global",
+    default_currency: "USD",
+    pricing_tier: "freemium",
+    store_listing: {},
+  };
+}
+
+function tryParseManifestJson<T>(value: string, fallback: T): T {
+  try {
+    const parsed = JSON.parse(value) as T;
+    return parsed;
+  } catch {
+    return fallback;
+  }
+}
+
+type Tab = "settings" | "overrides" | "access" | "features" | "microapps";
 
 const TABS: Array<{ id: Tab; label: string }> = [
   { id: "settings", label: "App Settings" },
   { id: "overrides", label: "User Overrides" },
   { id: "access", label: "Access Grants" },
   { id: "features", label: "Feature Manager" },
+  { id: "microapps", label: "Micro-Apps" },
 ];
 
 const GRANT_TYPES = [
@@ -83,6 +127,9 @@ export default function AdminSettingsPage() {
   const [newGrant, setNewGrant] = useState({ userId: "", grantType: "beta_tester", reason: "" });
   const [features, setFeatures] = useState<FeatureEntry[]>([]);
   const [featureFilter, setFeatureFilter] = useState<string>("all");
+  const [manifests, setManifests] = useState<ManifestEntry[]>([]);
+  const [editingManifest, setEditingManifest] = useState<ManifestEntry | null>(null);
+  const [newManifest, setNewManifest] = useState<ManifestEntry>(createEmptyManifest());
   const [loading, setLoading] = useState(false);
   const [toast, setToast] = useState("");
 
@@ -260,10 +307,58 @@ export default function AdminSettingsPage() {
     flash("Feature cache flushed");
   };
 
+  /* ---------- Manifests ---------- */
+  const loadManifests = useCallback(async () => {
+    setLoading(true);
+    try {
+      const res = await fetch("/api/admin/manifests");
+      if (!res.ok) throw new Error();
+      const data = await res.json();
+      setManifests(data.manifests ?? []);
+    } catch {
+      flash("Error loading manifests");
+    } finally {
+      setLoading(false);
+    }
+  }, [flash]);
+
+  const saveManifest = async (m: ManifestEntry) => {
+    const res = await fetch("/api/admin/manifests", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(m),
+    });
+    if (res.ok) {
+      flash(`Saved ${m.app_id}`);
+      setEditingManifest(null);
+      loadManifests();
+    } else {
+      flash("Save failed");
+    }
+  };
+
+  const deactivateManifest = async (appId: string) => {
+    const res = await fetch("/api/admin/manifests", {
+      method: "DELETE",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ app_id: appId }),
+    });
+    if (res.ok) { flash(`Deactivated ${appId}`); loadManifests(); } else flash("Deactivation failed");
+  };
+
+  const previewManifestTheme = (themeConfig: Record<string, string>) => {
+    const html = document.documentElement;
+    for (const [prop, val] of Object.entries(themeConfig)) {
+      if (prop.startsWith("--")) html.style.setProperty(prop, val);
+    }
+    flash("Theme preview applied (refresh to reset)");
+  };
+
   /* ---------- Auto-load on tab change ---------- */
   useEffect(() => { if (tab === "settings") loadSettings(); }, [tab, loadSettings]);
   useEffect(() => { if (tab === "access") loadGrants(); }, [tab, grantType, loadGrants]);
   useEffect(() => { if (tab === "features") loadFeatures(); }, [tab, loadFeatures]);
+  useEffect(() => { if (tab === "microapps") loadManifests(); }, [tab, loadManifests]);
 
   const filteredFeatures = featureFilter === "all"
     ? features
@@ -402,6 +497,294 @@ export default function AdminSettingsPage() {
             <input placeholder="Reason (optional)" className="rounded-xl border border-border bg-surface-muted px-3 py-1.5 text-sm" value={newGrant.reason} onChange={(e) => setNewGrant((n) => ({ ...n, reason: e.target.value }))} />
           </div>
           <SoftButton variant="accent" onClick={createGrant}>Grant Access</SoftButton>
+        </SoftCard>
+      )}
+
+      {/* ===== Micro-Apps Tab ===== */}
+      {tab === "microapps" && (
+        <SoftCard as="section" className="space-y-4 p-5">
+          <h2 className="text-lg font-semibold">Micro-App Manifests</h2>
+
+          {loading ? <p className="text-sm text-zinc-500">Loading...</p> : (
+            <div className="divide-y divide-border rounded-xl border border-border">
+              {manifests.map((m) => (
+                <div key={m.app_id} className="flex flex-wrap items-center gap-3 px-4 py-3">
+                  <code className="min-w-[140px] text-sm font-medium">{m.app_id}</code>
+                  <span className="flex-1 text-sm">{m.display_name}</span>
+                  <span className="text-xs text-zinc-500">
+                    Ages {m.min_age}-{m.max_age}
+                  </span>
+                  <span className="rounded-md bg-blue-50 px-1.5 py-0.5 text-[10px] font-medium text-blue-700">
+                    {m.region ?? "global"}
+                  </span>
+                  <span className="rounded-md bg-purple-50 px-1.5 py-0.5 text-[10px] font-medium text-purple-700">
+                    {m.default_locale ?? "en"} / {m.default_currency ?? "USD"}
+                  </span>
+                  <span className="rounded-md bg-amber-50 px-1.5 py-0.5 text-[10px] font-medium text-amber-700">
+                    {m.pricing_tier ?? "freemium"}
+                  </span>
+                  <span className="text-xs text-zinc-500">
+                    {(m.enabled_subjects || []).join(", ")}
+                  </span>
+                  <span className={`text-xs font-medium ${m.is_active ? "text-emerald-600" : "text-rose-600"}`}>
+                    {m.is_active ? "Active" : "Inactive"}
+                  </span>
+                  <SoftButton variant="ghost" onClick={() => previewManifestTheme(m.theme_config)}>
+                    Preview Theme
+                  </SoftButton>
+                  <SoftButton variant="ghost" onClick={() => setEditingManifest({ ...m })}>
+                    Edit
+                  </SoftButton>
+                  {m.app_id !== "koydo_main" && m.is_active && (
+                    <SoftButton variant="ghost" onClick={() => deactivateManifest(m.app_id)}>
+                      Deactivate
+                    </SoftButton>
+                  )}
+                </div>
+              ))}
+              {manifests.length === 0 && (
+                <p className="py-4 text-center text-sm text-zinc-500">No manifests found.</p>
+              )}
+            </div>
+          )}
+
+          {/* Edit modal */}
+          {editingManifest && (
+            <div className="rounded-xl border border-accent/30 bg-surface-muted p-4 space-y-3">
+              <h3 className="text-sm font-semibold">Edit: {editingManifest.app_id}</h3>
+              <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
+                <input
+                  placeholder="Display Name"
+                  className="rounded-xl border border-border bg-white px-3 py-1.5 text-sm"
+                  value={editingManifest.display_name}
+                  onChange={(e) => setEditingManifest({ ...editingManifest, display_name: e.target.value })}
+                />
+                <input
+                  placeholder="Subjects (comma-separated)"
+                  className="rounded-xl border border-border bg-white px-3 py-1.5 text-sm"
+                  value={editingManifest.enabled_subjects.join(",")}
+                  onChange={(e) => setEditingManifest({ ...editingManifest, enabled_subjects: e.target.value.split(",").map((s) => s.trim()).filter(Boolean) })}
+                />
+                <input
+                  placeholder="Supported Locales (comma-separated, or *)"
+                  className="rounded-xl border border-border bg-white px-3 py-1.5 text-sm"
+                  value={editingManifest.supported_locales.join(",")}
+                  onChange={(e) => setEditingManifest({
+                    ...editingManifest,
+                    supported_locales: e.target.value.split(",").map((s) => s.trim()).filter(Boolean),
+                  })}
+                />
+                <input
+                  placeholder="Min Age"
+                  type="number"
+                  className="rounded-xl border border-border bg-white px-3 py-1.5 text-sm"
+                  value={editingManifest.min_age}
+                  onChange={(e) => setEditingManifest({ ...editingManifest, min_age: Number(e.target.value) })}
+                />
+                <input
+                  placeholder="Max Age"
+                  type="number"
+                  className="rounded-xl border border-border bg-white px-3 py-1.5 text-sm"
+                  value={editingManifest.max_age}
+                  onChange={(e) => setEditingManifest({ ...editingManifest, max_age: Number(e.target.value) })}
+                />
+                <input
+                  placeholder="Default Locale"
+                  className="rounded-xl border border-border bg-white px-3 py-1.5 text-sm"
+                  value={editingManifest.default_locale}
+                  onChange={(e) => setEditingManifest({ ...editingManifest, default_locale: e.target.value.trim() })}
+                />
+                <input
+                  placeholder="Region"
+                  className="rounded-xl border border-border bg-white px-3 py-1.5 text-sm"
+                  value={editingManifest.region}
+                  onChange={(e) => setEditingManifest({ ...editingManifest, region: e.target.value.trim() })}
+                />
+                <select
+                  className="rounded-xl border border-border bg-white px-3 py-1.5 text-sm"
+                  value={editingManifest.default_currency}
+                  onChange={(e) => setEditingManifest({ ...editingManifest, default_currency: e.target.value })}
+                >
+                  <option value="USD">USD</option>
+                  <option value="EUR">EUR</option>
+                  <option value="GBP">GBP</option>
+                  <option value="JPY">JPY</option>
+                  <option value="KRW">KRW</option>
+                  <option value="INR">INR</option>
+                  <option value="CNY">CNY</option>
+                  <option value="AED">AED</option>
+                </select>
+                <select
+                  className="rounded-xl border border-border bg-white px-3 py-1.5 text-sm"
+                  value={editingManifest.pricing_tier}
+                  onChange={(e) => setEditingManifest({ ...editingManifest, pricing_tier: e.target.value })}
+                >
+                  <option value="free">Free</option>
+                  <option value="freemium">Freemium</option>
+                  <option value="premium_9.99">Premium $9.99</option>
+                  <option value="premium_19.99">Premium $19.99</option>
+                  <option value="custom">Custom</option>
+                </select>
+                <label className="inline-flex min-h-10 items-center gap-2 rounded-xl border border-border bg-white px-3 py-1.5 text-sm">
+                  <input
+                    type="checkbox"
+                    checked={editingManifest.is_active}
+                    onChange={(e) => setEditingManifest({ ...editingManifest, is_active: e.target.checked })}
+                  />
+                  Active
+                </label>
+                <textarea
+                  placeholder='Theme JSON (e.g., {"--color-primary":"#ff6b35"})'
+                  className="rounded-xl border border-border bg-white px-3 py-1.5 text-sm sm:col-span-2"
+                  rows={3}
+                  value={JSON.stringify(editingManifest.theme_config, null, 2)}
+                  onChange={(e) => setEditingManifest({
+                    ...editingManifest,
+                    theme_config: tryParseManifestJson(e.target.value, editingManifest.theme_config),
+                  })}
+                />
+                <textarea
+                  placeholder='Store Listing JSON (e.g., {"en":{"title":"...","subtitle":"...","keywords":["a"],"description":"..."}})'
+                  className="rounded-xl border border-border bg-white px-3 py-1.5 text-sm sm:col-span-2"
+                  rows={4}
+                  value={JSON.stringify(editingManifest.store_listing, null, 2)}
+                  onChange={(e) => setEditingManifest({
+                    ...editingManifest,
+                    store_listing: tryParseManifestJson(e.target.value, editingManifest.store_listing),
+                  })}
+                />
+              </div>
+              <div className="flex gap-2">
+                <SoftButton variant="accent" onClick={() => saveManifest(editingManifest)}>Save</SoftButton>
+                <SoftButton variant="neutral" onClick={() => setEditingManifest(null)}>Cancel</SoftButton>
+              </div>
+            </div>
+          )}
+
+          {/* Add new manifest */}
+          <div className="rounded-xl border border-border p-4 space-y-3">
+            <h3 className="text-sm font-semibold">Add New Micro-App</h3>
+            <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
+              <input
+                placeholder="App ID (e.g., koydo_junior)"
+                className="rounded-xl border border-border bg-surface-muted px-3 py-1.5 text-sm"
+                value={newManifest.app_id}
+                onChange={(e) => setNewManifest({ ...newManifest, app_id: e.target.value })}
+              />
+              <input
+                placeholder="Display Name"
+                className="rounded-xl border border-border bg-surface-muted px-3 py-1.5 text-sm"
+                value={newManifest.display_name}
+                onChange={(e) => setNewManifest({ ...newManifest, display_name: e.target.value })}
+              />
+              <input
+                placeholder="Subjects (comma-separated, or *)"
+                className="rounded-xl border border-border bg-surface-muted px-3 py-1.5 text-sm"
+                value={newManifest.enabled_subjects.join(",")}
+                onChange={(e) => setNewManifest({ ...newManifest, enabled_subjects: e.target.value.split(",").map((s) => s.trim()).filter(Boolean) })}
+              />
+              <input
+                placeholder="Supported Locales (comma-separated, or *)"
+                className="rounded-xl border border-border bg-surface-muted px-3 py-1.5 text-sm"
+                value={newManifest.supported_locales.join(",")}
+                onChange={(e) => setNewManifest({
+                  ...newManifest,
+                  supported_locales: e.target.value.split(",").map((s) => s.trim()).filter(Boolean),
+                })}
+              />
+              <div className="flex gap-2">
+                <input
+                  placeholder="Min Age"
+                  type="number"
+                  className="w-20 rounded-xl border border-border bg-surface-muted px-3 py-1.5 text-sm"
+                  value={newManifest.min_age}
+                  onChange={(e) => setNewManifest({ ...newManifest, min_age: Number(e.target.value) })}
+                />
+                <input
+                  placeholder="Max Age"
+                  type="number"
+                  className="w-20 rounded-xl border border-border bg-surface-muted px-3 py-1.5 text-sm"
+                  value={newManifest.max_age}
+                  onChange={(e) => setNewManifest({ ...newManifest, max_age: Number(e.target.value) })}
+                />
+              </div>
+              <input
+                placeholder="Default Locale (e.g., en, es, ja)"
+                className="rounded-xl border border-border bg-surface-muted px-3 py-1.5 text-sm"
+                value={newManifest.default_locale}
+                onChange={(e) => setNewManifest({ ...newManifest, default_locale: e.target.value })}
+              />
+              <input
+                placeholder="Region (global, us, latam, dach, jp, kr...)"
+                className="rounded-xl border border-border bg-surface-muted px-3 py-1.5 text-sm"
+                value={newManifest.region}
+                onChange={(e) => setNewManifest({ ...newManifest, region: e.target.value })}
+              />
+              <select
+                className="rounded-xl border border-border bg-surface-muted px-3 py-1.5 text-sm"
+                value={newManifest.default_currency}
+                onChange={(e) => setNewManifest({ ...newManifest, default_currency: e.target.value })}
+              >
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="GBP">GBP</option>
+                <option value="JPY">JPY</option>
+                <option value="KRW">KRW</option>
+                <option value="INR">INR</option>
+                <option value="CNY">CNY</option>
+                <option value="AED">AED</option>
+              </select>
+              <select
+                className="rounded-xl border border-border bg-surface-muted px-3 py-1.5 text-sm"
+                value={newManifest.pricing_tier}
+                onChange={(e) => setNewManifest({ ...newManifest, pricing_tier: e.target.value })}
+              >
+                <option value="free">Free</option>
+                <option value="freemium">Freemium</option>
+                <option value="premium_9.99">Premium $9.99</option>
+                <option value="premium_19.99">Premium $19.99</option>
+                <option value="custom">Custom</option>
+              </select>
+              <label className="inline-flex min-h-10 items-center gap-2 rounded-xl border border-border bg-surface-muted px-3 py-1.5 text-sm">
+                <input
+                  type="checkbox"
+                  checked={newManifest.is_active}
+                  onChange={(e) => setNewManifest({ ...newManifest, is_active: e.target.checked })}
+                />
+                Active
+              </label>
+              <textarea
+                placeholder='Theme JSON (e.g., {"--color-primary":"#ff6b35"})'
+                className="rounded-xl border border-border bg-surface-muted px-3 py-1.5 text-sm sm:col-span-2"
+                rows={3}
+                value={JSON.stringify(newManifest.theme_config, null, 2)}
+                onChange={(e) => setNewManifest({
+                  ...newManifest,
+                  theme_config: tryParseManifestJson(e.target.value, newManifest.theme_config),
+                })}
+              />
+              <textarea
+                placeholder='Store Listing JSON (optional)'
+                className="rounded-xl border border-border bg-surface-muted px-3 py-1.5 text-sm sm:col-span-2"
+                rows={4}
+                value={JSON.stringify(newManifest.store_listing, null, 2)}
+                onChange={(e) => setNewManifest({
+                  ...newManifest,
+                  store_listing: tryParseManifestJson(e.target.value, newManifest.store_listing),
+                })}
+              />
+            </div>
+            <SoftButton
+              variant="accent"
+              onClick={() => {
+                if (!newManifest.app_id || !newManifest.display_name) { flash("App ID and Name are required"); return; }
+                saveManifest(newManifest);
+                setNewManifest(createEmptyManifest());
+              }}
+            >
+              Add App
+            </SoftButton>
+          </div>
         </SoftCard>
       )}
 

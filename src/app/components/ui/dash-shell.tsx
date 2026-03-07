@@ -44,6 +44,8 @@ type DashShellProps = {
   productSubtitle: string;
   /** User email or display name for the avatar / top-bar label */
   userLabel?: string;
+  /** Optional right sidebar content, visible on large screens */
+  rightSidebar?: ReactNode;
 };
 
 // ── Sidebar nav link ──────────────────────────────────────────────────────────
@@ -216,6 +218,7 @@ export default function DashShell({
   productName,
   productSubtitle,
   userLabel,
+  rightSidebar,
 }: DashShellProps) {
   const pathname = usePathname();
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -256,8 +259,18 @@ export default function DashShell({
         />
       </aside>
 
+      {/* ── Right Sidebar (Financial Center & Bridge) ── */}
+      {rightSidebar && (
+        <aside
+          className="fixed inset-y-0 right-0 z-30 hidden w-80 border-l border-border/20 bg-surface/50 backdrop-blur-xl 2xl:block"
+          aria-label="Financial Center"
+        >
+          {rightSidebar}
+        </aside>
+      )}
+
       {/* ── Main column ── */}
-      <div className="flex min-w-0 flex-1 flex-col md:pl-72 2xl:pl-80">
+      <div className={`flex min-w-0 flex-1 flex-col md:pl-72 2xl:pl-80 ${rightSidebar ? "2xl:pr-80" : ""}`}>
         {/* ── Top bar ── */}
         <header
           className="safe-area-top sticky top-0 z-10 flex h-14 shrink-0 items-center justify-between border-b border-border/20 bg-surface/90 backdrop-blur-sm px-4 md:px-6 dark:bg-background/90"

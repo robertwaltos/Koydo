@@ -1996,3 +1996,71 @@ select,
 textarea {
   min-height: 32px;
 }
+
+/* ═══════════════════════════════════════════════
+   Zen / Deep Focus Mode
+   Strips gamification, calms colours & animations.
+   Toggle: top-nav Display section → "Zen Mode"
+   ═══════════════════════════════════════════════ */
+
+[data-zen-mode="on"] {
+  --background: #f5f0e8;
+  --surface: #faf6ef;
+  --surface-muted: #f0ead8;
+  --accent: #6b5b4f;
+  --gradient-hero: none;
+  --shadow-soft-raised: none;
+}
+
+[data-zen-mode="on"][data-theme="dark"],
+[data-theme="dark"] [data-zen-mode="on"] {
+  --background: #1a1a2e;
+  --surface: #1e1e32;
+  --surface-muted: #252540;
+  --accent: #8b8fa8;
+}
+
+/* Hide gamification visuals via CSS (belt-and-suspenders with React suppression) */
+[data-zen-mode="on"] .koydo-gamification,
+[data-zen-mode="on"] .koydo-xp-float,
+[data-zen-mode="on"] .koydo-confetti,
+[data-zen-mode="on"] .koydo-achievement-toast,
+[data-zen-mode="on"] .koydo-streak-widget,
+[data-zen-mode="on"] .koydo-level-card {
+  display: none !important;
+}
+
+/* Calm animations in Zen Mode */
+[data-zen-mode="on"] * {
+  animation-duration: 0s !important;
+  transition-duration: 150ms !important;
+}
+
+[data-zen-mode="on"] .reveal-on-scroll {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+/* ────────────────────────────────────────────────────────────────────────
+   Content Protection
+   Prevent highlighting and dragging text/images natively via CSS
+   ──────────────────────────────────────────────────────────────────────── */
+.app-no-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.app-no-drag {
+  -webkit-user-drag: none;
+  user-drag: none;
+}
+
+/* Re-enable selection for inputs and textareas so forms still work */
+input, textarea {
+  -webkit-user-select: auto !important;
+  -moz-user-select: auto !important;
+  -ms-user-select: auto !important;
+  user-select: auto !important;
+}

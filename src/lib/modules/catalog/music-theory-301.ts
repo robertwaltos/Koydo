@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const MusicTheory301Module: LearningModule = {
+export const music_theory_301_Module: LearningModule = {
   "id": "music-theory-301",
   "title": "Advanced Music Theory",
   "description": "Master chord progressions, explore the seven modes, analyze musical form, and begin composing original melodies. Think like a musician, not just read like one.",
@@ -13,13 +13,13 @@ export const MusicTheory301Module: LearningModule = {
   ],
   "minAge": 13,
   "maxAge": 18,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "learningObjectives": [
     "Analyze and write chord progressions using Roman numeral notation",
     "Identify and construct all seven diatonic modes",
-    "Recognize common musical forms (binary, ternary, rondo, sonata)",
+    "Recognize common musical forms (binary, ternary, rondo, verse-chorus)",
     "Compose an 8-bar melody following voice-leading principles",
-    "Understand secondary dominants and their function",
+    "Understand and apply secondary dominants",
     "Identify cadence types: authentic, half, plagal, and deceptive",
     "Apply non-chord tones to create melodic interest"
   ],
@@ -38,47 +38,47 @@ export const MusicTheory301Module: LearningModule = {
         {
           "id": "music-theory-301-l01-c1",
           "title": "Why Roman Numerals?",
-          "content": "Roman numeral analysis is a fantastic tool for understanding how chords work together in music! It assigns a specific numeral to each chord based on its position in a scale. For instance, in the C major scale, the C chord is labeled as I, which stands for the first scale degree. The D minor chord is labeled as ii, representing the second scale degree, and the E minor chord is labeled as iii, for the third scale degree. This pattern continues for all the chords in the scale.\nWhat makes this system so special is that it is not limited to just one key; it can be applied to any key! This means that if you see a chord progression like I-V-vi-IV, it will have the same meaning no matter which key you are playing in. This universality helps musicians from different backgrounds communicate their ideas about music more easily.\nIn this analysis system, uppercase letters indicate major chords, which sound bright and happy, while lowercase letters indicate minor chords, which have a more somber tone. Additionally, a small circle (°) represents a diminished chord, which has a tense sound, and a plus sign (+) indicates an augmented chord, known for its unique and colorful sound. By using Roman numerals, musicians can share their thoughts on harmony and chord progressions in a clear and effective way, making it easier to collaborate and create beautiful music together.\nContext recap: Roman numeral analysis is a fantastic tool for understanding how chords work together in music! It assigns a specific numeral to each chord based on its position in a scale. For instance, in the C major scale, the C chord is labeled as I, which stands for the first scale degree. The D minor chord is labeled as ii, representing the second scale degree, and the E minor chord is labeled as iii, for the third scale degree.\nWhy this matters: Why Roman Numerals? helps learners in Music connect ideas from Advanced Music Theory to decisions they make during practice and assessment. Connect ideas to real decisions and evidence.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "Roman numeral analysis is a powerful tool for understanding how chords function in music. It acts as a universal language, assigning a numeral to each chord based on its position in a scale. For example, in C major, the C chord is I, D minor is ii, and G is V. This system is key-independent; a I-V-vi-IV progression has the same harmonic function in C major as it does in G major or any other key. Uppercase numerals (I, IV, V) represent major chords, which sound bright, while lowercase numerals (ii, iii, vi) represent minor chords, which sound more somber. A small circle (°) indicates a diminished chord. This system allows musicians to communicate complex harmonic ideas clearly and efficiently, making it essential for analysis, songwriting, and improvisation."
         },
         {
           "id": "music-theory-301-l01-c2",
           "title": "Diatonic Chords in Major",
-          "content": "Every major scale produces seven unique diatonic triads, which are special types of chords made up of the notes from that scale. These chords are identified with Roman numerals: I (major), ii (minor), iii (minor), IV (major), V (major), vi (minor), and vii° (diminished). Together, these seven chords create the harmonic foundation of a key, which is crucial for composing and understanding music. Interestingly, in many popular songs, musicians often use only 4 to 6 of these chords, making them very important in contemporary music. The I chord is commonly known as the 'home' chord or tonic, which gives a sense of stability. The V chord, known as the dominant, creates a feeling of tension that wants to resolve back to the tonic, while the IV chord, called the subdominant, leads us to different musical destinations. By grasping these relationships between the chords, musicians can effectively create and analyze music, enhancing their overall understanding and appreciation of musical compositions.\nContext recap: Every major scale produces seven unique diatonic triads, which are special types of chords made up of the notes from that scale. These chords are identified with Roman numerals: I (major), ii (minor), iii (minor), IV (major), V (major), vi (minor), and vii° (diminished). Together, these seven chords create the harmonic foundation of a key, which is crucial for composing and understanding music. Interestingly, in many popular songs, musicians often use only 4 to 6 of these chords, making them very important in contemporary music.\nWhy this matters: Diatonic Chords in Major helps learners in Music connect ideas from Advanced Music Theory to decisions they make during practice and assessment. Connect ideas to real decisions and evidence."
+          "content": "Every major scale generates seven basic chords, called diatonic triads. These chords form the harmonic foundation of a key. The pattern is always the same: I (major), ii (minor), iii (minor), IV (major), V (major), vi (minor), and vii° (diminished). Each chord has a specific function. The I chord, or tonic, is the 'home base,' providing a sense of rest and stability. The V chord, the dominant, creates tension that strongly pulls back to the tonic. The IV chord, the subdominant, provides a feeling of moving away from the tonic, often leading to the dominant. Understanding the relationship between these core chords is the first step to mastering harmony."
         },
         {
           "id": "music-theory-301-l01-c3",
           "title": "Reading a Chord Chart",
-          "content": "When you encounter the chord progression 'I - V - vi - IV', you're discovering one of the most beloved chord progressions in pop music! This sequence is not just popular; it’s a building block for many hit songs. In the key of C major, this progression translates to the chords C - G - Am - F. If you were to play this same progression in the key of G major, it would change to G - D - Em - C. The wonderful thing about using Roman numerals is that they provide a way for musicians to express harmonic ideas without being restricted to a specific key. This flexibility is incredibly important for various musical activities, such as transposing music to different keys, arranging songs for different instruments, and improvising during performances. By mastering this system, musicians can communicate their ideas and collaborate more effectively, making music together in a way that is both creative and enjoyable. Understanding Roman numeral analysis not only enhances your music theory knowledge but also empowers you to explore and create music in exciting new ways.\nContext recap: When you encounter the chord progression 'I - V - vi - IV', you're discovering one of the most beloved chord progressions in pop music! This sequence is not just popular; it’s a building block for many hit songs. In the key of C major, this progression translates to the chords C - G - Am - F. If you were to play this same progression in the key of G major, it would change to G - D - Em - C.\nWhy this matters: Reading a Chord Chart helps learners in Music connect ideas from Advanced Music Theory to decisions they make during practice and assessment. Connect ideas to real decisions and evidence."
+          "content": "When you see a progression like 'I - V - vi - IV', you're looking at the blueprint for countless pop songs. In the key of C major, this translates to C - G - Am - F. In G major, it becomes G - D - Em - C. The beauty of Roman numerals is this very flexibility. It allows musicians to transpose a song to a different key on the fly, arrange it for different instruments, or improvise over a familiar structure. Mastering this system moves you from simply playing chords to understanding why those chords work together, unlocking a deeper level of musical creativity."
         }
       ],
       "flashcards": [
         {
           "id": "music-theory-301-l01-f1",
           "front": "Roman numeral I",
-          "back": "The tonic chord — built on the 1st scale degree; the 'home base' of a key"
+          "back": "The tonic chord — built on the 1st scale degree; the 'home base' of a key."
         },
         {
           "id": "music-theory-301-l01-f2",
           "front": "Roman numeral V",
-          "back": "The dominant chord — built on the 5th scale degree; creates tension that resolves to I"
+          "back": "The dominant chord — built on the 5th scale degree; creates tension that resolves to I."
         },
         {
           "id": "music-theory-301-l01-f3",
           "front": "Roman numeral vi",
-          "back": "The submediant — a minor chord on the 6th degree; often used as a tonic substitute"
+          "back": "The submediant — a minor chord on the 6th degree; often used as a tonic substitute."
         },
         {
           "id": "music-theory-301-l01-f4",
           "front": "Diatonic",
-          "back": "Using only the notes and chords that belong to a given key, with no alterations"
+          "back": "Using only the notes and chords that belong to a given key, with no alterations."
         }
       ],
       "learningAids": [
         {
           "id": "music-theory-301-l01-a1",
           "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary of the lesson's main concept."
+          "title": "Diatonic Triads Chart",
+          "content": "A clear chart showing the C major scale and the seven diatonic triads built on each degree, with their corresponding Roman numerals (I, ii, iii, IV, V, vi, vii°)."
         }
       ]
     },
@@ -88,7 +88,7 @@ export const MusicTheory301Module: LearningModule = {
       "type": "interactive",
       "duration": 14,
       "objectives": [
-        "Identify the I-V-vi-IV, I-IV-V, and ii-V-I progressions",
+        "Identify the I-V-vi-IV, I-IV-V, and ii-V-I progressions by ear and sight",
         "Match progressions to the genres where they're most common",
         "Write a chord progression for a given mood"
       ],
@@ -96,28 +96,28 @@ export const MusicTheory301Module: LearningModule = {
         {
           "id": "music-theory-301-l02-c1",
           "title": "The Pop Progression: I-V-vi-IV",
-          "content": "The I-V-vi-IV chord progression is a four-chord loop that is extremely popular in various music genres, including pop, rock, and country. When we play this progression in the key of C, the chords are C, G, Am, and F. This specific sequence of chords is effective because it creates a perfect balance between tension, release, and emotional depth. The V chord (G) introduces a sense of tension, which is then resolved by the I chord (C), providing a feeling of stability. The vi chord (Am) adds emotional richness to the progression, making it resonate deeply with listeners. Many well-known songs, such as 'Let It Be' by The Beatles, 'No Woman No Cry' by Bob Marley, and 'With or Without You' by U2, all use this same chord progression. This familiarity is why it feels so comfortable to our ears; we have been exposed to this sound in countless songs over the years, allowing us to appreciate its beauty and emotional impact. Understanding this progression can help you create your own music or analyze the songs you love, making it a valuable tool in your musical journey.\nContext recap: The I-V-vi-IV chord progression is a four-chord loop that is extremely popular in various music genres, including pop, rock, and country. When we play this progression in the key of C, the chords are C, G, Am, and F. This specific sequence of chords is effective because it creates a perfect balance between tension, release, and emotional depth. The V chord (G) introduces a sense of tension, which is then resolved by the I chord (C), providing a feeling of stability.\nWhy this matters: The Pop Progression: I-V-vi-IV helps learners in Music connect ideas from Advanced Music Theory to decisions they make during practice and assessment. Connect ideas to real decisions and evidence."
+          "content": "The I-V-vi-IV progression is a cornerstone of modern music, found in everything from pop and rock to country. In C major, the chords are C-G-Am-F. Its power lies in its perfect emotional arc: it starts at home (I), builds tension (V), moves to a reflective, emotional minor chord (vi), and then prepares for the return (IV). This cycle of tension and release is incredibly satisfying to our ears, which is why songs from 'Let It Be' to 'Don't Stop Believin'' use it to create an instantly familiar and compelling sound."
         },
         {
           "id": "music-theory-301-l02-c2",
           "title": "The Blues and Rock Progression: I-IV-V",
-          "content": "The I-IV-V chord progression is a crucial building block in many styles of music, especially in blues, early rock, and folk genres. To illustrate this, let’s take a look at how it works in the key of A. In this key, the chords are A, D, and E. When musicians play these chords together, they create a sound that is both familiar and exciting.\nOne popular way to organize this progression is through the 12-bar blues format. This structure consists of 12 measures, or bars, that repeat in a specific pattern. The pattern goes like this: first, you play 4 bars of the I chord (A), then 2 bars of the IV chord (D), followed by 2 more bars of the I chord (A). After that, there’s a turnaround that includes the V chord (E), the IV chord (D), back to the I chord (A), and finally ending on the V chord (E). This turnaround helps to bring the progression back to the beginning, creating a loop that feels satisfying to play and listen to.\nThe reason this I-IV-V progression feels so grounded and driving is that it uses only three major chords from the key. This simplicity allows musicians to easily follow along and improvise, making it a favorite among many performers. Whether you’re strumming on a guitar or playing on a piano, mastering this progression can open the door to countless musical possibilities!\nContext recap: The I-IV-V chord progression is a crucial building block in many styles of music, especially in blues, early rock, and folk genres. To illustrate this, let’s take a look at how it works in the key of A. In this key, the chords are A, D, and E. When musicians play these chords together, they create a sound that is both familiar and exciting.\nWhy this matters: The Blues and Rock Progression: I-IV-V helps learners in Music connect ideas from Advanced Music Theory to decisions they make during practice and assessment. Connect ideas to real decisions and evidence.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "The I-IV-V progression is the backbone of blues, early rock and roll, and folk music. In the key of A, this would be A-D-E. This progression uses the three primary major chords of a key, creating a strong, grounded, and driving sound. It's most famously used in the 12-bar blues format, a repeating 12-measure structure that has served as the foundation for improvisation for generations of musicians. Its simplicity and power make it one of the most important progressions to know."
         },
         {
           "id": "music-theory-301-l02-c3",
           "title": "The Jazz Turnaround: ii-V-I",
-          "content": "In the world of jazz music, the ii-V-I progression is a crucial building block that every aspiring musician should understand. To illustrate, let's look at the key of C major. Here, the ii-V-I progression can be played as Dm-G-C. If you want to add a bit more complexity, you can use seventh chords, which would look like Dm7-G7-Cmaj7. Each part of this progression has its own role: the ii chord (Dm) introduces a feeling of tension, the V chord (G) heightens that tension even further, and finally, the I chord (C) resolves it, bringing a sense of closure. This progression is so important that many jazz standards use it repeatedly, often shifting to different keys to keep things interesting. By mastering the ii-V-I progression, you will unlock a world of possibilities in jazz improvisation and arranging, allowing you to express your creativity and musical ideas more freely. Understanding this concept is a key step in your journey as a jazz musician, paving the way for more advanced techniques and compositions in the future.\nContext recap: In the world of jazz music, the ii-V-I progression is a crucial building block that every aspiring musician should understand. To illustrate, let's look at the key of C major. Here, the ii-V-I progression can be played as Dm-G-C. If you want to add a bit more complexity, you can use seventh chords, which would look like Dm7-G7-Cmaj7.\nWhy this matters: The Jazz Turnaround: ii-V-I helps learners in Music connect ideas from Advanced Music Theory to decisions they make during practice and assessment. Connect ideas to real decisions and evidence."
+          "content": "In jazz, the ii-V-I is the most fundamental harmonic movement. In C major, this is Dm-G-C (or with sevenths, Dm7-G7-Cmaj7). This progression creates a smooth, sophisticated path back to the tonic. The ii chord gently moves away from home, the V chord builds strong tension, and the I chord provides a satisfying resolution. Jazz standards are filled with ii-V-I progressions, often moving through multiple keys. Mastering this 'turnaround' is essential for anyone wanting to improvise or compose in the jazz style."
         }
       ],
       "interactiveActivities": [
         {
           "id": "music-theory-301-l02-a1",
-          "title": "Match the Pairs",
+          "title": "Match the Progression to the Genre",
           "type": "matching_pairs",
           "pairs": [
             {
               "left": "I – V – vi – IV",
-              "right": "Pop / Rock ballad"
+              "right": "Pop / Rock Ballad"
             },
             {
               "left": "I – IV – V – I",
@@ -125,19 +125,15 @@ export const MusicTheory301Module: LearningModule = {
             },
             {
               "left": "ii – V – I",
-              "right": "Jazz standard"
+              "right": "Jazz Standard"
             },
             {
-              "left": "i – VII – VI – VII",
-              "right": "Film / Epic cinematic"
+              "left": "i – VI – III – VII",
+              "right": "Modern Minor Pop"
             },
             {
               "left": "I – vi – IV – V",
-              "right": "1950s doo-wop"
-            },
-            {
-              "left": "vi – IV – I – V",
-              "right": "Modern pop / EDM"
+              "right": "1950s Doo-Wop"
             }
           ]
         }
@@ -146,64 +142,171 @@ export const MusicTheory301Module: LearningModule = {
         {
           "id": "music-theory-301-l02-f1",
           "front": "I-V-vi-IV",
-          "back": "The most common pop progression — balances brightness (I, IV) with emotional depth (vi)"
+          "back": "The most common pop progression — balances brightness (I, V, IV) with emotional depth (vi)."
         },
         {
           "id": "music-theory-301-l02-f2",
           "front": "12-bar blues",
-          "back": "A repeating form: 4 bars I, 2 bars IV, 2 bars I, then V-IV-I-V turnaround"
+          "back": "A repeating form: 4 bars I, 2 bars IV, 2 bars I, then a V-IV-I-V turnaround."
         },
         {
           "id": "music-theory-301-l02-f3",
           "front": "ii-V-I",
-          "back": "The fundamental jazz progression — tension (ii), intensification (V), resolution (I)"
-        }
-      ],
-      "learningAids": [
-        {
-          "id": "music-theory-301-l02-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Follow the prompt sequence and document your reasoning."
+          "back": "The fundamental jazz progression — creates a smooth path from subdominant (ii) to dominant (V) to tonic (I)."
         }
       ]
     },
     {
       "id": "music-theory-301-l03",
-      "title": "Progressions Checkpoint",
+      "title": "Cadences: Musical Punctuation",
+      "type": "video",
+      "duration": 11,
+      "objectives": [
+        "Define a cadence as a harmonic arrival point",
+        "Identify authentic, half, plagal, and deceptive cadences by ear",
+        "Explain how cadences create phrase structure"
+      ],
+      "chunks": [
+        {
+          "id": "music-theory-301-l03-c1",
+          "title": "What Is a Cadence?",
+          "content": "Cadences are the punctuation of music. Just as a period ends a sentence and a comma signals a pause, a cadence marks the end of a musical phrase. It's a two-chord gesture that creates a sense of arrival, pause, or surprise. Strong cadences provide a feeling of finality and closure, while weaker cadences leave the listener expecting more music to follow. By controlling tension and release, cadences are essential for shaping melodies and organizing music into clear, understandable sections."
+        },
+        {
+          "id": "music-theory-301-l03-c2",
+          "title": "Authentic and Half Cadences",
+          "content": "The authentic cadence (AC), moving from V to I, is the strongest and most common cadence in music. It's the musical equivalent of a full stop, providing a powerful sense of resolution and finality. A perfect authentic cadence (PAC) is even stronger, with both chords in root position and the melody ending on the tonic. In contrast, the half cadence (HC) ends on the V chord. It feels like a comma or a question mark, creating a pause that leaves the music hanging and demands continuation. It creates suspense and keeps the listener engaged."
+        },
+        {
+          "id": "music-theory-301-l03-c3",
+          "title": "Plagal and Deceptive Cadences",
+          "content": "The plagal cadence, moving from IV to I, is often called the 'Amen' cadence because of its frequent use at the end of hymns. It provides a sense of closure, but it's gentler and less forceful than an authentic cadence. The deceptive cadence is a musical surprise. It moves from V to vi, just when the listener expects the tonic I chord. This unexpected shift to a minor chord avoids the expected resolution, creating an element of drama and often extending the musical phrase in a new direction."
+        }
+      ],
+      "flashcards": [
+        {
+          "id": "music-theory-301-l03-f1",
+          "front": "Authentic Cadence (AC)",
+          "back": "V → I — the strongest, most final-sounding cadence. A musical period."
+        },
+        {
+          "id": "music-theory-301-l03-f2",
+          "front": "Half Cadence (HC)",
+          "back": "Any chord → V — sounds incomplete, like a question. Demands continuation."
+        },
+        {
+          "id": "music-theory-301-l03-f3",
+          "front": "Plagal Cadence (PC)",
+          "back": "IV → I — the 'Amen' cadence; softer and more hymn-like than an authentic cadence."
+        },
+        {
+          "id": "music-theory-301-l03-f4",
+          "front": "Deceptive Cadence (DC)",
+          "back": "V → vi — the ear expects I but gets vi instead. Creates surprise and pushes the music forward."
+        }
+      ],
+      "learningAids": [
+        {
+          "id": "music-theory-301-l03-a1",
+          "type": "image",
+          "title": "Cadence Cheat Sheet",
+          "content": "A visual guide with four short musical examples on a staff, one for each cadence type (Authentic, Half, Plagal, Deceptive), showing the final two chords and their Roman numerals."
+        }
+      ]
+    },
+    {
+      "id": "music-theory-301-l04",
+      "title": "Secondary Dominants Lab",
+      "type": "interactive",
+      "duration": 14,
+      "objectives": [
+        "Define a secondary dominant as a V chord 'borrowed' from another key",
+        "Identify and label secondary dominants (e.g., V/V, V/vi)",
+        "Analyze how secondary dominants add color and direction to progressions"
+      ],
+      "chunks": [
+        {
+          "id": "music-theory-301-l04-c1",
+          "title": "Beyond Diatonic Harmony",
+          "content": "While diatonic chords form a key's foundation, music would be predictable if we only used them. Secondary dominants add color and excitement by temporarily borrowing a chord from a related key. A secondary dominant is the dominant (V chord) of a diatonic chord other than the tonic. This process, called tonicization, creates a strong pull towards that target chord, making the harmony more dynamic and sophisticated. It's like adding a splash of a new, vibrant color to a familiar painting."
+        },
+        {
+          "id": "music-theory-301-l04-c2",
+          "title": "V/V — The Most Common Secondary Dominant",
+          "content": "The most common secondary dominant is the 'five of five' (V/V). In C major, the V chord is G major. The dominant of G major is D major. So, D major is the V/V in the key of C. Notice that the D major chord contains an F-sharp, a note that is not in the C major scale. This chromatic note is what gives the secondary dominant its power, creating a stronger-than-usual pull towards the G chord. A progression like C - D - G - C (I - V/V - V - I) sounds much more compelling than a purely diatonic version."
+        },
+        {
+          "id": "music-theory-301-l04-c3",
+          "title": "Other Secondary Dominants",
+          "content": "You can create a secondary dominant for almost any major or minor diatonic chord. For example, in C major, you can have a V/ii (A major, pulling to D minor), a V/vi (E major, pulling to A minor), or a V/IV (C major, which is the same as the tonic). Each secondary dominant introduces a unique chromatic note that intensifies the arrival of its target chord. Using them skillfully allows composers to create longer, more interesting progressions and to smoothly transition between different harmonic areas."
+        }
+      ],
+      "interactiveActivities": [
+        {
+          "id": "music-theory-301-l04-a1",
+          "title": "Identify the Secondary Dominant",
+          "type": "matching_pairs",
+          "pairs": [
+            {
+              "left": "V/V in C major",
+              "right": "D major (contains F♯)"
+            },
+            {
+              "left": "V/vi in C major",
+              "right": "E major (contains G♯)"
+            },
+            {
+              "left": "V/ii in C major",
+              "right": "A major (contains C♯)"
+            },
+            {
+              "left": "V/V in G major",
+              "right": "A major (contains C♯)"
+            },
+            {
+              "left": "V/vi in G major",
+              "right": "B major (contains D♯)"
+            }
+          ]
+        }
+      ],
+      "flashcards": [
+        {
+          "id": "music-theory-301-l04-f1",
+          "front": "Secondary Dominant",
+          "back": "A chord that acts as the V (or V7) of a diatonic chord other than the tonic. It adds chromatic color."
+        },
+        {
+          "id": "music-theory-301-l04-f2",
+          "front": "V/V",
+          "back": "'Five of five' — the dominant of the dominant chord. The most common secondary dominant."
+        },
+        {
+          "id": "music-theory-301-l04-f3",
+          "front": "Tonicization",
+          "back": "The process of making a non-tonic chord sound like a temporary tonic, usually by preceding it with its secondary dominant."
+        }
+      ],
+      "learningAids": [
+        {
+          "id": "music-theory-301-l04-a1",
+          "type": "image",
+          "title": "Secondary Dominant Map",
+          "content": "A diagram showing the diatonic chords of C major, with arrows pointing from each potential secondary dominant (V/ii, V/iii, etc.) to its target chord."
+        }
+      ]
+    },
+    {
+      "id": "music-theory-301-l05",
+      "title": "Harmony Checkpoint",
       "type": "quiz",
       "duration": 8,
       "objectives": [
-        "Demonstrate knowledge of chord progressions and Roman numeral analysis"
+        "Demonstrate knowledge of Roman numerals, common progressions, cadences, and secondary dominants"
       ],
       "questions": [
         {
-          "id": "music-theory-301-l03-q1",
-          "text": "In a major key, which Roman numeral represents a diminished triad?",
-          "skillId": "music-theory-301-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "iii"
-            },
-            {
-              "id": "b",
-              "text": "V"
-            },
-            {
-              "id": "c",
-              "text": "vi"
-            },
-            {
-              "id": "d",
-              "text": "vii°"
-            }
-          ],
-          "correctOptionId": "d",
-          "explanation": ""
-        },
-        {
-          "id": "music-theory-301-l03-q2",
+          "id": "music-theory-301-l05-q1",
           "text": "The progression I-V-vi-IV in G major is:",
           "skillId": "music-theory-301-skill-core",
           "options": [
@@ -225,16 +328,66 @@ export const MusicTheory301Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": ""
+          "explanation": "In G major: I is G, V is D, vi is Em, and IV is C."
         },
         {
-          "id": "music-theory-301-l03-q3",
-          "text": "The ii-V-I progression is most associated with which genre?",
+          "id": "music-theory-301-l05-q2",
+          "text": "A cadence that ends on the V chord, creating a feeling of pause, is called a:",
           "skillId": "music-theory-301-skill-core",
           "options": [
             {
               "id": "a",
-              "text": "Punk rock"
+              "text": "Deceptive Cadence"
+            },
+            {
+              "id": "b",
+              "text": "Plagal Cadence"
+            },
+            {
+              "id": "c",
+              "text": "Authentic Cadence"
+            },
+            {
+              "id": "d",
+              "text": "Half Cadence"
+            }
+          ],
+          "correctOptionId": "d",
+          "explanation": "A half cadence ends on the dominant (V), creating an unresolved feeling like a question."
+        },
+        {
+          "id": "music-theory-301-l05-q3",
+          "text": "In the key of C major, what chord is the V/V?",
+          "skillId": "music-theory-301-skill-core",
+          "options": [
+            {
+              "id": "a",
+              "text": "G major"
+            },
+            {
+              "id": "b",
+              "text": "C major"
+            },
+            {
+              "id": "c",
+              "text": "D major"
+            },
+            {
+              "id": "d",
+              "text": "F major"
+            }
+          ],
+          "correctOptionId": "c",
+          "explanation": "The V chord in C is G. The dominant (V) of G is D. Therefore, D major is the V/V in C."
+        },
+        {
+          "id": "music-theory-301-l05-q4",
+          "text": "The ii-V-I progression is most strongly associated with which genre?",
+          "skillId": "music-theory-301-skill-core",
+          "options": [
+            {
+              "id": "a",
+              "text": "Blues"
             },
             {
               "id": "b",
@@ -242,40 +395,15 @@ export const MusicTheory301Module: LearningModule = {
             },
             {
               "id": "c",
-              "text": "Country"
+              "text": "Pop"
             },
             {
               "id": "d",
-              "text": "Electronic dance music"
+              "text": "Folk"
             }
           ],
           "correctOptionId": "b",
-          "explanation": ""
-        },
-        {
-          "id": "music-theory-301-l03-q4",
-          "text": "What is the function of the V chord in tonal music?",
-          "skillId": "music-theory-301-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "Tonic — home and rest"
-            },
-            {
-              "id": "b",
-              "text": "Subdominant — departure"
-            },
-            {
-              "id": "c",
-              "text": "Dominant — tension seeking resolution to I"
-            },
-            {
-              "id": "d",
-              "text": "Mediant — color and contrast"
-            }
-          ],
-          "correctOptionId": "c",
-          "explanation": ""
+          "explanation": "The ii-V-I is the fundamental harmonic building block of jazz music."
         }
       ],
       "quizBlueprint": {
@@ -285,185 +413,266 @@ export const MusicTheory301Module: LearningModule = {
           "understand": 2,
           "apply": 1
         }
-      },
-      "learningAids": [
-        {
-          "id": "music-theory-301-l03-a1",
-          "type": "mnemonic",
-          "title": "Memory Cue",
-          "content": "Use Plan, Solve, Explain to structure each response."
-        }
-      ]
+      }
     },
     {
-      "id": "music-theory-301-l04",
-      "title": "Cadences: Musical Punctuation",
-      "type": "video",
-      "duration": 11,
-      "objectives": [
-        "Define a cadence as a harmonic arrival point",
-        "Identify authentic, half, plagal, and deceptive cadences",
-        "Explain how cadences create phrase structure"
-      ],
-      "chunks": [
-        {
-          "id": "music-theory-301-l04-c1",
-          "title": "What Is a Cadence?",
-          "content": "A cadence is an important concept in music, acting like punctuation at the end of a musical phrase, much like how we use periods, commas, and other punctuation marks in writing. Think of a strong cadence as a period; it gives a sense of finality and resolution, making you feel like the musical idea has come to a complete stop. In contrast, a weak cadence resembles a comma; it creates a pause but indicates that there is more music to come, leaving the listener in anticipation. Cadences are determined by the last two chords of a musical phrase, and they play a crucial role in organizing music into distinct phrases, sections, and complete thoughts. Without cadences, music would flow on endlessly, lacking clear structure and direction, which would make it challenging for listeners to follow along and appreciate the musical journey. Understanding cadences helps musicians and composers create more engaging and expressive music, allowing them to communicate their ideas effectively through sound.\nContext recap: A cadence is an important concept in music, acting like punctuation at the end of a musical phrase, much like how we use periods, commas, and other punctuation marks in writing. Think of a strong cadence as a period; it gives a sense of finality and resolution, making you feel like the musical idea has come to a complete stop. In contrast, a weak cadence resembles a comma; it creates a pause but indicates that there is more music to come, leaving the listener in anticipation. Cadences are determined by the last two chords of a musical phrase, and they play a crucial role in organizing music into distinct phrases, sections, and complete thoughts."
-        },
-        {
-          "id": "music-theory-301-l04-c2",
-          "title": "Authentic and Half Cadences",
-          "content": "An authentic cadence, represented as V → I, is one of the most powerful ways to bring music to a satisfying conclusion in tonal music. It creates a sense of completeness and finality, making the listener feel as if the musical journey has reached its destination. When we talk about a perfect authentic cadence, or PAC for short, we mean that both chords are in their root position, and the melody beautifully ends on the tonic note. This combination gives a very strong sense of closure, making it a favorite among composers and listeners alike. On the other hand, we have the imperfect authentic cadence, known as IAC. This also follows the V → I pattern but feels less conclusive. It may involve inverted chords or the melody might not land on the tonic, which makes it feel a bit weaker. Lastly, we encounter the half cadence. This type of cadence can be anything that leads to the V chord, and it creates a feeling of incompleteness. It’s like leaving a question unanswered, making the listener eager to hear what comes next. Understanding these cadences helps us appreciate how composers create tension and resolution in their music, guiding our emotions throughout a piece.\nContext recap: An authentic cadence, represented as V → I, is one of the most powerful ways to bring music to a satisfying conclusion in tonal music. It creates a sense of completeness and finality, making the listener feel as if the musical journey has reached its destination. When we talk about a perfect authentic cadence, or PAC for short, we mean that both chords are in their root position, and the melody beautifully ends on the tonic note. This combination gives a very strong sense of closure, making it a favorite among composers and listeners alike.\nWhy this matters: Authentic and Half Cadences helps learners in Music connect ideas from Advanced Music Theory to decisions they make during practice and assessment. Connect ideas to real decisions and evidence."
-        },
-        {
-          "id": "music-theory-301-l04-c3",
-          "title": "Plagal and Deceptive Cadences",
-          "content": "A plagal cadence, which we can write as IV → I, is commonly known as the 'Amen' cadence. This name comes from its gentle and soothing sound, which is quite different from the stronger, more definitive sound of an authentic cadence. You might hear a plagal cadence used at the end of a piece of music or after an authentic cadence, serving as a soft and comforting conclusion. It’s like a warm hug for the ears!\nOn the flip side, we have the deceptive cadence, represented as V → vi. This type of cadence is all about surprise! When listeners hear the V chord, they naturally expect the music to resolve to the I chord, which is the typical ending. However, instead of landing on the I chord, the music unexpectedly shifts to the vi chord. This twist keeps the audience on their toes and adds an element of excitement to the music. Composers love to use deceptive cadences because they create a sense of intrigue and allow the music to flow in unexpected directions, making the listening experience more engaging and dynamic.\nUnderstanding these cadences can help you appreciate the clever ways composers play with musical expectations, making their pieces more interesting and enjoyable to listen to.\nContext recap: A plagal cadence, which we can write as IV → I, is commonly known as the 'Amen' cadence. This name comes from its gentle and soothing sound, which is quite different from the stronger, more definitive sound of an authentic cadence. You might hear a plagal cadence used at the end of a piece of music or after an authentic cadence, serving as a soft and comforting conclusion. It’s like a warm hug for the ears!\nWhy this matters: Plagal and Deceptive Cadences helps learners in Music connect ideas from Advanced Music Theory to decisions they make during practice and assessment. Connect ideas to real decisions and evidence."
-        }
-      ],
-      "flashcards": [
-        {
-          "id": "music-theory-301-l04-f1",
-          "front": "Authentic cadence (AC)",
-          "back": "V → I — the strongest, most final-sounding cadence in tonal music"
-        },
-        {
-          "id": "music-theory-301-l04-f2",
-          "front": "Half cadence (HC)",
-          "back": "Any chord → V — sounds incomplete, like a question; demands continuation"
-        },
-        {
-          "id": "music-theory-301-l04-f3",
-          "front": "Plagal cadence",
-          "back": "IV → I — the 'Amen' cadence; softer and more hymn-like than authentic"
-        },
-        {
-          "id": "music-theory-301-l04-f4",
-          "front": "Deceptive cadence (DC)",
-          "back": "V → vi — the ear expects I but gets vi; creates surprise and continuation"
-        }
-      ],
-      "learningAids": [
-        {
-          "id": "music-theory-301-l04-a1",
-          "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary of the lesson's main concept."
-        }
-      ]
-    },
-    {
-      "id": "music-theory-301-l05",
+      "id": "music-theory-301-l06",
       "title": "The Seven Modes",
       "type": "interactive",
       "duration": 14,
       "objectives": [
         "Name and construct all seven diatonic modes",
         "Identify the characteristic note that distinguishes each mode",
-        "Associate modes with musical moods and genres"
+        "Associate modes with specific musical moods and genres"
       ],
       "chunks": [
         {
-          "id": "music-theory-301-l05-c1",
+          "id": "music-theory-301-l06-c1",
           "title": "Modes from the Major Scale",
-          "content": "The seven modes are intriguing variations of the major scale, and each mode can be understood as a different 'rotation' of that scale. When you start a major scale on each of its seven notes, you will uncover a unique mode. The first mode is called Ionian, which is the same as the major scale itself. The second mode is Dorian, which has a slightly different sound. The third mode is Phrygian, known for its exotic flavor. The fourth mode is Lydian, which has a bright and uplifting character. The fifth mode is Mixolydian, often used in popular music. The sixth mode is Aeolian, which is the same as the natural minor scale, giving it a more somber tone. Finally, the seventh mode is Locrian, which has a mysterious and unstable quality. Each of these modes has its own distinct step pattern and character, which contributes to the rich variety of music we hear in different genres and styles. Understanding these modes can help you become a more versatile musician and composer, allowing you to explore new musical ideas and express yourself in unique ways.\nContext recap: The seven modes are intriguing variations of the major scale, and each mode can be understood as a different 'rotation' of that scale. When you start a major scale on each of its seven notes, you will uncover a unique mode. The first mode is called Ionian, which is the same as the major scale itself. The second mode is Dorian, which has a slightly different sound.\nWhy this matters: Modes from the Major Scale helps learners in Music connect ideas from Advanced Music Theory to decisions they make during practice and assessment. Connect ideas to real decisions and evidence."
+          "content": "The seven modes are unique scales derived from the major scale. You can think of them as 'rotations' of the major scale, where you start on a different note each time. Starting on the first note gives you Ionian (the major scale). Starting on the second gives you Dorian, the third Phrygian, and so on through Lydian, Mixolydian, Aeolian (the natural minor scale), and Locrian. Each mode has a distinct pattern of whole and half steps, which gives it a unique character and emotional color, from bright and dreamy to dark and intense."
         },
         {
-          "id": "music-theory-301-l05-c2",
+          "id": "music-theory-301-l06-c2",
           "title": "Character Notes",
-          "content": "In music, each mode has a unique 'character note' that makes it different from the major and natural minor scales. Let's explore these character notes! The Dorian mode is special because it has a raised 6th note when compared to the natural minor scale. This gives it a jazzy feel that many musicians love to use. On the other hand, the Phrygian mode features a lowered 2nd note, which can create a sound reminiscent of Spanish music or even heavy metal. Then we have the Lydian mode, which stands out with its raised 4th note, giving it a dreamy and ethereal quality that can transport listeners to another world. Lastly, the Mixolydian mode is characterized by a lowered 7th note, which lends it a bluesy vibe that is often found in rock and blues music. These small changes in just one note can lead to vastly different emotions and atmospheres in the music we hear and create. Understanding these modes and their character notes can help you express a wide range of feelings through your own compositions and performances.\nContext recap: In music, each mode has a unique 'character note' that makes it different from the major and natural minor scales. Let's explore these character notes! The Dorian mode is special because it has a raised 6th note when compared to the natural minor scale. This gives it a jazzy feel that many musicians love to use.\nWhy this matters: Character Notes helps learners in Music connect ideas from Advanced Music Theory to decisions they make during practice and assessment. Connect ideas to real decisions and evidence.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "Each mode has a 'character note' that gives it its signature sound. Compared to a standard major or minor scale, this one altered note changes everything. For example, Dorian is a minor mode, but its raised 6th degree gives it a hopeful, jazzy sound. Lydian is a major mode, but its raised 4th creates a bright, magical, or dreamy quality. Phrygian's lowered 2nd degree gives it a dark, Spanish or heavy metal flavor, while Mixolydian's lowered 7th makes it sound bluesy and perfect for rock music. Identifying these notes is the key to unlocking the power of modes."
         },
         {
-          "id": "music-theory-301-l05-c3",
+          "id": "music-theory-301-l06-c3",
           "title": "Modes in Popular Music",
-          "content": "Modes are fascinating musical tools that go beyond just theory; they can be heard in many of your favorite songs! For example, the lively tune 'Oye Como Va' by Santana is a great illustration of the Dorian mode, which has a jazzy and upbeat feel. If you listen to Metallica's powerful track 'Wherever I May Roam,' you'll notice it uses the Phrygian mode, giving it a mysterious and intense vibe. The iconic theme from 'The Simpsons' is another example, showcasing a Lydian flavor that feels bright and uplifting. The Beatles' classic 'Norwegian Wood' is a wonderful representation of the Mixolydian mode, which adds a unique twist to its melody. Furthermore, film composers cleverly use these modes to evoke different emotions: the Lydian mode often brings a sense of wonder and magic, the Phrygian mode can create feelings of exotic danger, and the Dorian mode conveys a sense of cool sophistication. By understanding these modes, you can deepen your appreciation for music and even inspire your own creative compositions!\nContext recap: Modes are fascinating musical tools that go beyond just theory; they can be heard in many of your favorite songs! For example, the lively tune 'Oye Como Va' by Santana is a great illustration of the Dorian mode, which has a jazzy and upbeat feel. If you listen to Metallica's powerful track 'Wherever I May Roam,' you'll notice it uses the Phrygian mode, giving it a mysterious and intense vibe. The iconic theme from 'The Simpsons' is another example, showcasing a Lydian flavor that feels bright and uplifting."
+          "content": "Modes are everywhere in the music you listen to. The cool, soulful vibe of Santana's 'Oye Como Va' comes from the Dorian mode. The dreamy, floating sound of 'The Simpsons' theme is pure Lydian. The Beatles' 'Norwegian Wood' uses the Mixolydian mode to give its folk melody a bluesy edge, and Metallica's 'Wherever I May Roam' gets its heavy, exotic sound from the Phrygian mode. Film composers also use modes to quickly establish a mood: Lydian for wonder, Phrygian for tension, and Dorian for heroic adventure."
         }
       ],
       "interactiveActivities": [
         {
-          "id": "music-theory-301-l05-a1",
-          "title": "Sort into Categories",
+          "id": "music-theory-301-l06-a1",
+          "title": "Sort the Modes by Mood",
           "type": "sorting_buckets",
           "buckets": [
-            "Major-like (bright)",
-            "Minor-like (dark)",
-            "Diminished (unstable)"
+            "Major-like (Bright)",
+            "Minor-like (Dark)",
+            "Tense / Unstable"
           ],
           "items": [
             {
               "text": "Ionian",
-              "bucket": "Major-like (bright)"
+              "bucket": "Major-like (Bright)"
             },
             {
               "text": "Lydian",
-              "bucket": "Major-like (bright)"
+              "bucket": "Major-like (Bright)"
             },
             {
               "text": "Mixolydian",
-              "bucket": "Major-like (bright)"
+              "bucket": "Major-like (Bright)"
             },
             {
               "text": "Dorian",
-              "bucket": "Minor-like (dark)"
+              "bucket": "Minor-like (Dark)"
             },
             {
               "text": "Phrygian",
-              "bucket": "Minor-like (dark)"
+              "bucket": "Minor-like (Dark)"
             },
             {
               "text": "Aeolian",
-              "bucket": "Minor-like (dark)"
+              "bucket": "Minor-like (Dark)"
             },
             {
               "text": "Locrian",
-              "bucket": "Diminished (unstable)"
+              "bucket": "Tense / Unstable"
             }
           ]
         }
       ],
       "flashcards": [
         {
-          "id": "music-theory-301-l05-f1",
-          "front": "Dorian mode",
-          "back": "Minor mode with a raised 6th — sounds jazzy/soulful. Built on the 2nd degree of major."
+          "id": "music-theory-301-l06-f1",
+          "front": "Dorian Mode",
+          "back": "Minor mode with a raised 6th. Sounds jazzy/soulful. Built on the 2nd degree of major."
         },
         {
-          "id": "music-theory-301-l05-f2",
-          "front": "Phrygian mode",
-          "back": "Minor mode with a lowered 2nd — sounds Spanish/exotic/heavy. Built on the 3rd degree."
+          "id": "music-theory-301-l06-f2",
+          "front": "Phrygian Mode",
+          "back": "Minor mode with a lowered 2nd. Sounds Spanish/exotic/heavy. Built on the 3rd degree."
         },
         {
-          "id": "music-theory-301-l05-f3",
-          "front": "Lydian mode",
-          "back": "Major mode with a raised 4th — sounds dreamy/floating. Built on the 4th degree."
+          "id": "music-theory-301-l06-f3",
+          "front": "Lydian Mode",
+          "back": "Major mode with a raised 4th. Sounds dreamy/magical. Built on the 4th degree."
         },
         {
-          "id": "music-theory-301-l05-f4",
-          "front": "Mixolydian mode",
-          "back": "Major mode with a lowered 7th — sounds bluesy/rock. Built on the 5th degree."
+          "id": "music-theory-301-l06-f4",
+          "front": "Mixolydian Mode",
+          "back": "Major mode with a lowered 7th. Sounds bluesy/rock. Built on the 5th degree."
         }
       ],
       "learningAids": [
         {
-          "id": "music-theory-301-l05-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Follow the prompt sequence and document your reasoning."
+          "id": "music-theory-301-l06-a1",
+          "type": "image",
+          "title": "The Mood of Modes",
+          "content": "An infographic matching each mode (Ionian, Dorian, etc.) to its characteristic sound/mood (e.g., Lydian: Dreamy, Phrygian: Spanish/Exotic) and its character note (e.g., Lydian: #4)."
         }
       ]
     },
     {
-      "id": "music-theory-301-l06",
-      "title": "Modes & Cadences Checkpoint",
+      "id": "music-theory-301-l07",
+      "title": "Musical Form: The Big Picture",
+      "type": "video",
+      "duration": 12,
+      "objectives": [
+        "Define musical form as the large-scale structure of a composition",
+        "Identify binary (AB), ternary (ABA), rondo, and verse-chorus forms",
+        "Use letter labeling to map the sections of a piece"
+      ],
+      "chunks": [
+        {
+          "id": "music-theory-301-l07-c1",
+          "title": "Why Form Matters",
+          "content": "Musical form is the blueprint or map of a piece of music. It's the way a composition is structured and organized into sections. Understanding form helps listeners follow the musical journey, and it gives composers a framework for their ideas. We use letters like A, B, and C to label the different sections. A repeating section gets the same letter, while a contrasting section gets a new one. Recognizing these patterns of repetition and contrast is key to appreciating how a piece of music is built."
+        },
+        {
+          "id": "music-theory-301-l07-c2",
+          "title": "Binary and Ternary Form",
+          "content": "Binary form (AB) is a two-part structure based on contrast. It features an 'A' section followed by a different 'B' section. It's common in Baroque dances. Ternary form (ABA) is a three-part structure built on statement, contrast, and return. It presents an 'A' section, moves to a contrasting 'B' section, and then, satisfyingly, returns to the original 'A' section. This return of the familiar 'A' theme makes ternary form feel very complete and balanced."
+        },
+        {
+          "id": "music-theory-301-l07-c3",
+          "title": "Rondo and Verse-Chorus Form",
+          "content": "Rondo form features a recurring main theme (A) that alternates with contrasting sections called episodes (B, C, etc.). A typical pattern is ABACABA. The repetition of the 'A' theme makes it catchy and memorable, like in Beethoven's 'Für Elise'. The most common structure in popular music is verse-chorus form. The verses (A) have different lyrics but the same music, telling the story. The chorus (B) has the same lyrics and music each time, containing the song's main hook. Often, a contrasting bridge (C) is added for variety before the final chorus."
+        }
+      ],
+      "flashcards": [
+        {
+          "id": "music-theory-301-l07-f1",
+          "front": "Binary Form (AB)",
+          "back": "Two contrasting sections. A statement followed by a counter-statement."
+        },
+        {
+          "id": "music-theory-301-l07-f2",
+          "front": "Ternary Form (ABA)",
+          "back": "Three-part form: theme, contrast, return. The return of A provides closure."
+        },
+        {
+          "id": "music-theory-301-l07-f3",
+          "front": "Rondo Form",
+          "back": "A recurring main theme (A) alternates with contrasting episodes (ABACA or ABACABA)."
+        },
+        {
+          "id": "music-theory-301-l07-f4",
+          "front": "Verse-Chorus Form",
+          "back": "The standard pop song structure: verses with changing lyrics and a recurring chorus hook."
+        }
+      ],
+      "learningAids": [
+        {
+          "id": "music-theory-301-l07-a1",
+          "type": "image",
+          "title": "Form Blueprints",
+          "content": "Simple block diagrams illustrating Binary (A-B), Ternary (A-B-A), Rondo (A-B-A-C-A), and Verse-Chorus form."
+        }
+      ]
+    },
+    {
+      "id": "music-theory-301-l08",
+      "title": "Non-Chord Tones",
+      "type": "interactive",
+      "duration": 13,
+      "objectives": [
+        "Identify passing tones, neighbor tones, suspensions, and appoggiaturas",
+        "Explain how non-chord tones create melodic motion and tension",
+        "Add non-chord tones to a given melody"
+      ],
+      "chunks": [
+        {
+          "id": "music-theory-301-l08-c1",
+          "title": "Decorating the Skeleton",
+          "content": "A melody made of only chord tones can sound stiff and boring. Non-chord tones (NCTs) are the notes that add flavor, smoothness, and emotion to a melody. They are notes that don't belong to the underlying chord, creating momentary dissonance that resolves back to a chord tone. Think of chord tones as the skeleton of a melody; non-chord tones are the muscles and skin that bring it to life. Every memorable melody is filled with skillfully used NCTs."
+        },
+        {
+          "id": "music-theory-301-l08-c2",
+          "title": "Passing and Neighbor Tones",
+          "content": "Passing tones and neighbor tones are the most common NCTs. A passing tone fills the space between two chord tones by moving in one direction, like the D in the melody C-D-E over a C major chord. It creates a smooth, connected line. A neighbor tone decorates a single chord tone by stepping away and then immediately returning, like the F in the melody E-F-E over a C major chord. It adds a small bit of interest without disrupting the harmony."
+        },
+        {
+          "id": "music-theory-301-l08-c3",
+          "title": "Suspensions and Appoggiaturas",
+          "content": "Suspensions and appoggiaturas are more dramatic NCTs that create tension. A suspension occurs when a note from a previous chord is held over, creating a clash with the new chord, before resolving down by step. It has three parts: preparation, suspension (the clash), and resolution. An appoggiatura is even more dramatic; it's a dissonant note that is leaped to and then resolved by step. It creates an expressive, sighing effect and is often used to emphasize important words or emotional moments in a melody."
+        }
+      ],
+      "interactiveActivities": [
+        {
+          "id": "music-theory-301-l08-a1",
+          "title": "Identify the Non-Chord Tone",
+          "type": "sorting_buckets",
+          "buckets": [
+            "Passing Tone",
+            "Neighbor Tone",
+            "Suspension",
+            "Appoggiatura"
+          ],
+          "items": [
+            {
+              "text": "Stepwise motion between two different chord tones",
+              "bucket": "Passing Tone"
+            },
+            {
+              "text": "Leaves and returns to the same chord tone by step",
+              "bucket": "Neighbor Tone"
+            },
+            {
+              "text": "Held from previous chord, creates dissonance, resolves down",
+              "bucket": "Suspension"
+            },
+            {
+              "text": "Leaps to a dissonance, then resolves by step",
+              "bucket": "Appoggiatura"
+            }
+          ]
+        }
+      ],
+      "flashcards": [
+        {
+          "id": "music-theory-301-l08-f1",
+          "front": "Passing Tone",
+          "back": "An NCT that moves by step between two chord tones in the same direction."
+        },
+        {
+          "id": "music-theory-301-l08-f2",
+          "front": "Neighbor Tone",
+          "back": "An NCT that steps away from a chord tone and then returns to it."
+        },
+        {
+          "id": "music-theory-301-l08-f3",
+          "front": "Suspension",
+          "back": "A held note from a previous chord that clashes with the new chord and resolves down by step."
+        },
+        {
+          "id": "music-theory-301-l08-f4",
+          "front": "Appoggiatura",
+          "back": "An NCT approached by leap and resolved by step — creates a dramatic, sighing effect."
+        }
+      ],
+      "learningAids": [
+        {
+          "id": "music-theory-301-l08-a1",
+          "type": "image",
+          "title": "NCT Spotter's Guide",
+          "content": "Four short musical excerpts on a staff, each highlighting a different non-chord tone (Passing, Neighbor, Suspension, Appoggiatura) with the NCT circled and labeled."
+        }
+      ]
+    },
+    {
+      "id": "music-theory-301-l09",
+      "title": "Structure & Melody Checkpoint",
       "type": "quiz",
       "duration": 8,
       "objectives": [
-        "Demonstrate knowledge of modes and cadence types"
+        "Demonstrate knowledge of musical modes, form, and non-chord tones"
       ],
       "questions": [
         {
-          "id": "music-theory-301-l06-q1",
+          "id": "music-theory-301-l09-q1",
           "text": "Which mode is identical to the natural minor scale?",
           "skillId": "music-theory-301-skill-core",
           "options": [
@@ -485,268 +694,11 @@ export const MusicTheory301Module: LearningModule = {
             }
           ],
           "correctOptionId": "c",
-          "explanation": ""
+          "explanation": "Aeolian mode is another name for the natural minor scale. It is built on the 6th degree of the major scale."
         },
         {
-          "id": "music-theory-301-l06-q2",
-          "text": "The Lydian mode's character note is a:",
-          "skillId": "music-theory-301-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "Lowered 2nd"
-            },
-            {
-              "id": "b",
-              "text": "Raised 4th"
-            },
-            {
-              "id": "c",
-              "text": "Lowered 7th"
-            },
-            {
-              "id": "d",
-              "text": "Raised 6th"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": ""
-        },
-        {
-          "id": "music-theory-301-l06-q3",
-          "text": "A deceptive cadence moves from V to:",
-          "skillId": "music-theory-301-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "I"
-            },
-            {
-              "id": "b",
-              "text": "IV"
-            },
-            {
-              "id": "c",
-              "text": "vi"
-            },
-            {
-              "id": "d",
-              "text": "ii"
-            }
-          ],
-          "correctOptionId": "c",
-          "explanation": ""
-        },
-        {
-          "id": "music-theory-301-l06-q4",
-          "text": "Which mode is most associated with blues and rock music?",
-          "skillId": "music-theory-301-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "Phrygian"
-            },
-            {
-              "id": "b",
-              "text": "Lydian"
-            },
-            {
-              "id": "c",
-              "text": "Mixolydian"
-            },
-            {
-              "id": "d",
-              "text": "Locrian"
-            }
-          ],
-          "correctOptionId": "c",
-          "explanation": ""
-        }
-      ],
-      "quizBlueprint": {
-        "totalQuestions": 4,
-        "bloomProfile": {
-          "remember": 2,
-          "understand": 1,
-          "apply": 1
-        }
-      },
-      "learningAids": [
-        {
-          "id": "music-theory-301-l06-a1",
-          "type": "mnemonic",
-          "title": "Memory Cue",
-          "content": "Use Plan, Solve, Explain to structure each response."
-        }
-      ]
-    },
-    {
-      "id": "music-theory-301-l07",
-      "title": "Musical Form: The Big Picture",
-      "type": "video",
-      "duration": 12,
-      "objectives": [
-        "Define musical form as the large-scale structure of a composition",
-        "Identify binary (AB), ternary (ABA), rondo, and verse-chorus forms",
-        "Use letter labeling to map the sections of a piece"
-      ],
-      "chunks": [
-        {
-          "id": "music-theory-301-l07-c1",
-          "title": "Why Form Matters",
-          "content": "Understanding musical form is like learning the blueprint of a building. Just as a house has different rooms, hallways, and spaces that serve various purposes, music is structured into sections that relate to each other in unique and interesting ways. These sections can repeat, contrast, or connect, creating a musical journey for both the performer and the listener. By recognizing these patterns, musicians can interpret pieces more effectively, composers can organize their ideas clearly, and listeners can follow along with the music's story. We label these sections using letters: the first section is called 'A', a contrasting section is labeled 'B', and if there’s a third distinct section, it is marked as 'C'. This system helps everyone understand the overall structure of the music. For example, when you hear a song, you might notice that the chorus (which is often catchy and repeated) is like the main room of a house, while the verses (which tell the story) are like the hallways that connect everything together. By learning about musical form, you can appreciate how composers build their pieces and how performers bring those pieces to life, making music a rich and engaging experience for everyone involved.\nContext recap: Understanding musical form is like learning the blueprint of a building. Just as a house has different rooms, hallways, and spaces that serve various purposes, music is structured into sections that relate to each other in unique and interesting ways. These sections can repeat, contrast, or connect, creating a musical journey for both the performer and the listener. By recognizing these patterns, musicians can interpret pieces more effectively, composers can organize their ideas clearly, and listeners can follow along with the music's story.\nWhy this matters: Why Form Matters helps learners in Music connect ideas from Advanced Music Theory to decisions they make during practice and assessment. Connect ideas to real decisions and evidence."
-        },
-        {
-          "id": "music-theory-301-l07-c2",
-          "title": "Binary and Ternary Form",
-          "content": "Binary form, which we can think of as AB, is a musical structure that consists of two distinct sections that contrast with each other. The first section, labeled A, ends in a key that is different from the main key of the piece, creating a sense of departure. Then, the second section, labeled B, brings us back to the main key, giving us a feeling of return and resolution. This form is commonly found in lively Baroque dances, which are known for their structured and energetic nature.\nOn the other hand, we have ternary form, which is represented as ABA. In this structure, the first section introduces a theme, then moves away to a contrasting section, and finally returns to the original theme. This return is important because it provides a sense of satisfaction and closure to the listener. A well-known example of ternary form is the 'da capo' aria found in operas, where the singer often repeats the first section after a contrasting middle part. Additionally, you can observe this form in the minuet and trio sections of classical symphonies, where the trio serves as the contrasting B section. Understanding these forms helps us appreciate the creativity and structure in music composition.\nContext recap: Binary form, which we can think of as AB, is a musical structure that consists of two distinct sections that contrast with each other. The first section, labeled A, ends in a key that is different from the main key of the piece, creating a sense of departure. Then, the second section, labeled B, brings us back to the main key, giving us a feeling of return and resolution. This form is commonly found in lively Baroque dances, which are known for their structured and energetic nature.\nWhy this matters: Binary and Ternary Form helps learners in Music connect ideas from Advanced Music Theory to decisions they make during practice and assessment. Connect ideas to real decisions and evidence."
-        },
-        {
-          "id": "music-theory-301-l07-c3",
-          "title": "Rondo and Song Form",
-          "content": "Rondo form is a musical structure that often follows a pattern like ABACABA. In this form, a main theme, which we call A, keeps coming back throughout the piece, alternating with different sections that provide contrast. This structure is commonly found in the final movements of classical compositions, such as Beethoven's well-known piece 'Für Elise'. On the other hand, popular music typically uses a verse-chorus structure, which can be represented as ABABCB. In this format, the verse introduces new lyrics while maintaining the same melody, and the chorus acts as the catchy part that listeners remember easily. The C section, known as the bridge, offers a different musical idea before leading back to the final chorus. Understanding these musical forms is essential for anyone who wants to write songs, as they help in crafting music that is both memorable and engaging for the audience. By learning about these structures, aspiring songwriters can better express their creativity and connect with listeners through their music.\nContext recap: Rondo form is a musical structure that often follows a pattern like ABACABA. In this form, a main theme, which we call A, keeps coming back throughout the piece, alternating with different sections that provide contrast. This structure is commonly found in the final movements of classical compositions, such as Beethoven's well-known piece 'Für Elise'. On the other hand, popular music typically uses a verse-chorus structure, which can be represented as ABABCB.\nWhy this matters: Rondo and Song Form helps learners in Music connect ideas from Advanced Music Theory to decisions they make during practice and assessment. Connect ideas to real decisions and evidence."
-        }
-      ],
-      "flashcards": [
-        {
-          "id": "music-theory-301-l07-f1",
-          "front": "Binary form (AB)",
-          "back": "Two contrasting sections — A moves away from tonic; B resolves back"
-        },
-        {
-          "id": "music-theory-301-l07-f2",
-          "front": "Ternary form (ABA)",
-          "back": "Three-part form: theme, contrast, return — satisfying because A comes back"
-        },
-        {
-          "id": "music-theory-301-l07-f3",
-          "front": "Rondo form",
-          "back": "A recurring theme alternates with contrasting episodes (ABACA or ABACABA)"
-        },
-        {
-          "id": "music-theory-301-l07-f4",
-          "front": "Verse-chorus form",
-          "back": "Pop song structure: verses with changing lyrics, recurring chorus hook, optional bridge"
-        }
-      ],
-      "learningAids": [
-        {
-          "id": "music-theory-301-l07-a1",
-          "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary of the lesson's main concept."
-        }
-      ]
-    },
-    {
-      "id": "music-theory-301-l08",
-      "title": "Non-Chord Tones",
-      "type": "interactive",
-      "duration": 13,
-      "objectives": [
-        "Identify passing tones, neighbor tones, suspensions, and appoggiaturas",
-        "Explain how non-chord tones create melodic motion and tension",
-        "Add non-chord tones to a given melody"
-      ],
-      "chunks": [
-        {
-          "id": "music-theory-301-l08-c1",
-          "title": "Decorating the Skeleton",
-          "content": "When we create melodies, it's important to remember that using only chord tones can make the music sound choppy and uninteresting. To enhance our melodies and make them more expressive, we can incorporate non-chord tones (NCTs) to fill in the gaps between the chord tones. Imagine NCTs as the spices in a delicious dish; while the harmony serves as the main ingredient, NCTs add that extra flavor and excitement that makes the music truly captivating. Every memorable melody we hear includes these special tones in various ways. There are several types of non-chord tones, and each type is defined by how the dissonant note is approached and resolved. This approach adds depth and richness to the melody, allowing it to convey more emotion and complexity. Understanding how to use NCTs effectively can elevate your musical compositions and help you express your unique artistic voice. So, as you explore the world of melodies, remember to experiment with these non-chord tones to create music that resonates with your audience and leaves a lasting impression.\nContext recap: When we create melodies, it's important to remember that using only chord tones can make the music sound choppy and uninteresting. To enhance our melodies and make them more expressive, we can incorporate non-chord tones (NCTs) to fill in the gaps between the chord tones. Imagine NCTs as the spices in a delicious dish; while the harmony serves as the main ingredient, NCTs add that extra flavor and excitement that makes the music truly captivating. Every memorable melody we hear includes these special tones in various ways."
-        },
-        {
-          "id": "music-theory-301-l08-c2",
-          "title": "Passing and Neighbor Tones",
-          "content": "Passing tones and neighbor tones are two important types of non-chord tones that musicians use to create smooth and flowing melodies. Let's explore each one in more detail! A passing tone is a note that connects two chord tones by moving stepwise, which means it moves from one note to the next without skipping any notes in between. For example, if we are in the key of C major and playing a C chord, we can see this in the sequence of notes C-D-E. Here, the note D acts as a passing tone because it fills the gap between the chord tones C and E. This movement helps to create a sense of continuity in the music.\nOn the other hand, a neighbor tone is a little different. It involves leaving a chord tone by step and then returning back to it. For instance, if we take the notes E-F-E, the note F serves as a neighbor tone. It steps away from the chord tone E and then comes back to it. This technique adds a playful and decorative quality to melodies, making them more interesting to listen to.\nBoth passing tones and neighbor tones are essential tools for composers and songwriters. They help to create melodies that feel natural and engaging, allowing listeners to connect with the music on a deeper level. By incorporating these tones into your own compositions, you can enhance the expressiveness and flow of your musical ideas.\nContext recap: Passing tones and neighbor tones are two important types of non-chord tones that musicians use to create smooth and flowing melodies. Let's explore each one in more detail! A passing tone is a note that connects two chord tones by moving stepwise, which means it moves from one note to the next without skipping any notes in between. For example, if we are in the key of C major and playing a C chord, we can see this in the sequence of notes C-D-E.\nWhy this matters: Passing and Neighbor Tones helps learners in Music connect ideas from Advanced Music Theory to decisions they make during practice and assessment. Connect ideas to real decisions and evidence.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
-        },
-        {
-          "id": "music-theory-301-l08-c3",
-          "title": "Suspensions and Appoggiaturas",
-          "content": "Suspensions and appoggiaturas are two exciting types of non-chord tones that play a crucial role in adding tension and drama to music compositions. Let's explore each one in detail! A suspension happens when a note from the previous chord is held over into the new chord. This creates a moment of dissonance, which is a clash of sounds that can be quite powerful. The dissonance then resolves downward by step to a consonant note, creating a satisfying resolution. You can think of this process in three steps: first, the note is prepared, which means it sounds good with the chord (this is called consonance). Next, it becomes suspended, creating that tension we talked about (this is dissonance). Finally, it resolves back to a consonant note, bringing everything back into harmony. Musicians often notate these suspensions using numbers, like a 4-3 suspension or a 7-6 suspension, which indicates the specific intervals involved. On the other hand, an appoggiatura is a bit different. It leaps directly to a dissonant note and then resolves by step, which creates a striking and dramatic effect. This technique is similar to a suspension but skips the preparation phase, making it feel more spontaneous and intense. Both suspensions and appoggiaturas are essential tools for composers and performers, as they add emotional depth and complexity to melodies, making the music more engaging and expressive.\nContext recap: Suspensions and appoggiaturas are two exciting types of non-chord tones that play a crucial role in adding tension and drama to music compositions. Let's explore each one in detail! A suspension happens when a note from the previous chord is held over into the new chord. This creates a moment of dissonance, which is a clash of sounds that can be quite powerful.\nWhy this matters: Suspensions and Appoggiaturas helps learners in Music connect ideas from Advanced Music Theory to decisions they make during practice and assessment. Connect ideas to real decisions and evidence.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
-        }
-      ],
-      "interactiveActivities": [
-        {
-          "id": "music-theory-301-l08-a1",
-          "title": "Sort into Categories",
-          "type": "sorting_buckets",
-          "buckets": [
-            "Passing Tone",
-            "Neighbor Tone",
-            "Suspension",
-            "Appoggiatura"
-          ],
-          "items": [
-            {
-              "text": "Stepwise motion between two chord tones",
-              "bucket": "Passing Tone"
-            },
-            {
-              "text": "Leaves and returns to the same chord tone by step",
-              "bucket": "Neighbor Tone"
-            },
-            {
-              "text": "Held from previous chord, resolves down by step",
-              "bucket": "Suspension"
-            },
-            {
-              "text": "Leaps to a dissonance, resolves by step",
-              "bucket": "Appoggiatura"
-            },
-            {
-              "text": "C → D → E over a C major chord",
-              "bucket": "Passing Tone"
-            },
-            {
-              "text": "E → F → E over a C major chord",
-              "bucket": "Neighbor Tone"
-            }
-          ]
-        }
-      ],
-      "flashcards": [
-        {
-          "id": "music-theory-301-l08-f1",
-          "front": "Passing tone",
-          "back": "A non-chord tone that moves by step between two chord tones in the same direction"
-        },
-        {
-          "id": "music-theory-301-l08-f2",
-          "front": "Neighbor tone",
-          "back": "A non-chord tone that steps away from a chord tone and returns to it"
-        },
-        {
-          "id": "music-theory-301-l08-f3",
-          "front": "Suspension",
-          "back": "A held note from the previous chord that clashes with the new chord and resolves down by step (e.g., 4-3 sus)"
-        },
-        {
-          "id": "music-theory-301-l08-f4",
-          "front": "Appoggiatura",
-          "back": "A non-chord tone approached by leap and resolved by step — dramatic and expressive"
-        }
-      ],
-      "learningAids": [
-        {
-          "id": "music-theory-301-l08-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Follow the prompt sequence and document your reasoning."
-        }
-      ]
-    },
-    {
-      "id": "music-theory-301-l09",
-      "title": "Form & NCTs Checkpoint",
-      "type": "quiz",
-      "duration": 8,
-      "objectives": [
-        "Demonstrate knowledge of musical form and non-chord tones"
-      ],
-      "questions": [
-        {
-          "id": "music-theory-301-l09-q1",
-          "text": "ABA form is called:",
+          "id": "music-theory-301-l09-q2",
+          "text": "A musical form with the structure ABA is called:",
           "skillId": "music-theory-301-skill-core",
           "options": [
             {
@@ -763,86 +715,61 @@ export const MusicTheory301Module: LearningModule = {
             },
             {
               "id": "d",
-              "text": "Through-composed"
+              "text": "Verse-Chorus"
             }
           ],
           "correctOptionId": "b",
-          "explanation": ""
-        },
-        {
-          "id": "music-theory-301-l09-q2",
-          "text": "A suspension is characterized by:",
-          "skillId": "music-theory-301-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "A leap to a dissonance followed by stepwise resolution"
-            },
-            {
-              "id": "b",
-              "text": "A held note from the previous chord that resolves down by step"
-            },
-            {
-              "id": "c",
-              "text": "Stepwise motion connecting two chord tones"
-            },
-            {
-              "id": "d",
-              "text": "A note that steps away and returns"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": ""
+          "explanation": "Ternary form is a three-part structure based on statement (A), contrast (B), and return (A)."
         },
         {
           "id": "music-theory-301-l09-q3",
-          "text": "In rondo form, which section keeps returning?",
+          "text": "In the melody C-B-C over a C major chord, the note B is a:",
           "skillId": "music-theory-301-skill-core",
           "options": [
             {
               "id": "a",
-              "text": "B"
+              "text": "Passing Tone"
             },
             {
               "id": "b",
-              "text": "C"
+              "text": "Suspension"
             },
             {
               "id": "c",
-              "text": "A"
+              "text": "Appoggiatura"
             },
             {
               "id": "d",
-              "text": "The bridge"
+              "text": "Neighbor Tone"
             }
           ],
-          "correctOptionId": "c",
-          "explanation": ""
+          "correctOptionId": "d",
+          "explanation": "The B steps away from the chord tone C and immediately returns, making it a neighbor tone."
         },
         {
           "id": "music-theory-301-l09-q4",
-          "text": "Which NCT is described as a 'passing tone'?",
+          "text": "Which mode is characterized by a raised 4th degree, giving it a 'dreamy' sound?",
           "skillId": "music-theory-301-skill-core",
           "options": [
             {
               "id": "a",
-              "text": "A note held from the previous chord"
+              "text": "Mixolydian"
             },
             {
               "id": "b",
-              "text": "A note approached by leap"
+              "text": "Dorian"
             },
             {
               "id": "c",
-              "text": "A note connecting two chord tones by step in one direction"
+              "text": "Lydian"
             },
             {
               "id": "d",
-              "text": "A note that decorates by stepping away and back"
+              "text": "Phrygian"
             }
           ],
           "correctOptionId": "c",
-          "explanation": ""
+          "explanation": "Lydian mode's raised 4th is its character note, creating a bright and magical quality."
         }
       ],
       "quizBlueprint": {
@@ -855,16 +782,127 @@ export const MusicTheory301Module: LearningModule = {
     },
     {
       "id": "music-theory-301-l10",
-      "title": "Mastery Quiz: Progressions, Modes & Form",
-      "type": "quiz",
+      "title": "Melody Composition Basics",
+      "type": "video",
       "duration": 12,
       "objectives": [
-        "Synthesize knowledge of progressions, modes, form, and non-chord tones"
+        "Apply voice-leading principles to compose smooth melodic lines",
+        "Balance stepwise motion with leaps for melodic interest",
+        "Create a sense of direction with contour and climax"
+      ],
+      "chunks": [
+        {
+          "id": "music-theory-301-l10-c1",
+          "title": "Melodic Contour",
+          "content": "The contour of a melody is its overall shape, the way it rises and falls. A good melody has a clear direction and a focal point. This high point, called the climax, usually occurs only once per phrase and gives the melody a sense of purpose. Great melodies balance smooth, stepwise motion with occasional, well-placed leaps. A large leap often creates excitement, and is typically followed by a step in the opposite direction to maintain a smooth, singable line."
+        },
+        {
+          "id": "music-theory-301-l10-c2",
+          "title": "Voice Leading",
+          "content": "Voice leading is the art of writing smooth, logical melodic lines. The core principle is to favor stepwise motion, as it's easiest for the ear to follow and for a voice to sing. When you do use leaps, try to keep them smaller than an octave. It's also important to resolve tendency tones: the 7th scale degree (the leading tone) has a strong pull upwards to the tonic, while the 4th scale degree often wants to resolve down to the 3rd. Following these guidelines will help you write melodies that sound natural and coherent."
+        },
+        {
+          "id": "music-theory-301-l10-c3",
+          "title": "Phrase Structure",
+          "content": "Melodies are built from phrases, which are like musical sentences. A common structure is the period, which consists of two phrases in a question-and-answer relationship. The first phrase, the antecedent, ends with a weak cadence (like a half cadence), leaving the listener wanting more. The second phrase, the consequent, provides the answer, ending with a strong cadence (like an authentic cadence) that gives a sense of closure. This balanced structure makes a melody feel complete and satisfying."
+        }
+      ],
+      "flashcards": [
+        {
+          "id": "music-theory-301-l10-f1",
+          "front": "Melodic Contour",
+          "back": "The overall shape of a melody — its pattern of ascending and descending motion."
+        },
+        {
+          "id": "music-theory-301-l10-f2",
+          "front": "Climax",
+          "back": "The highest point of a melodic phrase, serving as the emotional focal point."
+        },
+        {
+          "id": "music-theory-301-l10-f3",
+          "front": "Period (Music)",
+          "back": "A pair of phrases in a question-answer relationship: antecedent (ends HC) + consequent (ends AC)."
+        },
+        {
+          "id": "music-theory-301-l10-f4",
+          "front": "Tendency Tone",
+          "back": "A note with a strong pull toward resolution, like the leading tone (7th) resolving up to the tonic."
+        }
+      ]
+    },
+    {
+      "id": "music-theory-301-l11",
+      "title": "Composition Coaching Clinic",
+      "type": "interactive",
+      "duration": 14,
+      "objectives": [
+        "Identify common composition mistakes in given melodies",
+        "Apply non-chord tones to enrich a basic melodic line",
+        "Arrange chord tones and passing tones into a singable phrase"
+      ],
+      "chunks": [
+        {
+          "id": "music-theory-301-l11-c1",
+          "title": "Common Melody Mistakes",
+          "content": "When starting out, composers often make a few common mistakes. One is writing a 'jagged' melody with too many large leaps and not enough stepwise motion. Another is having no clear focal point or climax, making the melody wander aimlessly. A third is a static melody that stays in a very narrow range and lacks rhythmic variety. Finally, a weak ending that doesn't land on a strong chord tone on a strong beat can make a phrase feel unfinished. Being aware of these pitfalls is the first step to avoiding them."
+        },
+        {
+          "id": "music-theory-301-l11-c2",
+          "title": "Enriching Your Melody",
+          "content": "To elevate a simple melody, start by building a strong skeleton of chord tones on the strong beats (beats 1 and 3 in 4/4 time). This anchors your melody to the harmony. Then, use the weaker beats (2 and 4) to add non-chord tones. Use passing tones to create smooth connections, neighbor tones to add decoration, and perhaps a suspension or appoggiatura at a key moment to create emotional tension. This combination of a strong harmonic foundation with melodic decoration is the key to writing compelling tunes."
+        }
+      ],
+      "interactiveActivities": [
+        {
+          "id": "music-theory-301-l11-a1",
+          "title": "Build a Melody",
+          "type": "drag_and_drop",
+          "prompt": "Build a 4-beat melody in C major over a I chord (C-E-G) followed by a V chord (G-B-D). Place chord tones on beats 1 and 3, and a passing or neighbor tone on beat 2.",
+          "items": [
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "B"
+          ],
+          "zones": [
+            "Beat 1 (I)",
+            "Beat 2",
+            "Beat 3 (V)",
+            "Beat 4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "music-theory-301-l12",
+      "title": "Final Composition Project",
+      "type": "project",
+      "duration": 30,
+      "objectives": [
+        "Synthesize all learned concepts by composing an original 8-bar melody over a given chord progression"
+      ],
+      "chunks": [
+        {
+          "id": "music-theory-301-l12-c1",
+          "title": "Project Brief: Your 8-Bar Melody",
+          "content": "Your mission is to compose an 8-bar melody in C major over the chord progression: I - V/V - V - I - IV - I - V - I. Your melody must demonstrate: \n1. A clear melodic contour with a single climax. \n2. A balance of stepwise motion and leaps. \n3. Correct use of at least two different non-chord tones (e.g., passing tone, neighbor tone). \n4. A clear period structure: an antecedent phrase (bars 1-4) ending on a half cadence (over the V chord) and a consequent phrase (bars 5-8) ending on an authentic cadence (over the final V-I)."
+        }
+      ]
+    },
+    {
+      "id": "music-theory-301-l13",
+      "title": "Final Mastery Exam",
+      "type": "quiz",
+      "duration": 15,
+      "objectives": [
+        "Demonstrate comprehensive mastery of advanced music theory concepts"
       ],
       "questions": [
         {
-          "id": "music-theory-301-l10-q1",
-          "text": "The diatonic chords in a major key follow the quality pattern:",
+          "id": "music-theory-301-l13-q1",
+          "text": "The diatonic chords in a major key follow which quality pattern?",
           "skillId": "music-theory-301-skill-core",
           "options": [
             {
@@ -873,7 +911,7 @@ export const MusicTheory301Module: LearningModule = {
             },
             {
               "id": "b",
-              "text": "I  II  III  IV  V  VI  VII"
+              "text": "I  II  iii  IV  V  vi  vii"
             },
             {
               "id": "c",
@@ -881,39 +919,14 @@ export const MusicTheory301Module: LearningModule = {
             },
             {
               "id": "d",
-              "text": "I  ii  iii  IV  V  vi  VII"
+              "text": "I  ii  III  iv  V  vi  VII"
             }
           ],
           "correctOptionId": "a",
-          "explanation": ""
+          "explanation": "The pattern of diatonic triads in a major key is always: Major, minor, minor, Major, Major, minor, diminished."
         },
         {
-          "id": "music-theory-301-l10-q2",
-          "text": "Dorian mode differs from Aeolian (natural minor) by having a:",
-          "skillId": "music-theory-301-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "Raised 7th"
-            },
-            {
-              "id": "b",
-              "text": "Lowered 2nd"
-            },
-            {
-              "id": "c",
-              "text": "Raised 6th"
-            },
-            {
-              "id": "d",
-              "text": "Lowered 4th"
-            }
-          ],
-          "correctOptionId": "c",
-          "explanation": ""
-        },
-        {
-          "id": "music-theory-301-l10-q3",
+          "id": "music-theory-301-l13-q2",
           "text": "A perfect authentic cadence (PAC) is defined as:",
           "skillId": "music-theory-301-skill-core",
           "options": [
@@ -935,445 +948,10 @@ export const MusicTheory301Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": ""
+          "explanation": "A PAC requires a V-I progression, both chords in root position, and the melody ending on the tonic note for the strongest possible closure."
         },
         {
-          "id": "music-theory-301-l10-q4",
-          "text": "In pop song form, the 'bridge' section is typically labeled:",
-          "skillId": "music-theory-301-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "A"
-            },
-            {
-              "id": "b",
-              "text": "B"
-            },
-            {
-              "id": "c",
-              "text": "C"
-            },
-            {
-              "id": "d",
-              "text": "D"
-            }
-          ],
-          "correctOptionId": "c",
-          "explanation": ""
-        }
-      ],
-      "quizBlueprint": {
-        "totalQuestions": 4,
-        "bloomProfile": {
-          "remember": 1,
-          "understand": 2,
-          "analyze": 1
-        }
-      }
-    },
-    {
-      "id": "music-theory-301-l11",
-      "title": "Secondary Dominants Lab",
-      "type": "interactive",
-      "duration": 14,
-      "objectives": [
-        "Define a secondary dominant as a V chord 'borrowed' from another key",
-        "Identify and label secondary dominants (V/V, V/vi, etc.)",
-        "Hear how secondary dominants add color and direction to progressions"
-      ],
-      "chunks": [
-        {
-          "id": "music-theory-301-l11-c1",
-          "title": "Beyond Diatonic Harmony",
-          "content": "Diatonic chords are the building blocks of music, providing a strong and stable foundation. However, if we only use these chords, our music can become repetitive and lose its excitement. This is where the concept of secondary dominants becomes important! A secondary dominant is a special type of major chord, or sometimes a dominant 7th chord, that doesn't belong to the main key we are in but temporarily acts as the dominant (V) of another diatonic chord. We label these chords as V/x, where 'x' is the chord that the secondary dominant is leading us to. This creates a momentary pull towards that chord, which adds a sense of movement and surprise to our music. One of the most common secondary dominants is V/V, which is the dominant of the dominant chord. By using secondary dominants, we can enhance our harmonic progressions and make our compositions more interesting and dynamic. So, next time you are writing music, think about how you can incorporate secondary dominants to add depth and excitement to your pieces!\nContext recap: Diatonic chords are the building blocks of music, providing a strong and stable foundation. However, if we only use these chords, our music can become repetitive and lose its excitement. This is where the concept of secondary dominants becomes important! A secondary dominant is a special type of major chord, or sometimes a dominant 7th chord, that doesn't belong to the main key we are in but temporarily acts as the dominant (V) of another diatonic chord.\nWhy this matters: Beyond Diatonic Harmony helps learners in Music connect ideas from Advanced Music Theory to decisions they make during practice and assessment. Connect ideas to real decisions and evidence."
-        },
-        {
-          "id": "music-theory-301-l11-c2",
-          "title": "V/V — The Most Common Secondary Dominant",
-          "content": "In the key of C major, the V chord is G. This means that G is the fifth chord in the scale of C major. Now, if we look at G more closely, we find that its dominant chord is D major. The D major chord has an F♯ note in it, which is a bit special because it doesn't naturally occur in the C major scale. This F♯ is what we call a chromatic note, and it creates a sense of tension that pulls the listener's ear toward the G chord. This is why when we play a chord progression like C – D – G – C (which can be labeled as I – V/V – V – I), it sounds much richer and more engaging than if we only used the notes that belong to the C major scale. The D chord, which we refer to as V/V, or 'five of five', serves an important role in this progression. It heightens the moment when we finally arrive at the G chord, making the music feel more dynamic and exciting. By using secondary dominants like V/V, composers can add depth and color to their music, creating a more captivating listening experience for everyone. Understanding how these chords work together can really enhance your musical compositions and performances, allowing you to express a wider range of emotions through your music.\nContext recap: In the key of C major, the V chord is G. This means that G is the fifth chord in the scale of C major. Now, if we look at G more closely, we find that its dominant chord is D major. The D major chord has an F♯ note in it, which is a bit special because it doesn't naturally occur in the C major scale.\nWhy this matters: V/V — The Most Common Secondary Dominant helps learners in Music connect ideas from Advanced Music Theory to decisions they make during practice and assessment. Connect ideas to real decisions and evidence.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
-        },
-        {
-          "id": "music-theory-301-l11-c3",
-          "title": "Other Secondary Dominants",
-          "content": "In the world of music, we often explore how different chords interact with each other to create beautiful melodies and harmonies. One interesting concept is the idea of secondary dominants. A secondary dominant is a chord that leads to another chord, creating a sense of tension and resolution. In this case, any diatonic chord—meaning a chord that fits within the key—can be preceded by its own secondary dominant, with the exception of the diminished vii° chord.\nTo illustrate this, let’s look at some examples in the key of C major. When we say V/ii, we are referring to the dominant chord that leads to the ii chord. This means that the chord A7 (which is the V7 of Dm) pulls us towards the D minor chord. Similarly, V/IV indicates that the dominant chord leads to the IV chord, so D7 (the V7 of G) pulls us towards the G major chord. Lastly, V/vi shows that the dominant chord leads to the vi chord, where E7 (the V7 of Am) pulls us towards the A minor chord.\nEach of these secondary dominants introduces a chromatic note, which is a note that is not part of the original scale. This chromatic note adds color and excitement to the music, enhancing the emotional experience for listeners. By using secondary dominants, composers can create more dynamic and engaging musical pieces that keep the audience interested and involved in the journey of the music.\nContext recap: In the world of music, we often explore how different chords interact with each other to create beautiful melodies and harmonies. One interesting concept is the idea of secondary dominants. A secondary dominant is a chord that leads to another chord, creating a sense of tension and resolution. In this case, any diatonic chord—meaning a chord that fits within the key—can be preceded by its own secondary dominant, with the exception of the diminished vii° chord.\nWhy this matters: Other Secondary Dominants helps learners in Music connect ideas from Advanced Music Theory to decisions they make during practice and assessment. Connect ideas to real decisions and evidence.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
-        }
-      ],
-      "interactiveActivities": [
-        {
-          "id": "music-theory-301-l11-a1",
-          "title": "Match the Pairs",
-          "type": "matching_pairs",
-          "pairs": [
-            {
-              "left": "V/V in C major",
-              "right": "D major (has F♯)"
-            },
-            {
-              "left": "V/vi in C major",
-              "right": "E major (has G♯)"
-            },
-            {
-              "left": "V/ii in C major",
-              "right": "A major (has C♯)"
-            },
-            {
-              "left": "V/IV in C major",
-              "right": "C major (same as I)"
-            },
-            {
-              "left": "V/V in G major",
-              "right": "A major (has C♯)"
-            },
-            {
-              "left": "V/vi in G major",
-              "right": "B major (has D♯)"
-            }
-          ]
-        }
-      ],
-      "flashcards": [
-        {
-          "id": "music-theory-301-l11-f1",
-          "front": "Secondary dominant",
-          "back": "A chord that acts as V (or V7) of a diatonic chord other than the tonic — adds chromatic color"
-        },
-        {
-          "id": "music-theory-301-l11-f2",
-          "front": "V/V",
-          "back": "'Five of five' — the dominant of the dominant chord; introduces a chromatic sharp"
-        },
-        {
-          "id": "music-theory-301-l11-f3",
-          "front": "Tonicization",
-          "back": "A brief, temporary emphasis on a non-tonic chord using its own secondary dominant"
-        }
-      ]
-    },
-    {
-      "id": "music-theory-301-l12",
-      "title": "Mastery Retest",
-      "type": "quiz",
-      "duration": 10,
-      "objectives": [
-        "Demonstrate comprehensive advanced theory knowledge"
-      ],
-      "questions": [
-        {
-          "id": "music-theory-301-l12-q1",
-          "text": "In C major, V/vi is which chord?",
-          "skillId": "music-theory-301-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "A minor"
-            },
-            {
-              "id": "b",
-              "text": "E major"
-            },
-            {
-              "id": "c",
-              "text": "D major"
-            },
-            {
-              "id": "d",
-              "text": "F major"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": ""
-        },
-        {
-          "id": "music-theory-301-l12-q2",
-          "text": "Which form features a recurring theme alternating with contrasting episodes?",
-          "skillId": "music-theory-301-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "Binary"
-            },
-            {
-              "id": "b",
-              "text": "Ternary"
-            },
-            {
-              "id": "c",
-              "text": "Rondo"
-            },
-            {
-              "id": "d",
-              "text": "Through-composed"
-            }
-          ],
-          "correctOptionId": "c",
-          "explanation": ""
-        },
-        {
-          "id": "music-theory-301-l12-q3",
-          "text": "A 4-3 suspension means the 4th above the bass resolves down to the:",
-          "skillId": "music-theory-301-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "2nd"
-            },
-            {
-              "id": "b",
-              "text": "3rd"
-            },
-            {
-              "id": "c",
-              "text": "5th"
-            },
-            {
-              "id": "d",
-              "text": "Octave"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": ""
-        },
-        {
-          "id": "music-theory-301-l12-q4",
-          "text": "Phrygian mode's character note is a:",
-          "skillId": "music-theory-301-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "Raised 4th"
-            },
-            {
-              "id": "b",
-              "text": "Lowered 7th"
-            },
-            {
-              "id": "c",
-              "text": "Lowered 2nd"
-            },
-            {
-              "id": "d",
-              "text": "Raised 6th"
-            }
-          ],
-          "correctOptionId": "c",
-          "explanation": ""
-        }
-      ],
-      "quizBlueprint": {
-        "totalQuestions": 4,
-        "bloomProfile": {
-          "remember": 1,
-          "understand": 1,
-          "apply": 1,
-          "analyze": 1
-        }
-      }
-    },
-    {
-      "id": "music-theory-301-l13",
-      "title": "Melody Composition Basics",
-      "type": "video",
-      "duration": 12,
-      "objectives": [
-        "Apply voice-leading principles to compose smooth melodic lines",
-        "Balance stepwise motion with leaps for melodic interest",
-        "Create a sense of direction with contour and climax"
-      ],
-      "chunks": [
-        {
-          "id": "music-theory-301-l13-c1",
-          "title": "Melodic Contour",
-          "content": "The contour of a melody is like its unique shape, which is created by the way the notes rise and fall over time. When we listen to a melody, we can often feel a sense of movement as it goes up and down. A well-crafted melody usually has a special moment called the climax, which is the highest point of the melody. This climax often happens once and is typically found about two-thirds of the way through the musical phrase. To make a melody interesting, composers often mix smooth, stepwise motion—where the notes move closely together—with occasional leaps. These leaps are like exciting surprises that grab the listener's attention and make the music more engaging. After a leap, the melody often changes direction and moves back down by stepping down to the next note. This technique is called a 'compensating step,' and it helps keep the melody flowing smoothly, making it enjoyable to listen to. Understanding these concepts can help you create your own memorable melodies that resonate with your audience.\nContext recap: The contour of a melody is like its unique shape, which is created by the way the notes rise and fall over time. When we listen to a melody, we can often feel a sense of movement as it goes up and down. A well-crafted melody usually has a special moment called the climax, which is the highest point of the melody. This climax often happens once and is typically found about two-thirds of the way through the musical phrase.\nWhy this matters: Melodic Contour helps learners in Music connect ideas from Advanced Music Theory to decisions they make during practice and assessment. Connect ideas to real decisions and evidence."
-        },
-        {
-          "id": "music-theory-301-l13-c2",
-          "title": "Voice Leading",
-          "content": "Voice leading is a fundamental skill in music composition that helps you create smooth and flowing melodies. It involves the careful movement of each note to the next, ensuring that transitions feel natural and pleasing to the ear. Here are some key principles to keep in mind when practicing voice leading: First, try to use stepwise motion as much as you can. This means moving from one note to the next by small intervals, which makes melodies easier to sing and remember. If you do need to leap to a note that is further away, it’s a good idea to follow that leap with a step in the opposite direction. This technique helps maintain balance in your melody. Additionally, be cautious about using parallel fifths and octaves. These intervals can make different musical voices sound too similar, which can weaken the overall texture of your composition. Lastly, pay attention to tendency tones. For example, the seventh degree of a scale typically wants to resolve up to the tonic, while the fourth degree often resolves down. By following these guidelines, you can craft melodies that are not only beautiful but also engaging for your listeners, making your compositions more effective and enjoyable.\nContext recap: Voice leading is a fundamental skill in music composition that helps you create smooth and flowing melodies. It involves the careful movement of each note to the next, ensuring that transitions feel natural and pleasing to the ear. Here are some key principles to keep in mind when practicing voice leading: First, try to use stepwise motion as much as you can. This means moving from one note to the next by small intervals, which makes melodies easier to sing and remember.\nWhy this matters: Voice Leading helps learners in Music connect ideas from Advanced Music Theory to decisions they make during practice and assessment. Connect ideas to real decisions and evidence."
-        },
-        {
-          "id": "music-theory-301-l13-c3",
-          "title": "Phrase Structure",
-          "content": "In music, melodies are often organized into phrases, which are sections that usually consist of 4 or 8 bars. One of the most common structures used in melody composition is called the 'period'. This structure is made up of two main parts: the first part is called the antecedent phrase, which can be thought of as a musical question. This phrase typically ends with a half cadence, which gives a sense of pause or suspense. Following this, we have the consequent phrase, which serves as the answer to the question posed by the antecedent. This second phrase usually concludes with an authentic cadence, providing a sense of resolution and completeness. Interestingly, these two phrases often start with similar musical ideas, but they usually take different paths at the end, especially at the cadence point. This contrast creates a satisfying musical sentence that has a clear beginning, middle, and end. Understanding this structure is essential for composers, as it helps listeners follow the music's flow and enhances their overall enjoyment of the piece.\nContext recap: In music, melodies are often organized into phrases, which are sections that usually consist of 4 or 8 bars. One of the most common structures used in melody composition is called the 'period'. This structure is made up of two main parts: the first part is called the antecedent phrase, which can be thought of as a musical question. This phrase typically ends with a half cadence, which gives a sense of pause or suspense.\nWhy this matters: Phrase Structure helps learners in Music connect ideas from Advanced Music Theory to decisions they make during practice and assessment. Connect ideas to real decisions and evidence."
-        }
-      ],
-      "flashcards": [
-        {
-          "id": "music-theory-301-l13-f1",
-          "front": "Melodic contour",
-          "back": "The overall shape of a melody — its pattern of ascending, descending, and static motion"
-        },
-        {
-          "id": "music-theory-301-l13-f2",
-          "front": "Voice leading",
-          "back": "The practice of moving each note as smoothly as possible to the next, minimizing large leaps"
-        },
-        {
-          "id": "music-theory-301-l13-f3",
-          "front": "Period (music)",
-          "back": "A pair of phrases: antecedent (question ending on HC) + consequent (answer ending on AC)"
-        },
-        {
-          "id": "music-theory-301-l13-f4",
-          "front": "Compensating step",
-          "back": "After a leap, the melody steps in the opposite direction to smooth out the line"
-        }
-      ]
-    },
-    {
-      "id": "music-theory-301-l14",
-      "title": "Composition Coaching Clinic",
-      "type": "interactive",
-      "duration": 14,
-      "objectives": [
-        "Identify common composition mistakes in given melodies",
-        "Apply non-chord tones to enrich a basic melodic line",
-        "Arrange chord tones and passing tones into a singable phrase"
-      ],
-      "chunks": [
-        {
-          "id": "music-theory-301-l14-c1",
-          "title": "Common Melody Mistakes",
-          "content": "When you start composing music, it's common to make a few mistakes that can impact how your melodies sound. One mistake many beginner composers make is using too many big jumps between notes without adding smaller steps in between. This can create a melody that feels jagged and difficult to follow. Instead, try to balance these leaps with smoother steps to create a more flowing sound.\nAnother issue is sticking to a very limited range of notes. When you only use a small selection of notes, your music can end up sounding dull and uninteresting. To make your compositions more exciting, explore the full range of your instrument or voice. This will help you create a richer and more dynamic melody.\nAdditionally, many composers forget to include a clear high point, or climax, in their melodies. A climax is an important moment that captures the listener's attention and makes the music feel complete. Make sure to plan for one significant climax in each phrase of your music.\nLastly, it's essential to end your musical phrases with a proper cadence. A cadence is like a musical punctuation mark that signals the end of a phrase. If you skip this step, your music may feel unfinished or unresolved. Always aim to conclude your phrases with a strong chord tone on the important beats.\nBy addressing these common mistakes, you can create melodies that are not only more engaging but also more satisfying for your listeners. Remember, practice makes perfect, so keep experimenting and refining your skills as a composer!\nContext recap: When you start composing music, it's common to make a few mistakes that can impact how your melodies sound. One mistake many beginner composers make is using too many big jumps between notes without adding smaller steps in between. This can create a melody that feels jagged and difficult to follow. Instead, try to balance these leaps with smoother steps to create a more flowing sound.\nWhy this matters: Common Melody Mistakes helps learners in Music connect ideas from Advanced Music Theory to decisions they make during practice and assessment. Connect ideas to real decisions and evidence."
-        },
-        {
-          "id": "music-theory-301-l14-c2",
-          "title": "Enriching With Non-Chord Tones",
-          "content": "To create a more interesting and expressive melody, it’s important to start with a solid foundation using chord tones on the strong beats of your music. This means you should first identify the main notes that form the chords and place them where they will stand out the most. Once you have this basic structure in place, you can enhance your melody by adding non-chord tones on the weaker beats. For instance, you can use passing tones, which smoothly connect two chord tones, creating a sense of flow in your music. Neighbor tones are another great option; they briefly move up or down from a note to add a decorative touch. Additionally, incorporating a suspension at the end of a musical phrase can create a dramatic effect that really captures the listener's attention and makes your music more engaging. In vocal music, using an appoggiatura—an expressive note that leads into a chord tone—on an important word can emphasize its emotional weight, making the lyrics more impactful. Remember, the non-chord tones you add should always serve a purpose in the melody; they should either create movement (like passing tones), add decoration (like neighbor tones), or build tension (like suspensions or appoggiaturas). By thoughtfully incorporating these elements into your compositions, you can enrich your music and make it more captivating for your audience, allowing your creativity to shine through.\nContext recap: To create a more interesting and expressive melody, it’s important to start with a solid foundation using chord tones on the strong beats of your music. This means you should first identify the main notes that form the chords and place them where they will stand out the most. Once you have this basic structure in place, you can enhance your melody by adding non-chord tones on the weaker beats. For instance, you can use passing tones, which smoothly connect two chord tones, creating a sense of flow in your music.\nWhy this matters: Enriching With Non-Chord Tones helps learners in Music connect ideas from Advanced Music Theory to decisions they make during practice and assessment. Connect ideas to real decisions and evidence."
-        }
-      ],
-      "interactiveActivities": [
-        {
-          "id": "music-theory-301-l14-a1",
-          "title": "Drag and Drop",
-          "type": "drag_and_drop",
-          "prompt": "Build an 8-note melody in C major over a I–V–I progression. Place chord tones on beats 1 and 3, passing tones on beats 2 and 4:",
-          "items": [
-            "C",
-            "D",
-            "E",
-            "F",
-            "G",
-            "A",
-            "B",
-            "C"
-          ],
-          "zones": [
-            "Beat 1 (I)",
-            "Beat 2",
-            "Beat 3 (V)",
-            "Beat 4",
-            "Beat 1 (V)",
-            "Beat 2",
-            "Beat 3 (I)",
-            "Beat 4"
-          ]
-        }
-      ],
-      "flashcards": [
-        {
-          "id": "music-theory-301-l14-f1",
-          "front": "Strong beat",
-          "back": "Beats 1 and 3 in 4/4 time — typically carry chord tones and important melodic notes"
-        },
-        {
-          "id": "music-theory-301-l14-f2",
-          "front": "Weak beat",
-          "back": "Beats 2 and 4 in 4/4 — good locations for passing tones, neighbor tones, and rhythmic variety"
-        },
-        {
-          "id": "music-theory-301-l14-f3",
-          "front": "Tendency tone",
-          "back": "A note with a strong pull toward resolution — the leading tone (7th) resolves up, the 4th resolves down"
-        }
-      ]
-    },
-    {
-      "id": "music-theory-301-l15",
-      "title": "Mastery Sprint",
-      "type": "quiz",
-      "duration": 10,
-      "objectives": [
-        "Demonstrate comprehensive mastery of advanced music theory"
-      ],
-      "questions": [
-        {
-          "id": "music-theory-301-l15-q1",
-          "text": "Which progression is known as the 'Amen cadence'?",
-          "skillId": "music-theory-301-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "V → I"
-            },
-            {
-              "id": "b",
-              "text": "IV → I"
-            },
-            {
-              "id": "c",
-              "text": "V → vi"
-            },
-            {
-              "id": "d",
-              "text": "ii → V"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": ""
-        },
-        {
-          "id": "music-theory-301-l15-q2",
-          "text": "A period in music consists of:",
-          "skillId": "music-theory-301-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "Two contrasting sections A and B"
-            },
-            {
-              "id": "b",
-              "text": "An antecedent phrase (HC) and consequent phrase (AC)"
-            },
-            {
-              "id": "c",
-              "text": "A recurring theme with episodes"
-            },
-            {
-              "id": "d",
-              "text": "Verse, chorus, and bridge"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": ""
-        },
-        {
-          "id": "music-theory-301-l15-q3",
-          "text": "Tonicization differs from modulation in that tonicization is:",
-          "skillId": "music-theory-301-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "Permanent"
-            },
-            {
-              "id": "b",
-              "text": "Brief and temporary"
-            },
-            {
-              "id": "c",
-              "text": "Only used in minor keys"
-            },
-            {
-              "id": "d",
-              "text": "Always chromatic"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": ""
-        },
-        {
-          "id": "music-theory-301-l15-q4",
+          "id": "music-theory-301-l13-q3",
           "text": "In C major, the progression I – V/V – V – I uses which chromatic note?",
           "skillId": "music-theory-301-skill-core",
           "options": [
@@ -1395,16 +973,90 @@ export const MusicTheory301Module: LearningModule = {
             }
           ],
           "correctOptionId": "c",
-          "explanation": ""
+          "explanation": "The V/V in C major is a D major chord (D-F♯-A). The F♯ is the chromatic note that creates a strong pull to the G chord."
+        },
+        {
+          "id": "music-theory-301-l13-q4",
+          "text": "Dorian mode differs from Aeolian (natural minor) by having a:",
+          "skillId": "music-theory-301-skill-core",
+          "options": [
+            {
+              "id": "a",
+              "text": "Raised 7th"
+            },
+            {
+              "id": "b",
+              "text": "Lowered 2nd"
+            },
+            {
+              "id": "c",
+              "text": "Raised 6th"
+            },
+            {
+              "id": "d",
+              "text": "Lowered 4th"
+            }
+          ],
+          "correctOptionId": "c",
+          "explanation": "The raised 6th degree is the character note of the Dorian mode, giving it a brighter, jazzier sound than the natural minor."
+        },
+        {
+          "id": "music-theory-301-l13-q5",
+          "text": "A musical 'period' is best described as:",
+          "skillId": "music-theory-301-skill-core",
+          "options": [
+            {
+              "id": "a",
+              "text": "A single, complete musical thought"
+            },
+            {
+              "id": "b",
+              "text": "A recurring theme that alternates with other sections"
+            },
+            {
+              "id": "c",
+              "text": "A pair of phrases in a question-answer relationship"
+            },
+            {
+              "id": "d",
+              "text": "The main hook of a pop song"
+            }
+          ],
+          "correctOptionId": "c",
+          "explanation": "A period consists of an antecedent phrase (question, ending on a weak cadence) and a consequent phrase (answer, ending on a strong cadence)."
+        },
+        {
+          "id": "music-theory-301-l13-q6",
+          "text": "A non-chord tone that is approached by leap and resolves by step is called:",
+          "skillId": "music-theory-301-skill-core",
+          "options": [
+            {
+              "id": "a",
+              "text": "A suspension"
+            },
+            {
+              "id": "b",
+              "text": "A passing tone"
+            },
+            {
+              "id": "c",
+              "text": "A neighbor tone"
+            },
+            {
+              "id": "d",
+              "text": "An appoggiatura"
+            }
+          ],
+          "correctOptionId": "d",
+          "explanation": "The appoggiatura is a dramatic NCT characterized by a leap to a dissonance, followed by a stepwise resolution."
         }
       ],
       "quizBlueprint": {
-        "totalQuestions": 4,
+        "totalQuestions": 6,
         "bloomProfile": {
-          "remember": 1,
-          "understand": 1,
-          "apply": 1,
-          "analyze": 1
+          "remember": 2,
+          "understand": 2,
+          "analyze": 2
         }
       }
     }

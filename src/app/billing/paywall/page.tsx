@@ -16,6 +16,8 @@ import {
   findTypedPackageForLanguagePlanId,
   formatRevenueCatPackageCadenceLabel,
 } from "@/lib/billing/revenuecat-offerings";
+import { useActiveProfile } from "@/lib/profiles/active-profile-context";
+import ParentalGate from "@/components/parental-gate";
 
 type PlanOption = {
   id: LanguagePlanId;
@@ -48,11 +50,15 @@ const DEFAULT_PLAN_ID: LanguagePlanId =
 
 export default function PaywallPage() {
   const router = useRouter();
+  const { profile } = useActiveProfile();
+  const isChild = (profile?.age_years ?? 99) < 13;
   const [selectedId, setSelectedId] = useState<LanguagePlanId>(DEFAULT_PLAN_ID);
   const [plans, setPlans] = useState<PlanOption[]>(PLAN_DISPLAY);
   const [status, setStatus] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [rcReady, setRcReady] = useState(false);
+  const [showParentalGate, setShowParentalGate] = useState(false);
+  const [parentalGateApproved, setParentalGateApproved] = useState(false);
 
   useEffect(() => {
     if (!canUseIAP() || !Capacitor.isNativePlatform()) return;
@@ -106,6 +112,11 @@ export default function PaywallPage() {
 
   const handleSubscribe = async () => {
     if (!rcReady) return;
+    // Require parental gate approval for child accounts before purchase
+    if (isChild && !parentalGateApproved) {
+      setShowParentalGate(true);
+      return;
+    }
     setIsLoading(true);
     setStatus("");
     try {
@@ -254,6 +265,18 @@ export default function PaywallPage() {
           <Link href="/legal/privacy" className="underline">Privacy Policy</Link>
         </p>
       </div>
+
+      {/* Parental gate for child accounts attempting purchases */}
+      {showParentalGate && (
+        <ParentalGate
+          onVerified={() => {
+            setParentalGateApproved(true);
+            setShowParentalGate(false);
+            void handleSubscribe();
+          }}
+          onCancel={() => setShowParentalGate(false)}
+        />
+      )}
     </main>
   );
 }

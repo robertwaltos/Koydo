@@ -1,332 +1,381 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const ALevelPrep101Module: LearningModule = {
-  id: "a-level-prep-101",
-  title: "A-Level Prep Foundations",
-  description: "Strengthen deep content mastery and analytical writing for A-Level exams.",
-  subject: "Exam Prep",
-  tags: ["exam-prep", "assessment", "advanced"],
-  minAge: 15,
-  maxAge: 19,
-  version: "1.0.0",
-  difficultyBand: "advanced",
-  localeSupport: ["en", "es", "fr", "de", "ar", "hi", "zh", "ja", "ko", "ru"],
-  thumbnail: "/placeholders/lesson-robot.svg",
-  learningObjectives: [
-    "Build structured A-Level readiness workflows",
-    "Improve speed and accuracy under timed constraints",
-    "Use analytics-based revision loops to close weak areas"
+export const a_level_prep_101_Module: LearningModule = {
+  "id": "a-level-prep-101",
+  "title": "A-Level Prep Foundations",
+  "description": "Level up your A-Level exam game. Master deep content, nail your analytical writing, and build bulletproof strategies for timed exams so you can walk into the hall with zero stress.",
+  "subject": "Exam Prep",
+  "tags": [
+    "exam-prep",
+    "assessment",
+    "advanced",
+    "study-skills",
+    "a-level"
   ],
-  quizBlueprint: {
-    frequency: "weekly_assessment",
-    questionsPerCheck: 20,
-    totalQuestions: 20,
-    timeLimitMinutes: 25,
-    questionTypes: [{ type: "mcq_single", percentage: 100, pointsEach: 1, bloomsLevels: [1, 2, 3, 4] }],
-    difficultyDistribution: { easy: 6, medium: 10, hard: 4 },
-    feedbackMode: "after_submit",
-    adaptive: false,
-    masteryThreshold: 0.8
+  "minAge": 15,
+  "maxAge": 19,
+  "version": "1.1.0",
+  "difficultyBand": "advanced",
+  "localeSupport": [
+    "en",
+    "es",
+    "fr",
+    "de",
+    "ar",
+    "hi",
+    "zh",
+    "ja",
+    "ko",
+    "ru"
+  ],
+  "thumbnail": "/placeholders/lesson-robot.svg",
+  "learningObjectives": [
+    "Build structured, stress-free A-Level revision workflows.",
+    "Improve speed and accuracy under strict timed constraints.",
+    "Use analytics-based feedback loops to crush weak areas."
+  ],
+  "quizBlueprint": {
+    "frequency": "weekly_assessment",
+    "questionsPerCheck": 20,
+    "totalQuestions": 20,
+    "timeLimitMinutes": 25,
+    "questionTypes": [
+      {
+        "type": "mcq_single",
+        "percentage": 100,
+        "pointsEach": 1,
+        "bloomsLevels": [
+          1,
+          2,
+          3,
+          4
+        ]
+      }
+    ],
+    "difficultyDistribution": {
+      "easy": 6,
+      "medium": 10,
+      "hard": 4
+    },
+    "feedbackMode": "after_submit",
+    "adaptive": false,
+    "masteryThreshold": 0.8
   },
-  lessons: [
+  "lessons": [
     {
-      id: "a-level-prep-101-l01",
-      title: "A-Level: A-Level Standards and Targets",
-      type: "video",
-      duration: 11,
-      learningAids: [
+      "id": "a-level-prep-101-l01",
+      "title": "Cracking A-Level Standards & Targets",
+      "type": "video",
+      "duration": 11,
+      "metadata": {
+        "lessonImagePrompt": "Imagen 4 prompt: A sleek, modern student dashboard showing A-Level target grades with glowing progress bars, cinematic lighting, photorealistic, neon blue and purple accents, 8k resolution.",
+        "conceptVideoPrompt": "Veo 3.1 prompt: A dynamic 3D animation zooming through a glowing roadmap of A-Level subjects, landing on a glowing target bullseye. High quality, 4k resolution, fast-paced, motivating, and futuristic.",
+        "prompts": [
+          "What is your target grade for your absolute toughest subject?",
+          "Identify one specific topic you need to master to hit that target.",
+          "Write down a daily micro-goal to get you there."
+        ]
+      },
+      "learningAids": [
         {
           "id": "a-level-prep-101-l01-a1",
           "type": "image",
           "title": "Depth Mastery Snapshot",
-          "content": "Visual anchor for A-Level: A-Level Standards and Targets with emphasis on depth mastery within practice set planning."
+          "content": "A visual breakdown of what examiners actually mean by 'depth' vs 'breadth' in A-Level grading."
         },
         {
           "id": "a-level-prep-101-l01-a2",
           "type": "animation",
           "title": "Analysis Walkthrough",
-          "content": "Stepwise walkthrough for A-Level: A-Level Standards and Targets showing analysis decisions and strategy log checks."
+          "content": "Step-by-step animation showing how to break down a massive A-Level syllabus into actionable daily targets."
         }
       ]
     },
     {
-      id: "a-level-prep-101-l02",
-      title: "A-Level: Knowledge Retrieval Systems",
-      type: "interactive",
-      duration: 14,
-      metadata: {
-        prompts: [
-          "Identify one depth mastery decision rule in A-Level: Knowledge Retrieval Systems.",
-          "Apply it in one practice set and show how it improves decision quality under constraints.",
-          "Set one next-step target for analysis before your next A-Level readiness session."
+      "id": "a-level-prep-101-l02",
+      "title": "Active Recall & Retrieval Systems",
+      "type": "interactive",
+      "duration": 14,
+      "metadata": {
+        "lessonImagePrompt": "Imagen 4 prompt: A futuristic glowing brain with interconnected nodes representing memory retrieval, neon blue and purple, 8k resolution, highly detailed, cyberpunk aesthetic.",
+        "conceptVideoPrompt": "Veo 3.1 prompt: A fast-paced visual metaphor of a student pulling glowing files from a massive, organized digital library, representing quick memory recall, 4k, cinematic lighting, smooth transitions.",
+        "prompts": [
+          "Identify one active recall technique (like blurting or flashcards) that works best for you.",
+          "Apply it to a single topic today and see how much faster you can retrieve the info.",
+          "Set a target to use this technique before your next practice paper."
         ]
       },
-      interactiveActivities: [
+      "interactiveActivities": [
         {
           "id": "a-level-prep-101-l02-ia1",
           "type": "drag_and_drop",
-          "title": "A-Level: Knowledge Retrieval Systems Decision-Phase Mapping",
-          "description": "Map each decision cue to Plan, Execute, or Reflect.",
+          "title": "Map Your Retrieval Strategy",
+          "description": "Drag and drop the study habits into the correct phase of your revision cycle: Plan, Execute, or Reflect.",
           "estimatedMinutes": 8,
           "difficultyLevel": "medium",
           "instructions": [
-            "Assign each decision cue to the best phase.",
-            "Check all mappings.",
-            "Capture one improvement target."
+            "Read each study habit.",
+            "Drag it to the phase where it belongs.",
+            "Review your answers to build a bulletproof workflow."
           ],
           "data": {
             "targets": [
               {
                 "id": "plan",
-                "label": "Synoptic Plan"
+                "label": "Plan (Before Studying)"
               },
               {
                 "id": "execute",
-                "label": "Analytical Execution"
+                "label": "Execute (During Studying)"
               },
               {
                 "id": "reflect",
-                "label": "Depth Review"
+                "label": "Reflect (After Studying)"
               }
             ],
             "draggables": [
               {
                 "id": "d1",
-                "label": "Prioritize A-Level high-weight synoptic topics before timed papers",
+                "label": "Prioritize high-weight synoptic topics",
                 "correctTargetId": "plan"
               },
               {
                 "id": "d2",
-                "label": "Structure argument with claim, evidence, analysis, and evaluation",
+                "label": "Write out arguments from memory without notes",
                 "correctTargetId": "execute"
               },
               {
                 "id": "d3",
-                "label": "Audit depth, precision, and link quality after each practice response",
+                "label": "Audit your answers against the mark scheme",
                 "correctTargetId": "reflect"
               }
             ]
           }
         }
       ],
-      learningAids: [
+      "learningAids": [
         {
           "id": "a-level-prep-101-l02-a1",
           "type": "image",
-          "title": "Depth Mastery Snapshot",
-          "content": "Visual anchor for A-Level: Knowledge Retrieval Systems with emphasis on depth mastery within practice set planning."
+          "title": "Beating the Forgetting Curve",
+          "content": "A visual graph showing how spaced repetition flattens the forgetting curve and locks in memory."
         },
         {
           "id": "a-level-prep-101-l02-a2",
           "type": "animation",
-          "title": "Analysis Walkthrough",
-          "content": "Stepwise walkthrough for A-Level: Knowledge Retrieval Systems showing analysis decisions and strategy log checks."
+          "title": "Active Recall in Action",
+          "content": "An animation demonstrating the massive difference in brain activity between passive reading and active recall."
         }
       ]
     },
     {
-      id: "a-level-prep-101-l03",
-      title: "A-Level: High-Value Topic Prioritization",
-      type: "quiz",
-      duration: 12,
-      questions: [
+      "id": "a-level-prep-101-l03",
+      "title": "High-Value Topic Prioritization",
+      "type": "quiz",
+      "duration": 12,
+      "metadata": {
+        "lessonImagePrompt": "Imagen 4 prompt: A glowing holographic pyramid showing topic prioritization, top tier glowing gold, dark background, photorealistic, 8k, depth of field.",
+        "conceptVideoPrompt": "Veo 3.1 prompt: A sleek animation of a student sorting glowing blocks of different sizes into a high-priority funnel, representing efficient study planning, 4k, dynamic camera angles.",
+        "examDrill": "lesson_drill"
+      },
+      "questions": [
         {
           "id": "a-level-prep-101-l03-q1",
-          "text": "In A-Level: High-Value Topic Prioritization, a learner keeps missing depth mastery items during A-Level practice. Which adjustment should happen before the next timed practice set?",
+          "text": "You keep bleeding marks on 'depth of analysis' during practice papers. What's your best move before the next timed session?",
           "skillId": "a-level-prep-101-skill-depth-mastery-workflow",
           "options": [
             {
               "id": "a",
-              "text": "Skip review and jump directly to harder questions."
+              "text": "Skip the review and just grind harder questions to build stamina."
             },
             {
               "id": "b",
-              "text": "Track only total score with no error categories."
+              "text": "Only look at your total score and ignore the specific feedback."
             },
             {
               "id": "c",
-              "text": "Run a short depth mastery checkpoint routine and annotate why each miss occurred in a strategy log before retesting."
+              "text": "Do a quick review of why you missed those marks, log the specific error, and retest that exact skill."
             },
             {
               "id": "d",
-              "text": "Switch topics even if depth mastery is still the dominant weakness."
+              "text": "Switch to a completely different topic to clear your head."
             }
           ],
           "correctOptionId": "c",
-          "hint": "Choose the action that creates a repeatable feedback loop for depth mastery.",
-          "explanation": "Fast targeted feedback plus immediate correction is the most reliable way to improve depth mastery."
+          "hint": "Think about creating a feedback loop that actually fixes the root problem.",
+          "explanation": "Fast, targeted feedback followed by immediate correction is the most reliable way to improve depth of analysis. Grinding without reviewing just reinforces bad habits."
         },
         {
           "id": "a-level-prep-101-l03-q2",
-          "text": "A A-Level A-Level: High-Value Topic Prioritization session ends with unstable timing. What should be diagnosed first?",
+          "text": "You just finished a practice session and your timing was all over the place. What should you diagnose first?",
           "skillId": "a-level-prep-101-skill-analysis-diagnosis",
           "options": [
             {
               "id": "a",
-              "text": "Retake the session immediately without diagnostics."
+              "text": "Retake the whole paper immediately to see if you can go faster."
             },
             {
               "id": "b",
-              "text": "Increase total question count and keep the same attempt order."
+              "text": "Do more questions to build muscle memory."
             },
             {
               "id": "c",
-              "text": "Use one pacing rule for all sections regardless of load."
+              "text": "Force yourself to spend exactly 1 minute per mark, no matter the question type."
             },
             {
               "id": "d",
-              "text": "Locate the exact analysis decision point where time spikes, then set micro-checkpoints for that phase."
+              "text": "Figure out exactly which type of question (e.g., essays vs. data analysis) is eating up your time, and set micro-goals for that section."
             }
           ],
           "correctOptionId": "d",
-          "hint": "Find the answer that isolates a measurable bottleneck.",
-          "explanation": "Pacing stabilizes when the highest-cost decision point is measured and corrected directly."
+          "hint": "You need to find the specific bottleneck before you can fix it.",
+          "explanation": "Pacing improves when you identify the exact type of question that slows you down and practice pacing for that specific task. A blanket '1 minute per mark' rule doesn't work for complex essays."
         },
         {
           "id": "a-level-prep-101-l03-q3",
-          "text": "A-Level practice shows correction is happening but not sticking in A-Level: High-Value Topic Prioritization. What plan fixes this fastest?",
+          "text": "You understand the feedback on your essays, but you keep making the same mistakes in timed conditions. How do you fix this?",
           "skillId": "a-level-prep-101-skill-extended-response-transfer",
           "options": [
             {
               "id": "a",
-              "text": "Pair each corrected extended response error with a near-transfer item in the next timed block and track it in a strategy log."
+              "text": "Take the corrected mistake and immediately test yourself on a similar question under timed conditions."
             },
             {
               "id": "b",
-              "text": "Keep reviewing notes and avoid new timed attempts."
+              "text": "Keep re-reading your notes until you feel more confident."
             },
             {
               "id": "c",
-              "text": "Increase difficulty only, without targeted rematches."
+              "text": "Try doing university-level questions to make A-Levels feel easier."
             },
             {
               "id": "d",
-              "text": "Rewatch lesson content without logging applied changes."
+              "text": "Watch more YouTube tutorials on the topic."
             }
           ],
           "correctOptionId": "a",
-          "hint": "The strongest option forces immediate transfer testing.",
-          "explanation": "Correction becomes durable when each fix is tested on a similar item during the next constrained attempt."
+          "hint": "You need to bridge the gap between knowing the fix and applying it under pressure.",
+          "explanation": "Corrections only stick when you immediately practice applying them to a new, similar problem under the same time constraints. Passive reading won't fix performance under pressure."
         },
         {
           "id": "a-level-prep-101-l03-q4",
-          "text": "During post-drill review for A-Level: High-Value Topic Prioritization, which fix should be prioritized first for score impact in A-Level?",
+          "text": "When reviewing a past paper, which type of mistake should you prioritize fixing first to boost your grade?",
           "skillId": "a-level-prep-101-skill-synoptic-links-priority",
           "options": [
             {
               "id": "a",
-              "text": "Polish already-mastered question types first."
+              "text": "Make sure your strongest topics are absolutely perfect."
             },
             {
               "id": "b",
-              "text": "Address repeated synoptic links and pacing errors first because they affect many questions in one run."
+              "text": "Fix recurring structural errors (like missing links or bad pacing) because they cost you marks across multiple questions."
             },
             {
               "id": "c",
-              "text": "Ignore pacing and focus only on confidence items."
+              "text": "Focus entirely on the one obscure topic you didn't know."
             },
             {
               "id": "d",
-              "text": "Rewrite notes without validating changes in timed practice."
+              "text": "Rewrite your class notes to make them neater."
             }
           ],
           "correctOptionId": "b",
-          "hint": "Prioritize changes that influence the largest question set.",
-          "explanation": "Highest-impact remediation usually targets repeated timing and process breakdowns before edge-case content gaps."
+          "hint": "Which fix will give you the biggest return on investment across the whole paper?",
+          "explanation": "Process errors (like bad essay structure or poor time management) affect your score on almost every question. Fixing them yields the biggest score jump compared to learning one obscure fact."
         },
         {
           "id": "a-level-prep-101-l03-q5",
-          "text": "In A-Level extended-response section, assertion without analytical link appears during A-Level: High-Value Topic Prioritization. What is the strongest immediate correction?",
+          "text": "Your teacher says your essays are 'too descriptive' and lack analysis. What is the best immediate fix?",
           "skillId": "a-level-prep-101-skill-depth-mastery-section-application",
           "options": [
             {
               "id": "a",
-              "text": "Ignore extended-response section diagnostics and continue for volume."
+              "text": "Write longer paragraphs to ensure you cover everything."
             },
             {
               "id": "b",
-              "text": "Re-read notes without running a corrected attempt."
+              "text": "Memorize more facts and dates to impress the examiner."
             },
             {
               "id": "c",
-              "text": "Add explicit because-therefore reasoning after each claim."
+              "text": "Force yourself to use 'because... therefore...' reasoning after every piece of evidence you introduce."
             },
             {
               "id": "d",
-              "text": "Delay correction until after several unrelated drills."
+              "text": "Wait until your next full mock exam to try a new writing style."
             }
           ],
           "correctOptionId": "c",
-          "hint": "Choose the option that directly fixes assertion without analytical link.",
-          "explanation": "Immediate correction inside extended-response section improves transfer to the next timed practice set."
+          "hint": "You need a structural rule that forces you to analyze, not just state facts.",
+          "explanation": "Using explicit 'because/therefore' frameworks forces you to explain the significance of your evidence, instantly shifting your writing from descriptive to analytical."
         },
         {
           "id": "a-level-prep-101-l03-q6",
-          "text": "During A-Level synoptic section, missing synoptic bridge repeats in A-Level: High-Value Topic Prioritization. Which plan should be applied before the next retest?",
+          "text": "You keep forgetting to link different topics together (synoptic links) in your 25-mark essays. What's your game plan?",
           "skillId": "a-level-prep-101-skill-analysis-section-application",
           "options": [
             {
               "id": "a",
-              "text": "Switch to new content before validating the fix."
+              "text": "Move on to a different subject and hope you remember next time."
             },
             {
               "id": "b",
-              "text": "Increase speed without updating process controls."
+              "text": "Try to write faster so you have time to add links at the end."
             },
             {
               "id": "c",
-              "text": "Retake the section with no checkpoint changes."
+              "text": "Just re-read the essay question a few more times."
             },
             {
               "id": "d",
-              "text": "Link at least two themes with one evaluative judgement statement. Track outcomes in an analysis depth tracker and retest the same pattern."
+              "text": "Practice writing single paragraphs that explicitly link two themes, track your success, and repeat until it's a habit."
             }
           ],
           "correctOptionId": "d",
-          "hint": "Best plans combine targeted correction with measurable tracking.",
-          "explanation": "A logged correction cycle in analysis depth tracker makes the pacing fix visible and repeatable."
+          "hint": "Break the big problem down into a small, repeatable drill.",
+          "explanation": "Isolating the specific skill (writing a synoptic paragraph) and drilling it makes it automatic when you write full essays. Hoping you'll remember on the day is a recipe for panic."
         }
       ],
-      interactiveActivities: [
+      "interactiveActivities": [
         {
           "id": "a-level-prep-101-l03-ia1",
           "type": "matching_pairs",
-          "title": "A-Level: High-Value Topic Prioritization Correction Alignment",
-          "description": "Align each recurring signal with the strongest correction action for decision quality under constraints.",
+          "title": "Match the Error to the Fix",
+          "description": "Connect the common exam mistake with the best strategy to fix it.",
           "estimatedMinutes": 8,
           "difficultyLevel": "medium",
           "instructions": [
-            "Align each pair.",
-            "Check your result.",
-            "Apply one correction in the next drill."
+            "Read the exam error on the left.",
+            "Match it to the actionable fix on the right.",
+            "Apply one of these fixes in your next study session."
           ],
           "data": {
             "left": [
               {
                 "id": "l1",
-                "label": "Essay has knowledge but weak analytical linkage"
+                "label": "Essay has facts but weak analysis"
               },
               {
                 "id": "l2",
-                "label": "Data/source question misses evaluation criteria"
+                "label": "Data question misses evaluation marks"
               },
               {
                 "id": "l3",
-                "label": "Revision broad but not deep in core themes"
+                "label": "Revision is too broad, lacking depth"
               }
             ],
             "right": [
               {
                 "id": "r1",
-                "label": "Insert explicit because-therefore reasoning after each evidence point"
+                "label": "Use 'because-therefore' reasoning after evidence"
               },
               {
                 "id": "r2",
-                "label": "Apply reliability, validity, and bias checklist before conclusion"
+                "label": "Apply a reliability/bias checklist before concluding"
               },
               {
                 "id": "r3",
-                "label": "Run focused depth sprint on one high-yield topic per day"
+                "label": "Run a focused 'deep dive' sprint on one topic"
               }
             ],
             "pairs": [
@@ -346,7 +395,7 @@ export const ALevelPrep101Module: LearningModule = {
           }
         }
       ],
-      quizBlueprint: {
+      "quizBlueprint": {
         "frequency": "lesson_assessment",
         "questionsPerCheck": 6,
         "totalQuestions": 6,
@@ -372,322 +421,335 @@ export const ALevelPrep101Module: LearningModule = {
         "adaptive": false,
         "masteryThreshold": 0.75
       },
-      metadata: {
-        examDrill: "lesson_drill"
-      },
-      learningAids: [
+      "learningAids": [
         {
           "id": "a-level-prep-101-l03-a1",
           "type": "image",
-          "title": "Depth Mastery Snapshot",
-          "content": "Visual anchor for A-Level: High-Value Topic Prioritization with emphasis on depth mastery within practice set planning."
+          "title": "The Prioritization Matrix",
+          "content": "A visual guide on how to rank topics by exam weight vs. your current confidence level."
         },
         {
           "id": "a-level-prep-101-l03-a2",
           "type": "animation",
-          "title": "Analysis Walkthrough",
-          "content": "Stepwise walkthrough for A-Level: High-Value Topic Prioritization showing analysis decisions and strategy log checks."
+          "title": "Triage in Action",
+          "content": "Animation showing how to quickly triage a past paper to find the highest-yield areas to study."
         }
       ]
     },
     {
-      id: "a-level-prep-101-l04",
-      title: "A-Level: Analytical Essay Construction",
-      type: "interactive",
-      duration: 14,
-      metadata: {
-        prompts: [
-          "Identify one depth mastery decision rule in A-Level: Analytical Essay Construction.",
-          "Apply it in one passage set and show how it improves evidence and language precision.",
-          "Set one next-step target for analysis before your next A-Level readiness session."
+      "id": "a-level-prep-101-l04",
+      "title": "Mastering Analytical Essay Construction",
+      "type": "interactive",
+      "duration": 14,
+      "metadata": {
+        "lessonImagePrompt": "Imagen 4 prompt: A glowing blueprint of an essay structure, with sections for claim, evidence, and analysis lighting up sequentially, cyberpunk aesthetic, 8k, highly detailed.",
+        "conceptVideoPrompt": "Veo 3.1 prompt: A dynamic animation of text blocks snapping together like high-tech Lego bricks to form a perfect essay paragraph, 4k resolution, smooth motion graphics.",
+        "prompts": [
+          "Identify one structural weakness in your recent essays.",
+          "Apply the PEEL (Point, Evidence, Explain, Link) framework to rewrite one paragraph.",
+          "Set a goal for your next essay's conclusion."
         ]
       },
-      interactiveActivities: [
+      "interactiveActivities": [
         {
           "id": "a-level-prep-101-l04-ia1",
           "type": "drag_and_drop",
-          "title": "A-Level: Analytical Essay Construction Decision-Phase Mapping",
-          "description": "Map each decision cue to Plan, Execute, or Reflect.",
+          "title": "Build the Perfect Paragraph",
+          "description": "Drag the components of an analytical paragraph into the correct logical order.",
           "estimatedMinutes": 8,
           "difficultyLevel": "medium",
           "instructions": [
-            "Assign each decision cue to the best phase.",
-            "Check all mappings.",
-            "Capture one improvement target."
+            "Read the sentence fragments.",
+            "Arrange them to form a cohesive, high-scoring analytical paragraph.",
+            "Check your structure against the PEEL method."
           ],
           "data": {
             "targets": [
               {
                 "id": "plan",
-                "label": "Synoptic Plan"
+                "label": "1. The Claim (Point)"
               },
               {
                 "id": "execute",
-                "label": "Analytical Execution"
+                "label": "2. The Evidence"
               },
               {
                 "id": "reflect",
-                "label": "Depth Review"
+                "label": "3. The Analysis (Explain/Link)"
               }
             ],
             "draggables": [
               {
                 "id": "d1",
-                "label": "Prioritize A-Level high-weight synoptic topics before timed papers",
+                "label": "State your main argument clearly and concisely.",
                 "correctTargetId": "plan"
               },
               {
                 "id": "d2",
-                "label": "Structure argument with claim, evidence, analysis, and evaluation",
+                "label": "Provide specific data, quotes, or case studies.",
                 "correctTargetId": "execute"
               },
               {
                 "id": "d3",
-                "label": "Audit depth, precision, and link quality after each practice response",
+                "label": "Explain *why* the evidence proves your point and link back to the question.",
                 "correctTargetId": "reflect"
               }
             ]
           }
         }
       ],
-      learningAids: [
+      "learningAids": [
         {
           "id": "a-level-prep-101-l04-a1",
           "type": "image",
-          "title": "Depth Mastery Snapshot",
-          "content": "Visual anchor for A-Level: Analytical Essay Construction with emphasis on depth mastery within passage set planning."
+          "title": "Essay Blueprint",
+          "content": "A visual breakdown of a top-band A-Level essay structure."
         },
         {
           "id": "a-level-prep-101-l04-a2",
           "type": "animation",
-          "title": "Analysis Walkthrough",
-          "content": "Stepwise walkthrough for A-Level: Analytical Essay Construction showing analysis decisions and annotation map checks."
+          "title": "From Descriptive to Analytical",
+          "content": "An animation showing a basic descriptive sentence transforming into a high-level analytical point."
         }
       ]
     },
     {
-      id: "a-level-prep-101-l05",
-      title: "A-Level: Data and Source Evaluation",
-      type: "video",
-      duration: 11,
-      learningAids: [
+      "id": "a-level-prep-101-l05",
+      "title": "Data & Source Evaluation Tactics",
+      "type": "video",
+      "duration": 11,
+      "metadata": {
+        "lessonImagePrompt": "Imagen 4 prompt: A magnifying glass hovering over a glowing historical document and data charts, revealing hidden neon text, photorealistic, 8k, dramatic lighting.",
+        "conceptVideoPrompt": "Veo 3.1 prompt: A sleek visual of a student scanning a document with a futuristic HUD overlay that highlights bias, reliability, and validity in real-time, 4k, sci-fi aesthetic.",
+        "prompts": [
+          "Find a source from a past paper.",
+          "Identify one potential bias or limitation in the data.",
+          "Write a one-sentence evaluation of its reliability."
+        ]
+      },
+      "learningAids": [
         {
           "id": "a-level-prep-101-l05-a1",
           "type": "image",
-          "title": "Depth Mastery Snapshot",
-          "content": "Visual anchor for A-Level: Data and Source Evaluation with emphasis on depth mastery within practice set planning."
+          "title": "The Evaluation Checklist",
+          "content": "A quick-reference guide for evaluating the reliability, validity, and bias of any source."
         },
         {
           "id": "a-level-prep-101-l05-a2",
           "type": "animation",
-          "title": "Analysis Walkthrough",
-          "content": "Stepwise walkthrough for A-Level: Data and Source Evaluation showing analysis decisions and strategy log checks."
+          "title": "Spotting the Bias",
+          "content": "A walkthrough showing how to quickly identify hidden biases in exam source materials."
         }
       ]
     },
     {
-      id: "a-level-prep-101-l06",
-      title: "A-Level: Synoptic Question Strategy",
-      type: "quiz",
-      duration: 12,
-      questions: [
+      "id": "a-level-prep-101-l06",
+      "title": "Crushing Synoptic Questions",
+      "type": "quiz",
+      "duration": 12,
+      "metadata": {
+        "lessonImagePrompt": "Imagen 4 prompt: A glowing web connecting different subject icons, representing synoptic links, neon colors, dark background, 8k, highly detailed.",
+        "conceptVideoPrompt": "Veo 3.1 prompt: An animation of two separate glowing streams of information merging into a powerful, bright beam of light, representing synoptic thinking, 4k, cinematic.",
+        "examDrill": "lesson_drill"
+      },
+      "questions": [
         {
           "id": "a-level-prep-101-l06-q1",
-          "text": "During A-Level: Synoptic Question Strategy, early guesses are causing synoptic links losses. Which intervention should happen first?",
+          "text": "You're doing a synoptic practice paper and realize you're just guessing the connections between topics. What should you do right now?",
           "skillId": "a-level-prep-101-skill-synoptic-links-workflow",
           "options": [
             {
               "id": "a",
-              "text": "Keep the same pace and hope accuracy normalizes later."
+              "text": "Keep going and hope it makes sense by the end."
             },
             {
               "id": "b",
-              "text": "Use a short verification pass and log decision triggers in a strategy log before restarting the drill."
+              "text": "Stop, do a quick review of the core themes, map out the links on paper, and then restart the question."
             },
             {
               "id": "c",
-              "text": "Memorize answer patterns instead of checking reasoning."
+              "text": "Just memorize the mark scheme answers later."
             },
             {
               "id": "d",
-              "text": "Delay all correction until the weekend review session."
+              "text": "Wait until the weekend to figure it out."
             }
           ],
           "correctOptionId": "b",
-          "hint": "Pick the option that creates immediate corrective feedback.",
-          "explanation": "Quick structured verification catches repeatable process errors before they spread across the next set."
+          "hint": "Don't reinforce bad habits by guessing. Fix the process immediately.",
+          "explanation": "Stopping to map out the connections ensures you are practicing the actual skill of synoptic thinking, rather than just guessing and hoping for the best."
         },
         {
           "id": "a-level-prep-101-l06-q2",
-          "text": "A A-Level drill on A-Level: Synoptic Question Strategy ends with unstable pacing. What should be diagnosed first?",
+          "text": "You always run out of time on the big synoptic essay at the end of the paper. What's the best way to diagnose the issue?",
           "skillId": "a-level-prep-101-skill-depth-mastery-diagnosis",
           "options": [
             {
               "id": "a",
-              "text": "Retake the same drill immediately without analysis."
+              "text": "Just take another full paper and try to write faster."
             },
             {
               "id": "b",
-              "text": "Memorize answer keys without tracking timing behavior."
+              "text": "Read the textbook faster."
             },
             {
               "id": "c",
-              "text": "Pinpoint where depth mastery decisions consume extra time, then redesign attempt order with checkpoints."
+              "text": "Time yourself on the planning phase vs. the writing phase to see exactly where you are getting bogged down."
             },
             {
               "id": "d",
-              "text": "Increase question volume while keeping the same pacing errors."
+              "text": "Do more multiple-choice questions to warm up."
             }
           ],
           "correctOptionId": "c",
-          "hint": "Look for the answer that isolates a measurable timing bottleneck.",
-          "explanation": "Pacing issues usually come from specific depth mastery decision points, not from total question count alone."
+          "hint": "You need data to fix a timing issue.",
+          "explanation": "Pacing issues are usually caused by spending too much time planning or getting stuck on a specific paragraph. Isolating the phases helps you fix the exact bottleneck."
         },
         {
           "id": "a-level-prep-101-l06-q3",
-          "text": "Which one-week sprint most improves analysis transfer for A-Level: Synoptic Question Strategy in A-Level?",
+          "text": "You want to get better at applying knowledge across different topics (synoptic transfer). What's the best 7-day plan?",
           "skillId": "a-level-prep-101-skill-analysis-transfer",
           "options": [
             {
               "id": "a",
-              "text": "Use only untimed review until confidence feels high."
+              "text": "Read your notes without a timer until you feel ready."
             },
             {
               "id": "b",
-              "text": "Rotate random topics daily with no retest queue."
+              "text": "Study a random topic every day and never look back."
             },
             {
               "id": "c",
-              "text": "Delay all error correction until the final day."
+              "text": "Wait until the night before the exam to do past papers."
             },
             {
               "id": "d",
-              "text": "Run two targeted correction blocks, one mixed timed practice set, and one retest focused on the same analysis objective."
+              "text": "Do two targeted drills on weak links, one timed mixed-topic paper, and then re-test the exact things you got wrong."
             }
           ],
           "correctOptionId": "d",
-          "hint": "Best plans combine remediation and timed validation.",
-          "explanation": "Transfer improves when learners re-encounter corrected skills under realistic constraints."
+          "hint": "The best plan mixes targeted practice with realistic exam conditions.",
+          "explanation": "This plan ensures you learn the skill, test it under pressure, and immediately fix any remaining gaps. It's the ultimate feedback loop."
         },
         {
           "id": "a-level-prep-101-l06-q4",
-          "text": "In A-Level A-Level: Synoptic Question Strategy, there are both content misses and pacing slips. What should the learner fix first?",
+          "text": "In your last mock, you lost marks for both lack of knowledge and poor time management. Which do you fix first?",
           "skillId": "a-level-prep-101-skill-extended-response-priority",
           "options": [
             {
               "id": "a",
-              "text": "Prioritize the repeated extended response process issue, then apply the same correction across the next timed block."
+              "text": "Fix the time management and essay structure first, then apply that structure to your next practice sessions."
             },
             {
               "id": "b",
-              "text": "Tackle the rarest concept gap first for variety."
+              "text": "Focus entirely on the one topic you didn't know."
             },
             {
               "id": "c",
-              "text": "Review only confidence items and skip timing analysis."
+              "text": "Only review the questions you got right to build confidence."
             },
             {
               "id": "d",
-              "text": "Change resources without identifying what failed."
+              "text": "Buy a new revision guide."
             }
           ],
           "correctOptionId": "a",
-          "hint": "Look for the answer that addresses recurrence.",
-          "explanation": "Recurring process errors compound quickly, so fixing them first creates cleaner conditions for content correction."
+          "hint": "Which problem affects every single question you answer?",
+          "explanation": "Process errors (like timing) compound and ruin your score even if you know the content. Fix the process first, then fill the knowledge gaps."
         },
         {
           "id": "a-level-prep-101-l06-q5",
-          "text": "In A-Level extended-response section, assertion without analytical link appears during A-Level: Synoptic Question Strategy. What is the strongest immediate correction?",
+          "text": "You keep making claims in your essays without backing them up analytically. What's the quickest fix?",
           "skillId": "a-level-prep-101-skill-synoptic-links-section-application",
           "options": [
             {
               "id": "a",
-              "text": "Ignore extended-response section diagnostics and continue for volume."
+              "text": "Ignore it and just try to write more words."
             },
             {
               "id": "b",
-              "text": "Add explicit because-therefore reasoning after each claim."
+              "text": "Force yourself to use a 'This means that...' or 'Therefore...' sentence after every claim."
             },
             {
               "id": "c",
-              "text": "Re-read notes without running a corrected attempt."
+              "text": "Re-read your textbook."
             },
             {
               "id": "d",
-              "text": "Delay correction until after several unrelated drills."
+              "text": "Wait until your teacher grades your next essay."
             }
           ],
           "correctOptionId": "b",
-          "hint": "Choose the option that directly fixes assertion without analytical link.",
-          "explanation": "Immediate correction inside extended-response section improves transfer to the next timed practice set."
+          "hint": "You need a mechanical rule to force analysis.",
+          "explanation": "Using specific transition phrases forces your brain to explain the 'why' and 'how', which is exactly where the analysis marks are hidden."
         },
         {
           "id": "a-level-prep-101-l06-q6",
-          "text": "During A-Level synoptic section, missing synoptic bridge repeats in A-Level: Synoptic Question Strategy. Which plan should be applied before the next retest?",
+          "text": "You struggle to link Theme A and Theme B in your synoptic essays. What should you do before your next practice paper?",
           "skillId": "a-level-prep-101-skill-depth-mastery-section-application",
           "options": [
             {
               "id": "a",
-              "text": "Switch to new content before validating the fix."
+              "text": "Study Theme C instead."
             },
             {
               "id": "b",
-              "text": "Increase speed without updating process controls."
+              "text": "Try to write the essay faster."
             },
             {
               "id": "c",
-              "text": "Link at least two themes with one evaluative judgement statement. Track outcomes in an analysis depth tracker and retest the same pattern."
+              "text": "Write out three specific sentences that link Theme A and Theme B, memorize them, and force yourself to use one in the next paper."
             },
             {
               "id": "d",
-              "text": "Retake the section with no checkpoint changes."
+              "text": "Just take the paper and hope the link comes to you naturally."
             }
           ],
           "correctOptionId": "c",
-          "hint": "Best plans combine targeted correction with measurable tracking.",
-          "explanation": "A logged correction cycle in analysis depth tracker makes the pacing fix visible and repeatable."
+          "hint": "Prepare your synoptic links in advance.",
+          "explanation": "Pre-planning and practicing specific synoptic links takes the pressure off during the exam and ensures you hit the required criteria without panicking."
         }
       ],
-      interactiveActivities: [
+      "interactiveActivities": [
         {
           "id": "a-level-prep-101-l06-ia1",
           "type": "matching_pairs",
-          "title": "A-Level: Synoptic Question Strategy Correction Alignment",
-          "description": "Align each recurring signal with the strongest correction action for decision quality under constraints.",
+          "title": "Synoptic Link Builder",
+          "description": "Match the core concept to its best synoptic pair to build high-level arguments.",
           "estimatedMinutes": 8,
           "difficultyLevel": "medium",
           "instructions": [
-            "Align each pair.",
-            "Check your result.",
-            "Apply one correction in the next drill."
+            "Look at the concept on the left.",
+            "Find the concept on the right that creates the strongest synoptic link.",
+            "Think about how you would write a sentence connecting them."
           ],
           "data": {
             "left": [
               {
                 "id": "l1",
-                "label": "Essay has knowledge but weak analytical linkage"
+                "label": "Economic Policy"
               },
               {
                 "id": "l2",
-                "label": "Data/source question misses evaluation criteria"
+                "label": "Biological Systems"
               },
               {
                 "id": "l3",
-                "label": "Revision broad but not deep in core themes"
+                "label": "Historical Context"
               }
             ],
             "right": [
               {
                 "id": "r1",
-                "label": "Insert explicit because-therefore reasoning after each evidence point"
+                "label": "Social Inequality Impacts"
               },
               {
                 "id": "r2",
-                "label": "Apply reliability, validity, and bias checklist before conclusion"
+                "label": "Environmental Changes"
               },
               {
                 "id": "r3",
-                "label": "Run focused depth sprint on one high-yield topic per day"
+                "label": "Literary Themes"
               }
             ],
             "pairs": [
@@ -707,7 +769,7 @@ export const ALevelPrep101Module: LearningModule = {
           }
         }
       ],
-      quizBlueprint: {
+      "quizBlueprint": {
         "frequency": "lesson_assessment",
         "questionsPerCheck": 6,
         "totalQuestions": 6,
@@ -733,96 +795,104 @@ export const ALevelPrep101Module: LearningModule = {
         "adaptive": false,
         "masteryThreshold": 0.75
       },
-      metadata: {
-        examDrill: "lesson_drill"
-      },
-      learningAids: [
+      "learningAids": [
         {
           "id": "a-level-prep-101-l06-a1",
           "type": "image",
-          "title": "Synoptic Links Snapshot",
-          "content": "Visual anchor for A-Level: Synoptic Question Strategy with emphasis on synoptic links within practice set planning."
+          "title": "The Synoptic Web",
+          "content": "A visual map showing how to connect disparate topics across your syllabus."
         },
         {
           "id": "a-level-prep-101-l06-a2",
           "type": "animation",
-          "title": "Depth Mastery Walkthrough",
-          "content": "Stepwise walkthrough for A-Level: Synoptic Question Strategy showing depth mastery decisions and strategy log checks."
+          "title": "Building the Bridge",
+          "content": "Animation showing how to write a transition sentence that perfectly links two different themes."
         }
       ]
     },
     {
-      id: "a-level-prep-101-l07",
-      title: "A-Level: Revision Under Time Pressure",
-      type: "video",
-      duration: 11,
-      learningAids: [
+      "id": "a-level-prep-101-l07",
+      "title": "Revision Under Time Pressure",
+      "type": "video",
+      "duration": 11,
+      "metadata": {
+        "lessonImagePrompt": "Imagen 4 prompt: A sleek, glowing digital countdown timer hovering over a neat desk with study notes, cinematic lighting, 8k, high contrast.",
+        "conceptVideoPrompt": "Veo 3.1 prompt: A fast-paced montage of a clock ticking down while a student calmly and efficiently maps out key concepts on a digital tablet, 4k, energetic.",
+        "prompts": [
+          "Set a 15-minute timer for your next revision block.",
+          "Focus entirely on one high-yield topic.",
+          "Stop immediately when the timer goes off and review what you retained."
+        ]
+      },
+      "learningAids": [
         {
           "id": "a-level-prep-101-l07-a1",
           "type": "image",
-          "title": "Depth Mastery Snapshot",
-          "content": "Visual anchor for A-Level: Revision Under Time Pressure with emphasis on depth mastery within timed block planning."
+          "title": "The 24-Hour Time-Crunch Matrix",
+          "content": "A visual guide on what to prioritize when you only have 24 hours left before an exam."
         },
         {
           "id": "a-level-prep-101-l07-a2",
           "type": "animation",
-          "title": "Analysis Walkthrough",
-          "content": "Stepwise walkthrough for A-Level: Revision Under Time Pressure showing analysis decisions and checkpoint log checks."
+          "title": "Pacing Your Paper",
+          "content": "An animation showing how to allocate your time per mark during the actual exam."
         }
       ]
     },
     {
-      id: "a-level-prep-101-l08",
-      title: "A-Level: Past Paper Mark-Scheme Analysis",
-      type: "interactive",
-      duration: 14,
-      metadata: {
-        prompts: [
-          "Identify one analysis decision rule in A-Level: Past Paper Mark-Scheme Analysis.",
-          "Apply it in one review cycle and show how it improves root-cause and correction quality.",
-          "Set one next-step target for depth mastery before your next A-Level readiness session."
+      "id": "a-level-prep-101-l08",
+      "title": "Hacking the Mark-Scheme",
+      "type": "interactive",
+      "duration": 14,
+      "metadata": {
+        "lessonImagePrompt": "Imagen 4 prompt: A glowing, decoded exam mark-scheme with neon highlights revealing the 'secret' points, cyberpunk style, 8k, photorealistic.",
+        "conceptVideoPrompt": "Veo 3.1 prompt: An animation of an exam paper being scanned by a laser, revealing the exact keywords the examiner is looking for in glowing green text, 4k, high-tech.",
+        "prompts": [
+          "Find a question you recently got wrong.",
+          "Look at the mark scheme and identify the exact keyword you missed.",
+          "Rewrite your answer to perfectly match the examiner's criteria."
         ]
       },
-      interactiveActivities: [
+      "interactiveActivities": [
         {
           "id": "a-level-prep-101-l08-ia1",
           "type": "matching_pairs",
-          "title": "A-Level: Past Paper Mark-Scheme Analysis Diagnostic Match",
-          "description": "Match recurring error signals to the highest-impact correction routine.",
+          "title": "Crack the Examiner's Code",
+          "description": "Match the command word from the exam to what the examiner actually wants you to do.",
           "estimatedMinutes": 8,
           "difficultyLevel": "medium",
           "instructions": [
-            "Match each error signal.",
-            "Verify all pairings.",
-            "Use one correction in your next attempt."
+            "Read the command word (e.g., 'Evaluate').",
+            "Match it to the correct action required.",
+            "Keep these in mind for your next paper."
           ],
           "data": {
             "left": [
               {
                 "id": "l1",
-                "label": "Essay has knowledge but weak analytical linkage"
+                "label": "Describe"
               },
               {
                 "id": "l2",
-                "label": "Data/source question misses evaluation criteria"
+                "label": "Explain"
               },
               {
                 "id": "l3",
-                "label": "Revision broad but not deep in core themes"
+                "label": "Evaluate"
               }
             ],
             "right": [
               {
                 "id": "r1",
-                "label": "Insert explicit because-therefore reasoning after each evidence point"
+                "label": "State the characteristics or features."
               },
               {
                 "id": "r2",
-                "label": "Apply reliability, validity, and bias checklist before conclusion"
+                "label": "Set out purposes or reasons (use 'because')."
               },
               {
                 "id": "r3",
-                "label": "Run focused depth sprint on one high-yield topic per day"
+                "label": "Judge from available evidence, showing both sides."
               }
             ],
             "pairs": [
@@ -842,224 +912,229 @@ export const ALevelPrep101Module: LearningModule = {
           }
         }
       ],
-      learningAids: [
+      "learningAids": [
         {
           "id": "a-level-prep-101-l08-a1",
           "type": "image",
-          "title": "Analysis Snapshot",
-          "content": "Visual anchor for A-Level: Past Paper Mark-Scheme Analysis with emphasis on analysis within review cycle planning."
+          "title": "Command Word Cheat Sheet",
+          "content": "A visual dictionary of A-Level command words and what they demand."
         },
         {
           "id": "a-level-prep-101-l08-a2",
           "type": "animation",
-          "title": "Depth Mastery Walkthrough",
-          "content": "Stepwise walkthrough for A-Level: Past Paper Mark-Scheme Analysis showing depth mastery decisions and error taxonomy checks."
+          "title": "Inside the Examiner's Mind",
+          "content": "An animation showing how an examiner awards marks based on specific trigger words."
         }
       ]
     },
     {
-      id: "a-level-prep-101-l09",
-      title: "A-Level: Coursework/Practical Integration",
-      type: "quiz",
-      duration: 12,
-      questions: [
+      "id": "a-level-prep-101-l09",
+      "title": "Integrating Coursework & Practicals",
+      "type": "quiz",
+      "duration": 12,
+      "metadata": {
+        "lessonImagePrompt": "Imagen 4 prompt: A split-screen showing a glowing science beaker on one side and a glowing essay on the other, merging in the center, photorealistic, 8k, vibrant colors.",
+        "conceptVideoPrompt": "Veo 3.1 prompt: A dynamic transition from a hands-on practical experiment to a high-tech digital report, showing the seamless link between practice and theory, 4k.",
+        "examDrill": "lesson_drill"
+      },
+      "questions": [
         {
           "id": "a-level-prep-101-l09-q1",
-          "text": "In A-Level: Coursework/Practical Integration, a learner keeps missing depth mastery items during A-Level practice. Which adjustment should happen before the next timed practice set?",
+          "text": "You keep losing marks on questions related to practical experiments. What's the best way to fix this before your next test?",
           "skillId": "a-level-prep-101-skill-depth-mastery-workflow",
           "options": [
             {
               "id": "a",
-              "text": "Run a short depth mastery checkpoint routine and annotate why each miss occurred in a strategy log before retesting."
+              "text": "Review the specific practical methodology, figure out why you lost the mark, and retest yourself on a similar question."
             },
             {
               "id": "b",
-              "text": "Skip review and jump directly to harder questions."
+              "text": "Skip the practical questions and focus on the theory."
             },
             {
               "id": "c",
-              "text": "Track only total score with no error categories."
+              "text": "Just look at your overall score and move on."
             },
             {
               "id": "d",
-              "text": "Switch topics even if depth mastery is still the dominant weakness."
+              "text": "Switch to studying a completely different topic."
             }
           ],
           "correctOptionId": "a",
-          "hint": "Choose the action that creates a repeatable feedback loop for depth mastery.",
-          "explanation": "Fast targeted feedback plus immediate correction is the most reliable way to improve depth mastery."
+          "hint": "Practical questions require specific methodological knowledge. Find the gap and test it.",
+          "explanation": "Targeted feedback on methodology, followed by immediate retesting, is the best way to secure practical marks."
         },
         {
           "id": "a-level-prep-101-l09-q2",
-          "text": "A A-Level A-Level: Coursework/Practical Integration session ends with unstable timing. What should be diagnosed first?",
+          "text": "During a mock exam, the data analysis section from a practical experiment takes you way too long. What should you do?",
           "skillId": "a-level-prep-101-skill-analysis-diagnosis",
           "options": [
             {
               "id": "a",
-              "text": "Retake the session immediately without diagnostics."
+              "text": "Blind guess to save time and pray."
             },
             {
               "id": "b",
-              "text": "Locate the exact analysis decision point where time spikes, then set micro-checkpoints for that phase."
+              "text": "Figure out exactly which part of the data analysis (e.g., the math, the graph reading) is slowing you down, and drill that specific skill."
             },
             {
               "id": "c",
-              "text": "Increase total question count and keep the same attempt order."
+              "text": "Do more multiple-choice questions instead."
             },
             {
               "id": "d",
-              "text": "Use one pacing rule for all sections regardless of load."
+              "text": "Assume you'll be faster on the real day."
             }
           ],
           "correctOptionId": "b",
-          "hint": "Find the answer that isolates a measurable bottleneck.",
-          "explanation": "Pacing stabilizes when the highest-cost decision point is measured and corrected directly."
+          "hint": "Isolate the bottleneck.",
+          "explanation": "Pacing improves when you identify the exact step that causes friction and practice it until it's automatic."
         },
         {
           "id": "a-level-prep-101-l09-q3",
-          "text": "A-Level practice shows correction is happening but not sticking in A-Level: Coursework/Practical Integration. What plan fixes this fastest?",
+          "text": "You understand the theory, but you struggle to apply it to unfamiliar practical scenarios in the exam. How do you bridge this gap?",
           "skillId": "a-level-prep-101-skill-extended-response-transfer",
           "options": [
             {
               "id": "a",
-              "text": "Keep reviewing notes and avoid new timed attempts."
+              "text": "Keep re-reading your class notes."
             },
             {
               "id": "b",
-              "text": "Increase difficulty only, without targeted rematches."
+              "text": "Only practice questions you've seen before."
             },
             {
               "id": "c",
-              "text": "Pair each corrected extended response error with a near-transfer item in the next timed block and track it in a strategy log."
+              "text": "Take a theory concept and immediately practice applying it to 3 different, unfamiliar practical scenarios under timed conditions."
             },
             {
               "id": "d",
-              "text": "Rewatch lesson content without logging applied changes."
+              "text": "Watch videos of the experiments without taking notes."
             }
           ],
           "correctOptionId": "c",
-          "hint": "The strongest option forces immediate transfer testing.",
-          "explanation": "Correction becomes durable when each fix is tested on a similar item during the next constrained attempt."
+          "hint": "You need to practice the skill of 'transferring' knowledge.",
+          "explanation": "Applying known theory to unknown scenarios is a skill that must be drilled under exam conditions."
         },
         {
           "id": "a-level-prep-101-l09-q4",
-          "text": "During post-drill review for A-Level: Coursework/Practical Integration, which fix should be prioritized first for score impact in A-Level?",
+          "text": "When reviewing a past paper with a heavy practical section, what should you prioritize fixing first?",
           "skillId": "a-level-prep-101-skill-synoptic-links-priority",
           "options": [
             {
               "id": "a",
-              "text": "Polish already-mastered question types first."
+              "text": "Make sure your spelling is perfect."
             },
             {
               "id": "b",
-              "text": "Ignore pacing and focus only on confidence items."
+              "text": "Ignore the timing and just focus on getting the right answer eventually."
             },
             {
               "id": "c",
-              "text": "Rewrite notes without validating changes in timed practice."
+              "text": "Rewrite your notes neatly."
             },
             {
               "id": "d",
-              "text": "Address repeated synoptic links and pacing errors first because they affect many questions in one run."
+              "text": "Fix recurring errors in how you interpret data or structure your evaluations, as these affect multiple questions."
             }
           ],
           "correctOptionId": "d",
-          "hint": "Prioritize changes that influence the largest question set.",
-          "explanation": "Highest-impact remediation usually targets repeated timing and process breakdowns before edge-case content gaps."
+          "hint": "Fix the root cause that costs you the most marks.",
+          "explanation": "Process errors in data interpretation will ruin your score across the whole section. Fix the process first."
         },
         {
           "id": "a-level-prep-101-l09-q5",
-          "text": "In A-Level extended-response section, assertion without analytical link appears during A-Level: Coursework/Practical Integration. What is the strongest immediate correction?",
+          "text": "You state the result of an experiment in your essay, but you don't explain *why* it matters. What's the fix?",
           "skillId": "a-level-prep-101-skill-depth-mastery-section-application",
           "options": [
             {
               "id": "a",
-              "text": "Add explicit because-therefore reasoning after each claim."
+              "text": "Force yourself to add a 'This demonstrates that...' sentence after stating any result."
             },
             {
               "id": "b",
-              "text": "Ignore extended-response section diagnostics and continue for volume."
+              "text": "Just write more results to compensate."
             },
             {
               "id": "c",
-              "text": "Re-read notes without running a corrected attempt."
+              "text": "Re-read the textbook."
             },
             {
               "id": "d",
-              "text": "Delay correction until after several unrelated drills."
+              "text": "Wait for your teacher to correct it."
             }
           ],
           "correctOptionId": "a",
-          "hint": "Choose the option that directly fixes assertion without analytical link.",
-          "explanation": "Immediate correction inside extended-response section improves transfer to the next timed practice set."
+          "hint": "You need a rule that forces you to analyze the data.",
+          "explanation": "Using specific analytical phrases forces you to explain the significance of the practical data, securing the higher-level marks."
         },
         {
           "id": "a-level-prep-101-l09-q6",
-          "text": "During A-Level synoptic section, missing synoptic bridge repeats in A-Level: Coursework/Practical Integration. Which plan should be applied before the next retest?",
+          "text": "You struggle to link your coursework findings to the broader theoretical themes of the syllabus. What's your plan?",
           "skillId": "a-level-prep-101-skill-analysis-section-application",
           "options": [
             {
               "id": "a",
-              "text": "Switch to new content before validating the fix."
+              "text": "Keep them separate in your mind."
             },
             {
               "id": "b",
-              "text": "Link at least two themes with one evaluative judgement statement. Track outcomes in an analysis depth tracker and retest the same pattern."
+              "text": "Practice writing paragraphs that explicitly link one coursework finding to one major syllabus theme, and track your progress."
             },
             {
               "id": "c",
-              "text": "Increase speed without updating process controls."
+              "text": "Try to write faster."
             },
             {
               "id": "d",
-              "text": "Retake the section with no checkpoint changes."
+              "text": "Just hope the exam question doesn't ask for links."
             }
           ],
           "correctOptionId": "b",
-          "hint": "Best plans combine targeted correction with measurable tracking.",
-          "explanation": "A logged correction cycle in analysis depth tracker makes the pacing fix visible and repeatable."
+          "hint": "Practice the specific skill of linking.",
+          "explanation": "Deliberately practicing the connection between practical work and theory makes it automatic during the exam."
         }
       ],
-      interactiveActivities: [
+      "interactiveActivities": [
         {
           "id": "a-level-prep-101-l09-ia1",
           "type": "matching_pairs",
-          "title": "A-Level: Coursework/Practical Integration Correction Alignment",
-          "description": "Align each recurring signal with the strongest correction action for decision quality under constraints.",
+          "title": "Theory to Practice Match",
+          "description": "Match the theoretical concept to the practical experiment that proves it.",
           "estimatedMinutes": 8,
           "difficultyLevel": "medium",
           "instructions": [
-            "Align each pair.",
-            "Check your result.",
-            "Apply one correction in the next drill."
+            "Look at the theory on the left.",
+            "Match it to the practical application on the right.",
+            "Think about how you would write about this connection."
           ],
           "data": {
             "left": [
               {
                 "id": "l1",
-                "label": "Essay has knowledge but weak analytical linkage"
+                "label": "Enzyme Denaturation"
               },
               {
                 "id": "l2",
-                "label": "Data/source question misses evaluation criteria"
+                "label": "Market Failure"
               },
               {
                 "id": "l3",
-                "label": "Revision broad but not deep in core themes"
+                "label": "Source Reliability"
               }
             ],
             "right": [
               {
                 "id": "r1",
-                "label": "Insert explicit because-therefore reasoning after each evidence point"
+                "label": "Temperature/pH Lab Experiment"
               },
               {
                 "id": "r2",
-                "label": "Apply reliability, validity, and bias checklist before conclusion"
+                "label": "Case Study on Pollution Taxes"
               },
               {
                 "id": "r3",
-                "label": "Run focused depth sprint on one high-yield topic per day"
+                "label": "Cross-referencing Historical Diaries"
               }
             ],
             "pairs": [
@@ -1079,7 +1154,7 @@ export const ALevelPrep101Module: LearningModule = {
           }
         }
       ],
-      quizBlueprint: {
+      "quizBlueprint": {
         "frequency": "lesson_assessment",
         "questionsPerCheck": 6,
         "totalQuestions": 6,
@@ -1105,322 +1180,335 @@ export const ALevelPrep101Module: LearningModule = {
         "adaptive": false,
         "masteryThreshold": 0.75
       },
-      metadata: {
-        examDrill: "lesson_drill"
-      },
-      learningAids: [
+      "learningAids": [
         {
           "id": "a-level-prep-101-l09-a1",
           "type": "image",
-          "title": "Depth Mastery Snapshot",
-          "content": "Visual anchor for A-Level: Coursework/Practical Integration with emphasis on depth mastery within practice set planning."
+          "title": "The Practical-Theory Bridge",
+          "content": "A visual diagram showing how to integrate lab results or case studies into theoretical essays."
         },
         {
           "id": "a-level-prep-101-l09-a2",
           "type": "animation",
-          "title": "Analysis Walkthrough",
-          "content": "Stepwise walkthrough for A-Level: Coursework/Practical Integration showing analysis decisions and strategy log checks."
+          "title": "Evaluating Methodology",
+          "content": "An animation showing how to quickly spot flaws in an experiment's methodology for evaluation marks."
         }
       ]
     },
     {
-      id: "a-level-prep-101-l10",
-      title: "A-Level: Targeted Depth Mastery Remediation",
-      type: "interactive",
-      duration: 14,
-      metadata: {
-        prompts: [
-          "Identify one depth mastery decision rule in A-Level: Targeted Depth Mastery Remediation.",
-          "Apply it in one practice set and show how it improves decision quality under constraints.",
-          "Set one next-step target for analysis before your next A-Level readiness session."
+      "id": "a-level-prep-101-l10",
+      "title": "Targeted Depth Mastery",
+      "type": "interactive",
+      "duration": 14,
+      "metadata": {
+        "lessonImagePrompt": "Imagen 4 prompt: A glowing sniper scope focusing on a specific weak point in a digital wall of text, neon green and black, 8k, highly detailed.",
+        "conceptVideoPrompt": "Veo 3.1 prompt: An animation of a student identifying a cracked, glowing brick in a wall of knowledge and replacing it with a solid, reinforced gold brick, 4k, satisfying motion.",
+        "prompts": [
+          "Identify your absolute weakest topic right now.",
+          "Spend 15 minutes doing a 'deep dive' on just that topic.",
+          "Test yourself with one high-level question on that topic."
         ]
       },
-      interactiveActivities: [
+      "interactiveActivities": [
         {
           "id": "a-level-prep-101-l10-ia1",
           "type": "drag_and_drop",
-          "title": "A-Level: Targeted Depth Mastery Remediation Decision-Phase Mapping",
-          "description": "Map each decision cue to Plan, Execute, or Reflect.",
+          "title": "Build a Remediation Plan",
+          "description": "Drag the steps into the correct order to fix a major knowledge gap.",
           "estimatedMinutes": 8,
           "difficultyLevel": "medium",
           "instructions": [
-            "Assign each decision cue to the best phase.",
-            "Check all mappings.",
-            "Capture one improvement target."
+            "Read the steps for fixing a weak topic.",
+            "Arrange them in the most logical, effective order.",
+            "Use this process next time you bomb a practice question."
           ],
           "data": {
             "targets": [
               {
                 "id": "plan",
-                "label": "Synoptic Plan"
+                "label": "Step 1: Isolate"
               },
               {
                 "id": "execute",
-                "label": "Analytical Execution"
+                "label": "Step 2: Re-learn"
               },
               {
                 "id": "reflect",
-                "label": "Depth Review"
+                "label": "Step 3: Verify"
               }
             ],
             "draggables": [
               {
                 "id": "d1",
-                "label": "Prioritize A-Level high-weight synoptic topics before timed papers",
+                "label": "Identify the exact sub-topic or skill you are failing at.",
                 "correctTargetId": "plan"
               },
               {
                 "id": "d2",
-                "label": "Structure argument with claim, evidence, analysis, and evaluation",
+                "label": "Use active recall and targeted resources to understand the concept deeply.",
                 "correctTargetId": "execute"
               },
               {
                 "id": "d3",
-                "label": "Audit depth, precision, and link quality after each practice response",
+                "label": "Test yourself on a new, unseen question under timed conditions.",
                 "correctTargetId": "reflect"
               }
             ]
           }
         }
       ],
-      learningAids: [
+      "learningAids": [
         {
           "id": "a-level-prep-101-l10-a1",
           "type": "image",
-          "title": "Depth Mastery Snapshot",
-          "content": "Visual anchor for A-Level: Targeted Depth Mastery Remediation with emphasis on depth mastery within practice set planning."
+          "title": "The Remediation Loop",
+          "content": "A flowchart showing the fastest way to turn a weakness into a strength."
         },
         {
           "id": "a-level-prep-101-l10-a2",
           "type": "animation",
-          "title": "Analysis Walkthrough",
-          "content": "Stepwise walkthrough for A-Level: Targeted Depth Mastery Remediation showing analysis decisions and strategy log checks."
+          "title": "Deep vs. Shallow Revision",
+          "content": "An animation contrasting a student passively reading (shallow) vs. actively testing and fixing gaps (deep)."
         }
       ]
     },
     {
-      id: "a-level-prep-101-l11",
-      title: "A-Level: Timed Analysis Sprint",
-      type: "video",
-      duration: 11,
-      learningAids: [
+      "id": "a-level-prep-101-l11",
+      "title": "Timed Analysis Sprints",
+      "type": "video",
+      "duration": 11,
+      "metadata": {
+        "lessonImagePrompt": "Imagen 4 prompt: A futuristic runner on a glowing digital track made of data and text, representing a timed sprint, cinematic lighting, 8k, dynamic angle.",
+        "conceptVideoPrompt": "Veo 3.1 prompt: A high-energy animation of a student racing against a glowing digital clock, rapidly connecting analytical dots on a holographic screen, 4k.",
+        "prompts": [
+          "Pick a 25-mark essay question.",
+          "Set a timer for exactly 5 minutes.",
+          "Sprint to create a full, bullet-pointed essay plan before the timer ends."
+        ]
+      },
+      "learningAids": [
         {
           "id": "a-level-prep-101-l11-a1",
           "type": "image",
-          "title": "Analysis Snapshot",
-          "content": "Visual anchor for A-Level: Timed Analysis Sprint with emphasis on analysis within timed block planning."
+          "title": "The Sprint Framework",
+          "content": "A visual guide on how to break a 2-hour exam into manageable 15-minute sprints."
         },
         {
           "id": "a-level-prep-101-l11-a2",
           "type": "animation",
-          "title": "Depth Mastery Walkthrough",
-          "content": "Stepwise walkthrough for A-Level: Timed Analysis Sprint showing depth mastery decisions and checkpoint log checks."
+          "title": "Beating the Clock",
+          "content": "An animation showing how to quickly outline an essay in 5 minutes before writing."
         }
       ]
     },
     {
-      id: "a-level-prep-101-l12",
-      title: "A-Level: Mixed-Section Decision Drill",
-      type: "quiz",
-      duration: 12,
-      questions: [
+      "id": "a-level-prep-101-l12",
+      "title": "Mixed-Section Decision Drills",
+      "type": "quiz",
+      "duration": 12,
+      "metadata": {
+        "lessonImagePrompt": "Imagen 4 prompt: A glowing crossroads sign with different exam sections (Essays, Data, Synoptic) pointing in different directions, neon lighting, 8k, cyberpunk.",
+        "conceptVideoPrompt": "Veo 3.1 prompt: A fast-paced POV animation of navigating a high-tech maze, making split-second decisions at each turn based on different question types, 4k.",
+        "examDrill": "lesson_drill"
+      },
+      "questions": [
         {
           "id": "a-level-prep-101-l12-q1",
-          "text": "A-Level coaching notes show repeated depth mastery misses in A-Level: Mixed-Section Decision Drill. What should the learner do before the next practice set?",
+          "text": "You keep messing up the transition between short-answer questions and long essays. What should you do before your next practice paper?",
           "skillId": "a-level-prep-101-skill-depth-mastery-workflow",
           "options": [
             {
               "id": "a",
-              "text": "Jump to harder content before confirming the root cause."
+              "text": "Just do more full papers and hope you get used to it."
             },
             {
               "id": "b",
-              "text": "Track only final score and ignore process notes."
+              "text": "Only practice essays from now on."
             },
             {
               "id": "c",
-              "text": "Switch strands even though depth mastery is still the top weakness."
+              "text": "Ignore the problem and focus on getting the short answers perfect."
             },
             {
               "id": "d",
-              "text": "Rebuild the solve workflow on two representative practice set items, then retest with the same constraints."
+              "text": "Practice the specific transition: do 3 short questions, immediately plan 1 essay, and repeat this drill."
             }
           ],
           "correctOptionId": "d",
-          "hint": "Choose the option that improves process quality, not just volume.",
-          "explanation": "When depth mastery is unstable, workflow repair plus immediate retest creates the fastest reliable gains."
+          "hint": "Drill the exact moment of friction.",
+          "explanation": "Context-switching is a specific skill. Drilling the transition between question types builds the mental agility needed for the real exam."
         },
         {
           "id": "a-level-prep-101-l12-q2",
-          "text": "In A-Level: Mixed-Section Decision Drill, pace drops late even when early accuracy is strong. Which move best addresses this A-Level pattern?",
+          "text": "You start strong on a mixed-section paper, but your pace drops massively in the second half. What's the best fix?",
           "skillId": "a-level-prep-101-skill-analysis-diagnosis",
           "options": [
             {
               "id": "a",
-              "text": "Introduce phase checkpoints and a cut-loss rule around high-friction analysis items."
+              "text": "Set strict time checkpoints for each section and practice cutting your losses and moving on if you get stuck."
             },
             {
               "id": "b",
-              "text": "Spend more time on every item to avoid mistakes."
+              "text": "Spend more time on the early questions to guarantee those marks."
             },
             {
               "id": "c",
-              "text": "Memorize answer keys without tracking timing behavior."
+              "text": "Just try to write faster at the end."
             },
             {
               "id": "d",
-              "text": "Use random breaks with no fixed transition points."
+              "text": "Take a long break in the middle of the exam."
             }
           ],
           "correctOptionId": "a",
-          "hint": "Look for a solution tied to timing behavior, not memory.",
-          "explanation": "Late-section drift usually comes from unmanaged friction points, not lack of content knowledge."
+          "hint": "You need a system to prevent getting bogged down.",
+          "explanation": "Late-paper fatigue is often caused by spending too much time on hard questions earlier. Strict checkpoints and a 'cut-loss' rule keep your pace stable."
         },
         {
           "id": "a-level-prep-101-l12-q3",
-          "text": "Which one-week plan best improves extended response transfer for A-Level readiness in A-Level?",
+          "text": "What is the best way to ensure you can handle the unpredictability of a real A-Level exam?",
           "skillId": "a-level-prep-101-skill-extended-response-transfer",
           "options": [
             {
               "id": "a",
-              "text": "Use only untimed warmups and avoid mixed sets."
+              "text": "Only study one topic per day."
             },
             {
               "id": "b",
-              "text": "Alternate mixed-difficulty sets with targeted remediation, then re-test the same extended response objective under timing constraints."
+              "text": "Mix up your practice: do sets that randomly combine different topics and question types under timed conditions."
             },
             {
               "id": "c",
-              "text": "Choose random topics daily without a remediation queue."
+              "text": "Always do practice questions in the exact order of the textbook."
             },
             {
               "id": "d",
-              "text": "Delay all review tasks until the final week."
+              "text": "Wait until the final week to do mixed papers."
             }
           ],
           "correctOptionId": "b",
-          "hint": "The strongest plan combines correction and timed transfer.",
-          "explanation": "Transfer improves when correction cycles are followed by fresh timed retrieval of the same extended response target."
+          "hint": "Train how you fight.",
+          "explanation": "Interleaved practice (mixing topics and question types) forces your brain to constantly retrieve different information, which perfectly simulates the real exam."
         },
         {
           "id": "a-level-prep-101-l12-q4",
-          "text": "After a A-Level: Mixed-Section Decision Drill drill, which remediation should be prioritized first for score impact in A-Level?",
+          "text": "After a mixed-section drill, you realize you lost marks on both content knowledge and essay structure. What do you fix first?",
           "skillId": "a-level-prep-101-skill-synoptic-links-priority",
           "options": [
             {
               "id": "a",
-              "text": "Start with already-mastered tasks to build comfort."
+              "text": "Start by reviewing the topics you already know well."
             },
             {
               "id": "b",
-              "text": "Rewrite notes without testing changes in a timed set."
+              "text": "Rewrite your notes."
             },
             {
               "id": "c",
-              "text": "Fix repeated synoptic links breakdowns first because they scale across many items in the same run."
+              "text": "Fix the essay structure first, because that framework will help you score marks even on topics you are weak on."
             },
             {
               "id": "d",
-              "text": "Ignore pacing because content accuracy matters more."
+              "text": "Ignore the structure and just memorize more facts."
             }
           ],
           "correctOptionId": "c",
-          "hint": "Choose the fix with the widest downstream effect.",
-          "explanation": "High-frequency process breakdowns usually produce the largest immediate score delta when corrected first."
+          "hint": "Which fix gives you a structural advantage across the whole paper?",
+          "explanation": "A strong structural framework can often salvage marks even if your content knowledge is slightly lacking. Fix the process first."
         },
         {
           "id": "a-level-prep-101-l12-q5",
-          "text": "In A-Level extended-response section, assertion without analytical link appears during A-Level: Mixed-Section Decision Drill. What is the strongest immediate correction?",
+          "text": "You keep making statements in your essays without linking them back to the main question. What's the immediate fix?",
           "skillId": "a-level-prep-101-skill-depth-mastery-section-application",
           "options": [
             {
               "id": "a",
-              "text": "Ignore extended-response section diagnostics and continue for volume."
+              "text": "Ignore it and just write more."
             },
             {
               "id": "b",
-              "text": "Re-read notes without running a corrected attempt."
+              "text": "Re-read the question at the end of the exam."
             },
             {
               "id": "c",
-              "text": "Delay correction until after several unrelated drills."
+              "text": "Wait until your next full mock to try a new strategy."
             },
             {
               "id": "d",
-              "text": "Add explicit because-therefore reasoning after each claim."
+              "text": "Force yourself to write a concluding sentence for every paragraph that explicitly uses the words from the question prompt."
             }
           ],
           "correctOptionId": "d",
-          "hint": "Choose the option that directly fixes assertion without analytical link.",
-          "explanation": "Immediate correction inside extended-response section improves transfer to the next timed practice set."
+          "hint": "You need a mechanical rule to force relevance.",
+          "explanation": "Explicitly using the words from the prompt in your mini-conclusions guarantees that your analysis remains focused and relevant."
         },
         {
           "id": "a-level-prep-101-l12-q6",
-          "text": "During A-Level synoptic section, missing synoptic bridge repeats in A-Level: Mixed-Section Decision Drill. Which plan should be applied before the next retest?",
+          "text": "You struggle to bring in synoptic links when switching between different sections of the paper. What's your plan?",
           "skillId": "a-level-prep-101-skill-analysis-section-application",
           "options": [
             {
               "id": "a",
-              "text": "Link at least two themes with one evaluative judgement statement. Track outcomes in an analysis depth tracker and retest the same pattern."
+              "text": "Create a 'synoptic checklist' to review during your 5-minute planning phase, and practice using it in mixed drills."
             },
             {
               "id": "b",
-              "text": "Switch to new content before validating the fix."
+              "text": "Just hope you remember them on the day."
             },
             {
               "id": "c",
-              "text": "Increase speed without updating process controls."
+              "text": "Write faster so you have time to think at the end."
             },
             {
               "id": "d",
-              "text": "Retake the section with no checkpoint changes."
+              "text": "Only use synoptic links if the question explicitly asks for them."
             }
           ],
           "correctOptionId": "a",
-          "hint": "Best plans combine targeted correction with measurable tracking.",
-          "explanation": "A logged correction cycle in analysis depth tracker makes the pacing fix visible and repeatable."
+          "hint": "Systematize your thinking process.",
+          "explanation": "A pre-planned checklist ensures you actively look for synoptic opportunities, rather than relying on spontaneous inspiration."
         }
       ],
-      interactiveActivities: [
+      "interactiveActivities": [
         {
           "id": "a-level-prep-101-l12-ia1",
           "type": "matching_pairs",
-          "title": "A-Level: Mixed-Section Decision Drill Correction Alignment",
-          "description": "Align each recurring signal with the strongest correction action for decision quality under constraints.",
+          "title": "Context Switching Drill",
+          "description": "Match the question type to the optimal mental strategy.",
           "estimatedMinutes": 8,
           "difficultyLevel": "medium",
           "instructions": [
-            "Align each pair.",
-            "Check your result.",
-            "Apply one correction in the next drill."
+            "Look at the question type on the left.",
+            "Match it to the best approach on the right.",
+            "Use these strategies to switch gears quickly during an exam."
           ],
           "data": {
             "left": [
               {
                 "id": "l1",
-                "label": "Essay has knowledge but weak analytical linkage"
+                "label": "Multiple Choice (1 mark)"
               },
               {
                 "id": "l2",
-                "label": "Data/source question misses evaluation criteria"
+                "label": "Data Analysis (4 marks)"
               },
               {
                 "id": "l3",
-                "label": "Revision broad but not deep in core themes"
+                "label": "Synoptic Essay (25 marks)"
               }
             ],
             "right": [
               {
                 "id": "r1",
-                "label": "Insert explicit because-therefore reasoning after each evidence point"
+                "label": "Process of elimination, max 1 minute."
               },
               {
                 "id": "r2",
-                "label": "Apply reliability, validity, and bias checklist before conclusion"
+                "label": "Identify trend, quote data, explain anomaly."
               },
               {
                 "id": "r3",
-                "label": "Run focused depth sprint on one high-yield topic per day"
+                "label": "5 min plan, PEEL paragraphs, evaluate."
               }
             ],
             "pairs": [
@@ -1440,7 +1528,7 @@ export const ALevelPrep101Module: LearningModule = {
           }
         }
       ],
-      quizBlueprint: {
+      "quizBlueprint": {
         "frequency": "lesson_assessment",
         "questionsPerCheck": 6,
         "totalQuestions": 6,
@@ -1466,440 +1554,453 @@ export const ALevelPrep101Module: LearningModule = {
         "adaptive": false,
         "masteryThreshold": 0.75
       },
-      metadata: {
-        examDrill: "lesson_drill"
-      },
-      learningAids: [
+      "learningAids": [
         {
           "id": "a-level-prep-101-l12-a1",
           "type": "image",
-          "title": "Depth Mastery Snapshot",
-          "content": "Visual anchor for A-Level: Mixed-Section Decision Drill with emphasis on depth mastery within practice set planning."
+          "title": "The Context Switcher",
+          "content": "A visual guide on how to mentally reset between different sections of an exam."
         },
         {
           "id": "a-level-prep-101-l12-a2",
           "type": "animation",
-          "title": "Analysis Walkthrough",
-          "content": "Stepwise walkthrough for A-Level: Mixed-Section Decision Drill showing analysis decisions and strategy log checks."
+          "title": "Navigating the Maze",
+          "content": "An animation showing a student smoothly transitioning from a math-heavy question to a long-form essay."
         }
       ]
     },
     {
-      id: "a-level-prep-101-l13",
-      title: "A-Level: Adaptive Retry and Transfer Check",
-      type: "video",
-      duration: 11,
-      learningAids: [
+      "id": "a-level-prep-101-l13",
+      "title": "Adaptive Retry & Transfer Checks",
+      "type": "video",
+      "duration": 11,
+      "metadata": {
+        "lessonImagePrompt": "Imagen 4 prompt: A glowing digital loop symbol representing retry and transfer, with sparks of electricity, dark background, 8k, photorealistic.",
+        "conceptVideoPrompt": "Veo 3.1 prompt: An animation of a student failing a digital puzzle, the puzzle resetting, and the student instantly solving it with a new glowing strategy, 4k, smooth loop.",
+        "prompts": [
+          "Take a question you failed last week.",
+          "Attempt it again right now without looking at the answer.",
+          "Did you transfer the new skill successfully?"
+        ]
+      },
+      "learningAids": [
         {
           "id": "a-level-prep-101-l13-a1",
           "type": "image",
-          "title": "Depth Mastery Snapshot",
-          "content": "Visual anchor for A-Level: Adaptive Retry and Transfer Check with emphasis on depth mastery within practice set planning."
+          "title": "The Retry Loop",
+          "content": "A visual diagram showing how to effectively retry a failed question to guarantee learning."
         },
         {
           "id": "a-level-prep-101-l13-a2",
           "type": "animation",
-          "title": "Analysis Walkthrough",
-          "content": "Stepwise walkthrough for A-Level: Adaptive Retry and Transfer Check showing analysis decisions and strategy log checks."
+          "title": "Transferring Skills",
+          "content": "An animation showing how a skill learned in one topic can be 'transferred' to solve a problem in a completely different topic."
         }
       ]
     },
     {
-      id: "a-level-prep-101-l14",
-      title: "A-Level: A Level Readiness Stability Checkpoint",
-      type: "interactive",
-      duration: 14,
-      metadata: {
-        prompts: [
-          "Identify one depth mastery decision rule in A-Level: A Level Readiness Stability Checkpoint.",
-          "Apply it in one practice set and show how it improves decision quality under constraints.",
-          "Set one next-step target for analysis before your next A-Level readiness session."
+      "id": "a-level-prep-101-l14",
+      "title": "Readiness Stability Checkpoint",
+      "type": "interactive",
+      "duration": 14,
+      "metadata": {
+        "lessonImagePrompt": "Imagen 4 prompt: A glowing green checkmark over a futuristic shield, representing exam readiness and stability, photorealistic, 8k, cinematic lighting.",
+        "conceptVideoPrompt": "Veo 3.1 prompt: A sleek animation of a structural stress test on a glowing bridge of knowledge, showing it holding strong under pressure, 4k, high-tech.",
+        "prompts": [
+          "Review your last 3 practice scores. Are they stable or fluctuating?",
+          "Identify the one variable (e.g., sleep, timing, specific topic) causing the fluctuation.",
+          "Create a rule to stabilize that variable for your next mock."
         ]
       },
-      interactiveActivities: [
+      "interactiveActivities": [
         {
           "id": "a-level-prep-101-l14-ia1",
           "type": "drag_and_drop",
-          "title": "A-Level: A Level Readiness Stability Checkpoint Decision-Phase Mapping",
-          "description": "Map each decision cue to Plan, Execute, or Reflect.",
+          "title": "Stress-Test Your Exam Loadout",
+          "description": "Map the pre-exam checks to ensure you are completely stable and ready.",
           "estimatedMinutes": 8,
           "difficultyLevel": "medium",
           "instructions": [
-            "Assign each decision cue to the best phase.",
-            "Check all mappings.",
-            "Capture one improvement target."
+            "Read the readiness checks.",
+            "Categorize them into Content, Strategy, or Mindset.",
+            "Use this checklist before your real exam."
           ],
           "data": {
             "targets": [
               {
                 "id": "plan",
-                "label": "Synoptic Plan"
+                "label": "Content Readiness"
               },
               {
                 "id": "execute",
-                "label": "Analytical Execution"
+                "label": "Strategy Readiness"
               },
               {
                 "id": "reflect",
-                "label": "Depth Review"
+                "label": "Mindset Readiness"
               }
             ],
             "draggables": [
               {
                 "id": "d1",
-                "label": "Prioritize A-Level high-weight synoptic topics before timed papers",
+                "label": "I can recall the core frameworks for all major topics.",
                 "correctTargetId": "plan"
               },
               {
                 "id": "d2",
-                "label": "Structure argument with claim, evidence, analysis, and evaluation",
+                "label": "I have a strict time-per-mark rule that I have practiced.",
                 "correctTargetId": "execute"
               },
               {
                 "id": "d3",
-                "label": "Audit depth, precision, and link quality after each practice response",
+                "label": "I have a plan for what to do if I panic or go blank.",
                 "correctTargetId": "reflect"
               }
             ]
           }
         }
       ],
-      learningAids: [
+      "learningAids": [
         {
           "id": "a-level-prep-101-l14-a1",
           "type": "image",
-          "title": "Depth Mastery Snapshot",
-          "content": "Visual anchor for A-Level: A Level Readiness Stability Checkpoint with emphasis on depth mastery within practice set planning."
+          "title": "The Stability Checklist",
+          "content": "A final checklist to ensure you are consistently hitting your target grade before the real exam."
         },
         {
           "id": "a-level-prep-101-l14-a2",
           "type": "animation",
-          "title": "Analysis Walkthrough",
-          "content": "Stepwise walkthrough for A-Level: A Level Readiness Stability Checkpoint showing analysis decisions and strategy log checks."
+          "title": "Handling the Curveball",
+          "content": "An animation showing a student calmly applying their core strategy when faced with a weird, unexpected exam question."
         }
       ]
     },
     {
-      id: "a-level-prep-101-l15",
-      title: "A-Level: Full Mock and Gap Closure",
-      type: "quiz",
-      duration: 20,
-      questions: [
+      "id": "a-level-prep-101-l15",
+      "title": "Full Mock & Gap Closure",
+      "type": "quiz",
+      "duration": 20,
+      "metadata": {
+        "lessonImagePrompt": "Imagen 4 prompt: A dramatic, cinematic shot of a student sitting at a desk in a massive, futuristic exam hall, glowing light from the paper, 8k, highly detailed.",
+        "conceptVideoPrompt": "Veo 3.1 prompt: A dynamic sequence showing a student completing a massive holographic exam, followed by a glowing scan that instantly patches any remaining knowledge gaps, 4k.",
+        "examDrill": "full_mock"
+      },
+      "questions": [
         {
           "id": "a-level-prep-101-l15-q1",
-          "text": "During A-Level: Full Mock and Gap Closure, early guesses are causing depth mastery losses. Which intervention should happen first?",
+          "text": "You're reviewing your full mock exam and notice you lost marks early on because you were rushing and guessing. What's the fix?",
           "skillId": "a-level-prep-101-skill-depth-mastery-workflow",
           "options": [
             {
               "id": "a",
-              "text": "Keep the same pace and hope accuracy normalizes later."
+              "text": "Keep the same pace and hope you are more accurate on the real day."
             },
             {
               "id": "b",
-              "text": "Memorize answer patterns instead of checking reasoning."
+              "text": "Just memorize the answers you got wrong."
             },
             {
               "id": "c",
-              "text": "Use a short verification pass and log decision triggers in an attempt-order sheet before restarting the drill."
+              "text": "Implement a '10-second verification' rule for early questions to ensure you aren't making silly mistakes before moving on."
             },
             {
               "id": "d",
-              "text": "Delay all correction until the weekend review session."
+              "text": "Wait until the night before the exam to review it."
             }
           ],
           "correctOptionId": "c",
-          "hint": "Pick the option that creates immediate corrective feedback.",
-          "explanation": "Quick structured verification catches repeatable process errors before they spread across the next set."
+          "hint": "You need a system to catch careless errors.",
+          "explanation": "A quick, structured verification step prevents careless early mistakes from ruining your baseline score."
         },
         {
           "id": "a-level-prep-101-l15-q2",
-          "text": "A A-Level drill on A-Level: Full Mock and Gap Closure ends with unstable pacing. What should be diagnosed first?",
+          "text": "Your pacing completely fell apart during the full mock. What is the first step to fixing this?",
           "skillId": "a-level-prep-101-skill-analysis-diagnosis",
           "options": [
             {
               "id": "a",
-              "text": "Retake the same drill immediately without analysis."
+              "text": "Take another full mock immediately."
             },
             {
               "id": "b",
-              "text": "Memorize answer keys without tracking timing behavior."
+              "text": "Just try to write faster next time."
             },
             {
               "id": "c",
-              "text": "Increase question volume while keeping the same pacing errors."
+              "text": "Do more questions without timing yourself."
             },
             {
               "id": "d",
-              "text": "Pinpoint where analysis decisions consume extra time, then redesign attempt order with checkpoints."
+              "text": "Look at your paper and pinpoint exactly which question type caused the bottleneck, then redesign your time allocation."
             }
           ],
           "correctOptionId": "d",
-          "hint": "Look for the answer that isolates a measurable timing bottleneck.",
-          "explanation": "Pacing issues usually come from specific analysis decision points, not from total question count alone."
+          "hint": "Find the specific bottleneck.",
+          "explanation": "Pacing issues are usually caused by getting stuck on one specific type of question. Identify it and set strict time limits for it."
         },
         {
           "id": "a-level-prep-101-l15-q3",
-          "text": "Which one-week sprint most improves extended response transfer for A-Level: Full Mock and Gap Closure in A-Level?",
+          "text": "You want to make sure the mistakes you made in this mock don't happen in the real exam. What's the best 7-day plan?",
           "skillId": "a-level-prep-101-skill-extended-response-transfer",
           "options": [
             {
               "id": "a",
-              "text": "Run two targeted correction blocks, one mixed timed section simulation, and one retest focused on the same extended response objective."
+              "text": "Do two targeted drills on your weak spots, one timed section simulation, and then re-test the exact skills you failed."
             },
             {
               "id": "b",
-              "text": "Use only untimed review until confidence feels high."
+              "text": "Just read your notes until you feel confident."
             },
             {
               "id": "c",
-              "text": "Rotate random topics daily with no retest queue."
+              "text": "Study random topics every day."
             },
             {
               "id": "d",
-              "text": "Delay all error correction until the final day."
+              "text": "Wait until the day before the exam to look at your mock again."
             }
           ],
           "correctOptionId": "a",
-          "hint": "Best plans combine remediation and timed validation.",
-          "explanation": "Transfer improves when learners re-encounter corrected skills under realistic constraints."
+          "hint": "Combine targeted fixing with realistic testing.",
+          "explanation": "This plan ensures you learn the fix, practice it under pressure, and verify that the gap is actually closed."
         },
         {
           "id": "a-level-prep-101-l15-q4",
-          "text": "In A-Level A-Level: Full Mock and Gap Closure, there are both content misses and pacing slips. What should the learner fix first?",
+          "text": "In your mock, you missed some content facts, but you also completely messed up the structure of two 25-mark essays. What do you fix first?",
           "skillId": "a-level-prep-101-skill-synoptic-links-priority",
           "options": [
             {
               "id": "a",
-              "text": "Tackle the rarest concept gap first for variety."
+              "text": "Focus on the obscure facts you missed."
             },
             {
               "id": "b",
-              "text": "Prioritize the repeated synoptic links process issue, then apply the same correction across the next timed block."
+              "text": "Prioritize fixing the essay structure, because that framework will secure marks across multiple questions."
             },
             {
               "id": "c",
-              "text": "Review only confidence items and skip timing analysis."
+              "text": "Only review the questions you got right."
             },
             {
               "id": "d",
-              "text": "Change resources without identifying what failed."
+              "text": "Buy a new textbook."
             }
           ],
           "correctOptionId": "b",
-          "hint": "Look for the answer that addresses recurrence.",
-          "explanation": "Recurring process errors compound quickly, so fixing them first creates cleaner conditions for content correction."
+          "hint": "Fix the problem that costs you the most marks.",
+          "explanation": "Structural errors in high-mark questions destroy your grade. Fixing the process yields a much higher return on investment than memorizing a few facts."
         },
         {
           "id": "a-level-prep-101-l15-q5",
-          "text": "In A-Level extended-response section, assertion without analytical link appears during A-Level: Full Mock and Gap Closure. What is the strongest immediate correction?",
+          "text": "Your mock feedback says your essays are 'too descriptive'. What is the strongest immediate correction?",
           "skillId": "a-level-prep-101-skill-depth-mastery-section-application",
           "options": [
             {
               "id": "a",
-              "text": "Ignore extended-response section diagnostics and continue for volume."
+              "text": "Ignore it and just write longer paragraphs."
             },
             {
               "id": "b",
-              "text": "Re-read notes without running a corrected attempt."
+              "text": "Re-read your notes."
             },
             {
               "id": "c",
-              "text": "Add explicit because-therefore reasoning after each claim."
+              "text": "Force yourself to use 'because... therefore...' reasoning after every claim you make."
             },
             {
               "id": "d",
-              "text": "Delay correction until after several unrelated drills."
+              "text": "Wait until the real exam to try analyzing."
             }
           ],
           "correctOptionId": "c",
-          "hint": "Choose the option that directly fixes assertion without analytical link.",
-          "explanation": "Immediate correction inside extended-response section improves transfer to the next timed section simulation."
+          "hint": "You need a rule that forces analysis.",
+          "explanation": "Using explicit analytical frameworks forces you to explain the significance of your points, instantly elevating your writing."
         },
         {
           "id": "a-level-prep-101-l15-q6",
-          "text": "During A-Level synoptic section, missing synoptic bridge repeats in A-Level: Full Mock and Gap Closure. Which plan should be applied before the next retest?",
+          "text": "You forgot to include synoptic links in your mock. What should you do before your next practice?",
           "skillId": "a-level-prep-101-skill-analysis-section-application",
           "options": [
             {
               "id": "a",
-              "text": "Switch to new content before validating the fix."
+              "text": "Study a different topic."
             },
             {
               "id": "b",
-              "text": "Increase speed without updating process controls."
+              "text": "Try to write faster."
             },
             {
               "id": "c",
-              "text": "Retake the section with no checkpoint changes."
+              "text": "Just take another paper and hope you remember."
             },
             {
               "id": "d",
-              "text": "Link at least two themes with one evaluative judgement statement. Track outcomes in an analysis depth tracker and retest the same pattern."
+              "text": "Practice writing specific sentences that link two themes, track your success, and force yourself to use them."
             }
           ],
           "correctOptionId": "d",
-          "hint": "Best plans combine targeted correction with measurable tracking.",
-          "explanation": "A logged correction cycle in analysis depth tracker makes the pacing fix visible and repeatable."
+          "hint": "Make the skill automatic through targeted practice.",
+          "explanation": "Pre-planning and drilling synoptic links ensures you don't forget them when under pressure."
         },
         {
           "id": "a-level-prep-101-l15-q7",
-          "text": "In a full A-Level mock, misses appear across multiple strands. What triage order is strongest?",
+          "text": "You got your mock back and you have mistakes everywhere. How do you triage your revision?",
           "skillId": "a-level-prep-101-skill-mock-triage",
           "options": [
             {
               "id": "a",
-              "text": "Group misses by concept, strategy, and timing first, then sequence fixes by expected score gain."
+              "text": "Group your mistakes into 'Content', 'Strategy', and 'Timing', then fix the ones that will gain you the most marks first."
             },
             {
               "id": "b",
-              "text": "Review only the most recent mistakes."
+              "text": "Just start from question 1 and review everything."
             },
             {
               "id": "c",
-              "text": "Retake the full mock without a remediation plan."
+              "text": "Take another mock immediately without reviewing."
             },
             {
               "id": "d",
-              "text": "Choose revision topics only by preference."
+              "text": "Only study the topics you like."
             }
           ],
           "correctOptionId": "a",
-          "hint": "The right choice creates a stable remediation queue.",
-          "explanation": "Process-level triage finds leverage points that improve many future items."
+          "hint": "Organize the chaos to find the highest leverage points.",
+          "explanation": "Categorizing errors helps you identify systemic issues (like timing) that, when fixed, will improve your score across the entire paper."
         },
         {
           "id": "a-level-prep-101-l15-q8",
-          "text": "A learner finishes one section early but times out on another in A-Level. What is the best pacing fix?",
+          "text": "You finished Section A early but ran out of time on Section B. What's the pacing fix?",
           "skillId": "a-level-prep-101-skill-section-pacing",
           "options": [
             {
               "id": "a",
-              "text": "Use the same checkpoint target for every section."
+              "text": "Use the exact same time limit for every section."
             },
             {
               "id": "b",
-              "text": "Set section-specific checkpoints and rehearse transitions so pace remains stable end-to-end."
+              "text": "Set specific time checkpoints based on the marks available for each section, and practice transitioning between them."
             },
             {
               "id": "c",
-              "text": "Speed up all sections equally without checking accuracy."
+              "text": "Just try to rush through Section A even faster next time."
             },
             {
               "id": "d",
-              "text": "Add extra questions without tracking section pace."
+              "text": "Ignore the clock and just focus on quality."
             }
           ],
           "correctOptionId": "b",
-          "hint": "Section load differences require section-level pacing plans.",
-          "explanation": "One-size pacing causes uneven performance; section-specific pacing is more reliable."
+          "hint": "Pacing must be proportional to the marks available.",
+          "explanation": "Different sections require different time allocations. Setting specific checkpoints ensures you don't steal time from high-value sections."
         },
         {
           "id": "a-level-prep-101-l15-q9",
-          "text": "Before submitting a high-stakes A-Level section, which quality-control habit is most reliable?",
+          "text": "You have 5 minutes left at the end of the exam. What is the most reliable way to check your work?",
           "skillId": "a-level-prep-101-skill-quality-control",
           "options": [
             {
               "id": "a",
-              "text": "Change random answers to distribute letters evenly."
+              "text": "Randomly change a few multiple-choice answers."
             },
             {
               "id": "b",
-              "text": "Skip verification to preserve confidence."
+              "text": "Close the paper and rest."
             },
             {
               "id": "c",
-              "text": "Run a brief targeted verification pass on flagged items and known error patterns."
+              "text": "Do a targeted check of the questions you flagged as difficult, and quickly scan for your known common errors (e.g., missing units)."
             },
             {
               "id": "d",
-              "text": "Review only the first third of the section."
+              "text": "Try to re-read the entire paper from the beginning."
             }
           ],
           "correctOptionId": "c",
-          "hint": "Targeted verification beats random checking.",
-          "explanation": "Focused verification catches preventable mistakes without excessive time cost."
+          "hint": "Be strategic with your final minutes.",
+          "explanation": "A targeted check of known weak spots and flagged questions is much more likely to catch errors than a panicked skim of the whole paper."
         },
         {
           "id": "a-level-prep-101-l15-q10",
-          "text": "After full-mock review in A-Level, which next-step plan yields the best one-week improvement?",
+          "text": "After reviewing this full mock, what is the best plan for the final week before the real exam?",
           "skillId": "a-level-prep-101-skill-remediation-loop",
           "options": [
             {
               "id": "a",
-              "text": "Repeat the same mock daily with no targeted fixes."
+              "text": "Do a full mock every single day."
             },
             {
               "id": "b",
-              "text": "Study only easiest content to boost confidence."
+              "text": "Only study the easy stuff to build confidence."
             },
             {
               "id": "c",
-              "text": "Pause all timed practice until every concept feels perfect."
+              "text": "Stop doing timed practice and just read notes."
             },
             {
               "id": "d",
-              "text": "Build a remediation sprint with two top weak strands, one pacing drill, and one timed re-check."
+              "text": "Run a targeted sprint on your top 2 weak areas, do a pacing drill, and crush one final timed check to prove you've leveled up."
             }
           ],
           "correctOptionId": "d",
-          "hint": "The strongest plan includes targeted fixes plus timed validation.",
-          "explanation": "Improvement requires focused remediation and a timed checkpoint to verify transfer."
+          "hint": "Balance targeted fixing with final verification.",
+          "explanation": "This plan prevents burnout while ensuring you fix your biggest weaknesses and verify your readiness under timed conditions."
         }
       ],
-      interactiveActivities: [
+      "interactiveActivities": [
         {
           "id": "a-level-prep-101-l15-ia1",
           "type": "sorting_buckets",
-          "title": "A-Level: Full Mock and Gap Closure Error Taxonomy Sort",
-          "description": "Sort mock errors into concept, strategy, or timing remediation lanes.",
+          "title": "Triage Your Mock Errors",
+          "description": "Sort your mock exam mistakes into the correct category so you know exactly how to fix them.",
           "estimatedMinutes": 10,
           "difficultyLevel": "adaptive",
           "instructions": [
-            "Review each error pattern.",
-            "Sort into best remediation lane.",
-            "Use output to plan your next practice sprint."
+            "Look at the common exam mistake.",
+            "Sort it into Content (Knowledge), Strategy (Analysis/Structure), or Timing.",
+            "Use this system to triage your own mock papers."
           ],
           "data": {
             "buckets": [
               {
                 "id": "concept",
-                "label": "Depth Knowledge Gap"
+                "label": "Content Gap (Knowledge)"
               },
               {
                 "id": "strategy",
-                "label": "Analysis Strategy Gap"
+                "label": "Strategy Gap (Structure/Analysis)"
               },
               {
                 "id": "timing",
-                "label": "Extended Response Timing Gap"
+                "label": "Timing Gap (Pacing)"
               }
             ],
             "items": [
               {
                 "id": "i1",
-                "label": "Synoptic link omitted between two core topics",
+                "label": "Forgot the definition of a key term.",
                 "correctBucketId": "concept"
               },
               {
                 "id": "i2",
-                "label": "Evaluation statement lacked explicit judgement criteria",
+                "label": "Wrote a great point but forgot to link it back to the question.",
                 "correctBucketId": "strategy"
               },
               {
                 "id": "i3",
-                "label": "Final essay conclusion truncated due pacing",
+                "label": "Only wrote two sentences for the final 25-mark essay.",
                 "correctBucketId": "timing"
               },
               {
                 "id": "i4",
-                "label": "Feedback noted but same structural gap reappeared",
-                "correctBucketId": "timing"
+                "label": "Didn't evaluate both sides of the argument.",
+                "correctBucketId": "strategy"
               }
             ]
           }
         }
       ],
-      quizBlueprint: {
+      "quizBlueprint": {
         "frequency": "mock_assessment",
         "questionsPerCheck": 10,
         "totalQuestions": 10,
@@ -1925,23 +2026,20 @@ export const ALevelPrep101Module: LearningModule = {
         "adaptive": false,
         "masteryThreshold": 0.82
       },
-      metadata: {
-        examDrill: "full_mock"
-      },
-      learningAids: [
+      "learningAids": [
         {
           "id": "a-level-prep-101-l15-a1",
           "type": "image",
-          "title": "Depth Mastery Snapshot",
-          "content": "Visual anchor for A-Level: Full Mock and Gap Closure with emphasis on depth mastery within section simulation planning."
+          "title": "The Post-Mock Autopsy",
+          "content": "A visual guide on how to break down your mock results and build a final revision plan."
         },
         {
           "id": "a-level-prep-101-l15-a2",
           "type": "animation",
-          "title": "Analysis Walkthrough",
-          "content": "Stepwise walkthrough for A-Level: Full Mock and Gap Closure showing analysis decisions and attempt-order sheet checks."
+          "title": "Closing the Gap",
+          "content": "An animation showing a student identifying a weak spot from a mock, drilling it, and successfully answering it in the real exam."
         }
       ]
     }
-  ],
+  ]
 };

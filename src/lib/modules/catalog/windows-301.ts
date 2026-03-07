@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const Windows301Module: LearningModule = {
+export const windows_301_Module: LearningModule = {
   "id": "windows-301",
   "title": "Windows Fleet Reliability, Security, and Performance Engineering",
   "description": "Advanced Windows engineering curriculum on fleet policy governance, endpoint telemetry, performance diagnosis, incident containment, and resilient operations design.",
@@ -16,7 +16,7 @@ export const Windows301Module: LearningModule = {
   ],
   "minAge": 15,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en"
@@ -41,19 +41,19 @@ export const Windows301Module: LearningModule = {
           "id": "windows-301-l01-c1",
           "kind": "concept",
           "title": "Policy at Scale",
-          "content": "In large environments that use Windows, it is important to have a set of basic policies that are well-defined, can be tested, and are applied consistently. When individuals make random changes locally, it can lead to inconsistencies and unexpected problems. By having a structured approach, we can ensure that everyone is following the same guidelines, which helps maintain stability and reliability across the system.\nContext recap: In large environments that use Windows, it is important to have a set of basic policies that are well-defined, can be tested, and are applied consistently. When individuals make random changes locally, it can lead to inconsistencies and unexpected problems. By having a structured approach, we can ensure that everyone is following the same guidelines, which helps maintain stability and reliability across the system."
+          "content": "In large Windows environments, establishing a well-defined, testable, and consistently applied set of core policies is critical. When administrators or users make ad-hoc local changes, it leads to configuration drift, inconsistencies, and unpredictable system behavior. A structured governance approach ensures uniform guidelines, maintaining stability and reliability across the entire fleet."
         },
         {
           "id": "windows-301-l01-c2",
           "kind": "concept",
           "title": "Ringed Policy Promotion",
-          "content": "When making changes to policies, it is best to do so gradually and in a controlled manner. This means introducing changes to small groups first and checking their effectiveness before rolling them out to everyone. By having clear checkpoints to assess the health of the system, we can reduce the chances of widespread issues that might arise from poorly tested changes.\nContext recap: When making changes to policies, it is best to do so gradually and in a controlled manner. This means introducing changes to small groups first and checking their effectiveness before rolling them out to everyone. By having clear checkpoints to assess the health of the system, we can reduce the chances of widespread issues that might arise from poorly tested changes."
+          "content": "When deploying policy changes, it is best practice to use a phased, controlled rollout. This involves introducing changes to small, low-risk groups (rings) first, validating their effectiveness and system health, before expanding to the broader fleet. Establishing clear promotion gates reduces the risk of widespread outages caused by untested configurations."
         },
         {
           "id": "windows-301-l01-c3",
           "kind": "recap",
           "title": "Governance Rhythm",
-          "content": "Effective teams that manage endpoints regularly check for any discrepancies, review exceptions, and gather evidence to ensure compliance with policies. This ongoing process helps maintain smooth operations and allows teams to quickly identify and address any issues that may arise, ensuring that everything runs as expected.\nContext recap: Effective teams that manage endpoints regularly check for any discrepancies, review exceptions, and gather evidence to ensure compliance with policies. This ongoing process helps maintain smooth operations and allows teams to quickly identify and address any issues that may arise, ensuring that everything runs as expected."
+          "content": "Effective endpoint management teams establish a regular rhythm for auditing policy drift, reviewing exceptions, and gathering compliance evidence. This continuous feedback loop helps maintain smooth operations, allowing teams to quickly identify anomalies and ensure the fleet remains secure and compliant."
         }
       ],
       "flashcards": [
@@ -78,7 +78,7 @@ export const Windows301Module: LearningModule = {
           "id": "windows-301-l01-a1",
           "type": "image",
           "title": "Windows Fleet Governance Model",
-          "content": "Model of baseline policy lifecycle, rollout rings, and exception controls."
+          "content": "Visual prompt: A flowchart illustrating the baseline policy lifecycle, showing deployment rings (e.g., Canary, Fast, Broad) and a side-process for exception controls."
         }
       ]
     },
@@ -92,13 +92,13 @@ export const Windows301Module: LearningModule = {
           "id": "windows-301-l02-c1",
           "kind": "concept",
           "title": "Multi-Signal Diagnosis",
-          "content": "When we face challenges with endpoints, it's usually because the CPU, memory, disk, and network are all working together in complex ways. To truly understand and fix these problems, we must examine all these signals at the same time. This method is crucial because it helps us avoid making mistakes in identifying the actual cause of the issue. By doing so, we can develop better and more effective solutions to the problems we encounter.\nContext recap: When we face challenges with endpoints, it's usually because the CPU, memory, disk, and network are all working together in complex ways. To truly understand and fix these problems, we must examine all these signals at the same time. This method is crucial because it helps us avoid making mistakes in identifying the actual cause of the issue. By doing so, we can develop better and more effective solutions to the problems we encounter.\nContext recap: When we face challenges with endpoints, it's usually because the CPU, memory, disk, and network are all working together in complex ways. To truly understand and fix these problems, we must examine all these signals at the same time. This method is crucial because it helps us avoid making mistakes in identifying the actual cause of the issue. By doing so, we can develop better and more effective solutions to the problems we encounter.\nWhy this matters: Multi-Signal Diagnosis helps learners in Operating Systems connect ideas from Windows Fleet Reliability, Security, and Performance Engineering to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "Endpoint performance issues rarely stem from a single source; CPU, memory, disk, and network resources interact in complex ways. To accurately diagnose root causes, engineers must correlate multiple telemetry signals simultaneously. This multi-signal approach prevents misdiagnosis and ensures effective remediation.\n\nStep-by-step approach:\n1. Define the investigation goal.\n2. Gather cross-domain evidence.\n3. Analyze how each signal impacts your hypothesis.\n4. Verify the conclusion against the initial constraints."
         },
         {
           "id": "windows-301-l02-c2",
           "kind": "practice",
           "title": "Evidence-First Response",
-          "content": "Before making any major changes to policies, it is crucial to gather baseline data about the system's performance and correlate it with any user impact over time. By doing this, we can implement temporary fixes that can be reversed if necessary, ensuring that we do not disrupt the entire system without understanding the full impact of our changes.\nContext recap: Before making any major changes to policies, it is crucial to gather baseline data about the system's performance and correlate it with any user impact over time. By doing this, we can implement temporary fixes that can be reversed if necessary, ensuring that we do not disrupt the entire system without understanding the full impact of our changes."
+          "content": "Before applying broad policy changes during an incident, it is crucial to capture baseline performance data and correlate it with user impact. This evidence-first approach allows engineers to implement targeted, low-risk mitigations that can be easily rolled back, preventing further disruption while the root cause is investigated."
         }
       ],
       "interactiveActivities": [
@@ -149,7 +149,7 @@ export const Windows301Module: LearningModule = {
           "id": "windows-301-l02-a1",
           "type": "practice",
           "title": "Performance Investigation Sheet",
-          "content": "Template for timeline, signal capture, hypothesis ranking, and test outcomes."
+          "content": "Visual prompt: A digital worksheet template displaying a timeline axis, sections for capturing CPU/Memory/Disk/Network signals, a hypothesis ranking table, and a test outcome log."
         }
       ]
     },
@@ -265,7 +265,7 @@ export const Windows301Module: LearningModule = {
           "id": "windows-301-l03-a1",
           "type": "mnemonic",
           "title": "BASE",
-          "content": "Baseline, Analyze, Stabilize, Evaluate."
+          "content": "Visual prompt: A stylized shield icon divided into four quadrants, each containing one letter of the BASE acronym: Baseline, Analyze, Stabilize, Evaluate."
         }
       ]
     },
@@ -279,19 +279,19 @@ export const Windows301Module: LearningModule = {
           "id": "windows-301-l04-c1",
           "kind": "concept",
           "title": "Defense-in-Depth Endpoint Baseline",
-          "content": "A strong strategy for hardening Windows systems involves multiple layers of protection. This includes controls to safeguard endpoints, measures to protect user identities, strict enforcement of policies, and automated checks to ensure compliance. By combining these elements, we can create a more secure environment that is resilient against threats.\nContext recap: A strong strategy for hardening Windows systems involves multiple layers of protection. This includes controls to safeguard endpoints, measures to protect user identities, strict enforcement of policies, and automated checks to ensure compliance. By combining these elements, we can create a more secure environment that is resilient against threats."
+          "content": "A robust Windows hardening strategy relies on defense-in-depth—layering multiple security controls to protect the system. This includes endpoint safeguards, identity protection, strict policy enforcement, and automated compliance checks. Together, these layers create a resilient environment capable of withstanding diverse cyber threats."
         },
         {
           "id": "windows-301-l04-c2",
           "kind": "concept",
           "title": "Evidence Quality",
-          "content": "To ensure that operations are ready for audits, it is essential to maintain clear records of policy versions, compliance snapshots, timelines for remediation, and histories of any exceptions. This documentation not only helps in demonstrating compliance but also aids in identifying areas for improvement.\nContext recap: To ensure that operations are ready for audits, it is essential to maintain clear records of policy versions, compliance snapshots, timelines for remediation, and histories of any exceptions. This documentation not only helps in demonstrating compliance but also aids in identifying areas for improvement."
+          "content": "To maintain audit readiness, organizations must keep meticulous records of policy versions, compliance snapshots, remediation timelines, and exception histories. High-quality documentation not only proves regulatory compliance but also highlights systemic vulnerabilities and areas for operational improvement."
         },
         {
           "id": "windows-301-l04-c3",
           "kind": "recap",
           "title": "Usability and Security Balance",
-          "content": "It is important to test security controls in real-world scenarios to ensure they do not create unnecessary obstacles for users. If controls are too cumbersome, users may find ways to bypass them, which can lead to security risks. Striking a balance between usability and security is key to maintaining a safe and efficient environment.\nContext recap: It is important to test security controls in real-world scenarios to ensure they do not create unnecessary obstacles for users. If controls are too cumbersome, users may find ways to bypass them, which can lead to security risks. Striking a balance between usability and security is key to maintaining a safe and efficient environment."
+          "content": "Security controls must be tested against real-world user workflows to prevent excessive friction. If security measures are too restrictive, users often find dangerous workarounds, inadvertently increasing organizational risk. Striking the right balance between robust security and seamless usability is essential for a healthy IT ecosystem."
         }
       ],
       "flashcards": [
@@ -316,7 +316,7 @@ export const Windows301Module: LearningModule = {
           "id": "windows-301-l04-a1",
           "type": "image",
           "title": "Hardening Evidence Pipeline",
-          "content": "Pipeline showing policy definition, enforcement telemetry, and exception review."
+          "content": "Visual prompt: A pipeline diagram showing data flowing from 'Policy Definition' to 'Enforcement Telemetry', ending at a 'Compliance & Exception Review' dashboard."
         }
       ]
     },
@@ -330,13 +330,13 @@ export const Windows301Module: LearningModule = {
           "id": "windows-301-l05-c1",
           "kind": "practice",
           "title": "Containment Under Pressure",
-          "content": "When a serious incident occurs that affects computer endpoints, it is crucial for teams to respond swiftly and effectively. They must work to contain the situation while keeping risks as low as possible. This means taking careful steps to preserve any evidence related to the incident, which can help in understanding what happened. Additionally, teams should focus on preventing any further outages, which could disrupt services even more. Acting quickly and thoughtfully is key to managing the incident successfully and ensuring that systems can be restored to normal operations as soon as possible.\nContext recap: When a serious incident occurs that affects computer endpoints, it is crucial for teams to respond swiftly and effectively. They must work to contain the situation while keeping risks as low as possible. This means taking careful steps to preserve any evidence related to the incident, which can help in understanding what happened. Additionally, teams should focus on preventing any further outages, which could disrupt services even more."
+          "content": "During high-severity endpoint incidents, rapid and coordinated response is critical. Incident commanders must balance swift containment with risk minimization. This involves preserving forensic evidence for root-cause analysis while applying targeted mitigations to prevent further service degradation. Decisive, well-documented actions ensure systems are restored safely and efficiently."
         },
         {
           "id": "windows-301-l05-c2",
           "kind": "recap",
           "title": "Learning System",
-          "content": "When an incident happens, we need to carefully look at what went wrong and learn from it. This process involves taking the lessons we learned and turning them into specific actions that we can take to improve our systems. This means we might need to update our policies to reflect these changes and set clear, measurable goals to ensure that similar incidents do not happen again. By learning from our past experiences, we can make our systems stronger and more reliable for everyone involved.\nContext recap: When an incident happens, we need to carefully look at what went wrong and learn from it. This process involves taking the lessons we learned and turning them into specific actions that we can take to improve our systems. This means we might need to update our policies to reflect these changes and set clear, measurable goals to ensure that similar incidents do not happen again. By learning from our past experiences, we can make our systems stronger and more reliable for everyone involved.\nContext recap: When an incident happens, we need to carefully look at what went wrong and learn from it. This process involves taking the lessons we learned and turning them into specific actions that we can take to improve our systems. This means we might need to update our policies to reflect these changes and set clear, measurable goals to ensure that similar incidents do not happen again. By learning from our past experiences, we can make our systems stronger and more reliable for everyone involved.\nWhy this matters: Learning System helps learners in Operating Systems connect ideas from Windows Fleet Reliability, Security, and Performance Engineering to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "Post-incident analysis transforms operational failures into systemic improvements. This process requires translating lessons learned into actionable, owned tasks—such as updating baseline policies, adjusting telemetry alerts, and setting measurable prevention goals. A mature learning system ensures that the same incident does not occur twice, continuously strengthening fleet resilience."
         }
       ],
       "interactiveActivities": [
@@ -397,7 +397,7 @@ export const Windows301Module: LearningModule = {
           "id": "windows-301-l05-a1",
           "type": "practice",
           "title": "Incident Governance Template",
-          "content": "Template for command role, containment actions, rollback, and prevention owners."
+          "content": "Visual prompt: A structured incident response dashboard mockup featuring fields for Command Role, Active Containment Actions, Rollback Procedures, and Prevention Task Owners."
         }
       ]
     },
@@ -513,7 +513,7 @@ export const Windows301Module: LearningModule = {
           "id": "windows-301-l06-a1",
           "type": "mnemonic",
           "title": "SHIELD",
-          "content": "Scope, Harden, Investigate, Escalate, Learn, Document."
+          "content": "Visual prompt: An infographic of a tactical shield, spelling out SHIELD vertically with corresponding icons for Scope, Harden, Investigate, Escalate, Learn, and Document."
         }
       ]
     }

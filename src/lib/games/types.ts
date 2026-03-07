@@ -3,6 +3,9 @@ export const GAME_TYPES = [
   "word-builder",
   "number-crunch",
   "pattern-train",
+  "garden-patch-planner",
+  "bug-trail-balancer",
+  "cloud-crew-forecast",
   "story-sequencer",
   "memory-match",
   "color-mixer",
@@ -12,12 +15,12 @@ export const GAME_TYPES = [
 export type GameType = (typeof GAME_TYPES)[number];
 
 /**
- * Validates that a string is either a legacy 8-game type OR a valid
+ * Validates that a string is either a core game type OR a valid
  * catalog game ID (e.g. "math-quiz-001"). Catalog IDs follow the
  * pattern: lowercase letters/digits/hyphens, 5-30 chars.
  */
 export function isValidGameId(value: string): boolean {
-  // Legacy 8 types
+  // Registered core game types
   if ((GAME_TYPES as readonly string[]).includes(value)) return true;
   // Catalog IDs follow a strict pattern: category-mechanic-NNN
   return /^[a-z][a-z0-9-]{3,29}$/.test(value);
@@ -133,3 +136,4 @@ export function isGameType(value: string): value is GameType {
 export function isGameDifficulty(value: string): value is GameDifficulty {
   return (GAME_DIFFICULTIES as readonly string[]).includes(value);
 }
+

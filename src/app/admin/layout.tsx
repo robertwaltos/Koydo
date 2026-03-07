@@ -1,7 +1,15 @@
 import { redirect } from "next/navigation";
+import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import DashShell, { type DashNavGroup } from "@/app/components/ui/dash-shell";
+import AdminBridgeSidebar from "./admin-bridge-sidebar";
+import { AdminProvider } from "./admin-context";
+
+export const metadata: Metadata = {
+  title: "Admin Console — Koydo",
+  robots: { index: false, follow: false },
+};
 
 const SUPPORT_NAV: DashNavGroup[] = [
   {
@@ -140,13 +148,16 @@ export default async function AdminLayout({ children }: { children: ReactNode })
       : "Developer Tools";
 
   return (
-    <DashShell
-      navGroups={isSupportOnly ? SUPPORT_NAV : ADMIN_NAV}
-      productName={productName}
-      productSubtitle={productSubtitle}
-      userLabel={user.email ?? "Admin"}
-    >
-      {children}
-    </DashShell>
+    <AdminProvider>
+      <DashShell
+        navGroups={isSupportOnly ? SUPPORT_NAV : ADMIN_NAV}
+        productName={productName}
+        productSubtitle={productSubtitle}
+        userLabel={user.email ?? "Admin"}
+        rightSidebar={<AdminBridgeSidebar />}
+      >
+        {children}
+      </DashShell>
+    </AdminProvider>
   );
 }

@@ -31,6 +31,18 @@ const ROUTE_GUARDS = [
     mustInclude: ["enforceIpRateLimit", "api:tts:generate:post"],
   },
   {
+    file: "src/app/api/auth/device/init/route.ts",
+    mustInclude: ["enforceIpRateLimit", "api:auth:device:init:post", "max: 10"],
+  },
+  {
+    file: "src/app/api/auth/device/poll/route.ts",
+    mustInclude: ["enforceIpRateLimit", "api:auth:device:poll:post", "max: 60"],
+  },
+  {
+    file: "src/app/api/auth/device/approve/route.ts",
+    mustInclude: ["enforceIpRateLimit", "api:auth:device:approve:post", "max: 15"],
+  },
+  {
     file: "src/app/api/images/generate/route.ts",
     mustInclude: ["enforceIpRateLimit", "api:images:generate:post"],
   },

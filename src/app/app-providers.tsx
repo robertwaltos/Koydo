@@ -13,6 +13,7 @@ import PlatformLifecycleProvider from "./platform-lifecycle-provider";
 import PlatformClassProvider from "./components/platform-class-provider";
 import OfflineRuntimeProvider from "./components/offline-runtime-provider";
 import { ExperienceProvider } from "@/lib/gamification/experience-context";
+import { ZenModeProvider } from "@/lib/theme/zen-mode-context";
 import { FeatureProvider } from "@/lib/platform/feature-context";
 import { CompanionPreferencesProvider } from "@/lib/greeter/companion-preferences";
 import { AccessibilityProvider } from "@/lib/accessibility/accessibility-context";
@@ -63,6 +64,7 @@ export default function AppProviders({ children }: { children: ReactNode }) {
                     to the entire tree. Owns: src/lib/gamification/ */}
                 <AccessibilityProvider>
                 <FeatureProvider>
+                <ZenModeProvider>
                 <ExperienceProvider>
                   <CompanionPreferencesProvider>
                   <MixpanelProvider>
@@ -76,6 +78,7 @@ export default function AppProviders({ children }: { children: ReactNode }) {
                   </MixpanelProvider>
                   </CompanionPreferencesProvider>
                 </ExperienceProvider>
+                </ZenModeProvider>
                 </FeatureProvider>
                 </AccessibilityProvider>
               </OfflineRuntimeProvider>

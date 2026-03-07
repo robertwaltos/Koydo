@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const Macos401Module: LearningModule = {
+export const macos_401_Module: LearningModule = {
   "id": "macos-401",
   "title": "Apple Platform Strategy, Governance, and Enterprise Reliability",
   "description": "Expert-level macOS and Apple endpoint strategy curriculum focused on platform governance, fleet economics, supply-chain trust, severe incident leadership, and multi-year transformation planning.",
@@ -16,7 +16,7 @@ export const Macos401Module: LearningModule = {
   ],
   "minAge": 17,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en"
@@ -40,20 +40,20 @@ export const Macos401Module: LearningModule = {
         {
           "id": "macos-401-l01-c1",
           "kind": "concept",
-          "title": "Centralized vs Federated Endpoint Ownership",
-          "content": "In big companies, it's crucial to think about who is in charge of the devices that employees use every day. There are three main ways to organize this control: first, a central team that oversees everything from one place; second, individual teams that specialize in different areas, like marketing or finance; and third, a combination of both approaches. Each of these methods has its own strengths and weaknesses. For example, a central team might make decisions faster, but specialized teams can provide more tailored support. It's important to find the right balance to ensure that the devices are managed effectively while also being responsive to the needs of different departments."
+          "title": "Centralized vs. Federated Endpoint Ownership",
+          "content": "Enterprise endpoint management requires a deliberate operating model. The primary models are centralized, where a single IT team governs the entire fleet for maximum standardization; federated, where business units manage their own endpoints for greater autonomy; and hybrid, which blends central governance with delegated execution. The choice involves trade-offs between consistency, speed, and responsiveness to specific business needs. \n\n[Visual: A diagram comparing Centralized, Federated, and Hybrid models across axes of 'Standardization' and 'Business Unit Autonomy']."
         },
         {
           "id": "macos-401-l01-c2",
           "kind": "concept",
           "title": "Decision Rights and Escalation",
-          "content": "In the world of technology, making important decisions is a big responsibility. For example, when there is a need to quickly update the operating system or deal with an emergency situation, it is essential to know exactly who is in charge of making those decisions. Having clear authority boundaries helps everyone understand their roles and responsibilities. If these boundaries are not clearly defined, it can lead to confusion and slow down the response time during critical moments. This can make it much more challenging to manage and resolve issues effectively, which is why clarity in decision-making is so important."
+          "content": "Effective governance hinges on clearly defined decision rights. Ambiguity in authority, especially for high-stakes actions like emergency patching or policy rollbacks, creates unacceptable delays during incidents. A formal framework, such as a RACI (Responsible, Accountable, Consulted, Informed) matrix, should map specific decisions to designated roles, ensuring clear ownership and predictable escalation paths. \n\n[Visual: A sample RACI chart for common endpoint management decisions like 'Approve OS Update' or 'Declare Severe Incident']."
         },
         {
           "id": "macos-401-l01-c3",
           "kind": "recap",
           "title": "Operating Rhythm",
-          "content": "To ensure that endpoint operations run smoothly, it is important to have a regular schedule or rhythm. This includes conducting weekly reviews to assess risks, monthly evaluations of reliability and compliance, and quarterly planning sessions to address any architectural debts. This structured approach helps maintain a high level of operational effectiveness.\nContext recap: To ensure that endpoint operations run smoothly, it is important to have a regular schedule or rhythm. This includes conducting weekly reviews to assess risks, monthly evaluations of reliability and compliance, and quarterly planning sessions to address any architectural debts. This structured approach helps maintain a high level of operational effectiveness."
+          "content": "A consistent operating rhythm, or cadence, translates strategy into execution. This schedule of recurring meetings and reviews ensures continuous alignment and accountability. Key elements include weekly risk and change reviews, monthly reliability and compliance assessments, and quarterly strategic planning sessions to prioritize architectural improvements and address technical debt. \n\n[Visual: A timeline graphic illustrating a quarterly operating rhythm with weekly, monthly, and quarterly review milestones.]"
         }
       ],
       "flashcards": [
@@ -77,8 +77,8 @@ export const Macos401Module: LearningModule = {
         {
           "id": "macos-401-l01-a1",
           "type": "image",
-          "title": "Endpoint Operating Model Map",
-          "content": "Comparison map of centralized, federated, and hybrid endpoint models."
+          "title": "Endpoint Operating Model Comparison Matrix",
+          "content": "Comparison matrix of centralized, federated, and hybrid endpoint models showing trade-offs."
         }
       ]
     },
@@ -92,13 +92,13 @@ export const Macos401Module: LearningModule = {
           "id": "macos-401-l02-c1",
           "kind": "concept",
           "title": "Release Blast Radius and Health Gates",
-          "content": "When we release updates for macOS devices, we need to be aware of certain challenges that can cause problems. These challenges might include changes in drivers, which are essential for hardware to communicate with the operating system, compatibility issues with applications that may not work well with the new update, or conflicts with existing policies that govern how devices should operate. To effectively manage these risks and ensure a smooth update process, it is crucial to adopt strong governance practices. This includes implementing phased rollouts, where updates are gradually introduced to a small group of users before a wider release. Additionally, we should conduct health checks to continuously monitor the performance and status of the updates. If any issues arise, having rollback triggers in place allows us to quickly revert to the previous version, minimizing disruption for users."
+          "content": "Staged rollouts are a fundamental control to limit the 'blast radius' of a potential failure. By deploying changes to progressively larger cohorts (e.g., IT team, pilot users, 10% of fleet), we can validate stability against measurable health gates. These gates are telemetry-driven thresholds for metrics like crash rates or support ticket volume. If a gate is breached, automated triggers should halt the rollout or initiate a rollback. \n\n[Visual: A funnel diagram showing rollout rings from 'Ring 0: IT' to 'Ring 3: Full Fleet', with quality gates between each ring.]"
         },
         {
           "id": "macos-401-l02-c2",
           "kind": "practice",
-          "title": "Policy Lifecycle",
-          "content": "To ensure that software releases are reliable, it is important to follow a structured governance process. This includes creating clear standards for writing policies, running simulations to test them, verifying them through pilot programs, deploying them in stages, collecting real-time data during operation, and having criteria for when to retire or revise policies. This comprehensive approach helps maintain high quality in software releases.\nContext recap: To ensure that software releases are reliable, it is important to follow a structured governance process. This includes creating clear standards for writing policies, running simulations to test them, verifying them through pilot programs, deploying them in stages, collecting real-time data during operation, and having criteria for when to retire or revise policies. This comprehensive approach helps maintain high quality in software releases."
+          "title": "Policy Lifecycle Management",
+          "content": "A robust policy lifecycle ensures that endpoint configurations are managed with the same rigor as production code. This lifecycle includes distinct stages: authoring against defined standards, validation via simulation, verification in a pilot deployment, staged production rollout with monitoring, an operational phase with performance tracking, and finally, a defined process for deprecation and retirement. \n\n[Visual: An infinity loop diagram illustrating the policy lifecycle: Author -> Test -> Pilot -> Deploy -> Monitor -> Retire/Revise.]"
         }
       ],
       "interactiveActivities": [
@@ -186,7 +186,7 @@ export const Macos401Module: LearningModule = {
         },
         {
           "id": "macos-401-l03-q2",
-          "text": "Most damaging governance gap during severe incidents is:",
+          "text": "The most damaging governance gap during severe incidents is:",
           "skillId": "macos-401-skill-incident",
           "options": [
             {
@@ -236,7 +236,7 @@ export const Macos401Module: LearningModule = {
         },
         {
           "id": "macos-401-l03-q4",
-          "text": "What is the primary value of endpoint exception registers?",
+          "text": "What is the primary value of an endpoint exception register?",
           "skillId": "macos-401-skill-governance",
           "options": [
             {
@@ -279,19 +279,19 @@ export const Macos401Module: LearningModule = {
           "id": "macos-401-l04-c1",
           "kind": "concept",
           "title": "Cost of Endpoint Failure",
-          "content": "When devices, known as endpoints, stop working properly, it can cause a variety of costs for a company. These costs can be both direct and indirect. For example, when employees can't use their devices, they lose valuable time, which means less work gets done. Additionally, more people may need help from the support team, leading to a spike in requests for assistance. Fixing these issues often requires extra work from staff, which can also be costly. Furthermore, if users feel that their devices are unreliable, it can hurt their trust in the company. Because of these reasons, it's crucial for organizations to carefully consider their investments in technology. They should focus on how much they can lower these potential costs that come from device failures, ensuring a more reliable experience for everyone involved."
+          "content": "Quantifying the cost of endpoint failure is essential for justifying reliability investments. These costs extend beyond direct IT support hours to include lost employee productivity, increased support ticket volume, engineering effort for incident response, and intangible costs like reputational damage. Framing investments in terms of 'cost of failure' reduction provides a powerful economic rationale. \n\n[Visual: An iceberg diagram where the 'tip' is 'IT Support Costs' and the submerged part includes 'Lost Productivity', 'Business Disruption', and 'Reputational Damage']."
         },
         {
           "id": "macos-401-l04-c2",
           "kind": "concept",
-          "title": "Portfolio Lens",
-          "content": "When prioritizing initiatives for the platform, it is important to consider several factors. These include how critical the dependencies are, how often incidents occur, the challenges users face when adopting new features, and the confidence in the ability to mitigate risks. Often, foundational controls that ensure stability and security can be more beneficial than focusing solely on high-visibility features.\nContext recap: When prioritizing initiatives for the platform, it is important to consider several factors. These include how critical the dependencies are, how often incidents occur, the challenges users face when adopting new features, and the confidence in the ability to mitigate risks. Often, foundational controls that ensure stability and security can be more beneficial than focusing solely on high-visibility features."
+          "title": "A Portfolio Lens for Prioritization",
+          "content": "Platform strategy requires a portfolio approach, balancing foundational stability with feature delivery. Initiatives should be evaluated through multiple lenses: dependency criticality, incident frequency and impact, user adoption friction, and mitigation confidence. Often, the highest value work involves strengthening core controls (e.g., deployment automation, monitoring) that enable all other features to be delivered more safely. \n\n[Visual: A 2x2 prioritization matrix with 'Business Impact' on the Y-axis and 'Implementation Effort' on the X-axis.]"
         },
         {
           "id": "macos-401-l04-c3",
           "kind": "example",
           "title": "Executive Framing",
-          "content": "When you are making strategic recommendations, it is very important to clearly express the expected measurable impacts and the assumptions that support them. For example, you could say, 'By implementing managed rollout health gates, we anticipate a reduction in the number of serious release incidents by 30% over the next two quarters.' This kind of clarity is crucial because it helps everyone involved understand the potential benefits of the proposed actions and how they can positively affect the project. Clear communication ensures that all stakeholders are on the same page and can make informed decisions based on the expected outcomes."
+          "content": "Strategic recommendations must be framed for an executive audience by translating technical initiatives into measurable business outcomes. For example: 'We recommend investing in automated release health gates. We project this will reduce P1/P2 release incidents by 30% within two quarters, saving an estimated 500 hours of lost productivity per incident.' This connects the 'what' to the 'so what' for decision-makers. \n\n[Visual: A template of a single slide for an executive recommendation, with sections for 'Problem', 'Proposed Solution', 'Expected Outcome (Metric)', and 'Required Investment']."
         }
       ],
       "flashcards": [
@@ -315,7 +315,7 @@ export const Macos401Module: LearningModule = {
         {
           "id": "macos-401-l04-a1",
           "type": "image",
-          "title": "Endpoint Investment Matrix",
+          "title": "Endpoint Investment Prioritization Matrix",
           "content": "Matrix ranking initiatives by risk reduction potential and delivery effort."
         }
       ]
@@ -330,13 +330,13 @@ export const Macos401Module: LearningModule = {
           "id": "macos-401-l05-c1",
           "kind": "concept",
           "title": "Trust Boundaries in Endpoint Delivery",
-          "content": "The trustworthiness of a platform relies on several key factors. These include ensuring that the source of the software is authentic, that the integrity of the packages is maintained, that there are controls in place for distribution, and that policies are enforced before the software is deployed on endpoints. These elements are crucial for maintaining a secure and reliable environment.\nContext recap: The trustworthiness of a platform relies on several key factors. These include ensuring that the source of the software is authentic, that the integrity of the packages is maintained, that there are controls in place for distribution, and that policies are enforced before the software is deployed on endpoints. These elements are crucial for maintaining a secure and reliable environment."
+          "content": "A trusted endpoint platform requires a secure software supply chain with explicit trust boundaries. Every stage—from upstream source code, to the internal build pipeline, to distribution and deployment—is a potential vector for compromise. Provenance assurance involves implementing controls at each boundary, such as code signing, dependency scanning, and deployment admission controllers, to verify artifact integrity and origin. \n\n[Visual: A linear diagram of the software supply chain (Source -> Build -> Package -> Distribute -> Deploy) with security control icons at each stage.]"
         },
         {
           "id": "macos-401-l05-c2",
           "kind": "practice",
-          "title": "Release Assurance Workflow",
-          "content": "To maintain a high level of trust in release operations, it is important to have a workflow that includes several components. This should consist of evidence of signing, metadata that shows the origin of the software, records of approvals, and workflows for handling exceptions that include expiration dates and review processes. These practices help ensure that releases are secure and trustworthy.\nContext recap: To maintain a high level of trust in release operations, it is important to have a workflow that includes several components. This should consist of evidence of signing, metadata that shows the origin of the software, records of approvals, and workflows for handling exceptions that include expiration dates and review processes. These practices help ensure that releases are secure and trustworthy."
+          "title": "High-Assurance Release Workflow",
+          "content": "A high-assurance release workflow makes trust auditable. Key components include: mandatory cryptographic signing of all artifacts, verifiable metadata linking a package to its source and build job, a formal approval log, and a strictly governed exception workflow with mandatory expiration dates. This creates an auditable chain of custody for every artifact. \n\n[Visual: A flowchart of a release workflow showing a package moving through 'Code Commit', 'Automated Build & Sign', 'Security Scan', 'Manager Approval', and 'Deploy' stages.]"
         }
       ],
       "interactiveActivities": [
@@ -384,7 +384,7 @@ export const Macos401Module: LearningModule = {
         "prompts": [
           "Which release evidence should be mandatory for production promotion?",
           "How do you balance release speed with provenance assurance?",
-          "What signal should trigger immediate release freeze?"
+          "What signal should trigger an immediate release freeze?"
         ]
       },
       "learningAids": [
@@ -404,7 +404,7 @@ export const Macos401Module: LearningModule = {
       "questions": [
         {
           "id": "macos-401-l06-q1",
-          "text": "Best metric pair for prioritizing endpoint reliability programs is:",
+          "text": "The best metric pair for prioritizing endpoint reliability programs is:",
           "skillId": "macos-401-skill-strategy",
           "options": [
             {
@@ -547,13 +547,13 @@ export const Macos401Module: LearningModule = {
           "id": "macos-401-l07-c1",
           "kind": "practice",
           "title": "Capstone Brief",
-          "content": "In this capstone project, you will have the exciting opportunity to develop a comprehensive proposal aimed at transforming the enterprise Apple platform over the next two years. Your proposal should thoughtfully consider and balance several key factors, including reliability, security, user productivity, and cost-effectiveness. Furthermore, it is essential to include a governance model that outlines how decisions will be made and who will be responsible for them. You will also need to create a portfolio of controls that will help manage risks and ensure compliance. Lastly, be sure to set clear and achievable milestones for each quarter, so progress can be tracked effectively throughout the transformation process."
+          "content": "For your capstone project, you will develop a two-year strategic proposal for transforming an enterprise Apple platform. Your proposal must synthesize the concepts from this curriculum, presenting a balanced roadmap that enhances reliability, security, and user productivity while remaining cost-effective. The proposal must include a defined governance model, a portfolio of prioritized initiatives with clear controls, and a quarterly roadmap with measurable milestones."
         },
         {
           "id": "macos-401-l07-c2",
           "kind": "recap",
           "title": "Assessment Criteria",
-          "content": "High-quality proposals should clearly define measurable outcomes, which are specific goals that can be tracked and evaluated. Additionally, they must consider the sequence of dependencies, meaning that the order of tasks is important for successful completion. It is also crucial to explicitly accept risks, acknowledging potential challenges that may arise during the project. Finally, accountability must be assigned to owners for each phase of the project, ensuring that everyone knows their responsibilities. This structured approach helps to ensure that all aspects of the proposal are well thought out and can be effectively implemented, leading to a successful transformation of the Apple platform in an enterprise setting."
+          "content": "Proposals will be assessed on their strategic clarity and operational feasibility. Key evaluation criteria include: the definition of measurable outcomes (KPIs), a logical sequencing of initiatives that respects dependencies, a transparent accounting of key risks and proposed mitigations, and clear assignment of ownership and accountability for each major milestone. The proposal should be presented as a formal document suitable for executive review. \n\n[Visual: A sample scoring rubric with criteria like 'Clarity of Objectives', 'Economic Rationale', 'Risk Management', and 'Roadmap Feasibility' rated on a 1-5 scale.]"
         }
       ],
       "metadata": {

@@ -3,7 +3,7 @@ import type { LearningModule } from "@/lib/modules/types";
 export const Gardening601Module: LearningModule = {
   "id": "gardening-601",
   "title": "Gardening Research and Leadership",
-  "description": "Post-401 specialization in Gardening, focused on agriculture systems diagnostics, agriculture operations and execution design, agriculture impact and tradeoff analysis, and agriculture governance and leadership through advanced casework, simulation, and defense-based checkpoints.",
+  "description": "An advanced module on agricultural leadership, focusing on diagnosing complex systems, designing robust operations, analyzing impacts and trade-offs, and implementing effective governance through case studies, simulations, and expert review.",
   "subject": "Agriculture",
   "tags": [
     "core",
@@ -14,121 +14,123 @@ export const Gardening601Module: LearningModule = {
   ],
   "minAge": 17,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en",
     "es"
   ],
   "learningObjectives": [
-    "Apply advanced methods for agriculture systems diagnostics in high-constraint environments",
-    "Design robust systems for agriculture operations and execution design with measurable control gates",
-    "Evaluate interventions in agriculture impact and tradeoff analysis with research-grade rigor",
-    "Operationalize agriculture governance and leadership with accountable governance and escalation pathways",
-    "Lead cross-functional decision reviews with explicit tradeoff communication",
-    "Defend recommendations under expert critique using evidence and uncertainty bounds"
+    "Diagnose complex problems in agricultural systems under challenging conditions.",
+    "Design and manage robust agricultural operations with clear checkpoints and controls.",
+    "Evaluate the impact of agricultural interventions with research-grade rigor, considering all trade-offs.",
+    "Develop and implement fair governance systems with clear accountability and escalation paths.",
+    "Lead decision-making processes, clearly communicating trade-offs to diverse stakeholders.",
+    "Defend strategic recommendations to expert panels using evidence-based arguments and acknowledging uncertainty."
   ],
   "lessons": [
     {
       "id": "gardening-601-l01",
-      "title": "Gardening Advanced Foundations",
+      "title": "Foundations of Agricultural Systems Analysis",
       "type": "video",
       "duration": 14,
       "learningAids": [
         {
           "id": "gardening-601-l01-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Systems Thinking in Agriculture",
+          "content": "Learn to see a garden or farm as an interconnected system. Define its boundaries, identify key components, and map the relationships between them.",
+          "visualPrompt": "An animated diagram showing a farm with interconnected nodes for soil, water, plants, pests, and human inputs, illustrating the flow of energy and resources."
         }
       ],
       "chunks": [
         {
           "id": "gardening-601-l01-c1",
           "kind": "concept",
-          "title": "Scope and Boundary Design",
-          "content": "In this lesson, we will explore the advanced concepts of scope and boundaries in gardening. We will focus on understanding agricultural systems, how to diagnose issues within these systems, and how to effectively design and execute agricultural operations. This knowledge will help you create well-defined limits and objectives for your gardening projects, ensuring that you can manage them successfully.\nContext recap: In this lesson, we will explore the advanced concepts of scope and boundaries in gardening. We will focus on understanding agricultural systems, how to diagnose issues within these systems, and how to effectively design and execute agricultural operations. This knowledge will help you create well-defined limits and objectives for your gardening projects, ensuring that you can manage them successfully."
+          "title": "Defining the System: Scope and Boundaries",
+          "content": "Effective analysis begins with a clear scope. We will learn to define the boundaries of an agricultural system—whether a single raised bed, a community garden, or a regional watershed—to focus our diagnostic efforts and set clear, achievable goals."
         },
         {
           "id": "gardening-601-l01-c2",
           "kind": "concept",
-          "title": "Causal and Uncertainty Modeling",
-          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different factors in gardening. They will also explore uncertainty ranges, which help us understand the potential variations in outcomes, and system dependencies, which show how different parts of the gardening system rely on each other. This foundational knowledge is crucial for planning effective interventions in gardening practices.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different factors in gardening. They will also explore uncertainty ranges, which help us understand the potential variations in outcomes, and system dependencies, which show how different parts of the gardening system rely on each other. This foundational knowledge is crucial for planning effective interventions in gardening practices."
+          "title": "Modeling Causes and Effects",
+          "content": "In this section, we will map the causal links within a garden system. For example, how does soil pH affect nutrient availability, and how does that, in turn, influence plant growth and pest resistance? Understanding these pathways and their uncertainties is key to planning effective interventions."
         },
         {
           "id": "gardening-601-l01-c3",
           "kind": "recap",
-          "title": "Evidence Thresholds",
-          "content": "In our recap, we will emphasize the importance of linking all claims to measurable indicators. This means that every assertion we make about gardening practices should be supported by clear evidence. We will also discuss the significance of establishing confidence bounds and review checkpoints to ensure that our gardening strategies are based on solid data and can be evaluated effectively.\nContext recap: In our recap, we will emphasize the importance of linking all claims to measurable indicators. This means that every assertion we make about gardening practices should be supported by clear evidence. We will also discuss the significance of establishing confidence bounds and review checkpoints to ensure that our gardening strategies are based on solid data and can be evaluated effectively."
+          "title": "Using Evidence to Make Claims",
+          "content": "We will recap the importance of grounding all claims in measurable evidence. This means using data from soil tests, yield logs, and pest counts to support our conclusions, and establishing confidence levels for our recommendations."
         }
       ],
       "flashcards": [
         {
           "id": "gardening-601-l01-f1",
-          "front": "agriculture systems diagnostics",
-          "back": "A specialization axis requiring explicit assumptions and measurable constraints."
+          "front": "Agricultural Systems Diagnostics",
+          "back": "The structured process of identifying root causes of problems in a farm or garden by analyzing its interconnected parts."
         },
         {
           "id": "gardening-601-l01-f2",
-          "front": "agriculture operations and execution design",
-          "back": "Execution architecture that determines reliability under stress."
+          "front": "Operational Design",
+          "back": "The planning of workflows, tasks, and schedules that determines how reliably a garden or farm can produce desired outcomes, especially under stress."
         },
         {
           "id": "gardening-601-l01-f3",
-          "front": "agriculture impact and tradeoff analysis",
-          "back": "Evaluation discipline for identifying true gains and hidden costs."
+          "front": "Impact and Trade-off Analysis",
+          "back": "The discipline of evaluating an intervention's full effects, including intended benefits, unintended side effects, and hidden costs."
         }
       ]
     },
     {
       "id": "gardening-601-l02",
-      "title": "Gardening Specialist Methods Lab",
+      "title": "Lab: Designing Agricultural Interventions",
       "type": "interactive",
       "duration": 17,
       "learningAids": [
         {
           "id": "gardening-601-l02-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Guided Practice: Workflow Design",
+          "content": "Design a detailed workflow for a common agricultural task, such as introducing beneficial insects for pest control. Include steps, checkpoints, and criteria for success.",
+          "visualPrompt": "A user-friendly flowchart builder interface where a learner can drag and drop steps like 'Assess Pest Levels,' 'Order Insects,' 'Release Insects,' and 'Monitor Effectiveness.'"
         }
       ],
       "chunks": [
         {
           "id": "gardening-601-l02-c1",
           "kind": "practice",
-          "title": "Method Design and Stress Test",
-          "content": "In this interactive practice session, learners will have the opportunity to design specialized workflows for gardening tasks. They will also conduct stress tests on these workflows by simulating adverse scenarios, such as extreme weather conditions or pest infestations. This hands-on experience will help learners understand how to adapt their gardening strategies to overcome challenges.\nContext recap: In this interactive practice session, learners will have the opportunity to design specialized workflows for gardening tasks. They will also conduct stress tests on these workflows by simulating adverse scenarios, such as extreme weather conditions or pest infestations. This hands-on experience will help learners understand how to adapt their gardening strategies to overcome challenges."
+          "title": "Designing and Stress-Testing Workflows",
+          "content": "In this interactive lab, you will design a specialized workflow for a complex agricultural task. You will then test its resilience by running simulations of adverse scenarios, such as a sudden drought or an equipment failure, to identify and fix potential weaknesses."
         },
         {
           "id": "gardening-601-l02-c2",
           "kind": "recap",
-          "title": "Control Gate Architecture",
-          "content": "In our recap, we will discuss the architecture of control gates within our workflows. These control gates are essential as they integrate checkpoints, which are points where we can assess progress, rollback criteria that allow us to revert to previous steps if necessary, and threshold-based escalation, which helps us know when to take further action. Understanding these elements is key to effective gardening management.\nContext recap: In our recap, we will discuss the architecture of control gates within our workflows. These control gates are essential as they integrate checkpoints, which are points where we can assess progress, rollback criteria that allow us to revert to previous steps if necessary, and threshold-based escalation, which helps us know when to take further action. Understanding these elements is key to effective gardening management."
+          "title": "Building in Checkpoints and Safeguards",
+          "content": "We will recap how to build a robust workflow. This includes integrating regular checkpoints to assess progress, defining criteria for when to pause or reverse a course of action, and setting clear thresholds for when a problem needs to be escalated to leadership."
         }
       ],
       "interactiveActivities": [
         {
           "id": "gardening-601-l02-act1",
           "type": "matching_pairs",
-          "title": "Control-to-Outcome Mapping",
-          "description": "Match specialist controls with their strongest reliability and governance effects.",
+          "title": "Matching Actions to Outcomes",
+          "description": "Match the management practice with its primary benefit for system reliability and governance.",
           "pairs": [
             {
-              "left": "Pre-commit gate",
-              "right": "Prevents avoidable downstream failures"
+              "left": "Pre-planting soil analysis",
+              "right": "Prevents nutrient deficiencies and costly soil amendments later."
             },
             {
-              "left": "Rollback trigger",
-              "right": "Limits blast radius under adverse outcomes"
+              "left": "Emergency irrigation plan",
+              "right": "Minimizes crop loss during an unexpected drought."
             },
             {
-              "left": "Baseline dashboard",
-              "right": "Supports defensible impact attribution"
+              "left": "Weekly pest monitoring dashboard",
+              "right": "Allows for early intervention before an infestation becomes severe."
             },
             {
-              "left": "Retrospective loop",
-              "right": "Improves next-cycle decision quality"
+              "left": "End-of-season review meeting",
+              "right": "Improves the quality of planning for the next growing cycle."
             }
           ]
         }
@@ -136,279 +138,182 @@ export const Gardening601Module: LearningModule = {
     },
     {
       "id": "gardening-601-l03",
-      "title": "Checkpoint 1: Specialist Methods",
+      "title": "Checkpoint 1: Methods and Design",
       "type": "quiz",
       "duration": 10,
       "learningAids": [
         {
           "id": "gardening-601-l03-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Knowledge Check",
+          "content": "Assess your understanding of systems analysis and operational design principles.",
+          "visualPrompt": "A clean, simple quiz interface with a progress bar at the top."
         }
       ],
       "questions": [
         {
           "id": "gardening-601-l03-q1",
-          "text": "Which practice most improves agriculture systems diagnostics decision quality?",
+          "text": "When diagnosing problems in an agricultural system, which practice leads to the best decisions?",
           "skillId": "gardening-601-skill-core",
           "options": [
             {
               "id": "a",
-              "text": "Proceed without baseline or assumptions"
+              "text": "Act quickly based on initial observations."
             },
             {
               "id": "b",
-              "text": "Define assumptions, constraints, and measurable indicators"
+              "text": "Define assumptions, identify constraints, and use measurable indicators."
             },
             {
               "id": "c",
-              "text": "Optimize only for speed in every context"
+              "text": "Focus only on the most visible symptom."
             },
             {
               "id": "d",
-              "text": "Ignore uncertainty and edge conditions"
+              "text": "Assume the problem will resolve itself over time."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Advanced decisions improve when assumptions, constraints, and metrics are explicit."
+          "explanation": "High-quality decisions are based on a structured approach where assumptions, constraints, and metrics are made explicit."
         },
         {
           "id": "gardening-601-l03-q2",
-          "text": "At level 601, strong execution for agriculture operations and execution design requires:",
+          "text": "A robust plan for agricultural operations should always include:",
           "skillId": "gardening-601-skill-execution",
           "options": [
             {
               "id": "a",
-              "text": "Owner mapping, checkpoint cadence, and escalation thresholds"
+              "text": "Clear roles, a schedule for checkpoints, and rules for when to escalate issues."
             },
             {
               "id": "b",
-              "text": "No role clarity and ad-hoc process changes"
+              "text": "Vague responsibilities and a flexible, undocumented process."
             },
             {
               "id": "c",
-              "text": "No retrospective or post-run review"
+              "text": "A 'set it and forget it' approach with no follow-up reviews."
             },
             {
               "id": "d",
-              "text": "No rollback or fallback conditions"
+              "text": "A single plan with no backup or contingency options."
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Reliable advanced execution needs ownership clarity and threshold-driven governance."
+          "explanation": "Reliable execution requires clear ownership, scheduled reviews, and pre-defined rules for handling problems."
         },
         {
           "id": "gardening-601-l03-q3",
-          "text": "A defensible approach to agriculture impact and tradeoff analysis includes:",
+          "text": "A defensible analysis of a new farming technique must include:",
           "skillId": "gardening-601-skill-eval",
           "options": [
             {
               "id": "a",
-              "text": "Anecdotes without comparison"
+              "text": "Only personal stories and anecdotes."
             },
             {
               "id": "b",
-              "text": "Baseline comparisons, side-effect analysis, and uncertainty bounds"
+              "text": "Comparison to a baseline, analysis of side effects, and an estimate of uncertainty."
             },
             {
               "id": "c",
-              "text": "Changing success criteria after outcomes"
+              "text": "Changing the definition of success after seeing the results."
             },
             {
               "id": "d",
-              "text": "Excluding difficult scenarios from analysis"
+              "text": "Ignoring any data that contradicts the desired outcome."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible analysis combines comparative baselines, side-effect checks, and uncertainty disclosure."
+          "explanation": "A credible analysis requires comparing results to a control group, considering all impacts, and acknowledging what you don't know."
         },
         {
           "id": "gardening-601-l03-q4",
-          "text": "Mature governance systems connect:",
+          "text": "A mature governance system for a community garden connects:",
           "skillId": "gardening-601-skill-governance",
           "options": [
             {
               "id": "a",
-              "text": "Policy intent, measurable controls, and remediation pathways"
+              "text": "The garden's mission, measurable rules, and a process for resolving issues."
             },
             {
               "id": "b",
-              "text": "Policy language with no measurable enforcement"
+              "text": "A mission statement with no enforceable rules."
             },
             {
               "id": "c",
-              "text": "Targets without ownership or escalation design"
+              "text": "Goals without assigning responsibility to anyone."
             },
             {
               "id": "d",
-              "text": "Operations without transparent accountability"
+              "text": "Day-to-day work with no transparent accountability."
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Governance maturity is the operational link between intent, measurement, and corrective action."
-        },
-        {
-          "id": "gardening-601-l03-q5",
-          "text": "What is the best way to compare competing interventions in advanced Agriculture?",
-          "skillId": "gardening-601-skill-advanced-5",
-          "options": [
-            {
-              "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
-            },
-            {
-              "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
-            },
-            {
-              "id": "c",
-              "text": "Switch metrics after results arrive"
-            },
-            {
-              "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
-        },
-        {
-          "id": "gardening-601-l03-q6",
-          "text": "In high-stakes Gardening Research and Leadership execution, which communication protocol is strongest?",
-          "skillId": "gardening-601-skill-advanced-6",
-          "options": [
-            {
-              "id": "a",
-              "text": "Broadcast conclusions without assumptions"
-            },
-            {
-              "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
-            },
-            {
-              "id": "c",
-              "text": "Share only final outcomes after completion"
-            },
-            {
-              "id": "d",
-              "text": "Limit updates to a single informal channel"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
-        },
-        {
-          "id": "gardening-601-l03-q7",
-          "text": "A mature remediation loop in advanced Agriculture should prioritize:",
-          "skillId": "gardening-601-skill-advanced-7",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blame assignment without system updates"
-            },
-            {
-              "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
-            },
-            {
-              "id": "c",
-              "text": "One-time fixes without retesting"
-            },
-            {
-              "id": "d",
-              "text": "Issue closure based on elapsed time"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
-        },
-        {
-          "id": "gardening-601-l03-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Gardening Research and Leadership?",
-          "skillId": "gardening-601-skill-advanced-8",
-          "options": [
-            {
-              "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
-            },
-            {
-              "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
-            },
-            {
-              "id": "c",
-              "text": "Ignore correlated failure modes"
-            },
-            {
-              "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "explanation": "Good governance links the overall goal (intent) to specific actions (measurement) and a plan for when things go wrong (corrective action)."
         }
       ]
     },
     {
       "id": "gardening-601-l04",
-      "title": "Gardening Advanced Case Analysis",
+      "title": "Case Study: Analyzing Agricultural Trade-offs",
       "type": "video",
       "duration": 14,
       "learningAids": [
         {
           "id": "gardening-601-l04-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "The Urban Farm Dilemma",
+          "content": "Analyze a case study of a community farm facing competing demands: maximizing food production, minimizing water usage, and ensuring equitable access for all members.",
+          "visualPrompt": "A split-screen image. On one side, a lush, productive garden. On the other, a water meter showing high usage and a sign-up sheet with a long waiting list."
         }
       ],
       "chunks": [
         {
           "id": "gardening-601-l04-c1",
           "kind": "concept",
-          "title": "Scenario Architecture",
-          "content": "In this lesson, we will frame a case study that highlights the competing constraints within agricultural systems diagnostics. We will analyze the impacts of various agricultural practices and the trade-offs involved in decision-making. This will help learners understand the complexities of agriculture and how different factors can influence outcomes.\nContext recap: In this lesson, we will frame a case study that highlights the competing constraints within agricultural systems diagnostics. We will analyze the impacts of various agricultural practices and the trade-offs involved in decision-making. This will help learners understand the complexities of agriculture and how different factors can influence outcomes."
+          "title": "Analyzing a Complex Case Study",
+          "content": "In this lesson, we will dissect a real-world case study that highlights the competing constraints in agriculture. We will analyze the impacts of different farming practices and the difficult trade-offs leaders must make."
         },
         {
           "id": "gardening-601-l04-c2",
           "kind": "practice",
-          "title": "Tradeoff Framing",
-          "content": "In this practice session, learners will compare different options available to them in gardening, focusing on key dimensions such as safety, reliability, cost, equity, and governance. By evaluating these aspects, learners will gain insights into how to make informed decisions that balance various priorities in their gardening projects.\nContext recap: In this practice session, learners will compare different options available to them in gardening, focusing on key dimensions such as safety, reliability, cost, equity, and governance. By evaluating these aspects, learners will gain insights into how to make informed decisions that balance various priorities in their gardening projects."
+          "title": "Evaluating Competing Priorities",
+          "content": "Using the case study, you will compare different strategic options. We will evaluate each option against key dimensions like cost, environmental impact, community equity, and operational reliability to practice making balanced, informed decisions."
         },
         {
           "id": "gardening-601-l04-c3",
           "kind": "recap",
-          "title": "Decision Memo Pattern",
-          "content": "In our recap, we will outline the essential components of a decision memo. Each recommendation made should include clear assumptions, supporting evidence, risk controls to mitigate potential issues, and fallback plans to ensure that there are alternatives if the initial plan does not succeed. This structured approach will enhance decision-making in gardening.\nContext recap: In our recap, we will outline the essential components of a decision memo. Each recommendation made should include clear assumptions, supporting evidence, risk controls to mitigate potential issues, and fallback plans to ensure that there are alternatives if the initial plan does not succeed. This structured approach will enhance decision-making in gardening."
+          "title": "Structuring a Recommendation",
+          "content": "We will recap how to structure a formal recommendation. A strong proposal must clearly state its assumptions, provide supporting evidence, outline how risks will be managed, and include a fallback plan in case the primary strategy fails."
         }
       ]
     },
     {
       "id": "gardening-601-l05",
-      "title": "Gardening Simulation Clinic",
+      "title": "Simulation: Managing a Farm System",
       "type": "interactive",
       "duration": 18,
       "learningAids": [
         {
           "id": "gardening-601-l05-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Guided Practice: Farm Simulator",
+          "content": "Step into the role of a farm manager in a dynamic simulation. Make critical decisions about resource allocation and strategy in response to changing conditions.",
+          "visualPrompt": "A dashboard interface for a farm simulation game, showing metrics for crop health, budget, water levels, and market prices, with sliders and buttons for user input."
         }
       ],
       "chunks": [
         {
           "id": "gardening-601-l05-c1",
           "kind": "practice",
-          "title": "Live Scenario Controls",
-          "content": "In this interactive practice, learners will operate scenario controls, which are tools that help manage different gardening situations. They will learn how to balance performance, which refers to how well the gardening practices are working, with governance constraints, which are the rules and guidelines that must be followed. This experience will prepare learners for real-world gardening challenges.\nContext recap: In this interactive practice, learners will operate scenario controls, which are tools that help manage different gardening situations. They will learn how to balance performance, which refers to how well the gardening practices are working, with governance constraints, which are the rules and guidelines that must be followed. This experience will prepare learners for real-world gardening challenges."
+          "title": "Managing a Dynamic Simulation",
+          "content": "In this interactive simulation, you will manage a farm through a full growing season. You will be responsible for balancing performance goals, like yield and profit, with governance constraints, such as water quotas and organic certification rules."
         },
         {
           "id": "gardening-601-l05-c2",
           "kind": "recap",
-          "title": "Adaptive Response Design",
-          "content": "In our recap, we will discuss the importance of adaptive response design in gardening. Effective responses to challenges should be able to update control gates without losing track of what has been done or who is responsible. This ensures that all actions taken are accountable and traceable, which is vital for successful gardening management.\nContext recap: In our recap, we will discuss the importance of adaptive response design in gardening. Effective responses to challenges should be able to update control gates without losing track of what has been done or who is responsible. This ensures that all actions taken are accountable and traceable, which is vital for successful gardening management."
+          "title": "Adapting to Unexpected Events",
+          "content": "We will recap the importance of adaptive management. The simulation will throw unexpected challenges at you, like a pest outbreak or a market crash. Success depends on your ability to adjust your strategy while maintaining accountability and clear records of your decisions."
         }
       ],
       "interactiveActivities": [
@@ -416,302 +321,205 @@ export const Gardening601Module: LearningModule = {
           "id": "gardening-601-l05-act1",
           "type": "scenario",
           "title": "Adverse-Condition Decision Run",
-          "description": "Run a high-pressure gardening scenario and tune controls under uncertainty."
+          "description": "Run a high-pressure farming scenario. Can you save the harvest and stay profitable when faced with unexpected drought, pests, and market volatility?"
         }
       ]
     },
     {
       "id": "gardening-601-l06",
-      "title": "Checkpoint 2: Case and Simulation Mastery",
+      "title": "Checkpoint 2: Application and Analysis",
       "type": "quiz",
       "duration": 11,
       "learningAids": [
         {
           "id": "gardening-601-l06-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Knowledge Check",
+          "content": "Assess your ability to apply analytical concepts to complex case studies and simulations.",
+          "visualPrompt": "A clean, simple quiz interface with a progress bar at the top."
         }
       ],
       "questions": [
         {
           "id": "gardening-601-l06-q1",
-          "text": "In advanced casework, the first requirement for defensible recommendations is:",
+          "text": "In a complex case study, the first step toward a defensible recommendation is to:",
           "skillId": "gardening-601-skill-case1",
           "options": [
             {
               "id": "a",
-              "text": "A preferred option without explicit assumptions"
+              "text": "Choose a preferred option before analyzing the data."
             },
             {
               "id": "b",
-              "text": "A clear baseline, explicit constraints, and success criteria"
+              "text": "Establish a clear baseline, define constraints, and set success criteria."
             },
             {
               "id": "c",
-              "text": "High confidence without evidence logs"
+              "text": "Express high confidence without providing evidence."
             },
             {
               "id": "d",
-              "text": "Single-metric optimization only"
+              "text": "Optimize for a single metric, such as cost, and ignore all others."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible recommendations begin with explicit assumptions, constraints, and measurable targets."
+          "explanation": "Defensible recommendations are built on a solid foundation of explicit assumptions, constraints, and measurable targets."
         },
         {
           "id": "gardening-601-l06-q2",
-          "text": "A resilient strategy for agriculture operations and execution design should include:",
+          "text": "A resilient operational strategy for a farm must include:",
           "skillId": "gardening-601-skill-case2",
           "options": [
             {
               "id": "a",
-              "text": "Checkpointed execution with fallback and escalation criteria"
+              "text": "A plan with checkpoints, fallback options, and clear escalation criteria."
             },
             {
               "id": "b",
-              "text": "One-way execution with no rollback capability"
+              "text": "A rigid, unchangeable plan that cannot adapt to new conditions."
             },
             {
               "id": "c",
-              "text": "No ownership mapping across teams"
+              "text": "No clear assignment of who is responsible for critical tasks."
             },
             {
               "id": "d",
-              "text": "Hidden assumptions and undocumented decisions"
+              "text": "Decisions made without documentation or clear rationale."
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Resilience depends on checkpoints, fallback options, and explicit escalation design."
+          "explanation": "Resilience in operations depends on having checkpoints, backup plans, and an explicit process for handling major issues."
         },
         {
           "id": "gardening-601-l06-q3",
-          "text": "When evaluating agriculture impact and tradeoff analysis, which method is most rigorous?",
+          "text": "When comparing two different pest control strategies, the most rigorous method is to:",
           "skillId": "gardening-601-skill-case3",
           "options": [
             {
               "id": "a",
-              "text": "Single success story without controls"
+              "text": "Choose the one with the best marketing story."
             },
             {
               "id": "b",
-              "text": "Comparative baselines plus side-effect and uncertainty analysis"
+              "text": "Compare them against a control group and analyze side effects and uncertainties."
             },
             {
               "id": "c",
-              "text": "Outcome-only narrative without process evidence"
+              "text": "Focus only on the final pest count and ignore the cost or labor involved."
             },
             {
               "id": "d",
-              "text": "Retrospective scope changes to fit outcomes"
+              "text": "Change your evaluation criteria to fit whichever strategy performed better."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Rigorous evaluation requires comparisons, side-effect analysis, and uncertainty disclosure."
+          "explanation": "Rigorous evaluation requires a scientific approach: using a baseline for comparison, analyzing all impacts, and acknowledging uncertainty."
         },
         {
           "id": "gardening-601-l06-q4",
-          "text": "Advanced governance is strongest when it:",
+          "text": "In the farm simulation, your budget is unexpectedly cut by 20%. The best adaptive response is to:",
           "skillId": "gardening-601-skill-case4",
           "options": [
             {
               "id": "a",
-              "text": "Aligns authority, measurement, and remediation obligations"
+              "text": "Continue with the original plan and hope for the best."
             },
             {
               "id": "b",
-              "text": "Separates policy from operational controls"
+              "text": "Immediately abandon all non-essential activities without analysis."
             },
             {
               "id": "c",
-              "text": "Avoids external review and transparency"
+              "text": "Re-evaluate priorities based on their impact and cost, then adjust the plan."
             },
             {
               "id": "d",
-              "text": "Treats accountability as optional under pressure"
+              "text": "Spend the remaining budget as quickly as possible on your favorite project."
             }
           ],
-          "correctOptionId": "a",
-          "explanation": "Mature governance links authority, measurable controls, and corrective action."
-        },
-        {
-          "id": "gardening-601-l06-q5",
-          "text": "What is the best way to compare competing interventions in advanced Agriculture?",
-          "skillId": "gardening-601-skill-advanced-5",
-          "options": [
-            {
-              "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
-            },
-            {
-              "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
-            },
-            {
-              "id": "c",
-              "text": "Switch metrics after results arrive"
-            },
-            {
-              "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
-        },
-        {
-          "id": "gardening-601-l06-q6",
-          "text": "In high-stakes Gardening Research and Leadership execution, which communication protocol is strongest?",
-          "skillId": "gardening-601-skill-advanced-6",
-          "options": [
-            {
-              "id": "a",
-              "text": "Broadcast conclusions without assumptions"
-            },
-            {
-              "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
-            },
-            {
-              "id": "c",
-              "text": "Share only final outcomes after completion"
-            },
-            {
-              "id": "d",
-              "text": "Limit updates to a single informal channel"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
-        },
-        {
-          "id": "gardening-601-l06-q7",
-          "text": "A mature remediation loop in advanced Agriculture should prioritize:",
-          "skillId": "gardening-601-skill-advanced-7",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blame assignment without system updates"
-            },
-            {
-              "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
-            },
-            {
-              "id": "c",
-              "text": "One-time fixes without retesting"
-            },
-            {
-              "id": "d",
-              "text": "Issue closure based on elapsed time"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
-        },
-        {
-          "id": "gardening-601-l06-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Gardening Research and Leadership?",
-          "skillId": "gardening-601-skill-advanced-8",
-          "options": [
-            {
-              "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
-            },
-            {
-              "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
-            },
-            {
-              "id": "c",
-              "text": "Ignore correlated failure modes"
-            },
-            {
-              "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "correctOptionId": "c",
+          "explanation": "Effective adaptive management involves a rational re-assessment of priorities in response to changing constraints."
         }
       ]
     },
     {
       "id": "gardening-601-l07",
-      "title": "Gardening Governance and Public Impact",
+      "title": "Leadership, Governance, and Community Impact",
       "type": "video",
       "duration": 13,
       "learningAids": [
         {
           "id": "gardening-601-l07-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "The Stakeholder Map",
+          "content": "Learn to map the impact of agricultural decisions on all stakeholders, including workers, neighbors, consumers, and the local ecosystem.",
+          "visualPrompt": "A mind map centered on a 'New Irrigation Policy.' Branches lead to different stakeholders (e.g., 'Local Residents,' 'River Ecosystem,' 'Farm Workers') with notes on positive and negative impacts for each."
         }
       ],
       "chunks": [
         {
           "id": "gardening-601-l07-c1",
           "kind": "concept",
-          "title": "Stakeholder Impact Distribution",
-          "content": "In this lesson, learners will explore how to map the distribution of benefits, burdens, and delayed effects across different stakeholder groups involved in gardening. Understanding these impacts is crucial for ensuring that all voices are heard and that gardening practices are fair and equitable for everyone involved.\nContext recap: In this lesson, learners will explore how to map the distribution of benefits, burdens, and delayed effects across different stakeholder groups involved in gardening. Understanding these impacts is crucial for ensuring that all voices are heard and that gardening practices are fair and equitable for everyone involved."
+          "title": "Understanding Stakeholder Impacts",
+          "content": "Agricultural decisions rarely affect just one person. We will learn to map how benefits, costs, and risks are distributed across different groups, ensuring that decisions are made equitably and with a full understanding of their consequences."
         },
         {
           "id": "gardening-601-l07-c2",
           "kind": "concept",
-          "title": "Accountability Architecture",
-          "content": "In this section, we will focus on the architecture of accountability in decision-making. This includes ensuring that there is traceability for decisions made, rights for reviews, and obligations for remediation if issues arise. Integrating these elements helps create a transparent and responsible approach to gardening governance.\nContext recap: In this section, we will focus on the architecture of accountability in decision-making. This includes ensuring that there is traceability for decisions made, rights for reviews, and obligations for remediation if issues arise. Integrating these elements helps create a transparent and responsible approach to gardening governance."
+          "title": "Creating Accountable Systems",
+          "content": "This section focuses on building systems for accountability. This means creating a clear, traceable record of decisions, establishing rights for community members to review those decisions, and defining the obligation to remediate any harm caused."
         },
         {
           "id": "gardening-601-l07-c3",
           "kind": "recap",
-          "title": "Responsible Leadership Checklist",
-          "content": "This final checklist is an important tool that helps us connect the outcomes of our gardening projects with ethical considerations, adherence to policies, and the ability to adapt and thrive in changing conditions. It ensures that we are responsible leaders in our gardening efforts.\nContext recap: This final checklist is an important tool that helps us connect the outcomes of our gardening projects with ethical considerations, adherence to policies, and the ability to adapt and thrive in changing conditions. It ensures that we are responsible leaders in our gardening efforts."
+          "title": "A Checklist for Responsible Leadership",
+          "content": "This final checklist synthesizes our learning. It provides a tool to ensure our agricultural projects align with ethical principles, comply with policies, and are resilient enough to adapt and thrive in a changing world."
         }
       ],
       "flashcards": [
         {
           "id": "gardening-601-l07-f1",
-          "front": "Impact distribution",
-          "back": "How outcomes are allocated across populations and timescales."
+          "front": "Impact Distribution",
+          "back": "How the positive and negative outcomes of a decision are spread across different groups of people and over time."
         },
         {
           "id": "gardening-601-l07-f2",
-          "front": "Decision traceability",
-          "back": "An auditable record of evidence, ownership, and rationale."
+          "front": "Decision Traceability",
+          "back": "An auditable record showing who made a decision, when, and based on what evidence and rationale."
         },
         {
           "id": "gardening-601-l07-f3",
-          "front": "Responsible leadership",
-          "back": "Decision behavior balancing performance, accountability, and ethics."
+          "front": "Responsible Leadership",
+          "back": "A decision-making approach that balances performance goals with accountability to the community and ethical standards."
         }
       ]
     },
     {
       "id": "gardening-601-l08",
-      "title": "Gardening Capstone Defense Lab",
+      "title": "Capstone: Defending Your Agricultural Plan",
       "type": "interactive",
       "duration": 16,
       "learningAids": [
         {
           "id": "gardening-601-l08-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Guided Practice: Build Your Brief",
+          "content": "Assemble your final recommendation into a professional brief. Structure your argument, cite your evidence, and prepare to defend your plan.",
+          "visualPrompt": "A template for a decision memo on a screen, with sections for 'Recommendation,' 'Supporting Evidence,' 'Risk Analysis,' and 'Contingency Plan' that the learner can fill in."
         }
       ],
       "chunks": [
         {
           "id": "gardening-601-l08-c1",
           "kind": "practice",
-          "title": "Defense Brief Assembly",
-          "content": "In this activity, learners will work together to create a comprehensive brief. This brief will include well-supported claims, evidence to back them up, an understanding of the uncertainties involved, and clear pathways for remediation if challenges arise. This process encourages critical thinking and collaboration.\nContext recap: In this activity, learners will work together to create a comprehensive brief. This brief will include well-supported claims, evidence to back them up, an understanding of the uncertainties involved, and clear pathways for remediation if challenges arise. This process encourages critical thinking and collaboration."
+          "title": "Preparing Your Final Proposal",
+          "content": "In this activity, you will synthesize everything you've learned to create a comprehensive proposal for a complex agricultural challenge. Your brief must include evidence-based claims, a clear analysis of uncertainties, and a robust plan for remediation if things go wrong."
         },
         {
           "id": "gardening-601-l08-c2",
           "kind": "recap",
-          "title": "Expert Panel Rehearsal",
-          "content": "During this rehearsal, learners will practice their responses to various critiques that may come from experts, governance bodies, and stakeholders. This preparation is crucial for building confidence and ensuring that they can effectively communicate their ideas and defend their projects.\nContext recap: During this rehearsal, learners will practice their responses to various critiques that may come from experts, governance bodies, and stakeholders. This preparation is crucial for building confidence and ensuring that they can effectively communicate their ideas and defend their projects."
+          "title": "Rehearsing for Expert Review",
+          "content": "During this rehearsal, you will practice responding to tough questions and critiques from experts, governance bodies, and community stakeholders. This preparation is crucial for building confidence and communicating your ideas effectively under pressure."
         }
       ],
       "interactiveActivities": [
@@ -719,7 +527,7 @@ export const Gardening601Module: LearningModule = {
           "id": "gardening-601-l08-act1",
           "type": "debate_simulator",
           "title": "Expert Defense Panel",
-          "description": "Defend specialization recommendations under adversarial cross-examination."
+          "description": "Present your final proposal to a simulated panel of experts. Defend your recommendations against tough, critical cross-examination and prove your mastery of the material."
         }
       ]
     }

@@ -1,0 +1,111 @@
+{
+  "name": "koydo-university",
+  "description": "Professional, analytics-first learning theme for adult test prep and upskilling.",
+  "palette": {
+    "slate_950": "#0f172a",
+    "slate_900": "#111827",
+    "slate_800": "#1f2937",
+    "navy_700": "#1d3557",
+    "navy_600": "#274c77",
+    "forest_700": "#1f4d3c",
+    "forest_600": "#2f6f56",
+    "bronze_500": "#a67c52",
+    "bronze_400": "#c79b63",
+    "paper_50": "#f8fafc",
+    "paper_100": "#f1f5f9"
+  },
+  "night_palette": {
+    "bg_deep": "#0f172a",
+    "surface_deep": "#111827",
+    "surface_mid": "#1f2937",
+    "ink_bright": "#e5edf8",
+    "ink_muted": "#9fb1c9",
+    "accent_navy": "#3b5f8a",
+    "accent_forest": "#2f6f56",
+    "accent_bronze": "#c79b63"
+  },
+  "typography": {
+    "ui_sans": "'Geist', 'Inter', 'Segoe UI', 'Roboto', sans-serif",
+    "body_sans": "'Geist', 'Inter', 'Segoe UI', 'Roboto', sans-serif",
+    "reading_serif": "'Merriweather', 'Crimson Text', Georgia, serif",
+    "letter_spacing": "0.002em",
+    "line_height": 1.45
+  },
+  "spacing": {
+    "density": "high",
+    "padding_xl": "20px",
+    "padding_lg": "16px",
+    "padding_md": "12px",
+    "padding_sm": "8px",
+    "gap_xl": "16px",
+    "gap_lg": "12px",
+    "gap_md": "8px",
+    "gap_sm": "6px"
+  },
+  "sizing": {
+    "nav_width": "272px",
+    "control_height": "36px",
+    "card_min_height": "168px"
+  },
+  "radii": {
+    "card": "12px",
+    "input": "10px",
+    "pill": "999px"
+  },
+  "shadows": {
+    "panel": "0 1px 2px rgba(2, 6, 23, 0.08), 0 4px 14px rgba(2, 6, 23, 0.06)",
+    "elevated": "0 10px 24px rgba(2, 6, 23, 0.18)"
+  },
+  "components": {
+    "button": {
+      "height": "36px",
+      "font_weight": 600,
+      "radius": "10px",
+      "press_scale": 1
+    },
+    "card": {
+      "radius": "12px",
+      "border_width": "1px"
+    }
+  },
+  "css_variables": {
+    "--background": "#f8fafc",
+    "--foreground": "#0f172a",
+    "--surface": "#ffffff",
+    "--surface-muted": "#f1f5f9",
+    "--surface-strong": "#e2e8f0",
+    "--border": "#dbe3ee",
+    "--accent": "#1d3557",
+    "--accent-subtle": "#e8eef7",
+    "--color-primary": "#1d3557",
+    "--success": "#2f6f56",
+    "--warn": "#a67c52",
+    "--danger": "#b42318",
+    "--radius-card": "12px",
+    "--radius-pill": "999px",
+    "--shadow-panel": "0 1px 2px rgba(2, 6, 23, 0.08), 0 4px 14px rgba(2, 6, 23, 0.06)",
+    "--shadow-elevated": "0 10px 24px rgba(2, 6, 23, 0.18)",
+    "--font-display-sans": "'Geist', 'Inter', 'Segoe UI', 'Roboto', sans-serif",
+    "--font-body-sans": "'Geist', 'Inter', 'Segoe UI', 'Roboto', sans-serif",
+    "--font-ui-sans": "'Geist', 'Inter', 'Segoe UI', 'Roboto', sans-serif",
+    "--font-reading-serif": "'Merriweather', 'Crimson Text', Georgia, serif",
+    "--type-xs": "0.72rem",
+    "--type-sm": "0.81rem",
+    "--type-md": "0.92rem",
+    "--type-lg": "1rem"
+  },
+  "dark_mode": {
+    "--background": "#0f172a",
+    "--foreground": "#e5edf8",
+    "--surface": "#111827",
+    "--surface-muted": "#1f2937",
+    "--surface-strong": "#273449",
+    "--border": "#2d3a50",
+    "--accent": "#4f729c",
+    "--accent-subtle": "#1a2a3f",
+    "--color-primary": "#4f729c",
+    "--success": "#3f7f64",
+    "--warn": "#c79b63",
+    "--danger": "#d95f52"
+  }
+}

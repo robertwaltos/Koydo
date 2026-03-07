@@ -1,14 +1,25 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { useTransition } from "react";
+import { useMemo, useTransition } from "react";
 import { useI18n } from "@/lib/i18n/provider";
 import { ACTIVE_LOCALES, localeLabels } from "@/lib/i18n/translations";
+import { getAppLocales } from "@/lib/platform/app-manifest";
 
 export default function LanguageSwitcher({ compact = false }: { compact?: boolean }) {
   const { locale, setLocale, t } = useI18n();
   const router = useRouter();
   const [, startTransition] = useTransition();
+
+  // Filter ACTIVE_LOCALES to only those the current micro-app supports
+  const visibleLocales = useMemo(() => {
+    const appLocales = getAppLocales();
+    if (appLocales.includes("*")) return ACTIVE_LOCALES;
+    return ACTIVE_LOCALES.filter((code) => appLocales.includes(code));
+  }, []);
+
+  // Don't render if only one locale available
+  if (visibleLocales.length <= 1) return null;
 
   return (
     <label className="flex items-center gap-2 text-sm">
@@ -25,7 +36,7 @@ export default function LanguageSwitcher({ compact = false }: { compact?: boolea
         aria-label={t("language_label")}
         className="ui-focus-ring min-h-9 rounded-full border border-border bg-surface px-3 py-1 text-sm text-foreground shadow-sm [color-scheme:light]"
       >
-        {ACTIVE_LOCALES.map((code) => (
+        {visibleLocales.map((code) => (
           <option key={code} value={code}>
             {localeLabels[code]}
           </option>

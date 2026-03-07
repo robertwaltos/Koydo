@@ -1,162 +1,166 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const Philosophy401Module: LearningModule = {
+export const philosophy_401_Module: LearningModule = {
   "id": "philosophy-401",
   "title": "Philosophy Mastery and Leadership",
-  "description": "Level 401 curriculum in Philosophy, emphasizing argument structure, epistemology, ethics and politics, applied reasoning, and real-world decision quality through structured practice and assessment.",
+  "description": "An advanced curriculum in philosophy emphasizing rigorous argument construction, epistemology, ethical and political theory, and applied reasoning. Students will learn to analyze complex problems, evaluate evidence, and make high-quality decisions through structured case studies and assessments.",
   "subject": "Humanities",
   "tags": [
-    "core",
-    "curriculum",
-    "interactive",
+    "philosophy",
     "critical-thinking",
-    "ethics"
+    "ethics",
+    "logic",
+    "advanced"
   ],
   "minAge": 16,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en"
   ],
   "learningObjectives": [
-    "Develop rigorous mental models for argument structure and epistemology",
-    "Apply structured methods to plan, execute, and review ethics and politics tasks",
-    "Interpret evidence using metrics, constraints, and context",
-    "Diagnose common failure modes and design recovery actions",
-    "Communicate tradeoffs clearly to technical and non-technical audiences",
-    "Build repeatable systems for sustained improvement in Philosophy"
+    "Develop rigorous mental models for argument structure and epistemology.",
+    "Apply structured methods to analyze complex ethical and political problems.",
+    "Evaluate evidence based on established criteria, constraints, and context.",
+    "Diagnose common fallacies and errors in reasoning, and design corrective approaches.",
+    "Communicate complex philosophical positions and their tradeoffs clearly.",
+    "Build repeatable systems for sustained improvement in philosophical inquiry."
   ],
   "lessons": [
     {
       "id": "philosophy-401-l01",
-      "title": "Core Models for Philosophy",
+      "title": "Foundational Models for Philosophical Inquiry",
       "type": "video",
-      "duration": 13,
+      "duration": 15,
       "learningAids": [
         {
           "id": "philosophy-401-l01-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use the structured prompt and write your reasoning before finalizing answers."
+          "title": "Diagram: Scoping an Argument",
+          "content": "A Venn diagram showing the relationship between a broad topic, the specific question (unit of analysis), and the defined scope of the inquiry."
         }
       ],
       "chunks": [
         {
           "id": "philosophy-401-l01-c1",
           "kind": "concept",
-          "title": "Operating Vocabulary and Scope",
-          "content": "In our advanced Philosophy course, it is essential to use precise and clear language. We will explore how to define the boundaries of our discussions, identify the specific units we are analyzing, and ensure that we are using consistent terminology. This clarity allows us to make informed decisions that can be effectively compared across different teams and perspectives. By establishing a common vocabulary, we can enhance our collaborative efforts and deepen our understanding of philosophical concepts.\nContext recap: In our advanced Philosophy course, it is essential to use precise and clear language. We will explore how to define the boundaries of our discussions, identify the specific units we are analyzing, and ensure that we are using consistent terminology. This clarity allows us to make informed decisions that can be effectively compared across different teams and perspectives. By establishing a common vocabulary, we can enhance our collaborative efforts and deepen our understanding of philosophical concepts.\nContext recap: In our advanced Philosophy course, it is essential to use precise and clear language. We will explore how to define the boundaries of our discussions, identify the specific units we are analyzing, and ensure that we are using consistent terminology. This clarity allows us to make informed decisions that can be effectively compared across different teams and perspectives. By establishing a common vocabulary, we can enhance our collaborative efforts and deepen our understanding of philosophical concepts.\nWhy this matters: Operating Vocabulary and Scope helps learners in Humanities connect ideas from Philosophy Mastery and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "title": "Defining Scope and Vocabulary",
+          "content": "In advanced philosophy, precision is paramount. Before analyzing an argument, we must first define its scope and establish a clear operating vocabulary. This involves identifying the core question, or 'unit of analysis,' and setting the boundaries for our discussion. By ensuring all participants use terms consistently, we create a shared foundation for productive debate and prevent misunderstandings. This initial step is crucial for constructing sound arguments and making defensible claims."
         },
         {
           "id": "philosophy-401-l01-c2",
           "kind": "concept",
-          "title": "Causal Thinking and Constraints",
-          "content": "To excel in Philosophy, it is crucial to understand the reasons behind events, not just their outcomes. In this lesson, we will examine the underlying assumptions, dependencies, and constraints that influence our thoughts and actions. By mapping these elements, we can focus our efforts on addressing the root causes of issues rather than merely treating their symptoms. This approach will help us develop more effective interventions and foster a deeper understanding of complex philosophical problems.\nContext recap: To excel in Philosophy, it is crucial to understand the reasons behind events, not just their outcomes. In this lesson, we will examine the underlying assumptions, dependencies, and constraints that influence our thoughts and actions. By mapping these elements, we can focus our efforts on addressing the root causes of issues rather than merely treating their symptoms. This approach will help us develop more effective interventions and foster a deeper understanding of complex philosophical problems.\nContext recap: To excel in Philosophy, it is crucial to understand the reasons behind events, not just their outcomes. In this lesson, we will examine the underlying assumptions, dependencies, and constraints that influence our thoughts and actions. By mapping these elements, we can focus our efforts on addressing the root causes of issues rather than merely treating their symptoms. This approach will help us develop more effective interventions and foster a deeper understanding of complex philosophical problems.\nWhy this matters: Causal Thinking and Constraints helps learners in Humanities connect ideas from Philosophy Mastery and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "title": "Causal Reasoning and Constraints",
+          "content": "Effective philosophical analysis goes beyond identifying what happened to understand *why* it happened. This requires causal reasoning—examining the assumptions, dependencies, and logical constraints that shape an argument. By mapping these relationships, we can distinguish between necessary and sufficient conditions and identify the root premises of a conclusion. This focus on underlying causes, rather than surface-level claims, allows for more profound critiques and robust arguments."
         },
         {
           "id": "philosophy-401-l01-c3",
           "kind": "recap",
-          "title": "Evidence and Accountability",
-          "content": "In this section, we will introduce important practices that are essential for maintaining high standards of evidence and accountability in our philosophical work. We will discuss the importance of keeping detailed records of our findings, adhering to a disciplined approach in our research, and establishing clear accountability loops. These practices are non-negotiable and will help ensure that our work is reliable and trustworthy, allowing us to build a solid foundation for our philosophical inquiries.\nContext recap: In this section, we will introduce important practices that are essential for maintaining high standards of evidence and accountability in our philosophical work. We will discuss the importance of keeping detailed records of our findings, adhering to a disciplined approach in our research, and establishing clear accountability loops. These practices are non-negotiable and will help ensure that our work is reliable and trustworthy, allowing us to build a solid foundation for our philosophical inquiries."
+          "title": "Epistemic Responsibility",
+          "content": "This lesson introduces core principles of epistemic responsibility. This includes the non-negotiable practices of documenting your reasoning process, adhering to high standards of evidence, and creating accountability loops to check your own biases and assumptions. These habits ensure that our philosophical work is rigorous, transparent, and trustworthy, forming a solid foundation for all future inquiry."
         }
       ],
       "flashcards": [
         {
           "id": "philosophy-401-l01-f1",
-          "front": "Unit of analysis",
-          "back": "The specific entity or process you evaluate to make defensible decisions."
+          "front": "Unit of Analysis",
+          "back": "The specific concept, question, or entity being evaluated in a philosophical inquiry."
         },
         {
           "id": "philosophy-401-l01-f2",
-          "front": "Constraint mapping",
-          "back": "A method for identifying boundaries that shape feasible options."
+          "front": "Constraint Analysis",
+          "back": "A method for identifying the logical, ethical, or practical boundaries that shape a philosophical problem and its possible solutions."
         },
         {
           "id": "philosophy-401-l01-f3",
-          "front": "Evidence standard",
-          "back": "The minimum quality threshold data must meet before action is taken."
+          "front": "Standard of Evidence",
+          "back": "The threshold of justification and quality that a piece of evidence must meet to be considered in an argument."
         }
       ]
     },
     {
       "id": "philosophy-401-l02",
-      "title": "Philosophy Workflow Lab",
+      "title": "Structuring a Philosophical Inquiry",
       "type": "interactive",
       "duration": 15,
       "learningAids": [
         {
           "id": "philosophy-401-l02-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use the structured prompt and write your reasoning before finalizing answers."
+          "type": "image",
+          "title": "Flowchart: The Inquiry Process",
+          "content": "An interactive flowchart illustrating the steps of a philosophical inquiry: from formulating a question, gathering evidence, structuring the argument, testing for fallacies, to drawing a conclusion."
         }
       ],
       "chunks": [
         {
           "id": "philosophy-401-l02-c1",
           "kind": "practice",
-          "title": "Workflow Construction",
-          "content": "In this interactive activity, you will have the opportunity to construct a comprehensive workflow that outlines the structure of arguments and the study of knowledge, known as epistemology. This workflow will include various components such as inputs, checkpoints to assess progress, outputs that represent the conclusions drawn, and rollback triggers that allow us to revisit earlier steps if necessary. This hands-on experience will enhance your understanding of how to organize and analyze philosophical arguments effectively.\nContext recap: In this interactive activity, you will have the opportunity to construct a comprehensive workflow that outlines the structure of arguments and the study of knowledge, known as epistemology. This workflow will include various components such as inputs, checkpoints to assess progress, outputs that represent the conclusions drawn, and rollback triggers that allow us to revisit earlier steps if necessary. This hands-on experience will enhance your understanding of how to organize and analyze philosophical arguments effectively."
+          "title": "Constructing an Inquiry Workflow",
+          "content": "In this interactive activity, you will build a structured workflow for a philosophical inquiry. You will learn to organize the process into distinct stages: defining premises and evidence (inputs), applying logical checks and balances (checkpoints), formulating a conclusion (output), and identifying points where you might need to revisit assumptions (feedback loops). This hands-on practice will help you develop a systematic and effective approach to tackling complex philosophical questions."
         },
         {
           "id": "philosophy-401-l02-c2",
           "kind": "recap",
-          "title": "Decision Logging",
-          "content": "In this recap, we will emphasize the importance of logging every decision made during our philosophical explorations. Each decision should be accompanied by a clear rationale, an expected effect, and a verification point that allows us to analyze the outcomes after our work is completed. By documenting our thought processes in this way, we can engage in meaningful post-run analysis, which will help us refine our approaches and improve our future philosophical inquiries.\nContext recap: In this recap, we will emphasize the importance of logging every decision made during our philosophical explorations. Each decision should be accompanied by a clear rationale, an expected effect, and a verification point that allows us to analyze the outcomes after our work is completed. By documenting our thought processes in this way, we can engage in meaningful post-run analysis, which will help us refine our approaches and improve our future philosophical inquiries."
+          "title": "Argument Journaling",
+          "content": "We will recap the importance of documenting your reasoning process. For every key step in your inquiry, you should log the rationale for your decision, its expected impact on your argument, and a verification point to check if your reasoning holds up. This practice of 'argument journaling' is essential for critical self-reflection and allows you to analyze and refine your thinking over time."
         }
       ],
       "interactiveActivities": [
         {
           "id": "philosophy-401-l02-act1",
           "type": "matching_pairs",
-          "title": "Workflow Match",
-          "description": "Match each workflow component to its strongest governance function.",
+          "title": "Argument Structure and Function",
+          "description": "Match each component of a structured inquiry to its primary function.",
           "pairs": [
             {
-              "left": "Input audit",
-              "right": "Prevents low-quality data from entering the system"
+              "left": "Premise Evaluation",
+              "right": "Ensures the argument is built on a solid foundation."
             },
             {
-              "left": "Checkpoint gate",
-              "right": "Stops propagation of known defects"
+              "left": "Logical Fallacy Check",
+              "right": "Prevents errors in reasoning from weakening the conclusion."
             },
             {
-              "left": "Outcome metric",
-              "right": "Measures whether the objective was met"
+              "left": "Conclusion Strength Test",
+              "right": "Measures how well the conclusion is supported by the evidence."
             },
             {
-              "left": "Retrospective log",
-              "right": "Captures lessons for next iteration"
+              "left": "Assumption Review",
+              "right": "Identifies hidden beliefs that could be challenged."
             }
           ]
         },
         {
           "id": "philosophy-401-l02-act2",
           "type": "sorting_buckets",
-          "title": "Risk Classification",
-          "description": "Sort items into strategic, operational, and quality-risk groups.",
+          "title": "Classifying Argumentative Flaws",
+          "description": "Sort each flaw into the correct category of error.",
           "buckets": [
-            "Strategic",
-            "Operational",
-            "Quality"
+            "Logical Fallacy",
+            "Epistemic Error",
+            "Rhetorical Device"
           ],
           "items": [
             {
-              "text": "Misaligned goals",
-              "bucket": "Strategic"
+              "text": "Ad Hominem Attack",
+              "bucket": "Logical Fallacy"
             },
             {
-              "text": "Unclear handoff timing",
-              "bucket": "Operational"
+              "text": "Confirmation Bias",
+              "bucket": "Epistemic Error"
             },
             {
-              "text": "Inconsistent acceptance criteria",
-              "bucket": "Quality"
+              "text": "Appeal to Emotion",
+              "bucket": "Rhetorical Device"
             },
             {
-              "text": "No benchmark baseline",
-              "bucket": "Quality"
+              "text": "Overlooking contradictory evidence",
+              "bucket": "Epistemic Error"
+            },
+            {
+              "text": "Straw Man Argument",
+              "bucket": "Logical Fallacy"
             }
           ]
         }
@@ -171,124 +175,124 @@ export const Philosophy401Module: LearningModule = {
         {
           "id": "philosophy-401-l03-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use the structured prompt and write your reasoning before finalizing answers."
+          "title": "Review Prompt",
+          "content": "Before starting, briefly review your notes on 'unit of analysis,' 'causal reasoning,' and the steps of a structured inquiry."
         }
       ],
       "questions": [
         {
           "id": "philosophy-401-l03-q1",
-          "text": "Which action best improves decisions in argument structure work?",
+          "text": "Which action best improves the rigor of a philosophical argument?",
           "skillId": "philosophy-401-skill-core",
           "options": [
             {
               "id": "a",
-              "text": "Rely on one unverified example"
+              "text": "Using emotionally charged language to be more persuasive."
             },
             {
               "id": "b",
-              "text": "Define criteria, compare alternatives, and test assumptions"
+              "text": "Clearly defining terms, testing assumptions, and evaluating alternative viewpoints."
             },
             {
               "id": "c",
-              "text": "Skip metrics and move directly to execution"
+              "text": "Focusing only on evidence that supports your initial hypothesis."
             },
             {
               "id": "d",
-              "text": "Avoid documenting rationale"
+              "text": "Keeping your reasoning process private to avoid criticism."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Explicit criteria and testable assumptions improve reliability and transferability."
+          "explanation": "Rigor in philosophy comes from clarity, self-critique, and a thorough examination of the logical space, which includes defining terms and testing assumptions."
         },
         {
           "id": "philosophy-401-l03-q2",
-          "text": "In epistemology, what is the strongest indicator of process quality?",
+          "text": "In epistemology, what is the strongest indicator of a high-quality inquiry process?",
           "skillId": "philosophy-401-skill-process",
           "options": [
             {
               "id": "a",
-              "text": "Output speed only"
+              "text": "The speed at which a conclusion is reached."
             },
             {
               "id": "b",
-              "text": "Traceable steps, checkpoints, and measurable outcomes"
+              "text": "A transparent process with traceable steps, logical checks, and measurable outcomes."
             },
             {
               "id": "c",
-              "text": "Unstructured iteration without logs"
+              "text": "An unstructured approach that relies purely on intuition."
             },
             {
               "id": "d",
-              "text": "One-time performance anecdotes"
+              "text": "The popularity of the final conclusion."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Quality processes are observable, repeatable, and measurable."
+          "explanation": "A high-quality epistemic process is observable, repeatable, and justifiable at every step, ensuring the conclusion is well-founded."
         },
         {
           "id": "philosophy-401-l03-q3",
-          "text": "When evaluating ethics and politics, which practice supports trustworthy conclusions?",
+          "text": "When analyzing an ethical theory, which practice supports a trustworthy evaluation?",
           "skillId": "philosophy-401-skill-eval",
           "options": [
             {
               "id": "a",
-              "text": "Ignore edge cases"
+              "text": "Ignoring hypothetical edge cases and counterexamples."
             },
             {
               "id": "b",
-              "text": "Use baseline comparisons and failure analysis"
+              "text": "Using baseline comparisons against other theories and analyzing potential failure modes."
             },
             {
               "id": "c",
-              "text": "Change targets after results are known"
+              "text": "Changing the criteria for what counts as 'good' after seeing the theory's results."
             },
             {
               "id": "d",
-              "text": "Remove context from findings"
+              "text": "Removing the historical and social context from the theory's development."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Baselines and failure analysis prevent overclaiming and improve design quality."
+          "explanation": "Trustworthy evaluations require context and comparison. Baselines and failure analysis prevent biased assessments and improve critical understanding."
         },
         {
           "id": "philosophy-401-l03-q4",
-          "text": "A mature applied reasoning strategy should prioritize:",
+          "text": "A mature strategy for applied reasoning should prioritize:",
           "skillId": "philosophy-401-skill-strategy",
           "options": [
             {
               "id": "a",
-              "text": "Single-metric optimization at any cost"
+              "text": "Optimizing for a single principle (e.g., utility) at any cost."
             },
             {
               "id": "b",
-              "text": "Balanced outcomes across quality, risk, and sustainability"
+              "text": "Balancing competing values and considering the long-term implications of a decision."
             },
             {
               "id": "c",
-              "text": "Decisions based only on intuition"
+              "text": "Making decisions based only on gut feeling or intuition."
             },
             {
               "id": "d",
-              "text": "No post-implementation review"
+              "text": "Avoiding a post-decision review to maintain confidence."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Balanced scorecards align long-term performance with accountability."
+          "explanation": "Mature reasoning acknowledges complexity and seeks balanced, sustainable outcomes rather than relying on oversimplified metrics or unexamined intuition."
         }
       ]
     },
     {
       "id": "philosophy-401-l04",
-      "title": "Methods, Metrics, and Failure Modes in Philosophy",
+      "title": "Methods, Criteria, and Errors in Reasoning",
       "type": "video",
       "duration": 14,
       "learningAids": [
         {
           "id": "philosophy-401-l04-a1",
-          "type": "mnemonic",
-          "title": "Guided Practice",
-          "content": "Use the structured prompt and write your reasoning before finalizing answers."
+          "type": "image",
+          "title": "Decision Tree: Choosing a Method",
+          "content": "A flowchart guiding the student through questions to help select the best philosophical method (e.g., 'Is the question conceptual or empirical?') for a given problem."
         }
       ],
       "chunks": [
@@ -296,50 +300,50 @@ export const Philosophy401Module: LearningModule = {
           "id": "philosophy-401-l04-c1",
           "kind": "concept",
           "title": "Method Selection",
-          "content": "When selecting methods for our philosophical inquiries, we must consider various factors such as constraints, the quality of information available, and the potential cost of errors. In this lesson, you will learn how to compare different alternatives and justify the methods you choose for specific philosophical scenarios. This critical thinking process will enhance your ability to make informed decisions and apply the most suitable methods to your philosophical work.\nContext recap: When selecting methods for our philosophical inquiries, we must consider various factors such as constraints, the quality of information available, and the potential cost of errors. In this lesson, you will learn how to compare different alternatives and justify the methods you choose for specific philosophical scenarios. This critical thinking process will enhance your ability to make informed decisions and apply the most suitable methods to your philosophical work."
+          "content": "Different philosophical questions require different methods of inquiry. We will explore how to select and justify the appropriate method—such as Socratic dialogue, thought experiments, or formal logic—based on the nature of the problem, the available evidence, and the potential consequences of flawed reasoning. This strategic choice is fundamental to conducting an effective and efficient philosophical investigation."
         },
         {
           "id": "philosophy-401-l04-c2",
           "kind": "example",
-          "title": "Metric Architecture",
-          "content": "In this example, we will explore the concept of metric architecture, which connects leading indicators, lagging outcomes, and diagnostic measures. This framework enables teams to identify any deviations from expected results early on and respond thoughtfully. By understanding how these metrics interact, you will be better equipped to monitor progress and make informed adjustments to your philosophical projects.\nContext recap: In this example, we will explore the concept of metric architecture, which connects leading indicators, lagging outcomes, and diagnostic measures. This framework enables teams to identify any deviations from expected results early on and respond thoughtfully. By understanding how these metrics interact, you will be better equipped to monitor progress and make informed adjustments to your philosophical projects."
+          "title": "Developing Evaluation Criteria",
+          "content": "How do we know if an argument is good? We need clear criteria. This involves establishing standards for logical consistency, empirical adequacy, and explanatory power. We'll examine how to connect predictive criteria (e.g., 'Does this ethical theory anticipate difficult cases?') with outcome evaluations (e.g., 'Does the theory produce a just result?'). This framework allows us to assess arguments systematically and identify weaknesses early."
         },
         {
           "id": "philosophy-401-l04-c3",
           "kind": "recap",
-          "title": "Failure Taxonomy",
-          "content": "In this recap, we will categorize different types of failures that may occur in our philosophical work. These failures can be grouped by data issues, process challenges, execution problems, and governance concerns. By organizing failures in this way, we can create specific mitigation plans that address the root causes of these issues rather than applying generic solutions. This targeted approach will enhance our ability to learn from mistakes and improve our philosophical practices.\nContext recap: In this recap, we will categorize different types of failures that may occur in our philosophical work. These failures can be grouped by data issues, process challenges, execution problems, and governance concerns. By organizing failures in this way, we can create specific mitigation plans that address the root causes of these issues rather than applying generic solutions. This targeted approach will enhance our ability to learn from mistakes and improve our philosophical practices.\nContext recap: In this recap, we will categorize different types of failures that may occur in our philosophical work. These failures can be grouped by data issues, process challenges, execution problems, and governance concerns. By organizing failures in this way, we can create specific mitigation plans that address the root causes of these issues rather than applying generic solutions. This targeted approach will enhance our ability to learn from mistakes and improve our philosophical practices.\nWhy this matters: Failure Taxonomy helps learners in Humanities connect ideas from Philosophy Mastery and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "title": "A Taxonomy of Errors in Reasoning",
+          "content": "This recap introduces a structured classification of common errors in reasoning. We will categorize failures by their source: formal fallacies (errors in logical structure), informal fallacies (errors in content and context), and cognitive biases (systematic patterns of deviation from rational judgment). By understanding this taxonomy, we can diagnose flaws in arguments more precisely and develop targeted strategies to avoid them in our own work."
         }
       ],
       "flashcards": [
         {
           "id": "philosophy-401-l04-f1",
-          "front": "Leading indicator",
-          "back": "A metric that signals probable future outcomes before final results appear."
+          "front": "Predictive Criterion",
+          "back": "A standard used to evaluate the likely success or coherence of an argument before its final conclusion is reached."
         },
         {
           "id": "philosophy-401-l04-f2",
-          "front": "Failure taxonomy",
-          "back": "A structured classification of failure types used to design targeted fixes."
+          "front": "Taxonomy of Errors",
+          "back": "A structured classification of types of flawed reasoning, used to diagnose and correct arguments."
         },
         {
           "id": "philosophy-401-l04-f3",
-          "front": "Cost of error",
-          "back": "The operational, financial, or social impact caused by an incorrect decision."
+          "front": "Consequences of Flawed Reasoning",
+          "back": "The logical, ethical, or practical impact of reaching an incorrect conclusion due to errors in an argument."
         }
       ]
     },
     {
       "id": "philosophy-401-l05",
-      "title": "Case Studio: Improve a Philosophy System",
+      "title": "Case Study: Analyzing an Ethical Framework",
       "type": "interactive",
       "duration": 16,
       "learningAids": [
         {
           "id": "philosophy-401-l05-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use the structured prompt and write your reasoning before finalizing answers."
+          "type": "image",
+          "title": "Case Study Brief",
+          "content": "A one-page summary of a complex ethical dilemma, highlighting the key stakeholders, conflicting values, and the central question to be resolved."
         }
       ],
       "chunks": [
@@ -347,48 +351,48 @@ export const Philosophy401Module: LearningModule = {
           "id": "philosophy-401-l05-c1",
           "kind": "practice",
           "title": "Case Decomposition",
-          "content": "In this interactive case study, you will break down a realistic philosophical case into its essential components. This includes identifying the main objective, understanding the context in which it exists, recognizing any constraints that may limit options, and exploring various intervention strategies. You will also make explicit notes about the trade-offs involved in each option. This exercise will help you develop critical analytical skills and enhance your ability to approach complex philosophical problems.\nContext recap: In this interactive case study, you will break down a realistic philosophical case into its essential components. This includes identifying the main objective, understanding the context in which it exists, recognizing any constraints that may limit options, and exploring various intervention strategies. You will also make explicit notes about the trade-offs involved in each option. This exercise will help you develop critical analytical skills and enhance your ability to approach complex philosophical problems.\nContext recap: In this interactive case study, you will break down a realistic philosophical case into its essential components. This includes identifying the main objective, understanding the context in which it exists, recognizing any constraints that may limit options, and exploring various intervention strategies. You will also make explicit notes about the trade-offs involved in each option. This exercise will help you develop critical analytical skills and enhance your ability to approach complex philosophical problems.\nWhy this matters: Case Decomposition helps learners in Humanities connect ideas from Philosophy Mastery and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "In this interactive case study, you will analyze a realistic ethical dilemma. You will break the case down into its core components: the primary objective, the contextual factors, the ethical constraints, and potential courses of action. For each option, you will explicitly map the trade-offs between competing values (e.g., liberty vs. security). This exercise will sharpen your analytical skills and your ability to navigate complex moral landscapes."
         },
         {
           "id": "philosophy-401-l05-c2",
           "kind": "recap",
-          "title": "Improvement Proposal",
-          "content": "In this recap, you will present a structured improvement proposal based on the case study you analyzed. This proposal will include clear success criteria, a mapping of who is responsible for each aspect of the proposal, and a timeline for follow-up actions. By delivering a well-organized proposal, you will practice articulating your ideas and demonstrating how to implement improvements in philosophical systems effectively.\nContext recap: In this recap, you will present a structured improvement proposal based on the case study you analyzed. This proposal will include clear success criteria, a mapping of who is responsible for each aspect of the proposal, and a timeline for follow-up actions. By delivering a well-organized proposal, you will practice articulating your ideas and demonstrating how to implement improvements in philosophical systems effectively."
+          "title": "Proposing a Refined Position",
+          "content": "Based on your case analysis, you will formulate and defend a refined ethical position. This proposal must include clear criteria for what constitutes a successful resolution, an acknowledgment of the strongest counter-arguments, and a plan for how your position could be implemented or tested. This final step practices the crucial skill of moving from analysis to a well-reasoned, actionable conclusion."
         }
       ],
       "interactiveActivities": [
         {
           "id": "philosophy-401-l05-act1",
           "type": "scenario_practice",
-          "title": "Decision Path Simulation",
-          "description": "Choose among three interventions to improve ethics and politics outcomes under time and quality constraints.",
+          "title": "Ethical Framework Simulation",
+          "description": "You are on a bioethics committee. Apply one of three frameworks (Utilitarian, Deontological, Virtue Ethics) to a gene-editing dilemma and justify your decision.",
           "instructions": [
-            "Define success criteria before selecting an intervention.",
-            "Document one short-term tradeoff and one long-term benefit.",
-            "Specify a metric that confirms success in the next cycle."
+            "Define your success criteria before selecting a framework.",
+            "Document one short-term tradeoff and one long-term benefit of your chosen path.",
+            "Specify a metric or principle that would confirm the success of your decision."
           ]
         },
         {
           "id": "philosophy-401-l05-act2",
           "type": "matching_pairs",
-          "title": "Intervention to Outcome Mapping",
-          "description": "Connect interventions with the most likely system-level effects.",
+          "title": "Matching Principles to Implications",
+          "description": "Connect each philosophical principle or method with its most likely implication.",
           "pairs": [
             {
-              "left": "Tighter intake criteria",
-              "right": "Higher signal quality and lower downstream rework"
+              "left": "Applying the Veil of Ignorance",
+              "right": "Leads to impartial principles of justice."
             },
             {
-              "left": "Checkpoint automation",
-              "right": "Faster detection of preventable defects"
+              "left": "The Categorical Imperative",
+              "right": "Establishes universal moral duties."
             },
             {
-              "left": "Post-run retrospective",
-              "right": "Improved adaptation in later cycles"
+              "left": "Seeking the Golden Mean",
+              "right": "Identifies virtue as a balance between extremes."
             },
             {
-              "left": "Cross-team briefing",
-              "right": "Reduced ambiguity at handoff boundaries"
+              "left": "Maximizing Overall Happiness",
+              "right": "Prioritizes consequences in ethical calculations."
             }
           ]
         }
@@ -396,7 +400,7 @@ export const Philosophy401Module: LearningModule = {
     },
     {
       "id": "philosophy-401-l06",
-      "title": "Checkpoint 2: Systems Reasoning",
+      "title": "Checkpoint 2: Applied Systems Reasoning",
       "type": "quiz",
       "duration": 10,
       "learningAids": [
@@ -404,109 +408,109 @@ export const Philosophy401Module: LearningModule = {
           "id": "philosophy-401-l06-a1",
           "type": "practice",
           "title": "Guided Practice",
-          "content": "Use the structured prompt and write your reasoning before finalizing answers."
+          "content": "Review the Taxonomy of Errors and the ethical frameworks from the case study before you begin."
         }
       ],
       "questions": [
         {
           "id": "philosophy-401-l06-q1",
-          "text": "Which action best improves decisions in argument structure work?",
-          "skillId": "philosophy-401-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "Rely on one unverified example"
-            },
-            {
-              "id": "b",
-              "text": "Define criteria, compare alternatives, and test assumptions"
-            },
-            {
-              "id": "c",
-              "text": "Skip metrics and move directly to execution"
-            },
-            {
-              "id": "d",
-              "text": "Avoid documenting rationale"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Explicit criteria and testable assumptions improve reliability and transferability."
-        },
-        {
-          "id": "philosophy-401-l06-q2",
-          "text": "In epistemology, what is the strongest indicator of process quality?",
-          "skillId": "philosophy-401-skill-process",
-          "options": [
-            {
-              "id": "a",
-              "text": "Output speed only"
-            },
-            {
-              "id": "b",
-              "text": "Traceable steps, checkpoints, and measurable outcomes"
-            },
-            {
-              "id": "c",
-              "text": "Unstructured iteration without logs"
-            },
-            {
-              "id": "d",
-              "text": "One-time performance anecdotes"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Quality processes are observable, repeatable, and measurable."
-        },
-        {
-          "id": "philosophy-401-l06-q3",
-          "text": "When evaluating ethics and politics, which practice supports trustworthy conclusions?",
+          "text": "An argument claims that because a new technology is 'natural,' it must be morally good. According to the taxonomy of errors, this is an example of:",
           "skillId": "philosophy-401-skill-eval",
           "options": [
             {
               "id": "a",
-              "text": "Ignore edge cases"
+              "text": "A formal fallacy."
             },
             {
               "id": "b",
-              "text": "Use baseline comparisons and failure analysis"
+              "text": "An appeal to nature, which is an informal fallacy."
             },
             {
               "id": "c",
-              "text": "Change targets after results are known"
+              "text": "A cognitive bias."
             },
             {
               "id": "d",
-              "text": "Remove context from findings"
+              "text": "A sound deductive argument."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Baselines and failure analysis prevent overclaiming and improve design quality."
+          "explanation": "The 'appeal to nature' is a common informal fallacy that incorrectly assumes that what is natural is inherently good or right. It's an error in the content and context of the argument, not its logical form."
         },
         {
-          "id": "philosophy-401-l06-q4",
-          "text": "A mature applied reasoning strategy should prioritize:",
+          "id": "philosophy-401-l06-q2",
+          "text": "When analyzing a complex ethical case study, what is the most critical first step?",
           "skillId": "philosophy-401-skill-strategy",
           "options": [
             {
               "id": "a",
-              "text": "Single-metric optimization at any cost"
+              "text": "Immediately choosing a solution that feels right."
             },
             {
               "id": "b",
-              "text": "Balanced outcomes across quality, risk, and sustainability"
+              "text": "Identifying the core ethical conflict and the primary stakeholders involved."
             },
             {
               "id": "c",
-              "text": "Decisions based only on intuition"
+              "text": "Finding historical precedents without considering the current context."
             },
             {
               "id": "d",
-              "text": "No post-implementation review"
+              "text": "Focusing only on the potential legal implications."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Balanced scorecards align long-term performance with accountability."
+          "explanation": "Before any framework can be applied or a solution proposed, one must first decompose the problem to understand the central tension and who is affected by the outcome."
+        },
+        {
+          "id": "philosophy-401-l06-q3",
+          "text": "A policy analyst uses a utilitarian framework to justify a decision that benefits the majority but severely harms a minority. A deontological critique of this decision would most likely focus on:",
+          "skillId": "philosophy-401-skill-core",
+          "options": [
+            {
+              "id": "a",
+              "text": "Whether the calculation of overall happiness was accurate."
+            },
+            {
+              "id": "b",
+              "text": "Whether the decision violates a universal moral duty or the rights of individuals."
+            },
+            {
+              "id": "c",
+              "text": "Whether the analyst is a virtuous person."
+            },
+            {
+              "id": "d",
+              "text": "Whether the policy will lead to long-term economic growth."
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Deontology prioritizes duties, rules, and rights over consequences. It would question whether the action itself is permissible, regardless of the positive outcome for the majority."
+        },
+        {
+          "id": "philosophy-401-l06-q4",
+          "text": "Which of the following represents the strongest 'evaluation criterion' for a political theory of justice?",
+          "skillId": "philosophy-401-skill-process",
+          "options": [
+            {
+              "id": "a",
+              "text": "The theory was proposed by a famous philosopher."
+            },
+            {
+              "id": "b",
+              "text": "The theory is described in a very long and complex book."
+            },
+            {
+              "id": "c",
+              "text": "The theory's principles, when applied, consistently resolve conflicts and protect basic rights under various conditions."
+            },
+            {
+              "id": "d",
+              "text": "The theory is very popular on social media."
+            }
+          ],
+          "correctOptionId": "c",
+          "explanation": "The strongest criterion for evaluating a theory is its functional success: its logical consistency, explanatory power, and ability to be applied effectively to real-world or hypothetical problems."
         }
       ]
     }

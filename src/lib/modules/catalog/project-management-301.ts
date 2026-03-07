@@ -1,17 +1,19 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const ProjectManagement301Module: LearningModule = {
+export const project_management_301_Module: LearningModule = {
   "id": "project-management-301",
   "title": "Program Management",
-  "description": "Advanced program governance, portfolio sequencing, risk orchestration, and delivery optimization.",
+  "description": "Master advanced program governance, portfolio sequencing, risk orchestration, and benefits realization to drive strategic business outcomes.",
   "subject": "Project Management",
   "tags": [
-    "curriculum",
-    "interactive"
+    "program management",
+    "portfolio management",
+    "strategic alignment",
+    "advanced"
   ],
-  "minAge": 16,
+  "minAge": 18,
   "maxAge": 99,
-  "version": "1.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en",
@@ -25,489 +27,273 @@ export const ProjectManagement301Module: LearningModule = {
     "ko",
     "ru"
   ],
-  "thumbnail": "/placeholders/lesson-robot.svg",
+  "thumbnail": "/thumbnails/program-management-advanced.svg",
   "learningObjectives": [
-    "Understand core concepts in Project Management",
-    "Apply Project Management skills through guided practice",
-    "Demonstrate mastery through checkpoint quizzes"
+    "Differentiate between project, program, and portfolio management.",
+    "Design and implement a robust program governance framework.",
+    "Optimize project sequencing and resource allocation within a program portfolio.",
+    "Orchestrate risk management activities across interdependent projects.",
+    "Develop a benefits realization plan to track and measure program value."
   ],
   "lessons": [
     {
       "id": "project-management-301-l01",
-      "title": "Project Management Concepts 1",
+      "title": "Foundations of Program Management",
       "type": "video",
-      "duration": 9,
+      "duration": 10,
       "learningAids": [
         {
           "id": "project-management-301-l01-a1",
           "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary for Project Management."
+          "title": "Project vs. Program vs. Portfolio",
+          "content": "A Venn diagram illustrating the relationships and distinctions between projects, programs, and portfolios."
         },
         {
           "id": "project-management-301-l01-a2",
           "type": "animation",
-          "title": "Animated Example",
-          "content": "Step-by-step walkthrough for Project Management."
+          "title": "Lifecycle of a Strategic Program",
+          "content": "An animated walkthrough of the typical phases of a program, from formulation to benefits realization."
         }
       ]
     },
     {
       "id": "project-management-301-l02",
-      "title": "Project Management Practice 2",
-      "type": "interactive",
-      "duration": 12,
-      "metadata": {
-        "prompts": [
-          "State the key concept in one sentence.",
-          "Apply it to one example.",
-          "Explain your improvement step for next time."
-        ]
-      },
+      "title": "Program Governance & Strategic Alignment",
+      "type": "video",
+      "duration": 15,
       "learningAids": [
         {
           "id": "project-management-301-l02-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Follow the challenge flow and record your approach."
+          "type": "image",
+          "title": "Program Governance Structure",
+          "content": "An organizational chart showing a typical program governance model, including steering committees, program managers, and project teams."
+        },
+        {
+          "id": "project-management-301-l02-a2",
+          "type": "animation",
+          "title": "From Strategy to Execution",
+          "content": "A flowchart animating how high-level business strategy is translated into actionable program objectives and key results (OKRs)."
         }
       ]
     },
     {
       "id": "project-management-301-l03",
-      "title": "Checkpoint 1: Project Management",
-      "type": "quiz",
-      "duration": 10,
-      "questions": [
-        {
-          "id": "project-management-301-l03-q1",
-          "text": "Which choice best matches the main idea of Project Management?",
-          "skillId": "project-management-301-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "A complete, evidence-based explanation"
-            },
-            {
-              "id": "b",
-              "text": "An unrelated claim"
-            },
-            {
-              "id": "c",
-              "text": "A random guess"
-            },
-            {
-              "id": "d",
-              "text": "A conflicting idea"
-            }
-          ],
-          "correctOptionId": "a"
-        },
-        {
-          "id": "project-management-301-l03-q2",
-          "text": "What should a learner do after getting an answer wrong?",
-          "skillId": "project-management-301-skill-review",
-          "options": [
-            {
-              "id": "a",
-              "text": "Review error cause and retry with strategy"
-            },
-            {
-              "id": "b",
-              "text": "Skip all corrections"
-            },
-            {
-              "id": "c",
-              "text": "Memorize only the answer letter"
-            },
-            {
-              "id": "d",
-              "text": "Stop practicing"
-            }
-          ],
-          "correctOptionId": "a"
-        },
-        {
-          "id": "project-management-301-l03-q3",
-          "text": "Which strategy most improves long-term retention for Program Management?",
-          "skillId": "project-management-301-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "Use spaced retrieval and mixed practice over multiple sessions."
-            },
-            {
-              "id": "b",
-              "text": "Cram once and avoid later practice."
-            },
-            {
-              "id": "c",
-              "text": "Read notes passively without self-testing."
-            },
-            {
-              "id": "d",
-              "text": "Rely on confidence alone instead of evidence."
-            }
-          ],
-          "correctOptionId": "a",
-          "explanation": "Spaced retrieval with varied practice strengthens durable memory and flexible application."
-        }
-      ],
+      "title": "Practice: Designing a Governance Framework",
+      "type": "interactive",
+      "duration": 18,
+      "metadata": {
+        "prompts": [
+          "For the 'Global Market Expansion' program, draft a one-sentence mission statement.",
+          "Identify three key stakeholder groups and propose a steering committee structure.",
+          "Outline the critical decision-making gates for this program's lifecycle."
+        ]
+      },
       "learningAids": [
         {
           "id": "project-management-301-l03-a1",
-          "type": "mnemonic",
-          "title": "Memory Cue",
-          "content": "Use Plan, Solve, Explain to structure each response."
+          "type": "practice",
+          "title": "Interactive Case Study",
+          "content": "Use the provided templates to build a governance plan for the 'LaunchLink Satellite Network' case study."
         }
       ]
     },
     {
       "id": "project-management-301-l04",
-      "title": "Project Management Practice 4",
-      "type": "interactive",
+      "title": "Checkpoint 1: Strategy & Governance",
+      "type": "quiz",
       "duration": 12,
-      "metadata": {
-        "prompts": [
-          "State the key concept in one sentence.",
-          "Apply it to one example.",
-          "Explain your improvement step for next time."
-        ]
-      },
-      "learningAids": [
+      "questions": [
         {
-          "id": "project-management-301-l04-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Follow the challenge flow and record your approach."
+          "id": "project-management-301-l04-q1",
+          "text": "What is the primary function of program management that distinguishes it from project management?",
+          "skillId": "program-fundamentals",
+          "options": [
+            {
+              "id": "a",
+              "text": "Coordinating multiple related projects to achieve a strategic business outcome."
+            },
+            {
+              "id": "b",
+              "text": "Managing the day-to-day tasks of a single project team."
+            },
+            {
+              "id": "c",
+              "text": "Executing a specific set of deliverables within a fixed budget and timeline."
+            },
+            {
+              "id": "d",
+              "text": "Selecting and prioritizing all potential projects for an organization."
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Program management focuses on the coordinated management of interdependent projects to realize benefits and control not available from managing them individually."
+        },
+        {
+          "id": "project-management-301-l04-q2",
+          "text": "A program's steering committee is primarily responsible for which of the following?",
+          "skillId": "program-governance",
+          "options": [
+            {
+              "id": "a",
+              "text": "Providing strategic direction, resources, and high-level decision-making."
+            },
+            {
+              "id": "b",
+              "text": "Creating detailed project schedules and assigning tasks."
+            },
+            {
+              "id": "c",
+              "text": "Developing the software code for the program's components."
+            },
+            {
+              "id": "d",
+              "text": "Marketing the final product to end-users."
+            }
+          ],
+          "correctOptionId": "a"
         }
       ]
     },
     {
       "id": "project-management-301-l05",
-      "title": "Project Management Concepts 5",
+      "title": "Portfolio Sequencing & Benefits Realization",
       "type": "video",
-      "duration": 9,
+      "duration": 15,
       "learningAids": [
         {
           "id": "project-management-301-l05-a1",
           "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary for Project Management."
+          "title": "Program Roadmap with Dependencies",
+          "content": "A visual roadmap showing how different projects within a program are sequenced over time, highlighting key dependencies and milestones."
         },
         {
           "id": "project-management-301-l05-a2",
           "type": "animation",
-          "title": "Animated Example",
-          "content": "Step-by-step walkthrough for Project Management."
+          "title": "Benefits Realization Pathway",
+          "content": "An animation illustrating the path from project 'output' (e.g., a new system) to program 'outcome' (e.g., improved efficiency) and finally to strategic 'benefit' (e.g., increased profit)."
         }
       ]
     },
     {
       "id": "project-management-301-l06",
-      "title": "Checkpoint 2: Project Management",
-      "type": "quiz",
-      "duration": 10,
-      "questions": [
-        {
-          "id": "project-management-301-l06-q1",
-          "text": "Which choice best matches the main idea of Project Management?",
-          "skillId": "project-management-301-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "A complete, evidence-based explanation"
-            },
-            {
-              "id": "b",
-              "text": "An unrelated claim"
-            },
-            {
-              "id": "c",
-              "text": "A random guess"
-            },
-            {
-              "id": "d",
-              "text": "A conflicting idea"
-            }
-          ],
-          "correctOptionId": "a"
-        },
-        {
-          "id": "project-management-301-l06-q2",
-          "text": "What should a learner do after getting an answer wrong?",
-          "skillId": "project-management-301-skill-review",
-          "options": [
-            {
-              "id": "a",
-              "text": "Review error cause and retry with strategy"
-            },
-            {
-              "id": "b",
-              "text": "Skip all corrections"
-            },
-            {
-              "id": "c",
-              "text": "Memorize only the answer letter"
-            },
-            {
-              "id": "d",
-              "text": "Stop practicing"
-            }
-          ],
-          "correctOptionId": "a"
-        },
-        {
-          "id": "project-management-301-l06-q3",
-          "text": "Which strategy most improves long-term retention for Program Management?",
-          "skillId": "project-management-301-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "Use spaced retrieval and mixed practice over multiple sessions."
-            },
-            {
-              "id": "b",
-              "text": "Cram once and avoid later practice."
-            },
-            {
-              "id": "c",
-              "text": "Read notes passively without self-testing."
-            },
-            {
-              "id": "d",
-              "text": "Rely on confidence alone instead of evidence."
-            }
-          ],
-          "correctOptionId": "a",
-          "explanation": "Spaced retrieval with varied practice strengthens durable memory and flexible application."
-        }
-      ],
+      "title": "Practice: Building a Program Roadmap",
+      "type": "interactive",
+      "duration": 20,
+      "metadata": {
+        "prompts": [
+          "Sequence the projects for the 'Smart City' initiative based on their dependencies and potential for early value delivery.",
+          "Identify and define the three most critical program milestones for the first year.",
+          "Draft a benefits realization plan to measure the success of the 'Smart City' initiative."
+        ]
+      },
       "learningAids": [
         {
           "id": "project-management-301-l06-a1",
-          "type": "mnemonic",
-          "title": "Memory Cue",
-          "content": "Use Plan, Solve, Explain to structure each response."
+          "type": "practice",
+          "title": "Roadmap Simulation",
+          "content": "Use a drag-and-drop interface to build an optimal program roadmap for a given set of projects, constraints, and objectives."
         }
       ]
     },
     {
       "id": "project-management-301-l07",
-      "title": "Project Management Concepts 7",
+      "title": "Risk Orchestration & Stakeholder Management",
       "type": "video",
-      "duration": 9,
+      "duration": 12,
       "learningAids": [
         {
           "id": "project-management-301-l07-a1",
           "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary for Project Management."
+          "title": "Program-Level Risk Matrix",
+          "content": "A matrix demonstrating how risks from individual projects are aggregated and assessed at the program level."
         },
         {
           "id": "project-management-301-l07-a2",
           "type": "animation",
-          "title": "Animated Example",
-          "content": "Step-by-step walkthrough for Project Management."
+          "title": "Stakeholder Communication Cadence",
+          "content": "An animated calendar showing a sample communication plan for different stakeholder groups throughout a program's lifecycle."
         }
       ]
     },
     {
       "id": "project-management-301-l08",
-      "title": "Project Management Practice 8",
-      "type": "interactive",
-      "duration": 12,
-      "metadata": {
-        "prompts": [
-          "State the key concept in one sentence.",
-          "Apply it to one example.",
-          "Explain your improvement step for next time."
-        ]
-      },
-      "learningAids": [
-        {
-          "id": "project-management-301-l08-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Follow the challenge flow and record your approach."
-        }
-      ]
-    },
-    {
-      "id": "project-management-301-l09",
-      "title": "Checkpoint 3: Project Management",
+      "title": "Final Assessment: Program Management Mastery",
       "type": "quiz",
-      "duration": 10,
+      "duration": 20,
       "questions": [
         {
-          "id": "project-management-301-l09-q1",
-          "text": "Which choice best matches the main idea of Project Management?",
-          "skillId": "project-management-301-skill-core",
+          "id": "project-management-301-l08-q1",
+          "text": "A key project in your program is delayed, threatening a major program milestone. What is the BEST first step for a program manager?",
+          "skillId": "risk-orchestration",
           "options": [
             {
               "id": "a",
-              "text": "A complete, evidence-based explanation"
+              "text": "Assess the impact of the delay on other interdependent projects and the overall program benefits."
             },
             {
               "id": "b",
-              "text": "An unrelated claim"
+              "text": "Immediately replace the project manager of the delayed project."
             },
             {
               "id": "c",
-              "text": "A random guess"
+              "text": "Cancel the delayed project to protect the program's budget."
             },
             {
               "id": "d",
-              "text": "A conflicting idea"
-            }
-          ],
-          "correctOptionId": "a"
-        },
-        {
-          "id": "project-management-301-l09-q2",
-          "text": "What should a learner do after getting an answer wrong?",
-          "skillId": "project-management-301-skill-review",
-          "options": [
-            {
-              "id": "a",
-              "text": "Review error cause and retry with strategy"
-            },
-            {
-              "id": "b",
-              "text": "Skip all corrections"
-            },
-            {
-              "id": "c",
-              "text": "Memorize only the answer letter"
-            },
-            {
-              "id": "d",
-              "text": "Stop practicing"
-            }
-          ],
-          "correctOptionId": "a"
-        },
-        {
-          "id": "project-management-301-l09-q3",
-          "text": "Which strategy most improves long-term retention for Program Management?",
-          "skillId": "project-management-301-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "Use spaced retrieval and mixed practice over multiple sessions."
-            },
-            {
-              "id": "b",
-              "text": "Cram once and avoid later practice."
-            },
-            {
-              "id": "c",
-              "text": "Read notes passively without self-testing."
-            },
-            {
-              "id": "d",
-              "text": "Rely on confidence alone instead of evidence."
+              "text": "Inform the customer that the entire program will be late."
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Spaced retrieval with varied practice strengthens durable memory and flexible application."
-        }
-      ],
-      "learningAids": [
-        {
-          "id": "project-management-301-l09-a1",
-          "type": "mnemonic",
-          "title": "Memory Cue",
-          "content": "Use Plan, Solve, Explain to structure each response."
-        }
-      ]
-    },
-    {
-      "id": "project-management-301-l10",
-      "title": "Checkpoint 4: Project Management",
-      "type": "quiz",
-      "duration": 10,
-      "questions": [
-        {
-          "id": "project-management-301-l10-q1",
-          "text": "Which choice best matches the main idea of Project Management?",
-          "skillId": "project-management-301-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "A complete, evidence-based explanation"
-            },
-            {
-              "id": "b",
-              "text": "An unrelated claim"
-            },
-            {
-              "id": "c",
-              "text": "A random guess"
-            },
-            {
-              "id": "d",
-              "text": "A conflicting idea"
-            }
-          ],
-          "correctOptionId": "a"
+          "explanation": "A program manager's primary role is to understand cross-project dependencies and manage the program as a whole. The first step is to assess the ripple effects before taking corrective action."
         },
         {
-          "id": "project-management-301-l10-q2",
-          "text": "What should a learner do after getting an answer wrong?",
-          "skillId": "project-management-301-skill-review",
+          "id": "project-management-301-l08-q2",
+          "text": "Your program has successfully delivered all its component projects, but the expected business benefits have not materialized. This indicates a failure in which area?",
+          "skillId": "benefits-realization",
           "options": [
             {
               "id": "a",
-              "text": "Review error cause and retry with strategy"
+              "text": "Benefits realization management."
             },
             {
               "id": "b",
-              "text": "Skip all corrections"
+              "text": "Project scheduling."
             },
             {
               "id": "c",
-              "text": "Memorize only the answer letter"
+              "text": "Technical execution."
             },
             {
               "id": "d",
-              "text": "Stop practicing"
-            }
-          ],
-          "correctOptionId": "a"
-        },
-        {
-          "id": "project-management-301-l10-q3",
-          "text": "Which strategy most improves long-term retention for Program Management?",
-          "skillId": "project-management-301-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "Use spaced retrieval and mixed practice over multiple sessions."
-            },
-            {
-              "id": "b",
-              "text": "Cram once and avoid later practice."
-            },
-            {
-              "id": "c",
-              "text": "Read notes passively without self-testing."
-            },
-            {
-              "id": "d",
-              "text": "Rely on confidence alone instead of evidence."
+              "text": "Resource allocation."
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Spaced retrieval with varied practice strengthens durable memory and flexible application."
-        }
-      ],
-      "learningAids": [
+          "explanation": "Delivering project outputs is not enough; a successful program ensures these outputs lead to the intended strategic benefits. A failure to achieve benefits points to a weakness in the benefits realization process."
+        },
         {
-          "id": "project-management-301-l10-a1",
-          "type": "mnemonic",
-          "title": "Memory Cue",
-          "content": "Use Plan, Solve, Explain to structure each response."
+          "id": "project-management-301-l08-q3",
+          "text": "When sequencing projects within a program, which factor should be given the highest consideration?",
+          "skillId": "portfolio-sequencing",
+          "options": [
+            {
+              "id": "a",
+              "text": "Dependencies between projects and the path to quickest value delivery."
+            },
+            {
+              "id": "b",
+              "text": "Which project has the most senior project manager."
+            },
+            {
+              "id": "c",
+              "text": "The individual budget size of each project."
+            },
+            {
+              "id": "d",
+              "text": "The preferences of the individual project teams."
+            }
+          ],
+          "correctOptionId": "a"
         }
       ]
     }

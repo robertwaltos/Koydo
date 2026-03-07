@@ -2,6 +2,9 @@
 export { ColorMixer } from "./color-mixer";
 export type { ColorMixerProps } from "./color-mixer";
 
+export { CloudCrewForecast } from "./cloud-crew-forecast";
+export type { CloudCrewForecastProps } from "./cloud-crew-forecast";
+
 export { LetterCatcher } from "./letter-catcher";
 export type { LetterCatcherProps } from "./letter-catcher";
 
@@ -10,6 +13,12 @@ export type { MemoryMatchProps } from "./memory-match";
 
 export { NumberCrunch } from "./number-crunch";
 export type { NumberCrunchProps } from "./number-crunch";
+
+export { GardenPatchPlanner } from "./garden-patch-planner";
+export type { GardenPatchPlannerProps } from "./garden-patch-planner";
+
+export { BugTrailBalancer } from "./bug-trail-balancer";
+export type { BugTrailBalancerProps } from "./bug-trail-balancer";
 
 export { PatternTrain } from "./pattern-train";
 export type { PatternTrainProps } from "./pattern-train";
@@ -42,9 +51,11 @@ export { default as EthicalEngine } from "./ethical-engine";
 export { default as EthosEngine } from "./ethos-engine";
 export { default as EvolutionPrime } from "./evolution-prime";
 export { default as FloraFusion } from "./flora-fusion";
+export { default as FireflyWordWeave } from "./firefly-word-weave";
 export { default as FractionFactory } from "./fraction-factory";
 export { default as FractionForge } from "./fraction-forge";
 export { default as FusionFounder } from "./fusion-founder";
+export { default as GardenGlowLab } from "./garden-glow-lab";
 export { default as GeneticGarden } from "./genetic-garden";
 export { default as GlobalHarmony } from "./global-harmony";
 export { default as GravityGoliath } from "./gravity-goliath";
@@ -68,6 +79,7 @@ export { default as QuantumQuest } from "./quantum-quest";
 export { default as QuantumQuirk } from "./quantum-quirk";
 export { default as RhymeRiver } from "./rhyme-river";
 export { default as RhythmRules } from "./rhythm-rules";
+export { default as RiverRouteRangers } from "./river-route-rangers";
 export { default as SentenceSafari } from "./sentence-safari";
 export { default as SparksSparkQuest } from "./sparks-spark-quest";
 export { default as StarSteer } from "./star-steer";
@@ -83,7 +95,6 @@ export { default as VocabularyVoyager } from "./vocabulary-voyager";
 export { default as WordWoods } from "./word-woods";
 
 // ─── Templates ───
-export { default as ImmersiveArcadeTemplate } from "./immersive-arcade-template";
 export { default as QuizAdventureFactory } from "./quiz-adventure-factory";
 export { default as QuizAdventureGame } from "./quiz-adventure-game";
 export { default as RewardRealmCharacterGauntlet } from "./reward-realm-character-gauntlet";
@@ -247,3 +258,6 @@ export { default as Zone122EchoJudgmentCircuit } from "./zone-122-echo-judgment-
 export { default as Zone123TerraColonyEvac } from "./zone-123-terra-colony-evac";
 export { default as Zone124LunaNovaCadence } from "./zone-124-luna-nova-cadence";
 export { default as Zone125PixelContainmentMatrix } from "./zone-125-pixel-containment-matrix";
+
+
+

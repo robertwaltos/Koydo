@@ -1,9 +1,9 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const Linux601Module: LearningModule = {
+export const linux_601_Module: LearningModule = {
   "id": "linux-601",
   "title": "Linux Research and Leadership",
-  "description": "Post-401 specialization in Linux, focused on linux systems diagnostics, linux operations and execution design, linux impact and tradeoff analysis, and linux governance and leadership through advanced casework, simulation, and defense-based checkpoints.",
+  "description": "A specialization for advanced Linux professionals. This module covers systems diagnostics, operational design, impact analysis, and governance through complex case studies, interactive simulations, and a capstone defense.",
   "subject": "Linux",
   "tags": [
     "core",
@@ -14,121 +14,121 @@ export const Linux601Module: LearningModule = {
   ],
   "minAge": 17,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en",
     "es"
   ],
   "learningObjectives": [
-    "Apply advanced methods for linux systems diagnostics in high-constraint environments",
-    "Design robust systems for linux operations and execution design with measurable control gates",
-    "Evaluate interventions in linux impact and tradeoff analysis with research-grade rigor",
-    "Operationalize linux governance and leadership with accountable governance and escalation pathways",
-    "Lead cross-functional decision reviews with explicit tradeoff communication",
-    "Defend recommendations under expert critique using evidence and uncertainty bounds"
+    "Apply advanced diagnostic methods to Linux systems in high-pressure environments.",
+    "Design robust, automated operational workflows with clear control gates and monitoring.",
+    "Evaluate the impact and tradeoffs of system changes with research-grade rigor.",
+    "Develop and implement accountable governance structures and escalation pathways for Linux systems.",
+    "Lead technical reviews, clearly communicating tradeoffs between competing solutions.",
+    "Defend system architecture and operational recommendations against expert critique using evidence-based reasoning."
   ],
   "lessons": [
     {
       "id": "linux-601-l01",
-      "title": "Linux Advanced Foundations",
+      "title": "Advanced Linux Foundations",
       "type": "video",
-      "duration": 14,
+      "duration": 15,
       "learningAids": [
         {
           "id": "linux-601-l01-a1",
-          "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "diagram",
+          "title": "Linux System Layers",
+          "content": "A diagram illustrating the boundaries between hardware, kernel space, and user space, including key subsystems like memory management, process scheduling, and the virtual file system."
         }
       ],
       "chunks": [
         {
           "id": "linux-601-l01-c1",
           "kind": "concept",
-          "title": "Scope and Boundary Design",
-          "content": "In this lesson, we will dive deep into the advanced concepts of scope boundaries within Linux systems. We will learn how to effectively diagnose issues that may arise in Linux environments and design operations that allow us to execute tasks efficiently. Grasping these boundaries is essential for maintaining the smooth and effective functioning of our systems. By understanding how to set and manage these boundaries, we can ensure that our Linux systems operate at their best, minimizing errors and maximizing performance. This knowledge will empower you to tackle complex challenges in Linux management and enhance your overall skills in system administration."
+          "title": "Defining Scope and Boundaries",
+          "content": "To diagnose complex systems, you must first define their boundaries. We'll explore key Linux boundaries like kernel vs. user space, process isolation using namespaces, and resource limits with cgroups. Understanding these concepts is critical for isolating problems and designing stable systems."
         },
         {
           "id": "linux-601-l01-c2",
           "kind": "concept",
-          "title": "Causal and Uncertainty Modeling",
-          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different events or actions. They will also identify ranges of uncertainty and understand how various system dependencies interact. This foundational knowledge is essential for planning effective interventions in complex systems.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different events or actions. They will also identify ranges of uncertainty and understand how various system dependencies interact. This foundational knowledge is essential for planning effective interventions in complex systems."
+          "title": "Root Cause Analysis and Modeling",
+          "content": "Effective problem-solving goes beyond fixing symptoms. This section introduces structured methods for root cause analysis. You will learn to map causal pathways between events, identify system dependencies, and model uncertainty to predict how interventions will affect a complex system."
         },
         {
           "id": "linux-601-l01-c3",
           "kind": "recap",
-          "title": "Evidence Thresholds",
-          "content": "In our recap, we will emphasize that all claims made during our analysis must be linked to measurable indicators. This means we will establish confidence bounds and set up review checkpoints to ensure that our findings are reliable and can be verified.\nContext recap: In our recap, we will emphasize that all claims made during our analysis must be linked to measurable indicators. This means we will establish confidence bounds and set up review checkpoints to ensure that our findings are reliable and can be verified."
+          "title": "Metrics-Driven Analysis",
+          "content": "In this recap, we'll establish the principle that all claims must be supported by measurable evidence. We will review how to gather metrics from sources like `procfs` and `sysfs`, set confidence bounds for your findings, and establish review checkpoints to ensure analysis is verifiable and rigorous."
         }
       ],
       "flashcards": [
         {
           "id": "linux-601-l01-f1",
-          "front": "linux systems diagnostics",
-          "back": "A specialization axis requiring explicit assumptions and measurable constraints."
+          "front": "What is Linux systems diagnostics?",
+          "back": "The discipline of identifying and resolving issues in Linux systems by forming hypotheses, gathering evidence, and testing solutions."
         },
         {
           "id": "linux-601-l01-f2",
-          "front": "linux operations and execution design",
-          "back": "Execution architecture that determines reliability under stress."
+          "front": "What is operational design?",
+          "back": "The process of creating reliable and repeatable workflows for managing Linux systems, including automation, monitoring, and alerting."
         },
         {
           "id": "linux-601-l01-f3",
-          "front": "linux impact and tradeoff analysis",
-          "back": "Evaluation discipline for identifying true gains and hidden costs."
+          "front": "What is tradeoff analysis?",
+          "back": "The practice of evaluating decisions by comparing their potential benefits against their costs, risks, and side effects."
         }
       ]
     },
     {
       "id": "linux-601-l02",
-      "title": "Linux Specialist Methods Lab",
+      "title": "Linux Systems Analysis Lab",
       "type": "interactive",
       "duration": 17,
       "learningAids": [
         {
           "id": "linux-601-l02-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "code_snippet",
+          "title": "Stress Test Example",
+          "content": "A sample script using 'stress-ng' to simulate high CPU and I/O load, allowing you to observe system behavior under pressure and test your diagnostic tools."
         }
       ],
       "chunks": [
         {
           "id": "linux-601-l02-c1",
           "kind": "practice",
-          "title": "Method Design and Stress Test",
-          "content": "In this interactive lab, learners will have the opportunity to design specialized workflows tailored to specific tasks. They will also conduct stress tests on these workflows by simulating adverse scenarios to see how well they perform under pressure. This hands-on experience is vital for understanding real-world applications.\nContext recap: In this interactive lab, learners will have the opportunity to design specialized workflows tailored to specific tasks. They will also conduct stress tests on these workflows by simulating adverse scenarios to see how well they perform under pressure. This hands-on experience is vital for understanding real-world applications."
+          "title": "Workflow Design and Stress Testing",
+          "content": "In this lab, you'll design a diagnostic workflow using standard Linux tools. Then, you'll use stress-testing utilities to simulate adverse conditions like memory leaks or I/O bottlenecks, and use your workflow to identify the root cause."
         },
         {
           "id": "linux-601-l02-c2",
           "kind": "recap",
-          "title": "Control Gate Architecture",
-          "content": "In our recap, we will discuss how workflows can be enhanced by integrating various checkpoints. These checkpoints will help us establish rollback criteria and set up threshold-based escalation processes, ensuring that we can manage workflows effectively and respond to issues as they arise.\nContext recap: In our recap, we will discuss how workflows can be enhanced by integrating various checkpoints. These checkpoints will help us establish rollback criteria and set up threshold-based escalation processes, ensuring that we can manage workflows effectively and respond to issues as they arise."
+          "title": "Automated Monitoring and Alerting",
+          "content": "A recap on building robust systems. We'll discuss how to integrate checkpoints into your workflows using monitoring tools. You will learn to define alert thresholds, establish criteria for automated rollbacks, and design escalation processes for when human intervention is needed."
         }
       ],
       "interactiveActivities": [
         {
           "id": "linux-601-l02-act1",
           "type": "matching_pairs",
-          "title": "Control-to-Outcome Mapping",
-          "description": "Match specialist controls with their strongest reliability and governance effects.",
+          "title": "Control to Outcome Mapping",
+          "description": "Match the system control with its primary reliability and governance effect.",
           "pairs": [
             {
-              "left": "Pre-commit gate",
+              "left": "Automated Pre-deployment Test",
               "right": "Prevents avoidable downstream failures"
             },
             {
-              "left": "Rollback trigger",
-              "right": "Limits blast radius under adverse outcomes"
+              "left": "Automated Rollback on Error Threshold",
+              "right": "Limits the impact of a failure"
             },
             {
-              "left": "Baseline dashboard",
-              "right": "Supports defensible impact attribution"
+              "left": "Performance Monitoring Dashboard",
+              "right": "Provides evidence for impact analysis"
             },
             {
-              "left": "Retrospective loop",
-              "right": "Improves next-cycle decision quality"
+              "left": "Post-Incident Review Process",
+              "right": "Improves future decision-making"
             }
           ]
         }
@@ -136,590 +136,376 @@ export const Linux601Module: LearningModule = {
     },
     {
       "id": "linux-601-l03",
-      "title": "Checkpoint 1: Specialist Methods",
+      "title": "Checkpoint 1: Systems Analysis",
       "type": "quiz",
       "duration": 10,
-      "learningAids": [
-        {
-          "id": "linux-601-l03-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
-        }
-      ],
+      "learningAids": [],
       "questions": [
         {
           "id": "linux-601-l03-q1",
-          "text": "Which practice most improves linux systems diagnostics decision quality?",
+          "text": "You are diagnosing a slow web server. What is the most effective first step according to metrics-driven principles?",
           "skillId": "linux-601-skill-core",
           "options": [
             {
               "id": "a",
-              "text": "Proceed without baseline or assumptions"
+              "text": "Immediately restart the server."
             },
             {
               "id": "b",
-              "text": "Define assumptions, constraints, and measurable indicators"
+              "text": "Establish a performance baseline by measuring key metrics (CPU, memory, I/O, network)."
             },
             {
               "id": "c",
-              "text": "Optimize only for speed in every context"
+              "text": "Guess the problem is the database and optimize it."
             },
             {
               "id": "d",
-              "text": "Ignore uncertainty and edge conditions"
+              "text": "Ask a colleague for their opinion without gathering data."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Advanced decisions improve when assumptions, constraints, and metrics are explicit."
+          "explanation": "Effective diagnostics start with establishing a baseline of measurable indicators to understand normal behavior and identify anomalies."
         },
         {
           "id": "linux-601-l03-q2",
-          "text": "At level 601, strong execution for linux operations and execution design requires:",
+          "text": "A robust operational plan for deploying a critical patch should always include:",
           "skillId": "linux-601-skill-execution",
           "options": [
             {
               "id": "a",
-              "text": "Owner mapping, checkpoint cadence, and escalation thresholds"
+              "text": "A detailed rollback procedure and success verification metrics."
             },
             {
               "id": "b",
-              "text": "No role clarity and ad-hoc process changes"
+              "text": "Deployment during peak business hours to ensure it works under load."
             },
             {
               "id": "c",
-              "text": "No retrospective or post-run review"
+              "text": "No pre-deployment testing to save time."
             },
             {
               "id": "d",
-              "text": "No rollback or fallback conditions"
+              "text": "Assigning the task to a junior admin with no supervision."
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Reliable advanced execution needs ownership clarity and threshold-driven governance."
+          "explanation": "Reliable execution requires a plan for both success and failure, including how to verify the change and how to revert it if necessary."
         },
         {
           "id": "linux-601-l03-q3",
-          "text": "A defensible approach to linux impact and tradeoff analysis includes:",
+          "text": "When presenting an analysis of a performance improvement, what is the most defensible approach?",
           "skillId": "linux-601-skill-eval",
           "options": [
             {
               "id": "a",
-              "text": "Anecdotes without comparison"
+              "text": "Show only the final, improved performance numbers."
             },
             {
               "id": "b",
-              "text": "Baseline comparisons, side-effect analysis, and uncertainty bounds"
+              "text": "Compare before-and-after metrics, note any side effects, and state the confidence level of the results."
             },
             {
               "id": "c",
-              "text": "Changing success criteria after outcomes"
+              "text": "Claim a 100% improvement without providing any data."
             },
             {
               "id": "d",
-              "text": "Excluding difficult scenarios from analysis"
+              "text": "Attribute the improvement to your change, even if other changes were made at the same time."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible analysis combines comparative baselines, side-effect checks, and uncertainty disclosure."
+          "explanation": "A defensible analysis is transparent, providing a baseline for comparison, acknowledging potential side effects, and qualifying the certainty of the findings."
         },
         {
           "id": "linux-601-l03-q4",
-          "text": "Mature governance systems connect:",
+          "text": "A mature governance system for managing system configurations (e.g., using Ansible or Puppet) must connect:",
           "skillId": "linux-601-skill-governance",
           "options": [
             {
               "id": "a",
-              "text": "Policy intent, measurable controls, and remediation pathways"
+              "text": "The policy (e.g., 'all servers must have security patches'), the control (the script that applies patches), and the remediation plan (what to do if a server is out of compliance)."
             },
             {
               "id": "b",
-              "text": "Policy language with no measurable enforcement"
+              "text": "A written policy with no automated way to enforce it."
             },
             {
               "id": "c",
-              "text": "Targets without ownership or escalation design"
+              "text": "A script that runs occasionally but with no alerting for failures."
             },
             {
               "id": "d",
-              "text": "Operations without transparent accountability"
+              "text": "Allowing any administrator to make undocumented changes directly on servers."
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Governance maturity is the operational link between intent, measurement, and corrective action."
-        },
-        {
-          "id": "linux-601-l03-q5",
-          "text": "What is the best way to compare competing interventions in advanced Linux?",
-          "skillId": "linux-601-skill-advanced-5",
-          "options": [
-            {
-              "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
-            },
-            {
-              "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
-            },
-            {
-              "id": "c",
-              "text": "Switch metrics after results arrive"
-            },
-            {
-              "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
-        },
-        {
-          "id": "linux-601-l03-q6",
-          "text": "In high-stakes Linux Research and Leadership execution, which communication protocol is strongest?",
-          "skillId": "linux-601-skill-advanced-6",
-          "options": [
-            {
-              "id": "a",
-              "text": "Broadcast conclusions without assumptions"
-            },
-            {
-              "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
-            },
-            {
-              "id": "c",
-              "text": "Share only final outcomes after completion"
-            },
-            {
-              "id": "d",
-              "text": "Limit updates to a single informal channel"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
-        },
-        {
-          "id": "linux-601-l03-q7",
-          "text": "A mature remediation loop in advanced Linux should prioritize:",
-          "skillId": "linux-601-skill-advanced-7",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blame assignment without system updates"
-            },
-            {
-              "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
-            },
-            {
-              "id": "c",
-              "text": "One-time fixes without retesting"
-            },
-            {
-              "id": "d",
-              "text": "Issue closure based on elapsed time"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
-        },
-        {
-          "id": "linux-601-l03-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Linux Research and Leadership?",
-          "skillId": "linux-601-skill-advanced-8",
-          "options": [
-            {
-              "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
-            },
-            {
-              "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
-            },
-            {
-              "id": "c",
-              "text": "Ignore correlated failure modes"
-            },
-            {
-              "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "explanation": "Mature governance links the intended policy, the technical controls that enforce it, and a clear process for handling exceptions and failures."
         }
       ]
     },
     {
       "id": "linux-601-l04",
-      "title": "Linux Advanced Case Analysis",
+      "title": "Advanced Linux Case Studies",
       "type": "video",
       "duration": 14,
       "learningAids": [
         {
           "id": "linux-601-l04-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Sample Root Cause Analysis (RCA)",
+          "content": "An image of a well-structured RCA document, highlighting key sections like the timeline, root cause, impact, and corrective actions."
         }
       ],
       "chunks": [
         {
           "id": "linux-601-l04-c1",
           "kind": "concept",
-          "title": "Scenario Architecture",
-          "content": "In this lesson, we will explore a case study that illustrates the various competing constraints that arise during Linux systems diagnostics. We will delve into the impacts and trade-offs associated with different decision-making processes. This analysis will provide learners with a deeper understanding of the complexities involved in system analysis, enabling them to make informed choices in real-world scenarios.\nContext recap: In this lesson, we will explore a case study that illustrates the various competing constraints that arise during Linux systems diagnostics. We will delve into the impacts and trade-offs associated with different decision-making processes. This analysis will provide learners with a deeper understanding of the complexities involved in system analysis, enabling them to make informed choices in real-world scenarios."
+          "title": "Deconstructing a System Failure",
+          "content": "In this lesson, we will analyze a real-world case study of a major system outage. We will deconstruct the incident report to identify the competing constraints (e.g., performance vs. reliability), the key decision points, and the ultimate impact of the choices made by the engineering team."
         },
         {
           "id": "linux-601-l04-c2",
           "kind": "practice",
-          "title": "Tradeoff Framing",
-          "content": "In this practice session, learners will compare various options based on important dimensions such as safety, reliability, cost, equity, and governance. This comparison will help them understand how to make informed decisions that consider multiple factors.\nContext recap: In this practice session, learners will compare various options based on important dimensions such as safety, reliability, cost, equity, and governance. This comparison will help them understand how to make informed decisions that consider multiple factors.\nWhy this matters: Tradeoff Framing helps learners in Linux connect ideas from Linux Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "Framing Technical Tradeoffs",
+          "content": "Using the case study, you will practice framing the technical tradeoffs involved. We will compare options based on concrete dimensions like latency vs. throughput, security vs. usability, and cost vs. resilience. This helps you articulate the reasoning behind complex technical decisions."
         },
         {
           "id": "linux-601-l04-c3",
           "kind": "recap",
-          "title": "Decision Memo Pattern",
-          "content": "In our recap, we will highlight that each recommendation made should include clear assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that decisions are well-founded and can be revisited if necessary.\nContext recap: In our recap, we will highlight that each recommendation made should include clear assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that decisions are well-founded and can be revisited if necessary.\nWhy this matters: Decision Memo Pattern helps learners in Linux connect ideas from Linux Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "Writing a Root Cause Analysis (RCA)",
+          "content": "We'll recap the lesson by introducing a standard industry pattern for documenting incidents: the Root Cause Analysis (RCA). A strong RCA includes a clear timeline, states assumptions, provides supporting evidence, outlines corrective actions, and includes a plan to prevent recurrence."
         }
       ]
     },
     {
       "id": "linux-601-l05",
-      "title": "Linux Simulation Clinic",
+      "title": "Linux Incident Response Simulation",
       "type": "interactive",
       "duration": 18,
       "learningAids": [
         {
           "id": "linux-601-l05-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "diagram",
+          "title": "Incident Response Flowchart",
+          "content": "A flowchart showing the stages of incident response: Detection, Analysis, Containment, Eradication, Recovery, and Post-Incident Review."
         }
       ],
       "chunks": [
         {
           "id": "linux-601-l05-c1",
           "kind": "practice",
-          "title": "Live Scenario Controls",
-          "content": "In this interactive clinic, learners will operate scenario controls while carefully balancing performance and governance constraints. This experience will help them understand how to manage competing priorities in real-time situations.\nContext recap: In this interactive clinic, learners will operate scenario controls while carefully balancing performance and governance constraints. This experience will help them understand how to manage competing priorities in real-time situations.\nWhy this matters: Live Scenario Controls helps learners in Linux connect ideas from Linux Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "Live Incident Simulation",
+          "content": "In this interactive clinic, you'll be dropped into a simulated environment where a critical system is failing. Under time pressure, you must use diagnostic tools like `top`, `iostat`, and `strace` to identify the problem while managing performance and stability constraints."
         },
         {
           "id": "linux-601-l05-c2",
           "kind": "recap",
-          "title": "Adaptive Response Design",
-          "content": "In our recap, we will discuss how effective responses can be designed to update control gates while maintaining traceability and accountability. This is essential for ensuring that all actions taken can be tracked and evaluated.\nContext recap: In our recap, we will discuss how effective responses can be designed to update control gates while maintaining traceability and accountability. This is essential for ensuring that all actions taken can be tracked and evaluated.\nWhy this matters: Adaptive Response Design helps learners in Linux connect ideas from Linux Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "Developing an Incident Response Plan",
+          "content": "After the simulation, we'll discuss how to build an adaptive incident response plan. An effective plan isn't just a static checklist; it's a living document that helps you make decisions, track actions, and maintain accountability, even as new information emerges during an incident."
         }
       ],
       "interactiveActivities": [
         {
           "id": "linux-601-l05-act1",
           "type": "scenario",
-          "title": "Adverse-Condition Decision Run",
-          "description": "Run a high-pressure linux scenario and tune controls under uncertainty."
+          "title": "Live Incident Simulation",
+          "description": "A web application is experiencing intermittent timeouts. Your goal is to diagnose the root cause and apply a fix in a simulated production environment before the service-level objective (SLO) is breached."
         }
       ]
     },
     {
       "id": "linux-601-l06",
-      "title": "Checkpoint 2: Case and Simulation Mastery",
+      "title": "Checkpoint 2: Incident Management",
       "type": "quiz",
       "duration": 11,
-      "learningAids": [
-        {
-          "id": "linux-601-l06-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
-        }
-      ],
+      "learningAids": [],
       "questions": [
         {
           "id": "linux-601-l06-q1",
-          "text": "In advanced casework, the first requirement for defensible recommendations is:",
+          "text": "In a post-incident review, what is the primary goal?",
           "skillId": "linux-601-skill-case1",
           "options": [
             {
               "id": "a",
-              "text": "A preferred option without explicit assumptions"
+              "text": "To assign blame to the person who made the error."
             },
             {
               "id": "b",
-              "text": "A clear baseline, explicit constraints, and success criteria"
+              "text": "To identify systemic causes and define preventative actions."
             },
             {
               "id": "c",
-              "text": "High confidence without evidence logs"
+              "text": "To close the issue as quickly as possible."
             },
             {
               "id": "d",
-              "text": "Single-metric optimization only"
+              "text": "To prove that the monitoring system worked perfectly."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible recommendations begin with explicit assumptions, constraints, and measurable targets."
+          "explanation": "The goal of a blameless post-mortem is to learn from the incident and improve the system, not to punish individuals."
         },
         {
           "id": "linux-601-l06-q2",
-          "text": "A resilient strategy for linux operations and execution design should include:",
+          "text": "During a live incident, you discover the initial hypothesis is wrong. What is the most resilient response?",
           "skillId": "linux-601-skill-case2",
           "options": [
             {
               "id": "a",
-              "text": "Checkpointed execution with fallback and escalation criteria"
+              "text": "Continue with the original plan, hoping it will eventually work."
             },
             {
               "id": "b",
-              "text": "One-way execution with no rollback capability"
+              "text": "Announce the new findings, pivot to a new hypothesis, and document the change in the incident log."
             },
             {
               "id": "c",
-              "text": "No ownership mapping across teams"
+              "text": "Stop working on the incident and wait for someone else to solve it."
             },
             {
               "id": "d",
-              "text": "Hidden assumptions and undocumented decisions"
+              "text": "Silently change direction without informing the team."
             }
           ],
-          "correctOptionId": "a",
-          "explanation": "Resilience depends on checkpoints, fallback options, and explicit escalation design."
+          "correctOptionId": "b",
+          "explanation": "Resilience during an incident requires adapting to new information and maintaining clear communication with the team."
         },
         {
           "id": "linux-601-l06-q3",
-          "text": "When evaluating linux impact and tradeoff analysis, which method is most rigorous?",
+          "text": "When evaluating a proposed fix, what tradeoff is most important to consider?",
           "skillId": "linux-601-skill-case3",
           "options": [
             {
               "id": "a",
-              "text": "Single success story without controls"
+              "text": "Only how quickly the fix can be deployed."
             },
             {
               "id": "b",
-              "text": "Comparative baselines plus side-effect and uncertainty analysis"
+              "text": "The risk of the fix causing a new, potentially worse problem versus the benefit of resolving the current issue."
             },
             {
               "id": "c",
-              "text": "Outcome-only narrative without process evidence"
+              "text": "Whether the fix is elegant from a coding perspective."
             },
             {
               "id": "d",
-              "text": "Retrospective scope changes to fit outcomes"
+              "text": "Who gets credit for the fix."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Rigorous evaluation requires comparisons, side-effect analysis, and uncertainty disclosure."
+          "explanation": "Rigorous evaluation requires analyzing the potential negative side effects (the cure being worse than the disease) of any intervention."
         },
         {
           "id": "linux-601-l06-q4",
-          "text": "Advanced governance is strongest when it:",
+          "text": "Strong incident management governance is demonstrated by:",
           "skillId": "linux-601-skill-case4",
           "options": [
             {
               "id": "a",
-              "text": "Aligns authority, measurement, and remediation obligations"
+              "text": "Having clear roles (e.g., Incident Commander), a documented process, and a commitment to follow-up actions."
             },
             {
               "id": "b",
-              "text": "Separates policy from operational controls"
+              "text": "An informal process where the most senior person always takes charge."
             },
             {
               "id": "c",
-              "text": "Avoids external review and transparency"
+              "text": "Never documenting incidents to avoid creating a paper trail."
             },
             {
               "id": "d",
-              "text": "Treats accountability as optional under pressure"
+              "text": "Solving every incident with a full system reboot."
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Mature governance links authority, measurable controls, and corrective action."
-        },
-        {
-          "id": "linux-601-l06-q5",
-          "text": "What is the best way to compare competing interventions in advanced Linux?",
-          "skillId": "linux-601-skill-advanced-5",
-          "options": [
-            {
-              "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
-            },
-            {
-              "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
-            },
-            {
-              "id": "c",
-              "text": "Switch metrics after results arrive"
-            },
-            {
-              "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
-        },
-        {
-          "id": "linux-601-l06-q6",
-          "text": "In high-stakes Linux Research and Leadership execution, which communication protocol is strongest?",
-          "skillId": "linux-601-skill-advanced-6",
-          "options": [
-            {
-              "id": "a",
-              "text": "Broadcast conclusions without assumptions"
-            },
-            {
-              "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
-            },
-            {
-              "id": "c",
-              "text": "Share only final outcomes after completion"
-            },
-            {
-              "id": "d",
-              "text": "Limit updates to a single informal channel"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
-        },
-        {
-          "id": "linux-601-l06-q7",
-          "text": "A mature remediation loop in advanced Linux should prioritize:",
-          "skillId": "linux-601-skill-advanced-7",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blame assignment without system updates"
-            },
-            {
-              "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
-            },
-            {
-              "id": "c",
-              "text": "One-time fixes without retesting"
-            },
-            {
-              "id": "d",
-              "text": "Issue closure based on elapsed time"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
-        },
-        {
-          "id": "linux-601-l06-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Linux Research and Leadership?",
-          "skillId": "linux-601-skill-advanced-8",
-          "options": [
-            {
-              "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
-            },
-            {
-              "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
-            },
-            {
-              "id": "c",
-              "text": "Ignore correlated failure modes"
-            },
-            {
-              "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "explanation": "Mature governance provides structure through defined roles and processes, ensuring incidents are managed consistently and improvements are implemented."
         }
       ]
     },
     {
       "id": "linux-601-l07",
-      "title": "Linux Governance and Public Impact",
+      "title": "Linux Governance and System Ethics",
       "type": "video",
       "duration": 13,
       "learningAids": [
         {
           "id": "linux-601-l07-a1",
-          "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "flowchart",
+          "title": "Change Management Process",
+          "content": "A flowchart illustrating a formal change management process: Proposal -> Technical Review -> Approval -> Implementation -> Verification."
         }
       ],
       "chunks": [
         {
           "id": "linux-601-l07-c1",
           "kind": "concept",
-          "title": "Stakeholder Impact Distribution",
-          "content": "In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. This understanding is crucial for recognizing how decisions impact various individuals and organizations.\nContext recap: In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. This understanding is crucial for recognizing how decisions impact various individuals and organizations.\nWhy this matters: Stakeholder Impact Distribution helps learners in Linux connect ideas from Linux Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "Analyzing Stakeholder Impact",
+          "content": "Technical decisions have human consequences. In this lesson, we'll analyze how a system change—like a new security policy or a kernel update—distributes benefits and burdens across different groups of users, and consider the long-term ethical implications."
         },
         {
           "id": "linux-601-l07-c2",
           "kind": "concept",
-          "title": "Accountability Architecture",
-          "content": "In this section, we will explore the architecture of accountability. This includes understanding how decision traceability, review rights, and remediation obligations are integrated into our processes. This knowledge is vital for ensuring responsible governance.\nContext recap: In this section, we will explore the architecture of accountability. This includes understanding how decision traceability, review rights, and remediation obligations are integrated into our processes. This knowledge is vital for ensuring responsible governance.\nWhy this matters: Accountability Architecture helps learners in Linux connect ideas from Linux Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "Designing for Accountability",
+          "content": "Accountability isn't an accident; it's a feature you design. We will explore how to build accountable systems using tools and processes like version control for configurations (GitOps), comprehensive audit logs (`auditd`), and formal change management procedures."
         },
         {
           "id": "linux-601-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "At the end of our lesson, we will provide a helpful checklist that connects important outcomes with ethical considerations, adherence to policies, and the ability to adapt and recover from challenges. This checklist will serve as a guide to ensure responsible leadership in the Linux community.\nContext recap: At the end of our lesson, we will provide a helpful checklist that connects important outcomes with ethical considerations, adherence to policies, and the ability to adapt and recover from challenges. This checklist will serve as a guide to ensure responsible leadership in the Linux community."
+          "content": "We'll conclude with a checklist for responsible technical leadership. This guide connects key outcomes with ethical duties, policy compliance, and system resilience, helping you make decisions that are not just technically sound, but also responsible."
         }
       ],
       "flashcards": [
         {
           "id": "linux-601-l07-f1",
-          "front": "Impact distribution",
-          "back": "How outcomes are allocated across populations and timescales."
+          "front": "Stakeholder Impact",
+          "back": "The effects, both positive and negative, that a system or decision has on different groups of people over time."
         },
         {
           "id": "linux-601-l07-f2",
-          "front": "Decision traceability",
-          "back": "An auditable record of evidence, ownership, and rationale."
+          "front": "Decision Traceability",
+          "back": "An auditable record showing who made a decision, when, and based on what evidence and rationale."
         },
         {
           "id": "linux-601-l07-f3",
-          "front": "Responsible leadership",
-          "back": "Decision behavior balancing performance, accountability, and ethics."
+          "front": "Responsible Leadership",
+          "back": "Making decisions that balance technical performance with accountability, fairness, and ethical considerations."
         }
       ]
     },
     {
       "id": "linux-601-l08",
-      "title": "Linux Capstone Defense Lab",
+      "title": "Capstone: System Design Defense",
       "type": "interactive",
-      "duration": 16,
+      "duration": 20,
       "learningAids": [
         {
           "id": "linux-601-l08-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "document_template",
+          "title": "System Design Document",
+          "content": "A template for a system design document, with sections for requirements, proposed architecture, tradeoff analysis, and risk mitigation."
         }
       ],
       "chunks": [
         {
           "id": "linux-601-l08-c1",
           "kind": "practice",
-          "title": "Defense Brief Assembly",
-          "content": "In this interactive activity, learners will work together to create a comprehensive brief. This brief will include well-supported claims, solid evidence, clear boundaries of uncertainty, and proposed solutions for any issues that may arise. This exercise will help you practice critical thinking and effective communication.\nContext recap: In this interactive activity, learners will work together to create a comprehensive brief. This brief will include well-supported claims, solid evidence, clear boundaries of uncertainty, and proposed solutions for any issues that may arise. This exercise will help you practice critical thinking and effective communication."
+          "title": "Assembling the Design Brief",
+          "content": "In this final lab, you will be given a complex technical challenge, such as designing a highly available, scalable web service. Your task is to prepare a system design document that presents your solution, justifies your architectural choices, and analyzes the tradeoffs."
         },
         {
           "id": "linux-601-l08-c2",
           "kind": "recap",
-          "title": "Expert Panel Rehearsal",
-          "content": "During this session, learners will practice their responses to various critiques that may come from experts in technology, governance, and stakeholders. This rehearsal will help you prepare for real-world discussions and improve your ability to articulate your ideas confidently.\nContext recap: During this session, learners will practice their responses to various critiques that may come from experts in technology, governance, and stakeholders. This rehearsal will help you prepare for real-world discussions and improve your ability to articulate your ideas confidently."
+          "title": "Preparing for a Technical Design Review",
+          "content": "We'll conclude by rehearsing for a technical design review. You will practice presenting your design and responding to critical questions from a panel of experts representing technology, governance, and business stakeholders. This prepares you to defend your work in a real-world setting."
         }
       ],
       "interactiveActivities": [
         {
           "id": "linux-601-l08-act1",
           "type": "debate_simulator",
-          "title": "Expert Defense Panel",
-          "description": "Defend specialization recommendations under adversarial cross-examination."
+          "title": "Expert Design Review Panel",
+          "description": "Present your capstone system design to a simulated panel of senior engineers. Defend your architectural decisions, cost estimates, and risk assessments under adversarial cross-examination."
         }
       ]
     }

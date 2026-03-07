@@ -1,17 +1,19 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const Microelectronics201Module: LearningModule = {
+export const microelectronics_201_Module: LearningModule = {
   "id": "microelectronics-201",
   "title": "Microelectronics II",
-  "description": "Transistor operation, biasing, amplifier basics, switching behavior, and intermediate circuit analysis.",
+  "description": "An intermediate course on transistor operation, DC biasing, small-signal amplifier analysis, frequency response, and switching behavior for BJT and MOSFET circuits.",
   "subject": "Microelectronics",
   "tags": [
     "curriculum",
-    "interactive"
+    "interactive",
+    "electronics",
+    "engineering"
   ],
   "minAge": 16,
   "maxAge": 99,
-  "version": "1.0.0",
+  "version": "1.1.0",
   "difficultyBand": "intermediate",
   "localeSupport": [
     "en",
@@ -25,489 +27,348 @@ export const Microelectronics201Module: LearningModule = {
     "ko",
     "ru"
   ],
-  "thumbnail": "/placeholders/lesson-robot.svg",
+  "thumbnail": "/placeholders/lesson-transistor.svg",
   "learningObjectives": [
-    "Understand core concepts in Microelectronics",
-    "Apply Microelectronics skills through guided practice",
-    "Demonstrate mastery through checkpoint quizzes"
+    "Understand BJT and MOSFET device physics, operating regions, and biasing techniques.",
+    "Analyze the performance of single-stage transistor amplifiers using small-signal models.",
+    "Evaluate the switching behavior of transistors in basic digital logic applications."
   ],
   "lessons": [
     {
       "id": "microelectronics-201-l01",
-      "title": "Microelectronics Concepts 1",
+      "title": "BJT Biasing and Operating Regions",
       "type": "video",
-      "duration": 9,
+      "duration": 15,
       "learningAids": [
         {
           "id": "microelectronics-201-l01-a1",
           "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary for Microelectronics."
+          "title": "BJT I-V Curves",
+          "content": "Diagram illustrating the cutoff, active, and saturation regions on a BJT's characteristic I-V curves."
         },
         {
           "id": "microelectronics-201-l01-a2",
           "type": "animation",
-          "title": "Animated Example",
-          "content": "Step-by-step walkthrough for Microelectronics."
+          "title": "Voltage Divider Biasing",
+          "content": "Step-by-step animation showing how currents and voltages are established in a voltage-divider biasing circuit."
         }
       ]
     },
     {
       "id": "microelectronics-201-l02",
-      "title": "Microelectronics Practice 2",
+      "title": "Practice: DC Analysis of BJT Circuits",
       "type": "interactive",
-      "duration": 12,
+      "duration": 20,
       "metadata": {
         "prompts": [
-          "State the key concept in one sentence.",
-          "Apply it to one example.",
-          "Explain your improvement step for next time."
+          "For the given common-emitter circuit, calculate the Q-point (ICQ, VCEQ).",
+          "Verify that the transistor is operating in the active region.",
+          "Predict how the Q-point would shift if the transistor's β (beta) value were to increase by 20%."
         ]
       },
       "learningAids": [
         {
           "id": "microelectronics-201-l02-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Follow the challenge flow and record your approach."
+          "title": "Interactive Circuit Simulator",
+          "content": "Adjust resistor values in a BJT biasing circuit and observe the real-time impact on the Q-point."
         }
       ]
     },
     {
       "id": "microelectronics-201-l03",
-      "title": "Checkpoint 1: Microelectronics",
+      "title": "Checkpoint: BJT Biasing",
       "type": "quiz",
       "duration": 10,
       "questions": [
         {
           "id": "microelectronics-201-l03-q1",
-          "text": "Which choice best matches the main idea of Microelectronics?",
-          "skillId": "microelectronics-201-skill-core",
+          "text": "For a BJT to operate in the active region, which condition must be met?",
+          "skillId": "bjt-operating-regions",
           "options": [
             {
               "id": "a",
-              "text": "A complete, evidence-based explanation"
+              "text": "The base-emitter junction is forward-biased and the base-collector junction is reverse-biased."
             },
             {
               "id": "b",
-              "text": "An unrelated claim"
+              "text": "Both junctions are forward-biased."
             },
             {
               "id": "c",
-              "text": "A random guess"
+              "text": "Both junctions are reverse-biased."
             },
             {
               "id": "d",
-              "text": "A conflicting idea"
-            }
-          ],
-          "correctOptionId": "a"
-        },
-        {
-          "id": "microelectronics-201-l03-q2",
-          "text": "What should a learner do after getting an answer wrong?",
-          "skillId": "microelectronics-201-skill-review",
-          "options": [
-            {
-              "id": "a",
-              "text": "Review error cause and retry with strategy"
-            },
-            {
-              "id": "b",
-              "text": "Skip all corrections"
-            },
-            {
-              "id": "c",
-              "text": "Memorize only the answer letter"
-            },
-            {
-              "id": "d",
-              "text": "Stop practicing"
-            }
-          ],
-          "correctOptionId": "a"
-        },
-        {
-          "id": "microelectronics-201-l03-q3",
-          "text": "Which strategy most improves long-term retention for Microelectronics II?",
-          "skillId": "microelectronics-201-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "Use spaced retrieval and mixed practice over multiple sessions."
-            },
-            {
-              "id": "b",
-              "text": "Cram once and avoid later practice."
-            },
-            {
-              "id": "c",
-              "text": "Read notes passively without self-testing."
-            },
-            {
-              "id": "d",
-              "text": "Rely on confidence alone instead of evidence."
+              "text": "The base-emitter junction is reverse-biased and the base-collector junction is forward-biased."
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Spaced retrieval with varied practice strengthens durable memory and flexible application."
-        }
-      ],
-      "learningAids": [
+          "explanation": "In the active region, the BE junction acts like a forward-biased diode, allowing current flow, while the reverse-biased BC junction collects that current."
+        },
         {
-          "id": "microelectronics-201-l03-a1",
-          "type": "mnemonic",
-          "title": "Memory Cue",
-          "content": "Use Plan, Solve, Explain to structure each response."
+          "id": "microelectronics-201-l03-q2",
+          "text": "What is the primary purpose of DC biasing in a transistor amplifier?",
+          "skillId": "amplifier-biasing",
+          "options": [
+            {
+              "id": "a",
+              "text": "To establish a stable DC operating point (Q-point) in the desired region."
+            },
+            {
+              "id": "b",
+              "text": "To maximize the transistor's power consumption."
+            },
+            {
+              "id": "c",
+              "text": "To ensure the transistor always operates in saturation."
+            },
+            {
+              "id": "d",
+              "text": "To block all AC signals from entering the transistor."
+            }
+          ],
+          "correctOptionId": "a"
         }
       ]
     },
     {
       "id": "microelectronics-201-l04",
-      "title": "Microelectronics Practice 4",
-      "type": "interactive",
-      "duration": 12,
-      "metadata": {
-        "prompts": [
-          "State the key concept in one sentence.",
-          "Apply it to one example.",
-          "Explain your improvement step for next time."
-        ]
-      },
+      "title": "The BJT Small-Signal Model",
+      "type": "video",
+      "duration": 18,
       "learningAids": [
         {
           "id": "microelectronics-201-l04-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Follow the challenge flow and record your approach."
+          "type": "image",
+          "title": "Hybrid-Pi Model Diagram",
+          "content": "A clear schematic of the Hybrid-Pi small-signal model, labeling transconductance (gm), input resistance (rπ), and output resistance (ro)."
+        },
+        {
+          "id": "microelectronics-201-l04-a2",
+          "type": "animation",
+          "title": "From DC to AC Analysis",
+          "content": "Visualizing how a large DC circuit is simplified into a small-signal AC equivalent by treating DC sources as grounds."
         }
       ]
     },
     {
       "id": "microelectronics-201-l05",
-      "title": "Microelectronics Concepts 5",
-      "type": "video",
-      "duration": 9,
+      "title": "Practice: Common-Emitter Amplifier Analysis",
+      "type": "interactive",
+      "duration": 25,
+      "metadata": {
+        "prompts": [
+          "Draw the small-signal AC equivalent circuit for the given common-emitter amplifier.",
+          "Calculate the voltage gain (Av), input resistance (Rin), and output resistance (Rout).",
+          "Explain how adding an emitter resistor (RE) would affect the amplifier's voltage gain and stability."
+        ]
+      },
       "learningAids": [
         {
           "id": "microelectronics-201-l05-a1",
-          "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary for Microelectronics."
-        },
-        {
-          "id": "microelectronics-201-l05-a2",
-          "type": "animation",
-          "title": "Animated Example",
-          "content": "Step-by-step walkthrough for Microelectronics."
+          "type": "practice",
+          "title": "Guided Amplifier Analysis",
+          "content": "A step-by-step workflow to analyze a CE amplifier, from drawing the model to calculating key performance metrics."
         }
       ]
     },
     {
       "id": "microelectronics-201-l06",
-      "title": "Checkpoint 2: Microelectronics",
+      "title": "Checkpoint: BJT Amplifiers",
       "type": "quiz",
-      "duration": 10,
+      "duration": 15,
       "questions": [
         {
           "id": "microelectronics-201-l06-q1",
-          "text": "Which choice best matches the main idea of Microelectronics?",
-          "skillId": "microelectronics-201-skill-core",
+          "text": "In a common-emitter amplifier, the output voltage at the collector is typically...",
+          "skillId": "small-signal-analysis",
           "options": [
             {
               "id": "a",
-              "text": "A complete, evidence-based explanation"
+              "text": "180 degrees out of phase with the input voltage."
             },
             {
               "id": "b",
-              "text": "An unrelated claim"
+              "text": "In phase with the input voltage."
             },
             {
               "id": "c",
-              "text": "A random guess"
+              "text": "90 degrees out of phase with the input voltage."
             },
             {
               "id": "d",
-              "text": "A conflicting idea"
-            }
-          ],
-          "correctOptionId": "a"
-        },
-        {
-          "id": "microelectronics-201-l06-q2",
-          "text": "What should a learner do after getting an answer wrong?",
-          "skillId": "microelectronics-201-skill-review",
-          "options": [
-            {
-              "id": "a",
-              "text": "Review error cause and retry with strategy"
-            },
-            {
-              "id": "b",
-              "text": "Skip all corrections"
-            },
-            {
-              "id": "c",
-              "text": "Memorize only the answer letter"
-            },
-            {
-              "id": "d",
-              "text": "Stop practicing"
-            }
-          ],
-          "correctOptionId": "a"
-        },
-        {
-          "id": "microelectronics-201-l06-q3",
-          "text": "Which strategy most improves long-term retention for Microelectronics II?",
-          "skillId": "microelectronics-201-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "Use spaced retrieval and mixed practice over multiple sessions."
-            },
-            {
-              "id": "b",
-              "text": "Cram once and avoid later practice."
-            },
-            {
-              "id": "c",
-              "text": "Read notes passively without self-testing."
-            },
-            {
-              "id": "d",
-              "text": "Rely on confidence alone instead of evidence."
+              "text": "Independent of the input voltage."
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Spaced retrieval with varied practice strengthens durable memory and flexible application."
-        }
-      ],
-      "learningAids": [
+          "explanation": "The inverting nature of the common-emitter configuration results in a 180-degree phase shift between the input and output signals."
+        },
         {
-          "id": "microelectronics-201-l06-a1",
-          "type": "mnemonic",
-          "title": "Memory Cue",
-          "content": "Use Plan, Solve, Explain to structure each response."
+          "id": "microelectronics-201-l06-q2",
+          "text": "The small-signal parameter 'gm' (transconductance) is directly proportional to what DC parameter?",
+          "skillId": "small-signal-parameters",
+          "options": [
+            {
+              "id": "a",
+              "text": "The DC collector current (IC)."
+            },
+            {
+              "id": "b",
+              "text": "The DC supply voltage (VCC)."
+            },
+            {
+              "id": "c",
+              "text": "The base resistor (RB)."
+            },
+            {
+              "id": "d",
+              "text": "The transistor's beta (β)."
+            }
+          ],
+          "correctOptionId": "a"
         }
       ]
     },
     {
       "id": "microelectronics-201-l07",
-      "title": "Microelectronics Concepts 7",
+      "title": "MOSFET Operation and Biasing",
       "type": "video",
-      "duration": 9,
+      "duration": 16,
       "learningAids": [
         {
           "id": "microelectronics-201-l07-a1",
           "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary for Microelectronics."
+          "title": "MOSFET I-V Curves",
+          "content": "Diagram showing the triode (linear) and saturation regions for an n-channel MOSFET."
         },
         {
           "id": "microelectronics-201-l07-a2",
           "type": "animation",
-          "title": "Animated Example",
-          "content": "Step-by-step walkthrough for Microelectronics."
+          "title": "Visualizing Channel Formation",
+          "content": "An animation showing how applying a gate voltage above the threshold voltage (Vth) forms an inversion layer (channel) in an NMOS transistor."
         }
       ]
     },
     {
       "id": "microelectronics-201-l08",
-      "title": "Microelectronics Practice 8",
+      "title": "Practice: Common-Source Amplifier Analysis",
       "type": "interactive",
-      "duration": 12,
+      "duration": 25,
       "metadata": {
         "prompts": [
-          "State the key concept in one sentence.",
-          "Apply it to one example.",
-          "Explain your improvement step for next time."
+          "Given the gate-source voltage (VGS) and drain-source voltage (VDS), determine the MOSFET's operating region.",
+          "Calculate the voltage gain (Av) for the provided common-source amplifier.",
+          "How does the channel-length modulation parameter (λ) affect the amplifier's output resistance and gain?"
         ]
       },
       "learningAids": [
         {
           "id": "microelectronics-201-l08-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Follow the challenge flow and record your approach."
+          "title": "Guided MOSFET Amplifier Analysis",
+          "content": "Analyze a common-source amplifier by calculating DC operating points and small-signal gain."
         }
       ]
     },
     {
       "id": "microelectronics-201-l09",
-      "title": "Checkpoint 3: Microelectronics",
-      "type": "quiz",
-      "duration": 10,
-      "questions": [
-        {
-          "id": "microelectronics-201-l09-q1",
-          "text": "Which choice best matches the main idea of Microelectronics?",
-          "skillId": "microelectronics-201-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "A complete, evidence-based explanation"
-            },
-            {
-              "id": "b",
-              "text": "An unrelated claim"
-            },
-            {
-              "id": "c",
-              "text": "A random guess"
-            },
-            {
-              "id": "d",
-              "text": "A conflicting idea"
-            }
-          ],
-          "correctOptionId": "a"
-        },
-        {
-          "id": "microelectronics-201-l09-q2",
-          "text": "What should a learner do after getting an answer wrong?",
-          "skillId": "microelectronics-201-skill-review",
-          "options": [
-            {
-              "id": "a",
-              "text": "Review error cause and retry with strategy"
-            },
-            {
-              "id": "b",
-              "text": "Skip all corrections"
-            },
-            {
-              "id": "c",
-              "text": "Memorize only the answer letter"
-            },
-            {
-              "id": "d",
-              "text": "Stop practicing"
-            }
-          ],
-          "correctOptionId": "a"
-        },
-        {
-          "id": "microelectronics-201-l09-q3",
-          "text": "Which strategy most improves long-term retention for Microelectronics II?",
-          "skillId": "microelectronics-201-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "Use spaced retrieval and mixed practice over multiple sessions."
-            },
-            {
-              "id": "b",
-              "text": "Cram once and avoid later practice."
-            },
-            {
-              "id": "c",
-              "text": "Read notes passively without self-testing."
-            },
-            {
-              "id": "d",
-              "text": "Rely on confidence alone instead of evidence."
-            }
-          ],
-          "correctOptionId": "a",
-          "explanation": "Spaced retrieval with varied practice strengthens durable memory and flexible application."
-        }
-      ],
+      "title": "Transistor as a Switch",
+      "type": "video",
+      "duration": 12,
       "learningAids": [
         {
           "id": "microelectronics-201-l09-a1",
-          "type": "mnemonic",
-          "title": "Memory Cue",
-          "content": "Use Plan, Solve, Explain to structure each response."
+          "type": "image",
+          "title": "BJT Inverter Load Line",
+          "content": "Load line analysis of a BJT inverter, clearly showing the cutoff (HIGH output) and saturation (LOW output) operating points."
+        },
+        {
+          "id": "microelectronics-201-l09-a2",
+          "type": "animation",
+          "title": "CMOS Inverter Switching",
+          "content": "Animation of a CMOS inverter, showing the PMOS and NMOS transistors turning on and off in complementary fashion as the input switches between HIGH and LOW."
         }
       ]
     },
     {
       "id": "microelectronics-201-l10",
-      "title": "Checkpoint 4: Microelectronics",
+      "title": "Final Exam: Microelectronics II",
       "type": "quiz",
-      "duration": 10,
+      "duration": 30,
       "questions": [
         {
           "id": "microelectronics-201-l10-q1",
-          "text": "Which choice best matches the main idea of Microelectronics?",
-          "skillId": "microelectronics-201-skill-core",
+          "text": "For an NMOS transistor to operate in the saturation region, which condition must be true?",
+          "skillId": "mosfet-operating-regions",
           "options": [
             {
               "id": "a",
-              "text": "A complete, evidence-based explanation"
+              "text": "VGS > Vth and VDS ≥ (VGS - Vth)"
             },
             {
               "id": "b",
-              "text": "An unrelated claim"
+              "text": "VGS < Vth"
             },
             {
               "id": "c",
-              "text": "A random guess"
+              "text": "VGS > Vth and VDS < (VGS - Vth)"
             },
             {
               "id": "d",
-              "text": "A conflicting idea"
+              "text": "VDS = 0"
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "microelectronics-201-l10-q2",
-          "text": "What should a learner do after getting an answer wrong?",
-          "skillId": "microelectronics-201-skill-review",
+          "text": "Compared to a BJT-based common-emitter amplifier, a MOSFET-based common-source amplifier generally has a much higher...",
+          "skillId": "bjt-vs-mosfet-amps",
           "options": [
             {
               "id": "a",
-              "text": "Review error cause and retry with strategy"
+              "text": "Input resistance."
             },
             {
               "id": "b",
-              "text": "Skip all corrections"
+              "text": "Voltage gain."
             },
             {
               "id": "c",
-              "text": "Memorize only the answer letter"
+              "text": "Transconductance (gm)."
             },
             {
               "id": "d",
-              "text": "Stop practicing"
-            }
-          ],
-          "correctOptionId": "a"
-        },
-        {
-          "id": "microelectronics-201-l10-q3",
-          "text": "Which strategy most improves long-term retention for Microelectronics II?",
-          "skillId": "microelectronics-201-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "Use spaced retrieval and mixed practice over multiple sessions."
-            },
-            {
-              "id": "b",
-              "text": "Cram once and avoid later practice."
-            },
-            {
-              "id": "c",
-              "text": "Read notes passively without self-testing."
-            },
-            {
-              "id": "d",
-              "text": "Rely on confidence alone instead of evidence."
+              "text": "Power consumption."
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Spaced retrieval with varied practice strengthens durable memory and flexible application."
-        }
-      ],
-      "learningAids": [
+          "explanation": "The insulated gate of a MOSFET results in a nearly infinite input resistance, whereas a BJT's input resistance is limited by its forward-biased base-emitter junction."
+        },
         {
-          "id": "microelectronics-201-l10-a1",
-          "type": "mnemonic",
-          "title": "Memory Cue",
-          "content": "Use Plan, Solve, Explain to structure each response."
+          "id": "microelectronics-201-l10-q3",
+          "text": "When a BJT is used as a switch and is in the 'ON' state, it is operating in the ______ region.",
+          "skillId": "transistor-switching",
+          "options": [
+            {
+              "id": "a",
+              "text": "Saturation"
+            },
+            {
+              "id": "b",
+              "text": "Active"
+            },
+            {
+              "id": "c",
+              "text": "Cutoff"
+            },
+            {
+              "id": "d",
+              "text": "Breakdown"
+            }
+          ],
+          "correctOptionId": "a"
         }
       ]
     }

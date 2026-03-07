@@ -573,6 +573,7 @@ export default function SettingsClient({ subscription, learnerProfiles }: Settin
             value={verificationCode}
             onChange={(event) => setVerificationCode(event.target.value)}
             placeholder="Enter verification code"
+            aria-label="Verification code"
             className="ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm"
           />
           <button

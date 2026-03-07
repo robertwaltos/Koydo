@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const GeneralScience601Module: LearningModule = {
+export const general_science_601_Module: LearningModule = {
   "id": "general-science-601",
   "title": "General Science Research and Leadership",
   "description": "Post-401 specialization in General Science, focused on general science systems diagnostics, general science operations and execution design, general science impact and tradeoff analysis, and general science governance and leadership through advanced casework, simulation, and defense-based checkpoints.",
@@ -14,7 +14,7 @@ export const GeneralScience601Module: LearningModule = {
   ],
   "minAge": 17,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en",
@@ -31,15 +31,15 @@ export const GeneralScience601Module: LearningModule = {
   "lessons": [
     {
       "id": "general-science-601-l01",
-      "title": "General Science Advanced Foundations",
+      "title": "Advanced Foundations in General Science",
       "type": "video",
       "duration": 14,
       "learningAids": [
         {
           "id": "general-science-601-l01-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Causal Loop Diagram",
+          "content": "A diagram illustrating system dependencies and feedback loops, crucial for diagnostics."
         }
       ],
       "chunks": [
@@ -47,50 +47,50 @@ export const GeneralScience601Module: LearningModule = {
           "id": "general-science-601-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "In this lesson, we will delve into the fascinating concept of advanced scope boundaries in the field of General Science. We will learn how to effectively diagnose various systems that exist within this discipline, which is crucial for understanding how different scientific components interact with one another. Additionally, we will discuss the importance of designing effective operations and execution strategies. By clearly defining these boundaries, we can enhance our comprehension of the intricate complexities involved in scientific systems, ultimately leading to more informed and effective scientific inquiries. This exploration will not only broaden our understanding but also equip us with the tools needed to tackle real-world scientific challenges."
+          "content": "This lesson introduces advanced scope boundaries in General Science. Learn to diagnose complex systems by understanding how scientific components interact. We will cover the design of effective operations and execution strategies, which are essential for managing the intricate complexities of scientific inquiry and tackling real-world challenges."
         },
         {
           "id": "general-science-601-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different events or actions. They will also identify uncertainty ranges and system dependencies, which are crucial for planning interventions. This process helps us understand how various factors interact and prepares us for making informed decisions in scientific research.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different events or actions. They will also identify uncertainty ranges and system dependencies, which are crucial for planning interventions. This process helps us understand how various factors interact and prepares us for making informed decisions in scientific research."
+          "content": "Explore how to map causal pathways that connect events and actions. You will learn to identify uncertainty ranges and system dependencies, which are critical for planning effective interventions and making informed decisions in scientific research."
         },
         {
           "id": "general-science-601-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "In our recap, we emphasize that all claims made in scientific research should be linked to measurable indicators. This means that we need to establish confidence bounds and set up review checkpoints to ensure that our findings are reliable. By doing this, we can maintain a high standard of evidence in our scientific work.\nContext recap: In our recap, we emphasize that all claims made in scientific research should be linked to measurable indicators. This means that we need to establish confidence bounds and set up review checkpoints to ensure that our findings are reliable. By doing this, we can maintain a high standard of evidence in our scientific work."
+          "content": "A recap on the importance of linking all scientific claims to measurable indicators. We will review how to establish confidence bounds and set up review checkpoints to ensure all findings are reliable and maintain a high standard of evidence."
         }
       ],
       "flashcards": [
         {
           "id": "general-science-601-l01-f1",
-          "front": "general science systems diagnostics",
+          "front": "General Science Systems Diagnostics",
           "back": "A specialization axis requiring explicit assumptions and measurable constraints."
         },
         {
           "id": "general-science-601-l01-f2",
-          "front": "general science operations and execution design",
-          "back": "Execution architecture that determines reliability under stress."
+          "front": "General Science Operations Design",
+          "back": "The architecture for execution that determines reliability under stress."
         },
         {
           "id": "general-science-601-l01-f3",
-          "front": "general science impact and tradeoff analysis",
-          "back": "Evaluation discipline for identifying true gains and hidden costs."
+          "front": "Impact and Tradeoff Analysis",
+          "back": "An evaluation discipline for identifying true gains and hidden costs."
         }
       ]
     },
     {
       "id": "general-science-601-l02",
-      "title": "General Science Specialist Methods Lab",
+      "title": "Specialist Methods Lab",
       "type": "interactive",
       "duration": 17,
       "learningAids": [
         {
           "id": "general-science-601-l02-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "image",
+          "title": "Workflow with Control Gates",
+          "content": "Visual representation of a process with built-in checkpoints for quality and risk management."
         }
       ],
       "chunks": [
@@ -98,13 +98,13 @@ export const GeneralScience601Module: LearningModule = {
           "id": "general-science-601-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "In this interactive practice, learners will have the opportunity to design specialized workflows that are tailored to specific scientific tasks. They will also conduct stress tests on these workflows by simulating adverse scenarios. This hands-on experience is vital for understanding how to adapt and improve scientific methods under challenging conditions.\nContext recap: In this interactive practice, learners will have the opportunity to design specialized workflows that are tailored to specific scientific tasks. They will also conduct stress tests on these workflows by simulating adverse scenarios. This hands-on experience is vital for understanding how to adapt and improve scientific methods under challenging conditions."
+          "content": "In this interactive lab, you will design specialized workflows for specific scientific tasks. Then, you'll conduct stress tests by simulating adverse scenarios to learn how to adapt and improve scientific methods under challenging conditions."
         },
         {
           "id": "general-science-601-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "In our recap, we will discuss how workflows should be structured to include essential components such as checkpoints, rollback criteria, and threshold-based escalation. These elements are important for ensuring that processes can be monitored and adjusted as needed, which enhances the overall effectiveness and reliability of scientific methods.\nContext recap: In our recap, we will discuss how workflows should be structured to include essential components such as checkpoints, rollback criteria, and threshold-based escalation. These elements are important for ensuring that processes can be monitored and adjusted as needed, which enhances the overall effectiveness and reliability of scientific methods."
+          "content": "This recap covers how to structure workflows with essential components like checkpoints, rollback criteria, and threshold-based escalation. These elements are critical for monitoring processes and enhancing the reliability of scientific methods."
         }
       ],
       "interactiveActivities": [
@@ -142,20 +142,20 @@ export const GeneralScience601Module: LearningModule = {
       "learningAids": [
         {
           "id": "general-science-601-l03-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "image",
+          "title": "Key Concepts Review",
+          "content": "A one-page summary of core concepts from the first two lessons, including diagnostics, execution design, and control gates."
         }
       ],
       "questions": [
         {
           "id": "general-science-601-l03-q1",
-          "text": "Which practice most improves general science systems diagnostics decision quality?",
-          "skillId": "general-science-601-skill-core",
+          "text": "Which practice most improves the decision quality of general science systems diagnostics?",
+          "skillId": "general-science-601-diagnostics",
           "options": [
             {
               "id": "a",
-              "text": "Proceed without baseline or assumptions"
+              "text": "Proceed without a baseline or assumptions"
             },
             {
               "id": "b",
@@ -171,12 +171,12 @@ export const GeneralScience601Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Advanced decisions improve when assumptions, constraints, and metrics are explicit."
+          "explanation": "Advanced decisions improve when assumptions, constraints, and metrics are made explicit."
         },
         {
           "id": "general-science-601-l03-q2",
-          "text": "At level 601, strong execution for general science operations and execution design requires:",
-          "skillId": "general-science-601-skill-execution",
+          "text": "At an advanced level, strong execution design for general science operations requires:",
+          "skillId": "general-science-601-execution",
           "options": [
             {
               "id": "a",
@@ -200,12 +200,12 @@ export const GeneralScience601Module: LearningModule = {
         },
         {
           "id": "general-science-601-l03-q3",
-          "text": "A defensible approach to general science impact and tradeoff analysis includes:",
-          "skillId": "general-science-601-skill-eval",
+          "text": "A defensible approach to impact and tradeoff analysis includes:",
+          "skillId": "general-science-601-evaluation",
           "options": [
             {
               "id": "a",
-              "text": "Anecdotes without comparison"
+              "text": "Anecdotes without a comparison group"
             },
             {
               "id": "b",
@@ -213,11 +213,11 @@ export const GeneralScience601Module: LearningModule = {
             },
             {
               "id": "c",
-              "text": "Changing success criteria after outcomes"
+              "text": "Changing success criteria after seeing the outcomes"
             },
             {
               "id": "d",
-              "text": "Excluding difficult scenarios from analysis"
+              "text": "Excluding difficult scenarios from the analysis"
             }
           ],
           "correctOptionId": "b",
@@ -225,8 +225,8 @@ export const GeneralScience601Module: LearningModule = {
         },
         {
           "id": "general-science-601-l03-q4",
-          "text": "Mature governance systems connect:",
-          "skillId": "general-science-601-skill-governance",
+          "text": "Mature governance systems effectively connect:",
+          "skillId": "general-science-601-governance",
           "options": [
             {
               "id": "a",
@@ -238,7 +238,7 @@ export const GeneralScience601Module: LearningModule = {
             },
             {
               "id": "c",
-              "text": "Targets without ownership or escalation design"
+              "text": "Targets without ownership or an escalation design"
             },
             {
               "id": "d",
@@ -247,120 +247,20 @@ export const GeneralScience601Module: LearningModule = {
           ],
           "correctOptionId": "a",
           "explanation": "Governance maturity is the operational link between intent, measurement, and corrective action."
-        },
-        {
-          "id": "general-science-601-l03-q5",
-          "text": "What is the best way to compare competing interventions in advanced General Science?",
-          "skillId": "general-science-601-skill-advanced-5",
-          "options": [
-            {
-              "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
-            },
-            {
-              "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
-            },
-            {
-              "id": "c",
-              "text": "Switch metrics after results arrive"
-            },
-            {
-              "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
-        },
-        {
-          "id": "general-science-601-l03-q6",
-          "text": "In high-stakes General Science Research and Leadership execution, which communication protocol is strongest?",
-          "skillId": "general-science-601-skill-advanced-6",
-          "options": [
-            {
-              "id": "a",
-              "text": "Broadcast conclusions without assumptions"
-            },
-            {
-              "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
-            },
-            {
-              "id": "c",
-              "text": "Share only final outcomes after completion"
-            },
-            {
-              "id": "d",
-              "text": "Limit updates to a single informal channel"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
-        },
-        {
-          "id": "general-science-601-l03-q7",
-          "text": "A mature remediation loop in advanced General Science should prioritize:",
-          "skillId": "general-science-601-skill-advanced-7",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blame assignment without system updates"
-            },
-            {
-              "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
-            },
-            {
-              "id": "c",
-              "text": "One-time fixes without retesting"
-            },
-            {
-              "id": "d",
-              "text": "Issue closure based on elapsed time"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
-        },
-        {
-          "id": "general-science-601-l03-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in General Science Research and Leadership?",
-          "skillId": "general-science-601-skill-advanced-8",
-          "options": [
-            {
-              "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
-            },
-            {
-              "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
-            },
-            {
-              "id": "c",
-              "text": "Ignore correlated failure modes"
-            },
-            {
-              "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
         }
       ]
     },
     {
       "id": "general-science-601-l04",
-      "title": "General Science Advanced Case Analysis",
+      "title": "Advanced Case Analysis",
       "type": "video",
       "duration": 14,
       "learningAids": [
         {
           "id": "general-science-601-l04-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Tradeoff Analysis Matrix",
+          "content": "A structured table for comparing multiple options across criteria like cost, safety, and impact."
         }
       ],
       "chunks": [
@@ -368,33 +268,50 @@ export const GeneralScience601Module: LearningModule = {
           "id": "general-science-601-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "In this lesson, we will frame cases that highlight the competing constraints found in general science systems diagnostics. We will also analyze the impacts and trade-offs involved in different scientific decisions. Understanding these elements is crucial for making informed choices that balance various scientific and societal needs.\nContext recap: In this lesson, we will frame cases that highlight the competing constraints found in general science systems diagnostics. We will also analyze the impacts and trade-offs involved in different scientific decisions. Understanding these elements is crucial for making informed choices that balance various scientific and societal needs."
+          "content": "This lesson teaches you to frame cases that highlight competing constraints in general science systems. You will analyze the impacts and trade-offs of different scientific decisions, a crucial skill for making informed choices that balance various scientific and societal needs."
         },
         {
           "id": "general-science-601-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "In this practice session, learners will compare different options based on important criteria such as safety, reliability, cost, equity, and governance. This comparative analysis helps us understand the implications of our choices and ensures that we consider all relevant factors when making decisions in science.\nContext recap: In this practice session, learners will compare different options based on important criteria such as safety, reliability, cost, equity, and governance. This comparative analysis helps us understand the implications of our choices and ensures that we consider all relevant factors when making decisions in science."
+          "content": "Practice comparing different options based on criteria such as safety, reliability, cost, equity, and governance. This comparative analysis helps clarify the implications of choices and ensures all relevant factors are considered when making decisions in science."
         },
         {
           "id": "general-science-601-l04-c3",
           "kind": "recap",
           "title": "Decision Memo Pattern",
-          "content": "In our recap, we will outline the key components that should be included in each recommendation. This includes stating the assumptions made, presenting the evidence gathered, identifying risk controls, and outlining fallback plans. By doing this, we ensure that our decisions are well-supported and that we are prepared for any potential challenges.\nContext recap: In our recap, we will outline the key components that should be included in each recommendation. This includes stating the assumptions made, presenting the evidence gathered, identifying risk controls, and outlining fallback plans. By doing this, we ensure that our decisions are well-supported and that we are prepared for any potential challenges."
+          "content": "We will recap the key components of a strong recommendation. This includes stating assumptions, presenting evidence, identifying risk controls, and outlining fallback plans. This structure ensures your decisions are well-supported and prepared for potential challenges."
+        }
+      ],
+      "flashcards": [
+        {
+          "id": "general-science-601-l04-f1",
+          "front": "Competing Constraints",
+          "back": "When the optimization of one system metric (e.g., speed) comes at the cost of another (e.g., safety)."
+        },
+        {
+          "id": "general-science-601-l04-f2",
+          "front": "Decision Memo",
+          "back": "A structured document that outlines a recommendation, its evidence, assumptions, risks, and alternatives."
+        },
+        {
+          "id": "general-science-601-l04-f3",
+          "front": "Fallback Plan",
+          "back": "A pre-defined alternative course of action to be taken if the primary plan fails or encounters unforeseen issues."
         }
       ]
     },
     {
       "id": "general-science-601-l05",
-      "title": "General Science Simulation Clinic",
+      "title": "Simulation Clinic",
       "type": "interactive",
       "duration": 18,
       "learningAids": [
         {
           "id": "general-science-601-l05-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "image",
+          "title": "Simulation Control Dashboard",
+          "content": "An interactive dashboard interface for managing variables and constraints in a live scenario."
         }
       ],
       "chunks": [
@@ -402,13 +319,13 @@ export const GeneralScience601Module: LearningModule = {
           "id": "general-science-601-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "In this interactive practice, learners will take on the role of operators managing scenario controls. They will learn how to balance performance with governance constraints, which is essential for effective decision-making in scientific contexts. This experience will help them understand the importance of maintaining oversight while striving for optimal outcomes.\nContext recap: In this interactive practice, learners will take on the role of operators managing scenario controls. They will learn how to balance performance with governance constraints, which is essential for effective decision-making in scientific contexts. This experience will help them understand the importance of maintaining oversight while striving for optimal outcomes."
+          "content": "In this interactive simulation, you will act as an operator managing scenario controls. You will learn to balance performance with governance constraints, an essential skill for effective decision-making in high-stakes scientific contexts."
         },
         {
           "id": "general-science-601-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "In our recap, we will discuss how effective responses to scenarios should involve updating control gates while ensuring that traceability and accountability are maintained. This is important for tracking changes and ensuring that all actions taken are transparent and justifiable.\nContext recap: In our recap, we will discuss how effective responses to scenarios should involve updating control gates while ensuring that traceability and accountability are maintained. This is important for tracking changes and ensuring that all actions taken are transparent and justifiable."
+          "content": "This recap explains how effective responses in dynamic scenarios involve updating control gates while maintaining traceability and accountability. This is critical for tracking changes and ensuring all actions are transparent and justifiable."
         }
       ],
       "interactiveActivities": [
@@ -416,7 +333,7 @@ export const GeneralScience601Module: LearningModule = {
           "id": "general-science-601-l05-act1",
           "type": "scenario",
           "title": "Adverse-Condition Decision Run",
-          "description": "Run a high-pressure general science scenario and tune controls under uncertainty."
+          "description": "Manage a high-pressure general science scenario. Your task is to tune system controls in real-time to mitigate risks and achieve objectives under uncertainty and unexpected events."
         }
       ]
     },
@@ -428,16 +345,16 @@ export const GeneralScience601Module: LearningModule = {
       "learningAids": [
         {
           "id": "general-science-601-l06-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "image",
+          "title": "Scenario Debrief Checklist",
+          "content": "A checklist to guide the post-simulation analysis of decisions, outcomes, and lessons learned."
         }
       ],
       "questions": [
         {
           "id": "general-science-601-l06-q1",
-          "text": "In advanced casework, the first requirement for defensible recommendations is:",
-          "skillId": "general-science-601-skill-case1",
+          "text": "In advanced casework, what is the first requirement for a defensible recommendation?",
+          "skillId": "general-science-601-case-framing",
           "options": [
             {
               "id": "a",
@@ -445,7 +362,7 @@ export const GeneralScience601Module: LearningModule = {
             },
             {
               "id": "b",
-              "text": "A clear baseline, explicit constraints, and success criteria"
+              "text": "A clear baseline, explicit constraints, and defined success criteria"
             },
             {
               "id": "c",
@@ -453,200 +370,100 @@ export const GeneralScience601Module: LearningModule = {
             },
             {
               "id": "d",
-              "text": "Single-metric optimization only"
+              "text": "Optimization of only a single metric"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible recommendations begin with explicit assumptions, constraints, and measurable targets."
+          "explanation": "Defensible recommendations begin with an explicit definition of the baseline, constraints, and measurable targets."
         },
         {
           "id": "general-science-601-l06-q2",
-          "text": "A resilient strategy for general science operations and execution design should include:",
-          "skillId": "general-science-601-skill-case2",
+          "text": "When performing a tradeoff analysis between two scientific interventions, which approach is most rigorous?",
+          "skillId": "general-science-601-tradeoff-analysis",
           "options": [
             {
               "id": "a",
-              "text": "Checkpointed execution with fallback and escalation criteria"
+              "text": "Choosing the option with the most compelling narrative"
             },
             {
               "id": "b",
-              "text": "One-way execution with no rollback capability"
+              "text": "Comparing them on a single, easy-to-measure metric"
             },
             {
               "id": "c",
-              "text": "No ownership mapping across teams"
+              "text": "Evaluating both against a shared set of criteria, including risks and side effects"
             },
             {
               "id": "d",
-              "text": "Hidden assumptions and undocumented decisions"
+              "text": "Selecting the one that requires the least amount of change"
             }
           ],
-          "correctOptionId": "a",
-          "explanation": "Resilience depends on checkpoints, fallback options, and explicit escalation design."
+          "correctOptionId": "c",
+          "explanation": "Rigorous analysis requires comparing options against a consistent, multi-dimensional set of criteria that includes potential downsides."
         },
         {
           "id": "general-science-601-l06-q3",
-          "text": "When evaluating general science impact and tradeoff analysis, which method is most rigorous?",
-          "skillId": "general-science-601-skill-case3",
+          "text": "During a live simulation, an unexpected adverse event occurs. What is the most effective immediate response?",
+          "skillId": "general-science-601-simulation-response",
           "options": [
             {
               "id": "a",
-              "text": "Single success story without controls"
+              "text": "Continue with the original plan regardless of the new event"
             },
             {
               "id": "b",
-              "text": "Comparative baselines plus side-effect and uncertainty analysis"
+              "text": "Activate a pre-defined fallback plan or contingency protocol"
             },
             {
               "id": "c",
-              "text": "Outcome-only narrative without process evidence"
+              "text": "Halt the simulation and wait for external guidance"
             },
             {
               "id": "d",
-              "text": "Retrospective scope changes to fit outcomes"
+              "text": "Focus solely on assigning blame for the event"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Rigorous evaluation requires comparisons, side-effect analysis, and uncertainty disclosure."
+          "explanation": "Effective crisis management in a simulation relies on having and using pre-planned contingencies and fallback options."
         },
         {
           "id": "general-science-601-l06-q4",
-          "text": "Advanced governance is strongest when it:",
-          "skillId": "general-science-601-skill-case4",
+          "text": "What is the primary goal of an adaptive response design in a dynamic system?",
+          "skillId": "general-science-601-adaptive-design",
           "options": [
             {
               "id": "a",
-              "text": "Aligns authority, measurement, and remediation obligations"
+              "text": "To ensure the system never deviates from its initial plan"
             },
             {
               "id": "b",
-              "text": "Separates policy from operational controls"
+              "text": "To allow system controls to be updated in response to new information while maintaining accountability"
             },
             {
               "id": "c",
-              "text": "Avoids external review and transparency"
+              "text": "To eliminate all forms of uncertainty from the system"
             },
             {
               "id": "d",
-              "text": "Treats accountability as optional under pressure"
-            }
-          ],
-          "correctOptionId": "a",
-          "explanation": "Mature governance links authority, measurable controls, and corrective action."
-        },
-        {
-          "id": "general-science-601-l06-q5",
-          "text": "What is the best way to compare competing interventions in advanced General Science?",
-          "skillId": "general-science-601-skill-advanced-5",
-          "options": [
-            {
-              "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
-            },
-            {
-              "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
-            },
-            {
-              "id": "c",
-              "text": "Switch metrics after results arrive"
-            },
-            {
-              "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
+              "text": "To make changes without documenting the rationale"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
-        },
-        {
-          "id": "general-science-601-l06-q6",
-          "text": "In high-stakes General Science Research and Leadership execution, which communication protocol is strongest?",
-          "skillId": "general-science-601-skill-advanced-6",
-          "options": [
-            {
-              "id": "a",
-              "text": "Broadcast conclusions without assumptions"
-            },
-            {
-              "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
-            },
-            {
-              "id": "c",
-              "text": "Share only final outcomes after completion"
-            },
-            {
-              "id": "d",
-              "text": "Limit updates to a single informal channel"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
-        },
-        {
-          "id": "general-science-601-l06-q7",
-          "text": "A mature remediation loop in advanced General Science should prioritize:",
-          "skillId": "general-science-601-skill-advanced-7",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blame assignment without system updates"
-            },
-            {
-              "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
-            },
-            {
-              "id": "c",
-              "text": "One-time fixes without retesting"
-            },
-            {
-              "id": "d",
-              "text": "Issue closure based on elapsed time"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
-        },
-        {
-          "id": "general-science-601-l06-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in General Science Research and Leadership?",
-          "skillId": "general-science-601-skill-advanced-8",
-          "options": [
-            {
-              "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
-            },
-            {
-              "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
-            },
-            {
-              "id": "c",
-              "text": "Ignore correlated failure modes"
-            },
-            {
-              "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "explanation": "Adaptive design is about creating systems that can change intelligently based on new data, without losing track of why changes were made."
         }
       ]
     },
     {
       "id": "general-science-601-l07",
-      "title": "General Science Governance and Public Impact",
+      "title": "Governance and Public Impact",
       "type": "video",
       "duration": 13,
       "learningAids": [
         {
           "id": "general-science-601-l07-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Accountability Framework",
+          "content": "A chart mapping decision authority, traceability requirements, and remediation pathways for stakeholders."
         }
       ],
       "chunks": [
@@ -654,50 +471,50 @@ export const GeneralScience601Module: LearningModule = {
           "id": "general-science-601-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "In this lesson, learners will explore how to map the distribution of benefits, burdens, and delayed effects across different stakeholder groups. This understanding is crucial for assessing the broader impact of scientific decisions and ensuring that all voices are considered in the decision-making process.\nContext recap: In this lesson, learners will explore how to map the distribution of benefits, burdens, and delayed effects across different stakeholder groups. This understanding is crucial for assessing the broader impact of scientific decisions and ensuring that all voices are considered in the decision-making process."
+          "content": "Learn how to map the distribution of benefits, burdens, and delayed effects across different stakeholder groups. This is crucial for assessing the broader societal impact of scientific decisions and ensuring equitable outcomes."
         },
         {
           "id": "general-science-601-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "In this section, we will focus on the architecture of accountability in decision-making. This includes integrating elements such as decision traceability, review rights, and remediation obligations. By establishing these frameworks, we can ensure that decisions are made responsibly and that there are mechanisms in place for addressing any issues that arise.\nContext recap: In this section, we will focus on the architecture of accountability in decision-making. This includes integrating elements such as decision traceability, review rights, and remediation obligations. By establishing these frameworks, we can ensure that decisions are made responsibly and that there are mechanisms in place for addressing any issues that arise."
+          "content": "This section focuses on designing accountability into decision-making processes. This includes integrating decision traceability, review rights, and remediation obligations to ensure that decisions are made responsibly and that there are clear mechanisms for addressing issues."
         },
         {
           "id": "general-science-601-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "As you wrap up your learning journey, it's important to have a final checklist that connects various important aspects. This checklist should include the outcomes of your projects, the ethical considerations involved, compliance with relevant policies, and strategies for resilience in your work. By ensuring that all these elements are addressed, you can demonstrate responsible leadership in science.\nContext recap: As you wrap up your learning journey, it's important to have a final checklist that connects various important aspects. This checklist should include the outcomes of your projects, the ethical considerations involved, compliance with relevant policies, and strategies for resilience in your work. By ensuring that all these elements are addressed, you can demonstrate responsible leadership in science."
+          "content": "This final recap provides a checklist for responsible leadership. It connects project outcomes, ethical considerations, policy compliance, and resilience strategies, ensuring you can demonstrate a holistic and accountable approach in your scientific work."
         }
       ],
       "flashcards": [
         {
           "id": "general-science-601-l07-f1",
-          "front": "Impact distribution",
-          "back": "How outcomes are allocated across populations and timescales."
+          "front": "Impact Distribution",
+          "back": "How outcomes, both positive and negative, are allocated across different populations and timescales."
         },
         {
           "id": "general-science-601-l07-f2",
-          "front": "Decision traceability",
-          "back": "An auditable record of evidence, ownership, and rationale."
+          "front": "Decision Traceability",
+          "back": "An auditable record of the evidence, ownership, and rationale behind a decision."
         },
         {
           "id": "general-science-601-l07-f3",
-          "front": "Responsible leadership",
-          "back": "Decision behavior balancing performance, accountability, and ethics."
+          "front": "Responsible Leadership",
+          "back": "Decision-making behavior that balances performance, accountability, and ethics."
         }
       ]
     },
     {
       "id": "general-science-601-l08",
-      "title": "General Science Capstone Defense Lab",
+      "title": "Capstone Defense Lab",
       "type": "interactive",
       "duration": 16,
       "learningAids": [
         {
           "id": "general-science-601-l08-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "image",
+          "title": "Capstone Defense Rubric",
+          "content": "A scoring rubric outlining the criteria for a successful defense, including evidence quality, logical rigor, and clarity."
         }
       ],
       "chunks": [
@@ -705,13 +522,13 @@ export const GeneralScience601Module: LearningModule = {
           "id": "general-science-601-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "In this interactive activity, you will create a comprehensive brief that includes your main claims supported by evidence. Additionally, you will outline the bounds of uncertainty related to your claims and propose pathways for remediation. This exercise will help you develop critical thinking skills and prepare you for presenting your ideas effectively.\nContext recap: In this interactive activity, you will create a comprehensive brief that includes your main claims supported by evidence. Additionally, you will outline the bounds of uncertainty related to your claims and propose pathways for remediation. This exercise will help you develop critical thinking skills and prepare you for presenting your ideas effectively."
+          "content": "In this activity, you will construct a comprehensive defense brief. It must include your main claims, supporting evidence, the bounds of uncertainty, and proposed remediation pathways. This exercise hones your ability to build and present a rigorous scientific argument."
         },
         {
           "id": "general-science-601-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "During this session, you will have the opportunity to practice your responses to various critiques that may arise from technical experts, governance representatives, and stakeholders. This rehearsal will help you refine your communication skills and prepare you to confidently address questions and feedback during your final presentation.\nContext recap: During this session, you will have the opportunity to practice your responses to various critiques that may arise from technical experts, governance representatives, and stakeholders. This rehearsal will help you refine your communication skills and prepare you to confidently address questions and feedback during your final presentation."
+          "content": "Practice responding to critiques from technical experts, governance representatives, and stakeholders. This rehearsal will refine your communication skills and prepare you to confidently address challenging questions and feedback during your final defense."
         }
       ],
       "interactiveActivities": [
@@ -719,7 +536,7 @@ export const GeneralScience601Module: LearningModule = {
           "id": "general-science-601-l08-act1",
           "type": "debate_simulator",
           "title": "Expert Defense Panel",
-          "description": "Defend specialization recommendations under adversarial cross-examination."
+          "description": "Present and defend your capstone recommendations to a simulated panel of experts. You will face adversarial cross-examination designed to test the rigor and resilience of your work."
         }
       ]
     }

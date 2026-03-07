@@ -1,9 +1,9 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const DigitalMarketing201Module: LearningModule = {
+export const digital_marketing_201_Module: LearningModule = {
   "id": "digital-marketing-201",
   "title": "Digital Marketing Applied Practice",
-  "description": "Level 201 curriculum in Digital Marketing, emphasizing audience strategy, campaign analytics, channel optimization, growth experimentation, and real-world decision quality through structured practice and assessment.",
+  "description": "A level 201 course in Digital Marketing that focuses on audience strategy, campaign analysis, channel optimization, and growth experiments. You'll learn to make real-world decisions through structured practice and assessments.",
   "subject": "Business",
   "tags": [
     "core",
@@ -14,23 +14,23 @@ export const DigitalMarketing201Module: LearningModule = {
   ],
   "minAge": 14,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "intermediate",
   "localeSupport": [
     "en"
   ],
   "learningObjectives": [
-    "Develop rigorous mental models for audience strategy and campaign analytics",
-    "Apply structured methods to plan, execute, and review channel optimization tasks",
-    "Interpret evidence using metrics, constraints, and context",
-    "Diagnose common failure modes and design recovery actions",
-    "Communicate tradeoffs clearly to technical and non-technical audiences",
-    "Build repeatable systems for sustained improvement in Digital Marketing"
+    "Develop clear ways of thinking about audience strategy and campaign analytics.",
+    "Apply structured methods to plan, run, and review marketing channel improvements.",
+    "Interpret results using data, considering limitations and context.",
+    "Identify common reasons for failure and design plans to fix them.",
+    "Explain the pros and cons of different choices to both technical and non-technical people.",
+    "Build repeatable processes for continuous improvement in Digital Marketing."
   ],
   "lessons": [
     {
       "id": "digital-marketing-201-l01",
-      "title": "Core Models for Digital Marketing",
+      "title": "Core Ideas for Digital Marketing",
       "type": "video",
       "duration": 13,
       "learningAids": [
@@ -38,44 +38,45 @@ export const DigitalMarketing201Module: LearningModule = {
           "id": "digital-marketing-201-l01-a1",
           "type": "image",
           "title": "Guided Practice",
-          "content": "Use the structured prompt and write your reasoning before finalizing answers."
+          "content": "Use the structured prompt and write down your reasoning before choosing an answer.",
+          "visualPrompt": "An icon of a checklist with a magnifying glass, symbolizing a structured review of your work."
         }
       ],
       "chunks": [
         {
           "id": "digital-marketing-201-l01-c1",
           "kind": "concept",
-          "title": "Operating Vocabulary and Scope",
-          "content": "In Digital Marketing at level 201, using clear and specific language is essential for our success. We will explore how to define the boundaries of our work, which means understanding what is included in our projects and what is not. Additionally, we will identify the main focus of our analysis, which helps us understand what we are studying or measuring. By ensuring that everyone uses the same terms, we create a common language that allows us to communicate effectively. This clarity helps us make better decisions and enables different teams to compare their results accurately, leading to improved collaboration and outcomes."
+          "title": "Defining Our Terms",
+          "content": "In digital marketing, using clear and specific language is key to success. We'll learn how to define the scope of our work—what our project will cover and what it won't. We'll also identify the main focus of our analysis, which is what we are studying or measuring. When everyone uses the same terms, we can communicate effectively, make better decisions, and compare results accurately across different teams."
         },
         {
           "id": "digital-marketing-201-l01-c2",
           "kind": "concept",
-          "title": "Causal Thinking and Constraints",
-          "content": "To achieve success in Digital Marketing, it is crucial to dig deeper and understand the reasons behind our results, rather than just looking at the results themselves. In this lesson, we will learn how to identify our assumptions—these are the beliefs we hold that may influence our decisions. We will also explore the connections between different factors that can affect our marketing efforts, which we call dependencies. Additionally, we will discuss the limitations or constraints we might encounter in our strategies. By focusing on these key areas, we can work towards addressing the root causes of any challenges we face, rather than simply treating the symptoms. This approach will help us create more effective marketing strategies that truly resonate with our audience and lead to better outcomes."
+          "title": "Thinking About Cause and Effect",
+          "content": "To succeed in digital marketing, we need to understand the 'why' behind our results, not just the 'what'. We'll learn to identify our assumptions—the beliefs we hold that might affect our decisions. We'll also explore how different factors are connected and look at the limits we have to work with, like time or budget. By focusing on the root causes of problems instead of just the symptoms, we can create more effective marketing strategies."
         },
         {
           "id": "digital-marketing-201-l01-c3",
           "kind": "recap",
-          "title": "Evidence and Accountability",
-          "content": "In this section, we will introduce important practices that help ensure our work is reliable and trustworthy. We will discuss the importance of having clear evidence standards, maintaining a disciplined approach to logging our activities, and creating accountability loops. These practices are essential for making sure that our digital marketing efforts are executed effectively.\nContext recap: In this section, we will introduce important practices that help ensure our work is reliable and trustworthy. We will discuss the importance of having clear evidence standards, maintaining a disciplined approach to logging our activities, and creating accountability loops. These practices are essential for making sure that our digital marketing efforts are executed effectively."
+          "title": "Using Proof and Taking Responsibility",
+          "content": "In this section, we'll cover practices that make our work more reliable and trustworthy. We'll discuss the importance of having clear standards for evidence, keeping detailed logs of our activities, and creating feedback loops to ensure accountability. These habits are essential for making sure our digital marketing efforts are effective and that we learn from our experiences."
         }
       ],
       "flashcards": [
         {
           "id": "digital-marketing-201-l01-f1",
           "front": "Unit of analysis",
-          "back": "The specific entity or process you evaluate to make defensible decisions."
+          "back": "The main thing you are studying or measuring to make a decision (e.g., a customer, a campaign, a web page)."
         },
         {
           "id": "digital-marketing-201-l01-f2",
           "front": "Constraint mapping",
-          "back": "A method for identifying boundaries that shape feasible options."
+          "back": "A way to identify the limits or boundaries (like budget, time, or rules) that shape your available options."
         },
         {
           "id": "digital-marketing-201-l01-f3",
           "front": "Evidence standard",
-          "back": "The minimum quality threshold data must meet before action is taken."
+          "back": "The level of quality your data must meet before you use it to make a decision."
         }
       ]
     },
@@ -89,21 +90,22 @@ export const DigitalMarketing201Module: LearningModule = {
           "id": "digital-marketing-201-l02-a1",
           "type": "practice",
           "title": "Guided Practice",
-          "content": "Use the structured prompt and write your reasoning before finalizing answers."
+          "content": "Use the structured prompt and write down your reasoning before finalizing your answers.",
+          "visualPrompt": "An animated diagram of a workflow with distinct stages: Plan, Do, Check, Act."
         }
       ],
       "chunks": [
         {
           "id": "digital-marketing-201-l02-c1",
           "kind": "practice",
-          "title": "Workflow Construction",
-          "content": "In this interactive lab, you will have the opportunity to create a complete workflow for developing an audience strategy and analyzing campaign performance. This will include identifying the necessary inputs, establishing checkpoints to monitor progress, determining the expected outputs, and setting up rollback triggers to address any issues that may arise.\nContext recap: In this interactive lab, you will have the opportunity to create a complete workflow for developing an audience strategy and analyzing campaign performance. This will include identifying the necessary inputs, establishing checkpoints to monitor progress, determining the expected outputs, and setting up rollback triggers to address any issues that may arise."
+          "title": "Building a Workflow",
+          "content": "In this interactive lab, you'll build a complete workflow for creating an audience strategy and analyzing a campaign. This includes defining the necessary inputs (what you need to start), setting up checkpoints to monitor progress, deciding on the outputs (what you need to deliver), and creating triggers to roll back changes if something goes wrong."
         },
         {
           "id": "digital-marketing-201-l02-c2",
           "kind": "recap",
-          "title": "Decision Logging",
-          "content": "In this recap, we will emphasize the importance of logging every decision made during the marketing process. Each decision should be accompanied by a clear explanation of the reasoning behind it, the expected outcomes, and a point for verification. This practice will enable us to analyze our results after the campaign is completed and learn from our experiences.\nContext recap: In this recap, we will emphasize the importance of logging every decision made during the marketing process. Each decision should be accompanied by a clear explanation of the reasoning behind it, the expected outcomes, and a point for verification. This practice will enable us to analyze our results after the campaign is completed and learn from our experiences."
+          "title": "Logging Your Decisions",
+          "content": "This recap highlights why it's crucial to log every decision you make. Each entry should include your reasoning, what you expect to happen, and how you'll verify the outcome. This practice allows you to review your performance after a campaign and learn from both your successes and mistakes."
         }
       ],
       "interactiveActivities": [
@@ -111,7 +113,7 @@ export const DigitalMarketing201Module: LearningModule = {
           "id": "digital-marketing-201-l02-act1",
           "type": "matching_pairs",
           "title": "Workflow Match",
-          "description": "Match each workflow component to its strongest governance function.",
+          "description": "Match each workflow component to its main purpose.",
           "pairs": [
             {
               "left": "Input audit",
@@ -119,15 +121,15 @@ export const DigitalMarketing201Module: LearningModule = {
             },
             {
               "left": "Checkpoint gate",
-              "right": "Stops propagation of known defects"
+              "right": "Stops known problems from moving forward"
             },
             {
               "left": "Outcome metric",
-              "right": "Measures whether the objective was met"
+              "right": "Measures whether the main goal was met"
             },
             {
               "left": "Retrospective log",
-              "right": "Captures lessons for next iteration"
+              "right": "Captures lessons to improve the next cycle"
             }
           ]
         },
@@ -135,7 +137,7 @@ export const DigitalMarketing201Module: LearningModule = {
           "id": "digital-marketing-201-l02-act2",
           "type": "sorting_buckets",
           "title": "Risk Classification",
-          "description": "Sort items into strategic, operational, and quality-risk groups.",
+          "description": "Sort each risk into the correct category: Strategic, Operational, or Quality.",
           "buckets": [
             "Strategic",
             "Operational",
@@ -143,19 +145,19 @@ export const DigitalMarketing201Module: LearningModule = {
           ],
           "items": [
             {
-              "text": "Misaligned goals",
+              "text": "Marketing goals don't align with company goals",
               "bucket": "Strategic"
             },
             {
-              "text": "Unclear handoff timing",
+              "text": "Unclear timing for handoffs between teams",
               "bucket": "Operational"
             },
             {
-              "text": "Inconsistent acceptance criteria",
+              "text": "Inconsistent rules for approving work",
               "bucket": "Quality"
             },
             {
-              "text": "No benchmark baseline",
+              "text": "No starting data to compare results against",
               "bucket": "Quality"
             }
           ]
@@ -172,166 +174,168 @@ export const DigitalMarketing201Module: LearningModule = {
           "id": "digital-marketing-201-l03-a1",
           "type": "practice",
           "title": "Guided Practice",
-          "content": "Use the structured prompt and write your reasoning before finalizing answers."
+          "content": "Use the structured prompt and write down your reasoning before choosing an answer.",
+          "visualPrompt": "An icon of a brain with a pencil, encouraging thoughtful written responses."
         }
       ],
       "questions": [
         {
           "id": "digital-marketing-201-l03-q1",
-          "text": "Which action best improves decisions in audience strategy work?",
+          "text": "What is the best way to improve decisions when planning who to market to?",
           "skillId": "digital-marketing-201-skill-core",
           "options": [
             {
               "id": "a",
-              "text": "Rely on one unverified example"
+              "text": "Rely on a single, unverified example"
             },
             {
               "id": "b",
-              "text": "Define criteria, compare alternatives, and test assumptions"
+              "text": "Define your criteria, compare options, and test your assumptions"
             },
             {
               "id": "c",
-              "text": "Skip metrics and move directly to execution"
+              "text": "Ignore data and start executing immediately"
             },
             {
               "id": "d",
-              "text": "Avoid documenting rationale"
+              "text": "Avoid writing down why you made a decision"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Explicit criteria and testable assumptions improve reliability and transferability."
+          "explanation": "Having clear rules and testable ideas makes your decisions more reliable and easier to apply in the future."
         },
         {
           "id": "digital-marketing-201-l03-q2",
-          "text": "In campaign analytics, what is the strongest indicator of process quality?",
+          "text": "In campaign analysis, what is the best sign of a good process?",
           "skillId": "digital-marketing-201-skill-process",
           "options": [
             {
               "id": "a",
-              "text": "Output speed only"
+              "text": "How fast you get it done"
             },
             {
               "id": "b",
-              "text": "Traceable steps, checkpoints, and measurable outcomes"
+              "text": "Having traceable steps, checkpoints, and measurable results"
             },
             {
               "id": "c",
-              "text": "Unstructured iteration without logs"
+              "text": "Making changes without keeping any logs"
             },
             {
               "id": "d",
-              "text": "One-time performance anecdotes"
+              "text": "Stories about one-time successes"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Quality processes are observable, repeatable, and measurable."
+          "explanation": "A quality process is one that is easy to observe, repeat, and measure."
         },
         {
           "id": "digital-marketing-201-l03-q3",
-          "text": "When evaluating channel optimization, which practice supports trustworthy conclusions?",
+          "text": "When evaluating how to improve a marketing channel, which practice leads to more trustworthy conclusions?",
           "skillId": "digital-marketing-201-skill-eval",
           "options": [
             {
               "id": "a",
-              "text": "Ignore edge cases"
+              "text": "Ignoring unusual results or edge cases"
             },
             {
               "id": "b",
-              "text": "Use baseline comparisons and failure analysis"
+              "text": "Using baseline comparisons and analyzing failures"
             },
             {
               "id": "c",
-              "text": "Change targets after results are known"
+              "text": "Changing your success targets after you see the results"
             },
             {
               "id": "d",
-              "text": "Remove context from findings"
+              "text": "Presenting findings without their original context"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Baselines and failure analysis prevent overclaiming and improve design quality."
+          "explanation": "Comparing to a starting point and studying mistakes helps you be honest about your results and improve your plans."
         },
         {
           "id": "digital-marketing-201-l03-q4",
-          "text": "A mature growth experimentation strategy should prioritize:",
+          "text": "A good plan for testing new growth ideas should prioritize:",
           "skillId": "digital-marketing-201-skill-strategy",
           "options": [
             {
               "id": "a",
-              "text": "Single-metric optimization at any cost"
+              "text": "Improving a single metric, no matter the cost"
             },
             {
               "id": "b",
-              "text": "Balanced outcomes across quality, risk, and sustainability"
+              "text": "Balancing results across quality, risk, and long-term success"
             },
             {
               "id": "c",
-              "text": "Decisions based only on intuition"
+              "text": "Making decisions based only on gut feelings"
             },
             {
               "id": "d",
-              "text": "No post-implementation review"
+              "text": "Skipping any review after the test is done"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Balanced scorecards align long-term performance with accountability."
+          "explanation": "Focusing on a balanced set of goals helps you achieve long-term success and ensures accountability."
         }
       ]
     },
     {
       "id": "digital-marketing-201-l04",
-      "title": "Methods, Metrics, and Failure Modes in Digital Marketing",
+      "title": "Methods, Metrics, and Common Failures",
       "type": "video",
       "duration": 14,
       "learningAids": [
         {
           "id": "digital-marketing-201-l04-a1",
-          "type": "mnemonic",
+          "type": "practice",
           "title": "Guided Practice",
-          "content": "Use the structured prompt and write your reasoning before finalizing answers."
+          "content": "Use the structured prompt and write down your reasoning before choosing an answer.",
+          "visualPrompt": "A flowchart showing a decision point with multiple paths, representing method selection."
         }
       ],
       "chunks": [
         {
           "id": "digital-marketing-201-l04-c1",
           "kind": "concept",
-          "title": "Method Selection",
-          "content": "When we choose methods for our digital marketing projects, it's important to think about several key factors. First, we need to look at any constraints we might have, like time or budget limits. Next, we should consider the quality of the information we have—good information helps us make better decisions. Finally, we must think about the cost of making mistakes; some errors can be very expensive. In this lesson, we will explore different methods and compare them. We will also discuss why some methods work better than others in specific digital marketing situations, helping us make informed choices in our marketing strategies."
+          "title": "Choosing the Right Tools",
+          "content": "When choosing a method for a marketing project, we must consider several factors. First, what are our limits, like time and budget? Second, how good is the information we have? Finally, what is the cost of being wrong? Some mistakes are more expensive than others. In this lesson, we'll compare different methods and discuss why some work better in certain situations, helping you make smarter choices."
         },
         {
           "id": "digital-marketing-201-l04-c2",
           "kind": "example",
-          "title": "Metric Architecture",
-          "content": "A well-organized metric architecture is like a map for a digital marketing team. It connects three important parts: leading indicators, which are signs that help us predict how well we might do in the future; lagging outcomes, which show us the results of our past efforts; and diagnostic measures, which help us understand what is currently happening in our campaigns. By using this structure, teams can spot any changes or problems early on, allowing them to make thoughtful decisions to keep their marketing efforts on the right path and achieve their goals."
+          "title": "How to Measure Success",
+          "content": "A good set of metrics is like a car's dashboard for a marketing team. It connects leading indicators (like a check engine light, warning you of future problems), lagging outcomes (like the trip odometer, showing how far you've gone), and diagnostic measures (like the fuel gauge, telling you what's happening now). This structure helps teams spot issues early and make smart adjustments to stay on track."
         },
         {
           "id": "digital-marketing-201-l04-c3",
           "kind": "recap",
-          "title": "Failure Taxonomy",
-          "content": "In this recap, we will categorize failures into four main areas: data, process, execution, and governance. By grouping failures this way, we can create specific plans to address each type of issue rather than using a one-size-fits-all approach. This targeted strategy will help us improve our digital marketing efforts.\nContext recap: In this recap, we will categorize failures into four main areas: data, process, execution, and governance. By grouping failures this way, we can create specific plans to address each type of issue rather than using a one-size-fits-all approach. This targeted strategy will help us improve our digital marketing efforts."
+          "title": "Understanding Why Things Go Wrong",
+          "content": "In this recap, we'll sort failures into four main types: data, process, execution, and governance. By categorizing failures, we can create specific, targeted plans to fix each type of problem instead of using a one-size-fits-all solution. This helps us make more effective improvements to our marketing efforts."
         }
       ],
       "flashcards": [
         {
           "id": "digital-marketing-201-l04-f1",
           "front": "Leading indicator",
-          "back": "A metric that signals probable future outcomes before final results appear."
+          "back": "A metric that signals a likely future result before the final numbers are in."
         },
         {
           "id": "digital-marketing-201-l04-f2",
           "front": "Failure taxonomy",
-          "back": "A structured classification of failure types used to design targeted fixes."
+          "back": "A structured way of classifying different types of failures to design targeted solutions."
         },
         {
           "id": "digital-marketing-201-l04-f3",
           "front": "Cost of error",
-          "back": "The operational, financial, or social impact caused by an incorrect decision."
+          "back": "The negative impact (financial, operational, or social) of making a wrong decision."
         }
       ]
     },
     {
       "id": "digital-marketing-201-l05",
-      "title": "Case Studio: Improve a Digital Marketing System",
+      "title": "Case Study: Improve a Digital Marketing System",
       "type": "interactive",
       "duration": 16,
       "learningAids": [
@@ -339,21 +343,22 @@ export const DigitalMarketing201Module: LearningModule = {
           "id": "digital-marketing-201-l05-a1",
           "type": "practice",
           "title": "Guided Practice",
-          "content": "Use the structured prompt and write your reasoning before finalizing answers."
+          "content": "Use the structured prompt and write down your reasoning before finalizing your answers.",
+          "visualPrompt": "An image of a detective's board with clues, photos, and strings connecting them, representing case decomposition."
         }
       ],
       "chunks": [
         {
           "id": "digital-marketing-201-l05-c1",
           "kind": "practice",
-          "title": "Case Decomposition",
-          "content": "In this interactive case study, we will break down a realistic marketing scenario into its key components, including the main objective, the context in which it operates, any constraints we need to consider, and the various options for intervention. We will also take notes on the trade-offs involved in each option to make informed decisions.\nContext recap: In this interactive case study, we will break down a realistic marketing scenario into its key components, including the main objective, the context in which it operates, any constraints we need to consider, and the various options for intervention. We will also take notes on the trade-offs involved in each option to make informed decisions."
+          "title": "Breaking Down the Problem",
+          "content": "In this interactive case study, you'll analyze a realistic marketing scenario. You will identify the main goal, the context, any limits you need to consider, and the different options for taking action. You'll also take notes on the pros and cons (trade-offs) of each option to help you make the best decision."
         },
         {
           "id": "digital-marketing-201-l05-c2",
           "kind": "recap",
-          "title": "Improvement Proposal",
-          "content": "In this recap, learners will present a structured proposal for improving the digital marketing system. This proposal will include clear criteria for success, a mapping of who is responsible for each part of the plan, and a timeline for follow-up actions. This approach ensures that everyone knows their role and what to expect moving forward.\nContext recap: In this recap, learners will present a structured proposal for improving the digital marketing system. This proposal will include clear criteria for success, a mapping of who is responsible for each part of the plan, and a timeline for follow-up actions. This approach ensures that everyone knows their role and what to expect moving forward."
+          "title": "Creating a Plan for Improvement",
+          "content": "In this recap, you will present a structured proposal to improve the marketing system from the case study. Your proposal will include clear goals for success, a map of who is responsible for each task, and a timeline for follow-up. This ensures everyone knows their role and what to expect."
         }
       ],
       "interactiveActivities": [
@@ -361,34 +366,34 @@ export const DigitalMarketing201Module: LearningModule = {
           "id": "digital-marketing-201-l05-act1",
           "type": "scenario_practice",
           "title": "Decision Path Simulation",
-          "description": "Choose among three interventions to improve channel optimization outcomes under time and quality constraints.",
+          "description": "Choose one of three actions to improve marketing channel results, while balancing time and quality limits.",
           "instructions": [
-            "Define success criteria before selecting an intervention.",
-            "Document one short-term tradeoff and one long-term benefit.",
-            "Specify a metric that confirms success in the next cycle."
+            "Define what success looks like before choosing an action.",
+            "Write down one short-term trade-off and one long-term benefit for your choice.",
+            "Name one metric you will use to confirm your action was successful in the next cycle."
           ]
         },
         {
           "id": "digital-marketing-201-l05-act2",
           "type": "matching_pairs",
-          "title": "Intervention to Outcome Mapping",
-          "description": "Connect interventions with the most likely system-level effects.",
+          "title": "Action to Outcome Mapping",
+          "description": "Connect each action with its most likely effect on the overall system.",
           "pairs": [
             {
-              "left": "Tighter intake criteria",
-              "right": "Higher signal quality and lower downstream rework"
+              "left": "Stricter criteria for new projects",
+              "right": "Higher quality work and less rework later"
             },
             {
-              "left": "Checkpoint automation",
-              "right": "Faster detection of preventable defects"
+              "left": "Automated quality checks",
+              "right": "Faster detection of preventable errors"
             },
             {
-              "left": "Post-run retrospective",
-              "right": "Improved adaptation in later cycles"
+              "left": "Review meeting after each project",
+              "right": "Better plans and adjustments in future projects"
             },
             {
-              "left": "Cross-team briefing",
-              "right": "Reduced ambiguity at handoff boundaries"
+              "left": "Briefing between different teams",
+              "right": "Less confusion when work is handed off"
             }
           ]
         }
@@ -404,109 +409,110 @@ export const DigitalMarketing201Module: LearningModule = {
           "id": "digital-marketing-201-l06-a1",
           "type": "practice",
           "title": "Guided Practice",
-          "content": "Use the structured prompt and write your reasoning before finalizing answers."
+          "content": "Use the structured prompt and write down your reasoning before choosing an answer.",
+          "visualPrompt": "An icon of a gear system with one gear highlighted, representing systems thinking."
         }
       ],
       "questions": [
         {
           "id": "digital-marketing-201-l06-q1",
-          "text": "Which action best improves decisions in audience strategy work?",
+          "text": "When choosing a marketing method, what is the most important first step?",
           "skillId": "digital-marketing-201-skill-core",
           "options": [
             {
               "id": "a",
-              "text": "Rely on one unverified example"
+              "text": "Pick the newest, most popular tool"
             },
             {
               "id": "b",
-              "text": "Define criteria, compare alternatives, and test assumptions"
+              "text": "Understand your limits, like time and budget"
             },
             {
               "id": "c",
-              "text": "Skip metrics and move directly to execution"
+              "text": "Ask a friend what they use"
             },
             {
               "id": "d",
-              "text": "Avoid documenting rationale"
+              "text": "Automatically use the same method as last time"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Explicit criteria and testable assumptions improve reliability and transferability."
+          "explanation": "Understanding your constraints and limitations helps you choose a method that is both realistic and effective for your situation."
         },
         {
           "id": "digital-marketing-201-l06-q2",
-          "text": "In campaign analytics, what is the strongest indicator of process quality?",
+          "text": "A 'leading indicator' is a metric that...",
           "skillId": "digital-marketing-201-skill-process",
           "options": [
             {
               "id": "a",
-              "text": "Output speed only"
+              "text": "Tells you the final result of your campaign"
             },
             {
               "id": "b",
-              "text": "Traceable steps, checkpoints, and measurable outcomes"
+              "text": "Helps you predict a future outcome"
             },
             {
               "id": "c",
-              "text": "Unstructured iteration without logs"
+              "text": "Is always difficult and expensive to measure"
             },
             {
               "id": "d",
-              "text": "One-time performance anecdotes"
+              "text": "Measures how happy the marketing team is"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Quality processes are observable, repeatable, and measurable."
+          "explanation": "Leading indicators give you an early warning or a positive sign of future success, allowing you to make adjustments before it's too late."
         },
         {
           "id": "digital-marketing-201-l06-q3",
-          "text": "When evaluating channel optimization, which practice supports trustworthy conclusions?",
+          "text": "If a campaign fails because the team didn't follow the approved plan correctly, what type of failure is it?",
           "skillId": "digital-marketing-201-skill-eval",
           "options": [
             {
               "id": "a",
-              "text": "Ignore edge cases"
+              "text": "Data failure"
             },
             {
               "id": "b",
-              "text": "Use baseline comparisons and failure analysis"
+              "text": "Process failure"
             },
             {
               "id": "c",
-              "text": "Change targets after results are known"
+              "text": "Execution failure"
             },
             {
               "id": "d",
-              "text": "Remove context from findings"
+              "text": "Governance failure"
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "Baselines and failure analysis prevent overclaiming and improve design quality."
+          "correctOptionId": "c",
+          "explanation": "An execution failure happens when the plan itself is good, but it isn't carried out correctly by the team."
         },
         {
           "id": "digital-marketing-201-l06-q4",
-          "text": "A mature growth experimentation strategy should prioritize:",
+          "text": "In a case study, what is the main purpose of documenting the 'trade-offs' of a decision?",
           "skillId": "digital-marketing-201-skill-strategy",
           "options": [
             {
               "id": "a",
-              "text": "Single-metric optimization at any cost"
+              "text": "To make the final report look longer"
             },
             {
               "id": "b",
-              "text": "Balanced outcomes across quality, risk, and sustainability"
+              "text": "To show you understand the pros and cons of your choice"
             },
             {
               "id": "c",
-              "text": "Decisions based only on intuition"
+              "text": "To find someone to blame if the plan fails"
             },
             {
               "id": "d",
-              "text": "No post-implementation review"
+              "text": "To hide the potential risks from your boss"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Balanced scorecards align long-term performance with accountability."
+          "explanation": "Acknowledging trade-offs demonstrates critical thinking about the consequences of your choices and helps set realistic expectations for everyone involved."
         }
       ]
     }

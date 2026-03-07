@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const SportsScience601Module: LearningModule = {
+export const sports_science_601_Module: LearningModule = {
   "id": "sports-science-601",
   "title": "Sports Science Research and Leadership",
   "description": "Post-401 specialization in Sports Science, focused on performance systems modeling, training and recovery design, injury-risk analytics, and athlete welfare governance through advanced casework, simulation, and defense-based checkpoints.",
@@ -14,7 +14,7 @@ export const SportsScience601Module: LearningModule = {
   ],
   "minAge": 17,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en"
@@ -30,15 +30,15 @@ export const SportsScience601Module: LearningModule = {
   "lessons": [
     {
       "id": "sports-science-601-l01",
-      "title": "Sports Science Advanced Foundations",
+      "title": "Advanced Foundations in Sports Science",
       "type": "video",
       "duration": 14,
       "learningAids": [
         {
           "id": "sports-science-601-l01-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Performance System Model",
+          "content": "A diagram illustrating the interconnected factors in athletic performance, such as training load, recovery, nutrition, and psychological state, with explicit assumptions and constraints noted."
         }
       ],
       "chunks": [
@@ -46,50 +46,50 @@ export const SportsScience601Module: LearningModule = {
           "id": "sports-science-601-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "In this lesson, we will explore the advanced boundaries of Sports Science. We will focus on how to model performance systems effectively, as well as how to design training and recovery programs that help athletes perform at their best. Understanding these concepts is crucial for anyone interested in the science behind sports and athletic performance.\nContext recap: In this lesson, we will explore the advanced boundaries of Sports Science. We will focus on how to model performance systems effectively, as well as how to design training and recovery programs that help athletes perform at their best. Understanding these concepts is crucial for anyone interested in the science behind sports and athletic performance."
+          "content": "This lesson explores the advanced boundaries of Sports Science. We will focus on how to effectively model performance systems and design robust training and recovery programs. Understanding these concepts is crucial for optimizing athletic performance while managing complex constraints."
         },
         {
           "id": "sports-science-601-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different factors that influence performance. Additionally, we will examine uncertainty ranges and the dependencies within systems. This foundational knowledge is essential for planning effective interventions in sports science.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different factors that influence performance. Additionally, we will examine uncertainty ranges and the dependencies within systems. This foundational knowledge is essential for planning effective interventions in sports science."
+          "content": "Here, we will map the causal pathways that connect different factors influencing performance. We will also examine how to model uncertainty and system dependencies. This foundational knowledge is essential for planning effective and defensible interventions in sports science."
         },
         {
           "id": "sports-science-601-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "It is important to ensure that all claims made in sports science are backed by measurable indicators. In this recap, we will discuss how to establish confidence bounds and set up review checkpoints to verify our findings. This process helps maintain the integrity and reliability of our research.\nContext recap: It is important to ensure that all claims made in sports science are backed by measurable indicators. In this recap, we will discuss how to establish confidence bounds and set up review checkpoints to verify our findings. This process helps maintain the integrity and reliability of our research."
+          "content": "It is critical that all claims in sports science are backed by measurable indicators. This recap covers how to establish confidence bounds for your data and set up review checkpoints to verify findings, ensuring the integrity and reliability of your research."
         }
       ],
       "flashcards": [
         {
           "id": "sports-science-601-l01-f1",
-          "front": "performance systems modeling",
-          "back": "A specialization axis requiring explicit assumptions and measurable constraints."
+          "front": "Performance Systems Modeling",
+          "back": "A method for analyzing athletic performance by defining explicit assumptions, variables, and measurable constraints."
         },
         {
           "id": "sports-science-601-l01-f2",
-          "front": "training and recovery design",
-          "back": "Execution architecture that determines reliability under stress."
+          "front": "Training and Recovery Design",
+          "back": "The architecture of a program that determines its reliability and an athlete's resilience under stress."
         },
         {
           "id": "sports-science-601-l01-f3",
-          "front": "injury-risk analytics",
-          "back": "Evaluation discipline for identifying true gains and hidden costs."
+          "front": "Injury-Risk Analytics",
+          "back": "An evaluation discipline for identifying the true benefits and hidden costs of an intervention."
         }
       ]
     },
     {
       "id": "sports-science-601-l02",
-      "title": "Sports Science Specialist Methods Lab",
+      "title": "Specialist Methods Lab",
       "type": "interactive",
       "duration": 17,
       "learningAids": [
         {
           "id": "sports-science-601-l02-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "image",
+          "title": "Workflow with Control Gates",
+          "content": "A flowchart showing a training plan with integrated checkpoints, decision points (rollback criteria), and escalation paths based on performance data thresholds."
         }
       ],
       "chunks": [
@@ -97,13 +97,13 @@ export const SportsScience601Module: LearningModule = {
           "id": "sports-science-601-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "In this interactive practice session, learners will have the opportunity to design specialized workflows tailored for sports science applications. They will also conduct stress tests on these workflows to see how they perform under challenging scenarios. This hands-on experience is vital for understanding real-world applications.\nContext recap: In this interactive practice session, learners will have the opportunity to design specialized workflows tailored for sports science applications. They will also conduct stress tests on these workflows to see how they perform under challenging scenarios. This hands-on experience is vital for understanding real-world applications."
+          "content": "In this interactive lab, you will design specialized workflows for sports science applications. You will then conduct stress tests on these workflows to evaluate their performance under challenging scenarios, providing vital hands-on experience for real-world application."
         },
         {
           "id": "sports-science-601-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "In this recap, we will discuss the architecture of control gates within our workflows. These gates are essential for integrating checkpoints, rollback criteria, and threshold-based escalation. Understanding this architecture helps ensure that our processes are robust and can adapt to various situations.\nContext recap: In this recap, we will discuss the architecture of control gates within our workflows. These gates are essential for integrating checkpoints, rollback criteria, and threshold-based escalation. Understanding this architecture helps ensure that our processes are robust and can adapt to various situations.\nContext recap: In this recap, we will discuss the architecture of control gates within our workflows. These gates are essential for integrating checkpoints, rollback criteria, and threshold-based escalation. Understanding this architecture helps ensure that our processes are robust and can adapt to various situations. Context recap: In this recap, we will discuss the architecture of control gates within our workflows.\nWhy this matters: Control Gate Architecture helps learners in Health Science connect ideas from Sports Science Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "This recap reviews the architecture of control gates within a workflow. These gates are essential for integrating checkpoints, rollback criteria, and threshold-based escalations. A well-designed architecture ensures that processes are robust, adaptable, and defensible."
         }
       ],
       "interactiveActivities": [
@@ -111,7 +111,7 @@ export const SportsScience601Module: LearningModule = {
           "id": "sports-science-601-l02-act1",
           "type": "matching_pairs",
           "title": "Control-to-Outcome Mapping",
-          "description": "Match specialist controls with their strongest reliability and governance effects.",
+          "description": "Match specialist controls with their primary reliability and governance effects.",
           "pairs": [
             {
               "left": "Pre-commit gate",
@@ -141,9 +141,9 @@ export const SportsScience601Module: LearningModule = {
       "learningAids": [
         {
           "id": "sports-science-601-l03-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "image",
+          "title": "Review Aid: Core Concepts Map",
+          "content": "A concept map linking Performance Modeling, Control Gates, and Evidence Thresholds to show their relationships."
         }
       ],
       "questions": [
@@ -246,120 +246,20 @@ export const SportsScience601Module: LearningModule = {
           ],
           "correctOptionId": "a",
           "explanation": "Governance maturity is the operational link between intent, measurement, and corrective action."
-        },
-        {
-          "id": "sports-science-601-l03-q5",
-          "text": "What is the best way to compare competing interventions in advanced Health Science?",
-          "skillId": "sports-science-601-skill-advanced-5",
-          "options": [
-            {
-              "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
-            },
-            {
-              "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
-            },
-            {
-              "id": "c",
-              "text": "Switch metrics after results arrive"
-            },
-            {
-              "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
-        },
-        {
-          "id": "sports-science-601-l03-q6",
-          "text": "In high-stakes Sports Science Research and Leadership execution, which communication protocol is strongest?",
-          "skillId": "sports-science-601-skill-advanced-6",
-          "options": [
-            {
-              "id": "a",
-              "text": "Broadcast conclusions without assumptions"
-            },
-            {
-              "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
-            },
-            {
-              "id": "c",
-              "text": "Share only final outcomes after completion"
-            },
-            {
-              "id": "d",
-              "text": "Limit updates to a single informal channel"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
-        },
-        {
-          "id": "sports-science-601-l03-q7",
-          "text": "A mature remediation loop in advanced Health Science should prioritize:",
-          "skillId": "sports-science-601-skill-advanced-7",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blame assignment without system updates"
-            },
-            {
-              "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
-            },
-            {
-              "id": "c",
-              "text": "One-time fixes without retesting"
-            },
-            {
-              "id": "d",
-              "text": "Issue closure based on elapsed time"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
-        },
-        {
-          "id": "sports-science-601-l03-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Sports Science Research and Leadership?",
-          "skillId": "sports-science-601-skill-advanced-8",
-          "options": [
-            {
-              "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
-            },
-            {
-              "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
-            },
-            {
-              "id": "c",
-              "text": "Ignore correlated failure modes"
-            },
-            {
-              "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
         }
       ]
     },
     {
       "id": "sports-science-601-l04",
-      "title": "Sports Science Advanced Case Analysis",
+      "title": "Advanced Case Analysis",
       "type": "video",
       "duration": 14,
       "learningAids": [
         {
           "id": "sports-science-601-l04-a1",
-          "type": "mnemonic",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "image",
+          "title": "Decision Tradeoff Matrix",
+          "content": "A table comparing three different training interventions, scored against criteria like Performance Gain, Injury Risk, Cost, and Athlete Adherence."
         }
       ],
       "chunks": [
@@ -367,50 +267,50 @@ export const SportsScience601Module: LearningModule = {
           "id": "sports-science-601-l04-c1",
           "kind": "example",
           "title": "Case Context and Stakes",
-          "content": "In this case analysis, we will explore a high-performance sports program designed to harmonize competitive objectives with the principles of recovery science, all while prioritizing the long-term health of athletes. Participants will engage in mapping out various constraints that may affect the program, identifying different classes of risk that could impact athlete performance and well-being, and establishing clear governance boundaries. This structured approach will help us gain a deeper understanding of the complexities involved in managing such a program and the critical stakes at play for athletes and coaches alike.\nContext recap: In this case analysis, we will explore a high-performance sports program designed to harmonize competitive objectives with the principles of recovery science, all while prioritizing the long-term health of athletes. Participants will engage in mapping out various constraints that may affect the program, identifying different classes of risk that could impact athlete performance and well-being, and establishing clear governance boundaries. This structured approach will help us gain a deeper understanding of the complexities involved in managing such a program and the critical stakes at play for athletes and coaches alike."
+          "content": "We will analyze a case study of a high-performance sports program aiming to balance competitive goals with recovery science and long-term athlete health. You will map the program's constraints, identify different classes of risk, and establish clear governance boundaries to understand the critical stakes involved."
         },
         {
           "id": "sports-science-601-l04-c2",
           "kind": "concept",
           "title": "Tradeoff Matrix",
-          "content": "In this section, we will explore a tradeoff matrix where various alternatives are evaluated. Each option will be scored based on its effectiveness, feasibility, risk, equity, and implementation cost. This analysis is crucial for making informed decisions in sports science.\nContext recap: In this section, we will explore a tradeoff matrix where various alternatives are evaluated. Each option will be scored based on its effectiveness, feasibility, risk, equity, and implementation cost. This analysis is crucial for making informed decisions in sports science.\nContext recap: In this section, we will explore a tradeoff matrix where various alternatives are evaluated. Each option will be scored based on its effectiveness, feasibility, risk, equity, and implementation cost. This analysis is crucial for making informed decisions in sports science. Context recap: In this section, we will explore a tradeoff matrix where various alternatives are evaluated.\nWhy this matters: Tradeoff Matrix helps learners in Health Science connect ideas from Sports Science Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "This section introduces the tradeoff matrix, a tool for evaluating alternatives. Each option is scored against multiple criteria, such as effectiveness, feasibility, risk, and cost. This structured analysis is crucial for making transparent and well-informed decisions in sports science."
         },
         {
           "id": "sports-science-601-l04-c3",
           "kind": "recap",
           "title": "Recovery and Adaptation Design",
-          "content": "In this recap, we will discuss how to map failure signatures to specific remediation actions. Additionally, we will identify measurable recovery triggers that can help athletes return to optimal performance. This understanding is key to designing effective recovery and adaptation strategies.\nContext recap: In this recap, we will discuss how to map failure signatures to specific remediation actions. Additionally, we will identify measurable recovery triggers that can help athletes return to optimal performance. This understanding is key to designing effective recovery and adaptation strategies.\nContext recap: In this recap, we will discuss how to map failure signatures to specific remediation actions. Additionally, we will identify measurable recovery triggers that can help athletes return to optimal performance. This understanding is key to designing effective recovery and adaptation strategies. Context recap: In this recap, we will discuss how to map failure signatures to specific remediation actions.\nWhy this matters: Recovery and Adaptation Design helps learners in Health Science connect ideas from Sports Science Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "This recap focuses on designing effective recovery and adaptation strategies. We will discuss how to map common failure signatures (e.g., overtraining symptoms) to specific remediation actions and how to use measurable recovery triggers to guide athletes back to optimal performance."
         }
       ],
       "flashcards": [
         {
           "id": "sports-science-601-l04-f1",
-          "front": "Tradeoff matrix",
-          "back": "A structured model for comparing alternatives under competing priorities."
+          "front": "Tradeoff Matrix",
+          "back": "A structured model for comparing alternatives across a set of competing priorities."
         },
         {
           "id": "sports-science-601-l04-f2",
-          "front": "Failure signature",
-          "back": "A recurring indicator of a predictable risk class."
+          "front": "Failure Signature",
+          "back": "A recurring pattern of indicators that signals a predictable type of system risk or failure."
         },
         {
           "id": "sports-science-601-l04-f3",
-          "front": "Recovery trigger",
-          "back": "A measurable threshold that initiates corrective action."
+          "front": "Recovery Trigger",
+          "back": "A measurable threshold (e.g., heart rate variability) that initiates a pre-planned corrective action."
         }
       ]
     },
     {
       "id": "sports-science-601-l05",
-      "title": "Sports Science Simulation and Defense Studio",
+      "title": "Simulation and Defense Studio",
       "type": "interactive",
       "duration": 17,
       "learningAids": [
         {
           "id": "sports-science-601-l05-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "image",
+          "title": "Intervention Simulation Dashboard",
+          "content": "An interactive dashboard interface showing input variables (training load, recovery methods) and output metrics (performance forecast, injury probability)."
         }
       ],
       "chunks": [
@@ -418,13 +318,13 @@ export const SportsScience601Module: LearningModule = {
           "id": "sports-science-601-l05-c1",
           "kind": "practice",
           "title": "Scenario Simulation",
-          "content": "In this interactive practice, learners will configure various interventions, constraints, and escalation logic for high-stakes testing scenarios. This exercise will help them understand how to manage complex situations in sports science effectively.\nContext recap: In this interactive practice, learners will configure various interventions, constraints, and escalation logic for high-stakes testing scenarios. This exercise will help them understand how to manage complex situations in sports science effectively.\nWhy this matters: Scenario Simulation helps learners in Health Science connect ideas from Sports Science Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "In this interactive practice, you will configure interventions, constraints, and escalation logic within a high-stakes simulation. This exercise will challenge you to manage complex, dynamic situations and observe the consequences of your decisions in a controlled environment."
         },
         {
           "id": "sports-science-601-l05-c2",
           "kind": "recap",
           "title": "Debrief and Adaptation",
-          "content": "In this recap, we will review the outcomes of our interventions, focusing on the gains achieved, any side effects observed, and any gaps in governance compliance. This reflection is important for continuous improvement in sports science practices.\nContext recap: In this recap, we will review the outcomes of our interventions, focusing on the gains achieved, any side effects observed, and any gaps in governance compliance. This reflection is important for continuous improvement in sports science practices.\nWhy this matters: Debrief and Adaptation helps learners in Health Science connect ideas from Sports Science Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "This recap focuses on interpreting simulation outcomes. We will review the performance gains, unintended side effects, and any gaps in governance that emerged. This reflective process is essential for adapting strategies and fostering continuous improvement in sports science."
         }
       ],
       "interactiveActivities": [
@@ -432,242 +332,142 @@ export const SportsScience601Module: LearningModule = {
           "id": "sports-science-601-l05-act1",
           "type": "scenario_practice",
           "title": "High-Stakes Intervention Simulation",
-          "description": "Evaluate intervention options across performance systems modeling and athlete welfare governance priorities.",
+          "description": "Evaluate competing intervention options, balancing performance systems modeling with athlete welfare governance priorities.",
           "instructions": [
-            "Define objective and boundary conditions first.",
-            "Document short- and long-term tradeoffs.",
-            "Specify metrics and triggers that validate your recommendation."
+            "First, define your primary objective and boundary conditions.",
+            "Document the short-term and long-term tradeoffs of your chosen intervention.",
+            "Specify the key metrics and triggers that will be used to validate your recommendation."
           ]
         }
       ]
     },
     {
       "id": "sports-science-601-l06",
-      "title": "Checkpoint 2: Research and Governance Decisions",
+      "title": "Checkpoint 2: Application and Governance",
       "type": "quiz",
       "duration": 10,
       "learningAids": [
         {
           "id": "sports-science-601-l06-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "image",
+          "title": "Review Aid: Case Application Flow",
+          "content": "A flowchart showing the process from Case Analysis -> Tradeoff Matrix -> Simulation -> Recommendation."
         }
       ],
       "questions": [
         {
           "id": "sports-science-601-l06-q1",
-          "text": "Which practice most improves performance systems modeling decision quality?",
+          "text": "In a case study of an elite cycling team, a proposed intervention promises a 5% power output increase but also a 15% higher injury risk. Using a tradeoff matrix, what is the most critical next step?",
           "skillId": "sports-science-601-skill-core",
           "options": [
             {
               "id": "a",
-              "text": "Proceed without baseline or assumptions"
+              "text": "Implement immediately for the performance gain"
             },
             {
               "id": "b",
-              "text": "Define assumptions, constraints, and measurable indicators"
+              "text": "Reject it outright due to the increased injury risk"
             },
             {
               "id": "c",
-              "text": "Optimize only for speed in every context"
+              "text": "Quantify the long-term impact of the injury risk on athlete availability and weigh it against the performance gain"
             },
             {
               "id": "d",
-              "text": "Ignore uncertainty and edge conditions"
+              "text": "Ask the athletes to vote on the intervention"
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "Advanced decisions improve when assumptions, constraints, and metrics are explicit."
+          "correctOptionId": "c",
+          "explanation": "A defensible decision requires quantifying and comparing both the potential gains and the full costs, including secondary effects like lost time due to injury."
         },
         {
           "id": "sports-science-601-l06-q2",
-          "text": "At level 601, strong execution for training and recovery design requires:",
+          "text": "During a simulation, an athlete's recovery metrics repeatedly breach a negative threshold. What does a robust control gate architecture require?",
           "skillId": "sports-science-601-skill-execution",
           "options": [
             {
               "id": "a",
-              "text": "Owner mapping, checkpoint cadence, and escalation thresholds"
+              "text": "Ignoring the breach to stick to the original plan"
             },
             {
               "id": "b",
-              "text": "No role clarity and ad-hoc process changes"
+              "text": "Automatically triggering a pre-defined rollback to a lower-intensity block and escalating the issue"
             },
             {
               "id": "c",
-              "text": "No retrospective or post-run review"
+              "text": "Manually adjusting the plan without logging the change"
             },
             {
               "id": "d",
-              "text": "No rollback or fallback conditions"
+              "text": "Waiting until the end of the season to review all metric breaches"
             }
           ],
-          "correctOptionId": "a",
-          "explanation": "Reliable advanced execution needs ownership clarity and threshold-driven governance."
+          "correctOptionId": "b",
+          "explanation": "A robust system uses pre-defined thresholds to trigger automated, auditable actions (like rollbacks and escalations) to manage risk in real-time."
         },
         {
           "id": "sports-science-601-l06-q3",
-          "text": "A defensible approach to injury-risk analytics includes:",
+          "text": "When analyzing a simulated nutritional intervention, you see a 3% performance gain but also a small, statistically insignificant increase in side effects. How should this be presented?",
           "skillId": "sports-science-601-skill-eval",
           "options": [
             {
               "id": "a",
-              "text": "Anecdotes without comparison"
+              "text": "Report only the 3% performance gain to make a strong case"
             },
             {
               "id": "b",
-              "text": "Baseline comparisons, side-effect analysis, and uncertainty bounds"
+              "text": "Report the performance gain, the observed side effect with its uncertainty bounds, and recommend further monitoring"
             },
             {
               "id": "c",
-              "text": "Changing success criteria after outcomes"
+              "text": "Conclude the intervention is a failure due to any side effect"
             },
             {
               "id": "d",
-              "text": "Excluding difficult scenarios from analysis"
+              "text": "Dismiss the side effect as purely anecdotal and irrelevant"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible analysis combines comparative baselines, side-effect checks, and uncertainty disclosure."
+          "explanation": "Defensible analysis requires transparently reporting all findings, including primary outcomes, secondary effects, and the statistical confidence or uncertainty of each."
         },
         {
           "id": "sports-science-601-l06-q4",
-          "text": "Mature athlete welfare governance systems connect:",
+          "text": "A case study reveals a 'win-at-all-costs' culture led to athletes hiding overtraining symptoms. An effective athlete welfare governance system would primarily focus on:",
           "skillId": "sports-science-601-skill-governance",
           "options": [
             {
               "id": "a",
-              "text": "Policy intent, measurable controls, and remediation pathways"
+              "text": "Punishing athletes who report fatigue"
             },
             {
               "id": "b",
-              "text": "Policy language with no measurable enforcement"
+              "text": "Increasing training volume to improve toughness"
             },
             {
               "id": "c",
-              "text": "Targets without ownership or escalation design"
+              "text": "Implementing a confidential, no-fault reporting system for physical and mental fatigue with clear intervention pathways"
             },
             {
               "id": "d",
-              "text": "Operations without transparent accountability"
+              "text": "Firing the coaching staff without investigating the systemic issues"
             }
           ],
-          "correctOptionId": "a",
-          "explanation": "Governance maturity is the operational link between intent, measurement, and corrective action."
-        },
-        {
-          "id": "sports-science-601-l06-q5",
-          "text": "What is the best way to compare competing interventions in advanced Health Science?",
-          "skillId": "sports-science-601-skill-advanced-5",
-          "options": [
-            {
-              "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
-            },
-            {
-              "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
-            },
-            {
-              "id": "c",
-              "text": "Switch metrics after results arrive"
-            },
-            {
-              "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
-        },
-        {
-          "id": "sports-science-601-l06-q6",
-          "text": "In high-stakes Sports Science Research and Leadership execution, which communication protocol is strongest?",
-          "skillId": "sports-science-601-skill-advanced-6",
-          "options": [
-            {
-              "id": "a",
-              "text": "Broadcast conclusions without assumptions"
-            },
-            {
-              "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
-            },
-            {
-              "id": "c",
-              "text": "Share only final outcomes after completion"
-            },
-            {
-              "id": "d",
-              "text": "Limit updates to a single informal channel"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
-        },
-        {
-          "id": "sports-science-601-l06-q7",
-          "text": "A mature remediation loop in advanced Health Science should prioritize:",
-          "skillId": "sports-science-601-skill-advanced-7",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blame assignment without system updates"
-            },
-            {
-              "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
-            },
-            {
-              "id": "c",
-              "text": "One-time fixes without retesting"
-            },
-            {
-              "id": "d",
-              "text": "Issue closure based on elapsed time"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
-        },
-        {
-          "id": "sports-science-601-l06-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Sports Science Research and Leadership?",
-          "skillId": "sports-science-601-skill-advanced-8",
-          "options": [
-            {
-              "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
-            },
-            {
-              "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
-            },
-            {
-              "id": "c",
-              "text": "Ignore correlated failure modes"
-            },
-            {
-              "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "correctOptionId": "c",
+          "explanation": "Effective governance addresses root cultural and systemic issues by creating safe, reliable channels for reporting and acting on welfare concerns."
         }
       ]
     },
     {
       "id": "sports-science-601-l07",
-      "title": "Sports Science Governance and Public Impact",
+      "title": "Governance and Public Impact",
       "type": "video",
       "duration": 13,
       "learningAids": [
         {
           "id": "sports-science-601-l07-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Stakeholder Impact Map",
+          "content": "A diagram showing how a decision (e.g., new concussion protocol) affects various stakeholders like athletes, coaches, team owners, and fans over short and long timescales."
         }
       ],
       "chunks": [
@@ -675,50 +475,50 @@ export const SportsScience601Module: LearningModule = {
           "id": "sports-science-601-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "In this section, learners will map out the distribution of benefits and burdens among different stakeholder groups. They will also consider any delayed effects that may arise from decisions made in sports science. This understanding is crucial for assessing the broader impact of sports programs.\nContext recap: In this section, learners will map out the distribution of benefits and burdens among different stakeholder groups. They will also consider any delayed effects that may arise from decisions made in sports science. This understanding is crucial for assessing the broader impact of sports programs."
+          "content": "In this section, you will learn to map the distribution of benefits and burdens of a decision across different stakeholder groups. We will also consider delayed or second-order effects, which is crucial for assessing the full, long-term impact of sports programs."
         },
         {
           "id": "sports-science-601-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "In this section, we will discuss the architecture of accountability in decision-making processes. This includes ensuring traceability of decisions, establishing review rights, and outlining remediation obligations. These elements are essential for maintaining transparency and responsibility in sports science.\nContext recap: In this section, we will discuss the architecture of accountability in decision-making processes. This includes ensuring traceability of decisions, establishing review rights, and outlining remediation obligations. These elements are essential for maintaining transparency and responsibility in sports science.\nContext recap: In this section, we will discuss the architecture of accountability in decision-making processes. This includes ensuring traceability of decisions, establishing review rights, and outlining remediation obligations. These elements are essential for maintaining transparency and responsibility in sports science. Context recap: In this section, we will discuss the architecture of accountability in decision-making processes.\nWhy this matters: Accountability Architecture helps learners in Health Science connect ideas from Sports Science Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "Here, we will examine the architecture of accountability in decision-making. This includes ensuring decision traceability, establishing review rights for stakeholders, and defining remediation obligations. These elements are essential for building transparent and responsible systems in sports science."
         },
         {
           "id": "sports-science-601-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "As we conclude our discussion, it's important to remember a checklist that connects various important aspects of responsible leadership. This checklist includes outcomes we aim for, ethical considerations we must uphold, compliance with policies we need to follow, and the resilience we should develop to face challenges. Keeping these elements in mind helps ensure that our leadership is effective and responsible.\nContext recap: As we conclude our discussion, it's important to remember a checklist that connects various important aspects of responsible leadership. This checklist includes outcomes we aim for, ethical considerations we must uphold, compliance with policies we need to follow, and the resilience we should develop to face challenges. Keeping these elements in mind helps ensure that our leadership is effective and responsible."
+          "content": "This recap provides a checklist for responsible leadership, connecting desired outcomes with ethical guardrails, policy compliance, and system resilience. Using this checklist helps ensure that leadership is not only effective but also accountable and sustainable."
         }
       ],
       "flashcards": [
         {
           "id": "sports-science-601-l07-f1",
-          "front": "Impact distribution",
-          "back": "How outcomes are allocated across populations and timescales."
+          "front": "Impact Distribution",
+          "back": "The analysis of how outcomes (benefits, costs, risks) are allocated across different populations and timescales."
         },
         {
           "id": "sports-science-601-l07-f2",
-          "front": "Decision traceability",
-          "back": "An auditable record of evidence, ownership, and rationale."
+          "front": "Decision Traceability",
+          "back": "An auditable record linking a decision to its underlying evidence, ownership, and rationale."
         },
         {
           "id": "sports-science-601-l07-f3",
-          "front": "Responsible leadership",
-          "back": "Decision behavior balancing performance, accountability, and ethics."
+          "front": "Responsible Leadership",
+          "back": "A decision-making approach that balances performance goals with accountability and ethical considerations."
         }
       ]
     },
     {
       "id": "sports-science-601-l08",
-      "title": "Sports Science Capstone Defense Lab",
+      "title": "Capstone Defense Lab",
       "type": "interactive",
       "duration": 16,
       "learningAids": [
         {
           "id": "sports-science-601-l08-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "image",
+          "title": "Structured Defense Brief",
+          "content": "A presentation slide template outlining the key components of a capstone defense: Problem Statement, Proposed Intervention, Evidence, Tradeoff Analysis, and Risk Mitigation Plan."
         }
       ],
       "chunks": [
@@ -726,13 +526,13 @@ export const SportsScience601Module: LearningModule = {
           "id": "sports-science-601-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "In this interactive session, learners will work together to create a comprehensive brief. This brief will include well-supported claims, solid evidence, and clear boundaries of uncertainty. Additionally, it will outline potential pathways for remediation, which are strategies to address any issues that may arise. This exercise helps develop critical thinking and communication skills essential for effective sports science leadership.\nContext recap: In this interactive session, learners will work together to create a comprehensive brief. This brief will include well-supported claims, solid evidence, and clear boundaries of uncertainty. Additionally, it will outline potential pathways for remediation, which are strategies to address any issues that may arise. This exercise helps develop critical thinking and communication skills essential for effective sports science leadership.\nContext recap: In this interactive session, learners will work together to create a comprehensive brief. This brief will include well-supported claims, solid evidence, and clear boundaries of uncertainty. Additionally, it will outline potential pathways for remediation, which are strategies to address any issues that may arise. This exercise helps develop critical thinking and communication skills essential for effective sports science leadership.\nWhy this matters: Defense Brief Assembly helps learners in Health Science connect ideas from Sports Science Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "In this interactive lab, you will assemble a comprehensive defense brief for a capstone project. This brief must include a well-supported claim, robust evidence, clearly defined uncertainty boundaries, and potential remediation pathways to address foreseeable risks."
         },
         {
           "id": "sports-science-601-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "During this recap session, learners will practice their responses to various critiques they might face from experts, governance bodies, and stakeholders. This rehearsal is crucial as it prepares them to confidently address questions and concerns, ensuring they can effectively communicate their ideas and defend their positions in a professional setting. This practice enhances their readiness for real-world challenges in sports science.\nContext recap: During this recap session, learners will practice their responses to various critiques they might face from experts, governance bodies, and stakeholders. This rehearsal is crucial as it prepares them to confidently address questions and concerns, ensuring they can effectively communicate their ideas and defend their positions in a professional setting. This practice enhances their readiness for real-world challenges in sports science."
+          "content": "This session is a rehearsal for defending your work. You will practice responding to critiques from the perspective of experts, governance bodies, and other stakeholders. This rehearsal is crucial for preparing you to communicate and defend your recommendations confidently and professionally."
         }
       ],
       "interactiveActivities": [
@@ -740,7 +540,7 @@ export const SportsScience601Module: LearningModule = {
           "id": "sports-science-601-l08-act1",
           "type": "debate_simulator",
           "title": "Expert Defense Panel",
-          "description": "Defend specialization recommendations under adversarial cross-examination."
+          "description": "Defend your specialization recommendations under adversarial cross-examination from a simulated expert panel."
         }
       ]
     }

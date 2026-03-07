@@ -215,7 +215,12 @@ function getApiMutationRateLimitPolicy(pathname: string): RateLimitPolicy {
 
   if (
     pathname === "/api/ai/tutor"
+    || pathname === "/api/ai/roleplay"
+    || pathname === "/api/ai/follow-up"
     || pathname === "/api/companion/chat"
+    || pathname === "/api/math-solver"
+    || pathname === "/api/writing/feedback"
+    || pathname === "/api/translate"
     || pathname === "/api/media/generate"
     || pathname === "/api/images/generate"
     || pathname === "/api/tts/generate"

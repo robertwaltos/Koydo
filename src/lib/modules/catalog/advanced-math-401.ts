@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const AdvancedMath401Module: LearningModule = {
+export const advanced_math_401_Module: LearningModule = {
   "id": "advanced-math-401",
   "title": "Advanced Math Capstone Proofs and Models",
   "description": "Integrate modeling, optimization, and formal proof to solve complex quantitative problems.",
@@ -10,13 +10,13 @@ export const AdvancedMath401Module: LearningModule = {
     "curriculum",
     "interactive"
   ],
-  "minAge": 7,
+  "minAge": 12,
   "maxAge": 18,
   "version": "1.1.0",
   "learningObjectives": [
-    "Understand core concepts in Advanced Math",
-    "Apply Mathematical Argument Quality strategies through guided practice",
-    "Demonstrate mastery with subject-specific quizzes"
+    "Understand core concepts in Advanced Math modeling and optimization.",
+    "Apply Mathematical Argument Quality strategies through guided practice and formal proofs.",
+    "Demonstrate mastery with subject-specific quizzes and real-world scenario labs."
   ],
   "lessons": [
     {
@@ -24,48 +24,50 @@ export const AdvancedMath401Module: LearningModule = {
       "title": "Model Assumptions and Limits",
       "type": "video",
       "duration": 10,
+      "lessonImagePrompt": "Imagen 4 prompt: A vibrant, stylized blueprint of a futuristic bridge with glowing mathematical symbols highlighting stress points, representing model assumptions and structural limits.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A dynamic 3D animation showing a physical model of a city being built. Glowing text overlays point out 'Assumptions' like gravity and material strength, which seamlessly transition into floating mathematical equations.",
       "chunks": [
         {
           "id": "advanced-math-401-l01-c1",
-          "title": "Model Assumptions and Limits Overview",
-          "content": "In this lesson, we will explore the important concept of model assumptions, which are the ideas we take for granted when we use mathematical models. We will look at these assumptions through the lens of advanced math reasoning, especially as we prepare for our capstone projects. Our main goal is to learn how to identify what strong reasoning looks like before we dive into solving any problems. Understanding these assumptions will help us make better decisions in our mathematical work.\nContext recap: In this lesson, we will explore the important concept of model assumptions, which are the ideas we take for granted when we use mathematical models. We will look at these assumptions through the lens of advanced math reasoning, especially as we prepare for our capstone projects. Our main goal is to learn how to identify what strong reasoning looks like before we dive into solving any problems. Understanding these assumptions will help us make better decisions in our mathematical work."
+          "title": "The Invisible Rules of Math",
+          "content": "Ever wonder how engineers know a bridge won't collapse before they even build it? It comes down to model assumptions. These are the 'invisible rules' we take for granted when we use math to represent the messy real world. In this lesson, we'll look at these assumptions through the lens of advanced math reasoning. Understanding these hidden rules is the secret to making your mathematical models actually work in reality."
         },
         {
           "id": "advanced-math-401-l01-c2",
-          "title": "Core Concept",
-          "content": "In this section, we will discuss how model assumptions and optimization constraints work together to help us solve problems effectively. First, we will start by clearly naming the main target or goal we want to achieve. Next, we will identify the evidence or steps that support our approach to reaching that goal. This process will help us understand how to structure our reasoning and make informed decisions in our mathematical models.\nContext recap: In this section, we will discuss how model assumptions and optimization constraints work together to help us solve problems effectively. First, we will start by clearly naming the main target or goal we want to achieve. Next, we will identify the evidence or steps that support our approach to reaching that goal. This process will help us understand how to structure our reasoning and make informed decisions in our mathematical models."
+          "title": "Goals, Limits, and Rules",
+          "content": "How do model assumptions and optimization constraints work together? Think of it like a video game. First, you name your main target (the goal). Next, you identify your limits, like your health bar or inventory (constraints), and the physics of the game world (assumptions). This process helps structure your reasoning so you can find the absolute best strategy to win."
         },
         {
           "id": "advanced-math-401-l01-c3",
-          "title": "Worked Example",
-          "content": "Let's walk through a guided example together! First, we will define the goal we want to achieve. Then, we will apply a strategy to address the optimization constraints we have identified. Finally, we will verify our result with a quick check to ensure that our solution is correct. This step-by-step approach will help us understand how to apply our knowledge in practical situations and reinforce our learning.\nContext recap: Let's walk through a guided example together! First, we will define the goal we want to achieve. Then, we will apply a strategy to address the optimization constraints we have identified. Finally, we will verify our result with a quick check to ensure that our solution is correct.\nWhy this matters: Worked Example helps learners in Advanced Math connect ideas from Advanced Math Capstone Proofs and Models to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "title": "Worked Example: The Garden Fence",
+          "content": "Let's walk through a guided example! Imagine you want to build a garden with the maximum possible area, but you only have 50 feet of fencing. First, define the goal: maximize area. Then, apply the constraint: the perimeter cannot exceed 50 feet. Finally, verify your result—does a 12.5x12.5 square make logical sense? This step-by-step check ensures your math matches reality."
         },
         {
           "id": "advanced-math-401-l01-c4",
-          "title": "Transfer Prompt",
-          "content": "Now it's your turn! Apply the same process we just discussed to a new scenario. As you work through it, make sure to explain why your approach is valid in one clear sentence. This exercise will help you practice your reasoning skills and reinforce your understanding of how to apply model assumptions and optimization constraints in different contexts.\nContext recap: Now it's your turn! Apply the same process we just discussed to a new scenario. As you work through it, make sure to explain why your approach is valid in one clear sentence. This exercise will help you practice your reasoning skills and reinforce your understanding of how to apply model assumptions and optimization constraints in different contexts."
+          "title": "Your Turn: The Box Challenge",
+          "content": "Now it's your turn! Apply the same process to a new scenario: minimizing the cost of cardboard needed to build a shipping box of a specific volume. As you work through it, write down one clear sentence explaining why your approach is valid. This exercise will sharpen your reasoning skills and prove you can handle real-world optimization."
         }
       ],
       "flashcards": [
         {
           "id": "advanced-math-401-l01-f1",
-          "front": "model assumptions",
-          "back": "A central target skill in this module. Name it before solving."
+          "front": "Model Assumptions",
+          "back": "Simplifications we make to translate a complex real-world problem into a solvable mathematical equation."
         },
         {
           "id": "advanced-math-401-l01-f2",
-          "front": "optimization constraints",
-          "back": "Use this as the method step after defining the goal."
+          "front": "Optimization Constraints",
+          "back": "The limits or boundaries (like budget, time, or materials) within which a solution must be found."
         },
         {
           "id": "advanced-math-401-l01-f3",
           "front": "Verification",
-          "back": "Check that your result matches the original goal and constraints."
+          "back": "Checking that your mathematical result matches the original goal and makes sense in reality."
         },
         {
           "id": "advanced-math-401-l01-f4",
           "front": "Transfer",
-          "back": "Use the same strategy on a new item to confirm true mastery."
+          "back": "Using a learned strategy on a completely new problem to confirm true mastery."
         }
       ],
       "learningAids": [
@@ -88,6 +90,8 @@ export const AdvancedMath401Module: LearningModule = {
       "title": "Optimization with Constraints",
       "type": "interactive",
       "duration": 12,
+      "lessonImagePrompt": "Imagen 4 prompt: A glowing digital scale balancing a bright target symbol representing a goal with a set of heavy metallic weights representing constraints, set on a sleek futuristic desk.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A first-person view of a digital puzzle where the user drags and drops glowing blocks (resources) into a limited grid (constraints) to maximize a score (optimization), with satisfying visual feedback.",
       "metadata": {
         "prompts": [
           "Identify one core idea about model assumptions from this lesson.",
@@ -152,30 +156,32 @@ export const AdvancedMath401Module: LearningModule = {
       "title": "Checkpoint: Capstone Modeling",
       "type": "quiz",
       "duration": 10,
+      "lessonImagePrompt": "Imagen 4 prompt: A glowing checkpoint gate on a neon grid pathway, with floating math symbols passing through it, symbolizing progress in mathematical modeling.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A fast-paced montage of a student successfully solving a complex math problem on a transparent glowing board, checking off a 'Modeling Checkpoint' list as they progress.",
       "questions": [
         {
           "id": "advanced-math-401-l03-q1",
-          "text": "Which statement best explains model assumptions in Advanced Math?",
+          "text": "What is the primary purpose of a mathematical model assumption?",
           "skillId": "advanced-math-401-skill-core",
           "options": [
             {
               "id": "a",
-              "text": "It explains model assumptions using evidence from the lesson."
+              "text": "To ensure the model perfectly replicates every single real-world variable."
             },
             {
               "id": "b",
-              "text": "It ignores how model assumptions works in practice."
+              "text": "To simplify a complex real-world problem so it can be solved mathematically."
             },
             {
               "id": "c",
-              "text": "It focuses on an unrelated topic outside Advanced Math."
+              "text": "To eliminate the need for optimization entirely."
             },
             {
               "id": "d",
-              "text": "It repeats terms without showing meaning."
+              "text": "To replace empirical data with theoretical guesses."
             }
           ],
-          "correctOptionId": "a"
+          "correctOptionId": "b"
         },
         {
           "id": "advanced-math-401-l03-q2",
@@ -184,46 +190,46 @@ export const AdvancedMath401Module: LearningModule = {
           "options": [
             {
               "id": "a",
-              "text": "Define the goal and examine evidence for optimization constraints."
+              "text": "Immediately solve for the derivative of the constraints."
             },
             {
               "id": "b",
-              "text": "Guess quickly without checking evidence."
+              "text": "Expand the feasible region to infinity to ensure a solution exists."
             },
             {
               "id": "c",
-              "text": "Use data unrelated to optimization constraints."
+              "text": "Clearly define the objective function and identify the limiting boundaries."
             },
             {
               "id": "d",
-              "text": "Skip the context and jump to a conclusion."
+              "text": "Ignore inequalities and treat all constraints as absolute equalities."
             }
           ],
-          "correctOptionId": "a"
+          "correctOptionId": "c"
         },
         {
           "id": "advanced-math-401-l03-q3",
-          "text": "Which option shows strong reasoning about capstone advanced math reasoning?",
+          "text": "Which option shows strong reasoning when evaluating a mathematical model?",
           "skillId": "advanced-math-401-skill-reasoning",
           "options": [
             {
               "id": "a",
-              "text": "Use examples and verify assumptions step by step."
+              "text": "Assuming the model works perfectly for all possible scenarios without checking."
             },
             {
               "id": "b",
-              "text": "Ignore important details and edge cases."
+              "text": "Only using data that confirms the initial hypothesis."
             },
             {
               "id": "c",
-              "text": "Use assumptions unrelated to capstone advanced math reasoning."
+              "text": "Removing constraints to make the calculation faster."
             },
             {
               "id": "d",
-              "text": "Change the topic when evidence gets hard."
+              "text": "Testing the model's limits by inputting extreme values to see if it breaks."
             }
           ],
-          "correctOptionId": "a"
+          "correctOptionId": "d"
         },
         {
           "id": "advanced-math-401-l03-q4",
@@ -232,19 +238,19 @@ export const AdvancedMath401Module: LearningModule = {
           "options": [
             {
               "id": "a",
-              "text": "It strengthens memory and transfer over time"
+              "text": "It helps transfer short-term problem-solving steps into long-term mathematical intuition."
             },
             {
               "id": "b",
-              "text": "It creates confusion"
+              "text": "It focuses solely on memorizing formulas right before an exam."
             },
             {
               "id": "c",
-              "text": "It removes key facts"
+              "text": "It replaces the need for understanding core concepts."
             },
             {
               "id": "d",
-              "text": "It has no value"
+              "text": "It limits the ability to apply math to new scenarios."
             }
           ],
           "correctOptionId": "a"
@@ -349,33 +355,35 @@ export const AdvancedMath401Module: LearningModule = {
       "title": "Formal Proof Structure",
       "type": "video",
       "duration": 11,
+      "lessonImagePrompt": "Imagen 4 prompt: A glowing, multi-tiered pyramid made of translucent glass blocks, each labeled with steps of a proof: Goal, Strategy, Evidence, Check, set against a dark starry background.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: An animated sequence showing a detective connecting clues on a corkboard with red string, which magically transforms into a structured mathematical proof on a chalkboard.",
       "chunks": [
         {
           "id": "advanced-math-401-l04-c1",
-          "title": "Formal Proof Structure Focus",
-          "content": "In this lesson, we will deepen our understanding of formal proof structure by focusing on structured reasoning. We will move beyond just understanding concepts to making applied decisions based on those concepts. This will help us build a solid foundation for creating and analyzing proofs in advanced mathematics, which is essential for our capstone projects.\nContext recap: In this lesson, we will deepen our understanding of formal proof structure by focusing on structured reasoning. We will move beyond just understanding concepts to making applied decisions based on those concepts. This will help us build a solid foundation for creating and analyzing proofs in advanced mathematics, which is essential for our capstone projects."
+          "title": "Building an Unbreakable Argument",
+          "content": "A formal proof isn't just a bunch of equations thrown onto a page; it's an unbreakable argument. In this lesson, we'll dive into structured reasoning. We are moving beyond just memorizing formulas to actually making applied decisions based on logic. This is how mathematicians convince the world that their ideas are 100% true."
         },
         {
           "id": "advanced-math-401-l04-c2",
-          "title": "Method Steps",
-          "content": "Let's break down the steps we need to follow when constructing a formal proof. Step 1 is to identify what is being asked in the problem. Step 2 involves choosing a strategy that aligns with the proof structure we have learned. Finally, Step 3 is to justify our reasoning with solid evidence. By following these steps, we can create clear and convincing proofs that demonstrate our understanding of advanced mathematical concepts.\nContext recap: Let's break down the steps we need to follow when constructing a formal proof. Step 1 is to identify what is being asked in the problem. Step 2 involves choosing a strategy that aligns with the proof structure we have learned. Finally, Step 3 is to justify our reasoning with solid evidence."
+          "title": "The 4-Step Proof Method",
+          "content": "Let's break down the ultimate proof-writing framework. Step 1: Identify the Goal (what exactly are you trying to prove?). Step 2: Choose a Strategy (are you using direct proof, or maybe proof by contradiction?). Step 3: Provide Evidence (justify every single jump with an axiom or theorem). Step 4: Check (read it backwards to ensure the logic flows perfectly)."
         },
         {
           "id": "advanced-math-401-l04-c3",
-          "title": "Common Mistakes",
-          "content": "As we work on formal proofs, it's important to be aware of common mistakes that can occur. Some frequent errors include skipping the initial setup, using assumptions that are not related to the problem, or failing to verify the final result. By recognizing these pitfalls, we can improve our proof-writing skills and ensure that our arguments are strong and valid.\nContext recap: As we work on formal proofs, it's important to be aware of common mistakes that can occur. Some frequent errors include skipping the initial setup, using assumptions that are not related to the problem, or failing to verify the final result. By recognizing these pitfalls, we can improve our proof-writing skills and ensure that our arguments are strong and valid."
+          "title": "Dodging Common Pitfalls",
+          "content": "Even the best mathematicians make mistakes. The most common errors in formal proofs include skipping the initial setup, bringing in assumptions that weren't given in the problem, or forgetting to verify the final result. By keeping an eye out for these traps, you can keep your arguments bulletproof."
         },
         {
           "id": "advanced-math-401-l04-c4",
-          "title": "Independent Try",
-          "content": "Now, it's time for you to try solving a similar problem on your own! As you work through it, compare your process to the lesson sequence we discussed. This will help you reflect on your reasoning and identify areas for improvement. Remember, practice is key to mastering formal proof structures in advanced mathematics.\nContext recap: Now, it's time for you to try solving a similar problem on your own! As you work through it, compare your process to the lesson sequence we discussed. This will help you reflect on your reasoning and identify areas for improvement. Remember, practice is key to mastering formal proof structures in advanced mathematics."
+          "title": "Independent Try: Prove It!",
+          "content": "Now, it's time to test your skills! Try solving the provided geometry proof on your own. As you work, map your process directly to the Goal -> Strategy -> Evidence -> Check sequence. Did you skip a step? Did you justify your evidence? Practice is the only way to master the art of the formal proof."
         }
       ],
       "flashcards": [
         {
           "id": "advanced-math-401-l04-f1",
-          "front": "proof structure",
-          "back": "State the target and pick a strategy before solving."
+          "front": "Proof Structure",
+          "back": "A logical sequence of statements, each supported by a theorem or axiom, leading to an undeniable conclusion."
         },
         {
           "id": "advanced-math-401-l04-f2",
@@ -385,12 +393,12 @@ export const AdvancedMath401Module: LearningModule = {
         {
           "id": "advanced-math-401-l04-f3",
           "front": "Assumption Check",
-          "back": "Remove assumptions that are not supported by the prompt."
+          "back": "Remove assumptions that are not explicitly supported by the prompt or known axioms."
         },
         {
           "id": "advanced-math-401-l04-f4",
           "front": "Process Match",
-          "back": "Your explanation should match the steps you actually used."
+          "back": "Your written explanation should perfectly match the logical steps you actually used."
         }
       ],
       "learningAids": [
@@ -407,6 +415,8 @@ export const AdvancedMath401Module: LearningModule = {
       "title": "Validation and Error Bounds",
       "type": "interactive",
       "duration": 13,
+      "lessonImagePrompt": "Imagen 4 prompt: A futuristic archery target with glowing neon rings, showing a tight cluster of arrows near the center with a highlighted 'error bound' radius around them.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A 3D animation of a robot trying to throw a ball into a hoop, adjusting its angle and force each time, with glowing text showing the decreasing 'error bound' until it scores perfectly.",
       "metadata": {
         "prompts": [
           "Pick one challenge and outline your approach.",
@@ -426,11 +436,11 @@ export const AdvancedMath401Module: LearningModule = {
             "buckets": [
               {
                 "id": "concept",
-                "label": "proof structure Concept"
+                "label": "Proof Structure Concept"
               },
               {
                 "id": "process",
-                "label": "quantitative validation Process"
+                "label": "Quantitative Validation Process"
               },
               {
                 "id": "review",
@@ -471,6 +481,8 @@ export const AdvancedMath401Module: LearningModule = {
       "title": "Checkpoint: Mathematical Argument Quality",
       "type": "quiz",
       "duration": 10,
+      "lessonImagePrompt": "Imagen 4 prompt: A glowing golden scale of justice balancing a complex mathematical equation on one side and a stack of evidence folders on the other.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A cinematic zoom into a complex mathematical proof, where each line lights up in green as it is validated by a glowing checkmark.",
       "questions": [
         {
           "id": "advanced-math-401-l06-q1",
@@ -479,22 +491,22 @@ export const AdvancedMath401Module: LearningModule = {
           "options": [
             {
               "id": "a",
-              "text": "It explains proof structure using evidence from the lesson."
+              "text": "It is a collection of empirical observations that suggest a pattern."
             },
             {
               "id": "b",
-              "text": "It ignores how proof structure works in practice."
+              "text": "It is a visual representation of a function without algebraic backing."
             },
             {
               "id": "c",
-              "text": "It focuses on an unrelated topic outside Advanced Math."
+              "text": "It is a logical sequence of statements, each supported by a theorem or axiom, leading to a conclusion."
             },
             {
               "id": "d",
-              "text": "It repeats terms without showing meaning."
+              "text": "It is a hypothesis that has been tested with multiple numerical examples."
             }
           ],
-          "correctOptionId": "a"
+          "correctOptionId": "c"
         },
         {
           "id": "advanced-math-401-l06-q2",
@@ -503,43 +515,43 @@ export const AdvancedMath401Module: LearningModule = {
           "options": [
             {
               "id": "a",
-              "text": "Define the goal and examine evidence for quantitative validation."
+              "text": "Accept the first output generated by a calculator without questioning it."
             },
             {
               "id": "b",
-              "text": "Guess quickly without checking evidence."
+              "text": "Identify the expected range or bounds of the answer before performing detailed calculations."
             },
             {
               "id": "c",
-              "text": "Use data unrelated to quantitative validation."
+              "text": "Assume all variables are normally distributed."
             },
             {
               "id": "d",
-              "text": "Skip the context and jump to a conclusion."
+              "text": "Skip boundary testing if the formula is well-known."
             }
           ],
-          "correctOptionId": "a"
+          "correctOptionId": "b"
         },
         {
           "id": "advanced-math-401-l06-q3",
-          "text": "Which option shows strong reasoning about capstone advanced math reasoning?",
+          "text": "Which option shows strong reasoning when building a mathematical argument?",
           "skillId": "advanced-math-401-skill-reasoning",
           "options": [
             {
               "id": "a",
-              "text": "Use examples and verify assumptions step by step."
+              "text": "Explicitly stating assumptions and showing how each logical step derives from the previous one."
             },
             {
               "id": "b",
-              "text": "Ignore important details and edge cases."
+              "text": "Skipping intermediate algebraic steps to save space."
             },
             {
               "id": "c",
-              "text": "Use assumptions unrelated to capstone advanced math reasoning."
+              "text": "Relying on intuition for the most complex transitions."
             },
             {
               "id": "d",
-              "text": "Change the topic when evidence gets hard."
+              "text": "Using circular reasoning to prove the initial premise."
             }
           ],
           "correctOptionId": "a"
@@ -551,22 +563,22 @@ export const AdvancedMath401Module: LearningModule = {
           "options": [
             {
               "id": "a",
-              "text": "It strengthens memory and transfer over time"
+              "text": "It encourages cramming complex proofs right before a test."
             },
             {
               "id": "b",
-              "text": "It creates confusion"
+              "text": "It reduces the need for logical deduction."
             },
             {
               "id": "c",
-              "text": "It removes key facts"
+              "text": "It is only useful for basic arithmetic, not advanced proofs."
             },
             {
               "id": "d",
-              "text": "It has no value"
+              "text": "It strengthens memory and helps transfer problem-solving skills over time."
             }
           ],
-          "correctOptionId": "a"
+          "correctOptionId": "d"
         }
       ],
       "interactiveActivities": [
@@ -668,43 +680,45 @@ export const AdvancedMath401Module: LearningModule = {
       "title": "Multi-Model Comparisons",
       "type": "video",
       "duration": 12,
+      "lessonImagePrompt": "Imagen 4 prompt: Three different glowing holographic models of a galaxy spinning side-by-side on a high-tech lab table, being compared by a digital scanner.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A split-screen animation showing two different mathematical models predicting the weather; one shows rain, the other sun, and a glowing graph compares their accuracy against actual weather data.",
       "chunks": [
         {
           "id": "advanced-math-401-l07-c1",
-          "title": "Multi-Model Comparisons Setup",
-          "content": "Before you start working on multi-model comparisons, it's essential to use quantitative validation to organize your approach. Planning your steps in advance can significantly improve both the quality of your work and the speed at which you complete it. By taking the time to prepare, you set yourself up for success in analyzing and comparing different mathematical models.\nContext recap: Before you start working on multi-model comparisons, it's essential to use quantitative validation to organize your approach. Planning your steps in advance can significantly improve both the quality of your work and the speed at which you complete it. By taking the time to prepare, you set yourself up for success in analyzing and comparing different mathematical models."
+          "title": "Clash of the Models",
+          "content": "What happens when two different math models give you two different answers? Before you start comparing them, you need to use quantitative validation to organize your approach. Planning your steps in advance can significantly improve both the quality of your work and your speed. By preparing, you set yourself up to figure out which model is actually telling the truth."
         },
         {
           "id": "advanced-math-401-l07-c2",
-          "title": "Decision Rules",
-          "content": "When faced with competing choices in your analysis, it's helpful to use a simple decision rule: always pick the option that has the strongest evidence and the clearest link to your goal. This strategy will guide you in making informed decisions and help you focus on the most relevant information as you work through your comparisons.\nContext recap: When faced with competing choices in your analysis, it's helpful to use a simple decision rule: always pick the option that has the strongest evidence and the clearest link to your goal. This strategy will guide you in making informed decisions and help you focus on the most relevant information as you work through your comparisons."
+          "title": "The Golden Decision Rule",
+          "content": "When faced with competing models, use this simple decision rule: always pick the model that has the strongest evidence and the clearest link to your goal. Don't just pick the one with the fanciest equations! This strategy will guide you in making informed decisions and help you cut through the noise to find the most relevant data."
         },
         {
           "id": "advanced-math-401-l07-c3",
-          "title": "Quality Control",
-          "content": "As you evaluate your models, be sure to check for three important things: accuracy, completeness, and alignment with the original objective. By ensuring that your work meets these criteria, you can maintain high standards in your mathematical analysis and produce reliable results.\nContext recap: As you evaluate your models, be sure to check for three important things: accuracy, completeness, and alignment with the original objective. By ensuring that your work meets these criteria, you can maintain high standards in your mathematical analysis and produce reliable results."
+          "title": "Quality Control Check",
+          "content": "As you evaluate your models, run them through a strict quality control check. Look for three things: accuracy (are the numbers right?), completeness (did it account for all variables?), and alignment (does it actually solve the original problem?). Meeting these criteria ensures your mathematical analysis is rock solid."
         },
         {
           "id": "advanced-math-401-l07-c4",
-          "title": "Next-Step Plan",
-          "content": "After completing your analysis, take a moment to write down one action you want to repeat in your next practice round and one action you would like to improve. This reflection will help you set clear goals for your future practice and enhance your skills in multi-model comparisons.\nContext recap: After completing your analysis, take a moment to write down one action you want to repeat in your next practice round and one action you would like to improve. This reflection will help you set clear goals for your future practice and enhance your skills in multi-model comparisons."
+          "title": "Your Next-Step Plan",
+          "content": "After completing your analysis, take a moment to reflect. Write down one action you want to repeat in your next practice round (like checking error bounds) and one action you want to improve (like writing clearer proof steps). This reflection loop is what turns a good math student into a great one."
         }
       ],
       "flashcards": [
         {
           "id": "advanced-math-401-l07-f1",
-          "front": "quantitative validation",
-          "back": "Use this as your organizing framework before execution."
+          "front": "Quantitative Validation",
+          "back": "Comparing a model's numerical predictions against real-world data or known bounds."
         },
         {
           "id": "advanced-math-401-l07-f2",
           "front": "Decision Rule",
-          "back": "Choose the option with strongest evidence-to-goal alignment."
+          "back": "Choose the model option with the strongest evidence-to-goal alignment."
         },
         {
           "id": "advanced-math-401-l07-f3",
           "front": "Quality Control",
-          "back": "Accuracy + completeness + objective match."
+          "back": "Checking for Accuracy + Completeness + Objective Match."
         },
         {
           "id": "advanced-math-401-l07-f4",
@@ -726,6 +740,8 @@ export const AdvancedMath401Module: LearningModule = {
       "title": "Capstone Proof Workshop",
       "type": "interactive",
       "duration": 10,
+      "lessonImagePrompt": "Imagen 4 prompt: A cozy, high-tech workshop desk with glowing blueprints, a digital stylus, and floating holographic geometric shapes being assembled.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A time-lapse animation of a student sketching a complex geometric proof on a digital tablet, erasing and refining steps until the final shape glows with success.",
       "metadata": {
         "prompts": [
           "What did you learn most clearly?",
@@ -801,6 +817,8 @@ export const AdvancedMath401Module: LearningModule = {
       "title": "Review: Advanced Quantitative Thinking",
       "type": "quiz",
       "duration": 10,
+      "lessonImagePrompt": "Imagen 4 prompt: A glowing brain made of interconnected mathematical nodes and numbers, pulsing with light on a dark blue background.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A dynamic fly-through of a digital brain where synapses fire, connecting different mathematical concepts like 'Optimization' and 'Validation' with bright beams of light.",
       "questions": [
         {
           "id": "advanced-math-401-l09-q1",
@@ -809,22 +827,22 @@ export const AdvancedMath401Module: LearningModule = {
           "options": [
             {
               "id": "a",
-              "text": "It explains optimization constraints using evidence from the lesson."
+              "text": "They are the primary goals we are trying to maximize or minimize."
             },
             {
               "id": "b",
-              "text": "It ignores how optimization constraints works in practice."
+              "text": "They are the limits or boundaries within which a solution must be found, like budget or materials."
             },
             {
               "id": "c",
-              "text": "It focuses on an unrelated topic outside Advanced Math."
+              "text": "They are variables that can take on any value from negative to positive infinity."
             },
             {
               "id": "d",
-              "text": "It repeats terms without showing meaning."
+              "text": "They are the final verified answers of the model."
             }
           ],
-          "correctOptionId": "a"
+          "correctOptionId": "b"
         },
         {
           "id": "advanced-math-401-l09-q2",
@@ -833,43 +851,43 @@ export const AdvancedMath401Module: LearningModule = {
           "options": [
             {
               "id": "a",
-              "text": "Define the goal and examine evidence for quantitative validation."
+              "text": "Immediately plug numbers into the first available formula."
             },
             {
               "id": "b",
-              "text": "Guess quickly without checking evidence."
+              "text": "Assume the model has zero margin of error."
             },
             {
               "id": "c",
-              "text": "Use data unrelated to quantitative validation."
+              "text": "Identify the expected range of the answer before performing detailed calculations."
             },
             {
               "id": "d",
-              "text": "Skip the context and jump to a conclusion."
+              "text": "Discard any data that doesn't fit a linear pattern."
             }
           ],
-          "correctOptionId": "a"
+          "correctOptionId": "c"
         },
         {
           "id": "advanced-math-401-l09-q3",
-          "text": "Which option shows strong reasoning about capstone advanced math reasoning?",
+          "text": "Which option shows strong reasoning when comparing multiple mathematical models?",
           "skillId": "advanced-math-401-skill-reasoning",
           "options": [
             {
               "id": "a",
-              "text": "Use examples and verify assumptions step by step."
+              "text": "Cross-referencing results from two different models to ensure consistency and checking against real-world data."
             },
             {
               "id": "b",
-              "text": "Ignore important details and edge cases."
+              "text": "Choosing the model that produces the highest numerical value."
             },
             {
               "id": "c",
-              "text": "Use assumptions unrelated to capstone advanced math reasoning."
+              "text": "Selecting the model with the most complex equations, assuming it is more accurate."
             },
             {
               "id": "d",
-              "text": "Change the topic when evidence gets hard."
+              "text": "Ignoring the underlying assumptions of each model."
             }
           ],
           "correctOptionId": "a"
@@ -881,22 +899,22 @@ export const AdvancedMath401Module: LearningModule = {
           "options": [
             {
               "id": "a",
-              "text": "It strengthens memory and transfer over time"
+              "text": "It is a technique used to solve differential equations."
             },
             {
               "id": "b",
-              "text": "It creates confusion"
+              "text": "It replaces the need for active recall."
             },
             {
               "id": "c",
-              "text": "It removes key facts"
+              "text": "It is only effective for memorizing historical dates, not math."
             },
             {
               "id": "d",
-              "text": "It has no value"
+              "text": "It strengthens memory and helps transfer problem-solving skills over time."
             }
           ],
-          "correctOptionId": "a"
+          "correctOptionId": "d"
         }
       ],
       "interactiveActivities": [
@@ -998,6 +1016,8 @@ export const AdvancedMath401Module: LearningModule = {
       "title": "Mastery: Advanced Math IV",
       "type": "quiz",
       "duration": 10,
+      "lessonImagePrompt": "Imagen 4 prompt: A glowing golden trophy shaped like a geometric fractal, resting on a pedestal inscribed with mathematical equations.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A celebratory animation of a glowing pathway lighting up step-by-step, leading to a grand, glowing portal labeled 'Mastery'.",
       "questions": [
         {
           "id": "advanced-math-401-l10-q1",
@@ -1006,22 +1026,22 @@ export const AdvancedMath401Module: LearningModule = {
           "options": [
             {
               "id": "a",
-              "text": "It explains model assumptions using evidence from the lesson."
+              "text": "The final proven theorems of a capstone project."
             },
             {
               "id": "b",
-              "text": "It ignores how model assumptions works in practice."
+              "text": "The absolute truths that govern all physical laws without exception."
             },
             {
               "id": "c",
-              "text": "It focuses on an unrelated topic outside Advanced Math."
+              "text": "Simplifications made to translate a complex real-world problem into a solvable mathematical equation."
             },
             {
               "id": "d",
-              "text": "It repeats terms without showing meaning."
+              "text": "The variables that we are trying to optimize."
             }
           ],
-          "correctOptionId": "a"
+          "correctOptionId": "c"
         },
         {
           "id": "advanced-math-401-l10-q2",
@@ -1030,43 +1050,43 @@ export const AdvancedMath401Module: LearningModule = {
           "options": [
             {
               "id": "a",
-              "text": "Define the goal and examine evidence for proof structure."
+              "text": "Start writing equations randomly until a pattern emerges."
             },
             {
               "id": "b",
-              "text": "Guess quickly without checking evidence."
+              "text": "Clearly state the given information and the final conclusion to be proven."
             },
             {
               "id": "c",
-              "text": "Use data unrelated to proof structure."
+              "text": "Assume the conclusion is true and work backward exclusively."
             },
             {
               "id": "d",
-              "text": "Skip the context and jump to a conclusion."
+              "text": "Skip defining the axioms and jump straight to the calculation."
             }
           ],
-          "correctOptionId": "a"
+          "correctOptionId": "b"
         },
         {
           "id": "advanced-math-401-l10-q3",
-          "text": "Which option shows strong reasoning about capstone advanced math reasoning?",
+          "text": "Which option shows strong reasoning when constructing a formal proof?",
           "skillId": "advanced-math-401-skill-reasoning",
           "options": [
             {
               "id": "a",
-              "text": "Use examples and verify assumptions step by step."
+              "text": "Justifying every step of a calculation with a specific mathematical property or theorem."
             },
             {
               "id": "b",
-              "text": "Ignore important details and edge cases."
+              "text": "Using a specific numerical example to prove a general rule."
             },
             {
               "id": "c",
-              "text": "Use assumptions unrelated to capstone advanced math reasoning."
+              "text": "Leaving out steps that seem 'obvious' to save time."
             },
             {
               "id": "d",
-              "text": "Change the topic when evidence gets hard."
+              "text": "Relying on visual diagrams without algebraic support."
             }
           ],
           "correctOptionId": "a"
@@ -1078,22 +1098,22 @@ export const AdvancedMath401Module: LearningModule = {
           "options": [
             {
               "id": "a",
-              "text": "It strengthens memory and transfer over time"
+              "text": "It is a method for calculating the area under a curve."
             },
             {
               "id": "b",
-              "text": "It creates confusion"
+              "text": "It eliminates the need to practice new problem types."
             },
             {
               "id": "c",
-              "text": "It removes key facts"
+              "text": "It is a type of optimization constraint."
             },
             {
               "id": "d",
-              "text": "It has no value"
+              "text": "It strengthens memory and helps transfer problem-solving skills over time."
             }
           ],
-          "correctOptionId": "a"
+          "correctOptionId": "d"
         }
       ],
       "interactiveActivities": [
@@ -1195,6 +1215,8 @@ export const AdvancedMath401Module: LearningModule = {
       "title": "Applied Advanced Math Challenge Studio",
       "type": "interactive",
       "duration": 14,
+      "lessonImagePrompt": "Imagen 4 prompt: A futuristic art studio where canvases display complex, glowing mathematical graphs and 3D models instead of paintings.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: An interactive point-of-view animation where the viewer selects a glowing 'weak pattern' orb, places it into a 'correction machine', and watches it transform into a perfect, glowing geometric shape.",
       "metadata": {
         "prompts": [
           "Select one weak pattern from recent quizzes.",
@@ -1259,6 +1281,8 @@ export const AdvancedMath401Module: LearningModule = {
       "title": "Advanced Math IV Mastery Applied Retest",
       "type": "quiz",
       "duration": 10,
+      "lessonImagePrompt": "Imagen 4 prompt: A glowing digital lock opening as a complex mathematical equation is solved, revealing a bright light inside.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A fast-paced sequence of a digital clock ticking down while glowing math problems are solved rapidly and correctly, ending with a '100% Mastery' screen.",
       "questions": [
         {
           "id": "advanced-math-401-l12-q1",
@@ -1267,22 +1291,22 @@ export const AdvancedMath401Module: LearningModule = {
           "options": [
             {
               "id": "a",
-              "text": "It explains model assumptions using evidence from the lesson."
+              "text": "They guarantee that the mathematical model will perfectly predict the future."
             },
             {
               "id": "b",
-              "text": "It ignores how model assumptions works in practice."
+              "text": "They define the boundaries where the model is accurate and where it breaks down."
             },
             {
               "id": "c",
-              "text": "It focuses on an unrelated topic outside Advanced Math."
+              "text": "They are the final outputs of an optimization function."
             },
             {
               "id": "d",
-              "text": "It repeats terms without showing meaning."
+              "text": "They eliminate the need for quantitative validation."
             }
           ],
-          "correctOptionId": "a"
+          "correctOptionId": "b"
         },
         {
           "id": "advanced-math-401-l12-q2",
@@ -1291,43 +1315,43 @@ export const AdvancedMath401Module: LearningModule = {
           "options": [
             {
               "id": "a",
-              "text": "Define the goal and examine evidence for quantitative validation."
+              "text": "Assuming the calculator's output is always 100% correct."
             },
             {
               "id": "b",
-              "text": "Guess quickly without checking evidence."
+              "text": "Ignoring the units of measurement to simplify the final answer."
             },
             {
               "id": "c",
-              "text": "Use data unrelated to quantitative validation."
+              "text": "Checking if the final numerical answer makes logical sense in the context of the original problem."
             },
             {
               "id": "d",
-              "text": "Skip the context and jump to a conclusion."
+              "text": "Only validating the answer if the numbers are integers."
             }
           ],
-          "correctOptionId": "a"
+          "correctOptionId": "c"
         },
         {
           "id": "advanced-math-401-l12-q3",
-          "text": "Which option shows strong reasoning about capstone advanced math reasoning?",
+          "text": "Which option shows strong reasoning when evaluating a mathematical model?",
           "skillId": "advanced-math-401-skill-reasoning",
           "options": [
             {
               "id": "a",
-              "text": "Use examples and verify assumptions step by step."
+              "text": "Acknowledging the limitations of a model and explaining how those limits affect the final answer."
             },
             {
               "id": "b",
-              "text": "Ignore important details and edge cases."
+              "text": "Claiming the model is universally applicable to all scenarios."
             },
             {
               "id": "c",
-              "text": "Use assumptions unrelated to capstone advanced math reasoning."
+              "text": "Hiding any data points that contradict the model's predictions."
             },
             {
               "id": "d",
-              "text": "Change the topic when evidence gets hard."
+              "text": "Using overly complex jargon to mask potential errors in the calculation."
             }
           ],
           "correctOptionId": "a"
@@ -1339,22 +1363,22 @@ export const AdvancedMath401Module: LearningModule = {
           "options": [
             {
               "id": "a",
-              "text": "It strengthens memory and transfer over time"
+              "text": "It is a specific type of geometric proof."
             },
             {
               "id": "b",
-              "text": "It creates confusion"
+              "text": "It reduces the cognitive load required to learn new concepts."
             },
             {
               "id": "c",
-              "text": "It removes key facts"
+              "text": "It is only useful for students who struggle with basic math."
             },
             {
               "id": "d",
-              "text": "It has no value"
+              "text": "It strengthens memory and helps transfer problem-solving skills over time."
             }
           ],
-          "correctOptionId": "a"
+          "correctOptionId": "d"
         }
       ],
       "interactiveActivities": [
@@ -1456,26 +1480,28 @@ export const AdvancedMath401Module: LearningModule = {
       "title": "Advanced Math Scenario Lab",
       "type": "video",
       "duration": 12,
+      "lessonImagePrompt": "Imagen 4 prompt: A high-tech laboratory with glowing holographic screens showing real-world scenarios like rocket trajectories and population growth graphs.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A cinematic animation of a rocket launch, with glowing mathematical overlays showing the real-time calculations, assumptions, and trajectory adjustments being made.",
       "chunks": [
         {
           "id": "advanced-math-401-l13-c1",
-          "title": "Scenario Brief",
-          "content": "In this exciting scenario, we will explore how to combine different ideas about models, the structure of proofs, and ways to check our answers using numbers. This challenge will help you understand how these concepts work together in real-life situations.\nContext recap: In this exciting scenario, we will explore how to combine different ideas about models, the structure of proofs, and ways to check our answers using numbers. This challenge will help you understand how these concepts work together in real-life situations."
+          "title": "Mission Briefing: Real-World Math",
+          "content": "Welcome to the Scenario Lab! Here, we combine everything: models, proof structures, and quantitative validation. We aren't just solving textbook problems anymore. We are looking at real-life challenges, like predicting population growth or calculating the trajectory of a rocket. This is where math becomes a superpower."
         },
         {
           "id": "advanced-math-401-l13-c2",
           "title": "Plan the Approach",
-          "content": "To tackle this scenario effectively, it's important to break it down into smaller, manageable decisions. For each decision point, think about one specific strategy that you can use. This will help you stay organized and focused as you work through the challenge.\nContext recap: To tackle this scenario effectively, it's important to break it down into smaller, manageable decisions. For each decision point, think about one specific strategy that you can use. This will help you stay organized and focused as you work through the challenge."
+          "content": "To tackle a massive scenario, you have to break it down. Don't try to solve the whole thing at once. For each decision point, pick one specific strategy. Are you optimizing for cost? Are you proving a structural limit? Planning your approach keeps you organized when the math gets complicated."
         },
         {
           "id": "advanced-math-401-l13-c3",
           "title": "Execute and Justify",
-          "content": "Now it's time to put your plan into action! As you apply your strategies, make sure to explain each step you take. Use clear evidence to support your choices instead of making random guesses. This will help you build a strong argument for your approach.\nContext recap: Now it's time to put your plan into action! As you apply your strategies, make sure to explain each step you take. Use clear evidence to support your choices instead of making random guesses. This will help you build a strong argument for your approach."
+          "content": "Time to launch your plan! As you apply your strategies, you must explain every step. Use clear mathematical evidence to support your choices—no random guessing allowed. If you change a variable, justify why. This builds an undeniable argument that your solution is the correct one."
         },
         {
           "id": "advanced-math-401-l13-c4",
-          "title": "Evaluate Outcome",
-          "content": "After you have completed your work, take a moment to evaluate the outcome. Compare your results to the goals you set at the beginning. Identify what aspects of your work were successful and which parts might need some adjustments. This reflection will help you improve in future challenges.\nContext recap: After you have completed your work, take a moment to evaluate the outcome. Compare your results to the goals you set at the beginning. Identify what aspects of your work were successful and which parts might need some adjustments. This reflection will help you improve in future challenges."
+          "title": "Evaluate the Outcome",
+          "content": "Once you have an answer, the job isn't done. Evaluate the outcome. Did your rocket reach orbit, or did your model fail? Compare your results to your original goals. Identify what worked and what needs adjustment. This reflection is the final step in true mathematical mastery."
         }
       ],
       "flashcards": [
@@ -1497,7 +1523,7 @@ export const AdvancedMath401Module: LearningModule = {
         {
           "id": "advanced-math-401-l13-f4",
           "front": "Applied Mastery",
-          "back": "Mastery means transferring the process to a new context."
+          "back": "Mastery means transferring the process to a completely new context."
         }
       ],
       "learningAids": [
@@ -1520,6 +1546,8 @@ export const AdvancedMath401Module: LearningModule = {
       "title": "Advanced Math Coaching Clinic",
       "type": "interactive",
       "duration": 13,
+      "lessonImagePrompt": "Imagen 4 prompt: A glowing digital clipboard with a checklist of mathematical skills, with a futuristic stethoscope resting on it.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: An animated digital coach (a friendly robot) analyzing a student's math test on a glowing screen, highlighting errors in red and transforming them into green checkmarks with a magic wand.",
       "metadata": {
         "prompts": [
           "Identify one repeated error pattern from your recent work.",
@@ -1595,6 +1623,8 @@ export const AdvancedMath401Module: LearningModule = {
       "title": "Advanced Math IV Mastery Mastery Sprint",
       "type": "quiz",
       "duration": 10,
+      "lessonImagePrompt": "Imagen 4 prompt: A glowing neon finish line on a futuristic racetrack, with mathematical symbols zooming past it like race cars.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A high-speed, exhilarating point-of-view animation racing through a neon tunnel of mathematical equations, bursting through a glowing finish line into a shower of golden sparks.",
       "questions": [
         {
           "id": "advanced-math-401-l15-q1",
@@ -1603,22 +1633,22 @@ export const AdvancedMath401Module: LearningModule = {
           "options": [
             {
               "id": "a",
-              "text": "It explains optimization constraints using evidence from the lesson."
+              "text": "They represent the infinite possibilities of a mathematical function."
             },
             {
               "id": "b",
-              "text": "It ignores how optimization constraints works in practice."
+              "text": "They are the primary objectives we want to maximize."
             },
             {
               "id": "c",
-              "text": "It focuses on an unrelated topic outside Advanced Math."
+              "text": "They restrict the set of possible solutions to those that are practically feasible."
             },
             {
               "id": "d",
-              "text": "It repeats terms without showing meaning."
+              "text": "They are the assumptions made before building the model."
             }
           ],
-          "correctOptionId": "a"
+          "correctOptionId": "c"
         },
         {
           "id": "advanced-math-401-l15-q2",
@@ -1627,43 +1657,43 @@ export const AdvancedMath401Module: LearningModule = {
           "options": [
             {
               "id": "a",
-              "text": "Define the goal and examine evidence for proof structure."
+              "text": "Make sure the proof is as long and complex as possible."
             },
             {
               "id": "b",
-              "text": "Guess quickly without checking evidence."
+              "text": "Ensure that the argument is logically sound and can be followed by others without ambiguity."
             },
             {
               "id": "c",
-              "text": "Use data unrelated to proof structure."
+              "text": "Use only numerical examples to demonstrate the theorem."
             },
             {
               "id": "d",
-              "text": "Skip the context and jump to a conclusion."
+              "text": "Skip the initial definitions to get straight to the core equations."
             }
           ],
-          "correctOptionId": "a"
+          "correctOptionId": "b"
         },
         {
           "id": "advanced-math-401-l15-q3",
-          "text": "Which option shows strong reasoning about capstone advanced math reasoning?",
+          "text": "Which option shows strong reasoning when solving a capstone advanced math problem?",
           "skillId": "advanced-math-401-skill-reasoning",
           "options": [
             {
               "id": "a",
-              "text": "Use examples and verify assumptions step by step."
+              "text": "Synthesizing multiple mathematical concepts to solve a novel, complex problem."
             },
             {
               "id": "b",
-              "text": "Ignore important details and edge cases."
+              "text": "Relying on a single memorized formula to solve every part of the problem."
             },
             {
               "id": "c",
-              "text": "Use assumptions unrelated to capstone advanced math reasoning."
+              "text": "Ignoring the constraints to find a theoretical maximum."
             },
             {
               "id": "d",
-              "text": "Change the topic when evidence gets hard."
+              "text": "Assuming the problem has no solution if it takes more than five minutes to solve."
             }
           ],
           "correctOptionId": "a"
@@ -1675,22 +1705,22 @@ export const AdvancedMath401Module: LearningModule = {
           "options": [
             {
               "id": "a",
-              "text": "It strengthens memory and transfer over time"
+              "text": "It is a technique for optimizing linear programming models."
             },
             {
               "id": "b",
-              "text": "It creates confusion"
+              "text": "It replaces the need for deep conceptual understanding."
             },
             {
               "id": "c",
-              "text": "It removes key facts"
+              "text": "It is a method for validating error bounds."
             },
             {
               "id": "d",
-              "text": "It has no value"
+              "text": "It strengthens memory and helps transfer problem-solving skills over time."
             }
           ],
-          "correctOptionId": "a"
+          "correctOptionId": "d"
         }
       ],
       "interactiveActivities": [

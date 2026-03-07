@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const ApPrep101Module: LearningModule = {
+export const ap_prep_101_Module: LearningModule = {
   "id": "ap-prep-101",
   "title": "AP Exam Prep Toolkit",
   "description": "A comprehensive guide to Advanced Placement exam strategy. Learn how to tackle DBQs, experimental design FRQs, rhetorical analysis, and calculus free-response questions with proven frameworks and scoring-aligned techniques.",
@@ -14,7 +14,7 @@ export const ApPrep101Module: LearningModule = {
   ],
   "minAge": 15,
   "maxAge": 19,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en",
@@ -40,21 +40,23 @@ export const ApPrep101Module: LearningModule = {
         "Identify the key question formats across major AP subjects",
         "Describe the AP registration and score-reporting process"
       ],
+      "lessonImagePrompt": "Imagen 4 prompt: A cinematic, high-contrast illustration of a focused high school student sitting at a modern desk, looking at a glowing holographic display showing a '5' on an AP scoring scale, surrounded by floating books and digital notes.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A fast-paced, dynamic 3D motion graphics sequence showing a blank test paper transforming into a college acceptance letter, with glowing numbers 1 through 5 lighting up sequentially, ending on a bright, golden 5.",
       "chunks": [
         {
           "id": "ap-prep-101-l01-c1",
           "title": "AP Exam Structure and Scoring",
-          "content": "AP exams are designed to assess your understanding and knowledge of various subjects, and they are structured into two main parts: the multiple-choice questions (MCQ) section and the free-response questions (FRQ) section. In the MCQ section, you will find between 40 to 60 questions that challenge your grasp of the material. These questions are designed to test your recall, comprehension, and application of concepts learned throughout the course. The FRQ section, on the other hand, requires you to demonstrate your understanding through written answers or problem-solving. This part allows you to express your thoughts and reasoning in a more detailed manner, showcasing your analytical skills and depth of knowledge.\nWhen it comes to scoring, each AP exam is evaluated on a scale from 1 to 5. A score of 5 indicates that you are 'extremely well qualified' in the subject, showing a high level of mastery, while a score of 1 means 'no recommendation,' indicating that you may not have demonstrated sufficient understanding. Most colleges recognize scores of 3 or higher, which can earn you college credit or allow you to bypass introductory courses. However, if you are aiming for admission to more selective colleges, you may need to achieve a score of 4 or 5 to receive similar advantages.\nThe MCQ section is graded by machines, ensuring quick and efficient scoring, while the FRQ section is assessed by trained AP readers each June. These readers are experienced educators who evaluate your responses based on established guidelines. After both sections are scored, your raw scores are combined and converted to the 1-5 scale using a statistical process. This method helps to ensure fairness and consistency across different years and exams, making sure that your performance is evaluated accurately in comparison to other test-takers. Understanding this structure and scoring system can help you prepare effectively for your AP exams and set realistic goals for your performance.\nContext recap: AP exams are designed to assess your understanding and knowledge of various subjects, and they are structured into two main parts: the multiple-choice questions (MCQ) section and the free-response questions (FRQ) section. In the MCQ section, you will find between 40 to 60 questions that challenge your grasp of the material. These questions are designed to test your recall, comprehension, and application of concepts learned throughout the course. The FRQ section, on the other hand, requires you to demonstrate your understanding through written answers or problem-solving.\nWhy this matters: AP Exam Structure and Scoring helps learners in Exam Prep connect ideas from AP Exam Prep Toolkit to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "AP exams are your ticket to earning college credit before you even graduate high school. They're broken down into two main arenas: the Multiple-Choice Questions (MCQ) and the Free-Response Questions (FRQ). The MCQ section usually packs 40 to 60 questions that test your rapid recall and concept application. The FRQ section is where you show your work—writing essays, solving complex math problems, or designing experiments.\n\nScoring works on a 1 to 5 scale. A 5 means you're 'extremely well qualified,' while a 1 means 'no recommendation.' Most colleges will grant you credit or let you skip intro-level courses if you score a 3 or higher. However, highly selective universities often look for 4s and 5s. The MCQs are graded by machines for speed, but your FRQs are read by actual human beings—trained AP educators—every June. Your raw scores from both sections are combined and curved to fit the 1-5 scale, ensuring fairness across different years. Knowing how the game is scored is your first step to winning it."
         },
         {
           "id": "ap-prep-101-l01-c2",
           "title": "Subject Overview — What Each AP Expects",
-          "content": "Each Advanced Placement (AP) exam is designed to assess your knowledge and skills in a specific subject area, and each one has its own unique requirements. For instance, in AP U.S. History, commonly referred to as APUSH, you will encounter a Document-Based Question (DBQ). This type of question requires you to analyze various primary sources, such as historical documents, letters, or photographs, and then use that analysis to write a comprehensive long essay. This process not only tests your understanding of historical events but also your ability to construct a well-reasoned argument based on evidence.\nIn AP Biology, the exam includes free-response questions (FRQs) that challenge you to interpret experimental data and design your own scientific investigations. This means you will need to think critically about experiments and how to apply your knowledge of biological concepts to real-world scenarios.\nFor students taking AP Calculus AB and BC, it is essential to demonstrate all of your mathematical work. This means that even if you arrive at the correct answer, you must show the steps you took to get there. If you only provide the final answer without any supporting calculations, you will not receive any credit for your response. This requirement emphasizes the importance of understanding the process of solving problems, not just the final result.\nLastly, the AP English Language and Literature exams focus heavily on rhetorical analysis. In these exams, you will need to dissect how authors use language, style, and structure to achieve their intended purpose. This involves closely reading texts and understanding the techniques that writers use to convey their messages effectively.\nBy familiarizing yourself with the specific expectations for each AP subject, you can tailor your study strategies to meet these demands, which is crucial for effective preparation and ultimately achieving success on your exams.\nContext recap: Each Advanced Placement (AP) exam is designed to assess your knowledge and skills in a specific subject area, and each one has its own unique requirements. For instance, in AP U.S. History, commonly referred to as APUSH, you will encounter a Document-Based Question (DBQ). This type of question requires you to analyze various primary sources, such as historical documents, letters, or photographs, and then use that analysis to write a comprehensive long essay.\nWhy this matters: Subject Overview — What Each AP Expects helps learners in Exam Prep connect ideas from AP Exam Prep Toolkit to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "Every AP subject has its own unique boss battle. In AP U.S. History (APUSH) or AP World, you'll face the Document-Based Question (DBQ). This isn't just an essay; it's a puzzle where you analyze 7 primary sources and weave them into a rock-solid historical argument.\n\nIn AP Science courses like Biology or Chemistry, the FRQs will test your ability to interpret raw data and design controlled experiments. You'll need to think like a scientist, not just memorize facts.\n\nTaking AP Calculus? The golden rule is: Show. Your. Work. Even if you calculate the right answer in your head, a naked number gets zero points. You have to prove how you got there.\n\nFinally, AP English Language is all about rhetorical analysis. You'll dissect how authors use tone, structure, and word choice to manipulate their audience. By knowing exactly what your specific exam demands, you can stop studying blindly and start training strategically."
         },
         {
           "id": "ap-prep-101-l01-c3",
           "title": "Registration and Score Reporting",
-          "content": "AP exams are an important part of the Advanced Placement program, and they take place every May during a two-week testing period. To be able to take these exams, students typically need to register through their school's AP coordinator. This registration usually happens in the fall or early spring, so it's a good idea to plan ahead! Each exam costs about $98, which can be a lot for some families. However, there are fee reductions available for students who show financial need, making it more accessible for everyone.\nOnce the exams are completed, the College Board scores them in June and July. After scoring, students can check their scores online. This is an exciting moment, as it reflects all the hard work you put into your studies! During the registration period, students can send their score reports to colleges for free. This is a great opportunity to showcase your achievements without any extra cost. However, if you miss this window, there will be a fee for sending your scores later on.\nIt's also important to know that if you are not satisfied with your scores, you have options. You can choose to cancel or withhold specific scores from being sent to colleges. Just remember, you need to make this request before your scores are sent out. This way, you can ensure that only the scores you feel proud of are shared with potential colleges. Understanding these details can help you navigate the AP exam process more smoothly and make informed decisions about your academic future.\nContext recap: AP exams are an important part of the Advanced Placement program, and they take place every May during a two-week testing period. To be able to take these exams, students typically need to register through their school's AP coordinator. This registration usually happens in the fall or early spring, so it's a good idea to plan ahead! Each exam costs about $98, which can be a lot for some families.\nWhy this matters: Registration and Score Reporting helps learners in Exam Prep connect ideas from AP Exam Prep Toolkit to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "AP exams happen every May during an intense two-week window. To get a seat, you usually have to register through your school's AP coordinator in the fall. Don't sleep on this deadline! Each exam costs around $98, but if that's a barrier, talk to your counselor—there are fee reductions available for students who qualify.\n\nFast forward to July: scores are released online. It's a nerve-wracking but exciting moment. When you register, you get the option to send your score report to one college for free. Use it! If you miss that window, you'll have to pay to send them later.\n\nWhat if you bomb an exam? Don't panic. You have the power to cancel or withhold specific scores from colleges. You just have to submit the request before the scores are officially sent out. You are in control of your academic narrative. Now, let's dive into specific strategies to make sure you don't have to cancel anything."
         }
       ],
       "flashcards": [
@@ -79,9 +81,10 @@ export const ApPrep101Module: LearningModule = {
           "id": "ap-prep-101-l01-a1",
           "type": "image",
           "title": "Concept Card",
-          "content": "Visual summary of the lesson's main concept."
+          "content": "Visual summary of the AP Exam structure, highlighting the split between MCQ and FRQ sections and the 1-5 scoring scale."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/ap-prep-101-l01.png"
     },
     {
       "id": "ap-prep-101-l02",
@@ -93,21 +96,23 @@ export const ApPrep101Module: LearningModule = {
         "Apply the AAHC method to analyze primary sources",
         "Construct a historically defensible thesis that addresses all parts of the prompt"
       ],
+      "lessonImagePrompt": "Imagen 4 prompt: A stylized, moody image of a vintage magnifying glass hovering over aged historical documents, with glowing neon annotations and connecting lines highlighting key text.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A top-down, stop-motion style animation of historical photos, letters, and maps sliding across a wooden desk, seamlessly folding and organizing themselves into a structured, glowing essay outline.",
       "chunks": [
         {
           "id": "ap-prep-101-l02-c1",
           "title": "What Is a DBQ?",
-          "content": "The Document-Based Question, commonly known as the DBQ, is a crucial component of the AP History exam that tests your analytical and writing skills. In this section, you will receive a set of 7 primary-source documents. Your main objective is to craft a persuasive essay that not only draws on the evidence provided in these documents but also incorporates your own knowledge of historical events and themes.\nTo help you understand how your work will be evaluated, the official AP grading rubric outlines a total of 7 points that you can earn. Here’s how it breaks down:\n- You can earn 1 point for developing a strong thesis statement that is historically defensible. This means your thesis should clearly state your argument and be supported by historical facts.\n- Another 1 point can be earned for contextualization. This involves placing your topic within a broader historical context, which helps to show the significance of your argument.\n- You can earn up to 3 points for effectively using evidence. This means you should not only reference the documents provided but also integrate your outside knowledge to strengthen your argument.\n- Finally, you can earn up to 2 points for analysis and reasoning. This part requires you to explain how your evidence supports your argument, and you must include sourcing from at least 3 of the documents to demonstrate your understanding.\nYou will have a total of 60 minutes to complete the DBQ. It is recommended that you spend about 15 minutes reading and planning your essay, which is crucial for organizing your thoughts and determining how you will use the documents. The remaining 45 minutes should be dedicated to writing your essay, where you will present your argument clearly and persuasively.\nBy understanding the structure and expectations of the DBQ, you can approach this task with confidence and improve your chances of achieving a high score on the AP History exam.\nContext recap: The Document-Based Question, commonly known as the DBQ, is a crucial component of the AP History exam that tests your analytical and writing skills. In this section, you will receive a set of 7 primary-source documents. Your main objective is to craft a persuasive essay that not only draws on the evidence provided in these documents but also incorporates your own knowledge of historical events and themes. To help you understand how your work will be evaluated, the official AP grading rubric outlines a total of 7 points that you can earn.\nWhy this matters: What Is a DBQ? helps learners in Exam Prep connect ideas from AP Exam Prep Toolkit to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "The Document-Based Question (DBQ) is the heavyweight champion of the AP History exam. You're handed 7 primary-source documents and tasked with building a persuasive, evidence-backed essay. \n\nThe official AP rubric gives you 7 possible points:\n1. Thesis (1 point): A clear, historically defensible argument.\n2. Contextualization (1 point): Setting the scene by explaining the broader historical events surrounding the prompt.\n3. Evidence (up to 3 points): Using the provided documents AND your own outside knowledge to back up your claims.\n4. Analysis & Reasoning (up to 2 points): Explaining *how* the evidence supports your argument, including sourcing at least 3 documents.\n\nYou get 60 minutes total. Spend the first 15 minutes reading, grouping the documents, and outlining. Use the remaining 45 minutes to write. If you master the rubric, the DBQ becomes a predictable formula rather than a terrifying mystery."
         },
         {
           "id": "ap-prep-101-l02-c2",
           "title": "Reading Primary Sources with AAHC",
-          "content": "When you are preparing to analyze historical documents, using the AAHC framework can be incredibly helpful. AAHC stands for Author, Audience, Historical Context, and Connection. Let's break down each part to understand how to use it effectively.\nFirst, let's talk about the Author. This means you should identify who created the document. Understanding the author's background, beliefs, and potential biases is crucial because it can influence how they present information. For example, if the author is a politician, their viewpoint might be shaped by their political agenda.\nNext, consider the Audience. Who was the document intended for? Knowing the audience can help you understand why certain language or ideas were included. For instance, a document aimed at scholars might use complex language, while one meant for the general public might be more straightforward.\nNow, let’s explore the Historical Context. This involves looking at the events and circumstances that were occurring at the time the document was created. Understanding the historical backdrop can provide insights into why the document was written and what issues it addresses. For example, a letter written during a war might reflect the urgency and emotions of that time.\nFinally, make a Connection. Think about how this document ties into the larger argument you are making in your essay. Does it support your thesis? Does it provide evidence for your claims? By connecting the document to your overall argument, you strengthen your analysis.\nBy applying the AAHC framework to each document you analyze, you will showcase your ability to source and analyze information effectively. This skill is essential for achieving high marks on the AP exam. Remember, AP readers are looking for students who can go beyond just summarizing the documents; they want to see you explain why the perspective of the source is significant in understanding the historical narrative.\nContext recap: When you are preparing to analyze historical documents, using the AAHC framework can be incredibly helpful. AAHC stands for Author, Audience, Historical Context, and Connection. Let's break down each part to understand how to use it effectively. First, let's talk about the Author.\nWhy this matters: Reading Primary Sources with AAHC helps learners in Exam Prep connect ideas from AP Exam Prep Toolkit to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "When you look at a historical document, don't just read what it says—read *why* it says it. The AAHC framework is your cheat code for this.\n\n- **Author**: Who wrote this? What is their background, class, or bias? A factory owner and a factory worker will describe the Industrial Revolution very differently.\n- **Audience**: Who is this meant for? A private diary entry is usually more honest than a speech given to thousands of voters.\n- **Historical Context**: What was happening at the exact moment this was created? A letter written during the height of a war carries a different weight than one written in peacetime.\n- **Connection**: How does this tie back to your thesis? \n\nAP readers don't want you to just quote the document. They want you to explain how the Author's bias or the intended Audience impacts the reliability or meaning of the text. That's how you earn the complex analysis points."
         },
         {
           "id": "ap-prep-101-l02-c3",
           "title": "Constructing a Strong Thesis",
-          "content": "Creating a strong thesis statement is an essential part of writing a successful essay, especially in history. A thesis statement is like a roadmap for your readers; it tells them what to expect in your essay and what your main argument will be. To craft a historically defensible thesis, you need to make a claim that can be backed up with solid evidence and that addresses every part of the prompt given to you. It's important to avoid vague statements, such as 'There were many causes of the Civil War.' These kinds of statements do not provide a clear direction for your essay. Instead, strive for something specific and debatable. For example, you might say: 'While economic differences between the North and South contributed to sectional tension, the expansion of slavery into western territories was the primary catalyst for the Civil War because it threatened the political balance of power.' This statement is strong because it clearly outlines your argument and can be supported with historical evidence. Your thesis should be included in the introduction of your essay, where it sets the stage for the categories or arguments that your body paragraphs will explore. A strong thesis takes a clear position on the topic at hand and does not simply restate the question or list topics. Remember, your thesis is your chance to make a strong impression on your reader, so make sure it is clear, concise, and compelling. By following these guidelines, you will be well on your way to writing an effective thesis that enhances your overall essay and helps you succeed in your AP History exam.\nContext recap: Creating a strong thesis statement is an essential part of writing a successful essay, especially in history. A thesis statement is like a roadmap for your readers; it tells them what to expect in your essay and what your main argument will be. To craft a historically defensible thesis, you need to make a claim that can be backed up with solid evidence and that addresses every part of the prompt given to you. It's important to avoid vague statements, such as 'There were many causes of the Civil War.' These kinds of statements do not provide a clear direction for your essay."
+          "content": "Your thesis is the steering wheel of your essay. If it's weak, your whole essay goes off a cliff. A historically defensible thesis must make a specific, debatable claim that answers the entire prompt.\n\nAvoid weak, generic statements like, 'There were many causes of the Civil War.' That tells the reader nothing. Instead, level it up: 'While economic differences between the North and South contributed to sectional tension, the expansion of slavery into western territories was the primary catalyst for the Civil War because it threatened the political balance of power.'\n\nSee the difference? The second thesis sets up a clear argument (slavery expansion was the primary catalyst) while acknowledging a counter-argument (economic differences). Put your thesis in your introduction so the AP reader knows exactly where you're going. Don't make them hunt for your argument."
         }
       ],
       "flashcards": [
@@ -132,9 +137,10 @@ export const ApPrep101Module: LearningModule = {
           "id": "ap-prep-101-l02-a1",
           "type": "image",
           "title": "Concept Card",
-          "content": "Visual summary of the lesson's main concept."
+          "content": "A visual breakdown of the 7-point DBQ Rubric, showing how points are distributed across Thesis, Contextualization, Evidence, and Analysis."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/ap-prep-101-l02.png"
     },
     {
       "id": "ap-prep-101-l03",
@@ -146,21 +152,23 @@ export const ApPrep101Module: LearningModule = {
         "Structure AP Biology FRQ responses using the CER format",
         "Describe key laboratory concepts tested on AP Science exams"
       ],
+      "lessonImagePrompt": "Imagen 4 prompt: A sleek, modern chemistry and biology lab setup with glowing neon liquids in beakers, a digital tablet displaying dynamic line graphs, and a futuristic microscope.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A high-quality time-lapse of a plant growing rapidly under different colored LED lights, with sleek floating UI labels pointing to the light source as 'Independent Variable' and the plant height as 'Dependent Variable'.",
       "chunks": [
         {
           "id": "ap-prep-101-l03-c1",
           "title": "Variables in Experimental Design",
-          "content": "In any well-structured experiment, understanding the different types of variables is essential for obtaining reliable results. There are three main types of variables that you should be familiar with: independent variables, dependent variables, and controlled variables.\nThe independent variable is the factor that you, as the scientist, intentionally change in your experiment. For instance, if you are studying how fertilizer affects plant growth, the independent variable would be the amount of fertilizer you apply to the plants. This is the variable you manipulate to observe its effects.\nNext, we have the dependent variable. This is the outcome that you measure in response to the changes you made to the independent variable. Continuing with our example, the dependent variable could be the height of the plants, which you would measure in centimeters. This variable is dependent on the changes you made to the independent variable.\nLastly, we have controlled variables, which are also known as constants. These are the factors that you keep the same across all experimental groups to ensure that your test is fair. For example, you might use the same type of soil, provide each plant with the same amount of water, ensure they all receive equal light exposure, and use the same species of plants. Keeping these variables constant is crucial because it allows you to isolate the effects of the independent variable on the dependent variable.\nIf you do not have proper controls in place, it becomes challenging to determine whether any changes observed in the dependent variable were actually caused by the independent variable. In AP Science free-response questions, you may be asked to identify these variables or even design an experiment that includes appropriate controls. Understanding these concepts will help you excel in your AP Science exams and develop strong experimental skills.\nContext recap: In any well-structured experiment, understanding the different types of variables is essential for obtaining reliable results. There are three main types of variables that you should be familiar with: independent variables, dependent variables, and controlled variables. The independent variable is the factor that you, as the scientist, intentionally change in your experiment. For instance, if you are studying how fertilizer affects plant growth, the independent variable would be the amount of fertilizer you apply to the plants.\nWhy this matters: Variables in Experimental Design helps learners in Exam Prep connect ideas from AP Exam Prep Toolkit to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "If you want to crush the AP Science FRQs, you need to master experimental design. Every experiment revolves around three types of variables: Independent, Dependent, and Controlled.\n\nThe **Independent Variable** is what YOU change. It's the cause. If you're testing how caffeine affects heart rate, the caffeine dose is the independent variable.\n\nThe **Dependent Variable** is what you measure. It's the effect. In the caffeine experiment, the heart rate (measured in beats per minute) is the dependent variable.\n\n**Controlled Variables** (or constants) are everything you keep exactly the same so they don't mess up your results. You'd use the same age group, same time of day, and same resting conditions. If you don't control these, you can't prove that the caffeine actually caused the heart rate spike. AP graders love to test whether you can spot a flawed experiment that forgot its controls."
         },
         {
           "id": "ap-prep-101-l03-c2",
           "title": "AP Biology FRQ Format and CER",
-          "content": "The AP Biology exam is an important part of your preparation for college-level science courses, and it includes a total of 6 free-response questions. Among these, you will find 2 long-form questions that are each worth between 8 to 10 points, and 4 short-answer questions that are each worth 4 points. To effectively tackle these questions, you can use a structured approach known as the CER framework, which stands for Claim, Evidence, and Reasoning.\nLet's break down how to use this framework step by step. First, you begin with your Claim. This is your direct answer to the question being asked. It should be clear and concise, making it easy for the reader to understand your main point.\nNext, you need to provide Evidence. This part is crucial because it supports your claim with specific data, observations, or biological facts. The evidence you present should be relevant and directly related to your claim, helping to strengthen your argument.\nFinally, you will explain your Reasoning. This is where you connect the dots between your evidence and your claim. You should discuss the biological principle or mechanism that explains why your evidence supports your claim. This part demonstrates your understanding of the underlying concepts in biology.\nFor example, if you were to answer a question about enzyme activity, you might structure your response like this:\n- Claim: 'The enzyme reaction rate will decrease above 40 degrees Celsius.'\n- Evidence: 'The data shows a sharp decline in product formation at 45 degrees Celsius.'\n- Reasoning: 'High temperatures denature proteins by disrupting hydrogen bonds, which alters the shape of the active site so that the substrate can no longer bind.'\nBy following this structured approach, you can effectively communicate your understanding of biological concepts and improve your chances of earning a higher score on the exam.\nContext recap: The AP Biology exam is an important part of your preparation for college-level science courses, and it includes a total of 6 free-response questions. Among these, you will find 2 long-form questions that are each worth between 8 to 10 points, and 4 short-answer questions that are each worth 4 points. To effectively tackle these questions, you can use a structured approach known as the CER framework, which stands for Claim, Evidence, and Reasoning. Let's break down how to use this framework step by step.\nWhy this matters: AP Biology FRQ Format and CER helps learners in Exam Prep connect ideas from AP Exam Prep Toolkit to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "The AP Biology exam throws 6 FRQs at you: 2 long ones and 4 short ones. To guarantee you hit the scoring points, use the CER framework: Claim, Evidence, Reasoning.\n\n- **Claim**: Answer the prompt directly in one sentence. No fluff.\n- **Evidence**: Pull specific data from the graph or table provided. Don't just say 'it went up.' Say 'the reaction rate increased from 2.5 to 8.0 mmol/sec.'\n- **Reasoning**: This is where you earn your money. Connect the evidence to the biological concept. \n\nExample:\n*Claim*: The enzyme denatures above 40°C.\n*Evidence*: The graph shows product formation dropping to zero at 45°C.\n*Reasoning*: High temperatures disrupt the hydrogen bonds in the enzyme, altering the shape of its active site so the substrate can no longer bind.\n\nStick to CER, and you'll stop rambling and start scoring."
         },
         {
           "id": "ap-prep-101-l03-c3",
           "title": "Key Laboratory Concepts",
-          "content": "In AP Science exams, several important laboratory techniques are commonly tested, and it's crucial for students to understand these concepts thoroughly. One such technique is gel electrophoresis, which is used to separate DNA fragments based on their size. This process involves applying an electric field to a gel, allowing smaller DNA fragments to move farther through the gel matrix compared to larger ones. This technique is not only fundamental in genetics but also widely used in various biological research applications.\nAnother key concept is Hardy-Weinberg equilibrium, which describes a theoretical scenario in which allele frequencies in a population remain unchanged from one generation to the next. For this equilibrium to hold true, five specific conditions must be satisfied: there must be no mutations occurring, mating must be random, there should be no natural selection acting on the population, the population must be infinitely large, and there must be no gene flow into or out of the population. If any of these conditions are not met, it can lead to evolutionary changes within the population over time.\nAdditionally, understanding how to measure the rate of photosynthesis is a vital topic in AP Science. There are several methods to assess this rate, including tracking the production of oxygen, measuring the consumption of carbon dioxide, or utilizing the floating leaf disk assay. Each of these methods provides insights into the efficiency of photosynthesis under various conditions.\nGrasping these essential laboratory techniques and their underlying principles is not only important for your understanding of biological processes but also crucial for earning full credit on experimental design questions in the AP exams. Being well-prepared in these areas will significantly enhance your performance and confidence in tackling exam challenges.\nContext recap: In AP Science exams, several important laboratory techniques are commonly tested, and it's crucial for students to understand these concepts thoroughly. One such technique is gel electrophoresis, which is used to separate DNA fragments based on their size. This process involves applying an electric field to a gel, allowing smaller DNA fragments to move farther through the gel matrix compared to larger ones. This technique is not only fundamental in genetics but also widely used in various biological research applications.\nWhy this matters: Key Laboratory Concepts helps learners in Exam Prep connect ideas from AP Exam Prep Toolkit to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "AP Science exams expect you to be familiar with standard lab techniques, even if you didn't get to do them all in class.\n\nKnow **Gel Electrophoresis**: It uses an electrical current to separate DNA fragments by size. Smaller fragments move faster and further through the gel. It's a staple for genetics questions.\n\nUnderstand **Hardy-Weinberg Equilibrium**: It's a baseline model showing a population that is NOT evolving. For it to work, you need 5 conditions: no mutations, random mating, no natural selection, massive population size, and no gene flow. If a question shows allele frequencies changing, one of these rules was broken.\n\nFinally, know how to measure **Photosynthesis and Cellular Respiration**. You can measure photosynthesis by tracking oxygen production (like counting bubbles from an aquatic plant) or carbon dioxide consumption. Knowing the mechanics of these labs will save you when an FRQ asks you to design an experiment on the fly."
         }
       ],
       "flashcards": [
@@ -185,15 +193,18 @@ export const ApPrep101Module: LearningModule = {
           "id": "ap-prep-101-l03-a1",
           "type": "image",
           "title": "Concept Card",
-          "content": "Visual summary of the lesson's main concept."
+          "content": "A visual diagram showing the relationship between Independent, Dependent, and Controlled variables using a simple plant growth experiment."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/ap-prep-101-l03.png"
     },
     {
       "id": "ap-prep-101-interactive-lab",
       "title": "AP Exam Prep Toolkit Practice Lab",
       "type": "interactive",
       "duration": 12,
+      "lessonImagePrompt": "Imagen 4 prompt: A glowing, futuristic digital interface showing a practice exam with a countdown timer, holographic checkmarks, and a sleek stylus resting on a tablet.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A first-person perspective of a student interacting with a sleek digital quiz interface. As they select the correct answers, satisfying green checkmarks and subtle glowing particle effects appear.",
       "metadata": {
         "prompts": [
           "Summarize the key idea from AP Exam Prep Toolkit in one concise statement.",
@@ -207,6 +218,12 @@ export const ApPrep101Module: LearningModule = {
           "type": "scenario_practice",
           "title": "Guided Scenario Drill",
           "description": "Work through a realistic prompt, explain your reasoning, and compare your answer with a model approach."
+        },
+        {
+          "id": "ap-prep-101-interactive-lab-act2",
+          "type": "frq_deconstruction",
+          "title": "FRQ Deconstruction",
+          "description": "Break down a sample AP Biology FRQ using the CER (Claim, Evidence, Reasoning) framework to identify where points are awarded."
         }
       ],
       "learningAids": [
@@ -216,7 +233,8 @@ export const ApPrep101Module: LearningModule = {
           "title": "Practice Playbook",
           "content": "Use Explain -> Apply -> Reflect to complete this Exam Prep practice lab with clear reasoning."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/ap-prep-101-interactive-lab.png"
     },
     {
       "id": "ap-prep-101-l04",
@@ -227,6 +245,8 @@ export const ApPrep101Module: LearningModule = {
         "Recall key facts about DBQ structure and experimental design",
         "Demonstrate understanding of AP exam scoring and question formats"
       ],
+      "lessonImagePrompt": "Imagen 4 prompt: A futuristic glowing checkpoint gate in a cyber-environment, with a bright green checkmark hovering in the center.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A 3D animation of a complex metallic lock clicking open, revealing a glowing core of light as a quiz is successfully completed.",
       "questions": [
         {
           "id": "ap-prep-101-l04-q1",
@@ -302,15 +322,67 @@ export const ApPrep101Module: LearningModule = {
           ],
           "correctOptionId": "a",
           "explanation": "Most colleges accept a score of 3 or higher for credit or placement, though more selective institutions may require a 4 or 5. A score of 3 is officially classified as 'qualified' by the College Board."
+        },
+        {
+          "id": "ap-prep-101-l04-q4",
+          "text": "When analyzing a primary source using the AAHC method, what does the 'C' stand for?",
+          "skillId": "ap-prep-101-skill-history",
+          "options": [
+            {
+              "id": "a",
+              "text": "Connection"
+            },
+            {
+              "id": "b",
+              "text": "Context"
+            },
+            {
+              "id": "c",
+              "text": "Conclusion"
+            },
+            {
+              "id": "d",
+              "text": "Causation"
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation": "In the AAHC method (Author, Audience, Historical Context, Connection), the 'C' stands for Connection. It reminds you to explicitly tie the document's analysis back to your thesis."
+        },
+        {
+          "id": "ap-prep-101-l04-q5",
+          "text": "In the CER framework for AP Science, what is the primary purpose of the 'Reasoning' section?",
+          "skillId": "ap-prep-101-skill-science",
+          "options": [
+            {
+              "id": "a",
+              "text": "To connect the evidence to a biological or scientific concept"
+            },
+            {
+              "id": "b",
+              "text": "To state the initial hypothesis"
+            },
+            {
+              "id": "c",
+              "text": "To list the raw data from the experiment"
+            },
+            {
+              "id": "d",
+              "text": "To identify the independent variable"
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation": "The Reasoning section is where you explain *why* the evidence supports your claim by applying scientific principles and concepts. It bridges the gap between raw data and your conclusion."
         }
       ],
       "quizBlueprint": {
-        "totalQuestions": 3,
+        "totalQuestions": 5,
         "bloomProfile": {
           "remember": 2,
-          "understand": 1
+          "understand": 2,
+          "apply": 1
         }
-      }
+      },
+      "imageUrl": "/generated-images/refinery/ap-prep-101-l04.png"
     },
     {
       "id": "ap-prep-101-l05",
@@ -322,21 +394,23 @@ export const ApPrep101Module: LearningModule = {
         "Identify common AP Calculus FRQ types and demonstrate show-all-work strategy",
         "Use precise justification language in math and science responses"
       ],
+      "lessonImagePrompt": "Imagen 4 prompt: A split-screen artistic composition. The left side features elegant cursive writing on parchment with ink splatters, while the right side features glowing neon calculus equations floating in a dark space.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A dynamic zoom-in on a complex 3D calculus graph that smoothly morphs into a glowing web of interconnected words representing rhetorical analysis, blending math and language arts.",
       "chunks": [
         {
           "id": "ap-prep-101-l05-c1",
           "title": "AP English — Rhetorical Analysis with SOAPSTone",
-          "content": "In the AP English Language exam, you will encounter tasks that require you to analyze how authors construct their arguments using various rhetorical strategies. To help you with this analysis, the SOAPSTone framework is an invaluable tool. SOAPSTone stands for Speaker, Occasion, Audience, Purpose, Subject, and Tone. Let's break down each component to understand how they contribute to a deeper analysis of a text.\nFirst, consider the Speaker. This is the voice behind the text. Ask yourself: Who is this person, and what makes them credible? Understanding the speaker's background and perspective can provide insight into the argument being made.\nNext, we have the Occasion. This refers to the event, situation, or context that prompted the writing. What was happening in the world at the time? Knowing the occasion can help you grasp why the author chose to write about a particular topic.\nThen, think about the Audience. Who is the intended reader of this text? Understanding the audience is crucial because it shapes the author's choices in language, tone, and style. Different audiences may require different approaches to effectively convey a message.\nThe Purpose of the text is another key element. What is the author trying to achieve? Are they aiming to persuade, inform, entertain, or call the audience to action? Identifying the purpose will guide your understanding of the overall message.\nNext, we have the Subject, which is the main topic or issue being discussed in the text. What is the central theme? Understanding the subject helps you focus your analysis on the core ideas presented.\nFinally, consider the Tone. This reflects the author's attitude toward the subject and the audience. Tone can be conveyed through word choice, sentence structure, and imagery. Is the tone serious, sarcastic, passionate, or neutral? Recognizing the tone can enhance your interpretation of the text.\nBy systematically applying the SOAPSTone framework before you begin writing your analysis, you can ensure that your essay addresses the entire rhetorical situation. This approach will help you avoid merely summarizing the passage and instead engage with the text on a deeper level, leading to a more insightful and comprehensive analysis. Remember, a well-rounded analysis not only demonstrates your understanding of the text but also showcases your critical thinking skills, which are essential for success in the AP English exam.\nContext recap: In the AP English Language exam, you will encounter tasks that require you to analyze how authors construct their arguments using various rhetorical strategies. To help you with this analysis, the SOAPSTone framework is an invaluable tool. SOAPSTone stands for Speaker, Occasion, Audience, Purpose, Subject, and Tone. Let's break down each component to understand how they contribute to a deeper analysis of a text.\nWhy this matters: AP English — Rhetorical Analysis with SOAPSTone helps learners in Exam Prep connect ideas from AP Exam Prep Toolkit to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints.\nGuided check: Ask yourself, \"What is the claim?\", \"Which evidence is strongest?\", and \"What would change my conclusion?\" Use the terms text, analysis, tone, audience, understanding, soapstone, subject, author while answering to reinforce vocabulary and precision."
+          "content": "When you face the rhetorical analysis essay in AP English Language, you can't just summarize what the author said. You have to explain *how* and *why* they said it. Enter SOAPSTone:\n\n- **Speaker**: Who is the voice? What gives them authority?\n- **Occasion**: What event triggered this piece of writing?\n- **Audience**: Who is the target demographic, and how does the author manipulate them?\n- **Purpose**: What is the ultimate goal? To persuade? To incite anger? To comfort?\n- **Subject**: What is the core topic?\n- **Tone**: What is the author's attitude? (e.g., sarcastic, urgent, melancholic).\n\nBefore you write a single word of your essay, jot down the SOAPSTone elements. It forces you to look at the text like a mechanic looking at a car engine. You'll stop focusing on the paint job (the summary) and start explaining how the pistons work (the rhetorical strategies)."
         },
         {
           "id": "ap-prep-101-l05-c2",
           "title": "AP Calculus FRQ Strategies",
-          "content": "The AP Calculus AB and BC exams are designed to assess your understanding of calculus concepts through a series of free-response questions. Each exam includes 6 free-response questions, and it is crucial to show all of your work in order to receive credit. If you provide only a correct numerical answer without any supporting steps, you will earn zero points. This means that every step you take in your calculations is important!\nYou will encounter various types of free-response questions, including those that focus on area and volume. For example, you might be asked to find the area between curves using definite integrals, which requires a solid understanding of how to set up and evaluate integrals. Another common type of question involves related rates, where you will connect the rates of change of related quantities through the process of implicit differentiation. Additionally, you may see questions about accumulation functions, which ask you to interpret integrals as representing net change over an interval.\nWhen you come across questions that allow the use of a calculator, it is a good practice to write out the mathematical setup before you actually use your calculator. This helps you clarify your thought process and ensures that you are on the right track. Don’t forget to record the equation you entered into the calculator as well!\nFor questions that do not permit the use of a calculator, it is essential to show every algebraic and calculus step clearly. This not only demonstrates your understanding but also allows the AP readers to follow your reasoning. Remember, AP readers are known to award partial credit for correct methods even if you make minor arithmetic errors. Therefore, if you present a well-organized solution that contains a small mistake, you can still earn most of the available points. So, take your time, show your work, and you will maximize your chances of success on the exam!\nContext recap: The AP Calculus AB and BC exams are designed to assess your understanding of calculus concepts through a series of free-response questions. Each exam includes 6 free-response questions, and it is crucial to show all of your work in order to receive credit. If you provide only a correct numerical answer without any supporting steps, you will earn zero points. This means that every step you take in your calculations is important!\nWhy this matters: AP Calculus FRQ Strategies helps learners in Exam Prep connect ideas from AP Exam Prep Toolkit to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "AP Calculus FRQs are notorious, but they are highly predictable. You'll almost always see questions on Area/Volume, Related Rates, and Accumulation Functions. \n\nThe golden rule of Calc FRQs: The grader is not a mind reader. If you punch an integral into your calculator and just write down '42.5', you get zero points. You must write the mathematical setup (like the integral notation with bounds) on your paper first.\n\nAlso, never leave a question blank. AP readers award partial credit for correct methods, even if your final arithmetic is wrong. If you set up the derivative correctly but mess up the subtraction at the end, you still get the majority of the points. Write down your formulas, show your steps, and let the partial credit stack up."
         },
         {
           "id": "ap-prep-101-l05-c3",
           "title": "Justification Language That Earns Points",
-          "content": "When you are preparing for the AP exams, one of the most important skills you can develop is the ability to justify your answers using precise mathematical and scientific language. This means that instead of using casual phrases, you should express your reasoning in a way that clearly demonstrates your understanding of the concepts. For instance, if you are analyzing a function, instead of simply saying, 'the function goes up then down,' you should articulate your reasoning more formally. You could say, 'Because the derivative of the function changes from positive to negative at x equals 3, we can conclude that the function has a relative maximum at this point, according to the First Derivative Test.' This type of precise language not only shows your knowledge but also helps you earn valuable points on the exam.\nSimilarly, in AP Biology, when discussing changes in a population, it is crucial to use specific terminology. Instead of just stating, 'the population changed,' you could express it as, 'The allele frequency shifted from 0.6 to 0.4 over ten generations, which indicates that natural selection acted against the dominant phenotype, thereby violating Hardy-Weinberg equilibrium.' This detailed explanation demonstrates a deeper understanding of the biological processes at play.\nUsing this kind of mechanism-driven language is essential for achieving full justification points on your exams. To improve your skills, practice transforming casual observations into formal AP language. This exercise will not only enhance your writing but also significantly boost your performance on the exams. Remember, the clearer and more precise your language, the better your chances of success in the AP exams!\nContext recap: When you are preparing for the AP exams, one of the most important skills you can develop is the ability to justify your answers using precise mathematical and scientific language. This means that instead of using casual phrases, you should express your reasoning in a way that clearly demonstrates your understanding of the concepts. For instance, if you are analyzing a function, instead of simply saying, 'the function goes up then down,' you should articulate your reasoning more formally. You could say, 'Because the derivative of the function changes from positive to negative at x equals 3, we can conclude that the function has a relative maximum at this point, according to the First Derivative Test.' This type of precise language not only shows your knowledge but also helps you earn valuable points on the exam."
+          "content": "In AP math and science, casual language will cost you points. You have to sound like a professional.\n\nIn Calculus, don't say, 'The graph goes up so it's a maximum.' Say, 'Because the derivative f'(x) changes from positive to negative at x=3, f(x) has a relative maximum at x=3.' \n\nIn Biology, don't say, 'The animals changed to survive.' Say, 'Natural selection favored the darker phenotype, leading to a shift in allele frequencies over ten generations.'\n\nAP graders are looking for specific trigger words. They have a rubric, and they want to check off boxes. Give them the exact vocabulary they are looking for. Practice translating your casual thoughts into formal AP justification language, and watch your FRQ scores jump."
         }
       ],
       "flashcards": [
@@ -355,7 +429,16 @@ export const ApPrep101Module: LearningModule = {
           "front": "Partial Credit Strategy",
           "back": "On AP Calculus FRQs, showing a correct method earns points even if arithmetic is wrong. Always write the integral or derivative setup first, then compute. Never leave a question blank — partial credit adds up."
         }
-      ]
+      ],
+      "learningAids": [
+        {
+          "id": "ap-prep-101-l05-a1",
+          "type": "image",
+          "title": "Concept Card",
+          "content": "A visual cheat sheet comparing 'Casual Language' vs 'AP Justification Language' for common Calculus and Biology scenarios."
+        }
+      ],
+      "imageUrl": "/generated-images/refinery/ap-prep-101-l05.png"
     },
     {
       "id": "ap-prep-101-l06",
@@ -367,6 +450,8 @@ export const ApPrep101Module: LearningModule = {
         "Evaluate experimental design scenarios",
         "Synthesize AP scoring strategies across subjects"
       ],
+      "lessonImagePrompt": "Imagen 4 prompt: A gleaming golden trophy shaped like a '5' sitting on a sleek pedestal, surrounded by subtle falling confetti and dramatic studio lighting.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A cinematic reveal of a digital screen displaying a perfect score, with dynamic lighting sweeping across the screen and a burst of celebratory digital fireworks.",
       "questions": [
         {
           "id": "ap-prep-101-l06-q1",
@@ -442,16 +527,67 @@ export const ApPrep101Module: LearningModule = {
           ],
           "correctOptionId": "a",
           "explanation": "AP Calculus FRQs require all supporting work to be shown. A correct answer with no work earns zero points. Conversely, showing a correct method with a minor arithmetic error can still earn most of the available points through partial credit. Always write out your setup, steps, and reasoning."
+        },
+        {
+          "id": "ap-prep-101-l06-q4",
+          "text": "Which element of the SOAPSTone framework focuses on the specific event or catalyst that prompted the author to write the piece?",
+          "skillId": "ap-prep-101-skill-english",
+          "options": [
+            {
+              "id": "a",
+              "text": "Occasion"
+            },
+            {
+              "id": "b",
+              "text": "Subject"
+            },
+            {
+              "id": "c",
+              "text": "Audience"
+            },
+            {
+              "id": "d",
+              "text": "Purpose"
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation": "The 'Occasion' refers to the time, place, and specific context or event that triggered the writing. Understanding the occasion helps explain why the author chose specific rhetorical strategies."
+        },
+        {
+          "id": "ap-prep-101-l06-q5",
+          "text": "Why is it critical to use precise vocabulary, like 'relative maximum' instead of 'the graph goes up', on AP FRQs?",
+          "skillId": "ap-prep-101-skill-strategy",
+          "options": [
+            {
+              "id": "a",
+              "text": "AP graders use specific rubrics that require precise terminology to award points"
+            },
+            {
+              "id": "b",
+              "text": "It saves time during the exam"
+            },
+            {
+              "id": "c",
+              "text": "It proves you didn't use a calculator"
+            },
+            {
+              "id": "d",
+              "text": "It is required for the multiple-choice section"
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation": "AP graders are trained to look for specific 'trigger words' that match their scoring rubrics. Casual language often fails to meet the rigorous standards required to earn justification points."
         }
       ],
       "quizBlueprint": {
-        "totalQuestions": 3,
+        "totalQuestions": 5,
         "bloomProfile": {
-          "understand": 1,
-          "apply": 1,
+          "understand": 2,
+          "apply": 2,
           "analyze": 1
         }
-      }
+      },
+      "imageUrl": "/generated-images/refinery/ap-prep-101-l06.png"
     }
   ]
 };

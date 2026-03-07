@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const CloudComputing201Module: LearningModule = {
+export const cloud_computing_201_Module: LearningModule = {
   "id": "cloud-computing-201",
   "title": "Cloud Platform Engineering",
   "description": "Intermediate cloud engineering focused on reliability, observability, automation, security operations, and cost-aware architecture. Learners build practical platform skills used by modern SRE and platform teams.",
@@ -15,7 +15,7 @@ export const CloudComputing201Module: LearningModule = {
   ],
   "minAge": 15,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "intermediate",
   "localeSupport": [
     "en"
@@ -41,6 +41,8 @@ export const CloudComputing201Module: LearningModule = {
       "title": "Reliability Engineering Foundations",
       "type": "video",
       "duration": 12,
+      "lessonImagePrompt": "Imagen 4 prompt: A futuristic control room with glowing holographic dashboards showing system health metrics, 99.9% uptime, and a balanced scale representing reliability versus speed, cinematic lighting, photorealistic.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A dynamic 3D animation showing a digital highway where data packets travel smoothly. A roadblock appears (failure), but traffic seamlessly reroutes to an alternate path, illustrating high availability and blast radius reduction. Clean, modern tech aesthetic.",
       "objectives": [
         "Differentiate availability, reliability, and durability",
         "Define SLI/SLO/error budget and describe how teams use them",
@@ -51,30 +53,30 @@ export const CloudComputing201Module: LearningModule = {
           "id": "cloud-computing-201-l01-c1",
           "kind": "concept",
           "title": "Reliability Language That Teams Share",
-          "content": "In the exciting field of cloud computing, it's really important for teams to communicate clearly and use the same terms when they talk about reliability. Let's explore some essential concepts together! First, we have Availability. This term tells us whether users can access a service at any moment. Imagine trying to log into your favorite game; if you can get in, that means the service is available! Next up is Reliability. This is about how well that service performs over time without running into problems. Think of it like a car that runs smoothly for years without breaking down. Then we have Durability, which focuses on the safety of the data stored in the cloud. It ensures that even if something goes wrong, like a power outage, your important files and information stay safe and sound.\nNow, let’s talk about Site Reliability Engineering, often called SRE. This is a special approach that uses specific measurements known as service-level indicators, or SLIs, to evaluate the quality that users experience. For example, SLIs can measure how often requests are successful or how quickly they are processed. Based on these measurements, teams set goals called service-level objectives, or SLOs. An example of an SLO might be that 99.9% of requests should be successful over a 30-day period.\nFinally, there’s something called the error budget. This is the difference between perfect performance (which is 100%) and the SLO. The error budget helps teams decide how quickly they can release new features. If they use up their error budget too quickly, they need to slow down on introducing new features and focus on fixing any reliability issues first. This way, they can ensure that users have a great experience with the service they provide!\nContext recap: In the exciting field of cloud computing, it's really important for teams to communicate clearly and use the same terms when they talk about reliability. Let's explore some essential concepts together! First, we have Availability. This term tells us whether users can access a service at any moment.\nWhy this matters: Reliability Language That Teams Share helps learners in Computer Science connect ideas from Cloud Platform Engineering to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "Clear communication is the bedrock of cloud reliability. When engineers discuss system health, they rely on specific terms to ensure everyone is on the same page. Availability measures whether users can access a service at any given moment—if you can log in, it's available. Reliability tracks how well that service performs over time without degrading or failing. Durability focuses on data safety, ensuring that even during a catastrophic event like a power outage, your stored files remain intact. Site Reliability Engineering (SRE) uses specific measurements known as Service-Level Indicators (SLIs) to evaluate the user experience, such as request success rates or processing speed. Based on these SLIs, teams set Service-Level Objectives (SLOs), like aiming for 99.9% successful requests over 30 days. The gap between perfect 100% performance and your SLO is your Error Budget. This budget dictates how quickly teams can release new features; if the budget is depleted, feature releases pause so the team can focus entirely on stabilizing the system."
         },
         {
           "id": "cloud-computing-201-l01-c2",
           "kind": "example",
           "title": "Failure Domains and Blast Radius",
-          "content": "A failure domain is a specific area where problems are likely to happen together. Think of it like a neighborhood where if one house has an issue, the others might too. This could be a single availability zone, a database cluster, or a shared cache. To keep services running smoothly, platform engineers work hard to reduce what is known as the blast radius. This term refers to the potential impact of a failure. To minimize this impact, engineers try to keep different workloads separate across various zones. This means that if one zone has a problem, it won’t affect the others as much. They also ensure that services that don’t hold onto information can easily scale up or down based on demand. This flexibility is important for maintaining service reliability. For example, imagine a service that uses API pods running in three different zones behind a load balancer. Each zone is capable of handling 60% of the usual traffic. If one zone fails, the service can still operate because the remaining zones can automatically adjust to take on the extra load. This way, users can continue to access the service without interruption, demonstrating how careful planning and design can lead to more reliable systems.\nContext recap: A failure domain is a specific area where problems are likely to happen together. Think of it like a neighborhood where if one house has an issue, the others might too. This could be a single availability zone, a database cluster, or a shared cache. To keep services running smoothly, platform engineers work hard to reduce what is known as the blast radius.\nWhy this matters: Failure Domains and Blast Radius helps learners in Computer Science connect ideas from Cloud Platform Engineering to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "A failure domain is a specific section of your architecture where problems are likely to happen together—like a single availability zone, a database cluster, or a shared cache. To keep services running smoothly, platform engineers work to reduce the 'blast radius,' which is the potential impact of a single failure. By separating workloads across multiple zones, engineers ensure that a localized outage doesn't take down the entire system. For example, imagine a service running API pods across three different zones behind a load balancer, with each zone capable of handling 60% of the usual traffic. If one zone fails, the remaining two can automatically absorb the extra load. This architectural flexibility ensures that users continue to access the service without interruption, demonstrating how careful design minimizes the blast radius and maximizes resilience."
         },
         {
           "id": "cloud-computing-201-l01-c3",
           "kind": "recap",
           "title": "Reliability as a Product Requirement",
-          "content": "Reliability is a vital part of creating a successful product, and it should be considered from the very start of the development process, not just added later on. One way to ensure reliability is through the use of service-level objectives, or SLOs. These objectives help turn broad ideas, like 'the service should be fast,' into specific, measurable goals that engineers can work towards. For example, if a team decides that their checkout process should have a latency of under 300 milliseconds for 95% of the transactions, they can use this target to guide their decisions about how to design their system, including how to manage data storage and how to handle user requests efficiently.\nMoreover, experienced teams keep a close eye on both leading indicators and lagging indicators. Leading indicators are metrics that can predict future performance, such as how many requests are waiting in line (queue depth) or how busy the system is (saturation). On the other hand, lagging indicators reflect past performance, like the number of customer complaints or failed transactions. By monitoring these indicators, teams can spot potential problems early and fix them before users even notice any issues. This proactive approach is essential for maintaining a high level of reliability and ensuring a positive experience for all users.\nContext recap: Reliability is a vital part of creating a successful product, and it should be considered from the very start of the development process, not just added later on. One way to ensure reliability is through the use of service-level objectives, or SLOs. These objectives help turn broad ideas, like 'the service should be fast,' into specific, measurable goals that engineers can work towards. For example, if a team decides that their checkout process should have a latency of under 300 milliseconds for 95% of the transactions, they can use this target to guide their decisions about how to design their system, including how to manage data storage and how to handle user requests efficiently."
+          "content": "Reliability isn't just an operational afterthought; it is a core product requirement that must be designed from day one. Service-Level Objectives (SLOs) help translate vague goals like 'the app should be fast' into measurable engineering targets, such as '95% of checkout transactions must complete in under 300 milliseconds.' To maintain these targets, experienced teams monitor both leading and lagging indicators. Leading indicators, like queue depth or CPU saturation, predict future performance and allow teams to intervene before users notice a slowdown. Lagging indicators, such as customer support tickets or failed transaction logs, reflect past performance. By proactively managing these metrics, teams ensure a consistently high-quality user experience while balancing the need for rapid innovation."
         }
       ],
       "flashcards": [
         {
           "id": "cloud-computing-201-l01-f1",
-          "front": "SLI",
+          "front": "SLI (Service-Level Indicator)",
           "back": "A quantitative measure of service behavior, such as success rate, latency, or error ratio observed by users."
         },
         {
           "id": "cloud-computing-201-l01-f2",
-          "front": "SLO",
+          "front": "SLO (Service-Level Objective)",
           "back": "A target value for an SLI over a time window, for example 99.9% successful requests over 30 days."
         },
         {
@@ -95,13 +97,16 @@ export const CloudComputing201Module: LearningModule = {
           "title": "SLO Scorecard",
           "content": "One-page visual for SLI definitions, objective windows, and monthly error-budget burn examples."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/cloud-computing-201-l01.png"
     },
     {
       "id": "cloud-computing-201-l02",
       "title": "Observability and Incident Response Lab",
       "type": "interactive",
       "duration": 15,
+      "lessonImagePrompt": "Imagen 4 prompt: A split-screen digital illustration. On the left, a magnifying glass over lines of code (logs). On the right, a glowing interconnected web of nodes (traces) and a line graph spiking (metrics). Cyberpunk color palette.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: Fast-paced point-of-view shot of an engineer's multi-monitor setup during an incident. Red alerts flash, then the screen transitions to a structured timeline showing detection, triage, and resolution, ending with a green 'System Restored' checkmark.",
       "objectives": [
         "Use metrics, logs, and traces together for diagnosis",
         "Identify noisy alerts and propose actionable alert rules",
@@ -112,13 +117,19 @@ export const CloudComputing201Module: LearningModule = {
           "id": "cloud-computing-201-l02-c1",
           "kind": "concept",
           "title": "From Monitoring to Observability",
-          "content": "Monitoring is an important process that helps teams keep track of known issues by using specific dashboards and thresholds that have been set up in advance. This means that when something goes wrong, teams can quickly check these dashboards to see if any of the known problems are occurring. However, observability takes this a step further. It allows teams to investigate unknown problems by analyzing data from various parts of the system. This is crucial because sometimes issues arise that teams did not anticipate.\nMetrics are one of the tools used in observability; they provide insights into trends and show how much the system is being utilized over time. Logs are another essential tool; they keep detailed records of events that happen within the system, which can be very helpful for understanding what went wrong. Lastly, traces help teams understand how requests travel through different services, giving a clearer picture of the entire process.\nIf teams only focus on monitoring basic things like CPU usage and memory, they might overlook significant application-level problems. For example, they could miss sudden increases in the time it takes for external services to respond or delays in queues that could negatively impact the user experience. By embracing observability, teams can better identify and resolve these issues, leading to a smoother and more reliable service for users.\nContext recap: Monitoring is an important process that helps teams keep track of known issues by using specific dashboards and thresholds that have been set up in advance. This means that when something goes wrong, teams can quickly check these dashboards to see if any of the known problems are occurring. However, observability takes this a step further. It allows teams to investigate unknown problems by analyzing data from various parts of the system.\nWhy this matters: From Monitoring to Observability helps learners in Computer Science connect ideas from Cloud Platform Engineering to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "Monitoring helps teams track known issues using predefined dashboards and thresholds. When a known problem occurs, monitoring tools immediately flag it. However, modern cloud environments are complex, and unpredictable issues often arise. This is where observability comes in. Observability allows teams to investigate unknown problems by analyzing the internal state of a system through three core pillars: Metrics, Logs, and Traces. Metrics provide high-level trends over time, such as CPU usage or request rates. Logs offer detailed, timestamped records of specific events, crucial for understanding the 'what' and 'why' of an error. Traces follow a single user request as it travels across multiple microservices, pinpointing exactly where a bottleneck occurs. Relying solely on basic monitoring might cause you to miss application-level degradation, but full observability empowers you to diagnose and resolve complex, unforeseen anomalies."
         },
         {
           "id": "cloud-computing-201-l02-c2",
           "kind": "practice",
           "title": "Incident Workflow",
-          "content": "An effective incident response process is crucial for maintaining the reliability of services in cloud computing. This process consists of several important steps: detection, triage, mitigation, communication, and review. When an incident occurs, the first responders are the heroes of the situation. They act quickly to stabilize the service and reduce its impact on users. This can involve several strategies, such as shifting traffic to other servers to balance the load, using feature flags to temporarily disable certain functions that may be causing issues, rolling back to a previous version of the service that was working well, or setting limits on how much traffic the service can handle at one time to prevent overload. During the mitigation phase, one team member is responsible for regularly updating everyone on the status of the incident, ensuring that all stakeholders are informed. Meanwhile, another team member investigates the root cause of the problem to understand what went wrong. Once the service is restored and functioning normally again, the team holds a blameless post-incident review. This is an important step where they reflect on what happened without placing blame on individuals. They analyze the incident to learn valuable lessons and convert their findings into specific tasks with deadlines. This proactive approach helps to prevent similar issues from occurring in the future, ensuring a more resilient service for users.\nContext recap: An effective incident response process is crucial for maintaining the reliability of services in cloud computing. This process consists of several important steps: detection, triage, mitigation, communication, and review. When an incident occurs, the first responders are the heroes of the situation. They act quickly to stabilize the service and reduce its impact on users.\nWhy this matters: Incident Workflow helps learners in Computer Science connect ideas from Cloud Platform Engineering to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "An effective incident response process is vital for maintaining cloud reliability. The workflow consists of detection, triage, mitigation, communication, and review. When an alert fires, first responders act quickly to stabilize the service. Their immediate goal is mitigation—reducing the impact on users—not necessarily finding the root cause right away. Mitigation strategies include shifting traffic to healthy servers, using feature flags to disable a buggy new feature, or rolling back to a previous stable version. During this phase, clear communication is essential; a designated team member updates stakeholders while engineers focus on the fix. Once the system is stable, the team conducts a blameless post-incident review (PIR). This review focuses on systemic failures rather than human error, turning lessons learned into actionable engineering tasks to prevent the issue from recurring."
+        },
+        {
+          "id": "cloud-computing-201-l02-c3",
+          "kind": "concept",
+          "title": "Building an Incident Timeline",
+          "content": "Creating a precise incident timeline is a critical part of the post-incident review. A well-constructed timeline documents the exact sequence of events: when the first anomaly was detected by observability tools, when the alert was acknowledged, the steps taken during triage, the moment mitigation was applied, and when full service was restored. This chronological mapping helps teams calculate key metrics like Mean Time to Detect (MTTD) and Mean Time to Recover (MTTR). By analyzing the timeline, engineers can identify bottlenecks in their response process. For instance, if it took 20 minutes to acknowledge an alert, the team might need to adjust their paging rules or reduce alert fatigue. Ultimately, the timeline transforms a chaotic outage into a structured learning opportunity."
         }
       ],
       "interactiveActivities": [
@@ -201,6 +212,8 @@ export const CloudComputing201Module: LearningModule = {
       "title": "Checkpoint 1: Reliability and Ops",
       "type": "quiz",
       "duration": 10,
+      "lessonImagePrompt": "Imagen 4 prompt: A sleek, modern digital checkpoint gate with glowing blue and green lights, symbolizing a successful system health check in a cloud environment, isometric 3D style.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A looping animation of a glowing digital lock clicking into place, followed by a burst of data particles flowing upward, representing knowledge mastery and system security.",
       "quizBlueprint": {
         "totalQuestions": 5,
         "timeLimitMinutes": 10,
@@ -351,13 +364,16 @@ export const CloudComputing201Module: LearningModule = {
           "title": "Incident Core Loop",
           "content": "Acknowledge, Assess, Mitigate, Communicate, Review."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/cloud-computing-201-l03.png"
     },
     {
       "id": "cloud-computing-201-l04",
       "title": "Automation, IaC, and Progressive Delivery",
       "type": "video",
       "duration": 13,
+      "lessonImagePrompt": "Imagen 4 prompt: A robotic arm assembling glowing blocks of code into a structured skyscraper, representing Infrastructure as Code and automated deployment, vibrant neon colors, high tech.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A visual metaphor of a train switching tracks smoothly without stopping. The train represents user traffic, and the tracks represent blue/green deployment environments. Seamless transition, high-quality 3D render.",
       "objectives": [
         "Explain why immutable infrastructure reduces configuration drift",
         "Describe CI/CD guardrails for safer releases",
@@ -368,19 +384,19 @@ export const CloudComputing201Module: LearningModule = {
           "id": "cloud-computing-201-l04-c1",
           "kind": "concept",
           "title": "Infrastructure as Code Discipline",
-          "content": "Infrastructure as Code, often abbreviated as IaC, is an important practice in cloud computing that allows teams to manage cloud resources in a more efficient and organized way. Instead of manually clicking through a console to set up and configure resources, teams treat these resources like pieces of code. This means they can write code that defines everything from networks and computing power to access policies and data services. By using detailed templates, teams can ensure that their cloud environments are consistent and reliable.\nOnce these templates are created, they go through a review process called pull requests. This step is crucial because it allows team members to check each other's work, ensuring that everything is accurate and meets the necessary standards before any changes are made.\nOne of the big advantages of using IaC is that it makes it much easier to audit changes. This means teams can track what changes were made, when they were made, and who made them, which is very important for maintaining security and compliance. Additionally, if something goes wrong, teams can quickly recover from disasters because they can recreate their environments reliably using the templates.\nAnother helpful feature of IaC is drift detection. This tool compares the actual state of the cloud resources with the intended state defined in the templates. If there are any differences, or 'drifts,' it alerts the team to these unmanaged changes before they can cause outages or other issues. This proactive approach helps maintain the stability and reliability of cloud environments, making IaC a vital discipline in cloud platform engineering.\nContext recap: Infrastructure as Code, often abbreviated as IaC, is an important practice in cloud computing that allows teams to manage cloud resources in a more efficient and organized way. Instead of manually clicking through a console to set up and configure resources, teams treat these resources like pieces of code. This means they can write code that defines everything from networks and computing power to access policies and data services. By using detailed templates, teams can ensure that their cloud environments are consistent and reliable.\nWhy this matters: Infrastructure as Code Discipline helps learners in Computer Science connect ideas from Cloud Platform Engineering to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "Infrastructure as Code (IaC) revolutionizes how teams manage cloud resources. Instead of manually clicking through a web console to configure servers, networks, and databases, engineers write declarative code templates. This approach treats infrastructure with the same rigor as application code. Changes are proposed via pull requests, allowing peers to review and validate modifications before they go live. A major benefit of IaC is the prevention of 'configuration drift'—the dangerous scenario where the actual state of a server diverges from its documented state due to manual tweaks. With IaC, drift detection tools automatically flag unmanaged changes. Furthermore, if a disaster occurs, IaC allows teams to rapidly and reliably recreate their entire environment from scratch, ensuring consistency, security, and compliance."
         },
         {
           "id": "cloud-computing-201-l04-c2",
           "kind": "example",
           "title": "CI/CD Safety Rails",
-          "content": "In the world of software development, having reliable continuous integration and continuous delivery (CI/CD) pipelines is crucial for ensuring that our applications run smoothly and safely. These pipelines incorporate several important safety measures to catch potential issues before they affect users. For instance, linting helps identify and fix code errors, while unit tests check individual components of the software to ensure they work as intended. Integration tests examine how different parts of the application work together, and policy checks ensure that the code meets specific standards. Additionally, signing artifacts before deployment adds a layer of security, confirming that the code is authentic and has not been tampered with.\nWhen it comes to releasing new features, it's essential that the process stops if any quality checks fail. This is especially important for high-risk systems, where even a small mistake can lead to significant problems. Runtime guardrails act as safety nets that automatically revert changes if the error rate or response time exceeds a predefined limit, helping to maintain a smooth user experience.\nMoreover, experienced teams often conduct deployment simulations and practice scenarios, known as game days. These exercises allow teams to test their rollback procedures under real-world conditions, ensuring that they can respond effectively to any issues that arise during deployment, not just in a controlled testing environment. By implementing these practices, teams can enhance the reliability and safety of their software delivery processes.\nContext recap: In the world of software development, having reliable continuous integration and continuous delivery (CI/CD) pipelines is crucial for ensuring that our applications run smoothly and safely. These pipelines incorporate several important safety measures to catch potential issues before they affect users. For instance, linting helps identify and fix code errors, while unit tests check individual components of the software to ensure they work as intended. Integration tests examine how different parts of the application work together, and policy checks ensure that the code meets specific standards.\nWhy this matters: CI/CD Safety Rails helps learners in Computer Science connect ideas from Cloud Platform Engineering to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "Continuous Integration and Continuous Delivery (CI/CD) pipelines are the automated assembly lines of software development. To prevent bad code from reaching users, these pipelines are equipped with strict safety rails. Linting tools catch syntax errors early, while unit and integration tests verify that individual components and their interactions function correctly. Policy checks ensure compliance with security standards, and artifact signing guarantees the code hasn't been tampered with. If any of these checks fail, the pipeline halts immediately. For high-risk deployments, runtime guardrails act as an automated safety net, instantly reverting changes if error rates or latency spike post-deployment. Elite engineering teams also conduct 'game days'—simulated failure scenarios that test these automated rollbacks in real-world conditions, building confidence in their safety mechanisms."
         },
         {
           "id": "cloud-computing-201-l04-c3",
           "kind": "concept",
           "title": "Progressive Delivery Patterns",
-          "content": "Progressive delivery patterns are important strategies that help teams release new features in a careful and controlled way. One common method is called rolling deployment. This approach allows teams to gradually replace parts of a service without having to shut everything down at once. This means that users can continue to use the service while updates are being made, which helps to avoid disruptions.\nAnother method is known as blue/green deployment. In this strategy, teams maintain two separate environments: one that is currently live and one that is ready to go. Once the new environment has been tested and validated, traffic is switched over to it. This ensures that if anything goes wrong, the team can quickly revert back to the original environment without affecting users.\nCanary deployment is another technique where a new feature is first released to a small group of users. This allows the team to observe how the feature performs and gather feedback before making it available to everyone.\nLastly, feature flags are a valuable tool that allows teams to separate the process of deploying code from actually releasing it to users. This means that teams can prepare new features in the background and then activate them for specific groups of users when they are ready. This approach helps teams manage risk and improve the overall user experience.\nContext recap: Progressive delivery patterns are important strategies that help teams release new features in a careful and controlled way. One common method is called rolling deployment. This approach allows teams to gradually replace parts of a service without having to shut everything down at once. This means that users can continue to use the service while updates are being made, which helps to avoid disruptions.\nWhy this matters: Progressive Delivery Patterns helps learners in Computer Science connect ideas from Cloud Platform Engineering to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "Progressive delivery minimizes the risk of releasing new features by exposing them to users gradually. A 'rolling deployment' updates instances sequentially, ensuring the service remains available, though it can be slow to roll back. A 'blue/green deployment' spins up a completely new environment (green) alongside the existing one (blue). Once the green environment passes all tests, traffic is instantly switched over, allowing for an immediate rollback if issues arise. A 'canary deployment' routes a tiny percentage of traffic (e.g., 1%) to the new version. If observability metrics remain healthy, the rollout gradually expands to 100%. Finally, 'feature flags' decouple deployment from release. Code can be deployed to production but hidden behind a toggle, allowing teams to turn features on or off for specific user segments instantly without redeploying code."
         }
       ],
       "flashcards": [
@@ -407,13 +423,16 @@ export const CloudComputing201Module: LearningModule = {
           "title": "Release Strategy Comparison",
           "content": "Side-by-side timeline of rolling, blue/green, and canary rollout behavior with rollback points."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/cloud-computing-201-l04.png"
     },
     {
       "id": "cloud-computing-201-l05",
       "title": "Capacity, Scaling, and FinOps Workshop",
       "type": "interactive",
       "duration": 15,
+      "lessonImagePrompt": "Imagen 4 prompt: A glowing digital scale balancing a stack of gold coins on one side and a server rack on the other, representing FinOps and cost-aware architecture, sleek corporate tech style.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: An animation of a cloud server expanding and contracting like a breathing lung as user traffic (represented by glowing dots) increases and decreases, demonstrating elastic autoscaling.",
       "objectives": [
         "Estimate baseline and peak capacity requirements",
         "Choose autoscaling triggers that align with user experience",
@@ -424,13 +443,19 @@ export const CloudComputing201Module: LearningModule = {
           "id": "cloud-computing-201-l05-c1",
           "kind": "concept",
           "title": "Right-Sizing and Autoscaling Signals",
-          "content": "Autoscaling is a smart technique that helps adjust the amount of resources we use based on how many users are accessing a service at any given time. However, for autoscaling to be truly effective, we need to pay attention to signals that show us what users are really experiencing, rather than just focusing on technical data that might not tell the whole story. For instance, while monitoring CPU usage is crucial for tasks that require a lot of computing power, there are other important metrics to consider. These include queue depth, which tells us how many requests are waiting to be processed, request latency, which measures how long it takes for a request to be completed, and the number of concurrent sessions, which indicates how many users are using the service at the same time. By looking at these factors, we can get a clearer picture of how our users are impacted. Rightsizing is the first step in this process, where we analyze the workloads to understand their specific needs. After that, we choose the right types of instances based on important factors such as memory usage, network speed, and storage performance patterns. This careful selection helps ensure that we provide the best possible experience for our users while optimizing our resources effectively.\nContext recap: Autoscaling is a smart technique that helps adjust the amount of resources we use based on how many users are accessing a service at any given time. However, for autoscaling to be truly effective, we need to pay attention to signals that show us what users are really experiencing, rather than just focusing on technical data that might not tell the whole story. For instance, while monitoring CPU usage is crucial for tasks that require a lot of computing power, there are other important metrics to consider. These include queue depth, which tells us how many requests are waiting to be processed, request latency, which measures how long it takes for a request to be completed, and the number of concurrent sessions, which indicates how many users are using the service at the same time."
+          "content": "Autoscaling dynamically adjusts computing resources to match user demand, ensuring performance during traffic spikes and saving money during lulls. However, scaling based purely on technical metrics like CPU usage can be misleading. For instance, a server might have low CPU utilization but still provide a poor user experience if it's waiting on a slow database. Effective autoscaling relies on signals that reflect actual user experience. Metrics like queue depth (how many requests are waiting), request latency (how long a response takes), and concurrent sessions provide a much clearer picture of system stress. Before implementing autoscaling, teams must 'right-size' their workloads by analyzing memory, network, and storage patterns to select the most efficient instance types, establishing a solid baseline for elastic growth."
         },
         {
           "id": "cloud-computing-201-l05-c2",
           "kind": "concept",
           "title": "FinOps Metrics That Matter",
-          "content": "FinOps, which stands for financial operations, is an important practice that helps connect the choices made by engineering teams to the overall success of a business. It goes beyond simply looking at how much money is spent each month. Instead, teams focus on specific unit cost metrics that provide deeper insights into spending. For example, they might track the cost for every 1,000 API calls, the cost associated with each active user, or the expenses related to running a data pipeline. By monitoring these metrics, teams can clearly see the trade-offs involved in optimizing their systems.\nTo illustrate this, consider the scenario where a team decides to add more cache nodes to their infrastructure. While this decision might lead to higher infrastructure costs in the short term, it can also have several positive effects. For instance, it can significantly reduce the load on the database, which in turn lowers the cost per transaction. Additionally, it can improve the speed at which users receive responses, enhancing their overall experience. Understanding these relationships is crucial for making informed decisions that benefit both the technology and the business as a whole.\nContext recap: FinOps, which stands for financial operations, is an important practice that helps connect the choices made by engineering teams to the overall success of a business. It goes beyond simply looking at how much money is spent each month. Instead, teams focus on specific unit cost metrics that provide deeper insights into spending. For example, they might track the cost for every 1,000 API calls, the cost associated with each active user, or the expenses related to running a data pipeline.\nWhy this matters: FinOps Metrics That Matter helps learners in Computer Science connect ideas from Cloud Platform Engineering to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "FinOps (Financial Operations) bridges the gap between engineering decisions and business outcomes. Instead of just looking at the total monthly cloud bill, FinOps focuses on 'unit economics'—metrics that tie costs directly to business value. Examples include the cost per 1,000 API calls, cost per active user, or cost per gigabyte of processed data. Tracking these metrics allows teams to make informed architectural trade-offs. For example, introducing a caching layer might increase upfront infrastructure costs, but by drastically reducing the load on an expensive primary database, the overall cost per transaction drops. Understanding these unit metrics empowers engineers to design systems that are not only highly performant but also financially sustainable."
+        },
+        {
+          "id": "cloud-computing-201-l05-c3",
+          "kind": "concept",
+          "title": "Balancing Cost and Performance",
+          "content": "Achieving the perfect balance between cost and performance requires continuous tuning. Engineers must identify waste, such as orphaned storage volumes, over-provisioned environments, or idle resources running outside of business hours. Implementing automated shutdown schedules for non-production environments is a quick FinOps win. Additionally, leveraging purchasing strategies like Reserved Instances or Spot Instances for fault-tolerant batch jobs can yield massive savings. The goal of FinOps isn't simply to spend less; it's to maximize the business value of every dollar spent in the cloud. By integrating cost-awareness into the daily engineering workflow, teams ensure that scalability doesn't lead to runaway expenses."
         }
       ],
       "interactiveActivities": [
@@ -483,13 +508,16 @@ export const CloudComputing201Module: LearningModule = {
           "title": "FinOps Worksheet",
           "content": "Template to compute cost per transaction before and after architecture changes."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/cloud-computing-201-l05.png"
     },
     {
       "id": "cloud-computing-201-l06",
       "title": "Checkpoint 2: Delivery and FinOps",
       "type": "quiz",
       "duration": 11,
+      "lessonImagePrompt": "Imagen 4 prompt: A futuristic vault door opening to reveal glowing data streams and financial charts, symbolizing the intersection of cloud delivery and FinOps, cinematic lighting.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A fast-paced montage of automated code deployment pipelines merging with upward-trending financial graphs, ending with a glowing 'Optimization Complete' badge.",
       "quizBlueprint": {
         "totalQuestions": 6,
         "timeLimitMinutes": 11,
@@ -665,13 +693,16 @@ export const CloudComputing201Module: LearningModule = {
           "title": "SAFE Release",
           "content": "Small batches, Automated checks, Fast rollback, Evidence-driven ramp."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/cloud-computing-201-l06.png"
     },
     {
       "id": "cloud-computing-201-l07",
       "title": "Platform Design Studio",
       "type": "interactive",
       "duration": 16,
+      "lessonImagePrompt": "Imagen 4 prompt: A holographic blueprint of a global cloud architecture floating above a modern conference table, showing interconnected regions, databases, and users, photorealistic.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A time-lapse style animation of a complex cloud architecture being drawn line-by-line on a dark digital canvas, highlighting load balancers, databases, and user nodes lighting up globally.",
       "objectives": [
         "Synthesize reliability, delivery, and cost practices in one architecture",
         "Defend design trade-offs using measurable SLO and cost outcomes",
@@ -682,13 +713,19 @@ export const CloudComputing201Module: LearningModule = {
           "id": "cloud-computing-201-l07-c1",
           "kind": "practice",
           "title": "Case: Global Learning API",
-          "content": "Picture yourself as the platform engineer for a dynamic learning platform that helps students from three different regions. This platform is super busy during the evenings, especially when students are doing their homework, and it can see traffic spikes that are eight times higher than usual! Right now, the system has a few challenges: it only has one main database region, which can be a single point of failure, it doesn't have the ability to trace requests, and it requires someone to manually approve updates at midnight. Your exciting challenge is to redesign this system. You need to make it strong and resilient so that it can handle the high traffic without crashing. Additionally, you should aim to make the process of releasing updates faster and safer, ensuring that everything runs smoothly. Finally, it's important to keep the financial side predictable, meaning you want to manage costs effectively while providing a great service to all the students. This is a fantastic opportunity to use your creativity and technical skills to improve the platform!\nContext recap: Picture yourself as the platform engineer for a dynamic learning platform that helps students from three different regions. This platform is super busy during the evenings, especially when students are doing their homework, and it can see traffic spikes that are eight times higher than usual! Right now, the system has a few challenges: it only has one main database region, which can be a single point of failure, it doesn't have the ability to trace requests, and it requires someone to manually approve updates at midnight. Your exciting challenge is to redesign this system."
+          "content": "Picture yourself as the lead platform engineer for a dynamic global learning platform serving students across three continents. During evening homework hours, traffic spikes up to eight times the normal baseline. Currently, the system faces several critical challenges: it relies on a single main database region (a massive single point of failure), lacks distributed tracing for debugging, and requires manual approval for midnight updates. Your challenge is to redesign this architecture. You must make it resilient enough to handle massive traffic spikes without crashing, automate the release process to make updates faster and safer, and implement FinOps practices to keep costs predictable. This case study requires you to synthesize everything you've learned about reliability, observability, automation, and cost management."
         },
         {
           "id": "cloud-computing-201-l07-c2",
           "kind": "recap",
           "title": "Design Rubric",
-          "content": "When designing a strong platform, there are several important elements you should include. First, you need to define clear service-level objectives (SLOs). These are specific goals that help you understand how well your service is performing. Next, having an error-budget policy is crucial. This policy helps you manage how many errors are acceptable before you need to make changes. Additionally, you should create a plan for observability. This means you need to know how to monitor your system effectively so you can spot issues quickly. A solid release strategy is also necessary to ensure that updates are deployed smoothly. Furthermore, you should establish triggers for scaling your resources, which means knowing when to add or reduce capacity based on demand. Lastly, it's important to set guidelines for managing costs to keep your project within budget. Sometimes, you may need to make trade-offs, and that’s okay as long as you can measure the impact. For instance, adding regional read replicas might increase your expenses, but it can significantly lower latency for users and enhance availability during failover situations, making your service more reliable overall.\nContext recap: When designing a strong platform, there are several important elements you should include. First, you need to define clear service-level objectives (SLOs). These are specific goals that help you understand how well your service is performing. Next, having an error-budget policy is crucial.\nWhy this matters: Design Rubric helps learners in Computer Science connect ideas from Cloud Platform Engineering to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "When evaluating your platform redesign, rely on a structured design rubric. First, establish clear Service-Level Objectives (SLOs) to define what 'success' looks like for the user experience. Next, implement an error-budget policy to govern when feature releases should be paused in favor of reliability fixes. Your observability plan must detail how you will monitor metrics, logs, and traces to detect anomalies quickly. Your release strategy should leverage progressive delivery patterns, like canary deployments, to minimize the blast radius of bad updates. Finally, define autoscaling triggers based on user-centric metrics (like latency) and establish FinOps guidelines to track unit costs. Remember, architecture is about trade-offs. For instance, adding regional read replicas will increase your monthly bill, but it drastically lowers latency and improves failover availability. Always justify your trade-offs with measurable data."
+        },
+        {
+          "id": "cloud-computing-201-l07-c3",
+          "kind": "practice",
+          "title": "Creating Your 30-Day Action Plan",
+          "content": "A great architecture on paper is useless without an execution strategy. Your final task is to produce an actionable 30-day platform improvement plan. Break down your massive redesign into incremental, high-impact steps. Week 1 might focus on implementing distributed tracing to gain visibility into the current bottlenecks. Week 2 could involve containerizing the application and setting up basic Infrastructure as Code (IaC) templates. Week 3 might introduce automated CI/CD pipelines with linting and unit tests. Week 4 could culminate in deploying a multi-region database failover mechanism. By prioritizing tasks based on their impact on reliability and cost, you transform a daunting architectural overhaul into a manageable, measurable engineering roadmap."
         }
       ],
       "metadata": {
@@ -705,7 +742,8 @@ export const CloudComputing201Module: LearningModule = {
           "title": "Architecture Review Canvas",
           "content": "Template with sections for reliability target, telemetry plan, release plan, and FinOps KPI baseline."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/cloud-computing-201-l07.png"
     }
   ]
 };

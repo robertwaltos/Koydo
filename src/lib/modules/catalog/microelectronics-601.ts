@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const Microelectronics601Module: LearningModule = {
+export const microelectronics_601_Module: LearningModule = {
   "id": "microelectronics-601",
   "title": "Microelectronics Research and Leadership",
   "description": "Post-401 specialization in Microelectronics, focused on microelectronics systems diagnostics, microelectronics operations and execution design, microelectronics impact and tradeoff analysis, and microelectronics governance and leadership through advanced casework, simulation, and defense-based checkpoints.",
@@ -14,19 +14,19 @@ export const Microelectronics601Module: LearningModule = {
   ],
   "minAge": 17,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en",
     "es"
   ],
   "learningObjectives": [
-    "Apply advanced methods for microelectronics systems diagnostics in high-constraint environments",
-    "Design robust systems for microelectronics operations and execution design with measurable control gates",
-    "Evaluate interventions in microelectronics impact and tradeoff analysis with research-grade rigor",
-    "Operationalize microelectronics governance and leadership with accountable governance and escalation pathways",
-    "Lead cross-functional decision reviews with explicit tradeoff communication",
-    "Defend recommendations under expert critique using evidence and uncertainty bounds"
+    "Apply advanced methods for microelectronics systems diagnostics in high-constraint environments.",
+    "Design robust systems for microelectronics operations and execution with measurable control gates.",
+    "Evaluate interventions in microelectronics impact and tradeoff analysis with research-grade rigor.",
+    "Operationalize microelectronics governance and leadership with accountable governance and escalation pathways.",
+    "Lead cross-functional decision reviews with explicit tradeoff communication.",
+    "Defend recommendations under expert critique using evidence and uncertainty bounds."
   ],
   "lessons": [
     {
@@ -38,8 +38,8 @@ export const Microelectronics601Module: LearningModule = {
         {
           "id": "microelectronics-601-l01-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Causal Loop Diagram Example",
+          "content": "A visual example of interconnected system variables and feedback loops used in uncertainty modeling. This helps in mapping dependencies before planning interventions."
         }
       ],
       "chunks": [
@@ -47,36 +47,36 @@ export const Microelectronics601Module: LearningModule = {
           "id": "microelectronics-601-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "In this lesson, we will delve into the advanced boundaries of scope within the fascinating field of Microelectronics. Our focus will be on two key areas: first, we will learn how to effectively diagnose microelectronics systems, which involves identifying issues and ensuring they function correctly. Second, we will explore how to design operations and execution plans that are not only efficient but also reliable. Gaining this foundational knowledge is crucial for anyone aspiring to excel in the dynamic world of microelectronics, as it lays the groundwork for future innovations and problem-solving in the industry."
+          "content": "This lesson establishes the advanced boundaries of microelectronics analysis. We focus on two key areas: diagnosing complex microelectronics systems to identify and resolve issues, and designing efficient and reliable operational execution plans. This foundational knowledge is crucial for innovation and high-stakes problem-solving."
         },
         {
           "id": "microelectronics-601-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different factors in a system. They will also identify ranges of uncertainty and understand how various system components depend on one another. This preparation is crucial before planning any interventions, as it helps ensure that decisions are well-informed and effective.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different factors in a system. They will also identify ranges of uncertainty and understand how various system components depend on one another. This preparation is crucial before planning any interventions, as it helps ensure that decisions are well-informed and effective."
+          "content": "Learners will map the causal pathways connecting different factors in a microelectronics system. This includes identifying ranges of uncertainty and understanding component interdependencies. This modeling is an essential prerequisite for planning effective and well-informed system interventions."
         },
         {
           "id": "microelectronics-601-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "In our recap, we emphasize that all claims made in our analyses must be linked to measurable indicators. This means that we need to establish confidence bounds and set up review checkpoints to ensure that our findings are valid and reliable. This practice helps maintain the integrity of our work and supports sound decision-making.\nContext recap: In our recap, we emphasize that all claims made in our analyses must be linked to measurable indicators. This means that we need to establish confidence bounds and set up review checkpoints to ensure that our findings are valid and reliable. This practice helps maintain the integrity of our work and supports sound decision-making."
+          "content": "This recap emphasizes a core principle: all analytical claims must be linked to measurable indicators. We will review the importance of establishing confidence bounds and implementing review checkpoints to ensure findings are valid and reliable, thereby maintaining analytical integrity and supporting sound decision-making."
         }
       ],
       "flashcards": [
         {
           "id": "microelectronics-601-l01-f1",
-          "front": "microelectronics systems diagnostics",
-          "back": "A specialization axis requiring explicit assumptions and measurable constraints."
+          "front": "Microelectronics Systems Diagnostics",
+          "back": "A specialization axis requiring explicit assumptions, measurable constraints, and evidence-based validation."
         },
         {
           "id": "microelectronics-601-l01-f2",
-          "front": "microelectronics operations and execution design",
-          "back": "Execution architecture that determines reliability under stress."
+          "front": "Operational Execution Design",
+          "back": "The architecture of processes and controls that determines a system's reliability under stress."
         },
         {
           "id": "microelectronics-601-l01-f3",
-          "front": "microelectronics impact and tradeoff analysis",
-          "back": "Evaluation discipline for identifying true gains and hidden costs."
+          "front": "Impact and Tradeoff Analysis",
+          "back": "An evaluation discipline for identifying the true gains, hidden costs, and second-order effects of an intervention."
         }
       ]
     },
@@ -89,8 +89,8 @@ export const Microelectronics601Module: LearningModule = {
         {
           "id": "microelectronics-601-l02-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Interactive Workflow Builder",
+          "content": "A tool to design a microelectronics operational workflow with custom control gates, rollback triggers, and escalation paths."
         }
       ],
       "chunks": [
@@ -98,13 +98,13 @@ export const Microelectronics601Module: LearningModule = {
           "id": "microelectronics-601-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "In this interactive lab, learners will have the opportunity to design specialized workflows tailored to their specific needs. They will also conduct stress tests on these workflows by simulating adverse scenarios. This hands-on practice is vital for understanding how to create robust systems that can withstand challenges.\nContext recap: In this interactive lab, learners will have the opportunity to design specialized workflows tailored to their specific needs. They will also conduct stress tests on these workflows by simulating adverse scenarios. This hands-on practice is vital for understanding how to create robust systems that can withstand challenges."
+          "content": "In this interactive lab, learners design specialized operational workflows tailored to specific microelectronics challenges. They will then conduct stress tests on these workflows by simulating adverse scenarios, providing vital hands-on practice in creating robust and resilient systems."
         },
         {
           "id": "microelectronics-601-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "In our recap of the lab, we highlight the importance of integrating checkpoints into workflows. These checkpoints help ensure that processes can be reviewed and adjusted as necessary. Additionally, we will discuss rollback criteria and how to implement threshold-based escalation to manage any issues that arise effectively.\nContext recap: In our recap of the lab, we highlight the importance of integrating checkpoints into workflows. These checkpoints help ensure that processes can be reviewed and adjusted as necessary. Additionally, we will discuss rollback criteria and how to implement threshold-based escalation to manage any issues that arise effectively."
+          "content": "This recap synthesizes the lab's key learnings, focusing on the importance of integrating checkpoints for review and adjustment. We will discuss the architecture of effective control gates, including defining clear rollback criteria and implementing threshold-based escalation protocols to manage issues."
         }
       ],
       "interactiveActivities": [
@@ -142,16 +142,16 @@ export const Microelectronics601Module: LearningModule = {
       "learningAids": [
         {
           "id": "microelectronics-601-l03-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "image",
+          "title": "Key Concepts Review",
+          "content": "A one-page summary of core concepts from Lessons 1 & 2, including diagnostic methods, uncertainty modeling, and control gate architecture."
         }
       ],
       "questions": [
         {
           "id": "microelectronics-601-l03-q1",
           "text": "Which practice most improves microelectronics systems diagnostics decision quality?",
-          "skillId": "microelectronics-601-skill-core",
+          "skillId": "microelectronics-601-skill-diagnostics-foundations",
           "options": [
             {
               "id": "a",
@@ -175,8 +175,8 @@ export const Microelectronics601Module: LearningModule = {
         },
         {
           "id": "microelectronics-601-l03-q2",
-          "text": "At level 601, strong execution for microelectronics operations and execution design requires:",
-          "skillId": "microelectronics-601-skill-execution",
+          "text": "At level 601, strong execution for microelectronics operations requires:",
+          "skillId": "microelectronics-601-skill-execution-design",
           "options": [
             {
               "id": "a",
@@ -201,7 +201,7 @@ export const Microelectronics601Module: LearningModule = {
         {
           "id": "microelectronics-601-l03-q3",
           "text": "A defensible approach to microelectronics impact and tradeoff analysis includes:",
-          "skillId": "microelectronics-601-skill-eval",
+          "skillId": "microelectronics-601-skill-evaluation-rigor",
           "options": [
             {
               "id": "a",
@@ -226,7 +226,7 @@ export const Microelectronics601Module: LearningModule = {
         {
           "id": "microelectronics-601-l03-q4",
           "text": "Mature governance systems connect:",
-          "skillId": "microelectronics-601-skill-governance",
+          "skillId": "microelectronics-601-skill-governance-systems",
           "options": [
             {
               "id": "a",
@@ -247,106 +247,6 @@ export const Microelectronics601Module: LearningModule = {
           ],
           "correctOptionId": "a",
           "explanation": "Governance maturity is the operational link between intent, measurement, and corrective action."
-        },
-        {
-          "id": "microelectronics-601-l03-q5",
-          "text": "What is the best way to compare competing interventions in advanced Microelectronics?",
-          "skillId": "microelectronics-601-skill-advanced-5",
-          "options": [
-            {
-              "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
-            },
-            {
-              "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
-            },
-            {
-              "id": "c",
-              "text": "Switch metrics after results arrive"
-            },
-            {
-              "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
-        },
-        {
-          "id": "microelectronics-601-l03-q6",
-          "text": "In high-stakes Microelectronics Research and Leadership execution, which communication protocol is strongest?",
-          "skillId": "microelectronics-601-skill-advanced-6",
-          "options": [
-            {
-              "id": "a",
-              "text": "Broadcast conclusions without assumptions"
-            },
-            {
-              "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
-            },
-            {
-              "id": "c",
-              "text": "Share only final outcomes after completion"
-            },
-            {
-              "id": "d",
-              "text": "Limit updates to a single informal channel"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
-        },
-        {
-          "id": "microelectronics-601-l03-q7",
-          "text": "A mature remediation loop in advanced Microelectronics should prioritize:",
-          "skillId": "microelectronics-601-skill-advanced-7",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blame assignment without system updates"
-            },
-            {
-              "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
-            },
-            {
-              "id": "c",
-              "text": "One-time fixes without retesting"
-            },
-            {
-              "id": "d",
-              "text": "Issue closure based on elapsed time"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
-        },
-        {
-          "id": "microelectronics-601-l03-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Microelectronics Research and Leadership?",
-          "skillId": "microelectronics-601-skill-advanced-8",
-          "options": [
-            {
-              "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
-            },
-            {
-              "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
-            },
-            {
-              "id": "c",
-              "text": "Ignore correlated failure modes"
-            },
-            {
-              "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
         }
       ]
     },
@@ -359,8 +259,8 @@ export const Microelectronics601Module: LearningModule = {
         {
           "id": "microelectronics-601-l04-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Tradeoff Analysis Matrix",
+          "content": "A visual template for comparing decision options across multiple criteria like cost, reliability, safety, and governance."
         }
       ],
       "chunks": [
@@ -368,19 +268,31 @@ export const Microelectronics601Module: LearningModule = {
           "id": "microelectronics-601-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "In this lesson, we will frame a case that presents competing constraints within microelectronics systems diagnostics. We will analyze the impacts and trade-offs involved in various decisions. Understanding these dynamics is crucial for making informed choices that balance different factors effectively.\nContext recap: In this lesson, we will frame a case that presents competing constraints within microelectronics systems diagnostics. We will analyze the impacts and trade-offs involved in various decisions. Understanding these dynamics is crucial for making informed choices that balance different factors effectively."
+          "content": "This lesson frames a complex case study featuring competing constraints within microelectronics systems diagnostics. We will analyze the impacts and trade-offs of various decisions, developing the skills needed to make informed choices that effectively balance conflicting factors."
         },
         {
           "id": "microelectronics-601-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "In this practice session, learners will compare different options based on several important dimensions, including safety, reliability, cost, equity, and governance. This comparative analysis will help them understand the implications of their choices and the importance of considering multiple perspectives.\nContext recap: In this practice session, learners will compare different options based on several important dimensions, including safety, reliability, cost, equity, and governance. This comparative analysis will help them understand the implications of their choices and the importance of considering multiple perspectives."
+          "content": "Learners will actively compare different strategic options from the case study across multiple dimensions, including safety, reliability, cost, and governance. This comparative analysis sharpens the ability to articulate the implications of each choice and consider diverse perspectives."
         },
         {
           "id": "microelectronics-601-l04-c3",
           "kind": "recap",
           "title": "Decision Memo Pattern",
-          "content": "In our recap, we will discuss the structure of a decision memo. Each recommendation made should include key elements such as assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that decisions are well thought out and prepared for potential challenges.\nContext recap: In our recap, we will discuss the structure of a decision memo. Each recommendation made should include key elements such as assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that decisions are well thought out and prepared for potential challenges."
+          "content": "We conclude by outlining the structure of a professional decision memo. Each recommendation must be supported by explicit assumptions, verifiable evidence, defined risk controls, and pre-planned fallbacks. This structured approach ensures decisions are robust, defensible, and prepared for potential challenges."
+        }
+      ],
+      "flashcards": [
+        {
+          "id": "microelectronics-601-l04-f1",
+          "front": "Competing Constraints",
+          "back": "A common scenario where improving one system metric (e.g., performance) degrades another (e.g., power consumption), requiring a tradeoff decision."
+        },
+        {
+          "id": "microelectronics-601-l04-f2",
+          "front": "Decision Memo",
+          "back": "A structured document that presents a recommendation along with its supporting evidence, assumptions, risks, and mitigation plans."
         }
       ]
     },
@@ -393,8 +305,8 @@ export const Microelectronics601Module: LearningModule = {
         {
           "id": "microelectronics-601-l05-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Simulation Dashboard Guide",
+          "content": "An interactive guide explaining the controls, metrics, and constraints within the simulation environment. This helps connect theory to the decisions made during the exercise."
         }
       ],
       "chunks": [
@@ -402,13 +314,13 @@ export const Microelectronics601Module: LearningModule = {
           "id": "microelectronics-601-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "In this interactive clinic, learners will operate scenario controls while balancing performance and governance constraints. This hands-on experience is essential for understanding how to manage complex systems effectively while adhering to necessary regulations and standards.\nContext recap: In this interactive clinic, learners will operate scenario controls while balancing performance and governance constraints. This hands-on experience is essential for understanding how to manage complex systems effectively while adhering to necessary regulations and standards.\nWhy this matters: Live Scenario Controls helps learners in Microelectronics connect ideas from Microelectronics Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "In this interactive clinic, learners operate scenario controls in a simulated environment, balancing system performance against governance constraints. This hands-on experience is essential for understanding how to manage complex systems effectively while adhering to necessary regulations and standards."
         },
         {
           "id": "microelectronics-601-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "In our recap, we will focus on the design of effective responses that can adapt to changing conditions. It is important that these responses update control gates without losing traceability or accountability. This ensures that all actions taken are transparent and can be reviewed if necessary.\nContext recap: In our recap, we will focus on the design of effective responses that can adapt to changing conditions. It is important that these responses update control gates without losing traceability or accountability. This ensures that all actions taken are transparent and can be reviewed if necessary."
+          "content": "The recap focuses on designing effective responses that adapt to changing conditions within the simulation. We emphasize the importance of updating control gates dynamically without losing traceability or accountability, ensuring all actions are transparent and auditable."
         }
       ],
       "interactiveActivities": [
@@ -416,7 +328,7 @@ export const Microelectronics601Module: LearningModule = {
           "id": "microelectronics-601-l05-act1",
           "type": "scenario",
           "title": "Adverse-Condition Decision Run",
-          "description": "Run a high-pressure microelectronics scenario and tune controls under uncertainty."
+          "description": "Run a high-pressure microelectronics scenario and tune controls under uncertainty to maintain system stability and meet performance targets."
         }
       ]
     },
@@ -428,16 +340,16 @@ export const Microelectronics601Module: LearningModule = {
       "learningAids": [
         {
           "id": "microelectronics-601-l06-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "image",
+          "title": "Decision Memo Checklist",
+          "content": "A checklist outlining the essential components of a defensible recommendation, drawing from lessons in the case study and simulation."
         }
       ],
       "questions": [
         {
           "id": "microelectronics-601-l06-q1",
           "text": "In advanced casework, the first requirement for defensible recommendations is:",
-          "skillId": "microelectronics-601-skill-case1",
+          "skillId": "microelectronics-601-skill-case-foundations",
           "options": [
             {
               "id": "a",
@@ -461,8 +373,8 @@ export const Microelectronics601Module: LearningModule = {
         },
         {
           "id": "microelectronics-601-l06-q2",
-          "text": "A resilient strategy for microelectronics operations and execution design should include:",
-          "skillId": "microelectronics-601-skill-case2",
+          "text": "A resilient strategy for microelectronics operations, as tested in the simulation, should include:",
+          "skillId": "microelectronics-601-skill-resilient-strategy",
           "options": [
             {
               "id": "a",
@@ -482,16 +394,16 @@ export const Microelectronics601Module: LearningModule = {
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Resilience depends on checkpoints, fallback options, and explicit escalation design."
+          "explanation": "Resilience, especially under adverse conditions, depends on checkpoints, fallback options, and explicit escalation design."
         },
         {
           "id": "microelectronics-601-l06-q3",
-          "text": "When evaluating microelectronics impact and tradeoff analysis, which method is most rigorous?",
-          "skillId": "microelectronics-601-skill-case3",
+          "text": "When evaluating the outcome of a simulation run, which method is most rigorous?",
+          "skillId": "microelectronics-601-skill-simulation-evaluation",
           "options": [
             {
               "id": "a",
-              "text": "Single success story without controls"
+              "text": "A single success story without controls"
             },
             {
               "id": "b",
@@ -507,132 +419,57 @@ export const Microelectronics601Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Rigorous evaluation requires comparisons, side-effect analysis, and uncertainty disclosure."
+          "explanation": "Rigorous evaluation requires comparing results to a baseline, analyzing unintended side-effects, and disclosing uncertainty."
         },
         {
           "id": "microelectronics-601-l06-q4",
-          "text": "Advanced governance is strongest when it:",
-          "skillId": "microelectronics-601-skill-case4",
+          "text": "During a simulation, a critical component's failure rate unexpectedly doubles. What is the most resilient immediate action?",
+          "skillId": "microelectronics-601-skill-adaptive-response",
           "options": [
             {
               "id": "a",
-              "text": "Aligns authority, measurement, and remediation obligations"
+              "text": "Continue the simulation to gather more data"
             },
             {
               "id": "b",
-              "text": "Separates policy from operational controls"
+              "text": "Trigger a pre-defined fallback protocol and escalate to the review board"
             },
             {
               "id": "c",
-              "text": "Avoids external review and transparency"
+              "text": "Manually adjust other parameters to compensate"
             },
             {
               "id": "d",
-              "text": "Treats accountability as optional under pressure"
+              "text": "Halt the simulation and discard the results"
             }
           ],
-          "correctOptionId": "a",
-          "explanation": "Mature governance links authority, measurable controls, and corrective action."
+          "correctOptionId": "b",
+          "explanation": "A resilient system relies on pre-defined, structured responses like fallback protocols and clear escalation paths, not ad-hoc adjustments."
         },
         {
           "id": "microelectronics-601-l06-q5",
-          "text": "What is the best way to compare competing interventions in advanced Microelectronics?",
-          "skillId": "microelectronics-601-skill-advanced-5",
+          "text": "When presenting a case analysis recommendation with significant tradeoffs, what is the most crucial element to communicate to leadership?",
+          "skillId": "microelectronics-601-skill-tradeoff-communication",
           "options": [
             {
               "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
+              "text": "Only the final recommendation to save time"
             },
             {
               "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
+              "text": "The full dataset without interpretation"
             },
             {
               "id": "c",
-              "text": "Switch metrics after results arrive"
+              "text": "The explicit tradeoffs, uncertainty bounds, and the rationale for the chosen path"
             },
             {
               "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
+              "text": "A list of all team members who contributed"
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
-        },
-        {
-          "id": "microelectronics-601-l06-q6",
-          "text": "In high-stakes Microelectronics Research and Leadership execution, which communication protocol is strongest?",
-          "skillId": "microelectronics-601-skill-advanced-6",
-          "options": [
-            {
-              "id": "a",
-              "text": "Broadcast conclusions without assumptions"
-            },
-            {
-              "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
-            },
-            {
-              "id": "c",
-              "text": "Share only final outcomes after completion"
-            },
-            {
-              "id": "d",
-              "text": "Limit updates to a single informal channel"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
-        },
-        {
-          "id": "microelectronics-601-l06-q7",
-          "text": "A mature remediation loop in advanced Microelectronics should prioritize:",
-          "skillId": "microelectronics-601-skill-advanced-7",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blame assignment without system updates"
-            },
-            {
-              "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
-            },
-            {
-              "id": "c",
-              "text": "One-time fixes without retesting"
-            },
-            {
-              "id": "d",
-              "text": "Issue closure based on elapsed time"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
-        },
-        {
-          "id": "microelectronics-601-l06-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Microelectronics Research and Leadership?",
-          "skillId": "microelectronics-601-skill-advanced-8",
-          "options": [
-            {
-              "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
-            },
-            {
-              "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
-            },
-            {
-              "id": "c",
-              "text": "Ignore correlated failure modes"
-            },
-            {
-              "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "correctOptionId": "c",
+          "explanation": "Effective leadership communication requires transparency about tradeoffs and uncertainties to enable informed decision-making."
         }
       ]
     },
@@ -645,8 +482,8 @@ export const Microelectronics601Module: LearningModule = {
         {
           "id": "microelectronics-601-l07-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Stakeholder Impact Map",
+          "content": "A diagram illustrating how a microelectronics policy decision distributes benefits, costs, and risks across various stakeholder groups over time."
         }
       ],
       "chunks": [
@@ -654,36 +491,36 @@ export const Microelectronics601Module: LearningModule = {
           "id": "microelectronics-601-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "In this lesson, learners will map out how benefits, burdens, and delayed effects are distributed among different stakeholder groups. Understanding this distribution is crucial for recognizing the broader impact of decisions made in microelectronics.\nContext recap: In this lesson, learners will map out how benefits, burdens, and delayed effects are distributed among different stakeholder groups. Understanding this distribution is crucial for recognizing the broader impact of decisions made in microelectronics.\nWhy this matters: Stakeholder Impact Distribution helps learners in Microelectronics connect ideas from Microelectronics Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "This lesson moves beyond technical outcomes to map how benefits, burdens, and delayed effects are distributed among different stakeholder groups. Understanding this distribution is crucial for responsible leadership and recognizing the broader societal impact of microelectronics."
         },
         {
           "id": "microelectronics-601-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "In this section, we will explore the architecture of accountability. This includes understanding how decisions can be traced, the rights of individuals to review those decisions, and the obligations to remediate any issues that arise. Integrating these elements is essential for fostering trust and responsibility in microelectronics governance.\nContext recap: In this section, we will explore the architecture of accountability. This includes understanding how decisions can be traced, the rights of individuals to review those decisions, and the obligations to remediate any issues that arise. Integrating these elements is essential for fostering trust and responsibility in microelectronics governance."
+          "content": "We will explore the architecture of accountability, covering decision traceability, the rights of individuals to review those decisions, and the obligations to remediate issues. Integrating these elements is essential for building trust and ensuring responsibility in microelectronics governance."
         },
         {
           "id": "microelectronics-601-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "As we conclude our discussion on responsible leadership in microelectronics, it's important to remember a checklist that connects various important aspects. This checklist includes outcomes we aim for, ethical considerations we must uphold, compliance with policies that guide our actions, and the resilience we need to adapt to challenges. Keeping these elements in mind will help us lead responsibly in the field.\nContext recap: As we conclude our discussion on responsible leadership in microelectronics, it's important to remember a checklist that connects various important aspects. This checklist includes outcomes we aim for, ethical considerations we must uphold, compliance with policies that guide our actions, and the resilience we need to adapt to challenges. Keeping these elements in mind will help us lead responsibly in the field."
+          "content": "We conclude with a checklist for responsible leadership, connecting desired outcomes with ethical principles, policy compliance, and system resilience. This framework helps ensure that leadership decisions are not just effective, but also equitable and accountable."
         }
       ],
       "flashcards": [
         {
           "id": "microelectronics-601-l07-f1",
-          "front": "Impact distribution",
-          "back": "How outcomes are allocated across populations and timescales."
+          "front": "Impact Distribution",
+          "back": "The analysis of how outcomes (benefits, costs, risks) are allocated across different populations and timescales."
         },
         {
           "id": "microelectronics-601-l07-f2",
-          "front": "Decision traceability",
-          "back": "An auditable record of evidence, ownership, and rationale."
+          "front": "Decision Traceability",
+          "back": "An auditable record of the evidence, ownership, and rationale behind a decision, enabling accountability."
         },
         {
           "id": "microelectronics-601-l07-f3",
-          "front": "Responsible leadership",
-          "back": "Decision behavior balancing performance, accountability, and ethics."
+          "front": "Responsible Leadership",
+          "back": "A decision-making approach that balances performance objectives with accountability, ethical considerations, and stakeholder impact."
         }
       ]
     },
@@ -696,8 +533,8 @@ export const Microelectronics601Module: LearningModule = {
         {
           "id": "microelectronics-601-l08-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Capstone Defense Brief Template",
+          "content": "A structured template for assembling claims, evidence, risk analysis, and remediation plans for the final defense presentation."
         }
       ],
       "chunks": [
@@ -705,13 +542,13 @@ export const Microelectronics601Module: LearningModule = {
           "id": "microelectronics-601-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "In this interactive session, learners will work together to create a comprehensive brief. This brief will include well-supported claims, evidence that backs up those claims, clear boundaries of uncertainty, and pathways for remediation if issues arise. This exercise will help you practice critical thinking and effective communication skills that are essential in the field of microelectronics.\nContext recap: In this interactive session, learners will work together to create a comprehensive brief. This brief will include well-supported claims, evidence that backs up those claims, clear boundaries of uncertainty, and pathways for remediation if issues arise. This exercise will help you practice critical thinking and effective communication skills that are essential in the field of microelectronics."
+          "content": "In this culminating interactive session, learners synthesize their knowledge to construct a comprehensive defense brief. This brief will integrate well-supported claims, verifiable evidence, clear boundaries of uncertainty, and robust remediation pathways, honing skills in critical thinking and effective communication."
         },
         {
           "id": "microelectronics-601-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "During this rehearsal session, learners will practice responding to various critiques that may come from experts in the field. These critiques will focus on technical aspects, governance issues, and the perspectives of stakeholders. This practice will prepare you to confidently defend your ideas and solutions in front of an audience, enhancing your public speaking and critical thinking abilities.\nContext recap: During this rehearsal session, learners will practice responding to various critiques that may come from experts in the field. These critiques will focus on technical aspects, governance issues, and the perspectives of stakeholders. This practice will prepare you to confidently defend your ideas and solutions in front of an audience, enhancing your public speaking and critical thinking abilities."
+          "content": "During this rehearsal, learners practice responding to critiques from the perspective of technical experts, governance officers, and external stakeholders. This prepares them to confidently defend their recommendations under pressure, enhancing their ability to engage in high-stakes professional discourse."
         }
       ],
       "interactiveActivities": [
@@ -719,7 +556,7 @@ export const Microelectronics601Module: LearningModule = {
           "id": "microelectronics-601-l08-act1",
           "type": "debate_simulator",
           "title": "Expert Defense Panel",
-          "description": "Defend specialization recommendations under adversarial cross-examination."
+          "description": "Defend your capstone recommendation for a complex microelectronics system under adversarial cross-examination from a simulated expert panel."
         }
       ]
     }

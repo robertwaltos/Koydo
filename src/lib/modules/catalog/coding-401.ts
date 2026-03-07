@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const Coding401Module: LearningModule = {
+export const coding_401_Module: LearningModule = {
   "id": "coding-401",
   "title": "Coding Capstone Systems",
   "description": "Build robust software workflows using architecture, testing, observability, and iteration.",
@@ -14,9 +14,9 @@ export const Coding401Module: LearningModule = {
   "maxAge": 18,
   "version": "1.1.0",
   "learningObjectives": [
-    "Understand core concepts in Coding",
-    "Apply Engineering Decision Quality strategies through guided practice",
-    "Demonstrate mastery with subject-specific quizzes"
+    "Understand core concepts in software system architecture.",
+    "Apply Engineering Decision Quality strategies through guided practice.",
+    "Demonstrate mastery in debugging, refactoring, and testing with subject-specific quizzes."
   ],
   "lessons": [
     {
@@ -24,48 +24,50 @@ export const Coding401Module: LearningModule = {
       "title": "Architecture for Maintainability",
       "type": "video",
       "duration": 10,
+      "lessonImagePrompt": "Imagen 4 prompt: A colorful, 3D animated illustration of a glowing digital blueprint transforming into a futuristic, well-organized city made of glowing code blocks, symbolizing system architecture.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A high-quality educational 3D animation showing a messy pile of digital blocks magically organizing themselves into a strong, structured glowing tower, representing maintainable software architecture.",
       "chunks": [
         {
           "id": "coding-401-l01-c1",
           "title": "Architecture for Maintainability Overview",
-          "content": "In this lesson, we will dive into the fascinating world of system architecture, which is a key concept when we create software systems for our capstone projects. System architecture is like the blueprint of a building; it shows how different parts fit together and work as a whole. Our main goal is to develop strong reasoning skills that will help us tackle problems more effectively. By understanding how each component of a system interacts, we can design software that is not only functional but also easy to maintain and enhance over time. This knowledge will empower us to create robust and efficient systems that can adapt to future needs."
+          "content": "In this lesson, we will dive into the fascinating world of system architecture, which is a key concept when we create software systems for our capstone projects. System architecture is like the blueprint of a building; it shows how different parts fit together and work as a whole. By understanding how each component of a system interacts, we can design software that is not only functional but also easy to maintain and enhance over time. This knowledge will empower us to create robust and efficient systems that can adapt to future needs."
         },
         {
           "id": "coding-401-l01-c2",
-          "title": "Core Concept",
-          "content": "In this section, we will discuss how system architecture and test strategies are closely connected. First, we need to clearly define our main target or goal for the project. Once we have that, we can identify the evidence or steps that will support our goal. This means thinking about how each part of our system will work together and how we can test it to ensure everything functions as intended.\nContext recap: In this section, we will discuss how system architecture and test strategies are closely connected. First, we need to clearly define our main target or goal for the project. Once we have that, we can identify the evidence or steps that will support our goal. This means thinking about how each part of our system will work together and how we can test it to ensure everything functions as intended."
+          "title": "Core Concept: The Blueprint",
+          "content": "System architecture and test strategies are closely connected. First, we need to clearly define our main target or goal for the project. Once we have that, we can identify the steps that will support our goal. This means thinking about how each part of our system will work together—like gears in a clock—and how we can test it to ensure everything functions as intended without breaking."
         },
         {
           "id": "coding-401-l01-c3",
-          "title": "Worked Example",
-          "content": "Let's go through a guided example together to help us understand these concepts better. First, we will define our goal clearly. Next, we will apply a strategy for our test plan to see if our system works as expected. Finally, we will verify our results with a quick check to make sure everything is functioning correctly. This hands-on approach will help solidify our understanding of how to apply these strategies in real projects.\nContext recap: Let's go through a guided example together to help us understand these concepts better. First, we will define our goal clearly. Next, we will apply a strategy for our test plan to see if our system works as expected. Finally, we will verify our results with a quick check to make sure everything is functioning correctly."
+          "title": "Worked Example: Building a Login System",
+          "content": "Let's go through a guided example together. Imagine we are building a login screen. First, we define our goal: users must be able to log in securely. Next, we apply a test strategy: we will test what happens when a user enters the right password, and what happens when they enter the wrong one. Finally, we verify our results with a quick check to make sure the system blocks incorrect passwords. This hands-on approach solidifies our understanding."
         },
         {
           "id": "coding-401-l01-c4",
           "title": "Transfer Prompt",
-          "content": "Now it's your turn! Try applying the same process we just discussed to a new scenario. As you work through it, make sure to explain why your approach is valid in one clear sentence. This will help you practice articulating your reasoning and strengthen your understanding of the concepts we've learned.\nContext recap: Now it's your turn! Try applying the same process we just discussed to a new scenario. As you work through it, make sure to explain why your approach is valid in one clear sentence. This will help you practice articulating your reasoning and strengthen your understanding of the concepts we've learned."
+          "content": "Now it's your turn! Try applying the same process to a new scenario: a shopping cart in an app. What is the goal? How would you test it? As you work through it, make sure to explain why your approach is valid in one clear sentence. This will help you practice articulating your reasoning and strengthen your understanding of system architecture."
         }
       ],
       "flashcards": [
         {
           "id": "coding-401-l01-f1",
-          "front": "system architecture",
-          "back": "A central target skill in this module. Name it before solving."
+          "front": "System Architecture",
+          "back": "The blueprint of how different parts of a software system fit together."
         },
         {
           "id": "coding-401-l01-f2",
-          "front": "test strategy",
-          "back": "Use this as the method step after defining the goal."
+          "front": "Test Strategy",
+          "back": "A planned method to check if your software works as intended."
         },
         {
           "id": "coding-401-l01-f3",
           "front": "Verification",
-          "back": "Check that your result matches the original goal and constraints."
+          "back": "Checking that your result matches the original goal and constraints."
         },
         {
           "id": "coding-401-l01-f4",
-          "front": "Transfer",
-          "back": "Use the same strategy on a new item to confirm true mastery."
+          "front": "Maintainability",
+          "back": "Writing code in a way that makes it easy to fix and update in the future."
         }
       ],
       "learningAids": [
@@ -73,13 +75,13 @@ export const Coding401Module: LearningModule = {
           "id": "coding-401-l01-a1",
           "type": "image",
           "title": "Concept Poster",
-          "content": "A colorful infographic about system architecture and test strategy."
+          "content": "A colorful infographic showing a house blueprint next to a software architecture diagram."
         },
         {
           "id": "coding-401-l01-a2",
           "type": "animation",
           "title": "Warm-up Animation",
-          "content": "Short animation introducing Coding vocabulary."
+          "content": "Short animation introducing Coding vocabulary like 'Architecture' and 'Testing'."
         }
       ]
     },
@@ -88,6 +90,8 @@ export const Coding401Module: LearningModule = {
       "title": "Testing Strategy at Scale",
       "type": "interactive",
       "duration": 12,
+      "lessonImagePrompt": "Imagen 4 prompt: A vibrant 3D illustration of a robot holding a magnifying glass, inspecting a long conveyor belt of glowing digital boxes, representing software testing at scale.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A dynamic animation showing a single line of code being tested, which then zooms out to show thousands of lines of code being scanned by a futuristic laser grid, symbolizing scalable testing.",
       "metadata": {
         "prompts": [
           "Identify one core idea about system architecture from this lesson.",
@@ -126,7 +130,7 @@ export const Coding401Module: LearningModule = {
               },
               {
                 "id": "d2",
-                "label": "Try one strategy for test strategy",
+                "label": "Run the automated test suite",
                 "correctTargetId": "execute"
               },
               {
@@ -145,106 +149,109 @@ export const Coding401Module: LearningModule = {
           "title": "Try It Board",
           "content": "Complete a guided activity on test strategy and write one reflection."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/coding-401-l02.png"
     },
     {
       "id": "coding-401-l03",
       "title": "Checkpoint: Capstone Engineering Setup",
       "type": "quiz",
       "duration": 10,
+      "lessonImagePrompt": "Imagen 4 prompt: A 3D isometric view of a digital checkpoint station with a glowing green checkmark, surrounded by floating holographic code snippets.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A fast-paced, engaging motion graphics video showing a checklist being ticked off one by one as a digital rocket prepares for launch.",
       "questions": [
         {
           "id": "coding-401-l03-q1",
-          "text": "Which statement best explains system architecture in Coding?",
+          "text": "What is the best definition of system architecture in coding?",
           "skillId": "coding-401-skill-core",
           "options": [
             {
               "id": "a",
-              "text": "It explains system architecture using evidence from the lesson."
+              "text": "The blueprint of how different software parts fit and work together."
             },
             {
               "id": "b",
-              "text": "It ignores how system architecture works in practice."
+              "text": "The physical color and shape of the computer monitor."
             },
             {
               "id": "c",
-              "text": "It focuses on an unrelated topic outside Coding."
+              "text": "A type of internet browser used for downloading games."
             },
             {
               "id": "d",
-              "text": "It repeats terms without showing meaning."
+              "text": "Typing code as fast as possible without planning."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "coding-401-l03-q2",
-          "text": "What is the best first step when analyzing test strategy?",
+          "text": "What is the best first step when creating a test strategy?",
           "skillId": "coding-401-skill-process",
           "options": [
             {
               "id": "a",
-              "text": "Define the goal and examine evidence for test strategy."
+              "text": "Define the goal and identify exactly what needs to be tested."
             },
             {
               "id": "b",
-              "text": "Guess quickly without checking evidence."
+              "text": "Guess quickly and hope the code works."
             },
             {
               "id": "c",
-              "text": "Use data unrelated to test strategy."
+              "text": "Delete old files to make room for the test."
             },
             {
               "id": "d",
-              "text": "Skip the context and jump to a conclusion."
+              "text": "Skip the planning phase and jump straight to writing code."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "coding-401-l03-q3",
-          "text": "Which option shows strong reasoning about capstone software systems thinking?",
+          "text": "Which option shows strong reasoning when building a capstone software system?",
           "skillId": "coding-401-skill-reasoning",
           "options": [
             {
               "id": "a",
-              "text": "Use examples and verify assumptions step by step."
+              "text": "Breaking the system into smaller components and verifying each step."
             },
             {
               "id": "b",
-              "text": "Ignore important details and edge cases."
+              "text": "Ignoring important details and edge cases to finish faster."
             },
             {
               "id": "c",
-              "text": "Use assumptions unrelated to capstone software systems thinking."
+              "text": "Using random code snippets from the internet without understanding them."
             },
             {
               "id": "d",
-              "text": "Change the topic when evidence gets hard."
+              "text": "Changing the project goal every time a bug appears."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "coding-401-l03-q4",
-          "text": "Why is spaced review useful for Coding mastery?",
+          "text": "Why is spaced review useful for mastering coding concepts?",
           "skillId": "coding-401-skill-review",
           "options": [
             {
               "id": "a",
-              "text": "It strengthens memory and transfer over time"
+              "text": "It strengthens memory and helps you transfer skills to new projects."
             },
             {
               "id": "b",
-              "text": "It creates confusion"
+              "text": "It creates confusion by mixing up old and new topics."
             },
             {
               "id": "c",
-              "text": "It removes key facts"
+              "text": "It removes key facts from your short-term memory."
             },
             {
               "id": "d",
-              "text": "It has no value"
+              "text": "It has no value in computer science."
             }
           ],
           "correctOptionId": "a"
@@ -254,7 +261,7 @@ export const Coding401Module: LearningModule = {
         {
           "id": "coding-401-l03-ia1",
           "type": "matching_pairs",
-          "title": "Reasoning Match: Checkpoint: Capstone Engineering Setup",
+          "title": "Reasoning Match: Engineering Setup",
           "description": "Match each error signal to the strongest correction strategy.",
           "estimatedMinutes": 7,
           "difficultyLevel": "medium",
@@ -275,17 +282,17 @@ export const Coding401Module: LearningModule = {
               },
               {
                 "id": "l3",
-                "label": "Weak transfer of capstone software systems thinking under timing"
+                "label": "Weak transfer of systems thinking under timing"
               }
             ],
             "right": [
               {
                 "id": "r1",
-                "label": "Create a one-step concept summary with one worked example"
+                "label": "Create a one-step concept summary with a diagram"
               },
               {
                 "id": "r2",
-                "label": "Use a checklist before choosing the final answer"
+                "label": "Use a checklist before choosing the final test plan"
               },
               {
                 "id": "r3",
@@ -342,55 +349,58 @@ export const Coding401Module: LearningModule = {
           "title": "Memory Tip",
           "content": "Use the phrase Plan, Check, Explain for each question."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/coding-401-l03.png"
     },
     {
       "id": "coding-401-l04",
       "title": "Debug Instrumentation Workflows",
       "type": "video",
       "duration": 11,
+      "lessonImagePrompt": "Imagen 4 prompt: A 3D illustration of a glowing digital magnifying glass hovering over lines of code, highlighting a small, cute bug character hiding between the letters.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A sleek animation showing a detective's dashboard with glowing logs, graphs, and code snippets, zooming in to isolate and fix a red error line.",
       "chunks": [
         {
           "id": "coding-401-l04-c1",
           "title": "Debug Instrumentation Workflows Focus",
-          "content": "In this lesson, we will dive deeper into the topic of debug instrumentation using structured reasoning. We will move beyond just understanding the concepts to making applied decisions that will help us debug our systems effectively. This means learning how to analyze problems and come up with solutions that are logical and well-supported.\nContext recap: In this lesson, we will dive deeper into the topic of debug instrumentation using structured reasoning. We will move beyond just understanding the concepts to making applied decisions that will help us debug our systems effectively. This means learning how to analyze problems and come up with solutions that are logical and well-supported."
+          "content": "In this lesson, we will dive deeper into the topic of debug instrumentation. Think of debugging like being a digital detective. Instrumentation means setting up tools—like logs, alerts, and breakpoints—that help us see exactly what our code is doing behind the scenes. We will move beyond just guessing to making applied decisions that will help us debug our systems effectively and logically."
         },
         {
           "id": "coding-401-l04-c2",
           "title": "Method Steps",
-          "content": "Let's break down the steps we need to follow for effective debugging. Step 1: Identify what is being asked in the problem. Step 2: Choose a strategy that aligns with debug instrumentation techniques. Step 3: Justify your choice with evidence that supports your decision. Following these steps will help you stay organized and focused while debugging.\nContext recap: Let's break down the steps we need to follow for effective debugging. Step 1: Identify what is being asked in the problem. Step 2: Choose a strategy that aligns with debug instrumentation techniques. Step 3: Justify your choice with evidence that supports your decision."
+          "content": "Let's break down the steps for effective debugging. Step 1: Identify the exact error (What is broken?). Step 2: Choose an instrumentation strategy, like adding print statements or checking error logs. Step 3: Justify your choice with evidence. For example, 'I am checking the database log because the error says data is missing.' Following these steps keeps you organized."
         },
         {
           "id": "coding-401-l04-c3",
           "title": "Common Mistakes",
-          "content": "As we learn about debugging, it's important to be aware of common mistakes that can happen. Some of these include skipping the setup process, making assumptions that are not related to the problem, or failing to verify the final result of your debugging efforts. By recognizing these errors, we can avoid them and improve our debugging skills.\nContext recap: As we learn about debugging, it's important to be aware of common mistakes that can happen. Some of these include skipping the setup process, making assumptions that are not related to the problem, or failing to verify the final result of your debugging efforts. By recognizing these errors, we can avoid them and improve our debugging skills."
+          "content": "As we learn about debugging, it's important to avoid common traps. Some of these include skipping the setup process, making wild guesses without reading the error message, or failing to verify if your fix actually worked. By recognizing these errors, we can avoid them and become much faster at solving complex coding puzzles."
         },
         {
           "id": "coding-401-l04-c4",
           "title": "Independent Try",
-          "content": "Now, I encourage you to solve a similar problem on your own. After you finish, take some time to compare your process with the sequence we discussed in the lesson. This reflection will help you understand what you did well and where you can improve in your debugging approach.\nContext recap: Now, I encourage you to solve a similar problem on your own. After you finish, take some time to compare your process with the sequence we discussed in the lesson. This reflection will help you understand what you did well and where you can improve in your debugging approach."
+          "content": "Now, I encourage you to solve a similar problem on your own. Imagine a button on your app isn't working. Where would you put a 'log' to see what's happening? After you finish, compare your process with the sequence we discussed. This reflection will help you understand what you did well and where you can improve."
         }
       ],
       "flashcards": [
         {
           "id": "coding-401-l04-f1",
-          "front": "debug instrumentation",
-          "back": "State the target and pick a strategy before solving."
+          "front": "Debug Instrumentation",
+          "back": "Using tools like logs and breakpoints to monitor and fix code."
         },
         {
           "id": "coding-401-l04-f2",
           "front": "Step Sequence",
-          "back": "Goal -> Strategy -> Evidence -> Check."
+          "back": "Identify Error -> Choose Tool -> Gather Evidence -> Verify Fix."
         },
         {
           "id": "coding-401-l04-f3",
           "front": "Assumption Check",
-          "back": "Remove assumptions that are not supported by the prompt."
+          "back": "Don't guess! Read the error message and use logs for evidence."
         },
         {
           "id": "coding-401-l04-f4",
-          "front": "Process Match",
-          "back": "Your explanation should match the steps you actually used."
+          "front": "Log",
+          "back": "A record of events that happen while a program is running."
         }
       ],
       "learningAids": [
@@ -400,13 +410,16 @@ export const Coding401Module: LearningModule = {
           "title": "Worked Example Sheet",
           "content": "Step-by-step visuals for debug instrumentation scenarios."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/coding-401-l04.png"
     },
     {
       "id": "coding-401-l05",
       "title": "Performance and Reliability Tradeoffs",
       "type": "interactive",
       "duration": 13,
+      "lessonImagePrompt": "Imagen 4 prompt: A 3D illustration of a glowing digital scale balancing a lightning bolt (speed) on one side and a sturdy shield (reliability) on the other.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: An animation showing a race car (performance) driving too fast and losing parts, then slowing down slightly to become a heavily armored, unstoppable vehicle (reliability).",
       "metadata": {
         "prompts": [
           "Pick one challenge and outline your approach.",
@@ -426,11 +439,11 @@ export const Coding401Module: LearningModule = {
             "buckets": [
               {
                 "id": "concept",
-                "label": "debug instrumentation Concept"
+                "label": "Debug Concept"
               },
               {
                 "id": "process",
-                "label": "performance-quality balance Process"
+                "label": "Tradeoff Process"
               },
               {
                 "id": "review",
@@ -440,12 +453,12 @@ export const Coding401Module: LearningModule = {
             "items": [
               {
                 "id": "i1",
-                "label": "Write one definition in your own words",
+                "label": "Write the definition of 'Tradeoff' in your own words",
                 "correctBucketId": "concept"
               },
               {
                 "id": "i2",
-                "label": "Follow the step-by-step method on a new example",
+                "label": "Balance speed vs memory on a new example",
                 "correctBucketId": "process"
               },
               {
@@ -464,106 +477,109 @@ export const Coding401Module: LearningModule = {
           "title": "Challenge Walkthrough",
           "content": "Animated sequence for solving a debug instrumentation challenge."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/coding-401-l05.png"
     },
     {
       "id": "coding-401-l06",
       "title": "Checkpoint: Engineering Decision Quality",
       "type": "quiz",
       "duration": 10,
+      "lessonImagePrompt": "Imagen 4 prompt: A 3D illustration of a glowing brain made of circuit boards, symbolizing smart engineering decisions, set against a dark blue background.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A motion graphics video showing a crossroads with digital signs, where a glowing data packet chooses the safest and most efficient path.",
       "questions": [
         {
           "id": "coding-401-l06-q1",
-          "text": "Which statement best explains debug instrumentation in Coding?",
+          "text": "What is 'debug instrumentation' in coding?",
           "skillId": "coding-401-skill-core",
           "options": [
             {
               "id": "a",
-              "text": "It explains debug instrumentation using evidence from the lesson."
+              "text": "Adding tools like logs and alerts to monitor what the code is doing."
             },
             {
               "id": "b",
-              "text": "It ignores how debug instrumentation works in practice."
+              "text": "Playing musical instruments while writing software."
             },
             {
               "id": "c",
-              "text": "It focuses on an unrelated topic outside Coding."
+              "text": "Deleting all the code and starting over from scratch."
             },
             {
               "id": "d",
-              "text": "It repeats terms without showing meaning."
+              "text": "Guessing where the bug is without looking at the error message."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "coding-401-l06-q2",
-          "text": "What is the best first step when analyzing performance-quality balance?",
+          "text": "What is a common performance vs. quality tradeoff?",
           "skillId": "coding-401-skill-process",
           "options": [
             {
               "id": "a",
-              "text": "Define the goal and examine evidence for performance-quality balance."
+              "text": "Making an app run faster, but using more of the computer's memory."
             },
             {
               "id": "b",
-              "text": "Guess quickly without checking evidence."
+              "text": "Changing the app's background color to make it load slower."
             },
             {
               "id": "c",
-              "text": "Use data unrelated to performance-quality balance."
+              "text": "Turning off the computer to save electricity."
             },
             {
               "id": "d",
-              "text": "Skip the context and jump to a conclusion."
+              "text": "Ignoring bugs so you can release the app today."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "coding-401-l06-q3",
-          "text": "Which option shows strong reasoning about capstone software systems thinking?",
+          "text": "Why shouldn't we just guess when debugging a system?",
           "skillId": "coding-401-skill-reasoning",
           "options": [
             {
               "id": "a",
-              "text": "Use examples and verify assumptions step by step."
+              "text": "It wastes time and might create new bugs. We should use evidence."
             },
             {
               "id": "b",
-              "text": "Ignore important details and edge cases."
+              "text": "Guessing is always faster than reading logs."
             },
             {
               "id": "c",
-              "text": "Use assumptions unrelated to capstone software systems thinking."
+              "text": "Computers prefer when programmers guess."
             },
             {
               "id": "d",
-              "text": "Change the topic when evidence gets hard."
+              "text": "Bugs usually fix themselves if you wait long enough."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "coding-401-l06-q4",
-          "text": "Why is spaced review useful for Coding mastery?",
+          "text": "What is a 'log' in the context of software systems?",
           "skillId": "coding-401-skill-review",
           "options": [
             {
               "id": "a",
-              "text": "It strengthens memory and transfer over time"
+              "text": "A digital record of events that happen while the program runs."
             },
             {
               "id": "b",
-              "text": "It creates confusion"
+              "text": "A piece of wood used to build the computer."
             },
             {
               "id": "c",
-              "text": "It removes key facts"
+              "text": "A type of error that crashes the system."
             },
             {
               "id": "d",
-              "text": "It has no value"
+              "text": "A fast way to write code without a keyboard."
             }
           ],
           "correctOptionId": "a"
@@ -573,7 +589,7 @@ export const Coding401Module: LearningModule = {
         {
           "id": "coding-401-l06-ia1",
           "type": "matching_pairs",
-          "title": "Reasoning Match: Checkpoint: Engineering Decision Quality",
+          "title": "Reasoning Match: Decision Quality",
           "description": "Match each error signal to the strongest correction strategy.",
           "estimatedMinutes": 7,
           "difficultyLevel": "medium",
@@ -590,21 +606,21 @@ export const Coding401Module: LearningModule = {
               },
               {
                 "id": "l2",
-                "label": "Inconsistent approach to performance-quality balance"
+                "label": "Inconsistent approach to performance tradeoffs"
               },
               {
                 "id": "l3",
-                "label": "Weak transfer of capstone software systems thinking under timing"
+                "label": "Weak transfer of systems thinking under timing"
               }
             ],
             "right": [
               {
                 "id": "r1",
-                "label": "Create a one-step concept summary with one worked example"
+                "label": "Review how logs and breakpoints work"
               },
               {
                 "id": "r2",
-                "label": "Use a checklist before choosing the final answer"
+                "label": "Use a pros/cons checklist before choosing an answer"
               },
               {
                 "id": "r3",
@@ -661,55 +677,58 @@ export const Coding401Module: LearningModule = {
           "title": "Memory Tip",
           "content": "Use the phrase Plan, Check, Explain for each question."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/coding-401-l06.png"
     },
     {
       "id": "coding-401-l07",
       "title": "Refactor and Simplify",
       "type": "video",
       "duration": 12,
+      "lessonImagePrompt": "Imagen 4 prompt: A 3D illustration of a messy, tangled ball of glowing wires being magically straightened out into neat, organized, parallel lines of light.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A satisfying animation showing a cluttered, chaotic digital workspace automatically organizing itself into clean, labeled folders and streamlined code blocks.",
       "chunks": [
         {
           "id": "coding-401-l07-c1",
           "title": "Refactor and Simplify Setup",
-          "content": "Before you start working on your project, it's important to use a balance of performance and quality to organize your approach. Taking the time to plan your work first will not only improve the quality of your results but also help you work more efficiently and quickly. Good planning is key to successful coding!\nContext recap: Before you start working on your project, it's important to use a balance of performance and quality to organize your approach. Taking the time to plan your work first will not only improve the quality of your results but also help you work more efficiently and quickly. Good planning is key to successful coding!"
+          "content": "Before you finish your project, it's important to 'refactor' your code. Refactoring is like cleaning your room: you aren't throwing away your toys (features), you are just organizing them so they are easier to find later. Taking the time to simplify your work improves the quality of your results and helps you or your teammates work more efficiently in the future."
         },
         {
           "id": "coding-401-l07-c2",
           "title": "Decision Rules",
-          "content": "When you are working on a coding project and you have to make decisions, it can sometimes be tricky to know which path to take. A great way to help you decide is to follow a simple rule: always choose the option that has the strongest evidence supporting it and the clearest connection to what you want to achieve. By doing this, you will be making smart choices that can lead to better results in your coding projects. Remember, good decision-making is a key part of being a successful coder!"
+          "content": "When deciding how to simplify code, follow a simple rule: always choose the option that makes the code easiest to read. If a piece of code is too long or confusing, break it down into smaller, clearly named functions. By doing this, you will be making smart choices that lead to better, bug-free results in your coding projects."
         },
         {
           "id": "coding-401-l07-c3",
           "title": "Quality Control",
-          "content": "As you work on your projects, it's essential to check for three important things: accuracy, completeness, and alignment with your original objective. By ensuring that your work meets these criteria, you can maintain high standards and produce quality results in your coding endeavors.\nContext recap: As you work on your projects, it's essential to check for three important things: accuracy, completeness, and alignment with your original objective. By ensuring that your work meets these criteria, you can maintain high standards and produce quality results in your coding endeavors."
+          "content": "As you refactor, it's essential to check for three important things: accuracy (does it still work?), completeness (did I accidentally delete a feature?), and alignment (is it easier to read?). By ensuring that your work meets these criteria, you maintain high standards and produce professional-quality code."
         },
         {
           "id": "coding-401-l07-c4",
           "title": "Next-Step Plan",
-          "content": "After completing your practice round, take a moment to write down one action that you want to repeat in your next session and one action that you would like to improve. This reflection will help you set clear goals for your future practice and continue to develop your coding skills.\nContext recap: After completing your practice round, take a moment to write down one action that you want to repeat in your next session and one action that you would like to improve. This reflection will help you set clear goals for your future practice and continue to develop your coding skills."
+          "content": "After completing your refactoring practice, take a moment to write down one messy habit you want to avoid next time (like using bad variable names) and one good habit you want to repeat (like writing comments). This reflection will help you set clear goals for your future practice."
         }
       ],
       "flashcards": [
         {
           "id": "coding-401-l07-f1",
-          "front": "performance-quality balance",
-          "back": "Use this as your organizing framework before execution."
+          "front": "Refactoring",
+          "back": "Cleaning and organizing code without changing what it actually does."
         },
         {
           "id": "coding-401-l07-f2",
           "front": "Decision Rule",
-          "back": "Choose the option with strongest evidence-to-goal alignment."
+          "back": "Choose the option that makes the code easiest to read and maintain."
         },
         {
           "id": "coding-401-l07-f3",
           "front": "Quality Control",
-          "back": "Accuracy + completeness + objective match."
+          "back": "Checking for accuracy, completeness, and readability."
         },
         {
           "id": "coding-401-l07-f4",
           "front": "Iteration",
-          "back": "Repeat what works; refine one weak step each cycle."
+          "back": "Repeating a process to improve it step by step."
         }
       ],
       "learningAids": [
@@ -719,13 +738,16 @@ export const Coding401Module: LearningModule = {
           "title": "Project Planner",
           "content": "Template for planning a mini project focused on performance-quality balance."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/coding-401-l07.png"
     },
     {
       "id": "coding-401-l08",
       "title": "Capstone Build Sprint",
       "type": "interactive",
       "duration": 10,
+      "lessonImagePrompt": "Imagen 4 prompt: A 3D illustration of a glowing digital stopwatch next to a laptop displaying a complex, colorful software architecture diagram.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A fast-paced timelapse animation of a digital city being built block by block, representing a software capstone project coming together during a sprint.",
       "metadata": {
         "prompts": [
           "What did you learn most clearly?",
@@ -745,15 +767,15 @@ export const Coding401Module: LearningModule = {
             "left": [
               {
                 "id": "l1",
-                "label": "I keep missing one skill pattern"
+                "label": "I keep missing one architecture pattern"
               },
               {
                 "id": "l2",
-                "label": "I rush and make avoidable mistakes"
+                "label": "I rush and make avoidable syntax mistakes"
               },
               {
                 "id": "l3",
-                "label": "I understand in notes but miss in quizzes"
+                "label": "I understand the notes but fail the debugging quizzes"
               }
             ],
             "right": [
@@ -763,11 +785,11 @@ export const Coding401Module: LearningModule = {
               },
               {
                 "id": "r2",
-                "label": "Use a short checklist before submitting answers"
+                "label": "Use a short checklist before submitting code"
               },
               {
                 "id": "r3",
-                "label": "Repeat the skill in a timed re-check"
+                "label": "Practice with hands-on, timed debugging scenarios"
               }
             ],
             "pairs": [
@@ -794,106 +816,109 @@ export const Coding401Module: LearningModule = {
           "title": "Reflection Cycle",
           "content": "Remember Observe, Adjust, Repeat while practicing."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/coding-401-l08.png"
     },
     {
       "id": "coding-401-l09",
       "title": "Review: Software Systems Habits",
       "type": "quiz",
       "duration": 10,
+      "lessonImagePrompt": "Imagen 4 prompt: A 3D illustration of a glowing digital checklist with a futuristic pen ticking off good coding habits, surrounded by floating gears.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: An animation showing a programmer's daily routine, highlighting good habits like writing tests, refactoring code, and checking logs.",
       "questions": [
         {
           "id": "coding-401-l09-q1",
-          "text": "Which statement best explains test strategy in Coding?",
+          "text": "What does it mean to 'refactor' code?",
           "skillId": "coding-401-skill-core",
           "options": [
             {
               "id": "a",
-              "text": "It explains test strategy using evidence from the lesson."
+              "text": "Cleaning and organizing code without changing what it actually does."
             },
             {
               "id": "b",
-              "text": "It ignores how test strategy works in practice."
+              "text": "Adding a bunch of new features to an app."
             },
             {
               "id": "c",
-              "text": "It focuses on an unrelated topic outside Coding."
+              "text": "Deleting the whole project and starting over."
             },
             {
               "id": "d",
-              "text": "It repeats terms without showing meaning."
+              "text": "Making the code run slower on purpose."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "coding-401-l09-q2",
-          "text": "What is the best first step when analyzing performance-quality balance?",
+          "text": "Why is simple code usually better than complicated code?",
           "skillId": "coding-401-skill-process",
           "options": [
             {
               "id": "a",
-              "text": "Define the goal and examine evidence for performance-quality balance."
+              "text": "It is easier to read, fix, and share with other programmers."
             },
             {
               "id": "b",
-              "text": "Guess quickly without checking evidence."
+              "text": "It looks cooler on the screen."
             },
             {
               "id": "c",
-              "text": "Use data unrelated to performance-quality balance."
+              "text": "It takes up more space on the hard drive."
             },
             {
               "id": "d",
-              "text": "Skip the context and jump to a conclusion."
+              "text": "It is harder for hackers to see."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "coding-401-l09-q3",
-          "text": "Which option shows strong reasoning about capstone software systems thinking?",
+          "text": "What is 'quality control' in coding?",
           "skillId": "coding-401-skill-reasoning",
           "options": [
             {
               "id": "a",
-              "text": "Use examples and verify assumptions step by step."
+              "text": "Checking that the app is accurate, complete, and meets its goals."
             },
             {
               "id": "b",
-              "text": "Ignore important details and edge cases."
+              "text": "Making sure the code is typed really fast."
             },
             {
               "id": "c",
-              "text": "Use assumptions unrelated to capstone software systems thinking."
+              "text": "Using the most expensive computer to write code."
             },
             {
               "id": "d",
-              "text": "Change the topic when evidence gets hard."
+              "text": "Never testing the app so you don't find bugs."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "coding-401-l09-q4",
-          "text": "Why is spaced review useful for Coding mastery?",
+          "text": "What should you do if you find a messy piece of code that works?",
           "skillId": "coding-401-skill-review",
           "options": [
             {
               "id": "a",
-              "text": "It strengthens memory and transfer over time"
+              "text": "Carefully refactor it so it's easier to understand later."
             },
             {
               "id": "b",
-              "text": "It creates confusion"
+              "text": "Leave it alone forever."
             },
             {
               "id": "c",
-              "text": "It removes key facts"
+              "text": "Delete it immediately."
             },
             {
               "id": "d",
-              "text": "It has no value"
+              "text": "Copy and paste it everywhere."
             }
           ],
           "correctOptionId": "a"
@@ -903,7 +928,7 @@ export const Coding401Module: LearningModule = {
         {
           "id": "coding-401-l09-ia1",
           "type": "matching_pairs",
-          "title": "Reasoning Match: Review: Software Systems Habits",
+          "title": "Reasoning Match: Habits",
           "description": "Match each error signal to the strongest correction strategy.",
           "estimatedMinutes": 7,
           "difficultyLevel": "medium",
@@ -916,21 +941,21 @@ export const Coding401Module: LearningModule = {
             "left": [
               {
                 "id": "l1",
-                "label": "Confusion about test strategy"
+                "label": "Confusion about refactoring"
               },
               {
                 "id": "l2",
-                "label": "Inconsistent approach to performance-quality balance"
+                "label": "Inconsistent approach to quality control"
               },
               {
                 "id": "l3",
-                "label": "Weak transfer of capstone software systems thinking under timing"
+                "label": "Weak transfer of systems thinking under timing"
               }
             ],
             "right": [
               {
                 "id": "r1",
-                "label": "Create a one-step concept summary with one worked example"
+                "label": "Review examples of clean vs messy code"
               },
               {
                 "id": "r2",
@@ -991,106 +1016,109 @@ export const Coding401Module: LearningModule = {
           "title": "Memory Tip",
           "content": "Use the phrase Plan, Check, Explain for each question."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/coding-401-l09.png"
     },
     {
       "id": "coding-401-l10",
       "title": "Mastery: Coding IV",
       "type": "quiz",
       "duration": 10,
+      "lessonImagePrompt": "Imagen 4 prompt: A 3D illustration of a glowing golden trophy sitting on top of a server rack, symbolizing mastery in coding systems.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A celebratory animation showing a digital fireworks display over a futuristic city made of code, representing the completion of a major coding milestone.",
       "questions": [
         {
           "id": "coding-401-l10-q1",
-          "text": "Which statement best explains system architecture in Coding?",
+          "text": "Which of these is the best example of system architecture?",
           "skillId": "coding-401-skill-core",
           "options": [
             {
               "id": "a",
-              "text": "It explains system architecture using evidence from the lesson."
+              "text": "Planning how the database, server, and app communicate with each other."
             },
             {
               "id": "b",
-              "text": "It ignores how system architecture works in practice."
+              "text": "Picking a background color for the login screen."
             },
             {
               "id": "c",
-              "text": "It focuses on an unrelated topic outside Coding."
+              "text": "Typing code really fast without looking at the keyboard."
             },
             {
               "id": "d",
-              "text": "It repeats terms without showing meaning."
+              "text": "Buying a new, expensive keyboard."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "coding-401-l10-q2",
-          "text": "What is the best first step when analyzing debug instrumentation?",
+          "text": "If your app is crashing, what is the best first step?",
           "skillId": "coding-401-skill-process",
           "options": [
             {
               "id": "a",
-              "text": "Define the goal and examine evidence for debug instrumentation."
+              "text": "Look at the error logs to find out exactly why it crashed."
             },
             {
               "id": "b",
-              "text": "Guess quickly without checking evidence."
+              "text": "Delete the app and start over."
             },
             {
               "id": "c",
-              "text": "Use data unrelated to debug instrumentation."
+              "text": "Restart the computer and hope the bug goes away."
             },
             {
               "id": "d",
-              "text": "Skip the context and jump to a conclusion."
+              "text": "Write a completely new app."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "coding-401-l10-q3",
-          "text": "Which option shows strong reasoning about capstone software systems thinking?",
+          "text": "What is a 'bottleneck' in software performance?",
           "skillId": "coding-401-skill-reasoning",
           "options": [
             {
               "id": "a",
-              "text": "Use examples and verify assumptions step by step."
+              "text": "A specific part of the system that slows everything else down."
             },
             {
               "id": "b",
-              "text": "Ignore important details and edge cases."
+              "text": "A really fast piece of code."
             },
             {
               "id": "c",
-              "text": "Use assumptions unrelated to capstone software systems thinking."
+              "text": "A type of variable used to store text."
             },
             {
               "id": "d",
-              "text": "Change the topic when evidence gets hard."
+              "text": "A secure password."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "coding-401-l10-q4",
-          "text": "Why is spaced review useful for Coding mastery?",
+          "text": "Why do we break big projects into smaller chunks?",
           "skillId": "coding-401-skill-review",
           "options": [
             {
               "id": "a",
-              "text": "It strengthens memory and transfer over time"
+              "text": "It makes the project easier to manage, build, and test."
             },
             {
               "id": "b",
-              "text": "It creates confusion"
+              "text": "It makes the code run faster."
             },
             {
               "id": "c",
-              "text": "It removes key facts"
+              "text": "It hides bugs from the users."
             },
             {
               "id": "d",
-              "text": "It has no value"
+              "text": "It requires less typing."
             }
           ],
           "correctOptionId": "a"
@@ -1100,7 +1128,7 @@ export const Coding401Module: LearningModule = {
         {
           "id": "coding-401-l10-ia1",
           "type": "matching_pairs",
-          "title": "Reasoning Match: Mastery: Coding IV",
+          "title": "Reasoning Match: Mastery",
           "description": "Match each error signal to the strongest correction strategy.",
           "estimatedMinutes": 7,
           "difficultyLevel": "medium",
@@ -1121,7 +1149,7 @@ export const Coding401Module: LearningModule = {
               },
               {
                 "id": "l3",
-                "label": "Weak transfer of capstone software systems thinking under timing"
+                "label": "Weak transfer of systems thinking under timing"
               }
             ],
             "right": [
@@ -1188,13 +1216,16 @@ export const Coding401Module: LearningModule = {
           "title": "Memory Tip",
           "content": "Use the phrase Plan, Check, Explain for each question."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/coding-401-l10.png"
     },
     {
       "id": "coding-401-l11",
       "title": "Applied Coding Challenge Studio",
       "type": "interactive",
       "duration": 14,
+      "lessonImagePrompt": "Imagen 4 prompt: A 3D illustration of a futuristic coding studio with floating holographic screens displaying code, and a glowing 'Challenge Accepted' sign.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A dynamic animation showing a student stepping into a virtual reality coding environment, grabbing floating blocks of code to solve a complex puzzle.",
       "metadata": {
         "prompts": [
           "Select one weak pattern from recent quizzes.",
@@ -1238,7 +1269,7 @@ export const Coding401Module: LearningModule = {
               },
               {
                 "id": "i3",
-                "label": "Retest with a timed mini-check on performance-quality balance",
+                "label": "Retest with a timed mini-check on performance tradeoffs",
                 "correctBucketId": "transfer"
               }
             ]
@@ -1252,106 +1283,109 @@ export const Coding401Module: LearningModule = {
           "title": "Correction Loop Card",
           "content": "Use Diagnose, Fix, Transfer for each difficult problem."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/coding-401-l11.png"
     },
     {
       "id": "coding-401-l12",
       "title": "Coding IV Mastery Applied Retest",
       "type": "quiz",
       "duration": 10,
+      "lessonImagePrompt": "Imagen 4 prompt: A 3D illustration of a glowing digital shield deflecting bugs, representing mastery and robust software systems.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A fast-paced animation showing a software system successfully handling a massive wave of data without crashing, proving its scalability and reliability.",
       "questions": [
         {
           "id": "coding-401-l12-q1",
-          "text": "Which statement best explains system architecture in Coding?",
+          "text": "What does 'scalability' mean in software architecture?",
           "skillId": "coding-401-skill-core",
           "options": [
             {
               "id": "a",
-              "text": "It explains system architecture using evidence from the lesson."
+              "text": "The ability of a system to handle more users or data without breaking."
             },
             {
               "id": "b",
-              "text": "It ignores how system architecture works in practice."
+              "text": "How heavy the physical computer is."
             },
             {
               "id": "c",
-              "text": "It focuses on an unrelated topic outside Coding."
+              "text": "The ability of the app to draw shapes on the screen."
             },
             {
               "id": "d",
-              "text": "It repeats terms without showing meaning."
+              "text": "How loud the app's sound effects are."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "coding-401-l12-q2",
-          "text": "What is the best first step when analyzing performance-quality balance?",
+          "text": "Why is it important to balance performance and quality?",
           "skillId": "coding-401-skill-process",
           "options": [
             {
               "id": "a",
-              "text": "Define the goal and examine evidence for performance-quality balance."
+              "text": "So the app is fast enough to use, but doesn't crash or lose data."
             },
             {
               "id": "b",
-              "text": "Guess quickly without checking evidence."
+              "text": "So the app is slow and crashes often."
             },
             {
               "id": "c",
-              "text": "Use data unrelated to performance-quality balance."
+              "text": "So the app is only fast for one person at a time."
             },
             {
               "id": "d",
-              "text": "Skip the context and jump to a conclusion."
+              "text": "Quality doesn't matter as long as the app is fast."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "coding-401-l12-q3",
-          "text": "Which option shows strong reasoning about capstone software systems thinking?",
+          "text": "What is a 'breakpoint' in debugging?",
           "skillId": "coding-401-skill-reasoning",
           "options": [
             {
               "id": "a",
-              "text": "Use examples and verify assumptions step by step."
+              "text": "A tool that pauses the code while it runs so you can inspect it."
             },
             {
               "id": "b",
-              "text": "Ignore important details and edge cases."
+              "text": "The exact moment the computer breaks."
             },
             {
               "id": "c",
-              "text": "Use assumptions unrelated to capstone software systems thinking."
+              "text": "A time to take a snack break while coding."
             },
             {
               "id": "d",
-              "text": "Change the topic when evidence gets hard."
+              "text": "A broken line of code that needs to be deleted."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "coding-401-l12-q4",
-          "text": "Why is spaced review useful for Coding mastery?",
+          "text": "What is the main goal of a Capstone project?",
           "skillId": "coding-401-skill-review",
           "options": [
             {
               "id": "a",
-              "text": "It strengthens memory and transfer over time"
+              "text": "To combine everything you've learned into one big, working system."
             },
             {
               "id": "b",
-              "text": "It creates confusion"
+              "text": "To write the shortest code possible."
             },
             {
               "id": "c",
-              "text": "It removes key facts"
+              "text": "To forget old lessons and only use new ones."
             },
             {
               "id": "d",
-              "text": "It has no value"
+              "text": "To copy someone else's work."
             }
           ],
           "correctOptionId": "a"
@@ -1361,7 +1395,7 @@ export const Coding401Module: LearningModule = {
         {
           "id": "coding-401-l12-ia1",
           "type": "matching_pairs",
-          "title": "Reasoning Match: Coding IV Mastery Applied Retest",
+          "title": "Reasoning Match: Applied Retest",
           "description": "Match each error signal to the strongest correction strategy.",
           "estimatedMinutes": 7,
           "difficultyLevel": "medium",
@@ -1374,21 +1408,21 @@ export const Coding401Module: LearningModule = {
             "left": [
               {
                 "id": "l1",
-                "label": "Confusion about system architecture"
+                "label": "Confusion about scalability"
               },
               {
                 "id": "l2",
-                "label": "Inconsistent approach to performance-quality balance"
+                "label": "Inconsistent approach to performance balance"
               },
               {
                 "id": "l3",
-                "label": "Weak transfer of capstone software systems thinking under timing"
+                "label": "Weak transfer of systems thinking under timing"
               }
             ],
             "right": [
               {
                 "id": "r1",
-                "label": "Create a one-step concept summary with one worked example"
+                "label": "Review the definition and examples of scalability"
               },
               {
                 "id": "r2",
@@ -1456,48 +1490,50 @@ export const Coding401Module: LearningModule = {
       "title": "Coding Scenario Lab",
       "type": "video",
       "duration": 12,
+      "lessonImagePrompt": "Imagen 4 prompt: A 3D illustration of a digital laboratory with glowing test tubes filled with code, and a large holographic screen displaying a complex software scenario.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: An engaging animation showing a team of digital avatars working together in a virtual lab to solve a massive server crash, using logs and architecture blueprints.",
       "chunks": [
         {
           "id": "coding-401-l13-c1",
           "title": "Scenario Brief",
-          "content": "In this exciting scenario, you will explore how different parts of a computer system work together. You will learn about system architecture, which is like the blueprint of a building, and how to find and fix problems, known as debugging. Additionally, you will discover how to balance the quality of your program's performance, ensuring it runs smoothly while meeting all requirements. This challenge will help you apply these important concepts in a fun and practical way!\nContext recap: In this exciting scenario, you will explore how different parts of a computer system work together. You will learn about system architecture, which is like the blueprint of a building, and how to find and fix problems, known as debugging. Additionally, you will discover how to balance the quality of your program's performance, ensuring it runs smoothly while meeting all requirements. This challenge will help you apply these important concepts in a fun and practical way!"
+          "content": "In this exciting scenario, you will explore how different parts of a computer system work together. Imagine you are building a chat app for your school. You will use system architecture to plan how messages travel, debugging tools to fix messages that get lost, and performance balancing to ensure the app doesn't crash when everyone logs on at once. This challenge brings all your skills together!"
         },
         {
           "id": "coding-401-l13-c2",
           "title": "Plan the Approach",
-          "content": "To tackle this scenario effectively, start by breaking it down into smaller, manageable decisions. Think of each decision point as a step in a treasure hunt. For each step, choose a specific strategy that will guide you in making the best choice. This way, you can focus on one part at a time, making it easier to see how everything fits together in the bigger picture of your project.\nContext recap: To tackle this scenario effectively, start by breaking it down into smaller, manageable decisions. Think of each decision point as a step in a treasure hunt. For each step, choose a specific strategy that will guide you in making the best choice. This way, you can focus on one part at a time, making it easier to see how everything fits together in the bigger picture of your project."
+          "content": "To tackle this scenario effectively, start by breaking it down into smaller, manageable decisions. Think of each decision point as a step in a treasure hunt. First, plan the database. Next, plan the user interface. For each step, choose a specific strategy that will guide you. This way, you can focus on one part at a time without getting overwhelmed."
         },
         {
           "id": "coding-401-l13-c3",
           "title": "Execute and Justify",
-          "content": "Now it's time to put your plan into action! As you execute each step, make sure to explain why you are making each choice. Use evidence from your research or previous experiences to support your decisions, rather than just guessing. This will help you understand the reasoning behind your actions and improve your coding skills as you learn to think critically about your work.\nContext recap: Now it's time to put your plan into action! As you execute each step, make sure to explain why you are making each choice. Use evidence from your research or previous experiences to support your decisions, rather than just guessing. This will help you understand the reasoning behind your actions and improve your coding skills as you learn to think critically about your work."
+          "content": "Now it's time to put your plan into action! As you execute each step, make sure to explain why you are making each choice. For example, 'I am using a fast database because chat messages need to appear instantly.' Use evidence to support your decisions, rather than just guessing. This builds strong critical thinking skills."
         },
         {
           "id": "coding-401-l13-c4",
           "title": "Evaluate Outcome",
-          "content": "After you have completed your project, take a moment to evaluate the outcome. Compare what you achieved with the goals you set at the beginning. Identify the elements that worked well and should be kept, as well as those that need adjustments or improvements. This reflection will help you learn from your experience and enhance your future coding projects.\nContext recap: After you have completed your project, take a moment to evaluate the outcome. Compare what you achieved with the goals you set at the beginning. Identify the elements that worked well and should be kept, as well as those that need adjustments or improvements. This reflection will help you learn from your experience and enhance your future coding projects."
+          "content": "After you have completed your project, take a moment to evaluate the outcome. Did the chat app work? Did it crash when 100 users joined? Identify the elements that worked well and should be kept, as well as those that need adjustments. This reflection is what turns a good coder into a great software engineer."
         }
       ],
       "flashcards": [
         {
           "id": "coding-401-l13-f1",
           "front": "Scenario Planning",
-          "back": "Split a complex task into clear decision points."
+          "back": "Split a complex task into clear, manageable decision points."
         },
         {
           "id": "coding-401-l13-f2",
           "front": "Evidence Link",
-          "back": "Each step should connect to evidence in the scenario."
+          "back": "Each coding step should connect to a specific goal or requirement."
         },
         {
           "id": "coding-401-l13-f3",
           "front": "Adjustment Loop",
-          "back": "Use outcome checks to refine your next attempt."
+          "back": "Use outcome checks (like testing) to refine your next attempt."
         },
         {
           "id": "coding-401-l13-f4",
           "front": "Applied Mastery",
-          "back": "Mastery means transferring the process to a new context."
+          "back": "Transferring your coding process to a brand new, real-world context."
         }
       ],
       "learningAids": [
@@ -1513,13 +1549,16 @@ export const Coding401Module: LearningModule = {
           "title": "Mini Case Prompt",
           "content": "Apply one strategy to a new case and explain your reasoning."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/coding-401-l13.png"
     },
     {
       "id": "coding-401-l14",
       "title": "Coding Coaching Clinic",
       "type": "interactive",
       "duration": 13,
+      "lessonImagePrompt": "Imagen 4 prompt: A 3D illustration of a friendly robot coach wearing a whistle, pointing at a glowing digital whiteboard filled with coding strategies.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A dynamic animation showing a coder struggling with a bug, then a digital coach appears, highlights the error, and guides them to the correct solution step-by-step.",
       "metadata": {
         "prompts": [
           "Identify one repeated error pattern from your recent work.",
@@ -1543,7 +1582,7 @@ export const Coding401Module: LearningModule = {
               },
               {
                 "id": "l2",
-                "label": "Losses due to rushed performance-quality balance decisions"
+                "label": "Losses due to rushed performance tradeoffs"
               },
               {
                 "id": "l3",
@@ -1588,106 +1627,109 @@ export const Coding401Module: LearningModule = {
           "title": "Clinic Loop",
           "content": "Diagnose, Correct, Transfer."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/coding-401-l14.png"
     },
     {
       "id": "coding-401-l15",
       "title": "Coding IV Mastery Mastery Sprint",
       "type": "quiz",
       "duration": 10,
+      "lessonImagePrompt": "Imagen 4 prompt: A 3D illustration of a glowing finish line ribbon being broken by a fast-moving digital data packet, symbolizing the completion of the final mastery sprint.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: An epic, fast-paced montage of all the coding concepts learned—blueprints, debugging logs, and refactoring—culminating in a perfectly running, glowing software system.",
       "questions": [
         {
           "id": "coding-401-l15-q1",
-          "text": "Which statement best explains test strategy in Coding?",
+          "text": "You want to add a chat feature to your game. What should you do first?",
           "skillId": "coding-401-skill-core",
           "options": [
             {
               "id": "a",
-              "text": "It explains test strategy using evidence from the lesson."
+              "text": "Plan the architecture and how the chat connects to the game."
             },
             {
               "id": "b",
-              "text": "It ignores how test strategy works in practice."
+              "text": "Start typing random code and hope it works."
             },
             {
               "id": "c",
-              "text": "It focuses on an unrelated topic outside Coding."
+              "text": "Change the game's graphics instead."
             },
             {
               "id": "d",
-              "text": "It repeats terms without showing meaning."
+              "text": "Release the game immediately without testing."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "coding-401-l15-q2",
-          "text": "What is the best first step when analyzing debug instrumentation?",
+          "text": "Your app is super fast but sometimes loses user data. What is the issue?",
           "skillId": "coding-401-skill-process",
           "options": [
             {
               "id": "a",
-              "text": "Define the goal and examine evidence for debug instrumentation."
+              "text": "Poor performance-quality balance (sacrificed reliability for speed)."
             },
             {
               "id": "b",
-              "text": "Guess quickly without checking evidence."
+              "text": "The app is too secure."
             },
             {
               "id": "c",
-              "text": "Use data unrelated to debug instrumentation."
+              "text": "The code is too clean and refactored."
             },
             {
               "id": "d",
-              "text": "Skip the context and jump to a conclusion."
+              "text": "The users are typing too fast."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "coding-401-l15-q3",
-          "text": "Which option shows strong reasoning about capstone software systems thinking?",
+          "text": "You find a bug that only happens when a user clicks a button 10 times. How do you fix it?",
           "skillId": "coding-401-skill-reasoning",
           "options": [
             {
               "id": "a",
-              "text": "Use examples and verify assumptions step by step."
+              "text": "Use debug tools to track the button clicks and find the error."
             },
             {
               "id": "b",
-              "text": "Ignore important details and edge cases."
+              "text": "Tell users not to click the button 10 times."
             },
             {
               "id": "c",
-              "text": "Use assumptions unrelated to capstone software systems thinking."
+              "text": "Delete the button entirely."
             },
             {
               "id": "d",
-              "text": "Change the topic when evidence gets hard."
+              "text": "Ignore it because it rarely happens."
             }
           ],
           "correctOptionId": "a"
         },
         {
           "id": "coding-401-l15-q4",
-          "text": "Why is spaced review useful for Coding mastery?",
+          "text": "After finishing your Capstone project, what is the best final step?",
           "skillId": "coding-401-skill-review",
           "options": [
             {
               "id": "a",
-              "text": "It strengthens memory and transfer over time"
+              "text": "Review the outcome, refactor messy code, and celebrate!"
             },
             {
               "id": "b",
-              "text": "It creates confusion"
+              "text": "Delete the project to save space."
             },
             {
               "id": "c",
-              "text": "It removes key facts"
+              "text": "Never look at code again."
             },
             {
               "id": "d",
-              "text": "It has no value"
+              "text": "Break the app on purpose to see what happens."
             }
           ],
           "correctOptionId": "a"
@@ -1697,7 +1739,7 @@ export const Coding401Module: LearningModule = {
         {
           "id": "coding-401-l15-ia1",
           "type": "matching_pairs",
-          "title": "Reasoning Match: Coding IV Mastery Mastery Sprint",
+          "title": "Reasoning Match: Final Sprint",
           "description": "Match each error signal to the strongest correction strategy.",
           "estimatedMinutes": 7,
           "difficultyLevel": "medium",
@@ -1718,7 +1760,7 @@ export const Coding401Module: LearningModule = {
               },
               {
                 "id": "l3",
-                "label": "Weak transfer of capstone software systems thinking under timing"
+                "label": "Weak transfer of systems thinking under timing"
               }
             ],
             "right": [
@@ -1785,7 +1827,8 @@ export const Coding401Module: LearningModule = {
           "title": "Memory Tip",
           "content": "Use the phrase Plan, Check, Explain for each question."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/coding-401-l15.png"
     }
   ]
 };

@@ -1,9 +1,9 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const AdvancedMath501Module: LearningModule = {
+export const advanced_math_501_Module: LearningModule = {
   "id": "advanced-math-501",
   "title": "Advanced Math Specialization Studio",
-  "description": "Post-401 specialization in Advanced Math, focused on advanced math systems diagnostics, advanced math operations and execution design, advanced math impact and tradeoff analysis, and advanced math governance and leadership through advanced casework, simulation, and defense-based checkpoints.",
+  "description": "Post-401 specialization in Advanced Math, focused on advanced math systems diagnostics, operations and execution design, impact and tradeoff analysis, and governance and leadership through advanced casework, simulation, and defense-based checkpoints.",
   "subject": "Advanced Math",
   "tags": [
     "core",
@@ -14,7 +14,7 @@ export const AdvancedMath501Module: LearningModule = {
   ],
   "minAge": 17,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en",
@@ -31,15 +31,17 @@ export const AdvancedMath501Module: LearningModule = {
   "lessons": [
     {
       "id": "advanced-math-501-l01",
-      "title": "Advanced Math Advanced Foundations",
+      "title": "Advanced Mathematical Foundations",
       "type": "video",
       "duration": 14,
+      "lessonImagePrompt": "Imagen 4 prompt: A sleek, futuristic digital interface displaying complex mathematical causal models, uncertainty bounds, and scope boundaries in glowing blue and white neon lines against a dark background, photorealistic, 8k resolution.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A dynamic 3D animation showing a complex mathematical system being mapped out. Glowing nodes connect to form causal pathways, with translucent spheres representing uncertainty ranges expanding and contracting. Cinematic lighting, high-tech aesthetic, 4k resolution.",
       "learningAids": [
         {
           "id": "advanced-math-501-l01-a1",
           "type": "image",
           "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "content": "Focus on defining explicit boundaries. A well-scoped mathematical model isolates variables and quantifies uncertainty before any operations begin."
         }
       ],
       "chunks": [
@@ -47,50 +49,52 @@ export const AdvancedMath501Module: LearningModule = {
           "id": "advanced-math-501-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "In this lesson, we will delve into the fascinating concept of advanced scope boundaries within the realm of Advanced Math. Our primary focus will be on learning how to effectively diagnose complex mathematical systems. We will also explore how to design efficient operations and execution strategies that can be applied in various mathematical contexts. By understanding these principles, we will enhance our ability to navigate the intricate world of advanced mathematical concepts and their real-world applications, ultimately empowering us to tackle challenging problems with confidence.\nContext recap: In this lesson, we will delve into the fascinating concept of advanced scope boundaries within the realm of Advanced Math. Our primary focus will be on learning how to effectively diagnose complex mathematical systems. We will also explore how to design efficient operations and execution strategies that can be applied in various mathematical contexts. By understanding these principles, we will enhance our ability to navigate the intricate world of advanced mathematical concepts and their real-world applications, ultimately empowering us to tackle challenging problems with confidence."
+          "content": "In this lesson, we establish the critical framework for advanced scope boundaries within complex mathematical systems. Our primary focus is on diagnosing intricate mathematical architectures by defining explicit system boundaries and operational constraints. Mastering these principles empowers practitioners to isolate variables effectively and tackle high-level mathematical problems with rigorous precision."
         },
         {
           "id": "advanced-math-501-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different events or variables. They will also identify uncertainty ranges and understand how various systems depend on one another. This foundational knowledge is crucial for planning effective interventions in complex scenarios.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different events or variables. They will also identify uncertainty ranges and understand how various systems depend on one another. This foundational knowledge is crucial for planning effective interventions in complex scenarios."
+          "content": "Learners will engage in mapping out causal pathways, identifying the precise mathematical connections between interdependent variables. This section emphasizes the quantification of uncertainty ranges and the modeling of system dependencies. This foundational knowledge is crucial for planning effective interventions and predicting outcomes in highly complex, stochastic scenarios."
         },
         {
           "id": "advanced-math-501-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "In our recap, we emphasize that all claims made in our analyses should be linked to measurable indicators. This means we will establish confidence bounds and set up review checkpoints to ensure our findings are reliable and valid. This practice is essential for maintaining the integrity of our mathematical conclusions.\nContext recap: In our recap, we emphasize that all claims made in our analyses should be linked to measurable indicators. This means we will establish confidence bounds and set up review checkpoints to ensure our findings are reliable and valid. This practice is essential for maintaining the integrity of our mathematical conclusions."
+          "content": "To conclude our foundations, we emphasize that all mathematical claims must be inextricably linked to measurable indicators. We will establish strict confidence bounds and set up review checkpoints to ensure findings are statistically reliable and valid. This practice is non-negotiable for maintaining the integrity of advanced mathematical conclusions."
         }
       ],
       "flashcards": [
         {
           "id": "advanced-math-501-l01-f1",
-          "front": "advanced math systems diagnostics",
-          "back": "A specialization axis requiring explicit assumptions and measurable constraints."
+          "front": "Advanced Math Systems Diagnostics",
+          "back": "A specialization axis requiring explicit assumptions and measurable constraints to isolate system behaviors."
         },
         {
           "id": "advanced-math-501-l01-f2",
-          "front": "advanced math operations and execution design",
-          "back": "Execution architecture that determines reliability under stress."
+          "front": "Operations and Execution Design",
+          "back": "Execution architecture that determines system reliability and performance under extreme stress."
         },
         {
           "id": "advanced-math-501-l01-f3",
-          "front": "advanced math impact and tradeoff analysis",
-          "back": "Evaluation discipline for identifying true gains and hidden costs."
+          "front": "Impact and Tradeoff Analysis",
+          "back": "An evaluation discipline for identifying true mathematical gains, hidden costs, and systemic side effects."
         }
       ]
     },
     {
       "id": "advanced-math-501-l02",
-      "title": "Advanced Math Specialist Methods Lab",
+      "title": "Specialist Methods Lab",
       "type": "interactive",
       "duration": 17,
+      "lessonImagePrompt": "Imagen 4 prompt: A modern high-tech laboratory workspace featuring multiple holographic screens displaying mathematical workflows, stress test graphs, and control gate architectures, photorealistic, cinematic lighting, 8k.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A visual simulation of a mathematical workflow undergoing a stress test. Data flows through a glowing pipeline, hitting a 'control gate' that flashes red, triggering a mechanical rollback mechanism. Clean, modern data visualization style, 4k.",
       "learningAids": [
         {
           "id": "advanced-math-501-l02-a1",
           "type": "practice",
           "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "content": "When designing workflows, always include control gates. These act as circuit breakers, preventing cascading failures during mathematical stress tests."
         }
       ],
       "chunks": [
@@ -98,13 +102,19 @@ export const AdvancedMath501Module: LearningModule = {
           "id": "advanced-math-501-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "In this interactive segment, learners will have the opportunity to design specialized workflows that are tailored to specific mathematical challenges. They will also conduct stress tests on these workflows to see how they perform under adverse conditions, helping them to identify potential weaknesses and areas for improvement.\nContext recap: In this interactive segment, learners will have the opportunity to design specialized workflows that are tailored to specific mathematical challenges. They will also conduct stress tests on these workflows to see how they perform under adverse conditions, helping them to identify potential weaknesses and areas for improvement."
+          "content": "In this interactive segment, learners will design specialized mathematical workflows tailored to specific, high-constraint challenges. You will conduct rigorous stress tests on these workflows to observe performance under adverse conditions, identifying potential failure points, edge cases, and areas requiring structural reinforcement."
         },
         {
           "id": "advanced-math-501-l02-c2",
-          "kind": "recap",
+          "kind": "concept",
           "title": "Control Gate Architecture",
-          "content": "In this recap, we will discuss how workflows can be structured to include important checkpoints, rollback criteria, and threshold-based escalation processes. These elements are vital for ensuring that our mathematical operations remain effective and can adapt to changing circumstances.\nContext recap: In this recap, we will discuss how workflows can be structured to include important checkpoints, rollback criteria, and threshold-based escalation processes. These elements are vital for ensuring that our mathematical operations remain effective and can adapt to changing circumstances."
+          "content": "We will analyze how workflows must be structured to include critical checkpoints, rollback criteria, and threshold-based escalation processes. These architectural elements are vital for ensuring that mathematical operations remain robust, fail gracefully, and adapt dynamically to changing systemic circumstances."
+        },
+        {
+          "id": "advanced-math-501-l02-c3",
+          "kind": "recap",
+          "title": "Escalation Protocols",
+          "content": "Finally, we define clear pathways for escalating systemic anomalies to human oversight. Establishing these protocols ensures that mathematical models do not operate unchecked during critical failures, maintaining a necessary layer of human accountability."
         }
       ],
       "interactiveActivities": [
@@ -139,12 +149,14 @@ export const AdvancedMath501Module: LearningModule = {
       "title": "Checkpoint 1: Specialist Methods",
       "type": "quiz",
       "duration": 10,
+      "lessonImagePrompt": "Imagen 4 prompt: A minimalist, elegant digital checkpoint interface with a glowing lock icon and complex mathematical symbols, representing a knowledge assessment, dark mode, high contrast, 8k.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A fast-paced cinematic montage of mathematical symbols, data dashboards, and glowing checkmarks appearing on a sleek glass screen, symbolizing a rapid assessment of advanced math concepts, 4k.",
       "learningAids": [
         {
           "id": "advanced-math-501-l03-a1",
           "type": "practice",
           "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "content": "Review your foundational concepts: explicit assumptions, control gate architecture, and the necessity of causal modeling in complex systems."
         }
       ],
       "questions": [
@@ -155,23 +167,23 @@ export const AdvancedMath501Module: LearningModule = {
           "options": [
             {
               "id": "a",
-              "text": "Proceed without baseline or assumptions"
+              "text": "Rely solely on heuristic approximations without empirical baselines"
             },
             {
               "id": "b",
-              "text": "Define assumptions, constraints, and measurable indicators"
+              "text": "Define explicit assumptions, constraints, and measurable indicators"
             },
             {
               "id": "c",
-              "text": "Optimize only for speed in every context"
+              "text": "Optimize exclusively for computational speed across all contexts"
             },
             {
               "id": "d",
-              "text": "Ignore uncertainty and edge conditions"
+              "text": "Abstract away uncertainty to simplify the decision matrix"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Advanced decisions improve when assumptions, constraints, and metrics are explicit."
+          "explanation": "Advanced decisions improve significantly when assumptions, constraints, and metrics are made explicit and measurable."
         },
         {
           "id": "advanced-math-501-l03-q2",
@@ -184,19 +196,19 @@ export const AdvancedMath501Module: LearningModule = {
             },
             {
               "id": "b",
-              "text": "No role clarity and ad-hoc process changes"
+              "text": "Decentralized execution with fluid, ad-hoc process adaptations"
             },
             {
               "id": "c",
-              "text": "No retrospective or post-run review"
+              "text": "Continuous deployment without retrospective review cycles"
             },
             {
               "id": "d",
-              "text": "No rollback or fallback conditions"
+              "text": "Linear execution models lacking rollback or fallback conditions"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Reliable advanced execution needs ownership clarity and threshold-driven governance."
+          "explanation": "Reliable advanced execution necessitates ownership clarity, structured checkpoints, and threshold-driven governance."
         },
         {
           "id": "advanced-math-501-l03-q3",
@@ -205,7 +217,7 @@ export const AdvancedMath501Module: LearningModule = {
           "options": [
             {
               "id": "a",
-              "text": "Anecdotes without comparison"
+              "text": "Qualitative case studies without comparative control groups"
             },
             {
               "id": "b",
@@ -213,15 +225,15 @@ export const AdvancedMath501Module: LearningModule = {
             },
             {
               "id": "c",
-              "text": "Changing success criteria after outcomes"
+              "text": "Dynamic success criteria adjusted post-implementation"
             },
             {
               "id": "d",
-              "text": "Excluding difficult scenarios from analysis"
+              "text": "Exclusion of stochastic edge cases to ensure model convergence"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible analysis combines comparative baselines, side-effect checks, and uncertainty disclosure."
+          "explanation": "Defensible analysis combines comparative baselines, rigorous side-effect checks, and transparent uncertainty disclosure."
         },
         {
           "id": "advanced-math-501-l03-q4",
@@ -234,133 +246,135 @@ export const AdvancedMath501Module: LearningModule = {
             },
             {
               "id": "b",
-              "text": "Policy language with no measurable enforcement"
+              "text": "High-level policy language decoupled from operational metrics"
             },
             {
               "id": "c",
-              "text": "Targets without ownership or escalation design"
+              "text": "Aggressive performance targets without defined escalation protocols"
             },
             {
               "id": "d",
-              "text": "Operations without transparent accountability"
+              "text": "Siloed operations prioritizing speed over transparent accountability"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Governance maturity is the operational link between intent, measurement, and corrective action."
+          "explanation": "Governance maturity is defined by the operational link between strategic intent, measurable enforcement, and corrective action."
         },
         {
           "id": "advanced-math-501-l03-q5",
-          "text": "What is the best way to compare competing interventions in advanced Advanced Math?",
-          "skillId": "advanced-math-501-skill-advanced-5",
+          "text": "Why is causal modeling critical before implementing an advanced mathematical intervention?",
+          "skillId": "advanced-math-501-skill-causal",
           "options": [
             {
               "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
+              "text": "It guarantees a positive outcome regardless of the underlying data quality."
             },
             {
               "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
+              "text": "It isolates the true effect of the intervention from confounding variables."
             },
             {
               "id": "c",
-              "text": "Switch metrics after results arrive"
+              "text": "It eliminates the need for establishing confidence bounds."
             },
             {
               "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
+              "text": "It allows practitioners to bypass control gate architecture entirely."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
+          "explanation": "Causal modeling is essential for distinguishing the actual impact of an intervention from external noise and confounding factors."
         },
         {
           "id": "advanced-math-501-l03-q6",
-          "text": "In high-stakes Advanced Math Specialization Studio execution, which communication protocol is strongest?",
-          "skillId": "advanced-math-501-skill-advanced-6",
+          "text": "What is the primary purpose of a stress test in mathematical method design?",
+          "skillId": "advanced-math-501-skill-stress",
           "options": [
             {
               "id": "a",
-              "text": "Broadcast conclusions without assumptions"
+              "text": "To mathematically prove that the system will never experience failure."
             },
             {
               "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
+              "text": "To identify failure points and system behavior under extreme, non-standard conditions."
             },
             {
               "id": "c",
-              "text": "Share only final outcomes after completion"
+              "text": "To reduce the overall computational load of the workflow."
             },
             {
               "id": "d",
-              "text": "Limit updates to a single informal channel"
+              "text": "To bypass standard operational checkpoints for faster deployment."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
+          "explanation": "Stress tests are designed to push systems to their limits to uncover vulnerabilities and ensure graceful degradation under pressure."
         },
         {
           "id": "advanced-math-501-l03-q7",
-          "text": "A mature remediation loop in advanced Advanced Math should prioritize:",
-          "skillId": "advanced-math-501-skill-advanced-7",
+          "text": "Which of the following best describes a 'rollback trigger' in control gate architecture?",
+          "skillId": "advanced-math-501-skill-gates",
           "options": [
             {
               "id": "a",
-              "text": "Blame assignment without system updates"
+              "text": "A predefined threshold that, when breached, automatically reverts the system to its previous stable state."
             },
             {
               "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
+              "text": "A mechanism that accelerates the workflow when environmental conditions are optimal."
             },
             {
               "id": "c",
-              "text": "One-time fixes without retesting"
+              "text": "A manual review process that occurs only after a project is fully completed."
             },
             {
               "id": "d",
-              "text": "Issue closure based on elapsed time"
+              "text": "A communication tool used exclusively for updating non-technical stakeholders."
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
+          "correctOptionId": "a",
+          "explanation": "Rollback triggers are critical safety mechanisms that revert systems to a known good state when operational thresholds are violated."
         },
         {
           "id": "advanced-math-501-l03-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Advanced Math Specialization Studio?",
-          "skillId": "advanced-math-501-skill-advanced-8",
+          "text": "How should uncertainty be handled when presenting mathematical evidence?",
+          "skillId": "advanced-math-501-skill-evidence",
           "options": [
             {
               "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
+              "text": "It should be minimized or hidden to project absolute confidence to stakeholders."
             },
             {
               "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
+              "text": "It should be explicitly quantified and reported alongside confidence bounds."
             },
             {
               "id": "c",
-              "text": "Ignore correlated failure modes"
+              "text": "It should only be discussed if stakeholders specifically ask about potential risks."
             },
             {
               "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
+              "text": "It should be replaced with deterministic estimates to simplify the narrative."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "explanation": "Defensible mathematical practice requires the transparent quantification and reporting of uncertainty and confidence intervals."
         }
       ]
     },
     {
       "id": "advanced-math-501-l04",
-      "title": "Advanced Math Advanced Case Analysis",
+      "title": "Advanced Case Analysis",
       "type": "video",
       "duration": 14,
+      "lessonImagePrompt": "Imagen 4 prompt: A sophisticated boardroom table with a holographic projection of a complex mathematical tradeoff matrix, showing safety, reliability, and cost dimensions in glowing colors, photorealistic, 8k.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A 3D data visualization comparing multiple mathematical scenarios. Bar charts and radar graphs dynamically adjust as different constraints like cost, safety, and reliability are prioritized, illustrating tradeoff framing, 4k.",
       "learningAids": [
         {
           "id": "advanced-math-501-l04-a1",
           "type": "image",
           "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "content": "Tradeoff framing requires looking beyond primary metrics. Always evaluate secondary effects like cost, safety, and systemic reliability."
         }
       ],
       "chunks": [
@@ -368,33 +382,52 @@ export const AdvancedMath501Module: LearningModule = {
           "id": "advanced-math-501-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "In this lesson, we will explore the different competing constraints that can occur in advanced math systems diagnostics. These constraints can affect how we analyze and understand complex mathematical problems. Additionally, we will examine the impacts and trade-offs involved in these scenarios. Understanding these elements is crucial for making informed and effective decisions when working with advanced mathematical concepts and systems. By the end of this lesson, you will have a clearer understanding of how to navigate these challenges in your mathematical studies.\nContext recap: In this lesson, we will explore the different competing constraints that can occur in advanced math systems diagnostics. These constraints can affect how we analyze and understand complex mathematical problems. Additionally, we will examine the impacts and trade-offs involved in these scenarios. Understanding these elements is crucial for making informed and effective decisions when working with advanced mathematical concepts and systems."
+          "content": "In this lesson, we explore the competing constraints inherent in advanced math systems diagnostics. These constraints dictate how we analyze and model complex mathematical problems. We will examine the systemic impacts and trade-offs involved in these scenarios, providing the analytical tools necessary to navigate high-stakes mathematical challenges effectively."
         },
         {
           "id": "advanced-math-501-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "In this practice session, learners will compare different options based on several important dimensions, including safety, reliability, cost, equity, and governance. This comparative analysis will help them understand the implications of their choices in advanced mathematical contexts.\nContext recap: In this practice session, learners will compare different options based on several important dimensions, including safety, reliability, cost, equity, and governance. This comparative analysis will help them understand the implications of their choices in advanced mathematical contexts.\nWhy this matters: Tradeoff Framing helps learners in Advanced Math connect ideas from Advanced Math Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "Learners will conduct comparative analyses of different mathematical interventions based on critical dimensions: safety, reliability, cost, equity, and governance. This rigorous tradeoff framing ensures that practitioners fully understand the multidimensional implications of their choices before implementation."
         },
         {
           "id": "advanced-math-501-l04-c3",
           "kind": "recap",
           "title": "Decision Memo Pattern",
-          "content": "In our recap, we will highlight that each recommendation made should clearly outline the underlying assumptions, the evidence supporting it, the risk controls in place, and any fallback plans. This structured approach is crucial for ensuring that our decisions are well-informed and robust.\nContext recap: In our recap, we will highlight that each recommendation made should clearly outline the underlying assumptions, the evidence supporting it, the risk controls in place, and any fallback plans. This structured approach is crucial for ensuring that our decisions are well-informed and robust."
+          "content": "We conclude by formalizing the Decision Memo Pattern. Every mathematical recommendation must clearly articulate underlying assumptions, empirical evidence, risk controls, and fallback plans. This structured documentation is crucial for ensuring decisions are defensible, transparent, and robust against expert scrutiny."
+        }
+      ],
+      "flashcards": [
+        {
+          "id": "advanced-math-501-l04-f1",
+          "front": "Scenario Architecture",
+          "back": "The structural mapping of competing constraints and variables within a mathematical model."
+        },
+        {
+          "id": "advanced-math-501-l04-f2",
+          "front": "Tradeoff Framing",
+          "back": "The comparative analysis of interventions across dimensions like safety, cost, and reliability."
+        },
+        {
+          "id": "advanced-math-501-l04-f3",
+          "front": "Decision Memo Pattern",
+          "back": "A structured documentation format detailing assumptions, evidence, and fallback plans for mathematical decisions."
         }
       ]
     },
     {
       "id": "advanced-math-501-l05",
-      "title": "Advanced Math Simulation Clinic",
+      "title": "Simulation Clinic",
       "type": "interactive",
       "duration": 18,
+      "lessonImagePrompt": "Imagen 4 prompt: A high-tech control room with a large curved monitor displaying a live mathematical simulation, showing real-time data streams and adaptive response controls, cinematic lighting, 8k.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A first-person view of a digital dashboard during a high-pressure mathematical simulation. The user adjusts sliders and toggles controls in real-time as warning alerts pop up, demonstrating adaptive response, 4k.",
       "learningAids": [
         {
           "id": "advanced-math-501-l05-a1",
           "type": "practice",
           "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "content": "In live simulations, adaptability is key. Monitor your baseline dashboards and be prepared to trigger rollback protocols if thresholds are breached."
         }
       ],
       "chunks": [
@@ -402,13 +435,19 @@ export const AdvancedMath501Module: LearningModule = {
           "id": "advanced-math-501-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "In this interactive clinic, learners will take on the role of operators managing scenario controls. They will need to balance performance with governance constraints, which is an important skill in advanced mathematical applications where multiple factors must be considered.\nContext recap: In this interactive clinic, learners will take on the role of operators managing scenario controls. They will need to balance performance with governance constraints, which is an important skill in advanced mathematical applications where multiple factors must be considered."
+          "content": "In this interactive clinic, learners act as operators managing live scenario controls. You will be tasked with balancing mathematical performance optimization against strict governance constraints. This exercise develops the critical ability to make real-time, data-driven adjustments in volatile mathematical environments."
         },
         {
           "id": "advanced-math-501-l05-c2",
-          "kind": "recap",
+          "kind": "concept",
           "title": "Adaptive Response Design",
-          "content": "In our recap, we will discuss how effective responses to challenges can be designed to update control gates while maintaining traceability and accountability. This ensures that all actions taken are transparent and can be tracked back to their origins.\nContext recap: In our recap, we will discuss how effective responses to challenges can be designed to update control gates while maintaining traceability and accountability. This ensures that all actions taken are transparent and can be tracked back to their origins."
+          "content": "We will review how to design adaptive responses that dynamically update control gates during a crisis. Maintaining traceability and accountability while adjusting parameters on the fly ensures that all emergency actions remain transparent and auditable."
+        },
+        {
+          "id": "advanced-math-501-l05-c3",
+          "kind": "recap",
+          "title": "Post-Simulation Analysis",
+          "content": "Following the simulation, we conduct rigorous retrospective reviews to identify latency in response times and refine control gate thresholds for future iterations, ensuring continuous improvement in high-pressure execution."
         }
       ],
       "interactiveActivities": [
@@ -425,12 +464,14 @@ export const AdvancedMath501Module: LearningModule = {
       "title": "Checkpoint 2: Case and Simulation Mastery",
       "type": "quiz",
       "duration": 11,
+      "lessonImagePrompt": "Imagen 4 prompt: A glowing digital badge or shield with intricate mathematical geometry embedded within, symbolizing mastery and defense of complex systems, dark background, 8k resolution.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A sleek animation of a complex geometric puzzle assembling itself, with each piece representing a different aspect of case analysis and simulation, culminating in a glowing, unified structure, 4k.",
       "learningAids": [
         {
           "id": "advanced-math-501-l06-a1",
           "type": "practice",
           "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "content": "Mastery requires synthesizing tradeoff analysis with operational execution. Ensure your decisions are defensible under strict governance criteria."
         }
       ],
       "questions": [
@@ -441,23 +482,23 @@ export const AdvancedMath501Module: LearningModule = {
           "options": [
             {
               "id": "a",
-              "text": "A preferred option without explicit assumptions"
+              "text": "A preferred theoretical model without explicit operational assumptions"
             },
             {
               "id": "b",
-              "text": "A clear baseline, explicit constraints, and success criteria"
+              "text": "A clear baseline, explicit constraints, and measurable success criteria"
             },
             {
               "id": "c",
-              "text": "High confidence without evidence logs"
+              "text": "High-confidence projections omitting underlying evidence logs"
             },
             {
               "id": "d",
-              "text": "Single-metric optimization only"
+              "text": "Single-metric optimization to ensure narrative clarity"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible recommendations begin with explicit assumptions, constraints, and measurable targets."
+          "explanation": "Defensible recommendations must begin with explicit assumptions, constraints, and measurable targets to ensure validity."
         },
         {
           "id": "advanced-math-501-l06-q2",
@@ -466,23 +507,23 @@ export const AdvancedMath501Module: LearningModule = {
           "options": [
             {
               "id": "a",
-              "text": "Checkpointed execution with fallback and escalation criteria"
+              "text": "Checkpointed execution with predefined fallback and escalation criteria"
             },
             {
               "id": "b",
-              "text": "One-way execution with no rollback capability"
+              "text": "Unidirectional execution pipelines optimized for maximum throughput"
             },
             {
               "id": "c",
-              "text": "No ownership mapping across teams"
+              "text": "Diffused ownership mapping to encourage cross-functional agility"
             },
             {
               "id": "d",
-              "text": "Hidden assumptions and undocumented decisions"
+              "text": "Implicit assumptions to maintain flexibility during deployment"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Resilience depends on checkpoints, fallback options, and explicit escalation design."
+          "explanation": "Resilience in complex systems depends heavily on checkpoints, fallback options, and explicit escalation design."
         },
         {
           "id": "advanced-math-501-l06-q3",
@@ -491,23 +532,23 @@ export const AdvancedMath501Module: LearningModule = {
           "options": [
             {
               "id": "a",
-              "text": "Single success story without controls"
+              "text": "Highlighting a single successful implementation without control comparisons"
             },
             {
               "id": "b",
-              "text": "Comparative baselines plus side-effect and uncertainty analysis"
+              "text": "Comparative baselines integrated with side-effect and uncertainty analysis"
             },
             {
               "id": "c",
-              "text": "Outcome-only narrative without process evidence"
+              "text": "Outcome-focused narratives that omit procedural evidence"
             },
             {
               "id": "d",
-              "text": "Retrospective scope changes to fit outcomes"
+              "text": "Retrospective scope adjustments to align with observed outcomes"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Rigorous evaluation requires comparisons, side-effect analysis, and uncertainty disclosure."
+          "explanation": "Rigorous evaluation requires baseline comparisons, comprehensive side-effect analysis, and transparent uncertainty disclosure."
         },
         {
           "id": "advanced-math-501-l06-q4",
@@ -516,23 +557,23 @@ export const AdvancedMath501Module: LearningModule = {
           "options": [
             {
               "id": "a",
-              "text": "Aligns authority, measurement, and remediation obligations"
+              "text": "Aligns decision authority, measurable controls, and remediation obligations"
             },
             {
               "id": "b",
-              "text": "Separates policy from operational controls"
+              "text": "Strictly separates strategic policy from tactical operational controls"
             },
             {
               "id": "c",
-              "text": "Avoids external review and transparency"
+              "text": "Internalizes all reviews to prevent external transparency friction"
             },
             {
               "id": "d",
-              "text": "Treats accountability as optional under pressure"
+              "text": "Treats accountability as a flexible guideline during high-pressure crises"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Mature governance links authority, measurable controls, and corrective action."
+          "explanation": "Mature governance effectively links authority, measurable controls, and corrective action into a unified framework."
         },
         {
           "id": "advanced-math-501-l06-q5",
@@ -541,7 +582,7 @@ export const AdvancedMath501Module: LearningModule = {
           "options": [
             {
               "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
+              "text": "Select the option supported by the most persuasive qualitative narrative"
             },
             {
               "id": "b",
@@ -549,15 +590,15 @@ export const AdvancedMath501Module: LearningModule = {
             },
             {
               "id": "c",
-              "text": "Switch metrics after results arrive"
+              "text": "Dynamically adjust evaluation metrics as preliminary results arrive"
             },
             {
               "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
+              "text": "Prioritize the intervention with the lowest initial computational cost"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
+          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and explicit uncertainty disclosure."
         },
         {
           "id": "advanced-math-501-l06-q6",
@@ -566,7 +607,7 @@ export const AdvancedMath501Module: LearningModule = {
           "options": [
             {
               "id": "a",
-              "text": "Broadcast conclusions without assumptions"
+              "text": "Broadcast definitive conclusions while abstracting away underlying assumptions"
             },
             {
               "id": "b",
@@ -574,15 +615,15 @@ export const AdvancedMath501Module: LearningModule = {
             },
             {
               "id": "c",
-              "text": "Share only final outcomes after completion"
+              "text": "Restrict information sharing to final outcomes post-completion"
             },
             {
               "id": "d",
-              "text": "Limit updates to a single informal channel"
+              "text": "Limit updates to informal channels to avoid premature scrutiny"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
+          "explanation": "High-stakes communication must transparently expose assumptions, confidence intervals, and operational checkpoints."
         },
         {
           "id": "advanced-math-501-l06-q7",
@@ -591,7 +632,7 @@ export const AdvancedMath501Module: LearningModule = {
           "options": [
             {
               "id": "a",
-              "text": "Blame assignment without system updates"
+              "text": "Rapid blame assignment to isolate underperforming system components"
             },
             {
               "id": "b",
@@ -599,15 +640,15 @@ export const AdvancedMath501Module: LearningModule = {
             },
             {
               "id": "c",
-              "text": "One-time fixes without retesting"
+              "text": "Implementation of one-time hotfixes without subsequent regression testing"
             },
             {
               "id": "d",
-              "text": "Issue closure based on elapsed time"
+              "text": "Administrative issue closure based on elapsed time since the incident"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
+          "explanation": "Mature remediation ties root causes directly to control redesign and subsequent verification."
         },
         {
           "id": "advanced-math-501-l06-q8",
@@ -616,7 +657,7 @@ export const AdvancedMath501Module: LearningModule = {
           "options": [
             {
               "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
+              "text": "Maximize short-term expected value regardless of systemic concentration risk"
             },
             {
               "id": "b",
@@ -624,11 +665,11 @@ export const AdvancedMath501Module: LearningModule = {
             },
             {
               "id": "c",
-              "text": "Ignore correlated failure modes"
+              "text": "Discount correlated failure modes to simplify portfolio variance calculations"
             },
             {
               "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
+              "text": "Commit all available resources to a single, irreversible strategic pathway"
             }
           ],
           "correctOptionId": "b",
@@ -638,15 +679,17 @@ export const AdvancedMath501Module: LearningModule = {
     },
     {
       "id": "advanced-math-501-l07",
-      "title": "Advanced Math Governance and Public Impact",
+      "title": "Governance and Public Impact",
       "type": "video",
       "duration": 13,
+      "lessonImagePrompt": "Imagen 4 prompt: A conceptual illustration of a glowing mathematical network overlaying a stylized globe, representing the global and public impact of advanced mathematical governance, photorealistic, 8k.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: An abstract animation showing a single mathematical decision rippling outward as a glowing wave, affecting various interconnected nodes representing different stakeholder groups, highlighting impact distribution, 4k.",
       "learningAids": [
         {
           "id": "advanced-math-501-l07-a1",
           "type": "image",
           "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "content": "Mathematical models do not exist in a vacuum. Always map the distribution of impacts across stakeholders and ensure decision traceability."
         }
       ],
       "chunks": [
@@ -654,50 +697,52 @@ export const AdvancedMath501Module: LearningModule = {
           "id": "advanced-math-501-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. Understanding these dynamics is essential for evaluating the broader impact of mathematical decisions on society.\nContext recap: In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. Understanding these dynamics is essential for evaluating the broader impact of mathematical decisions on society.\nWhy this matters: Stakeholder Impact Distribution helps learners in Advanced Math connect ideas from Advanced Math Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "In this lesson, learners will map the distribution of benefits, burdens, and delayed effects across diverse stakeholder groups. Understanding these temporal and demographic dynamics is essential for evaluating the broader societal impact of high-level mathematical decisions and algorithms."
         },
         {
           "id": "advanced-math-501-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "In this section, we will explore the architecture of accountability, which includes ensuring that decision traceability, review rights, and remediation obligations are integrated into our processes. This framework is vital for maintaining trust and responsibility in advanced mathematical practices.\nContext recap: In this section, we will explore the architecture of accountability, which includes ensuring that decision traceability, review rights, and remediation obligations are integrated into our processes. This framework is vital for maintaining trust and responsibility in advanced mathematical practices."
+          "content": "We will explore the architecture of accountability, ensuring that decision traceability, review rights, and remediation obligations are deeply integrated into mathematical processes. This framework is vital for maintaining public trust and institutional responsibility in advanced mathematical practices."
         },
         {
           "id": "advanced-math-501-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "At the end of our lesson, we will use a comprehensive checklist that connects important outcomes with ethical considerations, ensures we are following policies, and promotes resilience in our leadership practices. This checklist will help us reflect on how our decisions impact the community and the environment around us.\nContext recap: At the end of our lesson, we will use a comprehensive checklist that connects important outcomes with ethical considerations, ensures we are following policies, and promotes resilience in our leadership practices. This checklist will help us reflect on how our decisions impact the community and the environment around us."
+          "content": "We conclude with a comprehensive leadership checklist that aligns performance outcomes with ethical considerations and policy compliance. This tool ensures practitioners systematically reflect on how their mathematical models and decisions impact the broader community and environment."
         }
       ],
       "flashcards": [
         {
           "id": "advanced-math-501-l07-f1",
           "front": "Impact distribution",
-          "back": "How outcomes are allocated across populations and timescales."
+          "back": "How outcomes, benefits, and burdens are allocated across populations and timescales."
         },
         {
           "id": "advanced-math-501-l07-f2",
           "front": "Decision traceability",
-          "back": "An auditable record of evidence, ownership, and rationale."
+          "back": "An auditable record of evidence, ownership, and rationale behind a mathematical model."
         },
         {
           "id": "advanced-math-501-l07-f3",
           "front": "Responsible leadership",
-          "back": "Decision behavior balancing performance, accountability, and ethics."
+          "back": "Decision behavior balancing mathematical performance, accountability, and ethical impact."
         }
       ]
     },
     {
       "id": "advanced-math-501-l08",
-      "title": "Advanced Math Capstone Defense Lab",
+      "title": "Capstone Defense Lab",
       "type": "interactive",
       "duration": 16,
+      "lessonImagePrompt": "Imagen 4 prompt: A futuristic academic defense setting, featuring a glowing podium facing a panel of holographic screens displaying complex mathematical proofs and data, cinematic lighting, 8k.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A dynamic simulation of a defense brief assembly. Documents, data charts, and mathematical models fly into a structured digital folder, which is then presented to a virtual expert panel for critique, 4k.",
       "learningAids": [
         {
           "id": "advanced-math-501-l08-a1",
           "type": "practice",
           "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "content": "A successful defense relies on transparency. Be prepared to articulate your uncertainty bounds and justify your remediation pathways under expert critique."
         }
       ],
       "chunks": [
@@ -705,13 +750,19 @@ export const AdvancedMath501Module: LearningModule = {
           "id": "advanced-math-501-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "In this interactive session, learners will work together to create a detailed defense brief. This brief will include well-supported claims, relevant evidence, clear boundaries of uncertainty, and suggested pathways for remediation. This exercise will help you practice articulating your ideas and backing them up with solid reasoning.\nContext recap: In this interactive session, learners will work together to create a detailed defense brief. This brief will include well-supported claims, relevant evidence, clear boundaries of uncertainty, and suggested pathways for remediation. This exercise will help you practice articulating your ideas and backing them up with solid reasoning."
+          "content": "In this capstone session, learners will synthesize their knowledge to create a comprehensive defense brief. This document must include well-supported mathematical claims, empirical evidence, explicit boundaries of uncertainty, and structured pathways for remediation. This exercise hones your ability to articulate and justify complex models."
         },
         {
           "id": "advanced-math-501-l08-c2",
-          "kind": "recap",
+          "kind": "practice",
           "title": "Expert Panel Rehearsal",
-          "content": "During this recap session, learners will have the opportunity to practice their responses to various critiques. These critiques will focus on technical aspects, governance issues, and the perspectives of different stakeholders. This rehearsal will prepare you to confidently address questions and feedback in a real-world setting.\nContext recap: During this recap session, learners will have the opportunity to practice their responses to various critiques. These critiques will focus on technical aspects, governance issues, and the perspectives of different stakeholders. This rehearsal will prepare you to confidently address questions and feedback in a real-world setting."
+          "content": "Learners will practice defending their briefs against rigorous critiques focusing on technical validity, governance compliance, and stakeholder impact. This adversarial rehearsal prepares you to confidently address expert scrutiny and defend your mathematical methodologies in real-world, high-stakes environments."
+        },
+        {
+          "id": "advanced-math-501-l08-c3",
+          "kind": "recap",
+          "title": "Remediation Pathways",
+          "content": "Finally, we establish structured, evidence-based protocols for addressing and correcting model vulnerabilities identified during the expert critique phase, ensuring that feedback translates directly into systemic improvement."
         }
       ],
       "interactiveActivities": [

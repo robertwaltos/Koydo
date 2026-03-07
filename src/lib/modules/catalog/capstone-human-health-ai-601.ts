@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const CapstoneHumanHealthAi601Module: LearningModule = {
+export const capstone_human_health_ai_601_Module: LearningModule = {
   "id": "capstone-human-health-ai-601",
   "title": "Capstone Human Health AI Defense",
   "description": "Interdisciplinary capstone module focused on regulatory strategy, risk communication, multi-stakeholder governance, and research and deployment defense, using case-based simulation and defense-driven assessment.",
@@ -14,7 +14,7 @@ export const CapstoneHumanHealthAi601Module: LearningModule = {
   ],
   "minAge": 17,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en"
@@ -33,6 +33,8 @@ export const CapstoneHumanHealthAi601Module: LearningModule = {
       "title": "Capstone Context and Stakes",
       "type": "video",
       "duration": 14,
+      "lessonImagePrompt": "A diverse board of directors in a modern, high-tech conference room reviewing AI health data on a glowing holographic table, professional lighting, photorealistic, 8k resolution.",
+      "conceptVideoPrompt": "A cinematic slow pan across a futuristic hospital command center, showing healthcare professionals and AI analysts discussing patient equity metrics on large transparent screens, soft blue and white lighting, highly detailed.",
       "learningAids": [
         {
           "id": "capstone-human-health-ai-601-l01-a1",
@@ -46,44 +48,47 @@ export const CapstoneHumanHealthAi601Module: LearningModule = {
           "id": "capstone-human-health-ai-601-l01-c1",
           "kind": "concept",
           "title": "Problem Frame",
-          "content": "In this capstone project, we will dive into the critical role of a health system board as it reviews significant safety incidents that may affect patient care. We will also look at how the board evaluates outcomes related to patient equity, ensuring that all patients receive fair treatment. Additionally, we will discuss the criteria that the board uses to decide whether to continue using specific health models. As learners, you will collaborate to define clear objectives for your project, identify any constraints that may limit your options, and understand the various stakeholders involved in this process. This collaborative effort will help you appreciate the complexities of health systems and the importance of making informed, thoughtful decisions that can impact many lives."
+          "content": "In this capstone project, you will assume the role of a health system governance board member reviewing critical AI safety incidents and patient equity outcomes. You will evaluate the criteria required to deploy, monitor, or decommission specific health AI models. By collaborating to define clear objectives, identifying operational constraints, and mapping stakeholder incentives, you will navigate the complexities of modern health systems and make defensible, high-stakes decisions."
         },
         {
           "id": "capstone-human-health-ai-601-l01-c2",
           "kind": "concept",
           "title": "Decision Boundaries",
-          "content": "When designing boundaries for decision-making, it is essential to distinguish between what aspects we can control, what remains uncertain, and what issues may need to be escalated to policy makers. Understanding these boundaries will help you navigate the complexities of health systems and make informed choices that can lead to better outcomes for patients and communities.\nContext recap: When designing boundaries for decision-making, it is essential to distinguish between what aspects we can control, what remains uncertain, and what issues may need to be escalated to policy makers. Understanding these boundaries will help you navigate the complexities of health systems and make informed choices that can lead to better outcomes for patients and communities."
+          "content": "When designing boundaries for AI decision-making, it is essential to distinguish between variables we can control, factors that remain uncertain, and systemic issues requiring policy escalation. Establishing clear decision boundaries helps navigate complex health ecosystems, ensuring that AI interventions are both safe and effective while mitigating unintended consequences."
         },
         {
           "id": "capstone-human-health-ai-601-l01-c3",
           "kind": "recap",
           "title": "Evidence Standards",
-          "content": "All claims made during the capstone project must be connected to measurable indicators and should include notes on any uncertainties. This means that you will need to provide clear evidence for your claims and be transparent about any factors that may affect the outcomes. This practice will help ensure that your conclusions are based on solid data and can be trusted by others.\nContext recap: All claims made during the capstone project must be connected to measurable indicators and should include notes on any uncertainties. This means that you will need to provide clear evidence for your claims and be transparent about any factors that may affect the outcomes. This practice will help ensure that your conclusions are based on solid data and can be trusted by others."
+          "content": "All claims made during your capstone defense must be anchored to measurable indicators and explicitly state any underlying uncertainties. Providing clear, empirical evidence for your claims—while remaining transparent about data limitations—ensures your conclusions are robust, trustworthy, and capable of withstanding expert cross-examination."
         }
       ],
       "flashcards": [
         {
           "id": "capstone-human-health-ai-601-l01-f1",
-          "front": "regulatory strategy",
-          "back": "A critical system axis in the capstone decision model."
+          "front": "Regulatory Strategy",
+          "back": "A critical system axis in the capstone decision model ensuring compliance and safety."
         },
         {
           "id": "capstone-human-health-ai-601-l01-f2",
-          "front": "Tradeoff map",
-          "back": "A structured representation of competing objectives and constraints."
+          "front": "Tradeoff Map",
+          "back": "A structured representation of competing objectives, risks, and operational constraints."
         },
         {
           "id": "capstone-human-health-ai-601-l01-f3",
-          "front": "Evidence standard",
-          "back": "The minimum quality threshold needed to support a claim."
+          "front": "Evidence Standard",
+          "back": "The minimum quality threshold of empirical data needed to support a strategic claim."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/capstone-human-health-ai-601-l01.png"
     },
     {
       "id": "capstone-human-health-ai-601-l02",
       "title": "Integrated Methods Lab",
       "type": "interactive",
       "duration": 17,
+      "lessonImagePrompt": "A split-screen conceptual image showing technical AI code on one side and legal policy documents on the other, merging into a glowing shield in the center, digital art style, highly detailed.",
+      "conceptVideoPrompt": "A dynamic top-down view of a collaborative workspace where a diverse team of experts maps out an AI intervention plan using digital sticky notes and flowcharts that glow and connect, smooth motion.",
       "learningAids": [
         {
           "id": "capstone-human-health-ai-601-l02-a1",
@@ -97,13 +102,13 @@ export const CapstoneHumanHealthAi601Module: LearningModule = {
           "id": "capstone-human-health-ai-601-l02-c1",
           "kind": "practice",
           "title": "Method Integration",
-          "content": "As part of this interactive lab, you will work on creating a comprehensive intervention plan that integrates various aspects such as technical solutions, policy considerations, and the perspectives of different stakeholders. This collaborative effort will help you understand how to address complex health issues by combining different methods and viewpoints into a cohesive strategy.\nContext recap: As part of this interactive lab, you will work on creating a comprehensive intervention plan that integrates various aspects such as technical solutions, policy considerations, and the perspectives of different stakeholders. This collaborative effort will help you understand how to address complex health issues by combining different methods and viewpoints into a cohesive strategy."
+          "content": "As part of this interactive lab, you will work on creating a comprehensive intervention plan that integrates technical solutions, policy considerations, and the perspectives of diverse stakeholders. This collaborative effort will help you understand how to address complex health issues by combining different methodologies and viewpoints into a cohesive, actionable strategy."
         },
         {
           "id": "capstone-human-health-ai-601-l02-c2",
           "kind": "recap",
           "title": "Control Gates",
-          "content": "Your intervention plan should include specific control thresholds, criteria for rolling back decisions if necessary, and accountability checkpoints. These elements are crucial for ensuring that the plan is effective and that everyone involved understands their responsibilities. By establishing these control gates, you will be better equipped to manage the implementation of your plan and respond to any challenges that arise.\nContext recap: Your intervention plan should include specific control thresholds, criteria for rolling back decisions if necessary, and accountability checkpoints. These elements are crucial for ensuring that the plan is effective and that everyone involved understands their responsibilities. By establishing these control gates, you will be better equipped to manage the implementation of your plan and respond to any challenges that arise."
+          "content": "Your intervention plan must include specific control thresholds, criteria for rolling back decisions if necessary, and strict accountability checkpoints. These elements are crucial for ensuring that the plan is effective and that everyone involved understands their responsibilities. By establishing these control gates, you will be equipped to manage implementation risks and respond dynamically to adverse events."
         }
       ],
       "interactiveActivities": [
@@ -111,7 +116,7 @@ export const CapstoneHumanHealthAi601Module: LearningModule = {
           "id": "capstone-human-health-ai-601-l02-act1",
           "type": "matching_pairs",
           "title": "Control Alignment",
-          "description": "Match each control to the strongest risk reduction effect.",
+          "description": "Match each control to its strongest risk reduction effect.",
           "pairs": [
             {
               "left": "Pre-implementation review gate",
@@ -131,13 +136,16 @@ export const CapstoneHumanHealthAi601Module: LearningModule = {
             }
           ]
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/capstone-human-health-ai-601-l02.png"
     },
     {
       "id": "capstone-human-health-ai-601-l03",
       "title": "Checkpoint 1: Integrated Design",
       "type": "quiz",
       "duration": 10,
+      "lessonImagePrompt": "A stylized digital checkpoint gate with glowing green and blue lights, symbolizing a quality assurance pass in a high-tech healthcare environment, sleek 3D render.",
+      "conceptVideoPrompt": "A sleek 3D animation of a data pipeline passing through various security and compliance filters, lighting up green as it meets regulatory standards, futuristic tech aesthetic.",
       "learningAids": [
         {
           "id": "capstone-human-health-ai-601-l03-a1",
@@ -347,13 +355,16 @@ export const CapstoneHumanHealthAi601Module: LearningModule = {
           "correctOptionId": "b",
           "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/capstone-human-health-ai-601-l03.png"
     },
     {
       "id": "capstone-human-health-ai-601-l04",
       "title": "Simulation and Response",
       "type": "interactive",
       "duration": 16,
+      "lessonImagePrompt": "A complex simulation dashboard with multiple graphs, predictive models, and uncertainty bounds displayed in a sleek dark mode UI, glowing neon accents, photorealistic.",
+      "conceptVideoPrompt": "A fast-paced time-lapse of a digital simulation running thousands of health intervention scenarios, with branching pathways lighting up in different colors based on success rates, high-tech visualization.",
       "learningAids": [
         {
           "id": "capstone-human-health-ai-601-l04-a1",
@@ -367,13 +378,13 @@ export const CapstoneHumanHealthAi601Module: LearningModule = {
           "id": "capstone-human-health-ai-601-l04-c1",
           "kind": "practice",
           "title": "Simulation Run",
-          "content": "In this interactive simulation, you will run multiple interventions while considering various uncertainties that may affect the outcomes. By comparing the results of these different runs, you will gain valuable insights into how different strategies can lead to different results. This hands-on experience will help you understand the importance of adaptability in health interventions.\nContext recap: In this interactive simulation, you will run multiple interventions while considering various uncertainties that may affect the outcomes. By comparing the results of these different runs, you will gain valuable insights into how different strategies can lead to different results. This hands-on experience will help you understand the importance of adaptability in health interventions."
+          "content": "In this interactive simulation, you will run multiple interventions while considering various uncertainties that may affect the outcomes. By comparing the results of these different runs, you will gain valuable insights into how different strategies perform under stress. This hands-on experience will help you understand the critical importance of adaptability and contingency planning in health AI interventions."
         },
         {
           "id": "capstone-human-health-ai-601-l04-c2",
           "kind": "recap",
           "title": "Debrief",
-          "content": "After each simulation run, you will take part in a debriefing session. During this session, you will carefully analyze the objectives that were successfully achieved, any side effects that were observed, and how well the interventions followed the established governance standards. This important process will involve detailed data analysis, which will help you create an implementation artifact. This artifact will summarize your findings and provide recommendations based on your observations and analyses.\nContext recap: After each simulation run, you will take part in a debriefing session. During this session, you will carefully analyze the objectives that were successfully achieved, any side effects that were observed, and how well the interventions followed the established governance standards. This important process will involve detailed data analysis, which will help you create an implementation artifact. This artifact will summarize your findings and provide recommendations based on your observations and analyses."
+          "content": "After each simulation run, you will participate in a structured debriefing session. During this phase, you will carefully analyze the objectives that were successfully achieved, any unintended side effects that emerged, and how well the interventions adhered to established governance standards. This detailed data analysis will culminate in the creation of an implementation artifact, summarizing your findings and providing evidence-based recommendations."
         }
       ],
       "interactiveActivities": [
@@ -388,13 +399,16 @@ export const CapstoneHumanHealthAi601Module: LearningModule = {
             "Specify the metric set that validates your recommendation."
           ]
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/capstone-human-health-ai-601-l04.png"
     },
     {
       "id": "capstone-human-health-ai-601-l05",
       "title": "Checkpoint 2: Defense Readiness",
       "type": "quiz",
       "duration": 10,
+      "lessonImagePrompt": "A glowing digital shield protecting a medical cross, surrounded by data streams and binary code, representing defense readiness and AI safety, 3D digital art.",
+      "conceptVideoPrompt": "A dramatic 3D visualization of a stress test on a neural network, showing nodes flashing red and then stabilizing to blue as defense mechanisms activate, cinematic lighting.",
       "learningAids": [
         {
           "id": "capstone-human-health-ai-601-l05-a1",
@@ -406,211 +420,214 @@ export const CapstoneHumanHealthAi601Module: LearningModule = {
       "questions": [
         {
           "id": "capstone-human-health-ai-601-l05-q1",
-          "text": "Which practice most improves regulatory strategy quality?",
-          "skillId": "capstone-human-health-ai-601-skill-core",
+          "text": "What is the primary purpose of running multiple simulation interventions in AI health defense?",
+          "skillId": "capstone-human-health-ai-601-skill-simulation",
           "options": [
             {
               "id": "a",
-              "text": "Skip assumptions and proceed by instinct"
+              "text": "To guarantee a single perfect outcome without any risks"
             },
             {
               "id": "b",
-              "text": "Use explicit constraints, metrics, and failure checks"
+              "text": "To map uncertainty bounds and evaluate the adaptability of different strategies under stress"
             },
             {
               "id": "c",
-              "text": "Ignore uncertainty and edge cases"
+              "text": "To bypass regulatory compliance checks"
             },
             {
               "id": "d",
-              "text": "Avoid cross-functional review"
+              "text": "To generate a high volume of unanalyzed data"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Capstone quality improves with explicit constraints, measurable targets, and stress-tested assumptions."
+          "explanation": "Simulations are designed to test how strategies hold up against uncertainty and stress, allowing for better adaptability."
         },
         {
           "id": "capstone-human-health-ai-601-l05-q2",
-          "text": "A robust risk communication decision should include:",
-          "skillId": "capstone-human-health-ai-601-skill-decision",
+          "text": "During a post-simulation debrief, which elements are most critical to analyze?",
+          "skillId": "capstone-human-health-ai-601-skill-debrief",
           "options": [
             {
               "id": "a",
-              "text": "No baseline or comparison"
+              "text": "Only the positive outcomes and cost savings"
             },
             {
               "id": "b",
-              "text": "Baseline comparison, tradeoff mapping, and side-effect review"
+              "text": "Achieved objectives, unintended side effects, and adherence to governance standards"
             },
             {
               "id": "c",
-              "text": "Single stakeholder viewpoint"
+              "text": "The speed at which the simulation was completed"
             },
             {
               "id": "d",
-              "text": "No post-decision accountability loop"
+              "text": "The aesthetic design of the simulation dashboard"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible capstone decisions require comparisons, tradeoff reasoning, and side-effect analysis."
+          "explanation": "A comprehensive debrief must look at successes, negative side effects, and whether the process followed governance rules."
         },
         {
           "id": "capstone-human-health-ai-601-l05-q3",
-          "text": "For multi-stakeholder governance, what is most important?",
-          "skillId": "capstone-human-health-ai-601-skill-governance",
+          "text": "An effective implementation artifact for a capstone defense must primarily demonstrate:",
+          "skillId": "capstone-human-health-ai-601-skill-artifact",
           "options": [
             {
               "id": "a",
-              "text": "Unclear ownership and escalation"
+              "text": "Data-driven recommendations supported by empirical evidence and clear operational constraints"
             },
             {
               "id": "b",
-              "text": "Clear owner mapping, threshold triggers, and remediation pathways"
+              "text": "A theoretical framework with no real-world application"
             },
             {
               "id": "c",
-              "text": "Ad-hoc incident responses only"
+              "text": "A list of complaints about the simulation software"
             },
             {
               "id": "d",
-              "text": "No transparency obligations"
+              "text": "Unverified claims based on intuition"
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "Governance quality relies on clear ownership, escalation criteria, and corrective action design."
+          "correctOptionId": "a",
+          "explanation": "Implementation artifacts are meant to be actionable, evidence-based documents that guide real-world deployment."
         },
         {
           "id": "capstone-human-health-ai-601-l05-q4",
-          "text": "A mature research and deployment defense strategy connects:",
-          "skillId": "capstone-human-health-ai-601-skill-strategy",
+          "text": "How should uncertainty bounds be treated during a high-stakes simulation run?",
+          "skillId": "capstone-human-health-ai-601-skill-uncertainty",
           "options": [
             {
               "id": "a",
-              "text": "Policy goals and measurements disconnected from action"
+              "text": "They should be ignored to simplify the decision-making process"
             },
             {
               "id": "b",
-              "text": "Policy intent, measurable thresholds, and operational response plans"
+              "text": "They should be explicitly documented and factored into the final risk assessment and rollback criteria"
             },
             {
               "id": "c",
-              "text": "Performance targets without risk controls"
+              "text": "They should be hidden from stakeholders to maintain confidence"
             },
             {
               "id": "d",
-              "text": "Leadership decisions without evidence logs"
+              "text": "They should be averaged out to zero"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Capstone maturity comes from linking policy to metrics and response execution."
+          "explanation": "Transparently documenting and planning for uncertainty is a core requirement of defensible AI governance."
         },
         {
           "id": "capstone-human-health-ai-601-l05-q5",
-          "text": "What is the best way to compare competing interventions in advanced Interdisciplinary Studies?",
-          "skillId": "capstone-human-health-ai-601-skill-advanced-5",
+          "text": "When a simulation reveals an unexpected adverse side effect in a health AI model, the best immediate response is to:",
+          "skillId": "capstone-human-health-ai-601-skill-response",
           "options": [
             {
               "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
+              "text": "Delete the simulation data and run it again"
             },
             {
               "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
+              "text": "Trigger a predefined rollback protocol and conduct a thorough root-cause analysis"
             },
             {
               "id": "c",
-              "text": "Switch metrics after results arrive"
+              "text": "Proceed with deployment but add a warning label"
             },
             {
               "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
+              "text": "Blame the technical team and escalate to the media"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
+          "explanation": "Adverse effects require immediate containment (rollback) followed by an investigation (root-cause analysis) to prevent real-world harm."
         },
         {
           "id": "capstone-human-health-ai-601-l05-q6",
-          "text": "In high-stakes Capstone Human Health AI Defense execution, which communication protocol is strongest?",
-          "skillId": "capstone-human-health-ai-601-skill-advanced-6",
+          "text": "In preparing for an expert panel defense, a decision brief must include:",
+          "skillId": "capstone-human-health-ai-601-skill-defense-prep",
           "options": [
             {
               "id": "a",
-              "text": "Broadcast conclusions without assumptions"
+              "text": "Core claims, supporting evidence, ranges of uncertainty, and a concrete implementation artifact"
             },
             {
               "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
+              "text": "Only the final decision without the underlying data"
             },
             {
               "id": "c",
-              "text": "Share only final outcomes after completion"
+              "text": "A list of team members and their biographies"
             },
             {
               "id": "d",
-              "text": "Limit updates to a single informal channel"
+              "text": "Marketing materials for the AI model"
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
+          "correctOptionId": "a",
+          "explanation": "A defensible brief provides the full context: claims, evidence, uncertainties, and actionable artifacts."
         },
         {
           "id": "capstone-human-health-ai-601-l05-q7",
-          "text": "A mature remediation loop in advanced Interdisciplinary Studies should prioritize:",
-          "skillId": "capstone-human-health-ai-601-skill-advanced-7",
+          "text": "What is the most effective strategy for responding to technical critiques during a panel defense?",
+          "skillId": "capstone-human-health-ai-601-skill-critique",
           "options": [
             {
               "id": "a",
-              "text": "Blame assignment without system updates"
+              "text": "Become defensive and dismiss the critique"
             },
             {
               "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
+              "text": "Acknowledge the critique, reference specific evidence or uncertainty bounds, and explain your tradeoff rationale"
             },
             {
               "id": "c",
-              "text": "One-time fixes without retesting"
+              "text": "Change your recommendation immediately to please the panel"
             },
             {
               "id": "d",
-              "text": "Issue closure based on elapsed time"
+              "text": "Refuse to answer without consulting legal counsel"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
+          "explanation": "Professional defense requires acknowledging valid points while calmly explaining the evidence and tradeoffs that led to your decision."
         },
         {
           "id": "capstone-human-health-ai-601-l05-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Capstone Human Health AI Defense?",
-          "skillId": "capstone-human-health-ai-601-skill-advanced-8",
+          "text": "Why is a scoring rubric utilized during the panel response strategy session?",
+          "skillId": "capstone-human-health-ai-601-skill-rubric",
           "options": [
             {
               "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
+              "text": "To ensure everyone passes regardless of performance"
             },
             {
               "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
+              "text": "To provide objective, standardized feedback on the defensibility and comprehensiveness of the proposed intervention"
             },
             {
               "id": "c",
-              "text": "Ignore correlated failure modes"
+              "text": "To rank students for competitive hiring"
             },
             {
               "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
+              "text": "To limit the amount of time each person can speak"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "explanation": "Rubrics ensure that feedback is objective, consistent, and focused on the core competencies of defensibility and comprehensiveness."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/capstone-human-health-ai-601-l05.png"
     },
     {
       "id": "capstone-human-health-ai-601-l06",
       "title": "Capstone Defense Panel",
       "type": "interactive",
       "duration": 15,
+      "lessonImagePrompt": "A professional, intense scene of a candidate presenting a digital implementation artifact to a panel of expert judges in a modern auditorium, dramatic lighting, photorealistic.",
+      "conceptVideoPrompt": "A cinematic over-the-shoulder shot of a presenter confidently pointing to a dynamic data visualization on a large screen, while a panel of diverse experts nods in agreement, professional atmosphere.",
       "learningAids": [
         {
           "id": "capstone-human-health-ai-601-l06-a1",
@@ -624,13 +641,13 @@ export const CapstoneHumanHealthAi601Module: LearningModule = {
           "id": "capstone-human-health-ai-601-l06-c1",
           "kind": "practice",
           "title": "Defense Preparation",
-          "content": "As you prepare for the capstone defense panel, you will create a decision brief that includes your claims, supporting evidence, ranges of uncertainty, and one implementation artifact that aligns with the evaluation criteria. This preparation will help you articulate your ideas clearly and confidently during the defense, showcasing your understanding of the project.\nContext recap: As you prepare for the capstone defense panel, you will create a decision brief that includes your claims, supporting evidence, ranges of uncertainty, and one implementation artifact that aligns with the evaluation criteria. This preparation will help you articulate your ideas clearly and confidently during the defense, showcasing your understanding of the project."
+          "content": "As you prepare for the capstone defense panel, you will compile a comprehensive decision brief. This brief must clearly articulate your core claims, provide robust supporting evidence, explicitly state ranges of uncertainty, and include an implementation artifact that aligns with the evaluation criteria. Thorough preparation will enable you to articulate your strategy clearly and confidently, showcasing your mastery of the project's complexities."
         },
         {
           "id": "capstone-human-health-ai-601-l06-c2",
           "kind": "recap",
           "title": "Panel Response Strategy",
-          "content": "During the panel response strategy session, you will practice responding to critiques related to technical aspects, governance issues, and stakeholder concerns. This structured policy debate will utilize a scoring rubric to guide your responses, helping you refine your arguments and improve your ability to engage in constructive discussions about your work.\nContext recap: During the panel response strategy session, you will practice responding to critiques related to technical aspects, governance issues, and stakeholder concerns. This structured policy debate will utilize a scoring rubric to guide your responses, helping you refine your arguments and improve your ability to engage in constructive discussions about your work."
+          "content": "During the panel response strategy session, you will practice fielding rigorous critiques related to technical architecture, governance frameworks, and stakeholder impacts. This structured policy debate utilizes a standardized scoring rubric to guide your responses, helping you refine your arguments, acknowledge valid counterpoints, and engage in constructive, evidence-based discussions about your strategic recommendations."
         }
       ],
       "interactiveActivities": [
@@ -640,7 +657,8 @@ export const CapstoneHumanHealthAi601Module: LearningModule = {
           "title": "Expert Panel Defense",
           "description": "Defend the capstone recommendation under adversarial questioning with a rubric-based debate and implementation artifact walkthrough."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/capstone-human-health-ai-601-l06.png"
     }
   ]
 };

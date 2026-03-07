@@ -1,9 +1,9 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const MusicHistory501Module: LearningModule = {
+export const music_history_501_Module: LearningModule = {
   "id": "music-history-501",
-  "title": "Music History Specialization Studio",
-  "description": "Post-401 specialization in Music History, focused on music systems diagnostics, music operations and execution design, music impact and tradeoff analysis, and music governance and leadership through advanced casework, simulation, and defense-based checkpoints.",
+  "title": "Advanced Music History: Systems and Analysis",
+  "description": "A specialization course in Music History focusing on the analysis of historical music systems. Students will learn to diagnose the factors behind major musical trends, design frameworks for historical analysis, evaluate the cultural impact of musical innovations, and defend a major historical thesis through advanced casework, simulation, and defense-based checkpoints.",
   "subject": "Music",
   "tags": [
     "core",
@@ -14,121 +14,121 @@ export const MusicHistory501Module: LearningModule = {
   ],
   "minAge": 17,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en",
     "es"
   ],
   "learningObjectives": [
-    "Apply advanced methods for music systems diagnostics in high-constraint environments",
-    "Design robust systems for music operations and execution design with measurable control gates",
-    "Evaluate interventions in music impact and tradeoff analysis with research-grade rigor",
-    "Operationalize music governance and leadership with accountable governance and escalation pathways",
-    "Lead cross-functional decision reviews with explicit tradeoff communication",
-    "Defend recommendations under expert critique using evidence and uncertainty bounds"
+    "Analyze the complex factors contributing to the rise and fall of musical genres and movements.",
+    "Design robust analytical frameworks for studying historical musical events and phenomena.",
+    "Evaluate the cultural, technological, and economic impacts of musical innovations with research-grade rigor.",
+    "Develop and defend a historical thesis using primary and secondary sources.",
+    "Lead critical discussions on music history, communicating complex ideas and tradeoffs clearly.",
+    "Defend historical interpretations against expert critique using evidence and acknowledging uncertainty."
   ],
   "lessons": [
     {
       "id": "music-history-501-l01",
-      "title": "Music History Advanced Foundations",
+      "title": "Foundations of Historical Music Systems",
       "type": "video",
       "duration": 14,
       "learningAids": [
         {
           "id": "music-history-501-l01-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Diagram of the Baroque Patronage System",
+          "content": "Visualize the network of composers, patrons, performers, and audiences that defined the creation and consumption of music in the 17th and 18th centuries."
         }
       ],
       "chunks": [
         {
           "id": "music-history-501-l01-c1",
           "kind": "concept",
-          "title": "Scope and Boundary Design",
-          "content": "In this lesson, we will delve into the advanced boundaries of Music History. Our focus will be on understanding the intricate workings of music systems, which includes identifying and diagnosing any issues that may arise within these systems. Additionally, we will learn how to design effective operations for executing music. By doing so, we will gain a deeper appreciation for the complexity and richness of music as an art form, recognizing the various elements that contribute to its creation and performance.\nContext recap: In this lesson, we will delve into the advanced boundaries of Music History. Our focus will be on understanding the intricate workings of music systems, which includes identifying and diagnosing any issues that may arise within these systems. Additionally, we will learn how to design effective operations for executing music. By doing so, we will gain a deeper appreciation for the complexity and richness of music as an art form, recognizing the various elements that contribute to its creation and performance."
+          "title": "Defining Historical Music Systems",
+          "content": "In this lesson, we'll define what constitutes a 'system' in music history. We will explore examples like the patronage system of the Baroque era, the Tin Pan Alley ecosystem, and the Nashville studio system, understanding them as networks of people, technology, and economic forces that shape how music is made and heard."
         },
         {
           "id": "music-history-501-l01-c2",
           "kind": "concept",
-          "title": "Causal and Uncertainty Modeling",
-          "content": "In this section, learners will engage in mapping out causal pathways, which means understanding how different events in music can lead to specific outcomes. We will also look at uncertainty ranges and system dependencies, which are important for planning effective interventions in music history. This will help us make informed decisions based on our findings.\nContext recap: In this section, learners will engage in mapping out causal pathways, which means understanding how different events in music can lead to specific outcomes. We will also look at uncertainty ranges and system dependencies, which are important for planning effective interventions in music history. This will help us make informed decisions based on our findings."
+          "title": "Analyzing Cause and Effect",
+          "content": "We will learn to map causal pathways in music history. For example, how did the invention of the printing press affect the spread of Renaissance polyphony? We'll also address historical uncertainty, acknowledging where evidence is limited and multiple interpretations are possible."
         },
         {
           "id": "music-history-501-l01-c3",
           "kind": "recap",
-          "title": "Evidence Thresholds",
-          "content": "In our recap, we will emphasize that all claims made in our analysis should be linked to measurable indicators. This means we will establish confidence bounds and set up review checkpoints to ensure our findings are reliable and valid. This practice is essential for maintaining the integrity of our work in music history.\nContext recap: In our recap, we will emphasize that all claims made in our analysis should be linked to measurable indicators. This means we will establish confidence bounds and set up review checkpoints to ensure our findings are reliable and valid. This practice is essential for maintaining the integrity of our work in music history."
+          "title": "Working with Historical Evidence",
+          "content": "In our recap, we will emphasize that all historical claims must be supported by evidence. We will differentiate between primary sources (letters, scores) and secondary sources (scholarly articles) and discuss how to establish clear criteria for evaluating the strength of our arguments."
         }
       ],
       "flashcards": [
         {
           "id": "music-history-501-l01-f1",
-          "front": "music systems diagnostics",
-          "back": "A specialization axis requiring explicit assumptions and measurable constraints."
+          "front": "What is a 'music system' in a historical context?",
+          "back": "A network of social, economic, and technological factors that govern the creation, performance, and distribution of music in a specific time and place."
         },
         {
           "id": "music-history-501-l01-f2",
-          "front": "music operations and execution design",
-          "back": "Execution architecture that determines reliability under stress."
+          "front": "What is causal analysis in music history?",
+          "back": "The method of identifying and evaluating the factors that led to specific historical outcomes, such as the emergence of a new genre."
         },
         {
           "id": "music-history-501-l01-f3",
-          "front": "music impact and tradeoff analysis",
-          "back": "Evaluation discipline for identifying true gains and hidden costs."
+          "front": "What is a primary source in music history?",
+          "back": "A firsthand account or direct evidence from the period, such as a composer's manuscript, a letter, or a concert program."
         }
       ]
     },
     {
       "id": "music-history-501-l02",
-      "title": "Music History Specialist Methods Lab",
+      "title": "Historical Analysis in Practice",
       "type": "interactive",
       "duration": 17,
       "learningAids": [
         {
           "id": "music-history-501-l02-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Guided Practice: Building a Framework",
+          "content": "Use a structured method to outline an analysis of a historical event. Define your central question, identify key actors, list necessary sources, and state your initial hypothesis."
         }
       ],
       "chunks": [
         {
           "id": "music-history-501-l02-c1",
           "kind": "practice",
-          "title": "Method Design and Stress Test",
-          "content": "In this interactive practice, learners will have the opportunity to design specialized workflows that reflect their understanding of music history. They will also stress-test these workflows by applying them to challenging scenarios. This hands-on experience will enhance their problem-solving skills and deepen their understanding of music systems.\nContext recap: In this interactive practice, learners will have the opportunity to design specialized workflows that reflect their understanding of music history. They will also stress-test these workflows by applying them to challenging scenarios. This hands-on experience will enhance their problem-solving skills and deepen their understanding of music systems."
+          "title": "Building an Analytical Framework",
+          "content": "In this interactive practice, you will design an analytical framework to investigate a specific historical event, such as the 'British Invasion.' You will then 'stress-test' this framework by considering how you would apply it to a different, more complex event, like the development of opera."
         },
         {
           "id": "music-history-501-l02-c2",
           "kind": "recap",
-          "title": "Control Gate Architecture",
-          "content": "In our recap, we will discuss how workflows should include important elements such as checkpoints, rollback criteria, and threshold-based escalation. These components are crucial for ensuring that our processes are effective and can adapt to changing circumstances in music history.\nContext recap: In our recap, we will discuss how workflows should include important elements such as checkpoints, rollback criteria, and threshold-based escalation. These components are crucial for ensuring that our processes are effective and can adapt to changing circumstances in music history."
+          "title": "Structuring a Historical Argument",
+          "content": "In our recap, we will discuss how a strong historical argument is structured. It requires a clear thesis, supporting evidence checkpoints, and an acknowledgment of counter-evidence or alternative interpretations that could challenge the main argument."
         }
       ],
       "interactiveActivities": [
         {
           "id": "music-history-501-l02-act1",
           "type": "matching_pairs",
-          "title": "Control-to-Outcome Mapping",
-          "description": "Match specialist controls with their strongest reliability and governance effects.",
+          "title": "Matching Methods to Historical Questions",
+          "description": "Match the musicological method with the type of historical insight it provides.",
           "pairs": [
             {
-              "left": "Pre-commit gate",
-              "right": "Prevents avoidable downstream failures"
+              "left": "Schenkerian Analysis",
+              "right": "Reveals underlying harmonic structure in tonal music."
             },
             {
-              "left": "Rollback trigger",
-              "right": "Limits blast radius under adverse outcomes"
+              "left": "Archival Research",
+              "right": "Uncovers primary source documents like letters and contracts."
             },
             {
-              "left": "Baseline dashboard",
-              "right": "Supports defensible impact attribution"
+              "left": "Oral History",
+              "right": "Captures firsthand accounts from participants in historical events."
             },
             {
-              "left": "Retrospective loop",
-              "right": "Improves next-cycle decision quality"
+              "left": "Organology",
+              "right": "The study of musical instruments and their history."
             }
           ]
         }
@@ -136,287 +136,187 @@ export const MusicHistory501Module: LearningModule = {
     },
     {
       "id": "music-history-501-l03",
-      "title": "Checkpoint 1: Specialist Methods",
+      "title": "Checkpoint 1: Foundations and Methods",
       "type": "quiz",
       "duration": 10,
       "learningAids": [
         {
           "id": "music-history-501-l03-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Review Key Concepts",
+          "content": "Before starting, review the definitions of 'music system,' 'causal analysis,' and the different types of historical evidence."
         }
       ],
       "questions": [
         {
           "id": "music-history-501-l03-q1",
-          "text": "Which practice most improves music systems diagnostics decision quality?",
+          "text": "When analyzing the decline of big band jazz, which factor is an example of a 'system constraint'?",
           "skillId": "music-history-501-skill-core",
           "options": [
             {
               "id": "a",
-              "text": "Proceed without baseline or assumptions"
+              "text": "A single band's unpopular new album."
             },
             {
               "id": "b",
-              "text": "Define assumptions, constraints, and measurable indicators"
+              "text": "Wartime economic pressures making large ensembles financially unviable."
             },
             {
               "id": "c",
-              "text": "Optimize only for speed in every context"
+              "text": "The personal preference of one famous radio DJ."
             },
             {
               "id": "d",
-              "text": "Ignore uncertainty and edge conditions"
+              "text": "A positive review in a local newspaper."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Advanced decisions improve when assumptions, constraints, and metrics are explicit."
+          "explanation": "System constraints are broad economic, technological, or social factors that impact the entire musical ecosystem, not just individual actors."
         },
         {
           "id": "music-history-501-l03-q2",
-          "text": "At level 501, strong execution for music operations and execution design requires:",
+          "text": "A strong analytical framework for studying the birth of rock and roll must include:",
           "skillId": "music-history-501-skill-execution",
           "options": [
             {
               "id": "a",
-              "text": "Owner mapping, checkpoint cadence, and escalation thresholds"
+              "text": "An analysis of technological changes, economic shifts, and cultural factors."
             },
             {
               "id": "b",
-              "text": "No role clarity and ad-hoc process changes"
+              "text": "Focusing only on the biography of Elvis Presley."
             },
             {
               "id": "c",
-              "text": "No retrospective or post-run review"
+              "text": "Ignoring the influence of rhythm and blues."
             },
             {
               "id": "d",
-              "text": "No rollback or fallback conditions"
+              "text": "Relying solely on modern-day interviews."
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Reliable advanced execution needs ownership clarity and threshold-driven governance."
+          "explanation": "A robust framework must be multi-faceted, considering the interplay of technology (e.g., the electric guitar), economics (e.g., the teenage consumer market), and culture (e.g., post-war social changes)."
         },
         {
           "id": "music-history-501-l03-q3",
-          "text": "A defensible approach to music impact and tradeoff analysis includes:",
+          "text": "A defensible historical argument about the impact of MTV should include:",
           "skillId": "music-history-501-skill-eval",
           "options": [
             {
               "id": "a",
-              "text": "Anecdotes without comparison"
+              "text": "Only anecdotes from your favorite artists."
             },
             {
               "id": "b",
-              "text": "Baseline comparisons, side-effect analysis, and uncertainty bounds"
+              "text": "Analysis of record sales data, a discussion of its effect on non-visual artists, and acknowledgment of its initial lack of diversity."
             },
             {
               "id": "c",
-              "text": "Changing success criteria after outcomes"
+              "text": "The claim that it had no important effect on the music industry."
             },
             {
               "id": "d",
-              "text": "Excluding difficult scenarios from analysis"
+              "text": "Changing your thesis to match the first article you find."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible analysis combines comparative baselines, side-effect checks, and uncertainty disclosure."
+          "explanation": "A defensible analysis requires quantitative data (sales), consideration of negative side-effects (tradeoffs), and a full picture of the phenomenon."
         },
         {
           "id": "music-history-501-l03-q4",
-          "text": "Mature governance systems connect:",
+          "text": "Which source would be most valuable for understanding a composer's original intent for a piece?",
           "skillId": "music-history-501-skill-governance",
           "options": [
             {
               "id": "a",
-              "text": "Policy intent, measurable controls, and remediation pathways"
+              "text": "The composer's personal letters and annotated manuscripts."
             },
             {
               "id": "b",
-              "text": "Policy language with no measurable enforcement"
+              "text": "A modern recording by a famous orchestra."
             },
             {
               "id": "c",
-              "text": "Targets without ownership or escalation design"
+              "text": "A movie biography about the composer."
             },
             {
               "id": "d",
-              "text": "Operations without transparent accountability"
+              "text": "A blog post discussing the piece."
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Governance maturity is the operational link between intent, measurement, and corrective action."
-        },
-        {
-          "id": "music-history-501-l03-q5",
-          "text": "What is the best way to compare competing interventions in advanced Music?",
-          "skillId": "music-history-501-skill-advanced-5",
-          "options": [
-            {
-              "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
-            },
-            {
-              "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
-            },
-            {
-              "id": "c",
-              "text": "Switch metrics after results arrive"
-            },
-            {
-              "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
-        },
-        {
-          "id": "music-history-501-l03-q6",
-          "text": "In high-stakes Music History Specialization Studio execution, which communication protocol is strongest?",
-          "skillId": "music-history-501-skill-advanced-6",
-          "options": [
-            {
-              "id": "a",
-              "text": "Broadcast conclusions without assumptions"
-            },
-            {
-              "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
-            },
-            {
-              "id": "c",
-              "text": "Share only final outcomes after completion"
-            },
-            {
-              "id": "d",
-              "text": "Limit updates to a single informal channel"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
-        },
-        {
-          "id": "music-history-501-l03-q7",
-          "text": "A mature remediation loop in advanced Music should prioritize:",
-          "skillId": "music-history-501-skill-advanced-7",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blame assignment without system updates"
-            },
-            {
-              "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
-            },
-            {
-              "id": "c",
-              "text": "One-time fixes without retesting"
-            },
-            {
-              "id": "d",
-              "text": "Issue closure based on elapsed time"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
-        },
-        {
-          "id": "music-history-501-l03-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Music History Specialization Studio?",
-          "skillId": "music-history-501-skill-advanced-8",
-          "options": [
-            {
-              "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
-            },
-            {
-              "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
-            },
-            {
-              "id": "c",
-              "text": "Ignore correlated failure modes"
-            },
-            {
-              "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "explanation": "Primary sources like letters and manuscripts provide the most direct evidence of a composer's thoughts and creative process."
         }
       ]
     },
     {
       "id": "music-history-501-l04",
-      "title": "Music History Advanced Case Analysis",
+      "title": "Advanced Case Study Analysis",
       "type": "video",
       "duration": 14,
       "learningAids": [
         {
           "id": "music-history-501-l04-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Cause-and-Effect Diagram: The Rise of Hip-Hop",
+          "content": "Use a fishbone diagram to map the multiple causes (social, economic, technological, artistic) that contributed to the emergence of hip-hop in the 1970s."
         }
       ],
       "chunks": [
         {
           "id": "music-history-501-l04-c1",
           "kind": "concept",
-          "title": "Scenario Architecture",
-          "content": "In this lesson, we will frame our case by examining the competing constraints that exist within music systems diagnostics. We will analyze the impact of music and the trade-offs that come with different decisions. This understanding will help us appreciate the complexities involved in music history.\nContext recap: In this lesson, we will frame our case by examining the competing constraints that exist within music systems diagnostics. We will analyze the impact of music and the trade-offs that come with different decisions. This understanding will help us appreciate the complexities involved in music history."
+          "title": "Case Study: The Invention of the Phonograph",
+          "content": "In this lesson, we will frame our case study by examining the competing impacts of the phonograph. We will analyze its positive effects, like wider access to music, alongside its negative tradeoffs, such as the potential decline in live, local music-making."
         },
         {
           "id": "music-history-501-l04-c2",
           "kind": "practice",
-          "title": "Tradeoff Framing",
-          "content": "In this practice session, learners will compare various options based on important dimensions such as safety, reliability, cost, equity, and governance. This comparative analysis will help them understand the multifaceted nature of decision-making in music history.\nContext recap: In this practice session, learners will compare various options based on important dimensions such as safety, reliability, cost, equity, and governance. This comparative analysis will help them understand the multifaceted nature of decision-making in music history.\nWhy this matters: Tradeoff Framing helps learners in Music connect ideas from Music History Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "Analyzing Tradeoffs",
+          "content": "In this practice session, you will compare the impacts of a major technological shift, like the move from physical media to digital streaming. You will evaluate the change across dimensions like artist compensation, listener access, sound quality, and cultural preservation."
         },
         {
           "id": "music-history-501-l04-c3",
           "kind": "recap",
-          "title": "Decision Memo Pattern",
-          "content": "In our recap, we will highlight that each recommendation made during our analysis should include key elements such as assumptions, evidence, risk controls, and fallback plans. This structured approach ensures that our decisions are well-informed and prepared for potential challenges.\nContext recap: In our recap, we will highlight that each recommendation made during our analysis should include key elements such as assumptions, evidence, risk controls, and fallback plans. This structured approach ensures that our decisions are well-informed and prepared for potential challenges."
+          "title": "Presenting Your Findings",
+          "content": "In our recap, we will highlight that a strong case study analysis must be presented clearly. This includes stating your main thesis, providing supporting evidence, acknowledging counter-arguments, and suggesting alternative interpretations or areas for further research."
         }
       ]
     },
     {
       "id": "music-history-501-l05",
-      "title": "Music History Simulation Clinic",
+      "title": "Historical Simulation Lab",
       "type": "interactive",
       "duration": 18,
       "learningAids": [
         {
           "id": "music-history-501-l05-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Guided Practice: Decision-Making",
+          "content": "In the simulation, you will face a decision. Before choosing, explicitly state your goal, the assumptions you're making, and the potential risks of your choice."
         }
       ],
       "chunks": [
         {
           "id": "music-history-501-l05-c1",
           "kind": "practice",
-          "title": "Live Scenario Controls",
-          "content": "In this interactive practice, learners will operate scenario controls while balancing performance and governance constraints. This experience will allow them to apply their knowledge in real-time and understand the importance of maintaining a balance between different factors in music history.\nContext recap: In this interactive practice, learners will operate scenario controls while balancing performance and governance constraints. This experience will allow them to apply their knowledge in real-time and understand the importance of maintaining a balance between different factors in music history."
+          "title": "Simulation: Managing a 1960s Record Label",
+          "content": "In this interactive simulation, you will act as the head of a record label in the 1960s. You'll make decisions about which artists to sign, what technology to invest in, and how to respond to market trends, all while balancing artistic vision and financial constraints."
         },
         {
           "id": "music-history-501-l05-c2",
           "kind": "recap",
-          "title": "Adaptive Response Design",
-          "content": "In our recap, we will discuss how effective responses should update control gates without losing traceability or accountability. This principle is vital for ensuring that our actions in music history are transparent and responsible.\nContext recap: In our recap, we will discuss how effective responses should update control gates without losing traceability or accountability. This principle is vital for ensuring that our actions in music history are transparent and responsible.\nWhy this matters: Adaptive Response Design helps learners in Music connect ideas from Music History Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "Adapting to Historical Change",
+          "content": "In our recap, we will discuss how the simulation demonstrates the need for adaptation. Effective historical actors, from composers to producers, had to constantly update their strategies in response to unforeseen events like a rival's hit record, a new technology, or a shift in public taste."
         }
       ],
       "interactiveActivities": [
         {
           "id": "music-history-501-l05-act1",
           "type": "scenario",
-          "title": "Adverse-Condition Decision Run",
-          "description": "Run a high-pressure music history scenario and tune controls under uncertainty."
+          "title": "Simulation: Navigating the Digital Revolution",
+          "description": "Run a high-pressure scenario as a music industry executive at the dawn of the internet, making key decisions about digital distribution, piracy, and artist contracts under extreme uncertainty."
         }
       ]
     },
@@ -429,289 +329,189 @@ export const MusicHistory501Module: LearningModule = {
         {
           "id": "music-history-501-l06-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Review Your Simulation Choices",
+          "content": "Think back to the simulation. Why did you make certain decisions? What were the outcomes? How could you have improved your strategy?"
         }
       ],
       "questions": [
         {
           "id": "music-history-501-l06-q1",
-          "text": "In advanced casework, the first requirement for defensible recommendations is:",
+          "text": "In a case study of the synthesizer's adoption in popular music, a defensible thesis requires:",
           "skillId": "music-history-501-skill-case1",
           "options": [
             {
               "id": "a",
-              "text": "A preferred option without explicit assumptions"
+              "text": "A preference for one synthesizer brand without justification."
             },
             {
               "id": "b",
-              "text": "A clear baseline, explicit constraints, and success criteria"
+              "text": "A clear baseline (pre-synthesizer pop), explicit constraints (e.g., high initial cost), and success criteria (e.g., chart performance)."
             },
             {
               "id": "c",
-              "text": "High confidence without evidence logs"
+              "text": "High confidence that it was the only important invention of the era."
             },
             {
               "id": "d",
-              "text": "Single-metric optimization only"
+              "text": "Focusing only on its use in one specific song."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible recommendations begin with explicit assumptions, constraints, and measurable targets."
+          "explanation": "Defensible recommendations begin with an established baseline for comparison, explicit constraints, and measurable targets."
         },
         {
           "id": "music-history-501-l06-q2",
-          "text": "A resilient strategy for music operations and execution design should include:",
+          "text": "In the record label simulation, a resilient strategy for signing artists should include:",
           "skillId": "music-history-501-skill-case2",
           "options": [
             {
               "id": "a",
-              "text": "Checkpointed execution with fallback and escalation criteria"
+              "text": "A diverse roster of artists to mitigate risk if one genre falls out of favor."
             },
             {
               "id": "b",
-              "text": "One-way execution with no rollback capability"
+              "text": "Spending the entire budget on one 'guaranteed' superstar."
             },
             {
               "id": "c",
-              "text": "No ownership mapping across teams"
+              "text": "Signing only artists that sound identical to current hits."
             },
             {
               "id": "d",
-              "text": "Hidden assumptions and undocumented decisions"
+              "text": "Ignoring contracts and legal advice."
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Resilience depends on checkpoints, fallback options, and explicit escalation design."
+          "explanation": "Resilience in a portfolio (like an artist roster) depends on diversification to protect against changing market conditions."
         },
         {
           "id": "music-history-501-l06-q3",
-          "text": "When evaluating music impact and tradeoff analysis, which method is most rigorous?",
+          "text": "When evaluating the impact of the electric guitar, which method is most rigorous?",
           "skillId": "music-history-501-skill-case3",
           "options": [
             {
               "id": "a",
-              "text": "Single success story without controls"
+              "text": "Telling a single story about a famous guitarist."
             },
             {
               "id": "b",
-              "text": "Comparative baselines plus side-effect and uncertainty analysis"
+              "text": "Comparing pre-electric and post-electric popular music, analyzing its effect on musical arrangement, and noting the decline of other instruments."
             },
             {
               "id": "c",
-              "text": "Outcome-only narrative without process evidence"
+              "text": "A narrative focusing only on positive outcomes."
             },
             {
               "id": "d",
-              "text": "Retrospective scope changes to fit outcomes"
+              "text": "Changing the scope of the analysis to fit a preferred conclusion."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Rigorous evaluation requires comparisons, side-effect analysis, and uncertainty disclosure."
+          "explanation": "Rigorous evaluation requires before-and-after comparisons, analysis of specific effects (tradeoffs), and acknowledgment of negative consequences."
         },
         {
           "id": "music-history-501-l06-q4",
-          "text": "Advanced governance is strongest when it:",
+          "text": "In the simulation, a good decision-making process under pressure involves:",
           "skillId": "music-history-501-skill-case4",
           "options": [
             {
               "id": "a",
-              "text": "Aligns authority, measurement, and remediation obligations"
+              "text": "Aligning your choice with your label's long-term goals, available budget, and ability to pivot if the choice is wrong."
             },
             {
               "id": "b",
-              "text": "Separates policy from operational controls"
+              "text": "Making a random choice quickly."
             },
             {
               "id": "c",
-              "text": "Avoids external review and transparency"
+              "text": "Avoiding making a decision until the opportunity has passed."
             },
             {
               "id": "d",
-              "text": "Treats accountability as optional under pressure"
+              "text": "Treating your initial assumption as an unchangeable fact."
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Mature governance links authority, measurable controls, and corrective action."
-        },
-        {
-          "id": "music-history-501-l06-q5",
-          "text": "What is the best way to compare competing interventions in advanced Music?",
-          "skillId": "music-history-501-skill-advanced-5",
-          "options": [
-            {
-              "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
-            },
-            {
-              "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
-            },
-            {
-              "id": "c",
-              "text": "Switch metrics after results arrive"
-            },
-            {
-              "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
-        },
-        {
-          "id": "music-history-501-l06-q6",
-          "text": "In high-stakes Music History Specialization Studio execution, which communication protocol is strongest?",
-          "skillId": "music-history-501-skill-advanced-6",
-          "options": [
-            {
-              "id": "a",
-              "text": "Broadcast conclusions without assumptions"
-            },
-            {
-              "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
-            },
-            {
-              "id": "c",
-              "text": "Share only final outcomes after completion"
-            },
-            {
-              "id": "d",
-              "text": "Limit updates to a single informal channel"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
-        },
-        {
-          "id": "music-history-501-l06-q7",
-          "text": "A mature remediation loop in advanced Music should prioritize:",
-          "skillId": "music-history-501-skill-advanced-7",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blame assignment without system updates"
-            },
-            {
-              "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
-            },
-            {
-              "id": "c",
-              "text": "One-time fixes without retesting"
-            },
-            {
-              "id": "d",
-              "text": "Issue closure based on elapsed time"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
-        },
-        {
-          "id": "music-history-501-l06-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Music History Specialization Studio?",
-          "skillId": "music-history-501-skill-advanced-8",
-          "options": [
-            {
-              "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
-            },
-            {
-              "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
-            },
-            {
-              "id": "c",
-              "text": "Ignore correlated failure modes"
-            },
-            {
-              "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "explanation": "Good decision-making links the choice to strategic goals, acknowledges constraints (budget), and includes contingency planning."
         }
       ]
     },
     {
       "id": "music-history-501-l07",
-      "title": "Music History Governance and Public Impact",
+      "title": "Music, Culture, and Society",
       "type": "video",
       "duration": 13,
       "learningAids": [
         {
           "id": "music-history-501-l07-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Map of Jazz Diffusion",
+          "content": "Trace the geographic spread of jazz from New Orleans, showing how its cultural impact was distributed and transformed across different regions and communities."
         }
       ],
       "chunks": [
         {
           "id": "music-history-501-l07-c1",
           "kind": "concept",
-          "title": "Stakeholder Impact Distribution",
-          "content": "In this lesson, learners will map out the benefits, burdens, and delayed effects of decisions made across different stakeholder groups. This mapping exercise will help them understand the broader impact of music history on various communities.\nContext recap: In this lesson, learners will map out the benefits, burdens, and delayed effects of decisions made across different stakeholder groups. This mapping exercise will help them understand the broader impact of music history on various communities.\nWhy this matters: Stakeholder Impact Distribution helps learners in Music connect ideas from Music History Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "Analyzing Cultural Impact",
+          "content": "In this lesson, you will map out how a musical development, like the birth of jazz, affected different stakeholder groups. We will analyze the benefits and burdens for musicians, audiences, club owners, critics, and its broader role in society, for example, in race relations."
         },
         {
           "id": "music-history-501-l07-c2",
           "kind": "concept",
-          "title": "Accountability Architecture",
-          "content": "In this section, we will explore the concept of accountability architecture. This includes understanding how decision traceability, review rights, and remediation obligations are integrated into our processes. This knowledge is essential for fostering trust and responsibility in music history.\nContext recap: In this section, we will explore the concept of accountability architecture. This includes understanding how decision traceability, review rights, and remediation obligations are integrated into our processes. This knowledge is essential for fostering trust and responsibility in music history."
+          "title": "The Historian's Responsibility",
+          "content": "In this section, we will explore the ethics of historiography. This includes the responsibility to cite sources accurately (traceability), engage with peer review, and be willing to correct the historical record when new evidence emerges."
         },
         {
           "id": "music-history-501-l07-c3",
           "kind": "recap",
-          "title": "Responsible Leadership Checklist",
-          "content": "At the end of our lesson, we will provide a helpful checklist that connects important outcomes with ethical considerations, ensures we follow policies correctly, and emphasizes the importance of resilience in leadership. This checklist will serve as a guide to help you reflect on how to be a responsible leader in the music industry.\nContext recap: At the end of our lesson, we will provide a helpful checklist that connects important outcomes with ethical considerations, ensures we follow policies correctly, and emphasizes the importance of resilience in leadership. This checklist will serve as a guide to help you reflect on how to be a responsible leader in the music industry."
+          "title": "Ethical Framework for Music Historians",
+          "content": "We will conclude with a checklist for responsible historical work. This guide will connect key principles like evidence-based arguments, acknowledging bias, considering diverse perspectives, and maintaining intellectual honesty."
         }
       ],
       "flashcards": [
         {
           "id": "music-history-501-l07-f1",
-          "front": "Impact distribution",
-          "back": "How outcomes are allocated across populations and timescales."
+          "front": "Cultural Impact Distribution",
+          "back": "How the effects (positive and negative) of a musical innovation are spread across different social groups, regions, and time periods."
         },
         {
           "id": "music-history-501-l07-f2",
-          "front": "Decision traceability",
-          "back": "An auditable record of evidence, ownership, and rationale."
+          "front": "Historical Traceability",
+          "back": "An auditable trail of evidence, through citations and footnotes, that allows others to verify a historian's sources and rationale."
         },
         {
           "id": "music-history-501-l07-f3",
-          "front": "Responsible leadership",
-          "back": "Decision behavior balancing performance, accountability, and ethics."
+          "front": "Ethical Historiography",
+          "back": "The practice of researching and writing history with intellectual honesty, a commitment to evidence, and a responsibility to represent the past accurately."
         }
       ]
     },
     {
       "id": "music-history-501-l08",
-      "title": "Music History Capstone Defense Lab",
+      "title": "Capstone Thesis Defense Lab",
       "type": "interactive",
       "duration": 16,
       "learningAids": [
         {
           "id": "music-history-501-l08-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Guided Practice: Structuring Your Thesis",
+          "content": "Use a structured outline to assemble your argument: 1. Thesis Statement. 2. Key Evidence Point A. 3. Key Evidence Point B. 4. Acknowledgment of Counter-Argument. 5. Conclusion."
         }
       ],
       "chunks": [
         {
           "id": "music-history-501-l08-c1",
           "kind": "practice",
-          "title": "Defense Brief Assembly",
-          "content": "In this interactive activity, you will work on assembling a comprehensive brief. This brief will include your main claims, supporting evidence, the boundaries of uncertainty regarding your arguments, and possible pathways for remediation. This exercise will help you practice critical thinking and develop your ability to present well-rounded arguments.\nContext recap: In this interactive activity, you will work on assembling a comprehensive brief. This brief will include your main claims, supporting evidence, the boundaries of uncertainty regarding your arguments, and possible pathways for remediation. This exercise will help you practice critical thinking and develop your ability to present well-rounded arguments."
+          "title": "Constructing Your Capstone Thesis",
+          "content": "In this interactive activity, you will assemble a comprehensive brief for a historical thesis. This will include your central thesis statement, supporting evidence, acknowledgment of the limitations of your sources, and suggestions for future research."
         },
         {
           "id": "music-history-501-l08-c2",
           "kind": "recap",
-          "title": "Expert Panel Rehearsal",
-          "content": "During this session, you will have the opportunity to rehearse your responses to various critiques. These critiques may come from experts in technical areas, governance issues, and stakeholder perspectives. Practicing your responses will help you feel more confident and prepared for real-world discussions and presentations.\nContext recap: During this session, you will have the opportunity to rehearse your responses to various critiques. These critiques may come from experts in technical areas, governance issues, and stakeholder perspectives. Practicing your responses will help you feel more confident and prepared for real-world discussions and presentations."
+          "title": "Preparing for Your Thesis Defense",
+          "content": "During this session, you will rehearse responses to critical questions about your thesis. These critiques will come from the perspective of experts in music theory, sociology, and economic history, preparing you for a real-world academic defense."
         }
       ],
       "interactiveActivities": [
@@ -719,7 +519,7 @@ export const MusicHistory501Module: LearningModule = {
           "id": "music-history-501-l08-act1",
           "type": "debate_simulator",
           "title": "Expert Defense Panel",
-          "description": "Defend specialization recommendations under adversarial cross-examination."
+          "description": "Defend your historical thesis against critical questions from a panel of simulated academic experts."
         }
       ]
     }

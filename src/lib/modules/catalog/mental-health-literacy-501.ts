@@ -1,9 +1,9 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const MentalHealthLiteracy501Module: LearningModule = {
+export const mental_health_literacy_501_Module: LearningModule = {
   "id": "mental-health-literacy-501",
-  "title": "Mental Health Literacy Specialization Studio",
-  "description": "Post-401 specialization module in Mental Health Literacy, focused on risk signal interpretation, support pathway architecture, outcome and safety monitoring, and ethical escalation governance with case simulation and defense-oriented assessment.",
+  "title": "Mental Health Literacy: Advanced Practice",
+  "description": "An advanced module on Mental Health Literacy. Learn to interpret risk signals, design support systems, monitor outcomes, and govern ethical escalations through case studies and a final capstone project.",
   "subject": "Psychology",
   "tags": [
     "core",
@@ -14,120 +14,120 @@ export const MentalHealthLiteracy501Module: LearningModule = {
   ],
   "minAge": 17,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en"
   ],
   "learningObjectives": [
-    "Apply advanced methods for risk signal interpretation in high-constraint environments",
-    "Design robust execution systems for support pathway architecture",
-    "Evaluate interventions in outcome and safety monitoring with research-grade evidence standards",
-    "Operationalize ethical escalation governance with transparent accountability loops",
-    "Lead cross-functional review processes with explicit tradeoff reasoning",
-    "Defend capstone recommendations under expert critique"
+    "Analyze complex situations to accurately interpret signals of mental health risk.",
+    "Design effective and reliable support pathways for individuals in need.",
+    "Evaluate the impact and safety of mental health interventions using evidence-based standards.",
+    "Develop and implement clear, ethical protocols for escalating crisis situations.",
+    "Justify intervention strategies by clearly explaining the tradeoffs between different options.",
+    "Present and defend a comprehensive mental health intervention plan based on a complex case scenario."
   ],
   "lessons": [
     {
       "id": "mental-health-literacy-501-l01",
-      "title": "Mental Health Literacy Advanced Foundations",
+      "title": "Foundations of Advanced MHL",
       "type": "video",
       "duration": 14,
       "learningAids": [
         {
           "id": "mental-health-literacy-501-l01-a1",
-          "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured approach, document assumptions, and verify outcomes with measurable criteria."
+          "type": "diagram",
+          "title": "Causal Loop Diagram Example",
+          "content": "A visual representation of how different factors in a mental health scenario influence one another, helping to identify root causes and intervention points."
         }
       ],
       "chunks": [
         {
           "id": "mental-health-literacy-501-l01-c1",
           "kind": "concept",
-          "title": "Scope and Decision Boundaries",
-          "content": "In this lesson, we will explore the advanced boundaries of Mental Health Literacy. This includes understanding how to identify important control points that help us interpret risk signals effectively. Additionally, we will discuss the architecture of support pathways, which are essential for guiding individuals towards the help they need. By the end of this lesson, you will have a clearer understanding of how to navigate these complex systems.\nContext recap: In this lesson, we will explore the advanced boundaries of Mental Health Literacy. This includes understanding how to identify important control points that help us interpret risk signals effectively. Additionally, we will discuss the architecture of support pathways, which are essential for guiding individuals towards the help they need. By the end of this lesson, you will have a clearer understanding of how to navigate these complex systems."
+          "title": "Defining Scope and Key Decisions",
+          "content": "In this lesson, we'll establish the boundaries of advanced Mental Health Literacy. We will learn to identify critical decision points for interpreting risk signals and structuring support pathways, providing a clear framework for navigating complex systems."
         },
         {
           "id": "mental-health-literacy-501-l01-c2",
           "kind": "concept",
-          "title": "Causal and Uncertainty Structure",
-          "content": "In this section, learners will engage in mapping out causal pathways and understanding the ranges of uncertainty that may arise. This process is crucial before planning any interventions. By visualizing these pathways, you will be better equipped to anticipate potential outcomes and make informed decisions that can positively impact mental health support.\nContext recap: In this section, learners will engage in mapping out causal pathways and understanding the ranges of uncertainty that may arise. This process is crucial before planning any interventions. By visualizing these pathways, you will be better equipped to anticipate potential outcomes and make informed decisions that can positively impact mental health support."
+          "title": "Mapping Causes and Uncertainties",
+          "content": "Before planning an intervention, it's crucial to map the potential causal pathways and understand the areas of uncertainty. This section teaches you how to visualize these connections to better anticipate outcomes and make informed decisions."
         },
         {
           "id": "mental-health-literacy-501-l01-c3",
           "kind": "recap",
-          "title": "Evidence Thresholds",
-          "content": "In this recap, we will emphasize the importance of linking claims to measurable indicators. This means that any assertions made about mental health interventions should be supported by clear evidence. Additionally, we will discuss the significance of declaring uncertainties and establishing review checkpoints to ensure that the information we use is reliable and valid.\nContext recap: In this recap, we will emphasize the importance of linking claims to measurable indicators. This means that any assertions made about mental health interventions should be supported by clear evidence. Additionally, we will discuss the significance of declaring uncertainties and establishing review checkpoints to ensure that the information we use is reliable and valid."
+          "title": "Setting Standards for Evidence",
+          "content": "We'll recap the importance of linking any claims to measurable evidence. This includes clearly stating any uncertainties and setting up review checkpoints to ensure the information guiding our interventions is both reliable and valid."
         }
       ],
       "flashcards": [
         {
           "id": "mental-health-literacy-501-l01-f1",
-          "front": "risk signal interpretation",
-          "back": "A specialization axis requiring explicit constraints and measurable assumptions."
+          "front": "Risk Signal Interpretation",
+          "back": "The process of identifying and evaluating potential mental health risks by defining clear criteria and assumptions."
         },
         {
           "id": "mental-health-literacy-501-l01-f2",
-          "front": "support pathway architecture",
-          "back": "Execution architecture that determines repeatability under stress."
+          "front": "Support Pathway",
+          "back": "A structured plan that guides an individual through the steps of receiving mental health support, designed to be reliable under stress."
         },
         {
           "id": "mental-health-literacy-501-l01-f3",
-          "front": "outcome and safety monitoring",
-          "back": "Evaluation discipline for determining true impact and side effects."
+          "front": "Outcome Monitoring",
+          "back": "The systematic evaluation of an intervention's true impact and potential side effects, based on measurable evidence."
         }
       ]
     },
     {
       "id": "mental-health-literacy-501-l02",
-      "title": "Mental Health Literacy Specialist Methods Lab",
+      "title": "Designing Support Systems",
       "type": "interactive",
       "duration": 17,
       "learningAids": [
         {
           "id": "mental-health-literacy-501-l02-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured approach, document assumptions, and verify outcomes with measurable criteria."
+          "type": "template",
+          "title": "Support Pathway Design Template",
+          "content": "A fillable template for designing a support pathway, including sections for roles, checkpoints, escalation triggers, and success metrics."
         }
       ],
       "chunks": [
         {
           "id": "mental-health-literacy-501-l02-c1",
           "kind": "practice",
-          "title": "Method Design and Stress Test",
-          "content": "In this interactive practice, learners will have the opportunity to design specialized workflows that address mental health challenges. After creating these workflows, you will stress-test them against various adversarial conditions. This exercise will help you understand how to make your plans resilient and effective in real-world scenarios.\nContext recap: In this interactive practice, learners will have the opportunity to design specialized workflows that address mental health challenges. After creating these workflows, you will stress-test them against various adversarial conditions. This exercise will help you understand how to make your plans resilient and effective in real-world scenarios."
+          "title": "Workflow Design Lab",
+          "content": "In this interactive lab, you will design a specialized workflow to address a mental health challenge. You will then test your design against various challenging conditions to build a plan that is resilient and effective in the real world."
         },
         {
           "id": "mental-health-literacy-501-l02-c2",
           "kind": "recap",
-          "title": "Control Gate Design",
-          "content": "In this recap, we will review the essential components of your workflow design. This includes integrating criteria for control gates, rollback conditions, and escalation thresholds. Understanding these elements will help ensure that your mental health interventions are both effective and adaptable to changing circumstances.\nContext recap: In this recap, we will review the essential components of your workflow design. This includes integrating criteria for control gates, rollback conditions, and escalation thresholds. Understanding these elements will help ensure that your mental health interventions are both effective and adaptable to changing circumstances."
+          "title": "Building in Safety Checkpoints",
+          "content": "This recap covers the essential safety components of your workflow design. We'll review how to integrate clear criteria for decision gates, conditions for rolling back a failing intervention, and thresholds for escalating a case."
         }
       ],
       "interactiveActivities": [
         {
           "id": "mental-health-literacy-501-l02-act1",
           "type": "matching_pairs",
-          "title": "Control-to-Outcome Mapping",
-          "description": "Match specialist controls with their strongest system effect.",
+          "title": "Matching Controls to Their Purpose",
+          "description": "Match each system control with its primary function in a support pathway.",
           "pairs": [
             {
-              "left": "Pre-commit gate",
+              "left": "Pre-Commit Gate",
               "right": "Prevents avoidable downstream failures"
             },
             {
-              "left": "Rollback trigger",
-              "right": "Limits impact under adverse outcomes"
+              "left": "Rollback Trigger",
+              "right": "Limits harm when outcomes are negative"
             },
             {
-              "left": "Baseline dashboard",
-              "right": "Supports defensible impact attribution"
+              "left": "Baseline Dashboard",
+              "right": "Helps prove the intervention's impact"
             },
             {
-              "left": "Retrospective loop",
-              "right": "Improves next-cycle decision quality"
+              "left": "Retrospective Loop",
+              "right": "Improves the quality of future decisions"
             }
           ]
         }
@@ -135,612 +135,295 @@ export const MentalHealthLiteracy501Module: LearningModule = {
     },
     {
       "id": "mental-health-literacy-501-l03",
-      "title": "Checkpoint 1: Specialist Methods",
-      "type": "quiz",
-      "duration": 10,
+      "title": "Case Study: A Community in Crisis",
+      "type": "video",
+      "duration": 14,
       "learningAids": [
         {
           "id": "mental-health-literacy-501-l03-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured approach, document assumptions, and verify outcomes with measurable criteria."
+          "type": "document",
+          "title": "Case Study Brief",
+          "content": "A detailed document outlining the case of a multi-institution support network designing early intervention and crisis escalation protocols."
         }
       ],
-      "questions": [
+      "chunks": [
         {
-          "id": "mental-health-literacy-501-l03-q1",
-          "text": "Which practice most improves risk signal interpretation decision quality?",
-          "skillId": "mental-health-literacy-501-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "Proceed without baselines or constraints"
-            },
-            {
-              "id": "b",
-              "text": "Define assumptions, stress-test scenarios, and monitor indicators"
-            },
-            {
-              "id": "c",
-              "text": "Ignore edge conditions"
-            },
-            {
-              "id": "d",
-              "text": "Prioritize speed over evidence always"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Advanced decisions require explicit assumptions and stress-tested measurement discipline."
+          "id": "mental-health-literacy-501-l03-c1",
+          "kind": "example",
+          "title": "Introducing the Case",
+          "content": "We will analyze a case involving a support network that is designing early intervention strategies and crisis escalation protocols. Your task is to identify the constraints, risks, and governance boundaries that affect their implementation."
         },
         {
-          "id": "mental-health-literacy-501-l03-q2",
-          "text": "At level 501, high-quality execution for support pathway architecture requires:",
-          "skillId": "mental-health-literacy-501-skill-execution",
-          "options": [
-            {
-              "id": "a",
-              "text": "Owner mapping, checkpoints, and threshold-based escalation"
-            },
-            {
-              "id": "b",
-              "text": "No role clarity and ad-hoc approvals"
-            },
-            {
-              "id": "c",
-              "text": "No retrospective cycle"
-            },
-            {
-              "id": "d",
-              "text": "Untracked process variation"
-            }
-          ],
-          "correctOptionId": "a",
-          "explanation": "Reliable advanced execution depends on clear ownership and threshold-driven control points."
+          "id": "mental-health-literacy-501-l03-c2",
+          "kind": "concept",
+          "title": "Using a Tradeoff Matrix to Compare Options",
+          "content": "We will introduce the tradeoff matrix, a tool for evaluating options across multiple dimensions like performance, reliability, equity, and feasibility. This structured process is crucial for making balanced and informed decisions."
         },
         {
-          "id": "mental-health-literacy-501-l03-q3",
-          "text": "A defensible approach to outcome and safety monitoring includes:",
-          "skillId": "mental-health-literacy-501-skill-eval",
-          "options": [
-            {
-              "id": "a",
-              "text": "Anecdotal claims without comparison"
-            },
-            {
-              "id": "b",
-              "text": "Baseline comparison, side-effect analysis, and uncertainty bounds"
-            },
-            {
-              "id": "c",
-              "text": "Changing criteria after outcomes are known"
-            },
-            {
-              "id": "d",
-              "text": "Excluding difficult cases"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Defensible analysis requires comparison, side-effect checks, and explicit uncertainty reporting."
+          "id": "mental-health-literacy-501-l03-c3",
+          "kind": "recap",
+          "title": "Planning for Failure and Recovery",
+          "content": "This recap focuses on how to anticipate potential failures and plan for them. We will discuss how to map common problems to specific mitigation actions and identify measurable triggers that signal a successful recovery."
+        }
+      ],
+      "flashcards": [
+        {
+          "id": "mental-health-literacy-501-l03-f1",
+          "front": "Tradeoff Matrix",
+          "back": "A structured tool for scoring and comparing different decision options against a common set of criteria."
         },
         {
-          "id": "mental-health-literacy-501-l03-q4",
-          "text": "Mature ethical escalation governance systems connect:",
-          "skillId": "mental-health-literacy-501-skill-governance",
-          "options": [
-            {
-              "id": "a",
-              "text": "Policy intent, measurable controls, and remediation pathways"
-            },
-            {
-              "id": "b",
-              "text": "Policy language without enforcement"
-            },
-            {
-              "id": "c",
-              "text": "Targets without ownership"
-            },
-            {
-              "id": "d",
-              "text": "Operations without accountability logs"
-            }
-          ],
-          "correctOptionId": "a",
-          "explanation": "Governance maturity is the linkage between policy, measurement, and corrective execution."
+          "id": "mental-health-literacy-501-l03-f2",
+          "front": "Failure Signature",
+          "back": "A specific, recurring indicator that warns of a known type of risk or system failure."
         },
         {
-          "id": "mental-health-literacy-501-l03-q5",
-          "text": "What is the best way to compare competing interventions in advanced Psychology?",
-          "skillId": "mental-health-literacy-501-skill-advanced-5",
-          "options": [
-            {
-              "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
-            },
-            {
-              "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
-            },
-            {
-              "id": "c",
-              "text": "Switch metrics after results arrive"
-            },
-            {
-              "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
-        },
-        {
-          "id": "mental-health-literacy-501-l03-q6",
-          "text": "In high-stakes Mental Health Literacy Specialization Studio execution, which communication protocol is strongest?",
-          "skillId": "mental-health-literacy-501-skill-advanced-6",
-          "options": [
-            {
-              "id": "a",
-              "text": "Broadcast conclusions without assumptions"
-            },
-            {
-              "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
-            },
-            {
-              "id": "c",
-              "text": "Share only final outcomes after completion"
-            },
-            {
-              "id": "d",
-              "text": "Limit updates to a single informal channel"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
-        },
-        {
-          "id": "mental-health-literacy-501-l03-q7",
-          "text": "A mature remediation loop in advanced Psychology should prioritize:",
-          "skillId": "mental-health-literacy-501-skill-advanced-7",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blame assignment without system updates"
-            },
-            {
-              "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
-            },
-            {
-              "id": "c",
-              "text": "One-time fixes without retesting"
-            },
-            {
-              "id": "d",
-              "text": "Issue closure based on elapsed time"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
-        },
-        {
-          "id": "mental-health-literacy-501-l03-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Mental Health Literacy Specialization Studio?",
-          "skillId": "mental-health-literacy-501-skill-advanced-8",
-          "options": [
-            {
-              "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
-            },
-            {
-              "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
-            },
-            {
-              "id": "c",
-              "text": "Ignore correlated failure modes"
-            },
-            {
-              "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "id": "mental-health-literacy-501-l03-f3",
+          "front": "Recovery Trigger",
+          "back": "A measurable threshold that, when met, initiates a pre-planned corrective action or confirms recovery."
         }
       ]
     },
     {
       "id": "mental-health-literacy-501-l04",
-      "title": "Mental Health Literacy Advanced Case Analysis",
-      "type": "video",
-      "duration": 14,
-      "learningAids": [
+      "title": "Checkpoint: Core Concepts in Practice",
+      "type": "quiz",
+      "duration": 10,
+      "learningAids": [],
+      "questions": [
         {
-          "id": "mental-health-literacy-501-l04-a1",
-          "type": "mnemonic",
-          "title": "Guided Practice",
-          "content": "Use a structured approach, document assumptions, and verify outcomes with measurable criteria."
-        }
-      ],
-      "chunks": [
-        {
-          "id": "mental-health-literacy-501-l04-c1",
-          "kind": "example",
-          "title": "Case Context",
-          "content": "In this case analysis, we will focus on a multi-institution support network that is working to design early intervention strategies and protocols for crisis escalation. As learners, you will identify various constraints, risks, and governance boundaries that may affect the implementation of these protocols. This analysis will provide valuable insights into the complexities of mental health support systems.\nContext recap: In this case analysis, we will focus on a multi-institution support network that is working to design early intervention strategies and protocols for crisis escalation. As learners, you will identify various constraints, risks, and governance boundaries that may affect the implementation of these protocols. This analysis will provide valuable insights into the complexities of mental health support systems."
+          "id": "mental-health-literacy-501-l04-q1",
+          "text": "What is the most effective first step when interpreting potential mental health risk signals in a complex case?",
+          "skillId": "risk-interpretation",
+          "options": [
+            {
+              "id": "a",
+              "text": "Act immediately based on intuition."
+            },
+            {
+              "id": "b",
+              "text": "Define clear assumptions and test them against different scenarios."
+            },
+            {
+              "id": "c",
+              "text": "Wait for more data, regardless of urgency."
+            },
+            {
+              "id": "d",
+              "text": "Focus only on the most obvious signals."
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Advanced decisions require defining your assumptions and stress-testing them to ensure your interpretation is robust and defensible."
         },
         {
-          "id": "mental-health-literacy-501-l04-c2",
-          "kind": "concept",
-          "title": "Tradeoff Matrix",
-          "content": "In this section, we will introduce the concept of a tradeoff matrix. Here, options will be evaluated based on several important dimensions, including performance, reliability, equity, and feasibility. This evaluation process is crucial for making informed decisions that balance various factors in mental health interventions.\nContext recap: In this section, we will introduce the concept of a tradeoff matrix. Here, options will be evaluated based on several important dimensions, including performance, reliability, equity, and feasibility. This evaluation process is crucial for making informed decisions that balance various factors in mental health interventions."
+          "id": "mental-health-literacy-501-l04-q2",
+          "text": "A high-quality support pathway requires which of the following elements?",
+          "skillId": "system-design",
+          "options": [
+            {
+              "id": "a",
+              "text": "Clear role ownership, progress checkpoints, and threshold-based escalation."
+            },
+            {
+              "id": "b",
+              "text": "Vague roles and informal approvals."
+            },
+            {
+              "id": "c",
+              "text": "A process that never changes or gets reviewed."
+            },
+            {
+              "id": "d",
+              "text": "Allowing for untracked variations in the process."
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Reliable and effective support systems depend on clear ownership, defined checkpoints, and pre-agreed triggers for escalation."
         },
         {
-          "id": "mental-health-literacy-501-l04-c3",
-          "kind": "recap",
-          "title": "Failure and Recovery Design",
-          "content": "In this recap, we will discuss how to map failure signatures to appropriate mitigation actions. Additionally, we will identify measurable recovery triggers that can help us understand when an intervention is successful. This knowledge is vital for improving mental health strategies and ensuring that we can effectively respond to challenges.\nContext recap: In this recap, we will discuss how to map failure signatures to appropriate mitigation actions. Additionally, we will identify measurable recovery triggers that can help us understand when an intervention is successful. This knowledge is vital for improving mental health strategies and ensuring that we can effectively respond to challenges."
-        }
-      ],
-      "flashcards": [
-        {
-          "id": "mental-health-literacy-501-l04-f1",
-          "front": "Tradeoff matrix",
-          "back": "A structured scoring model for competing decision pathways."
+          "id": "mental-health-literacy-501-l04-q3",
+          "text": "A defensible approach to monitoring the outcome of an intervention includes:",
+          "skillId": "outcome-monitoring",
+          "options": [
+            {
+              "id": "a",
+              "text": "Relying on anecdotes without comparison data."
+            },
+            {
+              "id": "b",
+              "text": "Comparison to a baseline, analysis of side-effects, and acknowledging uncertainties."
+            },
+            {
+              "id": "c",
+              "text": "Changing the success criteria after the results are known."
+            },
+            {
+              "id": "d",
+              "text": "Excluding difficult cases from the analysis."
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "A credible analysis requires comparing results to a baseline, checking for unintended side-effects, and being transparent about uncertainty."
         },
         {
-          "id": "mental-health-literacy-501-l04-f2",
-          "front": "Failure signature",
-          "back": "A recurring indicator of a known risk class."
-        },
-        {
-          "id": "mental-health-literacy-501-l04-f3",
-          "front": "Recovery trigger",
-          "back": "A measurable threshold that initiates corrective action."
+          "id": "mental-health-literacy-501-l04-q4",
+          "text": "A mature ethical governance system connects:",
+          "skillId": "ethical-governance",
+          "options": [
+            {
+              "id": "a",
+              "text": "The intent of a policy, measurable controls, and clear pathways for fixing problems."
+            },
+            {
+              "id": "b",
+              "text": "A policy document that has no enforcement mechanism."
+            },
+            {
+              "id": "c",
+              "text": "Goals that have no assigned owner."
+            },
+            {
+              "id": "d",
+              "text": "Actions that are not logged or reviewed for accountability."
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Mature governance links the high-level policy to measurable actions and a reliable process for remediation and accountability."
         }
       ]
     },
     {
       "id": "mental-health-literacy-501-l05",
-      "title": "Mental Health Literacy Simulation and Defense Studio",
-      "type": "interactive",
-      "duration": 17,
+      "title": "Ethical Governance and Leadership",
+      "type": "video",
+      "duration": 13,
       "learningAids": [
         {
           "id": "mental-health-literacy-501-l05-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured approach, document assumptions, and verify outcomes with measurable criteria."
+          "type": "checklist",
+          "title": "Ethical Leadership Checklist",
+          "content": "A checklist to guide decision-making, connecting technical outcomes, policy adherence, ethical principles, and community resilience."
         }
       ],
       "chunks": [
         {
           "id": "mental-health-literacy-501-l05-c1",
-          "kind": "practice",
-          "title": "Simulation Setup",
-          "content": "In this interactive practice, learners will set up various scenarios for intervention tests. This includes configuring constraints, metrics, and escalation logic. By doing this, you will gain hands-on experience in creating realistic testing environments that can help evaluate the effectiveness of mental health interventions.\nContext recap: In this interactive practice, learners will set up various scenarios for intervention tests. This includes configuring constraints, metrics, and escalation logic. By doing this, you will gain hands-on experience in creating realistic testing environments that can help evaluate the effectiveness of mental health interventions."
+          "kind": "concept",
+          "title": "Analyzing Impact on Stakeholders",
+          "content": "Learn to map how the benefits and burdens of a mental health initiative are distributed among different groups over time. This is key to ensuring that interventions are equitable and effective for everyone involved."
         },
         {
           "id": "mental-health-literacy-501-l05-c2",
+          "kind": "concept",
+          "title": "Designing for Accountability",
+          "content": "This section explores the architecture of accountability. This includes how to trace decisions back to their source, establish rights for review, and define clear obligations for remediation when things go wrong."
+        },
+        {
+          "id": "mental-health-literacy-501-l05-c3",
           "kind": "recap",
-          "title": "Debrief and Adaptation",
-          "content": "In this recap, we will review the outcomes of the simulations you conducted. This includes analyzing the gains achieved, any side effects observed, and ensuring that all actions taken were in compliance with governance standards. This reflection is essential for continuous improvement in mental health practices.\nContext recap: In this recap, we will review the outcomes of the simulations you conducted. This includes analyzing the gains achieved, any side effects observed, and ensuring that all actions taken were in compliance with governance standards. This reflection is essential for continuous improvement in mental health practices."
+          "title": "A Checklist for Responsible Leadership",
+          "content": "Effective leadership in mental health requires balancing technical, ethical, and policy considerations. We'll review a checklist that helps leaders navigate these complexities to promote positive public impact and community resilience."
         }
       ],
-      "interactiveActivities": [
+      "flashcards": [
         {
-          "id": "mental-health-literacy-501-l05-act1",
-          "type": "scenario_practice",
-          "title": "High-Stakes Intervention Simulation",
-          "description": "Evaluate intervention options across risk signal interpretation and ethical escalation governance priorities.",
-          "instructions": [
-            "Define objective and boundary conditions first.",
-            "Record near-term and long-term tradeoffs.",
-            "Specify metrics and triggers that validate your recommended path."
-          ]
+          "id": "mental-health-literacy-501-l05-f1",
+          "front": "Impact Distribution",
+          "back": "The analysis of how outcomes (both positive and negative) are allocated across different populations and over time."
+        },
+        {
+          "id": "mental-health-literacy-501-l05-f2",
+          "front": "Decision Traceability",
+          "back": "An auditable record of a decision, including the evidence used, who made it, and the rationale behind it."
+        },
+        {
+          "id": "mental-health-literacy-501-l05-f3",
+          "front": "Responsible Leadership",
+          "back": "A decision-making approach that balances achieving performance goals with ethical considerations and accountability."
         }
       ]
     },
     {
       "id": "mental-health-literacy-501-l06",
-      "title": "Checkpoint 2: Research and Governance Decisions",
-      "type": "quiz",
-      "duration": 10,
+      "title": "Capstone Prep: Intervention Simulation",
+      "type": "interactive",
+      "duration": 17,
       "learningAids": [
         {
           "id": "mental-health-literacy-501-l06-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured approach, document assumptions, and verify outcomes with measurable criteria."
+          "type": "tool",
+          "title": "Interactive Simulation Tool",
+          "content": "A web-based tool to set up and run intervention scenarios, allowing you to configure constraints, metrics, and escalation logic."
         }
       ],
-      "questions": [
+      "chunks": [
         {
-          "id": "mental-health-literacy-501-l06-q1",
-          "text": "Which practice most improves risk signal interpretation decision quality?",
-          "skillId": "mental-health-literacy-501-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "Proceed without baselines or constraints"
-            },
-            {
-              "id": "b",
-              "text": "Define assumptions, stress-test scenarios, and monitor indicators"
-            },
-            {
-              "id": "c",
-              "text": "Ignore edge conditions"
-            },
-            {
-              "id": "d",
-              "text": "Prioritize speed over evidence always"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Advanced decisions require explicit assumptions and stress-tested measurement discipline."
+          "id": "mental-health-literacy-501-l06-c1",
+          "kind": "practice",
+          "title": "Setting Up Your Intervention Scenario",
+          "content": "In this hands-on practice, you will configure a scenario to test an intervention. This includes defining the constraints, success metrics, and escalation logic, giving you experience in creating realistic testing environments."
         },
         {
-          "id": "mental-health-literacy-501-l06-q2",
-          "text": "At level 501, high-quality execution for support pathway architecture requires:",
-          "skillId": "mental-health-literacy-501-skill-execution",
-          "options": [
-            {
-              "id": "a",
-              "text": "Owner mapping, checkpoints, and threshold-based escalation"
-            },
-            {
-              "id": "b",
-              "text": "No role clarity and ad-hoc approvals"
-            },
-            {
-              "id": "c",
-              "text": "No retrospective cycle"
-            },
-            {
-              "id": "d",
-              "text": "Untracked process variation"
-            }
-          ],
-          "correctOptionId": "a",
-          "explanation": "Reliable advanced execution depends on clear ownership and threshold-driven control points."
-        },
+          "id": "mental-health-literacy-501-l06-c2",
+          "kind": "recap",
+          "title": "Analyzing Simulation Results",
+          "content": "After running your simulation, we will review the outcomes. This includes analyzing the benefits achieved, any unintended side effects, and ensuring all actions complied with governance standards. This reflection is essential for continuous improvement."
+        }
+      ],
+      "interactiveActivities": [
         {
-          "id": "mental-health-literacy-501-l06-q3",
-          "text": "A defensible approach to outcome and safety monitoring includes:",
-          "skillId": "mental-health-literacy-501-skill-eval",
-          "options": [
-            {
-              "id": "a",
-              "text": "Anecdotal claims without comparison"
-            },
-            {
-              "id": "b",
-              "text": "Baseline comparison, side-effect analysis, and uncertainty bounds"
-            },
-            {
-              "id": "c",
-              "text": "Changing criteria after outcomes are known"
-            },
-            {
-              "id": "d",
-              "text": "Excluding difficult cases"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Defensible analysis requires comparison, side-effect checks, and explicit uncertainty reporting."
-        },
-        {
-          "id": "mental-health-literacy-501-l06-q4",
-          "text": "Mature ethical escalation governance systems connect:",
-          "skillId": "mental-health-literacy-501-skill-governance",
-          "options": [
-            {
-              "id": "a",
-              "text": "Policy intent, measurable controls, and remediation pathways"
-            },
-            {
-              "id": "b",
-              "text": "Policy language without enforcement"
-            },
-            {
-              "id": "c",
-              "text": "Targets without ownership"
-            },
-            {
-              "id": "d",
-              "text": "Operations without accountability logs"
-            }
-          ],
-          "correctOptionId": "a",
-          "explanation": "Governance maturity is the linkage between policy, measurement, and corrective execution."
-        },
-        {
-          "id": "mental-health-literacy-501-l06-q5",
-          "text": "What is the best way to compare competing interventions in advanced Psychology?",
-          "skillId": "mental-health-literacy-501-skill-advanced-5",
-          "options": [
-            {
-              "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
-            },
-            {
-              "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
-            },
-            {
-              "id": "c",
-              "text": "Switch metrics after results arrive"
-            },
-            {
-              "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
-        },
-        {
-          "id": "mental-health-literacy-501-l06-q6",
-          "text": "In high-stakes Mental Health Literacy Specialization Studio execution, which communication protocol is strongest?",
-          "skillId": "mental-health-literacy-501-skill-advanced-6",
-          "options": [
-            {
-              "id": "a",
-              "text": "Broadcast conclusions without assumptions"
-            },
-            {
-              "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
-            },
-            {
-              "id": "c",
-              "text": "Share only final outcomes after completion"
-            },
-            {
-              "id": "d",
-              "text": "Limit updates to a single informal channel"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
-        },
-        {
-          "id": "mental-health-literacy-501-l06-q7",
-          "text": "A mature remediation loop in advanced Psychology should prioritize:",
-          "skillId": "mental-health-literacy-501-skill-advanced-7",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blame assignment without system updates"
-            },
-            {
-              "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
-            },
-            {
-              "id": "c",
-              "text": "One-time fixes without retesting"
-            },
-            {
-              "id": "d",
-              "text": "Issue closure based on elapsed time"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
-        },
-        {
-          "id": "mental-health-literacy-501-l06-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Mental Health Literacy Specialization Studio?",
-          "skillId": "mental-health-literacy-501-skill-advanced-8",
-          "options": [
-            {
-              "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
-            },
-            {
-              "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
-            },
-            {
-              "id": "c",
-              "text": "Ignore correlated failure modes"
-            },
-            {
-              "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "id": "mental-health-literacy-501-l06-act1",
+          "type": "scenario_practice",
+          "title": "Simulating a High-Stakes Intervention",
+          "description": "Evaluate intervention options in a simulated crisis, balancing risk interpretation, system design, and ethical governance priorities.",
+          "instructions": [
+            "First, define your objective and boundary conditions.",
+            "Record the potential short-term and long-term tradeoffs of your chosen path.",
+            "Specify the metrics and triggers that would validate your recommendation."
+          ]
         }
       ]
     },
     {
       "id": "mental-health-literacy-501-l07",
-      "title": "Mental Health Literacy Governance and Public Impact",
-      "type": "video",
-      "duration": 13,
+      "title": "Capstone Project: Defense of an Intervention Plan",
+      "type": "project",
+      "duration": 60,
       "learningAids": [
         {
           "id": "mental-health-literacy-501-l07-a1",
-          "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured approach, document assumptions, and verify outcomes with measurable criteria."
+          "type": "document",
+          "title": "Capstone Project Rubric",
+          "content": "A detailed scoring guide that outlines the criteria for a successful capstone project, including analysis, design, and defense."
         }
       ],
       "chunks": [
         {
           "id": "mental-health-literacy-501-l07-c1",
           "kind": "concept",
-          "title": "Stakeholder Impact Distribution",
-          "content": "In this section, learners will explore how to map the distribution of benefits and burdens among different stakeholders over time. Understanding this distribution is key to ensuring that mental health initiatives are equitable and effective for all involved. By analyzing these impacts, you will be better prepared to advocate for fair mental health policies.\nContext recap: In this section, learners will explore how to map the distribution of benefits and burdens among different stakeholders over time. Understanding this distribution is key to ensuring that mental health initiatives are equitable and effective for all involved. By analyzing these impacts, you will be better prepared to advocate for fair mental health policies."
+          "title": "Project Overview",
+          "content": "Your final project is to develop a comprehensive intervention plan for a complex case study. You will apply all the concepts from this module, from risk interpretation to ethical governance, to create a defensible and robust plan."
         },
         {
           "id": "mental-health-literacy-501-l07-c2",
           "kind": "concept",
-          "title": "Accountability Architecture",
-          "content": "In this section, we will delve into the architecture of accountability within governance design. This includes understanding how to trace decisions, the rights to review those decisions, and the obligations for remediation. By grasping these concepts, you will be equipped to contribute to more transparent and responsible mental health governance.\nContext recap: In this section, we will delve into the architecture of accountability within governance design. This includes understanding how to trace decisions, the rights to review those decisions, and the obligations for remediation. By grasping these concepts, you will be equipped to contribute to more transparent and responsible mental health governance."
+          "title": "Building Your Defense Brief",
+          "content": "Your submission will be a defense brief. This document must include your analysis of the situation, your proposed support pathway, a plan for monitoring outcomes, and a discussion of the ethical considerations and tradeoffs involved."
         },
         {
           "id": "mental-health-literacy-501-l07-c3",
           "kind": "recap",
-          "title": "Responsible Leadership Checklist",
-          "content": "To ensure effective leadership in mental health governance, it is essential to have a comprehensive checklist. This checklist should connect important outcomes related to technical aspects, adherence to policies, ethical considerations, and the ability to foster resilience within communities. By using this checklist, leaders can better navigate the complexities of mental health initiatives and promote positive public impact.\nContext recap: To ensure effective leadership in mental health governance, it is essential to have a comprehensive checklist. This checklist should connect important outcomes related to technical aspects, adherence to policies, ethical considerations, and the ability to foster resilience within communities. By using this checklist, leaders can better navigate the complexities of mental health initiatives and promote positive public impact."
-        }
-      ],
-      "flashcards": [
-        {
-          "id": "mental-health-literacy-501-l07-f1",
-          "front": "Impact distribution",
-          "back": "How outcomes are allocated across populations and timescales."
-        },
-        {
-          "id": "mental-health-literacy-501-l07-f2",
-          "front": "Decision traceability",
-          "back": "An auditable record of evidence, ownership, and rationale."
-        },
-        {
-          "id": "mental-health-literacy-501-l07-f3",
-          "front": "Responsible leadership",
-          "back": "Decision behavior that balances performance with accountability and ethics."
-        }
-      ]
-    },
-    {
-      "id": "mental-health-literacy-501-l08",
-      "title": "Mental Health Literacy Capstone Defense Lab",
-      "type": "interactive",
-      "duration": 16,
-      "learningAids": [
-        {
-          "id": "mental-health-literacy-501-l08-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured approach, document assumptions, and verify outcomes with measurable criteria."
-        }
-      ],
-      "chunks": [
-        {
-          "id": "mental-health-literacy-501-l08-c1",
-          "kind": "practice",
-          "title": "Defense Brief Assembly",
-          "content": "In this interactive activity, learners will work together to create a detailed brief. This brief will include well-supported claims, relevant evidence, an understanding of the uncertainties involved, and proposed pathways for remediation. This exercise encourages critical thinking and helps learners articulate their ideas clearly, preparing them for real-world applications in mental health literacy.\nContext recap: In this interactive activity, learners will work together to create a detailed brief. This brief will include well-supported claims, relevant evidence, an understanding of the uncertainties involved, and proposed pathways for remediation. This exercise encourages critical thinking and helps learners articulate their ideas clearly, preparing them for real-world applications in mental health literacy."
-        },
-        {
-          "id": "mental-health-literacy-501-l08-c2",
-          "kind": "recap",
-          "title": "Expert Panel Rehearsal",
-          "content": "During the Expert Panel Rehearsal, learners will practice responding to various scenarios that involve technical questions, governance issues, and critiques from stakeholders. This rehearsal is designed to build confidence and improve communication skills, allowing learners to effectively engage with complex topics and defend their ideas in a supportive environment.\nContext recap: During the Expert Panel Rehearsal, learners will practice responding to various scenarios that involve technical questions, governance issues, and critiques from stakeholders. This rehearsal is designed to build confidence and improve communication skills, allowing learners to effectively engage with complex topics and defend their ideas in a supportive environment."
+          "title": "Final Submission and Review",
+          "content": "This section provides instructions for submitting your capstone brief. Your project will be evaluated based on the provided rubric, assessing the quality of your analysis, the feasibility of your plan, and the clarity of your reasoning."
         }
       ],
       "interactiveActivities": [
         {
-          "id": "mental-health-literacy-501-l08-act1",
-          "type": "debate_simulator",
-          "title": "Expert Defense Panel",
-          "description": "Defend specialization recommendations under adversarial cross-examination."
+          "id": "mental-health-literacy-501-l07-act1",
+          "type": "project_submission",
+          "title": "Submit Your Capstone Brief",
+          "description": "Submit your complete intervention plan, including risk analysis, pathway design, monitoring plan, and ethical governance considerations, for expert review."
         }
       ]
     }

@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const Science401Module: LearningModule = {
+export const science_401_Module: LearningModule = {
   "id": "science-401",
   "title": "Scientific Research Strategy and Evidence Governance",
   "description": "Expert-level science curriculum on research design governance, high-uncertainty inference, interdisciplinary evidence synthesis, and policy-facing scientific communication.",
@@ -15,7 +15,7 @@ export const Science401Module: LearningModule = {
   ],
   "minAge": 16,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en"
@@ -47,36 +47,45 @@ export const Science401Module: LearningModule = {
           "id": "science-401-l01-c1",
           "kind": "concept",
           "title": "Program-Level Research Design",
-          "content": "To conduct impactful research, it is essential to create a well-structured design that connects the research questions, the methods used to investigate them, the data collection processes, and the goals for drawing conclusions. This alignment should be maintained throughout all stages of the study to ensure clarity and effectiveness.\nContext recap: To conduct impactful research, it is essential to create a well-structured design that connects the research questions, the methods used to investigate them, the data collection processes, and the goals for drawing conclusions. This alignment should be maintained throughout all stages of the study to ensure clarity and effectiveness."
+          "content": "Impactful research requires a structured design that aligns research questions, methods, data collection, and analytical goals. This coherent framework ensures that every component of the study contributes directly to the intended conclusions.",
+          "visualPrompts": [
+            "A flowchart diagram illustrating the path from a research question to methods, data collection, analysis, and final conclusions."
+          ]
         },
         {
           "id": "science-401-l01-c2",
           "kind": "concept",
           "title": "Validity Dimensions",
-          "content": "When evaluating research, it is important to consider four key types of validity: internal validity, which assesses whether the study accurately reflects the relationship between variables; external validity, which examines the generalizability of the findings; construct validity, which ensures that the study accurately measures the concepts it intends to; and measurement validity, which checks the accuracy of the tools used for data collection. All these dimensions must be carefully evaluated to support credible conclusions.\nContext recap: When evaluating research, it is important to consider four key types of validity: internal validity, which assesses whether the study accurately reflects the relationship between variables; external validity, which examines the generalizability of the findings; construct validity, which ensures that the study accurately measures the concepts it intends to; and measurement validity, which checks the accuracy of the tools used for data collection. All these dimensions must be carefully evaluated to support credible conclusions."
+          "content": "Research credibility rests on four key validity dimensions. Internal validity confirms causal links. External validity addresses generalizability. Construct validity ensures you're measuring the intended concept. Measurement validity confirms the accuracy of your tools. A robust study must satisfy all four.",
+          "visualPrompts": [
+            "An infographic with four distinct quadrants, each representing a type of validity (Internal, External, Construct, Measurement) with a simple icon and a one-sentence definition."
+          ]
         },
         {
           "id": "science-401-l01-c3",
           "kind": "recap",
           "title": "Governance and Reproducibility",
-          "content": "Research governance involves several important practices that help ensure the integrity and reliability of scientific studies. This includes preregistration of studies to outline the research plan in advance, maintaining transparency in research protocols, responsible management of data, and creating pathways for reproducible analysis. These practices are crucial for building trust in scientific findings.\nContext recap: Research governance involves several important practices that help ensure the integrity and reliability of scientific studies. This includes preregistration of studies to outline the research plan in advance, maintaining transparency in research protocols, responsible management of data, and creating pathways for reproducible analysis. These practices are crucial for building trust in scientific findings."
+          "content": "Research governance ensures scientific integrity through key practices. Preregistration commits to an analysis plan before seeing the data. Transparent protocols, open data management, and reproducible analysis pipelines are essential for building trust and verifying findings.",
+          "visualPrompts": [
+            "A circular diagram showing the cycle of research governance: Preregistration -> Transparent Protocols -> Data Management -> Reproducible Analysis."
+          ]
         }
       ],
       "flashcards": [
         {
           "id": "science-401-l01-f1",
           "front": "Internal validity",
-          "back": "Confidence that observed effect is caused by intended factors."
+          "back": "Confidence that an observed effect is caused by the intended factors, not by other variables."
         },
         {
           "id": "science-401-l01-f2",
           "front": "External validity",
-          "back": "Generalizability of findings beyond study conditions."
+          "back": "The extent to which research findings can be generalized to other populations, settings, or times."
         },
         {
           "id": "science-401-l01-f3",
           "front": "Preregistration",
-          "back": "Documenting hypotheses and analysis plans before data outcomes are known."
+          "back": "Documenting hypotheses, methods, and analysis plans before research begins to prevent bias."
         }
       ]
     },
@@ -98,13 +107,19 @@ export const Science401Module: LearningModule = {
           "id": "science-401-l02-c1",
           "kind": "concept",
           "title": "Competing Explanatory Models",
-          "content": "In the field of science, experts often compare various plausible models to explain phenomena. This involves assessing how well each model fits the data, its complexity, its ability to make accurate predictions, and the assumptions it relies on. By weighing these factors, scientists can determine which model provides the best explanation for the observed outcomes.\nContext recap: In the field of science, experts often compare various plausible models to explain phenomena. This involves assessing how well each model fits the data, its complexity, its ability to make accurate predictions, and the assumptions it relies on. By weighing these factors, scientists can determine which model provides the best explanation for the observed outcomes."
+          "content": "Scientists evaluate competing models to find the best explanation for a phenomenon. This comparison involves a trade-off between a model's data fit, its complexity (parsimony), its predictive power, and the plausibility of its underlying assumptions.",
+          "visualPrompts": [
+            "A visual of a balance scale weighing two different scientific models. One side of the scale is labeled 'Data Fit & Prediction,' the other 'Simplicity & Plausible Assumptions'."
+          ]
         },
         {
           "id": "science-401-l02-c2",
           "kind": "practice",
           "title": "Uncertainty Decomposition",
-          "content": "To effectively communicate decisions based on scientific findings, it is important to break down uncertainty into three main components: measurement uncertainty, which relates to the accuracy of the data collected; structural uncertainty, which pertains to the assumptions made in the model; and sampling uncertainty, which involves the representativeness of the data sample. By understanding these components, clearer communication about the implications of the findings can be achieved.\nContext recap: To effectively communicate decisions based on scientific findings, it is important to break down uncertainty into three main components: measurement uncertainty, which relates to the accuracy of the data collected; structural uncertainty, which pertains to the assumptions made in the model; and sampling uncertainty, which involves the representativeness of the data sample. By understanding these components, clearer communication about the implications of the findings can be achieved."
+          "content": "Quantifying uncertainty is critical for responsible inference. Total uncertainty can be decomposed into key sources: measurement uncertainty (from data collection tools), structural uncertainty (from model assumptions), and sampling uncertainty (from using a sample to represent a population).",
+          "visualPrompts": [
+            "A stacked bar chart or a nested diagram breaking down 'Total Uncertainty' into its components: Measurement, Structural, and Sampling Uncertainty."
+          ]
         }
       ],
       "interactiveActivities": [
@@ -112,7 +127,7 @@ export const Science401Module: LearningModule = {
           "id": "science-401-l02-act1",
           "type": "matching_pairs",
           "title": "Model Metric Match",
-          "description": "Match comparison metric to interpretive role.",
+          "description": "Match comparison metric to its interpretive role.",
           "pairs": [
             {
               "left": "Predictive error",
@@ -138,8 +153,8 @@ export const Science401Module: LearningModule = {
           "title": "Competing Hypothesis Debate",
           "description": "Defend one model while acknowledging uncertainty and alternatives.",
           "instructions": [
-            "State strongest evidence for your preferred model.",
-            "State one result that would falsify your position."
+            "State the strongest evidence for your preferred model.",
+            "Identify one result that would falsify your position."
           ]
         }
       ]
@@ -165,7 +180,7 @@ export const Science401Module: LearningModule = {
           "options": [
             {
               "id": "a",
-              "text": "It removes need for replication"
+              "text": "It removes the need for replication"
             },
             {
               "id": "b",
@@ -177,15 +192,15 @@ export const Science401Module: LearningModule = {
             },
             {
               "id": "d",
-              "text": "It prevents all bias"
+              "text": "It prevents all forms of bias"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Preregistration strengthens transparency and inference integrity."
+          "explanation": "Preregistration strengthens transparency and inference integrity by committing researchers to a plan before results are known."
         },
         {
           "id": "science-401-l03-q2",
-          "text": "Residual structure after fitting often suggests:",
+          "text": "A non-random pattern in the residuals after fitting a model often suggests:",
           "skillId": "science-401-skill-models",
           "options": [
             {
@@ -194,7 +209,7 @@ export const Science401Module: LearningModule = {
             },
             {
               "id": "b",
-              "text": "Potential unmodeled process or assumption mismatch"
+              "text": "An unmodeled process or a mismatched assumption"
             },
             {
               "id": "c",
@@ -202,11 +217,11 @@ export const Science401Module: LearningModule = {
             },
             {
               "id": "d",
-              "text": "Guaranteed causal interpretation"
+              "text": "A guaranteed causal interpretation"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Structured residuals indicate likely model deficiency."
+          "explanation": "Structured residuals indicate that the model has failed to capture some systematic pattern in the data, suggesting a model deficiency."
         },
         {
           "id": "science-401-l03-q3",
@@ -215,15 +230,15 @@ export const Science401Module: LearningModule = {
           "options": [
             {
               "id": "a",
-              "text": "Generalize beyond the sample context"
+              "text": "Generalize beyond the specific sample and context of the study"
             },
             {
               "id": "b",
-              "text": "Use proper units"
+              "text": "Use the proper measurement units"
             },
             {
               "id": "c",
-              "text": "Contain no noise"
+              "text": "Contain no random noise"
             },
             {
               "id": "d",
@@ -231,32 +246,32 @@ export const Science401Module: LearningModule = {
             }
           ],
           "correctOptionId": "a",
-          "explanation": "External validity concerns broader applicability of results."
+          "explanation": "External validity is fundamentally about the broader applicability and generalizability of the study's results."
         },
         {
           "id": "science-401-l03-q4",
-          "text": "Model comparison should balance fit with:",
+          "text": "A robust model comparison should balance goodness-of-fit with:",
           "skillId": "science-401-skill-models",
           "options": [
             {
               "id": "a",
-              "text": "Complexity and robustness"
+              "text": "Model complexity and robustness to assumptions"
             },
             {
               "id": "b",
-              "text": "Narrative appeal"
+              "text": "The narrative appeal of the explanation"
             },
             {
               "id": "c",
-              "text": "Single metric only"
+              "text": "A single, definitive metric"
             },
             {
               "id": "d",
-              "text": "Author preference"
+              "text": "The preference of the author"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Overfitting risk and robustness are central comparison dimensions."
+          "explanation": "Good model selection penalizes excessive complexity to avoid overfitting and considers how sensitive conclusions are to underlying assumptions."
         }
       ]
     },
@@ -278,36 +293,45 @@ export const Science401Module: LearningModule = {
           "id": "science-401-l04-c1",
           "kind": "concept",
           "title": "Bias Taxonomy",
-          "content": "There are different types of bias that can affect research findings, including selection bias, which occurs when certain groups are favored in the study; measurement bias, which happens when the data collection methods are flawed; publication bias, where only certain results are published; and analytic bias, which arises from errors in data analysis. Each of these biases can independently distort the conclusions drawn from research.\nContext recap: There are different types of bias that can affect research findings, including selection bias, which occurs when certain groups are favored in the study; measurement bias, which happens when the data collection methods are flawed; publication bias, where only certain results are published; and analytic bias, which arises from errors in data analysis. Each of these biases can independently distort the conclusions drawn from research."
+          "content": "Bias can systematically distort research conclusions. Key types include selection bias (non-representative samples), measurement bias (flawed data collection), publication bias (selective reporting of 'interesting' results), and analytic bias (flawed data analysis choices).",
+          "visualPrompts": [
+            "An icon-based graphic illustrating four types of bias: Selection (unbalanced groups), Measurement (a warped ruler), Publication (a file drawer with hidden papers), and Analytic (a deliberately skewed graph)."
+          ]
         },
         {
           "id": "science-401-l04-c2",
           "kind": "concept",
           "title": "Confounding Architecture",
-          "content": "Confounding pathways can create misleading interpretations of research results. These pathways can mimic the effects of the variables being studied unless the research design or statistical controls are strong enough to account for them. It is crucial for researchers to identify and manage these confounding factors to ensure accurate conclusions.\nContext recap: Confounding pathways can create misleading interpretations of research results. These pathways can mimic the effects of the variables being studied unless the research design or statistical controls are strong enough to account for them. It is crucial for researchers to identify and manage these confounding factors to ensure accurate conclusions."
+          "content": "A confounder is a third variable that creates a spurious association between an exposure and an outcome. Failing to control for confounding through careful study design or statistical adjustment can lead to incorrect causal inferences.",
+          "visualPrompts": [
+            "A simple directed acyclic graph (DAG) showing a Confounder variable with arrows pointing to both the 'Exposure' and the 'Outcome', creating a 'backdoor path'."
+          ]
         },
         {
           "id": "science-401-l04-c3",
           "kind": "recap",
           "title": "Meta-Evidence Reasoning",
-          "content": "Scientific confidence increases when multiple independent studies yield similar results and support the same direction of effect. Additionally, the plausibility of the mechanisms behind these effects strengthens the overall confidence in the findings. This convergence of evidence is essential for establishing reliable scientific knowledge.\nContext recap: Scientific confidence increases when multiple independent studies yield similar results and support the same direction of effect. Additionally, the plausibility of the mechanisms behind these effects strengthens the overall confidence in the findings. This convergence of evidence is essential for establishing reliable scientific knowledge."
+          "content": "Confidence in a scientific claim grows with the convergence of evidence. This occurs when multiple, independent lines of inquiry—using different methods, datasets, and assumptions—all point toward the same conclusion, supported by a plausible mechanism.",
+          "visualPrompts": [
+            "A funnel plot diagram where data points from multiple studies cluster around a central effect size, illustrating evidence convergence."
+          ]
         }
       ],
       "flashcards": [
         {
           "id": "science-401-l04-f1",
           "front": "Publication bias",
-          "back": "Distortion from selective reporting of positive or significant outcomes."
+          "back": "Systematic distortion of the scientific literature due to the selective publication of studies with positive or statistically significant results."
         },
         {
           "id": "science-401-l04-f2",
           "front": "Confounder",
-          "back": "Variable associated with both predictor and outcome, distorting causal inference."
+          "back": "A third variable that is associated with both the predictor and outcome variables, creating a spurious correlation."
         },
         {
           "id": "science-401-l04-f3",
           "front": "Evidence convergence",
-          "back": "Agreement across independent methods and datasets."
+          "back": "The principle that confidence in a conclusion increases when it is supported by multiple, independent lines of evidence."
         }
       ]
     },
@@ -329,13 +353,19 @@ export const Science401Module: LearningModule = {
           "id": "science-401-l05-c1",
           "kind": "practice",
           "title": "Decision-Grade Science Communication",
-          "content": "When communicating scientific findings to policy audiences, it is important to present clear conclusions that summarize the research outcomes. Additionally, providing ranges of confidence, discussing the implications of different scenarios, and outlining explicit boundaries of uncertainty are essential for effective communication. This helps policymakers make informed decisions based on the evidence presented.\nContext recap: When communicating scientific findings to policy audiences, it is important to present clear conclusions that summarize the research outcomes. Additionally, providing ranges of confidence, discussing the implications of different scenarios, and outlining explicit boundaries of uncertainty are essential for effective communication. This helps policymakers make informed decisions based on the evidence presented."
+          "content": "Communicating science for policy requires translating complex findings into decision-relevant information. This means providing a clear 'bottom line' conclusion, but also qualifying it with confidence intervals, key assumptions, and the potential implications of alternative scenarios.",
+          "visualPrompts": [
+            "A mock policy brief dashboard showing a headline finding, a confidence interval bar, a list of key assumptions, and a simple risk meter."
+          ]
         },
         {
           "id": "science-401-l05-c2",
           "kind": "recap",
           "title": "Avoiding Overclaim",
-          "content": "Experts should clearly communicate what the data supports, while also pointing out any areas that are still unclear or unresolved. Additionally, it is crucial to specify what further evidence could lead to changes in the recommendations provided. This level of transparency is essential for fostering trust and understanding between scientists and policymakers, ensuring that decisions are based on the best available information.\nContext recap: Experts should clearly communicate what the data supports, while also pointing out any areas that are still unclear or unresolved. Additionally, it is crucial to specify what further evidence could lead to changes in the recommendations provided. This level of transparency is essential for fostering trust and understanding between scientists and policymakers, ensuring that decisions are based on the best available information."
+          "content": "To maintain credibility, experts must avoid overclaiming. This involves clearly stating what the evidence supports, what remains unknown, and what specific future evidence would be required to change the current recommendation. This transparency builds trust and supports robust decision-making.",
+          "visualPrompts": [
+            "An illustration of a document with two columns labeled 'What We Know (Evidence-Based)' and 'What We Don't Know (Research Gaps)', highlighting the boundary of current knowledge."
+          ]
         }
       ],
       "interactiveActivities": [
@@ -343,26 +373,26 @@ export const Science401Module: LearningModule = {
           "id": "science-401-l05-act1",
           "type": "sorting_buckets",
           "title": "Statement Quality Sort",
-          "description": "Sort statements by communication rigor.",
+          "description": "Sort statements by their communication rigor.",
           "buckets": [
             "Rigor Strong",
             "Rigor Weak"
           ],
           "items": [
             {
-              "text": "Result with uncertainty interval and assumption note",
+              "text": "Result presented with an uncertainty interval and a note on key assumptions.",
               "bucket": "Rigor Strong"
             },
             {
-              "text": "Absolute claim without confidence bounds",
+              "text": "An absolute claim made without any confidence bounds or context.",
               "bucket": "Rigor Weak"
             },
             {
-              "text": "Recommendation with scenario sensitivity",
+              "text": "A recommendation that includes an analysis of how it might change under different scenarios.",
               "bucket": "Rigor Strong"
             },
             {
-              "text": "Policy demand with no evidence link",
+              "text": "A policy demand that is not explicitly linked to the presented evidence.",
               "bucket": "Rigor Weak"
             }
           ]
@@ -374,7 +404,7 @@ export const Science401Module: LearningModule = {
           "description": "Prepare a concise science briefing for decision-makers.",
           "instructions": [
             "State one clear headline finding.",
-            "State one uncertainty condition that changes interpretation."
+            "State one key uncertainty or assumption that could change the interpretation."
           ]
         }
       ]
@@ -395,53 +425,53 @@ export const Science401Module: LearningModule = {
       "questions": [
         {
           "id": "science-401-l06-q1",
-          "text": "Why is overconfident policy communication risky?",
+          "text": "Why is overconfident communication of scientific results to policymakers risky?",
           "skillId": "science-401-skill-communication",
           "options": [
             {
               "id": "a",
-              "text": "It improves uncertainty tracking"
+              "text": "It improves the tracking of uncertainty"
             },
             {
               "id": "b",
-              "text": "It hides assumptions and can misguide decisions"
+              "text": "It hides critical assumptions and can misguide high-stakes decisions"
             },
             {
               "id": "c",
-              "text": "It always increases evidence quality"
+              "text": "It always increases the quality of the evidence"
             },
             {
               "id": "d",
-              "text": "It removes model limitations"
+              "text": "It removes all limitations from the model"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Decisions degrade when uncertainty and assumptions are hidden."
+          "explanation": "Decisions based on incomplete information are fragile. Hiding uncertainty and assumptions prevents decision-makers from understanding the full context and risks."
         },
         {
           "id": "science-401-l06-q2",
-          "text": "Most credible high-stakes scientific recommendation includes:",
+          "text": "A credible, high-stakes scientific recommendation should always include:",
           "skillId": "science-401-skill-governance",
           "options": [
             {
               "id": "a",
-              "text": "Single estimate only"
+              "text": "Only a single point estimate for simplicity"
             },
             {
               "id": "b",
-              "text": "Evidence, uncertainty bounds, assumptions, and decision implications"
+              "text": "The core evidence, uncertainty bounds, key assumptions, and decision implications"
             },
             {
               "id": "c",
-              "text": "No model comparison"
+              "text": "No comparison to alternative models"
             },
             {
               "id": "d",
-              "text": "No bias discussion"
+              "text": "No discussion of potential biases"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Complete framing supports responsible and traceable decisions."
+          "explanation": "This complete framing provides the necessary context for responsible, transparent, and traceable decision-making."
         },
         {
           "id": "science-401-l06-q3",
@@ -450,48 +480,48 @@ export const Science401Module: LearningModule = {
           "options": [
             {
               "id": "a",
-              "text": "Narrative simplicity"
+              "text": "The simplicity of the narrative"
             },
             {
               "id": "b",
-              "text": "Confidence robustness"
+              "text": "The robustness of one's confidence in the finding"
             },
             {
               "id": "c",
-              "text": "Model complexity"
+              "text": "The complexity of the model"
             },
             {
               "id": "d",
-              "text": "Bias certainty"
+              "text": "The certainty that no bias exists"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Independent convergence reduces single-method fragility."
+          "explanation": "If different methods with different assumptions all point to the same answer, the conclusion is less likely to be an artifact of a single flawed method."
         },
         {
           "id": "science-401-l06-q4",
-          "text": "Confounding risk is best addressed by:",
+          "text": "The risk of confounding is best addressed by:",
           "skillId": "science-401-skill-validity",
           "options": [
             {
               "id": "a",
-              "text": "Ignoring alternative pathways"
+              "text": "Ignoring alternative causal pathways"
             },
             {
               "id": "b",
-              "text": "Design controls and transparent adjustment strategy"
+              "text": "Careful design controls and a transparent statistical adjustment strategy"
             },
             {
               "id": "c",
-              "text": "Only increasing sample size"
+              "text": "Only increasing the sample size"
             },
             {
               "id": "d",
-              "text": "Removing all variables"
+              "text": "Removing all variables except the two of interest"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Confounding requires explicit design and analytic controls."
+          "explanation": "Confounding must be addressed proactively through study design (e.g., randomization) or reactively through principled statistical control."
         }
       ]
     },
@@ -513,20 +543,26 @@ export const Science401Module: LearningModule = {
           "id": "science-401-l07-c1",
           "kind": "practice",
           "title": "Capstone Brief",
-          "content": "In this capstone project, you will design a comprehensive research program that addresses a complex scientific question. Your proposal should include a phased methodology that outlines how you will conduct the research, controls for uncertainty to ensure reliable results, an ethical framework to guide your work, and outputs that are useful for decision-making. This project will help you apply what you have learned in a practical way.\nContext recap: In this capstone project, you will design a comprehensive research program that addresses a complex scientific question. Your proposal should include a phased methodology that outlines how you will conduct the research, controls for uncertainty to ensure reliable results, an ethical framework to guide your work, and outputs that are useful for decision-making. This project will help you apply what you have learned in a practical way."
+          "content": "The capstone project requires you to design a complete research program for a complex scientific question. Your proposal must integrate a phased methodology, explicit uncertainty controls, a robust ethical framework, and a plan for generating decision-relevant outputs.",
+          "visualPrompts": [
+            "An icon of a detailed architectural blueprint, symbolizing the structure and planning of a research program."
+          ]
         },
         {
           "id": "science-401-l07-c2",
           "kind": "recap",
           "title": "Assessment Criteria",
-          "content": "When assessing research proposals, it is important to ensure that the methods used align with the research questions being asked. Additionally, strong proposals should clearly define the safeguards for validity and effectively communicate the boundaries of interpretation for the results. This clarity is essential for ensuring that the research can be understood and applied appropriately.\nContext recap: When assessing research proposals, it is important to ensure that the methods used align with the research questions being asked. Additionally, strong proposals should clearly define the safeguards for validity and effectively communicate the boundaries of interpretation for the results. This clarity is essential for ensuring that the research can be understood and applied appropriately."
+          "content": "Your capstone proposal will be assessed on key criteria: the alignment between your research question and methods, the rigor of your proposed safeguards for validity and reproducibility, and the clarity with which you define the interpretive boundaries of your potential findings.",
+          "visualPrompts": [
+            "A simple checklist graphic with three items: 'Question-Method Alignment', 'Validity & Reproducibility Safeguards', and 'Clear Interpretive Boundaries'."
+          ]
         }
       ],
       "metadata": {
         "prompts": [
-          "Define your primary question and measurable outcomes.",
-          "List top three uncertainty drivers and mitigation plan.",
-          "State what future evidence would revise your recommendations."
+          "Define your primary research question and its measurable outcomes.",
+          "List the top three drivers of uncertainty in your proposed study and your plan to mitigate them.",
+          "State what specific future evidence would cause you to revise your conclusions or recommendations."
         ]
       }
     }

@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const Astronomy401Module: LearningModule = {
+export const astronomy_401_Module: LearningModule = {
   "id": "astronomy-401",
   "title": "Astronomy Research Design and Cosmological Inference",
   "description": "Expert-level astronomy curriculum focused on research-grade observation strategy, statistical inference, exoplanet and transient analysis, cosmological parameter estimation, and scientific communication.",
@@ -15,7 +15,7 @@ export const Astronomy401Module: LearningModule = {
   ],
   "minAge": 13,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en"
@@ -40,19 +40,19 @@ export const Astronomy401Module: LearningModule = {
           "id": "astronomy-401-l01-c1",
           "kind": "concept",
           "title": "From Question to Measurement",
-          "content": "To explore the wonders of astronomy effectively, we need to start by linking our scientific questions to signals that we can actually measure. This connection is vital for gathering meaningful data. The way we design our surveys is incredibly important in this journey. We have to make several key decisions: first, how often we will take measurements, which is known as cadence. Next, we consider exposure time, which is how long we allow our instruments to collect light from celestial objects. Additionally, we choose filters that allow us to capture different wavelengths of light, helping us see various features of the universe. Finally, we decide how much of the sky we will cover in our observations. All these choices influence what astronomical phenomena we can discover and what might remain hidden from our view. By carefully planning our observational strategies, we can unlock the secrets of the cosmos and gain a deeper understanding of the universe around us."
+          "content": "To explore the universe effectively, we must translate our broad scientific questions into specific signals we can actually measure. The way we design our astronomical surveys dictates what we can discover. We must make several critical decisions: 'cadence' (how often we take measurements), 'exposure time' (how long we collect light), 'filters' (which wavelengths of light we capture), and 'sky coverage' (how much of the sky we map). These choices act as a filter, determining which cosmic phenomena are revealed and which remain hidden in the dark."
         },
         {
           "id": "astronomy-401-l01-c2",
           "kind": "concept",
           "title": "Uncertainty Budgets",
-          "content": "In astronomy, it is important to understand the different types of uncertainties that can affect our observations. Researchers categorize these uncertainties into two main types: random and systematic. Random uncertainties can arise from factors like detector noise or variations in the atmosphere, while systematic uncertainties might come from calibration drift or assumptions made in our models. By creating explicit uncertainty budgets, scientists can better defend their conclusions and ensure that their findings are reliable.\nContext recap: In astronomy, it is important to understand the different types of uncertainties that can affect our observations. Researchers categorize these uncertainties into two main types: random and systematic. Random uncertainties can arise from factors like detector noise or variations in the atmosphere, while systematic uncertainties might come from calibration drift or assumptions made in our models. By creating explicit uncertainty budgets, scientists can better defend their conclusions and ensure that their findings are reliable."
+          "content": "In astronomy, understanding our margins of error is just as important as the measurements themselves. We categorize these errors into two main types: random and systematic uncertainties. Random uncertainties arise from unpredictable fluctuations, like detector noise or atmospheric blurring. Systematic uncertainties, however, are consistent biases, such as a miscalibrated sensor or flawed model assumptions. By creating explicit 'uncertainty budgets,' scientists can account for these errors, defend their conclusions, and ensure their findings are reliable."
         },
         {
           "id": "astronomy-401-l01-c3",
           "kind": "recap",
           "title": "Design Trade-offs",
-          "content": "When astronomers design surveys to study the universe, they often have to make important choices about how to approach their work. One option is a deep narrow survey, which focuses on a small area of the sky. This allows scientists to gather a lot of detailed information about that specific region. On the other hand, a shallow wide survey covers a much larger area but provides less detailed information. Each type of survey is useful for answering different scientific questions. Experts in the field explain their choices based on what they expect to discover, how easy it will be to conduct follow-up observations, and the value of learning from negative results, which can also provide important insights into our understanding of the universe."
+          "content": "Telescope time is precious, so astronomers must make strategic trade-offs. A 'deep, narrow' survey focuses on a tiny patch of sky for a long time, revealing incredibly faint, distant objects. Conversely, a 'shallow, wide' survey scans vast areas of the sky quickly, perfect for finding rare, bright events like supernovae. Experts justify their survey designs based on their specific targets, the feasibility of follow-up observations, and the scientific value of negative results—because sometimes, finding nothing is just as informative as finding something."
         }
       ],
       "flashcards": [
@@ -64,12 +64,12 @@ export const Astronomy401Module: LearningModule = {
         {
           "id": "astronomy-401-l01-f2",
           "front": "Systematic uncertainty",
-          "back": "Bias-like error source that can shift measurements consistently if not corrected."
+          "back": "A consistent bias or error source that can shift measurements in a specific direction if not corrected."
         },
         {
           "id": "astronomy-401-l01-f3",
-          "front": "Signal-to-noise ratio",
-          "back": "A measure of detection confidence comparing true signal strength to noise level."
+          "front": "Signal-to-noise ratio (SNR)",
+          "back": "A measure of detection confidence comparing the true signal strength to the background noise level."
         }
       ],
       "learningAids": [
@@ -77,7 +77,7 @@ export const Astronomy401Module: LearningModule = {
           "id": "astronomy-401-l01-a1",
           "type": "image",
           "title": "Survey Design Matrix",
-          "content": "Decision matrix mapping cadence, depth, and wavelength choices to research objectives."
+          "content": "[Visual Prompt: A 3D grid showing 'Cadence' (time), 'Depth' (exposure), and 'Wavelength' (color filters) intersecting to highlight different astronomical targets like supernovae or exoplanets.] Decision matrix mapping cadence, depth, and wavelength choices to research objectives."
         }
       ]
     },
@@ -91,13 +91,13 @@ export const Astronomy401Module: LearningModule = {
           "id": "astronomy-401-l02-c1",
           "kind": "concept",
           "title": "Detection Versus Interpretation",
-          "content": "In the field of astronomy, when we spot a feature in our observations, it doesn't necessarily mean we fully grasp what that feature signifies. It's important to make a clear distinction between how sure we are about detecting something and how sure we are about the explanation or model we use to interpret it. Good practices in astronomy require us to report both levels of confidence. This way, we can share our discoveries in a way that is clear and honest, helping others understand the significance of our findings."
+          "content": "When we spot an anomaly in our telescope data, it doesn't automatically mean we know what caused it. It is crucial to distinguish between our confidence in *detecting* a signal (e.g., 'there is definitely a dip in this star's light') and our confidence in *interpreting* it (e.g., 'that dip is caused by an Earth-sized planet'). Rigorous astronomy requires us to report both levels of confidence independently, ensuring our discoveries are communicated transparently and honestly."
         },
         {
           "id": "astronomy-401-l02-c2",
           "kind": "practice",
           "title": "Model Comparison",
-          "content": "When scientists study the universe and try to understand how it works, they often have different ideas, or models, about what might be happening. To figure out which model is the best, they compare them by looking at several important factors. One of these factors is called likelihood, which helps them see how well each model explains the data they have collected. They also look at something called posterior estimates, which gives them a better idea of how likely each model is to be correct based on the evidence they have. Additionally, scientists check the residuals, which are the differences between the data and what the model predicts. The goal is to find the model that not only fits the data well but also stands strong against uncertainties and assumptions. This careful process of comparison is crucial because it allows scientists to make informed decisions about which explanations of astronomical phenomena are the most credible and likely to be true."
+          "content": "To figure out which astrophysical model best explains our data, we use statistical inference. We look at 'likelihood' (how well a model predicts the observed data) and 'posterior estimates' (how probable the model is given our prior knowledge). Crucially, we also examine the 'residuals'—the leftover data after subtracting the model's predictions. If the residuals show a clear pattern instead of random static, it means our model is missing something important. This rigorous comparison helps us find the most credible explanation for cosmic phenomena."
         }
       ],
       "interactiveActivities": [
@@ -105,7 +105,7 @@ export const Astronomy401Module: LearningModule = {
           "id": "astronomy-401-l02-act1",
           "type": "matching_pairs",
           "title": "Error Source Match",
-          "description": "Match observational issues to strongest mitigation approach.",
+          "description": "Match observational issues to the strongest mitigation approach.",
           "pairs": [
             {
               "left": "Flat-field calibration drift",
@@ -121,7 +121,7 @@ export const Astronomy401Module: LearningModule = {
             },
             {
               "left": "Instrument thermal noise",
-              "right": "Exposure planning and detector correction"
+              "right": "Exposure planning and detector cooling"
             }
           ]
         },
@@ -148,7 +148,7 @@ export const Astronomy401Module: LearningModule = {
           "id": "astronomy-401-l02-a1",
           "type": "practice",
           "title": "Inference Checklist",
-          "content": "Template for detection threshold, model assumptions, residual diagnostics, and confidence reporting."
+          "content": "[Visual Prompt: A digital clipboard with checkboxes for Detection Threshold, Model Assumptions, Residual Diagnostics, and Confidence Reporting.] Template for ensuring rigorous statistical claims."
         }
       ]
     },
@@ -181,7 +181,7 @@ export const Astronomy401Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Transient detection probability is highly sensitive to revisit frequency."
+          "explanation": "Transient detection probability is highly sensitive to revisit frequency (cadence)."
         },
         {
           "id": "astronomy-401-l03-q2",
@@ -202,40 +202,40 @@ export const Astronomy401Module: LearningModule = {
             },
             {
               "id": "d",
-              "text": "No practical reason"
+              "text": "There is no practical reason"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Systematic errors can bias conclusions even when random noise is low."
+          "explanation": "Systematic errors can bias conclusions even when random noise is low, requiring different mathematical treatments."
         },
         {
           "id": "astronomy-401-l03-q3",
-          "text": "A model fits well but residuals show structure. Best interpretation?",
+          "text": "A model fits well but the residuals show a wavy structure. What is the best interpretation?",
           "skillId": "astronomy-401-skill-inference",
           "options": [
             {
               "id": "a",
-              "text": "Model likely misses important process"
+              "text": "The model likely misses an important physical process"
             },
             {
               "id": "b",
-              "text": "Model is definitively correct"
+              "text": "The model is definitively correct"
             },
             {
               "id": "c",
-              "text": "Residuals are always random"
+              "text": "Residuals are always random, so it can be ignored"
             },
             {
               "id": "d",
-              "text": "Data should be discarded immediately"
+              "text": "The data should be discarded immediately"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Structured residuals often indicate under-modeled physics or measurement artifacts."
+          "explanation": "Structured residuals often indicate under-modeled physics or uncorrected measurement artifacts."
         },
         {
           "id": "astronomy-401-l03-q4",
-          "text": "Most defensible scientific claim includes:",
+          "text": "The most defensible scientific claim includes:",
           "skillId": "astronomy-401-skill-communication",
           "options": [
             {
@@ -244,7 +244,7 @@ export const Astronomy401Module: LearningModule = {
             },
             {
               "id": "b",
-              "text": "Estimate, uncertainty bounds, and assumptions"
+              "text": "An estimate, uncertainty bounds, and explicit assumptions"
             },
             {
               "id": "c",
@@ -256,7 +256,7 @@ export const Astronomy401Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Transparent assumptions and uncertainty are essential for credible inference."
+          "explanation": "Transparent assumptions and uncertainty bounds are essential for credible, reproducible inference."
         }
       ],
       "learningAids": [
@@ -264,7 +264,7 @@ export const Astronomy401Module: LearningModule = {
           "id": "astronomy-401-l03-a1",
           "type": "mnemonic",
           "title": "CUE",
-          "content": "Claim, Uncertainty, Evidence."
+          "content": "Claim, Uncertainty, Evidence. Always present these three together when reporting astronomical findings."
         }
       ]
     },
@@ -278,36 +278,36 @@ export const Astronomy401Module: LearningModule = {
           "id": "astronomy-401-l04-c1",
           "kind": "concept",
           "title": "Exoplanet Evidence Chains",
-          "content": "To gather evidence for the existence of exoplanets, astronomers look at various signals such as transit depth, periodicity, and radial-velocity signals. These signals help us estimate important characteristics of the planets, including their size, how long it takes them to orbit their stars, and their minimum mass. A thorough interpretation of this data must take into account factors like stellar activity, any drift in our instruments, and the possibility of false positives, ensuring that our conclusions are well-supported.\nContext recap: To gather evidence for the existence of exoplanets, astronomers look at various signals such as transit depth, periodicity, and radial-velocity signals. These signals help us estimate important characteristics of the planets, including their size, how long it takes them to orbit their stars, and their minimum mass. A thorough interpretation of this data must take into account factors like stellar activity, any drift in our instruments, and the possibility of false positives, ensuring that our conclusions are well-supported."
+          "content": "To confirm the existence of exoplanets, astronomers analyze multiple signals. The 'transit method' measures the tiny dip in starlight when a planet crosses in front of its star, revealing its size. The 'radial-velocity method' detects the star's slight wobble caused by the planet's gravity, indicating its mass. A thorough interpretation must account for stellar activity (like sunspots), instrument drift, and potential false positives to ensure our conclusions are rock-solid."
         },
         {
           "id": "astronomy-401-l04-c2",
           "kind": "concept",
           "title": "Transient Event Classification",
-          "content": "Astronomers are fascinated by different types of transient events in the universe. Some of these include supernovae, which are massive explosions of stars, tidal disruption events where stars are torn apart by black holes, gamma-ray bursts that release enormous amounts of energy, and kilonova candidates that occur when two neutron stars collide. To learn more about these exciting phenomena, scientists need to quickly classify them. This means they must identify what type of event it is and decide which ones to study further. The timing of these events is very important, as is the information gathered from observing them in various types of light, like visible light, infrared, and radio waves. This multi-wavelength approach helps astronomers make accurate classifications and understand the significance of these cosmic occurrences better."
+          "content": "The universe is full of explosive, short-lived events called transients. These include supernovae (exploding stars), tidal disruption events (stars torn apart by black holes), and kilonovae (colliding neutron stars). Because these events fade quickly, astronomers must classify them rapidly to trigger follow-up observations. By analyzing the timing of the event and its spectrum across multiple wavelengths—from radio waves to X-rays—scientists can deduce the extreme physics driving the explosion."
         },
         {
           "id": "astronomy-401-l04-c3",
           "kind": "recap",
           "title": "Multi-Messenger Context",
-          "content": "In today's world of astronomy, scientists use a special method called the multi-messenger approach. This means they gather information from various sources, like light waves (which we see as electromagnetic signals), gravitational waves (ripples in space caused by massive objects), and neutrinos (tiny particles that come from the sun and other cosmic events). By combining these different types of information, astronomers can better locate where events in space are happening and understand what they mean. This teamwork between different observatories—places that watch the sky—is really important for making new discoveries and learning more about the universe. It helps us piece together the puzzle of how our cosmos works, making it an exciting time to be involved in astronomy!"
+          "content": "Modern astrophysics has entered the era of 'multi-messenger astronomy.' Instead of relying solely on light (electromagnetic radiation), we now gather information from entirely different cosmic messengers: gravitational waves (ripples in spacetime) and neutrinos (ghostly subatomic particles). By combining these distinct signals from a single event, like a neutron star merger, observatories worldwide can piece together a much more complete and profound picture of the universe's most violent phenomena."
         }
       ],
       "flashcards": [
         {
           "id": "astronomy-401-l04-f1",
           "front": "Transit method",
-          "back": "Detects periodic brightness dips when a planet passes in front of its host star."
+          "back": "Detects periodic brightness dips when a planet passes in front of its host star, revealing the planet's radius."
         },
         {
           "id": "astronomy-401-l04-f2",
           "front": "Radial velocity",
-          "back": "Infers planetary influence by measuring periodic Doppler shifts in stellar spectra."
+          "back": "Infers planetary mass by measuring periodic Doppler shifts in stellar spectra caused by gravitational tugs."
         },
         {
           "id": "astronomy-401-l04-f3",
           "front": "Multi-messenger astronomy",
-          "back": "Study of astrophysical events using multiple signal channels beyond light alone."
+          "back": "The coordinated study of astrophysical events using light, gravitational waves, and particles like neutrinos."
         }
       ],
       "learningAids": [
@@ -315,7 +315,7 @@ export const Astronomy401Module: LearningModule = {
           "id": "astronomy-401-l04-a1",
           "type": "image",
           "title": "Evidence Pipeline Diagram",
-          "content": "Workflow from candidate detection to follow-up confirmation in exoplanet/transient science."
+          "content": "[Visual Prompt: A flowchart showing a telescope detecting a light dip, moving to a spectrograph measuring a wobble, and ending with a confirmed 3D exoplanet model.] Workflow from candidate detection to follow-up confirmation."
         }
       ]
     },
@@ -329,13 +329,13 @@ export const Astronomy401Module: LearningModule = {
           "id": "astronomy-401-l05-c1",
           "kind": "concept",
           "title": "From Data to Cosmology",
-          "content": "Cosmological inference is the process of linking various observations to understand the universe better. This includes studying redshift, which tells us how fast objects are moving away from us, distance indicators that help us measure how far away things are, the large-scale structure of the universe, and background radiation. By analyzing these observations, scientists can estimate important parameters such as the rate of expansion of the universe and the composition of matter and energy within it.\nContext recap: Cosmological inference is the process of linking various observations to understand the universe better. This includes studying redshift, which tells us how fast objects are moving away from us, distance indicators that help us measure how far away things are, the large-scale structure of the universe, and background radiation. By analyzing these observations, scientists can estimate important parameters such as the rate of expansion of the universe and the composition of matter and energy within it."
+          "content": "Cosmological inference links observational data to the fundamental properties of the universe. By studying galaxy redshifts (how fast objects move away), distance indicators like supernovae, and the cosmic microwave background (the afterglow of the Big Bang), scientists can estimate critical parameters. These include the universe's expansion rate (the Hubble constant) and the exact balance of dark matter, dark energy, and ordinary matter."
         },
         {
           "id": "astronomy-401-l05-c2",
           "kind": "practice",
           "title": "Degeneracy and Tension",
-          "content": "When scientists analyze different datasets, they may find that each dataset suggests different ranges for certain parameters. This situation is known as tension. Experts investigate whether this tension is due to biases in measurement, incomplete models, or simply natural variations that can be expected statistically. Understanding these factors is crucial for making accurate interpretations of the data.\nContext recap: When scientists analyze different datasets, they may find that each dataset suggests different ranges for certain parameters. This situation is known as tension. Experts investigate whether this tension is due to biases in measurement, incomplete models, or simply natural variations that can be expected statistically. Understanding these factors is crucial for making accurate interpretations of the data."
+          "content": "When analyzing different datasets, scientists sometimes find that they suggest conflicting values for the same parameter—a situation known as 'tension.' For example, measurements of the universe's expansion rate differ depending on whether we look at the early universe or the late universe. Experts must rigorously investigate whether this tension stems from hidden measurement biases, incomplete theoretical models, or exciting new physics waiting to be discovered."
         }
       ],
       "interactiveActivities": [
@@ -343,7 +343,7 @@ export const Astronomy401Module: LearningModule = {
           "id": "astronomy-401-l05-act1",
           "type": "sorting_buckets",
           "title": "Dataset Role Sort",
-          "description": "Sort observational datasets by strongest cosmological constraint role.",
+          "description": "Sort observational datasets by their strongest cosmological constraint role.",
           "buckets": [
             "Expansion History",
             "Structure Growth",
@@ -374,7 +374,7 @@ export const Astronomy401Module: LearningModule = {
           "title": "Parameter Tension Debate",
           "description": "Argue whether an observed dataset tension is methodological or physical.",
           "instructions": [
-            "Present one methodological explanation.",
+            "Present one methodological explanation (e.g., calibration error).",
             "Present one new-physics hypothesis with a testable prediction."
           ]
         }
@@ -391,7 +391,7 @@ export const Astronomy401Module: LearningModule = {
           "id": "astronomy-401-l05-a1",
           "type": "practice",
           "title": "Cosmology Analysis Sheet",
-          "content": "Template for parameter assumptions, dataset dependencies, and robustness checks."
+          "content": "[Visual Prompt: A digital worksheet displaying a bell curve graph with overlapping datasets, highlighting the 'tension' gap between them.] Template for parameter assumptions, dataset dependencies, and robustness checks."
         }
       ]
     },
@@ -408,11 +408,11 @@ export const Astronomy401Module: LearningModule = {
           "options": [
             {
               "id": "a",
-              "text": "To reduce telescope scheduling"
+              "text": "To reduce telescope scheduling conflicts"
             },
             {
               "id": "b",
-              "text": "To constrain complementary planet properties"
+              "text": "To constrain complementary planet properties (mass and radius)"
             },
             {
               "id": "c",
@@ -420,11 +420,11 @@ export const Astronomy401Module: LearningModule = {
             },
             {
               "id": "d",
-              "text": "No scientific advantage"
+              "text": "There is no scientific advantage"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Each method constrains different parameters and strengthens interpretation together."
+          "explanation": "Each method constrains different parameters (transit gives radius, radial velocity gives mass), allowing us to calculate the planet's density."
         },
         {
           "id": "astronomy-401-l06-q2",
@@ -437,11 +437,11 @@ export const Astronomy401Module: LearningModule = {
             },
             {
               "id": "b",
-              "text": "Need for deeper systematic checks and model stress-testing"
+              "text": "A need for deeper systematic checks and model stress-testing"
             },
             {
               "id": "c",
-              "text": "Data can be ignored"
+              "text": "The data can be ignored entirely"
             },
             {
               "id": "d",
@@ -449,32 +449,32 @@ export const Astronomy401Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Tension requires careful methodological and theoretical evaluation before strong claims."
+          "explanation": "Tension requires careful methodological and theoretical evaluation before making strong claims about new physics."
         },
         {
           "id": "astronomy-401-l06-q3",
-          "text": "Most important feature of a research-grade result statement?",
+          "text": "What is the most important feature of a research-grade result statement?",
           "skillId": "astronomy-401-skill-communication",
           "options": [
             {
               "id": "a",
-              "text": "Only confidence language"
+              "text": "Only using absolute confidence language"
             },
             {
               "id": "b",
-              "text": "Estimate, uncertainty, assumptions, and limits"
+              "text": "Including the estimate, uncertainty, assumptions, and limits"
             },
             {
               "id": "c",
-              "text": "Single numerical claim without context"
+              "text": "A single numerical claim without context"
             },
             {
               "id": "d",
-              "text": "Avoid any caveats"
+              "text": "Avoiding any caveats to sound more authoritative"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Transparent scope and uncertainty make results reproducible and credible."
+          "explanation": "Transparent scope and uncertainty make results reproducible, credible, and scientifically useful."
         },
         {
           "id": "astronomy-401-l06-q4",
@@ -483,27 +483,27 @@ export const Astronomy401Module: LearningModule = {
           "options": [
             {
               "id": "a",
-              "text": "Eliminates instrument calibration needs"
+              "text": "It eliminates instrument calibration needs"
             },
             {
               "id": "b",
-              "text": "Provides complementary constraints from different physical channels"
+              "text": "It provides complementary constraints from different physical channels"
             },
             {
               "id": "c",
-              "text": "Replaces all optical telescopes"
+              "text": "It replaces all optical telescopes"
             },
             {
               "id": "d",
-              "text": "Guarantees immediate classification"
+              "text": "It guarantees immediate classification of all events"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Multiple channels improve inference robustness and source interpretation."
+          "explanation": "Combining light, gravitational waves, and particles improves inference robustness and gives a complete physical picture."
         },
         {
           "id": "astronomy-401-l06-q5",
-          "text": "Best practice when presenting potentially controversial cosmological findings?",
+          "text": "What is the best practice when presenting potentially controversial cosmological findings?",
           "skillId": "astronomy-401-skill-communication",
           "options": [
             {
@@ -516,15 +516,15 @@ export const Astronomy401Module: LearningModule = {
             },
             {
               "id": "c",
-              "text": "Publish only if no uncertainties remain"
+              "text": "Publish only if zero uncertainties remain"
             },
             {
               "id": "d",
-              "text": "Ignore cross-check datasets"
+              "text": "Ignore cross-check datasets that disagree"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Responsible communication includes limitations and testable next steps."
+          "explanation": "Responsible scientific communication includes acknowledging limitations and proposing testable next steps."
         }
       ],
       "learningAids": [
@@ -532,7 +532,7 @@ export const Astronomy401Module: LearningModule = {
           "id": "astronomy-401-l06-a1",
           "type": "mnemonic",
           "title": "STAR",
-          "content": "Signal, Test, Assumptions, Robustness."
+          "content": "Signal, Test, Assumptions, Robustness. A framework for evaluating frontier astronomical claims."
         }
       ]
     },
@@ -546,13 +546,39 @@ export const Astronomy401Module: LearningModule = {
           "id": "astronomy-401-l07-c1",
           "kind": "practice",
           "title": "Proposal Brief",
-          "content": "In this capstone project, you will create a complete research proposal. This proposal should include a clear scientific question that you want to explore, a detailed observation plan outlining how you will gather data, a framework for making inferences based on your findings, strategies for managing risks, and a communication plan for sharing your results, whether they confirm your hypothesis or not.\nContext recap: In this capstone project, you will create a complete research proposal. This proposal should include a clear scientific question that you want to explore, a detailed observation plan outlining how you will gather data, a framework for making inferences based on your findings, strategies for managing risks, and a communication plan for sharing your results, whether they confirm your hypothesis or not."
+          "content": "In this capstone project, you will design a complete astronomical research proposal. Your proposal must include a clear, testable scientific question, a detailed observation plan, and a framework for statistical inference. You will also need to outline strategies for managing uncertainties and a communication plan for sharing your results, regardless of whether they confirm or reject your initial hypothesis."
         },
         {
           "id": "astronomy-401-l07-c2",
           "kind": "recap",
           "title": "Evaluation Criteria",
-          "content": "When evaluating research proposals, strong submissions will align the design of their measurements with the hypothesis they are testing. They should clearly define how they will control for uncertainties and present realistic pathways for analysis and follow-up observations. These criteria help ensure that the research is well thought out and has a good chance of success.\nContext recap: When evaluating research proposals, strong submissions will align the design of their measurements with the hypothesis they are testing. They should clearly define how they will control for uncertainties and present realistic pathways for analysis and follow-up observations. These criteria help ensure that the research is well thought out and has a good chance of success."
+          "content": "Strong research proposals perfectly align their measurement strategies with the hypotheses they aim to test. When evaluating proposals, review panels look for clearly defined uncertainty controls, realistic analysis pathways, and logical follow-up observations. Meeting these criteria ensures your research is scientifically rigorous and capable of yielding meaningful discoveries."
+        }
+      ],
+      "interactiveActivities": [
+        {
+          "id": "astronomy-401-l07-act1",
+          "type": "matching_pairs",
+          "title": "Proposal Component Match",
+          "description": "Match the section of a research proposal to its core scientific purpose.",
+          "pairs": [
+            {
+              "left": "Scientific Justification",
+              "right": "Defines the hypothesis and its broader impact on the field"
+            },
+            {
+              "left": "Technical Feasibility",
+              "right": "Proves the chosen instruments can achieve the required Signal-to-Noise ratio"
+            },
+            {
+              "left": "Uncertainty Budget",
+              "right": "Identifies potential systematic errors and mitigation strategies"
+            },
+            {
+              "left": "Data Analysis Plan",
+              "right": "Outlines the statistical inference methods used to test the models"
+            }
+          ]
         }
       ],
       "metadata": {
@@ -567,7 +593,7 @@ export const Astronomy401Module: LearningModule = {
           "id": "astronomy-401-l07-a1",
           "type": "practice",
           "title": "Proposal Template",
-          "content": "Template for question, method, uncertainty budget, analysis plan, and reporting framework."
+          "content": "[Visual Prompt: A glowing digital schematic of a research document, with sections for Hypothesis, Observation Plan, and Uncertainty Budget highlighted.] Template for question, method, uncertainty budget, analysis plan, and reporting framework."
         }
       ]
     }

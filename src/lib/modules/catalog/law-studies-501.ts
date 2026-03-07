@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const LawStudies501Module: LearningModule = {
+export const law_studies_501_Module: LearningModule = {
   "id": "law-studies-501",
   "title": "Law Studies Specialization Studio",
   "description": "Post-401 specialization in Law Studies, focused on law systems diagnostics, law operations and execution design, law impact and tradeoff analysis, and law governance and leadership through advanced casework, simulation, and defense-based checkpoints.",
@@ -14,7 +14,7 @@ export const LawStudies501Module: LearningModule = {
   ],
   "minAge": 17,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en",
@@ -22,24 +22,24 @@ export const LawStudies501Module: LearningModule = {
   ],
   "learningObjectives": [
     "Apply advanced methods for law systems diagnostics in high-constraint environments",
-    "Design robust systems for law operations and execution design with measurable control gates",
-    "Evaluate interventions in law impact and tradeoff analysis with research-grade rigor",
-    "Operationalize law governance and leadership with accountable governance and escalation pathways",
+    "Design robust systems for law operations and execution with measurable control gates",
+    "Evaluate legal interventions and their tradeoffs with research-grade rigor",
+    "Operationalize law governance and leadership with accountable processes and escalation pathways",
     "Lead cross-functional decision reviews with explicit tradeoff communication",
     "Defend recommendations under expert critique using evidence and uncertainty bounds"
   ],
   "lessons": [
     {
       "id": "law-studies-501-l01",
-      "title": "Law Studies Advanced Foundations",
+      "title": "Advanced Foundations in Legal Systems",
       "type": "video",
       "duration": 14,
       "learningAids": [
         {
           "id": "law-studies-501-l01-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Legal System Diagnostic Flow",
+          "content": "A flowchart illustrating the process of diagnosing a legal system, from identifying constraints and stakeholders to mapping causal effects."
         }
       ],
       "chunks": [
@@ -47,50 +47,50 @@ export const LawStudies501Module: LearningModule = {
           "id": "law-studies-501-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "In this lesson, we will delve into the advanced concepts of scope boundaries within the field of Law Studies. Understanding these boundaries is crucial for anyone looking to navigate the intricate world of legal systems. We will focus on how to effectively diagnose law systems, which involves analyzing their structure and function. Additionally, we will explore how to design operations and execution strategies that are not only efficient but also effective in real-world applications. This foundational knowledge will empower you to better understand the complexities of legal frameworks and how they operate in various scenarios, preparing you for future challenges in the legal field."
+          "content": "This lesson introduces advanced concepts for analyzing legal systems. We will focus on defining the scope and boundaries of a legal problem, diagnosing its core functions and structures, and designing effective operational strategies for real-world application. This provides a framework for understanding legal complexities."
         },
         {
           "id": "law-studies-501-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different events or actions. They will also identify uncertainty ranges and understand how various systems depend on one another. This foundational skill is crucial for planning interventions effectively, ensuring that learners can anticipate potential outcomes and make informed decisions.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different events or actions. They will also identify uncertainty ranges and understand how various systems depend on one another. This foundational skill is crucial for planning interventions effectively, ensuring that learners can anticipate potential outcomes and make informed decisions."
+          "content": "Learners will map the causal pathways that connect legal actions to outcomes, identifying potential interdependencies between systems. A key skill is defining uncertainty ranges for these outcomes, which is crucial for planning effective interventions and making informed decisions under pressure."
         },
         {
           "id": "law-studies-501-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "In our recap, we emphasize that all claims made in legal contexts should be linked to measurable indicators. This means that learners will understand the importance of establishing confidence bounds and setting up review checkpoints to ensure that all assertions are backed by solid evidence. This practice is essential for maintaining integrity and accountability in legal studies.\nContext recap: In our recap, we emphasize that all claims made in legal contexts should be linked to measurable indicators. This means that learners will understand the importance of establishing confidence bounds and setting up review checkpoints to ensure that all assertions are backed by solid evidence. This practice is essential for maintaining integrity and accountability in legal studies."
+          "content": "We recap the importance of linking all claims to measurable indicators. Learners will understand how to establish confidence bounds for their assertions and implement review checkpoints, ensuring that every argument is supported by verifiable evidence to maintain integrity and accountability."
         }
       ],
       "flashcards": [
         {
           "id": "law-studies-501-l01-f1",
-          "front": "law systems diagnostics",
-          "back": "A specialization axis requiring explicit assumptions and measurable constraints."
+          "front": "Law Systems Diagnostics",
+          "back": "The systematic analysis of a legal framework, requiring explicit assumptions and measurable constraints to define a problem."
         },
         {
           "id": "law-studies-501-l01-f2",
-          "front": "law operations and execution design",
-          "back": "Execution architecture that determines reliability under stress."
+          "front": "Law Operations Design",
+          "back": "The architecture of a legal process, including workflows and controls, that determines its reliability under stress."
         },
         {
           "id": "law-studies-501-l01-f3",
-          "front": "law impact and tradeoff analysis",
-          "back": "Evaluation discipline for identifying true gains and hidden costs."
+          "front": "Law Impact Analysis",
+          "back": "The discipline of evaluating a law's effects, including intended benefits, unintended side effects, and hidden costs."
         }
       ]
     },
     {
       "id": "law-studies-501-l02",
-      "title": "Law Studies Specialist Methods Lab",
+      "title": "Specialist Methods Lab",
       "type": "interactive",
       "duration": 17,
       "learningAids": [
         {
           "id": "law-studies-501-l02-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Workflow Builder",
+          "content": "An interactive diagram of a legal workflow with draggable 'control gates' (e.g., 'Senior Counsel Review', 'Ethics Committee Approval') that users can place and configure."
         }
       ],
       "chunks": [
@@ -98,13 +98,13 @@ export const LawStudies501Module: LearningModule = {
           "id": "law-studies-501-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "In this interactive practice, learners will have the opportunity to design specialized workflows that reflect real-world legal processes. They will also conduct stress tests on these workflows, simulating adverse scenarios to see how well their designs hold up under pressure. This hands-on experience is vital for developing practical skills in law.\nContext recap: In this interactive practice, learners will have the opportunity to design specialized workflows that reflect real-world legal processes. They will also conduct stress tests on these workflows, simulating adverse scenarios to see how well their designs hold up under pressure. This hands-on experience is vital for developing practical skills in law."
+          "content": "In this lab, learners will use a digital toolkit to build a legal workflow, such as a compliance review process. They will then stress-test their design against simulated adverse scenarios, like budget cuts or sudden regulatory changes, to evaluate its resilience."
         },
         {
           "id": "law-studies-501-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "In our recap of control gate architecture, we will discuss how workflows should integrate essential checkpoints, criteria for rolling back decisions, and methods for escalating issues based on thresholds. Understanding these components will help learners create robust systems that can adapt to challenges while ensuring compliance and oversight.\nContext recap: In our recap of control gate architecture, we will discuss how workflows should integrate essential checkpoints, criteria for rolling back decisions, and methods for escalating issues based on thresholds. Understanding these components will help learners create robust systems that can adapt to challenges while ensuring compliance and oversight."
+          "content": "We review how effective legal workflows integrate control gates. These are essential checkpoints with clear criteria for advancing, rolling back, or escalating a decision. This architecture ensures that processes are robust, compliant, and adaptable to new information."
         }
       ],
       "interactiveActivities": [
@@ -112,7 +112,7 @@ export const LawStudies501Module: LearningModule = {
           "id": "law-studies-501-l02-act1",
           "type": "matching_pairs",
           "title": "Control-to-Outcome Mapping",
-          "description": "Match specialist controls with their strongest reliability and governance effects.",
+          "description": "Match specialist controls with their primary reliability and governance effects.",
           "pairs": [
             {
               "left": "Pre-commit gate",
@@ -120,7 +120,7 @@ export const LawStudies501Module: LearningModule = {
             },
             {
               "left": "Rollback trigger",
-              "right": "Limits blast radius under adverse outcomes"
+              "right": "Limits the impact of an adverse outcome"
             },
             {
               "left": "Baseline dashboard",
@@ -143,69 +143,69 @@ export const LawStudies501Module: LearningModule = {
         {
           "id": "law-studies-501-l03-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Knowledge Check",
+          "content": "A progress bar showing mastery of Specialist Methods, with key concepts like 'Explicit Assumptions' and 'Measurable Indicators' highlighted."
         }
       ],
       "questions": [
         {
           "id": "law-studies-501-l03-q1",
-          "text": "Which practice most improves law systems diagnostics decision quality?",
-          "skillId": "law-studies-501-skill-core",
+          "text": "Which practice most improves the quality of a law systems diagnostic?",
+          "skillId": "law-studies-501-skill-diagnostics",
           "options": [
             {
               "id": "a",
-              "text": "Proceed without baseline or assumptions"
+              "text": "Proceeding without a baseline or assumptions"
             },
             {
               "id": "b",
-              "text": "Define assumptions, constraints, and measurable indicators"
+              "text": "Defining assumptions, constraints, and measurable indicators"
             },
             {
               "id": "c",
-              "text": "Optimize only for speed in every context"
+              "text": "Optimizing only for speed in every context"
             },
             {
               "id": "d",
-              "text": "Ignore uncertainty and edge conditions"
+              "text": "Ignoring uncertainty and edge conditions"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Advanced decisions improve when assumptions, constraints, and metrics are explicit."
+          "explanation": "Advanced diagnostics improve when assumptions, constraints, and metrics are made explicit from the start."
         },
         {
           "id": "law-studies-501-l03-q2",
-          "text": "At level 501, strong execution for law operations and execution design requires:",
+          "text": "At an advanced level, strong design for law operations requires:",
           "skillId": "law-studies-501-skill-execution",
           "options": [
             {
               "id": "a",
-              "text": "Owner mapping, checkpoint cadence, and escalation thresholds"
+              "text": "Clear ownership, review checkpoints, and escalation thresholds"
             },
             {
               "id": "b",
-              "text": "No role clarity and ad-hoc process changes"
+              "text": "Ambiguous roles and ad-hoc process changes"
             },
             {
               "id": "c",
-              "text": "No retrospective or post-run review"
+              "text": "No retrospective or post-implementation review"
             },
             {
               "id": "d",
-              "text": "No rollback or fallback conditions"
+              "text": "No conditions for rolling back a decision"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Reliable advanced execution needs ownership clarity and threshold-driven governance."
+          "explanation": "Reliable execution at an advanced level needs ownership clarity and threshold-driven governance."
         },
         {
           "id": "law-studies-501-l03-q3",
           "text": "A defensible approach to law impact and tradeoff analysis includes:",
-          "skillId": "law-studies-501-skill-eval",
+          "skillId": "law-studies-501-skill-analysis",
           "options": [
             {
               "id": "a",
-              "text": "Anecdotes without comparison"
+              "text": "Anecdotes without a comparison group"
             },
             {
               "id": "b",
@@ -213,19 +213,19 @@ export const LawStudies501Module: LearningModule = {
             },
             {
               "id": "c",
-              "text": "Changing success criteria after outcomes"
+              "text": "Changing success criteria after seeing the outcomes"
             },
             {
               "id": "d",
-              "text": "Excluding difficult scenarios from analysis"
+              "text": "Excluding difficult scenarios from the analysis"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible analysis combines comparative baselines, side-effect checks, and uncertainty disclosure."
+          "explanation": "Defensible analysis combines comparative baselines, checks for side-effects, and disclosure of uncertainty."
         },
         {
           "id": "law-studies-501-l03-q4",
-          "text": "Mature governance systems connect:",
+          "text": "Mature governance systems effectively connect:",
           "skillId": "law-studies-501-skill-governance",
           "options": [
             {
@@ -238,7 +238,7 @@ export const LawStudies501Module: LearningModule = {
             },
             {
               "id": "c",
-              "text": "Targets without ownership or escalation design"
+              "text": "Targets without ownership or an escalation plan"
             },
             {
               "id": "d",
@@ -246,121 +246,21 @@ export const LawStudies501Module: LearningModule = {
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Governance maturity is the operational link between intent, measurement, and corrective action."
-        },
-        {
-          "id": "law-studies-501-l03-q5",
-          "text": "What is the best way to compare competing interventions in advanced Law?",
-          "skillId": "law-studies-501-skill-advanced-5",
-          "options": [
-            {
-              "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
-            },
-            {
-              "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
-            },
-            {
-              "id": "c",
-              "text": "Switch metrics after results arrive"
-            },
-            {
-              "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
-        },
-        {
-          "id": "law-studies-501-l03-q6",
-          "text": "In high-stakes Law Studies Specialization Studio execution, which communication protocol is strongest?",
-          "skillId": "law-studies-501-skill-advanced-6",
-          "options": [
-            {
-              "id": "a",
-              "text": "Broadcast conclusions without assumptions"
-            },
-            {
-              "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
-            },
-            {
-              "id": "c",
-              "text": "Share only final outcomes after completion"
-            },
-            {
-              "id": "d",
-              "text": "Limit updates to a single informal channel"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
-        },
-        {
-          "id": "law-studies-501-l03-q7",
-          "text": "A mature remediation loop in advanced Law should prioritize:",
-          "skillId": "law-studies-501-skill-advanced-7",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blame assignment without system updates"
-            },
-            {
-              "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
-            },
-            {
-              "id": "c",
-              "text": "One-time fixes without retesting"
-            },
-            {
-              "id": "d",
-              "text": "Issue closure based on elapsed time"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
-        },
-        {
-          "id": "law-studies-501-l03-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Law Studies Specialization Studio?",
-          "skillId": "law-studies-501-skill-advanced-8",
-          "options": [
-            {
-              "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
-            },
-            {
-              "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
-            },
-            {
-              "id": "c",
-              "text": "Ignore correlated failure modes"
-            },
-            {
-              "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "explanation": "Mature governance is the operational link between intent, measurement, and corrective action."
         }
       ]
     },
     {
       "id": "law-studies-501-l04",
-      "title": "Law Studies Advanced Case Analysis",
+      "title": "Advanced Case Analysis",
       "type": "video",
       "duration": 14,
       "learningAids": [
         {
           "id": "law-studies-501-l04-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Decision Memo Comparison",
+          "content": "A side-by-side comparison of two legal strategies for a case, presented as 'decision memos' highlighting their respective risks, costs, and potential outcomes."
         }
       ],
       "chunks": [
@@ -368,33 +268,33 @@ export const LawStudies501Module: LearningModule = {
           "id": "law-studies-501-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "In this concept section, we will frame a case that highlights the competing constraints within law systems diagnostics. This includes analyzing the impacts of law and understanding trade-offs that may arise. By examining these elements, learners will gain insights into the complexities of legal decision-making and the factors that influence outcomes.\nContext recap: In this concept section, we will frame a case that highlights the competing constraints within law systems diagnostics. This includes analyzing the impacts of law and understanding trade-offs that may arise. By examining these elements, learners will gain insights into the complexities of legal decision-making and the factors that influence outcomes."
+          "content": "We will analyze a landmark environmental law case, identifying the competing interests and constraints of corporations, government agencies, and public advocacy groups. This frames the complex, multi-stakeholder nature of advanced legal problems."
         },
         {
           "id": "law-studies-501-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "In this practice segment, learners will compare various options available to them across multiple dimensions, including safety, reliability, cost, equity, and governance. This comparative analysis will equip them with the skills to evaluate different legal strategies and make informed choices that consider all relevant factors.\nContext recap: In this practice segment, learners will compare various options available to them across multiple dimensions, including safety, reliability, cost, equity, and governance. This comparative analysis will equip them with the skills to evaluate different legal strategies and make informed choices that consider all relevant factors."
+          "content": "Learners will use a multi-criteria decision matrix to score potential legal strategies for the case study. This exercise involves weighing critical factors like legal precedent, public opinion, cost, and ethical considerations to compare options systematically."
         },
         {
           "id": "law-studies-501-l04-c3",
           "kind": "recap",
           "title": "Decision Memo Pattern",
-          "content": "In our recap, we will discuss the essential components of a decision memo. Each recommendation made should include underlying assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that all decisions are well-founded and that there are strategies in place to address potential challenges.\nContext recap: In our recap, we will discuss the essential components of a decision memo. Each recommendation made should include underlying assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that all decisions are well-founded and that there are strategies in place to address potential challenges."
+          "content": "We introduce a template for writing a persuasive legal decision memo. This structure ensures every recommendation is explicitly linked to its underlying assumptions, supporting evidence, risk controls, and fallback plans, making the rationale clear and defensible."
         }
       ]
     },
     {
       "id": "law-studies-501-l05",
-      "title": "Law Studies Simulation Clinic",
+      "title": "Simulation Clinic",
       "type": "interactive",
       "duration": 18,
       "learningAids": [
         {
           "id": "law-studies-501-l05-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Crisis Management Dashboard",
+          "content": "A screenshot of the simulation dashboard, showing dynamic charts for 'Public Trust,' 'Legal Risk,' and 'Budget,' with a pop-up decision point for the user."
         }
       ],
       "chunks": [
@@ -402,13 +302,13 @@ export const LawStudies501Module: LearningModule = {
           "id": "law-studies-501-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "In this interactive practice, learners will take on the role of operators managing scenario controls. They will learn how to balance performance with governance constraints, ensuring that their actions align with legal standards and ethical considerations. This experience will enhance their ability to navigate complex legal environments.\nContext recap: In this interactive practice, learners will take on the role of operators managing scenario controls. They will learn how to balance performance with governance constraints, ensuring that their actions align with legal standards and ethical considerations. This experience will enhance their ability to navigate complex legal environments."
+          "content": "In a real-time simulation, learners manage a corporate legal response to a public crisis. They must make critical decisions under time pressure, balancing legal liability, regulatory compliance, and public relations while managing limited resources."
         },
         {
           "id": "law-studies-501-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "In our recap, we will focus on the importance of effective responses in legal scenarios. Learners will understand how to update control gates while maintaining traceability and accountability. This skill is crucial for ensuring that all actions taken are documented and can be reviewed if necessary.\nContext recap: In our recap, we will focus on the importance of effective responses in legal scenarios. Learners will understand how to update control gates while maintaining traceability and accountability. This skill is crucial for ensuring that all actions taken are documented and can be reviewed if necessary."
+          "content": "After the simulation, we review the decision log to analyze how learners adapted their strategies. We focus on the importance of creating auditable decision trails, a crucial skill for accountability and learning in high-stakes legal environments."
         }
       ],
       "interactiveActivities": [
@@ -416,7 +316,7 @@ export const LawStudies501Module: LearningModule = {
           "id": "law-studies-501-l05-act1",
           "type": "scenario",
           "title": "Adverse-Condition Decision Run",
-          "description": "Run a high-pressure law studies scenario and tune controls under uncertainty."
+          "description": "Run a high-pressure legal crisis scenario and tune controls under uncertainty and evolving conditions."
         }
       ]
     },
@@ -429,15 +329,15 @@ export const LawStudies501Module: LearningModule = {
         {
           "id": "law-studies-501-l06-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Mastery Badge",
+          "content": "An icon representing a 'Mastery Badge' for Case and Simulation, showing a gavel and a gear intertwined."
         }
       ],
       "questions": [
         {
           "id": "law-studies-501-l06-q1",
-          "text": "In advanced casework, the first requirement for defensible recommendations is:",
-          "skillId": "law-studies-501-skill-case1",
+          "text": "In advanced casework, the first requirement for a defensible recommendation is:",
+          "skillId": "law-studies-501-skill-case-analysis",
           "options": [
             {
               "id": "a",
@@ -453,200 +353,100 @@ export const LawStudies501Module: LearningModule = {
             },
             {
               "id": "d",
-              "text": "Single-metric optimization only"
+              "text": "Optimization based on a single metric only"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible recommendations begin with explicit assumptions, constraints, and measurable targets."
+          "explanation": "Defensible recommendations begin with an explicit definition of the problem, including assumptions, constraints, and measurable targets."
         },
         {
           "id": "law-studies-501-l06-q2",
-          "text": "A resilient strategy for law operations and execution design should include:",
-          "skillId": "law-studies-501-skill-case2",
+          "text": "When analyzing tradeoffs between legal strategies, which method is most rigorous?",
+          "skillId": "law-studies-501-skill-tradeoffs",
           "options": [
             {
               "id": "a",
-              "text": "Checkpointed execution with fallback and escalation criteria"
+              "text": "Choosing the strategy with the most compelling narrative"
             },
             {
               "id": "b",
-              "text": "One-way execution with no rollback capability"
+              "text": "Using a decision matrix to score options against shared criteria"
             },
             {
               "id": "c",
-              "text": "No ownership mapping across teams"
+              "text": "Focusing only on the financial cost of each option"
             },
             {
               "id": "d",
-              "text": "Hidden assumptions and undocumented decisions"
+              "text": "Asking for a vote without presenting evidence"
             }
           ],
-          "correctOptionId": "a",
-          "explanation": "Resilience depends on checkpoints, fallback options, and explicit escalation design."
+          "correctOptionId": "b",
+          "explanation": "A rigorous tradeoff analysis uses a structured method, like a decision matrix, to compare alternatives across multiple, consistent criteria."
         },
         {
           "id": "law-studies-501-l06-q3",
-          "text": "When evaluating law impact and tradeoff analysis, which method is most rigorous?",
-          "skillId": "law-studies-501-skill-case3",
+          "text": "In a dynamic legal simulation, what does an 'adaptive response' prioritize?",
+          "skillId": "law-studies-501-skill-simulation",
           "options": [
             {
               "id": "a",
-              "text": "Single success story without controls"
+              "text": "Sticking to the initial plan regardless of new information"
             },
             {
               "id": "b",
-              "text": "Comparative baselines plus side-effect and uncertainty analysis"
+              "text": "Making decisions that are documented and traceable"
             },
             {
               "id": "c",
-              "text": "Outcome-only narrative without process evidence"
+              "text": "Waiting until the crisis is over to take any action"
             },
             {
               "id": "d",
-              "text": "Retrospective scope changes to fit outcomes"
+              "text": "Acting on instinct without consulting the data"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Rigorous evaluation requires comparisons, side-effect analysis, and uncertainty disclosure."
+          "explanation": "Adaptive response in a high-stakes environment requires making informed adjustments while maintaining a clear, auditable record of why decisions were made."
         },
         {
           "id": "law-studies-501-l06-q4",
-          "text": "Advanced governance is strongest when it:",
-          "skillId": "law-studies-501-skill-case4",
+          "text": "A strong decision memo in a legal context must always include:",
+          "skillId": "law-studies-501-skill-communication",
           "options": [
             {
               "id": "a",
-              "text": "Aligns authority, measurement, and remediation obligations"
+              "text": "A section on risks, uncertainties, and fallback plans"
             },
             {
               "id": "b",
-              "text": "Separates policy from operational controls"
+              "text": "Only the positive aspects of the recommended option"
             },
             {
               "id": "c",
-              "text": "Avoids external review and transparency"
+              "text": "Vague language to allow for future flexibility"
             },
             {
               "id": "d",
-              "text": "Treats accountability as optional under pressure"
+              "text": "A guarantee of a successful outcome"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Mature governance links authority, measurable controls, and corrective action."
-        },
-        {
-          "id": "law-studies-501-l06-q5",
-          "text": "What is the best way to compare competing interventions in advanced Law?",
-          "skillId": "law-studies-501-skill-advanced-5",
-          "options": [
-            {
-              "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
-            },
-            {
-              "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
-            },
-            {
-              "id": "c",
-              "text": "Switch metrics after results arrive"
-            },
-            {
-              "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
-        },
-        {
-          "id": "law-studies-501-l06-q6",
-          "text": "In high-stakes Law Studies Specialization Studio execution, which communication protocol is strongest?",
-          "skillId": "law-studies-501-skill-advanced-6",
-          "options": [
-            {
-              "id": "a",
-              "text": "Broadcast conclusions without assumptions"
-            },
-            {
-              "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
-            },
-            {
-              "id": "c",
-              "text": "Share only final outcomes after completion"
-            },
-            {
-              "id": "d",
-              "text": "Limit updates to a single informal channel"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
-        },
-        {
-          "id": "law-studies-501-l06-q7",
-          "text": "A mature remediation loop in advanced Law should prioritize:",
-          "skillId": "law-studies-501-skill-advanced-7",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blame assignment without system updates"
-            },
-            {
-              "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
-            },
-            {
-              "id": "c",
-              "text": "One-time fixes without retesting"
-            },
-            {
-              "id": "d",
-              "text": "Issue closure based on elapsed time"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
-        },
-        {
-          "id": "law-studies-501-l06-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Law Studies Specialization Studio?",
-          "skillId": "law-studies-501-skill-advanced-8",
-          "options": [
-            {
-              "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
-            },
-            {
-              "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
-            },
-            {
-              "id": "c",
-              "text": "Ignore correlated failure modes"
-            },
-            {
-              "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "explanation": "Mature and defensible recommendations acknowledge potential risks and prepare contingency plans."
         }
       ]
     },
     {
       "id": "law-studies-501-l07",
-      "title": "Law Studies Governance and Public Impact",
+      "title": "Governance and Public Impact",
       "type": "video",
       "duration": 13,
       "learningAids": [
         {
           "id": "law-studies-501-l07-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Stakeholder Impact Map",
+          "content": "An infographic showing the ripple effects of a single legal decision on various stakeholder groups (e.g., local businesses, residents, environment) over time."
         }
       ],
       "chunks": [
@@ -654,50 +454,50 @@ export const LawStudies501Module: LearningModule = {
           "id": "law-studies-501-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "In this concept section, learners will explore how to map the distribution of benefits and burdens among different stakeholder groups. They will also examine any delayed effects that may arise from legal decisions. This understanding is vital for ensuring that all voices are heard and considered in the legal process.\nContext recap: In this concept section, learners will explore how to map the distribution of benefits and burdens among different stakeholder groups. They will also examine any delayed effects that may arise from legal decisions. This understanding is vital for ensuring that all voices are heard and considered in the legal process."
+          "content": "We will analyze how a new zoning law affects different communities, mapping the distribution of economic benefits, environmental burdens, and long-term social consequences. This is key to understanding the full, real-world impact of legal decisions."
         },
         {
           "id": "law-studies-501-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "In this concept recap, we will discuss the architecture of accountability in legal decision-making. This includes understanding how decision traceability, review rights, and remediation obligations are integrated into the legal framework. These elements are essential for maintaining transparency and trust in legal processes.\nContext recap: In this concept recap, we will discuss the architecture of accountability in legal decision-making. This includes understanding how decision traceability, review rights, and remediation obligations are integrated into the legal framework. These elements are essential for maintaining transparency and trust in legal processes."
+          "content": "This section covers how to build accountability into legal systems. We will explore the importance of transparent decision records, formal appeal processes, and clear responsibilities for correcting errors to maintain public trust and ensure fairness."
         },
         {
           "id": "law-studies-501-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "As we conclude our exploration of responsible leadership, it's important to remember a final checklist that connects several key areas. This checklist includes the outcomes we aim to achieve, the ethical standards we must uphold, the policies we need to comply with, and the resilience we should develop in our leadership roles. By keeping these elements in mind, we can ensure that our leadership is effective and responsible.\nContext recap: As we conclude our exploration of responsible leadership, it's important to remember a final checklist that connects several key areas. This checklist includes the outcomes we aim to achieve, the ethical standards we must uphold, the policies we need to comply with, and the resilience we should develop in our leadership roles. By keeping these elements in mind, we can ensure that our leadership is effective and responsible."
+          "content": "We conclude with a practical checklist for responsible legal leadership. This tool helps ensure that decisions align with ethical principles, legal duties, and long-term societal well-being, connecting policy intent to measurable, positive outcomes."
         }
       ],
       "flashcards": [
         {
           "id": "law-studies-501-l07-f1",
-          "front": "Impact distribution",
-          "back": "How outcomes are allocated across populations and timescales."
+          "front": "Impact Distribution",
+          "back": "How the benefits and burdens of a legal outcome are allocated across different populations and over time."
         },
         {
           "id": "law-studies-501-l07-f2",
-          "front": "Decision traceability",
-          "back": "An auditable record of evidence, ownership, and rationale."
+          "front": "Decision Traceability",
+          "back": "An auditable record of a decision, including the evidence, ownership, and rationale behind it."
         },
         {
           "id": "law-studies-501-l07-f3",
-          "front": "Responsible leadership",
-          "back": "Decision behavior balancing performance, accountability, and ethics."
+          "front": "Responsible Leadership",
+          "back": "A decision-making approach that balances performance goals with accountability and ethical obligations."
         }
       ]
     },
     {
       "id": "law-studies-501-l08",
-      "title": "Law Studies Capstone Defense Lab",
+      "title": "Capstone Defense Lab",
       "type": "interactive",
       "duration": 16,
       "learningAids": [
         {
           "id": "law-studies-501-l08-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Capstone Defense Brief",
+          "content": "A mock-up of a 'Capstone Defense Brief' cover page, with fields for 'Recommendation,' 'Key Evidence,' and 'Risk Mitigation Plan'."
         }
       ],
       "chunks": [
@@ -705,13 +505,13 @@ export const LawStudies501Module: LearningModule = {
           "id": "law-studies-501-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "In this interactive session, learners will have the opportunity to create a comprehensive defense brief. This brief will include important components such as clear claims that outline our position, supporting evidence that backs up those claims, an understanding of the bounds of uncertainty that may affect our arguments, and pathways for remediation that suggest how we can address any potential issues. This exercise will help learners develop critical thinking and analytical skills.\nContext recap: In this interactive session, learners will have the opportunity to create a comprehensive defense brief. This brief will include important components such as clear claims that outline our position, supporting evidence that backs up those claims, an understanding of the bounds of uncertainty that may affect our arguments, and pathways for remediation that suggest how we can address any potential issues. This exercise will help learners develop critical thinking and analytical skills."
+          "content": "Learners will synthesize their work into a final capstone brief. This involves articulating a clear legal recommendation, presenting the supporting evidence, and transparently assessing the potential risks and uncertainties of their proposed strategy."
         },
         {
           "id": "law-studies-501-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "During the expert panel rehearsal, learners will practice their responses to various critiques. These critiques may come from technical experts, governance authorities, and stakeholders who have a vested interest in the outcomes of our work. This rehearsal is a valuable opportunity for learners to refine their communication skills and prepare for real-world discussions, ensuring they can effectively articulate their ideas and respond to feedback.\nContext recap: During the expert panel rehearsal, learners will practice their responses to various critiques. These critiques may come from technical experts, governance authorities, and stakeholders who have a vested interest in the outcomes of our work. This rehearsal is a valuable opportunity for learners to refine their communication skills and prepare for real-world discussions, ensuring they can effectively articulate their ideas and respond to feedback."
+          "content": "In a simulated hearing, learners present their brief to a panel of instructors playing the roles of skeptical judges, opposing counsel, and concerned clients. They must defend their analysis and recommendations under rigorous, expert cross-examination."
         }
       ],
       "interactiveActivities": [
@@ -719,7 +519,7 @@ export const LawStudies501Module: LearningModule = {
           "id": "law-studies-501-l08-act1",
           "type": "debate_simulator",
           "title": "Expert Defense Panel",
-          "description": "Defend specialization recommendations under adversarial cross-examination."
+          "description": "Defend your capstone recommendations against adversarial cross-examination from a panel of legal experts."
         }
       ]
     }

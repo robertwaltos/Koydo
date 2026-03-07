@@ -1,9 +1,9 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const InternationalRelations101Module: LearningModule = {
+export const international_relations_101_Module: LearningModule = {
   "id": "international-relations-101",
-  "title": "International Relations Foundations",
-  "description": "Level 101 curriculum in International Relations, focused on state and non-state actors, strategic bargaining, institutional governance, and conflict and cooperation analysis through case analysis, simulation practice, and mastery checkpoints.",
+  "title": "Foundations of International Relations",
+  "description": "An introductory course on International Relations. Learn about the key actors on the world stage, how they make decisions, and how they cooperate or come into conflict. Explore real-world cases and test your skills in interactive simulations.",
   "subject": "Social Studies",
   "tags": [
     "core",
@@ -14,150 +14,150 @@ export const InternationalRelations101Module: LearningModule = {
   ],
   "minAge": 14,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "beginner",
   "localeSupport": [
     "en",
     "es"
   ],
   "learningObjectives": [
-    "Apply state and non-state actors using explicit assumptions and constraints",
-    "Design and execute workflows for strategic bargaining with reliable control points",
-    "Evaluate institutional governance decisions using baseline and side-effect analysis",
-    "Strengthen conflict and cooperation analysis with accountable governance mechanisms",
-    "Communicate uncertainty and tradeoffs across stakeholder groups",
-    "Build defensible recommendations resilient to critical review"
+    "Identify key actors in international relations, such as states and non-governmental organizations (NGOs).",
+    "Describe the process of how international decisions and agreements are made.",
+    "Analyze the potential positive and negative outcomes of different foreign policy choices.",
+    "Evaluate historical and current events using core concepts of international relations.",
+    "Communicate complex global issues and potential solutions clearly.",
+    "Develop and defend a policy recommendation based on evidence and ethical considerations."
   ],
   "lessons": [
     {
       "id": "international-relations-101-l01",
-      "title": "International Relations Core Foundations",
+      "title": "What is International Relations?",
       "type": "video",
       "duration": 13,
       "learningAids": [
         {
           "id": "international-relations-101-l01-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Document assumptions, show your reasoning chain, and verify your conclusions before submission."
+          "title": "The World Stage",
+          "content": "A world map showing connections between countries, international organizations (like the UN), and non-state actors (like Doctors Without Borders), illustrating the key players in global politics."
         }
       ],
       "chunks": [
         {
           "id": "international-relations-101-l01-c1",
           "kind": "concept",
-          "title": "Scope and Shared Vocabulary",
-          "content": "In this lesson, we will explore the exciting world of International Relations. We will define what International Relations means and discuss important terms that help us understand this field. Additionally, we will learn about the different players involved, such as countries and organizations, and how they work together or compete through strategic discussions and negotiations. This will help us see how these interactions shape our world today.\nContext recap: In this lesson, we will explore the exciting world of International Relations. We will define what International Relations means and discuss important terms that help us understand this field. Additionally, we will learn about the different players involved, such as countries and organizations, and how they work together or compete through strategic discussions and negotiations. This will help us see how these interactions shape our world today."
+          "title": "Key Concepts and Vocabulary",
+          "content": "Welcome to the world of International Relations! In this lesson, we'll define what 'International Relations' means and learn the basic vocabulary. We'll meet the main 'actors' on the world stage, like countries (states) and large organizations (non-state actors), and see how they interact with each other."
         },
         {
           "id": "international-relations-101-l01-c2",
           "kind": "concept",
-          "title": "Causal Structure and Constraints",
-          "content": "In this part of the lesson, students will learn how to identify and map out the connections between different events and decisions in International Relations. This involves looking at the causes of certain actions and testing our assumptions to ensure they are correct. Before making any decisions, we will think critically about the possible outcomes and choose the best actions to take based on our findings.\nContext recap: In this part of the lesson, students will learn how to identify and map out the connections between different events and decisions in International Relations. This involves looking at the causes of certain actions and testing our assumptions to ensure they are correct. Before making any decisions, we will think critically about the possible outcomes and choose the best actions to take based on our findings."
+          "title": "Why Things Happen: Cause and Effect",
+          "content": "In this section, we'll learn to think like a detective and uncover the connections between global events. We'll explore how one country's decision can create a ripple effect across the world. Understanding cause and effect helps us analyze why conflicts start and how cooperation is achieved."
         },
         {
           "id": "international-relations-101-l01-c3",
           "kind": "recap",
-          "title": "Evidence Discipline",
-          "content": "In this recap, we will emphasize the importance of using evidence in our discussions about International Relations. We will learn how to connect our claims to observable facts and indicators. Additionally, we will discuss the importance of recognizing uncertainties and having checkpoints to review our progress. This will help us ensure that our conclusions are well-supported and reliable.\nContext recap: In this recap, we will emphasize the importance of using evidence in our discussions about International Relations. We will learn how to connect our claims to observable facts and indicators. Additionally, we will discuss the importance of recognizing uncertainties and having checkpoints to review our progress. This will help us ensure that our conclusions are well-supported and reliable."
+          "title": "Thinking with Evidence",
+          "content": "To wrap up, we'll focus on the importance of using facts and evidence. In International Relations, it's crucial to base our arguments on reliable information. We'll learn how to support our claims with data and recognize when we need more information to make a sound judgment."
         }
       ],
       "flashcards": [
         {
           "id": "international-relations-101-l01-f1",
-          "front": "state and non-state actors",
-          "back": "A core analytical lens in International Relations requiring careful assumption control."
+          "front": "State",
+          "back": "A country with its own government and defined territory, like the United States, Japan, or Brazil."
         },
         {
           "id": "international-relations-101-l01-f2",
-          "front": "strategic bargaining",
-          "back": "Operational design practices that determine system reliability and execution quality."
+          "front": "Non-State Actor",
+          "back": "An influential organization that is not a country, such as the United Nations, the Red Cross, or a multinational corporation."
         },
         {
           "id": "international-relations-101-l01-f3",
-          "front": "institutional governance",
-          "back": "The evaluation framework used to validate outcomes and detect hidden costs."
+          "front": "Diplomacy",
+          "back": "The practice of managing relationships between countries through negotiation and discussion, usually carried out by diplomats."
         }
       ]
     },
     {
       "id": "international-relations-101-l02",
-      "title": "International Relations Workflow Lab",
+      "title": "How Decisions Are Made: A Practical Guide",
       "type": "interactive",
       "duration": 15,
       "learningAids": [
         {
           "id": "international-relations-101-l02-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Document assumptions, show your reasoning chain, and verify your conclusions before submission."
+          "type": "image",
+          "title": "Decision Flowchart",
+          "content": "A simple flowchart graphic showing the steps in making a foreign policy decision: 1. Identify Problem -> 2. Gather Info -> 3. Explore Options -> 4. Make Decision -> 5. Review Outcome."
         }
       ],
       "chunks": [
         {
           "id": "international-relations-101-l02-c1",
           "kind": "practice",
-          "title": "Workflow Construction and Test",
-          "content": "In this interactive activity, students will have the opportunity to create their own workflow. This will involve using the foundational vocabulary we have learned, understanding how different mechanisms work, and interpreting basic scenarios. After designing their workflows, students will put them to the test to see how reliable they are, especially when faced with uncertainty. This hands-on experience will help solidify their understanding.\nContext recap: In this interactive activity, students will have the opportunity to create their own workflow. This will involve using the foundational vocabulary we have learned, understanding how different mechanisms work, and interpreting basic scenarios. After designing their workflows, students will put them to the test to see how reliable they are, especially when faced with uncertainty. This hands-on experience will help solidify their understanding."
+          "title": "Building a Plan of Action",
+          "content": "In this interactive activity, you'll get to create a plan to address a global issue. Using what we've learned, you'll outline the steps needed to achieve a goal, considering the different actors involved and the resources you have. This is how real-world policy begins!"
         },
         {
           "id": "international-relations-101-l02-c2",
           "kind": "recap",
-          "title": "Control Gates and Readiness",
-          "content": "In this recap, we will discuss the key elements needed to ensure our workflows are ready for action. This includes mapping out who is responsible for each part, setting criteria for decision-making, understanding what to do if things go wrong, and establishing signals to verify that everything is functioning as it should. These steps are essential for effective planning and execution.\nContext recap: In this recap, we will discuss the key elements needed to ensure our workflows are ready for action. This includes mapping out who is responsible for each part, setting criteria for decision-making, understanding what to do if things go wrong, and establishing signals to verify that everything is functioning as it should. These steps are essential for effective planning and execution."
+          "title": "Safety Checks for Your Plan",
+          "content": "Before any plan is put into action, it needs safety checks. We'll review the importance of having clear goals, knowing who is in charge of each step, and having a backup plan if things go wrong. These checks help ensure a plan is effective and responsible."
         }
       ],
       "interactiveActivities": [
         {
           "id": "international-relations-101-l02-act1",
           "type": "matching_pairs",
-          "title": "Control Mapping",
-          "description": "Match controls to the strongest expected reliability or governance effect.",
+          "title": "Diplomatic Tools",
+          "description": "Match the diplomatic tool to its primary goal.",
           "pairs": [
             {
-              "left": "Pre-release gate",
-              "right": "Reduces preventable failures"
+              "left": "Signing a Treaty",
+              "right": "Create a formal, binding agreement between countries."
             },
             {
-              "left": "Rollback threshold",
-              "right": "Contains blast radius quickly"
+              "left": "Applying Sanctions",
+              "right": "Pressure a country to change its behavior by restricting trade."
             },
             {
-              "left": "Baseline monitor",
-              "right": "Supports impact attribution"
+              "left": "Providing Foreign Aid",
+              "right": "Help a country develop or recover from a crisis."
             },
             {
-              "left": "Retrospective cycle",
-              "right": "Improves future decision quality"
+              "left": "Hosting a Summit",
+              "right": "Bring leaders together for face-to-face negotiation."
             }
           ]
         },
         {
           "id": "international-relations-101-l02-act2",
           "type": "sorting_buckets",
-          "title": "Constraint Sorting",
-          "description": "Sort constraint types into technical, policy, and stakeholder-impact categories.",
+          "title": "Factors in Decision-Making",
+          "description": "Sort these factors into the correct category that influences a country's foreign policy.",
           "buckets": [
-            "Technical",
-            "Policy",
-            "Stakeholder Impact"
+            "Economic",
+            "Political",
+            "Social"
           ],
           "items": [
             {
-              "text": "Throughput budget",
-              "bucket": "Technical"
+              "text": "Access to oil reserves",
+              "bucket": "Economic"
             },
             {
-              "text": "Regulatory retention requirement",
-              "bucket": "Policy"
+              "text": "Public opinion on a war",
+              "bucket": "Social"
             },
             {
-              "text": "Public trust erosion risk",
-              "bucket": "Stakeholder Impact"
+              "text": "Upcoming national election",
+              "bucket": "Political"
             },
             {
-              "text": "Audit evidence requirement",
-              "bucket": "Policy"
+              "text": "A major trade agreement",
+              "bucket": "Economic"
             }
           ]
         }
@@ -172,200 +172,175 @@ export const InternationalRelations101Module: LearningModule = {
         {
           "id": "international-relations-101-l03-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Document assumptions, show your reasoning chain, and verify your conclusions before submission."
+          "title": "Review Your Notes",
+          "content": "Before you start, quickly review the key terms from the first two lessons. Focus on the definitions of actors and the steps in decision-making."
         }
       ],
       "questions": [
         {
           "id": "international-relations-101-l03-q1",
-          "text": "Which approach most improves decisions in state and non-state actors?",
-          "skillId": "international-relations-101-skill-core",
+          "text": "Which of the following is considered a 'state' in International Relations?",
+          "skillId": "ir-concepts",
           "options": [
             {
               "id": "a",
-              "text": "Rely on assumptions that are never tested"
+              "text": "The Red Cross"
             },
             {
               "id": "b",
-              "text": "Define constraints, test failure modes, and monitor indicators"
+              "text": "Germany"
             },
             {
               "id": "c",
-              "text": "Treat all contexts as identical"
+              "text": "Apple Inc."
             },
             {
               "id": "d",
-              "text": "Avoid uncertainty analysis"
+              "text": "The United Nations"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Reliable decisions require explicit constraints, failure tests, and measured signals."
+          "explanation": "A state is a country with its own government and territory. The Red Cross, Apple, and the UN are all examples of non-state actors."
         },
         {
           "id": "international-relations-101-l03-q2",
-          "text": "The 101 level should emphasize:",
-          "skillId": "international-relations-101-skill-level",
+          "text": "Diplomacy is best described as:",
+          "skillId": "ir-concepts",
           "options": [
             {
               "id": "a",
-              "text": "foundational vocabulary, mechanism comprehension, and basic scenario interpretation"
+              "text": "The use of military force to achieve goals."
             },
             {
               "id": "b",
-              "text": "Execution speed without review"
+              "text": "Managing relationships between countries through negotiation."
             },
             {
               "id": "c",
-              "text": "No baselines or controls"
+              "text": "A country isolating itself from the rest of the world."
             },
             {
               "id": "d",
-              "text": "Single perspective decision-making"
+              "text": "Providing economic aid without any discussion."
             }
           ],
-          "correctOptionId": "a",
-          "explanation": "This level is explicitly structured around foundational vocabulary, mechanism comprehension, and basic scenario interpretation."
+          "correctOptionId": "b",
+          "explanation": "Diplomacy focuses on communication, negotiation, and peaceful interaction between states to resolve issues and build relationships."
         },
         {
           "id": "international-relations-101-l03-q3",
-          "text": "What best strengthens strategic bargaining reliability?",
-          "skillId": "international-relations-101-skill-reliability",
+          "text": "When creating a plan to address a global issue, what is a crucial first step?",
+          "skillId": "decision-making-process",
           "options": [
             {
               "id": "a",
-              "text": "Unowned workflows and unclear escalation"
+              "text": "Immediately sending troops."
             },
             {
               "id": "b",
-              "text": "Control checkpoints, ownership mapping, and response thresholds"
+              "text": "Ignoring the opinions of other countries."
             },
             {
               "id": "c",
-              "text": "Untracked changes"
+              "text": "Clearly defining the problem and your goals."
             },
             {
               "id": "d",
-              "text": "No incident review"
+              "text": "Waiting for the problem to solve itself."
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "Reliability depends on clear controls, owners, and threshold-driven responses."
+          "correctOptionId": "c",
+          "explanation": "A solid plan starts with a clear understanding of the problem you are trying to solve and what you hope to achieve."
         },
         {
           "id": "international-relations-101-l03-q4",
-          "text": "For institutional governance, which practice is most defensible?",
-          "skillId": "international-relations-101-skill-eval",
+          "text": "A trade agreement between two countries is primarily what kind of factor in decision-making?",
+          "skillId": "decision-making-process",
           "options": [
             {
               "id": "a",
-              "text": "Use anecdotal wins only"
+              "text": "Social"
             },
             {
               "id": "b",
-              "text": "Compare against baselines and include side-effect checks"
+              "text": "Political"
             },
             {
               "id": "c",
-              "text": "Ignore difficult scenarios"
+              "text": "Economic"
             },
             {
               "id": "d",
-              "text": "Adjust criteria after results"
+              "text": "Geographic"
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "Baseline and side-effect analysis prevents biased or incomplete conclusions."
-        },
-        {
-          "id": "international-relations-101-l03-q5",
-          "text": "A mature conflict and cooperation analysis model should include:",
-          "skillId": "international-relations-101-skill-governance",
-          "options": [
-            {
-              "id": "a",
-              "text": "Policy disconnected from measurement"
-            },
-            {
-              "id": "b",
-              "text": "Policy links, measurable thresholds, and corrective pathways"
-            },
-            {
-              "id": "c",
-              "text": "No transparency obligations"
-            },
-            {
-              "id": "d",
-              "text": "No remediation expectations"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Governance maturity connects intention, measurement, and corrective response."
+          "correctOptionId": "c",
+          "explanation": "Trade agreements directly concern the exchange of goods and money, making them a key economic factor."
         }
       ]
     },
     {
       "id": "international-relations-101-l04",
-      "title": "International Relations Case Analysis",
+      "title": "Learning from History: Case Studies",
       "type": "video",
       "duration": 14,
       "learningAids": [
         {
           "id": "international-relations-101-l04-a1",
-          "type": "mnemonic",
-          "title": "Guided Practice",
-          "content": "Document assumptions, show your reasoning chain, and verify your conclusions before submission."
+          "type": "image",
+          "title": "Weighing the Options",
+          "content": "A simple graphic of a balance scale. On one side are 'Pros' (e.g., increased security, economic benefit). On the other side are 'Cons' (e.g., high cost, risk of conflict)."
         }
       ],
       "chunks": [
         {
           "id": "international-relations-101-l04-c1",
           "kind": "example",
-          "title": "Case Context and Decision Stakes",
-          "content": "In this case analysis, we will explore a particular regional crisis that demands thoughtful diplomacy, the management of alliances, and collaboration with various international institutions. Students will engage in identifying and mapping out the major risks and challenges associated with this situation. By examining these elements, they will develop a deeper understanding of the complexities involved in making decisions on an international scale, which is crucial for future leaders in global affairs.\nContext recap: In this case analysis, we will explore a particular regional crisis that demands thoughtful diplomacy, the management of alliances, and collaboration with various international institutions. Students will engage in identifying and mapping out the major risks and challenges associated with this situation. By examining these elements, they will develop a deeper understanding of the complexities involved in making decisions on an international scale, which is crucial for future leaders in global affairs."
+          "title": "Setting the Scene: A Global Crisis",
+          "content": "In this lesson, we'll dive into a real historical event. We'll examine a regional crisis that required careful diplomacy and difficult choices. By understanding the context, the key players, and the high stakes involved, we can see how the concepts we've learned apply in the real world."
         },
         {
           "id": "international-relations-101-l04-c2",
           "kind": "concept",
-          "title": "Tradeoff Matrix",
-          "content": "In this section, we will introduce the concept of a tradeoff matrix. Students will learn how to evaluate different intervention options based on their effectiveness, reliability, fairness, and how easy they are to implement. This will help them understand the importance of weighing the pros and cons of each option before making decisions.\nContext recap: In this section, we will introduce the concept of a tradeoff matrix. Students will learn how to evaluate different intervention options based on their effectiveness, reliability, fairness, and how easy they are to implement. This will help them understand the importance of weighing the pros and cons of each option before making decisions."
+          "title": "Weighing the Options",
+          "content": "Every decision in international relations involves tradeoffs. We'll use a simple tool, like a 'pros and cons' list, to evaluate the different paths leaders could have taken. This helps us understand why they made the choices they did and what the potential consequences were for each option."
         },
         {
           "id": "international-relations-101-l04-c3",
           "kind": "recap",
-          "title": "Failure Learning and Recovery",
-          "content": "In this recap, we will discuss how to learn from failures in our decision-making processes. Students will discover how to turn patterns of failure into valuable lessons that can lead to better safeguards, response strategies, and updates for monitoring progress. This approach encourages a growth mindset and continuous improvement.\nContext recap: In this recap, we will discuss how to learn from failures in our decision-making processes. Students will discover how to turn patterns of failure into valuable lessons that can lead to better safeguards, response strategies, and updates for monitoring progress. This approach encourages a growth mindset and continuous improvement."
+          "title": "Learning from the Past",
+          "content": "History is one of our best teachers. We'll conclude by discussing what lessons can be learned from this case study. Understanding past successes and failures helps today's leaders make better, more informed decisions to prevent repeating mistakes and to build a more peaceful world."
         }
       ],
       "flashcards": [
         {
           "id": "international-relations-101-l04-f1",
-          "front": "Tradeoff matrix",
-          "back": "A structured comparison of alternatives under competing priorities."
+          "front": "Tradeoff",
+          "back": "A situation where you must choose between two or more things, and gaining one thing means losing another. For example, spending more on defense might mean spending less on education."
         },
         {
           "id": "international-relations-101-l04-f2",
-          "front": "Failure pattern",
-          "back": "A recurring risk signature used to design targeted mitigations."
+          "front": "Alliance",
+          "back": "A formal agreement or partnership between two or more countries to cooperate for specific purposes, often for mutual defense."
         },
         {
           "id": "international-relations-101-l04-f3",
-          "front": "Response playbook",
-          "back": "A predefined action sequence for safe and timely recovery."
+          "front": "Intervention",
+          "back": "An action taken by a country or organization to become involved in the affairs of another country, which can be diplomatic, economic, or military."
         }
       ]
     },
     {
       "id": "international-relations-101-l05",
-      "title": "International Relations Simulation Studio",
+      "title": "You're the Diplomat: A Simulation",
       "type": "interactive",
       "duration": 16,
       "learningAids": [
         {
           "id": "international-relations-101-l05-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Document assumptions, show your reasoning chain, and verify your conclusions before submission."
+          "title": "Simulation Briefing",
+          "content": "Read the scenario carefully. Your goal is to achieve a peaceful resolution while protecting your country's interests. Good luck!"
         }
       ],
       "chunks": [
@@ -373,48 +348,48 @@ export const InternationalRelations101Module: LearningModule = {
           "id": "international-relations-101-l05-c1",
           "kind": "practice",
           "title": "Simulation Setup",
-          "content": "In this interactive practice, students will set up their own simulation scenarios. They will configure various parameters related to uncertainty and define what success looks like in measurable terms. This activity will allow them to apply their knowledge in a practical way and understand the complexities involved in international interventions.\nContext recap: In this interactive practice, students will set up their own simulation scenarios. They will configure various parameters related to uncertainty and define what success looks like in measurable terms. This activity will allow them to apply their knowledge in a practical way and understand the complexities involved in international interventions."
+          "content": "It's your turn to make the decisions! In this interactive simulation, you will be presented with a developing international crisis. You'll define your goals, consider your options, and choose a course of action. Your choices will determine the outcome."
         },
         {
           "id": "international-relations-101-l05-c2",
           "kind": "recap",
           "title": "Simulation Debrief",
-          "content": "In this recap, we will conduct a review after running our simulations. Students will evaluate the outcomes, any unexpected side effects, and how well their actions aligned with the established governance rules. This debriefing process is crucial for understanding the implications of their decisions and improving future simulations.\nContext recap: In this recap, we will conduct a review after running our simulations. Students will evaluate the outcomes, any unexpected side effects, and how well their actions aligned with the established governance rules. This debriefing process is crucial for understanding the implications of their decisions and improving future simulations."
+          "content": "After the simulation, we'll review what happened. We'll analyze the results of your decisions, discuss any unexpected consequences, and think about what you might do differently next time. This debrief is key to turning experience into wisdom."
         }
       ],
       "interactiveActivities": [
         {
           "id": "international-relations-101-l05-act1",
           "type": "scenario_practice",
-          "title": "Intervention Simulation",
-          "description": "Evaluate three strategies and justify which best advances state and non-state actors and conflict and cooperation analysis.",
+          "title": "Crisis Negotiation",
+          "description": "You are the lead diplomat for your country. A neighboring nation has blocked a critical shipping lane. Choose your strategy to resolve the crisis.",
           "instructions": [
-            "Define objective and guardrails before selecting interventions.",
-            "Record near-term and long-term tradeoffs for each option.",
-            "Select confirmation metrics and escalation triggers."
+            "Review your primary objective: Reopen the shipping lane peacefully.",
+            "Consider the short-term and long-term consequences of each option.",
+            "Choose your first action: Issue a formal protest, propose negotiations, or request international mediation."
           ]
         },
         {
           "id": "international-relations-101-l05-act2",
           "type": "matching_pairs",
-          "title": "Mitigation Alignment",
-          "description": "Match risk conditions to the strongest mitigation responses.",
+          "title": "Responding to Challenges",
+          "description": "Match the international challenge to the most appropriate initial response.",
           "pairs": [
             {
-              "left": "Ambiguous ownership",
-              "right": "Define role map and escalation authority"
+              "left": "A sudden refugee crisis on your border",
+              "right": "Coordinate with humanitarian aid organizations."
             },
             {
-              "left": "Weak signal quality",
-              "right": "Strengthen intake validation and monitoring"
+              "left": "A dispute over fishing rights with a neighbor",
+              "right": "Propose bilateral negotiations to define boundaries."
             },
             {
-              "left": "Policy drift",
-              "right": "Re-anchor controls to explicit standards"
+              "left": "A global pandemic emerges",
+              "right": "Collaborate with the World Health Organization."
             },
             {
-              "left": "Stakeholder opposition",
-              "right": "Increase transparency and feedback channels"
+              "left": "Another country violates a climate treaty",
+              "right": "Raise the issue at the next international summit."
             }
           ]
         }
@@ -422,240 +397,215 @@ export const InternationalRelations101Module: LearningModule = {
     },
     {
       "id": "international-relations-101-l06",
-      "title": "Checkpoint 2: Systems Decisions",
+      "title": "Checkpoint 2: Application and Analysis",
       "type": "quiz",
       "duration": 10,
       "learningAids": [
         {
           "id": "international-relations-101-l06-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Document assumptions, show your reasoning chain, and verify your conclusions before submission."
+          "title": "Think Strategically",
+          "content": "For these questions, apply the concepts from the case study and simulation. Think about tradeoffs and consequences."
         }
       ],
       "questions": [
         {
           "id": "international-relations-101-l06-q1",
-          "text": "Which approach most improves decisions in state and non-state actors?",
-          "skillId": "international-relations-101-skill-core",
+          "text": "When analyzing a historical event, why is it important to study the different options the leaders had?",
+          "skillId": "case-analysis",
           "options": [
             {
               "id": "a",
-              "text": "Rely on assumptions that are never tested"
+              "text": "To prove that the leaders were wrong."
             },
             {
               "id": "b",
-              "text": "Define constraints, test failure modes, and monitor indicators"
+              "text": "Because history is always written by the victors."
             },
             {
               "id": "c",
-              "text": "Treat all contexts as identical"
+              "text": "To understand the tradeoffs they faced and why they made their specific choice."
             },
             {
               "id": "d",
-              "text": "Avoid uncertainty analysis"
+              "text": "It is not important, as the outcome is already known."
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "Reliable decisions require explicit constraints, failure tests, and measured signals."
+          "correctOptionId": "c",
+          "explanation": "Understanding the available options and their potential consequences (tradeoffs) provides insight into the complexities of decision-making and the reasons behind historical events."
         },
         {
           "id": "international-relations-101-l06-q2",
-          "text": "The 101 level should emphasize:",
-          "skillId": "international-relations-101-skill-level",
+          "text": "A country decides to increase its military spending, which means it cannot fund a new national healthcare program. This is a clear example of a:",
+          "skillId": "case-analysis",
           "options": [
             {
               "id": "a",
-              "text": "foundational vocabulary, mechanism comprehension, and basic scenario interpretation"
+              "text": "Tradeoff"
             },
             {
               "id": "b",
-              "text": "Execution speed without review"
+              "text": "Treaty"
             },
             {
               "id": "c",
-              "text": "No baselines or controls"
+              "text": "Sanction"
             },
             {
               "id": "d",
-              "text": "Single perspective decision-making"
+              "text": "Non-state actor"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "This level is explicitly structured around foundational vocabulary, mechanism comprehension, and basic scenario interpretation."
+          "explanation": "A tradeoff occurs when choosing one option means giving up another. Here, the choice to fund the military comes at the cost of funding healthcare."
         },
         {
           "id": "international-relations-101-l06-q3",
-          "text": "What best strengthens strategic bargaining reliability?",
-          "skillId": "international-relations-101-skill-reliability",
+          "text": "In a crisis simulation, why is it important to have a clear objective before you act?",
+          "skillId": "simulation-strategy",
           "options": [
             {
               "id": "a",
-              "text": "Unowned workflows and unclear escalation"
+              "text": "It's not important; it's better to be unpredictable."
             },
             {
               "id": "b",
-              "text": "Control checkpoints, ownership mapping, and response thresholds"
+              "text": "A clear objective helps guide your decisions and measure your success."
             },
             {
               "id": "c",
-              "text": "Untracked changes"
+              "text": "Objectives are only for the other side to guess."
             },
             {
               "id": "d",
-              "text": "No incident review"
+              "text": "So you can change your objective halfway through."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Reliability depends on clear controls, owners, and threshold-driven responses."
+          "explanation": "Having a clear goal (e.g., 'avoid war,' 'protect citizens') allows you to evaluate your options and choose the one that best helps you achieve that goal."
         },
         {
           "id": "international-relations-101-l06-q4",
-          "text": "For institutional governance, which practice is most defensible?",
-          "skillId": "international-relations-101-skill-eval",
+          "text": "If a country is facing a humanitarian crisis, which of these would be the most appropriate first response?",
+          "skillId": "simulation-strategy",
           "options": [
             {
               "id": "a",
-              "text": "Use anecdotal wins only"
+              "text": "Declare war on a neighboring country."
             },
             {
               "id": "b",
-              "text": "Compare against baselines and include side-effect checks"
+              "text": "Close all borders and cut off communication."
             },
             {
               "id": "c",
-              "text": "Ignore difficult scenarios"
+              "text": "Coordinate with international aid organizations like the Red Cross."
             },
             {
               "id": "d",
-              "text": "Adjust criteria after results"
+              "text": "Build a new sports stadium to boost morale."
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "Baseline and side-effect analysis prevents biased or incomplete conclusions."
-        },
-        {
-          "id": "international-relations-101-l06-q5",
-          "text": "A mature conflict and cooperation analysis model should include:",
-          "skillId": "international-relations-101-skill-governance",
-          "options": [
-            {
-              "id": "a",
-              "text": "Policy disconnected from measurement"
-            },
-            {
-              "id": "b",
-              "text": "Policy links, measurable thresholds, and corrective pathways"
-            },
-            {
-              "id": "c",
-              "text": "No transparency obligations"
-            },
-            {
-              "id": "d",
-              "text": "No remediation expectations"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Governance maturity connects intention, measurement, and corrective response."
+          "correctOptionId": "c",
+          "explanation": "Humanitarian crises require expertise in aid distribution and medical care, which organizations like the Red Cross specialize in. International cooperation is key."
         }
       ]
     },
     {
       "id": "international-relations-101-l07",
-      "title": "International Relations Policy and Ethics Integration",
+      "title": "Ethics in Global Affairs",
       "type": "video",
       "duration": 12,
       "learningAids": [
         {
           "id": "international-relations-101-l07-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Document assumptions, show your reasoning chain, and verify your conclusions before submission."
+          "title": "Circles of Impact",
+          "content": "An infographic with a policy decision at the center. Radiating outwards are circles showing the impact on different groups: 'Local Citizens,' 'Neighboring Countries,' 'Global Trade,' 'The Environment.'"
         }
       ],
       "chunks": [
         {
           "id": "international-relations-101-l07-c1",
           "kind": "concept",
-          "title": "Stakeholder Impact Mapping",
-          "content": "In this lesson, we will explore how different stakeholders are affected by decisions in International Relations. Students will examine how benefits and burdens are distributed among various groups and over time. This understanding is essential for recognizing the broader impact of policies and actions on different communities.\nContext recap: In this lesson, we will explore how different stakeholders are affected by decisions in International Relations. Students will examine how benefits and burdens are distributed among various groups and over time. This understanding is essential for recognizing the broader impact of policies and actions on different communities."
+          "title": "Who is Affected?",
+          "content": "Every international decision affects different groups of people in different ways. In this lesson, we'll explore how to map out the potential impact of a policy. We'll consider not just our own country, but also other nations, specific communities, and even future generations."
         },
         {
           "id": "international-relations-101-l07-c2",
           "kind": "concept",
-          "title": "Accountability Architecture",
-          "content": "In this section, we will discuss the concept of accountability in International Relations. Students will learn how accountability can be framed through the ideas of traceability, the rights to review decisions, and the obligations to correct any mistakes. Understanding these concepts is vital for ensuring responsible governance and ethical decision-making.\nContext recap: In this section, we will discuss the concept of accountability in International Relations. Students will learn how accountability can be framed through the ideas of traceability, the rights to review decisions, and the obligations to correct any mistakes. Understanding these concepts is vital for ensuring responsible governance and ethical decision-making."
+          "title": "Who is Responsible?",
+          "content": "When a decision is made, who is held accountable for the outcome? We'll discuss the concept of accountability in international relations. This includes being transparent about why a decision was made, allowing for review and criticism, and having an obligation to address negative consequences."
         },
         {
           "id": "international-relations-101-l07-c3",
           "kind": "recap",
-          "title": "Responsible Execution Checklist",
-          "content": "At the end of our lesson, we will create a helpful checklist that connects how well we perform our tasks with important ideas about policy, ethics, and the trust of those involved. This checklist will guide us in making responsible decisions that consider the impact on everyone affected.\nContext recap: At the end of our lesson, we will create a helpful checklist that connects how well we perform our tasks with important ideas about policy, ethics, and the trust of those involved. This checklist will guide us in making responsible decisions that consider the impact on everyone affected."
+          "title": "A Checklist for Fair Decisions",
+          "content": "To conclude, we'll create a simple checklist for making responsible and ethical decisions. This guide will help us consider a policy's effectiveness, its fairness to all involved, and whether it builds trust between nations. This is a key part of being a responsible global citizen."
         }
       ],
       "flashcards": [
         {
           "id": "international-relations-101-l07-f1",
-          "front": "Impact distribution",
-          "back": "How outcomes differ across stakeholder groups and timescales."
+          "front": "Stakeholder",
+          "back": "Any person, group, or nation that is affected by or has an interest in a particular decision or action."
         },
         {
           "id": "international-relations-101-l07-f2",
-          "front": "Decision traceability",
-          "back": "The evidence chain showing how and why a decision was made."
+          "front": "Accountability",
+          "back": "The responsibility of decision-makers to explain their actions and be answerable for the results."
         },
         {
           "id": "international-relations-101-l07-f3",
-          "front": "Responsible execution",
-          "back": "Delivery behavior that balances effectiveness with ethical and policy safeguards."
+          "front": "Ethics",
+          "back": "Moral principles that guide the behavior of individuals or groups. In IR, it involves questions of right and wrong in foreign policy."
         }
       ]
     },
     {
       "id": "international-relations-101-l08",
-      "title": "International Relations Capstone Planning Lab",
+      "title": "Final Project: Your Global Policy",
       "type": "interactive",
       "duration": 15,
       "learningAids": [
         {
           "id": "international-relations-101-l08-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Document assumptions, show your reasoning chain, and verify your conclusions before submission."
+          "title": "Project Workspace",
+          "content": "Use the tools provided to build your policy proposal. Remember to define your goals, support your arguments with evidence, and consider the ethical implications."
         }
       ],
       "chunks": [
         {
           "id": "international-relations-101-l08-c1",
           "kind": "practice",
-          "title": "Capstone Charter",
-          "content": "In this activity, you will work on drafting a charter for your capstone project. This charter will include your main objective, any limitations you might face, the metrics you will use to measure success, and the governance gates that will help guide your decisions. This is an important step in planning your project effectively.\nContext recap: In this activity, you will work on drafting a charter for your capstone project. This charter will include your main objective, any limitations you might face, the metrics you will use to measure success, and the governance gates that will help guide your decisions. This is an important step in planning your project effectively."
+          "title": "Drafting Your Policy",
+          "content": "In this final project, you will choose a current global issue and propose a policy to address it. You will define your main objective, identify potential challenges, and outline how you will measure success. This is your chance to bring everything you've learned together."
         },
         {
           "id": "international-relations-101-l08-c2",
           "kind": "recap",
-          "title": "Defense Readiness",
-          "content": "In this section, you will prepare strong arguments supported by evidence to defend your project against critiques related to technical aspects, policy considerations, and stakeholder perspectives. This practice will help you build confidence in presenting your ideas and responding to feedback.\nContext recap: In this section, you will prepare strong arguments supported by evidence to defend your project against critiques related to technical aspects, policy considerations, and stakeholder perspectives. This practice will help you build confidence in presenting your ideas and responding to feedback."
+          "title": "Defending Your Policy",
+          "content": "A good policy must be able to withstand criticism. In this section, you'll prepare to defend your proposal. You will need to anticipate questions about its cost, its impact on different groups, and why it's better than other alternatives. This will prepare you to present your ideas confidently."
         }
       ],
       "interactiveActivities": [
         {
           "id": "international-relations-101-l08-act1",
           "type": "project_builder",
-          "title": "Capstone Charter Builder",
-          "description": "Build a capstone charter with objectives, metrics, risks, and remediation pathways.",
+          "title": "Policy Proposal Builder",
+          "description": "Build a policy proposal to address a global challenge like climate change, poverty, or cybersecurity.",
           "instructions": [
-            "Define objective and boundary conditions.",
-            "List at least three measurable success indicators.",
-            "Define escalation and corrective action criteria."
+            "Clearly state the problem and your proposed solution.",
+            "List at least three measurable goals for your policy.",
+            "Identify the key stakeholders and how your policy will affect them."
           ]
         },
         {
           "id": "international-relations-101-l08-act2",
           "type": "debate_simulator",
-          "title": "Decision Defense Panel",
-          "description": "Defend your capstone decisions against technical, policy, and stakeholder objections."
+          "title": "Policy Defense Panel",
+          "description": "Present your policy proposal and defend it against critical questions from a simulated panel of international experts."
         }
       ]
     }

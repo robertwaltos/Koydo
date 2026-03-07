@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const DataEngineering601Module: LearningModule = {
+export const data_engineering_601_Module: LearningModule = {
   "id": "data-engineering-601",
   "title": "Data Engineering Research and Leadership",
   "description": "Post-401 specialization in Data Engineering, focused on reliability architecture for data platforms, stream-batch integration and orchestration, data quality and observability governance, and cost-performance-resilience optimization through advanced casework, simulation, and defense-based checkpoints.",
@@ -14,7 +14,7 @@ export const DataEngineering601Module: LearningModule = {
   ],
   "minAge": 17,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en",
@@ -39,7 +39,8 @@ export const DataEngineering601Module: LearningModule = {
           "id": "data-engineering-601-l01-a1",
           "type": "image",
           "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence.",
+          "visualPrompt": "A high-tech architectural diagram showing stream and batch data pipelines converging into a unified governance layer, with glowing nodes representing data quality checkpoints."
         }
       ],
       "chunks": [
@@ -47,19 +48,19 @@ export const DataEngineering601Module: LearningModule = {
           "id": "data-engineering-601-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "In this lesson, we will explore the advanced concepts of scope boundaries in Data Engineering. We will focus on how to create reliable architectures for data platforms. Additionally, we will learn about the integration of streaming data and batch processing, as well as how to orchestrate these processes effectively. Understanding these elements is crucial for building robust data systems that can handle various challenges.\nContext recap: In this lesson, we will explore the advanced concepts of scope boundaries in Data Engineering. We will focus on how to create reliable architectures for data platforms. Additionally, we will learn about the integration of streaming data and batch processing, as well as how to orchestrate these processes effectively. Understanding these elements is crucial for building robust data systems that can handle various challenges."
+          "content": "Define advanced scope boundaries in Data Engineering, focusing on reliability architecture for enterprise data platforms. We will analyze the seamless integration of streaming and batch processing, and how to orchestrate these workflows effectively. Mastering these elements is crucial for architecting robust, fault-tolerant data systems capable of handling high-constraint environments."
         },
         {
           "id": "data-engineering-601-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different factors that can lead to certain outcomes. We will also explore uncertainty ranges, which help us understand the possible variations in our predictions. Additionally, we will identify system dependencies, which are the relationships between different components of a system. This foundational knowledge is essential for planning effective interventions.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different factors that can lead to certain outcomes. We will also explore uncertainty ranges, which help us understand the possible variations in our predictions. Additionally, we will identify system dependencies, which are the relationships between different components of a system. This foundational knowledge is essential for planning effective interventions."
+          "content": "Map causal pathways to identify how system dependencies trigger cascading outcomes. We will explore uncertainty ranges to quantify prediction variations and assess risk. Understanding these complex relationships and foundational dependencies is essential for planning effective, targeted interventions in large-scale data ecosystems."
         },
         {
           "id": "data-engineering-601-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "In this recap, we will emphasize the importance of linking all claims to measurable indicators. This means that every assertion we make should be supported by data that we can quantify. We will also discuss the concept of confidence bounds, which help us understand the reliability of our data. Finally, we will introduce review checkpoints, which are critical moments where we assess our progress and ensure that we are on the right track.\nContext recap: In this recap, we will emphasize the importance of linking all claims to measurable indicators. This means that every assertion we make should be supported by data that we can quantify. We will also discuss the concept of confidence bounds, which help us understand the reliability of our data. Finally, we will introduce review checkpoints, which are critical moments where we assess our progress and ensure that we are on the right track."
+          "content": "Establish rigorous evidence thresholds by linking architectural claims to measurable indicators. Every assertion must be supported by quantifiable data and explicit confidence bounds, which define the reliability of our metrics. Finally, we will introduce review checkpoints as critical evaluation gates to ensure continuous alignment with system goals."
         }
       ],
       "flashcards": [
@@ -90,7 +91,8 @@ export const DataEngineering601Module: LearningModule = {
           "id": "data-engineering-601-l02-a1",
           "type": "practice",
           "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence.",
+          "visualPrompt": "An interactive dashboard interface displaying real-time data pipeline stress tests, with red and green indicators for control gates and rollback triggers."
         }
       ],
       "chunks": [
@@ -98,13 +100,13 @@ export const DataEngineering601Module: LearningModule = {
           "id": "data-engineering-601-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "In this interactive lab, learners will have the opportunity to design specialized workflows tailored to specific tasks. After creating these workflows, they will put them to the test by stress-testing them in challenging scenarios. This hands-on experience will help learners understand how to create resilient systems that can withstand unexpected challenges and maintain performance.\nContext recap: In this interactive lab, learners will have the opportunity to design specialized workflows tailored to specific tasks. After creating these workflows, they will put them to the test by stress-testing them in challenging scenarios. This hands-on experience will help learners understand how to create resilient systems that can withstand unexpected challenges and maintain performance."
+          "content": "Design specialized data workflows tailored to high-constraint environments. Subject these architectures to rigorous stress-testing under simulated adverse conditions. This hands-on lab develops the capability to engineer resilient systems that maintain performance and data integrity during unexpected operational spikes."
         },
         {
           "id": "data-engineering-601-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "In this recap, we will review how workflows can be enhanced by integrating control gates. These gates serve as checkpoints that help us monitor the progress of our workflows. We will also discuss rollback criteria, which are guidelines for reverting to a previous state if something goes wrong. Additionally, we will cover threshold-based escalation, which allows us to respond appropriately when certain limits are reached.\nContext recap: In this recap, we will review how workflows can be enhanced by integrating control gates. These gates serve as checkpoints that help us monitor the progress of our workflows. We will also discuss rollback criteria, which are guidelines for reverting to a previous state if something goes wrong. Additionally, we will cover threshold-based escalation, which allows us to respond appropriately when certain limits are reached."
+          "content": "Implement control gates as critical checkpoints within data workflows to monitor execution states. Define strict rollback criteria to revert systems to a stable baseline during failures. Additionally, establish threshold-based escalation protocols to ensure rapid, appropriate responses when operational limits are breached."
         }
       ],
       "interactiveActivities": [
@@ -144,13 +146,14 @@ export const DataEngineering601Module: LearningModule = {
           "id": "data-engineering-601-l03-a1",
           "type": "practice",
           "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence.",
+          "visualPrompt": "A digital exam interface with a split screen showing a complex data architecture diagram on one side and multiple-choice questions on the other."
         }
       ],
       "questions": [
         {
           "id": "data-engineering-601-l03-q1",
-          "text": "Which practice most improves reliability architecture for data platforms decision quality?",
+          "text": "Which practice most improves decision quality in reliability architecture for data platforms?",
           "skillId": "data-engineering-601-skill-core",
           "options": [
             {
@@ -250,103 +253,103 @@ export const DataEngineering601Module: LearningModule = {
         },
         {
           "id": "data-engineering-601-l03-q5",
-          "text": "What is the best way to compare competing interventions in advanced Computer Science?",
+          "text": "When mapping causal pathways in data engineering, what is the primary goal?",
           "skillId": "data-engineering-601-skill-advanced-5",
           "options": [
             {
               "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
+              "text": "To eliminate all system dependencies"
             },
             {
               "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
+              "text": "To identify how factors connect to trigger specific outcomes"
             },
             {
               "id": "c",
-              "text": "Switch metrics after results arrive"
+              "text": "To hide uncertainty ranges"
             },
             {
               "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
+              "text": "To bypass control gates"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
+          "explanation": "Causal pathways help engineers understand how interconnected system dependencies lead to specific, cascading outcomes."
         },
         {
           "id": "data-engineering-601-l03-q6",
-          "text": "In high-stakes Data Engineering Research and Leadership execution, which communication protocol is strongest?",
+          "text": "What is the primary function of a rollback trigger in a data workflow?",
           "skillId": "data-engineering-601-skill-advanced-6",
           "options": [
             {
               "id": "a",
-              "text": "Broadcast conclusions without assumptions"
+              "text": "To accelerate data processing speed"
             },
             {
               "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
+              "text": "To revert the system to a safe state if adverse conditions occur"
             },
             {
               "id": "c",
-              "text": "Share only final outcomes after completion"
+              "text": "To permanently delete corrupted data"
             },
             {
               "id": "d",
-              "text": "Limit updates to a single informal channel"
+              "text": "To bypass governance checks"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
+          "explanation": "Rollback triggers act as a safety mechanism to limit the blast radius by reverting to a stable baseline during failures."
         },
         {
           "id": "data-engineering-601-l03-q7",
-          "text": "A mature remediation loop in advanced Computer Science should prioritize:",
+          "text": "Why is establishing evidence thresholds critical in advanced data engineering?",
           "skillId": "data-engineering-601-skill-advanced-7",
           "options": [
             {
               "id": "a",
-              "text": "Blame assignment without system updates"
+              "text": "It ensures all architectural claims are supported by quantifiable data"
             },
             {
               "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
+              "text": "It allows engineers to rely on intuition"
             },
             {
               "id": "c",
-              "text": "One-time fixes without retesting"
+              "text": "It reduces the need for system monitoring"
             },
             {
               "id": "d",
-              "text": "Issue closure based on elapsed time"
+              "text": "It guarantees zero system failures"
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
+          "correctOptionId": "a",
+          "explanation": "Evidence thresholds demand that every assertion or architectural decision is backed by measurable, quantifiable indicators."
         },
         {
           "id": "data-engineering-601-l03-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Data Engineering Research and Leadership?",
+          "text": "In control gate architecture, what does threshold-based escalation enable?",
           "skillId": "data-engineering-601-skill-advanced-8",
           "options": [
             {
               "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
+              "text": "Ignoring minor errors indefinitely"
             },
             {
               "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
+              "text": "Automatically routing issues to higher authorities when specific limits are breached"
             },
             {
               "id": "c",
-              "text": "Ignore correlated failure modes"
+              "text": "Downgrading system performance to save costs"
             },
             {
               "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
+              "text": "Disabling all alerts during peak hours"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "explanation": "Threshold-based escalation ensures that when operational limits are exceeded, the system automatically triggers an appropriate, higher-level response."
         }
       ]
     },
@@ -360,7 +363,8 @@ export const DataEngineering601Module: LearningModule = {
           "id": "data-engineering-601-l04-a1",
           "type": "image",
           "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence.",
+          "visualPrompt": "A split-screen visual comparing two data architecture models, highlighting tradeoffs between latency, cost, and reliability with dynamic charts."
         }
       ],
       "chunks": [
@@ -368,19 +372,19 @@ export const DataEngineering601Module: LearningModule = {
           "id": "data-engineering-601-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "In this lesson, we will analyze a case that highlights the competing constraints faced in reliability architecture for data platforms. We will also discuss the importance of data quality and observability governance. Understanding these competing factors is essential for making informed decisions that balance reliability with the need for high-quality data.\nContext recap: In this lesson, we will analyze a case that highlights the competing constraints faced in reliability architecture for data platforms. We will also discuss the importance of data quality and observability governance. Understanding these competing factors is essential for making informed decisions that balance reliability with the need for high-quality data."
+          "content": "Analyze complex cases that expose competing constraints in data platform reliability. Evaluate the tension between high-throughput performance and strict observability governance. Mastering these competing factors is essential for architecting solutions that balance operational speed with uncompromising data quality."
         },
         {
           "id": "data-engineering-601-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "In this practice session, learners will compare different options available to them across several important dimensions. These dimensions include safety, reliability, cost, equity, and governance. By evaluating these factors, learners will gain insights into how to make balanced decisions that consider multiple perspectives and outcomes.\nContext recap: In this practice session, learners will compare different options available to them across several important dimensions. These dimensions include safety, reliability, cost, equity, and governance. By evaluating these factors, learners will gain insights into how to make balanced decisions that consider multiple perspectives and outcomes."
+          "content": "Conduct multidimensional tradeoff analyses across safety, reliability, cost, and equity. By rigorously evaluating these dimensions, you will develop the strategic insight required to make balanced, defensible decisions that account for diverse stakeholder perspectives and systemic outcomes."
         },
         {
           "id": "data-engineering-601-l04-c3",
           "kind": "recap",
           "title": "Decision Memo Pattern",
-          "content": "In this recap, we will summarize the key elements that should be included in each recommendation. This includes outlining the assumptions we are making, presenting the evidence that supports our claims, identifying risk controls that we have in place, and developing fallback plans in case our initial strategies do not work as intended. This structured approach helps ensure that our decisions are well-informed and carefully considered.\nContext recap: In this recap, we will summarize the key elements that should be included in each recommendation. This includes outlining the assumptions we are making, presenting the evidence that supports our claims, identifying risk controls that we have in place, and developing fallback plans in case our initial strategies do not work as intended. This structured approach helps ensure that our decisions are well-informed and carefully considered."
+          "content": "Synthesize findings into a structured decision memo. Articulate explicit assumptions, empirical evidence, risk controls, and fallback strategies. This rigorous documentation pattern ensures that architectural recommendations are transparent, well-reasoned, and resilient against expert scrutiny."
         }
       ]
     },
@@ -394,7 +398,8 @@ export const DataEngineering601Module: LearningModule = {
           "id": "data-engineering-601-l05-a1",
           "type": "practice",
           "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence.",
+          "visualPrompt": "A simulated command center UI showing a data pipeline under heavy load, with interactive sliders for tuning performance and governance constraints."
         }
       ],
       "chunks": [
@@ -402,13 +407,13 @@ export const DataEngineering601Module: LearningModule = {
           "id": "data-engineering-601-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "In this interactive clinic, learners will take on the role of operators managing scenario controls. They will need to balance performance with governance constraints, ensuring that their actions meet both operational goals and regulatory requirements. This experience will provide valuable insights into the complexities of managing data systems in real-world situations.\nContext recap: In this interactive clinic, learners will take on the role of operators managing scenario controls. They will need to balance performance with governance constraints, ensuring that their actions meet both operational goals and regulatory requirements. This experience will provide valuable insights into the complexities of managing data systems in real-world situations."
+          "content": "Assume the role of a lead data engineer managing live scenario controls under simulated adverse conditions. Balance system performance against strict governance constraints, ensuring operational goals align with regulatory requirements during high-pressure incidents."
         },
         {
           "id": "data-engineering-601-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "In this recap, we will discuss the importance of effective responses that can adapt to changing situations. Learners will understand how to update control gates while maintaining traceability and accountability. This means that even as changes are made, it is crucial to keep a clear record of actions taken and ensure that responsibilities are upheld.\nContext recap: In this recap, we will discuss the importance of effective responses that can adapt to changing situations. Learners will understand how to update control gates while maintaining traceability and accountability. This means that even as changes are made, it is crucial to keep a clear record of actions taken and ensure that responsibilities are upheld."
+          "content": "Formulate adaptive responses to dynamic system failures. Update control gates in real-time while maintaining strict traceability and accountability. This ensures that even during rapid mitigation, a clear, auditable record of actions and responsibilities is preserved."
         }
       ],
       "interactiveActivities": [
@@ -430,7 +435,8 @@ export const DataEngineering601Module: LearningModule = {
           "id": "data-engineering-601-l06-a1",
           "type": "practice",
           "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence.",
+          "visualPrompt": "A digital quiz interface displaying a complex scenario text block alongside multiple-choice options, with a timer counting down in the corner."
         }
       ],
       "questions": [
@@ -536,103 +542,103 @@ export const DataEngineering601Module: LearningModule = {
         },
         {
           "id": "data-engineering-601-l06-q5",
-          "text": "What is the best way to compare competing interventions in advanced Computer Science?",
+          "text": "When framing tradeoffs in advanced case analysis, which dimensions must be balanced?",
           "skillId": "data-engineering-601-skill-advanced-5",
           "options": [
             {
               "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
+              "text": "Only speed and cost"
             },
             {
               "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
+              "text": "Safety, reliability, cost, equity, and governance"
             },
             {
               "id": "c",
-              "text": "Switch metrics after results arrive"
+              "text": "Developer preference and marketing goals"
             },
             {
               "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
+              "text": "Hardware aesthetics and software licensing"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
+          "explanation": "Comprehensive tradeoff framing requires evaluating safety, reliability, cost, equity, and governance to ensure balanced decisions."
         },
         {
           "id": "data-engineering-601-l06-q6",
-          "text": "In high-stakes Data Engineering Research and Leadership execution, which communication protocol is strongest?",
+          "text": "What are the essential components of a structured decision memo?",
           "skillId": "data-engineering-601-skill-advanced-6",
           "options": [
             {
               "id": "a",
-              "text": "Broadcast conclusions without assumptions"
+              "text": "Anecdotes, opinions, and budget requests"
             },
             {
               "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
+              "text": "Explicit assumptions, empirical evidence, risk controls, and fallback strategies"
             },
             {
               "id": "c",
-              "text": "Share only final outcomes after completion"
+              "text": "Code snippets and raw data dumps"
             },
             {
               "id": "d",
-              "text": "Limit updates to a single informal channel"
+              "text": "Marketing copy and user testimonials"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
+          "explanation": "A rigorous decision memo synthesizes explicit assumptions, empirical evidence, risk controls, and fallback strategies."
         },
         {
           "id": "data-engineering-601-l06-q7",
-          "text": "A mature remediation loop in advanced Computer Science should prioritize:",
+          "text": "During a live scenario simulation, what is the key challenge for a data engineer?",
           "skillId": "data-engineering-601-skill-advanced-7",
           "options": [
             {
               "id": "a",
-              "text": "Blame assignment without system updates"
+              "text": "Writing new code from scratch"
             },
             {
               "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
+              "text": "Balancing high-throughput performance against strict governance constraints under pressure"
             },
             {
               "id": "c",
-              "text": "One-time fixes without retesting"
+              "text": "Delegating all decisions to automated systems"
             },
             {
               "id": "d",
-              "text": "Issue closure based on elapsed time"
+              "text": "Ignoring alerts to maintain focus"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
+          "explanation": "The primary challenge in live simulations is maintaining system performance while adhering to strict governance and regulatory constraints."
         },
         {
           "id": "data-engineering-601-l06-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Data Engineering Research and Leadership?",
+          "text": "What defines an effective adaptive response design in data engineering?",
           "skillId": "data-engineering-601-skill-advanced-8",
           "options": [
             {
               "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
+              "text": "Rigidly adhering to the original plan regardless of failures"
             },
             {
               "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
+              "text": "Updating control gates dynamically while maintaining strict traceability and accountability"
             },
             {
               "id": "c",
-              "text": "Ignore correlated failure modes"
+              "text": "Shutting down the entire system at the first sign of trouble"
             },
             {
               "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
+              "text": "Erasing logs to hide system errors"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "explanation": "Adaptive responses require dynamic updates to control gates without sacrificing the auditable record of actions and responsibilities."
         }
       ]
     },
@@ -646,7 +652,8 @@ export const DataEngineering601Module: LearningModule = {
           "id": "data-engineering-601-l07-a1",
           "type": "image",
           "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence.",
+          "visualPrompt": "A network graph illustrating the downstream impact of data engineering decisions on various stakeholders, with nodes varying in size based on impact magnitude."
         }
       ],
       "chunks": [
@@ -654,19 +661,19 @@ export const DataEngineering601Module: LearningModule = {
           "id": "data-engineering-601-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "In this lesson, learners will explore how to map the distribution of impacts among different stakeholders. This includes identifying the benefits, burdens, and any delayed effects that may arise from decisions made in data engineering. Understanding these dynamics is essential for ensuring that all voices are heard and considered in the decision-making process.\nContext recap: In this lesson, learners will explore how to map the distribution of impacts among different stakeholders. This includes identifying the benefits, burdens, and any delayed effects that may arise from decisions made in data engineering. Understanding these dynamics is essential for ensuring that all voices are heard and considered in the decision-making process."
+          "content": "Map the distribution of architectural impacts across diverse stakeholder groups. Identify immediate benefits, operational burdens, and delayed systemic effects arising from data engineering decisions. This holistic view ensures equitable consideration of all voices in the governance process."
         },
         {
           "id": "data-engineering-601-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "In this section, we will focus on the architecture of accountability within decision-making processes. This includes ensuring that there is traceability for decisions made, rights for reviews, and obligations for remediation if issues arise. Integrating these elements helps create a transparent and responsible framework for governance in data engineering.\nContext recap: In this section, we will focus on the architecture of accountability within decision-making processes. This includes ensuring that there is traceability for decisions made, rights for reviews, and obligations for remediation if issues arise. Integrating these elements helps create a transparent and responsible framework for governance in data engineering."
+          "content": "Design a robust accountability architecture that ensures decision traceability, review rights, and clear remediation obligations. Integrating these structural elements creates a transparent, responsible framework for enterprise data governance."
         },
         {
           "id": "data-engineering-601-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "To ensure responsible leadership in data engineering, it is important to have a final checklist. This checklist connects the outcomes we aim for with ethical considerations, compliance with policies, and the ability to adapt and recover from challenges. By using this checklist, we can make sure that our decisions are thoughtful and beneficial for everyone involved.\nContext recap: To ensure responsible leadership in data engineering, it is important to have a final checklist. This checklist connects the outcomes we aim for with ethical considerations, compliance with policies, and the ability to adapt and recover from challenges. By using this checklist, we can make sure that our decisions are thoughtful and beneficial for everyone involved."
+          "content": "Operationalize a responsible leadership framework connecting technical outcomes with ethical considerations, policy compliance, and system resilience. Utilizing this checklist guarantees that architectural decisions are both highly performant and socially responsible."
         }
       ],
       "flashcards": [
@@ -697,7 +704,8 @@ export const DataEngineering601Module: LearningModule = {
           "id": "data-engineering-601-l08-a1",
           "type": "practice",
           "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence.",
+          "visualPrompt": "A virtual boardroom setting where a data engineer is presenting a system architecture diagram to a panel of experts, with speech bubbles indicating rigorous Q&A."
         }
       ],
       "chunks": [
@@ -705,13 +713,13 @@ export const DataEngineering601Module: LearningModule = {
           "id": "data-engineering-601-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "In this interactive activity, learners will work together to create a comprehensive brief. This brief will include important claims that support their ideas, evidence that backs up those claims, uncertainty bounds that highlight any limitations, and remediation pathways that outline how to address potential issues. This exercise helps develop critical thinking and communication skills.\nContext recap: In this interactive activity, learners will work together to create a comprehensive brief. This brief will include important claims that support their ideas, evidence that backs up those claims, uncertainty bounds that highlight any limitations, and remediation pathways that outline how to address potential issues. This exercise helps develop critical thinking and communication skills."
+          "content": "Compile a comprehensive defense brief synthesizing architectural claims, empirical evidence, uncertainty bounds, and remediation pathways. This exercise hones the critical ability to structure complex technical arguments for executive and expert review."
         },
         {
           "id": "data-engineering-601-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "During the Expert Panel Rehearsal, learners will practice their responses to various critiques. These critiques may come from technical experts, governance representatives, and stakeholders who have an interest in the project. This rehearsal is crucial for building confidence and ensuring that learners can effectively communicate their ideas and defend their work in a professional setting.\nContext recap: During the Expert Panel Rehearsal, learners will practice their responses to various critiques. These critiques may come from technical experts, governance representatives, and stakeholders who have an interest in the project. This rehearsal is crucial for building confidence and ensuring that learners can effectively communicate their ideas and defend their work in a professional setting."
+          "content": "Defend your architectural recommendations against rigorous critique from technical experts and governance stakeholders. This rehearsal builds the communication resilience required to articulate tradeoffs and justify engineering decisions in high-stakes professional environments."
         }
       ],
       "interactiveActivities": [

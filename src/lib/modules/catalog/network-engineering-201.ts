@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const NetworkEngineering201Module: LearningModule = {
+export const network_engineering_201_Module: LearningModule = {
   "id": "network-engineering-201",
   "title": "Network Engineering Operations",
   "description": "Intermediate network engineering focused on enterprise operations, routing behavior, fault isolation, performance tuning, and secure service delivery across campus, branch, and cloud-connected environments.",
@@ -15,7 +15,7 @@ export const NetworkEngineering201Module: LearningModule = {
   ],
   "minAge": 15,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "intermediate",
   "localeSupport": [
     "en"
@@ -45,36 +45,45 @@ export const NetworkEngineering201Module: LearningModule = {
           "id": "network-engineering-201-l01-c1",
           "kind": "concept",
           "title": "Topology Patterns",
-          "content": "In today's digital age, enterprise networks are designed to be both efficient and effective by blending traditional network designs with cutting-edge technologies. One common approach is the three-tier campus design, which is often combined with data-center fabrics and wide area network (WAN) overlays. This combination helps organizations manage their network policies more easily and ensures that if a problem arises, it can be contained without disrupting the entire network. The core-distribution-access hierarchy is a key feature of this design, as it simplifies the management of network policies and enhances the ability to isolate issues. Furthermore, spine-leaf designs are utilized to improve performance by allowing data to travel quickly and efficiently across the network. When selecting the right architecture for a network, it is crucial to consider several factors, including the size of the network, the types of traffic it will handle, and the maturity of the operational processes in place. By taking these elements into account, organizations can create a robust network that meets their specific needs and supports their growth.\nContext recap: In today's digital age, enterprise networks are designed to be both efficient and effective by blending traditional network designs with cutting-edge technologies. One common approach is the three-tier campus design, which is often combined with data-center fabrics and wide area network (WAN) overlays. This combination helps organizations manage their network policies more easily and ensures that if a problem arises, it can be contained without disrupting the entire network. The core-distribution-access hierarchy is a key feature of this design, as it simplifies the management of network policies and enhances the ability to isolate issues."
+          "content": "Modern enterprise networks often blend traditional and new designs for efficiency and resilience. A common model is the three-tier hierarchical design (core, distribution, access), which simplifies policy management and isolates failures. For high-performance environments like data centers, a spine-leaf architecture provides low-latency, non-blocking connectivity. Choosing the right architecture depends on factors like network scale, traffic patterns, and operational maturity. A well-chosen topology forms the foundation for a stable and scalable network.",
+          "visualPrompts": [
+            "Diagram comparing the three-tier hierarchical model (core, distribution, access layers) with a two-tier spine-leaf fabric."
+          ]
         },
         {
           "id": "network-engineering-201-l01-c2",
           "kind": "concept",
           "title": "Gateway and Uplink Redundancy",
-          "content": "To make sure our networks are dependable and can bounce back from problems, it's really important to have redundancy at the gateway and to create different paths for data to travel. This means that if one path stops working, there are other routes ready to take over. First-hop redundancy protocols are like a virtual default gateway for devices, which helps them connect to the network more easily. When we design uplinks, we need to be careful not to create hidden loops that could lead to issues, while also making sure the network can recover quickly from any failures. A well-thought-out network design considers where things might go wrong, ensures that data is sent in a predictable way, and clearly states who is in charge of different parts of the network. By focusing on these aspects, we can build networks that are not only efficient but also resilient against disruptions.\nContext recap: To make sure our networks are dependable and can bounce back from problems, it's really important to have redundancy at the gateway and to create different paths for data to travel. This means that if one path stops working, there are other routes ready to take over. First-hop redundancy protocols are like a virtual default gateway for devices, which helps them connect to the network more easily. When we design uplinks, we need to be careful not to create hidden loops that could lead to issues, while also making sure the network can recover quickly from any failures.\nWhy this matters: Gateway and Uplink Redundancy helps learners in Computer Science connect ideas from Network Engineering Operations to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "To ensure high availability, networks require redundancy at key points. First-Hop Redundancy Protocols (FHRPs) like VRRP and HSRP provide a virtual default gateway for endpoints, allowing traffic to continue flowing even if one gateway device fails. Uplink design must also incorporate redundancy through multiple paths, often using technologies like link aggregation (LAG) or routed links. Careful design is needed to prevent Layer 2 loops while ensuring fast failover. The goal is to eliminate single points of failure and create predictable traffic paths.",
+          "visualPrompts": [
+            "Animation showing two physical routers providing a single virtual gateway IP to a user's computer. One router fails, and traffic seamlessly shifts to the other."
+          ]
         },
         {
           "id": "network-engineering-201-l01-c3",
           "kind": "recap",
           "title": "Failure-Domain Thinking",
-          "content": "A well-organized network is designed to minimize the impact of failures. This is achieved through strategies like using segmented Virtual Local Area Networks (VLANs), establishing controlled boundaries for faults, and documenting how the network behaves during failovers. By doing this, we can limit the spread of outages and ensure that problems do not affect the entire network. It is also essential to create architecture diagrams that clearly show how different components of the network depend on each other, not just the physical connections. This helps in understanding the network better and planning for any potential issues.\nContext recap: A well-organized network is designed to minimize the impact of failures. This is achieved through strategies like using segmented Virtual Local Area Networks (VLANs), establishing controlled boundaries for faults, and documenting how the network behaves during failovers. By doing this, we can limit the spread of outages and ensure that problems do not affect the entire network. It is also essential to create architecture diagrams that clearly show how different components of the network depend on each other, not just the physical connections."
+          "content": "A key principle of resilient network design is limiting the size of failure domains—the area of a network impacted by a single fault. Techniques like VLAN segmentation and Layer 3 boundaries contain the blast radius of outages. Effective network diagrams should illustrate not just physical connectivity but also logical dependencies and failure boundaries. This approach allows engineers to understand and minimize the potential impact of any component failure, leading to a more robust and reliable network.",
+          "visualPrompts": [
+            "A network diagram where different sections (e.g., 'Building A', 'Data Center Pod 1') are color-coded to represent distinct failure domains."
+          ]
         }
       ],
       "flashcards": [
         {
           "id": "network-engineering-201-l01-f1",
-          "front": "Failure domain",
-          "back": "A boundary where faults are likely correlated; limiting its size reduces outage impact."
+          "front": "What is a failure domain?",
+          "back": "A section of a network where a single fault can cause a service disruption. Limiting its size reduces the impact of outages."
         },
         {
           "id": "network-engineering-201-l01-f2",
-          "front": "First-hop redundancy",
-          "back": "A method that provides a virtual gateway IP so endpoint default gateway remains available during device failure."
+          "front": "What is the purpose of a First-Hop Redundancy Protocol (FHRP)?",
+          "back": "To provide a resilient default gateway for endpoints by using a virtual IP address shared between two or more routers."
         },
         {
           "id": "network-engineering-201-l01-f3",
-          "front": "Spine-leaf goal",
-          "back": "Consistent low-latency multipath forwarding for scale-out traffic patterns."
+          "front": "What is the primary goal of a spine-leaf architecture?",
+          "back": "To provide consistent, low-latency, and non-blocking connectivity between all devices, ideal for scale-out traffic patterns."
         }
       ],
       "learningAids": [
@@ -82,7 +91,7 @@ export const NetworkEngineering201Module: LearningModule = {
           "id": "network-engineering-201-l01-a1",
           "type": "image",
           "title": "Topology Decision Map",
-          "content": "Decision chart for choosing campus hierarchy vs spine-leaf by traffic and scale constraints."
+          "content": "A flowchart guiding the choice between a hierarchical campus design and a spine-leaf fabric based on traffic patterns, scale, and latency requirements."
         }
       ]
     },
@@ -101,13 +110,19 @@ export const NetworkEngineering201Module: LearningModule = {
           "id": "network-engineering-201-l02-c1",
           "kind": "concept",
           "title": "OSPF Stability",
-          "content": "The stability of the Open Shortest Path First (OSPF) protocol is very important for ensuring that data travels efficiently across a network. Several key factors influence this stability. First, it is crucial to have clear and reliable connections between neighboring devices, which are the routers and switches that communicate with each other. Second, the timing settings, which help manage how often devices check in with one another, need to be consistent. Lastly, the design of network areas must be well-structured to avoid confusion. Problems can occur if there are mismatches in settings such as Maximum Transmission Unit (MTU) sizes, which determine the largest packet size that can be sent, authentication methods that verify device identities, or the types of areas configured in the network. These mismatches can lead to hidden connectivity issues that are hard to detect. Therefore, network engineers should carefully monitor the status of neighbor connections and link any changes they observe to events happening in the network's layout. This practice helps ensure that the network operates smoothly and that the Shortest Path First (SPF) algorithm can quickly recalculate the best routes for data to travel, keeping everything running efficiently.\nContext recap: The stability of the Open Shortest Path First (OSPF) protocol is very important for ensuring that data travels efficiently across a network. Several key factors influence this stability. First, it is crucial to have clear and reliable connections between neighboring devices, which are the routers and switches that communicate with each other. Second, the timing settings, which help manage how often devices check in with one another, need to be consistent.\nWhy this matters: OSPF Stability helps learners in Computer Science connect ideas from Network Engineering Operations to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "Open Shortest Path First (OSPF) stability depends on healthy neighbor adjacencies. For two routers to become neighbors, parameters like area ID, authentication, and timer intervals must match. A common issue is an MTU mismatch, which can cause adjacencies to get stuck in the EXSTART/EXCHANGE state. Network engineers must monitor neighbor states and correlate state changes with physical or logical network events. A stable OSPF environment ensures that the Shortest Path First (SPF) algorithm runs efficiently and routing remains consistent.",
+          "visualPrompts": [
+            "A state diagram illustrating the OSPF neighbor adjacency process: Down, Init, 2-Way, Exstart, Exchange, Loading, and Full."
+          ]
         },
         {
           "id": "network-engineering-201-l02-c2",
           "kind": "concept",
           "title": "BGP Policy Effects",
-          "content": "The Border Gateway Protocol (BGP) is a key player in how data travels across the internet, and its decisions are heavily influenced by specific policies. These policies include factors like local preference, which indicates which routes are preferred; the length of the Autonomous System (AS) path, which shows how many networks the data must pass through; the Multi-Exit Discriminator (MED), which helps determine the best exit point for data; and community tags, which are labels that help manage routing decisions. Even minor adjustments to these policies can cause major changes in how traffic flows, so it is very important to test any changes in a safe and controlled setting before applying them to the entire network. This careful testing helps to keep the network running smoothly and efficiently, ensuring that users experience minimal disruptions and optimal performance.\nContext recap: The Border Gateway Protocol (BGP) is a key player in how data travels across the internet, and its decisions are heavily influenced by specific policies. These policies include factors like local preference, which indicates which routes are preferred; the length of the Autonomous System (AS) path, which shows how many networks the data must pass through; the Multi-Exit Discriminator (MED), which helps determine the best exit point for data; and community tags, which are labels that help manage routing decisions. Even minor adjustments to these policies can cause major changes in how traffic flows, so it is very important to test any changes in a safe and controlled setting before applying them to the entire network. This careful testing helps to keep the network running smoothly and efficiently, ensuring that users experience minimal disruptions and optimal performance.\nContext recap: The Border Gateway Protocol (BGP) is a key player in how data travels across the internet, and its decisions are heavily influenced by specific policies. These policies include factors like local preference, which indicates which routes are preferred; the length of the Autonomous System (AS) path, which shows how many networks the data must pass through; the Multi-Exit Discriminator (MED), which helps determine the best exit point for data; and community tags, which are labels that help manage routing decisions. Even minor adjustments to these policies can cause major changes in how traffic flows, so it is very important to test any changes in a safe and controlled setting before applying them to the entire network. This careful testing helps to keep the network running smoothly and efficiently, ensuring that users experience minimal disruptions and optimal performance."
+          "content": "Border Gateway Protocol (BGP) path selection is a deterministic process influenced by policy attributes. Key attributes include LOCAL_PREF (for outbound path selection), AS_PATH length (shorter is better), and MED (Multi-Exit Discriminator). A small change to one of these attributes can significantly alter traffic flow across an entire network. Because of this high impact, BGP policy changes must be carefully modeled and tested in a lab or with a staged rollout before being deployed in production.",
+          "visualPrompts": [
+            "A flowchart showing the BGP best path selection algorithm, highlighting key decision points like LOCAL_PREF, AS_PATH, and MED."
+          ]
         }
       ],
       "interactiveActivities": [
@@ -115,23 +130,23 @@ export const NetworkEngineering201Module: LearningModule = {
           "id": "network-engineering-201-l02-act1",
           "type": "matching_pairs",
           "title": "Symptom to Root-Cause Match",
-          "description": "Match routing symptoms to likely protocol-level causes.",
+          "description": "Match common routing symptoms to their likely protocol-level causes.",
           "pairs": [
             {
-              "left": "OSPF stuck in EXSTART",
-              "right": "MTU mismatch or adjacency negotiation issue"
+              "left": "OSPF adjacency stuck in EXSTART",
+              "right": "MTU mismatch between neighbors"
             },
             {
-              "left": "Unexpected egress ISP shift",
-              "right": "Local preference or policy update changed best path"
+              "left": "Outbound traffic unexpectedly shifts to a backup ISP",
+              "right": "A BGP LOCAL_PREF policy change was applied"
             },
             {
-              "left": "Frequent reconvergence spikes",
-              "right": "Flapping links or unstable neighbor sessions"
+              "left": "CPU usage spikes on routers periodically",
+              "right": "A flapping link is causing frequent SPF recalculations"
             },
             {
-              "left": "Route present but no traffic",
-              "right": "Policy/filter mismatch or next-hop reachability problem"
+              "left": "A route is in the routing table but traffic is dropped",
+              "right": "The next-hop IP address is unreachable"
             }
           ]
         },
@@ -139,18 +154,18 @@ export const NetworkEngineering201Module: LearningModule = {
           "id": "network-engineering-201-l02-act2",
           "type": "scenario_practice",
           "title": "Convergence Triage",
-          "description": "Prioritize checks during a live routing instability incident.",
+          "description": "You are notified of routing instability across the network. What are your first steps?",
           "instructions": [
-            "List first three commands/telemetry checks you would run.",
-            "Explain one action you would avoid to prevent wider blast radius."
+            "List the first three commands or telemetry checks you would run to assess the situation.",
+            "Explain one action you would avoid to prevent making the problem worse."
           ]
         }
       ],
       "metadata": {
         "prompts": [
-          "Why can a route appear in the table but still fail in forwarding?",
-          "What is one safe method to test BGP policy impact before broad rollout?",
-          "How do you reduce route flapping without hiding real failures?"
+          "Why can a route appear in the routing table but still fail to forward traffic?",
+          "What is a safe method to test the impact of a BGP policy change before full deployment?",
+          "How can you reduce the impact of route flapping without hiding legitimate network failures?"
         ]
       },
       "learningAids": [
@@ -158,7 +173,7 @@ export const NetworkEngineering201Module: LearningModule = {
           "id": "network-engineering-201-l02-a1",
           "type": "practice",
           "title": "Convergence Checklist",
-          "content": "Step-by-step triage sheet for adjacency, control-plane, and data-plane validation."
+          "content": "A step-by-step troubleshooting checklist for validating routing issues, covering adjacency state, control-plane tables, and data-plane forwarding."
         }
       ]
     },
@@ -170,7 +185,7 @@ export const NetworkEngineering201Module: LearningModule = {
       "questions": [
         {
           "id": "network-engineering-201-l03-q1",
-          "text": "A route exists in control plane but packets drop. Most likely first verification?",
+          "text": "A route exists in the control plane, but packets sent to that destination are being dropped. What is the most likely first step to verify?",
           "skillId": "network-engineering-201-skill-routing",
           "options": [
             {
@@ -183,24 +198,24 @@ export const NetworkEngineering201Module: LearningModule = {
             },
             {
               "id": "c",
-              "text": "Disable routing protocol entirely"
+              "text": "Disable the routing protocol entirely"
             },
             {
               "id": "d",
-              "text": "Ignore because route is present"
+              "text": "Ignore the issue because the route is present"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Control-plane visibility does not guarantee valid forwarding path."
+          "explanation": "The control plane (routing table) having a route does not guarantee the data plane (forwarding table) is programmed correctly or that the next-hop is reachable."
         },
         {
           "id": "network-engineering-201-l03-q2",
-          "text": "Which BGP attribute is commonly used to prefer one outbound path inside an AS?",
+          "text": "Which BGP attribute is most commonly used to influence outbound path selection within a single Autonomous System (AS)?",
           "skillId": "network-engineering-201-skill-routing",
           "options": [
             {
               "id": "a",
-              "text": "Local preference"
+              "text": "Local Preference"
             },
             {
               "id": "b",
@@ -216,57 +231,57 @@ export const NetworkEngineering201Module: LearningModule = {
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Local preference is a common internal policy lever for outbound path choice."
+          "explanation": "Local Preference is a well-known attribute used to signal the preferred exit point from an AS to all internal BGP speakers. A higher value is preferred."
         },
         {
           "id": "network-engineering-201-l03-q3",
-          "text": "What is the best reason to limit failure domain size in network design?",
+          "text": "What is the primary benefit of limiting failure domain size in a network design?",
           "skillId": "network-engineering-201-skill-architecture",
           "options": [
             {
               "id": "a",
-              "text": "Increase outage spread for faster detection"
+              "text": "To increase the spread of an outage for faster detection"
             },
             {
               "id": "b",
-              "text": "Reduce potential user impact when one component fails"
+              "text": "To reduce the number of users impacted when one component fails"
             },
             {
               "id": "c",
-              "text": "Avoid any monitoring requirements"
+              "text": "To avoid any need for network monitoring"
             },
             {
               "id": "d",
-              "text": "Eliminate need for documentation"
+              "text": "To eliminate the need for documentation"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Smaller failure domains reduce blast radius and accelerate recovery."
+          "explanation": "Smaller, well-defined failure domains contain the 'blast radius' of a fault, minimizing user impact and simplifying troubleshooting."
         },
         {
           "id": "network-engineering-201-l03-q4",
-          "text": "Which practice improves safety for high-impact routing policy changes?",
+          "text": "Which practice improves the safety of implementing a high-impact routing policy change?",
           "skillId": "network-engineering-201-skill-operations",
           "options": [
             {
               "id": "a",
-              "text": "Direct production edits with no rollback plan"
+              "text": "Making direct edits to production devices with no rollback plan"
             },
             {
               "id": "b",
-              "text": "Staged rollout with validation and rollback criteria"
+              "text": "Using a staged rollout with clear validation steps and rollback criteria"
             },
             {
               "id": "c",
-              "text": "Disable telemetry to reduce noise"
+              "text": "Disabling telemetry during the change to reduce noise"
             },
             {
               "id": "d",
-              "text": "Apply changes during peak business hours only"
+              "text": "Applying changes only during peak business hours"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Guarded rollout with rollback conditions minimizes risk."
+          "explanation": "A guarded, staged rollout with pre-defined success metrics and a rollback plan is a standard best practice for minimizing the risk of network changes."
         }
       ],
       "learningAids": [
@@ -274,7 +289,7 @@ export const NetworkEngineering201Module: LearningModule = {
           "id": "network-engineering-201-l03-a1",
           "type": "mnemonic",
           "title": "TRACE",
-          "content": "Table, Reachability, Adjacency, Change history, Evidence."
+          "content": "A troubleshooting mnemonic: Table (is the route present?), Reachability (can I reach the next-hop?), Adjacency (are neighbors up?), Change (what changed recently?), Evidence (check logs and counters)."
         }
       ]
     },
@@ -293,36 +308,45 @@ export const NetworkEngineering201Module: LearningModule = {
           "id": "network-engineering-201-l04-c1",
           "kind": "concept",
           "title": "Segmentation as Risk Control",
-          "content": "Network segmentation is an important practice that can significantly improve both the security and reliability of our networks. By using tools like Virtual Local Area Networks (VLANs) and Virtual Routing and Forwarding (VRF), we can create distinct boundaries that separate different areas of trust within the network. This separation is crucial because it helps to prevent unauthorized access and limits the movement of potential threats within the network. Additionally, it is essential to implement Access Control Lists (ACLs) and firewall policies that are clear and straightforward. These policies should adhere to the principle of least privilege, meaning that users and devices should only have access to the resources they absolutely need. Regularly reviewing these policies against actual traffic behavior ensures that they remain effective and relevant. By taking these proactive steps, we can maintain a secure and efficient network environment that protects our valuable data and resources.\nContext recap: Network segmentation is an important practice that can significantly improve both the security and reliability of our networks. By using tools like Virtual Local Area Networks (VLANs) and Virtual Routing and Forwarding (VRF), we can create distinct boundaries that separate different areas of trust within the network. This separation is crucial because it helps to prevent unauthorized access and limits the movement of potential threats within the network. Additionally, it is essential to implement Access Control Lists (ACLs) and firewall policies that are clear and straightforward.\nWhy this matters: Segmentation as Risk Control helps learners in Computer Science connect ideas from Network Engineering Operations to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "Network segmentation divides a network into smaller, isolated zones to improve security and reliability. Technologies like VLANs and Virtual Routing and Forwarding (VRF) create these boundaries. Access between zones is controlled by Access Control Lists (ACLs) and firewall policies. A key security principle is 'least privilege,' meaning traffic is denied by default and only explicitly permitted. Regularly auditing these policies against actual traffic flows ensures they remain effective and helps identify misconfigurations.",
+          "visualPrompts": [
+            "Diagram of a network segmented into zones like 'Users', 'Servers', 'DMZ', and 'Guests', with a firewall controlling traffic flow between them."
+          ]
         },
         {
           "id": "network-engineering-201-l04-c2",
           "kind": "concept",
           "title": "Access Control and Remote Connectivity",
-          "content": "Network Access Control, or NAC, is a crucial part of keeping our networks safe. It works by checking the health and security status of devices and users before they are allowed to connect to the network. This means that only devices that meet certain security standards can access the network, which helps prevent unauthorized access and potential threats. When it comes to remote access, which allows users to connect to the network from different locations, it's vital to have strong identity verification processes in place. This ensures that only the right people can access sensitive information. Additionally, implementing conditional policies helps to define what users can do based on their identity and the security status of their device. Logging user sessions is also important, as it keeps a record of who accessed the network and when, which can be useful for monitoring and security audits. For secure connections between different sites, technologies like IPsec are commonly used. They create secure tunnels for data to travel through. On the other hand, SSL/TLS-based remote access solutions are great for users who need to work on the go, as they allow access through web browsers while keeping the connection secure. This flexibility ensures that users can work safely from various locations without compromising the security of the network.\nContext recap: Network Access Control, or NAC, is a crucial part of keeping our networks safe. It works by checking the health and security status of devices and users before they are allowed to connect to the network. This means that only devices that meet certain security standards can access the network, which helps prevent unauthorized access and potential threats. When it comes to remote access, which allows users to connect to the network from different locations, it's vital to have strong identity verification processes in place.\nWhy this matters: Access Control and Remote Connectivity helps learners in Computer Science connect ideas from Network Engineering Operations to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "Network Access Control (NAC) acts as a gatekeeper, verifying a device's identity and security posture before granting access. For remote users, secure connectivity is vital. Site-to-site connections are typically secured using IPsec tunnels, which create a persistent, encrypted link between two network gateways. For individual remote users, SSL/TLS VPNs provide flexible, on-demand access, often through a web portal or client application. Both methods rely on strong authentication to verify user identity and enforce access policies.",
+          "visualPrompts": [
+            "Side-by-side comparison showing an IPsec tunnel connecting two office networks and a remote user connecting to a single office via an SSL VPN client."
+          ]
         },
         {
           "id": "network-engineering-201-l04-c3",
           "kind": "recap",
           "title": "Operational Security Hygiene",
-          "content": "In network management, it's important to be aware of certain security gaps that can put the system at risk. Some common issues include outdated Access Control Lists (ACLs), which are like rules that determine who can access what; overly broad administrative rights, which give too many people too much control; and undocumented exceptions, which are rules that aren't written down and can lead to confusion. To keep the network secure, experienced teams make it a habit to regularly review their policies. They also keep track of any exceptions, making sure each one has a clear expiration date and a designated owner responsible for it. This proactive approach helps ensure that the network remains safe and well-organized, significantly reducing the chances of security vulnerabilities.\nContext recap: In network management, it's important to be aware of certain security gaps that can put the system at risk. Some common issues include outdated Access Control Lists (ACLs), which are like rules that determine who can access what; overly broad administrative rights, which give too many people too much control; and undocumented exceptions, which are rules that aren't written down and can lead to confusion. To keep the network secure, experienced teams make it a habit to regularly review their policies. They also keep track of any exceptions, making sure each one has a clear expiration date and a designated owner responsible for it."
+          "content": "Effective network security is an ongoing process, not a one-time setup. Common operational gaps include stale or overly permissive firewall rules, shared administrative credentials, and undocumented policy exceptions. Mature operations teams conduct periodic rule reviews, enforce role-based access control, and maintain a registry of all policy exceptions, each with a clear business justification, owner, and expiration date. This continuous vigilance is crucial for maintaining a strong security posture.",
+          "visualPrompts": [
+            "A checklist graphic for a security audit, with items like 'Review firewall rules', 'Audit admin accounts', and 'Validate segmentation'."
+          ]
         }
       ],
       "flashcards": [
         {
           "id": "network-engineering-201-l04-f1",
-          "front": "VRF",
-          "back": "Virtual routing and forwarding instance that creates separate routing tables on shared hardware."
+          "front": "What is VRF?",
+          "back": "Virtual Routing and Forwarding. A technology that allows a single physical router to host multiple independent routing tables, creating logical network separation."
         },
         {
           "id": "network-engineering-201-l04-f2",
-          "front": "NAC",
-          "back": "Network Access Control: enforces identity/posture policy before allowing network access."
+          "front": "What is NAC?",
+          "back": "Network Access Control. A security approach that enforces policy on devices and users before granting them access to network resources."
         },
         {
           "id": "network-engineering-201-l04-f3",
-          "front": "Least privilege policy",
-          "back": "Grant only minimum required network access for required duration and scope."
+          "front": "What is the principle of least privilege?",
+          "back": "Granting users and systems only the minimum levels of access—or permissions—needed to perform their required tasks."
         }
       ],
       "learningAids": [
@@ -330,7 +354,7 @@ export const NetworkEngineering201Module: LearningModule = {
           "id": "network-engineering-201-l04-a1",
           "type": "image",
           "title": "Trust Zone Policy Map",
-          "content": "Reference map of enterprise trust zones with example ACL intents and review cadence."
+          "content": "A reference matrix showing typical enterprise trust zones (e.g., Production, Development, User) and the default access policies between them."
         }
       ]
     },
@@ -349,13 +373,19 @@ export const NetworkEngineering201Module: LearningModule = {
           "id": "network-engineering-201-l05-c1",
           "kind": "concept",
           "title": "Baseline and Drift",
-          "content": "To successfully keep an eye on how well a network is running, it's crucial to compare the current performance data with a set of standard behaviors known as the baseline. This means looking at important metrics like interface errors, queue drops, path latency, and control-plane events over time. By doing this, network administrators can spot any unusual patterns that might emerge. If there is a sudden change from the baseline, it could signal the beginning of a problem, which allows for a faster response than if they were just waiting for alerts based on set thresholds. This proactive approach to monitoring is vital for ensuring the network remains healthy and operates smoothly.\nContext recap: To successfully keep an eye on how well a network is running, it's crucial to compare the current performance data with a set of standard behaviors known as the baseline. This means looking at important metrics like interface errors, queue drops, path latency, and control-plane events over time. By doing this, network administrators can spot any unusual patterns that might emerge. If there is a sudden change from the baseline, it could signal the beginning of a problem, which allows for a faster response than if they were just waiting for alerts based on set thresholds."
+          "content": "Effective network monitoring goes beyond simple up/down alerts. It involves establishing a performance baseline—a known, healthy state—for key metrics like latency, jitter, interface errors, and queue drops. By continuously comparing real-time data against this baseline, engineers can detect 'drift' or anomalous behavior. Identifying these subtle deviations early often allows for proactive intervention before a full-blown outage occurs and users are impacted.",
+          "visualPrompts": [
+            "A time-series graph showing network latency. A shaded area indicates the normal baseline range, and a red line shows the metric suddenly drifting above this range."
+          ]
         },
         {
           "id": "network-engineering-201-l05-c2",
           "kind": "practice",
           "title": "Incident Playbook Structure",
-          "content": "A well-organized network incident playbook is an essential resource for effectively managing network problems. This playbook should contain several key components. First, it should identify the source of detection, which helps in understanding where the issue originated. Next, it should outline the scope of impact, detailing how widespread the problem is and which systems or users are affected. Immediate actions to contain the incident are crucial; these are the steps taken right away to prevent further damage. Additionally, an escalation matrix is important for communication; it specifies who should be informed at each stage of the incident response. Finally, recovery verification checks ensure that the issue has been resolved and that systems are functioning properly again. After addressing an incident, it is vital to conduct thorough reviews. These reviews should focus on identifying weaknesses in the system and developing long-term solutions to prevent similar issues in the future. Importantly, this process should emphasize learning and improvement rather than assigning blame to individuals, which helps create a supportive and collaborative team environment.\nContext recap: A well-organized network incident playbook is an essential resource for effectively managing network problems. This playbook should contain several key components. First, it should identify the source of detection, which helps in understanding where the issue originated. Next, it should outline the scope of impact, detailing how widespread the problem is and which systems or users are affected.\nWhy this matters: Incident Playbook Structure helps learners in Computer Science connect ideas from Network Engineering Operations to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "An incident playbook is a predefined set of steps for responding to a network issue. A good playbook includes: detection source, initial impact assessment, immediate containment actions, an escalation matrix for communication, and verification steps for recovery. After an incident is resolved, a blameless post-mortem review is conducted. The goal is not to assign blame but to identify systemic weaknesses and create corrective actions to prevent recurrence, improving the overall resilience of the system.",
+          "visualPrompts": [
+            "A flowchart illustrating the incident response lifecycle: Detect -> Triage -> Contain -> Remediate -> Recover -> Post-Mortem."
+          ]
         }
       ],
       "interactiveActivities": [
@@ -363,7 +393,7 @@ export const NetworkEngineering201Module: LearningModule = {
           "id": "network-engineering-201-l05-act1",
           "type": "sorting_buckets",
           "title": "Signal Classification",
-          "description": "Classify observability signals by likely diagnostic value.",
+          "description": "Classify these observability signals by the network layer they most likely represent.",
           "buckets": [
             "Control Plane",
             "Data Plane",
@@ -387,7 +417,7 @@ export const NetworkEngineering201Module: LearningModule = {
               "bucket": "Control Plane"
             },
             {
-              "text": "Queue drops on uplink under load",
+              "text": "Queue drops on an uplink under load",
               "bucket": "Data Plane"
             }
           ]
@@ -395,9 +425,9 @@ export const NetworkEngineering201Module: LearningModule = {
       ],
       "metadata": {
         "prompts": [
-          "Which metric drift would you alert on before users report outage symptoms?",
-          "Write a two-line stakeholder update during an active WAN incident.",
-          "Name one post-incident action that prevents recurrence."
+          "Which metric, if it drifted from its baseline, would you want an alert for even before users report an outage?",
+          "Write a two-sentence status update for business stakeholders during an active WAN outage.",
+          "Name one type of post-incident corrective action that helps prevent a similar issue from happening again."
         ]
       },
       "learningAids": [
@@ -405,7 +435,7 @@ export const NetworkEngineering201Module: LearningModule = {
           "id": "network-engineering-201-l05-a1",
           "type": "practice",
           "title": "Incident Update Template",
-          "content": "Template for impact statement, current mitigation, next update time, and owner."
+          "content": "A fill-in-the-blanks template for communicating incident status, including: Impact Statement, Current Mitigation Actions, Next Update Time, and Incident Commander."
         }
       ]
     },
@@ -417,82 +447,82 @@ export const NetworkEngineering201Module: LearningModule = {
       "questions": [
         {
           "id": "network-engineering-201-l06-q1",
-          "text": "Which control most directly limits lateral movement across internal networks?",
+          "text": "Which security control most directly limits an attacker's ability to move laterally across an internal network?",
           "skillId": "network-engineering-201-skill-security",
           "options": [
             {
               "id": "a",
-              "text": "Flat Layer 2 network for all workloads"
+              "text": "A flat Layer 2 network for all devices"
             },
             {
               "id": "b",
-              "text": "Zone segmentation with explicit allow policy"
+              "text": "Zone-based segmentation with a default-deny policy"
             },
             {
               "id": "c",
-              "text": "Disabling all logs"
+              "text": "Disabling all system logs"
             },
             {
               "id": "d",
-              "text": "One shared admin credential"
+              "text": "Using one shared administrator credential"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Segmentation and explicit policy sharply reduce lateral attack and failure spread."
+          "explanation": "Segmentation creates controlled boundaries, and a default-deny (or explicit allow) policy ensures that only necessary traffic can cross them, sharply reducing lateral movement."
         },
         {
           "id": "network-engineering-201-l06-q2",
-          "text": "Why is baseline telemetry important in network operations?",
+          "text": "Why is establishing baseline telemetry important in network operations?",
           "skillId": "network-engineering-201-skill-observability",
           "options": [
             {
               "id": "a",
-              "text": "It removes need for troubleshooting"
+              "text": "It removes the need for troubleshooting"
             },
             {
               "id": "b",
-              "text": "It helps detect abnormal drift before major incidents"
+              "text": "It helps detect abnormal drift before it becomes a major incident"
             },
             {
               "id": "c",
-              "text": "It guarantees no false alerts"
+              "text": "It guarantees there will be no false alerts"
             },
             {
               "id": "d",
-              "text": "It replaces routing policy"
+              "text": "It replaces the need for routing policy"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Baseline comparison reveals early change patterns not obvious from static thresholds."
+          "explanation": "Comparing current performance to a known-good baseline allows for the detection of subtle changes that static thresholds might miss, enabling proactive response."
         },
         {
           "id": "network-engineering-201-l06-q3",
-          "text": "Best first action after restoring service from a network outage?",
+          "text": "What is the best first action to take after service has been restored from a major network outage?",
           "skillId": "network-engineering-201-skill-operations",
           "options": [
             {
               "id": "a",
-              "text": "Close incident with no further analysis"
+              "text": "Close the incident ticket with no further analysis"
             },
             {
               "id": "b",
-              "text": "Run blameless review and assign corrective actions"
+              "text": "Conduct a blameless review and assign corrective actions"
             },
             {
               "id": "c",
-              "text": "Disable monitoring to reduce alert noise"
+              "text": "Disable monitoring to reduce future alert noise"
             },
             {
               "id": "d",
-              "text": "Rollback all security controls"
+              "text": "Roll back all security controls"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Durable reliability improvement requires structured post-incident action ownership."
+          "explanation": "To achieve long-term reliability, it is essential to learn from failures. A structured post-incident review identifies root causes and assigns ownership for actions to prevent recurrence."
         },
         {
           "id": "network-engineering-201-l06-q4",
-          "text": "Which VPN option is typically preferred for site-to-site network tunnels?",
+          "text": "Which VPN technology is typically preferred for creating secure, persistent tunnels between two network sites?",
           "skillId": "network-engineering-201-skill-security",
           "options": [
             {
@@ -513,7 +543,7 @@ export const NetworkEngineering201Module: LearningModule = {
             }
           ],
           "correctOptionId": "a",
-          "explanation": "IPsec is a common standard for secure site-to-site connectivity."
+          "explanation": "IPsec is a widely adopted standard for building secure, gateway-to-gateway VPNs for site-to-site connectivity."
         }
       ],
       "learningAids": [
@@ -521,7 +551,7 @@ export const NetworkEngineering201Module: LearningModule = {
           "id": "network-engineering-201-l06-a1",
           "type": "mnemonic",
           "title": "SAFE Ops",
-          "content": "Segment, Alert, Fix, Evaluate."
+          "content": "A mnemonic for operational best practices: Segment (limit blast radius), Alert (on deviation), Fix (the problem), Evaluate (the root cause)."
         }
       ]
     },
@@ -540,20 +570,20 @@ export const NetworkEngineering201Module: LearningModule = {
           "id": "network-engineering-201-l07-c1",
           "kind": "practice",
           "title": "Case Scenario",
-          "content": "Imagine you are given the important job of designing a plan to upgrade 60 branch locations that are currently experiencing some significant challenges. These challenges include unstable Wide Area Network (WAN) connections, which can cause disruptions in communication, inconsistent Access Control List (ACL) policies that affect security, and limited local IT support that makes it hard to resolve issues quickly. Your goal is to create a comprehensive upgrade plan that not only reduces the number of outages these branches face but also strengthens the overall security of the network. Additionally, your plan should ensure that the process of deploying these upgrades is consistent and repeatable across all locations. To achieve this, you will need to think carefully about the specific needs of each branch while also considering how they fit into the larger network architecture. This project will help you develop critical problem-solving skills and an understanding of how to manage complex network environments effectively.\nContext recap: Imagine you are given the important job of designing a plan to upgrade 60 branch locations that are currently experiencing some significant challenges. These challenges include unstable Wide Area Network (WAN) connections, which can cause disruptions in communication, inconsistent Access Control List (ACL) policies that affect security, and limited local IT support that makes it hard to resolve issues quickly. Your goal is to create a comprehensive upgrade plan that not only reduces the number of outages these branches face but also strengthens the overall security of the network. Additionally, your plan should ensure that the process of deploying these upgrades is consistent and repeatable across all locations."
+          "content": "Your task is to create a modernization plan for an enterprise with 60 branch offices. The branches currently suffer from unstable WAN connectivity, inconsistent security policies, and a lack of centralized monitoring. Your plan must propose a new standard architecture that improves reliability and security. It should also outline a repeatable deployment process that can be executed efficiently across all locations, considering that many branches have limited on-site IT staff."
         },
         {
           "id": "network-engineering-201-l07-c2",
           "kind": "recap",
-          "title": "Evaluation Lens",
-          "content": "A strong upgrade plan should include a phased rollout approach, a fallback strategy in case of issues, measurable Key Performance Indicators (KPIs) to assess success, and training for staff to ensure a smooth operational handoff. By incorporating these elements, you can create a comprehensive strategy that not only addresses current challenges but also prepares the network for future growth and stability.\nContext recap: A strong upgrade plan should include a phased rollout approach, a fallback strategy in case of issues, measurable Key Performance Indicators (KPIs) to assess success, and training for staff to ensure a smooth operational handoff. By incorporating these elements, you can create a comprehensive strategy that not only addresses current challenges but also prepares the network for future growth and stability."
+          "title": "Evaluation Criteria",
+          "content": "A successful modernization plan will be evaluated on several key components. It must include a phased rollout schedule to manage risk, a detailed validation plan to verify success at each stage, and a clear rollback strategy in case of failure. The plan should also define measurable Key Performance Indicators (KPIs) to track improvements in reliability and performance. Finally, it must consider the operational handoff, including documentation and training for the support team."
         }
       ],
       "metadata": {
         "prompts": [
-          "Define three KPIs for branch reliability improvement.",
-          "Select one high-risk change and describe your rollback approach.",
-          "List two security controls to standardize across all branches first."
+          "Define three KPIs you would use to measure the success of the branch reliability improvement.",
+          "Select one high-risk change from your plan (e.g., cutting over to a new circuit) and describe your rollback procedure.",
+          "List two security controls you would prioritize standardizing across all branches first, and explain why."
         ]
       },
       "learningAids": [
@@ -561,7 +591,7 @@ export const NetworkEngineering201Module: LearningModule = {
           "id": "network-engineering-201-l07-a1",
           "type": "practice",
           "title": "Modernization Canvas",
-          "content": "Template for current-state pain points, target architecture, change waves, and KPI targets."
+          "content": "A structured template to build your plan. Sections include: Current-State Pain Points, Target Architecture Diagram, Phased Rollout Schedule, and KPI Targets."
         }
       ]
     }

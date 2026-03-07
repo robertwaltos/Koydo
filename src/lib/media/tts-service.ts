@@ -1,7 +1,7 @@
 /**
  * TTS Service — Hybrid text-to-speech with provider fallback chain.
  *
- * Flow:  Check cache → OpenAI tts-1 → ElevenLabs (technical fallback) → browser TTS
+ * Flow:  Check cache → Gemini 2.5 Flash TTS → OpenAI tts-1 → browser TTS
  *
  * Generated audio is cached in Supabase Storage (`tts-audio` bucket) so each
  * unique text+voice combination is only ever generated once.
@@ -25,6 +25,16 @@ export const OPENAI_VOICES = [
 ] as const;
 
 export type OpenAIVoice = (typeof OPENAI_VOICES)[number]["id"];
+
+/** Maps OpenAI voice names to Gemini 2.5 Flash TTS prebuilt voices */
+const OPENAI_TO_GEMINI_VOICE: Record<OpenAIVoice, string> = {
+  shimmer: "Achird",   // Friendly, bright
+  nova: "Sulafat",     // Warm, clear
+  fable: "Algieba",    // Expressive, smooth
+  onyx: "Gacrux",      // Deep, mature
+  alloy: "Puck",       // Balanced, upbeat
+  echo: "Charon",      // Smooth, informative
+};
 
 export interface TTSRequest {
   text: string;
@@ -92,13 +102,17 @@ async function getCachedAudio(key: string): Promise<string | null> {
   }
 }
 
-async function setCachedAudio(key: string, audioBuffer: Buffer): Promise<string | null> {
+async function setCachedAudio(
+  key: string,
+  audioBuffer: Buffer,
+  contentType: "audio/mpeg" | "audio/wav" = "audio/mpeg",
+): Promise<string | null> {
   try {
     const supabase = createSupabaseAdminClient();
     const bucket = serverEnv.TTS_CACHE_BUCKET;
 
     const { error } = await supabase.storage.from(bucket).upload(key, audioBuffer, {
-      contentType: "audio/mpeg",
+      contentType,
       cacheControl: "public, max-age=31536000, immutable",
       upsert: true,
     });
@@ -116,42 +130,83 @@ async function setCachedAudio(key: string, audioBuffer: Buffer): Promise<string 
   }
 }
 
-// ── Gemini TTS Provider ────────────────────────────────────────────────────
-// Note: Google Cloud Text-to-Speech API requires different keys. 
-// Using this as a placeholder wrapper for the Gemini TTS feature once their native audio API stabilizes.
+// ── PCM → WAV helper ──────────────────────────────────────────────────────
+
+/**
+ * Wraps raw PCM data in a 44-byte WAV header.
+ * Gemini 2.5 Flash TTS outputs 24kHz, 16-bit, mono PCM.
+ */
+function pcmToWav(
+  pcm: Buffer,
+  sampleRate: number,
+  bitDepth: number,
+  channels: number,
+): Buffer {
+  const byteRate = (sampleRate * channels * bitDepth) / 8;
+  const blockAlign = (channels * bitDepth) / 8;
+  const dataSize = pcm.length;
+  const header = Buffer.alloc(44);
+
+  header.write("RIFF", 0);                        // ChunkID
+  header.writeUInt32LE(36 + dataSize, 4);          // ChunkSize
+  header.write("WAVE", 8);                         // Format
+  header.write("fmt ", 12);                        // Subchunk1ID
+  header.writeUInt32LE(16, 16);                    // Subchunk1Size (PCM)
+  header.writeUInt16LE(1, 20);                     // AudioFormat (1 = PCM)
+  header.writeUInt16LE(channels, 22);              // NumChannels
+  header.writeUInt32LE(sampleRate, 24);            // SampleRate
+  header.writeUInt32LE(byteRate, 28);              // ByteRate
+  header.writeUInt16LE(blockAlign, 32);            // BlockAlign
+  header.writeUInt16LE(bitDepth, 34);              // BitsPerSample
+  header.write("data", 36);                        // Subchunk2ID
+  header.writeUInt32LE(dataSize, 40);              // Subchunk2Size
+
+  return Buffer.concat([header, pcm]);
+}
+
+// ── Gemini 2.5 Flash TTS Provider ────────────────────────────────────────────
+// Uses the Gemini native audio API (generativelanguage.googleapis.com).
+// Outputs PCM audio which we wrap as WAV. Language is auto-detected.
 
 async function generateGeminiTTS(text: string, voice: OpenAIVoice): Promise<Buffer> {
-  const apiKey = serverEnv.GOOGLE_API_KEY;
-  if (!apiKey) throw new Error("GOOGLE_API_KEY not configured");
+  const apiKey = serverEnv.GOOGLE_API_KEY || serverEnv.GEMINI_API_KEY;
+  if (!apiKey) throw new Error("GOOGLE_API_KEY / GEMINI_API_KEY not configured");
 
-  // Google Cloud TTS API endpoint (assuming the key has access)
-  const response = await fetch(`https://texttospeech.googleapis.com/v1/text:synthesize?key=${apiKey}`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
+  const geminiVoice = OPENAI_TO_GEMINI_VOICE[voice] ?? "Sulafat";
+
+  const response = await fetch(
+    `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-tts:generateContent?key=${apiKey}`,
+    {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        contents: [{ parts: [{ text }] }],
+        generationConfig: {
+          responseModalities: ["AUDIO"],
+          speechConfig: {
+            voiceConfig: {
+              prebuiltVoiceConfig: { voiceName: geminiVoice },
+            },
+          },
+        },
+      }),
     },
-    body: JSON.stringify({
-      input: { text },
-      voice: { 
-        // Mapping OpenAI voices to Google Journey voices
-        languageCode: "en-US", 
-        name: voice === "nova" || voice === "shimmer" ? "en-US-Journey-F" : "en-US-Journey-D" 
-      },
-      audioConfig: { audioEncoding: "MP3" },
-    }),
-  });
+  );
 
   if (!response.ok) {
     const body = await response.text().catch(() => "");
-    throw new Error(`Gemini/Google TTS error ${response.status}: ${body}`);
+    throw new Error(`Gemini TTS error ${response.status}: ${body}`);
   }
 
   const data = await response.json();
-  if (!data.audioContent) {
-    throw new Error("No audio content returned from Gemini TTS");
+  const audioData = data.candidates?.[0]?.content?.parts?.[0]?.inlineData?.data;
+  if (!audioData) {
+    throw new Error("No audio data in Gemini TTS response");
   }
 
-  return Buffer.from(data.audioContent, "base64");
+  // Gemini outputs raw PCM (24kHz, 16-bit, mono) — wrap as WAV
+  const pcmBuffer = Buffer.from(audioData, "base64");
+  return pcmToWav(pcmBuffer, 24000, 16, 1);
 }
 
 // ── OpenAI TTS Provider ────────────────────────────────────────────────────
@@ -299,10 +354,24 @@ export async function generateTTS(request: TTSRequest): Promise<TTSResult> {
   }
 
   // 2. Define the exact fallback order: Gemini -> OpenAI -> Browser
-  // We ignore env flags for now to explicitly satisfy the requested chain.
-  const providers: Array<{ name: TTSProvider; generate: () => Promise<Buffer> }> = [
-    { name: "gemini", generate: () => generateGeminiTTS(request.text, voice) },
-    { name: "openai", generate: () => generateOpenAI(request.text, voice, request.speed) },
+  const providers: Array<{
+    name: TTSProvider;
+    generate: () => Promise<Buffer>;
+    contentType: "audio/mpeg" | "audio/wav";
+    mimeType: string;
+  }> = [
+    {
+      name: "gemini",
+      generate: () => generateGeminiTTS(request.text, voice),
+      contentType: "audio/wav",
+      mimeType: "audio/wav",
+    },
+    {
+      name: "openai",
+      generate: () => generateOpenAI(request.text, voice, request.speed),
+      contentType: "audio/mpeg",
+      mimeType: "audio/mpeg",
+    },
   ];
 
   // 3. Try each provider
@@ -313,7 +382,7 @@ export async function generateTTS(request: TTSRequest): Promise<TTSResult> {
       const audioBuffer = await provider.generate();
 
       // Cache the result
-      const publicUrl = await setCachedAudio(key, audioBuffer);
+      const publicUrl = await setCachedAudio(key, audioBuffer, provider.contentType);
 
       if (publicUrl) {
         return {
@@ -327,7 +396,7 @@ export async function generateTTS(request: TTSRequest): Promise<TTSResult> {
       // If cache write failed, return as base64 data URL
       const base64 = audioBuffer.toString("base64");
       return {
-        audioUrl: `data:audio/mpeg;base64,${base64}`,
+        audioUrl: `data:${provider.mimeType};base64,${base64}`,
         provider: provider.name,
         cached: false,
         durationEstimateMs: estimateDurationMs(request.text),

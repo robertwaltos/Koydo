@@ -27,7 +27,10 @@ if (process.env.OPENAI_MEDIA_API_KEY) {
   process.env.OPENAI_API_KEY = process.env.OPENAI_MEDIA_API_KEY;
 }
 
-const ALL_LOCALES = ["es", "fr", "de", "ar", "hi", "zh", "ja", "ko", "ru", "pl"];
+const ALL_LOCALES = [
+  "es", "fr", "de", "ar", "hi", "zh", "ja", "ko", "ru", "pl",
+  "pt", "it", "tr", "vi", "th", "id", "uk", "bn", "ur"
+];
 const locales = process.argv.slice(2);
 const targets = locales.length > 0 ? locales : ALL_LOCALES;
 

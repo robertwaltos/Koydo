@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const HouseholdManagement401Module: LearningModule = {
+export const household_management_401_Module: LearningModule = {
   "id": "household-management-401",
   "title": "Household Systems Leadership and Long-Term Resilience",
   "description": "Expert-level household management focused on governance, financial resilience, care logistics, legal readiness, and multi-year operating strategy for complex households.",
@@ -15,7 +15,7 @@ export const HouseholdManagement401Module: LearningModule = {
   ],
   "minAge": 16,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en"
@@ -40,36 +40,36 @@ export const HouseholdManagement401Module: LearningModule = {
           "id": "household-management-401-l01-c1",
           "kind": "concept",
           "title": "From Chores to Systems",
-          "content": "In advanced household management, we think of our regular chores and tasks as part of a larger system, similar to how a computer operates. This means instead of just remembering to do things as they come up, we create a structured approach. Governance in this context refers to understanding who makes decisions, who carries them out, and how we handle unexpected situations when things get tough. This helps everyone in the household know their roles and responsibilities, making it easier to work together.\nContext recap: In advanced household management, we think of our regular chores and tasks as part of a larger system, similar to how a computer operates. This means instead of just remembering to do things as they come up, we create a structured approach. Governance in this context refers to understanding who makes decisions, who carries them out, and how we handle unexpected situations when things get tough. This helps everyone in the household know their roles and responsibilities, making it easier to work together."
+          "content": "Advanced household management shifts from a reactive list of chores to a proactive, designed system. Think of your household like a well-run team or small business. Governance is the framework that defines who is responsible for what, how decisions are made, and how the team adapts to challenges. This structure reduces daily friction, clarifies expectations, and builds a foundation for long-term stability, especially under stress."
         },
         {
           "id": "household-management-401-l01-c2",
           "kind": "concept",
           "title": "Decision Rights and Escalation",
-          "content": "When it comes to important decisions like moving to a new place, spending a lot of money, changing caregiving arrangements, or switching schools, it's crucial to have clear rules about who gets to make those decisions and how to handle disagreements. Without clear guidelines, misunderstandings can lead to conflicts and slow down the decision-making process. Establishing these decision rights helps everyone feel more secure and ensures that actions can be taken promptly when needed.\nContext recap: When it comes to important decisions like moving to a new place, spending a lot of money, changing caregiving arrangements, or switching schools, it's crucial to have clear rules about who gets to make those decisions and how to handle disagreements. Without clear guidelines, misunderstandings can lead to conflicts and slow down the decision-making process. Establishing these decision rights helps everyone feel more secure and ensures that actions can be taken promptly when needed."
+          "content": "For major decisions—like a significant purchase, a change in caregiving, or a move—ambiguity is risky. Establishing clear decision rights defines who has the authority to approve, consult, or veto a choice. An escalation path is a pre-agreed process for handling disagreements or high-stakes issues, ensuring that conflicts are resolved constructively instead of causing gridlock during a crisis."
         },
         {
           "id": "household-management-401-l01-c3",
           "kind": "recap",
-          "title": "Review Cadence",
-          "content": "To maintain a well-functioning household, it's important to establish a routine for regular discussions and evaluations. This means having weekly meetings to talk about how things are going in the household, checking the budget and identifying any potential risks every month, and taking the time to reset and review goals every three months. By sticking to this regular schedule, families can catch any issues before they become bigger problems and avoid making hasty decisions during stressful times. This proactive approach helps everyone stay aligned and adapt to any changes that may come their way."
+          "title": "Establishing a Review Cadence",
+          "content": "A well-run system requires regular check-ins to stay on track. A strong operating cadence might include: weekly sync-ups for coordinating schedules and immediate tasks, monthly reviews for budgeting and risk monitoring, and quarterly resets for assessing progress against long-term goals. This rhythm turns planning into a routine habit, preventing crisis-mode decision-making and keeping the household aligned."
         }
       ],
       "flashcards": [
         {
           "id": "household-management-401-l01-f1",
-          "front": "Household governance",
-          "back": "Decision and accountability structure for household priorities, resources, and exceptions."
+          "front": "Household Governance",
+          "back": "The decision-making and accountability structure for a household's priorities, resources, and exceptions."
         },
         {
           "id": "household-management-401-l01-f2",
-          "front": "Decision rights",
-          "back": "Defined authority boundaries for who can approve, defer, or escalate major decisions."
+          "front": "Decision Rights",
+          "back": "Defined authority for who can approve, defer, or escalate major household decisions."
         },
         {
           "id": "household-management-401-l01-f3",
-          "front": "Operating cadence",
-          "back": "Recurring review rhythm that keeps plans current and coordinated."
+          "front": "Operating Cadence",
+          "back": "The recurring rhythm of meetings and reviews that keeps household plans current and coordinated."
         }
       ],
       "learningAids": [
@@ -77,7 +77,7 @@ export const HouseholdManagement401Module: LearningModule = {
           "id": "household-management-401-l01-a1",
           "type": "image",
           "title": "Household Operating Model Map",
-          "content": "Template mapping roles, decisions, escalation routes, and review rhythms."
+          "content": "A visual template for mapping household roles, key decisions, escalation paths for disagreements, and the schedule for review meetings."
         }
       ]
     },
@@ -90,14 +90,14 @@ export const HouseholdManagement401Module: LearningModule = {
         {
           "id": "household-management-401-l02-c1",
           "kind": "concept",
-          "title": "Risk Buckets",
-          "content": "To ensure a household can withstand challenges, it's important to have plans in place that cover various risks such as financial difficulties, health issues, housing problems, caregiving shortages, and technology failures. Relying on just one solution can make a household vulnerable. By diversifying how we prepare for these risks, we can build a stronger and more resilient household that can handle unexpected events more effectively.\nContext recap: To ensure a household can withstand challenges, it's important to have plans in place that cover various risks such as financial difficulties, health issues, housing problems, caregiving shortages, and technology failures. Relying on just one solution can make a household vulnerable. By diversifying how we prepare for these risks, we can build a stronger and more resilient household that can handle unexpected events more effectively."
+          "title": "Identifying Risk Buckets",
+          "content": "Resilient households anticipate challenges across several key areas, or 'risk buckets': financial shocks (job loss), health crises, housing instability, caregiving gaps, and infrastructure failures (utility outages). Relying on a single solution for all problems is fragile. Instead, building layered defenses for each risk bucket creates a robust system that can absorb unexpected shocks."
         },
         {
           "id": "household-management-401-l02-c2",
           "kind": "practice",
-          "title": "Control Design",
-          "content": "For each potential risk, it's essential to have a plan that includes a way to prevent the risk, a signal to detect when it happens, and a recovery strategy to follow afterward. This plan should specify who is responsible for each part, what triggers the plan to be activated, and what backup options are available. By having these controls in place, households can respond quickly and effectively when challenges arise.\nContext recap: For each potential risk, it's essential to have a plan that includes a way to prevent the risk, a signal to detect when it happens, and a recovery strategy to follow afterward. This plan should specify who is responsible for each part, what triggers the plan to be activated, and what backup options are available. By having these controls in place, households can respond quickly and effectively when challenges arise."
+          "title": "Designing Controls for Each Risk",
+          "content": "For each identified risk, a strong contingency plan has three parts: a preventative measure (what you do to avoid it), a detection signal (how you know it's happening), and a recovery playbook (your immediate steps to mitigate damage). This plan must specify an owner, a clear trigger for activation, and at least one backup option to ensure a swift and effective response."
         }
       ],
       "interactiveActivities": [
@@ -140,7 +140,7 @@ export const HouseholdManagement401Module: LearningModule = {
         "prompts": [
           "Which risk in your household has the highest impact if unmanaged?",
           "What trigger would force immediate escalation to all adults in the home?",
-          "Which control gives the best resilience per dollar of effort?"
+          "Which control gives the best resilience per dollar or hour of effort?"
         ]
       },
       "learningAids": [
@@ -148,7 +148,7 @@ export const HouseholdManagement401Module: LearningModule = {
           "id": "household-management-401-l02-a1",
           "type": "practice",
           "title": "Contingency Worksheet",
-          "content": "Template for risk owner, early warning indicator, fallback steps, and recovery target."
+          "content": "A template to define a risk, its owner, the early warning indicator, fallback steps, and the target for full recovery."
         }
       ]
     },
@@ -181,7 +181,7 @@ export const HouseholdManagement401Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Clarity of ownership and cadence is foundational to reliability under stress."
+          "explanation": "Clarity of ownership, decision rights, and a regular review cadence are foundational to reliability under stress."
         },
         {
           "id": "household-management-401-l03-q2",
@@ -206,11 +206,11 @@ export const HouseholdManagement401Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Triggers turn plans into timely action instead of debate during crises."
+          "explanation": "Triggers are pre-agreed signals that convert a plan into timely action, avoiding debate and delay during a crisis."
         },
         {
           "id": "household-management-401-l03-q3",
-          "text": "Most common failure pattern in household disruptions is:",
+          "text": "What is the most common failure pattern in household disruptions?",
           "skillId": "household-management-401-skill-incident",
           "options": [
             {
@@ -231,7 +231,7 @@ export const HouseholdManagement401Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Ambiguity causes response delay and increases downstream impact."
+          "explanation": "Ambiguity about who does what, and delays in making critical choices, are the primary drivers that escalate the impact of a disruption."
         },
         {
           "id": "household-management-401-l03-q4",
@@ -256,7 +256,7 @@ export const HouseholdManagement401Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Coverage across prevention, detection, and recovery improves end-to-end resilience."
+          "explanation": "A comprehensive plan addresses the full lifecycle of a risk: preventing it, detecting it early, and recovering from it effectively."
         }
       ],
       "learningAids": [
@@ -264,7 +264,7 @@ export const HouseholdManagement401Module: LearningModule = {
           "id": "household-management-401-l03-a1",
           "type": "mnemonic",
           "title": "RACE",
-          "content": "Roles, Alerts, Controls, Escalation."
+          "content": "Roles, Alerts, Controls, Escalation. The key elements of a strong response plan."
         }
       ]
     },
@@ -277,37 +277,37 @@ export const HouseholdManagement401Module: LearningModule = {
         {
           "id": "household-management-401-l04-c1",
           "kind": "concept",
-          "title": "Financial Resilience Stack",
-          "content": "Effective household financial planning is like building a strong foundation for your home. It involves coordinating several important elements to ensure that your household can handle unexpected situations. First, it's crucial to have savings set aside for emergencies, which acts as a safety net. Next, developing a smart strategy for managing any debt is essential, so you can pay it off without stress. Additionally, having the right insurance coverage protects you from financial losses due to accidents or unforeseen events. Finally, setting long-term financial goals helps guide your decisions and keeps you focused on the future. The best approach to financial planning will depend on how much uncertainty your household faces and how many people depend on it for support. By carefully structuring these financial aspects, households can build resilience and be better prepared for any changes that may come their way."
+          "title": "The Financial Resilience Stack",
+          "content": "A household's financial infrastructure is a layered defense against uncertainty. The base layer is a liquidity buffer (emergency savings) for immediate shocks. The next layer is insurance, which transfers catastrophic risk. Above that is a clear debt management strategy to control liabilities. Finally, long-term investment and savings plans provide for future goals. The strength of each layer depends on your household's specific risks and dependencies."
         },
         {
           "id": "household-management-401-l04-c2",
           "kind": "concept",
           "title": "Legal and Documentation Readiness",
-          "content": "Having the right documents prepared is crucial for every household. This means you should gather important information like who to contact in an emergency, forms that give permission for certain actions, clear instructions for managing important accounts, and legal papers that follow the rules of your area. When these documents are well-organized and of good quality, they can help your household bounce back faster from unexpected situations and lower the risk of disagreements when things get tough.\nContext recap: Having the right documents prepared is crucial for every household. This means you should gather important information like who to contact in an emergency, forms that give permission for certain actions, clear instructions for managing important accounts, and legal papers that follow the rules of your area. When these documents are well-organized and of good quality, they can help your household bounce back faster from unexpected situations and lower the risk of disagreements when things get tough."
+          "content": "In a crisis, access to the right information is critical. Legal and documentation readiness means having essential documents organized, accessible, and up-to-date. This includes wills, powers of attorney, advance healthcare directives, and a master document with emergency contacts, account access instructions, and key medical information. This preparation minimizes conflict and enables swift, authorized action when needed most."
         },
         {
           "id": "household-management-401-l04-c3",
           "kind": "recap",
-          "title": "Care Logistics",
-          "content": "When planning for care across generations, it's vital to create a schedule that includes backup options, clear communication about medical needs, and strategies to prevent caregiver burnout. This ensures that everyone involved in caregiving is supported and that the needs of all family members are met effectively. By planning ahead, families can create a more sustainable caregiving environment.\nContext recap: When planning for care across generations, it's vital to create a schedule that includes backup options, clear communication about medical needs, and strategies to prevent caregiver burnout. This ensures that everyone involved in caregiving is supported and that the needs of all family members are met effectively. By planning ahead, families can create a more sustainable caregiving environment."
+          "title": "Care Logistics and Continuity",
+          "content": "For households with dependents, care is a critical system. Robust care logistics include a master schedule with backup providers, clear protocols for medical information and medication, and strategies to prevent primary caregiver burnout. The goal is care continuity—the ability to maintain a high standard of care even if the primary caregiver is unavailable or during a household disruption."
         }
       ],
       "flashcards": [
         {
           "id": "household-management-401-l04-f1",
-          "front": "Liquidity buffer",
-          "back": "Accessible reserves for short-term disruptions without forced high-cost borrowing."
+          "front": "Liquidity Buffer",
+          "back": "Easily accessible cash reserves to cover essential expenses during a short-term disruption without forced borrowing or selling assets."
         },
         {
           "id": "household-management-401-l04-f2",
-          "front": "Care continuity",
-          "back": "Ability to sustain dependent care standards across disruptions or caregiver unavailability."
+          "front": "Care Continuity",
+          "back": "The ability to sustain dependent care standards across disruptions or the primary caregiver's unavailability."
         },
         {
           "id": "household-management-401-l04-f3",
-          "front": "Documentation readiness",
-          "back": "Maintained records and instructions required for fast, low-conflict response."
+          "front": "Documentation Readiness",
+          "back": "Maintaining organized, current records and instructions required for a fast, low-conflict response to an emergency."
         }
       ],
       "learningAids": [
@@ -315,7 +315,7 @@ export const HouseholdManagement401Module: LearningModule = {
           "id": "household-management-401-l04-a1",
           "type": "image",
           "title": "Resilience Stack Diagram",
-          "content": "Layered view of cash, insurance, legal, and care systems with dependencies."
+          "content": "A visual diagram showing how financial, legal, and care systems form a layered defense, with emergency cash at the base, followed by insurance, legal documents, and care plans."
         }
       ]
     },
@@ -328,14 +328,14 @@ export const HouseholdManagement401Module: LearningModule = {
         {
           "id": "household-management-401-l05-c1",
           "kind": "practice",
-          "title": "Case: Multi-Constraint Household",
-          "content": "Picture yourself as the leader of a household that encounters various challenges, such as fluctuating income, intricate school schedules, and limited availability of caregivers. Your mission is to develop a monthly operating plan that not only meets the essential needs of everyone in the household but also provides some room for adjustments in case of unforeseen circumstances. This plan should focus on prioritizing the most crucial aspects of your household's well-being, ensuring that everyone has what they need to thrive while also being prepared for any surprises that may come your way."
+          "title": "Case: The Multi-Constraint Household",
+          "content": "Your challenge is to lead a household with a variable income, complex school and activity schedules, and limited backup care options. Your task is to design a one-month operating plan that meets all non-negotiable needs (like bills and meals), protects your resilience buffers (like savings and caregiver rest), and identifies acceptable trade-offs if resources become constrained."
         },
         {
           "id": "household-management-401-l05-c2",
           "kind": "recap",
-          "title": "Quality Signals",
-          "content": "Strong household plans should include clear indicators that can be measured, assign responsibility for managing risks, maintain protective buffers, and establish specific triggers for when adjustments need to be made. By having these elements in place, households can respond effectively to changes and ensure that their plans remain relevant and effective over time.\nContext recap: Strong household plans should include clear indicators that can be measured, assign responsibility for managing risks, maintain protective buffers, and establish specific triggers for when adjustments need to be made. By having these elements in place, households can respond effectively to changes and ensure that their plans remain relevant and effective over time."
+          "title": "Elements of a Strong Operating Plan",
+          "content": "A high-quality household operating plan is more than a to-do list. It must include: measurable indicators to track stability (e.g., weekly budget variance), clear ownership for key risks, defined buffers to absorb shocks (e.g., a 'flex day' in the schedule), and specific triggers that prompt a plan review or activation of contingencies. These elements make the plan actionable and adaptable."
         }
       ],
       "interactiveActivities": [
@@ -358,7 +358,7 @@ export const HouseholdManagement401Module: LearningModule = {
           "id": "household-management-401-l05-act2",
           "type": "sorting_buckets",
           "title": "Indicator Classification",
-          "description": "Sort household signals by planning horizon.",
+          "description": "Sort household signals by their planning horizon.",
           "buckets": [
             "Early Warning",
             "Operational",
@@ -396,7 +396,13 @@ export const HouseholdManagement401Module: LearningModule = {
           "id": "household-management-401-l05-a1",
           "type": "practice",
           "title": "Household KPI Scorecard",
-          "content": "Template linking metric, threshold, owner, review cadence, and intervention playbook."
+          "content": "A template linking a key performance indicator (KPI), its target threshold, the owner, review cadence, and the intervention playbook to use if the metric goes off track."
+        },
+        {
+          "id": "household-management-401-l05-a2",
+          "type": "image",
+          "title": "Trade-Off Decision Matrix",
+          "content": "A simple 2x2 grid to help evaluate choices by mapping them against two critical criteria, such as 'Impact vs. Effort' or 'Cost vs. Urgency'."
         }
       ]
     },
@@ -408,7 +414,7 @@ export const HouseholdManagement401Module: LearningModule = {
       "questions": [
         {
           "id": "household-management-401-l06-q1",
-          "text": "Best reason to track both leading and lagging indicators in household planning?",
+          "text": "What is the best reason to track both leading and lagging indicators in household planning?",
           "skillId": "household-management-401-skill-analytics",
           "options": [
             {
@@ -429,7 +435,7 @@ export const HouseholdManagement401Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Combining both supports both prevention and accountability."
+          "explanation": "Leading indicators (like caregiver fatigue) predict future problems, allowing for proactive adjustments. Lagging indicators (like total debt) confirm long-term results."
         },
         {
           "id": "household-management-401-l06-q2",
@@ -454,11 +460,11 @@ export const HouseholdManagement401Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Threshold-based escalation reduces delay and confusion."
+          "explanation": "Using predefined triggers for escalation (e.g., 'emergency fund drops below one month's expenses') ensures a timely, decisive response instead of waiting too long."
         },
         {
           "id": "household-management-401-l06-q3",
-          "text": "Most defensible recommendation for a high-stress household is:",
+          "text": "What is the most defensible recommendation for a high-stress household?",
           "skillId": "household-management-401-skill-strategy",
           "options": [
             {
@@ -467,7 +473,7 @@ export const HouseholdManagement401Module: LearningModule = {
             },
             {
               "id": "b",
-              "text": "Use simple repeatable protocols with clear ownership"
+              "text": "Use simple, repeatable protocols with clear ownership"
             },
             {
               "id": "c",
@@ -479,11 +485,11 @@ export const HouseholdManagement401Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Simple, repeatable systems are more reliable under pressure."
+          "explanation": "Under pressure, cognitive load increases. Simple, clear, and repeatable systems are far more reliable than complex ones that depend on memory or improvisation."
         },
         {
           "id": "household-management-401-l06-q4",
-          "text": "Why include backup caregiver pathways in household operations?",
+          "text": "Why must household operations include backup caregiver pathways?",
           "skillId": "household-management-401-skill-care",
           "options": [
             {
@@ -504,7 +510,7 @@ export const HouseholdManagement401Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Redundancy in care pathways protects continuity and safety."
+          "explanation": "Relying on a single caregiver creates a critical vulnerability. Backup pathways provide redundancy, protecting the continuity and safety of care."
         },
         {
           "id": "household-management-401-l06-q5",
@@ -529,7 +535,7 @@ export const HouseholdManagement401Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Credibility comes from transparent assumptions and operational clarity."
+          "explanation": "Credibility is built on transparency and clarity. A strong proposal acknowledges reality (assumptions), defines success (outcomes), and assigns responsibility (accountability)."
         }
       ],
       "learningAids": [
@@ -537,7 +543,7 @@ export const HouseholdManagement401Module: LearningModule = {
           "id": "household-management-401-l06-a1",
           "type": "mnemonic",
           "title": "CLEAR",
-          "content": "Constraints, Levers, Evidence, Accountability, Review."
+          "content": "Constraints, Levers, Evidence, Accountability, Review. A checklist for a credible strategic plan."
         }
       ]
     },
@@ -551,20 +557,20 @@ export const HouseholdManagement401Module: LearningModule = {
           "id": "household-management-401-l07-c1",
           "kind": "practice",
           "title": "Capstone Brief",
-          "content": "For your final project, you will design a comprehensive one-year resilience plan tailored for a household that has several dependents and experiences fluctuations in income. This plan should clearly outline the governance model, which describes how decisions will be made within the household. Additionally, you will need to identify risk controls that will help manage potential challenges that may arise. It is important to include the financial and care infrastructure necessary to support the household's needs. Lastly, set specific milestones to track the execution of your plan throughout the year. This project will allow you to apply the knowledge and skills you have gained in household management in a real-world context, preparing you for future responsibilities. Remember, the goal is to create a sustainable and resilient household environment that can adapt to changes and challenges effectively."
+          "content": "Your final project is to create a one-year resilience plan for a complex household (multiple dependents, variable income). You will present this plan as a formal proposal to the household's key decision-makers (the 'board'). Your proposal must integrate all concepts from this module: a clear governance model, a prioritized risk control plan, a robust financial and care infrastructure, and a dashboard of key performance indicators to track progress."
         },
         {
           "id": "household-management-401-l07-c2",
           "kind": "recap",
           "title": "Assessment Criteria",
-          "content": "To ensure that your plans are of high quality, they should clearly define who has the authority to make decisions, include measurable key performance indicators (KPIs), present a realistic sequence of actions, and acknowledge where trade-offs may be necessary. This clarity will help in evaluating the effectiveness of the plans and ensuring that they can be successfully implemented.\nContext recap: To ensure that your plans are of high quality, they should clearly define who has the authority to make decisions, include measurable key performance indicators (KPIs), present a realistic sequence of actions, and acknowledge where trade-offs may be necessary. This clarity will help in evaluating the effectiveness of the plans and ensuring that they can be successfully implemented."
+          "content": "A successful proposal will be evaluated on its clarity, realism, and completeness. It must explicitly define decision rights, include measurable KPIs with targets, present a logical and achievable sequence of actions, and transparently acknowledge the key trade-offs being made. Your goal is to present a plan that is not just comprehensive, but also credible and actionable for the household."
         }
       ],
       "metadata": {
         "prompts": [
-          "Present top three risks and your control strategy for each.",
-          "Define one weekly and one monthly KPI for household stability.",
-          "State one deferred initiative and the trigger for reprioritization."
+          "Present your top three risks and the control strategy for each.",
+          "Define one weekly and one monthly KPI you will use to monitor household stability.",
+          "State one important initiative you are deferring and the trigger for its reprioritization."
         ]
       },
       "learningAids": [
@@ -572,7 +578,7 @@ export const HouseholdManagement401Module: LearningModule = {
           "id": "household-management-401-l07-a1",
           "type": "practice",
           "title": "Board Memo Template",
-          "content": "Template for objective, options, recommendation, KPI plan, and contingency controls."
+          "content": "A structured template for your final proposal, including sections for Objective, Options Considered, Recommendation, KPI Dashboard, and Contingency Controls."
         }
       ]
     }

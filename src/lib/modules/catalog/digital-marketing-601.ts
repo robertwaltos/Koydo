@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const DigitalMarketing601Module: LearningModule = {
+export const digital_marketing_601_Module: LearningModule = {
   "id": "digital-marketing-601",
   "title": "Digital Marketing Research and Leadership",
   "description": "Post-401 specialization in Digital Marketing, focused on business systems diagnostics, business operations and execution design, business impact and tradeoff analysis, and business governance and leadership through advanced casework, simulation, and defense-based checkpoints.",
@@ -14,7 +14,7 @@ export const DigitalMarketing601Module: LearningModule = {
   ],
   "minAge": 17,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en",
@@ -38,8 +38,8 @@ export const DigitalMarketing601Module: LearningModule = {
         {
           "id": "digital-marketing-601-l01-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Core Concepts Framework",
+          "content": "A diagram illustrating the three pillars of the course: Business Systems Diagnostics, Operations Design, and Impact Analysis."
         }
       ],
       "chunks": [
@@ -47,19 +47,19 @@ export const DigitalMarketing601Module: LearningModule = {
           "id": "digital-marketing-601-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "In this lesson, we will dive deep into the advanced boundaries of digital marketing. We will learn how to effectively diagnose business systems, which means understanding how different parts of a business work together. Additionally, we will focus on designing operations that can be executed successfully. By mastering these concepts, you will be able to identify both the limits and the exciting possibilities within digital marketing strategies. This knowledge is essential for ensuring that your business can operate not just efficiently, but also effectively in a competitive landscape.\nContext recap: In this lesson, we will dive deep into the advanced boundaries of digital marketing. We will learn how to effectively diagnose business systems, which means understanding how different parts of a business work together. Additionally, we will focus on designing operations that can be executed successfully. By mastering these concepts, you will be able to identify both the limits and the exciting possibilities within digital marketing strategies."
+          "content": "In this lesson, we'll explore the advanced principles of digital marketing. You will learn to diagnose complex business systems, understanding how all the pieces of a business—from marketing to sales to operations—interact. We will also focus on designing effective operational plans that can be executed reliably. Mastering these skills will enable you to define the scope of a marketing strategy and identify key opportunities for growth."
         },
         {
           "id": "digital-marketing-601-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different factors that can influence outcomes. Additionally, we will explore uncertainty ranges, which help us understand the limits of our predictions, and system dependencies, which show how different parts of a business rely on each other. This foundational knowledge is crucial for planning effective interventions in digital marketing.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different factors that can influence outcomes. Additionally, we will explore uncertainty ranges, which help us understand the limits of our predictions, and system dependencies, which show how different parts of a business rely on each other. This foundational knowledge is crucial for planning effective interventions in digital marketing."
+          "content": "Here, you will learn to map causal pathways to understand the cause-and-effect relationships in your marketing efforts. We will also define uncertainty ranges to acknowledge the limits of our predictions and identify system dependencies to see how different business units rely on one another. This knowledge is critical for planning effective and realistic marketing interventions."
         },
         {
           "id": "digital-marketing-601-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "In this recap, we emphasize the importance of ensuring that all claims made in digital marketing are supported by measurable indicators. This means that we need to establish confidence bounds, which help us understand how certain we are about our claims, and set up review checkpoints to evaluate our progress. This approach ensures that our marketing strategies are based on solid evidence.\nContext recap: In this recap, we emphasize the importance of ensuring that all claims made in digital marketing are supported by measurable indicators. This means that we need to establish confidence bounds, which help us understand how certain we are about our claims, and set up review checkpoints to evaluate our progress. This approach ensures that our marketing strategies are based on solid evidence."
+          "content": "This recap focuses on the importance of evidence. We will stress the need to support all claims with measurable data and establish confidence bounds to quantify our certainty. By implementing regular review checkpoints, you can ensure your marketing strategies are built on a solid, data-driven foundation."
         }
       ],
       "flashcards": [
@@ -91,6 +91,12 @@ export const DigitalMarketing601Module: LearningModule = {
           "type": "practice",
           "title": "Guided Practice",
           "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+        },
+        {
+          "id": "digital-marketing-601-l02-a2",
+          "type": "image",
+          "title": "Workflow with Control Gates",
+          "content": "A visual representation of a marketing workflow, highlighting key checkpoints, decision points (gates), and potential rollback loops."
         }
       ],
       "chunks": [
@@ -98,13 +104,13 @@ export const DigitalMarketing601Module: LearningModule = {
           "id": "digital-marketing-601-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "In this interactive practice, learners will have the opportunity to design specialized workflows that are tailored to specific digital marketing tasks. After creating these workflows, they will stress-test them by simulating adverse scenarios to see how well they hold up under pressure. This hands-on experience is vital for understanding how to create robust marketing strategies.\nContext recap: In this interactive practice, learners will have the opportunity to design specialized workflows that are tailored to specific digital marketing tasks. After creating these workflows, they will stress-test them by simulating adverse scenarios to see how well they hold up under pressure. This hands-on experience is vital for understanding how to create robust marketing strategies."
+          "content": "In this interactive lab, you will design specialized workflows for specific digital marketing tasks. You will then stress-test these workflows by simulating challenging scenarios, such as budget cuts or unexpected market shifts, to evaluate their resilience. This hands-on experience is essential for building robust and adaptable marketing strategies."
         },
         {
           "id": "digital-marketing-601-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "In this recap, we will discuss the architecture of control gates within workflows. These control gates are essential as they integrate checkpoints to monitor progress, rollback criteria to revert to previous states if needed, and threshold-based escalation to address issues as they arise. Understanding this architecture will help ensure that workflows remain effective and adaptable.\nContext recap: In this recap, we will discuss the architecture of control gates within workflows. These control gates are essential as they integrate checkpoints to monitor progress, rollback criteria to revert to previous states if needed, and threshold-based escalation to address issues as they arise. Understanding this architecture will help ensure that workflows remain effective and adaptable."
+          "content": "This recap covers the architecture of control gates within a workflow. These gates are critical checkpoints that allow you to monitor progress, trigger rollback procedures if results are poor, and use threshold-based alerts to escalate significant issues. A well-designed control gate system ensures your projects stay on track and are adaptable to change."
         }
       ],
       "interactiveActivities": [
@@ -142,16 +148,16 @@ export const DigitalMarketing601Module: LearningModule = {
       "learningAids": [
         {
           "id": "digital-marketing-601-l03-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "image",
+          "title": "Review: Key Methodologies",
+          "content": "A summary graphic of the core concepts from Lessons 1 and 2, including causal modeling, control gates, and evidence thresholds."
         }
       ],
       "questions": [
         {
           "id": "digital-marketing-601-l03-q1",
           "text": "Which practice most improves business systems diagnostics decision quality?",
-          "skillId": "digital-marketing-601-skill-core",
+          "skillId": "digital-marketing-601-skill-diagnostics",
           "options": [
             {
               "id": "a",
@@ -176,7 +182,7 @@ export const DigitalMarketing601Module: LearningModule = {
         {
           "id": "digital-marketing-601-l03-q2",
           "text": "At level 601, strong execution for business operations and execution design requires:",
-          "skillId": "digital-marketing-601-skill-execution",
+          "skillId": "digital-marketing-601-skill-execution-design",
           "options": [
             {
               "id": "a",
@@ -201,7 +207,7 @@ export const DigitalMarketing601Module: LearningModule = {
         {
           "id": "digital-marketing-601-l03-q3",
           "text": "A defensible approach to business impact and tradeoff analysis includes:",
-          "skillId": "digital-marketing-601-skill-eval",
+          "skillId": "digital-marketing-601-skill-impact-analysis",
           "options": [
             {
               "id": "a",
@@ -250,103 +256,103 @@ export const DigitalMarketing601Module: LearningModule = {
         },
         {
           "id": "digital-marketing-601-l03-q5",
-          "text": "What is the best way to compare competing interventions in advanced Business?",
-          "skillId": "digital-marketing-601-skill-advanced-5",
+          "text": "What is the primary purpose of a 'control gate' in an operational workflow?",
+          "skillId": "digital-marketing-601-skill-execution-design",
           "options": [
             {
               "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
+              "text": "To speed up the process by skipping steps"
             },
             {
               "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
+              "text": "To provide a formal checkpoint for quality and risk review"
             },
             {
               "id": "c",
-              "text": "Switch metrics after results arrive"
+              "text": "To eliminate the need for human oversight"
             },
             {
               "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
+              "text": "To document the initial plan only"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
+          "explanation": "Control gates are formal checkpoints designed to assess progress, manage risk, and ensure quality before proceeding."
         },
         {
           "id": "digital-marketing-601-l03-q6",
-          "text": "In high-stakes Digital Marketing Research and Leadership execution, which communication protocol is strongest?",
-          "skillId": "digital-marketing-601-skill-advanced-6",
+          "text": "When mapping causal pathways, why is it important to define uncertainty ranges?",
+          "skillId": "digital-marketing-601-skill-diagnostics",
           "options": [
             {
               "id": "a",
-              "text": "Broadcast conclusions without assumptions"
+              "text": "To guarantee a specific outcome"
             },
             {
               "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
+              "text": "To make the model appear more complex"
             },
             {
               "id": "c",
-              "text": "Share only final outcomes after completion"
+              "text": "To honestly represent the limits of predictability and potential variance in outcomes"
             },
             {
               "id": "d",
-              "text": "Limit updates to a single informal channel"
+              "text": "To eliminate all risks from the project"
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
+          "correctOptionId": "c",
+          "explanation": "Uncertainty ranges are crucial for setting realistic expectations and acknowledging that not all variables can be perfectly predicted."
         },
         {
           "id": "digital-marketing-601-l03-q7",
-          "text": "A mature remediation loop in advanced Business should prioritize:",
-          "skillId": "digital-marketing-601-skill-advanced-7",
+          "text": "Stress-testing a workflow is designed to assess its:",
+          "skillId": "digital-marketing-601-skill-execution-design",
           "options": [
             {
               "id": "a",
-              "text": "Blame assignment without system updates"
+              "text": "Cost-effectiveness under ideal conditions"
             },
             {
               "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
+              "text": "Popularity with the marketing team"
             },
             {
               "id": "c",
-              "text": "One-time fixes without retesting"
+              "text": "Resilience and reliability under adverse conditions"
             },
             {
               "id": "d",
-              "text": "Issue closure based on elapsed time"
+              "text": "Speed of completion"
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
+          "correctOptionId": "c",
+          "explanation": "Stress-testing simulates negative scenarios to identify weaknesses and ensure the system is resilient."
         },
         {
           "id": "digital-marketing-601-l03-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Digital Marketing Research and Leadership?",
-          "skillId": "digital-marketing-601-skill-advanced-8",
+          "text": "What does 'making assumptions explicit' achieve in business systems diagnostics?",
+          "skillId": "digital-marketing-601-skill-diagnostics",
           "options": [
             {
               "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
+              "text": "It complicates the analysis unnecessarily"
             },
             {
               "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
+              "text": "It makes the final recommendation transparent and allows for better critique and validation"
             },
             {
               "id": "c",
-              "text": "Ignore correlated failure modes"
+              "text": "It guarantees the project will be successful"
             },
             {
               "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
+              "text": "It is only necessary for junior analysts"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "explanation": "Stating assumptions clearly allows stakeholders to understand the foundation of your analysis and challenge it constructively."
         }
       ]
     },
@@ -359,8 +365,8 @@ export const DigitalMarketing601Module: LearningModule = {
         {
           "id": "digital-marketing-601-l04-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Tradeoff Analysis Matrix",
+          "content": "A sample matrix comparing two marketing strategies across multiple dimensions like cost, reach, risk, and ethical considerations."
         }
       ],
       "chunks": [
@@ -368,19 +374,19 @@ export const DigitalMarketing601Module: LearningModule = {
           "id": "digital-marketing-601-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "In this lesson, we will frame a case that highlights the competing constraints within business systems diagnostics. We will analyze the impacts of various business decisions and the trade-offs that must be considered. This understanding is crucial for making informed decisions that balance different business needs and objectives.\nContext recap: In this lesson, we will frame a case that highlights the competing constraints within business systems diagnostics. We will analyze the impacts of various business decisions and the trade-offs that must be considered. This understanding is crucial for making informed decisions that balance different business needs and objectives."
+          "content": "In this lesson, we will analyze a complex case study that presents competing business constraints. You will learn to diagnose the core challenges and evaluate the potential impact of different strategic decisions, focusing on the critical trade-offs between them. This is essential for making balanced decisions that serve multiple business objectives."
         },
         {
           "id": "digital-marketing-601-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "In this practice session, learners will compare different options available to them by examining various dimensions such as safety, reliability, cost, equity, and governance. This comparative analysis will help them understand the implications of their choices and how to make decisions that are not only effective but also responsible.\nContext recap: In this practice session, learners will compare different options available to them by examining various dimensions such as safety, reliability, cost, equity, and governance. This comparative analysis will help them understand the implications of their choices and how to make decisions that are not only effective but also responsible."
+          "content": "In this practice, you will frame the trade-offs presented in the case study. You will compare the available options across key dimensions such as cost, reliability, market reach, and governance requirements. This structured comparison will help you articulate the pros and cons of each path and justify your final recommendation."
         },
         {
           "id": "digital-marketing-601-l04-c3",
           "kind": "recap",
           "title": "Decision Memo Pattern",
-          "content": "In this recap, we will review the key components of a decision memo. Each recommendation made should include clear assumptions, supporting evidence, risk controls to mitigate potential issues, and fallback plans to ensure that there are alternatives if the initial plan does not work out. This structured approach is essential for effective decision-making in digital marketing.\nContext recap: In this recap, we will review the key components of a decision memo. Each recommendation made should include clear assumptions, supporting evidence, risk controls to mitigate potential issues, and fallback plans to ensure that there are alternatives if the initial plan does not work out. This structured approach is essential for effective decision-making in digital marketing."
+          "content": "This recap introduces a standard pattern for a decision memo. A strong recommendation must be built on four pillars: clearly stated assumptions, verifiable supporting evidence, defined risk controls to manage potential downsides, and a credible fallback plan in case the primary strategy fails."
         }
       ]
     },
@@ -395,6 +401,12 @@ export const DigitalMarketing601Module: LearningModule = {
           "type": "practice",
           "title": "Guided Practice",
           "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+        },
+        {
+          "id": "digital-marketing-601-l05-a2",
+          "type": "image",
+          "title": "Simulation Dashboard",
+          "content": "An example of an interactive dashboard with levers for budget allocation, channel mix, and risk management, alongside real-time performance metrics."
         }
       ],
       "chunks": [
@@ -402,13 +414,13 @@ export const DigitalMarketing601Module: LearningModule = {
           "id": "digital-marketing-601-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "In this interactive practice, learners will operate scenario controls, which are tools that help manage different situations in digital marketing. They will learn how to balance performance goals with governance constraints, ensuring that their marketing efforts are both effective and compliant with regulations.\nContext recap: In this interactive practice, learners will operate scenario controls, which are tools that help manage different situations in digital marketing. They will learn how to balance performance goals with governance constraints, ensuring that their marketing efforts are both effective and compliant with regulations."
+          "content": "In this live simulation, you will take control of a digital marketing campaign under dynamic conditions. Your task is to operate the scenario controls, making real-time decisions to balance performance targets with governance constraints. This will test your ability to adapt your strategy under pressure."
         },
         {
           "id": "digital-marketing-601-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "In this recap, we will discuss the importance of effective responses in digital marketing. These responses should be designed to update control gates without losing traceability or accountability. This means that as changes are made, it is crucial to keep track of what has been done and ensure that responsibilities are clear.\nContext recap: In this recap, we will discuss the importance of effective responses in digital marketing. These responses should be designed to update control gates without losing traceability or accountability. This means that as changes are made, it is crucial to keep track of what has been done and ensure that responsibilities are clear."
+          "content": "This recap focuses on designing adaptive responses. In a live environment, you must be able to adjust your strategy and update control gates quickly. We will discuss how to do this while maintaining clear traceability and accountability for every decision made."
         }
       ],
       "interactiveActivities": [
@@ -428,16 +440,16 @@ export const DigitalMarketing601Module: LearningModule = {
       "learningAids": [
         {
           "id": "digital-marketing-601-l06-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "image",
+          "title": "Review: Case & Simulation Concepts",
+          "content": "A summary graphic of key concepts from Lessons 4 and 5, including tradeoff framing, decision memo structure, and adaptive response."
         }
       ],
       "questions": [
         {
           "id": "digital-marketing-601-l06-q1",
           "text": "In advanced casework, the first requirement for defensible recommendations is:",
-          "skillId": "digital-marketing-601-skill-case1",
+          "skillId": "digital-marketing-601-skill-case-analysis",
           "options": [
             {
               "id": "a",
@@ -462,7 +474,7 @@ export const DigitalMarketing601Module: LearningModule = {
         {
           "id": "digital-marketing-601-l06-q2",
           "text": "A resilient strategy for business operations and execution design should include:",
-          "skillId": "digital-marketing-601-skill-case2",
+          "skillId": "digital-marketing-601-skill-execution-design",
           "options": [
             {
               "id": "a",
@@ -487,7 +499,7 @@ export const DigitalMarketing601Module: LearningModule = {
         {
           "id": "digital-marketing-601-l06-q3",
           "text": "When evaluating business impact and tradeoff analysis, which method is most rigorous?",
-          "skillId": "digital-marketing-601-skill-case3",
+          "skillId": "digital-marketing-601-skill-impact-analysis",
           "options": [
             {
               "id": "a",
@@ -512,7 +524,7 @@ export const DigitalMarketing601Module: LearningModule = {
         {
           "id": "digital-marketing-601-l06-q4",
           "text": "Advanced governance is strongest when it:",
-          "skillId": "digital-marketing-601-skill-case4",
+          "skillId": "digital-marketing-601-skill-governance",
           "options": [
             {
               "id": "a",
@@ -536,103 +548,103 @@ export const DigitalMarketing601Module: LearningModule = {
         },
         {
           "id": "digital-marketing-601-l06-q5",
-          "text": "What is the best way to compare competing interventions in advanced Business?",
-          "skillId": "digital-marketing-601-skill-advanced-5",
+          "text": "In a case study with multiple competing options, what is the most effective way to frame the decision?",
+          "skillId": "digital-marketing-601-skill-case-analysis",
           "options": [
             {
               "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
+              "text": "Choose the cheapest option"
             },
             {
               "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
+              "text": "Analyze each option against a common set of criteria, including trade-offs and risks"
             },
             {
               "id": "c",
-              "text": "Switch metrics after results arrive"
+              "text": "Pick the option favored by the senior-most person"
             },
             {
               "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
+              "text": "Focus only on the potential upside of each option"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
+          "explanation": "A structured, multi-criteria analysis ensures a balanced and defensible decision by explicitly considering trade-offs."
         },
         {
           "id": "digital-marketing-601-l06-q6",
-          "text": "In high-stakes Digital Marketing Research and Leadership execution, which communication protocol is strongest?",
-          "skillId": "digital-marketing-601-skill-advanced-6",
+          "text": "During a live simulation, you notice a key performance indicator is trending negatively. What is the best example of an 'adaptive response'?",
+          "skillId": "digital-marketing-601-skill-simulation",
           "options": [
             {
               "id": "a",
-              "text": "Broadcast conclusions without assumptions"
+              "text": "Ignoring the data and hoping it improves"
             },
             {
               "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
+              "text": "Pausing the campaign to conduct a multi-week analysis"
             },
             {
               "id": "c",
-              "text": "Share only final outcomes after completion"
+              "text": "Making a measured adjustment to a campaign variable and monitoring the immediate impact"
             },
             {
               "id": "d",
-              "text": "Limit updates to a single informal channel"
+              "text": "Cancelling the entire project immediately"
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
+          "correctOptionId": "c",
+          "explanation": "An adaptive response is a timely, measured adjustment based on incoming data, designed to correct course without overreacting."
         },
         {
           "id": "digital-marketing-601-l06-q7",
-          "text": "A mature remediation loop in advanced Business should prioritize:",
-          "skillId": "digital-marketing-601-skill-advanced-7",
+          "text": "A strong decision memo accompanying a case study recommendation should always include:",
+          "skillId": "digital-marketing-601-skill-case-analysis",
           "options": [
             {
               "id": "a",
-              "text": "Blame assignment without system updates"
+              "text": "A guarantee of success"
             },
             {
               "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
+              "text": "A detailed list of assumptions and a fallback plan"
             },
             {
               "id": "c",
-              "text": "One-time fixes without retesting"
+              "text": "Only the positive aspects of the recommendation"
             },
             {
               "id": "d",
-              "text": "Issue closure based on elapsed time"
+              "text": "Vague, high-level goals"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
+          "explanation": "Acknowledging assumptions and having a fallback plan are hallmarks of a robust, professional recommendation."
         },
         {
           "id": "digital-marketing-601-l06-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Digital Marketing Research and Leadership?",
-          "skillId": "digital-marketing-601-skill-advanced-8",
+          "text": "When analyzing a business case, 'stakeholder impact analysis' refers to:",
+          "skillId": "digital-marketing-601-skill-impact-analysis",
           "options": [
             {
               "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
+              "text": "Calculating the financial cost of the project"
             },
             {
               "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
+              "text": "Understanding how the decision will affect various groups, such as customers, employees, and the public"
             },
             {
               "id": "c",
-              "text": "Ignore correlated failure modes"
+              "text": "A survey of the project team's opinions"
             },
             {
               "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
+              "text": "The marketing message for the final product"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "explanation": "Stakeholder analysis is a critical part of responsible decision-making, ensuring the broader impacts of a decision are considered."
         }
       ]
     },
@@ -645,8 +657,8 @@ export const DigitalMarketing601Module: LearningModule = {
         {
           "id": "digital-marketing-601-l07-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Stakeholder Impact Map",
+          "content": "A diagram mapping different stakeholder groups (e.g., customers, employees, regulators, community) and the potential positive and negative impacts of a marketing campaign on each."
         }
       ],
       "chunks": [
@@ -654,19 +666,19 @@ export const DigitalMarketing601Module: LearningModule = {
           "id": "digital-marketing-601-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "In this lesson, learners will map out how benefits, burdens, and delayed effects are distributed among different stakeholder groups. Understanding these impacts is vital for ensuring that all voices are considered in the decision-making process, leading to more equitable outcomes in digital marketing.\nContext recap: In this lesson, learners will map out how benefits, burdens, and delayed effects are distributed among different stakeholder groups. Understanding these impacts is vital for ensuring that all voices are considered in the decision-making process, leading to more equitable outcomes in digital marketing."
+          "content": "In this lesson, you will learn to map the distribution of impacts from a marketing initiative. This involves identifying how benefits, costs, and risks are spread across different stakeholder groups, both immediately and in the long term. This analysis is crucial for making ethically sound and sustainable business decisions."
         },
         {
           "id": "digital-marketing-601-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "In this lesson, we will explore the architecture of accountability in decision-making. This includes ensuring that there is traceability for decisions made, rights for reviews, and obligations for remediation if issues arise. Integrating these elements is crucial for maintaining trust and integrity in digital marketing practices.\nContext recap: In this lesson, we will explore the architecture of accountability in decision-making. This includes ensuring that there is traceability for decisions made, rights for reviews, and obligations for remediation if issues arise. Integrating these elements is crucial for maintaining trust and integrity in digital marketing practices."
+          "content": "Here, we will examine the architecture of accountability. A robust system ensures that every major decision is traceable to its owner and rationale. It also establishes clear rights for stakeholders to request reviews and defines the organization's obligation to remediate any negative consequences, building trust and integrity."
         },
         {
           "id": "digital-marketing-601-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "At the end of our lesson, we will create a helpful checklist that connects important outcomes with ethical considerations, ensures we follow the right policies, and builds resilience in our digital marketing strategies. This checklist will guide us in making responsible decisions.\nContext recap: At the end of our lesson, we will create a helpful checklist that connects important outcomes with ethical considerations, ensures we follow the right policies, and builds resilience in our digital marketing strategies. This checklist will guide us in making responsible decisions."
+          "content": "This recap provides a practical checklist for responsible leadership. This tool will help you connect business outcomes to ethical guidelines, ensure compliance with relevant policies, and build long-term resilience into your strategies. It serves as a guide for making decisions that are not just profitable, but also principled."
         }
       ],
       "flashcards": [
@@ -698,6 +710,12 @@ export const DigitalMarketing601Module: LearningModule = {
           "type": "practice",
           "title": "Guided Practice",
           "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+        },
+        {
+          "id": "digital-marketing-601-l08-a2",
+          "type": "image",
+          "title": "Capstone Defense Structure",
+          "content": "A presentation slide template outlining the key sections of a capstone defense: Problem Statement, Analysis, Recommendation, Evidence, Risk Mitigation, and Conclusion."
         }
       ],
       "chunks": [
@@ -705,13 +723,13 @@ export const DigitalMarketing601Module: LearningModule = {
           "id": "digital-marketing-601-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "In this activity, you will work on putting together a detailed brief. This brief will include your main claims, the evidence that supports them, the uncertainties you might face, and the pathways for addressing any challenges that arise. This practice will help you communicate your ideas clearly and effectively.\nContext recap: In this activity, you will work on putting together a detailed brief. This brief will include your main claims, the evidence that supports them, the uncertainties you might face, and the pathways for addressing any challenges that arise. This practice will help you communicate your ideas clearly and effectively."
+          "content": "In this capstone lab, you will assemble a comprehensive defense brief for your final recommendation. This document will articulate your core claims, present the supporting evidence, acknowledge uncertainties and potential risks, and outline clear escalation pathways for addressing challenges. This is the foundation of a persuasive, professional argument."
         },
         {
           "id": "digital-marketing-601-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "During this session, you will practice responding to various critiques from experts. These critiques will cover technical aspects, governance issues, and the perspectives of different stakeholders. This rehearsal will prepare you to confidently defend your ideas and handle questions during your presentation.\nContext recap: During this session, you will practice responding to various critiques from experts. These critiques will cover technical aspects, governance issues, and the perspectives of different stakeholders. This rehearsal will prepare you to confidently defend your ideas and handle questions during your presentation."
+          "content": "In this final rehearsal, you will practice defending your recommendation against critiques from an expert panel. You will field challenging questions related to your technical analysis, governance plan, and stakeholder considerations. This will prepare you to confidently and effectively communicate your strategic vision."
         }
       ],
       "interactiveActivities": [

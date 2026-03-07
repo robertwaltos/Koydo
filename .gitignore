@@ -35,6 +35,7 @@
 
 # Service account keys / secrets (NEVER commit)
 koydo-*.json
+!src/tenants/**/theme/koydo-*.theme.json
 *-service-account*.json
 
 # Build output artifacts

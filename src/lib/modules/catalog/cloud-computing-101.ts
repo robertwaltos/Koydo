@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const CloudComputing101Module: LearningModule = {
+export const cloud_computing_101_Module: LearningModule = {
   "id": "cloud-computing-101",
   "title": "Cloud Computing Foundations",
   "description": "A comprehensive introduction to cloud computing covering infrastructure service models (IaaS, PaaS, SaaS), deployment strategies (public, private, hybrid), virtualization and container technologies, core cloud services including compute, storage, and networking, security best practices with IAM and zero-trust architectures, serverless and microservices patterns, and modern DevOps workflows with CI/CD pipelines and Infrastructure as Code.",
@@ -14,7 +14,7 @@ export const CloudComputing101Module: LearningModule = {
   ],
   "minAge": 16,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "beginner",
   "localeSupport": [
     "en"
@@ -35,6 +35,8 @@ export const CloudComputing101Module: LearningModule = {
       "title": "Cloud Computing Models",
       "type": "video",
       "duration": 12,
+      "lessonImagePrompt": "A futuristic, glowing 3D isometric diagram showing three distinct layers of cloud computing (IaaS, PaaS, SaaS) with miniature servers, code blocks, and application icons, rendered in a clean, modern tech aesthetic.",
+      "conceptVideoPrompt": "A sleek 3D animation zooming into a glowing data center, transitioning into abstract floating layers representing Infrastructure, Platform, and Software as a Service, with glowing data streams connecting them.",
       "objectives": [
         "Define IaaS, PaaS, and SaaS with real-world examples",
         "Compare public, private, and hybrid cloud deployments",
@@ -95,13 +97,16 @@ export const CloudComputing101Module: LearningModule = {
           "title": "Elasticity in Action",
           "content": "Animation showing auto-scaling adding instances during a traffic spike and removing them as demand subsides."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/cloud-computing-101-l01.png"
     },
     {
       "id": "cloud-computing-101-l02",
       "title": "Virtualization and Containers",
       "type": "interactive",
       "duration": 14,
+      "lessonImagePrompt": "A high-tech visual comparison showing a heavy, solid metallic cube representing a Virtual Machine next to a stack of lightweight, glowing translucent shipping containers representing Docker containers, set against a dark cyber background.",
+      "conceptVideoPrompt": "A dynamic 3D animation showing a large physical server splitting into multiple virtual machines, then transforming into dozens of lightweight, glowing containers that rapidly organize themselves into a structured grid representing Kubernetes orchestration.",
       "objectives": [
         "Describe how hypervisors create and manage virtual machines",
         "Compare VMs and containers in terms of isolation and performance",
@@ -205,13 +210,16 @@ export const CloudComputing101Module: LearningModule = {
           "title": "Hands-On Sorting",
           "content": "Classify VM and container characteristics to reinforce the architectural differences between full virtualization and OS-level containerization."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/cloud-computing-101-l02.png"
     },
     {
       "id": "cloud-computing-101-l03",
       "title": "Cloud Models Checkpoint",
       "type": "quiz",
       "duration": 8,
+      "lessonImagePrompt": "A stylized, glowing digital checkpoint gate in a futuristic cyber landscape, with floating holographic checkmarks and cloud icons.",
+      "conceptVideoPrompt": "A fast-paced, engaging motion graphics sequence showing a glowing progress bar filling up, with quick flashes of cloud computing icons like servers, containers, and databases locking into place.",
       "quizBlueprint": {
         "totalQuestions": 4,
         "timeLimitMinutes": 8,
@@ -339,13 +347,16 @@ export const CloudComputing101Module: LearningModule = {
           "title": "Service Model Ladder",
           "content": "Remember IaaS → PaaS → SaaS as climbing a ladder: each step up means the provider manages more and you manage less."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/cloud-computing-101-l03.png"
     },
     {
       "id": "cloud-computing-101-l04",
       "title": "Core Cloud Services",
       "type": "video",
       "duration": 12,
+      "lessonImagePrompt": "An isometric 3D illustration of a futuristic digital city where buildings represent different cloud services: glowing CPU towers for compute, massive glowing silos for storage, and interconnected neon highways for networking.",
+      "conceptVideoPrompt": "A smooth fly-through animation of a digital network, showing data packets traveling along glowing pathways, entering processing nodes (compute), and being stored in organized, glowing hexagonal vaults (storage).",
       "objectives": [
         "Describe compute instances and their sizing strategies",
         "Differentiate object storage, block storage, and managed databases",
@@ -406,13 +417,16 @@ export const CloudComputing101Module: LearningModule = {
           "title": "Load Balancer Traffic Flow",
           "content": "Animation illustrating how an ALB routes requests to healthy targets using round-robin and health checks."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/cloud-computing-101-l04.png"
     },
     {
       "id": "cloud-computing-101-l05",
       "title": "Cloud Security and IAM",
       "type": "interactive",
       "duration": 14,
+      "lessonImagePrompt": "A highly detailed, futuristic glowing padlock hovering over a digital cloud, with intricate neon geometric patterns and a glowing shield representing zero-trust security.",
+      "conceptVideoPrompt": "An abstract cyber animation showing a glowing data stream being intercepted by a high-tech security gate, scanning a digital ID card (IAM), and then encrypting the data stream into an unreadable, glowing cipher as it moves forward.",
       "objectives": [
         "Explain the shared responsibility model between provider and customer",
         "Configure IAM policies using least-privilege principles",
@@ -504,13 +518,16 @@ export const CloudComputing101Module: LearningModule = {
           "title": "Security Matching Exercise",
           "content": "Match cloud security terms with their definitions to reinforce understanding of IAM, encryption, and zero-trust principles."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/cloud-computing-101-l05.png"
     },
     {
       "id": "cloud-computing-101-l06",
       "title": "Services & Security Checkpoint",
       "type": "quiz",
       "duration": 8,
+      "lessonImagePrompt": "A sleek, modern holographic display showing a glowing shield and a cloud icon, with a futuristic progress ring completing a cycle.",
+      "conceptVideoPrompt": "A dynamic motion graphics loop showing a glowing shield locking into place over a cloud server, followed by a burst of digital confetti and a checkmark.",
       "quizBlueprint": {
         "totalQuestions": 4,
         "timeLimitMinutes": 8,
@@ -638,13 +655,16 @@ export const CloudComputing101Module: LearningModule = {
           "title": "Shared Responsibility Shortcut",
           "content": "Think 'Provider = OF the cloud (hardware, network, hypervisor), Customer = IN the cloud (data, identity, app code, OS in IaaS).'"
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/cloud-computing-101-l06.png"
     },
     {
       "id": "cloud-computing-101-l07",
       "title": "Serverless and Microservices",
       "type": "video",
       "duration": 12,
+      "lessonImagePrompt": "A futuristic, abstract representation of serverless computing, featuring floating, glowing nodes of code connecting and disconnecting dynamically in a dark, neon-lit digital space.",
+      "conceptVideoPrompt": "A fast-paced 3D animation showing a monolithic block of code shattering into dozens of small, glowing orbs (microservices) that independently process data streams and communicate via glowing laser threads (service mesh).",
       "objectives": [
         "Define Functions-as-a-Service and event-driven architecture patterns",
         "Describe how API gateways and service meshes route traffic in microservice systems",
@@ -705,13 +725,16 @@ export const CloudComputing101Module: LearningModule = {
           "title": "Service Mesh Sidecar",
           "content": "Animation showing sidecar proxies intercepting traffic between microservices to apply mTLS, retries, and circuit breaking transparently."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/cloud-computing-101-l07.png"
     },
     {
       "id": "cloud-computing-101-l08",
       "title": "DevOps and CI/CD",
       "type": "interactive",
       "duration": 14,
+      "lessonImagePrompt": "A glowing, infinite loop symbol (infinity) made of neon light, representing the DevOps lifecycle, with miniature icons for coding, testing, and deploying floating along the track.",
+      "conceptVideoPrompt": "A continuous, smooth animation of a digital assembly line where blocks of code are scanned by lasers (testing), assembled into a glowing package, and launched into a digital cloud (deployment).",
       "objectives": [
         "Outline continuous integration and continuous deployment pipeline stages",
         "Compare Infrastructure as Code tools like Terraform and CloudFormation",
@@ -815,13 +838,16 @@ export const CloudComputing101Module: LearningModule = {
           "title": "Pipeline Sorting",
           "content": "Classify DevOps activities into CI or CD phases to reinforce understanding of automation stages in the software delivery lifecycle."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/cloud-computing-101-l08.png"
     },
     {
       "id": "cloud-computing-101-l09",
       "title": "Serverless & DevOps Checkpoint",
       "type": "quiz",
       "duration": 8,
+      "lessonImagePrompt": "A futuristic digital dashboard with glowing green checkmarks, a stylized infinity loop, and floating serverless function icons.",
+      "conceptVideoPrompt": "A sleek motion graphics sequence showing an automated pipeline successfully delivering a glowing data packet, ending with a bright, satisfying checkmark.",
       "quizBlueprint": {
         "totalQuestions": 4,
         "timeLimitMinutes": 8,
@@ -949,13 +975,16 @@ export const CloudComputing101Module: LearningModule = {
           "title": "SRE Budget Rule",
           "content": "Error budget = 100% − SLO. When the budget hits zero, reliability trumps features. Think of it as a 'reliability savings account' that depletes with each incident."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/cloud-computing-101-l09.png"
     },
     {
       "id": "cloud-computing-101-l10",
       "title": "Mastery Quiz: Cloud Computing",
       "type": "quiz",
       "duration": 10,
+      "lessonImagePrompt": "A grand, futuristic glowing trophy or badge hovering in a high-tech digital arena, surrounded by floating cloud computing icons and neon lights.",
+      "conceptVideoPrompt": "An epic, sweeping 3D camera move around a massive, glowing digital brain or core, representing complete mastery of cloud computing, with all previous concepts (servers, containers, shields) orbiting it.",
       "quizBlueprint": {
         "totalQuestions": 4,
         "timeLimitMinutes": 10,
@@ -1083,7 +1112,8 @@ export const CloudComputing101Module: LearningModule = {
           "title": "Cloud Mastery Pillars",
           "content": "Remember the four pillars: Models (IaaS/PaaS/SaaS), Infrastructure (compute/storage/network), Security (IAM/encryption/zero-trust), and Operations (CI/CD/IaC/SRE)."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/cloud-computing-101-l10.png"
     }
   ]
 };

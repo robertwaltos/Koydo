@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const Neuroscience601Module: LearningModule = {
+export const neuroscience_601_Module: LearningModule = {
   "id": "neuroscience-601",
   "title": "Neuroscience Research and Leadership",
   "description": "Post-401 specialization in Neuroscience, focused on neural systems and circuit modeling, cognition-behavior experiment design, clinical-neuro translational reasoning, and neuroethics and societal impact governance through advanced casework, simulation, and defense-based checkpoints.",
@@ -14,7 +14,7 @@ export const Neuroscience601Module: LearningModule = {
   ],
   "minAge": 17,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en",
@@ -38,8 +38,8 @@ export const Neuroscience601Module: LearningModule = {
         {
           "id": "neuroscience-601-l01-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "The Research Cycle in Advanced Neuroscience",
+          "content": "A diagram showing the iterative process: defining boundaries, modeling causality, setting evidence thresholds, and validating recommendations."
         }
       ],
       "chunks": [
@@ -47,36 +47,36 @@ export const Neuroscience601Module: LearningModule = {
           "id": "neuroscience-601-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "In this lesson, we will dive deep into the fascinating world of Neuroscience by examining its advanced boundaries. We will learn about the intricate workings of neural systems, which are the networks of neurons that communicate with each other. Additionally, we will discover how to create models of these neural circuits, which help us visualize and understand their functions. Furthermore, we will design experiments that explore the relationship between cognition—how we think and learn—and behavior—how we act. By the end of this lesson, you will have a better understanding of the complexities of our brain's operations and how they shape our everyday actions.\nContext recap: In this lesson, we will dive deep into the fascinating world of Neuroscience by examining its advanced boundaries. We will learn about the intricate workings of neural systems, which are the networks of neurons that communicate with each other. Additionally, we will discover how to create models of these neural circuits, which help us visualize and understand their functions. Furthermore, we will design experiments that explore the relationship between cognition—how we think and learn—and behavior—how we act."
+          "content": "Explore the advanced frontiers of neuroscience by examining the intricate workings of neural systems—the vast networks of communicating neurons. Learn to construct models of these neural circuits to visualize and understand their function, and design experiments to probe the relationship between cognition (thought) and behavior (action)."
         },
         {
           "id": "neuroscience-601-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "In this part of the lesson, learners will learn how to identify and map out causal pathways, which are the connections between different factors that can lead to certain outcomes. They will also explore uncertainty ranges, which help us understand the limits of our knowledge, and system dependencies, which show how different parts of a system rely on each other. This foundational knowledge is crucial for planning effective interventions.\nContext recap: In this part of the lesson, learners will learn how to identify and map out causal pathways, which are the connections between different factors that can lead to certain outcomes. They will also explore uncertainty ranges, which help us understand the limits of our knowledge, and system dependencies, which show how different parts of a system rely on each other. This foundational knowledge is crucial for planning effective interventions."
+          "content": "Identify and map causal pathways that connect different factors to specific outcomes. This involves understanding system dependencies—how different parts of a system rely on each other—and defining uncertainty ranges to acknowledge the limits of current knowledge. This foundation is crucial for planning effective and responsible interventions."
         },
         {
           "id": "neuroscience-601-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "In this recap, we emphasize that all claims made in our research must be linked to measurable indicators. This means we need to have clear evidence that supports our statements. Additionally, we will discuss the importance of confidence bounds, which help us understand how certain we are about our findings, and review checkpoints that ensure our research stays on track.\nContext recap: In this recap, we emphasize that all claims made in our research must be linked to measurable indicators. This means we need to have clear evidence that supports our statements. Additionally, we will discuss the importance of confidence bounds, which help us understand how certain we are about our findings, and review checkpoints that ensure our research stays on track."
+          "content": "All scientific claims must be linked to measurable indicators and supported by clear evidence. This recap covers the importance of defining confidence bounds to express the certainty of findings and establishing review checkpoints to ensure research integrity and progress."
         }
       ],
       "flashcards": [
         {
           "id": "neuroscience-601-l01-f1",
           "front": "Neural Systems And Circuit Modeling",
-          "back": "A specialization axis requiring explicit assumptions and measurable constraints."
+          "back": "A method for representing brain circuits that requires clearly stated assumptions and measurable limits to ensure accuracy and testability."
         },
         {
           "id": "neuroscience-601-l01-f2",
           "front": "Cognition-Behavior Experiment Design",
-          "back": "Execution architecture that determines reliability under stress."
+          "back": "The process of creating a structured experiment that can reliably test hypotheses about the relationship between thought and action, especially under stress."
         },
         {
           "id": "neuroscience-601-l01-f3",
           "front": "Clinical-Neuro Translational Reasoning",
-          "back": "Evaluation discipline for identifying true gains and hidden costs."
+          "back": "The discipline of applying neuroscience findings to clinical settings, rigorously evaluating both the potential benefits and hidden costs of new interventions."
         }
       ]
     },
@@ -88,9 +88,9 @@ export const Neuroscience601Module: LearningModule = {
       "learningAids": [
         {
           "id": "neuroscience-601-l02-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "image",
+          "title": "Workflow with Control Gates",
+          "content": "A flowchart of an experimental workflow, highlighting key checkpoints, decision points (thresholds), and potential rollback loops."
         }
       ],
       "chunks": [
@@ -98,13 +98,13 @@ export const Neuroscience601Module: LearningModule = {
           "id": "neuroscience-601-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "In this interactive session, learners will have the opportunity to design specialized workflows that are tailored to specific tasks in neuroscience. They will also conduct stress tests on these workflows, simulating challenging scenarios to see how well their designs hold up under pressure. This hands-on practice is essential for developing robust methods in scientific research.\nContext recap: In this interactive session, learners will have the opportunity to design specialized workflows that are tailored to specific tasks in neuroscience. They will also conduct stress tests on these workflows, simulating challenging scenarios to see how well their designs hold up under pressure. This hands-on practice is essential for developing robust methods in scientific research."
+          "content": "In this interactive lab, design a specialized research workflow tailored to a specific neuroscience challenge. Then, conduct a stress test by simulating adverse conditions to evaluate how well the design holds up under pressure and identify potential points of failure."
         },
         {
           "id": "neuroscience-601-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "In this recap, we will review how our workflows should include important features such as checkpoints, which allow us to monitor progress, rollback criteria that let us revert to previous states if needed, and threshold-based escalation, which helps us decide when to take further action based on specific criteria. These elements are vital for ensuring our processes are effective and reliable.\nContext recap: In this recap, we will review how our workflows should include important features such as checkpoints, which allow us to monitor progress, rollback criteria that let us revert to previous states if needed, and threshold-based escalation, which helps us decide when to take further action based on specific criteria. These elements are vital for ensuring our processes are effective and reliable."
+          "content": "Effective workflows must include control gates to ensure quality and manage risk. This includes checkpoints to monitor progress, rollback criteria to revert to a previous state if an error occurs, and threshold-based escalation to trigger a higher-level review when specific criteria are met."
         }
       ],
       "interactiveActivities": [
@@ -247,106 +247,6 @@ export const Neuroscience601Module: LearningModule = {
           ],
           "correctOptionId": "a",
           "explanation": "Governance maturity is the operational link between intent, measurement, and corrective action."
-        },
-        {
-          "id": "neuroscience-601-l03-q5",
-          "text": "What is the best way to compare competing interventions in advanced Biology?",
-          "skillId": "neuroscience-601-skill-advanced-5",
-          "options": [
-            {
-              "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
-            },
-            {
-              "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
-            },
-            {
-              "id": "c",
-              "text": "Switch metrics after results arrive"
-            },
-            {
-              "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
-        },
-        {
-          "id": "neuroscience-601-l03-q6",
-          "text": "In high-stakes Neuroscience Research and Leadership execution, which communication protocol is strongest?",
-          "skillId": "neuroscience-601-skill-advanced-6",
-          "options": [
-            {
-              "id": "a",
-              "text": "Broadcast conclusions without assumptions"
-            },
-            {
-              "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
-            },
-            {
-              "id": "c",
-              "text": "Share only final outcomes after completion"
-            },
-            {
-              "id": "d",
-              "text": "Limit updates to a single informal channel"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
-        },
-        {
-          "id": "neuroscience-601-l03-q7",
-          "text": "A mature remediation loop in advanced Biology should prioritize:",
-          "skillId": "neuroscience-601-skill-advanced-7",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blame assignment without system updates"
-            },
-            {
-              "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
-            },
-            {
-              "id": "c",
-              "text": "One-time fixes without retesting"
-            },
-            {
-              "id": "d",
-              "text": "Issue closure based on elapsed time"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
-        },
-        {
-          "id": "neuroscience-601-l03-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Neuroscience Research and Leadership?",
-          "skillId": "neuroscience-601-skill-advanced-8",
-          "options": [
-            {
-              "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
-            },
-            {
-              "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
-            },
-            {
-              "id": "c",
-              "text": "Ignore correlated failure modes"
-            },
-            {
-              "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
         }
       ]
     },
@@ -359,8 +259,8 @@ export const Neuroscience601Module: LearningModule = {
         {
           "id": "neuroscience-601-l04-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Tradeoff Analysis Matrix",
+          "content": "An example of a matrix comparing multiple research proposals across criteria like safety, cost, equity, and scientific impact."
         }
       ],
       "chunks": [
@@ -368,19 +268,19 @@ export const Neuroscience601Module: LearningModule = {
           "id": "neuroscience-601-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "In this lesson, we will frame a case that highlights the competing constraints we face in neural systems and circuit modeling. We will also explore clinical-neuro translational reasoning, which involves applying our understanding of neuroscience to real-world clinical situations. This will help us appreciate the complexities involved in making decisions in this field.\nContext recap: In this lesson, we will frame a case that highlights the competing constraints we face in neural systems and circuit modeling. We will also explore clinical-neuro translational reasoning, which involves applying our understanding of neuroscience to real-world clinical situations. This will help us appreciate the complexities involved in making decisions in this field."
+          "content": "Analyze a complex case study that highlights the competing constraints in neuroscience research, from modeling neural circuits to applying findings in clinical settings. This exercise demonstrates the real-world complexities of translating laboratory discoveries into practical applications."
         },
         {
           "id": "neuroscience-601-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "In this practice session, learners will compare different options available to them by looking at various dimensions such as safety, reliability, cost, equity, and governance. This comparison will help them understand the trade-offs involved in decision-making and the importance of considering multiple factors when evaluating choices.\nContext recap: In this practice session, learners will compare different options available to them by looking at various dimensions such as safety, reliability, cost, equity, and governance. This comparison will help them understand the trade-offs involved in decision-making and the importance of considering multiple factors when evaluating choices."
+          "content": "Compare alternative courses of action by evaluating them across multiple dimensions, including safety, reliability, cost, equity, and governance. This practice develops the critical skill of identifying and weighing trade-offs to make balanced and justifiable decisions."
         },
         {
           "id": "neuroscience-601-l04-c3",
           "kind": "recap",
           "title": "Decision Memo Pattern",
-          "content": "In this recap, we will discuss the structure of a decision memo. Each recommendation made should include the assumptions that underlie it, the evidence that supports it, the risk controls that are in place to mitigate potential issues, and fallback plans that outline what to do if things do not go as expected. This comprehensive approach ensures that our decisions are well-informed and thought out.\nContext recap: In this recap, we will discuss the structure of a decision memo. Each recommendation made should include the assumptions that underlie it, the evidence that supports it, the risk controls that are in place to mitigate potential issues, and fallback plans that outline what to do if things do not go as expected. This comprehensive approach ensures that our decisions are well-informed and thought out."
+          "content": "Learn to structure a formal decision memo. A strong recommendation must clearly state the underlying assumptions, present the supporting evidence, detail the risk controls in place, and outline fallback plans in case of unexpected outcomes. This ensures decisions are well-reasoned and transparent."
         }
       ]
     },
@@ -392,9 +292,9 @@ export const Neuroscience601Module: LearningModule = {
       "learningAids": [
         {
           "id": "neuroscience-601-l05-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "image",
+          "title": "Simulation Control Dashboard",
+          "content": "An interactive mock-up of a simulation interface showing real-time data, adjustable parameters, and governance alerts."
         }
       ],
       "chunks": [
@@ -402,13 +302,13 @@ export const Neuroscience601Module: LearningModule = {
           "id": "neuroscience-601-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "In this interactive session, learners will take on the role of operators in a simulation clinic. They will manage scenario controls while balancing performance with governance constraints. This experience will help them understand the importance of making decisions that not only achieve results but also adhere to ethical and regulatory standards.\nContext recap: In this interactive session, learners will take on the role of operators in a simulation clinic. They will manage scenario controls while balancing performance with governance constraints. This experience will help them understand the importance of making decisions that not only achieve results but also adhere to ethical and regulatory standards."
+          "content": "Assume the role of a lead researcher in a dynamic simulation. Manage project variables and make critical decisions in real-time, balancing the drive for performance with strict ethical and governance constraints. This experience hones decision-making skills under pressure."
         },
         {
           "id": "neuroscience-601-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "In this recap, we will focus on the design of effective responses in our simulation. It is crucial that our responses can update control gates, which are mechanisms that regulate our processes, without losing traceability or accountability. This ensures that we can track changes and maintain responsibility for our actions.\nContext recap: In this recap, we will focus on the design of effective responses in our simulation. It is crucial that our responses can update control gates, which are mechanisms that regulate our processes, without losing traceability or accountability. This ensures that we can track changes and maintain responsibility for our actions."
+          "content": "Effective leadership requires adapting to new information. Learn how to design responses that can update experimental controls or project direction mid-stream, while maintaining full traceability and accountability for every change made."
         }
       ],
       "interactiveActivities": [
@@ -536,103 +436,103 @@ export const Neuroscience601Module: LearningModule = {
         },
         {
           "id": "neuroscience-601-l06-q5",
-          "text": "What is the best way to compare competing interventions in advanced Biology?",
+          "text": "In a case analysis involving a novel neuro-therapeutic, what does 'tradeoff framing' primarily help you do?",
           "skillId": "neuroscience-601-skill-advanced-5",
           "options": [
             {
               "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
+              "text": "Focus only on the most positive outcome"
             },
             {
               "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
+              "text": "Systematically compare options across multiple criteria like safety, cost, and equity"
             },
             {
               "id": "c",
-              "text": "Switch metrics after results arrive"
+              "text": "Choose the option that is fastest to implement, regardless of risk"
             },
             {
               "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
+              "text": "Ignore all factors except for the primary scientific goal"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
+          "explanation": "Tradeoff framing is a structured method for evaluating choices by comparing their pros and cons across a shared set of important criteria."
         },
         {
           "id": "neuroscience-601-l06-q6",
-          "text": "In high-stakes Neuroscience Research and Leadership execution, which communication protocol is strongest?",
+          "text": "When running a high-pressure simulation of a clinical trial, an 'adaptive response' means:",
           "skillId": "neuroscience-601-skill-advanced-6",
           "options": [
             {
               "id": "a",
-              "text": "Broadcast conclusions without assumptions"
+              "text": "Sticking to the original plan no matter what new data emerges"
             },
             {
               "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
+              "text": "Adjusting protocol controls based on new information while maintaining accountability"
             },
             {
               "id": "c",
-              "text": "Share only final outcomes after completion"
+              "text": "Stopping the simulation at the first sign of trouble"
             },
             {
               "id": "d",
-              "text": "Limit updates to a single informal channel"
+              "text": "Making undocumented changes to ensure a successful outcome"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
+          "explanation": "An adaptive response involves making informed, traceable adjustments to a plan as new evidence becomes available during execution."
         },
         {
           "id": "neuroscience-601-l06-q7",
-          "text": "A mature remediation loop in advanced Biology should prioritize:",
+          "text": "A 'decision memo' for a complex neuroscience case should always include a fallback plan. Why is this critical?",
           "skillId": "neuroscience-601-skill-advanced-7",
           "options": [
             {
               "id": "a",
-              "text": "Blame assignment without system updates"
+              "text": "It proves that the primary recommendation is likely to fail"
             },
             {
               "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
+              "text": "It is a formality that is rarely used in practice"
             },
             {
               "id": "c",
-              "text": "One-time fixes without retesting"
+              "text": "It prepares the team for potential risks and ensures a resilient strategy"
             },
             {
               "id": "d",
-              "text": "Issue closure based on elapsed time"
+              "text": "It complicates the decision and should be avoided"
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
+          "correctOptionId": "c",
+          "explanation": "A fallback plan is a key component of risk management, ensuring that if the primary plan fails, there is a pre-approved alternative to mitigate negative consequences."
         },
         {
           "id": "neuroscience-601-l06-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Neuroscience Research and Leadership?",
+          "text": "During a simulation, a sudden adverse event occurs. What is the first step according to a robust governance protocol?",
           "skillId": "neuroscience-601-skill-advanced-8",
           "options": [
             {
               "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
+              "text": "Immediately assign blame to a team member"
             },
             {
               "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
+              "text": "Activate pre-defined escalation pathways and notify the correct stakeholders"
             },
             {
               "id": "c",
-              "text": "Ignore correlated failure modes"
+              "text": "Wait to see if the problem resolves itself"
             },
             {
               "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
+              "text": "Continue the simulation as if nothing happened"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "explanation": "A mature governance system relies on clear, pre-established protocols for escalating issues to ensure a timely and structured response."
         }
       ]
     },
@@ -645,8 +545,8 @@ export const Neuroscience601Module: LearningModule = {
         {
           "id": "neuroscience-601-l07-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Stakeholder Impact Map",
+          "content": "A visual map illustrating the direct, indirect, and long-term effects of a neuro-intervention on various stakeholder groups (e.g., patients, families, society)."
         }
       ],
       "chunks": [
@@ -654,36 +554,36 @@ export const Neuroscience601Module: LearningModule = {
           "id": "neuroscience-601-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "In this lesson, learners will explore how to map the distribution of impacts among different stakeholders. This includes understanding the benefits and burdens that different groups may experience, as well as any delayed effects that might occur over time. This knowledge is essential for making informed decisions that consider the wider community.\nContext recap: In this lesson, learners will explore how to map the distribution of impacts among different stakeholders. This includes understanding the benefits and burdens that different groups may experience, as well as any delayed effects that might occur over time. This knowledge is essential for making informed decisions that consider the wider community."
+          "content": "Learn to map the potential impacts of a neuroscience innovation across all affected stakeholders. This includes analyzing the distribution of benefits and burdens, as well as considering delayed or second-order effects that may emerge over time. This is essential for equitable and ethical decision-making."
         },
         {
           "id": "neuroscience-601-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "In this lesson, we will discuss the architecture of accountability in decision-making. This includes ensuring that there is traceability for decisions made, rights for review, and obligations for remediation if things go wrong. Integrating these elements helps create a transparent and responsible decision-making process.\nContext recap: In this lesson, we will discuss the architecture of accountability in decision-making. This includes ensuring that there is traceability for decisions made, rights for review, and obligations for remediation if things go wrong. Integrating these elements helps create a transparent and responsible decision-making process."
+          "content": "Design systems that ensure accountability in research and implementation. This architecture includes mechanisms for decision traceability (who decided what, and why), rights for independent review, and clear obligations for remediation when negative outcomes occur."
         },
         {
           "id": "neuroscience-601-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "At the end of our lesson, we will provide a comprehensive checklist that connects important outcomes with ethical considerations, ensures compliance with relevant policies, and highlights the importance of resilience in leadership. This checklist will help you reflect on how these elements work together to create responsible leadership in neuroscience.\nContext recap: At the end of our lesson, we will provide a comprehensive checklist that connects important outcomes with ethical considerations, ensures compliance with relevant policies, and highlights the importance of resilience in leadership. This checklist will help you reflect on how these elements work together to create responsible leadership in neuroscience."
+          "content": "Review a comprehensive checklist for responsible leadership in neuroscience. This tool connects project outcomes with ethical principles, ensures compliance with governance policies, and reinforces the importance of building resilient, accountable systems."
         }
       ],
       "flashcards": [
         {
           "id": "neuroscience-601-l07-f1",
-          "front": "Impact distribution",
-          "back": "How outcomes are allocated across populations and timescales."
+          "front": "Impact Distribution",
+          "back": "The analysis of how the positive and negative outcomes of a decision are allocated across different populations and over various timescales."
         },
         {
           "id": "neuroscience-601-l07-f2",
-          "front": "Decision traceability",
-          "back": "An auditable record of evidence, ownership, and rationale."
+          "front": "Decision Traceability",
+          "back": "An auditable record that connects a decision to the evidence, rationale, and individuals responsible for making it."
         },
         {
           "id": "neuroscience-601-l07-f3",
-          "front": "Responsible leadership",
-          "back": "Decision behavior balancing performance, accountability, and ethics."
+          "front": "Responsible Leadership",
+          "back": "A decision-making approach that actively balances high performance with ethical considerations and institutional accountability."
         }
       ]
     },
@@ -695,9 +595,9 @@ export const Neuroscience601Module: LearningModule = {
       "learningAids": [
         {
           "id": "neuroscience-601-l08-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "image",
+          "title": "Capstone Defense Brief Template",
+          "content": "A structured document template outlining the key sections of a research defense: claim, evidence, uncertainty analysis, and remediation plan."
         }
       ],
       "chunks": [
@@ -705,13 +605,13 @@ export const Neuroscience601Module: LearningModule = {
           "id": "neuroscience-601-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "In this interactive activity, you will work on creating a detailed brief that includes your main claims, supporting evidence, the limits of uncertainty in your arguments, and potential pathways for remediation. This exercise will help you practice organizing your thoughts and presenting them clearly, which is essential for effective communication in neuroscience.\nContext recap: In this interactive activity, you will work on creating a detailed brief that includes your main claims, supporting evidence, the limits of uncertainty in your arguments, and potential pathways for remediation. This exercise will help you practice organizing your thoughts and presenting them clearly, which is essential for effective communication in neuroscience."
+          "content": "Synthesize your work into a capstone defense brief. This document must articulate your central claims, present the supporting evidence, honestly assess the limits and uncertainties of your findings, and propose potential pathways for remediation or future work."
         },
         {
           "id": "neuroscience-601-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "During this rehearsal session, you will practice responding to various critiques that may come from experts, governance bodies, and stakeholders. This will help you prepare for real-world scenarios where you need to defend your ideas and research. Engaging in this practice will boost your confidence and improve your ability to articulate your thoughts under pressure.\nContext recap: During this rehearsal session, you will practice responding to various critiques that may come from experts, governance bodies, and stakeholders. This will help you prepare for real-world scenarios where you need to defend your ideas and research. Engaging in this practice will boost your confidence and improve your ability to articulate your thoughts under pressure."
+          "content": "Prepare for your final defense by rehearsing responses to critical questions from different perspectives, including scientific experts, governance bodies, and public stakeholders. This practice builds confidence and sharpens your ability to defend your research under scrutiny."
         }
       ],
       "interactiveActivities": [

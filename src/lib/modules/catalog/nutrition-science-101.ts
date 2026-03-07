@@ -1,9 +1,9 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const NutritionScience101Module: LearningModule = {
+export const nutrition_science_101_Module: LearningModule = {
   "id": "nutrition-science-101",
   "title": "Nutrition Science Foundations",
-  "description": "Level 101 curriculum in Nutrition Science, centered on metabolic foundations, dietary pattern analysis, evidence-based intervention design, and nutrition policy and equity through case analysis, simulation, and checkpoint-driven mastery.",
+  "description": "A beginner's guide to nutrition science, focusing on how the body uses food, analyzing dietary patterns, designing effective health interventions, and understanding nutrition policy. Learn through case studies, interactive simulations, and hands-on projects.",
   "subject": "Health Science",
   "tags": [
     "core",
@@ -14,75 +14,75 @@ export const NutritionScience101Module: LearningModule = {
   ],
   "minAge": 14,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "beginner",
   "localeSupport": [
     "en",
     "es"
   ],
   "learningObjectives": [
-    "Explain and apply metabolic foundations under practical constraints",
-    "Build repeatable workflows for dietary pattern analysis with measurable controls",
-    "Evaluate interventions in evidence-based intervention design using comparative evidence",
-    "Operationalize nutrition policy and equity with transparent governance loops",
-    "Communicate uncertainty, risk, and tradeoffs clearly to mixed stakeholders",
-    "Defend decisions through evidence-backed reasoning and post-run review"
+    "Explain the basics of metabolism and how the body uses nutrients.",
+    "Develop a structured plan for analyzing and improving dietary patterns.",
+    "Evaluate the effectiveness of nutrition programs using evidence.",
+    "Analyze how nutrition policies can be designed to be fair and effective.",
+    "Communicate nutrition concepts, risks, and benefits clearly to others.",
+    "Defend nutrition-related decisions using scientific evidence and logical reasoning."
   ],
   "lessons": [
     {
       "id": "nutrition-science-101-l01",
-      "title": "Nutrition Science Core Models",
+      "title": "Foundations of Nutrition Science",
       "type": "video",
       "duration": 13,
       "learningAids": [
         {
           "id": "nutrition-science-101-l01-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use structured reasoning, map tradeoffs, and verify outcomes with metrics before finalizing."
+          "title": "How Your Body Uses Food",
+          "content": "A diagram showing how macronutrients (carbohydrates, proteins, fats) and micronutrients (vitamins, minerals) are broken down and used by the body for energy, growth, and repair."
         }
       ],
       "chunks": [
         {
           "id": "nutrition-science-101-l01-c1",
           "kind": "concept",
-          "title": "Scope and Vocabulary",
-          "content": "In this lesson, we will work together to create a shared vocabulary that will help us discuss Nutrition Science effectively. Understanding the language of nutrition is crucial because it allows us to communicate our ideas clearly and learn from one another. We will define key concepts that are essential for our learning journey, such as how our bodies process and utilize the food we consume. For example, we will look at how digestion works and the role of nutrients like carbohydrates, proteins, fats, vitamins, and minerals in keeping us healthy. Additionally, we will explore different eating patterns, such as vegetarianism, the Mediterranean diet, and balanced meals, and examine how these choices can affect our overall health and well-being. By establishing this common language, we will be better prepared to communicate and understand the fascinating topics we will encounter in the field of nutrition. This includes learning about the importance of hydration, the impact of sugar on our bodies, and how to make healthier food choices. Let's embark on this exciting journey to discover how food influences our lives and well-being! Together, we will uncover the science behind nutrition and learn how to make informed decisions that can lead to a healthier lifestyle. Are you ready to dive into the world of nutrition and explore how what we eat shapes our health and happiness?\nContext recap: In this lesson, we will work together to create a shared vocabulary that will help us discuss Nutrition Science effectively. Understanding the language of nutrition is crucial because it allows us to communicate our ideas clearly and learn from one another. We will define key concepts that are essential for our learning journey, such as how our bodies process and utilize the food we consume. For example, we will look at how digestion works and the role of nutrients like carbohydrates, proteins, fats, vitamins, and minerals in keeping us healthy.\nWhy this matters: Scope and Vocabulary helps learners in Health Science connect ideas from Nutrition Science Foundations to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "Core Concepts and Vocabulary",
+          "content": "To get started, we need to speak the same language. In this section, we'll define the key terms in nutrition science. We'll cover the basics of metabolism—how your body converts food into energy. We will also learn about the essential nutrients our bodies need to function, including carbohydrates, proteins, fats, vitamins, and minerals. Understanding these fundamentals is the first step to making smarter, healthier food choices."
         },
         {
           "id": "nutrition-science-101-l01-c2",
           "kind": "concept",
-          "title": "Causal Reasoning",
-          "content": "In this section of the lesson, students will explore how to identify and map out the connections between various factors that influence nutrition. This involves understanding the assumptions we often make about dietary choices and recognizing the limitations we face when creating strategies aimed at improving eating habits. By acknowledging these relationships, learners can develop more effective nutrition plans tailored to their needs. This skill is crucial as it empowers students to think critically about how different elements of nutrition interact and influence one another. For instance, they will learn how factors like food availability, cultural preferences, and personal health can all play a role in dietary decisions. By understanding these connections, students will be better equipped to make informed choices about their own diets, leading to healthier lifestyles and improved well-being. This knowledge not only enhances their understanding of nutrition but also prepares them to advocate for better dietary practices in their communities.\nContext recap: In this section of the lesson, students will explore how to identify and map out the connections between various factors that influence nutrition. This involves understanding the assumptions we often make about dietary choices and recognizing the limitations we face when creating strategies aimed at improving eating habits. By acknowledging these relationships, learners can develop more effective nutrition plans tailored to their needs. This skill is crucial as it empowers students to think critically about how different elements of nutrition interact and influence one another.\nWhy this matters: Causal Reasoning helps learners in Health Science connect ideas from Nutrition Science Foundations to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "Understanding Cause and Effect",
+          "content": "Nutrition is all about cause and effect. For example, what is the effect of eating a balanced diet? What causes nutrient deficiencies? In this section, we'll learn how to think critically about the relationship between what we eat and our health. This will help you move beyond common myths and understand the real science behind nutritional advice, enabling you to create effective strategies for better health."
         },
         {
           "id": "nutrition-science-101-l01-c3",
           "kind": "recap",
-          "title": "Evidence Standards",
-          "content": "In this section, we will dive into the important skill of evaluating claims made in the field of nutrition science. Understanding how to assess these claims is essential for making informed decisions about our health and diet. To do this effectively, we must rely on measurable indicators. These indicators are specific data points that we can observe and quantify, such as the amount of vitamins in a food item or the percentage of people who benefit from a certain diet.\nWe will also explore the concept of confidence ranges. Confidence ranges help us gauge how reliable our findings are. They give us a sense of how certain we can be about the data we have collected. For instance, if a study shows that a new diet helps people lose weight, the confidence range will tell us how likely it is that this result is true for the general population.\nFurthermore, we will highlight the importance of having review checkpoints in our research process. These checkpoints serve as moments to pause and reflect on our findings, ensuring that our conclusions are valid and trustworthy. By learning to critically assess information, students will not only enhance their understanding of nutrition science but also become more informed consumers, capable of making better choices for their health and well-being. This skill is vital in a world where we are constantly bombarded with information about food and nutrition, allowing us to separate fact from fiction and make choices that truly benefit us.\nContext recap: In this section, we will dive into the important skill of evaluating claims made in the field of nutrition science. Understanding how to assess these claims is essential for making informed decisions about our health and diet. To do this effectively, we must rely on measurable indicators. These indicators are specific data points that we can observe and quantify, such as the amount of vitamins in a food item or the percentage of people who benefit from a certain diet.\nWhy this matters: Evidence Standards helps learners in Health Science connect ideas from Nutrition Science Foundations to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "title": "Evaluating Nutrition Claims",
+          "content": "There's a lot of nutrition information out there, and not all of it is reliable. How can you tell fact from fiction? We'll discuss how to evaluate nutrition claims by looking for solid evidence. This includes understanding measurable results, like changes in cholesterol levels, and knowing what makes a scientific study trustworthy. This skill is essential for making informed decisions about your health."
         }
       ],
       "flashcards": [
         {
           "id": "nutrition-science-101-l01-f1",
-          "front": "metabolic foundations",
-          "back": "A core decision lens in Nutrition Science requiring explicit assumption control."
+          "front": "Metabolism",
+          "back": "The process by which your body converts what you eat and drink into energy."
         },
         {
           "id": "nutrition-science-101-l01-f2",
-          "front": "dietary pattern analysis",
-          "back": "Execution systems that determine reliability and repeatability."
+          "front": "Dietary Pattern",
+          "back": "The complete picture of what a person usually eats and drinks."
         },
         {
           "id": "nutrition-science-101-l01-f3",
-          "front": "evidence-based intervention design",
-          "back": "Evaluation process for distinguishing real gains from superficial wins."
+          "front": "Evidence-Based",
+          "back": "An approach where decisions are made based on the best available scientific research and data."
         }
       ]
     },
     {
       "id": "nutrition-science-101-l02",
-      "title": "Nutrition Science Workflow Lab",
+      "title": "Building a Nutrition Plan",
       "type": "interactive",
       "duration": 15,
       "learningAids": [
@@ -90,45 +90,45 @@ export const NutritionScience101Module: LearningModule = {
           "id": "nutrition-science-101-l02-a1",
           "type": "practice",
           "title": "Guided Practice",
-          "content": "Use structured reasoning, map tradeoffs, and verify outcomes with metrics before finalizing."
+          "content": "Follow a step-by-step guide to create a simple, one-week healthy eating plan for a specific goal, like increasing energy levels."
         }
       ],
       "chunks": [
         {
           "id": "nutrition-science-101-l02-c1",
           "kind": "practice",
-          "title": "Workflow Build",
-          "content": "In this engaging interactive activity, learners will have the opportunity to create a comprehensive workflow that outlines the essential steps needed to achieve specific nutrition goals. This process is not just about writing down tasks; it involves carefully mapping out who is responsible for each part of the plan. Students will also establish control points, which are important checkpoints that help monitor progress along the way. Additionally, they will define measurable outcomes, which are clear indicators that will help assess the success of their nutrition strategies. By participating in this hands-on approach, students will not only solidify their understanding of how to implement effective nutrition strategies, but they will also develop valuable organizational skills. Working collaboratively with peers towards common objectives will enhance their teamwork abilities, making this activity a well-rounded learning experience. Overall, this exercise is designed to empower students with the knowledge and skills they need to make informed decisions about nutrition and health.\nContext recap: In this engaging interactive activity, learners will have the opportunity to create a comprehensive workflow that outlines the essential steps needed to achieve specific nutrition goals. This process is not just about writing down tasks; it involves carefully mapping out who is responsible for each part of the plan. Students will also establish control points, which are important checkpoints that help monitor progress along the way. Additionally, they will define measurable outcomes, which are clear indicators that will help assess the success of their nutrition strategies.\nWhy this matters: Workflow Build helps learners in Health Science connect ideas from Nutrition Science Foundations to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "Creating Your Plan",
+          "content": "In this activity, you'll build a step-by-step nutrition plan. You will define a clear health goal, outline the actions needed to reach it, and set up checkpoints to monitor your progress. You'll also decide how to measure success. This hands-on exercise will teach you how to create structured, effective nutrition strategies for yourself or others."
         },
         {
           "id": "nutrition-science-101-l02-c2",
           "kind": "recap",
-          "title": "Readiness and Rollback",
-          "content": "In this recap, we will explore how to test our systems for potential failures in the context of nutrition science. This process involves simulating different scenarios where things might not go as planned, such as unexpected changes in dietary needs or food supply issues. By establishing clear thresholds for when to revert to previous decisions, we can make informed choices that prioritize health and well-being. Preparing for these situations is crucial because it ensures that our nutrition interventions remain effective and resilient, even in the face of challenges. This proactive approach not only helps us to anticipate problems but also teaches students the importance of adaptability and foresight in nutrition science. By understanding how to respond effectively to challenges, students will be better equipped to make a positive impact in their communities and promote healthy eating habits. Overall, this lesson emphasizes the value of preparation and flexibility in achieving successful nutrition outcomes.\nContext recap: In this recap, we will explore how to test our systems for potential failures in the context of nutrition science. This process involves simulating different scenarios where things might not go as planned, such as unexpected changes in dietary needs or food supply issues. By establishing clear thresholds for when to revert to previous decisions, we can make informed choices that prioritize health and well-being. Preparing for these situations is crucial because it ensures that our nutrition interventions remain effective and resilient, even in the face of challenges.\nWhy this matters: Readiness and Rollback helps learners in Health Science connect ideas from Nutrition Science Foundations to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "Planning for Setbacks",
+          "content": "Even the best plans can face challenges. What happens if you get busy or a certain food isn't available? Here, we'll discuss how to build flexibility into your nutrition plan. By creating a backup plan and knowing when to adjust your strategy, you can ensure that small setbacks don't derail your long-term health goals. This makes your plan more resilient and realistic."
         }
       ],
       "interactiveActivities": [
         {
           "id": "nutrition-science-101-l02-act1",
           "type": "matching_pairs",
-          "title": "Control Mapping",
-          "description": "Match each control to its strongest reliability or governance effect.",
+          "title": "Matching Actions to Goals",
+          "description": "Match each planning step to its main purpose.",
           "pairs": [
             {
-              "left": "Pre-commit review",
-              "right": "Prevents avoidable defects"
+              "left": "Set a clear goal",
+              "right": "Provides direction and motivation"
             },
             {
-              "left": "Rollback trigger",
-              "right": "Contains impact during failures"
+              "left": "Create a backup plan",
+              "right": "Helps you stay on track during challenges"
             },
             {
-              "left": "Baseline monitor",
-              "right": "Supports defensible outcome claims"
+              "left": "Track your progress",
+              "right": "Shows if your plan is working"
             },
             {
-              "left": "Retrospective cycle",
-              "right": "Improves future decisions"
+              "left": "Review your plan weekly",
+              "right": "Allows you to make improvements"
             }
           ]
         }
@@ -136,7 +136,7 @@ export const NutritionScience101Module: LearningModule = {
     },
     {
       "id": "nutrition-science-101-l03",
-      "title": "Checkpoint 1: Concepts and Workflow",
+      "title": "Checkpoint 1: Basic Concepts and Planning",
       "type": "quiz",
       "duration": 10,
       "learningAids": [
@@ -150,160 +150,160 @@ export const NutritionScience101Module: LearningModule = {
       "questions": [
         {
           "id": "nutrition-science-101-l03-q1",
-          "text": "Which practice most improves decision quality in metabolic foundations?",
-          "skillId": "nutrition-science-101-skill-core",
+          "text": "Which practice most improves the quality of a nutritional decision?",
+          "skillId": "nutrition-science-101-skill-reasoning",
           "options": [
             {
               "id": "a",
-              "text": "Use implicit assumptions and no baseline"
+              "text": "Relying on assumptions without data"
             },
             {
               "id": "b",
-              "text": "Define assumptions, constraints, and measurable indicators"
+              "text": "Defining goals, limitations, and ways to measure success"
             },
             {
               "id": "c",
-              "text": "Prioritize speed over evidence in all cases"
+              "text": "Prioritizing speed over accuracy in all cases"
             },
             {
               "id": "d",
-              "text": "Ignore uncertainty and edge cases"
+              "text": "Ignoring potential challenges"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Decision quality improves when assumptions, constraints, and measurement are explicit."
+          "explanation": "Decision quality improves when goals, constraints, and measurement are clearly defined."
         },
         {
           "id": "nutrition-science-101-l03-q2",
-          "text": "At level 101, high-quality execution in dietary pattern analysis should include:",
-          "skillId": "nutrition-science-101-skill-execution",
+          "text": "A high-quality plan for analyzing a dietary pattern should include:",
+          "skillId": "nutrition-science-101-skill-planning",
           "options": [
             {
               "id": "a",
-              "text": "Owner mapping, checkpoints, and escalation thresholds"
+              "text": "Clear responsibilities, progress checkpoints, and rules for when to adjust the plan"
             },
             {
               "id": "b",
-              "text": "No role clarity and ad-hoc decisions"
+              "text": "Vague roles and spontaneous decisions"
             },
             {
               "id": "c",
-              "text": "No post-implementation review"
+              "text": "No review after the plan is implemented"
             },
             {
               "id": "d",
-              "text": "Untracked process changes"
+              "text": "Changes to the process that are not tracked"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Reliable execution needs clear ownership and threshold-driven control points."
+          "explanation": "A reliable plan needs clear ownership and defined checkpoints to manage progress."
         },
         {
           "id": "nutrition-science-101-l03-q3",
-          "text": "A defensible approach to evidence-based intervention design requires:",
-          "skillId": "nutrition-science-101-skill-eval",
+          "text": "A trustworthy, evidence-based nutrition program requires:",
+          "skillId": "nutrition-science-101-skill-evaluation",
           "options": [
             {
               "id": "a",
-              "text": "Anecdotal wins without comparison"
+              "text": "Success stories without any data to back them up"
             },
             {
               "id": "b",
-              "text": "Baseline comparison and side-effect analysis"
+              "text": "Comparison to a starting point (baseline) and analysis of side effects"
             },
             {
               "id": "c",
-              "text": "Changing criteria after seeing results"
+              "text": "Changing the definition of success after seeing the results"
             },
             {
               "id": "d",
-              "text": "Ignoring difficult cases"
+              "text": "Ignoring cases where the program didn't work"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Comparison and side-effect analysis prevent biased conclusions."
+          "explanation": "Comparing results to a baseline and analyzing side effects prevents biased conclusions."
         },
         {
           "id": "nutrition-science-101-l03-q4",
-          "text": "Mature nutrition policy and equity systems connect:",
-          "skillId": "nutrition-science-101-skill-governance",
+          "text": "An effective nutrition policy connects:",
+          "skillId": "nutrition-science-101-skill-policy",
           "options": [
             {
               "id": "a",
-              "text": "Policy intent, measurable controls, and remediation pathways"
+              "text": "The goal of the policy, measurable ways to track it, and a plan for what to do if it's not working"
             },
             {
               "id": "b",
-              "text": "Policy statements without accountability"
+              "text": "Policy statements without anyone being held accountable"
             },
             {
               "id": "c",
-              "text": "Performance targets with no risk controls"
+              "text": "Performance targets with no plan for managing risks"
             },
             {
               "id": "d",
-              "text": "Governance with no transparency"
+              "text": "A system of rules that is not transparent"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Effective governance links policy intent to measurable controls and corrective action."
+          "explanation": "Effective policy links the original goal to measurable controls and a plan for corrective action."
         }
       ]
     },
     {
       "id": "nutrition-science-101-l04",
-      "title": "Nutrition Science Case Analysis",
+      "title": "Analyzing a Nutrition Case Study",
       "type": "video",
       "duration": 14,
       "learningAids": [
         {
           "id": "nutrition-science-101-l04-a1",
-          "type": "mnemonic",
-          "title": "Guided Practice",
-          "content": "Use structured reasoning, map tradeoffs, and verify outcomes with metrics before finalizing."
+          "type": "image",
+          "title": "Weighing the Options",
+          "content": "An infographic of a balance scale. On one side are 'Pros' (like Health Impact, Affordability) and on the other are 'Cons' (like Cost, Difficulty), visually representing a tradeoff analysis."
         }
       ],
       "chunks": [
         {
           "id": "nutrition-science-101-l04-c1",
           "kind": "example",
-          "title": "Case Context",
-          "content": "In this case study, we will explore a community nutrition initiative designed to enhance health outcomes for its members. This initiative takes into account the cultural preferences of the community and the accessibility of food resources. Throughout this lesson, students will engage in identifying various objectives that may sometimes conflict with one another, as well as the potential risks associated with the nutrition program. By analyzing these elements, learners will develop a deeper understanding of the complexities involved in implementing nutrition programs in real-world situations. Additionally, this exploration will highlight the significance of cultural sensitivity and the active participation of community members in the field of nutrition science. Understanding these challenges is crucial for future nutritionists and health professionals, as it equips them with the knowledge to create effective and inclusive health initiatives that truly meet the needs of diverse populations. This case study not only emphasizes the importance of nutrition but also encourages students to think critically about how to address the unique challenges faced by different communities in achieving better health outcomes.\nContext recap: In this case study, we will explore a community nutrition initiative designed to enhance health outcomes for its members. This initiative takes into account the cultural preferences of the community and the accessibility of food resources. Throughout this lesson, students will engage in identifying various objectives that may sometimes conflict with one another, as well as the potential risks associated with the nutrition program. By analyzing these elements, learners will develop a deeper understanding of the complexities involved in implementing nutrition programs in real-world situations."
+          "title": "Case Study: A School Lunch Program",
+          "content": "Let's analyze a real-world example: a public school wants to make its lunch menu healthier. We'll look at the different goals they might have, such as improving student health, keeping costs low, and offering food kids will actually eat. We'll identify the challenges and risks involved, like students rejecting the new food. This case study will show you how complex nutrition initiatives can be and the importance of community involvement."
         },
         {
           "id": "nutrition-science-101-l04-c2",
           "kind": "concept",
-          "title": "Tradeoff Matrix",
-          "content": "In this section, we will introduce a tradeoff matrix, a valuable tool that helps us evaluate various options when making decisions related to nutrition. This matrix allows us to look at different choices based on several important factors: their effectiveness, feasibility, potential risks, and the impact they may have on different stakeholders, such as individuals, communities, and organizations. By scoring these options, learners can gain insights into which strategies are the most beneficial to pursue in their nutrition initiatives. This process encourages students to think critically about the pros and cons of each choice, enhancing their analytical skills. These skills are not only essential in nutrition science but are also important for making informed decisions in everyday life. Understanding how to weigh different factors will empower students to become thoughtful decision-makers in their future careers and personal lives.\nContext recap: In this section, we will introduce a tradeoff matrix, a valuable tool that helps us evaluate various options when making decisions related to nutrition. This matrix allows us to look at different choices based on several important factors: their effectiveness, feasibility, potential risks, and the impact they may have on different stakeholders, such as individuals, communities, and organizations. By scoring these options, learners can gain insights into which strategies are the most beneficial to pursue in their nutrition initiatives. This process encourages students to think critically about the pros and cons of each choice, enhancing their analytical skills."
+          "title": "Weighing the Pros and Cons",
+          "content": "When making a decision, you often have to make tradeoffs. For example, the healthiest option might also be the most expensive. We'll introduce a tool called a 'tradeoff matrix' to help evaluate different choices. By comparing options based on factors like effectiveness, cost, and risks, you can make a more balanced and strategic decision. This is a powerful skill for analyzing any complex problem."
         },
         {
           "id": "nutrition-science-101-l04-c3",
           "kind": "recap",
-          "title": "Recovery Design",
-          "content": "In this recap, we will explore how to transform patterns of failure into proactive measures that can help us succeed in our nutrition programs. This process involves creating safeguards and response plans that we can activate if things do not go as expected. By preparing for potential challenges, we can significantly enhance the resilience of our nutrition programs. This discussion will encourage students to think creatively about solutions and to develop a mindset that embraces learning from setbacks. By viewing challenges as opportunities for growth, we can ultimately lead to stronger and more effective nutrition strategies that benefit everyone involved. Remember, every setback is a chance to learn and improve, so let's focus on building a positive approach to overcoming obstacles in our nutrition journey.\nContext recap: In this recap, we will explore how to transform patterns of failure into proactive measures that can help us succeed in our nutrition programs. This process involves creating safeguards and response plans that we can activate if things do not go as expected. By preparing for potential challenges, we can significantly enhance the resilience of our nutrition programs. This discussion will encourage students to think creatively about solutions and to develop a mindset that embraces learning from setbacks.\nWhy this matters: Recovery Design helps learners in Health Science connect ideas from Nutrition Science Foundations to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "Learning from Mistakes",
+          "content": "What if the new school lunch program fails and most students stop buying lunch? Instead of seeing this as a total failure, we can learn from it. This section is about turning setbacks into opportunities for improvement. By analyzing what went wrong, we can design safeguards and response plans for the future. This proactive mindset helps create stronger, more successful nutrition programs over time."
         }
       ],
       "flashcards": [
         {
           "id": "nutrition-science-101-l04-f1",
-          "front": "Tradeoff matrix",
-          "back": "A structured method to compare options under competing priorities."
+          "front": "Tradeoff",
+          "back": "A situation where you must balance two desirable but opposing factors, accepting less of one to get more of another."
         },
         {
           "id": "nutrition-science-101-l04-f2",
-          "front": "Failure pattern",
-          "back": "A recurring signal indicating a predictable risk mode."
+          "front": "Failure Pattern",
+          "back": "A recurring problem that points to a predictable weakness in a plan or system."
         },
         {
           "id": "nutrition-science-101-l04-f3",
-          "front": "Response playbook",
-          "back": "A predefined action pathway for safe and timely recovery."
+          "front": "Response Plan",
+          "back": "A pre-planned set of actions to take when something goes wrong, ensuring a quick and safe recovery."
         }
       ]
     },
     {
       "id": "nutrition-science-101-l05",
-      "title": "Nutrition Science Simulation Studio",
+      "title": "Nutrition Plan Simulation",
       "type": "interactive",
       "duration": 16,
       "learningAids": [
@@ -311,7 +311,7 @@ export const NutritionScience101Module: LearningModule = {
           "id": "nutrition-science-101-l05-a1",
           "type": "practice",
           "title": "Guided Practice",
-          "content": "Use structured reasoning, map tradeoffs, and verify outcomes with metrics before finalizing."
+          "content": "Use the simulation to test three different approaches to the school lunch problem. Compare the outcomes for student health, budget, and student satisfaction for each."
         }
       ],
       "chunks": [
@@ -319,13 +319,13 @@ export const NutritionScience101Module: LearningModule = {
           "id": "nutrition-science-101-l05-c1",
           "kind": "practice",
           "title": "Scenario Simulation",
-          "content": "In this engaging interactive simulation, students will have the opportunity to explore various intervention scenarios while navigating the challenges of uncertainty. Throughout the simulation, they will compare the outcomes of each scenario, which will help them understand the potential impacts of different nutrition strategies on health and well-being. This hands-on experience is designed to enhance critical thinking skills, as students will learn how to analyze results and adapt their approaches based on what they discover. By actively participating in this simulation, learners will not only reinforce their understanding of the complex and ever-changing field of nutrition science but also appreciate the importance of being flexible and open-minded when making decisions related to health and nutrition. This experience will empower students to think creatively and strategically about how to apply their knowledge in real-world situations, preparing them for future challenges in the field of health science.\nContext recap: In this engaging interactive simulation, students will have the opportunity to explore various intervention scenarios while navigating the challenges of uncertainty. Throughout the simulation, they will compare the outcomes of each scenario, which will help them understand the potential impacts of different nutrition strategies on health and well-being. This hands-on experience is designed to enhance critical thinking skills, as students will learn how to analyze results and adapt their approaches based on what they discover. By actively participating in this simulation, learners will not only reinforce their understanding of the complex and ever-changing field of nutrition science but also appreciate the importance of being flexible and open-minded when making decisions related to health and nutrition."
+          "content": "Now it's your turn to be the decision-maker. In this interactive simulation, you'll make choices for the school lunch program and see the results. You'll have to deal with unexpected events and budget cuts. By comparing the outcomes of different choices, you'll learn how to adapt your strategy and think on your feet. This will reinforce your understanding of how to apply nutrition science in a dynamic, real-world context."
         },
         {
           "id": "nutrition-science-101-l05-c2",
           "kind": "recap",
-          "title": "Debrief",
-          "content": "In this debriefing session, we will take a closer look at each simulation we completed. We will assess whether we met our goals, recognize any unexpected side effects that occurred, and confirm that we adhered to the established governance guidelines throughout the process. This reflective discussion is crucial as it not only helps us understand our successes but also highlights areas where we can improve. By analyzing what strategies worked well and which ones did not, students will gain important insights that can guide their future efforts in nutrition science. This practice of accountability and continuous improvement is essential for making effective nutrition interventions that can positively impact health outcomes.\nContext recap: In this debriefing session, we will take a closer look at each simulation we completed. We will assess whether we met our goals, recognize any unexpected side effects that occurred, and confirm that we adhered to the established governance guidelines throughout the process. This reflective discussion is crucial as it not only helps us understand our successes but also highlights areas where we can improve. By analyzing what strategies worked well and which ones did not, students will gain important insights that can guide their future efforts in nutrition science."
+          "title": "Reviewing the Results",
+          "content": "After each simulation, we'll debrief. Did you achieve your original goals? Were there any unexpected side effects? Did you stick to your budget? This reflection is key to learning. By analyzing what worked and what didn't, you'll gain valuable insights that will help you make better decisions in the future. This process builds accountability and a habit of continuous improvement."
         }
       ],
       "interactiveActivities": [
@@ -333,18 +333,18 @@ export const NutritionScience101Module: LearningModule = {
           "id": "nutrition-science-101-l05-act1",
           "type": "scenario_practice",
           "title": "Intervention Simulation",
-          "description": "Compare intervention paths for metabolic foundations and nutrition policy and equity.",
+          "description": "Choose an intervention path for the school lunch program and analyze its impact on health, budget, and fairness.",
           "instructions": [
-            "Define objective and constraints before intervention selection.",
-            "Document near-term and long-term tradeoffs.",
-            "Specify metrics that validate your chosen path."
+            "First, define your main objective and budget constraints.",
+            "Choose an intervention and document its potential short-term and long-term tradeoffs.",
+            "Select three key metrics that will prove whether your chosen path was successful."
           ]
         }
       ]
     },
     {
       "id": "nutrition-science-101-l06",
-      "title": "Checkpoint 2: Systems Decisions",
+      "title": "Checkpoint 2: Applying Your Knowledge",
       "type": "quiz",
       "duration": 10,
       "learningAids": [
@@ -358,160 +358,160 @@ export const NutritionScience101Module: LearningModule = {
       "questions": [
         {
           "id": "nutrition-science-101-l06-q1",
-          "text": "Which practice most improves decision quality in metabolic foundations?",
-          "skillId": "nutrition-science-101-skill-core",
+          "text": "In the school lunch case study, choosing a cheaper but less popular healthy menu item is an example of a tradeoff between:",
+          "skillId": "nutrition-science-101-skill-tradeoffs",
           "options": [
             {
               "id": "a",
-              "text": "Use implicit assumptions and no baseline"
+              "text": "Long-term and short-term goals"
             },
             {
               "id": "b",
-              "text": "Define assumptions, constraints, and measurable indicators"
+              "text": "Budget and student satisfaction"
             },
             {
               "id": "c",
-              "text": "Prioritize speed over evidence in all cases"
+              "text": "Evidence and opinion"
             },
             {
               "id": "d",
-              "text": "Ignore uncertainty and edge cases"
+              "text": "Safety and speed"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Decision quality improves when assumptions, constraints, and measurement are explicit."
+          "explanation": "This decision balances the goal of staying within budget against the goal of having students enjoy (and eat) the food."
         },
         {
           "id": "nutrition-science-101-l06-q2",
-          "text": "At level 101, high-quality execution in dietary pattern analysis should include:",
-          "skillId": "nutrition-science-101-skill-execution",
+          "text": "To measure the success of a new community garden initiative, which metric is most effective?",
+          "skillId": "nutrition-science-101-skill-metrics",
           "options": [
             {
               "id": "a",
-              "text": "Owner mapping, checkpoints, and escalation thresholds"
+              "text": "The number of people who heard about the garden"
             },
             {
               "id": "b",
-              "text": "No role clarity and ad-hoc decisions"
+              "text": "The number of positive comments on social media"
             },
             {
               "id": "c",
-              "text": "No post-implementation review"
+              "text": "The percentage of participating families who report eating more vegetables"
             },
             {
               "id": "d",
-              "text": "Untracked process changes"
+              "text": "The total cost of the garden tools"
             }
           ],
-          "correctOptionId": "a",
-          "explanation": "Reliable execution needs clear ownership and threshold-driven control points."
+          "correctOptionId": "c",
+          "explanation": "This is a direct, measurable outcome that connects the initiative to its primary goal of improving nutrition."
         },
         {
           "id": "nutrition-science-101-l06-q3",
-          "text": "A defensible approach to evidence-based intervention design requires:",
-          "skillId": "nutrition-science-101-skill-eval",
+          "text": "If a nutrition program unexpectedly leads to a negative side effect, what is the best first step?",
+          "skillId": "nutrition-science-101-skill-response",
           "options": [
             {
               "id": "a",
-              "text": "Anecdotal wins without comparison"
+              "text": "Ignore the problem and hope it goes away"
             },
             {
               "id": "b",
-              "text": "Baseline comparison and side-effect analysis"
+              "text": "End the entire program immediately without investigation"
             },
             {
               "id": "c",
-              "text": "Changing criteria after seeing results"
+              "text": "Use a pre-defined response plan to contain the harm and investigate the cause"
             },
             {
               "id": "d",
-              "text": "Ignoring difficult cases"
+              "text": "Blame the participants for not following the program correctly"
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "Comparison and side-effect analysis prevent biased conclusions."
+          "correctOptionId": "c",
+          "explanation": "A structured response plan allows for a safe, timely, and effective way to manage problems without overreacting."
         },
         {
           "id": "nutrition-science-101-l06-q4",
-          "text": "Mature nutrition policy and equity systems connect:",
-          "skillId": "nutrition-science-101-skill-governance",
+          "text": "When designing a nutrition policy for a diverse community, why is it important to consider different stakeholders (e.g., parents, farmers, store owners)?",
+          "skillId": "nutrition-science-101-skill-stakeholders",
           "options": [
             {
               "id": "a",
-              "text": "Policy intent, measurable controls, and remediation pathways"
+              "text": "To ensure the policy benefits everyone equally and avoids unintended harm"
             },
             {
               "id": "b",
-              "text": "Policy statements without accountability"
+              "text": "It is not important; only the scientific evidence matters"
             },
             {
               "id": "c",
-              "text": "Performance targets with no risk controls"
+              "text": "To find someone to blame if the policy fails"
             },
             {
               "id": "d",
-              "text": "Governance with no transparency"
+              "text": "To make the decision process more complicated"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Effective governance links policy intent to measurable controls and corrective action."
+          "explanation": "Considering all stakeholders helps create fair and effective policies that have broad support and address the community's actual needs."
         }
       ]
     },
     {
       "id": "nutrition-science-101-l07",
-      "title": "Nutrition Science Governance and Impact",
+      "title": "Nutrition, Policy, and Community",
       "type": "video",
       "duration": 12,
       "learningAids": [
         {
           "id": "nutrition-science-101-l07-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use structured reasoning, map tradeoffs, and verify outcomes with metrics before finalizing."
+          "title": "Community Impact Map",
+          "content": "A concept map showing a central nutrition policy (e.g., a tax on sugary drinks) and how it connects to different stakeholders like families, local businesses, schools, and public health agencies, with arrows indicating positive and negative impacts."
         }
       ],
       "chunks": [
         {
           "id": "nutrition-science-101-l07-c1",
           "kind": "concept",
-          "title": "Stakeholder Impact",
-          "content": "In this section, learners will dive into the fascinating world of nutrition interventions and how they affect various groups of people. We will investigate how the advantages and challenges of these interventions are shared among different stakeholders, such as communities, healthcare providers, and policymakers. By mapping out these impacts, students will gain a clearer understanding of the social consequences of their choices in nutrition science. This exploration will not only enhance their critical thinking skills but also inspire them to consider concepts of fairness and justice in health. Ultimately, it will help them develop a sense of responsibility towards their communities, encouraging them to advocate for more equitable solutions in nutrition science that benefit everyone, especially those who are most vulnerable. Through this journey, students will learn the importance of making informed decisions that can lead to positive changes in their own lives and the lives of others around them.\nContext recap: In this section, learners will dive into the fascinating world of nutrition interventions and how they affect various groups of people. We will investigate how the advantages and challenges of these interventions are shared among different stakeholders, such as communities, healthcare providers, and policymakers. By mapping out these impacts, students will gain a clearer understanding of the social consequences of their choices in nutrition science. This exploration will not only enhance their critical thinking skills but also inspire them to consider concepts of fairness and justice in health.\nWhy this matters: Stakeholder Impact helps learners in Health Science connect ideas from Nutrition Science Foundations to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "Who is Affected?",
+          "content": "Nutrition decisions, especially large-scale policies, don't happen in a vacuum. They affect many different groups of people, or 'stakeholders.' In this section, we'll explore how the benefits and costs of a nutrition program are distributed. For example, who benefits most from a new food program? Does anyone experience a negative impact? Understanding this helps us design programs that are fair and just for the entire community."
         },
         {
           "id": "nutrition-science-101-l07-c2",
           "kind": "concept",
-          "title": "Accountability Architecture",
-          "content": "In this section of our lesson, we will explore the vital role of accountability in the field of nutrition science. Accountability means that every decision made regarding nutrition can be traced back to its source, allowing us to understand how and why certain choices were made. It is essential to know who has the authority to review these decisions, ensuring that there is a system in place for oversight. Additionally, we must recognize our responsibilities to address and correct any problems that may arise from these decisions. By weaving together these important elements, we can establish a robust framework that promotes responsible decision-making in nutrition science. This discussion will not only enhance your understanding of these concepts but also help you appreciate the importance of transparency and ethical considerations in your future careers in nutrition science. As you move forward, remember that being accountable is not just about following rules; it’s about fostering trust and integrity in the work you do, which is crucial for the health and well-being of individuals and communities alike.\nContext recap: In this section of our lesson, we will explore the vital role of accountability in the field of nutrition science. Accountability means that every decision made regarding nutrition can be traced back to its source, allowing us to understand how and why certain choices were made. It is essential to know who has the authority to review these decisions, ensuring that there is a system in place for oversight. Additionally, we must recognize our responsibilities to address and correct any problems that may arise from these decisions."
+          "title": "Ensuring Responsibility",
+          "content": "Who is responsible for making sure a nutrition program is safe and effective? This is the concept of accountability. We'll discuss how to build systems where decisions are transparent, can be traced back to who made them, and include a clear process for review. This builds trust and ensures that if something goes wrong, there is a clear path to fix it. Responsible systems lead to better, more reliable outcomes for everyone."
         },
         {
           "id": "nutrition-science-101-l07-c3",
           "kind": "recap",
-          "title": "Responsible Execution",
-          "content": "At the end of our project, we will use a final checklist to ensure that we are performing well, managing risks effectively, and considering the ethical impact of our actions. This checklist will help us make sure we are doing the right things for ourselves and our community.\nContext recap: At the end of our project, we will use a final checklist to ensure that we are performing well, managing risks effectively, and considering the ethical impact of our actions. This checklist will help us make sure we are doing the right things for ourselves and our community."
+          "title": "Putting It All Together",
+          "content": "Responsible implementation means combining everything we've learned. It's about creating a program that is not only effective (it works) but also fair (it considers everyone's needs) and accountable (it has strong oversight). We'll recap with a simple checklist to help you evaluate whether a nutrition plan meets these important standards."
         }
       ],
       "flashcards": [
         {
           "id": "nutrition-science-101-l07-f1",
-          "front": "Impact distribution",
-          "back": "How outcomes are allocated across people, systems, and time."
+          "front": "Stakeholder",
+          "back": "Any person, group, or organization who can be affected by the outcome of a project or policy."
         },
         {
           "id": "nutrition-science-101-l07-f2",
-          "front": "Decision traceability",
-          "back": "An auditable explanation of evidence, ownership, and rationale."
+          "front": "Accountability",
+          "back": "The responsibility to justify decisions or actions and be held answerable for the results."
         },
         {
           "id": "nutrition-science-101-l07-f3",
-          "front": "Responsible execution",
-          "back": "Delivery mode that combines effectiveness with accountability and fairness."
+          "front": "Equity in Nutrition",
+          "back": "Ensuring that everyone has a fair and just opportunity to be as healthy as possible."
         }
       ]
     },
     {
       "id": "nutrition-science-101-l08",
-      "title": "Nutrition Science Capstone Planning Lab",
+      "title": "Planning Your Final Project",
       "type": "interactive",
       "duration": 15,
       "learningAids": [
@@ -519,21 +519,21 @@ export const NutritionScience101Module: LearningModule = {
           "id": "nutrition-science-101-l08-a1",
           "type": "practice",
           "title": "Guided Practice",
-          "content": "Use structured reasoning, map tradeoffs, and verify outcomes with metrics before finalizing."
+          "content": "Use the Capstone Charter Builder to outline a project for improving nutrition awareness among teenagers in your local area."
         }
       ],
       "chunks": [
         {
           "id": "nutrition-science-101-l08-c1",
           "kind": "practice",
-          "title": "Capstone Charter",
-          "content": "In this activity, you will create a capstone charter where you will outline the objectives of your project, identify any constraints you might face, establish metrics for success, and determine the governance triggers that will guide your decisions. This will help you stay focused and organized as you work on your project.\nContext recap: In this activity, you will create a capstone charter where you will outline the objectives of your project, identify any constraints you might face, establish metrics for success, and determine the governance triggers that will guide your decisions. This will help you stay focused and organized as you work on your project."
+          "title": "Creating Your Project Outline",
+          "content": "It's time to plan your own nutrition project. In this activity, you'll create a 'project charter,' which is a simple, one-page outline for your idea. You will define your project's main goal, list any limitations (like budget or time), and decide how you will measure success. This charter will be the roadmap for your capstone project, keeping you focused and organized."
         },
         {
           "id": "nutrition-science-101-l08-c2",
           "kind": "recap",
-          "title": "Defense Readiness",
-          "content": "As you work on your project, it is important to be ready to defend your decisions. You will prepare to explain your choices and how they align with technical standards and governance guidelines. This preparation will help you feel confident when discussing your work with others.\nContext recap: As you work on your project, it is important to be ready to defend your decisions. You will prepare to explain your choices and how they align with technical standards and governance guidelines. This preparation will help you feel confident when discussing your work with others."
+          "title": "Preparing to Share Your Work",
+          "content": "A key part of any project is being able to explain and defend your choices. As you create your charter, think about why you are making each decision. How does your plan align with the scientific principles and ethical guidelines we've discussed? This preparation will help you confidently present your project and answer questions about your work."
         }
       ],
       "interactiveActivities": [
@@ -541,12 +541,169 @@ export const NutritionScience101Module: LearningModule = {
           "id": "nutrition-science-101-l08-act1",
           "type": "project_builder",
           "title": "Capstone Charter Builder",
-          "description": "Build a capstone charter with measurable outcomes and remediation pathways.",
+          "description": "Build a charter for your final project with measurable goals and a plan for addressing challenges.",
           "instructions": [
-            "Define objective and operating boundaries.",
-            "List at least three measurable success indicators.",
-            "Define escalation and corrective-action criteria."
+            "Define your project's main objective in one sentence.",
+            "List at least three measurable indicators that will show you have succeeded.",
+            "Describe a potential risk and define what action you will take if it occurs."
           ]
+        }
+      ]
+    },
+    {
+      "id": "nutrition-science-101-l09",
+      "title": "Capstone Project: Design a Community Nutrition Program",
+      "type": "interactive",
+      "duration": 20,
+      "learningAids": [
+        {
+          "id": "nutrition-science-101-l09-a1",
+          "type": "image",
+          "title": "Project Checklist",
+          "content": "A visual checklist graphic with key project components: Clear Goal, Target Audience, Key Actions, Success Metrics, Budget, and Risk Plan."
+        }
+      ],
+      "chunks": [
+        {
+          "id": "nutrition-science-101-l09-c1",
+          "kind": "practice",
+          "title": "Project Implementation",
+          "content": "Using the project charter you created in the last lesson, you will now fully design your community nutrition program. This capstone project is your opportunity to apply everything you've learned in this course. You will detail the steps of your program, consider the stakeholders involved, analyze potential tradeoffs, and build in a plan for measuring your impact. This is your chance to be creative and design a program that could make a real difference."
+        },
+        {
+          "id": "nutrition-science-101-l09-c2",
+          "kind": "recap",
+          "title": "Final Review and Submission",
+          "content": "Before you finalize your project, take a moment for a self-review. Does your final design meet the goals you set in your charter? Is it realistic, evidence-based, and equitable? Use the project checklist to ensure you've covered all the key components. This final check helps you submit your best work and solidifies your understanding of how to design a complete and thoughtful nutrition program."
+        }
+      ],
+      "interactiveActivities": [
+        {
+          "id": "nutrition-science-101-l09-act1",
+          "type": "project_builder",
+          "title": "Final Project Submission",
+          "description": "Finalize and submit your complete community nutrition program plan.",
+          "instructions": [
+            "Upload or complete your final project plan based on your charter.",
+            "Write a brief summary explaining how your project is effective, equitable, and accountable.",
+            "Review your work against the course learning objectives before submitting."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nutrition-science-101-l10",
+      "title": "Final Checkpoint: Comprehensive Review",
+      "type": "quiz",
+      "duration": 10,
+      "learningAids": [
+        {
+          "id": "nutrition-science-101-l10-a1",
+          "type": "practice",
+          "title": "Guided Practice",
+          "content": "Use structured reasoning, map tradeoffs, and verify outcomes with metrics before finalizing."
+        }
+      ],
+      "questions": [
+        {
+          "id": "nutrition-science-101-l10-q1",
+          "text": "A city wants to improve food access in a low-income neighborhood. Why is it critical to involve neighborhood residents in the planning process?",
+          "skillId": "nutrition-science-101-skill-equity",
+          "options": [
+            {
+              "id": "a",
+              "text": "To ensure the solution meets their actual needs, cultural preferences, and practical challenges."
+            },
+            {
+              "id": "b",
+              "text": "Because it is a legal requirement in all cities."
+            },
+            {
+              "id": "c",
+              "text": "To slow down the project with unnecessary meetings."
+            },
+            {
+              "id": "d",
+              "text": "To make the outside experts feel good about their work."
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Involving the community (the primary stakeholders) directly is the most effective way to create a solution that is accepted, used, and successful long-term."
+        },
+        {
+          "id": "nutrition-science-101-l10-q2",
+          "text": "What is the primary function of a 'rollback trigger' or a 'response plan' in a nutrition intervention?",
+          "skillId": "nutrition-science-101-skill-resilience",
+          "options": [
+            {
+              "id": "a",
+              "text": "To punish the team if the project fails."
+            },
+            {
+              "id": "b",
+              "text": "To limit the damage from an unexpected negative outcome."
+            },
+            {
+              "id": "c",
+              "text": "To prove that the original plan was perfect."
+            },
+            {
+              "id": "d",
+              "text": "To secure more funding for the project."
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "These plans are designed to manage risk and provide a safe, controlled way to respond to problems, thus making the overall program more resilient."
+        },
+        {
+          "id": "nutrition-science-101-l10-q3",
+          "text": "An effective system of accountability in nutrition policy must include:",
+          "skillId": "nutrition-science-101-skill-accountability",
+          "options": [
+            {
+              "id": "a",
+              "text": "Complete secrecy around how decisions are made."
+            },
+            {
+              "id": "b",
+              "text": "A way to trace decisions, clear oversight, and a process for corrections."
+            },
+            {
+              "id": "c",
+              "text": "Assigning blame to a single person for any failure."
+            },
+            {
+              "id": "d",
+              "text": "Frequent changes in leadership to avoid responsibility."
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Accountability requires transparency (traceability), review (oversight), and a mechanism to fix problems (corrections)."
+        },
+        {
+          "id": "nutrition-science-101-l10-q4",
+          "text": "What is the most critical first step when designing any new nutrition program?",
+          "skillId": "nutrition-science-101-skill-synthesis",
+          "options": [
+            {
+              "id": "a",
+              "text": "Choosing a catchy name for the program."
+            },
+            {
+              "id": "b",
+              "text": "Securing the maximum possible budget."
+            },
+            {
+              "id": "c",
+              "text": "Clearly defining the problem you are trying to solve and for whom."
+            },
+            {
+              "id": "d",
+              "text": "Creating the marketing materials."
+            }
+          ],
+          "correctOptionId": "c",
+          "explanation": "Without a clear and accurate definition of the problem and the target audience, any solution is likely to be ineffective and a waste of resources."
         }
       ]
     }

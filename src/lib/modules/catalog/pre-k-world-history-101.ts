@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const PreKWorldHistory101Module: LearningModule = {
+export const pre_k_world_history_101_Module: LearningModule = {
   "id": "pre-k-world-history-101",
   "title": "Pre-K Long Ago Stories",
   "description": "Travel back in time to learn about dinosaurs, cave people, ancient Egypt, castles, and famous inventions through stories, sorting games, and pretend play for ages 3-5.",
@@ -16,7 +16,7 @@ export const PreKWorldHistory101Module: LearningModule = {
   ],
   "minAge": 3,
   "maxAge": 5,
-  "version": "4.0.0",
+  "version": "1.1.0",
   "difficultyBand": "beginner",
   "localeSupport": [
     "en",
@@ -44,17 +44,20 @@ export const PreKWorldHistory101Module: LearningModule = {
         {
           "id": "pre-k-world-history-101-l01-c1",
           "title": "When Dinosaurs Ruled",
-          "content": "A very long time ago, millions of years before people, cars, or houses existed, dinosaurs roamed the Earth! These incredible creatures came in all shapes and sizes. Some dinosaurs were enormous, like the Brachiosaurus, which stood as tall as a four-story building! Can you picture that? It would be like looking up at a giant! Others were much smaller, like the Compsognathus, which was about the size of a chicken. Imagine seeing these amazing creatures walking around in a world filled with lush plants and towering trees! The Earth was a different place back then, full of vibrant colors and sounds. Dinosaurs lived in many different habitats, from swamps to forests, and they had to find food and stay safe from each other. Isn't it fascinating to think about how they lived so long ago?\nContext recap: A very long time ago, millions of years before people, cars, or houses existed, dinosaurs roamed the Earth! These incredible creatures came in all shapes and sizes. Some dinosaurs were enormous, like the Brachiosaurus, which stood as tall as a four-story building! Can you picture that?\nWhy this matters: When Dinosaurs Ruled helps learners in World History connect ideas from Pre-K Long Ago Stories to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "Way, way back in time, millions of years before there were any people, cars, or houses, the world was home to amazing creatures called dinosaurs! They came in all shapes and sizes. Some were super tall, like the Brachiosaurus, which was as tall as a big building! Others were tiny, like the Compsognathus, which was only about the size of a chicken. Imagine a world full of giant ferns and tall trees, with dinosaurs walking all around. What an incredible sight that would be!",
+          "visualPrompt": "Animation of a lush, prehistoric world. A giant Brachiosaurus eats leaves from a tall tree, while a small Compsognathus scurries by its feet."
         },
         {
           "id": "pre-k-world-history-101-l01-c2",
           "title": "Meat Eaters and Plant Eaters",
-          "content": "Dinosaurs had different diets, just like we do! Some dinosaurs were herbivores, which means they loved to munch on plants. For example, the Triceratops enjoyed eating ferns and bushes. Imagine a big, friendly dinosaur nibbling on leaves! Other dinosaurs were carnivores, which means they ate meat. The Tyrannosaurus Rex is the most famous carnivore, known for its huge, sharp teeth! Picture a giant dinosaur roaring as it hunts for food! There were also dinosaurs called omnivores, which means they enjoyed both plants and meat. Isn't it fascinating how different they all were? Some liked to snack on greens, while others preferred a meaty meal. Learning about their diets helps us understand how they lived a long time ago!\nContext recap: Dinosaurs had different diets, just like we do! Some dinosaurs were herbivores, which means they loved to munch on plants. For example, the Triceratops enjoyed eating ferns and bushes. Imagine a big, friendly dinosaur nibbling on leaves!\nWhy this matters: Meat Eaters and Plant Eaters helps learners in World History connect ideas from Pre-K Long Ago Stories to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "Just like animals today, different dinosaurs ate different things. Some dinosaurs were plant-eaters, called herbivores. The big Triceratops, with its three horns, loved to munch on leafy bushes. Other dinosaurs were meat-eaters, called carnivores. The most famous one is the Tyrannosaurus Rex, with its huge mouth and super sharp teeth! Can you give a big T. Rex roar? ROAR! Learning what they ate helps us imagine what their world was like.",
+          "visualPrompt": "Split screen animation. On one side, a friendly Triceratops happily munches on ferns. On the other, a T. Rex lets out a mighty roar, showing its big teeth."
         },
         {
           "id": "pre-k-world-history-101-l01-c3",
           "title": "Where Did They Go?",
-          "content": "A long, long time ago, about 66 million years in the past, something very big happened! A giant asteroid, which is like a huge rock from space, crashed into our planet, Earth. This crash created a lot of dust and made the air very cold. Because of this, many dinosaurs found it really hard to live and survive. But guess what? Not all dinosaurs went away! Some of them changed over time and became birds! So, when you see a little bird flying in the sky or hopping on the ground, you are actually looking at a tiny, living dinosaur! Isn’t that amazing? Birds are like the great-great-great-grandchildren of dinosaurs! So next time you see a bird, remember that it has a special connection to those big dinosaurs from long ago! How cool is that? Birds are our little friends from the time of dinosaurs!\nContext recap: A long, long time ago, about 66 million years in the past, something very big happened! A giant asteroid, which is like a huge rock from space, crashed into our planet, Earth. This crash created a lot of dust and made the air very cold. Because of this, many dinosaurs found it really hard to live and survive.\nWhy this matters: Where Did They Go? helps learners in World History connect ideas from Pre-K Long Ago Stories to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "So, where are all the dinosaurs now? A very long time ago, a giant rock from space, called an asteroid, crashed into Earth. It made the world dusty and cold, and it was very hard for the dinosaurs to live. But here’s a secret: not all of them disappeared! Over millions of years, some dinosaurs changed and turned into... birds! That's right! When you see a bird chirping in a tree, you're looking at a relative of the dinosaurs. Isn't that amazing?",
+          "visualPrompt": "Animation of a big asteroid streaking across space and hitting Earth. The scene turns dusty and gray. Then, it transitions to a colorful bird flying in a modern-day park."
         }
       ],
       "flashcards": [
@@ -76,7 +79,7 @@ export const PreKWorldHistory101Module: LearningModule = {
         {
           "id": "pre-k-world-history-101-l01-fc4",
           "front": "Are dinosaurs truly gone?",
-          "back": "Not completely — birds are descendants of dinosaurs!"
+          "back": "Not completely — birds are the great-great-great-grandchildren of dinosaurs!"
         }
       ],
       "learningAids": [
@@ -97,17 +100,20 @@ export const PreKWorldHistory101Module: LearningModule = {
         {
           "id": "pre-k-world-history-101-l02-c1",
           "title": "Living in Caves",
-          "content": "A long, long time ago, the very first humans did not have houses like we do today. Instead, they lived in caves! Caves were special places that kept them safe from rain, strong winds, and wild animals that roamed outside. Families would snuggle together near a warm, crackling fire to stay cozy and share stories. It was a time when there were no stores or supermarkets, so these early humans had to go out into nature to find their food. This made their lives very exciting and full of adventures! They would gather fruits, hunt animals, and fish in rivers. Living in caves was a big part of their lives, helping them stay safe and warm while they explored the world around them.\nContext recap: A long, long time ago, the very first humans did not have houses like we do today. Instead, they lived in caves! Caves were special places that kept them safe from rain, strong winds, and wild animals that roamed outside. Families would snuggle together near a warm, crackling fire to stay cozy and share stories.\nWhy this matters: Living in Caves helps learners in World History connect ideas from Pre-K Long Ago Stories to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "After the dinosaurs, a long, long time passed, and the very first people appeared! They didn't have houses like we do. They lived in caves to stay safe and dry. A cave was a perfect home to protect them from rain, wind, and big animals. Inside, families would gather around a warm fire to tell stories and stay cozy. They had to find all their food by hunting for animals and gathering berries and plants. Every day was an adventure!",
+          "visualPrompt": "Animation of a family of early humans huddled cozily inside a cave around a crackling fire, while a storm rages outside."
         },
         {
           "id": "pre-k-world-history-101-l02-c2",
-          "title": "Fire: The Greatest Discovery",
-          "content": "The discovery of fire was a super important moment for the first humans! Imagine living in a time when it was really cold at night. Fire helped keep them warm and cozy, just like a warm blanket. It also helped keep scary animals away, making them feel safer. But the best part about fire was that it let them cook their food! Cooking made food safer to eat and much easier to chew. This wonderful invention changed their lives in so many ways, just like how we have cool inventions today that help us in our daily lives. Fire was like magic for them, and it opened up a whole new world of possibilities! Can you think of some inventions we have now that help us every day?\nContext recap: The discovery of fire was a super important moment for the first humans! Imagine living in a time when it was really cold at night. Fire helped keep them warm and cozy, just like a warm blanket. It also helped keep scary animals away, making them feel safer.\nWhy this matters: Fire: The Greatest Discovery helps learners in World History connect ideas from Pre-K Long Ago Stories to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "title": "Fire: A Great Discovery",
+          "content": "One of the most important discoveries for early humans was fire! Can you guess why? Fire gave them light when it was dark. It kept them warm when it was cold. It scared away dangerous animals. And, it let them cook their food, which made it yummy and easier to eat! Fire was a super tool that changed everything for the first people.",
+          "visualPrompt": "Animation showing the benefits of fire: providing warmth, scaring away a saber-toothed cat, and cooking meat over the flames."
         },
         {
           "id": "pre-k-world-history-101-l02-c3",
-          "title": "Cave Paintings",
-          "content": "A long, long time ago, cave people were not just hunters and gatherers; they were also very talented artists! They loved to express themselves by painting beautiful pictures on the walls of their caves. To create their artwork, they used ground-up rocks to make colorful paints. With these paints, they drew amazing pictures of animals like bison, horses, and deer. These wonderful paintings are some of the very first forms of art that we know about, and guess what? Many of them are over 30,000 years old! Today, we can still visit special caves in places like France and Spain to see these incredible artworks. Isn't it amazing to think about how these pictures have lasted for so many years? They tell us stories about the cave people's lives and the animals they saw. Art helps us connect with the past and understand how people lived a long time ago!\nContext recap: A long, long time ago, cave people were not just hunters and gatherers; they were also very talented artists! They loved to express themselves by painting beautiful pictures on the walls of their caves. To create their artwork, they used ground-up rocks to make colorful paints. With these paints, they drew amazing pictures of animals like bison, horses, and deer.\nWhy this matters: Cave Paintings helps learners in World History connect ideas from Pre-K Long Ago Stories to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "title": "The First Artists",
+          "content": "Guess what? The first people were also the first artists! They didn't have paper or crayons, so they painted on the walls of their caves. They made paint by crushing colorful rocks and mixing them with water. They painted pictures of the animals they saw every day, like big bison, fast horses, and graceful deer. These amazing paintings tell us stories about what life was like a very long time ago.",
+          "visualPrompt": "Animation of an early human using a piece of charcoal to draw a bison on a cave wall. The camera pans out to show many animal paintings."
         }
       ],
       "flashcards": [
@@ -124,7 +130,7 @@ export const PreKWorldHistory101Module: LearningModule = {
         {
           "id": "pre-k-world-history-101-l02-fc3",
           "front": "What did cave people paint on walls?",
-          "back": "Animals like bison, horses, and deer — using ground-up rocks as paint."
+          "back": "Animals like bison, horses, and deer — using crushed rocks as paint."
         }
       ],
       "learningAids": [
@@ -132,7 +138,7 @@ export const PreKWorldHistory101Module: LearningModule = {
           "id": "pre-k-world-history-101-l02-a1",
           "type": "practice",
           "title": "Cave Art Project",
-          "content": "Tape brown paper to a wall. Use crayons or chalk to draw animals like cave people did. You are making history art!"
+          "content": "Crumple up a piece of brown paper, then smooth it out to make it look like a cave wall. Use crayons or chalk to draw animals like the first artists did!"
         }
       ]
     },
@@ -207,7 +213,7 @@ export const PreKWorldHistory101Module: LearningModule = {
           "id": "pre-k-world-history-101-l03-a1",
           "type": "practice",
           "title": "Dino Dig",
-          "content": "Bury small toys in a sandbox or bowl of rice. Dig them out like a paleontologist finding fossils! What did you discover?"
+          "content": "Bury small toys in a sandbox or bowl of rice. Use a paintbrush to gently dig them out like a paleontologist finding fossils! What did you discover?"
         }
       ]
     },
@@ -220,24 +226,27 @@ export const PreKWorldHistory101Module: LearningModule = {
         {
           "id": "pre-k-world-history-101-l04-c1",
           "title": "The Land of Pyramids",
-          "content": "A long, long time ago, about 5,000 years in the past, there was a wonderful place called ancient Egypt. This was one of the most amazing civilizations ever! The people of Egypt were very clever and worked hard to build huge pyramids. These pyramids were made from giant stone blocks, and they are so tall that the Great Pyramid reaches as high as a 45-story building! Can you imagine how big that is? The Egyptians didn't have machines like we do today; they built these incredible structures all by hand. Isn't that just amazing to think about? The pyramids were not only big but also very special, as they were built for their kings, called pharaohs, who were like the rulers of Egypt. Learning about ancient Egypt helps us understand how people lived a long time ago and how they created such wonderful things!\nContext recap: A long, long time ago, about 5,000 years in the past, there was a wonderful place called ancient Egypt. This was one of the most amazing civilizations ever! The people of Egypt were very clever and worked hard to build huge pyramids. These pyramids were made from giant stone blocks, and they are so tall that the Great Pyramid reaches as high as a 45-story building!\nWhy this matters: The Land of Pyramids helps learners in World History connect ideas from Pre-K Long Ago Stories to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "Now let's travel to a hot, sandy place called ancient Egypt! About 5,000 years ago, the people there built giant, pointy buildings called pyramids. They were made from huge stone blocks, and they didn't have any cranes or trucks to help! The biggest pyramid is as tall as a skyscraper. These amazing pyramids were built as special tombs for their kings, who were called pharaohs.",
+          "visualPrompt": "Animation showing the construction of a pyramid with many people working together. The camera zooms out to show the massive Great Pyramid against the desert sky."
         },
         {
           "id": "pre-k-world-history-101-l04-c2",
-          "title": "Pharaohs and the Nile",
-          "content": "In the fascinating land of ancient Egypt, there were mighty kings called pharaohs. These pharaohs wore shiny golden crowns that sparkled in the sun, and the people believed they were very special, almost like gods! One of the most important things in Egypt was the Nile River. This big river was like a friend to the people because it helped them grow their food. Every year, the Nile would overflow its banks and spread rich, dark soil all around. This soil was perfect for planting seeds, and it helped the people grow lots of yummy fruits and vegetables. Without the Nile River, ancient Egypt would not have been able to grow strong and healthy, and the pharaohs would not have been able to rule their land well. So, the Nile was truly a lifeline for everyone in ancient Egypt!\nContext recap: In the fascinating land of ancient Egypt, there were mighty kings called pharaohs. These pharaohs wore shiny golden crowns that sparkled in the sun, and the people believed they were very special, almost like gods! One of the most important things in Egypt was the Nile River. This big river was like a friend to the people because it helped them grow their food.\nWhy this matters: Pharaohs and the Nile helps learners in World History connect ideas from Pre-K Long Ago Stories to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "title": "Pharaohs and the Nile River",
+          "content": "The pharaohs were the kings of Egypt. They wore shiny golden crowns and were very important. But the most important thing in all of Egypt was a long river called the Nile. Every year, the Nile would flood and leave behind special mud that was perfect for growing food. The river gave the Egyptians water to drink and helped them grow yummy fruits and vegetables. The Nile River was the secret to Egypt's success!",
+          "visualPrompt": "Animation of a pharaoh wearing a golden crown. The scene shifts to the Nile River flooding and then receding, leaving fertile soil for crops to grow."
         },
         {
           "id": "pre-k-world-history-101-l04-c3",
           "title": "Hieroglyphics: Picture Writing",
-          "content": "In ancient Egypt, people had a special way of writing called hieroglyphics. This writing used pictures to show sounds and ideas, making it very different from how we write today! For instance, if you saw a picture of an owl, it would represent a certain sound, and a picture of water would stand for another sound. Isn't that cool? They would write these amazing symbols on long scrolls made from a plant called papyrus. This is interesting because the word 'paper' that we use today actually comes from 'papyrus'! So, when you think about it, the ancient Egyptians were very creative in how they communicated with each other. Can you imagine writing with pictures instead of letters? What kind of pictures would you use to tell a story?\nContext recap: In ancient Egypt, people had a special way of writing called hieroglyphics. This writing used pictures to show sounds and ideas, making it very different from how we write today! For instance, if you saw a picture of an owl, it would represent a certain sound, and a picture of water would stand for another sound. Isn't that cool?\nWhy this matters: Hieroglyphics: Picture Writing helps learners in World History connect ideas from Pre-K Long Ago Stories to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "The ancient Egyptians had a very cool way of writing using pictures! It was called hieroglyphics. Instead of letters like A, B, C, they used little pictures of birds, eyes, and water to stand for sounds and words. They wrote these picture-stories on long rolls of paper made from a plant called papyrus. Our word 'paper' comes from 'papyrus'! Can you try drawing a story using only pictures?",
+          "visualPrompt": "Close-up animation of a scribe drawing hieroglyphics (like an owl and a wave) on a papyrus scroll. The pictures animate to show what they represent."
         }
       ],
       "flashcards": [
         {
           "id": "pre-k-world-history-101-l04-fc1",
           "front": "What are pyramids?",
-          "back": "Giant stone buildings in Egypt, built about 5,000 years ago as tombs for pharaohs."
+          "back": "Giant stone buildings in Egypt, built as tombs for pharaohs."
         },
         {
           "id": "pre-k-world-history-101-l04-fc2",
@@ -273,7 +282,7 @@ export const PreKWorldHistory101Module: LearningModule = {
         {
           "id": "pre-k-world-history-101-l05-q1",
           "text": "What made the dinosaurs disappear?",
-          "skillId": "pre-k-world-history-101-skill-dinosaurs",
+          "skillId": "dinosaurs-concepts",
           "options": [
             {
               "id": "a",
@@ -298,7 +307,7 @@ export const PreKWorldHistory101Module: LearningModule = {
         {
           "id": "pre-k-world-history-101-l05-q2",
           "text": "Why was fire important for cave people?",
-          "skillId": "pre-k-world-history-101-skill-cave-people",
+          "skillId": "early-humans-lifestyle",
           "options": [
             {
               "id": "a",
@@ -318,12 +327,12 @@ export const PreKWorldHistory101Module: LearningModule = {
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Fire was the first great invention — it warmed, protected, and fed early humans!"
+          "explanation": "Fire was a great discovery — it warmed, protected, and fed early humans!"
         },
         {
           "id": "pre-k-world-history-101-l05-q3",
           "text": "What is a pharaoh?",
-          "skillId": "pre-k-world-history-101-skill-egypt",
+          "skillId": "ancient-egypt-features",
           "options": [
             {
               "id": "a",
@@ -348,7 +357,7 @@ export const PreKWorldHistory101Module: LearningModule = {
         {
           "id": "pre-k-world-history-101-l05-q4",
           "text": "What are hieroglyphics?",
-          "skillId": "pre-k-world-history-101-skill-egypt",
+          "skillId": "ancient-egypt-features",
           "options": [
             {
               "id": "a",
@@ -406,17 +415,20 @@ export const PreKWorldHistory101Module: LearningModule = {
         {
           "id": "pre-k-world-history-101-l06-c1",
           "title": "Life in a Castle",
-          "content": "A long time ago, around 1,000 years ago, kings and queens lived in very big and beautiful stone castles. These castles were not just ordinary buildings; they had tall towers that reached up to the sky, strong thick walls that kept them safe, and a moat, which is a special water-filled ditch, all around them to protect against intruders. Inside these amazing castles, there were grand halls where people would gather for big feasts and celebrations, cozy bedrooms where the royal family would sleep, and even dungeons, which were dark rooms below the castle. Can you picture what it would be like to live in such a magnificent place? What fun adventures do you think the kings and queens had in their castles? Let's explore this magical world together!\nContext recap: A long time ago, around 1,000 years ago, kings and queens lived in very big and beautiful stone castles. These castles were not just ordinary buildings; they had tall towers that reached up to the sky, strong thick walls that kept them safe, and a moat, which is a special water-filled ditch, all around them to protect against intruders. Inside these amazing castles, there were grand halls where people would gather for big feasts and celebrations, cozy bedrooms where the royal family would sleep, and even dungeons, which were dark rooms below the castle. Can you picture what it would be like to live in such a magnificent place?"
+          "content": "Let's jump forward in time to about 1,000 years ago, to a time of kings, queens, and castles! Castles were giant stone homes with tall towers, thick walls, and sometimes even a moat—a big ditch filled with water—to keep everyone safe. Inside, there were huge rooms for parties and feasts. Living in a castle was like living in a fortress!",
+          "visualPrompt": "Animated tour of a castle, showing its tall towers, thick walls, and a drawbridge lowering over a moat. Inside, show a grand feast in the great hall."
         },
         {
           "id": "pre-k-world-history-101-l06-c2",
           "title": "Knights in Shining Armor",
-          "content": "Knights were very brave warriors who helped keep their kingdoms safe and sound. They wore shiny, heavy metal armor that protected them and carried swords and shields to defend against any bad guys. To become a knight, a boy had to go through a special training process that took many years. First, he would start as a page, which meant he helped the knights and learned important skills. After that, he would become a squire, which was like being a knight's helper, where he learned even more about being a warrior. Finally, after all that hard work and dedication, he would earn the special title of knight! This journey was not just about fighting; it was also about being brave, loyal, and helping others in the kingdom. Knights were known for their courage and their commitment to protecting the people they loved.\nContext recap: Knights were very brave warriors who helped keep their kingdoms safe and sound. They wore shiny, heavy metal armor that protected them and carried swords and shields to defend against any bad guys. To become a knight, a boy had to go through a special training process that took many years. First, he would start as a page, which meant he helped the knights and learned important skills.\nWhy this matters: Knights in Shining Armor helps learners in World History connect ideas from Pre-K Long Ago Stories to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "Who protected the castles? Brave knights! Knights wore heavy suits of metal armor to protect them in battles. They carried swords and shields and rode strong horses. Knights followed a special code to be brave, helpful, and loyal to their king and queen. They were the superheroes of their time!",
+          "visualPrompt": "Animation of a knight putting on shiny armor, piece by piece. Then, show the knight bravely riding a horse with a sword and shield."
         },
         {
           "id": "pre-k-world-history-101-l06-c3",
-          "title": "Everyday Life Long Ago",
-          "content": "A long time ago, most people were not kings or knights. Instead, they were everyday heroes who worked hard in their communities! Many were farmers, growing fresh fruits and vegetables to feed their families and neighbors. Others were bakers, who made yummy bread that everyone loved to eat. There were also blacksmiths, who were very skilled at making tools out of metal, helping everyone with their daily tasks. Life back then was quite different from today. There were no lights to turn on, no running water to drink, and no cars to drive. People had to walk everywhere or ride on horses to travel from one place to another. Imagine how exciting it must have been to ride a horse to visit friends or to the market! Every day was an adventure in a world without modern conveniences, where everyone played an important role in their community.\nContext recap: A long time ago, most people were not kings or knights. Instead, they were everyday heroes who worked hard in their communities! Many were farmers, growing fresh fruits and vegetables to feed their families and neighbors. Others were bakers, who made yummy bread that everyone loved to eat.\nWhy this matters: Everyday Life Long Ago helps learners in World History connect ideas from Pre-K Long Ago Stories to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "title": "Life Outside the Castle",
+          "content": "Most people back then weren't kings or knights. They were farmers who grew food, bakers who made bread, and blacksmiths who made tools from metal. Life was very different. There were no cars, so people walked or rode horses. There were no electric lights, so they used candles when it got dark. Everyone worked together in their village.",
+          "visualPrompt": "Animation showing a bustling medieval village with farmers in fields, a baker at an oven, and a blacksmith hammering on an anvil. People are walking or riding horses."
         }
       ],
       "flashcards": [
@@ -433,7 +445,7 @@ export const PreKWorldHistory101Module: LearningModule = {
         {
           "id": "pre-k-world-history-101-l06-fc3",
           "front": "Name two things people did NOT have long ago.",
-          "back": "Electricity and running water (also no cars, phones, or internet!)."
+          "back": "Electricity and cars (also no phones or computers!)."
         }
       ],
       "learningAids": [
@@ -461,7 +473,7 @@ export const PreKWorldHistory101Module: LearningModule = {
         {
           "id": "pre-k-world-history-101-l07-ia1",
           "type": "matching_pairs",
-          "title": "Match the Era",
+          "title": "Match the Time",
           "description": "Match each person or thing to when they lived.",
           "estimatedMinutes": 5,
           "difficultyLevel": "easy",
@@ -473,7 +485,7 @@ export const PreKWorldHistory101Module: LearningModule = {
               },
               {
                 "id": "l2",
-                "label": "Cave painter 🎨"
+                "label": "Cave Painter 🎨"
               },
               {
                 "id": "l3",
@@ -491,15 +503,15 @@ export const PreKWorldHistory101Module: LearningModule = {
               },
               {
                 "id": "r2",
-                "label": "Tens of thousands of years ago"
+                "label": "A very long time ago"
               },
               {
                 "id": "r3",
-                "label": "About 5,000 years ago"
+                "label": "A long time ago"
               },
               {
                 "id": "r4",
-                "label": "About 1,000 years ago"
+                "label": "Long ago"
               }
             ],
             "pairs": [
@@ -541,17 +553,20 @@ export const PreKWorldHistory101Module: LearningModule = {
         {
           "id": "pre-k-world-history-101-l08-c1",
           "title": "The Wheel",
-          "content": "A long, long time ago, about 5,500 years back, someone came up with a fantastic idea: the wheel! Before the wheel was invented, people had to carry heavy things on their backs or drag them along the ground, which was very hard work. But when the wheel was created, it made moving things so much easier! People could build carts that rolled on wheels, allowing them to transport heavy items without much effort. Today, we see wheels everywhere! They are on cars that take us places, bicycles that help us ride around, skateboards for fun, and even on our suitcases when we travel. Wheels have truly changed how we move and explore the world!\nContext recap: A long, long time ago, about 5,500 years back, someone came up with a fantastic idea: the wheel! Before the wheel was invented, people had to carry heavy things on their backs or drag them along the ground, which was very hard work. But when the wheel was created, it made moving things so much easier! People could build carts that rolled on wheels, allowing them to transport heavy items without much effort.\nWhy this matters: The Wheel helps learners in World History connect ideas from Pre-K Long Ago Stories to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "Some ideas are so great, they change the world! One of the first was the wheel. Before the wheel, people had to drag or carry everything. That's hard work! But with the wheel, they could build carts to move heavy things easily. Look around you—how many wheels can you spot today? On cars, bikes, and even your toys!",
+          "visualPrompt": "Animation showing a person struggling to drag a heavy log. Then, they get the idea for a wheel, and we see them easily pulling a cart."
         },
         {
           "id": "pre-k-world-history-101-l08-c2",
           "title": "The Printing Press",
-          "content": "A long time ago, about 600 years in the past, there was a very smart man named Johannes Gutenberg. He created something really special called the printing press. Before the printing press was invented, if someone wanted to read a book, it had to be written by hand, which meant that someone would write each page all by themselves! This took a lot of time, and not many people could have their own books because it was so hard to make them. But Johannes's invention changed everything! With the printing press, he could make hundreds of copies of a book all at once, and it was much faster and easier. This meant that many more people could have their own books to read and enjoy. Because of the printing press, lots of people learned how to read and write. This helped everyone share their stories and ideas with each other. Books became super important for learning and growing, and they helped people connect with one another!\nContext recap: A long time ago, about 600 years in the past, there was a very smart man named Johannes Gutenberg. He created something really special called the printing press. Before the printing press was invented, if someone wanted to read a book, it had to be written by hand, which meant that someone would write each page all by themselves! This took a lot of time, and not many people could have their own books because it was so hard to make them."
+          "content": "Long ago, books were very rare because someone had to write every single word by hand. It took a very long time! Then, a man named Johannes Gutenberg invented the printing press. It was a machine that could make hundreds of copies of a book very quickly. Thanks to his invention, more people could learn to read and share stories and ideas.",
+          "visualPrompt": "Split screen animation. On one side, a monk slowly writes a book by hand. On the other, Gutenberg's printing press quickly prints many pages."
         },
         {
           "id": "pre-k-world-history-101-l08-c3",
           "title": "The Light Bulb",
-          "content": "A long time ago, about 150 years back, there was a very smart inventor named Thomas Edison. He made something amazing called the light bulb! Before the light bulb was invented, people had to use candles and oil lamps to see when it got dark outside. Can you picture trying to do your homework by the flickering light of a candle? That would be quite hard, wouldn't it? But when the light bulb came along, everything changed! Now, we can read our favorite storybooks, play fun games, and even finish our homework after the sun goes down. Thanks to the light bulb, our nights are bright and filled with fun activities! Isn't it wonderful how one invention can make such a big difference in our lives?\nContext recap: A long time ago, about 150 years back, there was a very smart inventor named Thomas Edison. He made something amazing called the light bulb! Before the light bulb was invented, people had to use candles and oil lamps to see when it got dark outside. Can you picture trying to do your homework by the flickering light of a candle?\nWhy this matters: The Light Bulb helps learners in World History connect ideas from Pre-K Long Ago Stories to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "What do you do when it gets dark? You turn on a light! But long ago, people used candles. Then, an inventor named Thomas Edison worked very hard and created the first practical light bulb. Suddenly, people could light up their homes with the flip of a switch! The light bulb lets us work, play, and read long after the sun goes down.",
+          "visualPrompt": "Animation of a dark room lit only by a flickering candle. Thomas Edison has an 'aha!' moment, and a light bulb turns on, brightly illuminating the whole room."
         }
       ],
       "flashcards": [
@@ -563,11 +578,11 @@ export const PreKWorldHistory101Module: LearningModule = {
         {
           "id": "pre-k-world-history-101-l08-fc2",
           "front": "What did the printing press do?",
-          "back": "It let people make hundreds of book copies quickly instead of writing them by hand."
+          "back": "It let people make many copies of books quickly."
         },
         {
           "id": "pre-k-world-history-101-l08-fc3",
-          "front": "Who made the first practical light bulb?",
+          "front": "Who invented the first practical light bulb?",
           "back": "Thomas Edison, about 150 years ago."
         }
       ],
@@ -576,7 +591,7 @@ export const PreKWorldHistory101Module: LearningModule = {
           "id": "pre-k-world-history-101-l08-a1",
           "type": "image",
           "title": "Invention Timeline",
-          "content": "Timeline showing: wheel (5,500 years ago) → printing press (600 years ago) → light bulb (150 years ago)."
+          "content": "Simple timeline showing: wheel (very long ago) → printing press (long ago) → light bulb (not so long ago)."
         }
       ]
     },
@@ -650,7 +665,7 @@ export const PreKWorldHistory101Module: LearningModule = {
         {
           "id": "pre-k-world-history-101-l09-a1",
           "type": "practice",
-          "title": "Candlelight Night",
+          "title": "Flashlight Time",
           "content": "With a grown-up, try spending 10 minutes with just a flashlight (no other lights). Imagine that was your only light! How would life be different?"
         }
       ]
@@ -664,7 +679,7 @@ export const PreKWorldHistory101Module: LearningModule = {
         {
           "id": "pre-k-world-history-101-l10-q1",
           "text": "What is a moat around a castle?",
-          "skillId": "pre-k-world-history-101-skill-castles",
+          "skillId": "medieval-life-castles",
           "options": [
             {
               "id": "a",
@@ -689,7 +704,7 @@ export const PreKWorldHistory101Module: LearningModule = {
         {
           "id": "pre-k-world-history-101-l10-q2",
           "text": "What did the printing press let people do?",
-          "skillId": "pre-k-world-history-101-skill-inventions",
+          "skillId": "key-inventions-impact",
           "options": [
             {
               "id": "a",
@@ -714,7 +729,7 @@ export const PreKWorldHistory101Module: LearningModule = {
         {
           "id": "pre-k-world-history-101-l10-q3",
           "text": "Which came FIRST in history?",
-          "skillId": "pre-k-world-history-101-skill-timeline",
+          "skillId": "historical-sequencing",
           "options": [
             {
               "id": "a",
@@ -739,11 +754,11 @@ export const PreKWorldHistory101Module: LearningModule = {
         {
           "id": "pre-k-world-history-101-l10-q4",
           "text": "What did cave people paint on cave walls?",
-          "skillId": "pre-k-world-history-101-skill-cave-people",
+          "skillId": "early-humans-lifestyle",
           "options": [
             {
               "id": "a",
-              "text": "Animals like bison, horses, and deer"
+              "text": "Animals like bison and horses"
             },
             {
               "id": "b",
@@ -759,12 +774,12 @@ export const PreKWorldHistory101Module: LearningModule = {
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Cave people painted the animals they saw around them using ground-up rocks as paint."
+          "explanation": "Cave people painted the animals they saw around them using crushed rocks as paint."
         },
         {
           "id": "pre-k-world-history-101-l10-q5",
           "text": "Who invented the first practical light bulb?",
-          "skillId": "pre-k-world-history-101-skill-inventions",
+          "skillId": "key-inventions-impact",
           "options": [
             {
               "id": "a",
@@ -817,7 +832,7 @@ export const PreKWorldHistory101Module: LearningModule = {
           "id": "pre-k-world-history-101-l10-a1",
           "type": "mnemonic",
           "title": "History Rhyme",
-          "content": "Dinos first, then caves and fire, pyramids built ever higher, castles tall with moats around, inventions changed the world we found!"
+          "content": "Dinos first, then caves and fire, pyramids built ever higher, castles tall with knights so grand, inventions changed our whole wide land!"
         }
       ]
     }

@@ -1,9 +1,9 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const Macos301Module: LearningModule = {
+export const macos_301_Module: LearningModule = {
   "id": "macos-301",
-  "title": "macOS Fleet Management, Security, and Performance Engineering",
-  "description": "Advanced macOS engineering curriculum on fleet policy controls, endpoint telemetry, incident analysis, performance optimization, and enterprise support governance.",
+  "title": "macOS Fleet Management, Security, and Performance",
+  "description": "Learn to manage, secure, and optimize large groups of macOS computers. This advanced course covers setting rules for devices, analyzing performance data, responding to security incidents, and making sure everything runs smoothly in a professional environment.",
   "subject": "Operating Systems",
   "tags": [
     "core",
@@ -16,140 +16,140 @@ export const Macos301Module: LearningModule = {
   ],
   "minAge": 15,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en"
   ],
   "thumbnail": "/placeholders/lesson-robot.svg",
   "learningObjectives": [
-    "Operate macOS fleets with policy-driven management and change control",
-    "Correlate endpoint telemetry to diagnose reliability and security issues",
-    "Design hardening baselines with exception governance and evidence trails",
-    "Analyze performance bottlenecks across CPU, memory, storage, and app layers",
-    "Lead incident response workflows with containment and post-incident learning",
-    "Communicate fleet risk, remediation, and rollout decisions to stakeholders"
+    "Apply consistent rules and manage updates for many macOS devices at once.",
+    "Use data from devices to find and fix performance and security problems.",
+    "Create strong security settings for all devices and manage special exceptions with clear records.",
+    "Identify and solve performance issues related to CPU, memory, storage, and applications.",
+    "Develop a plan to handle security incidents, from stopping the threat to learning from the event.",
+    "Clearly explain technical risks, fixes, and update plans to team members and leaders."
   ],
   "lessons": [
     {
       "id": "macos-301-l01",
-      "title": "Fleet Policy Architecture and Management Controls",
+      "title": "Fleet Policy Architecture and Management",
       "type": "video",
       "duration": 14,
       "chunks": [
         {
           "id": "macos-301-l01-c1",
           "kind": "concept",
-          "title": "Policy-Centric Fleet Operations",
-          "content": "When managing a large number of macOS devices, it is important to follow clear policies instead of just responding to individual requests. This means that we should have established guidelines for security, software updates, and device configurations that are regularly updated and enforced consistently across all devices. By doing this, we ensure that every device is secure and functioning properly, which helps everyone in the organization.\nContext recap: When managing a large number of macOS devices, it is important to follow clear policies instead of just responding to individual requests. This means that we should have established guidelines for security, software updates, and device configurations that are regularly updated and enforced consistently across all devices. By doing this, we ensure that every device is secure and functioning properly, which helps everyone in the organization."
+          "title": "Managing with Policies",
+          "content": "When managing many macOS devices, it's better to use a consistent set of rules, or policies, rather than handling each computer individually. These policies cover security settings, software updates, and device configurations. By enforcing these rules everywhere, we ensure every device is secure, up-to-date, and works reliably for everyone."
         },
         {
           "id": "macos-301-l01-c2",
           "kind": "concept",
-          "title": "Change Control and Drift Prevention",
-          "content": "To keep our fleet of devices reliable, we need to minimize unexpected changes. This can be achieved by using controlled settings, gradually introducing updates, and keeping track of any exceptions. By doing so, we can prevent deviations from our established standards and make it easier to predict and manage any issues that arise. This proactive approach helps maintain a stable and efficient environment for all users.\nContext recap: To keep our fleet of devices reliable, we need to minimize unexpected changes. This can be achieved by using controlled settings, gradually introducing updates, and keeping track of any exceptions. By doing so, we can prevent deviations from our established standards and make it easier to predict and manage any issues that arise. This proactive approach helps maintain a stable and efficient environment for all users."
+          "title": "Controlling Change",
+          "content": "To keep all our computers reliable, we need to control how they change. We use standardized settings and roll out updates in careful stages. We also keep a record of any special exceptions. This prevents devices from 'drifting' away from our standards, making the whole system more stable and predictable."
         },
         {
           "id": "macos-301-l01-c3",
           "kind": "recap",
-          "title": "Governance Cadence",
-          "content": "Successful teams that manage devices effectively often create regular reports to monitor any changes that occur. They might review compliance with policies every month and refresh their security standards every three months. This consistent practice helps ensure that all devices remain secure and compliant with the latest guidelines, leading to better overall performance and security.\nContext recap: Successful teams that manage devices effectively often create regular reports to monitor any changes that occur. They might review compliance with policies every month and refresh their security standards every three months. This consistent practice helps ensure that all devices remain secure and compliant with the latest guidelines, leading to better overall performance and security."
+          "title": "Regular Reviews and Updates",
+          "content": "Effective teams regularly check how well devices are following the rules. For example, they might review compliance reports monthly and update security standards quarterly. This steady rhythm of review helps keep all devices secure and aligned with the latest best practices."
         }
       ],
       "flashcards": [
         {
           "id": "macos-301-l01-f1",
-          "front": "Fleet drift",
-          "back": "Unapproved divergence from standardized endpoint baseline."
+          "front": "What is 'fleet drift'?",
+          "back": "When devices in a group slowly become different from the standard, approved configuration over time."
         },
         {
           "id": "macos-301-l01-f2",
-          "front": "Policy ring",
-          "back": "Controlled cohort sequence for staged policy deployment."
+          "front": "What is a 'policy ring'?",
+          "back": "A small group of users or devices used to test new settings or updates before they are released to everyone."
         },
         {
           "id": "macos-301-l01-f3",
-          "front": "Exception register",
-          "back": "Tracked record of approved baseline deviations with owner and expiry."
+          "front": "What is an 'exception register'?",
+          "back": "An official log of all approved deviations from the standard security rules, including who approved it and why."
         }
       ],
       "learningAids": [
         {
           "id": "macos-301-l01-a1",
           "type": "image",
-          "title": "Fleet Control Model",
-          "content": "Model of baseline policy, rollout rings, exception handling, and compliance review."
+          "title": "The Lifecycle of a Policy",
+          "content": "A diagram showing how a central policy is created, tested on a small group (ring), rolled out to everyone, and continuously monitored for compliance and exceptions."
         }
       ]
     },
     {
       "id": "macos-301-l02",
-      "title": "Endpoint Telemetry and Performance Investigation Lab",
+      "title": "Using Device Data to Investigate Performance",
       "type": "interactive",
       "duration": 16,
       "chunks": [
         {
           "id": "macos-301-l02-c1",
           "kind": "concept",
-          "title": "Signal Correlation",
-          "content": "To accurately diagnose issues with devices, it is essential to look at multiple sources of information. This includes examining logs, measuring performance metrics, and understanding how users interact with their devices. Relying on just one source can lead to missing the real problems. By correlating data from different areas, we can identify the root causes of issues more effectively and implement appropriate solutions.\nContext recap: To accurately diagnose issues with devices, it is essential to look at multiple sources of information. This includes examining logs, measuring performance metrics, and understanding how users interact with their devices. Relying on just one source can lead to missing the real problems. By correlating data from different areas, we can identify the root causes of issues more effectively and implement appropriate solutions."
+          "title": "Connecting the Dots",
+          "content": "To solve a problem on a computer, you need to look at clues from multiple sources, like system logs, performance data, and user reports. Relying on just one piece of information can be misleading. By combining different data points, you can find the true root cause of an issue and fix it correctly."
         },
         {
           "id": "macos-301-l02-c2",
           "kind": "practice",
-          "title": "Performance Triage",
-          "content": "When analyzing performance issues, it is important to approach the situation carefully. This means forming specific hypotheses, comparing current performance to established baselines, and trying low-risk solutions before making significant changes to policies. By taking this measured approach, we can ensure that any adjustments made will not negatively impact users while still addressing the underlying issues.\nContext recap: When analyzing performance issues, it is important to approach the situation carefully. This means forming specific hypotheses, comparing current performance to established baselines, and trying low-risk solutions before making significant changes to policies. By taking this measured approach, we can ensure that any adjustments made will not negatively impact users while still addressing the underlying issues."
+          "title": "Investigating Performance Issues",
+          "content": "When a computer is slow, don't just guess. Start by forming a clear idea (a hypothesis) of what might be wrong. Compare its current performance to a normal baseline. Test small, safe solutions first before making big changes. This careful approach fixes the problem without creating new ones."
         }
       ],
       "interactiveActivities": [
         {
           "id": "macos-301-l02-act1",
           "type": "matching_pairs",
-          "title": "Signal-to-Hypothesis Match",
-          "description": "Match observed endpoint behavior to likely root domain.",
+          "title": "Symptom-to-Cause Match",
+          "description": "Match a computer's symptom to its most likely cause.",
           "pairs": [
             {
-              "left": "Sustained high memory pressure",
-              "right": "Application or workload memory contention"
+              "left": "Sustained high memory usage",
+              "right": "An application is using too many resources"
             },
             {
-              "left": "Frequent app launch delays",
-              "right": "Storage latency or indexing overhead"
+              "left": "Frequent delays when opening apps",
+              "right": "Slow storage or background indexing"
             },
             {
-              "left": "Thermal throttling under normal workflow",
-              "right": "CPU utilization pattern or cooling constraint"
+              "left": "Overheating during normal use",
+              "right": "High CPU usage or a cooling problem"
             },
             {
-              "left": "Periodic network-dependent app freezes",
-              "right": "Intermittent connectivity or DNS instability"
+              "left": "Apps freezing when using the internet",
+              "right": "Unstable network connection or DNS issues"
             }
           ]
         },
         {
           "id": "macos-301-l02-act2",
           "type": "scenario_practice",
-          "title": "Fleet Latency Drill",
-          "description": "Investigate a region-wide endpoint slowdown without disrupting users.",
+          "title": "Investigating a Slowdown",
+          "description": "You've been told computers in one office are running slow. Figure out how to investigate the problem without interrupting people's work.",
           "instructions": [
-            "Pick one low-risk measurement action first.",
-            "Define one mitigation safe for limited cohort deployment."
+            "Pick one low-risk measurement action to start.",
+            "Define one potential fix that is safe to test on a small group."
           ]
         }
       ],
       "metadata": {
         "prompts": [
-          "Why are baseline comparisons essential for endpoint triage?",
-          "Which metrics can mislead without context?",
-          "How do you avoid over-correcting from limited samples?"
+          "Why is comparing performance to a 'normal' baseline so important?",
+          "Which performance numbers can be misleading without more context?",
+          "How do you avoid making a big change based on a problem affecting only one or two computers?"
         ]
       },
       "learningAids": [
         {
           "id": "macos-301-l02-a1",
           "type": "practice",
-          "title": "Endpoint Incident Sheet",
-          "content": "Template for timeline, correlated signals, hypothesis ranking, and mitigation validation."
+          "title": "Problem-Solving Worksheet",
+          "content": "A structured template to guide your investigation. It includes sections for a timeline of events, data you've collected, possible causes, and how you'll test your solution."
         }
       ]
     },
@@ -161,41 +161,41 @@ export const Macos301Module: LearningModule = {
       "questions": [
         {
           "id": "macos-301-l03-q1",
-          "text": "Why use staged policy rollout for fleet changes?",
+          "text": "Why should you roll out changes to small groups first?",
           "skillId": "macos-301-skill-fleet",
           "options": [
             {
               "id": "a",
-              "text": "To increase failure blast radius"
+              "text": "To make sure problems affect more people"
             },
             {
               "id": "b",
-              "text": "To catch regressions before full deployment"
+              "text": "To find and fix problems before they affect everyone"
             },
             {
               "id": "c",
-              "text": "To remove need for monitoring"
+              "text": "To avoid having to monitor the change"
             },
             {
               "id": "d",
-              "text": "To avoid documentation"
+              "text": "To make the process faster"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Staged rollout supports controlled validation and safer change velocity."
+          "explanation": "Testing changes on a small group first helps you find and fix problems before they affect everyone."
         },
         {
           "id": "macos-301-l03-q2",
-          "text": "Most reliable first move in endpoint performance incidents is:",
+          "text": "What is the most reliable first step when investigating a performance problem?",
           "skillId": "macos-301-skill-performance",
           "options": [
             {
               "id": "a",
-              "text": "Apply broad config changes immediately"
+              "text": "Apply a major configuration change immediately"
             },
             {
               "id": "b",
-              "text": "Capture baseline telemetry and correlate symptoms"
+              "text": "Gather data and look for patterns in the symptoms"
             },
             {
               "id": "c",
@@ -203,61 +203,61 @@ export const Macos301Module: LearningModule = {
             },
             {
               "id": "d",
-              "text": "Reimage all affected devices"
+              "text": "Reinstall the operating system on all affected devices"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Evidence-first diagnosis reduces unnecessary disruption."
+          "explanation": "Starting with data and observation prevents you from making disruptive changes that don't fix the real problem."
         },
         {
           "id": "macos-301-l03-q3",
-          "text": "A strong exception register should include:",
+          "text": "A good system for tracking exceptions to security rules should include:",
           "skillId": "macos-301-skill-governance",
           "options": [
             {
               "id": "a",
-              "text": "No owner and no expiry"
+              "text": "No owner and no expiration date"
             },
             {
               "id": "b",
-              "text": "Owner, rationale, approved scope, and expiration"
+              "text": "The owner, reason, scope, and an expiration date"
             },
             {
               "id": "c",
-              "text": "Only device serial numbers"
+              "text": "Only the device serial numbers"
             },
             {
               "id": "d",
-              "text": "Untracked verbal approvals"
+              "text": "Verbal approvals that are not written down"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Governed exceptions prevent permanent hidden policy erosion."
+          "explanation": "A formal process for exceptions ensures that deviations from the rules are tracked, justified, and temporary, maintaining overall security."
         },
         {
           "id": "macos-301-l03-q4",
-          "text": "What is the main risk of single-metric troubleshooting?",
+          "text": "What is the main risk of troubleshooting using only one piece of data?",
           "skillId": "macos-301-skill-performance",
           "options": [
             {
               "id": "a",
-              "text": "Faster root-cause certainty"
+              "text": "It guarantees you will find the root cause faster"
             },
             {
               "id": "b",
-              "text": "Misdiagnosis due to missing cross-domain context"
+              "text": "You might misdiagnose the problem because you lack full context"
             },
             {
               "id": "c",
-              "text": "Lower operational cost"
+              "text": "It costs less money"
             },
             {
               "id": "d",
-              "text": "Improved evidence quality"
+              "text": "It improves the quality of your evidence"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Endpoint incidents are often multi-factor and require correlation."
+          "explanation": "Computer problems often have multiple causes. Looking at only one piece of data can lead you to the wrong conclusion."
         }
       ],
       "learningAids": [
@@ -265,121 +265,121 @@ export const Macos301Module: LearningModule = {
           "id": "macos-301-l03-a1",
           "type": "mnemonic",
           "title": "TRACE",
-          "content": "Telemetry, Relationships, Assumptions, Changes, Evidence."
+          "content": "A helpful acronym for investigations: Telemetry, Relationships, Assumptions, Changes, Evidence."
         }
       ]
     },
     {
       "id": "macos-301-l04",
-      "title": "Hardening Strategy and Compliance Evidence",
+      "title": "Creating Strong Security Baselines",
       "type": "video",
       "duration": 14,
       "chunks": [
         {
           "id": "macos-301-l04-c1",
           "kind": "concept",
-          "title": "Baseline Hardening Components",
-          "content": "To ensure that macOS devices are secure, it is important to establish a solid foundation known as a hardening baseline. This baseline includes several important components. First, there are policies that dictate how encryption should be used to protect sensitive information. Next, we have controls that ensure only trusted software can run on the device, which helps prevent malicious programs from executing. Additionally, strategies for network security are crucial, as they help safeguard the device from external threats. Local firewall settings play a vital role in monitoring and controlling incoming and outgoing network traffic. Finally, it is essential to set boundaries for privileged access, ensuring that only authorized users can access sensitive areas of the system. By combining these elements, we create a robust hardening baseline that significantly enhances the security of macOS devices against various threats and vulnerabilities."
+          "title": "Components of a Security Baseline",
+          "content": "A strong security 'baseline' is a standard set of protections applied to every computer. Key parts include: requiring disk encryption to protect data, allowing only approved software to run, configuring the firewall to block unwanted network traffic, and limiting who has administrative privileges. Together, these rules create a tough defense against common threats."
         },
         {
           "id": "macos-301-l04-c2",
           "kind": "concept",
-          "title": "Evidence and Audit Readiness",
-          "content": "To demonstrate security maturity, organizations need to provide evidence of their practices. This includes keeping records of policy versions, compliance reports, timelines for addressing issues, and any exceptions that have been tracked. The quality of this evidence is crucial, as it builds confidence during audits and shows that the organization is committed to maintaining high security standards.\nContext recap: To demonstrate security maturity, organizations need to provide evidence of their practices. This includes keeping records of policy versions, compliance reports, timelines for addressing issues, and any exceptions that have been tracked. The quality of this evidence is crucial, as it builds confidence during audits and shows that the organization is committed to maintaining high security standards."
+          "title": "Proving Your Security",
+          "content": "It's not enough to just have security rules; you must be able to prove they are working. This means keeping clear records of your security policies, reports showing that computers are compliant, and a log of any exceptions you've approved. Good records build trust and make security audits much smoother."
         },
         {
           "id": "macos-301-l04-c3",
           "kind": "recap",
-          "title": "Operational Fit",
-          "content": "It is essential that security controls align with the workflows of the business. If the hardening measures implemented disrupt the core productivity of users, it can lead to workarounds that compromise security. Therefore, finding a balance between security and usability is critical to achieving the overall goals of protecting the organization while allowing employees to work efficiently.\nContext recap: It is essential that security controls align with the workflows of the business. If the hardening measures implemented disrupt the core productivity of users, it can lead to workarounds that compromise security. Therefore, finding a balance between security and usability is critical to achieving the overall goals of protecting the organization while allowing employees to work efficiently."
+          "title": "Balancing Security and Productivity",
+          "content": "Security rules should protect the organization without preventing people from doing their jobs. If a security measure is too disruptive, users may find ways to bypass it, creating new risks. The goal is to find a balance that keeps the company safe while allowing everyone to be productive."
         }
       ],
       "flashcards": [
         {
           "id": "macos-301-l04-f1",
-          "front": "Baseline compliance",
-          "back": "Degree to which endpoints meet approved control configuration standards."
+          "front": "What is 'baseline compliance'?",
+          "back": "A measurement of how many devices in a group are correctly configured according to the standard security rules."
         },
         {
           "id": "macos-301-l04-f2",
-          "front": "Control exception",
-          "back": "Approved deviation from baseline with documented risk acceptance."
+          "front": "What is a 'security exception'?",
+          "back": "A formally approved permission for a specific device or user to not follow a standard security rule, usually for a specific business reason."
         },
         {
           "id": "macos-301-l04-f3",
-          "front": "Audit evidence",
-          "back": "Records proving policy enforcement, review, and remediation actions."
+          "front": "What is 'audit evidence'?",
+          "back": "The collection of logs, reports, and policy documents that prove your security controls are in place and working as intended."
         }
       ],
       "learningAids": [
         {
           "id": "macos-301-l04-a1",
           "type": "image",
-          "title": "Hardening Evidence Map",
-          "content": "Map connecting controls, telemetry, exceptions, and review cycles."
+          "title": "Connecting Security Rules to Proof",
+          "content": "A visual chart showing how a security rule (like 'Enable Firewall') is connected to the data that proves it's working, the process for handling exceptions, and the schedule for reviewing its effectiveness."
         }
       ]
     },
     {
       "id": "macos-301-l05",
-      "title": "Incident Response and Change Governance Lab",
+      "title": "Responding to Security Incidents",
       "type": "interactive",
       "duration": 16,
       "chunks": [
         {
           "id": "macos-301-l05-c1",
           "kind": "practice",
-          "title": "Containment and User Impact",
-          "content": "When responding to incidents on devices, it is important to find a balance between quickly containing the issue and ensuring that users can continue their work. First, we should define low-risk containment strategies that can be implemented immediately. If the situation escalates, we can then take further action based on the verified impact of the incident. This approach helps minimize disruption while addressing security concerns.\nContext recap: When responding to incidents on devices, it is important to find a balance between quickly containing the issue and ensuring that users can continue their work. First, we should define low-risk containment strategies that can be implemented immediately. If the situation escalates, we can then take further action based on the verified impact of the incident. This approach helps minimize disruption while addressing security concerns."
+          "title": "Containing Threats vs. Impacting Users",
+          "content": "When a security incident happens, your first job is to stop it from spreading. However, you must balance this with letting people continue to work. Start with small, low-impact actions to contain the threat. You can take more drastic steps if needed, but always consider how your actions will affect users."
         },
         {
           "id": "macos-301-l05-c2",
           "kind": "recap",
-          "title": "Post-Incident Improvement",
-          "content": "After an incident occurs, it is important to conduct a review to learn from the experience. This review should result in specific actions that need to be taken, along with measurable deadlines for completion. Additionally, any necessary updates to policies or tools should be made to reduce the likelihood of similar incidents happening in the future. This continuous improvement process is vital for enhancing security and operational efficiency.\nContext recap: After an incident occurs, it is important to conduct a review to learn from the experience. This review should result in specific actions that need to be taken, along with measurable deadlines for completion. Additionally, any necessary updates to policies or tools should be made to reduce the likelihood of similar incidents happening in the future. This continuous improvement process is vital for enhancing security and operational efficiency."
+          "title": "Learning From Incidents",
+          "content": "Every incident is a learning opportunity. After it's over, hold a review to understand what happened and why. The goal is to create a clear action plan with deadlines to fix the root cause. This process of learning and improving helps prevent the same problem from happening again."
         }
       ],
       "interactiveActivities": [
         {
           "id": "macos-301-l05-act1",
           "type": "timeline_builder",
-          "title": "Response Sequence Builder",
-          "description": "Arrange endpoint incident phases in defensible order.",
+          "title": "Incident Response Sequence",
+          "description": "Put the steps of a security incident response in the correct order.",
           "data": {
             "initiatives": [
-              "Confirm incident scope and affected cohort",
-              "Apply low-impact containment",
-              "Collect forensic and operational evidence",
-              "Validate service recovery",
-              "Publish prevention and ownership plan"
+              "Confirm the scope of the incident and who is affected",
+              "Apply low-impact actions to contain the threat",
+              "Collect evidence for analysis",
+              "Confirm that all systems are back to normal",
+              "Publish a plan to prevent the incident from reoccurring"
             ]
           }
         },
         {
           "id": "macos-301-l05-act2",
           "type": "sorting_buckets",
-          "title": "Change Risk Sort",
-          "description": "Classify proposed response changes by risk level.",
+          "title": "Sorting Changes by Risk",
+          "description": "During an incident, you need to make changes. Sort these proposed actions into buckets based on how risky they are.",
           "buckets": [
-            "Safe Immediate",
+            "Safe Immediate Action",
             "Needs Review",
             "High Risk"
           ],
           "items": [
             {
-              "text": "Temporary blocklist rule for affected app",
+              "text": "Temporarily block the affected application",
               "bucket": "Needs Review"
             },
             {
-              "text": "Global profile rewrite during incident",
+              "text": "Rewrite a major configuration profile for all devices",
               "bucket": "High Risk"
             },
             {
-              "text": "Targeted restart of impacted background service",
-              "bucket": "Safe Immediate"
+              "text": "Restart a single background service on affected machines",
+              "bucket": "Safe Immediate Action"
             },
             {
-              "text": "Disable endpoint protection across fleet",
+              "text": "Disable all endpoint security software",
               "bucket": "High Risk"
             }
           ]
@@ -387,17 +387,17 @@ export const Macos301Module: LearningModule = {
       ],
       "metadata": {
         "prompts": [
-          "Which incident change types require mandatory secondary approval?",
-          "How do you avoid permanent emergency fixes?",
-          "What artifact best supports faster future triage?"
+          "What kind of changes during an incident should always require a second person's approval?",
+          "How do you make sure that a temporary 'emergency fix' doesn't become permanent?",
+          "What is the most important piece of information to document during an incident to help with future problems?"
         ]
       },
       "learningAids": [
         {
           "id": "macos-301-l05-a1",
           "type": "practice",
-          "title": "Incident Governance Template",
-          "content": "Template for severity, containment, evidence, communication, and prevention actions."
+          "title": "Incident Response Plan",
+          "content": "A fill-in-the-blank worksheet for managing a security incident. It includes sections for defining the severity, planning containment steps, gathering evidence, and outlining a communication plan."
         }
       ]
     },
@@ -409,41 +409,41 @@ export const Macos301Module: LearningModule = {
       "questions": [
         {
           "id": "macos-301-l06-q1",
-          "text": "Why pair hardening controls with documented exceptions?",
+          "text": "Why is it important to have a formal process for security exceptions?",
           "skillId": "macos-301-skill-security",
           "options": [
             {
               "id": "a",
-              "text": "To make controls optional permanently"
+              "text": "To make security rules optional for everyone"
             },
             {
               "id": "b",
-              "text": "To preserve operational flexibility with accountable risk tracking"
+              "text": "To allow for flexibility while tracking and approving any risks"
             },
             {
               "id": "c",
-              "text": "To avoid policy ownership"
+              "text": "To avoid having anyone be responsible for security policies"
             },
             {
               "id": "d",
-              "text": "To remove compliance obligations"
+              "text": "To get rid of compliance requirements"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Governed exceptions maintain transparency while supporting real constraints."
+          "explanation": "A formal exception process allows for necessary flexibility while ensuring that every deviation from the security baseline is tracked and approved."
         },
         {
           "id": "macos-301-l06-q2",
-          "text": "Most valuable output of post-incident review is:",
+          "text": "What is the most valuable outcome of a post-incident review?",
           "skillId": "macos-301-skill-incident",
           "options": [
             {
               "id": "a",
-              "text": "A long chat transcript"
+              "text": "A long transcript of the discussion"
             },
             {
               "id": "b",
-              "text": "Owned corrective actions with measurable deadlines"
+              "text": "A list of corrective actions with owners and deadlines"
             },
             {
               "id": "c",
@@ -451,61 +451,61 @@ export const Macos301Module: LearningModule = {
             },
             {
               "id": "d",
-              "text": "Unprioritized suggestions"
+              "text": "A list of suggestions with no priority"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Clear ownership and deadlines convert review into prevention."
+          "explanation": "A review is only useful if it leads to action. Assigning tasks to specific people with clear deadlines ensures that lessons learned are turned into real improvements."
         },
         {
           "id": "macos-301-l06-q3",
-          "text": "Primary purpose of ringed policy rollout is:",
+          "text": "What is the main purpose of rolling out policy changes in 'rings'?",
           "skillId": "macos-301-skill-fleet",
           "options": [
             {
               "id": "a",
-              "text": "Simultaneous global blast"
+              "text": "To deploy the change to everyone at the same time"
             },
             {
               "id": "b",
-              "text": "Gradual validation with controlled risk exposure"
+              "text": "To test the change on a small group and limit risk"
             },
             {
               "id": "c",
-              "text": "Skipping observability"
+              "text": "To avoid the need for monitoring"
             },
             {
               "id": "d",
-              "text": "Removing rollback plans"
+              "text": "To eliminate the need for a rollback plan"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Rings let teams verify effects before broad deployment."
+          "explanation": "Testing changes on small, controlled groups (rings) is the safest way to roll out updates, as it limits the impact of any unexpected problems."
         },
         {
           "id": "macos-301-l06-q4",
-          "text": "In incident response, what makes a change reversible?",
+          "text": "During an incident, what makes a change easy to reverse?",
           "skillId": "macos-301-skill-change",
           "options": [
             {
               "id": "a",
-              "text": "No record of prior state"
+              "text": "Not keeping a record of the original state"
             },
             {
               "id": "b",
-              "text": "Defined rollback path and validation criteria"
+              "text": "Having a clear rollback plan and knowing what 'fixed' looks like"
             },
             {
               "id": "c",
-              "text": "Ad-hoc scripting in production"
+              "text": "Making changes on the fly without documentation"
             },
             {
               "id": "d",
-              "text": "Undocumented profile edits"
+              "text": "Editing configuration profiles directly without testing"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Rollback-ready changes reduce prolonged incident impact."
+          "explanation": "Knowing how to undo a change is just as important as making it. A clear rollback plan allows you to quickly reverse a fix that causes more problems."
         }
       ],
       "learningAids": [
@@ -513,7 +513,7 @@ export const Macos301Module: LearningModule = {
           "id": "macos-301-l06-a1",
           "type": "mnemonic",
           "title": "CLIP",
-          "content": "Contain, Log, Improve, Prevent."
+          "content": "A simple model for incident response: Contain, Log, Improve, Prevent."
         }
       ]
     }

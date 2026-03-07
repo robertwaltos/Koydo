@@ -18,10 +18,37 @@ export type AppVariant = "kids" | "teen" | "adult" | "school" | "full";
 export const APP_VARIANTS: AppVariant[] = ["kids", "teen", "adult", "school", "full"];
 
 export function getCurrentAppVariant(): AppVariant {
+  // 1. Explicit override via env var
   const v = process.env.NEXT_PUBLIC_APP_VARIANT;
   if (v && APP_VARIANTS.includes(v as AppVariant)) return v as AppVariant;
+
+  // 2. Derive from NEXT_PUBLIC_APP_ID
+  const appId = process.env.NEXT_PUBLIC_APP_ID;
+  if (appId && appId in APP_ID_TO_VARIANT) {
+    return APP_ID_TO_VARIANT[appId];
+  }
+
   return "full";
 }
+
+/** Static mapping from app_id → AppVariant, used by getCurrentAppVariant() */
+const APP_ID_TO_VARIANT: Record<string, AppVariant> = {
+  koydo_main: "full",
+  koydo_junior: "kids",
+  koydo_sat: "teen",
+  koydo_finance: "adult",
+  koydo_university: "adult",
+  koydo_math: "teen",
+  koydo_arena: "full",
+  // Regional variants
+  koydo_math_es: "teen",
+  koydo_exam_jp: "teen",
+  koydo_junior_de: "kids",
+  koydo_ar: "full",
+  koydo_kr: "teen",
+  koydo_hi: "full",
+  koydo_math_zh: "teen",
+};
 
 // ── Feature IDs ─────────────────────────────────────────────────────────────
 

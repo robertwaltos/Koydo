@@ -1,134 +1,156 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const LanguageArts501Module: LearningModule = {
+export const language_arts_501_Module: LearningModule = {
   "id": "language-arts-501",
-  "title": "Language Arts Specialization Studio",
-  "description": "Post-401 specialization in Language Arts, focused on language arts systems diagnostics, language arts operations and execution design, language arts impact and tradeoff analysis, and language arts governance and leadership through advanced casework, simulation, and defense-based checkpoints.",
+  "title": "Advanced Language Arts: Rhetoric, Analysis, and Leadership",
+  "description": "A post-401 specialization in Language Arts, focusing on advanced textual analysis, persuasive communication design, ethical impact assessment, and leadership in public discourse. The course uses advanced case studies, simulations, and a final capstone defense to build mastery.",
   "subject": "Language Arts",
   "tags": [
     "core",
     "curriculum",
     "interactive",
     "language-arts",
-    "specialization"
+    "specialization",
+    "rhetoric",
+    "ethics"
   ],
   "minAge": 17,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en",
     "es"
   ],
   "learningObjectives": [
-    "Apply advanced methods for language arts systems diagnostics in high-constraint environments",
-    "Design robust systems for language arts operations and execution design with measurable control gates",
-    "Evaluate interventions in language arts impact and tradeoff analysis with research-grade rigor",
-    "Operationalize language arts governance and leadership with accountable governance and escalation pathways",
-    "Lead cross-functional decision reviews with explicit tradeoff communication",
-    "Defend recommendations under expert critique using evidence and uncertainty bounds"
+    "Apply advanced analytical frameworks to deconstruct complex literary and rhetorical texts.",
+    "Design robust persuasive communication strategies for diverse audiences and contexts.",
+    "Evaluate the ethical implications and societal impact of language with research-grade rigor.",
+    "Develop and defend a well-reasoned position on a complex issue using evidence-based arguments.",
+    "Lead constructive dialogue and defend recommendations against expert critique.",
+    "Articulate the trade-offs between different communication strategies and their potential consequences."
   ],
   "lessons": [
     {
       "id": "language-arts-501-l01",
-      "title": "Language Arts Advanced Foundations",
+      "title": "Foundations of Advanced Rhetorical Analysis",
       "type": "video",
-      "duration": 14,
+      "duration": 15,
       "learningAids": [
         {
           "id": "language-arts-501-l01-a1",
           "type": "image",
           "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "content": "Use a structured analytical method, make interpretive assumptions explicit, and validate claims with strong textual evidence."
         }
       ],
       "chunks": [
         {
           "id": "language-arts-501-l01-c1",
           "kind": "concept",
-          "title": "Scope and Boundary Design",
-          "content": "In this lesson, we will delve into the advanced boundaries of Language Arts. Our focus will be on understanding how to effectively assess language arts systems, which means looking at how different parts of language arts work together. We will also learn how to design operations and execution plans that can improve our learning outcomes. By doing this, we will create a clearer framework for our studies, ensuring that we address all the important components in our language arts education. This understanding will help us become better learners and communicators, setting a strong foundation for our future studies."
+          "title": "Analytical Frameworks",
+          "content": "In this lesson, we will move beyond basic analysis to explore sophisticated frameworks for understanding complex texts. We'll learn how to deconstruct intricate arguments, narrative structures, and rhetorical strategies to uncover deeper meanings and authorial intent. This provides a solid foundation for all advanced work in language arts.",
+          "visualPrompts": [
+            "An animated diagram showing layers of meaning in a text (literal, symbolic, allegorical).",
+            "A flowchart breaking down a complex argument from a historical speech."
+          ]
         },
         {
           "id": "language-arts-501-l01-c2",
           "kind": "concept",
-          "title": "Causal and Uncertainty Modeling",
-          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different events or actions, as well as identifying ranges of uncertainty and dependencies within systems. This foundational knowledge is crucial for planning effective interventions in language arts, as it allows us to understand how various elements interact and influence one another before we take action.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different events or actions, as well as identifying ranges of uncertainty and dependencies within systems. This foundational knowledge is crucial for planning effective interventions in language arts, as it allows us to understand how various elements interact and influence one another before we take action."
+          "title": "Mapping Arguments and Assumptions",
+          "content": "Every argument has an underlying structure and relies on unstated assumptions. Here, we will practice mapping these logical pathways, identifying key premises, and uncovering hidden biases. This skill is crucial for critically evaluating the strength and validity of any piece of communication, from a political ad to a scientific paper.",
+          "visualPrompts": [
+            "An interactive diagram where learners can click on parts of an argument to reveal underlying assumptions.",
+            "A side-by-side comparison of a flawed argument and its corrected, logical version."
+          ]
         },
         {
           "id": "language-arts-501-l01-c3",
           "kind": "recap",
-          "title": "Evidence Thresholds",
-          "content": "It is important to ensure that all claims we make are supported by measurable indicators. This means we will establish confidence bounds and set up review checkpoints to verify our findings. By doing this, we can ensure that our conclusions are based on solid evidence and can be trusted in our discussions and analyses.\nContext recap: It is important to ensure that all claims we make are supported by measurable indicators. This means we will establish confidence bounds and set up review checkpoints to verify our findings. By doing this, we can ensure that our conclusions are based on solid evidence and can be trusted in our discussions and analyses."
+          "title": "Standards of Evidence",
+          "content": "A strong analysis requires strong evidence. We will establish clear standards for what constitutes valid textual evidence and how to use it to support your claims. This involves learning to build a convincing case that is grounded in the text itself, making your interpretations both credible and defensible.",
+          "visualPrompts": [
+            "A checklist graphic outlining the criteria for strong textual evidence (relevance, sufficiency, accuracy).",
+            "An example of a weak claim followed by a strong, evidence-based claim about the same text."
+          ]
         }
       ],
       "flashcards": [
         {
           "id": "language-arts-501-l01-f1",
-          "front": "language arts systems diagnostics",
-          "back": "A specialization axis requiring explicit assumptions and measurable constraints."
+          "front": "Rhetorical Analysis",
+          "back": "The systematic examination of texts to understand how an author's language choices work to influence an audience."
         },
         {
           "id": "language-arts-501-l01-f2",
-          "front": "language arts operations and execution design",
-          "back": "Execution architecture that determines reliability under stress."
+          "front": "Logical Fallacy",
+          "back": "A flaw in reasoning that weakens an argument or renders it invalid. Examples include ad hominem attacks or straw man arguments."
         },
         {
           "id": "language-arts-501-l01-f3",
-          "front": "language arts impact and tradeoff analysis",
-          "back": "Evaluation discipline for identifying true gains and hidden costs."
+          "front": "Textual Evidence",
+          "back": "Direct quotes, paraphrased details, or structural observations from a text used to support an analytical claim."
         }
       ]
     },
     {
       "id": "language-arts-501-l02",
-      "title": "Language Arts Specialist Methods Lab",
+      "title": "Persuasive Communication Design Lab",
       "type": "interactive",
-      "duration": 17,
+      "duration": 20,
       "learningAids": [
         {
           "id": "language-arts-501-l02-a1",
           "type": "practice",
           "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "content": "Design a communication strategy with a clear goal, target audience, and message, then test it against potential counterarguments."
         }
       ],
       "chunks": [
         {
           "id": "language-arts-501-l02-c1",
           "kind": "practice",
-          "title": "Method Design and Stress Test",
-          "content": "In this interactive practice, learners will have the opportunity to design workflows that are specific to their areas of expertise in language arts. They will also conduct stress tests on these workflows, simulating challenging scenarios to see how well their designs hold up under pressure. This hands-on experience is vital for developing practical skills and understanding the complexities of language arts operations.\nContext recap: In this interactive practice, learners will have the opportunity to design workflows that are specific to their areas of expertise in language arts. They will also conduct stress tests on these workflows, simulating challenging scenarios to see how well their designs hold up under pressure. This hands-on experience is vital for developing practical skills and understanding the complexities of language arts operations."
+          "title": "Argument Design and Stress-Testing",
+          "content": "In this interactive lab, you will design a persuasive campaign for a specific audience and goal. You will then 'stress-test' your argument by anticipating and preparing responses to potential challenges, critiques, and opposing viewpoints. This hands-on practice builds practical skills in crafting resilient and effective communication.",
+          "visualPrompts": [
+            "A digital whiteboard tool for brainstorming and structuring a persuasive campaign.",
+            "A 'devil's advocate' simulator that presents common counterarguments to the learner's position."
+          ]
         },
         {
           "id": "language-arts-501-l02-c2",
           "kind": "recap",
-          "title": "Control Gate Architecture",
-          "content": "In this recap, we will discuss how workflows can be structured to include important checkpoints, criteria for rolling back decisions, and thresholds that trigger escalation. By integrating these elements, we can create a more robust system that ensures accountability and effectiveness in our language arts practices.\nContext recap: In this recap, we will discuss how workflows can be structured to include important checkpoints, criteria for rolling back decisions, and thresholds that trigger escalation. By integrating these elements, we can create a more robust system that ensures accountability and effectiveness in our language arts practices."
+          "title": "Structuring for Impact",
+          "content": "Effective arguments are well-structured. We will review how to build your communication with logical checkpoints, clear transitions, and a compelling narrative arc. This ensures your audience can follow your reasoning and is more likely to be persuaded by your message.",
+          "visualPrompts": [
+            "Infographics showing different argument structures (e.g., classical, Rogerian, Toulmin model).",
+            "An animation of a poorly structured argument being reorganized into a clear, impactful flow."
+          ]
         }
       ],
       "interactiveActivities": [
         {
           "id": "language-arts-501-l02-act1",
           "type": "matching_pairs",
-          "title": "Control-to-Outcome Mapping",
-          "description": "Match specialist controls with their strongest reliability and governance effects.",
+          "title": "Match Rhetorical Device to its Effect",
+          "description": "Match the rhetorical technique with its most common persuasive effect on an audience.",
           "pairs": [
             {
-              "left": "Pre-commit gate",
-              "right": "Prevents avoidable downstream failures"
+              "left": "Pathos (Emotional Appeal)",
+              "right": "Builds empathy and a sense of urgency"
             },
             {
-              "left": "Rollback trigger",
-              "right": "Limits blast radius under adverse outcomes"
+              "left": "Ethos (Credibility)",
+              "right": "Establishes trust and authority"
             },
             {
-              "left": "Baseline dashboard",
-              "right": "Supports defensible impact attribution"
+              "left": "Logos (Logical Appeal)",
+              "right": "Appeals to reason with facts and evidence"
             },
             {
-              "left": "Retrospective loop",
-              "right": "Improves next-cycle decision quality"
+              "left": "Kairos (Timeliness)",
+              "right": "Creates relevance by addressing the current moment"
             }
           ]
         }
@@ -136,223 +158,116 @@ export const LanguageArts501Module: LearningModule = {
     },
     {
       "id": "language-arts-501-l03",
-      "title": "Checkpoint 1: Specialist Methods",
+      "title": "Checkpoint 1: Analysis and Design",
       "type": "quiz",
       "duration": 10,
-      "learningAids": [
-        {
-          "id": "language-arts-501-l03-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
-        }
-      ],
+      "learningAids": [],
       "questions": [
         {
           "id": "language-arts-501-l03-q1",
-          "text": "Which practice most improves language arts systems diagnostics decision quality?",
+          "text": "What is the most critical first step in conducting an advanced rhetorical analysis?",
           "skillId": "language-arts-501-skill-core",
           "options": [
             {
               "id": "a",
-              "text": "Proceed without baseline or assumptions"
+              "text": "Immediately forming a personal opinion."
             },
             {
               "id": "b",
-              "text": "Define assumptions, constraints, and measurable indicators"
+              "text": "Identifying the author's purpose, audience, and context."
             },
             {
               "id": "c",
-              "text": "Optimize only for speed in every context"
+              "text": "Counting the number of rhetorical devices used."
             },
             {
               "id": "d",
-              "text": "Ignore uncertainty and edge conditions"
+              "text": "Focusing only on grammatical errors."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Advanced decisions improve when assumptions, constraints, and metrics are explicit."
+          "explanation": "Understanding the purpose, audience, and context provides the necessary foundation for any meaningful analysis."
         },
         {
           "id": "language-arts-501-l03-q2",
-          "text": "At level 501, strong execution for language arts operations and execution design requires:",
+          "text": "When designing a persuasive message, 'stress-testing' your argument primarily helps to:",
           "skillId": "language-arts-501-skill-execution",
           "options": [
             {
               "id": "a",
-              "text": "Owner mapping, checkpoint cadence, and escalation thresholds"
+              "text": "Make the argument longer."
             },
             {
               "id": "b",
-              "text": "No role clarity and ad-hoc process changes"
+              "text": "Anticipate counterarguments and strengthen your position."
             },
             {
               "id": "c",
-              "text": "No retrospective or post-run review"
+              "text": "Ensure the vocabulary is sufficiently complex."
             },
             {
               "id": "d",
-              "text": "No rollback or fallback conditions"
+              "text": "Check for spelling and grammar mistakes."
             }
           ],
-          "correctOptionId": "a",
-          "explanation": "Reliable advanced execution needs ownership clarity and threshold-driven governance."
+          "correctOptionId": "b",
+          "explanation": "Stress-testing is about building a resilient argument by proactively addressing potential weaknesses and opposition."
         },
         {
           "id": "language-arts-501-l03-q3",
-          "text": "A defensible approach to language arts impact and tradeoff analysis includes:",
+          "text": "A defensible analytical claim must be supported by:",
           "skillId": "language-arts-501-skill-eval",
           "options": [
             {
               "id": "a",
-              "text": "Anecdotes without comparison"
+              "text": "Strong personal feelings about the text."
             },
             {
               "id": "b",
-              "text": "Baseline comparisons, side-effect analysis, and uncertainty bounds"
+              "text": "Specific, relevant evidence from the text itself."
             },
             {
               "id": "c",
-              "text": "Changing success criteria after outcomes"
+              "text": "What other critics have said, without your own analysis."
             },
             {
               "id": "d",
-              "text": "Excluding difficult scenarios from analysis"
+              "text": "A summary of the plot."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible analysis combines comparative baselines, side-effect checks, and uncertainty disclosure."
+          "explanation": "All credible analysis must be grounded in textual evidence to be defensible and persuasive."
         },
         {
           "id": "language-arts-501-l03-q4",
-          "text": "Mature governance systems connect:",
+          "text": "The concept of 'Ethos' in rhetoric refers to:",
           "skillId": "language-arts-501-skill-governance",
           "options": [
             {
               "id": "a",
-              "text": "Policy intent, measurable controls, and remediation pathways"
+              "text": "The emotional impact of the message on the audience."
             },
             {
               "id": "b",
-              "text": "Policy language with no measurable enforcement"
+              "text": "The logical structure and evidence of the argument."
             },
             {
               "id": "c",
-              "text": "Targets without ownership or escalation design"
+              "text": "The credibility, character, and authority of the speaker."
             },
             {
               "id": "d",
-              "text": "Operations without transparent accountability"
+              "text": "The timeliness and relevance of the message."
             }
           ],
-          "correctOptionId": "a",
-          "explanation": "Governance maturity is the operational link between intent, measurement, and corrective action."
-        },
-        {
-          "id": "language-arts-501-l03-q5",
-          "text": "What is the best way to compare competing interventions in advanced Language Arts?",
-          "skillId": "language-arts-501-skill-advanced-5",
-          "options": [
-            {
-              "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
-            },
-            {
-              "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
-            },
-            {
-              "id": "c",
-              "text": "Switch metrics after results arrive"
-            },
-            {
-              "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
-        },
-        {
-          "id": "language-arts-501-l03-q6",
-          "text": "In high-stakes Language Arts Specialization Studio execution, which communication protocol is strongest?",
-          "skillId": "language-arts-501-skill-advanced-6",
-          "options": [
-            {
-              "id": "a",
-              "text": "Broadcast conclusions without assumptions"
-            },
-            {
-              "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
-            },
-            {
-              "id": "c",
-              "text": "Share only final outcomes after completion"
-            },
-            {
-              "id": "d",
-              "text": "Limit updates to a single informal channel"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
-        },
-        {
-          "id": "language-arts-501-l03-q7",
-          "text": "A mature remediation loop in advanced Language Arts should prioritize:",
-          "skillId": "language-arts-501-skill-advanced-7",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blame assignment without system updates"
-            },
-            {
-              "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
-            },
-            {
-              "id": "c",
-              "text": "One-time fixes without retesting"
-            },
-            {
-              "id": "d",
-              "text": "Issue closure based on elapsed time"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
-        },
-        {
-          "id": "language-arts-501-l03-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Language Arts Specialization Studio?",
-          "skillId": "language-arts-501-skill-advanced-8",
-          "options": [
-            {
-              "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
-            },
-            {
-              "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
-            },
-            {
-              "id": "c",
-              "text": "Ignore correlated failure modes"
-            },
-            {
-              "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "correctOptionId": "c",
+          "explanation": "Ethos is the appeal to authority and credibility, establishing why the audience should trust the speaker."
         }
       ]
     },
     {
       "id": "language-arts-501-l04",
-      "title": "Language Arts Advanced Case Analysis",
+      "title": "Advanced Case Study: Deconstructing Public Discourse",
       "type": "video",
       "duration": 14,
       "learningAids": [
@@ -360,33 +275,45 @@ export const LanguageArts501Module: LearningModule = {
           "id": "language-arts-501-l04-a1",
           "type": "image",
           "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "content": "Analyze a real-world case by identifying key stakeholders, rhetorical strategies, and ethical trade-offs."
         }
       ],
       "chunks": [
         {
           "id": "language-arts-501-l04-c1",
           "kind": "concept",
-          "title": "Scenario Architecture",
-          "content": "In this lesson, we will frame a case that highlights the competing constraints within language arts systems diagnostics. We will analyze the impacts and trade-offs involved in different approaches, helping us to understand the complexities of decision-making in language arts and how various factors can influence outcomes.\nContext recap: In this lesson, we will frame a case that highlights the competing constraints within language arts systems diagnostics. We will analyze the impacts and trade-offs involved in different approaches, helping us to understand the complexities of decision-making in language arts and how various factors can influence outcomes."
+          "title": "Case Study Introduction",
+          "content": "In this lesson, we will deconstruct a complex, real-world case of public discourse, such as a landmark political speech or a viral media campaign. We will apply our analytical frameworks to understand the competing goals, hidden complexities, and strategic choices involved.",
+          "visualPrompts": [
+            "A short video clip of the case study being introduced (e.g., an excerpt of the speech).",
+            "An infographic mapping the key players and context surrounding the case."
+          ]
         },
         {
           "id": "language-arts-501-l04-c2",
           "kind": "practice",
-          "title": "Tradeoff Framing",
-          "content": "In this practice session, learners will compare different options available to them, focusing on key dimensions such as safety, reliability, cost, equity, and governance. This comparative analysis will help them understand the implications of their choices and how to make informed decisions in language arts.\nContext recap: In this practice session, learners will compare different options available to them, focusing on key dimensions such as safety, reliability, cost, equity, and governance. This comparative analysis will help them understand the implications of their choices and how to make informed decisions in language arts."
+          "title": "Analyzing Rhetorical and Ethical Trade-offs",
+          "content": "Every communication choice involves trade-offs. For example, a highly emotional appeal might be persuasive but could sacrifice logical rigor. In this practice, you will identify and evaluate the key trade-offs made in our case study, considering their impact on different audiences and their ethical implications.",
+          "visualPrompts": [
+            "A 'slider' interactive where learners can adjust a rhetorical strategy (e.g., more pathos vs. more logos) and see the potential outcomes.",
+            "A table comparing the intended effects of a message versus its actual, unintended consequences."
+          ]
         },
         {
           "id": "language-arts-501-l04-c3",
           "kind": "recap",
-          "title": "Decision Memo Pattern",
-          "content": "In this recap, we will emphasize that each recommendation made should include clear assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that our decisions are well-founded and that we are prepared for any potential challenges that may arise.\nContext recap: In this recap, we will emphasize that each recommendation made should include clear assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that our decisions are well-founded and that we are prepared for any potential challenges that may arise."
+          "title": "Formulating a Defensible Position",
+          "content": "Based on your analysis, you will formulate a clear, defensible position on the effectiveness and ethics of the communication in the case study. This position must be supported by strong evidence, acknowledge complexities, and consider potential counterarguments.",
+          "visualPrompts": [
+            "A template for a 'position statement' that includes fields for the main claim, key evidence, and acknowledgment of limitations.",
+            "A mind map showing how different pieces of evidence connect to support a central thesis."
+          ]
         }
       ]
     },
     {
       "id": "language-arts-501-l05",
-      "title": "Language Arts Simulation Clinic",
+      "title": "Crisis Communication Simulation",
       "type": "interactive",
       "duration": 18,
       "learningAids": [
@@ -394,251 +321,152 @@ export const LanguageArts501Module: LearningModule = {
           "id": "language-arts-501-l05-a1",
           "type": "practice",
           "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "content": "Make real-time communication decisions in a simulated crisis, balancing transparency, stakeholder needs, and organizational goals."
         }
       ],
       "chunks": [
         {
           "id": "language-arts-501-l05-c1",
           "kind": "practice",
-          "title": "Live Scenario Controls",
-          "content": "In this interactive practice, learners will take on the role of operators managing scenario controls. They will need to balance performance goals with governance constraints, ensuring that their actions align with established guidelines while striving for optimal outcomes in language arts.\nContext recap: In this interactive practice, learners will take on the role of operators managing scenario controls. They will need to balance performance goals with governance constraints, ensuring that their actions align with established guidelines while striving for optimal outcomes in language arts."
+          "title": "Live Crisis Scenario",
+          "content": "In this simulation, you will manage a communications crisis in real time. You'll receive breaking information and must make strategic decisions about what to say, when to say it, and to whom. Your goal is to navigate the crisis effectively while upholding ethical principles.",
+          "visualPrompts": [
+            "A simulated social media feed with incoming messages and news alerts.",
+            "A dashboard showing public sentiment and stakeholder trust levels changing based on your decisions."
+          ]
         },
         {
           "id": "language-arts-501-l05-c2",
           "kind": "recap",
-          "title": "Adaptive Response Design",
-          "content": "In this recap, we will discuss how effective responses to challenges should update control gates without losing traceability or accountability. This means that as we adapt our strategies, we must maintain clear records of our decisions and actions to ensure transparency and responsibility.\nContext recap: In this recap, we will discuss how effective responses to challenges should update control gates without losing traceability or accountability. This means that as we adapt our strategies, we must maintain clear records of our decisions and actions to ensure transparency and responsibility."
+          "title": "Adaptive Communication Strategy",
+          "content": "Crises are dynamic. Effective communication requires adapting your strategy as the situation evolves. We will recap how to adjust your messaging and tactics based on new information and audience feedback, without losing credibility or abandoning your core principles.",
+          "visualPrompts": [
+            "A decision tree showing how an initial communication plan might branch into different paths based on new events.",
+            "A 'before and after' comparison of a rigid message versus an adaptive one in a crisis."
+          ]
         }
       ],
       "interactiveActivities": [
         {
           "id": "language-arts-501-l05-act1",
           "type": "scenario",
-          "title": "Adverse-Condition Decision Run",
-          "description": "Run a high-pressure language arts scenario and tune controls under uncertainty."
+          "title": "High-Stakes Press Conference",
+          "description": "Navigate a high-pressure press conference in our crisis simulation. Choose your responses to tough questions from journalists and stakeholders and see the immediate impact on public trust."
         }
       ]
     },
     {
       "id": "language-arts-501-l06",
-      "title": "Checkpoint 2: Case and Simulation Mastery",
+      "title": "Checkpoint 2: Application and Adaptation",
       "type": "quiz",
-      "duration": 11,
-      "learningAids": [
-        {
-          "id": "language-arts-501-l06-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
-        }
-      ],
+      "duration": 12,
+      "learningAids": [],
       "questions": [
         {
           "id": "language-arts-501-l06-q1",
-          "text": "In advanced casework, the first requirement for defensible recommendations is:",
+          "text": "In analyzing a complex case study, what does identifying 'trade-offs' mean?",
           "skillId": "language-arts-501-skill-case1",
           "options": [
             {
               "id": "a",
-              "text": "A preferred option without explicit assumptions"
+              "text": "Finding factual errors in the author's writing."
             },
             {
               "id": "b",
-              "text": "A clear baseline, explicit constraints, and success criteria"
+              "text": "Recognizing that choosing one rhetorical strategy often means sacrificing the benefits of another."
             },
             {
               "id": "c",
-              "text": "High confidence without evidence logs"
+              "text": "Trading your interpretation with a classmate."
             },
             {
               "id": "d",
-              "text": "Single-metric optimization only"
+              "text": "Ignoring any part of the text that is confusing."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible recommendations begin with explicit assumptions, constraints, and measurable targets."
+          "explanation": "Analyzing trade-offs involves understanding the costs and benefits of the specific communication choices an author makes."
         },
         {
           "id": "language-arts-501-l06-q2",
-          "text": "A resilient strategy for language arts operations and execution design should include:",
+          "text": "A resilient crisis communication strategy should prioritize:",
           "skillId": "language-arts-501-skill-case2",
           "options": [
             {
               "id": "a",
-              "text": "Checkpointed execution with fallback and escalation criteria"
+              "text": "A single, unchangeable message to be repeated no matter what."
             },
             {
               "id": "b",
-              "text": "One-way execution with no rollback capability"
+              "text": "Flexibility to adapt to new information while maintaining core principles like transparency."
             },
             {
               "id": "c",
-              "text": "No ownership mapping across teams"
+              "text": "Waiting until the crisis is completely over before saying anything."
             },
             {
               "id": "d",
-              "text": "Hidden assumptions and undocumented decisions"
+              "text": "Blaming others to deflect attention."
             }
           ],
-          "correctOptionId": "a",
-          "explanation": "Resilience depends on checkpoints, fallback options, and explicit escalation design."
+          "correctOptionId": "b",
+          "explanation": "Resilience in a crisis depends on the ability to adapt your communications as the situation evolves."
         },
         {
           "id": "language-arts-501-l06-q3",
-          "text": "When evaluating language arts impact and tradeoff analysis, which method is most rigorous?",
+          "text": "When evaluating the societal impact of a media campaign, the most rigorous approach is to:",
           "skillId": "language-arts-501-skill-case3",
           "options": [
             {
               "id": "a",
-              "text": "Single success story without controls"
+              "text": "Only consider the creator's stated intentions."
             },
             {
               "id": "b",
-              "text": "Comparative baselines plus side-effect and uncertainty analysis"
+              "text": "Analyze its effects on various stakeholder groups, including any unintended consequences."
             },
             {
               "id": "c",
-              "text": "Outcome-only narrative without process evidence"
+              "text": "Focus only on how much money the campaign made."
             },
             {
               "id": "d",
-              "text": "Retrospective scope changes to fit outcomes"
+              "text": "Base your evaluation on a single, emotional anecdote."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Rigorous evaluation requires comparisons, side-effect analysis, and uncertainty disclosure."
+          "explanation": "Rigorous evaluation requires a comprehensive look at the full range of effects on all relevant groups."
         },
         {
           "id": "language-arts-501-l06-q4",
-          "text": "Advanced governance is strongest when it:",
+          "text": "Advanced ethical communication is strongest when it:",
           "skillId": "language-arts-501-skill-case4",
           "options": [
             {
               "id": "a",
-              "text": "Aligns authority, measurement, and remediation obligations"
+              "text": "Aligns the message with principles of honesty, accountability, and respect for the audience."
             },
             {
               "id": "b",
-              "text": "Separates policy from operational controls"
+              "text": "Separates the message from any real-world consequences."
             },
             {
               "id": "c",
-              "text": "Avoids external review and transparency"
+              "text": "Avoids transparency to maintain control."
             },
             {
               "id": "d",
-              "text": "Treats accountability as optional under pressure"
+              "text": "Prioritizes persuasion at any ethical cost."
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Mature governance links authority, measurable controls, and corrective action."
-        },
-        {
-          "id": "language-arts-501-l06-q5",
-          "text": "What is the best way to compare competing interventions in advanced Language Arts?",
-          "skillId": "language-arts-501-skill-advanced-5",
-          "options": [
-            {
-              "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
-            },
-            {
-              "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
-            },
-            {
-              "id": "c",
-              "text": "Switch metrics after results arrive"
-            },
-            {
-              "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
-        },
-        {
-          "id": "language-arts-501-l06-q6",
-          "text": "In high-stakes Language Arts Specialization Studio execution, which communication protocol is strongest?",
-          "skillId": "language-arts-501-skill-advanced-6",
-          "options": [
-            {
-              "id": "a",
-              "text": "Broadcast conclusions without assumptions"
-            },
-            {
-              "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
-            },
-            {
-              "id": "c",
-              "text": "Share only final outcomes after completion"
-            },
-            {
-              "id": "d",
-              "text": "Limit updates to a single informal channel"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
-        },
-        {
-          "id": "language-arts-501-l06-q7",
-          "text": "A mature remediation loop in advanced Language Arts should prioritize:",
-          "skillId": "language-arts-501-skill-advanced-7",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blame assignment without system updates"
-            },
-            {
-              "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
-            },
-            {
-              "id": "c",
-              "text": "One-time fixes without retesting"
-            },
-            {
-              "id": "d",
-              "text": "Issue closure based on elapsed time"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
-        },
-        {
-          "id": "language-arts-501-l06-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Language Arts Specialization Studio?",
-          "skillId": "language-arts-501-skill-advanced-8",
-          "options": [
-            {
-              "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
-            },
-            {
-              "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
-            },
-            {
-              "id": "c",
-              "text": "Ignore correlated failure modes"
-            },
-            {
-              "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "explanation": "Mature ethical communication integrates principles of accountability and respect directly into the messaging strategy."
         }
       ]
     },
     {
       "id": "language-arts-501-l07",
-      "title": "Language Arts Governance and Public Impact",
+      "title": "Ethical Frameworks and Societal Impact",
       "type": "video",
       "duration": 13,
       "learningAids": [
@@ -646,80 +474,100 @@ export const LanguageArts501Module: LearningModule = {
           "id": "language-arts-501-l07-a1",
           "type": "image",
           "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "content": "Apply ethical frameworks to evaluate the impact of language on diverse communities and ensure responsible communication."
         }
       ],
       "chunks": [
         {
           "id": "language-arts-501-l07-c1",
           "kind": "concept",
-          "title": "Stakeholder Impact Distribution",
-          "content": "In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. This understanding is crucial for recognizing how various decisions in language arts impact different individuals and communities, fostering a sense of responsibility and awareness.\nContext recap: In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. This understanding is crucial for recognizing how various decisions in language arts impact different individuals and communities, fostering a sense of responsibility and awareness."
+          "title": "Analyzing the Impact on Stakeholders",
+          "content": "Language is never neutral; it always has an impact. In this lesson, you will learn to map out how a message affects different groups, considering benefits, burdens, and long-term consequences. This is essential for understanding the full social responsibility of a communicator.",
+          "visualPrompts": [
+            "An infographic showing a central message radiating outwards to different stakeholder circles (e.g., primary audience, secondary audience, marginalized groups).",
+            "A timeline illustrating the short-term vs. long-term effects of a particular media narrative."
+          ]
         },
         {
           "id": "language-arts-501-l07-c2",
           "kind": "concept",
-          "title": "Accountability Architecture",
-          "content": "In this section, we will explore the concept of accountability architecture. This includes ensuring that decision traceability, review rights, and remediation obligations are integrated into our processes. By doing so, we can create a system that holds individuals accountable for their decisions and actions in language arts.\nContext recap: In this section, we will explore the concept of accountability architecture. This includes ensuring that decision traceability, review rights, and remediation obligations are integrated into our processes. By doing so, we can create a system that holds individuals accountable for their decisions and actions in language arts."
+          "title": "Frameworks for Ethical Communication",
+          "content": "How do we decide what is 'right' in communication? We will explore established ethical frameworks (like utilitarianism, deontology, and virtue ethics) and apply them to language arts. This provides a structured way to think through complex moral dilemmas and ensure your communication is responsible and accountable.",
+          "visualPrompts": [
+            "Simple, clear graphics explaining the core idea of each ethical framework.",
+            "A scenario with three different possible responses, each aligned with a different ethical framework."
+          ]
         },
         {
           "id": "language-arts-501-l07-c3",
           "kind": "recap",
-          "title": "Responsible Leadership Checklist",
-          "content": "At the end of our lesson, we have a helpful checklist that connects important outcomes with ethical considerations, ensures we follow policies correctly, and highlights the importance of being resilient in our leadership roles. This checklist serves as a guide to help us reflect on our responsibilities as leaders.\nContext recap: At the end of our lesson, we have a helpful checklist that connects important outcomes with ethical considerations, ensures we follow policies correctly, and highlights the importance of being resilient in our leadership roles. This checklist serves as a guide to help us reflect on our responsibilities as leaders."
+          "title": "A Checklist for Responsible Leadership",
+          "content": "We conclude with a practical checklist for responsible communication. This tool connects your strategic goals with ethical considerations, policy compliance, and resilience, serving as a guide for leading with integrity in any communication-focused role.",
+          "visualPrompts": [
+            "A visually appealing checklist graphic that learners can download.",
+            "An animation of a leader thinking through the checklist points before making a public statement."
+          ]
         }
       ],
       "flashcards": [
         {
           "id": "language-arts-501-l07-f1",
-          "front": "Impact distribution",
-          "back": "How outcomes are allocated across populations and timescales."
+          "front": "Stakeholder",
+          "back": "Any person or group who is affected by a communication, whether they are the intended audience or not."
         },
         {
           "id": "language-arts-501-l07-f2",
-          "front": "Decision traceability",
-          "back": "An auditable record of evidence, ownership, and rationale."
+          "front": "Deontology",
+          "back": "An ethical framework that judges the morality of an action based on rules and duties, regardless of the outcome."
         },
         {
           "id": "language-arts-501-l07-f3",
-          "front": "Responsible leadership",
-          "back": "Decision behavior balancing performance, accountability, and ethics."
+          "front": "Utilitarianism",
+          "back": "An ethical framework that judges an action based on its ability to produce the greatest good for the greatest number of people."
         }
       ]
     },
     {
       "id": "language-arts-501-l08",
-      "title": "Language Arts Capstone Defense Lab",
+      "title": "Capstone Defense and Synthesis",
       "type": "interactive",
-      "duration": 16,
+      "duration": 25,
       "learningAids": [
         {
           "id": "language-arts-501-l08-a1",
           "type": "practice",
           "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "content": "Construct and defend a comprehensive, evidence-based argument on a complex topic under expert cross-examination."
         }
       ],
       "chunks": [
         {
           "id": "language-arts-501-l08-c1",
           "kind": "practice",
-          "title": "Defense Brief Assembly",
-          "content": "In this activity, learners will work together to create a comprehensive brief. This brief will include well-supported claims, relevant evidence, an understanding of the uncertainties involved, and suggested pathways for remediation. This exercise encourages critical thinking and collaboration among peers.\nContext recap: In this activity, learners will work together to create a comprehensive brief. This brief will include well-supported claims, relevant evidence, an understanding of the uncertainties involved, and suggested pathways for remediation. This exercise encourages critical thinking and collaboration among peers."
+          "title": "Constructing Your Capstone Argument",
+          "content": "In this final activity, you will synthesize everything you've learned to build a comprehensive argument on a topic of your choice. Your final presentation must include a clear thesis, strong evidence, an analysis of rhetorical and ethical dimensions, and an acknowledgment of limitations and counterarguments.",
+          "visualPrompts": [
+            "A project management-style template for outlining the capstone project (thesis, evidence, structure, etc.).",
+            "A gallery of exemplary capstone projects from previous students."
+          ]
         },
         {
           "id": "language-arts-501-l08-c2",
           "kind": "recap",
-          "title": "Expert Panel Rehearsal",
-          "content": "During this session, learners will practice their responses to various critiques that may come from experts, governance representatives, and stakeholders. This rehearsal is essential for building confidence and ensuring that everyone is prepared to address questions and feedback effectively.\nContext recap: During this session, learners will practice their responses to various critiques that may come from experts, governance representatives, and stakeholders. This rehearsal is essential for building confidence and ensuring that everyone is prepared to address questions and feedback effectively."
+          "title": "Preparing for Your Defense",
+          "content": "The final step is to defend your work. We will rehearse how to respond to challenging questions from an expert panel. This practice is designed to build your confidence and sharpen your ability to think on your feet, articulating your ideas with clarity and conviction.",
+          "visualPrompts": [
+            "A video showing a mock defense with examples of strong and weak answers to questions.",
+            "A list of frequently asked questions during academic defenses to help learners prepare."
+          ]
         }
       ],
       "interactiveActivities": [
         {
           "id": "language-arts-501-l08-act1",
           "type": "debate_simulator",
-          "title": "Expert Defense Panel",
-          "description": "Defend specialization recommendations under adversarial cross-examination."
+          "title": "Final Capstone Defense Panel",
+          "description": "Present your capstone argument and defend your analysis and conclusions under cross-examination from a simulated expert panel."
         }
       ]
     }

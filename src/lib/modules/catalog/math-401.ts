@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const Math401Module: LearningModule = {
+export const math_401_Module: LearningModule = {
   "id": "math-401",
   "title": "Mathematical Systems, Proof, and Decision Science",
   "description": "Expert-level mathematics curriculum integrating proof strategy, optimization, uncertainty, and high-stakes quantitative decision frameworks.",
@@ -15,68 +15,92 @@ export const Math401Module: LearningModule = {
   ],
   "minAge": 16,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en"
   ],
+  "skills": [
+    {
+      "id": "math-401-skill-proof",
+      "name": "Proof and Argumentation"
+    },
+    {
+      "id": "math-401-skill-optimization",
+      "name": "Optimization and Constraints"
+    },
+    {
+      "id": "math-401-skill-uncertainty",
+      "name": "Uncertainty and Error Analysis"
+    },
+    {
+      "id": "math-401-skill-decision",
+      "name": "Decision Modeling"
+    },
+    {
+      "id": "math-401-skill-communication",
+      "name": "Technical Communication"
+    }
+  ],
   "learningObjectives": [
-    "Construct mathematically rigorous arguments using proof frameworks",
-    "Evaluate optimization problems under constraints and trade-offs",
-    "Interpret uncertainty, sensitivity, and error propagation in quantitative systems",
-    "Compare deterministic and probabilistic model assumptions",
-    "Communicate technical conclusions with transparent limitations",
-    "Design and defend a capstone quantitative decision proposal"
+    "Construct rigorous mathematical arguments using formal proof frameworks.",
+    "Formulate and evaluate optimization problems under specified constraints and trade-offs.",
+    "Analyze and interpret the impact of uncertainty, sensitivity, and error propagation in quantitative models.",
+    "Distinguish between deterministic and probabilistic modeling assumptions and their implications.",
+    "Communicate complex technical conclusions, including transparent assumptions and limitations.",
+    "Design, justify, and defend a comprehensive quantitative decision proposal in a capstone project."
   ],
   "lessons": [
     {
       "id": "math-401-l01",
       "title": "Proof Strategy and Mathematical Argumentation",
       "type": "video",
-      "duration": 14,
+      "duration": 15,
       "learningAids": [
         {
           "id": "math-401-l01-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Apply the lesson process and record your reasoning steps."
+          "title": "Proof Construction",
+          "content": "Construct a short proof for a given theorem using each of the three primary strategies: direct, contrapositive, and contradiction."
         }
       ],
       "chunks": [
         {
           "id": "math-401-l01-c1",
           "kind": "concept",
-          "title": "Claim-Evidence-Logic Structure",
-          "content": "The quality of a mathematical proof is determined by how clearly the claims are stated, how well the steps are justified, and how smoothly the logical transitions flow from one idea to the next. It is important to remember that the structure of an argument is just as crucial as the mathematical symbols and calculations used. A well-organized proof helps others follow your reasoning and understand your conclusions.\nContext recap: The quality of a mathematical proof is determined by how clearly the claims are stated, how well the steps are justified, and how smoothly the logical transitions flow from one idea to the next. It is important to remember that the structure of an argument is just as crucial as the mathematical symbols and calculations used. A well-organized proof helps others follow your reasoning and understand your conclusions."
+          "title": "The Anatomy of a Proof",
+          "content": "A mathematical proof is a structured argument that demonstrates the truth of a statement. Its quality depends on three pillars: a clear claim (the theorem), valid evidence (axioms, definitions, and prior results), and sound logic (the inferential steps connecting evidence to the claim). A well-organized proof is not just correct; it is persuasive and comprehensible.",
+          "visualPrompt": "A diagram showing three connected boxes: 'Claim (What you want to prove)', 'Evidence (What you know)', and 'Logic (How you connect them)'."
         },
         {
           "id": "math-401-l01-c2",
           "kind": "concept",
-          "title": "Direct, Contrapositive, and Contradiction",
-          "content": "There are various forms of proofs, such as direct proofs, contrapositive proofs, and proofs by contradiction, and each type is best suited for different kinds of mathematical statements. Experienced mathematicians carefully select their proof strategy based on the specific structure of the hypotheses they are working with and the conclusion they aim to reach. Understanding these strategies can greatly enhance your problem-solving skills.\nContext recap: There are various forms of proofs, such as direct proofs, contrapositive proofs, and proofs by contradiction, and each type is best suited for different kinds of mathematical statements. Experienced mathematicians carefully select their proof strategy based on the specific structure of the hypotheses they are working with and the conclusion they aim to reach. Understanding these strategies can greatly enhance your problem-solving skills."
+          "title": "Strategies: Direct, Contrapositive, and Contradiction",
+          "content": "Mathematicians select from a toolkit of proof strategies. A direct proof proceeds linearly from premises to conclusion. A proof by contrapositive establishes 'if P, then Q' by proving the equivalent 'if not-Q, then not-P'. A proof by contradiction assumes the opposite of the claim and derives a logical impossibility, thereby affirming the original claim.",
+          "visualPrompt": "A flowchart with three paths illustrating the logical flow of a Direct Proof (P -> ... -> Q), Contrapositive (¬Q -> ... -> ¬P), and Contradiction (P ∧ ¬Q -> ... -> False)."
         },
         {
           "id": "math-401-l01-c3",
           "kind": "recap",
-          "title": "Proof Review Standards",
-          "content": "A strong proof clearly defines all assumptions, avoids any hidden steps that could confuse the reader, and maintains a logical flow of implications throughout the argument. This means that every step should be justified and lead logically to the next, ensuring that the proof is not only valid but also easy to follow. By adhering to these standards, you can create robust and convincing mathematical arguments.\nContext recap: A strong proof clearly defines all assumptions, avoids any hidden steps that could confuse the reader, and maintains a logical flow of implications throughout the argument. This means that every step should be justified and lead logically to the next, ensuring that the proof is not only valid but also easy to follow. By adhering to these standards, you can create robust and convincing mathematical arguments."
+          "title": "Standards for a Rigorous Proof",
+          "content": "A high-quality proof is transparent and robust. It explicitly states all assumptions, justifies every logical step, defines all terms, and avoids ambiguity. The argument must flow seamlessly, with each inference validly following from the previous statements. Adhering to these standards ensures your arguments are convincing and withstand scrutiny."
         }
       ],
       "flashcards": [
         {
           "id": "math-401-l01-f1",
-          "front": "Direct proof",
-          "back": "Derive conclusion directly from assumptions through valid implications."
+          "front": "Direct Proof",
+          "back": "A proof that derives the conclusion directly from the assumptions through a chain of valid implications."
         },
         {
           "id": "math-401-l01-f2",
-          "front": "Contrapositive",
-          "back": "Prove not-Q implies not-P instead of P implies Q."
+          "front": "Proof by Contrapositive",
+          "back": "Proving 'if P, then Q' by demonstrating that 'if not-Q, then not-P' is true."
         },
         {
           "id": "math-401-l01-f3",
-          "front": "Proof by contradiction",
-          "back": "Assume opposite of claim and derive logical impossibility."
+          "front": "Proof by Contradiction",
+          "back": "A proof that assumes the negation of the claim and derives a logical impossibility (a contradiction)."
         }
       ]
     },
@@ -84,27 +108,35 @@ export const Math401Module: LearningModule = {
       "id": "math-401-l02",
       "title": "Optimization and Constraint Reasoning Lab",
       "type": "interactive",
-      "duration": 17,
+      "duration": 18,
       "learningAids": [
         {
           "id": "math-401-l02-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Apply the lesson process and record your reasoning steps."
+          "title": "Optimization Formulation",
+          "content": "For a given real-world problem, define the objective function, identify all relevant constraints, and sketch the feasible region."
         }
       ],
       "chunks": [
         {
+          "id": "math-401-l02-c0",
+          "kind": "introduction",
+          "title": "From Proof to Optimization",
+          "content": "Optimization applies rigorous logic to find the best possible solution within a set of limitations. The logical certainty developed in proof-building is essential for formulating optimization problems and verifying that a proposed solution is truly optimal."
+        },
+        {
           "id": "math-401-l02-c1",
           "kind": "concept",
-          "title": "Objective and Feasible Region",
-          "content": "When tackling optimization problems, it is essential to have a clear definition of your objective, which is the goal you want to achieve. Additionally, you must identify the constraints that define the feasible region, which is the set of possible solutions that meet all requirements. Understanding these concepts will help you effectively navigate and solve optimization challenges.\nContext recap: When tackling optimization problems, it is essential to have a clear definition of your objective, which is the goal you want to achieve. Additionally, you must identify the constraints that define the feasible region, which is the set of possible solutions that meet all requirements. Understanding these concepts will help you effectively navigate and solve optimization challenges."
+          "title": "Objective Function and Feasible Region",
+          "content": "Every optimization problem has two core components. The objective function is the quantity you aim to maximize or minimize (e.g., profit, cost, efficiency). The constraints are a system of equations or inequalities that define the feasible region—the set of all possible solutions that satisfy the problem's limitations.",
+          "visualPrompt": "A 2D graph with axes x1 and x2. Several lines representing constraints cut through the space, and a shaded polygon shows the resulting 'Feasible Region'."
         },
         {
           "id": "math-401-l02-c2",
           "kind": "practice",
-          "title": "Trade-off Analysis",
-          "content": "In real-world optimization scenarios, you often face competing objectives, which means you may need to balance different goals against each other. Additionally, the outcomes can be sensitive to changes in parameters, meaning that small adjustments can lead to different results. Learning how to analyze these trade-offs is crucial for making informed decisions in complex situations.\nContext recap: In real-world optimization scenarios, you often face competing objectives, which means you may need to balance different goals against each other. Additionally, the outcomes can be sensitive to changes in parameters, meaning that small adjustments can lead to different results. Learning how to analyze these trade-offs is crucial for making informed decisions in complex situations."
+          "title": "Analyzing Trade-offs and Sensitivity",
+          "content": "Often, objectives compete with one another, creating trade-offs. The Pareto frontier is a curve representing solutions where improving one objective necessitates worsening another. Furthermore, solutions can be sensitive to changes in parameters. Sensitivity analysis examines how the optimal solution changes when constraints or coefficients are altered.",
+          "visualPrompt": "A 2D graph with 'Objective 1' on the y-axis and 'Objective 2' on the x-axis. A concave curve (the Pareto Frontier) shows the optimal trade-offs."
         }
       ],
       "interactiveActivities": [
@@ -112,23 +144,23 @@ export const Math401Module: LearningModule = {
           "id": "math-401-l02-act1",
           "type": "matching_pairs",
           "title": "Optimization Concept Match",
-          "description": "Match optimization terms to strongest interpretation.",
+          "description": "Match optimization terms to their precise definitions.",
           "pairs": [
             {
-              "left": "Objective function",
-              "right": "Quantity to maximize or minimize"
+              "left": "Objective Function",
+              "right": "The specific quantity to be maximized or minimized."
             },
             {
               "left": "Constraint",
-              "right": "Limit defining feasible solutions"
+              "right": "A condition or limit that defines the space of valid solutions."
             },
             {
-              "left": "Feasible region",
-              "right": "All solutions satisfying constraints"
+              "left": "Feasible Region",
+              "right": "The set of all possible solutions that satisfy all constraints."
             },
             {
-              "left": "Sensitivity",
-              "right": "How solution changes with parameter shifts"
+              "left": "Sensitivity Analysis",
+              "right": "The study of how parameter changes affect the optimal solution."
             }
           ]
         },
@@ -136,10 +168,10 @@ export const Math401Module: LearningModule = {
           "id": "math-401-l02-act2",
           "type": "scenario_practice",
           "title": "Resource Allocation Drill",
-          "description": "Defend an optimization choice under budget and capacity limits.",
+          "description": "Defend an optimization choice for a factory's production schedule under budget and capacity limits.",
           "instructions": [
-            "State objective and constraints clearly.",
-            "Explain one sensitivity risk in your solution."
+            "State your objective function and all constraints clearly.",
+            "Explain one key sensitivity risk in your proposed solution."
           ]
         }
       ]
@@ -149,43 +181,36 @@ export const Math401Module: LearningModule = {
       "title": "Checkpoint 1: Proof and Optimization",
       "type": "quiz",
       "duration": 10,
-      "learningAids": [
-        {
-          "id": "math-401-l03-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Apply the lesson process and record your reasoning steps."
-        }
-      ],
+      "learningAids": [],
       "questions": [
         {
           "id": "math-401-l03-q1",
-          "text": "Why choose proof by contradiction for some claims?",
+          "text": "When is proof by contradiction a particularly effective strategy?",
           "skillId": "math-401-skill-proof",
           "options": [
             {
               "id": "a",
-              "text": "To avoid assumptions"
+              "text": "When you want to avoid making any assumptions."
             },
             {
               "id": "b",
-              "text": "To show opposite assumption leads to impossibility"
+              "text": "When assuming the negation of the claim leads to a clear logical impossibility."
             },
             {
               "id": "c",
-              "text": "To skip logical steps"
+              "text": "When the logical steps are too complex for a direct proof."
             },
             {
               "id": "d",
-              "text": "To remove conclusion"
+              "text": "When the conclusion is intuitively obvious."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Contradiction is effective when direct proof is cumbersome."
+          "explanation": "Proof by contradiction is powerful when the direct path is complex, but negating the claim creates a structure that quickly falls apart into a contradiction."
         },
         {
           "id": "math-401-l03-q2",
-          "text": "A solution outside all constraints is:",
+          "text": "In an optimization problem, a solution that violates at least one constraint is defined as:",
           "skillId": "math-401-skill-optimization",
           "options": [
             {
@@ -202,61 +227,61 @@ export const Math401Module: LearningModule = {
             },
             {
               "id": "d",
-              "text": "Guaranteed best"
+              "text": "A corner solution"
             }
           ],
           "correctOptionId": "c",
-          "explanation": "Only feasible candidates can be considered for optimality."
+          "explanation": "The feasible region contains all valid solutions. Any point outside this region is infeasible and cannot be considered for optimality."
         },
         {
           "id": "math-401-l03-q3",
-          "text": "Why perform sensitivity analysis?",
+          "text": "What is the primary purpose of sensitivity analysis in optimization?",
           "skillId": "math-401-skill-optimization",
           "options": [
             {
               "id": "a",
-              "text": "To hide uncertainty"
+              "text": "To prove the model has no errors."
             },
             {
               "id": "b",
-              "text": "To assess robustness of solution under parameter change"
+              "text": "To assess the robustness of the optimal solution to changes in model parameters."
             },
             {
               "id": "c",
-              "text": "To force one answer"
+              "text": "To find a completely different objective function."
             },
             {
               "id": "d",
-              "text": "To avoid constraints"
+              "text": "To ignore the constraints temporarily."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Sensitivity analysis evaluates stability of decisions."
+          "explanation": "Sensitivity analysis tests how stable the solution is. If a small change in an input parameter causes a large shift in the optimal solution, the solution is not robust."
         },
         {
           "id": "math-401-l03-q4",
-          "text": "A rigorous proof should always include:",
+          "text": "A rigorous mathematical proof must always include:",
           "skillId": "math-401-skill-proof",
           "options": [
             {
               "id": "a",
-              "text": "Hidden assumptions"
+              "text": "At least one diagram."
             },
             {
               "id": "b",
-              "text": "Clearly stated assumptions and valid logical transitions"
+              "text": "Clearly stated assumptions and a sequence of valid logical transitions."
             },
             {
               "id": "c",
-              "text": "Only final statement"
+              "text": "A reference to a historical mathematician."
             },
             {
               "id": "d",
-              "text": "No definitions"
+              "text": "An appeal to intuition."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Transparency and valid logic are core proof requirements."
+          "explanation": "Transparency of assumptions and the validity of the logical chain are the non-negotiable core of any rigorous proof."
         }
       ]
     },
@@ -269,45 +294,53 @@ export const Math401Module: LearningModule = {
         {
           "id": "math-401-l04-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Apply the lesson process and record your reasoning steps."
+          "title": "Error Propagation Calculation",
+          "content": "Given a simple function and inputs with specified uncertainties, calculate the uncertainty of the output."
         }
       ],
       "chunks": [
         {
+          "id": "math-401-l04-c0",
+          "kind": "introduction",
+          "title": "Beyond Deterministic Models",
+          "content": "The optimization models we've studied assumed perfect knowledge of all parameters. In reality, data is noisy and models are approximations. We now introduce uncertainty to build more realistic and reliable quantitative systems."
+        },
+        {
           "id": "math-401-l04-c1",
           "kind": "concept",
-          "title": "Measurement and Model Uncertainty",
-          "content": "When making quantitative conclusions, it is important to recognize that uncertainty can arise from both the quality of the data you are using and the assumptions made in your models. This means that the results you obtain may not be completely certain, and understanding the sources of this uncertainty is vital for interpreting your findings accurately.\nContext recap: When making quantitative conclusions, it is important to recognize that uncertainty can arise from both the quality of the data you are using and the assumptions made in your models. This means that the results you obtain may not be completely certain, and understanding the sources of this uncertainty is vital for interpreting your findings accurately."
+          "title": "Sources of Uncertainty",
+          "content": "Uncertainty in quantitative conclusions arises from multiple sources. Measurement uncertainty stems from the limitations of data collection instruments. Model uncertainty comes from the simplifying assumptions made to represent a complex system. Distinguishing between these helps in assessing the reliability of a result.",
+          "visualPrompt": "A funnel diagram where 'Measurement Noise', 'Sampling Error', and 'Model Assumptions' are inputs at the top, flowing down into a single output labeled 'Total Result Uncertainty'."
         },
         {
           "id": "math-401-l04-c2",
           "kind": "concept",
           "title": "Error Propagation",
-          "content": "Even small errors in input data can grow larger through nonlinear operations, which can significantly affect the credibility of your output results. This phenomenon, known as error propagation, highlights the importance of accuracy in your initial measurements and calculations. Being aware of how errors can compound helps you to better manage and minimize uncertainty in your work.\nContext recap: Even small errors in input data can grow larger through nonlinear operations, which can significantly affect the credibility of your output results. This phenomenon, known as error propagation, highlights the importance of accuracy in your initial measurements and calculations. Being aware of how errors can compound helps you to better manage and minimize uncertainty in your work."
+          "content": "Initial uncertainties in input variables do not simply add up; they propagate through calculations. In nonlinear functions, small input errors can be amplified, leading to large output errors. Understanding error propagation is critical for assessing the credibility of any calculated result derived from uncertain data.",
+          "visualPrompt": "A graph of a steep curve y=f(x). A small uncertainty interval [x-Δx, x+Δx] on the x-axis is shown to map to a much larger interval [y-Δy, y+Δy] on the y-axis."
         },
         {
           "id": "math-401-l04-c3",
           "kind": "recap",
-          "title": "Responsible Communication",
-          "content": "Effective communication of expert findings involves reporting not just point estimates, but also ranges, confidence levels, and known limitations. This approach provides a more comprehensive understanding of the results and their implications. By communicating responsibly, you help others grasp the uncertainty and reliability of your conclusions.\nContext recap: Effective communication of expert findings involves reporting not just point estimates, but also ranges, confidence levels, and known limitations. This approach provides a more comprehensive understanding of the results and their implications. By communicating responsibly, you help others grasp the uncertainty and reliability of your conclusions."
+          "title": "Responsible Communication of Results",
+          "content": "Ethical and effective communication requires acknowledging uncertainty. Instead of reporting only a single point estimate, a credible analysis presents results as a range of plausible values, such as a confidence interval. Clearly stating all known limitations and sources of error is a hallmark of expert practice."
         }
       ],
       "flashcards": [
         {
           "id": "math-401-l04-f1",
-          "front": "Uncertainty interval",
-          "back": "Range of plausible values for a quantity."
+          "front": "Uncertainty Interval",
+          "back": "A range of plausible values for a quantity, reflecting the degree of uncertainty in its measurement or estimation."
         },
         {
           "id": "math-401-l04-f2",
           "front": "Sensitivity",
-          "back": "Degree to which outputs respond to input changes."
+          "back": "The degree to which the outputs of a model respond to changes in its input parameters."
         },
         {
           "id": "math-401-l04-f3",
-          "front": "Error propagation",
-          "back": "How uncertainty transfers through calculations."
+          "front": "Error Propagation",
+          "back": "The process by which uncertainties in input variables are transferred and transformed through mathematical operations to create uncertainty in the output."
         }
       ]
     },
@@ -320,22 +353,23 @@ export const Math401Module: LearningModule = {
         {
           "id": "math-401-l05-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Apply the lesson process and record your reasoning steps."
+          "title": "Decision Tree Construction",
+          "content": "Model a simple business decision using a decision tree, including probabilities, payoffs, and expected values for each branch."
         }
       ],
       "chunks": [
         {
           "id": "math-401-l05-c1",
           "kind": "practice",
-          "title": "Model Selection Under Uncertainty",
-          "content": "The quality of your decisions can be greatly enhanced when you compare different alternatives using clear assumptions, potential payoffs, and various risk scenarios. By systematically evaluating these factors, you can make more informed choices that take into account the uncertainties and potential outcomes associated with each option.\nContext recap: The quality of your decisions can be greatly enhanced when you compare different alternatives using clear assumptions, potential payoffs, and various risk scenarios. By systematically evaluating these factors, you can make more informed choices that take into account the uncertainties and potential outcomes associated with each option."
+          "title": "Structuring Decisions Under Uncertainty",
+          "content": "Decision theory provides frameworks for making optimal choices when outcomes are uncertain. Tools like decision trees and payoff matrices help structure a problem by mapping out choices, uncertain events, probabilities, and resulting payoffs. This allows for a systematic comparison of alternatives based on criteria like expected value.",
+          "visualPrompt": "A simple decision tree with a square 'decision node' branching into two choices, each leading to a circular 'chance node' that branches into possible outcomes with associated probabilities and payoffs."
         },
         {
           "id": "math-401-l05-c2",
           "kind": "recap",
-          "title": "Robustness Criteria",
-          "content": "Robust decisions are those that remain acceptable even when faced with a reasonable range of uncertainty. This means that your choices should be resilient to changes in the conditions or assumptions that underlie them. Understanding robustness criteria helps you to make decisions that are not only effective but also adaptable to varying circumstances.\nContext recap: Robust decisions are those that remain acceptable even when faced with a reasonable range of uncertainty. This means that your choices should be resilient to changes in the conditions or assumptions that underlie them. Understanding robustness criteria helps you to make decisions that are not only effective but also adaptable to varying circumstances."
+          "title": "Robustness as a Decision Criterion",
+          "content": "A robust decision is one that performs acceptably well across a wide range of plausible future scenarios. Instead of maximizing the expected outcome under one set of assumptions, robust decision-making seeks strategies that are resilient to uncertainty and less likely to result in catastrophic failure if assumptions prove wrong."
         }
       ],
       "interactiveActivities": [
@@ -343,7 +377,7 @@ export const Math401Module: LearningModule = {
           "id": "math-401-l05-act1",
           "type": "sorting_buckets",
           "title": "Risk Signal Sort",
-          "description": "Sort indicators by strategic interpretation.",
+          "description": "Categorize each risk indicator by its primary source.",
           "buckets": [
             "Data Risk",
             "Model Risk",
@@ -351,20 +385,24 @@ export const Math401Module: LearningModule = {
           ],
           "items": [
             {
-              "text": "Sparse sample size",
+              "text": "Sparse or unrepresentative sample size",
               "bucket": "Data Risk"
             },
             {
-              "text": "Unvalidated structural assumption",
+              "text": "An unvalidated structural assumption in the model",
               "bucket": "Model Risk"
             },
             {
-              "text": "Resource bottleneck in implementation",
+              "text": "A resource bottleneck in the implementation plan",
               "bucket": "Execution Risk"
             },
             {
-              "text": "High measurement variance",
+              "text": "High variance in key input measurements",
               "bucket": "Data Risk"
+            },
+            {
+              "text": "The model ignores a known confounding variable",
+              "bucket": "Model Risk"
             }
           ]
         },
@@ -372,10 +410,10 @@ export const Math401Module: LearningModule = {
           "id": "math-401-l05-act2",
           "type": "scenario_practice",
           "title": "Policy Choice Debate",
-          "description": "Defend one quantitative policy option under uncertainty.",
+          "description": "Defend one of two public investment policies, each with different quantitative forecasts and uncertainties.",
           "instructions": [
-            "State one strongest quantitative argument.",
-            "State one limitation that could change your recommendation."
+            "State your single strongest quantitative argument for your chosen policy.",
+            "Identify one key uncertainty or limitation that could cause you to reverse your recommendation."
           ]
         }
       ]
@@ -385,114 +423,107 @@ export const Math401Module: LearningModule = {
       "title": "Checkpoint 2: Uncertainty and Decision Logic",
       "type": "quiz",
       "duration": 11,
-      "learningAids": [
-        {
-          "id": "math-401-l06-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Apply the lesson process and record your reasoning steps."
-        }
-      ],
+      "learningAids": [],
       "questions": [
         {
           "id": "math-401-l06-q1",
-          "text": "Why report uncertainty intervals with estimates?",
+          "text": "Why is it best practice to report an uncertainty interval along with a point estimate?",
           "skillId": "math-401-skill-uncertainty",
           "options": [
             {
               "id": "a",
-              "text": "To reduce clarity"
+              "text": "To make the result appear more complex."
             },
             {
               "id": "b",
-              "text": "To communicate plausible range and confidence"
+              "text": "To honestly communicate the plausible range of values and the confidence in the estimate."
             },
             {
               "id": "c",
-              "text": "To avoid data collection"
+              "text": "To show that no more data collection is needed."
             },
             {
               "id": "d",
-              "text": "To eliminate model assumptions"
+              "text": "To prove that all model assumptions are correct."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Intervals communicate uncertainty more honestly than single values."
+          "explanation": "A point estimate alone can be misleadingly precise. An interval provides crucial context about the result's reliability and potential variability."
         },
         {
           "id": "math-401-l06-q2",
-          "text": "A robust decision is one that:",
+          "text": "A 'robust' decision is one that:",
           "skillId": "math-401-skill-decision",
           "options": [
             {
               "id": "a",
-              "text": "Depends on one narrow assumption"
+              "text": "Depends on a single, narrow assumption being correct."
             },
             {
               "id": "b",
-              "text": "Performs acceptably across reasonable uncertainty cases"
+              "text": "Performs acceptably well across a range of plausible future scenarios."
             },
             {
               "id": "c",
-              "text": "Ignores constraints"
+              "text": "Ignores all constraints to maximize a single metric."
             },
             {
               "id": "d",
-              "text": "Maximizes one metric only"
+              "text": "Is the most optimistic choice available."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Robustness reflects stability under changing conditions."
+          "explanation": "Robustness prioritizes stability and satisfactory performance under uncertainty over achieving the absolute maximum payoff under a single, potentially wrong, set of assumptions."
         },
         {
           "id": "math-401-l06-q3",
-          "text": "Most credible quantitative recommendation includes:",
+          "text": "What should the most credible quantitative recommendation to a decision-maker include?",
           "skillId": "math-401-skill-communication",
           "options": [
             {
               "id": "a",
-              "text": "Result only"
+              "text": "Only the final number or conclusion."
             },
             {
               "id": "b",
-              "text": "Assumptions, uncertainty, trade-offs, and evidence"
+              "text": "The conclusion, supported by evidence, key assumptions, uncertainties, and potential trade-offs."
             },
             {
               "id": "c",
-              "text": "No risk discussion"
+              "text": "A guarantee that the recommended course of action will succeed."
             },
             {
               "id": "d",
-              "text": "No scenario analysis"
+              "text": "A complex mathematical formula without explanation."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Decision-makers need transparent assumptions and limitations."
+          "explanation": "A credible recommendation is transparent. It equips decision-makers with the context they need to understand the basis of the recommendation and its limitations."
         },
         {
           "id": "math-401-l06-q4",
-          "text": "Error propagation is most important when:",
+          "text": "Error propagation is of greatest concern when:",
           "skillId": "math-401-skill-uncertainty",
           "options": [
             {
               "id": "a",
-              "text": "Inputs are exact"
+              "text": "All input values are known with perfect certainty."
             },
             {
               "id": "b",
-              "text": "Calculated outputs depend on uncertain inputs"
+              "text": "The final calculated output depends on multiple uncertain inputs."
             },
             {
               "id": "c",
-              "text": "No calculations occur"
+              "text": "No calculations are performed."
             },
             {
               "id": "d",
-              "text": "Model is linear and perfect"
+              "text": "The model is perfectly linear and all errors are additive."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Uncertain inputs transmit uncertainty into outputs."
+          "explanation": "The core concept of error propagation is how uncertainty in inputs is transmitted through a system of calculations to create uncertainty in the output."
         }
       ]
     },
@@ -500,34 +531,34 @@ export const Math401Module: LearningModule = {
       "id": "math-401-l07",
       "title": "Capstone: Quantitative Decision Proposal Studio",
       "type": "interactive",
-      "duration": 20,
+      "duration": 25,
       "learningAids": [
         {
           "id": "math-401-l07-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Apply the lesson process and record your reasoning steps."
+          "title": "Peer Review",
+          "content": "Review a classmate's draft proposal using the official assessment criteria, providing constructive feedback on their logic, assumptions, and communication."
         }
       ],
       "chunks": [
         {
           "id": "math-401-l07-c1",
           "kind": "practice",
-          "title": "Capstone Brief",
-          "content": "In this capstone project, you will develop a comprehensive decision model that addresses a complex scenario. This model will need to account for multiple constraints, various sources of uncertainty, and competing objectives. Engaging in this process will allow you to apply your knowledge and skills in a practical setting, preparing you for real-world decision-making challenges.\nContext recap: In this capstone project, you will develop a comprehensive decision model that addresses a complex scenario. This model will need to account for multiple constraints, various sources of uncertainty, and competing objectives. Engaging in this process will allow you to apply your knowledge and skills in a practical setting, preparing you for real-world decision-making challenges."
+          "title": "Capstone Project Brief",
+          "content": "Synthesize all the skills from this module to address a complex, real-world decision scenario. You will select a problem, model it quantitatively, and produce a formal proposal. Your model must incorporate constraints, account for key uncertainties, and justify a final recommendation among competing alternatives. This is your opportunity to demonstrate end-to-end expert quantitative reasoning."
         },
         {
           "id": "math-401-l07-c2",
           "kind": "recap",
-          "title": "Assessment Criteria",
-          "content": "When assessing the quality of your proposals, it is important to include rigorous logic, clearly stated assumptions, sensitivity checks, and well-defined boundaries for your recommendations. These criteria ensure that your proposals are not only well-founded but also practical and actionable. By adhering to these standards, you can enhance the effectiveness of your decision-making process.\nContext recap: When assessing the quality of your proposals, it is important to include rigorous logic, clearly stated assumptions, sensitivity checks, and well-defined boundaries for your recommendations. These criteria ensure that your proposals are not only well-founded but also practical and actionable. By adhering to these standards, you can enhance the effectiveness of your decision-making process."
+          "title": "Assessment Criteria for the Proposal",
+          "content": "Your proposal will be evaluated on its rigor, clarity, and honesty. Key criteria include: 1. **Problem Formulation:** A clearly defined objective function and accurately identified constraints. 2. **Logical Rigor:** Valid mathematical and logical structure. 3. **Uncertainty Handling:** Sophisticated identification and analysis of key uncertainties. 4. **Transparency:** Clear statement of all assumptions and limitations. 5. **Communication:** Persuasive and clear communication of the final recommendation and its rationale to a non-expert audience."
         }
       ],
       "metadata": {
         "prompts": [
-          "State your objective function and constraints clearly.",
-          "Identify your top three uncertainty drivers.",
-          "Define what evidence would overturn your recommendation."
+          "State your primary objective function and all critical constraints.",
+          "Identify and rank your top three drivers of uncertainty and explain how you modeled them.",
+          "Define the specific evidence or future event that would most likely cause you to change your recommendation."
         ]
       }
     }

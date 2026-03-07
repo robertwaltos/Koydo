@@ -48,7 +48,8 @@ class OpenAIModerationProvider implements ModerationProvider {
 
       if (!response.ok) {
         console.error("[moderation] OpenAI API error:", response.status);
-        return { flagged: false, categories: {}, provider: this.name, action: "none" };
+        // Fail CLOSED on API errors — block content when moderation is unreachable
+        return { flagged: true, categories: {}, provider: this.name, action: "blocked" };
       }
 
       const data = await response.json() as {
@@ -82,7 +83,17 @@ class OpenAIModerationProvider implements ModerationProvider {
   }
 }
 
-// ── No-op Provider (for development/testing) ─────────────────────────────────
+// ── Fail-Closed Provider (blocks all content when no real provider available) ─
+
+class FailClosedModerationProvider implements ModerationProvider {
+  name = "fail_closed";
+
+  async moderate(): Promise<ModerationResult> {
+    return { flagged: true, categories: {}, provider: this.name, action: "blocked" };
+  }
+}
+
+// ── No-op Provider (for development/testing only) ────────────────────────────
 
 class NoopModerationProvider implements ModerationProvider {
   name = "noop";
@@ -99,16 +110,16 @@ function getProvider(providerName: string): ModerationProvider {
     case "openai": {
       const apiKey = process.env.OPENAI_API_KEY ?? "";
       if (!apiKey) {
-        console.warn("[moderation] OPENAI_API_KEY not set, using noop provider");
-        return new NoopModerationProvider();
+        console.warn("[moderation] OPENAI_API_KEY not set — failing closed (blocking all content)");
+        return new FailClosedModerationProvider();
       }
       return new OpenAIModerationProvider(apiKey);
     }
     case "noop":
       return new NoopModerationProvider();
     default:
-      console.warn(`[moderation] Unknown provider "${providerName}", using noop`);
-      return new NoopModerationProvider();
+      console.warn(`[moderation] Unknown provider "${providerName}", failing closed`);
+      return new FailClosedModerationProvider();
   }
 }
 

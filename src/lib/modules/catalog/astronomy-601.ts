@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const Astronomy601Module: LearningModule = {
+export const astronomy_601_Module: LearningModule = {
   "id": "astronomy-601",
   "title": "Astronomy Research and Leadership",
   "description": "Post-401 specialization in Astronomy, focused on astronomy systems diagnostics, astronomy operations and execution design, astronomy impact and tradeoff analysis, and astronomy governance and leadership through advanced casework, simulation, and defense-based checkpoints.",
@@ -10,11 +10,12 @@ export const Astronomy601Module: LearningModule = {
     "curriculum",
     "interactive",
     "astronomy",
-    "specialization"
+    "specialization",
+    "leadership"
   ],
   "minAge": 17,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en",
@@ -34,6 +35,8 @@ export const Astronomy601Module: LearningModule = {
       "title": "Astronomy Advanced Foundations",
       "type": "video",
       "duration": 14,
+      "lessonImagePrompt": "A high-tech astronomical observatory control room with glowing holographic star maps and data diagnostics screens, cinematic lighting, photorealistic.",
+      "conceptVideoPrompt": "A slow cinematic pan across a futuristic observatory control room, showing scientists analyzing complex causal pathways of galaxy formations on large glowing screens, highly detailed, 4k resolution.",
       "learningAids": [
         {
           "id": "astronomy-601-l01-a1",
@@ -47,44 +50,47 @@ export const Astronomy601Module: LearningModule = {
           "id": "astronomy-601-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "In this lesson, we will explore the advanced boundaries of astronomy research. We will focus on how to diagnose astronomy systems and design effective operations and execution strategies. Understanding these concepts is crucial for anyone looking to lead in the field of astronomy, as they help ensure that our research is both thorough and precise.\nContext recap: In this lesson, we will explore the advanced boundaries of astronomy research. We will focus on how to diagnose astronomy systems and design effective operations and execution strategies. Understanding these concepts is crucial for anyone looking to lead in the field of astronomy, as they help ensure that our research is both thorough and precise."
+          "content": "In this lesson, we explore the advanced boundaries of astrophysics research and mission planning. We will focus on how to diagnose complex astronomical systems and design effective operational strategies. Defining precise system boundaries is crucial for leading large-scale observational projects, ensuring that our research scope is both thorough and resource-efficient."
         },
         {
           "id": "astronomy-601-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different factors in astronomy. They will also identify uncertainty ranges and system dependencies, which are important for planning interventions. This process helps us understand how different elements in astronomy interact and how we can effectively address challenges.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different factors in astronomy. They will also identify uncertainty ranges and system dependencies, which are important for planning interventions. This process helps us understand how different elements in astronomy interact and how we can effectively address challenges."
+          "content": "Learners will engage in mapping out causal pathways—the intricate connections between different astrophysical phenomena and observational constraints. We will identify uncertainty ranges and system dependencies, which are critical when planning interventions like satellite deployments or telescope time allocation. This process helps us quantify risks and address observational challenges effectively."
         },
         {
           "id": "astronomy-601-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "It is essential that all claims made in our research are supported by measurable indicators. This means we need to establish confidence bounds and set up review checkpoints. By doing this, we ensure that our findings are reliable and can be trusted by others in the scientific community.\nContext recap: It is essential that all claims made in our research are supported by measurable indicators. This means we need to establish confidence bounds and set up review checkpoints. By doing this, we ensure that our findings are reliable and can be trusted by others in the scientific community."
+          "content": "It is essential that all claims made in advanced astronomical research are supported by measurable indicators. This means establishing strict confidence bounds and setting up rigorous review checkpoints. By enforcing these evidence thresholds, we ensure that our findings are scientifically defensible and can withstand peer review in the global scientific community."
         }
       ],
       "flashcards": [
         {
           "id": "astronomy-601-l01-f1",
-          "front": "astronomy systems diagnostics",
-          "back": "A specialization axis requiring explicit assumptions and measurable constraints."
+          "front": "Astronomy Systems Diagnostics",
+          "back": "A specialization axis requiring explicit assumptions and measurable constraints when analyzing astrophysical data."
         },
         {
           "id": "astronomy-601-l01-f2",
-          "front": "astronomy operations and execution design",
-          "back": "Execution architecture that determines reliability under stress."
+          "front": "Operations and Execution Design",
+          "back": "Execution architecture that determines mission reliability under stress and resource constraints."
         },
         {
           "id": "astronomy-601-l01-f3",
-          "front": "astronomy impact and tradeoff analysis",
-          "back": "Evaluation discipline for identifying true gains and hidden costs."
+          "front": "Impact and Tradeoff Analysis",
+          "back": "Evaluation discipline for identifying true scientific gains and hidden operational costs."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/astronomy-601-l01.png"
     },
     {
       "id": "astronomy-601-l02",
       "title": "Astronomy Specialist Methods Lab",
       "type": "interactive",
       "duration": 17,
+      "lessonImagePrompt": "A digital interface showing a stress-test simulation of a satellite deployment, with red and green status indicators, sleek modern UI design.",
+      "conceptVideoPrompt": "A dynamic screen recording style video showing a complex workflow diagram for a space mission being stress-tested, with nodes turning red and rerouting to green backup systems.",
       "learningAids": [
         {
           "id": "astronomy-601-l02-a1",
@@ -98,13 +104,13 @@ export const Astronomy601Module: LearningModule = {
           "id": "astronomy-601-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "In this interactive practice, learners will have the opportunity to design specialized workflows that are tailored for astronomy research. They will also conduct stress tests on these workflows by simulating adverse scenarios. This hands-on experience is vital for understanding how to prepare for unexpected challenges in real-world astronomy projects.\nContext recap: In this interactive practice, learners will have the opportunity to design specialized workflows that are tailored for astronomy research. They will also conduct stress tests on these workflows by simulating adverse scenarios. This hands-on experience is vital for understanding how to prepare for unexpected challenges in real-world astronomy projects."
+          "content": "In this interactive practice, you will design specialized workflows tailored for high-stakes astronomy research, such as coordinating multi-messenger observation campaigns. You will conduct stress tests on these workflows by simulating adverse scenarios like sudden sensor failures or extreme weather at ground-based observatories. This hands-on experience is vital for building resilient mission architectures."
         },
         {
           "id": "astronomy-601-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "In this recap, we will discuss how workflows should integrate various checkpoints, rollback criteria, and threshold-based escalation processes. These components are crucial for ensuring that our research remains on track and that we can respond effectively if things do not go as planned.\nContext recap: In this recap, we will discuss how workflows should integrate various checkpoints, rollback criteria, and threshold-based escalation processes. These components are crucial for ensuring that our research remains on track and that we can respond effectively if things do not go as planned."
+          "content": "We will now review how your workflows should integrate various checkpoints, rollback criteria, and threshold-based escalation processes. In mission-critical astronomy, these components are the safety nets that ensure our research remains on track and that we can respond systematically if anomalies occur during data collection."
         }
       ],
       "interactiveActivities": [
@@ -112,33 +118,36 @@ export const Astronomy601Module: LearningModule = {
           "id": "astronomy-601-l02-act1",
           "type": "matching_pairs",
           "title": "Control-to-Outcome Mapping",
-          "description": "Match specialist controls with their strongest reliability and governance effects.",
+          "description": "Match specialist controls with their strongest reliability and governance effects in an astronomical mission context.",
           "pairs": [
             {
               "left": "Pre-commit gate",
-              "right": "Prevents avoidable downstream failures"
+              "right": "Prevents avoidable downstream failures before telescope deployment"
             },
             {
               "left": "Rollback trigger",
-              "right": "Limits blast radius under adverse outcomes"
+              "right": "Limits blast radius under adverse observational outcomes"
             },
             {
               "left": "Baseline dashboard",
-              "right": "Supports defensible impact attribution"
+              "right": "Supports defensible impact attribution for new discoveries"
             },
             {
               "left": "Retrospective loop",
-              "right": "Improves next-cycle decision quality"
+              "right": "Improves next-cycle decision quality for grant allocations"
             }
           ]
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/astronomy-601-l02.png"
     },
     {
       "id": "astronomy-601-l03",
       "title": "Checkpoint 1: Specialist Methods",
       "type": "quiz",
       "duration": 10,
+      "lessonImagePrompt": "A glowing digital lock over a backdrop of deep space, symbolizing a checkpoint in a high-stakes astronomy mission, photorealistic.",
+      "conceptVideoPrompt": "A subtle animation of a glowing digital lock rotating against a backdrop of a moving nebula, symbolizing knowledge verification.",
       "learningAids": [
         {
           "id": "astronomy-601-l03-a1",
@@ -225,7 +234,7 @@ export const Astronomy601Module: LearningModule = {
         },
         {
           "id": "astronomy-601-l03-q4",
-          "text": "Mature governance systems connect:",
+          "text": "Mature governance systems in international astronomy collaborations connect:",
           "skillId": "astronomy-601-skill-governance",
           "options": [
             {
@@ -250,7 +259,7 @@ export const Astronomy601Module: LearningModule = {
         },
         {
           "id": "astronomy-601-l03-q5",
-          "text": "What is the best way to compare competing interventions in advanced Astronomy?",
+          "text": "What is the best way to compare competing interventions (e.g., upgrading a sensor vs. launching a new probe) in advanced Astronomy?",
           "skillId": "astronomy-601-skill-advanced-5",
           "options": [
             {
@@ -300,7 +309,7 @@ export const Astronomy601Module: LearningModule = {
         },
         {
           "id": "astronomy-601-l03-q7",
-          "text": "A mature remediation loop in advanced Astronomy should prioritize:",
+          "text": "A mature remediation loop following an observational anomaly should prioritize:",
           "skillId": "astronomy-601-skill-advanced-7",
           "options": [
             {
@@ -325,7 +334,7 @@ export const Astronomy601Module: LearningModule = {
         },
         {
           "id": "astronomy-601-l03-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Astronomy Research and Leadership?",
+          "text": "Which portfolio decision rule best balances performance and resilience in allocating telescope time?",
           "skillId": "astronomy-601-skill-advanced-8",
           "options": [
             {
@@ -348,13 +357,16 @@ export const Astronomy601Module: LearningModule = {
           "correctOptionId": "b",
           "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/astronomy-601-l03.png"
     },
     {
       "id": "astronomy-601-l04",
       "title": "Astronomy Advanced Case Analysis",
       "type": "video",
       "duration": 14,
+      "lessonImagePrompt": "A diverse team of senior astrophysicists sitting around a sleek conference table, reviewing a glowing 3D projection of a planetary system, cinematic.",
+      "conceptVideoPrompt": "A time-lapse of a team of astrophysicists in a modern glass-walled meeting room, intensely discussing and pointing at a 3D holographic projection of a planetary system.",
       "learningAids": [
         {
           "id": "astronomy-601-l04-a1",
@@ -368,19 +380,19 @@ export const Astronomy601Module: LearningModule = {
           "id": "astronomy-601-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "This lesson focuses on the architecture of scenarios in astronomy case analysis. We will examine how to frame competing constraints that arise during astronomy systems diagnostics. Understanding these constraints is key to conducting effective impact and tradeoff analyses, which help us make informed decisions.\nContext recap: This lesson focuses on the architecture of scenarios in astronomy case analysis. We will examine how to frame competing constraints that arise during astronomy systems diagnostics. Understanding these constraints is key to conducting effective impact and tradeoff analyses, which help us make informed decisions."
+          "content": "This lesson focuses on the architecture of scenarios in astronomy case analysis. We will examine how to frame competing constraints that arise during mission planning and systems diagnostics. Understanding these constraints—such as budget limits versus scientific yield—is key to conducting effective impact and tradeoff analyses."
         },
         {
           "id": "astronomy-601-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "In this practice session, learners will compare different options based on several important dimensions, including safety, reliability, cost, equity, and governance. This comparison is essential for making well-rounded decisions that consider all aspects of a situation in astronomy.\nContext recap: In this practice session, learners will compare different options based on several important dimensions, including safety, reliability, cost, equity, and governance. This comparison is essential for making well-rounded decisions that consider all aspects of a situation in astronomy."
+          "content": "In this practice session, you will compare different mission architectures based on several critical dimensions: safety, reliability, cost, equity of data access, and governance. This multidimensional comparison is essential for making well-rounded decisions that consider all aspects of a complex astronomical endeavor."
         },
         {
           "id": "astronomy-601-l04-c3",
           "kind": "recap",
           "title": "Decision Memo Pattern",
-          "content": "In this recap, we will review the structure of decision memos. Each recommendation made should include clear assumptions, supporting evidence, risk controls, and fallback plans. This thorough approach ensures that our decisions are well-supported and can be justified to others.\nContext recap: In this recap, we will review the structure of decision memos. Each recommendation made should include clear assumptions, supporting evidence, risk controls, and fallback plans. This thorough approach ensures that our decisions are well-supported and can be justified to others."
+          "content": "We will review the structure of executive decision memos used in space agencies and research institutions. Each recommendation must include clear assumptions, supporting astrophysical evidence, risk controls, and fallback plans. This thorough approach ensures that our decisions are well-supported and can secure funding and approval."
         }
       ]
     },
@@ -389,6 +401,8 @@ export const Astronomy601Module: LearningModule = {
       "title": "Astronomy Simulation Clinic",
       "type": "interactive",
       "duration": 18,
+      "lessonImagePrompt": "A first-person view of a complex dashboard used to control a deep-space probe, featuring telemetry data and interactive dials, photorealistic.",
+      "conceptVideoPrompt": "A point-of-view shot interacting with a futuristic deep-space probe dashboard, adjusting dials as telemetry data fluctuates rapidly on screen.",
       "learningAids": [
         {
           "id": "astronomy-601-l05-a1",
@@ -402,13 +416,13 @@ export const Astronomy601Module: LearningModule = {
           "id": "astronomy-601-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "In this interactive practice, learners will operate scenario controls while balancing performance and governance constraints. This experience is crucial for understanding how to manage complex situations in astronomy, ensuring that both effectiveness and accountability are maintained.\nContext recap: In this interactive practice, learners will operate scenario controls while balancing performance and governance constraints. This experience is crucial for understanding how to manage complex situations in astronomy, ensuring that both effectiveness and accountability are maintained.\nWhy this matters: Live Scenario Controls helps learners in Astronomy connect ideas from Astronomy Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "In this interactive clinic, you will operate scenario controls during a simulated astronomical event, such as an unexpected solar flare threatening a satellite network. You must balance data collection performance with strict governance and safety constraints. This experience bridges theoretical leadership concepts with real-time, high-pressure decision-making."
         },
         {
           "id": "astronomy-601-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "In this recap, we will discuss the importance of effective responses that update control gates while maintaining traceability and accountability. This ensures that all actions taken during a scenario are documented and can be reviewed later, which is vital for transparency in astronomy research.\nContext recap: In this recap, we will discuss the importance of effective responses that update control gates while maintaining traceability and accountability. This ensures that all actions taken during a scenario are documented and can be reviewed later, which is vital for transparency in astronomy research."
+          "content": "Following the simulation, we will analyze the importance of adaptive responses. Updating control gates dynamically while maintaining strict traceability and accountability ensures that all actions taken during an anomaly are documented. This is vital for post-incident reviews and maintaining transparency in the scientific community."
         }
       ],
       "interactiveActivities": [
@@ -416,15 +430,18 @@ export const Astronomy601Module: LearningModule = {
           "id": "astronomy-601-l05-act1",
           "type": "scenario",
           "title": "Adverse-Condition Decision Run",
-          "description": "Run a high-pressure astronomy scenario and tune controls under uncertainty."
+          "description": "Run a high-pressure astronomy scenario (e.g., orbital debris threat) and tune controls under uncertainty."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/astronomy-601-l05.png"
     },
     {
       "id": "astronomy-601-l06",
       "title": "Checkpoint 2: Case and Simulation Mastery",
       "type": "quiz",
       "duration": 11,
+      "lessonImagePrompt": "A stylized glowing checkmark superimposed over a detailed image of a spiral galaxy, representing mastery and success.",
+      "conceptVideoPrompt": "A slow zoom into a highly detailed spiral galaxy, with a subtle, elegant glowing checkmark forming in the foreground.",
       "learningAids": [
         {
           "id": "astronomy-601-l06-a1",
@@ -436,7 +453,7 @@ export const Astronomy601Module: LearningModule = {
       "questions": [
         {
           "id": "astronomy-601-l06-q1",
-          "text": "In advanced casework, the first requirement for defensible recommendations is:",
+          "text": "In advanced casework for space missions, the first requirement for defensible recommendations is:",
           "skillId": "astronomy-601-skill-case1",
           "options": [
             {
@@ -511,7 +528,7 @@ export const Astronomy601Module: LearningModule = {
         },
         {
           "id": "astronomy-601-l06-q4",
-          "text": "Advanced governance is strongest when it:",
+          "text": "Advanced governance in multi-national observatories is strongest when it:",
           "skillId": "astronomy-601-skill-case4",
           "options": [
             {
@@ -536,28 +553,28 @@ export const Astronomy601Module: LearningModule = {
         },
         {
           "id": "astronomy-601-l06-q5",
-          "text": "What is the best way to compare competing interventions in advanced Astronomy?",
+          "text": "During a simulated satellite failure, what is the most critical immediate action for a mission leader?",
           "skillId": "astronomy-601-skill-advanced-5",
           "options": [
             {
               "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
+              "text": "Draft a press release immediately"
             },
             {
               "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
+              "text": "Activate predefined fallback protocols and log all telemetry changes"
             },
             {
               "id": "c",
-              "text": "Switch metrics after results arrive"
+              "text": "Wait for the system to self-correct without intervention"
             },
             {
               "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
+              "text": "Assign blame to the engineering team"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
+          "explanation": "Activating fallback protocols and maintaining traceability are critical during an anomaly."
         },
         {
           "id": "astronomy-601-l06-q6",
@@ -634,13 +651,16 @@ export const Astronomy601Module: LearningModule = {
           "correctOptionId": "b",
           "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/astronomy-601-l06.png"
     },
     {
       "id": "astronomy-601-l07",
       "title": "Astronomy Governance and Public Impact",
       "type": "video",
       "duration": 13,
+      "lessonImagePrompt": "A public press conference setting with a scientist at a podium, a large screen behind them showing a newly discovered exoplanet, photorealistic.",
+      "conceptVideoPrompt": "A cinematic shot of a scientist at a podium during a press conference, gesturing towards a large screen displaying a beautiful exoplanet, camera slowly panning.",
       "learningAids": [
         {
           "id": "astronomy-601-l07-a1",
@@ -654,44 +674,47 @@ export const Astronomy601Module: LearningModule = {
           "id": "astronomy-601-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. This understanding is important for recognizing how various decisions in astronomy can impact different communities and individuals.\nContext recap: In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. This understanding is important for recognizing how various decisions in astronomy can impact different communities and individuals.\nWhy this matters: Stakeholder Impact Distribution helps learners in Astronomy connect ideas from Astronomy Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "In this lesson, we will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. Building large-scale infrastructure, like ground-based telescope arrays, impacts local communities, indigenous populations, and the global scientific body. Recognizing these impacts is crucial for ethical astronomy leadership."
         },
         {
           "id": "astronomy-601-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "In this section, we will explore the architecture of accountability in decision-making processes. This includes understanding how decision traceability, review rights, and remediation obligations are integrated. These elements are essential for ensuring that all decisions are made responsibly and can be held accountable.\nContext recap: In this section, we will explore the architecture of accountability in decision-making processes. This includes understanding how decision traceability, review rights, and remediation obligations are integrated. These elements are essential for ensuring that all decisions are made responsibly and can be held accountable."
+          "content": "We will explore the architecture of accountability in international space collaborations. This includes understanding how decision traceability, review rights, and remediation obligations are integrated into treaties and agency policies. These elements ensure that all decisions are made responsibly and can withstand public and governmental scrutiny."
         },
         {
           "id": "astronomy-601-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "At the end of our lesson, we will use a helpful checklist that connects important outcomes with ethical considerations, ensures we follow policies, and builds resilience in our leadership approach. This checklist will guide us in making responsible decisions in the field of astronomy.\nContext recap: At the end of our lesson, we will use a helpful checklist that connects important outcomes with ethical considerations, ensures we follow policies, and builds resilience in our leadership approach. This checklist will guide us in making responsible decisions in the field of astronomy."
+          "content": "To conclude, we will introduce a responsible leadership checklist that connects scientific outcomes with ethical considerations. This framework ensures policy compliance, builds resilience in our leadership approach, and guides us in making decisions that respect both the pursuit of knowledge and the communities we serve."
         }
       ],
       "flashcards": [
         {
           "id": "astronomy-601-l07-f1",
-          "front": "Impact distribution",
-          "back": "How outcomes are allocated across populations and timescales."
+          "front": "Impact Distribution",
+          "back": "How outcomes, benefits, and burdens of astronomical projects are allocated across populations and timescales."
         },
         {
           "id": "astronomy-601-l07-f2",
-          "front": "Decision traceability",
-          "back": "An auditable record of evidence, ownership, and rationale."
+          "front": "Decision Traceability",
+          "back": "An auditable record of evidence, ownership, and rationale for mission-critical choices."
         },
         {
           "id": "astronomy-601-l07-f3",
-          "front": "Responsible leadership",
-          "back": "Decision behavior balancing performance, accountability, and ethics."
+          "front": "Responsible Leadership",
+          "back": "Decision behavior balancing scientific performance, public accountability, and ethics."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/astronomy-601-l07.png"
     },
     {
       "id": "astronomy-601-l08",
       "title": "Astronomy Capstone Defense Lab",
       "type": "interactive",
       "duration": 16,
+      "lessonImagePrompt": "A formal academic defense setting, a candidate standing before a panel of experts with a large screen displaying complex astrophysical equations, cinematic lighting.",
+      "conceptVideoPrompt": "A tense, cinematic shot of an academic defense, the camera slowly pushing in on the candidate as they confidently explain complex astrophysical equations to a panel of experts.",
       "learningAids": [
         {
           "id": "astronomy-601-l08-a1",
@@ -705,13 +728,13 @@ export const Astronomy601Module: LearningModule = {
           "id": "astronomy-601-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "In this interactive activity, you will work on creating a detailed brief. This brief will include your claims, the evidence that supports them, the uncertainties you might face, and the pathways for remediation if challenges arise. This exercise will help you practice organizing your thoughts and presenting your ideas clearly.\nContext recap: In this interactive activity, you will work on creating a detailed brief. This brief will include your claims, the evidence that supports them, the uncertainties you might face, and the pathways for remediation if challenges arise. This exercise will help you practice organizing your thoughts and presenting your ideas clearly."
+          "content": "In this final interactive activity, you will compile a comprehensive defense brief for a proposed multi-billion dollar space observatory. This brief must articulate your scientific claims, the empirical evidence supporting them, quantified uncertainty bounds, and concrete pathways for remediation if technical challenges arise. Organization and clarity are paramount."
         },
         {
           "id": "astronomy-601-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "During this session, you will have the opportunity to practice your responses to questions and critiques from an expert panel. You will prepare for inquiries related to technical aspects, governance issues, and the perspectives of various stakeholders. This rehearsal will help you feel more confident and ready for your defense.\nContext recap: During this session, you will have the opportunity to practice your responses to questions and critiques from an expert panel. You will prepare for inquiries related to technical aspects, governance issues, and the perspectives of various stakeholders. This rehearsal will help you feel more confident and ready for your defense."
+          "content": "You will now practice your responses to adversarial critiques from a simulated expert panel. Prepare to defend your technical feasibility assessments, budget allocations, and governance structures. This rehearsal will test your ability to remain objective, rely on evidence, and communicate tradeoffs effectively under pressure."
         }
       ],
       "interactiveActivities": [
@@ -719,7 +742,7 @@ export const Astronomy601Module: LearningModule = {
           "id": "astronomy-601-l08-act1",
           "type": "debate_simulator",
           "title": "Expert Defense Panel",
-          "description": "Defend specialization recommendations under adversarial cross-examination."
+          "description": "Defend your specialization recommendations and mission architecture under adversarial cross-examination."
         }
       ]
     }

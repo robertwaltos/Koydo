@@ -1,134 +1,148 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const SocialStudiesUs601Module: LearningModule = {
+export const social_studies_us_601_Module: LearningModule = {
   "id": "social-studies-us-601",
-  "title": "Social Studies Us Research and Leadership",
-  "description": "Post-401 specialization in Social Studies Us, focused on social studies us systems diagnostics, social studies us operations and execution design, social studies us impact and tradeoff analysis, and social studies us governance and leadership through advanced casework, simulation, and defense-based checkpoints.",
+  "title": "U.S. Social Systems: Advanced Research and Leadership",
+  "description": "A specialization for post-401 learners focusing on the advanced analysis of U.S. social systems. This module covers systemic diagnosis of social issues, design of policy and operational interventions, rigorous impact and tradeoff analysis, and principles of governance and leadership. Learning is driven by advanced case studies, dynamic simulations, and defense-based capstone projects.",
   "subject": "Social Studies Us",
   "tags": [
     "core",
     "curriculum",
     "interactive",
     "social-studies-us",
-    "specialization"
+    "specialization",
+    "public policy",
+    "leadership"
   ],
   "minAge": 17,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en",
     "es"
   ],
   "learningObjectives": [
-    "Apply advanced methods for social studies us systems diagnostics in high-constraint environments",
-    "Design robust systems for social studies us operations and execution design with measurable control gates",
-    "Evaluate interventions in social studies us impact and tradeoff analysis with research-grade rigor",
-    "Operationalize social studies us governance and leadership with accountable governance and escalation pathways",
-    "Lead cross-functional decision reviews with explicit tradeoff communication",
-    "Defend recommendations under expert critique using evidence and uncertainty bounds"
+    "Apply advanced frameworks to analyze complex U.S. social systems in high-constraint environments.",
+    "Design robust social and policy interventions with measurable goals and clear review stages.",
+    "Evaluate the potential impacts and tradeoffs of interventions with research-grade rigor.",
+    "Develop operational governance models with clear accountability and escalation pathways.",
+    "Lead cross-functional decision-making processes, communicating tradeoffs and uncertainties clearly.",
+    "Defend policy and program recommendations against expert critique using evidence-based arguments."
   ],
   "lessons": [
     {
       "id": "social-studies-us-601-l01",
-      "title": "Social Studies Us Advanced Foundations",
+      "title": "Foundations of Social Systems Analysis",
       "type": "video",
-      "duration": 14,
+      "duration": 15,
       "learningAids": [
         {
           "id": "social-studies-us-601-l01-a1",
           "type": "image",
+          "title": "Systems Thinking Diagram",
+          "content": "A visual map showing interconnected factors of a social issue, such as poverty, including feedback loops and leverage points."
+        },
+        {
+          "id": "social-studies-us-601-l01-a2",
+          "type": "practice",
           "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "content": "Use a structured method to define a social problem, make assumptions explicit, and identify key variables and constraints."
         }
       ],
       "chunks": [
         {
           "id": "social-studies-us-601-l01-c1",
           "kind": "concept",
-          "title": "Scope and Boundary Design",
-          "content": "In this lesson, we will delve into the advanced boundaries of social studies in the United States. We will examine how to effectively diagnose social studies systems, which means understanding how different parts of social studies work together. Additionally, we will learn how to design operations that can be executed successfully, which involves planning and implementing strategies to improve social studies practices. By grasping these concepts, we will be better equipped to create a clearer framework for analyzing and enhancing the way social studies is taught and understood in our communities.\nContext recap: In this lesson, we will delve into the advanced boundaries of social studies in the United States. We will examine how to effectively diagnose social studies systems, which means understanding how different parts of social studies work together. Additionally, we will learn how to design operations that can be executed successfully, which involves planning and implementing strategies to improve social studies practices. By grasping these concepts, we will be better equipped to create a clearer framework for analyzing and enhancing the way social studies is taught and understood in our communities.\nContext recap: In this lesson, we will delve into the advanced boundaries of social studies in the United States. We will examine how to effectively diagnose social studies systems, which means understanding how different parts of social studies work together. Additionally, we will learn how to design operations that can be executed successfully, which involves planning and implementing strategies to improve social studies practices. By grasping these concepts, we will be better equipped to create a clearer framework for analyzing and enhancing the way social studies is taught and understood in our communities.\nWhy this matters: Scope and Boundary Design helps learners in Social Studies Us connect ideas from Social Studies Us Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "Defining the Scope of a Social Problem",
+          "content": "This lesson introduces advanced methods for analyzing social systems in the United States. We will learn to define the boundaries of a complex social issue, identifying the key actors, structures, and dynamics involved. This foundational skill allows us to create a clear framework for systematic investigation and intervention design. Why this matters: Clearly scoping a problem prevents wasted effort and focuses analysis on the most critical factors."
         },
         {
           "id": "social-studies-us-601-l01-c2",
           "kind": "concept",
-          "title": "Causal and Uncertainty Modeling",
-          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different events or actions. They will also identify ranges of uncertainty and understand how different systems depend on one another. This foundational knowledge is crucial before planning any interventions or changes in social studies practices.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different events or actions. They will also identify ranges of uncertainty and understand how different systems depend on one another. This foundational knowledge is crucial before planning any interventions or changes in social studies practices."
+          "title": "Modeling Causality and Uncertainty",
+          "content": "Here, we will map the causal pathways that contribute to a social problem, distinguishing between root causes, contributing factors, and symptoms. We will also learn to identify and quantify uncertainty, acknowledging the complex and often unpredictable nature of social systems. This is a crucial step before designing any effective intervention."
         },
         {
           "id": "social-studies-us-601-l01-c3",
           "kind": "recap",
-          "title": "Evidence Thresholds",
-          "content": "It is important to ensure that all claims made in our analysis are supported by measurable indicators. This means we will establish confidence bounds and set up review checkpoints to verify our findings. By doing so, we can ensure that our conclusions are reliable and based on solid evidence.\nContext recap: It is important to ensure that all claims made in our analysis are supported by measurable indicators. This means we will establish confidence bounds and set up review checkpoints to verify our findings. By doing so, we can ensure that our conclusions are reliable and based on solid evidence."
+          "title": "Establishing Standards of Evidence",
+          "content": "To ensure our analysis is credible, we must support all claims with verifiable evidence and measurable indicators. This involves setting clear standards for the quality of evidence we will accept and establishing confidence levels for our conclusions. This rigor ensures our findings are reliable and defensible."
         }
       ],
       "flashcards": [
         {
           "id": "social-studies-us-601-l01-f1",
-          "front": "social studies us systems diagnostics",
-          "back": "A specialization axis requiring explicit assumptions and measurable constraints."
+          "front": "Systemic Analysis of Social Issues",
+          "back": "A method of investigation that focuses on the relationships between a system's constituent parts and how they work together as a whole."
         },
         {
           "id": "social-studies-us-601-l01-f2",
-          "front": "social studies us operations and execution design",
-          "back": "Execution architecture that determines reliability under stress."
+          "front": "Intervention Design",
+          "back": "The process of creating a targeted policy, program, or action intended to produce desired outcomes within a social system."
         },
         {
           "id": "social-studies-us-601-l01-f3",
-          "front": "social studies us impact and tradeoff analysis",
-          "back": "Evaluation discipline for identifying true gains and hidden costs."
+          "front": "Tradeoff Analysis",
+          "back": "The evaluation discipline for identifying the benefits, hidden costs, and unintended consequences of a decision or intervention."
         }
       ]
     },
     {
       "id": "social-studies-us-601-l02",
-      "title": "Social Studies Us Specialist Methods Lab",
+      "title": "Applied Methods for Social Analysis Lab",
       "type": "interactive",
       "duration": 17,
       "learningAids": [
         {
           "id": "social-studies-us-601-l02-a1",
+          "type": "image",
+          "title": "Decision-Making Flowchart",
+          "content": "A flowchart illustrating a structured decision-making process, including stages for data gathering, stakeholder consultation, review, and contingency planning."
+        },
+        {
+          "id": "social-studies-us-601-l02-a2",
           "type": "practice",
           "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "content": "Design an analytical framework for a given social issue, including key questions, data sources, and review checkpoints."
         }
       ],
       "chunks": [
         {
           "id": "social-studies-us-601-l02-c1",
           "kind": "practice",
-          "title": "Method Design and Stress Test",
-          "content": "In this interactive segment, learners will have the opportunity to design specialized workflows. They will also conduct stress tests on these workflows by simulating adverse scenarios to see how well they hold up under pressure. This practice will help them understand the importance of resilience in social studies methods.\nContext recap: In this interactive segment, learners will have the opportunity to design specialized workflows. They will also conduct stress tests on these workflows by simulating adverse scenarios to see how well they hold up under pressure. This practice will help them understand the importance of resilience in social studies methods."
+          "title": "Designing and Testing Analytical Frameworks",
+          "content": "In this interactive lab, you will design a specialized analytical framework for a specific social problem. You will then 'stress test' your framework by applying it to historical or hypothetical scenarios with unexpected variables, evaluating its resilience and adaptability."
         },
         {
           "id": "social-studies-us-601-l02-c2",
           "kind": "recap",
-          "title": "Control Gate Architecture",
-          "content": "In this recap, we will discuss how workflows should be structured to include important checkpoints. These checkpoints will help us monitor progress, establish rollback criteria, and define thresholds for escalation. This architecture is essential for maintaining control and ensuring that our processes are effective.\nContext recap: In this recap, we will discuss how workflows should be structured to include important checkpoints. These checkpoints will help us monitor progress, establish rollback criteria, and define thresholds for escalation. This architecture is essential for maintaining control and ensuring that our processes are effective."
+          "title": "Structured Decision-Making Processes",
+          "content": "We will recap how to structure analytical workflows with clear checkpoints for review. These checkpoints ensure quality control, allow for course correction, and establish clear criteria for when a project should proceed, be revised, or be halted. This structure is essential for maintaining rigor and accountability."
         }
       ],
       "interactiveActivities": [
         {
           "id": "social-studies-us-601-l02-act1",
           "type": "matching_pairs",
-          "title": "Control-to-Outcome Mapping",
-          "description": "Match specialist controls with their strongest reliability and governance effects.",
+          "title": "Matching Governance Tools to Outcomes",
+          "description": "Match the governance mechanism with its primary effect on decision quality and reliability.",
           "pairs": [
             {
-              "left": "Pre-commit gate",
-              "right": "Prevents avoidable downstream failures"
+              "left": "Initial Proposal Review",
+              "right": "Prevents investment in poorly defined initiatives"
             },
             {
-              "left": "Rollback trigger",
-              "right": "Limits blast radius under adverse outcomes"
+              "left": "Contingency Plan",
+              "right": "Limits negative impact when outcomes are unfavorable"
             },
             {
-              "left": "Baseline dashboard",
-              "right": "Supports defensible impact attribution"
+              "left": "Baseline Data Dashboard",
+              "right": "Allows for credible measurement of an intervention's impact"
             },
             {
-              "left": "Retrospective loop",
-              "right": "Improves next-cycle decision quality"
+              "left": "After-Action Review",
+              "right": "Improves the quality of future decision-making cycles"
             }
           ]
         }
@@ -136,7 +150,7 @@ export const SocialStudiesUs601Module: LearningModule = {
     },
     {
       "id": "social-studies-us-601-l03",
-      "title": "Checkpoint 1: Specialist Methods",
+      "title": "Checkpoint 1: Analytical Methods",
       "type": "quiz",
       "duration": 10,
       "learningAids": [
@@ -144,285 +158,197 @@ export const SocialStudiesUs601Module: LearningModule = {
           "id": "social-studies-us-601-l03-a1",
           "type": "practice",
           "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "content": "Review key concepts of systemic analysis, evidence standards, and structured decision-making before starting the quiz."
         }
       ],
       "questions": [
         {
           "id": "social-studies-us-601-l03-q1",
-          "text": "Which practice most improves social studies us systems diagnostics decision quality?",
+          "text": "What is the most effective first step when analyzing a complex U.S. social issue?",
           "skillId": "social-studies-us-601-skill-core",
           "options": [
             {
               "id": "a",
-              "text": "Proceed without baseline or assumptions"
+              "text": "Immediately propose a solution based on intuition"
             },
             {
               "id": "b",
-              "text": "Define assumptions, constraints, and measurable indicators"
+              "text": "Clearly define the problem's scope, assumptions, and constraints"
             },
             {
               "id": "c",
-              "text": "Optimize only for speed in every context"
+              "text": "Focus only on the most easily available data"
             },
             {
               "id": "d",
-              "text": "Ignore uncertainty and edge conditions"
+              "text": "Ignore uncertainty to simplify the analysis"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Advanced decisions improve when assumptions, constraints, and metrics are explicit."
+          "explanation": "Advanced analysis begins with explicitly defining the problem's scope, assumptions, and constraints to ensure a rigorous and focused investigation."
         },
         {
           "id": "social-studies-us-601-l03-q2",
-          "text": "At level 601, strong execution for social studies us operations and execution design requires:",
+          "text": "A robust design for a social program requires:",
           "skillId": "social-studies-us-601-skill-execution",
           "options": [
             {
               "id": "a",
-              "text": "Owner mapping, checkpoint cadence, and escalation thresholds"
+              "text": "Clear roles, scheduled checkpoints, and criteria for escalation"
             },
             {
               "id": "b",
-              "text": "No role clarity and ad-hoc process changes"
+              "text": "Vague responsibilities and informal process changes"
             },
             {
               "id": "c",
-              "text": "No retrospective or post-run review"
+              "text": "No formal review process after implementation"
             },
             {
               "id": "d",
-              "text": "No rollback or fallback conditions"
+              "text": "No contingency plans for unexpected challenges"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Reliable advanced execution needs ownership clarity and threshold-driven governance."
+          "explanation": "Reliable execution requires clear ownership, planned reviews, and pre-defined thresholds for addressing problems."
         },
         {
           "id": "social-studies-us-601-l03-q3",
-          "text": "A defensible approach to social studies us impact and tradeoff analysis includes:",
+          "text": "A defensible impact analysis of a policy intervention must include:",
           "skillId": "social-studies-us-601-skill-eval",
           "options": [
             {
               "id": "a",
-              "text": "Anecdotes without comparison"
+              "text": "Only personal stories that support the policy"
             },
             {
               "id": "b",
-              "text": "Baseline comparisons, side-effect analysis, and uncertainty bounds"
+              "text": "Comparison to a baseline, analysis of side effects, and bounds of uncertainty"
             },
             {
               "id": "c",
-              "text": "Changing success criteria after outcomes"
+              "text": "Changing the definition of success after the results are in"
             },
             {
               "id": "d",
-              "text": "Excluding difficult scenarios from analysis"
+              "text": "Excluding inconvenient data from the final report"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible analysis combines comparative baselines, side-effect checks, and uncertainty disclosure."
+          "explanation": "Defensible analysis requires comparing outcomes to a baseline, accounting for unintended side effects, and transparently stating any uncertainties."
         },
         {
           "id": "social-studies-us-601-l03-q4",
-          "text": "Mature governance systems connect:",
+          "text": "A mature governance system effectively connects:",
           "skillId": "social-studies-us-601-skill-governance",
           "options": [
             {
               "id": "a",
-              "text": "Policy intent, measurable controls, and remediation pathways"
+              "text": "The policy's intent, measurable controls, and clear paths for corrective action"
             },
             {
               "id": "b",
-              "text": "Policy language with no measurable enforcement"
+              "text": "Policy goals with no way to measure their enforcement"
             },
             {
               "id": "c",
-              "text": "Targets without ownership or escalation design"
+              "text": "Ambitious targets without assigning responsibility for meeting them"
             },
             {
               "id": "d",
-              "text": "Operations without transparent accountability"
+              "text": "Operations that lack transparent accountability to the public"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Governance maturity is the operational link between intent, measurement, and corrective action."
-        },
-        {
-          "id": "social-studies-us-601-l03-q5",
-          "text": "What is the best way to compare competing interventions in advanced Social Studies Us?",
-          "skillId": "social-studies-us-601-skill-advanced-5",
-          "options": [
-            {
-              "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
-            },
-            {
-              "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
-            },
-            {
-              "id": "c",
-              "text": "Switch metrics after results arrive"
-            },
-            {
-              "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
-        },
-        {
-          "id": "social-studies-us-601-l03-q6",
-          "text": "In high-stakes Social Studies Us Research and Leadership execution, which communication protocol is strongest?",
-          "skillId": "social-studies-us-601-skill-advanced-6",
-          "options": [
-            {
-              "id": "a",
-              "text": "Broadcast conclusions without assumptions"
-            },
-            {
-              "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
-            },
-            {
-              "id": "c",
-              "text": "Share only final outcomes after completion"
-            },
-            {
-              "id": "d",
-              "text": "Limit updates to a single informal channel"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
-        },
-        {
-          "id": "social-studies-us-601-l03-q7",
-          "text": "A mature remediation loop in advanced Social Studies Us should prioritize:",
-          "skillId": "social-studies-us-601-skill-advanced-7",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blame assignment without system updates"
-            },
-            {
-              "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
-            },
-            {
-              "id": "c",
-              "text": "One-time fixes without retesting"
-            },
-            {
-              "id": "d",
-              "text": "Issue closure based on elapsed time"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
-        },
-        {
-          "id": "social-studies-us-601-l03-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Social Studies Us Research and Leadership?",
-          "skillId": "social-studies-us-601-skill-advanced-8",
-          "options": [
-            {
-              "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
-            },
-            {
-              "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
-            },
-            {
-              "id": "c",
-              "text": "Ignore correlated failure modes"
-            },
-            {
-              "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "explanation": "Mature governance creates an operational link between the stated intent of a policy, how its implementation is measured, and what happens when it goes off track."
         }
       ]
     },
     {
       "id": "social-studies-us-601-l04",
-      "title": "Social Studies Us Advanced Case Analysis",
+      "title": "Advanced Case Study Analysis",
       "type": "video",
       "duration": 14,
       "learningAids": [
         {
           "id": "social-studies-us-601-l04-a1",
           "type": "image",
+          "title": "Case Study Mind Map",
+          "content": "A mind map of a historical policy decision, branching out to show stakeholders, intended outcomes, actual outcomes, and key decision points."
+        },
+        {
+          "id": "social-studies-us-601-l04-a2",
+          "type": "practice",
           "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "content": "Deconstruct a provided case study by identifying the core problem, the proposed solution, and the explicit and implicit tradeoffs made by decision-makers."
         }
       ],
       "chunks": [
         {
           "id": "social-studies-us-601-l04-c1",
           "kind": "concept",
-          "title": "Scenario Architecture",
-          "content": "In this lesson, we will explore various scenarios that illustrate the competing constraints found within social studies systems. We will focus on analyzing diagnostics, which help us understand how different elements interact within these systems. Additionally, we will discuss the impacts and trade-offs that arise from various decisions made in social studies contexts. By examining these scenarios closely, learners will develop a deeper understanding of the complexities and nuances involved in social studies, enhancing their critical thinking skills and decision-making abilities.\nContext recap: In this lesson, we will explore various scenarios that illustrate the competing constraints found within social studies systems. We will focus on analyzing diagnostics, which help us understand how different elements interact within these systems. Additionally, we will discuss the impacts and trade-offs that arise from various decisions made in social studies contexts. By examining these scenarios closely, learners will develop a deeper understanding of the complexities and nuances involved in social studies, enhancing their critical thinking skills and decision-making abilities.\nContext recap: In this lesson, we will explore various scenarios that illustrate the competing constraints found within social studies systems. We will focus on analyzing diagnostics, which help us understand how different elements interact within these systems. Additionally, we will discuss the impacts and trade-offs that arise from various decisions made in social studies contexts. By examining these scenarios closely, learners will develop a deeper understanding of the complexities and nuances involved in social studies, enhancing their critical thinking skills and decision-making abilities.\nWhy this matters: Scenario Architecture helps learners in Social Studies Us connect ideas from Social Studies Us Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "Deconstructing Complex Scenarios",
+          "content": "In this lesson, we will analyze historical and contemporary case studies that illustrate competing values and constraints within U.S. social systems. We will focus on diagnosing the underlying issues, evaluating the interventions chosen, and understanding the resulting impacts and tradeoffs. This deepens our ability to learn from past decisions."
         },
         {
           "id": "social-studies-us-601-l04-c2",
           "kind": "practice",
-          "title": "Tradeoff Framing",
-          "content": "Learners will practice comparing various options based on important dimensions such as safety, reliability, cost, equity, and governance. This exercise will help them understand how to weigh different factors when making decisions in social studies contexts.\nContext recap: Learners will practice comparing various options based on important dimensions such as safety, reliability, cost, equity, and governance. This exercise will help them understand how to weigh different factors when making decisions in social studies contexts.\nWhy this matters: Tradeoff Framing helps learners in Social Studies Us connect ideas from Social Studies Us Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "Framing and Evaluating Tradeoffs",
+          "content": "Using our case studies, we will practice comparing policy options across multiple dimensions, such as effectiveness, cost, equity, and political feasibility. This exercise hones the critical skill of weighing different factors and making a reasoned judgment when no perfect solution exists."
         },
         {
           "id": "social-studies-us-601-l04-c3",
           "kind": "recap",
-          "title": "Decision Memo Pattern",
-          "content": "In this recap, we will review the structure of decision memos. Each recommendation should clearly outline the assumptions made, the evidence supporting the decision, the risk controls in place, and any fallback plans. This thorough approach ensures that decisions are well-informed and accountable.\nContext recap: In this recap, we will review the structure of decision memos. Each recommendation should clearly outline the assumptions made, the evidence supporting the decision, the risk controls in place, and any fallback plans. This thorough approach ensures that decisions are well-informed and accountable."
+          "title": "The Structure of a Policy Memo",
+          "content": "We will review the standard structure for a professional policy recommendation. A strong memo or brief should clearly state the recommendation, the supporting evidence, the underlying assumptions, the identified risks, and any contingency plans. This format ensures clarity, rigor, and accountability."
         }
       ]
     },
     {
       "id": "social-studies-us-601-l05",
-      "title": "Social Studies Us Simulation Clinic",
+      "title": "Policy Simulation Clinic",
       "type": "interactive",
       "duration": 18,
       "learningAids": [
         {
           "id": "social-studies-us-601-l05-a1",
+          "type": "image",
+          "title": "Simulation Dashboard",
+          "content": "An example of the simulation interface, showing key performance indicators (e.g., unemployment rate, public approval) and policy levers (e.g., budget allocation, new regulations)."
+        },
+        {
+          "id": "social-studies-us-601-l05-a2",
           "type": "practice",
           "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "content": "Participate in a guided run of the simulation, making decisions as a group and observing the immediate and long-term consequences."
         }
       ],
       "chunks": [
         {
           "id": "social-studies-us-601-l05-c1",
           "kind": "practice",
-          "title": "Live Scenario Controls",
-          "content": "In this interactive practice, learners will operate scenario controls while considering both performance and governance constraints. This hands-on experience will help them understand how to balance different priorities in real-world social studies situations.\nContext recap: In this interactive practice, learners will operate scenario controls while considering both performance and governance constraints. This hands-on experience will help them understand how to balance different priorities in real-world social studies situations.\nWhy this matters: Live Scenario Controls helps learners in Social Studies Us connect ideas from Social Studies Us Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "Decision-Making in a Dynamic Environment",
+          "content": "In this interactive simulation, you will take on the role of a policymaker and make decisions under pressure. You must balance competing goals, manage resources, and respond to unexpected events, all while being held to standards of effective governance and public accountability."
         },
         {
           "id": "social-studies-us-601-l05-c2",
           "kind": "recap",
-          "title": "Adaptive Response Design",
-          "content": "In this recap, we will discuss how effective responses can update control gates while maintaining traceability and accountability. This means that as situations change, we can adapt our responses without losing track of our decisions and their impacts.\nContext recap: In this recap, we will discuss how effective responses can update control gates while maintaining traceability and accountability. This means that as situations change, we can adapt our responses without losing track of our decisions and their impacts.\nContext recap: In this recap, we will discuss how effective responses can update control gates while maintaining traceability and accountability. This means that as situations change, we can adapt our responses without losing track of our decisions and their impacts. Context recap: In this recap, we will discuss how effective responses can update control gates while maintaining traceability and accountability. This means that as situations change, we can adapt our responses without losing track of our decisions and their impacts."
+          "title": "Adaptive Leadership and Iterative Policy",
+          "content": "This recap focuses on how effective leaders adapt their strategies based on new information and changing conditions. We will discuss how to build iterative feedback loops into policy implementation, allowing for adjustments that improve outcomes while maintaining transparency and accountability."
         }
       ],
       "interactiveActivities": [
         {
           "id": "social-studies-us-601-l05-act1",
           "type": "scenario",
-          "title": "Adverse-Condition Decision Run",
-          "description": "Run a high-pressure social studies us scenario and tune controls under uncertainty."
+          "title": "Crisis Simulation: Policy Leadership Under Pressure",
+          "description": "Manage a high-pressure social or economic crisis in a simulated environment. Make time-sensitive decisions and adjust your strategy based on evolving data and stakeholder feedback."
         }
       ]
     },
     {
       "id": "social-studies-us-601-l06",
-      "title": "Checkpoint 2: Case and Simulation Mastery",
+      "title": "Checkpoint 2: Application and Synthesis",
       "type": "quiz",
       "duration": 11,
       "learningAids": [
@@ -430,296 +356,208 @@ export const SocialStudiesUs601Module: LearningModule = {
           "id": "social-studies-us-601-l06-a1",
           "type": "practice",
           "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "content": "Review case study analysis techniques and principles of adaptive leadership before beginning the quiz."
         }
       ],
       "questions": [
         {
           "id": "social-studies-us-601-l06-q1",
-          "text": "In advanced casework, the first requirement for defensible recommendations is:",
+          "text": "In advanced case analysis, a defensible policy recommendation must begin with:",
           "skillId": "social-studies-us-601-skill-case1",
           "options": [
             {
               "id": "a",
-              "text": "A preferred option without explicit assumptions"
+              "text": "A preferred option without explaining the assumptions behind it"
             },
             {
               "id": "b",
-              "text": "A clear baseline, explicit constraints, and success criteria"
+              "text": "A clear baseline for comparison, explicit constraints, and measurable success criteria"
             },
             {
               "id": "c",
-              "text": "High confidence without evidence logs"
+              "text": "A high degree of confidence without providing supporting evidence"
             },
             {
               "id": "d",
-              "text": "Single-metric optimization only"
+              "text": "Optimizing for a single metric while ignoring all others"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible recommendations begin with explicit assumptions, constraints, and measurable targets."
+          "explanation": "Defensible recommendations are built on a foundation of explicit assumptions, constraints, and measurable targets that allow for objective evaluation."
         },
         {
           "id": "social-studies-us-601-l06-q2",
-          "text": "A resilient strategy for social studies us operations and execution design should include:",
+          "text": "A resilient strategy for implementing a new social program should always include:",
           "skillId": "social-studies-us-601-skill-case2",
           "options": [
             {
               "id": "a",
-              "text": "Checkpointed execution with fallback and escalation criteria"
+              "text": "Staged implementation with clear criteria for proceeding and contingency plans"
             },
             {
               "id": "b",
-              "text": "One-way execution with no rollback capability"
+              "text": "A single, irreversible path with no ability to adapt"
             },
             {
               "id": "c",
-              "text": "No ownership mapping across teams"
+              "text": "No clear assignment of responsibility for different parts of the program"
             },
             {
               "id": "d",
-              "text": "Hidden assumptions and undocumented decisions"
+              "text": "Keeping the decision-making process and assumptions hidden from stakeholders"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Resilience depends on checkpoints, fallback options, and explicit escalation design."
+          "explanation": "Resilience in execution depends on planned checkpoints, fallback options, and clear triggers for escalating issues."
         },
         {
           "id": "social-studies-us-601-l06-q3",
-          "text": "When evaluating social studies us impact and tradeoff analysis, which method is most rigorous?",
+          "text": "When evaluating a policy's impact, which method demonstrates the most rigor?",
           "skillId": "social-studies-us-601-skill-case3",
           "options": [
             {
               "id": "a",
-              "text": "Single success story without controls"
+              "text": "Highlighting a single success story without any comparison group"
             },
             {
               "id": "b",
-              "text": "Comparative baselines plus side-effect and uncertainty analysis"
+              "text": "Using comparative baselines and analyzing both side effects and uncertainties"
             },
             {
               "id": "c",
-              "text": "Outcome-only narrative without process evidence"
+              "text": "Presenting a narrative of the outcome without evidence from the process"
             },
             {
               "id": "d",
-              "text": "Retrospective scope changes to fit outcomes"
+              "text": "Changing the scope of the evaluation after the fact to fit the results"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Rigorous evaluation requires comparisons, side-effect analysis, and uncertainty disclosure."
+          "explanation": "Rigorous evaluation requires objective comparison, a thorough analysis of unintended consequences, and a transparent disclosure of uncertainty."
         },
         {
           "id": "social-studies-us-601-l06-q4",
-          "text": "Advanced governance is strongest when it:",
+          "text": "Advanced public governance is strongest when it:",
           "skillId": "social-studies-us-601-skill-case4",
           "options": [
             {
               "id": "a",
-              "text": "Aligns authority, measurement, and remediation obligations"
+              "text": "Aligns decision-making authority with measurable accountability and a duty to remediate failures"
             },
             {
               "id": "b",
-              "text": "Separates policy from operational controls"
+              "text": "Creates policies that are separate from the operational mechanisms to enforce them"
             },
             {
               "id": "c",
-              "text": "Avoids external review and transparency"
+              "text": "Avoids external review and operates without transparency"
             },
             {
               "id": "d",
-              "text": "Treats accountability as optional under pressure"
+              "text": "Treats accountability as an optional goal, especially under pressure"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Mature governance links authority, measurable controls, and corrective action."
-        },
-        {
-          "id": "social-studies-us-601-l06-q5",
-          "text": "What is the best way to compare competing interventions in advanced Social Studies Us?",
-          "skillId": "social-studies-us-601-skill-advanced-5",
-          "options": [
-            {
-              "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
-            },
-            {
-              "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
-            },
-            {
-              "id": "c",
-              "text": "Switch metrics after results arrive"
-            },
-            {
-              "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
-        },
-        {
-          "id": "social-studies-us-601-l06-q6",
-          "text": "In high-stakes Social Studies Us Research and Leadership execution, which communication protocol is strongest?",
-          "skillId": "social-studies-us-601-skill-advanced-6",
-          "options": [
-            {
-              "id": "a",
-              "text": "Broadcast conclusions without assumptions"
-            },
-            {
-              "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
-            },
-            {
-              "id": "c",
-              "text": "Share only final outcomes after completion"
-            },
-            {
-              "id": "d",
-              "text": "Limit updates to a single informal channel"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
-        },
-        {
-          "id": "social-studies-us-601-l06-q7",
-          "text": "A mature remediation loop in advanced Social Studies Us should prioritize:",
-          "skillId": "social-studies-us-601-skill-advanced-7",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blame assignment without system updates"
-            },
-            {
-              "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
-            },
-            {
-              "id": "c",
-              "text": "One-time fixes without retesting"
-            },
-            {
-              "id": "d",
-              "text": "Issue closure based on elapsed time"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
-        },
-        {
-          "id": "social-studies-us-601-l06-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Social Studies Us Research and Leadership?",
-          "skillId": "social-studies-us-601-skill-advanced-8",
-          "options": [
-            {
-              "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
-            },
-            {
-              "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
-            },
-            {
-              "id": "c",
-              "text": "Ignore correlated failure modes"
-            },
-            {
-              "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "explanation": "Mature governance ensures that those with the authority to make decisions are also accountable for the outcomes and responsible for corrective action."
         }
       ]
     },
     {
       "id": "social-studies-us-601-l07",
-      "title": "Social Studies Us Governance and Public Impact",
+      "title": "Governance, Ethics, and Public Impact",
       "type": "video",
       "duration": 13,
       "learningAids": [
         {
           "id": "social-studies-us-601-l07-a1",
           "type": "image",
+          "title": "Stakeholder Impact Map",
+          "content": "A diagram mapping a policy's effects across different groups (e.g., low-income families, small businesses, future generations), showing positive, negative, and neutral impacts."
+        },
+        {
+          "id": "social-studies-us-601-l07-a2",
+          "type": "practice",
           "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "content": "Use an ethical decision-making checklist to evaluate a historical policy decision, identifying its strengths and weaknesses in governance."
         }
       ],
       "chunks": [
         {
           "id": "social-studies-us-601-l07-c1",
           "kind": "concept",
-          "title": "Stakeholder Impact Distribution",
-          "content": "In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. This understanding is crucial for recognizing how decisions in social studies can impact various communities and individuals.\nContext recap: In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. This understanding is crucial for recognizing how decisions in social studies can impact various communities and individuals.\nWhy this matters: Stakeholder Impact Distribution helps learners in Social Studies Us connect ideas from Social Studies Us Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "Analyzing Stakeholder Impact",
+          "content": "This lesson focuses on mapping the distribution of a policy's effects. We will analyze how benefits, costs, and risks are allocated across different stakeholder groups, both now and in the future. This is crucial for understanding the equity and fairness of an intervention."
         },
         {
           "id": "social-studies-us-601-l07-c2",
           "kind": "concept",
-          "title": "Accountability Architecture",
-          "content": "In this section, we will explore the architecture of accountability. This includes understanding how decision traceability, review rights, and remediation obligations are integrated into our processes. This framework is essential for ensuring responsible governance in social studies.\nContext recap: In this section, we will explore the architecture of accountability. This includes understanding how decision traceability, review rights, and remediation obligations are integrated into our processes. This framework is essential for ensuring responsible governance in social studies.\nWhy this matters: Accountability Architecture helps learners in Social Studies Us connect ideas from Social Studies Us Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "Frameworks for Accountability",
+          "content": "Here, we will explore the architecture of public accountability. This includes mechanisms for decision traceability (who decided what and why), the rights of stakeholders to review and appeal decisions, and the obligation of leaders to correct failures. These frameworks are essential for building public trust."
         },
         {
           "id": "social-studies-us-601-l07-c3",
           "kind": "recap",
-          "title": "Responsible Leadership Checklist",
-          "content": "At the end of our lesson, we have a helpful checklist that connects important outcomes with ethical considerations, ensures we are following policies, and emphasizes the importance of resilience in leadership. This checklist serves as a guide to remind us of the key elements that contribute to responsible leadership.\nContext recap: At the end of our lesson, we have a helpful checklist that connects important outcomes with ethical considerations, ensures we are following policies, and emphasizes the importance of resilience in leadership. This checklist serves as a guide to remind us of the key elements that contribute to responsible leadership."
+          "title": "A Checklist for Responsible Leadership",
+          "content": "We conclude with a practical checklist for responsible leadership. This tool connects decision-making to ethical principles, policy compliance, and systemic resilience. It serves as a guide for ensuring that leadership actions are not just effective, but also just and accountable."
         }
       ],
       "flashcards": [
         {
           "id": "social-studies-us-601-l07-f1",
-          "front": "Impact distribution",
-          "back": "How outcomes are allocated across populations and timescales."
+          "front": "Impact Distribution",
+          "back": "The way in which the outcomes (benefits, costs, risks) of a policy or event are allocated across different populations and over time."
         },
         {
           "id": "social-studies-us-601-l07-f2",
-          "front": "Decision traceability",
-          "back": "An auditable record of evidence, ownership, and rationale."
+          "front": "Decision Traceability",
+          "back": "An auditable record that connects a decision to the evidence, rationale, and individuals responsible for it."
         },
         {
           "id": "social-studies-us-601-l07-f3",
-          "front": "Responsible leadership",
-          "back": "Decision behavior balancing performance, accountability, and ethics."
+          "front": "Responsible Leadership",
+          "back": "A mode of decision-making that balances the pursuit of performance goals with duties of accountability, ethical conduct, and public trust."
         }
       ]
     },
     {
       "id": "social-studies-us-601-l08",
-      "title": "Social Studies Us Capstone Defense Lab",
+      "title": "Capstone Policy Defense Lab",
       "type": "interactive",
       "duration": 16,
       "learningAids": [
         {
           "id": "social-studies-us-601-l08-a1",
+          "type": "image",
+          "title": "Policy Brief Template",
+          "content": "A professionally formatted template for a one-page policy brief, with sections for Executive Summary, Problem Statement, Proposed Solution, and Evidence Base."
+        },
+        {
+          "id": "social-studies-us-601-l08-a2",
           "type": "practice",
           "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "content": "Work with a peer to critique a draft policy recommendation, focusing on the strength of the evidence and the clarity of the argument."
         }
       ],
       "chunks": [
         {
           "id": "social-studies-us-601-l08-c1",
           "kind": "practice",
-          "title": "Defense Brief Assembly",
-          "content": "In this interactive activity, learners will work together to create a comprehensive brief. This brief will include well-supported claims, solid evidence, an understanding of uncertainty, and clear pathways for remediation. This process helps us think critically and prepares us for real-world challenges.\nContext recap: In this interactive activity, learners will work together to create a comprehensive brief. This brief will include well-supported claims, solid evidence, an understanding of uncertainty, and clear pathways for remediation. This process helps us think critically and prepares us for real-world challenges."
+          "title": "Assembling a Policy Recommendation Brief",
+          "content": "In this interactive workshop, you will synthesize your analysis of a major social issue into a comprehensive policy brief. This brief must include evidence-based claims, a clear acknowledgment of uncertainty and tradeoffs, and a viable implementation and remediation plan."
         },
         {
           "id": "social-studies-us-601-l08-c2",
           "kind": "recap",
-          "title": "Expert Panel Rehearsal",
-          "content": "During this rehearsal session, learners will practice their responses to various critiques that may come from experts, governance bodies, and stakeholders. This exercise is designed to build confidence and improve our ability to communicate effectively in challenging situations.\nContext recap: During this rehearsal session, learners will practice their responses to various critiques that may come from experts, governance bodies, and stakeholders. This exercise is designed to build confidence and improve our ability to communicate effectively in challenging situations.\nContext recap: During this rehearsal session, learners will practice their responses to various critiques that may come from experts, governance bodies, and stakeholders. This exercise is designed to build confidence and improve our ability to communicate effectively in challenging situations. Context recap: During this rehearsal session, learners will practice their responses to various critiques that may come from experts, governance bodies, and stakeholders. This exercise is designed to build confidence and improve our ability to communicate effectively in challenging situations."
+          "title": "Rehearsing for Expert Review",
+          "content": "We will conclude with a rehearsal for the final capstone defense. You will practice responding to critical questions and challenges from the perspective of different stakeholders, such as subject-matter experts, governance bodies, and community advocates. This builds confidence and sharpens your ability to defend your work."
         }
       ],
       "interactiveActivities": [
         {
           "id": "social-studies-us-601-l08-act1",
           "type": "debate_simulator",
-          "title": "Expert Defense Panel",
-          "description": "Defend specialization recommendations under adversarial cross-examination."
+          "title": "Capstone Policy Defense Simulation",
+          "description": "Present and defend your capstone policy recommendation before a simulated expert panel. Respond to adversarial questioning and justify your analysis and tradeoffs."
         }
       ]
     }

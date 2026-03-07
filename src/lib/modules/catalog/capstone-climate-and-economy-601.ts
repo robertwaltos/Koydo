@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const CapstoneClimateAndEconomy601Module: LearningModule = {
+export const capstone_climate_and_economy_601_Module: LearningModule = {
   "id": "capstone-climate-and-economy-601",
   "title": "Capstone Climate and Economy Defense",
   "description": "Interdisciplinary capstone focused on macroeconomic-climate scenario comparison, cross-sector governance alignment, risk communication strategy, and executive policy defense through simulation-driven design and defense-oriented assessment.",
@@ -14,7 +14,7 @@ export const CapstoneClimateAndEconomy601Module: LearningModule = {
   ],
   "minAge": 17,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en"
@@ -33,6 +33,8 @@ export const CapstoneClimateAndEconomy601Module: LearningModule = {
       "title": "Capstone Context and System Stakes",
       "type": "video",
       "duration": 14,
+      "lessonImagePrompt": "Imagen 4 prompt: A photorealistic, dramatic wide shot of a modern executive boardroom with a glowing holographic globe showing climate data and economic graphs, cinematic lighting, 8k resolution.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: Cinematic tracking shot moving through a high-tech policy war room. Analysts are reviewing macroeconomic and climate models on large transparent screens. The atmosphere is tense and focused, with dynamic lighting reflecting off the data visualizations.",
       "learningAids": [
         {
           "id": "capstone-climate-and-economy-601-l01-a1",
@@ -46,25 +48,25 @@ export const CapstoneClimateAndEconomy601Module: LearningModule = {
           "id": "capstone-climate-and-economy-601-l01-c1",
           "kind": "concept",
           "title": "Problem Frame",
-          "content": "In this lesson, we will dive into an important decision-making process that focuses on evaluating various climate policy options. This process is not straightforward; it considers many uncertainties, such as changing environmental conditions, financial limitations that governments face, and the political challenges that can arise. As you engage with this material, you will have the chance to set your own goals, identify the limitations you might encounter, and explore how different groups of people, known as stakeholders, are impacted by these decisions. By doing this, you will develop critical thinking skills that are essential for understanding the complexities involved in creating effective climate policies."
+          "content": "Evaluating climate policy options at a macroeconomic scale requires navigating deep uncertainties, fiscal constraints, and complex political realities. In this capstone, you will define strategic objectives, identify systemic limitations, and map stakeholder impacts to build a resilient decision-making framework."
         },
         {
           "id": "capstone-climate-and-economy-601-l01-c2",
           "kind": "concept",
           "title": "Decision Boundaries",
-          "content": "In this section, we will discuss the importance of setting boundaries in decision-making. These boundaries help us identify which variables we can control, which factors are uncertain, and what decisions may require further escalation. Understanding these distinctions is crucial for effective problem-solving and ensures that we can navigate the complexities of climate policy with clarity.\nContext recap: In this section, we will discuss the importance of setting boundaries in decision-making. These boundaries help us identify which variables we can control, which factors are uncertain, and what decisions may require further escalation. Understanding these distinctions is crucial for effective problem-solving and ensures that we can navigate the complexities of climate policy with clarity."
+          "content": "Establishing rigorous decision boundaries is critical for isolating controllable variables from exogenous uncertainties. By defining these limits, you can determine which risks can be mitigated internally and which require escalation, ensuring clarity in complex policy environments."
         },
         {
           "id": "capstone-climate-and-economy-601-l01-c3",
           "kind": "recap",
           "title": "Evidence Standards",
-          "content": "It is essential that all claims made in our discussions are supported by measurable indicators. This means we need to establish clear criteria for what we consider evidence, including ranges of uncertainty and accountability checkpoints. By doing so, we ensure that our arguments are grounded in solid data, making them more credible and reliable.\nContext recap: It is essential that all claims made in our discussions are supported by measurable indicators. This means we need to establish clear criteria for what we consider evidence, including ranges of uncertainty and accountability checkpoints. By doing so, we ensure that our arguments are grounded in solid data, making them more credible and reliable."
+          "content": "All policy claims must be anchored by measurable indicators. Establishing strict evidence thresholds—including defined uncertainty ranges and accountability checkpoints—ensures that strategic arguments are credible, defensible, and grounded in empirical data."
         }
       ],
       "flashcards": [
         {
           "id": "capstone-climate-and-economy-601-l01-f1",
-          "front": "macroeconomic-climate scenario comparison",
+          "front": "Macroeconomic-climate scenario comparison",
           "back": "A core capstone axis requiring explicit assumptions and measurable controls."
         },
         {
@@ -77,13 +79,16 @@ export const CapstoneClimateAndEconomy601Module: LearningModule = {
           "front": "Evidence threshold",
           "back": "The minimum evidence level required before policy or operational action."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/capstone-climate-and-economy-601-l01.png"
     },
     {
       "id": "capstone-climate-and-economy-601-l02",
       "title": "Integrated Methods Lab",
       "type": "interactive",
       "duration": 17,
+      "lessonImagePrompt": "Imagen 4 prompt: A sleek, modern digital workspace showing a complex tradeoff matrix on a large curved monitor, integrating climate models and financial data, professional and analytical atmosphere.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A time-lapse style cinematic video of a team of experts collaborating around a digital smart-table. They are moving data nodes to align technical, policy, and economic variables into a cohesive strategy. Soft, professional studio lighting.",
       "learningAids": [
         {
           "id": "capstone-climate-and-economy-601-l02-a1",
@@ -97,13 +102,13 @@ export const CapstoneClimateAndEconomy601Module: LearningModule = {
           "id": "capstone-climate-and-economy-601-l02-c1",
           "kind": "practice",
           "title": "Method Integration",
-          "content": "In this interactive lab, you will work on creating interventions that connect various domains, including technical aspects, policy considerations, and the perspectives of different stakeholders. This exercise will help you understand how to integrate diverse elements into a cohesive strategy that addresses climate-related challenges effectively.\nContext recap: In this interactive lab, you will work on creating interventions that connect various domains, including technical aspects, policy considerations, and the perspectives of different stakeholders. This exercise will help you understand how to integrate diverse elements into a cohesive strategy that addresses climate-related challenges effectively."
+          "content": "This interactive lab focuses on synthesizing technical constraints, policy mandates, and stakeholder incentives. You will practice integrating these diverse domains into a cohesive, actionable strategy capable of withstanding real-world climate and economic pressures."
         },
         {
           "id": "capstone-climate-and-economy-601-l02-c2",
           "kind": "recap",
           "title": "Control Gates",
-          "content": "As part of your planning process, it is important to include control gates. These are checkpoints that allow you to assess progress, establish criteria for rolling back decisions if necessary, and clarify who is responsible for accountability. By incorporating these elements, you can create a more structured and effective plan.\nContext recap: As part of your planning process, it is important to include control gates. These are checkpoints that allow you to assess progress, establish criteria for rolling back decisions if necessary, and clarify who is responsible for accountability. By incorporating these elements, you can create a more structured and effective plan."
+          "content": "Effective policy execution requires embedded control gates. These strategic checkpoints allow decision-makers to assess empirical progress, trigger predefined rollback criteria during adverse outcomes, and enforce strict accountability across all operational phases."
         }
       ],
       "interactiveActivities": [
@@ -131,13 +136,16 @@ export const CapstoneClimateAndEconomy601Module: LearningModule = {
             }
           ]
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/capstone-climate-and-economy-601-l02.png"
     },
     {
       "id": "capstone-climate-and-economy-601-l03",
       "title": "Checkpoint 1: Integrated Design",
       "type": "quiz",
       "duration": 10,
+      "lessonImagePrompt": "Imagen 4 prompt: A minimalist, high-contrast image of a glowing digital lock and a data dashboard, symbolizing security, checkpoints, and rigorous assessment in policy design.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A dynamic, abstract visualization of data streams passing through digital 'gates'. When the data meets the criteria, the gates glow green and allow passage, representing policy control gates and evidence thresholds.",
       "learningAids": [
         {
           "id": "capstone-climate-and-economy-601-l03-a1",
@@ -347,13 +355,16 @@ export const CapstoneClimateAndEconomy601Module: LearningModule = {
           "correctOptionId": "b",
           "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/capstone-climate-and-economy-601-l03.png"
     },
     {
       "id": "capstone-climate-and-economy-601-l04",
       "title": "Simulation and Adaptive Response",
       "type": "interactive",
       "duration": 16,
+      "lessonImagePrompt": "Imagen 4 prompt: A futuristic simulation control room with multiple screens displaying branching timelines, climate impact heatmaps, and economic stress-test results, highly detailed.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: Cinematic over-the-shoulder shot of a policy architect running a complex climate-economy simulation. The screen rapidly cycles through different adverse scenarios, highlighting adaptive responses and shifting data trends in real-time.",
       "learningAids": [
         {
           "id": "capstone-climate-and-economy-601-l04-a1",
@@ -367,13 +378,13 @@ export const CapstoneClimateAndEconomy601Module: LearningModule = {
           "id": "capstone-climate-and-economy-601-l04-c1",
           "kind": "practice",
           "title": "Scenario Simulation",
-          "content": "In this practice session, you will simulate various intervention scenarios while considering uncertainties. You will compare the outcomes of these scenarios against predefined metrics to evaluate their effectiveness. This hands-on experience will enhance your understanding of how different strategies can impact climate policy.\nContext recap: In this practice session, you will simulate various intervention scenarios while considering uncertainties. You will compare the outcomes of these scenarios against predefined metrics to evaluate their effectiveness. This hands-on experience will enhance your understanding of how different strategies can impact climate policy."
+          "content": "In this module, you will stress-test intervention strategies against simulated adverse scenarios. By comparing outcomes against predefined macroeconomic and climate metrics, you will evaluate the resilience and efficacy of your proposed policies under conditions of high uncertainty."
         },
         {
           "id": "capstone-climate-and-economy-601-l04-c2",
           "kind": "recap",
           "title": "Debrief and Correction",
-          "content": "Once you have completed your simulations, it is very important to take the time to conduct a detailed debriefing. This means you will carefully look back at what happened during the simulations. You will assess the positive outcomes or gains that were achieved, as well as any unexpected side effects that may have occurred. Additionally, you will need to identify any areas where governance compliance may have been lacking. To do this effectively, you will rely on clear and specific data that you collected during the simulations. This data will be instrumental in helping you create an implementation artifact, which is a document or tool that summarizes your findings and recommendations based on your analysis."
+          "content": "Post-simulation debriefing is essential for iterative policy refinement. You will analyze performance deltas, identify unintended systemic spillovers, and isolate governance failures. This empirical data will directly inform the creation of a robust implementation artifact."
         }
       ],
       "interactiveActivities": [
@@ -388,13 +399,16 @@ export const CapstoneClimateAndEconomy601Module: LearningModule = {
             "Specify metrics and triggers that validate your recommendation."
           ]
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/capstone-climate-and-economy-601-l04.png"
     },
     {
       "id": "capstone-climate-and-economy-601-l05",
       "title": "Checkpoint 2: Policy and Governance Defense",
       "type": "quiz",
       "duration": 10,
+      "lessonImagePrompt": "Imagen 4 prompt: A close-up of a heavy, embossed policy document resting on a dark wooden desk, with a pair of reading glasses and a glowing tablet displaying analytical charts in the background.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: A slow, dramatic pan across a series of interconnected digital nodes representing governance structures. The nodes pulse with light as they successfully defend against simulated external shocks, illustrating robust policy defense.",
       "learningAids": [
         {
           "id": "capstone-climate-and-economy-601-l05-a1",
@@ -406,203 +420,203 @@ export const CapstoneClimateAndEconomy601Module: LearningModule = {
       "questions": [
         {
           "id": "capstone-climate-and-economy-601-l05-q1",
-          "text": "Which approach most improves macroeconomic-climate scenario comparison quality?",
-          "skillId": "capstone-climate-and-economy-601-skill-core",
+          "text": "What is the primary purpose of stress-testing interventions in a macroeconomic-climate simulation?",
+          "skillId": "capstone-climate-and-economy-601-skill-simulation",
           "options": [
             {
               "id": "a",
-              "text": "Proceed without assumptions or baselines"
+              "text": "To guarantee a single, predictable outcome"
             },
             {
               "id": "b",
-              "text": "Set measurable constraints and test adverse scenarios"
+              "text": "To identify failure points and evaluate policy resilience under adverse conditions"
             },
             {
               "id": "c",
-              "text": "Optimize only for short-term optics"
+              "text": "To eliminate the need for stakeholder communication"
             },
             {
               "id": "d",
-              "text": "Ignore uncertainty and externalities"
+              "text": "To justify pre-existing political biases"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "High-quality capstone decisions require measurable constraints and stress-tested assumptions."
+          "explanation": "Stress-testing exposes vulnerabilities and measures how well a policy withstands high-uncertainty, adverse scenarios."
         },
         {
           "id": "capstone-climate-and-economy-601-l05-q2",
-          "text": "A robust cross-sector governance alignment decision should include:",
-          "skillId": "capstone-climate-and-economy-601-skill-strategy",
+          "text": "During a post-simulation debrief, which action is most critical for improving future policy iterations?",
+          "skillId": "capstone-climate-and-economy-601-skill-debrief",
           "options": [
             {
               "id": "a",
-              "text": "No baseline comparison and no side-effect review"
+              "text": "Analyzing performance deltas and identifying unintended systemic spillovers"
             },
             {
               "id": "b",
-              "text": "Tradeoff matrix, baseline comparison, and spillover analysis"
+              "text": "Deleting data that contradicts the original hypothesis"
             },
             {
               "id": "c",
-              "text": "Single stakeholder perspective only"
+              "text": "Assigning blame to specific stakeholders"
             },
             {
               "id": "d",
-              "text": "Policy claims without operational plan"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Defensible strategy combines tradeoff analysis, baseline comparison, and spillover checks."
-        },
-        {
-          "id": "capstone-climate-and-economy-601-l05-q3",
-          "text": "For risk communication strategy, which pattern is strongest?",
-          "skillId": "capstone-climate-and-economy-601-skill-communication",
-          "options": [
-            {
-              "id": "a",
-              "text": "Reactive messaging with no audience mapping"
-            },
-            {
-              "id": "b",
-              "text": "Audience-specific narratives, uncertainty disclosure, and feedback loops"
-            },
-            {
-              "id": "c",
-              "text": "One-time broadcast without correction mechanism"
-            },
-            {
-              "id": "d",
-              "text": "No transparency on decision rationale"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Trust-building communication requires audience mapping, uncertainty disclosure, and iterative feedback."
-        },
-        {
-          "id": "capstone-climate-and-economy-601-l05-q4",
-          "text": "A mature executive policy defense model connects:",
-          "skillId": "capstone-climate-and-economy-601-skill-governance",
-          "options": [
-            {
-              "id": "a",
-              "text": "Policy intent, measurable controls, and remediation pathways"
-            },
-            {
-              "id": "b",
-              "text": "Policy language without enforcement"
-            },
-            {
-              "id": "c",
-              "text": "Operational actions without accountability logs"
-            },
-            {
-              "id": "d",
-              "text": "Targets without ownership"
+              "text": "Focusing solely on the scenarios that succeeded"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Governance maturity depends on linking intent, measurement, and corrective action."
+          "explanation": "Effective debriefing requires an objective analysis of gaps (deltas) and unintended consequences to refine the policy."
+        },
+        {
+          "id": "capstone-climate-and-economy-601-l05-q3",
+          "text": "A robust implementation artifact must explicitly include:",
+          "skillId": "capstone-climate-and-economy-601-skill-implementation",
+          "options": [
+            {
+              "id": "a",
+              "text": "Vague goals to allow for maximum flexibility"
+            },
+            {
+              "id": "b",
+              "text": "Measurable triggers, accountability assignments, and predefined rollback criteria"
+            },
+            {
+              "id": "c",
+              "text": "Only the best-case scenario projections"
+            },
+            {
+              "id": "d",
+              "text": "A list of demands without operational pathways"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Implementation artifacts require concrete, measurable elements like triggers and rollback criteria to be actionable."
+        },
+        {
+          "id": "capstone-climate-and-economy-601-l05-q4",
+          "text": "When defending a policy against stakeholder critique, the most effective strategy is to:",
+          "skillId": "capstone-climate-and-economy-601-skill-defense",
+          "options": [
+            {
+              "id": "a",
+              "text": "Dismiss the critique as uninformed"
+            },
+            {
+              "id": "b",
+              "text": "Acknowledge valid concerns, present empirical tradeoff data, and demonstrate adaptive mitigation plans"
+            },
+            {
+              "id": "c",
+              "text": "Change the policy immediately to appease the stakeholder"
+            },
+            {
+              "id": "d",
+              "text": "Refuse to share the underlying data models"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "A strong defense relies on transparency, empirical tradeoff analysis, and demonstrating preparedness for mitigation."
         },
         {
           "id": "capstone-climate-and-economy-601-l05-q5",
-          "text": "What is the best way to compare competing interventions in advanced Interdisciplinary Studies?",
-          "skillId": "capstone-climate-and-economy-601-skill-advanced-5",
+          "text": "Adaptive policy response is best defined as:",
+          "skillId": "capstone-climate-and-economy-601-skill-adaptation",
           "options": [
             {
               "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
+              "text": "Sticking to the original plan regardless of new data"
             },
             {
               "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
+              "text": "The ability to dynamically adjust operational tactics based on real-time empirical feedback and predefined control gates"
             },
             {
               "id": "c",
-              "text": "Switch metrics after results arrive"
+              "text": "Rewriting the entire policy every time a minor issue occurs"
             },
             {
               "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
+              "text": "Delegating all decision-making to automated systems"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
+          "explanation": "Adaptive response utilizes real-time data and established control gates to make calculated adjustments."
         },
         {
           "id": "capstone-climate-and-economy-601-l05-q6",
-          "text": "In high-stakes Capstone Climate and Economy Defense execution, which communication protocol is strongest?",
-          "skillId": "capstone-climate-and-economy-601-skill-advanced-6",
+          "text": "Why is tracking systemic spillovers crucial during climate policy simulations?",
+          "skillId": "capstone-climate-and-economy-601-skill-spillovers",
           "options": [
             {
               "id": "a",
-              "text": "Broadcast conclusions without assumptions"
+              "text": "Because interventions in one sector can cause cascading, unintended economic or environmental impacts in others"
             },
             {
               "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
+              "text": "To ensure that the simulation runs faster"
             },
             {
               "id": "c",
-              "text": "Share only final outcomes after completion"
+              "text": "Because it is a mandatory regulatory requirement in all jurisdictions"
             },
             {
               "id": "d",
-              "text": "Limit updates to a single informal channel"
+              "text": "To confuse adversarial stakeholders during the defense panel"
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
+          "correctOptionId": "a",
+          "explanation": "Systemic spillovers represent the interconnected nature of climate and economics, where local actions have broad consequences."
         },
         {
           "id": "capstone-climate-and-economy-601-l05-q7",
-          "text": "A mature remediation loop in advanced Interdisciplinary Studies should prioritize:",
-          "skillId": "capstone-climate-and-economy-601-skill-advanced-7",
+          "text": "In executive policy defense, accountability is maintained by:",
+          "skillId": "capstone-climate-and-economy-601-skill-accountability",
           "options": [
             {
               "id": "a",
-              "text": "Blame assignment without system updates"
+              "text": "Keeping decision-making processes entirely confidential"
             },
             {
               "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
+              "text": "Linking specific policy outcomes to designated owners with transparent, measurable performance indicators"
             },
             {
               "id": "c",
-              "text": "One-time fixes without retesting"
+              "text": "Relying on verbal agreements between departments"
             },
             {
               "id": "d",
-              "text": "Issue closure based on elapsed time"
+              "text": "Shifting responsibility to external consultants"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
+          "explanation": "True accountability requires clear ownership tied to transparent and measurable performance metrics."
         },
         {
           "id": "capstone-climate-and-economy-601-l05-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Capstone Climate and Economy Defense?",
-          "skillId": "capstone-climate-and-economy-601-skill-advanced-8",
+          "text": "The most critical component of preparing for an expert defense panel is:",
+          "skillId": "capstone-climate-and-economy-601-skill-preparation",
           "options": [
             {
               "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
+              "text": "Memorizing a rigid script"
             },
             {
               "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
+              "text": "Anticipating adversarial critiques and preparing data-backed counterarguments with clear uncertainty bounds"
             },
             {
               "id": "c",
-              "text": "Ignore correlated failure modes"
+              "text": "Ensuring the presentation slides have high-end graphics"
             },
             {
               "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
+              "text": "Avoiding any mention of potential policy failures"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "explanation": "Expert panels will probe weaknesses; preparation requires anticipating these critiques and defending them with data and acknowledged uncertainty."
         }
       ]
     },
@@ -611,6 +625,8 @@ export const CapstoneClimateAndEconomy601Module: LearningModule = {
       "title": "Capstone Defense Panel",
       "type": "interactive",
       "duration": 15,
+      "lessonImagePrompt": "Imagen 4 prompt: A professional, high-stakes academic defense setting. A confident speaker stands before a panel of experts, a large presentation screen behind them displaying complex climate-economic models. Cinematic lighting.",
+      "conceptVideoPrompt": "Veo 3.1 prompt: Cinematic shot of an intense but professional policy defense panel. The camera slowly pushes in on the presenter, who is calmly gesturing toward a data visualization while answering a question from a panel of silhouetted experts.",
       "learningAids": [
         {
           "id": "capstone-climate-and-economy-601-l06-a1",
@@ -624,13 +640,13 @@ export const CapstoneClimateAndEconomy601Module: LearningModule = {
           "id": "capstone-climate-and-economy-601-l06-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "In this engaging practice session, you will work on creating a comprehensive defense brief. This brief will include several important components: your main claims, the evidence that supports those claims, the ranges of uncertainty related to your arguments, suggested pathways for remediation, and one implementation artifact that illustrates your ideas. Make sure to organize your brief according to the rubric criteria, which will help ensure that your arguments are clear, logical, and well-supported. This is a great opportunity to showcase your understanding and critical thinking skills!\nContext recap: In this engaging practice session, you will work on creating a comprehensive defense brief. This brief will include several important components: your main claims, the evidence that supports those claims, the ranges of uncertainty related to your arguments, suggested pathways for remediation, and one implementation artifact that illustrates your ideas. Make sure to organize your brief according to the rubric criteria, which will help ensure that your arguments are clear, logical, and well-supported. This is a great opportunity to showcase your understanding and critical thinking skills!"
+          "content": "Your defense brief is the culmination of your analytical work. It must synthesize your core claims, empirical evidence, uncertainty bounds, and remediation pathways into a single, cohesive narrative. Structuring this brief against rigorous rubric criteria ensures your arguments are logically sound and highly defensible."
         },
         {
           "id": "capstone-climate-and-economy-601-l06-c2",
           "kind": "recap",
           "title": "Panel Rehearsal",
-          "content": "In this important panel rehearsal, you will have the opportunity to practice your responses to various critiques. These critiques will cover three main areas: technical aspects of your project, the implications of your policy decisions, and the concerns of different stakeholders involved. This structured policy debate will be guided by a scoring rubric, which will help you organize your thoughts and responses effectively. By engaging in this practice, you will be better prepared for your final defense, allowing you to present your ideas confidently and clearly.\nContext recap: In this important panel rehearsal, you will have the opportunity to practice your responses to various critiques. These critiques will cover three main areas: technical aspects of your project, the implications of your policy decisions, and the concerns of different stakeholders involved. This structured policy debate will be guided by a scoring rubric, which will help you organize your thoughts and responses effectively. By engaging in this practice, you will be better prepared for your final defense, allowing you to present your ideas confidently and clearly."
+          "content": "The panel rehearsal simulates a high-stakes executive cross-examination. You will defend your technical methodologies, policy implications, and stakeholder tradeoff decisions against adversarial critique. This structured debate hones your ability to articulate complex, data-backed rationales under pressure."
         }
       ],
       "interactiveActivities": [

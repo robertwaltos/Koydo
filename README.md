@@ -55,6 +55,36 @@ npm run dev
 
 `http://localhost:3000`
 
+## Micro-App Build and Deploy
+
+Build a single micro-app variant:
+
+```bash
+npm run build:university
+```
+
+Build all micro-app variants:
+
+```bash
+npm run build:microapps
+```
+
+Validate micro-app wiring and deployment mappings:
+
+```bash
+npm run validate:microapps
+```
+
+Deploy all micro-apps to separate Vercel projects/URLs:
+
+```bash
+npm run deploy:microapps
+```
+
+Deployment setup details:
+
+- [`docs/product/microapp-deployments.md`](docs/product/microapp-deployments.md)
+
 Optional environment diagnostics:
 
 ```bash

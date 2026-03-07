@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const MusicTheory401Module: LearningModule = {
+export const music_theory_401_Module: LearningModule = {
   "id": "music-theory-401",
   "title": "Expert Music Theory",
   "description": "Dive into jazz harmony with extended chords, study counterpoint from species to free writing, explore orchestration and arranging, and analyze advanced compositional techniques.",
@@ -13,15 +13,15 @@ export const MusicTheory401Module: LearningModule = {
   ],
   "minAge": 16,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "learningObjectives": [
-    "Build and voice 7th, 9th, 11th, and 13th chords",
-    "Analyze jazz chord symbols and lead-sheet notation",
-    "Write species counterpoint following voice-leading rules",
-    "Identify instrument ranges, timbres, and idiomatic writing for orchestral families",
-    "Apply tritone substitution and other jazz reharmonization techniques",
-    "Compose a short piece demonstrating counterpoint and extended harmony",
-    "Score a short passage for a small ensemble"
+    "Analyze and construct extended chords (7ths, 9ths, 11ths, 13ths) and their voicings.",
+    "Apply advanced harmonic techniques, including tritone substitution and modal interchange.",
+    "Analyze common jazz forms and progressions in standard repertoire.",
+    "Compose contrapuntal lines following the principles of species and free counterpoint.",
+    "Identify the ranges, timbres, and idiomatic characteristics of orchestral instruments.",
+    "Arrange music for small ensembles, demonstrating effective scoring, spacing, and balancing.",
+    "Synthesize knowledge of harmony, counterpoint, and orchestration in a short original composition."
   ],
   "lessons": [
     {
@@ -30,89 +30,104 @@ export const MusicTheory401Module: LearningModule = {
       "type": "video",
       "duration": 13,
       "objectives": [
-        "Build 7th chords in all four qualities (major 7, dominant 7, minor 7, half-diminished 7)",
-        "Stack 3rds to create 9th, 11th, and 13th chords",
-        "Read jazz chord symbols (Cmaj7, Dm7, G7, etc.)"
+        "Build 7th chords in all four qualities (major 7, dominant 7, minor 7, half-diminished 7).",
+        "Stack thirds to create 9th, 11th, and 13th chords.",
+        "Read and interpret common jazz chord symbols."
       ],
       "chunks": [
         {
           "id": "music-theory-401-l01-c1",
           "title": "Seventh Chords",
-          "content": "A seventh chord is a fascinating type of chord that builds upon the basic triad by adding an additional note, which is a seventh above the root note. This addition creates a richer and more complex sound. There are four main types of seventh chords that are important for you to learn about. First, we have the Major 7th chord, which can be exemplified by Cmaj7 (C-E-G-B). This chord has a warm and dreamy quality, making it ideal for creating a relaxed and soothing atmosphere in your music compositions. Next is the Dominant 7th chord, represented as C7 (C-E-G-B♭). This chord carries a more tense and unresolved feeling, often leading the listener to anticipate a resolution to another chord, which adds excitement to the music. The third type is the Minor 7th chord, shown as Cm7 (C-E♭-G-B♭). This chord provides a mellow and smooth sound, which can enhance the emotional depth of your music. Finally, we have the Half-diminished 7th chord, noted as Cø7 (C-E♭-G♭-B♭). This chord has a darker and more restless character, often used to evoke a sense of tension or uncertainty. In the world of jazz music, you will discover that nearly every chord you encounter is at least a seventh chord, making them a fundamental building block for understanding and creating jazz compositions. By mastering these chords, you will greatly enhance your musical vocabulary and expression.\nContext recap: A seventh chord is a fascinating type of chord that builds upon the basic triad by adding an additional note, which is a seventh above the root note. This addition creates a richer and more complex sound. There are four main types of seventh chords that are important for you to learn about. First, we have the Major 7th chord, which can be exemplified by Cmaj7 (C-E-G-B).\nWhy this matters: Seventh Chords helps learners in Music connect ideas from Expert Music Theory to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "Seventh chords are the bedrock of jazz harmony, formed by adding a third on top of a basic triad. This added note, the seventh, introduces a new layer of color and tension. The four essential qualities are: Major 7th (Cmaj7: C-E-G-B), with a warm, lush sound; Dominant 7th (C7: C-E-G-B♭), creating tension that strongly pulls toward resolution; Minor 7th (Cm7: C-E♭-G-B♭), offering a smooth, mellow quality; and Half-diminished 7th (Cø7: C-E♭-G♭-B♭), which has a restless, ambiguous character often used in minor keys. Mastering these four types is the first step to understanding the language of jazz.",
+          "visualPrompts": [
+            "An animation showing a C major triad (C-E-G) on a piano keyboard, with the B being added to form Cmaj7.",
+            "A chart comparing the formulas and sounds of the four main 7th chord qualities (Major, Dominant, Minor, Half-diminished)."
+          ]
         },
         {
           "id": "music-theory-401-l01-c2",
           "title": "9ths, 11ths, and 13ths",
-          "content": "When we explore the world of music theory, we find that extended chords are a fascinating way to build upon the foundation of seventh chords. By stacking additional thirds on top of these chords, we create what are known as extended chords. Let's break this down a bit further! The 9th note in a scale is actually the same as the 2nd note, just one octave higher. This means that if you play a C note and then play a D note an octave up, you are playing the 9th. Similarly, the 11th note corresponds to the 4th note raised an octave, and the 13th note is the 6th note raised an octave. For instance, if we take a C13 chord, it theoretically includes all of these notes: C, E, G, B♭, D, F, and A. This means it contains all seven notes of the C major scale! However, in real-life music practice, musicians like pianists and guitarists often simplify these chords. They might choose to omit certain notes, such as the 5th or even the root note, to focus on the most colorful and interesting tones. This technique not only helps create a richer sound but also ensures that the music remains engaging and not overwhelming for the listener. By understanding how to use extended chords effectively, musicians can add depth and complexity to their compositions, making their music even more expressive and enjoyable to hear.\nContext recap: When we explore the world of music theory, we find that extended chords are a fascinating way to build upon the foundation of seventh chords. By stacking additional thirds on top of these chords, we create what are known as extended chords. Let's break this down a bit further! The 9th note in a scale is actually the same as the 2nd note, just one octave higher.\nWhy this matters: 9ths, 11ths, and 13ths helps learners in Music connect ideas from Expert Music Theory to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "To create even richer harmonies, we can continue stacking thirds on top of a seventh chord. These added notes are called extensions. The 9th is the same note as the 2nd, an octave higher; the 11th is the 4th an octave higher; and the 13th is the 6th an octave higher. A C13 chord, for example, theoretically contains all seven notes of the scale (C-E-G-B♭-D-F-A). In practice, performers often omit notes like the root or 5th to avoid a muddy sound, focusing instead on the colorful extensions and the essential 'guide tones' (3rd and 7th). These extensions are the key to sophisticated, modern-sounding harmonies.",
+          "visualPrompts": [
+            "An animation on a grand staff showing thirds being stacked on a G7 chord to add the 9th (A), 11th (C), and 13th (E).",
+            "A side-by-side comparison of a full C13 chord and a practical piano voicing that omits the root and 5th."
+          ]
         },
         {
           "id": "music-theory-401-l01-c3",
           "title": "Jazz Chord Symbols",
-          "content": "In the world of jazz music, musicians often use a special shorthand system to write down chords on lead sheets. Lead sheets are simplified musical scores that help musicians understand the harmony of a piece quickly. For example, when you see the letter 'C', it means you are playing a C major triad, which is a happy-sounding chord made up of three notes: C, E, and G. If you come across 'Cm' or 'C-', this indicates a C minor chord, which has a more somber tone and consists of the notes C, E♭, and G. The notation 'C7' refers to a C dominant 7th chord, which adds a bit of tension and is often used to resolve to another chord. On the other hand, 'Cmaj7' or 'CΔ7' represents a C major 7th chord, giving a lush and rich sound with the notes C, E, G, and B. Similarly, 'Cm7' or 'C-7' denotes a C minor 7th chord, while 'Cø7' indicates a C half-diminished 7th chord, which has a unique, slightly mysterious quality. The symbol 'C°7' shows a fully diminished 7th chord, which can create a sense of urgency or drama in music. Sometimes, musicians will add alterations to these chords, which are noted in parentheses or as superscripts, such as C7(♯9) or Cmaj9(♯11). Being able to read these chord symbols fluently is essential for anyone who wants to perform jazz music effectively, as it allows for better communication and improvisation among musicians.\nContext recap: In the world of jazz music, musicians often use a special shorthand system to write down chords on lead sheets. Lead sheets are simplified musical scores that help musicians understand the harmony of a piece quickly. For example, when you see the letter 'C', it means you are playing a C major triad, which is a happy-sounding chord made up of three notes: C, E, and G. If you come across 'Cm' or 'C-', this indicates a C minor chord, which has a more somber tone and consists of the notes C, E♭, and G."
+          "content": "Jazz musicians use a standardized shorthand on lead sheets to communicate harmony efficiently. A letter by itself (C) denotes a major triad. 'm' or '-' indicates minor (Cm or C-). A '7' signifies a dominant 7th (C7). 'maj7' or a triangle (Δ) indicates a major 7th (Cmaj7 or CΔ7). A half-diminished chord is shown with 'ø7' or 'm7(♭5)' (Cø7). A fully diminished chord uses a circle '°7' (C°7). Extensions and alterations are added in parentheses or as superscripts, like C7(♯9) or Gmaj13. Fluency in reading these symbols is essential for improvisation and performance in a jazz setting.",
+          "visualPrompts": [
+            "A table matching common jazz chord symbols (Cmaj7, G7, Dm7, Bø7) to their corresponding notes on a staff.",
+            "An excerpt from a real lead sheet with chord symbols highlighted and explained."
+          ]
         }
       ],
       "flashcards": [
         {
           "id": "music-theory-401-l01-f1",
           "front": "Dominant 7th chord",
-          "back": "Major triad + minor 7th (e.g., C-E-G-B♭) — the most tension-filled 7th chord, wants to resolve to I"
+          "back": "Major triad + minor 7th (e.g., G-B-D-F). Creates strong tension that resolves to the tonic."
         },
         {
           "id": "music-theory-401-l01-f2",
           "front": "Major 7th chord",
-          "back": "Major triad + major 7th (e.g., C-E-G-B) — lush and dreamy; used heavily in jazz ballads"
+          "back": "Major triad + major 7th (e.g., C-E-G-B). Has a lush, stable, and dreamy sound."
         },
         {
           "id": "music-theory-401-l01-f3",
           "front": "Half-diminished 7th (ø7)",
-          "back": "Diminished triad + minor 7th (e.g., C-E♭-G♭-B♭) — used as ii in minor-key ii-V-i progressions"
+          "back": "Diminished triad + minor 7th (e.g., B-D-F-A). Functions as the ii chord in minor keys."
         },
         {
           "id": "music-theory-401-l01-f4",
           "front": "Chord extension",
-          "back": "Notes beyond the 7th: 9th, 11th, 13th — add color and complexity to jazz voicings"
-        }
-      ],
-      "learningAids": [
-        {
-          "id": "music-theory-401-l01-a1",
-          "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary of the lesson's main concept."
+          "back": "A note added to a chord beyond the 7th, such as the 9th, 11th, or 13th, to add color."
         }
       ]
     },
     {
       "id": "music-theory-401-l02",
-      "title": "Jazz Voicings Workshop",
+      "title": "Jazz Voicings and Voice Leading",
       "type": "interactive",
       "duration": 14,
       "objectives": [
-        "Voice chords in open and close position",
-        "Apply the 'shell voicing' technique (root, 3rd, 7th)",
-        "Understand voice-leading between ii-V-I chords"
+        "Distinguish between open and close position voicings.",
+        "Apply the 'shell voicing' technique (root, 3rd, 7th).",
+        "Execute smooth voice-leading between chords in a ii-V-I progression."
       ],
       "chunks": [
         {
           "id": "music-theory-401-l02-c1",
           "title": "Close vs. Open Voicing",
-          "content": "In the world of jazz music, understanding how to voice chords is essential for creating the right sound. There are two primary styles of voicing: close voicing and open voicing. Close voicing occurs when all the notes of a chord are tightly packed within a single octave. This technique produces a dense and full sound, which is particularly beneficial when writing music for groups or ensembles. It helps create a rich texture that can fill the space in a performance.\nOn the other hand, open voicing involves spreading the notes of a chord across multiple octaves. This approach results in a sound that is more spacious and transparent, allowing each note to be heard more clearly. Jazz pianists often choose to use open voicings in their left hand. This choice leaves ample room for the melody or improvisation that is typically played in the right hand, creating a balanced and harmonious performance. Similarly, guitarists tend to use open voicings naturally due to the unique tuning of their instrument, which facilitates a more open and resonant sound. Understanding these two voicing techniques can greatly enhance your ability to create beautiful and effective jazz music.\nContext recap: In the world of jazz music, understanding how to voice chords is essential for creating the right sound. There are two primary styles of voicing: close voicing and open voicing. Close voicing occurs when all the notes of a chord are tightly packed within a single octave. This technique produces a dense and full sound, which is particularly beneficial when writing music for groups or ensembles.\nWhy this matters: Close vs. Open Voicing helps learners in Music connect ideas from Expert Music Theory to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "A chord voicing is the specific arrangement and spacing of the notes in a chord. In close voicing, all notes are placed as close together as possible, typically within a single octave. This creates a dense, powerful sound often used in big band horn sections. In open voicing, the notes are spread out over more than an octave. This creates a more spacious, transparent texture. Jazz pianists often use open voicings in the left hand to leave room for melody and improvisation in the right hand, while guitarists naturally gravitate towards open voicings due to the instrument's tuning.",
+          "visualPrompts": [
+            "A Cmaj7 chord shown on a staff in close position (E-G-B-C) and then in an open position (C-G-B-E).",
+            "Video clips of a pianist playing the same progression first with close voicings, then with open voicings, to compare the sound."
+          ]
         },
         {
           "id": "music-theory-401-l02-c2",
           "title": "Shell Voicings",
-          "content": "Shell voicings are a simplified yet powerful way to play chords on the piano, focusing on the most important notes that define the sound of the chord. When you use a shell voicing, you typically play the root note, which is the bass note of the chord, along with two special notes known as the 'guide tones.' These guide tones are the 3rd and 7th notes of the chord. They are essential because they help to determine the quality of the chord, indicating whether it is major, dominant, or minor. Interestingly, the 5th note is often omitted in shell voicings because it is considered less critical for conveying the chord's character. This technique is particularly useful in jazz piano comping, which is the art of providing rhythmic and harmonic support to other musicians. Once you have mastered the basic shell voicing, you can enhance your playing by adding extensions such as the 9th or 13th notes. These additional notes bring more color and complexity to your music, allowing for richer and more expressive performances. By practicing shell voicings, you will build a strong foundation for your jazz piano skills and develop your unique musical style.\nContext recap: Shell voicings are a simplified yet powerful way to play chords on the piano, focusing on the most important notes that define the sound of the chord. When you use a shell voicing, you typically play the root note, which is the bass note of the chord, along with two special notes known as the 'guide tones.' These guide tones are the 3rd and 7th notes of the chord. They are essential because they help to determine the quality of the chord, indicating whether it is major, dominant, or minor. Interestingly, the 5th note is often omitted in shell voicings because it is considered less critical for conveying the chord's character."
+          "content": "Shell voicings are a minimalist and highly effective way to play chords, especially for pianists comping in an ensemble. They contain only the essential notes that define a chord's identity: the root, the 3rd, and the 7th. The 3rd determines the quality (major or minor), and the 7th determines the type (major, dominant, etc.). These two notes are called 'guide tones.' The 5th is often omitted as it adds little harmonic information. This sparse structure leaves sonic space for a soloist and allows the pianist to easily add extensions like the 9th or 13th for extra color.",
+          "visualPrompts": [
+            "An illustration of a Dm7 chord on a piano, first with all notes (D-F-A-C), then stripped down to its shell voicing (D-F-C).",
+            "A lead sheet progression shown with the corresponding left-hand shell voicings for a pianist."
+          ]
         },
         {
           "id": "music-theory-401-l02-c3",
           "title": "Voice Leading in ii-V-I",
-          "content": "Voice leading is a key idea in music that helps us understand how to connect chords in a smooth and pleasing way. When we play a series of chords, like the progression from Dm7 to G7 to Cmaj7, good voice leading means we try to keep the movement between the notes as minimal as possible. Let's break it down step by step. In the Dm7 chord, the 3rd note is F. When we move to the G7 chord, that same F note can step down to the 7th note of G7, which is also F. This is known as a common tone because it stays the same! Next, the 7th note of Dm7, which is C, can remain in place and actually become the root note of the next chord, Cmaj7. Now, looking at the G7 chord, the 3rd note is B, and it resolves up to C, which is the root note of Cmaj7. Finally, the 7th note of G7, which is F, resolves down to E, the 3rd note of Cmaj7. This careful and smooth movement between the notes is what makes jazz voice leading so effective and enjoyable to listen to. It creates a beautiful flow in the music, allowing the listener to feel connected to the harmony and rhythm. Understanding these transitions will help you become a better musician and appreciate the art of jazz even more.\nContext recap: Voice leading is a key idea in music that helps us understand how to connect chords in a smooth and pleasing way. When we play a series of chords, like the progression from Dm7 to G7 to Cmaj7, good voice leading means we try to keep the movement between the notes as minimal as possible. Let's break it down step by step. In the Dm7 chord, the 3rd note is F.\nWhy this matters: Voice Leading in ii-V-I helps learners in Music connect ideas from Expert Music Theory to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "Voice leading is the art of moving individual notes from one chord to the next as smoothly as possible, usually by step or common tone. In the essential ii-V-I progression (e.g., Dm7-G7-Cmaj7), the guide tones create a beautifully efficient voice-leading pattern. The 7th of the ii chord (C in Dm7) resolves down by step to become the 3rd of the V chord (B in G7). Simultaneously, the 3rd of the ii chord (F in Dm7) is a common tone that becomes the 7th of the V chord (F in G7). This smooth, stepwise motion of the guide tones is the key to creating seamless harmonic transitions in jazz.",
+          "visualPrompts": [
+            "A three-chord progression (Dm7-G7-Cmaj7) on a staff with colored lines connecting the guide tones to show their smooth, stepwise resolution."
+          ]
         }
       ],
       "interactiveActivities": [
         {
           "id": "music-theory-401-l02-a1",
-          "title": "Match the Pairs",
+          "title": "Match the Shell Voicing",
           "type": "matching_pairs",
           "pairs": [
             {
@@ -141,249 +156,282 @@ export const MusicTheory401Module: LearningModule = {
             }
           ]
         }
-      ],
-      "flashcards": [
-        {
-          "id": "music-theory-401-l02-f1",
-          "front": "Shell voicing",
-          "back": "A minimal chord voicing containing only the root, 3rd, and 7th — defines quality, leaves room for extensions"
-        },
-        {
-          "id": "music-theory-401-l02-f2",
-          "front": "Guide tones",
-          "back": "The 3rd and 7th of a chord — the two notes that most strongly define its quality"
-        },
-        {
-          "id": "music-theory-401-l02-f3",
-          "front": "Voice leading in jazz",
-          "back": "Moving each voice by the smallest possible interval between chords; 3rds and 7ths typically exchange or resolve by step"
-        }
-      ],
-      "learningAids": [
-        {
-          "id": "music-theory-401-l02-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Follow the prompt sequence and document your reasoning."
-        }
       ]
     },
     {
       "id": "music-theory-401-l03",
-      "title": "Jazz Harmony Checkpoint",
-      "type": "quiz",
-      "duration": 8,
+      "title": "Advanced Harmony: Reharmonization",
+      "type": "video",
+      "duration": 13,
       "objectives": [
-        "Demonstrate knowledge of extended chords and jazz voicings"
+        "Explain tritone substitution as replacing V7 with ♭II7.",
+        "Apply tritone substitutions to create chromatic bass lines.",
+        "Identify other reharmonization techniques like modal interchange."
       ],
-      "questions": [
+      "chunks": [
         {
-          "id": "music-theory-401-l03-q1",
-          "text": "What notes make up a Dm7 chord?",
-          "skillId": "music-theory-401-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "D – F♯ – A – C"
-            },
-            {
-              "id": "b",
-              "text": "D – F – A – C"
-            },
-            {
-              "id": "c",
-              "text": "D – F – A♭ – C"
-            },
-            {
-              "id": "d",
-              "text": "D – F♯ – A – C♯"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": ""
+          "id": "music-theory-401-l03-c1",
+          "title": "The Tritone Substitution",
+          "content": "Tritone substitution is a cornerstone of jazz reharmonization. It involves replacing a dominant 7th chord with another dominant 7th chord whose root is a tritone (three whole steps) away. For example, a G7 chord can be replaced by a D♭7. This works because both chords share the same guide tones: the 3rd and 7th of G7 (B and F) are enharmonically the same as the 7th and 3rd of D♭7 (C♭ and F). This shared harmonic DNA allows them to perform the same function of resolving to the tonic, but the substitution adds a new harmonic color and facilitates smoother bass motion.",
+          "visualPrompts": [
+            "A circle of fifths diagram showing G and D♭ directly opposite each other, highlighting the tritone relationship.",
+            "A staff showing the G7 and D♭7 chords side-by-side, with the shared guide tones (B/C♭ and F) highlighted in the same color."
+          ]
         },
         {
-          "id": "music-theory-401-l03-q2",
-          "text": "In a shell voicing, which chord tones are typically included?",
-          "skillId": "music-theory-401-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "Root, 3rd, and 5th"
-            },
-            {
-              "id": "b",
-              "text": "Root, 3rd, and 7th"
-            },
-            {
-              "id": "c",
-              "text": "Root, 5th, and 9th"
-            },
-            {
-              "id": "d",
-              "text": "3rd, 5th, and 7th"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": ""
+          "id": "music-theory-401-l03-c2",
+          "title": "Chromatic Bass Motion",
+          "content": "A primary benefit of the tritone substitution is the creation of smooth, chromatic bass lines. In a standard ii-V-I progression in C (Dm7-G7-Cmaj7), the bass moves from D up a fourth to G, then down a fifth to C. By substituting D♭7 for G7, the progression becomes Dm7-D♭7-Cmaj7. Now, the bass moves chromatically downward: D to D♭ to C. This stepwise motion is considered very strong and melodic, adding a level of sophistication to the harmony. This technique can be applied not just to the primary V chord, but to any secondary dominant as well.",
+          "visualPrompts": [
+            "A musical example showing the bass line of a ii-V-I progression first without, and then with, a tritone substitution to illustrate the change from diatonic leaps to chromatic steps."
+          ]
         },
         {
-          "id": "music-theory-401-l03-q3",
-          "text": "What chord symbol represents a half-diminished 7th on C?",
-          "skillId": "music-theory-401-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "Cdim7"
-            },
-            {
-              "id": "b",
-              "text": "Cø7"
-            },
-            {
-              "id": "c",
-              "text": "Cm7"
-            },
-            {
-              "id": "d",
-              "text": "C7(♭5)"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": ""
-        },
-        {
-          "id": "music-theory-401-l03-q4",
-          "text": "The 13th of a chord is enharmonically the same as which scale degree?",
-          "skillId": "music-theory-401-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "2nd"
-            },
-            {
-              "id": "b",
-              "text": "4th"
-            },
-            {
-              "id": "c",
-              "text": "6th"
-            },
-            {
-              "id": "d",
-              "text": "7th"
-            }
-          ],
-          "correctOptionId": "c",
-          "explanation": ""
+          "id": "music-theory-401-l03-c3",
+          "title": "Other Reharmonization Tools",
+          "content": "Beyond the tritone sub, arrangers use many tools to refresh standard progressions. Modal interchange (or 'borrowed chords') involves borrowing chords from the parallel minor or major key. For example, in C major, using chords from C minor like Fm7 (iv) or A♭maj7 (♭VI) adds a darker, more poignant color. Another technique is using chromatic mediants, which are chords a third away that share one common tone but belong to a different key (e.g., Cmaj7 to Emaj7). These techniques allow an arranger to take a simple melody and create a rich, surprising harmonic landscape beneath it.",
+          "visualPrompts": [
+            "A chart showing the diatonic chords of C Major and C minor side-by-side, with arrows indicating common 'borrowed' chords.",
+            "A short musical phrase harmonized first with standard diatonic chords, then reharmonized using modal interchange."
+          ]
         }
       ],
-      "quizBlueprint": {
-        "totalQuestions": 4,
-        "bloomProfile": {
-          "remember": 2,
-          "understand": 1,
-          "apply": 1
-        }
-      },
-      "learningAids": [
+      "flashcards": [
         {
-          "id": "music-theory-401-l03-a1",
-          "type": "mnemonic",
-          "title": "Memory Cue",
-          "content": "Use Plan, Solve, Explain to structure each response."
+          "id": "music-theory-401-l03-f1",
+          "front": "Tritone substitution",
+          "back": "Replacing a dominant 7th chord with another dominant 7th a tritone away. They share the same guide tones."
+        },
+        {
+          "id": "music-theory-401-l03-f2",
+          "front": "Modal interchange",
+          "back": "Borrowing chords from the parallel major or minor key to add unexpected color (e.g., using iv or ♭VI in a major key)."
+        },
+        {
+          "id": "music-theory-401-l03-f3",
+          "front": "Reharmonization",
+          "back": "The technique of replacing the original chords of a melody with new, alternative harmonies."
         }
       ]
     },
     {
       "id": "music-theory-401-l04",
-      "title": "Tritone Substitution & Reharmonization",
-      "type": "video",
-      "duration": 13,
+      "title": "Harmonic Analysis Lab",
+      "type": "interactive",
+      "duration": 15,
       "objectives": [
-        "Explain tritone substitution as replacing V7 with ♭II7",
-        "Apply tritone subs to create chromatic bass lines",
-        "Identify other reharmonization techniques: modal interchange, chromatic mediants"
+        "Analyze a jazz standard using Roman numerals, identifying ii-V-I progressions and tritone substitutions.",
+        "Identify common jazz form structures like AABA and 12-bar blues.",
+        "Recognize the 'Rhythm Changes' progression."
       ],
       "chunks": [
         {
           "id": "music-theory-401-l04-c1",
-          "title": "The Tritone Sub",
-          "content": "A tritone substitution is an exciting and creative technique often used in jazz music. It involves replacing a dominant 7th chord with another dominant 7th chord that is a tritone away, which means it is six half steps apart. For example, if you have a G7 chord, you can substitute it with a D♭7 chord. But why does this substitution work so well? The answer lies in the concept of guide tones. Both G7 and D♭7 chords share the same important notes, known as guide tones. In the G7 chord, the notes B and F serve as the 3rd and 7th, while in the D♭7 chord, these notes switch roles and become the 7th and 3rd. This swapping of roles creates a smooth transition in the music. When you use this substitution, it allows for a chromatic bass line, which means the bass notes move in a half-step pattern, creating a beautiful sound. For instance, instead of playing the common progression of Dm7 to G7 to Cmaj7, you can use Dm7 to D♭7 to Cmaj7. This not only adds a unique flavor to your music but also enhances the harmonic richness, making your compositions more interesting and engaging for listeners. Exploring tritone substitutions can open up new creative pathways in your music-making journey!\nContext recap: A tritone substitution is an exciting and creative technique often used in jazz music. It involves replacing a dominant 7th chord with another dominant 7th chord that is a tritone away, which means it is six half steps apart. For example, if you have a G7 chord, you can substitute it with a D♭7 chord. But why does this substitution work so well?\nWhy this matters: The Tritone Sub helps learners in Music connect ideas from Expert Music Theory to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "title": "Common Jazz Forms: AABA",
+          "content": "Many jazz standards from the Great American Songbook are built on the 32-bar AABA form. This structure consists of four 8-bar sections. The 'A' section presents the main musical theme. This is repeated, often with slight variation, for the second 'A' section. The 'B' section, or 'bridge,' provides harmonic and melodic contrast, often modulating to a new key. Finally, the last 'A' section returns to the original theme, bringing the form to a close. Famous examples include 'I Got Rhythm' and 'Take the 'A' Train.' Recognizing this form is key to navigating and improvising over these tunes.",
+          "visualPrompts": [
+            "A block diagram illustrating the 32-bar AABA structure, with each 8-bar section clearly labeled."
+          ]
         },
         {
           "id": "music-theory-401-l04-c2",
-          "title": "Chromatic Bass Motion",
-          "content": "Tritone substitutions are an important concept in jazz music that help create a smooth and interesting bass line. In a typical ii-V-I chord progression in the key of C major, the bass notes move from D to G to C. This movement is known as root motion by fifths. However, when we introduce a tritone substitution, the bass notes change to move from D to D♭ and then down to C. This creates a chromatic descent, which means the bass notes are moving by half steps. This type of movement adds a sophisticated sound to the music and is a hallmark of jazz arranging. It gives the music a unique flavor that can make it more engaging for listeners. Additionally, tritone substitutions can be applied to any secondary dominant chords. For example, you can transform the V/ii chord into a ♭VI7 chord. This opens up even more creative possibilities for your compositions, allowing you to explore different sounds and emotions in your music. By understanding and using tritone substitutions, you can enhance your jazz arrangements and make them stand out with rich harmonic textures.\nContext recap: Tritone substitutions are an important concept in jazz music that help create a smooth and interesting bass line. In a typical ii-V-I chord progression in the key of C major, the bass notes move from D to G to C. This movement is known as root motion by fifths. However, when we introduce a tritone substitution, the bass notes change to move from D to D♭ and then down to C.\nWhy this matters: Chromatic Bass Motion helps learners in Music connect ideas from Expert Music Theory to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "Analyzing 'Autumn Leaves'",
+          "content": "The jazz standard 'Autumn Leaves' is a perfect study in diatonic harmony, built almost entirely on a chain of ii-V-I progressions that cycle between a major key and its relative minor. In the key of G minor, the progression is essentially: Cm7 (ii in B♭) – F7 (V in B♭) – B♭maj7 (I in B♭) – E♭maj7 (IV in B♭) – Am7♭5 (ii in Gm) – D7 (V in Gm) – Gm (i in Gm). This constant movement between the relative major (B♭) and minor (G) tonalities is a hallmark of sophisticated songwriting and provides a rich harmonic foundation for improvisation.",
+          "visualPrompts": [
+            "The chord changes for the A section of 'Autumn Leaves' with Roman numeral analysis written underneath, color-coding the ii-V-I progressions in B♭ major and G minor."
+          ]
         },
         {
           "id": "music-theory-401-l04-c3",
-          "title": "Other Reharmonization Tools",
-          "content": "In addition to tritone substitutions, there are several other reharmonization tools that can add exciting and unexpected colors to your music. One fascinating technique is called modal interchange. This is where you borrow chords from a parallel minor or major scale to create new sounds. For instance, if you are playing in C major, you might use the ♭VI or ♭VII chords from C minor. This can lead to surprising harmonic shifts that keep your listeners engaged and intrigued.\nAnother interesting method is the use of chromatic mediants. These are chords that are either a major or minor third away from the original chord and share one note with it. A great example of this would be transitioning from C major to E major. This shift not only sounds beautiful but also adds depth to your music.\nBy incorporating these reharmonization techniques, arrangers can take a simple song and transform it into something that is harmonically rich and full of surprises. This not only enhances the overall musical experience but also allows for greater creativity in your compositions. Exploring these tools can open up new avenues for your musical expression and help you develop your unique sound.\nContext recap: In addition to tritone substitutions, there are several other reharmonization tools that can add exciting and unexpected colors to your music. One fascinating technique is called modal interchange. This is where you borrow chords from a parallel minor or major scale to create new sounds. For instance, if you are playing in C major, you might use the ♭VI or ♭VII chords from C minor.\nWhy this matters: Other Reharmonization Tools helps learners in Music connect ideas from Expert Music Theory to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "title": "Rhythm Changes",
+          "content": "'Rhythm Changes' refers to the 32-bar AABA chord progression from George Gershwin's 'I Got Rhythm.' It has been used as the harmonic framework for countless new jazz compositions, known as contrafacts. The A section is characterized by a I-vi-ii-V progression, often with rapid harmonic rhythm. The bridge (B section) consists of a cycle of dominant 7th chords moving through the circle of fifths (III7-VI7-II7-V7). Tunes like 'Oleo' by Sonny Rollins and 'Anthropology' by Charlie Parker are famous contrafacts based on Rhythm Changes.",
+          "visualPrompts": [
+            "The standard B♭ Rhythm Changes progression written out, with the A and B sections clearly demarcated and analyzed."
+          ]
         }
       ],
-      "flashcards": [
-        {
-          "id": "music-theory-401-l04-f1",
-          "front": "Tritone substitution",
-          "back": "Replacing a dominant 7th chord with another dominant 7th a tritone (6 half steps) away — they share the same guide tones"
-        },
-        {
-          "id": "music-theory-401-l04-f2",
-          "front": "Modal interchange",
-          "back": "Borrowing chords from the parallel major or minor key to add unexpected color (e.g., ♭VI in a major key)"
-        },
-        {
-          "id": "music-theory-401-l04-f3",
-          "front": "Chromatic mediant",
-          "back": "A chord a major or minor 3rd away from the original that shares at least one common tone"
-        },
-        {
-          "id": "music-theory-401-l04-f4",
-          "front": "Reharmonization",
-          "back": "Replacing the original chords of a melody with alternative harmonies that support the same melody differently"
-        }
-      ],
-      "learningAids": [
+      "interactiveActivities": [
         {
           "id": "music-theory-401-l04-a1",
-          "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary of the lesson's main concept."
+          "title": "Match the Form",
+          "type": "matching_pairs",
+          "pairs": [
+            {
+              "left": "AABA form",
+              "right": "'Take the A Train'"
+            },
+            {
+              "left": "12-bar blues",
+              "right": "'Now's the Time'"
+            },
+            {
+              "left": "Rhythm changes",
+              "right": "'Oleo'"
+            },
+            {
+              "left": "Contrafact",
+              "right": "A new melody written over an existing chord progression."
+            },
+            {
+              "left": "ii – V – I chain",
+              "right": "'Autumn Leaves'"
+            }
+          ]
         }
       ]
     },
     {
       "id": "music-theory-401-l05",
+      "title": "Jazz Harmony Checkpoint",
+      "type": "quiz",
+      "duration": 8,
+      "objectives": [
+        "Demonstrate knowledge of extended chords, voicings, reharmonization, and jazz forms."
+      ],
+      "questions": [
+        {
+          "id": "music-theory-401-l05-q1",
+          "text": "What notes make up a G7(♭9) chord?",
+          "skillId": "music-theory-401-skill-core",
+          "options": [
+            {
+              "id": "a",
+              "text": "G – B – D – F – A"
+            },
+            {
+              "id": "b",
+              "text": "G – B♭ – D – F – A♭"
+            },
+            {
+              "id": "c",
+              "text": "G – B – D – F – A♭"
+            },
+            {
+              "id": "d",
+              "text": "G – B – D♭ – F – A"
+            }
+          ],
+          "correctOptionId": "c",
+          "explanation": "A G7 chord is G-B-D-F. The flat 9th (♭9) is an A♭."
+        },
+        {
+          "id": "music-theory-401-l05-q2",
+          "text": "The tritone substitution for an E7 chord is:",
+          "skillId": "music-theory-401-skill-core",
+          "options": [
+            {
+              "id": "a",
+              "text": "A7"
+            },
+            {
+              "id": "b",
+              "text": "B♭7"
+            },
+            {
+              "id": "c",
+              "text": "F7"
+            },
+            {
+              "id": "d",
+              "text": "D♭7"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "A tritone (6 half steps) above E is B♭. E7 and B♭7 share the same guide tones (G♯/A♭ and D)."
+        },
+        {
+          "id": "music-theory-401-l05-q3",
+          "text": "The bridge of a standard 'Rhythm Changes' progression consists of:",
+          "skillId": "music-theory-401-skill-core",
+          "options": [
+            {
+              "id": "a",
+              "text": "A cycle of dominant 7th chords"
+            },
+            {
+              "id": "b",
+              "text": "A static tonic pedal point"
+            },
+            {
+              "id": "c",
+              "text": "A minor key ii-V-i progression"
+            },
+            {
+              "id": "d",
+              "text": "A repeat of the A section material"
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation": "The bridge of Rhythm Changes is typically a cycle of dominants: III7 - VI7 - II7 - V7."
+        },
+        {
+          "id": "music-theory-401-l05-q4",
+          "text": "In a ii-V-I, the 7th of the ii chord typically resolves:",
+          "skillId": "music-theory-401-skill-core",
+          "options": [
+            {
+              "id": "a",
+              "text": "Up by a step to the 7th of the V chord"
+            },
+            {
+              "id": "b",
+              "text": "Down by a step to the 3rd of the V chord"
+            },
+            {
+              "id": "c",
+              "text": "Stays as a common tone to become the root of the V chord"
+            },
+            {
+              "id": "d",
+              "text": "Up by a leap of a third"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "This smooth, stepwise voice leading is characteristic of jazz harmony. For example, in Dm7-G7, the C (7th of Dm7) moves down to B (3rd of G7)."
+        }
+      ]
+    },
+    {
+      "id": "music-theory-401-l06",
       "title": "Species Counterpoint",
       "type": "interactive",
       "duration": 14,
       "objectives": [
-        "Write first-species (note-against-note) counterpoint",
-        "Apply the rules: begin and end on consonances, prefer contrary motion, avoid parallel 5ths/octaves",
-        "Understand the progression from first through fifth species"
+        "Define counterpoint and its relationship to harmony.",
+        "Write first-species (note-against-note) counterpoint, avoiding parallel 5ths and octaves.",
+        "Describe the progression from first through fifth species."
       ],
       "chunks": [
         {
-          "id": "music-theory-401-l05-c1",
+          "id": "music-theory-401-l06-c1",
           "title": "What Is Counterpoint?",
-          "content": "Counterpoint is an exciting and intricate musical technique that involves the artful combination of two or more independent melodic lines that work harmoniously together. Unlike harmony, which focuses on the vertical arrangement of chords, counterpoint emphasizes the horizontal flow of melodies. In this approach, each voice or melody has its own distinct melodic logic, allowing for a rich tapestry of sound. The concept of species counterpoint, which was formally established by the composer Johann Fux in 1725, teaches this art through five progressive steps, known as species. These steps guide musicians in developing their skills in creating counterpoint. Many renowned composers throughout history, such as Johann Sebastian Bach, Wolfgang Amadeus Mozart, and Ludwig van Beethoven, have utilized this technique in their compositions. Additionally, modern film composers also draw upon these principles to create captivating scores. By learning counterpoint, you can significantly deepen your understanding of music composition and arrangement, opening up new avenues for creativity in your musical journey.\nContext recap: Counterpoint is an exciting and intricate musical technique that involves the artful combination of two or more independent melodic lines that work harmoniously together. Unlike harmony, which focuses on the vertical arrangement of chords, counterpoint emphasizes the horizontal flow of melodies. In this approach, each voice or melody has its own distinct melodic logic, allowing for a rich tapestry of sound. The concept of species counterpoint, which was formally established by the composer Johann Fux in 1725, teaches this art through five progressive steps, known as species.\nWhy this matters: What Is Counterpoint? helps learners in Music connect ideas from Expert Music Theory to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "Counterpoint is the art of combining two or more independent melodic lines that are harmonically interdependent. While harmony focuses on the vertical 'snapshot' of chords, counterpoint emphasizes the horizontal, linear flow of each individual voice. The goal is to create a texture where each line is melodically interesting on its own, yet all lines work together to create a coherent whole. The foundational study of counterpoint, developed by Johann Fux, is called species counterpoint, a pedagogical system that introduces complexity in five progressive steps.",
+          "visualPrompts": [
+            "An animation contrasting a block-chord progression (vertical emphasis) with a two-voice contrapuntal excerpt (horizontal emphasis)."
+          ]
         },
         {
-          "id": "music-theory-401-l05-c2",
+          "id": "music-theory-401-l06-c2",
           "title": "First Species: Note Against Note",
-          "content": "In the first species of counterpoint, we explore how to create beautiful music by aligning each note in our counterpoint with a note from the cantus firmus, which is the main melody we are working with. This technique is foundational in music composition and helps us understand how different musical lines can interact harmoniously. There are several important rules to keep in mind while composing in this style. First, you should always start and end your piece on a perfect consonance. This means that the notes you choose at the beginning and the end should be either a unison (the same note), a fifth (like C and G), or an octave (like C and the next higher C). In between these points, your composition should mainly feature imperfect consonances, which include intervals like thirds and sixths. These intervals add richness to the music while still maintaining a sense of harmony. Occasionally, you can include perfect consonances to create moments of resolution. Another key aspect of first species counterpoint is the use of contrary motion, where the voices move in opposite directions. This technique adds interest and balance to your music. It's also crucial to avoid parallel fifths or octaves, as these can create a sense of stagnation in the music. Lastly, make sure that the voices do not cross over each other, as this can lead to confusion in the musical lines. By following these guidelines, you will be able to craft a strong and harmonious counterpoint that showcases your understanding of musical relationships.\nContext recap: In the first species of counterpoint, we explore how to create beautiful music by aligning each note in our counterpoint with a note from the cantus firmus, which is the main melody we are working with. This technique is foundational in music composition and helps us understand how different musical lines can interact harmoniously. There are several important rules to keep in mind while composing in this style. First, you should always start and end your piece on a perfect consonance.\nWhy this matters: First Species: Note Against Note helps learners in Music connect ideas from Expert Music Theory to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "First species is the simplest form of counterpoint: one note is written in the counterpoint line for every note in the given melody, or 'cantus firmus.' The core rules are designed to ensure voice independence and pleasing harmony. You must begin and end on a perfect consonance (unison, 5th, or octave). All other intervals must be consonant (major/minor 3rds and 6ths, perfect 5ths/octaves). Most importantly, you must avoid parallel perfect 5ths and octaves, where two voices move in the same direction to the same perfect interval, as this momentarily destroys their independence. Contrary motion is preferred.",
+          "visualPrompts": [
+            "A short cantus firmus on a staff with a correctly written first-species counterpoint above it. Arrows indicate the contrary motion.",
+            "An example of parallel 5ths with a large red 'X' over it to show what to avoid."
+          ]
         },
         {
-          "id": "music-theory-401-l05-c3",
+          "id": "music-theory-401-l06-c3",
           "title": "Beyond First Species",
-          "content": "As you continue your journey in counterpoint beyond the first species, you will discover the exciting world of second species. In this stage, you will learn to add two notes for every single note of the cantus firmus, which is the main melody. This technique introduces passing tones on the weaker beats, creating a more lively and engaging musical texture. Moving on to third species, you will explore the use of four notes for each note of the cantus firmus. This allows for a greater variety of rhythms and adds decorative motion to your music, making it more interesting and expressive. In fourth species, you will encounter the concept of suspensions. These are syncopated notes that are held over the beat, creating a sense of tension and release that can captivate listeners. Finally, in the fifth species, often called florid counterpoint, you have the freedom to combine all the previous species in creative ways. This stage allows for a rich tapestry of musical ideas, where each species builds upon the last, adding layers of complexity while still following the essential principles of voice leading. Embrace these challenges, as they will enhance your musical skills and deepen your understanding of counterpoint.\nContext recap: As you continue your journey in counterpoint beyond the first species, you will discover the exciting world of second species. In this stage, you will learn to add two notes for every single note of the cantus firmus, which is the main melody. This technique introduces passing tones on the weaker beats, creating a more lively and engaging musical texture. Moving on to third species, you will explore the use of four notes for each note of the cantus firmus.\nWhy this matters: Beyond First Species helps learners in Music connect ideas from Expert Music Theory to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "The subsequent species systematically introduce rhythmic complexity and dissonance. Second species uses two notes against one, allowing for dissonant passing tones on weak beats. Third species uses four notes against one, introducing more decorative melodic figures. Fourth species introduces syncopation through the use of suspensions, creating tension and release across the bar line. Finally, fifth species, or 'florid counterpoint,' combines the rhythmic varieties of all previous species, serving as a bridge to free composition. Each species builds upon the last, internalizing the principles of smooth melodic writing and controlled dissonance.",
+          "visualPrompts": [
+            "A side-by-side comparison of the same cantus firmus measure treated in first, second, and third species to show the increasing rhythmic activity."
+          ]
         }
       ],
       "interactiveActivities": [
         {
-          "id": "music-theory-401-l05-a1",
-          "title": "Sort into Categories",
+          "id": "music-theory-401-l06-a1",
+          "title": "Counterpoint Rules",
           "type": "sorting_buckets",
           "buckets": [
             "Allowed in First Species",
@@ -391,7 +439,7 @@ export const MusicTheory401Module: LearningModule = {
           ],
           "items": [
             {
-              "text": "Begin on a perfect unison or octave",
+              "text": "Begin on a perfect octave",
               "bucket": "Allowed in First Species"
             },
             {
@@ -407,469 +455,138 @@ export const MusicTheory401Module: LearningModule = {
               "bucket": "Forbidden in First Species"
             },
             {
-              "text": "Mostly 3rds and 6ths",
+              "text": "Using mostly 3rds and 6ths",
               "bucket": "Allowed in First Species"
             },
             {
               "text": "Consecutive parallel octaves",
               "bucket": "Forbidden in First Species"
-            },
-            {
-              "text": "End on a perfect consonance",
-              "bucket": "Allowed in First Species"
-            },
-            {
-              "text": "More than three perfect consonances in a row",
-              "bucket": "Forbidden in First Species"
             }
           ]
-        }
-      ],
-      "flashcards": [
-        {
-          "id": "music-theory-401-l05-f1",
-          "front": "Counterpoint",
-          "back": "The art of combining independent melodic lines that are harmonically compatible but rhythmically and melodically distinct"
-        },
-        {
-          "id": "music-theory-401-l05-f2",
-          "front": "Cantus firmus",
-          "back": "A fixed melody (usually in whole notes) against which a counterpoint line is composed"
-        },
-        {
-          "id": "music-theory-401-l05-f3",
-          "front": "First species",
-          "back": "Note-against-note counterpoint — one note in the upper voice for each note in the cantus firmus"
-        },
-        {
-          "id": "music-theory-401-l05-f4",
-          "front": "Parallel 5ths/octaves",
-          "back": "Two voices moving in the same direction by a 5th or octave — forbidden because they weaken voice independence"
-        }
-      ],
-      "learningAids": [
-        {
-          "id": "music-theory-401-l05-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Follow the prompt sequence and document your reasoning."
-        }
-      ]
-    },
-    {
-      "id": "music-theory-401-l06",
-      "title": "Counterpoint & Reharmonization Checkpoint",
-      "type": "quiz",
-      "duration": 8,
-      "objectives": [
-        "Demonstrate knowledge of counterpoint rules and reharmonization"
-      ],
-      "questions": [
-        {
-          "id": "music-theory-401-l06-q1",
-          "text": "A tritone sub for G7 is:",
-          "skillId": "music-theory-401-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "C7"
-            },
-            {
-              "id": "b",
-              "text": "D7"
-            },
-            {
-              "id": "c",
-              "text": "D♭7"
-            },
-            {
-              "id": "d",
-              "text": "A♭7"
-            }
-          ],
-          "correctOptionId": "c",
-          "explanation": ""
-        },
-        {
-          "id": "music-theory-401-l06-q2",
-          "text": "In first species counterpoint, voices should primarily move in:",
-          "skillId": "music-theory-401-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "Parallel motion"
-            },
-            {
-              "id": "b",
-              "text": "Contrary motion"
-            },
-            {
-              "id": "c",
-              "text": "Oblique motion only"
-            },
-            {
-              "id": "d",
-              "text": "Similar motion"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": ""
-        },
-        {
-          "id": "music-theory-401-l06-q3",
-          "text": "Which intervals are 'imperfect consonances' preferred in counterpoint?",
-          "skillId": "music-theory-401-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "Unisons and octaves"
-            },
-            {
-              "id": "b",
-              "text": "3rds and 6ths"
-            },
-            {
-              "id": "c",
-              "text": "4ths and 5ths"
-            },
-            {
-              "id": "d",
-              "text": "2nds and 7ths"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": ""
-        },
-        {
-          "id": "music-theory-401-l06-q4",
-          "text": "Modal interchange borrows chords from the:",
-          "skillId": "music-theory-401-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "Dominant key"
-            },
-            {
-              "id": "b",
-              "text": "Relative major/minor"
-            },
-            {
-              "id": "c",
-              "text": "Parallel major/minor"
-            },
-            {
-              "id": "d",
-              "text": "Subdominant key"
-            }
-          ],
-          "correctOptionId": "c",
-          "explanation": ""
-        }
-      ],
-      "quizBlueprint": {
-        "totalQuestions": 4,
-        "bloomProfile": {
-          "remember": 1,
-          "understand": 2,
-          "apply": 1
-        }
-      },
-      "learningAids": [
-        {
-          "id": "music-theory-401-l06-a1",
-          "type": "mnemonic",
-          "title": "Memory Cue",
-          "content": "Use Plan, Solve, Explain to structure each response."
         }
       ]
     },
     {
       "id": "music-theory-401-l07",
-      "title": "Orchestration: Instrument Families",
+      "title": "Free Counterpoint and Contrapuntal Devices",
       "type": "video",
-      "duration": 13,
+      "duration": 12,
       "objectives": [
-        "Describe the four orchestral families: strings, woodwinds, brass, percussion",
-        "Identify the range, timbre, and role of principal instruments in each family",
-        "Understand how instrument choice affects color and texture"
+        "Define free counterpoint as the application of contrapuntal principles in composition.",
+        "Identify and describe common contrapuntal devices like imitation, canon, and inversion.",
+        "Analyze the use of these devices in musical examples."
       ],
       "chunks": [
         {
           "id": "music-theory-401-l07-c1",
-          "title": "Strings",
-          "content": "The string section is often regarded as the heart of the orchestra, playing a crucial role in creating a wide variety of sounds and emotions. This section consists of four main instruments: the violin, which is known for its ability to play the highest and most agile notes; the viola, which is celebrated for its warm and rich middle voice; the cello, which produces a deep and vocal quality; and the double bass, which provides the essential deep foundation of sound. One of the remarkable features of string instruments is their ability to sustain notes for extended periods, allowing for beautiful melodies to unfold. They can also execute rapid passages with great skill, creating intricate musical lines. Additionally, string instruments are capable of producing lush harmonies, especially when players divide their parts, a technique known as divisi. They can create special effects such as pizzicato, where the strings are plucked instead of bowed, tremolo, which involves fast and repeated bowing, and harmonics, which generate ethereal and delicate tones. The versatility of string instruments allows them to blend seamlessly with other sections of the orchestra, transitioning effortlessly from soft whispers to powerful crescendos. This dynamic range makes them an essential component of orchestral music, enriching the overall sound and emotional depth of the performance.\nContext recap: The string section is often regarded as the heart of the orchestra, playing a crucial role in creating a wide variety of sounds and emotions. This section consists of four main instruments: the violin, which is known for its ability to play the highest and most agile notes; the viola, which is celebrated for its warm and rich middle voice; the cello, which produces a deep and vocal quality; and the double bass, which provides the essential deep foundation of sound. One of the remarkable features of string instruments is their ability to sustain notes for extended periods, allowing for beautiful melodies to unfold. They can also execute rapid passages with great skill, creating intricate musical lines."
+          "title": "From Species to Free Counterpoint",
+          "content": "While species counterpoint provides a strict framework for learning, free counterpoint is its application in actual music. Composers like J.S. Bach were masters of free counterpoint, using its principles not as rigid rules, but as guidelines for creating complex, beautiful textures. In free counterpoint, rhythmic variety is expected, dissonance is treated more flexibly (though still with care), and the goal is to create a compelling musical conversation between the voices. The core principles of voice independence, melodic integrity, and harmonic clarity learned in species still apply.",
+          "visualPrompts": [
+            "A side-by-side comparison of a rigid fifth-species exercise and an excerpt from a Bach invention to show the transition from exercise to art."
+          ]
         },
         {
           "id": "music-theory-401-l07-c2",
-          "title": "Woodwinds",
-          "content": "Woodwind instruments are essential in bringing vibrant colors and unique characters to orchestral music. This family of instruments includes the flute, which is known for its bright and agile sound, often playing high and piercing notes that can capture the listener's attention. The oboe has a distinctive nasal and penetrating tone, making it a favorite for carrying melodies in many compositions. The clarinet stands out with its warm and rich sound, boasting a wide range that allows it to adapt to various musical styles, from classical to jazz. Then there's the bassoon, which produces a dark and dry sound that can convey both humor and seriousness, adding depth to the music. Each woodwind instrument has its own unique timbre, meaning it creates a specific sound that can easily stand out among other instruments in an orchestra. Woodwinds frequently take on solo melodies, showcasing their expressive capabilities and adding intricate details to the overall orchestral sound. In addition to the standard woodwinds, there are extended instruments like the piccolo, which plays even higher than the flute, the English horn, the bass clarinet, and the contrabassoon. Each of these extended woodwinds contributes its own special qualities to the ensemble, enriching the musical experience for both performers and listeners alike.\nContext recap: Woodwind instruments are essential in bringing vibrant colors and unique characters to orchestral music. This family of instruments includes the flute, which is known for its bright and agile sound, often playing high and piercing notes that can capture the listener's attention. The oboe has a distinctive nasal and penetrating tone, making it a favorite for carrying melodies in many compositions. The clarinet stands out with its warm and rich sound, boasting a wide range that allows it to adapt to various musical styles, from classical to jazz.\nWhy this matters: Woodwinds helps learners in Music connect ideas from Expert Music Theory to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "Imitation and Canon",
+          "content": "Imitation is a fundamental device where a melody or motive introduced in one voice is repeated shortly after in another voice, often at a different pitch level. This creates a sense of unity and dialogue. A canon is the strictest form of imitation, where the second voice imitates the first exactly for the entire duration of the piece, like a round such as 'Row, Row, Row Your Boat.' These techniques form the basis of more complex forms like the fugue and are used to develop musical ideas across a composition.",
+          "visualPrompts": [
+            "An animated score of a simple two-voice imitative passage, where the melodic motive is highlighted in one color as it moves from the top voice to the bottom voice."
+          ]
         },
         {
           "id": "music-theory-401-l07-c3",
-          "title": "Brass and Percussion",
-          "content": "Brass instruments, such as the trumpet, French horn, trombone, and tuba, are celebrated for their powerful and noble sound. These instruments can bring a sense of brilliance to music, with softer brass notes providing a warm and inviting quality, while louder notes create thrilling and heroic moments that can captivate listeners. The French horn is especially versatile; it blends beautifully with both string and woodwind sections, enhancing the overall harmony of an orchestral piece.\nOn the other hand, percussion instruments play a crucial role in music and are divided into two main categories: pitched percussion and unpitched percussion. Pitched percussion instruments, like the timpani, xylophone, vibraphone, and marimba, can produce specific musical notes, allowing them to contribute melodies and harmonies. In contrast, unpitched percussion instruments, such as the snare drum, bass drum, cymbals, and triangle, do not have a definite pitch but are essential for providing rhythm and texture to the music.\nPercussion instruments add not only rhythm but also vibrant color and dramatic impact to a musical composition. For instance, timpani can create a sense of tension and anticipation, while a cymbal crash can punctuate a climactic moment, drawing the audience's attention and enhancing the emotional experience of the piece. Understanding the roles of brass and percussion instruments helps musicians create more dynamic and engaging performances.\nContext recap: Brass instruments, such as the trumpet, French horn, trombone, and tuba, are celebrated for their powerful and noble sound. These instruments can bring a sense of brilliance to music, with softer brass notes providing a warm and inviting quality, while louder notes create thrilling and heroic moments that can captivate listeners. The French horn is especially versatile; it blends beautifully with both string and woodwind sections, enhancing the overall harmony of an orchestral piece. On the other hand, percussion instruments play a crucial role in music and are divided into two main categories: pitched percussion and unpitched percussion.\nWhy this matters: Brass and Percussion helps learners in Music connect ideas from Expert Music Theory to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
-        }
-      ],
-      "flashcards": [
-        {
-          "id": "music-theory-401-l07-f1",
-          "front": "Divisi",
-          "back": "Splitting a string section into multiple parts, each playing different notes — creates rich harmonies"
-        },
-        {
-          "id": "music-theory-401-l07-f2",
-          "front": "Pizzicato",
-          "back": "Plucking strings with the fingers instead of bowing — creates a percussive, staccato effect"
-        },
-        {
-          "id": "music-theory-401-l07-f3",
-          "front": "Transposing instruments",
-          "back": "Instruments whose written pitch differs from sounding pitch (clarinet in B♭, horn in F, trumpet in B♭)"
-        },
-        {
-          "id": "music-theory-401-l07-f4",
-          "front": "Timbre",
-          "back": "The unique tone color of an instrument — what makes a flute sound different from a violin on the same note"
-        }
-      ],
-      "learningAids": [
-        {
-          "id": "music-theory-401-l07-a1",
-          "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary of the lesson's main concept."
-        }
-      ]
-    },
-    {
-      "id": "music-theory-401-l08",
-      "title": "Scoring for Small Ensemble",
-      "type": "interactive",
-      "duration": 14,
-      "objectives": [
-        "Assign melody, harmony, and bass roles to appropriate instruments",
-        "Balance dynamics across instruments with different volumes",
-        "Apply doubling and spacing principles for clean textures"
-      ],
-      "chunks": [
-        {
-          "id": "music-theory-401-l08-c1",
-          "title": "Role Assignment",
-          "content": "When you are creating music for a small group of musicians, it's really important to make sure that three key roles are filled: melody, harmony, and bass. Let's break these down! The melody is the main tune of the piece, and it should be played by an instrument that can project its sound well, so it stands out to the audience. Instruments like the flute or the first violin are great choices for this role because they can be heard clearly.\nNext, we have harmony. This part consists of the inner voices that support the melody and fill out the chords. It's best to assign this role to instruments that blend nicely together, such as the viola and the second violin in a string quartet. They create a warm sound that complements the melody beautifully.\nFinally, we have the bass, which is like the foundation of a building. It uses a low instrument, such as a cello or a bass guitar, to provide a strong grounding for the harmony and melody. In a string quartet, the cello usually plays this important role.\nIn a jazz combo, you might find the trumpet or saxophone taking the lead with the melody, while the piano or guitar adds harmony, and the bass instrument keeps everything steady and rhythmic. Understanding these roles is essential for creating a balanced and cohesive musical arrangement that everyone can enjoy!\nContext recap: When you are creating music for a small group of musicians, it's really important to make sure that three key roles are filled: melody, harmony, and bass. Let's break these down! The melody is the main tune of the piece, and it should be played by an instrument that can project its sound well, so it stands out to the audience. Instruments like the flute or the first violin are great choices for this role because they can be heard clearly.\nWhy this matters: Role Assignment helps learners in Music connect ideas from Expert Music Theory to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
-        },
-        {
-          "id": "music-theory-401-l08-c2",
-          "title": "Balance and Dynamics",
-          "content": "In the world of music, understanding how different instruments produce sound at varying volumes is crucial for creating a harmonious piece. For example, when a trumpet plays loudly, it can easily overshadow a flute that is also playing loudly. This is why composers need to be mindful of how they score their music. One helpful guideline is to have louder instruments play at softer dynamics or to pair softer instruments with others that can support their sound, ensuring that every part can be heard clearly. Additionally, the register of the instruments plays a significant role in how they project sound. Instruments that play in higher registers are generally louder and can cut through the mix more effectively. For instance, if a flute is tasked with playing a melody in its lower register while accompanied by powerful brass instruments, the delicate sound of the flute may become inaudible. Therefore, paying close attention to both dynamics and the register of each instrument is essential for achieving a well-balanced and engaging musical composition. This careful consideration helps ensure that all instruments contribute to the overall sound without any one part dominating the others, leading to a more enjoyable listening experience.\nContext recap: In the world of music, understanding how different instruments produce sound at varying volumes is crucial for creating a harmonious piece. For example, when a trumpet plays loudly, it can easily overshadow a flute that is also playing loudly. This is why composers need to be mindful of how they score their music. One helpful guideline is to have louder instruments play at softer dynamics or to pair softer instruments with others that can support their sound, ensuring that every part can be heard clearly.\nWhy this matters: Balance and Dynamics helps learners in Music connect ideas from Expert Music Theory to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
-        },
-        {
-          "id": "music-theory-401-l08-c3",
-          "title": "Spacing and Doubling",
-          "content": "When you are arranging music for a small ensemble, understanding spacing and doubling is crucial for creating a sound that is both clear and stable. One effective technique is to place wider intervals in the bass part, while keeping the upper voices closer together. This approach reflects the natural overtone series, which helps to produce a harmonious and pleasing sound. For instance, when you double the root or the fifth of a chord, it enhances the stability of that chord, making it feel more grounded. On the other hand, if you choose to double the third, it adds a unique color and richness to the chord, giving it more character. However, it's important to be cautious about doubling the leading tone, as this can lead to parallel octaves when it resolves, which might create unwanted tension in the music. In orchestration, another useful technique is octave doubling of the melody. This method can significantly boost the power of the melody without changing the underlying harmony, making the overall music more dynamic and engaging for the listeners. By mastering these techniques, you can create arrangements that are not only effective but also captivating and enjoyable to hear.\nContext recap: When you are arranging music for a small ensemble, understanding spacing and doubling is crucial for creating a sound that is both clear and stable. One effective technique is to place wider intervals in the bass part, while keeping the upper voices closer together. This approach reflects the natural overtone series, which helps to produce a harmonious and pleasing sound. For instance, when you double the root or the fifth of a chord, it enhances the stability of that chord, making it feel more grounded.\nWhy this matters: Spacing and Doubling helps learners in Music connect ideas from Expert Music Theory to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
-        }
-      ],
-      "interactiveActivities": [
-        {
-          "id": "music-theory-401-l08-a1",
-          "title": "Drag and Drop",
-          "type": "drag_and_drop",
-          "prompt": "Assign the best role for each instrument in a string quartet arrangement:",
-          "items": [
-            "Melody",
-            "Harmony (upper)",
-            "Harmony (lower)",
-            "Bass line"
-          ],
-          "zones": [
-            "Violin I",
-            "Violin II",
-            "Viola",
-            "Cello"
+          "title": "Melodic Inversion and Other Devices",
+          "content": "Composers manipulate melodic ideas to create variety while maintaining coherence. Melodic inversion involves flipping a melody upside down: every upward interval becomes a downward interval of the same size, and vice versa. Other devices include retrograde (playing the melody backward), and augmentation/diminution (making the rhythmic values longer or shorter). These tools allow a composer to extract the maximum potential from a single musical idea, creating intricate and intellectually satisfying musical textures.",
+          "visualPrompts": [
+            "A simple melody shown on a staff, followed by its inversion, retrograde, and augmentation to clearly illustrate each transformation."
           ]
         }
       ],
       "flashcards": [
         {
-          "id": "music-theory-401-l08-f1",
-          "front": "Doubling",
-          "back": "Having two or more instruments play the same note (often in octaves) — strengthens the line without changing harmony"
+          "id": "music-theory-401-l07-f1",
+          "front": "Free Counterpoint",
+          "back": "The application of contrapuntal principles in a compositional context, with greater rhythmic and dissonant freedom than species counterpoint."
         },
         {
-          "id": "music-theory-401-l08-f2",
-          "front": "Spacing rule",
-          "back": "Wider intervals in the bass, closer intervals above — mimics the overtone series for clarity"
+          "id": "music-theory-401-l07-f2",
+          "front": "Imitation",
+          "back": "A contrapuntal device where a melodic idea in one voice is repeated in another voice."
         },
         {
-          "id": "music-theory-401-l08-f3",
-          "front": "Overtone series",
-          "back": "The natural pattern of harmonics above a fundamental pitch — wider intervals at the bottom, closer at the top"
-        }
-      ],
-      "learningAids": [
+          "id": "music-theory-401-l07-f3",
+          "front": "Melodic Inversion",
+          "back": "Transforming a melody by inverting its intervals; an ascending third becomes a descending third."
+        },
         {
-          "id": "music-theory-401-l08-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Follow the prompt sequence and document your reasoning."
+          "id": "music-theory-401-l07-f4",
+          "front": "Canon",
+          "back": "A strict form of imitation where one voice follows another, playing the exact same melody."
         }
       ]
     },
     {
-      "id": "music-theory-401-l09",
-      "title": "Orchestration Checkpoint",
+      "id": "music-theory-401-l08",
+      "title": "Counterpoint Checkpoint",
       "type": "quiz",
       "duration": 8,
       "objectives": [
-        "Demonstrate knowledge of orchestration principles"
+        "Demonstrate knowledge of the rules of first species counterpoint and advanced contrapuntal devices."
       ],
       "questions": [
         {
-          "id": "music-theory-401-l09-q1",
-          "text": "Which string technique involves plucking the strings with fingers?",
+          "id": "music-theory-401-l08-q1",
+          "text": "The primary rule in first species counterpoint designed to maintain voice independence is:",
           "skillId": "music-theory-401-skill-core",
           "options": [
             {
               "id": "a",
-              "text": "Tremolo"
+              "text": "Avoid all dissonance"
             },
             {
               "id": "b",
-              "text": "Pizzicato"
+              "text": "Avoid parallel 5ths and octaves"
             },
             {
               "id": "c",
-              "text": "Sul ponticello"
+              "text": "Only use contrary motion"
             },
             {
               "id": "d",
-              "text": "Col legno"
+              "text": "Begin and end on a 3rd"
             }
           ],
           "correctOptionId": "b",
-          "explanation": ""
+          "explanation": "Parallel perfect intervals cause the two voices to merge into one sound, temporarily losing their independence."
         },
         {
-          "id": "music-theory-401-l09-q2",
-          "text": "In orchestral spacing, wider intervals should be placed:",
+          "id": "music-theory-401-l08-q2",
+          "text": "A contrapuntal device where a melody is played upside down is called:",
           "skillId": "music-theory-401-skill-core",
           "options": [
             {
               "id": "a",
-              "text": "In the highest voices"
+              "text": "Retrograde"
             },
             {
               "id": "b",
-              "text": "In the middle voices"
+              "text": "Augmentation"
             },
             {
               "id": "c",
-              "text": "In the lowest voices"
+              "text": "Imitation"
             },
             {
               "id": "d",
-              "text": "Evenly throughout all voices"
+              "text": "Inversion"
             }
           ],
-          "correctOptionId": "c",
-          "explanation": ""
+          "correctOptionId": "d",
+          "explanation": "Inversion flips the melodic contour, so ascending intervals become descending intervals."
         },
         {
-          "id": "music-theory-401-l09-q3",
-          "text": "The French horn blends well with both strings and woodwinds because of its:",
-          "skillId": "music-theory-401-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "Extremely loud volume"
-            },
-            {
-              "id": "b",
-              "text": "Warm, round timbre"
-            },
-            {
-              "id": "c",
-              "text": "Very high range"
-            },
-            {
-              "id": "d",
-              "text": "Percussive attack"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": ""
-        },
-        {
-          "id": "music-theory-401-l09-q4",
-          "text": "When a trumpet plays at forte and a flute plays at forte, to achieve balance you should:",
-          "skillId": "music-theory-401-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "Keep both at forte"
-            },
-            {
-              "id": "b",
-              "text": "Have the trumpet play softer or the flute play louder/double it"
-            },
-            {
-              "id": "c",
-              "text": "Remove the flute from the passage"
-            },
-            {
-              "id": "d",
-              "text": "Add more brass instruments"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": ""
-        }
-      ],
-      "quizBlueprint": {
-        "totalQuestions": 4,
-        "bloomProfile": {
-          "remember": 1,
-          "understand": 2,
-          "apply": 1
-        }
-      }
-    },
-    {
-      "id": "music-theory-401-l10",
-      "title": "Mastery Quiz: Jazz, Counterpoint & Orchestration",
-      "type": "quiz",
-      "duration": 12,
-      "objectives": [
-        "Synthesize expert-level knowledge across all topics"
-      ],
-      "questions": [
-        {
-          "id": "music-theory-401-l10-q1",
-          "text": "A Cmaj9 chord contains which notes?",
-          "skillId": "music-theory-401-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "C – E – G – B – D"
-            },
-            {
-              "id": "b",
-              "text": "C – E – G – B♭ – D"
-            },
-            {
-              "id": "c",
-              "text": "C – E♭ – G – B♭ – D"
-            },
-            {
-              "id": "d",
-              "text": "C – E – G – B – D♯"
-            }
-          ],
-          "correctOptionId": "a",
-          "explanation": ""
-        },
-        {
-          "id": "music-theory-401-l10-q2",
-          "text": "In species counterpoint, fourth species introduces:",
+          "id": "music-theory-401-l08-q3",
+          "text": "Fourth species counterpoint is primarily designed to teach the handling of:",
           "skillId": "music-theory-401-skill-core",
           "options": [
             {
@@ -878,7 +595,7 @@ export const MusicTheory401Module: LearningModule = {
             },
             {
               "id": "b",
-              "text": "Suspensions (syncopation)"
+              "text": "Suspensions"
             },
             {
               "id": "c",
@@ -886,346 +603,309 @@ export const MusicTheory401Module: LearningModule = {
             },
             {
               "id": "d",
-              "text": "Free combination of all species"
+              "text": "Parallel motion"
             }
           ],
           "correctOptionId": "b",
-          "explanation": ""
+          "explanation": "Fourth species introduces syncopation and the preparation and resolution of dissonant suspensions."
         },
         {
-          "id": "music-theory-401-l10-q3",
-          "text": "Which orchestral family provides the harmonic and melodic backbone of the orchestra?",
+          "id": "music-theory-401-l08-q4",
+          "text": "A canon is a strict form of:",
           "skillId": "music-theory-401-skill-core",
           "options": [
             {
               "id": "a",
-              "text": "Brass"
+              "text": "Inversion"
             },
             {
               "id": "b",
-              "text": "Percussion"
+              "text": "Harmony"
             },
             {
               "id": "c",
-              "text": "Strings"
+              "text": "Imitation"
             },
             {
               "id": "d",
-              "text": "Woodwinds"
+              "text": "Species"
             }
           ],
           "correctOptionId": "c",
-          "explanation": ""
-        },
-        {
-          "id": "music-theory-401-l10-q4",
-          "text": "Tritone substitution works because the two dominant 7th chords share the same:",
-          "skillId": "music-theory-401-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "Root and 5th"
-            },
-            {
-              "id": "b",
-              "text": "3rd and 7th (guide tones)"
-            },
-            {
-              "id": "c",
-              "text": "9th and 13th"
-            },
-            {
-              "id": "d",
-              "text": "Bass note"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": ""
+          "explanation": "A canon is the most rigid type of imitation, where one voice imitates another exactly."
         }
-      ],
-      "quizBlueprint": {
-        "totalQuestions": 4,
-        "bloomProfile": {
-          "remember": 1,
-          "understand": 1,
-          "apply": 1,
-          "analyze": 1
-        }
-      }
+      ]
     },
     {
-      "id": "music-theory-401-l11",
-      "title": "Advanced Harmonic Analysis Lab",
-      "type": "interactive",
-      "duration": 15,
+      "id": "music-theory-401-l09",
+      "title": "Orchestration: Instrument Families",
+      "type": "video",
+      "duration": 13,
       "objectives": [
-        "Analyze a jazz standard chord chart using Roman numerals, secondary dominants, and tritone subs",
-        "Identify modulations and tonicizations within a lead sheet",
-        "Recognize common jazz form structures (AABA, blues, rhythm changes)"
+        "Describe the four main orchestral families: strings, woodwinds, brass, and percussion.",
+        "Identify the typical range, timbre, and role of principal instruments in each family.",
+        "Understand how instrument choice affects orchestral color and texture."
       ],
       "chunks": [
         {
-          "id": "music-theory-401-l11-c1",
-          "title": "AABA Form",
-          "content": "In the world of jazz music, one of the most frequently used structures is known as the AABA form. This musical framework typically spans 32 bars in total. The first section, referred to as the A section, lasts for 8 bars and introduces the main theme of the piece. This theme is then repeated in the second A section, reinforcing the listener's familiarity with the melody. Following these two A sections is the B section, which is often called the 'bridge' or 'middle 8.' This part is crucial as it provides a contrast to the A sections, often featuring a different key or a new chord progression that adds variety to the piece. After the B section, the final A returns to the original theme, sometimes with a slightly altered ending to keep the listener engaged. This AABA structure is not just a theoretical concept; it is practically applied in many famous jazz standards. For instance, songs like 'I Got Rhythm,' 'Take the A Train,' and 'Satin Doll' all exemplify the effectiveness of the AABA form, highlighting its significance in jazz composition and its ability to create memorable musical experiences.\nContext recap: In the world of jazz music, one of the most frequently used structures is known as the AABA form. This musical framework typically spans 32 bars in total. The first section, referred to as the A section, lasts for 8 bars and introduces the main theme of the piece. This theme is then repeated in the second A section, reinforcing the listener's familiarity with the melody.\nWhy this matters: AABA Form helps learners in Music connect ideas from Expert Music Theory to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "id": "music-theory-401-l09-c1",
+          "title": "The String Family",
+          "content": "The string section—violin, viola, cello, and double bass—is the backbone of the orchestra. With the ability to play for long stretches without breathing, they excel at sustained melodic lines and lush harmonic pads. Their wide dynamic range allows them to go from a whisper to a roar. Special techniques like pizzicato (plucking), tremolo (rapid bowing), and harmonics create a vast palette of textures. As a group, they are remarkably homogenous, blending together seamlessly to form the core of the orchestral sound.",
+          "visualPrompts": [
+            "Images of the violin, viola, cello, and double bass, arranged side-by-side for size comparison.",
+            "A chart showing the typical written range for each string instrument on a grand staff."
+          ]
         },
         {
-          "id": "music-theory-401-l11-c2",
-          "title": "Analyzing 'Autumn Leaves'",
-          "content": "The chord progression in the well-known jazz standard 'Autumn Leaves' is built upon a series of ii-V-I movements, which are essential components of jazz harmony. When we look at this piece in the key of G minor, we can break down the progression into the following chords: Cm7 – F7 – B♭maj7 – E♭maj7 – Am7♭5 – D7 – Gm. If we analyze these chords, we first notice the ii-V-I progression in B♭ major, which consists of the chords Cm7, F7, and B♭maj7. After this, we encounter the IV chord of B♭ major, which is E♭maj7. Following that, we transition into a iiø – V – i progression in G minor, represented by the chords Am7♭5, D7, and Gm. This piece serves as a wonderful example of how jazz music frequently shifts between relative major and minor keys. It highlights the complex and fascinating relationships between different tonalities, showcasing the creativity and expressiveness that jazz musicians employ in their compositions. Understanding these progressions not only enhances our appreciation of 'Autumn Leaves' but also deepens our overall knowledge of jazz harmony and its unique characteristics.\nContext recap: The chord progression in the well-known jazz standard 'Autumn Leaves' is built upon a series of ii-V-I movements, which are essential components of jazz harmony. When we look at this piece in the key of G minor, we can break down the progression into the following chords: Cm7 – F7 – B♭maj7 – E♭maj7 – Am7♭5 – D7 – Gm. If we analyze these chords, we first notice the ii-V-I progression in B♭ major, which consists of the chords Cm7, F7, and B♭maj7. After this, we encounter the IV chord of B♭ major, which is E♭maj7."
+          "id": "music-theory-401-l09-c2",
+          "title": "The Woodwind Family",
+          "content": "The woodwind family—flute, oboe, clarinet, and bassoon—provides the orchestra's primary colors. Unlike the strings, each woodwind instrument has a highly distinct timbre. The flute is agile and bright, the oboe is nasal and penetrating, the clarinet is warm and versatile, and the bassoon is weighty and sonorous. They are often used for solo melodies that need to cut through the texture. Composers use them as a 'choir' of individual soloists, each bringing a unique character to the music.",
+          "visualPrompts": [
+            "A video montage showing a close-up of each principal woodwind instrument being played, allowing the viewer to connect the instrument to its unique sound."
+          ]
         },
         {
-          "id": "music-theory-401-l11-c3",
-          "title": "Rhythm Changes",
-          "content": "'Rhythm changes' is a term used in jazz music that refers to a specific chord progression made famous by George Gershwin in his well-known song 'I Got Rhythm.' This progression is one of the most popular and frequently used in jazz compositions. In the A section of the rhythm changes, the chords follow a pattern: I – vi – ii – V – I – vi – ii – V, which is played in the key of B♭. This means that musicians can use these chords to create a lively and engaging musical backdrop. The B section, often called the bridge, introduces a different sequence of chords: III7 – VI7 – II7 – V7. This part of the progression features dominant seventh chords that move in intervals of fourths, adding a rich harmonic texture to the music. Many jazz standards, including tunes like 'Oleo,' 'Anthropology,' and 'Cotton Tail,' are examples of contrafacts. This means that they are new melodies that have been composed over the rhythm changes, demonstrating the innovative spirit and improvisational skills of jazz musicians. By understanding rhythm changes, you can appreciate how jazz artists build upon existing frameworks to create fresh and exciting music, making it a vital concept in the study of jazz theory.\nContext recap: 'Rhythm changes' is a term used in jazz music that refers to a specific chord progression made famous by George Gershwin in his well-known song 'I Got Rhythm.' This progression is one of the most popular and frequently used in jazz compositions. In the A section of the rhythm changes, the chords follow a pattern: I – vi – ii – V – I – vi – ii – V, which is played in the key of B♭. This means that musicians can use these chords to create a lively and engaging musical backdrop. The B section, often called the bridge, introduces a different sequence of chords: III7 – VI7 – II7 – V7."
-        }
-      ],
-      "interactiveActivities": [
-        {
-          "id": "music-theory-401-l11-a1",
-          "title": "Match the Pairs",
-          "type": "matching_pairs",
-          "pairs": [
-            {
-              "left": "AABA form",
-              "right": "'I Got Rhythm,' 'Take the A Train'"
-            },
-            {
-              "left": "12-bar blues",
-              "right": "'Now's the Time,' 'Billie's Bounce'"
-            },
-            {
-              "left": "Rhythm changes",
-              "right": "'Oleo,' 'Anthropology'"
-            },
-            {
-              "left": "Through-composed",
-              "right": "Each section is new material; no repeats"
-            },
-            {
-              "left": "Contrafact",
-              "right": "New melody over an existing chord progression"
-            },
-            {
-              "left": "ii – V – I chain",
-              "right": "'Autumn Leaves,' 'All the Things You Are'"
-            }
+          "id": "music-theory-401-l09-c3",
+          "title": "The Brass and Percussion Families",
+          "content": "The brass family—trumpet, French horn, trombone, and tuba—provides power and nobility. They can produce brilliant, heroic fanfares or warm, rounded chords. The French horn is a unique 'bridge' instrument, blending equally well with woodwinds and other brass. The percussion section provides rhythmic drive, dramatic impact, and sonic punctuation. It is divided into pitched instruments (timpani, xylophone, marimba) that can play melodies, and unpitched instruments (snare drum, bass drum, cymbals) that provide rhythm and texture.",
+          "visualPrompts": [
+            "A diagram showing the standard orchestral layout, highlighting the typical placement of the brass and percussion sections.",
+            "A split-screen video showing a pitched percussion instrument (marimba) playing a melody and an unpitched instrument (snare drum) playing a rhythm."
           ]
         }
       ],
       "flashcards": [
         {
-          "id": "music-theory-401-l11-f1",
-          "front": "AABA form",
-          "back": "32-bar jazz standard form: 8-bar theme (A), repeat (A), contrasting bridge (B), return (A)"
+          "id": "music-theory-401-l09-f1",
+          "front": "Timbre",
+          "back": "The unique tone color or quality of a sound that distinguishes one instrument from another."
         },
         {
-          "id": "music-theory-401-l11-f2",
-          "front": "Rhythm changes",
-          "back": "The chord progression from 'I Got Rhythm' — one of the most reused progressions in jazz"
+          "id": "music-theory-401-l09-f2",
+          "front": "Pizzicato",
+          "back": "A performance instruction for string players to pluck the strings instead of using the bow."
         },
         {
-          "id": "music-theory-401-l11-f3",
-          "front": "Contrafact",
-          "back": "A new melody composed over the chord changes of an existing standard"
+          "id": "music-theory-401-l09-f3",
+          "front": "Transposing Instrument",
+          "back": "An instrument for which the written pitch is different from the sounding pitch (e.g., Clarinet in B♭, French Horn in F)."
+        },
+        {
+          "id": "music-theory-401-l09-f4",
+          "front": "Divisi",
+          "back": "An instruction for a section of players (e.g., first violins) to divide into two or more groups to play different parts."
+        }
+      ]
+    },
+    {
+      "id": "music-theory-401-l10",
+      "title": "Scoring and Arranging Techniques",
+      "type": "interactive",
+      "duration": 14,
+      "objectives": [
+        "Distinguish between orchestration and arranging.",
+        "Apply principles of spacing and doubling for clear textures.",
+        "Utilize common arranging techniques like soli and call and response."
+      ],
+      "chunks": [
+        {
+          "id": "music-theory-401-l10-c1",
+          "title": "Arranging vs. Orchestration",
+          "content": "While often used interchangeably, arranging and orchestration are distinct processes. Orchestration is the task of assigning an existing musical composition to specific instruments. The notes, rhythms, and harmonies are already written. Arranging is a more creative act that involves adapting a piece of music for a new context. An arranger might change the harmony, form, rhythm, or style of the original piece before orchestrating it. For example, arranging 'Yesterday' for a jazz big band involves reharmonization and rhythmic changes, while orchestrating it is the final step of assigning the parts.",
+          "visualPrompts": [
+            "A simple lead sheet of 'Twinkle, Twinkle, Little Star' shown on the left. On the right, two different arrangements are shown: one as a rock song, one as a string quartet, to illustrate the creative choices of an arranger."
+          ]
+        },
+        {
+          "id": "music-theory-401-l10-c2",
+          "title": "Spacing and Doubling",
+          "content": "Effective scoring requires careful attention to spacing and doubling. A fundamental principle, derived from the natural overtone series, is to place wider intervals in the lower registers and closer intervals in the upper registers. This prevents a muddy sound in the bass and provides a solid foundation. Doubling—having multiple instruments play the same line—can strengthen a melody or reinforce a harmony. Doubling the root or 5th of a chord adds stability, while doubling the 3rd adds color. It's generally wise to avoid doubling the leading tone, as it can create voice-leading problems.",
+          "visualPrompts": [
+            "Two chords shown on a staff. The first is poorly spaced (close interval in the bass). The second is well-spaced (wide interval in the bass), with a checkmark."
+          ]
+        },
+        {
+          "id": "music-theory-401-l10-c3",
+          "title": "Common Arranging Textures",
+          "content": "Arrangers use various textures to create interest. A unison or octave texture, where all instruments play the same melodic line, creates a powerful, focused sound. A soli is a feature for an entire section (e.g., the saxophone section in a big band) playing a harmonized melody. Background figures, like sustained pads or rhythmic riffs, support the main melody without overpowering it. Call and response creates a musical dialogue, where one instrument or section makes a statement (the 'call') and another answers (the 'response').",
+          "visualPrompts": [
+            "A score excerpt from a big band chart, highlighting a saxophone soli.",
+            "An animation showing a 'call' phrase played by the trumpets, followed by a 'response' phrase from the trombones."
+          ]
+        }
+      ],
+      "interactiveActivities": [
+        {
+          "id": "music-theory-401-l10-a1",
+          "title": "Assign the Role",
+          "type": "drag_and_drop",
+          "prompt": "In a typical string quartet arrangement, drag the instrument to its most common role.",
+          "items": [
+            "Violin I",
+            "Violin II",
+            "Viola",
+            "Cello"
+          ],
+          "zones": [
+            "Melody",
+            "Harmony (upper)",
+            "Harmony (lower)",
+            "Bass line"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "music-theory-401-l11",
+      "title": "Orchestration & Arranging Checkpoint",
+      "type": "quiz",
+      "duration": 8,
+      "objectives": [
+        "Demonstrate knowledge of instrument families and fundamental arranging principles."
+      ],
+      "questions": [
+        {
+          "id": "music-theory-401-l11-q1",
+          "text": "Which instrument is known as a 'bridge' instrument for its ability to blend well with both woodwinds and brass?",
+          "skillId": "music-theory-401-skill-core",
+          "options": [
+            {
+              "id": "a",
+              "text": "Viola"
+            },
+            {
+              "id": "b",
+              "text": "Clarinet"
+            },
+            {
+              "id": "c",
+              "text": "French horn"
+            },
+            {
+              "id": "d",
+              "text": "Trombone"
+            }
+          ],
+          "correctOptionId": "c",
+          "explanation": "The warm, round timbre of the French horn allows it to blend seamlessly with a wide variety of instrumental colors."
+        },
+        {
+          "id": "music-theory-401-l11-q2",
+          "text": "The principle of placing wider intervals in lower registers is based on:",
+          "skillId": "music-theory-401-skill-core",
+          "options": [
+            {
+              "id": "a",
+              "text": "The physical size of the instruments"
+            },
+            {
+              "id": "b",
+              "text": "The natural overtone series"
+            },
+            {
+              "id": "c",
+              "text": "A rule from species counterpoint"
+            },
+            {
+              "id": "d",
+              "text": "The circle of fifths"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "This spacing mimics the overtone series, where intervals are wider at the bottom, resulting in a clearer, more resonant sound."
+        },
+        {
+          "id": "music-theory-401-l11-q3",
+          "text": "A harmonized melodic passage played by an entire section of a big band is called a:",
+          "skillId": "music-theory-401-skill-core",
+          "options": [
+            {
+              "id": "a",
+              "text": "Solo"
+            },
+            {
+              "id": "b",
+              "text": "Soli"
+            },
+            {
+              "id": "c",
+              "text": "Tutti"
+            },
+            {
+              "id": "d",
+              "text": "Call and response"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "A soli features a whole section playing together, as opposed to a solo, which features one player."
+        },
+        {
+          "id": "music-theory-401-l11-q4",
+          "text": "Reharmonizing a song with new chords is an act of:",
+          "skillId": "music-theory-401-skill-core",
+          "options": [
+            {
+              "id": "a",
+              "text": "Orchestration"
+            },
+            {
+              "id": "b",
+              "text": "Transcription"
+            },
+            {
+              "id": "c",
+              "text": "Arranging"
+            },
+            {
+              "id": "d",
+              "text": "Transposition"
+            }
+          ],
+          "correctOptionId": "c",
+          "explanation": "Arranging involves making creative changes to the fundamental elements of a piece, such as its harmony."
         }
       ]
     },
     {
       "id": "music-theory-401-l12",
-      "title": "Mastery Retest",
-      "type": "quiz",
-      "duration": 10,
-      "objectives": [
-        "Demonstrate comprehensive expert-level theory knowledge"
-      ],
-      "questions": [
-        {
-          "id": "music-theory-401-l12-q1",
-          "text": "The bridge of a 32-bar AABA form is typically how many bars?",
-          "skillId": "music-theory-401-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "4 bars"
-            },
-            {
-              "id": "b",
-              "text": "8 bars"
-            },
-            {
-              "id": "c",
-              "text": "12 bars"
-            },
-            {
-              "id": "d",
-              "text": "16 bars"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": ""
-        },
-        {
-          "id": "music-theory-401-l12-q2",
-          "text": "In the 'Autumn Leaves' progression, Cm7 – F7 – B♭maj7 represents:",
-          "skillId": "music-theory-401-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "I – IV – V in C minor"
-            },
-            {
-              "id": "b",
-              "text": "ii – V – I in B♭ major"
-            },
-            {
-              "id": "c",
-              "text": "iii – VI – II in A♭ major"
-            },
-            {
-              "id": "d",
-              "text": "iv – VII – III in G minor"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": ""
-        },
-        {
-          "id": "music-theory-401-l12-q3",
-          "text": "Second species counterpoint introduces what rhythmic element?",
-          "skillId": "music-theory-401-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "Suspensions"
-            },
-            {
-              "id": "b",
-              "text": "Two notes per cantus firmus note"
-            },
-            {
-              "id": "c",
-              "text": "Free rhythm"
-            },
-            {
-              "id": "d",
-              "text": "Syncopation"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": ""
-        },
-        {
-          "id": "music-theory-401-l12-q4",
-          "text": "When doubling chord tones in orchestration, which note should you avoid doubling?",
-          "skillId": "music-theory-401-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "Root"
-            },
-            {
-              "id": "b",
-              "text": "3rd"
-            },
-            {
-              "id": "c",
-              "text": "5th"
-            },
-            {
-              "id": "d",
-              "text": "Leading tone"
-            }
-          ],
-          "correctOptionId": "d",
-          "explanation": ""
-        }
-      ],
-      "quizBlueprint": {
-        "totalQuestions": 4,
-        "bloomProfile": {
-          "remember": 1,
-          "understand": 2,
-          "apply": 1
-        }
-      }
-    },
-    {
-      "id": "music-theory-401-l13",
-      "title": "Arranging for Real Ensembles",
-      "type": "video",
-      "duration": 13,
-      "objectives": [
-        "Distinguish between arranging and orchestration",
-        "Apply common arranging techniques: unison, soli, background figures",
-        "Plan an arrangement from lead sheet to full score"
-      ],
-      "chunks": [
-        {
-          "id": "music-theory-401-l13-c1",
-          "title": "Arranging vs. Orchestration",
-          "content": "Orchestration and arranging are two important but different processes in the world of music composition. Orchestration is the art of taking existing music and assigning it to specific instruments. This means that each part of the music is played by the instrument that best suits its sound, creating a rich and harmonious blend. For example, a melody might be played by a flute, while the harmony could be provided by a cello. On the other hand, arranging goes beyond just assigning instruments; it involves reimagining the music itself. This can include making changes to various elements such as harmony, rhythm, form, texture, and style. To illustrate this, think about the song 'Happy Birthday.' An arranger could take this familiar tune and transform it into a jazz waltz, a lively rock anthem, or even a sophisticated baroque fugue. In this process, the arranger makes creative decisions about every aspect of the music, deciding how it should feel and sound. Meanwhile, the orchestrator takes those creative ideas and uses their knowledge of different instruments to bring them to life, ensuring that everything works together beautifully. Understanding the difference between these two roles is essential for anyone interested in music composition and performance.\nContext recap: Orchestration and arranging are two important but different processes in the world of music composition. Orchestration is the art of taking existing music and assigning it to specific instruments. This means that each part of the music is played by the instrument that best suits its sound, creating a rich and harmonious blend. For example, a melody might be played by a flute, while the harmony could be provided by a cello.\nWhy this matters: Arranging vs. Orchestration helps learners in Music connect ideas from Expert Music Theory to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
-        },
-        {
-          "id": "music-theory-401-l13-c2",
-          "title": "Texture Techniques",
-          "content": "When you're arranging music, there are several exciting texture techniques you can use to make your pieces more interesting and engaging. One powerful method is using unison or octaves, where all the instruments play the same melody together. This creates a strong and clear sound that can really grab the listener's attention. Another technique is called a soli, where a specific section of instruments plays the melody in harmony. For instance, in a big band, you might hear a saxophone soli that showcases the saxophones playing together beautifully.\nYou can also incorporate background figures, such as pads, riffs, and countermelodies. These elements act as supportive layers that add richness to the music without taking away from the main melody. They help create a fuller sound and make the arrangement more enjoyable to listen to.\nAdditionally, the call and response technique is a fun way to create interaction within the music. In this approach, one group of instruments states an idea, and another group responds, almost like a musical conversation.\nBy thoughtfully layering these different textures, composers can craft dynamic and evolving arrangements that keep listeners engaged and excited throughout the piece. Each technique adds its own unique flavor, making the overall composition more vibrant and memorable.\nContext recap: When you're arranging music, there are several exciting texture techniques you can use to make your pieces more interesting and engaging. One powerful method is using unison or octaves, where all the instruments play the same melody together. This creates a strong and clear sound that can really grab the listener's attention. Another technique is called a soli, where a specific section of instruments plays the melody in harmony.\nWhy this matters: Texture Techniques helps learners in Music connect ideas from Expert Music Theory to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
-        },
-        {
-          "id": "music-theory-401-l13-c3",
-          "title": "From Lead Sheet to Full Score",
-          "content": "Arranging music from a lead sheet to a full score is an exciting and creative process that involves several key steps. First, you need to carefully analyze the melody and chords. This means taking a close look at how the notes and harmonies work together to create the song's unique sound. Once you have a good understanding of the melody and chords, the next step is to decide on the form of your arrangement. This includes determining how many times certain sections will repeat and where you might want to add special parts like intros, interludes, or endings to make the piece more interesting.\nAfter establishing the form, it's time to assign the melody to specific instruments. This is where you think about which instruments will play the main tune and how the harmonic rhythm will flow, guiding the progression of the chords throughout the piece. Next, you will write the inner voices and bass lines. These parts are essential as they provide support to the melody and help create a fuller sound.\nOnce you have the basic structure in place, you can add special effects. This might include rhythmic hits, changes in texture, or even solos that can bring excitement and variety to your arrangement. Finally, it’s important to balance the dynamics and articulations. This means making sure that all parts of the music are heard clearly and that they work together harmoniously. Remember, the best arrangements enhance the song, with every choice made to uplift the melody and the emotions it expresses. By following these steps, you can create a beautiful and engaging arrangement that truly serves the music.\nContext recap: Arranging music from a lead sheet to a full score is an exciting and creative process that involves several key steps. First, you need to carefully analyze the melody and chords. This means taking a close look at how the notes and harmonies work together to create the song's unique sound. Once you have a good understanding of the melody and chords, the next step is to decide on the form of your arrangement.\nWhy this matters: From Lead Sheet to Full Score helps learners in Music connect ideas from Expert Music Theory to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
-        }
-      ],
-      "flashcards": [
-        {
-          "id": "music-theory-401-l13-f1",
-          "front": "Soli",
-          "back": "A section of instruments playing a harmonized melody together — a signature jazz big band technique"
-        },
-        {
-          "id": "music-theory-401-l13-f2",
-          "front": "Background figure",
-          "back": "A supporting musical idea (pad, riff, countermelody) that adds depth without competing with the melody"
-        },
-        {
-          "id": "music-theory-401-l13-f3",
-          "front": "Call and response",
-          "back": "A musical conversation where one group states an idea and another group answers"
-        },
-        {
-          "id": "music-theory-401-l13-f4",
-          "front": "Harmonic rhythm",
-          "back": "The rate at which chords change — fast harmonic rhythm creates urgency; slow creates stability"
-        }
-      ]
-    },
-    {
-      "id": "music-theory-401-l14",
       "title": "Composition Capstone Workshop",
       "type": "interactive",
       "duration": 15,
       "objectives": [
-        "Combine counterpoint, jazz harmony, and orchestration into a short composition",
-        "Plan form, texture, and instrumentation for a 16-bar piece",
-        "Self-evaluate using the principles learned throughout the course"
+        "Synthesize counterpoint, jazz harmony, and orchestration into a short composition.",
+        "Plan the form, texture, and instrumentation for a 16-bar piece.",
+        "Self-evaluate the composition using principles learned throughout the course."
       ],
       "chunks": [
         {
-          "id": "music-theory-401-l14-c1",
-          "title": "Planning Your Piece",
-          "content": "Before you start writing your music piece, it’s really important to create a thoughtful and detailed plan. This planning stage is like laying the foundation for a house; it helps ensure that everything you build on top is strong and well-structured. First, think about the key and mode you want to use. Ask yourself: what kind of feelings do I want my music to express? This question is crucial because it will help set the mood for your entire composition. For example, if you choose a minor key, your music might feel more somber or reflective, while a major key can evoke feelings of joy and brightness. Next, consider the form of your piece. Will it follow a traditional ABA structure, where you have a main theme, a contrasting section, and then return to the main theme? This structure can create a satisfying sense of familiarity for your listeners. Alternatively, you might choose a through-composed form, where the music flows continuously without repeating sections. Each choice you make will influence how your audience experiences your music, so think carefully about what you want to convey.\nThen, think about the instrumentation. Which instruments will you include in your piece, and what specific roles will each instrument play? This is essential for creating a rich and varied sound that captures the listener's attention. For instance, if you include strings, they might provide a warm, lush background, while brass instruments can add boldness and power. After that, sketch out your harmonic plan. Outline the Roman numeral progression you want to use and decide where you want your cadences to occur. Cadences are important because they create moments of tension and resolution in your music, guiding the listener through your composition. Think of them as musical punctuation marks that help to clarify your musical ideas.\nDon’t forget to plan your melody! Think about its arc, climax, and range. How will the melody rise and fall, and where will it reach its highest point? A well-crafted melody can be the heart of your piece, drawing listeners in and making them feel connected to your music. Finally, consider the texture of your piece. Where will you have unison notes, where will sections be harmonized, and where will you use counterpoint, which involves multiple independent melodies? A rich texture can add depth and interest to your music, making it more engaging for your audience. A well-thought-out plan not only saves you time but also helps create a more coherent and engaging piece of music that resonates with your audience. By taking the time to plan, you set yourself up for success in your composition journey. Remember, every great piece of music starts with a solid plan, so take your time and enjoy the process of creating something truly special.\nContext recap: Before you start writing your music piece, it’s really important to create a thoughtful and detailed plan. This planning stage is like laying the foundation for a house; it helps ensure that everything you build on top is strong and well-structured. First, think about the key and mode you want to use. Ask yourself: what kind of feelings do I want my music to express?\nWhy this matters: Planning Your Piece helps learners in Music connect ideas from Expert Music Theory to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "id": "music-theory-401-l12-c1",
+          "title": "Planning Your Composition",
+          "content": "A successful composition begins with a clear plan. Before writing a single note, define your key parameters. What is the mood or character? What is the form (e.g., AABA, simple binary)? What is the instrumentation? Sketch a harmonic plan using Roman numerals, deciding on key cadences and any advanced harmony you wish to include. Plan the melodic contour—where will it climax? Finally, map out the texture. Where will it be homophonic? Where will you use counterpoint? A solid blueprint will guide your creative decisions and lead to a more coherent piece.",
+          "visualPrompts": [
+            "A sample composition planning worksheet with fields for Form, Key, Instrumentation, Harmonic Plan, and Textural Plan."
+          ]
         },
         {
-          "id": "music-theory-401-l14-c2",
-          "title": "Writing Process",
-          "content": "When you start your writing process, the very first step is to create your melody. This melody is like the heart of your music; it’s the part that listeners will remember the most, so it’s essential to make it catchy and engaging. Think of your melody as the star of your show; it should shine brightly and capture the audience's attention. Once you have crafted your melody, the next step is to add a bass line. This bass line serves as a solid foundation for your music, creating a two-voice counterpoint skeleton that supports your melody beautifully. Imagine it as building a sturdy base for a tall building; without a strong foundation, everything else might wobble or feel unstable.\nAfter establishing your bass line, you can begin to fill in the inner voices. This is where you add more layers to your music, enriching it further. While doing this, remember to use good voice leading techniques. These techniques help the music flow smoothly from one note to the next, making transitions seamless and enjoyable for your listeners. Smooth transitions are crucial because they enhance the overall listening experience.\nTo make your composition even more interesting, consider adding non-chord tones. These are special notes that can add color and excitement to your music, much like adding vibrant colors to a painting. They can create moments of surprise and delight for your audience, making your piece stand out.\nAs you compose, it’s also very important to check for any parallel fifths or octaves. These can create unwanted tension in your harmony, which might distract from the beauty of your music. Additionally, ensure that each instrument stays within its comfortable playing range. This is vital so that musicians can perform their parts effectively and with confidence.\nFinally, take the time to play through each part individually. Each section should sound good on its own, not just when combined with the other parts. This practice will help you identify any areas that need improvement and ensure that every element of your composition contributes positively to the whole. By following these steps, you will create a more polished and effective composition that resonates with your audience. Remember, the process of writing music is just as important as the final product, so enjoy each step along the way! Embrace the journey of creativity, and let your unique voice shine through in your music.\nContext recap: When you start your writing process, the very first step is to create your melody. This melody is like the heart of your music; it’s the part that listeners will remember the most, so it’s essential to make it catchy and engaging. Think of your melody as the star of your show; it should shine brightly and capture the audience's attention. Once you have crafted your melody, the next step is to add a bass line.\nWhy this matters: Writing Process helps learners in Music connect ideas from Expert Music Theory to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "id": "music-theory-401-l12-c2",
+          "title": "The Writing Process: A Step-by-Step Approach",
+          "content": "Begin by composing the most important line: the melody. Ensure it has a clear shape and is memorable. Next, write a strong bass line that works in counterpoint with the melody. This two-voice framework is the skeleton of your piece. Once this is solid, fill in the inner voices, paying close attention to voice leading and avoiding parallels. Finally, add articulations, dynamics, and any non-chord tones to bring the music to life. Throughout the process, check that you are writing idiomatically for your chosen instruments and that all parts are within a comfortable playing range.",
+          "visualPrompts": [
+            "An animation showing the compositional process in layers: first the melody appears, then the bass line, then the inner harmony, and finally dynamics and articulations."
+          ]
+        },
+        {
+          "id": "music-theory-401-l12-c3",
+          "title": "Review and Refine",
+          "content": "Once your draft is complete, the final step is to review and refine. Play through each part individually—is each line musically satisfying on its own? Then, listen to the piece as a whole. Does the harmony support the melody? Is the texture balanced? Does the form unfold logically? Is there enough variety and contrast? Don't be afraid to revise. The best compositions are often the result of careful editing, where initial ideas are polished until they shine.",
+          "visualPrompts": [
+            "A checklist for self-evaluation, with questions like 'Is the voice leading smooth?' and 'Are instrument ranges respected?'"
+          ]
         }
       ],
       "interactiveActivities": [
         {
-          "id": "music-theory-401-l14-a1",
-          "title": "Sort into Categories",
+          "id": "music-theory-401-l12-a1",
+          "title": "Composition Workflow",
           "type": "sorting_buckets",
           "buckets": [
             "Do First (Planning)",
@@ -1234,7 +914,7 @@ export const MusicTheory401Module: LearningModule = {
           ],
           "items": [
             {
-              "text": "Choose key, mode, and form",
+              "text": "Choose key, form, and instrumentation",
               "bucket": "Do First (Planning)"
             },
             {
@@ -1242,11 +922,11 @@ export const MusicTheory401Module: LearningModule = {
               "bucket": "Do First (Planning)"
             },
             {
-              "text": "Write the melody",
+              "text": "Write the main melody",
               "bucket": "Do Second (Writing)"
             },
             {
-              "text": "Add bass line and inner voices",
+              "text": "Add the bass line and inner voices",
               "bucket": "Do Second (Writing)"
             },
             {
@@ -1254,157 +934,131 @@ export const MusicTheory401Module: LearningModule = {
               "bucket": "Do Last (Reviewing)"
             },
             {
-              "text": "Verify instrument ranges",
+              "text": "Verify instrument ranges and playability",
               "bucket": "Do Last (Reviewing)"
             },
             {
-              "text": "Decide instrumentation and texture plan",
-              "bucket": "Do First (Planning)"
+              "text": "Add dynamics and articulations",
+              "bucket": "Do Second (Writing)"
             },
             {
-              "text": "Add non-chord tones and articulations",
-              "bucket": "Do Second (Writing)"
+              "text": "Listen to the full piece for balance",
+              "bucket": "Do Last (Reviewing)"
             }
           ]
-        }
-      ],
-      "flashcards": [
-        {
-          "id": "music-theory-401-l14-f1",
-          "front": "Two-voice skeleton",
-          "back": "Writing melody and bass first, then filling inner voices — ensures a strong harmonic and contrapuntal foundation"
-        },
-        {
-          "id": "music-theory-401-l14-f2",
-          "front": "Range check",
-          "back": "Verifying every instrument stays within its comfortable playing range — avoids unplayable or strained passages"
-        },
-        {
-          "id": "music-theory-401-l14-f3",
-          "front": "Score order",
-          "back": "The standard arrangement of instruments in a full score: woodwinds on top, then brass, percussion, and strings at the bottom"
         }
       ]
     },
     {
-      "id": "music-theory-401-l15",
-      "title": "Mastery Sprint",
+      "id": "music-theory-401-l13",
+      "title": "Final Mastery Exam",
       "type": "quiz",
-      "duration": 10,
+      "duration": 12,
       "objectives": [
-        "Demonstrate comprehensive mastery of expert music theory"
+        "Synthesize expert-level knowledge across jazz harmony, counterpoint, and orchestration."
       ],
       "questions": [
         {
-          "id": "music-theory-401-l15-q1",
-          "text": "A contrafact is:",
+          "id": "music-theory-401-l13-q1",
+          "text": "A Cmaj9(♯11) chord contains which notes?",
           "skillId": "music-theory-401-skill-core",
           "options": [
             {
               "id": "a",
-              "text": "A piece in contrary motion"
+              "text": "C – E – G – B – D – F"
             },
             {
               "id": "b",
-              "text": "A new melody over an existing chord progression"
+              "text": "C – E – G – B♭ – D – F♯"
             },
             {
               "id": "c",
-              "text": "A counterpoint exercise"
+              "text": "C – E – G – B – D – F♯"
             },
             {
               "id": "d",
-              "text": "An arrangement for contrasting instruments"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": ""
-        },
-        {
-          "id": "music-theory-401-l15-q2",
-          "text": "In standard score order, which family appears at the top?",
-          "skillId": "music-theory-401-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "Strings"
-            },
-            {
-              "id": "b",
-              "text": "Brass"
-            },
-            {
-              "id": "c",
-              "text": "Woodwinds"
-            },
-            {
-              "id": "d",
-              "text": "Percussion"
+              "text": "C – E♭ – G – B♭ – D – F"
             }
           ],
           "correctOptionId": "c",
-          "explanation": ""
+          "explanation": "Cmaj7 is C-E-G-B. The 9th is D. The sharp 11th (♯11) is F♯."
         },
         {
-          "id": "music-theory-401-l15-q3",
-          "text": "The guide tones of a 7th chord are the:",
+          "id": "music-theory-401-l13-q2",
+          "text": "In species counterpoint, fifth species ('florid') is characterized by:",
           "skillId": "music-theory-401-skill-core",
           "options": [
             {
               "id": "a",
-              "text": "Root and 5th"
+              "text": "Strictly note-against-note writing"
             },
             {
               "id": "b",
-              "text": "3rd and 7th"
+              "text": "The introduction of suspensions"
             },
             {
               "id": "c",
-              "text": "Root and 3rd"
+              "text": "A free combination of rhythms from all previous species"
             },
             {
               "id": "d",
-              "text": "5th and 7th"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": ""
-        },
-        {
-          "id": "music-theory-401-l15-q4",
-          "text": "When writing a composition, the recommended first step is to:",
-          "skillId": "music-theory-401-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "Write the bass line"
-            },
-            {
-              "id": "b",
-              "text": "Add non-chord tones"
-            },
-            {
-              "id": "c",
-              "text": "Plan key, form, instrumentation, and harmonic progression"
-            },
-            {
-              "id": "d",
-              "text": "Check for parallel 5ths"
+              "text": "The exclusive use of contrary motion"
             }
           ],
           "correctOptionId": "c",
-          "explanation": ""
+          "explanation": "Fifth species is the culmination of the previous four, allowing the composer to mix rhythms to create a more fluid and musical line."
+        },
+        {
+          "id": "music-theory-401-l13-q3",
+          "text": "A 'contrafact' in jazz is:",
+          "skillId": "music-theory-401-skill-core",
+          "options": [
+            {
+              "id": "a",
+              "text": "A piece that avoids standard harmony"
+            },
+            {
+              "id": "b",
+              "text": "A new melody composed over a pre-existing chord progression"
+            },
+            {
+              "id": "c",
+              "text": "An arrangement for a very large ensemble"
+            },
+            {
+              "id": "d",
+              "text": "A contrapuntal exercise"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Many bebop tunes are contrafacts of older standards, most famously 'I Got Rhythm'."
+        },
+        {
+          "id": "music-theory-401-l13-q4",
+          "text": "When scoring for an ensemble, which chord tone is most often avoided when doubling?",
+          "skillId": "music-theory-401-skill-core",
+          "options": [
+            {
+              "id": "a",
+              "text": "The root"
+            },
+            {
+              "id": "b",
+              "text": "The fifth"
+            },
+            {
+              "id": "c",
+              "text": "The third"
+            },
+            {
+              "id": "d",
+              "text": "The leading tone (7th degree of the scale)"
+            }
+          ],
+          "correctOptionId": "d",
+          "explanation": "The leading tone has a very strong tendency to resolve up by a half step. Doubling it can easily lead to parallel octaves upon resolution."
         }
-      ],
-      "quizBlueprint": {
-        "totalQuestions": 4,
-        "bloomProfile": {
-          "remember": 1,
-          "understand": 1,
-          "apply": 1,
-          "analyze": 1
-        }
-      }
+      ]
     }
   ]
 };

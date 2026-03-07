@@ -43,7 +43,8 @@ function isMissingProfileColumn(error: unknown) {
     || lowered.includes("path_allowlist")
     || lowered.includes("featured_module_ids")
     || lowered.includes("module_assignment_mode")
-    || lowered.includes("ai_skill_level_map");
+    || lowered.includes("ai_skill_level_map")
+    || lowered.includes("last_checkpoint_url");
 }
 
 /* ── Stat-card accent colours (token-aware) ── */
@@ -107,6 +108,10 @@ export default function StudentDashboardPage() {
         featured_module_ids?: unknown;
         module_assignment_mode?: unknown;
         ai_skill_level_map?: unknown;
+        last_checkpoint_url?: string | null;
+        last_module_title?: string | null;
+        last_lesson_title?: string | null;
+        last_checkpoint_at?: string | null;
       }): StudentProfile => ({
         id: row.id,
         display_name: row.display_name,
@@ -117,11 +122,15 @@ export default function StudentDashboardPage() {
         featured_module_ids: normalizePathAllowlist(row.featured_module_ids),
         module_assignment_mode: row.module_assignment_mode === "random" ? "random" : "guided",
         ai_skill_level_map: normalizeObject(row.ai_skill_level_map),
+        last_checkpoint_url: row.last_checkpoint_url ?? null,
+        last_module_title: row.last_module_title ?? null,
+        last_lesson_title: row.last_lesson_title ?? null,
+        last_checkpoint_at: row.last_checkpoint_at ?? null,
       });
 
       const primaryQuery = await supabase
         .from("student_profiles")
-        .select("id, display_name, grade_level, age_years, avatar_url, path_allowlist, featured_module_ids, module_assignment_mode, ai_skill_level_map")
+        .select("id, display_name, grade_level, age_years, avatar_url, path_allowlist, featured_module_ids, module_assignment_mode, ai_skill_level_map, last_checkpoint_url, last_module_title, last_lesson_title, last_checkpoint_at")
         .eq("id", profileId)
         .single();
 
@@ -207,15 +216,46 @@ export default function StudentDashboardPage() {
   }, [profile, supabase]);
 
 
-  useEffect(() => {
-    if (!selectedWorldId || !profile?.path_allowlist || profile.path_allowlist.length === 0) return;
-    if (profile.path_allowlist.includes(selectedWorldId)) return;
-    setSelectedWorldId(null);
-    setSelectedWorldLabel(null);
-  }, [profile?.path_allowlist, selectedWorldId]);
+  const sanitizedSelectedWorldId = (() => {
+    if (!selectedWorldId) return null;
+    if (!profile?.path_allowlist || profile.path_allowlist.length === 0) return selectedWorldId;
+    return profile.path_allowlist.includes(selectedWorldId) ? selectedWorldId : null;
+  })();
+
+  /**
+   * Triggered when a learner taps a world card or when random mode
+   * auto-selects a world. Immediately starts generation and navigates
+   * to the resulting curriculum page — no extra button tap required.
+   */
+  const handleWorldSelected = useCallback(
+    async (worldId: string, worldLabel: string) => {
+      if (!profile || synthesizingRef.current) return;
+      synthesizingRef.current = true;
+      setIsSynthesizing(true);
+      setSelectedWorldId(worldId);
+      setSelectedWorldLabel(worldLabel);
+      try {
+        const result = await generateCurriculumModules(profile.id, worldId);
+        if (result.sessionId) {
+          // Navigate to the dedicated curriculum page — no page reload.
+          router.push(`/student/curriculum/${result.sessionId}`);
+        } else {
+          // DB save failed (offline / permission issue): show inline fallback.
+          console.warn("Curriculum session could not be saved; falling back to inline view.");
+          synthesizingRef.current = false;
+          setIsSynthesizing(false);
+        }
+      } catch (error) {
+        console.error("Failed to synthesize curriculum:", error);
+        synthesizingRef.current = false;
+        setIsSynthesizing(false);
+      }
+    },
+    [profile, router],
+  );
 
   useEffect(() => {
-    if (!profile || profile.module_assignment_mode !== "random" || selectedWorldId) return;
+    if (!profile || profile.module_assignment_mode !== "random" || sanitizedSelectedWorldId) return;
 
     const { paths } = getLearningPathsForLearner({
       age_years: profile.age_years,
@@ -240,45 +280,19 @@ export default function StudentDashboardPage() {
     if (!selected) return;
     // In random mode, auto-generate immediately so learners don't need to
     // interact with the selector at all.
-    void handleWorldSelected(selected.id, selected.label);
+    const timerId = window.setTimeout(() => {
+      void handleWorldSelected(selected.id, selected.label);
+    }, 0);
+
+    return () => {
+      window.clearTimeout(timerId);
+    };
   }, [
+    handleWorldSelected,
     interestPathIds,
     profile,
-    selectedWorldId,
+    sanitizedSelectedWorldId,
   ]);
-
-  /**
-   * Triggered when a learner taps a world card or when random mode
-   * auto-selects a world. Immediately starts generation and navigates
-   * to the resulting curriculum page — no extra button tap required.
-   */
-  const handleWorldSelected = useCallback(
-    async (worldId: string, worldLabel: string) => {
-      if (!profile || synthesizingRef.current) return;
-      synthesizingRef.current = true;
-      setIsSynthesizing(true);
-      setSelectedWorldId(worldId);
-      setSelectedWorldLabel(worldLabel);
-      try {
-        const result = await generateCurriculumModules(profile.id, worldId);
-        if (result.sessionId) {
-          // Navigate to the dedicated curriculum page — no page reload.
-          router.push(`/student/curriculum/${result.sessionId}`);
-        } else {
-          // DB save failed (offline / permission issue): show inline fallback.
-          // eslint-disable-next-line no-console
-          console.warn("Curriculum session could not be saved; falling back to inline view.");
-          synthesizingRef.current = false;
-          setIsSynthesizing(false);
-        }
-      } catch (error) {
-        console.error("Failed to synthesize curriculum:", error);
-        synthesizingRef.current = false;
-        setIsSynthesizing(false);
-      }
-    },
-    [profile, router],
-  );
 
   if (loading) {
     return (
@@ -363,6 +377,30 @@ export default function StudentDashboardPage() {
           </header>
         )}
 
+        {/* Quick Resume card */}
+        {!isSynthesizing && profile.last_checkpoint_url && (
+          <section className="reveal-on-scroll">
+            <Link href={profile.last_checkpoint_url}>
+              <SoftCard glass className="group p-5 sm:p-6 border-accent/30 bg-accent/5 hover:bg-accent/10 transition-colors cursor-pointer">
+                <div className="flex items-center gap-4">
+                  <span className="flex size-12 items-center justify-center rounded-full bg-accent/15 text-2xl group-hover:scale-110 transition-transform">
+                    ▶
+                  </span>
+                  <div className="flex-1 min-w-0">
+                    <p className="text-xs font-bold uppercase tracking-widest text-accent">
+                      Continue where you left off
+                    </p>
+                    <p className="mt-1 text-foreground font-bold truncate" style={{ fontSize: "var(--type-heading-sm)" }}>
+                      {profile.last_module_title} — {profile.last_lesson_title}
+                    </p>
+                  </div>
+                  <span className="text-accent text-xl hidden sm:block group-hover:translate-x-1 transition-transform">→</span>
+                </div>
+              </SoftCard>
+            </Link>
+          </section>
+        )}
+
         {/* Stats grid */}
         {progress && (
           <section className="reveal-stagger">
@@ -426,7 +464,7 @@ export default function StudentDashboardPage() {
 
             <div className="reveal-on-scroll">
               <WorldSelector
-                selectedWorldId={selectedWorldId || undefined}
+                selectedWorldId={sanitizedSelectedWorldId || undefined}
                 learner_age_years={profile.age_years}
                 learnerGradeLevel={profile.grade_level}
                 allowedPathIds={profile.path_allowlist}

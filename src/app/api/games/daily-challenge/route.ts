@@ -52,6 +52,9 @@ const GAME_TITLES: Record<GameType, string> = {
   "word-builder": "Word Builder",
   "number-crunch": "Number Crunch",
   "pattern-train": "Pattern Train",
+  "garden-patch-planner": "Garden Patch Planner",
+  "bug-trail-balancer": "Bug Trail Balancer",
+  "cloud-crew-forecast": "Cloud Crew Forecast",
   "story-sequencer": "Story Sequencer",
   "memory-match": "Memory Match",
   "color-mixer": "Color Mixer",
@@ -63,6 +66,9 @@ const GAME_DESCRIPTIONS: Record<GameType, string> = {
   "word-builder": "Build CVC words with the correct letter sequence.",
   "number-crunch": "Solve short math equations with speed and precision.",
   "pattern-train": "Find the missing item and complete each pattern.",
+  "garden-patch-planner": "Match plants to the best beds using sun and water clues.",
+  "bug-trail-balancer": "Build exact number paths so each bug reaches home.",
+  "cloud-crew-forecast": "Pack the right weather gear by reading the forecast card.",
   "story-sequencer": "Order story steps into the correct sequence.",
   "memory-match": "Match memory pairs using focus and recall.",
   "color-mixer": "Mix colors and identify the resulting shade correctly.",
@@ -532,3 +538,4 @@ export async function POST(request: NextRequest) {
     );
   }
 }
+

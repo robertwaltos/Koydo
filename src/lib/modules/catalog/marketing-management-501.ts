@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const MarketingManagement501Module: LearningModule = {
+export const marketing_management_501_Module: LearningModule = {
   "id": "marketing-management-501",
   "title": "Marketing Management Specialization Studio",
   "description": "Post-401 specialization in Marketing Management, focused on business systems diagnostics, business operations and execution design, business impact and tradeoff analysis, and business governance and leadership through advanced casework, simulation, and defense-based checkpoints.",
@@ -14,7 +14,7 @@ export const MarketingManagement501Module: LearningModule = {
   ],
   "minAge": 17,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en",
@@ -31,15 +31,15 @@ export const MarketingManagement501Module: LearningModule = {
   "lessons": [
     {
       "id": "marketing-management-501-l01",
-      "title": "Marketing Management Advanced Foundations",
+      "title": "Advanced Foundations in Marketing Management",
       "type": "video",
       "duration": 14,
       "learningAids": [
         {
           "id": "marketing-management-501-l01-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "System Diagnostics Flowchart",
+          "content": "A visual guide to defining system boundaries, mapping causal relationships, modeling uncertainty, and establishing evidence thresholds for analysis."
         }
       ],
       "chunks": [
@@ -47,64 +47,64 @@ export const MarketingManagement501Module: LearningModule = {
           "id": "marketing-management-501-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "In this lesson, we will delve into the advanced concepts of scope boundaries within the field of Marketing Management. Understanding these boundaries is crucial for identifying the limits and possibilities of marketing strategies. We will particularly focus on how to effectively diagnose business systems, which involves analyzing how different parts of a business work together. Additionally, we will learn about designing operations that can be executed successfully, ensuring that marketing initiatives are not only innovative but also practical and aligned with the overall goals of the business. This foundational knowledge is essential for creating marketing strategies that can be implemented efficiently and lead to successful outcomes."
+          "content": "Learn to define the scope and boundaries of a marketing problem. This is the first step in diagnosing complex business systems, designing executable operations, and ensuring marketing initiatives are both practical and aligned with strategic goals."
         },
         {
           "id": "marketing-management-501-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different factors that can influence outcomes. Additionally, we will examine uncertainty ranges and system dependencies. This foundational knowledge will help you plan interventions more effectively by understanding the various elements at play in a marketing context.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different factors that can influence outcomes. Additionally, we will examine uncertainty ranges and system dependencies. This foundational knowledge will help you plan interventions more effectively by understanding the various elements at play in a marketing context."
+          "content": "Explore how to map causal pathways that connect marketing actions to business outcomes. We will also model uncertainty ranges and system dependencies to better understand risks and plan more effective interventions."
         },
         {
           "id": "marketing-management-501-l01-c3",
           "kind": "recap",
-          "title": "Evidence Thresholds",
-          "content": "In our recap, we will emphasize the importance of ensuring that all claims made in marketing strategies are backed by measurable indicators. This includes establishing confidence bounds and setting up review checkpoints to monitor progress. By doing so, we can ensure that our marketing efforts are both credible and effective.\nContext recap: In our recap, we will emphasize the importance of ensuring that all claims made in marketing strategies are backed by measurable indicators. This includes establishing confidence bounds and setting up review checkpoints to monitor progress. By doing so, we can ensure that our marketing efforts are both credible and effective."
+          "title": "Establishing Evidence Thresholds",
+          "content": "This recap emphasizes the importance of backing all strategic claims with measurable indicators. We will review how to establish confidence bounds and design review checkpoints to ensure marketing efforts are credible, effective, and defensible."
         }
       ],
       "flashcards": [
         {
           "id": "marketing-management-501-l01-f1",
-          "front": "business systems diagnostics",
-          "back": "A specialization axis requiring explicit assumptions and measurable constraints."
+          "front": "Business Systems Diagnostics",
+          "back": "The structured process of analyzing a business system by defining explicit assumptions, measurable constraints, and causal relationships."
         },
         {
           "id": "marketing-management-501-l01-f2",
-          "front": "business operations and execution design",
-          "back": "Execution architecture that determines reliability under stress."
+          "front": "Business Operations Design",
+          "back": "The architecture of execution for a business process, designed to ensure reliability and performance under operational stress."
         },
         {
           "id": "marketing-management-501-l01-f3",
-          "front": "business impact and tradeoff analysis",
-          "back": "Evaluation discipline for identifying true gains and hidden costs."
+          "front": "Tradeoff Analysis",
+          "back": "An evaluation discipline for systematically identifying the true gains and hidden costs of a decision by comparing options across multiple criteria."
         }
       ]
     },
     {
       "id": "marketing-management-501-l02",
-      "title": "Marketing Management Specialist Methods Lab",
+      "title": "Specialist Methods Lab",
       "type": "interactive",
       "duration": 17,
       "learningAids": [
         {
           "id": "marketing-management-501-l02-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "tool",
+          "title": "Workflow Stress-Test Sandbox",
+          "content": "An interactive tool for designing operational workflows and testing their resilience against simulated adverse scenarios and unexpected events."
         }
       ],
       "chunks": [
         {
           "id": "marketing-management-501-l02-c1",
           "kind": "practice",
-          "title": "Method Design and Stress Test",
-          "content": "In this interactive practice session, learners will have the opportunity to design specialized workflows tailored to their marketing strategies. They will also conduct stress tests on these workflows by simulating adverse scenarios. This hands-on experience is crucial for understanding how to adapt and refine strategies in the face of challenges.\nContext recap: In this interactive practice session, learners will have the opportunity to design specialized workflows tailored to their marketing strategies. They will also conduct stress tests on these workflows by simulating adverse scenarios. This hands-on experience is crucial for understanding how to adapt and refine strategies in the face of challenges."
+          "title": "Method Design and Stress Testing",
+          "content": "In this interactive lab, you will design a specialized marketing workflow. You will then conduct stress tests by simulating adverse scenarios to identify weaknesses and refine your strategy for real-world resilience."
         },
         {
           "id": "marketing-management-501-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "In this recap, we will discuss the architecture of control gates within workflows. These control gates are essential as they integrate checkpoints, rollback criteria, and escalation procedures based on specific thresholds. Understanding this architecture helps ensure that workflows remain efficient and responsive to changing conditions.\nContext recap: In this recap, we will discuss the architecture of control gates within workflows. These control gates are essential as they integrate checkpoints, rollback criteria, and escalation procedures based on specific thresholds. Understanding this architecture helps ensure that workflows remain efficient and responsive to changing conditions."
+          "content": "We will recap the architecture of effective control gates. These are critical workflow components that integrate checkpoints, rollback criteria, and escalation procedures to ensure processes remain efficient and responsive."
         }
       ],
       "interactiveActivities": [
@@ -143,52 +143,52 @@ export const MarketingManagement501Module: LearningModule = {
         {
           "id": "marketing-management-501-l03-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Pre-Checkpoint Review Tip",
+          "content": "Review your notes on diagnostics, operations design, and impact analysis. Ensure you can connect foundational concepts to practical application."
         }
       ],
       "questions": [
         {
           "id": "marketing-management-501-l03-q1",
-          "text": "Which practice most improves business systems diagnostics decision quality?",
-          "skillId": "marketing-management-501-skill-core",
+          "text": "Which practice most improves the quality of business systems diagnostics?",
+          "skillId": "business-systems-diagnostics",
           "options": [
             {
               "id": "a",
-              "text": "Proceed without baseline or assumptions"
+              "text": "Proceeding without a baseline or assumptions"
             },
             {
               "id": "b",
-              "text": "Define assumptions, constraints, and measurable indicators"
+              "text": "Defining explicit assumptions, constraints, and measurable indicators"
             },
             {
               "id": "c",
-              "text": "Optimize only for speed in every context"
+              "text": "Optimizing only for speed in every context"
             },
             {
               "id": "d",
-              "text": "Ignore uncertainty and edge conditions"
+              "text": "Ignoring uncertainty and edge conditions"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Advanced decisions improve when assumptions, constraints, and metrics are explicit."
+          "explanation": "Advanced diagnostics improve when assumptions, constraints, and metrics are made explicit, providing a clear foundation for analysis."
         },
         {
           "id": "marketing-management-501-l03-q2",
-          "text": "At level 501, strong execution for business operations and execution design requires:",
-          "skillId": "marketing-management-501-skill-execution",
+          "text": "At an advanced level, strong business operations and execution design requires:",
+          "skillId": "operations-execution-design",
           "options": [
             {
               "id": "a",
-              "text": "Owner mapping, checkpoint cadence, and escalation thresholds"
+              "text": "Clear owner mapping, a defined checkpoint cadence, and escalation thresholds"
             },
             {
               "id": "b",
-              "text": "No role clarity and ad-hoc process changes"
+              "text": "Ambiguous roles and ad-hoc process changes"
             },
             {
               "id": "c",
-              "text": "No retrospective or post-run review"
+              "text": "No retrospective or post-implementation review"
             },
             {
               "id": "d",
@@ -196,171 +196,71 @@ export const MarketingManagement501Module: LearningModule = {
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Reliable advanced execution needs ownership clarity and threshold-driven governance."
+          "explanation": "Reliable advanced execution needs clear ownership, regular checkpoints, and threshold-driven governance to manage complexity."
         },
         {
           "id": "marketing-management-501-l03-q3",
           "text": "A defensible approach to business impact and tradeoff analysis includes:",
-          "skillId": "marketing-management-501-skill-eval",
+          "skillId": "impact-tradeoff-analysis",
           "options": [
             {
               "id": "a",
-              "text": "Anecdotes without comparison"
+              "text": "Using anecdotes without a comparison group"
             },
             {
               "id": "b",
-              "text": "Baseline comparisons, side-effect analysis, and uncertainty bounds"
+              "text": "Baseline comparisons, side-effect analysis, and explicit uncertainty bounds"
             },
             {
               "id": "c",
-              "text": "Changing success criteria after outcomes"
+              "text": "Changing success criteria after observing outcomes"
             },
             {
               "id": "d",
-              "text": "Excluding difficult scenarios from analysis"
+              "text": "Excluding difficult-to-measure scenarios from the analysis"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible analysis combines comparative baselines, side-effect checks, and uncertainty disclosure."
+          "explanation": "Defensible analysis combines comparative baselines, a check for unintended side-effects, and a transparent disclosure of uncertainty."
         },
         {
           "id": "marketing-management-501-l03-q4",
-          "text": "Mature governance systems connect:",
-          "skillId": "marketing-management-501-skill-governance",
+          "text": "Mature business governance systems effectively connect:",
+          "skillId": "business-governance",
           "options": [
             {
               "id": "a",
-              "text": "Policy intent, measurable controls, and remediation pathways"
+              "text": "Policy intent, measurable controls, and clear remediation pathways"
             },
             {
               "id": "b",
-              "text": "Policy language with no measurable enforcement"
+              "text": "Policy language with no measurable enforcement mechanism"
             },
             {
               "id": "c",
-              "text": "Targets without ownership or escalation design"
+              "text": "Performance targets without ownership or an escalation design"
             },
             {
               "id": "d",
-              "text": "Operations without transparent accountability"
+              "text": "Operations without transparent accountability structures"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Governance maturity is the operational link between intent, measurement, and corrective action."
-        },
-        {
-          "id": "marketing-management-501-l03-q5",
-          "text": "What is the best way to compare competing interventions in advanced Business?",
-          "skillId": "marketing-management-501-skill-advanced-5",
-          "options": [
-            {
-              "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
-            },
-            {
-              "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
-            },
-            {
-              "id": "c",
-              "text": "Switch metrics after results arrive"
-            },
-            {
-              "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
-        },
-        {
-          "id": "marketing-management-501-l03-q6",
-          "text": "In high-stakes Marketing Management Specialization Studio execution, which communication protocol is strongest?",
-          "skillId": "marketing-management-501-skill-advanced-6",
-          "options": [
-            {
-              "id": "a",
-              "text": "Broadcast conclusions without assumptions"
-            },
-            {
-              "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
-            },
-            {
-              "id": "c",
-              "text": "Share only final outcomes after completion"
-            },
-            {
-              "id": "d",
-              "text": "Limit updates to a single informal channel"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
-        },
-        {
-          "id": "marketing-management-501-l03-q7",
-          "text": "A mature remediation loop in advanced Business should prioritize:",
-          "skillId": "marketing-management-501-skill-advanced-7",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blame assignment without system updates"
-            },
-            {
-              "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
-            },
-            {
-              "id": "c",
-              "text": "One-time fixes without retesting"
-            },
-            {
-              "id": "d",
-              "text": "Issue closure based on elapsed time"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
-        },
-        {
-          "id": "marketing-management-501-l03-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Marketing Management Specialization Studio?",
-          "skillId": "marketing-management-501-skill-advanced-8",
-          "options": [
-            {
-              "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
-            },
-            {
-              "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
-            },
-            {
-              "id": "c",
-              "text": "Ignore correlated failure modes"
-            },
-            {
-              "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "explanation": "Governance maturity is achieved by operationally linking strategic intent, measurable controls, and pre-defined corrective actions."
         }
       ]
     },
     {
       "id": "marketing-management-501-l04",
-      "title": "Marketing Management Advanced Case Analysis",
+      "title": "Advanced Case Analysis",
       "type": "video",
       "duration": 14,
       "learningAids": [
         {
           "id": "marketing-management-501-l04-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Tradeoff Analysis Matrix",
+          "content": "A framework for comparing strategic options across key dimensions like cost, reliability, stakeholder impact, and ethical considerations."
         }
       ],
       "chunks": [
@@ -368,33 +268,33 @@ export const MarketingManagement501Module: LearningModule = {
           "id": "marketing-management-501-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "In this lesson, we will frame a case study that highlights the competing constraints found in business systems diagnostics. We will analyze the impacts of various business decisions and the trade-offs that must be considered. This analysis will help learners understand how to balance different factors when making marketing decisions.\nContext recap: In this lesson, we will frame a case study that highlights the competing constraints found in business systems diagnostics. We will analyze the impacts of various business decisions and the trade-offs that must be considered. This analysis will help learners understand how to balance different factors when making marketing decisions."
+          "content": "We will frame a complex case study that highlights the competing constraints common in business systems diagnostics. This involves analyzing the impacts of various decisions and the necessary trade-offs that must be considered."
         },
         {
           "id": "marketing-management-501-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "During this practice session, learners will compare different options available to them across several important dimensions, including safety, reliability, cost, equity, and governance. This comparative analysis is vital for making informed decisions that consider all aspects of a marketing strategy.\nContext recap: During this practice session, learners will compare different options available to them across several important dimensions, including safety, reliability, cost, equity, and governance. This comparative analysis is vital for making informed decisions that consider all aspects of a marketing strategy."
+          "content": "You will practice comparing different strategic options across multiple dimensions, including safety, reliability, cost, equity, and governance. This comparative analysis is vital for making well-rounded and defensible decisions."
         },
         {
           "id": "marketing-management-501-l04-c3",
           "kind": "recap",
-          "title": "Decision Memo Pattern",
-          "content": "In our recap, we will outline the essential components of a decision memo. Each recommendation made should include clear assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that decisions are well-founded and can be communicated effectively.\nContext recap: In our recap, we will outline the essential components of a decision memo. Each recommendation made should include clear assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that decisions are well-founded and can be communicated effectively."
+          "title": "The Decision Memo Pattern",
+          "content": "This recap outlines the essential components of a professional decision memo. Each recommendation must be supported by clear assumptions, verifiable evidence, defined risk controls, and pre-planned fallback options."
         }
       ]
     },
     {
       "id": "marketing-management-501-l05",
-      "title": "Marketing Management Simulation Clinic",
+      "title": "Simulation Clinic",
       "type": "interactive",
       "duration": 18,
       "learningAids": [
         {
           "id": "marketing-management-501-l05-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "tool",
+          "title": "Live Simulation Dashboard",
+          "content": "An interactive dashboard for managing a marketing scenario in real-time, challenging you to balance performance metrics with governance constraints."
         }
       ],
       "chunks": [
@@ -402,13 +302,13 @@ export const MarketingManagement501Module: LearningModule = {
           "id": "marketing-management-501-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "In this interactive practice, learners will operate scenario controls while carefully balancing performance metrics and governance constraints. This experience will help them understand how to make decisions that optimize outcomes while adhering to necessary regulations and standards.\nContext recap: In this interactive practice, learners will operate scenario controls while carefully balancing performance metrics and governance constraints. This experience will help them understand how to make decisions that optimize outcomes while adhering to necessary regulations and standards.\nWhy this matters: Live Scenario Controls helps learners in Business connect ideas from Marketing Management Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "In this interactive simulation, you will operate scenario controls to manage a marketing campaign. The goal is to balance performance metrics and governance constraints, connecting theory to practice by highlighting tradeoffs, assumptions, and the need for verification."
         },
         {
           "id": "marketing-management-501-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "In our recap, we will discuss the importance of effective responses in marketing scenarios. These responses should be designed to update control gates without losing traceability or accountability. This ensures that all actions taken are documented and can be reviewed if necessary.\nContext recap: In our recap, we will discuss the importance of effective responses in marketing scenarios. These responses should be designed to update control gates without losing traceability or accountability. This ensures that all actions taken are documented and can be reviewed if necessary."
+          "content": "We will recap the principles of designing effective, adaptive responses in dynamic scenarios. A key focus is on updating control gates and strategies without losing traceability or accountability for decisions made under pressure."
         }
       ],
       "interactiveActivities": [
@@ -416,7 +316,7 @@ export const MarketingManagement501Module: LearningModule = {
           "id": "marketing-management-501-l05-act1",
           "type": "scenario",
           "title": "Adverse-Condition Decision Run",
-          "description": "Run a high-pressure marketing management scenario and tune controls under uncertainty."
+          "description": "Run a high-pressure marketing management scenario and tune controls to navigate uncertainty and achieve strategic objectives."
         }
       ]
     },
@@ -429,224 +329,124 @@ export const MarketingManagement501Module: LearningModule = {
         {
           "id": "marketing-management-501-l06-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Pre-Checkpoint Review Tip",
+          "content": "Reflect on the case study and simulation. Focus on how you would apply tradeoff analysis and adaptive controls in a high-stakes environment."
         }
       ],
       "questions": [
         {
           "id": "marketing-management-501-l06-q1",
-          "text": "In advanced casework, the first requirement for defensible recommendations is:",
-          "skillId": "marketing-management-501-skill-case1",
+          "text": "In an advanced case analysis, what is the first requirement for a defensible recommendation?",
+          "skillId": "business-systems-diagnostics",
           "options": [
             {
               "id": "a",
-              "text": "A preferred option without explicit assumptions"
+              "text": "A single preferred option without explicit assumptions"
             },
             {
               "id": "b",
-              "text": "A clear baseline, explicit constraints, and success criteria"
+              "text": "A clear baseline, explicit constraints, and pre-defined success criteria"
             },
             {
               "id": "c",
-              "text": "High confidence without evidence logs"
+              "text": "High confidence expressed without supporting evidence logs"
             },
             {
               "id": "d",
-              "text": "Single-metric optimization only"
+              "text": "Optimization based on a single, convenient metric"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible recommendations begin with explicit assumptions, constraints, and measurable targets."
+          "explanation": "Defensible recommendations begin with a well-defined problem space, including an explicit baseline, constraints, and measurable targets."
         },
         {
           "id": "marketing-management-501-l06-q2",
-          "text": "A resilient strategy for business operations and execution design should include:",
-          "skillId": "marketing-management-501-skill-case2",
+          "text": "A resilient strategy for business operations, as tested in a simulation, should include:",
+          "skillId": "operations-execution-design",
           "options": [
             {
               "id": "a",
-              "text": "Checkpointed execution with fallback and escalation criteria"
+              "text": "Checkpointed execution with clear fallback and escalation criteria"
             },
             {
               "id": "b",
-              "text": "One-way execution with no rollback capability"
+              "text": "A one-way execution path with no capability for rollback"
             },
             {
               "id": "c",
-              "text": "No ownership mapping across teams"
+              "text": "No pre-defined ownership mapping across functional teams"
             },
             {
               "id": "d",
-              "text": "Hidden assumptions and undocumented decisions"
+              "text": "Hidden assumptions and undocumented critical decisions"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Resilience depends on checkpoints, fallback options, and explicit escalation design."
+          "explanation": "Resilience in complex operations depends on planned checkpoints, fallback options, and explicit escalation paths to manage unexpected events."
         },
         {
           "id": "marketing-management-501-l06-q3",
-          "text": "When evaluating business impact and tradeoff analysis, which method is most rigorous?",
-          "skillId": "marketing-management-501-skill-case3",
+          "text": "When evaluating competing interventions in a case study, which method is most rigorous?",
+          "skillId": "impact-tradeoff-analysis",
           "options": [
             {
               "id": "a",
-              "text": "Single success story without controls"
+              "text": "A single success story without control groups or baselines"
             },
             {
               "id": "b",
-              "text": "Comparative baselines plus side-effect and uncertainty analysis"
+              "text": "Scoring alternatives against shared metrics, side effects, and uncertainty bounds"
             },
             {
               "id": "c",
-              "text": "Outcome-only narrative without process evidence"
+              "text": "An outcome-only narrative without evidence of the process followed"
             },
             {
               "id": "d",
-              "text": "Retrospective scope changes to fit outcomes"
+              "text": "Changing the evaluation scope retrospectively to fit the observed outcomes"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Rigorous evaluation requires comparisons, side-effect analysis, and uncertainty disclosure."
+          "explanation": "Rigorous evaluation requires comparing options against consistent criteria, accounting for side-effects, and transparently disclosing uncertainty."
         },
         {
           "id": "marketing-management-501-l06-q4",
-          "text": "Advanced governance is strongest when it:",
-          "skillId": "marketing-management-501-skill-case4",
+          "text": "In a high-stakes simulation, advanced governance is strongest when it:",
+          "skillId": "business-governance",
           "options": [
             {
               "id": "a",
-              "text": "Aligns authority, measurement, and remediation obligations"
+              "text": "Aligns decision-making authority, performance measurement, and remediation obligations"
             },
             {
               "id": "b",
-              "text": "Separates policy from operational controls"
+              "text": "Separates high-level policy from day-to-day operational controls"
             },
             {
               "id": "c",
-              "text": "Avoids external review and transparency"
+              "text": "Avoids external review and operational transparency"
             },
             {
               "id": "d",
-              "text": "Treats accountability as optional under pressure"
+              "text": "Treats accountability as optional when under significant pressure"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Mature governance links authority, measurable controls, and corrective action."
-        },
-        {
-          "id": "marketing-management-501-l06-q5",
-          "text": "What is the best way to compare competing interventions in advanced Business?",
-          "skillId": "marketing-management-501-skill-advanced-5",
-          "options": [
-            {
-              "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
-            },
-            {
-              "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
-            },
-            {
-              "id": "c",
-              "text": "Switch metrics after results arrive"
-            },
-            {
-              "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
-        },
-        {
-          "id": "marketing-management-501-l06-q6",
-          "text": "In high-stakes Marketing Management Specialization Studio execution, which communication protocol is strongest?",
-          "skillId": "marketing-management-501-skill-advanced-6",
-          "options": [
-            {
-              "id": "a",
-              "text": "Broadcast conclusions without assumptions"
-            },
-            {
-              "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
-            },
-            {
-              "id": "c",
-              "text": "Share only final outcomes after completion"
-            },
-            {
-              "id": "d",
-              "text": "Limit updates to a single informal channel"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
-        },
-        {
-          "id": "marketing-management-501-l06-q7",
-          "text": "A mature remediation loop in advanced Business should prioritize:",
-          "skillId": "marketing-management-501-skill-advanced-7",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blame assignment without system updates"
-            },
-            {
-              "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
-            },
-            {
-              "id": "c",
-              "text": "One-time fixes without retesting"
-            },
-            {
-              "id": "d",
-              "text": "Issue closure based on elapsed time"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
-        },
-        {
-          "id": "marketing-management-501-l06-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Marketing Management Specialization Studio?",
-          "skillId": "marketing-management-501-skill-advanced-8",
-          "options": [
-            {
-              "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
-            },
-            {
-              "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
-            },
-            {
-              "id": "c",
-              "text": "Ignore correlated failure modes"
-            },
-            {
-              "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "explanation": "Mature governance links authority, measurable controls, and corrective action, ensuring accountability even under stress."
         }
       ]
     },
     {
       "id": "marketing-management-501-l07",
-      "title": "Marketing Management Governance and Public Impact",
+      "title": "Governance and Public Impact",
       "type": "video",
       "duration": 13,
       "learningAids": [
         {
           "id": "marketing-management-501-l07-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Stakeholder Impact Map",
+          "content": "A visual tool for mapping the distribution of benefits, costs, and risks of a marketing decision across different stakeholder groups and over time."
         }
       ],
       "chunks": [
@@ -654,50 +454,50 @@ export const MarketingManagement501Module: LearningModule = {
           "id": "marketing-management-501-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "In this lesson, learners will map out the distribution of impacts among various stakeholders. This includes identifying the benefits, burdens, and any delayed effects that may arise from marketing decisions. Understanding these dynamics is crucial for responsible marketing management.\nContext recap: In this lesson, learners will map out the distribution of impacts among various stakeholders. This includes identifying the benefits, burdens, and any delayed effects that may arise from marketing decisions. Understanding these dynamics is crucial for responsible marketing management."
+          "content": "Learn to map the distribution of impacts from marketing decisions across various stakeholders. This includes identifying benefits, burdens, and any delayed or second-order effects, which is crucial for responsible marketing management."
         },
         {
           "id": "marketing-management-501-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "In this section, we will explore the architecture of accountability in decision-making processes. This includes ensuring that there is traceability for decisions made, rights for review, and obligations for remediation. These elements are vital for maintaining integrity and trust in marketing practices.\nContext recap: In this section, we will explore the architecture of accountability in decision-making processes. This includes ensuring that there is traceability for decisions made, rights for review, and obligations for remediation. These elements are vital for maintaining integrity and trust in marketing practices."
+          "content": "Explore the architecture of accountability in decision-making. This framework includes ensuring decision traceability, establishing rights for review, and defining clear obligations for remediation to maintain integrity and trust."
         },
         {
           "id": "marketing-management-501-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "At the end of our lesson, we have a helpful checklist that connects important outcomes with ethical considerations, ensures we follow policies, and builds our ability to adapt and recover from challenges. This checklist is a great tool for responsible leadership in marketing.\nContext recap: At the end of our lesson, we have a helpful checklist that connects important outcomes with ethical considerations, ensures we follow policies, and builds our ability to adapt and recover from challenges. This checklist is a great tool for responsible leadership in marketing."
+          "content": "This recap provides a practical checklist for responsible leadership. It connects strategic outcomes with ethical guardrails, policy compliance, and organizational resilience, serving as a tool for making accountable decisions."
         }
       ],
       "flashcards": [
         {
           "id": "marketing-management-501-l07-f1",
-          "front": "Impact distribution",
-          "back": "How outcomes are allocated across populations and timescales."
+          "front": "Impact Distribution",
+          "back": "The analysis of how outcomes (benefits, costs, risks) are allocated across different populations and timescales."
         },
         {
           "id": "marketing-management-501-l07-f2",
-          "front": "Decision traceability",
-          "back": "An auditable record of evidence, ownership, and rationale."
+          "front": "Decision Traceability",
+          "back": "An auditable and unbroken record of the evidence, ownership, and rationale behind a significant decision."
         },
         {
           "id": "marketing-management-501-l07-f3",
-          "front": "Responsible leadership",
-          "back": "Decision behavior balancing performance, accountability, and ethics."
+          "front": "Responsible Leadership",
+          "back": "A decision-making approach that balances performance goals with accountability, ethical considerations, and stakeholder impact."
         }
       ]
     },
     {
       "id": "marketing-management-501-l08",
-      "title": "Marketing Management Capstone Defense Lab",
+      "title": "Capstone Defense Lab",
       "type": "interactive",
       "duration": 16,
       "learningAids": [
         {
           "id": "marketing-management-501-l08-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "tool",
+          "title": "Capstone Defense Builder",
+          "content": "A structured template to assemble your defense brief, including your core claims, supporting evidence, uncertainty bounds, and mitigation plans."
         }
       ],
       "chunks": [
@@ -705,13 +505,13 @@ export const MarketingManagement501Module: LearningModule = {
           "id": "marketing-management-501-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "In this activity, you will work on creating a comprehensive brief. This brief will include your main claims, supporting evidence, the limits of what we know, and possible solutions to any uncertainties. This exercise helps you practice critical thinking and effective communication.\nContext recap: In this activity, you will work on creating a comprehensive brief. This brief will include your main claims, supporting evidence, the limits of what we know, and possible solutions to any uncertainties. This exercise helps you practice critical thinking and effective communication."
+          "content": "In this activity, you will construct a comprehensive defense brief for your capstone recommendation. This includes articulating your main claims, presenting supporting evidence, acknowledging uncertainty bounds, and proposing mitigation plans."
         },
         {
           "id": "marketing-management-501-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "During this session, you will practice your responses to questions and feedback from experts regarding technical aspects, governance issues, and stakeholder concerns. This rehearsal is essential for building confidence and preparing you for real-world discussions.\nContext recap: During this session, you will practice your responses to questions and feedback from experts regarding technical aspects, governance issues, and stakeholder concerns. This rehearsal is essential for building confidence and preparing you for real-world discussions.\nWhy this matters: Expert Panel Rehearsal helps learners in Business connect ideas from Marketing Management Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "This session prepares you for the final defense. You will practice responding to critical questions from experts on technical methods, governance, and stakeholder impacts, building confidence for real-world, high-stakes reviews."
         }
       ],
       "interactiveActivities": [
@@ -719,7 +519,123 @@ export const MarketingManagement501Module: LearningModule = {
           "id": "marketing-management-501-l08-act1",
           "type": "debate_simulator",
           "title": "Expert Defense Panel",
-          "description": "Defend specialization recommendations under adversarial cross-examination."
+          "description": "Defend your specialization recommendations under adversarial cross-examination from a simulated panel of experts."
+        }
+      ]
+    },
+    {
+      "id": "marketing-management-501-l09",
+      "title": "Checkpoint 3: Governance and Capstone Defense",
+      "type": "quiz",
+      "duration": 12,
+      "learningAids": [
+        {
+          "id": "marketing-management-501-l09-a1",
+          "type": "practice",
+          "title": "Final Review Tip",
+          "content": "Synthesize your knowledge of governance, accountability, and stakeholder impact. Prepare to defend your reasoning as you would in the capstone defense."
+        }
+      ],
+      "questions": [
+        {
+          "id": "marketing-management-501-l09-q1",
+          "text": "Responsible analysis of stakeholder impact distribution requires a leader to:",
+          "skillId": "governance-leadership",
+          "options": [
+            {
+              "id": "a",
+              "text": "Focus only on the benefits to the primary customer segment"
+            },
+            {
+              "id": "b",
+              "text": "Map the allocation of benefits, costs, and risks across all affected groups"
+            },
+            {
+              "id": "c",
+              "text": "Consider only immediate, short-term effects"
+            },
+            {
+              "id": "d",
+              "text": "Ignore unintended consequences as long as the primary goal is met"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Responsible leadership involves a comprehensive analysis of how a decision's outcomes are distributed, including both positive and negative impacts on all stakeholders."
+        },
+        {
+          "id": "marketing-management-501-l09-q2",
+          "text": "What is the primary purpose of establishing decision traceability in an accountability architecture?",
+          "skillId": "governance-leadership",
+          "options": [
+            {
+              "id": "a",
+              "text": "To assign blame more easily when a failure occurs"
+            },
+            {
+              "id": "b",
+              "text": "To create an auditable record of the rationale, evidence, and ownership of a decision"
+            },
+            {
+              "id": "c",
+              "text": "To slow down the decision-making process with bureaucracy"
+            },
+            {
+              "id": "d",
+              "text": "To ensure that only senior leaders can make important decisions"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Traceability creates a transparent and auditable trail, which is essential for governance, learning, and ensuring that decisions are well-founded and accountable."
+        },
+        {
+          "id": "marketing-management-501-l09-q3",
+          "text": "When defending a recommendation to an expert panel, what is the strongest way to address uncertainty?",
+          "skillId": "recommendation-defense",
+          "options": [
+            {
+              "id": "a",
+              "text": "Ignore it and present all findings with absolute confidence"
+            },
+            {
+              "id": "b",
+              "text": "Acknowledge it but offer no plan for mitigation"
+            },
+            {
+              "id": "c",
+              "text": "Explicitly state the uncertainty bounds and propose specific monitoring and contingency plans"
+            },
+            {
+              "id": "d",
+              "text": "Suggest that uncertainty makes any recommendation impossible to defend"
+            }
+          ],
+          "correctOptionId": "c",
+          "explanation": "A strong defense acknowledges uncertainty transparently and demonstrates foresight by having plans to monitor and manage it."
+        },
+        {
+          "id": "marketing-management-501-l09-q4",
+          "text": "During a capstone defense, an expert challenges your primary assumption. What is the most effective response?",
+          "skillId": "recommendation-defense",
+          "options": [
+            {
+              "id": "a",
+              "text": "Dismiss the challenge as irrelevant"
+            },
+            {
+              "id": "b",
+              "text": "Acknowledge the validity of the challenge and explain the evidence that supports your assumption, while also discussing the implications if the assumption is wrong"
+            },
+            {
+              "id": "c",
+              "text": "Immediately abandon your recommendation"
+            },
+            {
+              "id": "d",
+              "text": "Question the expert's credentials"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "The strongest response is to engage with the critique constructively, defending your reasoning while also showing you have considered alternative conditions."
         }
       ]
     }

@@ -1,17 +1,19 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const ProjectManagement401Module: LearningModule = {
+export const project_management_401_Module: LearningModule = {
   "id": "project-management-401",
   "title": "Enterprise Project Leadership",
-  "description": "Executive project leadership, operating models, transformation strategy, and organizational execution systems.",
+  "description": "A curriculum on executive project leadership, focusing on strategic alignment, enterprise operating models, transformation strategy, and organizational execution systems.",
   "subject": "Project Management",
   "tags": [
-    "curriculum",
-    "interactive"
+    "strategy",
+    "leadership",
+    "transformation",
+    "agile"
   ],
-  "minAge": 17,
+  "minAge": 18,
   "maxAge": 99,
-  "version": "1.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en",
@@ -25,489 +27,240 @@ export const ProjectManagement401Module: LearningModule = {
     "ko",
     "ru"
   ],
-  "thumbnail": "/placeholders/lesson-robot.svg",
+  "thumbnail": "/thumbnails/enterprise-leadership.svg",
   "learningObjectives": [
-    "Understand core concepts in Project Management",
-    "Apply Project Management skills through guided practice",
-    "Demonstrate mastery through checkpoint quizzes"
+    "Evaluate project portfolios for strategic alignment with enterprise goals.",
+    "Design an organizational change management plan for a major transformation.",
+    "Analyze and compare enterprise-level agile operating models.",
+    "Develop a comprehensive governance framework for a project management office (PMO)."
   ],
   "lessons": [
     {
       "id": "project-management-401-l01",
-      "title": "Project Management Concepts 1",
+      "title": "Strategic Alignment and Portfolio Management",
       "type": "video",
-      "duration": 9,
+      "duration": 15,
       "learningAids": [
         {
           "id": "project-management-401-l01-a1",
           "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary for Project Management."
+          "title": "Strategic Alignment Pyramid",
+          "content": "A diagram showing the hierarchy from corporate vision down to individual projects."
         },
         {
           "id": "project-management-401-l01-a2",
           "type": "animation",
-          "title": "Animated Example",
-          "content": "Step-by-step walkthrough for Project Management."
+          "title": "Portfolio Balancing Simulation",
+          "content": "An animation demonstrating how to balance a portfolio based on risk, ROI, and strategic fit."
         }
       ]
     },
     {
       "id": "project-management-401-l02",
-      "title": "Project Management Practice 2",
+      "title": "Workshop: Prioritizing a Project Portfolio",
       "type": "interactive",
-      "duration": 12,
+      "duration": 25,
       "metadata": {
         "prompts": [
-          "State the key concept in one sentence.",
-          "Apply it to one example.",
-          "Explain your improvement step for next time."
+          "Given a set of business objectives, propose three potential projects.",
+          "Score each project against a provided matrix of strategic drivers.",
+          "Justify your recommendation for the top-priority project to a mock executive board."
         ]
       },
       "learningAids": [
         {
           "id": "project-management-401-l02-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Follow the challenge flow and record your approach."
+          "title": "Interactive Prioritization Matrix",
+          "content": "A tool to drag, drop, and score projects to build a balanced portfolio."
         }
       ]
     },
     {
       "id": "project-management-401-l03",
-      "title": "Checkpoint 1: Project Management",
+      "title": "Checkpoint: Strategy and Portfolio",
       "type": "quiz",
       "duration": 10,
       "questions": [
         {
           "id": "project-management-401-l03-q1",
-          "text": "Which choice best matches the main idea of Project Management?",
-          "skillId": "project-management-401-skill-core",
+          "text": "What is the primary purpose of Project Portfolio Management (PPM)?",
+          "skillId": "project-management-401-skill-ppm",
           "options": [
             {
               "id": "a",
-              "text": "A complete, evidence-based explanation"
+              "text": "To ensure all projects are completed on time and within budget."
             },
             {
               "id": "b",
-              "text": "An unrelated claim"
+              "text": "To select, prioritize, and manage projects and programs to best achieve strategic goals."
             },
             {
               "id": "c",
-              "text": "A random guess"
+              "text": "To track the daily tasks of individual project team members."
             },
             {
               "id": "d",
-              "text": "A conflicting idea"
+              "text": "To replace the need for individual project managers."
             }
           ],
-          "correctOptionId": "a"
+          "correctOptionId": "b",
+          "explanation": "PPM focuses on the strategic alignment and overall value of the entire collection of projects, not just the execution of individual ones."
         },
         {
           "id": "project-management-401-l03-q2",
-          "text": "What should a learner do after getting an answer wrong?",
-          "skillId": "project-management-401-skill-review",
+          "text": "A company's key strategy is 'market expansion'. Which project should receive the highest priority?",
+          "skillId": "project-management-401-skill-alignment",
           "options": [
             {
               "id": "a",
-              "text": "Review error cause and retry with strategy"
+              "text": "A project to upgrade internal IT infrastructure for a 5% cost saving."
             },
             {
               "id": "b",
-              "text": "Skip all corrections"
+              "text": "A project to research and launch a product in a new geographical region."
             },
             {
               "id": "c",
-              "text": "Memorize only the answer letter"
+              "text": "A project to redesign the employee training program."
             },
             {
               "id": "d",
-              "text": "Stop practicing"
+              "text": "A project to optimize an existing, stable product line."
             }
           ],
-          "correctOptionId": "a"
-        },
-        {
-          "id": "project-management-401-l03-q3",
-          "text": "Which strategy most improves long-term retention for Enterprise Project Leadership?",
-          "skillId": "project-management-401-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "Use spaced retrieval and mixed practice over multiple sessions."
-            },
-            {
-              "id": "b",
-              "text": "Cram once and avoid later practice."
-            },
-            {
-              "id": "c",
-              "text": "Read notes passively without self-testing."
-            },
-            {
-              "id": "d",
-              "text": "Rely on confidence alone instead of evidence."
-            }
-          ],
-          "correctOptionId": "a",
-          "explanation": "Spaced retrieval with varied practice strengthens durable memory and flexible application."
-        }
-      ],
-      "learningAids": [
-        {
-          "id": "project-management-401-l03-a1",
-          "type": "mnemonic",
-          "title": "Memory Cue",
-          "content": "Use Plan, Solve, Explain to structure each response."
+          "correctOptionId": "b"
         }
       ]
     },
     {
       "id": "project-management-401-l04",
-      "title": "Project Management Practice 4",
-      "type": "interactive",
-      "duration": 12,
-      "metadata": {
-        "prompts": [
-          "State the key concept in one sentence.",
-          "Apply it to one example.",
-          "Explain your improvement step for next time."
-        ]
-      },
+      "title": "Leading Organizational Change and Transformation",
+      "type": "video",
+      "duration": 18,
       "learningAids": [
         {
           "id": "project-management-401-l04-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Follow the challenge flow and record your approach."
+          "type": "image",
+          "title": "Kotter's 8-Step Change Model",
+          "content": "An infographic detailing the steps for leading successful organizational change."
         }
       ]
     },
     {
       "id": "project-management-401-l05",
-      "title": "Project Management Concepts 5",
-      "type": "video",
-      "duration": 9,
+      "title": "Simulation: Navigating a Merger Integration",
+      "type": "interactive",
+      "duration": 30,
+      "metadata": {
+        "prompts": [
+          "Identify the key stakeholder groups and their potential points of resistance.",
+          "Draft a communication plan to address the concerns of the acquired company's employees.",
+          "Choose a strategy to create short-term wins and build momentum for the integration."
+        ]
+      },
       "learningAids": [
         {
           "id": "project-management-401-l05-a1",
-          "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary for Project Management."
-        },
-        {
-          "id": "project-management-401-l05-a2",
-          "type": "animation",
-          "title": "Animated Example",
-          "content": "Step-by-step walkthrough for Project Management."
+          "type": "practice",
+          "title": "Scenario-Based Change Management Challenge",
+          "content": "Navigate a branching narrative to manage a complex organizational change."
         }
       ]
     },
     {
       "id": "project-management-401-l06",
-      "title": "Checkpoint 2: Project Management",
+      "title": "Checkpoint: Change Leadership",
       "type": "quiz",
       "duration": 10,
       "questions": [
         {
           "id": "project-management-401-l06-q1",
-          "text": "Which choice best matches the main idea of Project Management?",
-          "skillId": "project-management-401-skill-core",
+          "text": "According to Kotter's model, what is a critical first step in any transformation effort?",
+          "skillId": "project-management-401-skill-change-models",
           "options": [
             {
               "id": "a",
-              "text": "A complete, evidence-based explanation"
+              "text": "Communicating the change vision."
             },
             {
               "id": "b",
-              "text": "An unrelated claim"
+              "text": "Empowering employees for broad-based action."
             },
             {
               "id": "c",
-              "text": "A random guess"
+              "text": "Establishing a sense of urgency."
             },
             {
               "id": "d",
-              "text": "A conflicting idea"
+              "text": "Generating short-term wins."
             }
           ],
-          "correctOptionId": "a"
-        },
-        {
-          "id": "project-management-401-l06-q2",
-          "text": "What should a learner do after getting an answer wrong?",
-          "skillId": "project-management-401-skill-review",
-          "options": [
-            {
-              "id": "a",
-              "text": "Review error cause and retry with strategy"
-            },
-            {
-              "id": "b",
-              "text": "Skip all corrections"
-            },
-            {
-              "id": "c",
-              "text": "Memorize only the answer letter"
-            },
-            {
-              "id": "d",
-              "text": "Stop practicing"
-            }
-          ],
-          "correctOptionId": "a"
-        },
-        {
-          "id": "project-management-401-l06-q3",
-          "text": "Which strategy most improves long-term retention for Enterprise Project Leadership?",
-          "skillId": "project-management-401-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "Use spaced retrieval and mixed practice over multiple sessions."
-            },
-            {
-              "id": "b",
-              "text": "Cram once and avoid later practice."
-            },
-            {
-              "id": "c",
-              "text": "Read notes passively without self-testing."
-            },
-            {
-              "id": "d",
-              "text": "Rely on confidence alone instead of evidence."
-            }
-          ],
-          "correctOptionId": "a",
-          "explanation": "Spaced retrieval with varied practice strengthens durable memory and flexible application."
-        }
-      ],
-      "learningAids": [
-        {
-          "id": "project-management-401-l06-a1",
-          "type": "mnemonic",
-          "title": "Memory Cue",
-          "content": "Use Plan, Solve, Explain to structure each response."
+          "correctOptionId": "c",
+          "explanation": "Creating a sense of urgency is the foundational first step to motivate people and get the transformation effort off the ground."
         }
       ]
     },
     {
       "id": "project-management-401-l07",
-      "title": "Project Management Concepts 7",
+      "title": "Scaling Agile: Enterprise Operating Models",
       "type": "video",
-      "duration": 9,
+      "duration": 20,
       "learningAids": [
         {
           "id": "project-management-401-l07-a1",
           "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary for Project Management."
+          "title": "Comparison: SAFe vs. LeSS vs. Spotify",
+          "content": "A feature-by-feature comparison chart of popular scaled agile frameworks."
         },
         {
           "id": "project-management-401-l07-a2",
           "type": "animation",
-          "title": "Animated Example",
-          "content": "Step-by-step walkthrough for Project Management."
+          "title": "Visualizing a Program Increment (PI)",
+          "content": "An animated walkthrough of a PI Planning event, showing how teams align on objectives."
         }
       ]
     },
     {
       "id": "project-management-401-l08",
-      "title": "Project Management Practice 8",
+      "title": "Case Study: Designing a Value Stream",
       "type": "interactive",
-      "duration": 12,
+      "duration": 25,
       "metadata": {
         "prompts": [
-          "State the key concept in one sentence.",
-          "Apply it to one example.",
-          "Explain your improvement step for next time."
+          "Analyze the provided business case to identify the end-to-end value stream.",
+          "Map the key roles and responsibilities for an Agile Release Train (ART) to serve this value stream.",
+          "Outline the cadence of key events (e.g., PI Planning, System Demo) for one Program Increment."
         ]
       },
       "learningAids": [
         {
           "id": "project-management-401-l08-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Follow the challenge flow and record your approach."
+          "title": "Drag-and-Drop Value Stream Mapping Tool",
+          "content": "An interactive canvas for mapping the steps, people, and systems involved in delivering value."
         }
       ]
     },
     {
       "id": "project-management-401-l09",
-      "title": "Checkpoint 3: Project Management",
-      "type": "quiz",
-      "duration": 10,
-      "questions": [
-        {
-          "id": "project-management-401-l09-q1",
-          "text": "Which choice best matches the main idea of Project Management?",
-          "skillId": "project-management-401-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "A complete, evidence-based explanation"
-            },
-            {
-              "id": "b",
-              "text": "An unrelated claim"
-            },
-            {
-              "id": "c",
-              "text": "A random guess"
-            },
-            {
-              "id": "d",
-              "text": "A conflicting idea"
-            }
-          ],
-          "correctOptionId": "a"
-        },
-        {
-          "id": "project-management-401-l09-q2",
-          "text": "What should a learner do after getting an answer wrong?",
-          "skillId": "project-management-401-skill-review",
-          "options": [
-            {
-              "id": "a",
-              "text": "Review error cause and retry with strategy"
-            },
-            {
-              "id": "b",
-              "text": "Skip all corrections"
-            },
-            {
-              "id": "c",
-              "text": "Memorize only the answer letter"
-            },
-            {
-              "id": "d",
-              "text": "Stop practicing"
-            }
-          ],
-          "correctOptionId": "a"
-        },
-        {
-          "id": "project-management-401-l09-q3",
-          "text": "Which strategy most improves long-term retention for Enterprise Project Leadership?",
-          "skillId": "project-management-401-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "Use spaced retrieval and mixed practice over multiple sessions."
-            },
-            {
-              "id": "b",
-              "text": "Cram once and avoid later practice."
-            },
-            {
-              "id": "c",
-              "text": "Read notes passively without self-testing."
-            },
-            {
-              "id": "d",
-              "text": "Rely on confidence alone instead of evidence."
-            }
-          ],
-          "correctOptionId": "a",
-          "explanation": "Spaced retrieval with varied practice strengthens durable memory and flexible application."
-        }
-      ],
+      "title": "Capstone Project: Enterprise Transformation Blueprint",
+      "type": "interactive",
+      "duration": 60,
+      "metadata": {
+        "prompts": [
+          "1. Assess the fictional company's strategic position and identify the primary need for transformation.",
+          "2. Propose a new, strategically-aligned project portfolio to address market disruption.",
+          "3. Outline a comprehensive change management and communication plan.",
+          "4. Recommend a new, scaled agile operating model and justify your choice."
+        ]
+      },
       "learningAids": [
         {
           "id": "project-management-401-l09-a1",
-          "type": "mnemonic",
-          "title": "Memory Cue",
-          "content": "Use Plan, Solve, Explain to structure each response."
-        }
-      ]
-    },
-    {
-      "id": "project-management-401-l10",
-      "title": "Checkpoint 4: Project Management",
-      "type": "quiz",
-      "duration": 10,
-      "questions": [
-        {
-          "id": "project-management-401-l10-q1",
-          "text": "Which choice best matches the main idea of Project Management?",
-          "skillId": "project-management-401-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "A complete, evidence-based explanation"
-            },
-            {
-              "id": "b",
-              "text": "An unrelated claim"
-            },
-            {
-              "id": "c",
-              "text": "A random guess"
-            },
-            {
-              "id": "d",
-              "text": "A conflicting idea"
-            }
-          ],
-          "correctOptionId": "a"
-        },
-        {
-          "id": "project-management-401-l10-q2",
-          "text": "What should a learner do after getting an answer wrong?",
-          "skillId": "project-management-401-skill-review",
-          "options": [
-            {
-              "id": "a",
-              "text": "Review error cause and retry with strategy"
-            },
-            {
-              "id": "b",
-              "text": "Skip all corrections"
-            },
-            {
-              "id": "c",
-              "text": "Memorize only the answer letter"
-            },
-            {
-              "id": "d",
-              "text": "Stop practicing"
-            }
-          ],
-          "correctOptionId": "a"
-        },
-        {
-          "id": "project-management-401-l10-q3",
-          "text": "Which strategy most improves long-term retention for Enterprise Project Leadership?",
-          "skillId": "project-management-401-skill-core",
-          "options": [
-            {
-              "id": "a",
-              "text": "Use spaced retrieval and mixed practice over multiple sessions."
-            },
-            {
-              "id": "b",
-              "text": "Cram once and avoid later practice."
-            },
-            {
-              "id": "c",
-              "text": "Read notes passively without self-testing."
-            },
-            {
-              "id": "d",
-              "text": "Rely on confidence alone instead of evidence."
-            }
-          ],
-          "correctOptionId": "a",
-          "explanation": "Spaced retrieval with varied practice strengthens durable memory and flexible application."
-        }
-      ],
-      "learningAids": [
-        {
-          "id": "project-management-401-l10-a1",
-          "type": "mnemonic",
-          "title": "Memory Cue",
-          "content": "Use Plan, Solve, Explain to structure each response."
+          "type": "practice",
+          "title": "Capstone Project Brief & Submission Template",
+          "content": "A detailed case study and a structured template for submitting your final transformation blueprint."
         }
       ]
     }

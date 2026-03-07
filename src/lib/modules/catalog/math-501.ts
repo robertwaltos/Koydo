@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const Math501Module: LearningModule = {
+export const math_501_Module: LearningModule = {
   "id": "math-501",
   "title": "Math Specialization Studio",
   "description": "Post-401 specialization in Math, focused on math systems diagnostics, math operations and execution design, math impact and tradeoff analysis, and math governance and leadership through advanced casework, simulation, and defense-based checkpoints.",
@@ -14,32 +14,32 @@ export const Math501Module: LearningModule = {
   ],
   "minAge": 17,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en",
     "es"
   ],
   "learningObjectives": [
-    "Apply advanced methods for math systems diagnostics in high-constraint environments",
-    "Design robust systems for math operations and execution design with measurable control gates",
-    "Evaluate interventions in math impact and tradeoff analysis with research-grade rigor",
-    "Operationalize math governance and leadership with accountable governance and escalation pathways",
-    "Lead cross-functional decision reviews with explicit tradeoff communication",
-    "Defend recommendations under expert critique using evidence and uncertainty bounds"
+    "Apply advanced methods for math systems diagnostics in high-constraint environments.",
+    "Design robust systems for math operations and execution with measurable control gates.",
+    "Evaluate interventions and their impacts with research-grade tradeoff analysis.",
+    "Operationalize math governance and leadership with accountable escalation pathways.",
+    "Lead cross-functional decision reviews with explicit tradeoff communication.",
+    "Defend complex recommendations under expert critique using evidence and uncertainty bounds."
   ],
   "lessons": [
     {
       "id": "math-501-l01",
-      "title": "Math Advanced Foundations",
+      "title": "Advanced Foundations in Mathematical Systems",
       "type": "video",
       "duration": 14,
       "learningAids": [
         {
           "id": "math-501-l01-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Diagnostic Process Flowchart",
+          "content": "A flowchart illustrating the process of math systems diagnostics, from problem scoping and boundary design to validation and evidence thresholds."
         }
       ],
       "chunks": [
@@ -47,64 +47,64 @@ export const Math501Module: LearningModule = {
           "id": "math-501-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "In this lesson, we will explore the concept of advanced scope boundaries in mathematics. We will focus on understanding how to diagnose mathematical systems effectively and how to design operations and execution strategies that enhance our problem-solving skills. This foundational knowledge will help you navigate complex mathematical challenges with greater confidence and precision.\nContext recap: In this lesson, we will explore the concept of advanced scope boundaries in mathematics. We will focus on understanding how to diagnose mathematical systems effectively and how to design operations and execution strategies that enhance our problem-solving skills. This foundational knowledge will help you navigate complex mathematical challenges with greater confidence and precision."
+          "content": "Define the operational boundaries of a complex mathematical system. Learn to diagnose system behavior by making assumptions explicit and identifying key constraints, setting the stage for effective problem-solving."
         },
         {
           "id": "math-501-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different events or variables. We will also examine uncertainty ranges and system dependencies, which are crucial for understanding how different factors influence one another. This mapping process is essential for planning effective interventions in various scenarios.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different events or variables. We will also examine uncertainty ranges and system dependencies, which are crucial for understanding how different factors influence one another. This mapping process is essential for planning effective interventions in various scenarios."
+          "content": "Map the causal pathways that connect variables within a system. Quantify uncertainty ranges and analyze system dependencies to predict how interventions will perform under various conditions."
         },
         {
           "id": "math-501-l01-c3",
           "kind": "recap",
-          "title": "Evidence Thresholds",
-          "content": "In our recap, we will emphasize the importance of aligning all claims with measurable indicators. This means that every assertion we make should be supported by evidence that can be quantified. We will also discuss the significance of establishing confidence bounds and review checkpoints to ensure that our conclusions are reliable and well-founded.\nContext recap: In our recap, we will emphasize the importance of aligning all claims with measurable indicators. This means that every assertion we make should be supported by evidence that can be quantified. We will also discuss the significance of establishing confidence bounds and review checkpoints to ensure that our conclusions are reliable and well-founded."
+          "title": "Establishing Evidence Thresholds",
+          "content": "Recap the importance of aligning all claims with measurable indicators. Establish clear confidence bounds and review checkpoints to ensure conclusions are reliable, well-founded, and defensible."
         }
       ],
       "flashcards": [
         {
           "id": "math-501-l01-f1",
-          "front": "math systems diagnostics",
-          "back": "A specialization axis requiring explicit assumptions and measurable constraints."
+          "front": "Math Systems Diagnostics",
+          "back": "A structured method for analyzing complex systems by defining explicit assumptions, boundaries, and measurable constraints."
         },
         {
           "id": "math-501-l01-f2",
-          "front": "math operations and execution design",
-          "back": "Execution architecture that determines reliability under stress."
+          "front": "Causal Pathway",
+          "back": "The chain of events or variable interactions that lead from a cause to an effect within a defined system."
         },
         {
           "id": "math-501-l01-f3",
-          "front": "math impact and tradeoff analysis",
-          "back": "Evaluation discipline for identifying true gains and hidden costs."
+          "front": "Uncertainty Bound",
+          "back": "A quantified range that expresses the confidence level in a measurement or prediction, acknowledging potential variability."
         }
       ]
     },
     {
       "id": "math-501-l02",
-      "title": "Math Specialist Methods Lab",
+      "title": "Specialist Methods Lab",
       "type": "interactive",
       "duration": 17,
       "learningAids": [
         {
           "id": "math-501-l02-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Workflow Design Template",
+          "content": "An interactive template for designing a specialized workflow, including sections for control gates, rollback criteria, and escalation paths."
         }
       ],
       "chunks": [
         {
           "id": "math-501-l02-c1",
           "kind": "practice",
-          "title": "Method Design and Stress Test",
-          "content": "In this interactive practice, learners will have the opportunity to design specialized workflows tailored to specific mathematical tasks. After creating these workflows, we will put them to the test by simulating adverse scenarios to see how well they hold up under pressure. This hands-on experience will help you understand the importance of resilience in mathematical methods.\nContext recap: In this interactive practice, learners will have the opportunity to design specialized workflows tailored to specific mathematical tasks. After creating these workflows, we will put them to the test by simulating adverse scenarios to see how well they hold up under pressure. This hands-on experience will help you understand the importance of resilience in mathematical methods."
+          "title": "Method Design and Stress-Testing",
+          "content": "Design a specialized workflow for a given mathematical task. Then, stress-test your design by simulating adverse scenarios to evaluate its resilience and identify potential failure points."
         },
         {
           "id": "math-501-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "In our recap, we will review how workflows can be structured to include essential components such as checkpoints, rollback criteria, and threshold-based escalation. These elements are vital for ensuring that our processes remain effective and can adapt to changing circumstances, allowing for better decision-making in complex situations.\nContext recap: In our recap, we will review how workflows can be structured to include essential components such as checkpoints, rollback criteria, and threshold-based escalation. These elements are vital for ensuring that our processes remain effective and can adapt to changing circumstances, allowing for better decision-making in complex situations."
+          "content": "Review how to structure workflows with checkpoints, rollback criteria, and threshold-based escalation. These components are vital for creating adaptive processes that support robust decision-making."
         }
       ],
       "interactiveActivities": [
@@ -143,40 +143,40 @@ export const Math501Module: LearningModule = {
         {
           "id": "math-501-l03-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Key Concepts Study Guide",
+          "content": "A summary of core concepts from Lessons 1 & 2, including systems diagnostics, uncertainty modeling, and control gate architecture."
         }
       ],
       "questions": [
         {
           "id": "math-501-l03-q1",
-          "text": "Which practice most improves math systems diagnostics decision quality?",
-          "skillId": "math-501-skill-core",
+          "text": "Which practice most improves the decision quality of math systems diagnostics?",
+          "skillId": "math-501-lo-01",
           "options": [
             {
               "id": "a",
-              "text": "Proceed without baseline or assumptions"
+              "text": "Proceeding without a baseline or assumptions"
             },
             {
               "id": "b",
-              "text": "Define assumptions, constraints, and measurable indicators"
+              "text": "Defining explicit assumptions, constraints, and measurable indicators"
             },
             {
               "id": "c",
-              "text": "Optimize only for speed in every context"
+              "text": "Optimizing only for speed in every context"
             },
             {
               "id": "d",
-              "text": "Ignore uncertainty and edge conditions"
+              "text": "Ignoring uncertainty and edge conditions"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Advanced decisions improve when assumptions, constraints, and metrics are explicit."
+          "explanation": "Advanced decisions improve when assumptions, constraints, and metrics are made explicit, forming the foundation of a rigorous diagnostic process."
         },
         {
           "id": "math-501-l03-q2",
-          "text": "At level 501, strong execution for math operations and execution design requires:",
-          "skillId": "math-501-skill-execution",
+          "text": "A robust system for math operations and execution design requires:",
+          "skillId": "math-501-lo-02",
           "options": [
             {
               "id": "a",
@@ -196,12 +196,12 @@ export const Math501Module: LearningModule = {
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Reliable advanced execution needs ownership clarity and threshold-driven governance."
+          "explanation": "Reliable advanced execution needs clear ownership, planned checkpoints, and threshold-driven governance to manage complexity and risk."
         },
         {
           "id": "math-501-l03-q3",
           "text": "A defensible approach to math impact and tradeoff analysis includes:",
-          "skillId": "math-501-skill-eval",
+          "skillId": "math-501-lo-03",
           "options": [
             {
               "id": "a",
@@ -213,20 +213,20 @@ export const Math501Module: LearningModule = {
             },
             {
               "id": "c",
-              "text": "Changing success criteria after outcomes"
+              "text": "Changing success criteria after outcomes are known"
             },
             {
               "id": "d",
-              "text": "Excluding difficult scenarios from analysis"
+              "text": "Excluding difficult scenarios from the analysis"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible analysis combines comparative baselines, side-effect checks, and uncertainty disclosure."
+          "explanation": "Defensible analysis combines comparative baselines, a thorough check for unintended side-effects, and a clear disclosure of uncertainty."
         },
         {
           "id": "math-501-l03-q4",
-          "text": "Mature governance systems connect:",
-          "skillId": "math-501-skill-governance",
+          "text": "Mature governance systems effectively connect:",
+          "skillId": "math-501-lo-04",
           "options": [
             {
               "id": "a",
@@ -246,121 +246,21 @@ export const Math501Module: LearningModule = {
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Governance maturity is the operational link between intent, measurement, and corrective action."
-        },
-        {
-          "id": "math-501-l03-q5",
-          "text": "What is the best way to compare competing interventions in advanced Math?",
-          "skillId": "math-501-skill-advanced-5",
-          "options": [
-            {
-              "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
-            },
-            {
-              "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
-            },
-            {
-              "id": "c",
-              "text": "Switch metrics after results arrive"
-            },
-            {
-              "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
-        },
-        {
-          "id": "math-501-l03-q6",
-          "text": "In high-stakes Math Specialization Studio execution, which communication protocol is strongest?",
-          "skillId": "math-501-skill-advanced-6",
-          "options": [
-            {
-              "id": "a",
-              "text": "Broadcast conclusions without assumptions"
-            },
-            {
-              "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
-            },
-            {
-              "id": "c",
-              "text": "Share only final outcomes after completion"
-            },
-            {
-              "id": "d",
-              "text": "Limit updates to a single informal channel"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
-        },
-        {
-          "id": "math-501-l03-q7",
-          "text": "A mature remediation loop in advanced Math should prioritize:",
-          "skillId": "math-501-skill-advanced-7",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blame assignment without system updates"
-            },
-            {
-              "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
-            },
-            {
-              "id": "c",
-              "text": "One-time fixes without retesting"
-            },
-            {
-              "id": "d",
-              "text": "Issue closure based on elapsed time"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
-        },
-        {
-          "id": "math-501-l03-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Math Specialization Studio?",
-          "skillId": "math-501-skill-advanced-8",
-          "options": [
-            {
-              "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
-            },
-            {
-              "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
-            },
-            {
-              "id": "c",
-              "text": "Ignore correlated failure modes"
-            },
-            {
-              "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "explanation": "Governance maturity is the operational link between the stated intent of a policy, how it is measured and controlled, and what actions are taken when it fails."
         }
       ]
     },
     {
       "id": "math-501-l04",
-      "title": "Math Advanced Case Analysis",
+      "title": "Advanced Case Analysis",
       "type": "video",
       "duration": 14,
       "learningAids": [
         {
           "id": "math-501-l04-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Sample Decision Memo",
+          "content": "An example of a completed Decision Memo, highlighting the sections for assumptions, evidence, risk controls, and fallback plans."
         }
       ],
       "chunks": [
@@ -368,47 +268,59 @@ export const Math501Module: LearningModule = {
           "id": "math-501-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "In this lesson, we will frame case studies that highlight competing constraints within mathematical systems diagnostics. We will analyze the impacts and trade-offs involved in various mathematical decisions. Understanding these dynamics is crucial for making informed choices that balance multiple factors effectively.\nContext recap: In this lesson, we will frame case studies that highlight competing constraints within mathematical systems diagnostics. We will analyze the impacts and trade-offs involved in various mathematical decisions. Understanding these dynamics is crucial for making informed choices that balance multiple factors effectively."
+          "content": "Frame complex case studies that feature competing constraints. Analyze the impacts and trade-offs involved in various decisions to understand how to balance multiple factors effectively."
         },
         {
           "id": "math-501-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "In this practice session, learners will compare different options based on several important dimensions, including safety, reliability, cost, equity, and governance. This comparative analysis will help you appreciate the complexities involved in decision-making and the need to weigh various factors against one another.\nContext recap: In this practice session, learners will compare different options based on several important dimensions, including safety, reliability, cost, equity, and governance. This comparative analysis will help you appreciate the complexities involved in decision-making and the need to weigh various factors against one another."
+          "content": "Practice comparing different options across multiple dimensions, such as safety, reliability, cost, and equity. This analysis highlights the complexities of real-world decision-making."
         },
         {
           "id": "math-501-l04-c3",
           "kind": "recap",
-          "title": "Decision Memo Pattern",
-          "content": "In our recap, we will discuss the structure of decision memos. Each recommendation should clearly outline the underlying assumptions, the evidence supporting the decision, risk controls in place, and fallback plans. This structured approach ensures that all aspects of a decision are considered and documented for future reference.\nContext recap: In our recap, we will discuss the structure of decision memos. Each recommendation should clearly outline the underlying assumptions, the evidence supporting the decision, risk controls in place, and fallback plans. This structured approach ensures that all aspects of a decision are considered and documented for future reference."
+          "title": "The Decision Memo Pattern",
+          "content": "Review the structure of a professional decision memo. A strong recommendation must clearly outline its underlying assumptions, supporting evidence, risk controls, and fallback plans."
+        }
+      ],
+      "flashcards": [
+        {
+          "id": "math-501-l04-f1",
+          "front": "Tradeoff Framing",
+          "back": "The process of systematically comparing options across multiple, often competing, dimensions of value (e.g., cost vs. safety)."
+        },
+        {
+          "id": "math-501-l04-f2",
+          "front": "Decision Memo",
+          "back": "A structured document that presents a recommendation along with its supporting evidence, assumptions, risks, and contingency plans."
         }
       ]
     },
     {
       "id": "math-501-l05",
-      "title": "Math Simulation Clinic",
+      "title": "Simulation Clinic",
       "type": "interactive",
       "duration": 18,
       "learningAids": [
         {
           "id": "math-501-l05-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Simulation Interface",
+          "content": "A screenshot of the simulation interface, with key controls for adjusting parameters and dashboards for monitoring outcomes annotated."
         }
       ],
       "chunks": [
         {
           "id": "math-501-l05-c1",
           "kind": "practice",
-          "title": "Live Scenario Controls",
-          "content": "In this interactive practice, learners will operate scenario controls, focusing on balancing performance with governance constraints. This exercise will provide insights into how to manage competing priorities effectively while ensuring that all actions remain aligned with established guidelines.\nContext recap: In this interactive practice, learners will operate scenario controls, focusing on balancing performance with governance constraints. This exercise will provide insights into how to manage competing priorities effectively while ensuring that all actions remain aligned with established guidelines."
+          "title": "Live Scenario Control",
+          "content": "Operate the controls of a dynamic scenario, balancing system performance with governance constraints. This exercise provides direct insight into managing competing priorities under pressure."
         },
         {
           "id": "math-501-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "In our recap, we will highlight the importance of effective responses that update control gates while maintaining traceability and accountability. This means that as we adapt our strategies, we must ensure that all changes are documented and that we can track the outcomes of our decisions.\nContext recap: In our recap, we will highlight the importance of effective responses that update control gates while maintaining traceability and accountability. This means that as we adapt our strategies, we must ensure that all changes are documented and that we can track the outcomes of our decisions."
+          "content": "Recap the importance of designing effective responses that update control gates while maintaining traceability and accountability. As strategies adapt, all changes must be documented and their outcomes tracked."
         }
       ],
       "interactiveActivities": [
@@ -416,7 +328,7 @@ export const Math501Module: LearningModule = {
           "id": "math-501-l05-act1",
           "type": "scenario",
           "title": "Adverse-Condition Decision Run",
-          "description": "Run a high-pressure math scenario and tune controls under uncertainty."
+          "description": "Manage a complex financial model during a simulated market shock. Adjust risk parameters, trigger contingency plans, and manage stakeholder communications in real-time to mitigate losses and maintain stability."
         }
       ]
     },
@@ -429,224 +341,124 @@ export const Math501Module: LearningModule = {
         {
           "id": "math-501-l06-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Case Analysis Framework",
+          "content": "A review sheet outlining the key frameworks for case analysis and adaptive response used in Lessons 4 & 5."
         }
       ],
       "questions": [
         {
           "id": "math-501-l06-q1",
-          "text": "In advanced casework, the first requirement for defensible recommendations is:",
-          "skillId": "math-501-skill-case1",
+          "text": "In an advanced case analysis, what is the most critical element for framing a defensible recommendation?",
+          "skillId": "math-501-lo-03",
           "options": [
             {
               "id": "a",
-              "text": "A preferred option without explicit assumptions"
+              "text": "Focusing only on the positive outcomes of the preferred option."
             },
             {
               "id": "b",
-              "text": "A clear baseline, explicit constraints, and success criteria"
+              "text": "A clear problem statement with explicit tradeoffs and decision criteria."
             },
             {
               "id": "c",
-              "text": "High confidence without evidence logs"
+              "text": "Using complex vocabulary to sound more authoritative."
             },
             {
               "id": "d",
-              "text": "Single-metric optimization only"
+              "text": "Waiting to define success metrics until after the results are in."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible recommendations begin with explicit assumptions, constraints, and measurable targets."
+          "explanation": "A defensible recommendation is built on a well-framed problem, which includes clearly defined tradeoffs and the criteria used to evaluate them."
         },
         {
           "id": "math-501-l06-q2",
-          "text": "A resilient strategy for math operations and execution design should include:",
-          "skillId": "math-501-skill-case2",
+          "text": "During a high-pressure simulation, an effective leader should prioritize:",
+          "skillId": "math-501-lo-05",
           "options": [
             {
               "id": "a",
-              "text": "Checkpointed execution with fallback and escalation criteria"
+              "text": "Making rapid, undocumented changes to show decisiveness."
             },
             {
               "id": "b",
-              "text": "One-way execution with no rollback capability"
+              "text": "Adhering to the original plan, regardless of new information."
             },
             {
               "id": "c",
-              "text": "No ownership mapping across teams"
+              "text": "Executing adaptive responses based on pre-defined triggers and fallback plans."
             },
             {
               "id": "d",
-              "text": "Hidden assumptions and undocumented decisions"
+              "text": "Waiting for complete certainty before taking any action."
             }
           ],
-          "correctOptionId": "a",
-          "explanation": "Resilience depends on checkpoints, fallback options, and explicit escalation design."
+          "correctOptionId": "c",
+          "explanation": "Effective leadership in a crisis involves making adaptive decisions guided by a resilient plan that includes triggers and contingencies."
         },
         {
           "id": "math-501-l06-q3",
-          "text": "When evaluating math impact and tradeoff analysis, which method is most rigorous?",
-          "skillId": "math-501-skill-case3",
+          "text": "When presenting a decision to a cross-functional review, the most effective communication strategy is to:",
+          "skillId": "math-501-lo-05",
           "options": [
             {
               "id": "a",
-              "text": "Single success story without controls"
+              "text": "Hide the potential downsides to get faster approval."
             },
             {
               "id": "b",
-              "text": "Comparative baselines plus side-effect and uncertainty analysis"
+              "text": "Explicitly state the recommendation, key tradeoffs, and remaining uncertainties."
             },
             {
               "id": "c",
-              "text": "Outcome-only narrative without process evidence"
+              "text": "Present only the data that supports your chosen path."
             },
             {
               "id": "d",
-              "text": "Retrospective scope changes to fit outcomes"
+              "text": "Assume everyone in the room has the same technical background."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Rigorous evaluation requires comparisons, side-effect analysis, and uncertainty disclosure."
+          "explanation": "Transparent communication that acknowledges tradeoffs and uncertainties builds trust and leads to more robust, collective decision-making."
         },
         {
           "id": "math-501-l06-q4",
-          "text": "Advanced governance is strongest when it:",
-          "skillId": "math-501-skill-case4",
+          "text": "When defending a recommendation against expert critique, the strongest response is to:",
+          "skillId": "math-501-lo-06",
           "options": [
             {
               "id": "a",
-              "text": "Aligns authority, measurement, and remediation obligations"
+              "text": "Dismiss the critique as irrelevant."
             },
             {
               "id": "b",
-              "text": "Separates policy from operational controls"
+              "text": "Agree with the critique immediately to avoid conflict."
             },
             {
               "id": "c",
-              "text": "Avoids external review and transparency"
+              "text": "Acknowledge the critique and connect it back to your evidence, assumptions, and risk analysis."
             },
             {
               "id": "d",
-              "text": "Treats accountability as optional under pressure"
+              "text": "Change your recommendation on the spot without further analysis."
             }
           ],
-          "correctOptionId": "a",
-          "explanation": "Mature governance links authority, measurable controls, and corrective action."
-        },
-        {
-          "id": "math-501-l06-q5",
-          "text": "What is the best way to compare competing interventions in advanced Math?",
-          "skillId": "math-501-skill-advanced-5",
-          "options": [
-            {
-              "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
-            },
-            {
-              "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
-            },
-            {
-              "id": "c",
-              "text": "Switch metrics after results arrive"
-            },
-            {
-              "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
-        },
-        {
-          "id": "math-501-l06-q6",
-          "text": "In high-stakes Math Specialization Studio execution, which communication protocol is strongest?",
-          "skillId": "math-501-skill-advanced-6",
-          "options": [
-            {
-              "id": "a",
-              "text": "Broadcast conclusions without assumptions"
-            },
-            {
-              "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
-            },
-            {
-              "id": "c",
-              "text": "Share only final outcomes after completion"
-            },
-            {
-              "id": "d",
-              "text": "Limit updates to a single informal channel"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
-        },
-        {
-          "id": "math-501-l06-q7",
-          "text": "A mature remediation loop in advanced Math should prioritize:",
-          "skillId": "math-501-skill-advanced-7",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blame assignment without system updates"
-            },
-            {
-              "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
-            },
-            {
-              "id": "c",
-              "text": "One-time fixes without retesting"
-            },
-            {
-              "id": "d",
-              "text": "Issue closure based on elapsed time"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
-        },
-        {
-          "id": "math-501-l06-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Math Specialization Studio?",
-          "skillId": "math-501-skill-advanced-8",
-          "options": [
-            {
-              "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
-            },
-            {
-              "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
-            },
-            {
-              "id": "c",
-              "text": "Ignore correlated failure modes"
-            },
-            {
-              "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "correctOptionId": "c",
+          "explanation": "A strong defense involves engaging with criticism by referencing the foundational evidence and logic of your analysis, demonstrating rigor and preparedness."
         }
       ]
     },
     {
       "id": "math-501-l07",
-      "title": "Math Governance and Public Impact",
+      "title": "Governance and Public Impact",
       "type": "video",
       "duration": 13,
       "learningAids": [
         {
           "id": "math-501-l07-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Stakeholder Impact Map",
+          "content": "A heatmap illustrating the distribution of benefits and burdens from a public policy decision across different demographic groups and timelines."
         }
       ],
       "chunks": [
@@ -654,50 +466,50 @@ export const Math501Module: LearningModule = {
           "id": "math-501-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. Understanding how various groups are impacted by decisions is essential for creating equitable solutions that consider everyone's needs.\nContext recap: In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. Understanding how various groups are impacted by decisions is essential for creating equitable solutions that consider everyone's needs."
+          "content": "Map the distribution of benefits, burdens, and delayed effects across different stakeholder groups. Understanding these impacts is essential for creating equitable and sustainable solutions."
         },
         {
           "id": "math-501-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "In this section, we will discuss the architecture of accountability in decision-making processes. This includes ensuring that there is traceability for decisions made, rights for reviews, and obligations for remediation when necessary. Establishing these frameworks is crucial for maintaining trust and integrity in mathematical governance.\nContext recap: In this section, we will discuss the architecture of accountability in decision-making processes. This includes ensuring that there is traceability for decisions made, rights for reviews, and obligations for remediation when necessary. Establishing these frameworks is crucial for maintaining trust and integrity in mathematical governance."
+          "content": "Design the architecture of accountability for a decision-making process. This includes ensuring decision traceability, rights for review, and obligations for remediation to maintain trust and integrity."
         },
         {
           "id": "math-501-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "At the end of our lesson, we will provide a comprehensive checklist that connects important outcomes with ethical considerations, ensures compliance with relevant policies, and highlights the importance of resilience in leadership. This checklist will serve as a valuable tool for responsible decision-making.\nContext recap: At the end of our lesson, we will provide a comprehensive checklist that connects important outcomes with ethical considerations, ensures compliance with relevant policies, and highlights the importance of resilience in leadership. This checklist will serve as a valuable tool for responsible decision-making."
+          "content": "Review a checklist that connects outcomes with ethical considerations, policy compliance, and system resilience. This serves as a practical tool for responsible decision-making."
         }
       ],
       "flashcards": [
         {
           "id": "math-501-l07-f1",
-          "front": "Impact distribution",
-          "back": "How outcomes are allocated across populations and timescales."
+          "front": "Impact Distribution",
+          "back": "How the positive and negative outcomes of a decision are allocated across different populations and over various timescales."
         },
         {
           "id": "math-501-l07-f2",
-          "front": "Decision traceability",
-          "back": "An auditable record of evidence, ownership, and rationale."
+          "front": "Decision Traceability",
+          "back": "An auditable record of the evidence, ownership, and rationale behind a decision, allowing for future review and accountability."
         },
         {
           "id": "math-501-l07-f3",
-          "front": "Responsible leadership",
-          "back": "Decision behavior balancing performance, accountability, and ethics."
+          "front": "Responsible Leadership",
+          "back": "A decision-making approach that balances performance goals with accountability, ethical considerations, and long-term resilience."
         }
       ]
     },
     {
       "id": "math-501-l08",
-      "title": "Math Capstone Defense Lab",
+      "title": "Capstone Defense Lab",
       "type": "interactive",
       "duration": 16,
       "learningAids": [
         {
           "id": "math-501-l08-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Capstone Defense Briefing Template",
+          "content": "A structured template for assembling a capstone defense brief, complete with a scoring rubric used by the expert panel."
         }
       ],
       "chunks": [
@@ -705,13 +517,13 @@ export const Math501Module: LearningModule = {
           "id": "math-501-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "In this interactive activity, learners will work together to create a detailed defense brief. This brief will include well-supported claims, relevant evidence, clear uncertainty bounds, and proposed pathways for remediation. This exercise will help develop critical thinking and analytical skills.\nContext recap: In this interactive activity, learners will work together to create a detailed defense brief. This brief will include well-supported claims, relevant evidence, clear uncertainty bounds, and proposed pathways for remediation. This exercise will help develop critical thinking and analytical skills."
+          "content": "Collaborate to construct a detailed defense brief for your capstone project. The brief must include well-supported claims, primary evidence, clear uncertainty bounds, and proposed remediation pathways."
         },
         {
           "id": "math-501-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "During this session, learners will practice their responses to various critiques that may arise from technical experts, governance bodies, and stakeholders. This rehearsal will help build confidence and improve communication skills, ensuring that learners are well-prepared for real-world discussions.\nContext recap: During this session, learners will practice their responses to various critiques that may arise from technical experts, governance bodies, and stakeholders. This rehearsal will help build confidence and improve communication skills, ensuring that learners are well-prepared for real-world discussions."
+          "content": "Rehearse responses to critiques from technical experts, governance bodies, and public stakeholders. This practice builds confidence and sharpens communication skills for the final defense."
         }
       ],
       "interactiveActivities": [
@@ -719,7 +531,7 @@ export const Math501Module: LearningModule = {
           "id": "math-501-l08-act1",
           "type": "debate_simulator",
           "title": "Expert Defense Panel",
-          "description": "Defend specialization recommendations under adversarial cross-examination."
+          "description": "Present your capstone analysis to a simulated panel of experts. Field challenging questions regarding your methodology, assumptions, and the ethical implications of your recommendations under adversarial cross-examination."
         }
       ]
     }

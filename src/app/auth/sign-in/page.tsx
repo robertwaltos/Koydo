@@ -348,6 +348,16 @@ function SignInPageContent() {
           </Link>
         </p>
 
+        <div className="mt-6 flex flex-col items-center gap-3 border-t border-zinc-200/60 pt-6">
+          <p className="text-xs font-semibold uppercase tracking-widest text-zinc-400">Child lost access?</p>
+          <Link
+            href="/auth/device"
+            className="flex items-center gap-2 rounded-xl bg-indigo-50 px-5 py-2.5 text-sm font-bold text-indigo-700 hover:bg-indigo-100 transition-colors"
+          >
+            <span className="text-lg">📱</span> Ask an Adult to Log In
+          </Link>
+        </div>
+
         {/* Trust pills */}
         <div className="mt-5 flex flex-wrap items-center justify-center gap-2">
           {[

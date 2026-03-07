@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const WorldHistory601Module: LearningModule = {
+export const world_history_601_Module: LearningModule = {
   "id": "world-history-601",
   "title": "World History Research and Leadership",
   "description": "Post-401 specialization in World History, focused on world history systems diagnostics, world history operations and execution design, world history impact and tradeoff analysis, and world history governance and leadership through advanced casework, simulation, and defense-based checkpoints.",
@@ -14,7 +14,7 @@ export const WorldHistory601Module: LearningModule = {
   ],
   "minAge": 17,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en",
@@ -38,8 +38,8 @@ export const WorldHistory601Module: LearningModule = {
         {
           "id": "world-history-601-l01-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Visual Prompt: Systems Interaction",
+          "content": "A flowchart showing complex historical systems (economy, culture, politics) interacting with feedback loops and measurable constraints."
         }
       ],
       "chunks": [
@@ -47,36 +47,36 @@ export const WorldHistory601Module: LearningModule = {
           "id": "world-history-601-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "In this lesson, we will delve into the advanced boundaries of World History. Our focus will be on understanding how various historical systems interact and influence one another. We will learn to analyze their operations and designs in a comprehensive way. By clearly defining these boundaries, we can gain a deeper insight into the complexities of world history and appreciate how different elements, such as cultures, economies, and political systems, work together to shape our world. This understanding is crucial for anyone looking to grasp the intricate tapestry of global events and their interconnections.\nContext recap: In this lesson, we will delve into the advanced boundaries of World History. Our focus will be on understanding how various historical systems interact and influence one another. We will learn to analyze their operations and designs in a comprehensive way. By clearly defining these boundaries, we can gain a deeper insight into the complexities of world history and appreciate how different elements, such as cultures, economies, and political systems, work together to shape our world."
+          "content": "Analyze the advanced boundaries of World History by examining how complex historical systems—such as global economies, cultural shifts, and political structures—interact and influence one another. Clearly defining these boundaries allows researchers to isolate variables and understand the intricate tapestry of global events."
         },
         {
           "id": "world-history-601-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "In this section, learners will engage in mapping out the pathways that show how different events and factors are connected in history. They will also identify areas of uncertainty and understand how various systems depend on each other. This foundational knowledge will be crucial as they plan for interventions or changes in historical contexts.\nContext recap: In this section, learners will engage in mapping out the pathways that show how different events and factors are connected in history. They will also identify areas of uncertainty and understand how various systems depend on each other. This foundational knowledge will be crucial as they plan for interventions or changes in historical contexts."
+          "content": "Map the causal pathways connecting disparate historical events. Identify zones of uncertainty and map systemic interdependencies. This foundational modeling is critical for evaluating historical counterfactuals and planning interventions in complex environments."
         },
         {
           "id": "world-history-601-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "It is important to ensure that all claims made in our historical analysis are supported by measurable indicators. This means we will establish confidence bounds and set up review checkpoints to validate our findings. By doing so, we can ensure that our conclusions are based on solid evidence and can withstand scrutiny.\nContext recap: It is important to ensure that all claims made in our historical analysis are supported by measurable indicators. This means we will establish confidence bounds and set up review checkpoints to validate our findings. By doing so, we can ensure that our conclusions are based on solid evidence and can withstand scrutiny."
+          "content": "Establish rigorous evidence thresholds for historical analysis. Ensure all claims are supported by measurable indicators, define confidence bounds, and implement review checkpoints to validate findings against primary and secondary sources."
         }
       ],
       "flashcards": [
         {
           "id": "world-history-601-l01-f1",
-          "front": "world history systems diagnostics",
-          "back": "A specialization axis requiring explicit assumptions and measurable constraints."
+          "front": "World History Systems Diagnostics",
+          "back": "A specialization axis requiring explicit assumptions and measurable constraints to evaluate historical phenomena."
         },
         {
           "id": "world-history-601-l01-f2",
-          "front": "world history operations and execution design",
-          "back": "Execution architecture that determines reliability under stress."
+          "front": "Operations and Execution Design",
+          "back": "Execution architecture that determines the reliability of historical interventions under systemic stress."
         },
         {
           "id": "world-history-601-l01-f3",
-          "front": "world history impact and tradeoff analysis",
-          "back": "Evaluation discipline for identifying true gains and hidden costs."
+          "front": "Impact and Tradeoff Analysis",
+          "back": "An evaluation discipline for identifying true historical gains and hidden socio-political costs."
         }
       ]
     },
@@ -89,8 +89,8 @@ export const WorldHistory601Module: LearningModule = {
         {
           "id": "world-history-601-l02-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Visual Prompt: Control Gate Dashboard",
+          "content": "A dashboard interface displaying historical data points with control gates, escalation thresholds, and rollback triggers highlighted."
         }
       ],
       "chunks": [
@@ -98,13 +98,13 @@ export const WorldHistory601Module: LearningModule = {
           "id": "world-history-601-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "In this interactive practice, learners will have the opportunity to design specialized workflows that reflect their understanding of historical methods. They will also put these workflows to the test by simulating challenging scenarios to see how well they hold up under pressure. This hands-on experience will enhance their problem-solving skills.\nContext recap: In this interactive practice, learners will have the opportunity to design specialized workflows that reflect their understanding of historical methods. They will also put these workflows to the test by simulating challenging scenarios to see how well they hold up under pressure. This hands-on experience will enhance their problem-solving skills."
+          "content": "Design specialized research workflows reflecting advanced historical methodologies. Stress-test these workflows by simulating high-pressure, data-scarce historical scenarios to evaluate their resilience and analytical rigor."
         },
         {
           "id": "world-history-601-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "In this recap, we will discuss how workflows can be structured to include important checkpoints, criteria for rolling back decisions, and thresholds for escalating issues. This architecture is essential for ensuring that our historical analyses are robust and can adapt to new information or challenges.\nContext recap: In this recap, we will discuss how workflows can be structured to include important checkpoints, criteria for rolling back decisions, and thresholds for escalating issues. This architecture is essential for ensuring that our historical analyses are robust and can adapt to new information or challenges."
+          "content": "Structure analytical workflows with definitive control gates. Establish criteria for rolling back flawed historical assumptions and define thresholds for escalating analytical anomalies, ensuring robust and adaptable historical research."
         }
       ],
       "interactiveActivities": [
@@ -143,8 +143,8 @@ export const WorldHistory601Module: LearningModule = {
         {
           "id": "world-history-601-l03-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Visual Prompt: Comparative Analysis",
+          "content": "A split-screen comparing a flawed historical analysis without assumptions versus a rigorous analysis with explicit constraints and metrics."
         }
       ],
       "questions": [
@@ -359,8 +359,8 @@ export const WorldHistory601Module: LearningModule = {
         {
           "id": "world-history-601-l04-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Visual Prompt: Tradeoff Matrix",
+          "content": "A matrix comparing different historical interventions across dimensions of safety, cost, equity, and governance."
         }
       ],
       "chunks": [
@@ -368,19 +368,19 @@ export const WorldHistory601Module: LearningModule = {
           "id": "world-history-601-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "In this lesson, we will frame a case study that highlights the competing constraints within world history systems. We will analyze the impacts and trade-offs involved in historical decision-making. Understanding these dynamics will help learners appreciate the complexity of historical events and the factors that influence them.\nContext recap: In this lesson, we will frame a case study that highlights the competing constraints within world history systems. We will analyze the impacts and trade-offs involved in historical decision-making. Understanding these dynamics will help learners appreciate the complexity of historical events and the factors that influence them."
+          "content": "Frame complex case studies that highlight competing constraints within world history systems. Analyze the cascading impacts and trade-offs inherent in historical decision-making to appreciate the multifaceted nature of global events."
         },
         {
           "id": "world-history-601-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "In this practice session, learners will compare different options available to them in historical scenarios. They will evaluate these options based on various dimensions such as safety, reliability, cost, equity, and governance. This comparative analysis will help them make informed decisions in their historical studies.\nContext recap: In this practice session, learners will compare different options available to them in historical scenarios. They will evaluate these options based on various dimensions such as safety, reliability, cost, equity, and governance. This comparative analysis will help them make informed decisions in their historical studies."
+          "content": "Conduct comparative analyses of historical options. Evaluate these pathways across critical dimensions—such as socio-political stability, economic cost, equity, and governance—to make informed, defensible historical assessments."
         },
         {
           "id": "world-history-601-l04-c3",
           "kind": "recap",
           "title": "Decision Memo Pattern",
-          "content": "In our recap, we will discuss the importance of including assumptions, evidence, risk controls, and fallback plans in each recommendation made during our historical analyses. This structured approach will ensure that our conclusions are well-founded and prepared for potential challenges.\nContext recap: In our recap, we will discuss the importance of including assumptions, evidence, risk controls, and fallback plans in each recommendation made during our historical analyses. This structured approach will ensure that our conclusions are well-founded and prepared for potential challenges.\nContext recap: In our recap, we will discuss the importance of including assumptions, evidence, risk controls, and fallback plans in each recommendation made during our historical analyses. This structured approach will ensure that our conclusions are well-founded and prepared for potential challenges. Context recap: In our recap, we will discuss the importance of including assumptions, evidence, risk controls, and fallback plans in each recommendation made during our historical analyses. This structured approach will ensure that our conclusions are well-founded and prepared for potential challenges."
+          "content": "Master the decision memo pattern by explicitly documenting assumptions, empirical evidence, risk controls, and fallback plans for every historical recommendation. This structured approach ensures conclusions are resilient against academic and operational scrutiny."
         }
       ]
     },
@@ -393,8 +393,8 @@ export const WorldHistory601Module: LearningModule = {
         {
           "id": "world-history-601-l05-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Visual Prompt: Simulation Interface",
+          "content": "A simulation interface showing a world map with real-time shifting borders and resource allocations based on user decisions."
         }
       ],
       "chunks": [
@@ -402,13 +402,13 @@ export const WorldHistory601Module: LearningModule = {
           "id": "world-history-601-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "In this interactive practice, learners will take on the role of operators managing scenario controls. They will learn how to balance performance with governance constraints, ensuring that their decisions are both effective and responsible. This experience will enhance their understanding of historical management.\nContext recap: In this interactive practice, learners will take on the role of operators managing scenario controls. They will learn how to balance performance with governance constraints, ensuring that their decisions are both effective and responsible. This experience will enhance their understanding of historical management.\nContext recap: In this interactive practice, learners will take on the role of operators managing scenario controls. They will learn how to balance performance with governance constraints, ensuring that their decisions are both effective and responsible. This experience will enhance their understanding of historical management. Context recap: In this interactive practice, learners will take on the role of operators managing scenario controls.\nWhy this matters: Live Scenario Controls helps learners in World History connect ideas from World History Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "Assume the role of a historical operator managing live scenario controls. Balance operational performance with strict governance constraints, navigating uncertainty to ensure decisions are both historically sound and ethically responsible."
         },
         {
           "id": "world-history-601-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "In this recap, we will explore how effective responses can be designed to update control gates while maintaining traceability and accountability. This means that as we adapt our strategies, we will ensure that all changes are documented and that we remain responsible for our decisions.\nContext recap: In this recap, we will explore how effective responses can be designed to update control gates while maintaining traceability and accountability. This means that as we adapt our strategies, we will ensure that all changes are documented and that we remain responsible for our decisions."
+          "content": "Design adaptive responses that dynamically update control gates while maintaining strict traceability and accountability. Ensure that as strategic pivots occur, all methodological changes are documented and defensible."
         }
       ],
       "interactiveActivities": [
@@ -429,8 +429,8 @@ export const WorldHistory601Module: LearningModule = {
         {
           "id": "world-history-601-l06-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Visual Prompt: Root-Cause Diagram",
+          "content": "A conceptual diagram linking root-cause analysis to control redesign and verification in historical simulations."
         }
       ],
       "questions": [
@@ -536,103 +536,103 @@ export const WorldHistory601Module: LearningModule = {
         },
         {
           "id": "world-history-601-l06-q5",
-          "text": "What is the best way to compare competing interventions in advanced World History?",
-          "skillId": "world-history-601-skill-advanced-5",
+          "text": "During a live historical simulation, what is the primary purpose of an adaptive response design?",
+          "skillId": "world-history-601-skill-advanced-5b",
           "options": [
             {
               "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
+              "text": "To ignore initial constraints and focus solely on speed"
             },
             {
               "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
+              "text": "To update control gates dynamically while maintaining traceability"
             },
             {
               "id": "c",
-              "text": "Switch metrics after results arrive"
+              "text": "To assign blame for unexpected historical outcomes"
             },
             {
               "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
+              "text": "To permanently lock in a single strategy regardless of new data"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
+          "explanation": "Adaptive response design ensures that as strategies pivot, methodological changes are documented and defensible."
         },
         {
           "id": "world-history-601-l06-q6",
-          "text": "In high-stakes World History Research and Leadership execution, which communication protocol is strongest?",
-          "skillId": "world-history-601-skill-advanced-6",
+          "text": "When framing tradeoffs in advanced historical case studies, which dimensions must be evaluated?",
+          "skillId": "world-history-601-skill-advanced-6b",
           "options": [
             {
               "id": "a",
-              "text": "Broadcast conclusions without assumptions"
+              "text": "Only the immediate economic cost"
             },
             {
               "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
+              "text": "Socio-political stability, economic cost, equity, and governance"
             },
             {
               "id": "c",
-              "text": "Share only final outcomes after completion"
+              "text": "The popularity of the decision among modern historians"
             },
             {
               "id": "d",
-              "text": "Limit updates to a single informal channel"
+              "text": "The length of the resulting historical narrative"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
+          "explanation": "Comprehensive tradeoff framing requires evaluating multiple critical dimensions to make defensible assessments."
         },
         {
           "id": "world-history-601-l06-q7",
-          "text": "A mature remediation loop in advanced World History should prioritize:",
-          "skillId": "world-history-601-skill-advanced-7",
+          "text": "A robust decision memo for historical recommendations must explicitly include:",
+          "skillId": "world-history-601-skill-advanced-7b",
           "options": [
             {
               "id": "a",
-              "text": "Blame assignment without system updates"
+              "text": "Only the final conclusion"
             },
             {
               "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
+              "text": "Assumptions, empirical evidence, risk controls, and fallback plans"
             },
             {
               "id": "c",
-              "text": "One-time fixes without retesting"
+              "text": "A list of unrelated historical anecdotes"
             },
             {
               "id": "d",
-              "text": "Issue closure based on elapsed time"
+              "text": "Subjective opinions without empirical backing"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
+          "explanation": "The decision memo pattern ensures conclusions are resilient by documenting assumptions, evidence, risks, and fallbacks."
         },
         {
           "id": "world-history-601-l06-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in World History Research and Leadership?",
-          "skillId": "world-history-601-skill-advanced-8",
+          "text": "What is the core objective of scenario architecture in world history systems?",
+          "skillId": "world-history-601-skill-advanced-8b",
           "options": [
             {
               "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
+              "text": "To simplify history into a single, linear narrative"
             },
             {
               "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
+              "text": "To highlight competing constraints and analyze cascading impacts of historical decisions"
             },
             {
               "id": "c",
-              "text": "Ignore correlated failure modes"
+              "text": "To memorize dates and locations of major battles"
             },
             {
               "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
+              "text": "To avoid discussing the trade-offs of global events"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "explanation": "Scenario architecture frames complex case studies to reveal the multifaceted nature and cascading impacts of global events."
         }
       ]
     },
@@ -645,8 +645,8 @@ export const WorldHistory601Module: LearningModule = {
         {
           "id": "world-history-601-l07-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Visual Prompt: Stakeholder Impact Map",
+          "content": "A stakeholder map showing the delayed effects of a historical policy on different demographic groups over a 50-year timeline."
         }
       ],
       "chunks": [
@@ -654,36 +654,36 @@ export const WorldHistory601Module: LearningModule = {
           "id": "world-history-601-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "In this lesson, learners will map out how benefits, burdens, and delayed effects are distributed among different stakeholder groups in historical contexts. Understanding these distributions is crucial for analyzing the impact of historical events on various communities.\nContext recap: In this lesson, learners will map out how benefits, burdens, and delayed effects are distributed among different stakeholder groups in historical contexts. Understanding these distributions is crucial for analyzing the impact of historical events on various communities.\nWhy this matters: Stakeholder Impact Distribution helps learners in World History connect ideas from World History Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "Map the distribution of benefits, systemic burdens, and delayed effects across diverse stakeholder groups in historical contexts. This analysis is vital for understanding the long-term, multi-generational impacts of historical events on marginalized and dominant communities."
         },
         {
           "id": "world-history-601-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "In this section, we will discuss the architecture of accountability in decision-making processes. This includes understanding how decisions can be traced, the rights of individuals to review those decisions, and the obligations to rectify any issues that arise. This framework is essential for responsible governance in historical contexts.\nContext recap: In this section, we will discuss the architecture of accountability in decision-making processes. This includes understanding how decisions can be traced, the rights of individuals to review those decisions, and the obligations to rectify any issues that arise. This framework is essential for responsible governance in historical contexts."
+          "content": "Examine the architecture of accountability in historical governance. Trace decision-making processes, evaluate the rights of affected populations to review these decisions, and define the obligations of leaders to rectify systemic historical injustices."
         },
         {
           "id": "world-history-601-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "At the end of our lesson, we will create a checklist that connects important outcomes, ethical considerations, adherence to policies, and the ability to recover from challenges. This checklist will help us ensure that leaders are responsible and effective in their roles.\nContext recap: At the end of our lesson, we will create a checklist that connects important outcomes, ethical considerations, adherence to policies, and the ability to recover from challenges. This checklist will help us ensure that leaders are responsible and effective in their roles.\nContext recap: At the end of our lesson, we will create a checklist that connects important outcomes, ethical considerations, adherence to policies, and the ability to recover from challenges. This checklist will help us ensure that leaders are responsible and effective in their roles. Context recap: At the end of our lesson, we will create a checklist that connects important outcomes, ethical considerations, adherence to policies, and the ability to recover from challenges. This checklist will help us ensure that leaders are responsible and effective in their roles."
+          "content": "Develop a comprehensive responsible leadership checklist that synthesizes critical outcomes, ethical considerations, policy adherence, and systemic recovery capabilities. This tool ensures historical leaders and researchers maintain rigorous ethical standards."
         }
       ],
       "flashcards": [
         {
           "id": "world-history-601-l07-f1",
-          "front": "Impact distribution",
-          "back": "How outcomes are allocated across populations and timescales."
+          "front": "Impact Distribution",
+          "back": "How outcomes, benefits, and burdens are allocated across populations and timescales."
         },
         {
           "id": "world-history-601-l07-f2",
-          "front": "Decision traceability",
-          "back": "An auditable record of evidence, ownership, and rationale."
+          "front": "Decision Traceability",
+          "back": "An auditable record of evidence, ownership, and rationale in historical governance."
         },
         {
           "id": "world-history-601-l07-f3",
-          "front": "Responsible leadership",
-          "back": "Decision behavior balancing performance, accountability, and ethics."
+          "front": "Responsible Leadership",
+          "back": "Decision behavior balancing operational performance, accountability, and ethical standards."
         }
       ]
     },
@@ -696,8 +696,8 @@ export const WorldHistory601Module: LearningModule = {
         {
           "id": "world-history-601-l08-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Visual Prompt: Defense Panel",
+          "content": "An illustration of a researcher presenting a defense brief to a panel of experts, with a screen showing confidence intervals and evidence logs."
         }
       ],
       "chunks": [
@@ -705,13 +705,13 @@ export const WorldHistory601Module: LearningModule = {
           "id": "world-history-601-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "In this activity, students will work together to put together a comprehensive brief. This brief will include clear claims supported by evidence, an understanding of the uncertainties involved, and pathways for addressing any potential issues that may arise. This exercise will help develop critical thinking and analytical skills.\nContext recap: In this activity, students will work together to put together a comprehensive brief. This brief will include clear claims supported by evidence, an understanding of the uncertainties involved, and pathways for addressing any potential issues that may arise. This exercise will help develop critical thinking and analytical skills."
+          "content": "Collaboratively assemble a comprehensive defense brief. Synthesize clear historical claims supported by rigorous evidence logs, articulate known uncertainties, and establish concrete pathways for addressing methodological critiques."
         },
         {
           "id": "world-history-601-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "During our rehearsal, students will practice responding to various critiques that may come from experts, governance representatives, and stakeholders. This preparation will help students build confidence in their ability to defend their ideas and understand different perspectives.\nContext recap: During our rehearsal, students will practice responding to various critiques that may come from experts, governance representatives, and stakeholders. This preparation will help students build confidence in their ability to defend their ideas and understand different perspectives.\nWhy this matters: Expert Panel Rehearsal helps learners in World History connect ideas from World History Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "Engage in rigorous rehearsals to defend historical analyses against adversarial critiques from subject matter experts, governance representatives, and stakeholders. Build the intellectual resilience required to justify complex historical methodologies under pressure."
         }
       ],
       "interactiveActivities": [

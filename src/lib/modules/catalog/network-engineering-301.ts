@@ -1,9 +1,9 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const NetworkEngineering301Module: LearningModule = {
+export const network_engineering_301_Module: LearningModule = {
   "id": "network-engineering-301",
   "title": "Advanced Network Architecture and Automation",
-  "description": "Advanced networking curriculum covering BGP/OSPF design at scale, traffic engineering, EVPN overlays, network programmability, and high-reliability operations for large enterprise and service-provider-like environments.",
+  "description": "An advanced networking curriculum covering BGP/OSPF design at scale, traffic engineering, EVPN overlays, network programmability, and high-reliability operations for large enterprise and service-provider environments.",
   "subject": "Computer Science",
   "tags": [
     "core",
@@ -15,19 +15,19 @@ export const NetworkEngineering301Module: LearningModule = {
   ],
   "minAge": 16,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en"
   ],
   "thumbnail": "/placeholders/lesson-robot.svg",
   "learningObjectives": [
-    "Design scalable underlay and overlay architectures with clear fault domains",
-    "Apply advanced BGP and OSPF policy for deterministic traffic behavior",
-    "Implement traffic engineering and QoS strategies for mixed critical workloads",
-    "Use automation and intent validation to reduce configuration drift",
-    "Perform deep packet-path troubleshooting across control and data planes",
-    "Plan safe large-scale network changes with measurable blast-radius controls"
+    "Design scalable underlay and overlay architectures with clear fault domains.",
+    "Apply advanced BGP and OSPF policy for deterministic traffic behavior.",
+    "Implement traffic engineering and QoS strategies for mixed-criticality workloads.",
+    "Use automation and intent validation to reduce configuration drift.",
+    "Perform deep packet-path troubleshooting across control and data planes.",
+    "Plan safe, large-scale network changes with measurable blast-radius controls."
   ],
   "lessons": [
     {
@@ -40,36 +40,36 @@ export const NetworkEngineering301Module: LearningModule = {
           "id": "network-engineering-301-l01-c1",
           "kind": "concept",
           "title": "Control-Plane Scalability",
-          "content": "When we create large-scale routing systems, we need to think about several important factors. First, we want to know how quickly our network can respond to changes. This is called convergence behavior. Next, we should consider how often the routes we use change, which is known as route churn. Additionally, the rules and policies we set can be quite complex, so we need to keep that in mind. It's also crucial to have good visibility into how the network operates, so we can monitor everything effectively. To manage potential problems, designers use strategies like summarization, which helps to simplify the routes, creating a hierarchy to organize them better, and isolating policies to prevent issues from spreading. However, while doing all this, we must ensure that we maintain enough detail in the paths we create. This detail is essential for achieving our traffic management goals, allowing us to direct data efficiently across the network.\nContext recap: When we create large-scale routing systems, we need to think about several important factors. First, we want to know how quickly our network can respond to changes. This is called convergence behavior. Next, we should consider how often the routes we use change, which is known as route churn.\nWhy this matters: Control-Plane Scalability helps learners in Computer Science connect ideas from Advanced Network Architecture and Automation to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "When designing large-scale routing systems, we must manage several key factors to ensure stability and performance. These include convergence time (how quickly the network adapts to changes), route churn (the frequency of route updates), and policy complexity. To handle these challenges, designers use techniques like route summarization to reduce the number of advertised routes, hierarchical design to create logical boundaries, and policy isolation to contain the impact of changes. A well-designed system balances these scaling techniques with the need to retain enough path detail to meet specific traffic engineering goals, ensuring data flows efficiently and predictably."
         },
         {
           "id": "network-engineering-301-l01-c2",
           "kind": "concept",
           "title": "BGP in Enterprise-Scale Environments",
-          "content": "BGP, which stands for Border Gateway Protocol, plays a crucial role in modern networking, extending beyond just edge routing. In large-scale networks, iBGP is frequently employed to manage both the foundational (underlay) and the application-level (overlay) aspects of network control. This is often achieved through the use of route reflectors and policy communities, which help organize and optimize routing decisions. To ensure smooth and efficient network operations, it is vital to establish clear policies that outline routing intentions. Additionally, designing paths that are predictable and conducting comprehensive reviews of any changes made to the network are essential practices. These measures help to avoid problems such as route leaks, which can lead to data being sent the wrong way, uneven traffic flows that can slow down network performance, and unintended transit behaviors that might disrupt connectivity. By following these guidelines, network engineers can maintain a robust and reliable network environment.\nContext recap: BGP, which stands for Border Gateway Protocol, plays a crucial role in modern networking, extending beyond just edge routing. In large-scale networks, iBGP is frequently employed to manage both the foundational (underlay) and the application-level (overlay) aspects of network control. This is often achieved through the use of route reflectors and policy communities, which help organize and optimize routing decisions. To ensure smooth and efficient network operations, it is vital to establish clear policies that outline routing intentions.\nWhy this matters: BGP in Enterprise-Scale Environments helps learners in Computer Science connect ideas from Advanced Network Architecture and Automation to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "The Border Gateway Protocol (BGP) is no longer just for internet edge routing. In large enterprises, internal BGP (iBGP) is essential for scaling both underlay and overlay control planes. Using tools like route reflectors and BGP communities, architects can create sophisticated and manageable routing policies. The key to success is establishing a clear, intent-based policy framework and designing for predictable pathing. This disciplined approach helps prevent common large-scale issues such as route leaks, suboptimal traffic patterns, and unintended transit behaviors that can degrade network performance and reliability."
         },
         {
           "id": "network-engineering-301-l01-c3",
           "kind": "recap",
           "title": "Architectural Guardrails",
-          "content": "In the world of network engineering, having a strong architectural framework is essential for success. This framework includes specific guidelines that help manage the network effectively. For instance, setting a maximum limit on the number of prefixes ensures that the network does not become too complex to handle. Additionally, a route dampening strategy helps manage changes in the network by reducing unnecessary updates. It's also important to have mandatory tagging for community information, which helps in organizing and identifying different parts of the network. Finally, automated policy linting acts as a safety net, checking that all policies are followed correctly. By putting these guidelines in place, we can keep the network growing in a controlled manner and minimize the chances of problems arising as the network expands.\nContext recap: In the world of network engineering, having a strong architectural framework is essential for success. This framework includes specific guidelines that help manage the network effectively. For instance, setting a maximum limit on the number of prefixes ensures that the network does not become too complex to handle. Additionally, a route dampening strategy helps manage changes in the network by reducing unnecessary updates.\nWhy this matters: Architectural Guardrails helps learners in Computer Science connect ideas from Advanced Network Architecture and Automation to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "To maintain a healthy network that can grow without becoming unstable, it's crucial to establish architectural guardrails. These are predefined rules that prevent dangerous configurations. Examples include setting maximum prefix limits to protect router memory, implementing route dampening to reduce instability from flapping links, mandating BGP community tagging for clear policy identification, and using automated policy linting to check configurations for errors before deployment. These guardrails act as a safety framework, minimizing the risk of human error and ensuring controlled, predictable network evolution."
         }
       ],
       "flashcards": [
         {
           "id": "network-engineering-301-l01-f1",
-          "front": "Route reflector",
-          "back": "A BGP scaling mechanism that reduces full-mesh iBGP requirements by reflecting routes between clients."
+          "front": "What is a BGP Route Reflector?",
+          "back": "A BGP scaling mechanism that reduces the need for a full mesh of iBGP sessions by reflecting routes it receives from one client to other clients."
         },
         {
           "id": "network-engineering-301-l01-f2",
-          "front": "Route churn",
-          "back": "Frequent route updates/withdrawals that can destabilize convergence and increase control-plane load."
+          "front": "What is route churn?",
+          "back": "Frequent route updates and withdrawals in a network. High churn can increase CPU load on routers and lead to network instability."
         },
         {
           "id": "network-engineering-301-l01-f3",
-          "front": "Policy guardrail",
-          "back": "A predefined boundary rule that prevents unsafe routing behavior before it reaches production."
+          "front": "What is a policy guardrail?",
+          "back": "A predefined, often automated, rule that prevents a configuration change from violating architectural standards or causing unsafe routing behavior."
         }
       ],
       "learningAids": [
@@ -77,7 +77,7 @@ export const NetworkEngineering301Module: LearningModule = {
           "id": "network-engineering-301-l01-a1",
           "type": "image",
           "title": "Scale Routing Blueprint",
-          "content": "Reference blueprint showing hierarchy, route reflectors, summarization points, and policy boundaries."
+          "content": "Reference blueprint showing a hierarchical network design with distinct core, distribution, and access layers, highlighting route reflector placement, summarization points, and policy boundaries."
         }
       ]
     },
@@ -91,13 +91,13 @@ export const NetworkEngineering301Module: LearningModule = {
           "id": "network-engineering-301-l02-c1",
           "kind": "concept",
           "title": "Traffic Engineering Intent",
-          "content": "Traffic engineering is a crucial aspect of network management that focuses on optimizing how data travels through a network. It involves balancing three key factors: the utilization of different paths, the latency or delay in data transmission, and the network's ability to withstand failures. Engineers play a vital role in this process, as they must be able to identify the paths that the control plane prefers—these are the routes that the network is designed to use under normal conditions. However, it's equally important for them to understand the actual paths that data takes when the network experiences high traffic, encounters failures, or when specific policies are applied that may alter the expected behavior. By mastering these concepts, engineers can ensure that networks operate efficiently and reliably, even in challenging situations.\nContext recap: Traffic engineering is a crucial aspect of network management that focuses on optimizing how data travels through a network. It involves balancing three key factors: the utilization of different paths, the latency or delay in data transmission, and the network's ability to withstand failures. Engineers play a vital role in this process, as they must be able to identify the paths that the control plane prefers—these are the routes that the network is designed to use under normal conditions. However, it's equally important for them to understand the actual paths that data takes when the network experiences high traffic, encounters failures, or when specific policies are applied that may alter the expected behavior."
+          "content": "Traffic engineering is the practice of managing data flow across a network to optimize performance. The primary goal is to balance path utilization, latency, and resiliency. A key challenge for engineers is understanding the difference between the control plane's preferred path (the route calculated by protocols) and the data plane's actual path (the route packets actually take). These can diverge under conditions like link congestion, failures, or specific policy overrides. Effective traffic engineering requires visibility into both to ensure the network behaves as intended under all conditions."
         },
         {
           "id": "network-engineering-301-l02-c2",
           "kind": "concept",
           "title": "QoS in Practice",
-          "content": "Implementing Quality of Service (QoS) strategies is an important part of managing network traffic effectively. This process involves making careful decisions about how to classify different types of data, mark them for priority, queue them for processing, and enforce rules to manage their flow based on the needs of critical business applications. If these QoS policies are not set up correctly, it can create problems. For example, low-priority traffic might not get the resources it needs, or real-time services, like video calls or online gaming, might not function well during busy times when there is a lot of traffic. To make sure that these QoS policies work as intended, it is essential to test them thoroughly. This can be done by using synthetic stress tests, which simulate heavy traffic conditions, as well as analyzing real traffic data to see how the network performs under normal conditions. By doing this, network engineers can ensure that their QoS strategies are effective and reliable, providing a better experience for all users.\nContext recap: Implementing Quality of Service (QoS) strategies is an important part of managing network traffic effectively. This process involves making careful decisions about how to classify different types of data, mark them for priority, queue them for processing, and enforce rules to manage their flow based on the needs of critical business applications. If these QoS policies are not set up correctly, it can create problems. For example, low-priority traffic might not get the resources it needs, or real-time services, like video calls or online gaming, might not function well during busy times when there is a lot of traffic."
+          "content": "Quality of Service (QoS) ensures that critical applications receive the network resources they need. This is achieved by classifying traffic, marking it with a priority, placing it into appropriate queues, and enforcing policies like rate limiting. A misconfigured QoS policy can be counterproductive, potentially starving low-priority traffic or failing to protect real-time services like voice and video during congestion. To prevent this, policies must be validated rigorously using both synthetic stress tests and analysis of live traffic telemetry to confirm they meet the intended performance goals."
         }
       ],
       "interactiveActivities": [
@@ -105,7 +105,7 @@ export const NetworkEngineering301Module: LearningModule = {
           "id": "network-engineering-301-l02-act1",
           "type": "sorting_buckets",
           "title": "QoS Policy Classification",
-          "description": "Sort traffic classes into appropriate forwarding treatment categories.",
+          "description": "Sort these traffic classes into the appropriate forwarding treatment categories.",
           "buckets": [
             "Low Latency",
             "Assured Forwarding",
@@ -138,18 +138,19 @@ export const NetworkEngineering301Module: LearningModule = {
           "id": "network-engineering-301-l02-act2",
           "type": "scenario_practice",
           "title": "Path Shift Drill",
-          "description": "Choose policy changes to relieve congested WAN links while preserving SLA traffic.",
+          "description": "Choose policy changes to relieve a congested WAN link while preserving SLA traffic.",
           "instructions": [
-            "Pick one immediate action and one medium-term redesign action.",
+            "Scenario: A primary 10Gbps WAN link is at 95% utilization, causing high latency for critical ERP traffic. A secondary 5Gbps link is only at 20% utilization.",
+            "Choose one immediate action and one medium-term redesign action to offload non-critical traffic without impacting the ERP application.",
             "State one risk for each action."
           ]
         }
       ],
       "metadata": {
         "prompts": [
-          "How can preferred BGP path and actual traffic path diverge?",
-          "What QoS misconfiguration could increase jitter during peak hours?",
-          "Which metric would prove your traffic engineering change worked?"
+          "How can a preferred BGP path and the actual traffic path diverge?",
+          "What QoS misconfiguration could increase jitter for voice traffic during peak hours?",
+          "Which metric would best prove your traffic engineering change was successful?"
         ]
       },
       "learningAids": [
@@ -157,7 +158,7 @@ export const NetworkEngineering301Module: LearningModule = {
           "id": "network-engineering-301-l02-a1",
           "type": "practice",
           "title": "QoS Validation Sheet",
-          "content": "Worksheet to compare pre/post queue drop, latency, and jitter by traffic class."
+          "content": "A worksheet to guide the comparison of pre- and post-change telemetry, including queue drops, latency, and jitter measurements for each defined traffic class."
         }
       ]
     },
@@ -169,7 +170,7 @@ export const NetworkEngineering301Module: LearningModule = {
       "questions": [
         {
           "id": "network-engineering-301-l03-q1",
-          "text": "Primary purpose of BGP route reflectors in large networks?",
+          "text": "What is the primary purpose of BGP route reflectors in large networks?",
           "skillId": "network-engineering-301-skill-routing",
           "options": [
             {
@@ -190,32 +191,32 @@ export const NetworkEngineering301Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Route reflectors reduce session count and simplify iBGP scaling."
+          "explanation": "Route reflectors simplify iBGP topologies by reducing the number of required peerings, which is critical for scaling."
         },
         {
           "id": "network-engineering-301-l03-q2",
-          "text": "Which QoS class should usually protect delay-sensitive voice media traffic?",
+          "text": "Which QoS class should be used to protect delay-sensitive voice media traffic?",
           "skillId": "network-engineering-301-skill-qos",
           "options": [
             {
               "id": "a",
-              "text": "Low latency priority queue"
+              "text": "Low Latency Priority Queue"
             },
             {
               "id": "b",
-              "text": "Best effort queue only"
+              "text": "Best Effort Queue"
             },
             {
               "id": "c",
-              "text": "Bulk transfer queue"
+              "text": "Bulk Transfer Queue"
             },
             {
               "id": "d",
-              "text": "Unclassified discard queue"
+              "text": "Scavenger Queue"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Delay-sensitive traffic benefits from protected low-latency treatment."
+          "explanation": "Delay-sensitive traffic like voice requires priority treatment in a low-latency queue to minimize jitter and packet loss."
         },
         {
           "id": "network-engineering-301-l03-q3",
@@ -228,11 +229,11 @@ export const NetworkEngineering301Module: LearningModule = {
             },
             {
               "id": "b",
-              "text": "They remove need for testing"
+              "text": "They remove the need for testing"
             },
             {
               "id": "c",
-              "text": "They disable route updates"
+              "text": "They disable all route updates"
             },
             {
               "id": "d",
@@ -240,32 +241,32 @@ export const NetworkEngineering301Module: LearningModule = {
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Guardrails reduce high-blast-radius mistakes in control-plane policy."
+          "explanation": "Guardrails act as an automated safety check to reduce the blast radius of mistakes in control-plane policy."
         },
         {
           "id": "network-engineering-301-l03-q4",
-          "text": "Most reliable way to validate traffic engineering change success?",
+          "text": "What is the most reliable way to validate the success of a traffic engineering change?",
           "skillId": "network-engineering-301-skill-qos",
           "options": [
             {
               "id": "a",
-              "text": "Assume success if configs committed"
+              "text": "Assume success if the configuration commits without error"
             },
             {
               "id": "b",
-              "text": "Compare pre/post telemetry for utilization, latency, and drops"
+              "text": "Compare pre- and post-change telemetry for utilization, latency, and drops"
             },
             {
               "id": "c",
-              "text": "Turn off monitoring"
+              "text": "Turn off monitoring to avoid false alarms"
             },
             {
               "id": "d",
-              "text": "Rely on one ping test only"
+              "text": "Rely on a single ping test"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Measured telemetry outcomes are required to confirm design intent."
+          "explanation": "Only measured telemetry outcomes can confirm that a design change has achieved its intended goal."
         }
       ],
       "learningAids": [
@@ -273,7 +274,7 @@ export const NetworkEngineering301Module: LearningModule = {
           "id": "network-engineering-301-l03-a1",
           "type": "mnemonic",
           "title": "PATH",
-          "content": "Policy, Assertions, Telemetry, Hardening."
+          "content": "A mnemonic for reliable network design: Policy, Assertions, Telemetry, Hardening."
         }
       ]
     },
@@ -287,36 +288,36 @@ export const NetworkEngineering301Module: LearningModule = {
           "id": "network-engineering-301-l04-c1",
           "kind": "concept",
           "title": "Underlay and Overlay Separation",
-          "content": "Overlay fabrics play a crucial role in modern networking by ensuring that the logical service layout remains distinct from the physical transport layer. This separation allows for greater flexibility and efficiency in managing network resources. One of the key technologies used in this context is VXLAN encapsulation, which enables us to extend the functionalities of Layer 2 networks over Layer 3 infrastructures. This means that we can maintain the benefits of Layer 2 communication while leveraging the broader capabilities of Layer 3. Additionally, EVPN (Ethernet Virtual Private Network) is an advanced protocol that helps distribute information about MAC (Media Access Control) and IP (Internet Protocol) addresses. It utilizes BGP (Border Gateway Protocol) signaling to achieve this, which significantly improves scalability and operational visibility. This is a notable advancement compared to older methods that depended on flooding and learning, which could be less efficient and harder to manage.\nContext recap: Overlay fabrics play a crucial role in modern networking by ensuring that the logical service layout remains distinct from the physical transport layer. This separation allows for greater flexibility and efficiency in managing network resources. One of the key technologies used in this context is VXLAN encapsulation, which enables us to extend the functionalities of Layer 2 networks over Layer 3 infrastructures. This means that we can maintain the benefits of Layer 2 communication while leveraging the broader capabilities of Layer 3.\nWhy this matters: Underlay and Overlay Separation helps learners in Computer Science connect ideas from Advanced Network Architecture and Automation to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "Modern network fabrics separate the logical service layer (overlay) from the physical transport layer (underlay). This abstraction provides immense flexibility. VXLAN is an encapsulation technique that tunnels Layer 2 frames over a Layer 3 network, effectively stretching subnets wherever needed. EVPN acts as the advanced control plane for these overlays, using BGP to distribute MAC and IP address reachability information. This is a major improvement over older flood-and-learn methods, offering greater scalability, control, and operational visibility."
         },
         {
           "id": "network-engineering-301-l04-c2",
           "kind": "concept",
           "title": "Operational Considerations",
-          "content": "For overlay networks to work effectively, they need a strong and stable foundation provided by the underlying infrastructure. This means that careful planning is essential, especially when it comes to determining the Maximum Transmission Unit (MTU) sizes, which help manage data packet sizes. Additionally, it's important to have consistent policies at all endpoints, which are the devices or points where data enters or exits the network. Lastly, having reliable troubleshooting tools is vital. These tools help network engineers monitor and resolve issues by tracking the paths that data takes, both when it is encapsulated (wrapped in additional data for transmission) and decapsulated (unwrapped at the destination). All these elements work together to ensure that the network remains dependable and efficient.\nContext recap: For overlay networks to work effectively, they need a strong and stable foundation provided by the underlying infrastructure. This means that careful planning is essential, especially when it comes to determining the Maximum Transmission Unit (MTU) sizes, which help manage data packet sizes. Additionally, it's important to have consistent policies at all endpoints, which are the devices or points where data enters or exits the network. Lastly, having reliable troubleshooting tools is vital.\nWhy this matters: Operational Considerations helps learners in Computer Science connect ideas from Advanced Network Architecture and Automation to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "A stable overlay depends entirely on a robust underlay. Key operational considerations include meticulous planning of Maximum Transmission Unit (MTU) sizes to account for VXLAN header overhead, ensuring consistent endpoint policies, and having effective troubleshooting tools. Because traffic is encapsulated, traditional tools may be less effective. Engineers need methods to trace packet paths through both the overlay tunnels and the physical underlay to quickly diagnose and resolve issues."
         },
         {
           "id": "network-engineering-301-l04-c3",
           "kind": "recap",
           "title": "Design Trade-offs",
-          "content": "EVPN (Ethernet Virtual Private Network) and VXLAN (Virtual Extensible LAN) are powerful technologies that can significantly improve the scalability and flexibility of network designs. However, they also bring about more complexity in the control plane, which is the part of the network that manages data flow. To navigate this complexity successfully, it is crucial for teams to develop clear and detailed templates for their network configurations. Additionally, having effective tools to monitor network performance is vital. This allows teams to quickly identify and address any issues that may arise. Finally, implementing a well-thought-out strategy for gradually rolling out changes can help ensure that the network remains stable and efficient during the transition. By taking these steps, teams can leverage the benefits of EVPN and VXLAN while minimizing potential challenges.\nContext recap: EVPN (Ethernet Virtual Private Network) and VXLAN (Virtual Extensible LAN) are powerful technologies that can significantly improve the scalability and flexibility of network designs. However, they also bring about more complexity in the control plane, which is the part of the network that manages data flow. To navigate this complexity successfully, it is crucial for teams to develop clear and detailed templates for their network configurations. Additionally, having effective tools to monitor network performance is vital.\nWhy this matters: Design Trade-offs helps learners in Computer Science connect ideas from Advanced Network Architecture and Automation to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "While EVPN and VXLAN offer superior scalability and flexibility, they introduce greater control-plane complexity. Successful adoption requires a mature operational model. This includes using standardized configuration templates to ensure consistency, deploying comprehensive monitoring tools to maintain visibility into the fabric's health, and implementing a phased rollout strategy to de-risk the migration. The benefits are significant, but they must be balanced against the investment in tooling and process."
         }
       ],
       "flashcards": [
         {
           "id": "network-engineering-301-l04-f1",
-          "front": "EVPN",
-          "back": "A BGP-based control-plane for distributing MAC/IP information in overlay networks."
+          "front": "What is EVPN?",
+          "back": "Ethernet VPN. A modern, BGP-based control plane for distributing MAC and IP address information in overlay networks like VXLAN."
         },
         {
           "id": "network-engineering-301-l04-f2",
-          "front": "VXLAN",
-          "back": "Overlay encapsulation that carries Layer 2 segments across Layer 3 networks."
+          "front": "What is VXLAN?",
+          "back": "Virtual Extensible LAN. An overlay encapsulation protocol that allows Layer 2 segments to be tunneled across a Layer 3 network."
         },
         {
           "id": "network-engineering-301-l04-f3",
-          "front": "Underlay",
-          "back": "Physical/logical transport network that carries overlay encapsulated traffic."
+          "front": "What is an underlay network?",
+          "back": "The physical or logical transport network (typically IP-based) that is responsible for forwarding the encapsulated traffic of an overlay network."
         }
       ],
       "learningAids": [
@@ -324,7 +325,7 @@ export const NetworkEngineering301Module: LearningModule = {
           "id": "network-engineering-301-l04-a1",
           "type": "image",
           "title": "Overlay Fabric Packet Path",
-          "content": "Diagram tracing endpoint packet encapsulation, underlay forwarding, and decapsulation flow."
+          "content": "A diagram tracing a packet from a source endpoint, showing its VXLAN encapsulation at the source VTEP, forwarding across the IP underlay, and decapsulation at the destination VTEP before delivery."
         }
       ]
     },
@@ -338,13 +339,13 @@ export const NetworkEngineering301Module: LearningModule = {
           "id": "network-engineering-301-l05-c1",
           "kind": "concept",
           "title": "From CLI Drift to Intent",
-          "content": "When network operations are done manually using the Command Line Interface (CLI), especially in large networks, it can lead to problems like inconsistencies and drift in the configurations. This means that what you intended to set up might not match what is actually in place. To solve this issue, we can use automation pipelines. These pipelines help create configurations based on what we want to achieve, known as our intended policies. Additionally, it is important that these pipelines check to make sure that the policies stay consistent and perform necessary checks both before and after any changes are made. This way, we can ensure that everything is working correctly and as planned, reducing the chances of errors and improving the overall reliability of the network.\nContext recap: When network operations are done manually using the Command Line Interface (CLI), especially in large networks, it can lead to problems like inconsistencies and drift in the configurations. This means that what you intended to set up might not match what is actually in place. To solve this issue, we can use automation pipelines. These pipelines help create configurations based on what we want to achieve, known as our intended policies.\nWhy this matters: From CLI Drift to Intent helps learners in Computer Science connect ideas from Advanced Network Architecture and Automation to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "Manual, device-by-device configuration via the Command Line Interface (CLI) is prone to errors and leads to 'configuration drift,' where the running state of the network no longer matches the intended design. The modern approach is to use an automation pipeline driven by a 'source of truth.' This system generates configurations from high-level intent-based policies and includes pre- and post-change validation to ensure the network's state consistently reflects the desired outcome, enhancing reliability and agility."
         },
         {
           "id": "network-engineering-301-l05-c2",
           "kind": "practice",
-          "title": "Safe Change Pipeline",
-          "content": "A safe network automation pipeline is designed to ensure that changes to the network are made smoothly and without errors. It should include several key features: First, syntax checks are crucial to verify that all commands are written correctly, preventing mistakes that could disrupt the network. Next, policy compliance tests are necessary to ensure that all changes adhere to established guidelines and regulations. Additionally, simulating the network topology allows us to visualize how the network will behave before making any actual changes. Gradual deployment strategies, often referred to as canary deployments, involve rolling out changes to a small portion of the network first. This helps identify any potential issues before a full-scale implementation. Finally, automatic rollback mechanisms are essential; these systems can revert changes if monitoring detects any unusual behavior, ensuring the network remains stable and secure. By incorporating these features, we can create a robust and reliable network automation pipeline that minimizes risks and enhances performance.\nContext recap: A safe network automation pipeline is designed to ensure that changes to the network are made smoothly and without errors. It should include several key features: First, syntax checks are crucial to verify that all commands are written correctly, preventing mistakes that could disrupt the network. Next, policy compliance tests are necessary to ensure that all changes adhere to established guidelines and regulations. Additionally, simulating the network topology allows us to visualize how the network will behave before making any actual changes.\nWhy this matters: Safe Change Pipeline helps learners in Computer Science connect ideas from Advanced Network Architecture and Automation to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "Building a Safe Change Pipeline",
+          "content": "A safe network automation pipeline incorporates several stages to minimize risk. It begins with static validation, such as syntax and policy compliance checks. Next, changes are tested in a simulated or lab environment to predict their impact on network topology and behavior. Approved changes are then deployed incrementally using a 'canary' rollout to a small part of the network. Throughout this process, telemetry is monitored closely, and an automatic rollback is triggered if anomalies are detected, ensuring changes are deployed safely and reliably."
         }
       ],
       "interactiveActivities": [
@@ -352,14 +353,14 @@ export const NetworkEngineering301Module: LearningModule = {
           "id": "network-engineering-301-l05-act1",
           "type": "timeline_builder",
           "title": "Automation Pipeline Order",
-          "description": "Place network automation stages in safe execution order.",
+          "description": "Place the stages of a safe network automation pipeline in the correct execution order.",
           "data": {
             "stages": [
-              "Intent definition",
+              "Intent definition in source of truth",
               "Template generation",
-              "Static/policy validation",
-              "Lab simulation",
-              "Canary rollout",
+              "Static analysis and policy validation",
+              "Lab simulation and testing",
+              "Canary rollout to limited scope",
               "Telemetry verification",
               "Full rollout"
             ]
@@ -368,9 +369,9 @@ export const NetworkEngineering301Module: LearningModule = {
       ],
       "metadata": {
         "prompts": [
-          "What drift signals should trigger automatic rollback?",
-          "Why is canary rollout useful in network automation as well as app deployment?",
-          "Name one policy invariant you would enforce before merge."
+          "What telemetry signals should trigger an automatic rollback during a change?",
+          "Why is a canary rollout useful in network automation, similar to application deployment?",
+          "Name one policy invariant you would enforce in pre-deployment validation."
         ]
       },
       "learningAids": [
@@ -378,7 +379,13 @@ export const NetworkEngineering301Module: LearningModule = {
           "id": "network-engineering-301-l05-a1",
           "type": "practice",
           "title": "Intent Test Catalog",
-          "content": "Checklist of invariants: no unauthorized transit, route limits, ACL consistency, and MTU policy."
+          "content": "A checklist of common policy invariants to test before deployment: no unauthorized BGP transit, adherence to route prefix limits, ACL consistency, and correct MTU policy."
+        },
+        {
+          "id": "network-engineering-301-l05-a2",
+          "type": "image",
+          "title": "CI/CD Pipeline for Network Changes",
+          "content": "Diagram showing the flow from a code commit (intent) through automated stages of validation, simulation, canary deployment, and full production rollout, with telemetry feedback loops at each step."
         }
       ]
     },
@@ -390,20 +397,20 @@ export const NetworkEngineering301Module: LearningModule = {
       "questions": [
         {
           "id": "network-engineering-301-l06-q1",
-          "text": "Main benefit of EVPN over flood-and-learn overlays?",
+          "text": "What is the main benefit of EVPN over older flood-and-learn overlay methods?",
           "skillId": "network-engineering-301-skill-overlay",
           "options": [
             {
               "id": "a",
-              "text": "No control-plane required"
+              "text": "It requires no control plane"
             },
             {
               "id": "b",
-              "text": "BGP-based control-plane improves scale and reachability signaling"
+              "text": "Its BGP-based control plane improves scale and reachability signaling"
             },
             {
               "id": "c",
-              "text": "No underlay needed"
+              "text": "It requires no underlay network"
             },
             {
               "id": "d",
@@ -411,61 +418,61 @@ export const NetworkEngineering301Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": "EVPN provides explicit control-plane exchange for endpoint reachability."
+          "explanation": "EVPN provides an explicit, scalable control-plane for exchanging endpoint reachability information, avoiding inefficient traffic flooding."
         },
         {
           "id": "network-engineering-301-l06-q2",
-          "text": "Most important reason to include simulation before rollout in network automation?",
+          "text": "What is the most important reason to include simulation in a network automation pipeline?",
           "skillId": "network-engineering-301-skill-automation",
           "options": [
             {
               "id": "a",
-              "text": "It slows delivery intentionally"
+              "text": "It slows down the delivery process intentionally"
             },
             {
               "id": "b",
-              "text": "It catches topology/policy failures before production impact"
+              "text": "It can catch topology and policy failures before they impact production"
             },
             {
               "id": "c",
-              "text": "It removes need for monitoring"
+              "text": "It removes the need for post-deployment monitoring"
             },
             {
               "id": "d",
-              "text": "It replaces design review permanently"
+              "text": "It permanently replaces the need for design reviews"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Simulation reduces risk by revealing logic and policy defects early."
+          "explanation": "Simulation reduces risk by revealing logical errors and unintended policy interactions in a safe environment before they can cause an outage."
         },
         {
           "id": "network-engineering-301-l06-q3",
-          "text": "Which practice best reduces configuration drift long-term?",
+          "text": "Which practice best reduces configuration drift over the long term?",
           "skillId": "network-engineering-301-skill-automation",
           "options": [
             {
               "id": "a",
-              "text": "Frequent ad hoc manual edits"
+              "text": "Allowing frequent ad-hoc manual edits"
             },
             {
               "id": "b",
-              "text": "Intent-based source of truth with automated deployment"
+              "text": "Using an intent-based source of truth with automated deployment"
             },
             {
               "id": "c",
-              "text": "Ignoring diff reports"
+              "text": "Ignoring configuration difference reports"
             },
             {
               "id": "d",
-              "text": "Disabling config backup"
+              "text": "Disabling configuration backups"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Single source of truth plus automation limits unsanctioned drift."
+          "explanation": "A single source of truth combined with automation is the most effective way to limit unsanctioned changes and enforce the intended state."
         },
         {
           "id": "network-engineering-301-l06-q4",
-          "text": "What is a key prerequisite for stable overlay operations?",
+          "text": "What is a key prerequisite for stable overlay network operations?",
           "skillId": "network-engineering-301-skill-overlay",
           "options": [
             {
@@ -486,7 +493,7 @@ export const NetworkEngineering301Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Overlay reliability depends on solid underlay fundamentals."
+          "explanation": "The reliability of an overlay network is fundamentally dependent on the stability and proper configuration of its underlay, including reachability and MTU."
         }
       ],
       "learningAids": [
@@ -494,7 +501,7 @@ export const NetworkEngineering301Module: LearningModule = {
           "id": "network-engineering-301-l06-a1",
           "type": "mnemonic",
           "title": "SAFE Change",
-          "content": "Simulate, Apply canary, Follow telemetry, Expand rollout."
+          "content": "A mnemonic for a safe automation pipeline: Simulate, Apply canary, Follow telemetry, Expand rollout."
         }
       ]
     },
@@ -508,28 +515,28 @@ export const NetworkEngineering301Module: LearningModule = {
           "id": "network-engineering-301-l07-c1",
           "kind": "practice",
           "title": "Redesign Scenario",
-          "content": "In this exciting capstone project, you will take on the challenge of redesigning a multi-site network for a fast-growing organization. This organization is facing some important needs: they want to make their Wide Area Network (WAN) faster by reducing latency, enhance security by improving network segmentation, and streamline their operations with automated change control processes. Your task will be to come up with a detailed proposal for the new network architecture that meets these needs. You will also outline the different phases of migration, which are the steps the organization will take to transition to the new network. Additionally, you will identify strategies for managing risks to ensure that the transition goes smoothly and successfully. This project will allow you to apply your knowledge and skills in network engineering while considering real-world challenges and solutions.\nContext recap: In this exciting capstone project, you will take on the challenge of redesigning a multi-site network for a fast-growing organization. This organization is facing some important needs: they want to make their Wide Area Network (WAN) faster by reducing latency, enhance security by improving network segmentation, and streamline their operations with automated change control processes. Your task will be to come up with a detailed proposal for the new network architecture that meets these needs. You will also outline the different phases of migration, which are the steps the organization will take to transition to the new network."
+          "content": "Your capstone challenge is to propose a network redesign for a rapidly growing organization. Their current network suffers from high WAN latency, poor security segmentation, and risky manual change processes. Your task is to design a new architecture that addresses these issues. You must deliver a detailed proposal that includes the target architecture, a phased migration plan, and a risk management strategy to ensure a smooth and successful transition. This project will test your ability to apply all the concepts from this course to a real-world problem."
         },
         {
           "id": "network-engineering-301-l07-c2",
           "kind": "recap",
           "title": "Evaluation Criteria",
-          "content": "To earn a top score in your design evaluation, your proposal must clearly define the policies you intend to implement. Additionally, it should specify the requirements for monitoring how well the network performs. It's also important to include fallback options that can be used if any problems arise. Lastly, you should establish measurable success criteria that are directly connected to the user experience and the reliability of the network's operations.\nContext recap: To earn a top score in your design evaluation, your proposal must clearly define the policies you intend to implement. Additionally, it should specify the requirements for monitoring how well the network performs. It's also important to include fallback options that can be used if any problems arise. Lastly, you should establish measurable success criteria that are directly connected to the user experience and the reliability of the network's operations.\nContext recap: To earn a top score in your design evaluation, your proposal must clearly define the policies you intend to implement. Additionally, it should specify the requirements for monitoring how well the network performs. It's also important to include fallback options that can be used if any problems arise. Lastly, you should establish measurable success criteria that are directly connected to the user experience and the reliability of the network's operations.\nWhy this matters: Evaluation Criteria helps learners in Computer Science connect ideas from Advanced Network Architecture and Automation to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "Your design proposal will be evaluated on its clarity, completeness, and technical soundness. To achieve a top score, you must clearly define your intended routing and security policies, specify telemetry and monitoring requirements, include viable fallback plans for each migration phase, and establish measurable success criteria. These criteria should be tied directly to business outcomes, such as improved application performance and operational reliability."
         }
       ],
       "metadata": {
         "prompts": [
-          "Define three architecture decisions and their trade-offs.",
-          "Choose one migration risk and mitigation plan.",
-          "Name two KPIs proving redesign success in 90 days."
+          "Define three key architecture decisions you made and their trade-offs.",
+          "Choose the single biggest migration risk and describe your mitigation plan.",
+          "Name two Key Performance Indicators (KPIs) that would prove your redesign was successful after 90 days."
         ]
       },
       "learningAids": [
         {
           "id": "network-engineering-301-l07-a1",
           "type": "practice",
-          "title": "Architecture Decision Record",
-          "content": "Template for decision, alternatives, rationale, risk, and measurable success criteria."
+          "title": "Architecture Decision Record (ADR)",
+          "content": "A template to structure your design choices. For each decision, document the context, alternatives considered, final decision, rationale, potential risks, and measurable success criteria."
         }
       ]
     }

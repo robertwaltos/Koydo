@@ -1,9 +1,9 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const PreKGeneralScience101Module: LearningModule = {
+export const pre_k_general_science_101_Module: LearningModule = {
   "id": "pre-k-general-science-101",
   "title": "Little Scientists: Exploring Our World",
-  "description": "Discover science wonders! Learn about states of matter, forces like push and pull, simple machines, the water cycle, habitats, and the human body through fun experiments and activities.",
+  "description": "Discover the wonders of science! Explore states of matter, forces like push and pull, simple machines, the water cycle, animal habitats, and the human body through fun, hands-on activities and experiments.",
   "subject": "Science",
   "tags": [
     "pre-k",
@@ -13,58 +13,58 @@ export const PreKGeneralScience101Module: LearningModule = {
   ],
   "minAge": 3,
   "maxAge": 5,
-  "version": "4.0.0",
+  "version": "1.1.0",
   "learningObjectives": [
-    "Identify the three states of matter: solid, liquid, and gas",
-    "Understand basic forces including push, pull, gravity, and friction",
-    "Recognize simple machines like ramps, levers, and wheels",
-    "Describe the water cycle: evaporation, condensation, precipitation",
-    "Match animals to their habitats",
-    "Name major parts of the human body and their functions"
+    "Identify the three states of matter: solid, liquid, and gas.",
+    "Understand basic forces including push, pull, and gravity.",
+    "Recognize simple machines like ramps, levers, and wheels.",
+    "Describe the basic steps of the water cycle.",
+    "Match animals to their correct habitats.",
+    "Name major parts of the human body and their simple functions."
   ],
   "lessons": [
     {
       "id": "pre-k-general-science-101-l01",
-      "title": "States of Matter",
+      "title": "What's It Made Of? Solids, Liquids, and Gases",
       "type": "video",
       "duration": 10,
       "chunks": [
         {
           "id": "pre-k-general-science-101-l01-c1",
-          "title": "Solids",
-          "content": "Solids are really interesting because they always keep their shape! Imagine holding a rock, a toy block, or a crayon in your hand. No matter what you do, like stacking them on top of each other, they will always look the same. If you take a solid object and put it in a cup, it won’t change shape at all; it will stay just as it is! This is what makes solids so special. They are strong and steady, which means they are fun to play with and easy to understand. Next time you see a solid, remember how it holds its shape and think about all the fun things you can do with it!\nContext recap: Solids are really interesting because they always keep their shape! Imagine holding a rock, a toy block, or a crayon in your hand. No matter what you do, like stacking them on top of each other, they will always look the same. If you take a solid object and put it in a cup, it won’t change shape at all; it will stay just as it is!\nWhy this matters: Solids helps learners in Science connect ideas from Little Scientists: Exploring Our World to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "title": "Solids Keep Their Shape",
+          "content": "Let's learn about solids! Solids are things that keep their own shape. Think about your favorite toy block. If you put it in a cup or a bowl, it stays the same shape, right? A rock, a crayon, and an apple are all solids. They are firm and you can hold them. Look around you, can you find a solid?"
         },
         {
           "id": "pre-k-general-science-101-l01-c2",
-          "title": "Liquids",
-          "content": "Liquids are really interesting because they can flow and change their shape! Imagine you have a cup and you pour water, juice, or milk into it. What happens? The liquid fills up the cup and takes its shape! Now, if you take that same liquid and pour it into a bowl, guess what? It will change shape again and fill the bowl instead! This shows us that liquids are special because they can fit into any container we use. Isn’t it amazing how they can change shape so easily? Next time you drink your juice or water, think about how it changes shape just for you!\nContext recap: Liquids are really interesting because they can flow and change their shape! Imagine you have a cup and you pour water, juice, or milk into it. What happens? The liquid fills up the cup and takes its shape!\nWhy this matters: Liquids helps learners in Science connect ideas from Little Scientists: Exploring Our World to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "title": "Liquids Flow and Pour",
+          "content": "Now for liquids! Liquids don't have their own shape. They flow and take the shape of whatever container they are in. When you pour water into a cup, it takes the shape of the cup. If you pour it into a bowl, it takes the shape of the bowl! Juice and milk are liquids, too. They love to fill up any space you give them."
         },
         {
           "id": "pre-k-general-science-101-l01-c3",
-          "title": "Gases",
-          "content": "Gases are really interesting because we can't see most of them, but they are all around us, just like invisible friends! They like to spread out and fill up any space they can find. For example, when the wind blows, you can feel the air moving, and that air is actually a gas! It’s like a gentle hug from the wind. Have you ever blown up a balloon? When you do that, the air you blow inside is gas, and it pushes against the walls of the balloon, making it grow bigger and bigger. So, even though we can't always see gases, they are everywhere, helping us feel the breeze and making our balloons fun! Isn't that cool?\nContext recap: Gases are really interesting because we can't see most of them, but they are all around us, just like invisible friends! They like to spread out and fill up any space they can find. For example, when the wind blows, you can feel the air moving, and that air is actually a gas! It’s like a gentle hug from the wind.\nWhy this matters: Gases helps learners in Science connect ideas from Little Scientists: Exploring Our World to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "title": "Gases Are All Around Us",
+          "content": "What about gases? Gas is all around us, but we usually can't see it! The air we breathe is a gas. It spreads out to fill up any space, big or small. When you blow up a balloon, you are filling it with a gas from your lungs. You can't see the air, but you can see the balloon get bigger! You can also feel gas when the wind blows. That's moving air!"
         }
       ],
       "flashcards": [
         {
           "id": "pre-k-general-science-101-l01-f1",
-          "front": "Keeps its own shape",
-          "back": "Solid"
+          "front": "What keeps its own shape?",
+          "back": "A Solid"
         },
         {
           "id": "pre-k-general-science-101-l01-f2",
-          "front": "Flows and takes the shape of its container",
-          "back": "Liquid"
+          "front": "What flows and takes the shape of its container?",
+          "back": "A Liquid"
         },
         {
           "id": "pre-k-general-science-101-l01-f3",
-          "front": "Spreads out to fill any space",
-          "back": "Gas"
+          "front": "What spreads out to fill any space?",
+          "back": "A Gas"
         },
         {
           "id": "pre-k-general-science-101-l01-f4",
-          "front": "A balloon is filled with this state of matter",
-          "back": "Gas (air)"
+          "front": "An ice cube is a...",
+          "back": "Solid"
         }
       ],
       "questions": [
@@ -83,153 +83,137 @@ export const PreKGeneralScience101Module: LearningModule = {
             {
               "id": "c",
               "text": "Air"
-            },
-            {
-              "id": "d",
-              "text": "Juice"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "A rock keeps its shape — it's a solid!"
+          "explanation": "A rock keeps its shape, so it's a solid!"
         },
         {
           "id": "pre-k-general-science-101-l01-q2",
-          "text": "What happens when you pour water into a cup?",
+          "text": "What happens when you pour juice into a glass?",
           "options": [
             {
               "id": "a",
-              "text": "It takes the cup's shape"
+              "text": "It takes the glass's shape"
             },
             {
               "id": "b",
-              "text": "It stays a ball"
+              "text": "It stays in a ball"
             },
             {
               "id": "c",
               "text": "It disappears"
-            },
-            {
-              "id": "d",
-              "text": "It turns to ice"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Liquids flow and fill their container!"
+          "explanation": "Juice is a liquid, so it flows to fill the glass!"
         },
         {
           "id": "pre-k-general-science-101-l01-q3",
-          "text": "You cannot see most gases, but you can",
+          "text": "When you blow up a balloon, you fill it with...",
           "options": [
             {
               "id": "a",
-              "text": "Feel air (wind)"
+              "text": "Gas"
             },
             {
               "id": "b",
-              "text": "Hold them"
+              "text": "A solid"
             },
             {
               "id": "c",
-              "text": "Stack them"
-            },
-            {
-              "id": "d",
-              "text": "Pour them in a cup"
+              "text": "A liquid"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "You feel gas when the wind blows on your face!"
+          "explanation": "The air you blow is a gas that fills the balloon!"
         }
       ],
       "interactiveActivities": [
         {
           "id": "pre-k-general-science-101-l01-act1",
           "type": "sorting_game",
-          "title": "Sort the matter",
-          "description": "Gather 6 items from home (ice cube, water, balloon, toy car, soap, steam from a pot). Sort them into Solid, Liquid, or Gas."
+          "title": "Matter Hunt!",
+          "description": "With a grown-up, find one solid (like a toy), one liquid (like water in a cup), and one gas (like the air in a sealed bag). Talk about why each one is a solid, liquid, or gas."
         }
       ],
       "learningAids": [
         {
           "id": "pre-k-general-science-101-l01-a1",
           "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary of the lesson's main concept."
+          "title": "States of Matter Chart",
+          "content": "An animated chart showing an ice cube (solid) melting into water (liquid), which then turns into steam (gas) when heated."
         }
       ]
     },
     {
       "id": "pre-k-general-science-101-l02",
-      "title": "Forces: Push and Pull",
+      "title": "Let's Get Moving! Push, Pull, and Gravity",
       "type": "interactive",
       "duration": 10,
       "chunks": [
         {
           "id": "pre-k-general-science-101-l02-c1",
           "title": "Push and Pull",
-          "content": "Forces are all around us, and they help us move things in different ways! Let's explore the two main types of forces: pushing and pulling. When we push something, we are moving it away from our bodies. Imagine giving a swing a gentle push to make it go higher or pushing your favorite toy car across the floor to watch it zoom away! That's a push! Now, let's think about pulling. When we pull something, we are bringing it closer to us. For example, when you pull a wagon filled with your toys towards you or when you open a drawer to get your favorite book, you are using a pull. Both pushing and pulling are important forces that help us play and explore our world! Can you think of other things you can push or pull? Let's share our ideas together!\nContext recap: Forces are all around us, and they help us move things in different ways! Let's explore the two main types of forces: pushing and pulling. When we push something, we are moving it away from our bodies. Imagine giving a swing a gentle push to make it go higher or pushing your favorite toy car across the floor to watch it zoom away!\nWhy this matters: Push and Pull helps learners in Science connect ideas from Little Scientists: Exploring Our World to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "Forces make things move! A push moves something away from you. When you push a toy car, it rolls away. A pull brings something closer to you. When you pull a wagon by its handle, it comes toward you. Push and pull are forces we use every day to play and do things!"
         },
         {
           "id": "pre-k-general-science-101-l02-c2",
-          "title": "Gravity",
-          "content": "Gravity is a super important force that helps keep everything on the ground! Imagine you have a ball in your hand. When you let go of it and drop it, gravity is what makes the ball fall down to the floor. Isn't that cool? Now, think about when you jump up high into the air. You go up, but guess what? Gravity is also the reason you come back down to the ground! Without gravity, we would float away into the sky, just like astronauts do when they are in space. It’s really amazing how gravity works to keep us safe and grounded on Earth. So, the next time you drop something or jump, remember that gravity is always there to help us stay close to the ground!\nContext recap: Gravity is a super important force that helps keep everything on the ground! Imagine you have a ball in your hand. When you let go of it and drop it, gravity is what makes the ball fall down to the floor. Isn't that cool?\nWhy this matters: Gravity helps learners in Science connect ideas from Little Scientists: Exploring Our World to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "title": "Gravity Pulls Down",
+          "content": "Have you ever wondered why things fall down instead of up? That's because of a super strong, invisible force called gravity! Gravity pulls everything toward the ground. When you drop a ball, gravity pulls it down. When you jump, gravity brings you back to the floor. Gravity keeps us all on the Earth!"
         },
         {
           "id": "pre-k-general-science-101-l02-c3",
-          "title": "Friction",
-          "content": "Friction is a special force that helps slow things down. Have you ever rubbed your hands together really fast? If you did, you might have noticed that they start to feel warm — that’s because of friction! It happens when two surfaces rub against each other. Some surfaces, like ice, are super smooth and have less friction, which is why you can slide around easily on them, like when you go ice skating. On the other hand, some surfaces are rough, like sandpaper, and they create more friction. This makes it harder to slide, but it also helps us grip things better. Friction is very important because it helps us control how things move, whether we are walking, riding a bike, or playing with toys! Understanding friction can help us learn how to play safely and have fun!\nContext recap: Friction is a special force that helps slow things down. Have you ever rubbed your hands together really fast? If you did, you might have noticed that they start to feel warm — that’s because of friction! It happens when two surfaces rub against each other.\nWhy this matters: Friction helps learners in Science connect ideas from Little Scientists: Exploring Our World to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "title": "Friction Slows Things Down",
+          "content": "Friction is a special force that happens when things rub together. It slows things down. Rub your hands together really fast. Do they feel warm? That's friction! Friction helps the brakes on your bike work, and it helps you stop running without slipping. It's a very helpful force!"
         }
       ],
       "flashcards": [
         {
           "id": "pre-k-general-science-101-l02-f1",
-          "front": "Moves things away from you",
+          "front": "A force that moves things away from you.",
           "back": "Push"
         },
         {
           "id": "pre-k-general-science-101-l02-f2",
-          "front": "Brings things toward you",
+          "front": "A force that brings things closer to you.",
           "back": "Pull"
         },
         {
           "id": "pre-k-general-science-101-l02-f3",
-          "front": "Force that pulls things down to the ground",
+          "front": "The force that pulls things down to the ground.",
           "back": "Gravity"
         },
         {
           "id": "pre-k-general-science-101-l02-f4",
-          "front": "Force that slows things down",
+          "front": "The rubbing force that slows things down.",
           "back": "Friction"
         }
       ],
       "questions": [
         {
           "id": "pre-k-general-science-101-l02-q1",
-          "text": "When you push a toy car, it moves",
+          "text": "When you close a door, you usually...",
           "options": [
             {
               "id": "a",
-              "text": "Away from you"
+              "text": "Push it"
             },
             {
               "id": "b",
-              "text": "Toward you"
+              "text": "Pull it"
             },
             {
               "id": "c",
-              "text": "Up to the sky"
-            },
-            {
-              "id": "d",
-              "text": "Under water"
+              "text": "Drop it"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "A push moves things away from you!"
+          "explanation": "You push a door to move it away from you and close it."
         },
         {
           "id": "pre-k-general-science-101-l02-q2",
-          "text": "What force pulls you back down after you jump?",
+          "text": "What force pulls an apple from a tree to the ground?",
           "options": [
             {
               "id": "a",
@@ -241,19 +225,15 @@ export const PreKGeneralScience101Module: LearningModule = {
             },
             {
               "id": "c",
-              "text": "Push"
-            },
-            {
-              "id": "d",
-              "text": "Wind"
+              "text": "A push"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Gravity always pulls things toward the ground!"
+          "explanation": "Gravity always pulls things down toward the ground!"
         },
         {
           "id": "pre-k-general-science-101-l02-q3",
-          "text": "Why do your hands feel warm when you rub them together?",
+          "text": "Why is it hard to slide a heavy box on the carpet?",
           "options": [
             {
               "id": "a",
@@ -265,106 +245,98 @@ export const PreKGeneralScience101Module: LearningModule = {
             },
             {
               "id": "c",
-              "text": "Push"
-            },
-            {
-              "id": "d",
-              "text": "Pull"
+              "text": "A pull"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Rubbing creates friction, which makes heat!"
+          "explanation": "The rubbing between the box and the carpet creates friction, which makes it harder to move!"
         }
       ],
       "interactiveActivities": [
         {
           "id": "pre-k-general-science-101-l02-act1",
           "type": "sorting_game",
-          "title": "Push or pull walk",
-          "description": "Walk around your home and find 5 things you push (door, button) and 5 things you pull (drawer, rope). Draw or name them."
+          "title": "Push or Pull? Let's Explore!",
+          "description": "Walk around your home with a grown-up. Find three things you can push (like a light switch or a toy car) and three things you can pull (like a drawer or a sock). Show your grown-up how you push and pull them!"
         }
       ],
       "learningAids": [
         {
           "id": "pre-k-general-science-101-l02-a1",
           "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary of the lesson's main concept."
+          "title": "Forces in Action",
+          "content": "An animation showing a child pushing a swing away, pulling a wagon closer, and dropping a ball that falls down due to gravity."
         }
       ]
     },
     {
       "id": "pre-k-general-science-101-l03",
-      "title": "Simple Machines",
+      "title": "Helpful Tools: Simple Machines",
       "type": "video",
       "duration": 10,
       "chunks": [
         {
           "id": "pre-k-general-science-101-l03-c1",
-          "title": "Ramps (Inclined Planes)",
-          "content": "Ramps, which we can also call inclined planes, are super useful tools that help us move things up and down with ease. Imagine you have a ball. If you want to get that ball to a higher place, rolling it up a ramp is much easier than trying to lift it straight up into the air. It’s like magic! Now, think about the slides you see at the playground. Those slides are actually ramps too! When you climb up and then slide down, gravity is what pulls you down, making it a really fun adventure! Ramps help us in many ways, and they make our playtime even more exciting!\nContext recap: Ramps, which we can also call inclined planes, are super useful tools that help us move things up and down with ease. Imagine you have a ball. If you want to get that ball to a higher place, rolling it up a ramp is much easier than trying to lift it straight up into the air. It’s like magic!\nWhy this matters: Ramps (Inclined Planes) helps learners in Science connect ideas from Little Scientists: Exploring Our World to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "title": "Ramps Make It Easier",
+          "content": "A ramp is a simple machine that helps us move things up and down. It's a flat surface that is tilted, like a slide at the playground! It's much easier to roll a ball up a ramp than to lift it straight up. Ramps help make work easier for everyone."
         },
         {
           "id": "pre-k-general-science-101-l03-c2",
-          "title": "Levers",
-          "content": "A lever is a special kind of simple machine that helps us lift things more easily. Imagine a long bar that can move up and down, resting on a point called a fulcrum. This fulcrum is like a little helper that makes lifting lighter objects much easier! A fun example of a lever is a seesaw that you might play on at the playground. When one friend sits on one side and pushes down, the other side goes up! This is because the lever uses the fulcrum to balance the weight. Levers are super cool because they let us lift heavy things without needing to use a lot of strength. They make lifting not only easier but also a lot more fun! So next time you see a seesaw or even a big door, remember that they are using levers to help us out!\nContext recap: A lever is a special kind of simple machine that helps us lift things more easily. Imagine a long bar that can move up and down, resting on a point called a fulcrum. This fulcrum is like a little helper that makes lifting lighter objects much easier! A fun example of a lever is a seesaw that you might play on at the playground.\nWhy this matters: Levers helps learners in Science connect ideas from Little Scientists: Exploring Our World to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "title": "Levers Lift and Balance",
+          "content": "A lever is another helpful simple machine. A seesaw at the park is a lever! It's a long board that rests on a point in the middle. When you push down on one side, the other side goes up! Levers help us lift heavy things more easily."
         },
         {
           "id": "pre-k-general-science-101-l03-c3",
-          "title": "Wheels and Axles",
-          "content": "Wheels are truly wonderful inventions! They help things roll instead of slide, which makes moving them so much easier. For instance, think about a wagon. When it has wheels, you can pull it along without any trouble at all. But imagine if there were no wheels! You would have to drag the wagon, and that would create a lot of friction. Friction is what makes it hard to move things. So, thanks to wheels, we can move our toys, wagons, and even cars smoothly and quickly. Wheels help us in so many ways every day, making our lives a little bit easier and a lot more fun!\nContext recap: Wheels are truly wonderful inventions! They help things roll instead of slide, which makes moving them so much easier. For instance, think about a wagon. When it has wheels, you can pull it along without any trouble at all.\nWhy this matters: Wheels and Axles helps learners in Science connect ideas from Little Scientists: Exploring Our World to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "title": "Wheels Help Things Roll",
+          "content": "Wheels are amazing! They are round and help things roll smoothly. Imagine trying to pull a wagon without wheels—it would be so hard to drag! But with wheels, it rolls along easily. Wheels make it easier to move things because they reduce friction."
         }
       ],
       "flashcards": [
         {
           "id": "pre-k-general-science-101-l03-f1",
-          "front": "A slanted surface that helps you move things up",
-          "back": "Ramp (inclined plane)"
+          "front": "A slanted surface that helps you move things up.",
+          "back": "Ramp"
         },
         {
           "id": "pre-k-general-science-101-l03-f2",
-          "front": "A bar that rests on a point to lift things",
+          "front": "A seesaw is an example of this.",
           "back": "Lever"
         },
         {
           "id": "pre-k-general-science-101-l03-f3",
-          "front": "The balance point of a lever",
-          "back": "Fulcrum"
+          "front": "Round tools that help things roll.",
+          "back": "Wheels"
         },
         {
           "id": "pre-k-general-science-101-l03-f4",
-          "front": "Round objects that reduce friction and help things roll",
-          "back": "Wheels"
+          "front": "A slide at the playground is a type of...",
+          "back": "Ramp"
         }
       ],
       "questions": [
         {
           "id": "pre-k-general-science-101-l03-q1",
-          "text": "A slide at the playground is an example of",
+          "text": "A slide at the playground is a fun example of a...",
           "options": [
             {
               "id": "a",
-              "text": "A ramp"
+              "text": "Ramp"
             },
             {
               "id": "b",
-              "text": "A lever"
+              "text": "Lever"
             },
             {
               "id": "c",
-              "text": "A wheel"
-            },
-            {
-              "id": "d",
-              "text": "A magnet"
+              "text": "Wheel"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Slides are ramps — gravity pulls you down!"
+          "explanation": "A slide is a ramp that lets you slide down!"
         },
         {
           "id": "pre-k-general-science-101-l03-q2",
-          "text": "A seesaw is an example of",
+          "text": "What simple machine is like a seesaw?",
           "options": [
             {
               "id": "a",
@@ -377,105 +349,92 @@ export const PreKGeneralScience101Module: LearningModule = {
             {
               "id": "c",
               "text": "A wheel"
-            },
-            {
-              "id": "d",
-              "text": "A pulley"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "A seesaw lifts one side when you push down the other!"
+          "explanation": "A seesaw is a lever that helps lift your friend up!"
         },
         {
           "id": "pre-k-general-science-101-l03-q3",
-          "text": "Wheels help reduce",
+          "text": "What do toy cars have that help them move fast?",
           "options": [
             {
               "id": "a",
-              "text": "Friction"
+              "text": "Wheels"
             },
             {
               "id": "b",
-              "text": "Gravity"
+              "text": "Ramps"
             },
             {
               "id": "c",
-              "text": "Sound"
-            },
-            {
-              "id": "d",
-              "text": "Light"
+              "text": "Levers"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Wheels roll instead of sliding, reducing friction!"
+          "explanation": "Wheels help the car roll smoothly and reduce friction!"
         }
       ],
       "interactiveActivities": [
         {
           "id": "pre-k-general-science-101-l03-act1",
           "type": "project_builder",
-          "title": "Ramp experiment",
-          "description": "Build a ramp with a book propped against a box. Roll a toy car down and see how far it goes. Try different heights — higher ramp means more speed!"
+          "title": "Build a Ramp Race!",
+          "description": "With a grown-up, use a big book or a piece of cardboard to make a ramp. Prop it up on a pillow. Roll a toy car down your ramp. What happens if you make the ramp taller? Does the car go faster?"
         }
       ],
       "learningAids": [
         {
           "id": "pre-k-general-science-101-l03-a1",
           "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary of the lesson's main concept."
+          "title": "Playground Machines",
+          "content": "A colorful illustration of a playground showing a slide (ramp), a seesaw (lever), and a toy wagon (wheels)."
         }
       ]
     },
     {
       "id": "pre-k-general-science-101-l04",
-      "title": "Science Checkpoint",
+      "title": "Science Checkpoint!",
       "type": "quiz",
       "duration": 8,
       "chunks": [
         {
           "id": "pre-k-general-science-101-l04-c1",
           "title": "Matter Review",
-          "content": "Let’s take a moment to review what we learned about matter! Matter is everything around us, and it comes in three different forms. First, we have solids. Solids are special because they keep their shape no matter what! Think about a toy block or a rock; they don’t change shape when you touch them. Next, we have liquids. Liquids are fun because they can flow and change their shape. For example, when you pour juice into a cup, it takes the shape of the cup! Finally, we have gases. Gases are interesting because they spread out to fill any space they are in. For instance, when you blow up a balloon, the air inside is a gas. Now, let’s remember that ice is a solid, water is a liquid, and steam is a gas. Isn’t it amazing that they are all different forms of the same thing? That’s the magic of matter!\nContext recap: Let’s take a moment to review what we learned about matter! Matter is everything around us, and it comes in three different forms. First, we have solids. Solids are special because they keep their shape no matter what!\nWhy this matters: Matter Review helps learners in Science connect ideas from Little Scientists: Exploring Our World to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "Let's remember what we learned! A solid keeps its shape, like a block. A liquid flows to fill a cup, like juice. A gas fills all the space around it, like the air in a balloon. Great job!"
         },
         {
           "id": "pre-k-general-science-101-l04-c2",
-          "title": "Forces Review",
-          "content": "Now, let’s think about forces! When you push something, you are moving it away from you. When you pull something, you are bringing it closer to you. Gravity is a force that pulls everything down toward the ground. And remember, friction is the force that slows things down. These forces help us understand how things move in our world!\nContext recap: Now, let’s think about forces! When you push something, you are moving it away from you. When you pull something, you are bringing it closer to you. Gravity is a force that pulls everything down toward the ground.\nWhy this matters: Forces Review helps learners in Science connect ideas from Little Scientists: Exploring Our World to decisions they make during practice and assessment. Keep the explanation friendly and practical."
-        },
-        {
-          "id": "pre-k-general-science-101-l04-c3",
-          "title": "Simple Machines Review",
-          "content": "Finally, let’s review what we learned about simple machines! Ramps help us move things up and down easily. Levers are great for lifting heavy things with less effort. Wheels are super helpful because they reduce friction and make rolling things much easier. Simple machines are all around us, making our tasks simpler and more fun!\nContext recap: Finally, let’s review what we learned about simple machines! Ramps help us move things up and down easily. Levers are great for lifting heavy things with less effort. Wheels are super helpful because they reduce friction and make rolling things much easier."
+          "title": "Forces and Machines Review",
+          "content": "We also learned about forces and simple machines! A push moves things away, and a pull brings them close. Gravity pulls things down. Ramps, levers, and wheels are simple machines that make work easier. You're a science star!"
         }
       ],
       "flashcards": [
         {
           "id": "pre-k-general-science-101-l04-f1",
-          "front": "Three states of matter",
-          "back": "Solid, liquid, gas"
+          "front": "The three states of matter are...",
+          "back": "Solid, liquid, and gas"
         },
         {
           "id": "pre-k-general-science-101-l04-f2",
-          "front": "Force that pulls everything down",
+          "front": "The force that pulls everything down is...",
           "back": "Gravity"
         },
         {
           "id": "pre-k-general-science-101-l04-f3",
-          "front": "Force that slows things down",
-          "back": "Friction"
+          "front": "A seesaw is a type of...",
+          "back": "Lever"
         },
         {
           "id": "pre-k-general-science-101-l04-f4",
-          "front": "Playground slide is this simple machine",
+          "front": "A playground slide is a type of...",
           "back": "Ramp"
         }
       ],
       "questions": [
         {
           "id": "pre-k-general-science-101-l04-q1",
-          "text": "Ice is a",
+          "text": "Milk is a...",
           "options": [
             {
               "id": "a",
@@ -488,129 +447,117 @@ export const PreKGeneralScience101Module: LearningModule = {
             {
               "id": "c",
               "text": "Gas"
-            },
-            {
-              "id": "d",
-              "text": "Machine"
             }
           ],
-          "correctOptionId": "a",
-          "explanation": "Ice keeps its shape, so it is a solid!"
+          "correctOptionId": "b",
+          "explanation": "Milk is a liquid because it can be poured!"
         },
         {
           "id": "pre-k-general-science-101-l04-q2",
-          "text": "Opening a drawer is an example of",
+          "text": "Opening a drawer is an example of a...",
           "options": [
             {
               "id": "a",
-              "text": "A pull"
+              "text": "Pull"
             },
             {
               "id": "b",
-              "text": "A push"
-            },
-            {
-              "id": "c",
-              "text": "Gravity"
-            },
-            {
-              "id": "d",
-              "text": "A ramp"
-            }
-          ],
-          "correctOptionId": "a",
-          "explanation": "You pull a drawer toward you!"
-        },
-        {
-          "id": "pre-k-general-science-101-l04-q3",
-          "text": "A seesaw uses what simple machine?",
-          "options": [
-            {
-              "id": "a",
-              "text": "Lever"
-            },
-            {
-              "id": "b",
-              "text": "Wheel"
+              "text": "Push"
             },
             {
               "id": "c",
               "text": "Ramp"
-            },
-            {
-              "id": "d",
-              "text": "Magnet"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "A seesaw is a lever with a fulcrum in the middle!"
+          "explanation": "You pull a drawer toward you to open it!"
+        },
+        {
+          "id": "pre-k-general-science-101-l04-q3",
+          "text": "What helps a toy car roll?",
+          "options": [
+            {
+              "id": "a",
+              "text": "Wheels"
+            },
+            {
+              "id": "b",
+              "text": "Levers"
+            },
+            {
+              "id": "c",
+              "text": "Gravity"
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Wheels help the car roll smoothly!"
         }
       ],
       "interactiveActivities": [
         {
           "id": "pre-k-general-science-101-l04-act1",
           "type": "drawing_canvas",
-          "title": "Science doodle review",
-          "description": "Draw three things: a solid, a force, and a simple machine. Label each one."
+          "title": "My Science Doodle",
+          "description": "Draw a picture of your favorite thing you learned about so far. You could draw a solid, a liquid, a gas, or a simple machine. Tell a grown-up about your drawing!"
         }
       ],
       "learningAids": [
         {
           "id": "pre-k-general-science-101-l04-a1",
-          "type": "mnemonic",
-          "title": "Memory Cue",
-          "content": "Use Plan, Solve, Explain to structure each response."
+          "type": "image",
+          "title": "Picture Checklist",
+          "content": "A picture checklist with icons for a block (Solid), a glass of water (Liquid), a balloon (Gas), an arrow pushing (Push), an arrow pulling (Pull), a slide (Ramp), a seesaw (Lever), and a wheel (Wheel) for kids to point to as they review."
         }
       ]
     },
     {
       "id": "pre-k-general-science-101-l05",
-      "title": "The Water Cycle",
+      "title": "Water's Great Adventure: The Water Cycle",
       "type": "video",
       "duration": 10,
       "chunks": [
         {
           "id": "pre-k-general-science-101-l05-c1",
-          "title": "Evaporation",
-          "content": "When the warm sun shines down on water in puddles, lakes, and oceans, something magical happens! The heat from the sun makes some of the water turn into tiny, invisible droplets called water vapor, which float up high into the sky. This wonderful process is called evaporation, where liquid water changes into gas! You can see this happen when a wet sidewalk dries up under the bright sun. Isn’t it amazing how the sun helps water travel into the air? This is just one way that nature works, showing us how everything is connected. So next time you see a puddle drying up, remember that the sun is helping the water go on a little adventure into the sky!\nContext recap: When the warm sun shines down on water in puddles, lakes, and oceans, something magical happens! The heat from the sun makes some of the water turn into tiny, invisible droplets called water vapor, which float up high into the sky. This wonderful process is called evaporation, where liquid water changes into gas! You can see this happen when a wet sidewalk dries up under the bright sun.\nWhy this matters: Evaporation helps learners in Science connect ideas from Little Scientists: Exploring Our World to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "title": "Up, Up, Up! Evaporation",
+          "content": "The sun warms up water in puddles, lakes, and oceans. This warmth turns the water into an invisible gas called water vapor, which floats up into the sky. This is called evaporation. It's like the water is going on an adventure up to the clouds!"
         },
         {
           "id": "pre-k-general-science-101-l05-c2",
-          "title": "Condensation",
-          "content": "When water vapor, which is like invisible water in the air, rises high into the sky, it meets cooler air. This cool air makes the warm vapor change back into tiny drops of water. This amazing change is called condensation, where a gas turns back into a liquid! These tiny water droplets come together to create fluffy clouds that float in the sky. Have you ever seen fog on a cold window when you breathe on it? That’s also condensation! It’s a fun way to see how water can change from one form to another, just like magic in nature!\nContext recap: When water vapor, which is like invisible water in the air, rises high into the sky, it meets cooler air. This cool air makes the warm vapor change back into tiny drops of water. This amazing change is called condensation, where a gas turns back into a liquid! These tiny water droplets come together to create fluffy clouds that float in the sky.\nWhy this matters: Condensation helps learners in Science connect ideas from Little Scientists: Exploring Our World to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "title": "Making Clouds: Condensation",
+          "content": "High up in the sky, the air is cool. When the water vapor gets cold, it changes back into tiny little water drops. These drops group together to make clouds! This is called condensation. You can see condensation when you breathe on a cold window and it gets foggy."
         },
         {
           "id": "pre-k-general-science-101-l05-c3",
-          "title": "Precipitation",
-          "content": "When clouds become very full of water droplets, they can no longer hold all that water. So, the water falls back down to the ground in different forms like rain, snow, sleet, or even hail! This exciting event is called precipitation. Once the water reaches the ground, it flows into rivers, lakes, and oceans, and the whole water cycle starts all over again. Isn’t it fun to think about how water travels in a big circle? Water is always moving and changing, and it helps plants grow, fills our lakes, and even gives us the snow we love to play in during winter! So next time you see rain or snow, remember, it's all part of the amazing water cycle!\nContext recap: When clouds become very full of water droplets, they can no longer hold all that water. So, the water falls back down to the ground in different forms like rain, snow, sleet, or even hail! This exciting event is called precipitation. Once the water reaches the ground, it flows into rivers, lakes, and oceans, and the whole water cycle starts all over again.\nWhy this matters: Precipitation helps learners in Science connect ideas from Little Scientists: Exploring Our World to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "title": "Down It Comes! Precipitation",
+          "content": "When the clouds get too full and heavy with water drops, the water has to fall back down to Earth. This is called precipitation. Rain is precipitation! If it's very cold, the water can fall as snow. The water goes back into the lakes and oceans, and the cycle starts all over again!"
         }
       ],
       "flashcards": [
         {
           "id": "pre-k-general-science-101-l05-f1",
-          "front": "Water turns into vapor and rises",
+          "front": "When the sun turns water into a gas that rises.",
           "back": "Evaporation"
         },
         {
           "id": "pre-k-general-science-101-l05-f2",
-          "front": "Water vapor turns back into tiny droplets",
+          "front": "When water vapor gets cold and forms clouds.",
           "back": "Condensation"
         },
         {
           "id": "pre-k-general-science-101-l05-f3",
-          "front": "Water falls from clouds as rain or snow",
+          "front": "When water falls from clouds as rain or snow.",
           "back": "Precipitation"
         },
         {
           "id": "pre-k-general-science-101-l05-f4",
-          "front": "Evaporation → condensation → precipitation → repeat",
-          "back": "The water cycle"
+          "front": "The journey of water up to the sky and back down.",
+          "back": "The Water Cycle"
         }
       ],
       "questions": [
         {
           "id": "pre-k-general-science-101-l05-q1",
-          "text": "When the sun heats a puddle and it dries up, that is",
+          "text": "When a puddle dries up in the sun, it's because of...",
           "options": [
             {
               "id": "a",
@@ -618,47 +565,39 @@ export const PreKGeneralScience101Module: LearningModule = {
             },
             {
               "id": "b",
-              "text": "Precipitation"
+              "text": "Rain"
             },
             {
               "id": "c",
-              "text": "Condensation"
-            },
-            {
-              "id": "d",
-              "text": "Freezing"
+              "text": "Snow"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "The puddle evaporates — liquid becomes water vapor!"
+          "explanation": "The sun's heat causes the water to evaporate into the air!"
         },
         {
           "id": "pre-k-general-science-101-l05-q2",
-          "text": "Fog on a cold window is an example of",
+          "text": "What are clouds made of?",
           "options": [
             {
               "id": "a",
-              "text": "Condensation"
+              "text": "Tiny water drops"
             },
             {
               "id": "b",
-              "text": "Evaporation"
+              "text": "Cotton balls"
             },
             {
               "id": "c",
-              "text": "Precipitation"
-            },
-            {
-              "id": "d",
-              "text": "Gravity"
+              "text": "Smoke"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Warm breath meets cold glass, water vapor becomes droplets!"
+          "explanation": "Clouds are made of tiny water drops that have grouped together!"
         },
         {
           "id": "pre-k-general-science-101-l05-q3",
-          "text": "Rain falling from clouds is called",
+          "text": "Rain falling from the sky is called...",
           "options": [
             {
               "id": "a",
@@ -671,204 +610,188 @@ export const PreKGeneralScience101Module: LearningModule = {
             {
               "id": "c",
               "text": "Condensation"
-            },
-            {
-              "id": "d",
-              "text": "Friction"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Rain, snow, sleet, and hail are all precipitation!"
+          "explanation": "Rain, snow, and sleet are all types of precipitation!"
         }
       ],
       "interactiveActivities": [
         {
           "id": "pre-k-general-science-101-l05-act1",
           "type": "project_builder",
-          "title": "Water cycle in a bag",
-          "description": "Draw a sun and clouds on a zip-lock bag. Add a little water, seal it, and tape it to a sunny window. Watch evaporation and condensation happen inside the bag!"
+          "title": "Water Cycle in a Bag",
+          "description": "With a grown-up, draw a sun and a cloud on a zip-top bag. Add a little bit of water (with blue food coloring if you have it!). Seal the bag tightly and tape it to a sunny window. Watch over the next day to see the water evaporate and then form drops, like rain!"
         }
       ]
     },
     {
       "id": "pre-k-general-science-101-l06",
-      "title": "Habitats",
+      "title": "Animal Homes: Habitats",
       "type": "video",
       "duration": 10,
       "chunks": [
         {
           "id": "pre-k-general-science-101-l06-c1",
           "title": "What Is a Habitat?",
-          "content": "A habitat is a special and important place where animals live. It gives them everything they need to stay healthy and happy, like food to eat, water to drink, and shelter to keep them safe. For instance, a pond is a cozy habitat for frogs. In the pond, frogs can find yummy insects to eat and places to hide from other animals that might want to catch them. On the other hand, a forest is a wonderful habitat for bears. In the forest, bears have lots of tall trees to climb and many different kinds of food to find, like berries and fish. Each animal has its own unique home, or habitat, that helps it thrive, stay safe, and enjoy its life! Understanding habitats helps us learn how to protect the animals and places we love.\nContext recap: A habitat is a special and important place where animals live. It gives them everything they need to stay healthy and happy, like food to eat, water to drink, and shelter to keep them safe. For instance, a pond is a cozy habitat for frogs. In the pond, frogs can find yummy insects to eat and places to hide from other animals that might want to catch them.\nWhy this matters: What Is a Habitat? helps learners in Science connect ideas from Little Scientists: Exploring Our World to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "A habitat is a special home where an animal lives. It's a place that gives the animal everything it needs: food, water, and a safe place to sleep, called shelter. Every animal has a habitat that is just right for it!"
         },
         {
           "id": "pre-k-general-science-101-l06-c2",
-          "title": "Forest and Desert",
-          "content": "Forests are magical places filled with tall trees, cool shade, and plenty of rain. Many animals, like deer, owls, and squirrels, call forests their home. On the other hand, deserts are very different! They are dry and hot, where animals like camels can be found. Camels have special humps that store fat, giving them energy to survive in the heat. Lizards also live in deserts and often cool off under rocks to escape the sun. Each habitat is unique and perfect for the animals that live there!\nContext recap: Forests are magical places filled with tall trees, cool shade, and plenty of rain. Many animals, like deer, owls, and squirrels, call forests their home. On the other hand, deserts are very different! They are dry and hot, where animals like camels can be found.\nWhy this matters: Forest and Desert helps learners in Science connect ideas from Little Scientists: Exploring Our World to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "title": "Forest and Desert Habitats",
+          "content": "A forest is a habitat with lots of trees. Animals like bears, deer, and squirrels live in the forest. A desert is a very hot and dry habitat. Camels and lizards live in the desert. They are good at living where there isn't much water."
         },
         {
           "id": "pre-k-general-science-101-l06-c3",
-          "title": "Ocean and Arctic",
-          "content": "The ocean is a huge and wonderful habitat that is home to many incredible creatures! You can find colorful fish swimming around, playful dolphins leaping through the waves, and gentle sea turtles gliding gracefully in the water. Beneath the surface, there are coral reefs that look like magical underwater cities, filled with all sorts of life and vibrant colors! On the other hand, the Arctic is a very chilly place where the air is cold and the ground is covered in ice. Here, you can see magnificent polar bears wandering around. These bears have thick, warm fur and a layer of fat that helps them stay cozy in the freezing temperatures. Both the ocean and the Arctic are special habitats that provide homes for different animals, each uniquely suited to thrive in their own environment!\nContext recap: The ocean is a huge and wonderful habitat that is home to many incredible creatures! You can find colorful fish swimming around, playful dolphins leaping through the waves, and gentle sea turtles gliding gracefully in the water. Beneath the surface, there are coral reefs that look like magical underwater cities, filled with all sorts of life and vibrant colors! On the other hand, the Arctic is a very chilly place where the air is cold and the ground is covered in ice.\nWhy this matters: Ocean and Arctic helps learners in Science connect ideas from Little Scientists: Exploring Our World to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "title": "Ocean and Arctic Habitats",
+          "content": "The big, salty ocean is a habitat for fish, dolphins, and whales. It's a giant underwater world! The Arctic is a very cold, icy habitat. Polar bears live in the Arctic. Their thick, white fur keeps them warm and helps them hide in the snow."
         }
       ],
       "flashcards": [
         {
           "id": "pre-k-general-science-101-l06-f1",
-          "front": "A place where an animal lives, eats, and finds shelter",
+          "front": "An animal's special home.",
           "back": "Habitat"
         },
         {
           "id": "pre-k-general-science-101-l06-f2",
-          "front": "Animal with humps that lives in the desert",
-          "back": "Camel"
+          "front": "A hot, dry habitat.",
+          "back": "Desert"
         },
         {
           "id": "pre-k-general-science-101-l06-f3",
-          "front": "Underwater city made of living organisms",
-          "back": "Coral reef"
+          "front": "A cold, icy habitat.",
+          "back": "Arctic"
         },
         {
           "id": "pre-k-general-science-101-l06-f4",
-          "front": "Arctic animal with thick fur and fat",
-          "back": "Polar bear"
+          "front": "A fish's habitat.",
+          "back": "Ocean"
         }
       ],
       "questions": [
         {
           "id": "pre-k-general-science-101-l06-q1",
-          "text": "A frogs habitat is a",
+          "text": "Where would you find a polar bear?",
           "options": [
             {
               "id": "a",
-              "text": "Pond"
+              "text": "In the Arctic"
             },
             {
               "id": "b",
-              "text": "Desert"
+              "text": "In the desert"
             },
             {
               "id": "c",
-              "text": "Arctic"
-            },
-            {
-              "id": "d",
-              "text": "Sky"
+              "text": "In the forest"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Frogs live in and around ponds!"
+          "explanation": "Polar bears live in the cold, snowy Arctic!"
         },
         {
           "id": "pre-k-general-science-101-l06-q2",
-          "text": "A camel lives in",
+          "text": "A camel lives in the...",
           "options": [
             {
               "id": "a",
-              "text": "A desert"
+              "text": "Desert"
             },
             {
               "id": "b",
-              "text": "A pond"
+              "text": "Ocean"
             },
             {
               "id": "c",
-              "text": "The Arctic"
-            },
-            {
-              "id": "d",
-              "text": "A forest"
+              "text": "Forest"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Camels are adapted to hot, dry deserts!"
+          "explanation": "Camels are adapted to live in the hot, dry desert!"
         },
         {
           "id": "pre-k-general-science-101-l06-q3",
-          "text": "Polar bears stay warm because they have",
+          "text": "Which animal lives in the ocean?",
           "options": [
             {
               "id": "a",
-              "text": "Thick fur and fat"
+              "text": "A dolphin"
             },
             {
               "id": "b",
-              "text": "Thin skin"
+              "text": "A squirrel"
             },
             {
               "id": "c",
-              "text": "Cold blood"
-            },
-            {
-              "id": "d",
-              "text": "Wings"
+              "text": "A lizard"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Thick fur and blubber keep polar bears warm!"
+          "explanation": "Dolphins swim and find food in the ocean!"
         }
       ],
       "interactiveActivities": [
         {
           "id": "pre-k-general-science-101-l06-act1",
           "type": "matching_pairs",
-          "title": "Animal habitat match",
-          "description": "Match each animal to its habitat: frog→pond, camel→desert, polar bear→Arctic, deer→forest, dolphin→ocean."
+          "title": "Animal Home Match-Up",
+          "description": "Match the animal to its home! Drag the picture of the frog to the pond, the camel to the desert, the polar bear to the Arctic, and the fish to the ocean."
         }
       ]
     },
     {
       "id": "pre-k-general-science-101-l07",
-      "title": "The Human Body",
+      "title": "Our Amazing Bodies",
       "type": "video",
       "duration": 10,
       "chunks": [
         {
           "id": "pre-k-general-science-101-l07-c1",
           "title": "Bones and Muscles",
-          "content": "Did you know that your body has about 206 bones? These bones come together to form your skeleton, which is like a strong frame that helps hold you up and keeps you safe. Your skeleton protects important soft organs inside your body, like your brain, which helps you think, and your heart, which helps pump blood. But that's not all! Muscles are special tissues that are attached to your bones. They help you move around and do all the fun things you love, like running, jumping, and playing games. When your muscles get tight, they pull on the bones, making them move. Isn’t it amazing how all the parts of our bodies work together to help us explore and enjoy the world around us? Learning about our bones and muscles helps us understand how to take care of our bodies and stay healthy!\nContext recap: Did you know that your body has about 206 bones? These bones come together to form your skeleton, which is like a strong frame that helps hold you up and keeps you safe. Your skeleton protects important soft organs inside your body, like your brain, which helps you think, and your heart, which helps pump blood. But that's not all!\nWhy this matters: Bones and Muscles helps learners in Science connect ideas from Little Scientists: Exploring Our World to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "Your body is held up by a frame called a skeleton, which is made of bones! Your bones help you stand up tall and protect the soft parts inside you. Muscles are attached to your bones and help you move. When you run, jump, and wave, your muscles are pulling on your bones to make them move!"
         },
         {
           "id": "pre-k-general-science-101-l07-c2",
           "title": "Heart and Lungs",
-          "content": "Your heart is a very special muscle that works hard to pump blood all around your body. This blood carries important nutrients and oxygen that help keep you healthy and strong. If you place your hand on your chest, you can feel your heart beating! It’s like a little drum that keeps a steady rhythm. Now, let’s talk about your lungs! Your lungs are also super important because they help you breathe. When you take a deep breath in through your nose, your lungs fill up with fresh air, just like a balloon! And when you breathe out through your mouth, your lungs push the air back out. This process is really important because it helps keep your body full of the oxygen it needs to feel good and to play! So remember, your heart and lungs work together to help you stay active and healthy every day!\nContext recap: Your heart is a very special muscle that works hard to pump blood all around your body. This blood carries important nutrients and oxygen that help keep you healthy and strong. If you place your hand on your chest, you can feel your heart beating! It’s like a little drum that keeps a steady rhythm.\nWhy this matters: Heart and Lungs helps learners in Science connect ideas from Little Scientists: Exploring Our World to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "Put your hand on your chest. Can you feel that thump-thump? That's your heart! Your heart is a strong muscle that pumps blood all around your body. Your lungs help you breathe. Take a big breath in... and out! Your lungs are like two balloons that fill up with air and then let it out."
         },
         {
           "id": "pre-k-general-science-101-l07-c3",
           "title": "Brain and Senses",
-          "content": "Your brain is like the boss of your body! It tells your muscles when to move, helps you think about things, and allows you to feel different emotions. You also have five senses: sight, hearing, smell, taste, and touch. These senses are super important because they send messages to your brain, helping you explore and understand the world around you. For example, when you see a beautiful flower, your eyes send a message to your brain that says, 'Look at this!' Isn’t it amazing how your brain and senses work together to help you experience life? They help you enjoy yummy food, listen to your favorite music, and even feel the soft fur of a pet. So, every time you use your senses, remember that your brain is right there, helping you learn and have fun!\nContext recap: Your brain is like the boss of your body! It tells your muscles when to move, helps you think about things, and allows you to feel different emotions. You also have five senses: sight, hearing, smell, taste, and touch. These senses are super important because they send messages to your brain, helping you explore and understand the world around you.\nWhy this matters: Brain and Senses helps learners in Science connect ideas from Little Scientists: Exploring Our World to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "Your brain is the boss of your body! It's inside your head and helps you think, learn, and remember. Your brain also gets messages from your five senses: sight (seeing with your eyes), hearing (listening with your ears), smell (with your nose), taste (with your tongue), and touch (with your skin). Your senses help you explore the world!"
         }
       ],
       "flashcards": [
         {
           "id": "pre-k-general-science-101-l07-f1",
-          "front": "Number of bones in the human body (around)",
-          "back": "206"
+          "front": "The frame that holds up your body.",
+          "back": "Skeleton (Bones)"
         },
         {
           "id": "pre-k-general-science-101-l07-f2",
-          "front": "Muscle that pumps blood all through your body",
+          "front": "The muscle that pumps your blood.",
           "back": "Heart"
         },
         {
           "id": "pre-k-general-science-101-l07-f3",
-          "front": "Organs that help you breathe",
+          "front": "The body parts that help you breathe.",
           "back": "Lungs"
         },
         {
           "id": "pre-k-general-science-101-l07-f4",
-          "front": "The boss of your body",
+          "front": "The boss of your body.",
           "back": "Brain"
         }
       ],
       "questions": [
         {
           "id": "pre-k-general-science-101-l07-q1",
-          "text": "What holds your body up and protects your organs?",
+          "text": "What helps you run and jump?",
           "options": [
             {
               "id": "a",
-              "text": "Bones"
+              "text": "Muscles"
             },
             {
               "id": "b",
@@ -876,35 +799,27 @@ export const PreKGeneralScience101Module: LearningModule = {
             },
             {
               "id": "c",
-              "text": "Eyes"
-            },
-            {
-              "id": "d",
-              "text": "Skin"
+              "text": "Heart"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Your skeleton of bones holds you up and protects you!"
+          "explanation": "Your muscles pull on your bones to help you move!"
         },
         {
           "id": "pre-k-general-science-101-l07-q2",
-          "text": "Your heart is a special",
+          "text": "What body part is like a pump?",
           "options": [
             {
               "id": "a",
-              "text": "Muscle"
+              "text": "Heart"
             },
             {
               "id": "b",
-              "text": "Bone"
+              "text": "Brain"
             },
             {
               "id": "c",
-              "text": "Lung"
-            },
-            {
-              "id": "d",
-              "text": "Nerve"
+              "text": "Lungs"
             }
           ],
           "correctOptionId": "a",
@@ -912,114 +827,96 @@ export const PreKGeneralScience101Module: LearningModule = {
         },
         {
           "id": "pre-k-general-science-101-l07-q3",
-          "text": "How many senses do we have?",
+          "text": "Which sense do you use to listen to music?",
           "options": [
             {
               "id": "a",
-              "text": "5"
+              "text": "Hearing"
             },
             {
               "id": "b",
-              "text": "3"
+              "text": "Sight"
             },
             {
               "id": "c",
-              "text": "10"
-            },
-            {
-              "id": "d",
-              "text": "2"
+              "text": "Taste"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Sight, hearing, smell, taste, and touch — that's 5!"
+          "explanation": "You use your ears and your sense of hearing to listen!"
         }
       ],
       "interactiveActivities": [
         {
           "id": "pre-k-general-science-101-l07-act1",
           "type": "drawing_canvas",
-          "title": "Body map",
-          "description": "Lie down on a big piece of paper and have someone trace your outline. Draw and label your bones, heart, lungs, and brain inside the outline."
+          "title": "My Body Map",
+          "description": "Lie down on a big piece of paper and have a grown-up trace your body. Then, try to draw where your brain, heart, lungs, and some bones might be inside your outline!"
         }
       ]
     },
     {
       "id": "pre-k-general-science-101-l08",
-      "title": "Final Science Assessment",
+      "title": "Final Science Showcase",
       "type": "quiz",
       "duration": 8,
       "chunks": [
         {
           "id": "pre-k-general-science-101-l08-c1",
-          "title": "Matter and Forces Review",
-          "content": "Everything around us is made of something called matter! Matter can be found in three different states: solids, liquids, and gases. Solids are things that keep their shape, like a rock or a toy. Liquids can flow and take the shape of their container, like water or juice. Gases are all around us, even though we can't see them, like the air we breathe! We also have forces that help us move and stop things. A push makes something go forward, while a pull brings it closer. Gravity is a special force that pulls everything down toward the ground, and friction is what happens when two surfaces rub against each other, helping us to stop. Learning about these ideas helps us understand how everything works in our world!\nContext recap: Everything around us is made of something called matter! Matter can be found in three different states: solids, liquids, and gases. Solids are things that keep their shape, like a rock or a toy. Liquids can flow and take the shape of their container, like water or juice.\nWhy this matters: Matter and Forces Review helps learners in Science connect ideas from Little Scientists: Exploring Our World to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
-        },
-        {
-          "id": "pre-k-general-science-101-l08-c2",
-          "title": "Earth and Life Review",
-          "content": "The water cycle is a fascinating journey that goes round and round! It starts with evaporation, where water turns into vapor, then condensation, where it forms clouds, and finally precipitation, when water falls back to the ground. Animals live in different habitats that provide them with everything they need, like food, water, and shelter. Learning about these cycles and habitats helps us appreciate the world we live in!\nContext recap: The water cycle is a fascinating journey that goes round and round! It starts with evaporation, where water turns into vapor, then condensation, where it forms clouds, and finally precipitation, when water falls back to the ground. Animals live in different habitats that provide them with everything they need, like food, water, and shelter. Learning about these cycles and habitats helps us appreciate the world we live in!\nContext recap: The water cycle is a fascinating journey that goes round and round! It starts with evaporation, where water turns into vapor, then condensation, where it forms clouds, and finally precipitation, when water falls back to the ground. Animals live in different habitats that provide them with everything they need, like food, water, and shelter. Learning about these cycles and habitats helps us appreciate the world we live in!\nWhy this matters: Earth and Life Review helps learners in Science connect ideas from Little Scientists: Exploring Our World to decisions they make during practice and assessment. Keep the explanation friendly and practical."
-        },
-        {
-          "id": "pre-k-general-science-101-l08-c3",
-          "title": "Body Review",
-          "content": "Your skeleton is made up of 206 bones that work together to support your body. Your heart is a hardworking muscle that pumps blood throughout your body, while your lungs help you breathe in fresh air. Your brain is the control center, managing everything you do. Plus, your five senses—sight, hearing, smell, taste, and touch—help you explore and enjoy the world around you. Isn’t it wonderful how all these parts work together?\nContext recap: Your skeleton is made up of 206 bones that work together to support your body. Your heart is a hardworking muscle that pumps blood throughout your body, while your lungs help you breathe in fresh air. Your brain is the control center, managing everything you do. Plus, your five senses—sight, hearing, smell, taste, and touch—help you explore and enjoy the world around you."
+          "title": "Let's Review Everything!",
+          "content": "Wow, you've learned so much! We explored solids, liquids, and gases. We learned how pushes, pulls, and gravity make things move. We saw how simple machines like ramps and wheels help us. We followed water on its amazing journey in the water cycle. We visited animal homes called habitats, and we learned all about our amazing bodies. You are a true Little Scientist!"
         }
       ],
       "flashcards": [
         {
           "id": "pre-k-general-science-101-l08-f1",
-          "front": "Water turning to vapor",
-          "back": "Evaporation"
+          "front": "When water turns into clouds.",
+          "back": "Condensation"
         },
         {
           "id": "pre-k-general-science-101-l08-f2",
-          "front": "A place where an animal lives",
+          "front": "A home where an animal lives.",
           "back": "Habitat"
         },
         {
           "id": "pre-k-general-science-101-l08-f3",
-          "front": "Muscle that pumps blood",
+          "front": "The muscle that pumps blood.",
           "back": "Heart"
         },
         {
           "id": "pre-k-general-science-101-l08-f4",
-          "front": "Force that pulls you down",
+          "front": "The force that pulls you down when you jump.",
           "back": "Gravity"
         }
       ],
       "questions": [
         {
           "id": "pre-k-general-science-101-l08-q1",
-          "text": "Steam rising from a pot is an example of",
+          "text": "Steam coming from a hot cup of tea is a...",
           "options": [
             {
               "id": "a",
-              "text": "Evaporation"
+              "text": "Gas"
             },
             {
               "id": "b",
-              "text": "Precipitation"
+              "text": "Solid"
             },
             {
               "id": "c",
-              "text": "Friction"
-            },
-            {
-              "id": "d",
-              "text": "A lever"
+              "text": "Liquid"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Hot water turns to steam — liquid becomes gas!"
+          "explanation": "Steam is water that has turned into a gas!"
         },
         {
           "id": "pre-k-general-science-101-l08-q2",
-          "text": "A dolphin's habitat is the",
+          "text": "A bear's habitat is the...",
           "options": [
             {
               "id": "a",
-              "text": "Ocean"
+              "text": "Forest"
             },
             {
               "id": "b",
@@ -1027,47 +924,39 @@ export const PreKGeneralScience101Module: LearningModule = {
             },
             {
               "id": "c",
-              "text": "Forest"
-            },
-            {
-              "id": "d",
-              "text": "Arctic"
+              "text": "Ocean"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Dolphins swim and find food in the ocean!"
+          "explanation": "Bears live in the forest where there are lots of trees and food!"
         },
         {
           "id": "pre-k-general-science-101-l08-q3",
-          "text": "Your brain is",
+          "text": "Your brain helps you to...",
           "options": [
             {
               "id": "a",
-              "text": "The boss of your body"
+              "text": "Think"
             },
             {
               "id": "b",
-              "text": "A bone"
+              "text": "Breathe"
             },
             {
               "id": "c",
-              "text": "A lung"
-            },
-            {
-              "id": "d",
-              "text": "A habitat"
+              "text": "Pump blood"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Your brain controls thinking, moving, and feeling!"
+          "explanation": "Your brain is the boss of your body that controls thinking!"
         }
       ],
       "interactiveActivities": [
         {
           "id": "pre-k-general-science-101-l08-act1",
           "type": "drawing_canvas",
-          "title": "Science poster",
-          "description": "Make a poster with sections for Matter, Forces, Water Cycle, Habitats, and the Human Body. Draw one picture in each section and explain it to a grown-up."
+          "title": "My Science Poster",
+          "description": "Make a poster showing your favorite science topic. You can draw a habitat, the water cycle, or your own body. Then, tell a grown-up all about your amazing science poster!"
         }
       ]
     }

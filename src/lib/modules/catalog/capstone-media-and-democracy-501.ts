@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const CapstoneMediaAndDemocracy501Module: LearningModule = {
+export const capstone_media_and_democracy_501_Module: LearningModule = {
   "id": "capstone-media-and-democracy-501",
   "title": "Capstone Media and Democracy Studio",
   "description": "Interdisciplinary capstone focused on information ecosystem mapping, misinformation response design, civic trust reconstruction, and democratic resilience governance through simulation-driven design and defense-oriented assessment.",
@@ -14,7 +14,7 @@ export const CapstoneMediaAndDemocracy501Module: LearningModule = {
   ],
   "minAge": 17,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en"
@@ -33,6 +33,8 @@ export const CapstoneMediaAndDemocracy501Module: LearningModule = {
       "title": "Capstone Context and System Stakes",
       "type": "video",
       "duration": 14,
+      "lessonImagePrompt": "A cinematic, high-contrast image of a modern command center with glowing digital maps showing information flows and data nodes across a global network. Professional, hyper-realistic, 8k resolution.",
+      "conceptVideoPrompt": "A slow, sweeping pan across a holographic projection of a digital information ecosystem. Glowing data streams pulse with red and blue light, representing the spread and containment of misinformation. Cinematic lighting, photorealistic, 4k.",
       "learningAids": [
         {
           "id": "capstone-media-and-democracy-501-l01-a1",
@@ -46,44 +48,47 @@ export const CapstoneMediaAndDemocracy501Module: LearningModule = {
           "id": "capstone-media-and-democracy-501-l01-c1",
           "kind": "concept",
           "title": "Problem Frame",
-          "content": "In this lesson, we will explore a significant issue that arises during election cycles: the spread of misleading information. This problem can lead to confusion among voters, affecting their trust in the electoral process and the institutions that govern it. As learners, you will work together to identify your goals, understand the limitations you might face, and recognize the different groups involved in this situation. By defining these elements, you will gain a clearer understanding of the challenges at hand and how they impact democracy.\nContext recap: In this lesson, we will explore a significant issue that arises during election cycles: the spread of misleading information. This problem can lead to confusion among voters, affecting their trust in the electoral process and the institutions that govern it. As learners, you will work together to identify your goals, understand the limitations you might face, and recognize the different groups involved in this situation. By defining these elements, you will gain a clearer understanding of the challenges at hand and how they impact democracy."
+          "content": "In this lesson, we analyze the systemic threat of misinformation during critical democratic events. The rapid spread of misleading narratives can fracture voter trust and destabilize electoral institutions. You will learn to map the information ecosystem by defining precise intervention objectives, identifying non-negotiable constraints, and mapping the complex matrix of stakeholders involved. Establishing this rigorous problem frame is the first step in designing resilient democratic safeguards."
         },
         {
           "id": "capstone-media-and-democracy-501-l01-c2",
           "kind": "concept",
           "title": "Decision Boundaries",
-          "content": "In this section, we will discuss the importance of setting clear boundaries when making decisions. These boundaries help us identify what factors we can control, what remains uncertain, and when we need to escalate our decisions to others. By understanding these distinctions, you will be better equipped to navigate complex situations and make informed choices that can positively influence outcomes.\nContext recap: In this section, we will discuss the importance of setting clear boundaries when making decisions. These boundaries help us identify what factors we can control, what remains uncertain, and when we need to escalate our decisions to others. By understanding these distinctions, you will be better equipped to navigate complex situations and make informed choices that can positively influence outcomes."
+          "content": "Effective crisis response requires clearly delineated decision boundaries. You must distinguish between variables you can directly control (e.g., platform policies, official communications), factors that remain uncertain (e.g., adversarial adaptation, viral coefficients), and thresholds that require immediate escalation. By mapping these boundaries, you ensure that interventions are both legally defensible and operationally viable under pressure."
         },
         {
           "id": "capstone-media-and-democracy-501-l01-c3",
           "kind": "recap",
           "title": "Evidence Standards",
-          "content": "It is essential that all claims we make are supported by measurable evidence. This means that we need to establish clear indicators that can be tracked, understand the ranges of uncertainty involved, and set up accountability checkpoints. By adhering to these standards, we ensure that our arguments are credible and can withstand scrutiny, which is vital in discussions about democracy and media.\nContext recap: It is essential that all claims we make are supported by measurable evidence. This means that we need to establish clear indicators that can be tracked, understand the ranges of uncertainty involved, and set up accountability checkpoints. By adhering to these standards, we ensure that our arguments are credible and can withstand scrutiny, which is vital in discussions about democracy and media."
+          "content": "Policy and operational actions must be grounded in rigorous evidence standards. This requires establishing empirical baselines, tracking measurable telemetry, and explicitly stating the uncertainty bounds of your data. By enforcing strict accountability checkpoints and requiring verifiable evidence for every claim, you ensure that your proposed interventions can withstand intense expert scrutiny and real-world application."
         }
       ],
       "flashcards": [
         {
           "id": "capstone-media-and-democracy-501-l01-f1",
-          "front": "information ecosystem mapping",
-          "back": "A core capstone axis requiring explicit assumptions and measurable controls."
+          "front": "Information Ecosystem Mapping",
+          "back": "A core capstone axis requiring explicit assumptions, stakeholder analysis, and measurable controls."
         },
         {
           "id": "capstone-media-and-democracy-501-l01-f2",
-          "front": "Tradeoff matrix",
-          "back": "A structured way to compare alternatives under competing priorities."
+          "front": "Tradeoff Matrix",
+          "back": "A structured analytical tool used to compare intervention alternatives under competing priorities."
         },
         {
           "id": "capstone-media-and-democracy-501-l01-f3",
-          "front": "Evidence threshold",
-          "back": "The minimum evidence level required before policy or operational action."
+          "front": "Evidence Threshold",
+          "back": "The minimum level of empirical data required before authorizing policy or operational action."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/capstone-media-and-democracy-501-l01.png"
     },
     {
       "id": "capstone-media-and-democracy-501-l02",
       "title": "Integrated Methods Lab",
       "type": "interactive",
       "duration": 17,
+      "lessonImagePrompt": "A diverse group of professionals in a modern, glass-walled strategy room, analyzing a complex flowchart on a large interactive whiteboard. Natural lighting, highly detailed, corporate-academic setting.",
+      "conceptVideoPrompt": "Time-lapse of a collaborative strategy session. Professionals move sticky notes and draw connections on a digital smartboard, mapping out policy and technology interventions. Smooth camera tracking, bright and focused lighting.",
       "learningAids": [
         {
           "id": "capstone-media-and-democracy-501-l02-a1",
@@ -97,13 +102,13 @@ export const CapstoneMediaAndDemocracy501Module: LearningModule = {
           "id": "capstone-media-and-democracy-501-l02-c1",
           "kind": "practice",
           "title": "Method Integration",
-          "content": "In this interactive lab, you will have the opportunity to create solutions that connect various fields such as technology, policy, and the perspectives of different stakeholders. This integration is crucial because it allows us to address complex problems from multiple angles, ensuring that our interventions are comprehensive and effective. You will collaborate with your peers to brainstorm and develop these cross-domain solutions.\nContext recap: In this interactive lab, you will have the opportunity to create solutions that connect various fields such as technology, policy, and the perspectives of different stakeholders. This integration is crucial because it allows us to address complex problems from multiple angles, ensuring that our interventions are comprehensive and effective. You will collaborate with your peers to brainstorm and develop these cross-domain solutions."
+          "content": "This interactive lab focuses on synthesizing technical architecture, policy frameworks, and civic impact into cohesive intervention models. Siloed approaches fail in complex information ecosystems. You will practice cross-domain integration, ensuring that a technical algorithmic adjustment is supported by a robust legal policy and communicated effectively to maintain civic trust. This holistic approach is critical for designing sustainable solutions."
         },
         {
           "id": "capstone-media-and-democracy-501-l02-c2",
           "kind": "recap",
           "title": "Control Gates",
-          "content": "As you develop your plans, it is important to include specific checkpoints and criteria for when to reassess your strategies. These control gates will help you monitor progress and ensure that everyone involved is accountable for their roles. By establishing these guidelines, you can create a more structured approach to your projects, which will enhance their effectiveness and reliability.\nContext recap: As you develop your plans, it is important to include specific checkpoints and criteria for when to reassess your strategies. These control gates will help you monitor progress and ensure that everyone involved is accountable for their roles. By establishing these guidelines, you can create a more structured approach to your projects, which will enhance their effectiveness and reliability."
+          "content": "Accountable execution relies on the strategic placement of control gates. These are predefined checkpoints—such as pre-implementation reviews, rollback thresholds, and retrospective cycles—that dictate when an intervention should proceed, pivot, or halt. By embedding these gates into your project architecture, you mitigate the risk of cascading failures and ensure continuous alignment with democratic resilience goals."
         }
       ],
       "interactiveActivities": [
@@ -111,33 +116,36 @@ export const CapstoneMediaAndDemocracy501Module: LearningModule = {
           "id": "capstone-media-and-democracy-501-l02-act1",
           "type": "matching_pairs",
           "title": "Control Alignment",
-          "description": "Match governance controls with the strongest risk-reduction effects.",
+          "description": "Match governance controls with their corresponding risk-reduction effects in a democratic resilience framework.",
           "pairs": [
             {
               "left": "Pre-implementation gate",
-              "right": "Prevents predictable design defects"
+              "right": "Prevents predictable design defects before deployment"
             },
             {
               "left": "Rollback threshold",
-              "right": "Contains impact during adverse outcomes"
+              "right": "Contains impact and limits damage during adverse outcomes"
             },
             {
               "left": "Public indicator dashboard",
-              "right": "Supports trust through transparent progress tracking"
+              "right": "Supports civic trust through transparent progress tracking"
             },
             {
               "left": "Retrospective cycle",
-              "right": "Improves next-round decision quality"
+              "right": "Improves next-round decision quality through root-cause analysis"
             }
           ]
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/capstone-media-and-democracy-501-l02.png"
     },
     {
       "id": "capstone-media-and-democracy-501-l03",
       "title": "Checkpoint 1: Integrated Design",
       "type": "quiz",
       "duration": 10,
+      "lessonImagePrompt": "A sleek, minimalist digital interface displaying a multiple-choice assessment with abstract geometric shapes in the background representing logic and structure. High-tech, clean design.",
+      "conceptVideoPrompt": "A dynamic 3D animation of a glowing digital lock clicking into place, symbolizing the securing of knowledge and the successful passing of a strategic checkpoint. Smooth motion, neon blue and silver tones.",
       "learningAids": [
         {
           "id": "capstone-media-and-democracy-501-l03-a1",
@@ -170,7 +178,7 @@ export const CapstoneMediaAndDemocracy501Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": "High-quality capstone decisions require measurable constraints and stress-tested assumptions."
+          "explanation": "High-quality capstone decisions require measurable constraints and stress-tested assumptions to account for complex ecosystem dynamics."
         },
         {
           "id": "capstone-media-and-democracy-501-l03-q2",
@@ -191,15 +199,15 @@ export const CapstoneMediaAndDemocracy501Module: LearningModule = {
             },
             {
               "id": "d",
-              "text": "Policy claims without operational plan"
+              "text": "Policy claims without an operational plan"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible strategy combines tradeoff analysis, baseline comparison, and spillover checks."
+          "explanation": "Defensible strategy combines tradeoff analysis, baseline comparison, and spillover checks to ensure holistic risk management."
         },
         {
           "id": "capstone-media-and-democracy-501-l03-q3",
-          "text": "For civic trust reconstruction, which pattern is strongest?",
+          "text": "For civic trust reconstruction, which communication pattern is strongest?",
           "skillId": "capstone-media-and-democracy-501-skill-communication",
           "options": [
             {
@@ -212,7 +220,7 @@ export const CapstoneMediaAndDemocracy501Module: LearningModule = {
             },
             {
               "id": "c",
-              "text": "One-time broadcast without correction mechanism"
+              "text": "One-time broadcast without a correction mechanism"
             },
             {
               "id": "d",
@@ -220,7 +228,7 @@ export const CapstoneMediaAndDemocracy501Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Trust-building communication requires audience mapping, uncertainty disclosure, and iterative feedback."
+          "explanation": "Trust-building communication requires audience mapping, honest uncertainty disclosure, and iterative feedback to maintain credibility."
         },
         {
           "id": "capstone-media-and-democracy-501-l03-q4",
@@ -233,7 +241,7 @@ export const CapstoneMediaAndDemocracy501Module: LearningModule = {
             },
             {
               "id": "b",
-              "text": "Policy language without enforcement"
+              "text": "Policy language without enforcement mechanisms"
             },
             {
               "id": "c",
@@ -241,11 +249,11 @@ export const CapstoneMediaAndDemocracy501Module: LearningModule = {
             },
             {
               "id": "d",
-              "text": "Targets without ownership"
+              "text": "Targets without designated ownership"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Governance maturity depends on linking intent, measurement, and corrective action."
+          "explanation": "Governance maturity depends on linking the original intent to measurable controls and clear corrective actions when deviations occur."
         },
         {
           "id": "capstone-media-and-democracy-501-l03-q5",
@@ -262,15 +270,15 @@ export const CapstoneMediaAndDemocracy501Module: LearningModule = {
             },
             {
               "id": "c",
-              "text": "Switch metrics after results arrive"
+              "text": "Switch metrics after results arrive to ensure success"
             },
             {
               "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
+              "text": "Prioritize whichever option has the shortest implementation memo"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
+          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure to prevent bias."
         },
         {
           "id": "capstone-media-and-democracy-501-l03-q6",
@@ -279,7 +287,7 @@ export const CapstoneMediaAndDemocracy501Module: LearningModule = {
           "options": [
             {
               "id": "a",
-              "text": "Broadcast conclusions without assumptions"
+              "text": "Broadcast conclusions without revealing underlying assumptions"
             },
             {
               "id": "b",
@@ -287,15 +295,15 @@ export const CapstoneMediaAndDemocracy501Module: LearningModule = {
             },
             {
               "id": "c",
-              "text": "Share only final outcomes after completion"
+              "text": "Share only final outcomes after the project's completion"
             },
             {
               "id": "d",
-              "text": "Limit updates to a single informal channel"
+              "text": "Limit updates to a single informal channel to avoid scrutiny"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
+          "explanation": "High-stakes communication must expose assumptions, confidence levels, and checkpoints to foster trust and accountability."
         },
         {
           "id": "capstone-media-and-democracy-501-l03-q7",
@@ -304,7 +312,7 @@ export const CapstoneMediaAndDemocracy501Module: LearningModule = {
           "options": [
             {
               "id": "a",
-              "text": "Blame assignment without system updates"
+              "text": "Blame assignment without systemic updates"
             },
             {
               "id": "b",
@@ -312,15 +320,15 @@ export const CapstoneMediaAndDemocracy501Module: LearningModule = {
             },
             {
               "id": "c",
-              "text": "One-time fixes without retesting"
+              "text": "One-time fixes without retesting the environment"
             },
             {
               "id": "d",
-              "text": "Issue closure based on elapsed time"
+              "text": "Issue closure based solely on elapsed time"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
+          "explanation": "Mature remediation ties root causes to control redesign and verification, ensuring the vulnerability is actually resolved."
         },
         {
           "id": "capstone-media-and-democracy-501-l03-q8",
@@ -337,7 +345,7 @@ export const CapstoneMediaAndDemocracy501Module: LearningModule = {
             },
             {
               "id": "c",
-              "text": "Ignore correlated failure modes"
+              "text": "Ignore correlated failure modes across different interventions"
             },
             {
               "id": "d",
@@ -345,15 +353,18 @@ export const CapstoneMediaAndDemocracy501Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options to survive unexpected shocks."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/capstone-media-and-democracy-501-l03.png"
     },
     {
       "id": "capstone-media-and-democracy-501-l04",
       "title": "Simulation and Adaptive Response",
       "type": "interactive",
       "duration": 16,
+      "lessonImagePrompt": "A split-screen visual showing a simulated digital crisis on the left with red warning signals, and a calm, structured response dashboard on the right with green stabilizing metrics. Cyberpunk meets corporate strategy, 8k.",
+      "conceptVideoPrompt": "A fast-paced zoom into a computer monitor displaying a live simulation of a media crisis. Data charts fluctuate wildly before stabilizing as intervention protocols are activated. High-tech, realistic UI animation.",
       "learningAids": [
         {
           "id": "capstone-media-and-democracy-501-l04-a1",
@@ -367,13 +378,13 @@ export const CapstoneMediaAndDemocracy501Module: LearningModule = {
           "id": "capstone-media-and-democracy-501-l04-c1",
           "kind": "practice",
           "title": "Scenario Simulation",
-          "content": "In this practice session, you will simulate different intervention scenarios while considering various uncertainties. This hands-on experience will allow you to test your ideas and compare the outcomes against predefined metrics. By engaging in these simulations, you will gain valuable insights into how your decisions can impact real-world situations and learn to adapt your strategies accordingly.\nContext recap: In this practice session, you will simulate different intervention scenarios while considering various uncertainties. This hands-on experience will allow you to test your ideas and compare the outcomes against predefined metrics. By engaging in these simulations, you will gain valuable insights into how your decisions can impact real-world situations and learn to adapt your strategies accordingly."
+          "content": "Static plans rarely survive contact with a dynamic information ecosystem. In this session, you will stress-test your interventions through scenario simulation. By introducing adversarial behavior, cascading failures, and extreme uncertainty into your models, you will evaluate how your strategies perform under pressure. This practice exposes hidden vulnerabilities and allows you to calibrate your response thresholds before real-world deployment."
         },
         {
           "id": "capstone-media-and-democracy-501-l04-c2",
           "kind": "recap",
           "title": "Debrief and Correction",
-          "content": "After each simulation, it is crucial to conduct a thorough review of what happened. You will analyze the results to identify any improvements, unintended consequences, and areas where governance may not have been followed. This debriefing process will involve looking at explicit data to inform your future actions and create a detailed implementation plan that addresses any gaps identified during the simulations.\nContext recap: After each simulation, it is crucial to conduct a thorough review of what happened. You will analyze the results to identify any improvements, unintended consequences, and areas where governance may not have been followed. This debriefing process will involve looking at explicit data to inform your future actions and create a detailed implementation plan that addresses any gaps identified during the simulations."
+          "content": "The true value of a simulation lies in the debrief. Following the exercise, you will conduct a rigorous root-cause analysis to identify unintended externalities and governance failures. You will use the telemetry gathered during the simulation to update your risk models, refine your control gates, and draft a corrected implementation plan that addresses the newly discovered gaps."
         }
       ],
       "interactiveActivities": [
@@ -381,20 +392,24 @@ export const CapstoneMediaAndDemocracy501Module: LearningModule = {
           "id": "capstone-media-and-democracy-501-l04-act1",
           "type": "scenario_practice",
           "title": "Capstone Simulation Drill",
-          "description": "Evaluate intervention strategies across information ecosystem mapping and democratic resilience governance priorities.",
+          "description": "Evaluate intervention strategies across information ecosystem mapping and democratic resilience governance priorities under simulated crisis conditions.",
           "instructions": [
             "Define the decision objective and non-negotiable constraints.",
             "Document near-term and long-term tradeoffs.",
-            "Specify metrics and triggers that validate your recommendation."
+            "Specify metrics and triggers that validate your recommendation.",
+            "Adapt your strategy based on injected adversarial variables."
           ]
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/capstone-media-and-democracy-501-l04.png"
     },
     {
       "id": "capstone-media-and-democracy-501-l05",
       "title": "Checkpoint 2: Policy and Governance Defense",
       "type": "quiz",
       "duration": 10,
+      "lessonImagePrompt": "A close-up of a heavy, ornate wooden gavel resting on a stack of modern digital tablets displaying legal and policy documents. A blend of traditional governance and modern technology, dramatic lighting.",
+      "conceptVideoPrompt": "A slow dolly shot moving across a polished conference table, focusing on a glowing digital document titled 'Governance Protocol' that is being digitally signed and sealed. Cinematic depth of field, professional atmosphere.",
       "learningAids": [
         {
           "id": "capstone-media-and-democracy-501-l05-a1",
@@ -406,211 +421,214 @@ export const CapstoneMediaAndDemocracy501Module: LearningModule = {
       "questions": [
         {
           "id": "capstone-media-and-democracy-501-l05-q1",
-          "text": "Which approach most improves information ecosystem mapping quality?",
-          "skillId": "capstone-media-and-democracy-501-skill-core",
+          "text": "What is the primary pedagogical and strategic purpose of running a scenario simulation before deploying a policy?",
+          "skillId": "capstone-media-and-democracy-501-skill-simulation",
           "options": [
             {
               "id": "a",
-              "text": "Proceed without assumptions or baselines"
+              "text": "To guarantee that the policy will have zero negative side effects"
             },
             {
               "id": "b",
-              "text": "Set measurable constraints and test adverse scenarios"
+              "text": "To expose cascading failures, test assumptions, and calibrate response thresholds"
             },
             {
               "id": "c",
-              "text": "Optimize only for short-term optics"
+              "text": "To generate positive public relations material"
             },
             {
               "id": "d",
-              "text": "Ignore uncertainty and externalities"
+              "text": "To bypass standard legal review processes"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "High-quality capstone decisions require measurable constraints and stress-tested assumptions."
+          "explanation": "Simulations are designed to stress-test assumptions and reveal hidden vulnerabilities, allowing teams to calibrate their responses before real-world deployment."
         },
         {
           "id": "capstone-media-and-democracy-501-l05-q2",
-          "text": "A robust misinformation response design decision should include:",
-          "skillId": "capstone-media-and-democracy-501-skill-strategy",
+          "text": "In an adaptive response framework, what should trigger a strategic pivot during a crisis?",
+          "skillId": "capstone-media-and-democracy-501-skill-adaptive",
           "options": [
             {
               "id": "a",
-              "text": "No baseline comparison and no side-effect review"
+              "text": "Pre-defined telemetry thresholds being breached"
             },
             {
               "id": "b",
-              "text": "Tradeoff matrix, baseline comparison, and spillover analysis"
+              "text": "A single negative comment on social media"
             },
             {
               "id": "c",
-              "text": "Single stakeholder perspective only"
+              "text": "The passage of a predetermined amount of time, regardless of data"
             },
             {
               "id": "d",
-              "text": "Policy claims without operational plan"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Defensible strategy combines tradeoff analysis, baseline comparison, and spillover checks."
-        },
-        {
-          "id": "capstone-media-and-democracy-501-l05-q3",
-          "text": "For civic trust reconstruction, which pattern is strongest?",
-          "skillId": "capstone-media-and-democracy-501-skill-communication",
-          "options": [
-            {
-              "id": "a",
-              "text": "Reactive messaging with no audience mapping"
-            },
-            {
-              "id": "b",
-              "text": "Audience-specific narratives, uncertainty disclosure, and feedback loops"
-            },
-            {
-              "id": "c",
-              "text": "One-time broadcast without correction mechanism"
-            },
-            {
-              "id": "d",
-              "text": "No transparency on decision rationale"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Trust-building communication requires audience mapping, uncertainty disclosure, and iterative feedback."
-        },
-        {
-          "id": "capstone-media-and-democracy-501-l05-q4",
-          "text": "A mature democratic resilience governance model connects:",
-          "skillId": "capstone-media-and-democracy-501-skill-governance",
-          "options": [
-            {
-              "id": "a",
-              "text": "Policy intent, measurable controls, and remediation pathways"
-            },
-            {
-              "id": "b",
-              "text": "Policy language without enforcement"
-            },
-            {
-              "id": "c",
-              "text": "Operational actions without accountability logs"
-            },
-            {
-              "id": "d",
-              "text": "Targets without ownership"
+              "text": "Gut feeling of the project manager"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Governance maturity depends on linking intent, measurement, and corrective action."
+          "explanation": "Adaptive responses should be data-driven, triggered when pre-defined metrics (telemetry thresholds) indicate that the current strategy is failing or causing harm."
+        },
+        {
+          "id": "capstone-media-and-democracy-501-l05-q3",
+          "text": "What is the most critical output of a post-simulation debrief?",
+          "skillId": "capstone-media-and-democracy-501-skill-debrief",
+          "options": [
+            {
+              "id": "a",
+              "text": "A list of team members who performed poorly"
+            },
+            {
+              "id": "b",
+              "text": "Updated control gates, refined risk models, and a corrected implementation plan"
+            },
+            {
+              "id": "c",
+              "text": "A finalized press release declaring the simulation a success"
+            },
+            {
+              "id": "d",
+              "text": "Archiving the simulation data without further review"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "The debrief must translate simulation findings into actionable governance updates, specifically refining risk models and control gates."
+        },
+        {
+          "id": "capstone-media-and-democracy-501-l05-q4",
+          "text": "When defending a controversial media intervention to a governance panel, what is the strongest approach?",
+          "skillId": "capstone-media-and-democracy-501-skill-defense",
+          "options": [
+            {
+              "id": "a",
+              "text": "Relying on emotional appeals regarding the importance of democracy"
+            },
+            {
+              "id": "b",
+              "text": "Presenting empirical baseline data, bounded uncertainty, and a clear rollback plan"
+            },
+            {
+              "id": "c",
+              "text": "Refusing to acknowledge any potential downsides to the intervention"
+            },
+            {
+              "id": "d",
+              "text": "Deflecting questions by criticizing the panel's expertise"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "A rigorous defense relies on empirical evidence, an honest accounting of uncertainty, and a concrete plan to reverse the intervention if it fails."
         },
         {
           "id": "capstone-media-and-democracy-501-l05-q5",
-          "text": "What is the best way to compare competing interventions in advanced Interdisciplinary Studies?",
-          "skillId": "capstone-media-and-democracy-501-skill-advanced-5",
+          "text": "How should a robust democratic resilience strategy account for adversarial behavior?",
+          "skillId": "capstone-media-and-democracy-501-skill-adversarial",
           "options": [
             {
               "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
+              "text": "Assume all actors in the ecosystem will follow the rules"
             },
             {
               "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
+              "text": "Incorporate red-teaming and threat modeling into the design phase"
             },
             {
               "id": "c",
-              "text": "Switch metrics after results arrive"
+              "text": "Wait until an attack occurs to develop a response protocol"
             },
             {
               "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
+              "text": "Focus solely on technical bugs rather than human exploitation"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
+          "explanation": "Anticipating adversarial behavior requires proactive red-teaming and threat modeling to understand how bad actors might exploit the system."
         },
         {
           "id": "capstone-media-and-democracy-501-l05-q6",
-          "text": "In high-stakes Capstone Media and Democracy Studio execution, which communication protocol is strongest?",
-          "skillId": "capstone-media-and-democracy-501-skill-advanced-6",
+          "text": "Which of the following is an example of an 'unintended externality' in misinformation response design?",
+          "skillId": "capstone-media-and-democracy-501-skill-externalities",
           "options": [
             {
               "id": "a",
-              "text": "Broadcast conclusions without assumptions"
+              "text": "An algorithm successfully reducing the spread of a known bot network"
             },
             {
               "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
+              "text": "A strict content filter accidentally suppressing legitimate civic organizing efforts"
             },
             {
               "id": "c",
-              "text": "Share only final outcomes after completion"
+              "text": "A public awareness campaign reaching its target audience"
             },
             {
               "id": "d",
-              "text": "Limit updates to a single informal channel"
+              "text": "A policy team completing their review ahead of schedule"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
+          "explanation": "Unintended externalities (spillover effects) occur when an intervention causes harm outside its intended target, such as suppressing legitimate speech."
         },
         {
           "id": "capstone-media-and-democracy-501-l05-q7",
-          "text": "A mature remediation loop in advanced Interdisciplinary Studies should prioritize:",
-          "skillId": "capstone-media-and-democracy-501-skill-advanced-7",
+          "text": "What is the purpose of 'closing the loop' in governance protocols?",
+          "skillId": "capstone-media-and-democracy-501-skill-governance-loop",
           "options": [
             {
               "id": "a",
-              "text": "Blame assignment without system updates"
+              "text": "Ensuring that lessons learned from operations directly inform and update future policy"
             },
             {
               "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
+              "text": "Ending communication with external stakeholders once a project launches"
             },
             {
               "id": "c",
-              "text": "One-time fixes without retesting"
+              "text": "Creating a circular argument during a defense panel"
             },
             {
               "id": "d",
-              "text": "Issue closure based on elapsed time"
+              "text": "Automating all decisions to remove human oversight"
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
+          "correctOptionId": "a",
+          "explanation": "Closing the loop means creating a continuous feedback cycle where operational outcomes and simulation data are used to iteratively improve policy."
         },
         {
           "id": "capstone-media-and-democracy-501-l05-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Capstone Media and Democracy Studio?",
-          "skillId": "capstone-media-and-democracy-501-skill-advanced-8",
+          "text": "During a high-stakes crisis, how should uncertainty be communicated to the public to maintain civic trust?",
+          "skillId": "capstone-media-and-democracy-501-skill-trust",
           "options": [
             {
               "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
+              "text": "Project absolute certainty, even if the data is incomplete"
             },
             {
               "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
+              "text": "Transparently state what is known, what is unknown, and the steps being taken to find out"
             },
             {
               "id": "c",
-              "text": "Ignore correlated failure modes"
+              "text": "Remain entirely silent until all facts are 100% verified"
             },
             {
               "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
+              "text": "Release raw, unfiltered data without any context or synthesis"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "explanation": "Civic trust is maintained through transparency. Acknowledging uncertainty while demonstrating a competent process for resolving it builds credibility."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/capstone-media-and-democracy-501-l05.png"
     },
     {
       "id": "capstone-media-and-democracy-501-l06",
       "title": "Capstone Defense Panel",
       "type": "interactive",
       "duration": 15,
+      "lessonImagePrompt": "A professional defense panel setting. A confident speaker stands at a podium presenting a digital slide deck to a row of seated experts in a modern auditorium. Dramatic, focused spotlighting, photorealistic.",
+      "conceptVideoPrompt": "A dynamic over-the-shoulder shot from the perspective of a panel judge, looking at a presenter who is confidently gesturing towards a complex data visualization on a large screen. Professional, tense but constructive atmosphere, cinematic lighting.",
       "learningAids": [
         {
           "id": "capstone-media-and-democracy-501-l06-a1",
@@ -624,13 +642,13 @@ export const CapstoneMediaAndDemocracy501Module: LearningModule = {
           "id": "capstone-media-and-democracy-501-l06-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "In this activity, you will compile a comprehensive defense brief that includes your claims, supporting evidence, ranges of uncertainty, potential solutions, and one implementation artifact. This document will be structured according to specific rubric criteria, ensuring that you present your ideas clearly and effectively. This exercise will help you practice organizing your thoughts and arguments in a coherent manner.\nContext recap: In this activity, you will compile a comprehensive defense brief that includes your claims, supporting evidence, ranges of uncertainty, potential solutions, and one implementation artifact. This document will be structured according to specific rubric criteria, ensuring that you present your ideas clearly and effectively. This exercise will help you practice organizing your thoughts and arguments in a coherent manner."
+          "content": "Your final challenge is to synthesize your work into a comprehensive defense brief. This document must articulate your empirical claims, provide supporting evidence, explicitly state ranges of uncertainty, and include a concrete implementation artifact (e.g., a policy draft or technical architecture diagram). Structuring this brief according to strict rubric criteria ensures your arguments are coherent, defensible, and ready for executive review."
         },
         {
           "id": "capstone-media-and-democracy-501-l06-c2",
           "kind": "recap",
           "title": "Panel Rehearsal",
-          "content": "During this rehearsal, you will practice responding to critiques related to technical aspects, policy implications, and stakeholder perspectives. This structured policy debate will allow you to refine your arguments and improve your ability to communicate effectively. Using the scoring rubric, you will receive feedback that will help you enhance your performance and prepare for the actual defense panel.\nContext recap: During this rehearsal, you will practice responding to critiques related to technical aspects, policy implications, and stakeholder perspectives. This structured policy debate will allow you to refine your arguments and improve your ability to communicate effectively. Using the scoring rubric, you will receive feedback that will help you enhance your performance and prepare for the actual defense panel."
+          "content": "Before the final presentation, you will undergo a rigorous panel rehearsal. This involves adversarial cross-examination where peers and instructors will critique your technical assumptions, policy implications, and stakeholder impact assessments. This structured debate forces you to defend your tradeoffs, maintain analytical rigor under pressure, and refine your communication strategy for the final defense."
         }
       ],
       "interactiveActivities": [
@@ -640,7 +658,8 @@ export const CapstoneMediaAndDemocracy501Module: LearningModule = {
           "title": "Expert Defense Panel",
           "description": "Defend capstone recommendations under adversarial cross-examination with a rubric-based debate and implementation artifact walkthrough."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/capstone-media-and-democracy-501-l06.png"
     }
   ]
 };

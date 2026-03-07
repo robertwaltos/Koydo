@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const RenewableEnergySystems601Module: LearningModule = {
+export const renewable_energy_systems_601_Module: LearningModule = {
   "id": "renewable-energy-systems-601",
   "title": "Renewable Energy Systems Research and Leadership",
   "description": "Post-401 specialization in Renewable Energy Systems, focused on renewable energy systems diagnostics, renewable energy operations and execution design, renewable energy impact and tradeoff analysis, and renewable energy governance and leadership through advanced casework, simulation, and defense-based checkpoints.",
@@ -14,7 +14,7 @@ export const RenewableEnergySystems601Module: LearningModule = {
   ],
   "minAge": 17,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en",
@@ -31,15 +31,15 @@ export const RenewableEnergySystems601Module: LearningModule = {
   "lessons": [
     {
       "id": "renewable-energy-systems-601-l01",
-      "title": "Renewable Energy Systems Advanced Foundations",
+      "title": "Advanced Foundations of Renewable Energy Systems",
       "type": "video",
       "duration": 14,
       "learningAids": [
         {
           "id": "renewable-energy-systems-601-l01-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "System Boundary Diagram",
+          "content": "A diagram illustrating a renewable energy project (e.g., a solar farm) with clear boundaries, inputs (sunlight, investment), outputs (electricity, revenue), and external constraints (grid capacity, regulations)."
         }
       ],
       "chunks": [
@@ -47,50 +47,50 @@ export const RenewableEnergySystems601Module: LearningModule = {
           "id": "renewable-energy-systems-601-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "In this lesson, we will explore the advanced scope boundaries of Renewable Energy Systems. We will focus on understanding how to diagnose renewable energy systems effectively and how to design operations and execution plans that ensure these systems function optimally. By the end of this lesson, you will have a clearer picture of how to set the limits and expectations for renewable energy projects, which is crucial for their success.\nContext recap: In this lesson, we will explore the advanced scope boundaries of Renewable Energy Systems. We will focus on understanding how to diagnose renewable energy systems effectively and how to design operations and execution plans that ensure these systems function optimally. By the end of this lesson, you will have a clearer picture of how to set the limits and expectations for renewable energy projects, which is crucial for their success."
+          "content": "This lesson explores the advanced scope boundaries of Renewable Energy Systems. We will focus on diagnosing system constraints and designing operational plans to ensure optimal performance. You will learn to define the limits and expectations for renewable energy projects, a crucial first step for success."
         },
         {
           "id": "renewable-energy-systems-601-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different factors in renewable energy systems. Additionally, we will explore uncertainty ranges and how these can affect our planning. Understanding system dependencies is also vital, as it helps us prepare for potential challenges before we implement any interventions. This foundational knowledge will empower you to make informed decisions in your future projects.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different factors in renewable energy systems. Additionally, we will explore uncertainty ranges and how these can affect our planning. Understanding system dependencies is also vital, as it helps us prepare for potential challenges before we implement any interventions. This foundational knowledge will empower you to make informed decisions in your future projects.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different factors in renewable energy systems. Additionally, we will explore uncertainty ranges and how these can affect our planning. Understanding system dependencies is also vital, as it helps us prepare for potential challenges before we implement any interventions. This foundational knowledge will empower you to make informed decisions in your future projects.\nWhy this matters: Causal and Uncertainty Modeling helps learners in Renewable Energy connect ideas from Renewable Energy Systems Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "Here, you will map the causal pathways connecting different factors in a renewable energy system. We will explore how to model uncertainty ranges and system dependencies to anticipate challenges before they arise. This foundational knowledge empowers you to make more informed and resilient decisions."
         },
         {
           "id": "renewable-energy-systems-601-l01-c3",
-          "kind": "recap",
-          "title": "Evidence Thresholds",
-          "content": "In this recap, we will emphasize the importance of ensuring that all claims made in our analyses are supported by measurable indicators. This means that we will establish confidence bounds and set up review checkpoints to verify our findings. By doing so, we can ensure that our conclusions are reliable and that we are making decisions based on solid evidence, which is essential for the credibility of our work.\nContext recap: In this recap, we will emphasize the importance of ensuring that all claims made in our analyses are supported by measurable indicators. This means that we will establish confidence bounds and set up review checkpoints to verify our findings. By doing so, we can ensure that our conclusions are reliable and that we are making decisions based on solid evidence, which is essential for the credibility of our work."
+          "kind": "concept",
+          "title": "Establishing Evidence Thresholds",
+          "content": "This section emphasizes the importance of supporting all analytical claims with measurable indicators. We will establish methods for setting confidence bounds and implementing review checkpoints to verify findings. This ensures your conclusions are reliable and that decisions are based on solid evidence."
         }
       ],
       "flashcards": [
         {
           "id": "renewable-energy-systems-601-l01-f1",
-          "front": "renewable energy systems diagnostics",
-          "back": "A specialization axis requiring explicit assumptions and measurable constraints."
+          "front": "Systems Diagnostics",
+          "back": "The discipline of identifying a system's behavior by defining its boundaries, constraints, and key performance indicators."
         },
         {
           "id": "renewable-energy-systems-601-l01-f2",
-          "front": "renewable energy operations and execution design",
-          "back": "Execution architecture that determines reliability under stress."
+          "front": "Operations Design",
+          "back": "The architecture for execution that ensures system reliability and safety under both normal and stress conditions."
         },
         {
           "id": "renewable-energy-systems-601-l01-f3",
-          "front": "renewable energy impact and tradeoff analysis",
-          "back": "Evaluation discipline for identifying true gains and hidden costs."
+          "front": "Tradeoff Analysis",
+          "back": "The evaluation discipline for rigorously identifying the true benefits, hidden costs, and risks of a decision."
         }
       ]
     },
     {
       "id": "renewable-energy-systems-601-l02",
-      "title": "Renewable Energy Systems Specialist Methods Lab",
+      "title": "Specialist Methods Lab",
       "type": "interactive",
       "duration": 17,
       "learningAids": [
         {
           "id": "renewable-energy-systems-601-l02-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "image",
+          "title": "Control Gate Flowchart",
+          "content": "A flowchart showing a decision workflow with integrated control gates, illustrating checkpoints, rollback criteria, and escalation paths."
         }
       ],
       "chunks": [
@@ -98,13 +98,13 @@ export const RenewableEnergySystems601Module: LearningModule = {
           "id": "renewable-energy-systems-601-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "In this interactive practice session, learners will have the opportunity to design specialized workflows tailored to renewable energy systems. You will also stress-test these workflows by putting them through various challenging scenarios. This hands-on experience will help you understand how to create robust systems that can withstand unexpected situations, ensuring that your designs are both effective and resilient.\nContext recap: In this interactive practice session, learners will have the opportunity to design specialized workflows tailored to renewable energy systems. You will also stress-test these workflows by putting them through various challenging scenarios. This hands-on experience will help you understand how to create robust systems that can withstand unexpected situations, ensuring that your designs are both effective and resilient."
+          "content": "In this interactive lab, you will design a specialized workflow for a renewable energy system. You will then stress-test this workflow against various challenging scenarios to identify weaknesses and build a more resilient and effective operational design."
         },
         {
           "id": "renewable-energy-systems-601-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "In this recap, we will discuss the importance of integrating control gates into our workflows. These control gates will include checkpoints, criteria for rolling back decisions, and escalation procedures based on specific thresholds. By incorporating these elements, we can ensure that our workflows are not only efficient but also safe and accountable, allowing for better management of renewable energy projects.\nContext recap: In this recap, we will discuss the importance of integrating control gates into our workflows. These control gates will include checkpoints, criteria for rolling back decisions, and escalation procedures based on specific thresholds. By incorporating these elements, we can ensure that our workflows are not only efficient but also safe and accountable, allowing for better management of renewable energy projects."
+          "content": "This recap summarizes how to integrate control gates into your workflows. We will review the key components: decision checkpoints, criteria for rolling back actions, and escalation procedures based on pre-set thresholds. These elements ensure your projects are efficient, safe, and accountable."
         }
       ],
       "interactiveActivities": [
@@ -112,7 +112,7 @@ export const RenewableEnergySystems601Module: LearningModule = {
           "id": "renewable-energy-systems-601-l02-act1",
           "type": "matching_pairs",
           "title": "Control-to-Outcome Mapping",
-          "description": "Match specialist controls with their strongest reliability and governance effects.",
+          "description": "Match each governance control with its primary effect on system reliability and accountability.",
           "pairs": [
             {
               "left": "Pre-commit gate",
@@ -120,7 +120,7 @@ export const RenewableEnergySystems601Module: LearningModule = {
             },
             {
               "left": "Rollback trigger",
-              "right": "Limits blast radius under adverse outcomes"
+              "right": "Limits the impact of adverse outcomes"
             },
             {
               "left": "Baseline dashboard",
@@ -139,23 +139,16 @@ export const RenewableEnergySystems601Module: LearningModule = {
       "title": "Checkpoint 1: Specialist Methods",
       "type": "quiz",
       "duration": 10,
-      "learningAids": [
-        {
-          "id": "renewable-energy-systems-601-l03-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
-        }
-      ],
+      "learningAids": [],
       "questions": [
         {
           "id": "renewable-energy-systems-601-l03-q1",
-          "text": "Which practice most improves renewable energy systems diagnostics decision quality?",
-          "skillId": "renewable-energy-systems-601-skill-core",
+          "text": "Which practice most improves the decision quality of renewable energy systems diagnostics?",
+          "skillId": "res-diagnostics",
           "options": [
             {
               "id": "a",
-              "text": "Proceed without baseline or assumptions"
+              "text": "Proceed without a baseline or assumptions"
             },
             {
               "id": "b",
@@ -171,16 +164,16 @@ export const RenewableEnergySystems601Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Advanced decisions improve when assumptions, constraints, and metrics are explicit."
+          "explanation": "Advanced decisions improve when assumptions, constraints, and metrics are made explicit from the start."
         },
         {
           "id": "renewable-energy-systems-601-l03-q2",
-          "text": "At level 601, strong execution for renewable energy operations and execution design requires:",
-          "skillId": "renewable-energy-systems-601-skill-execution",
+          "text": "At an advanced level, strong renewable energy operations require:",
+          "skillId": "res-operations",
           "options": [
             {
               "id": "a",
-              "text": "Owner mapping, checkpoint cadence, and escalation thresholds"
+              "text": "Clear ownership, a regular checkpoint cadence, and defined escalation thresholds"
             },
             {
               "id": "b",
@@ -188,7 +181,7 @@ export const RenewableEnergySystems601Module: LearningModule = {
             },
             {
               "id": "c",
-              "text": "No retrospective or post-run review"
+              "text": "No retrospective or post-implementation review"
             },
             {
               "id": "d",
@@ -196,16 +189,16 @@ export const RenewableEnergySystems601Module: LearningModule = {
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Reliable advanced execution needs ownership clarity and threshold-driven governance."
+          "explanation": "Reliable advanced execution needs ownership clarity and threshold-driven governance to manage complexity."
         },
         {
           "id": "renewable-energy-systems-601-l03-q3",
           "text": "A defensible approach to renewable energy impact and tradeoff analysis includes:",
-          "skillId": "renewable-energy-systems-601-skill-eval",
+          "skillId": "res-evaluation",
           "options": [
             {
               "id": "a",
-              "text": "Anecdotes without comparison"
+              "text": "Anecdotes without a comparison group"
             },
             {
               "id": "b",
@@ -213,24 +206,24 @@ export const RenewableEnergySystems601Module: LearningModule = {
             },
             {
               "id": "c",
-              "text": "Changing success criteria after outcomes"
+              "text": "Changing success criteria after seeing the outcomes"
             },
             {
               "id": "d",
-              "text": "Excluding difficult scenarios from analysis"
+              "text": "Excluding difficult scenarios from the analysis"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible analysis combines comparative baselines, side-effect checks, and uncertainty disclosure."
+          "explanation": "Defensible analysis combines comparative baselines, checks for unintended consequences, and transparent disclosure of uncertainty."
         },
         {
           "id": "renewable-energy-systems-601-l03-q4",
-          "text": "Mature governance systems connect:",
-          "skillId": "renewable-energy-systems-601-skill-governance",
+          "text": "Mature governance systems effectively connect:",
+          "skillId": "res-governance",
           "options": [
             {
               "id": "a",
-              "text": "Policy intent, measurable controls, and remediation pathways"
+              "text": "Policy intent, measurable controls, and clear remediation pathways"
             },
             {
               "id": "b",
@@ -238,7 +231,7 @@ export const RenewableEnergySystems601Module: LearningModule = {
             },
             {
               "id": "c",
-              "text": "Targets without ownership or escalation design"
+              "text": "Targets without ownership or an escalation plan"
             },
             {
               "id": "d",
@@ -250,8 +243,8 @@ export const RenewableEnergySystems601Module: LearningModule = {
         },
         {
           "id": "renewable-energy-systems-601-l03-q5",
-          "text": "What is the best way to compare competing interventions in advanced Renewable Energy?",
-          "skillId": "renewable-energy-systems-601-skill-advanced-5",
+          "text": "What is the best way to compare competing interventions in an advanced renewable energy project?",
+          "skillId": "res-evaluation",
           "options": [
             {
               "id": "a",
@@ -263,7 +256,7 @@ export const RenewableEnergySystems601Module: LearningModule = {
             },
             {
               "id": "c",
-              "text": "Switch metrics after results arrive"
+              "text": "Switch metrics after the results arrive to favor an outcome"
             },
             {
               "id": "d",
@@ -271,16 +264,16 @@ export const RenewableEnergySystems601Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
+          "explanation": "Defensible comparisons require shared metrics, accounting for side-effects, and transparently disclosing uncertainty."
         },
         {
           "id": "renewable-energy-systems-601-l03-q6",
-          "text": "In high-stakes Renewable Energy Systems Research and Leadership execution, which communication protocol is strongest?",
-          "skillId": "renewable-energy-systems-601-skill-advanced-6",
+          "text": "In high-stakes renewable energy projects, which communication protocol is strongest for leadership?",
+          "skillId": "res-leadership",
           "options": [
             {
               "id": "a",
-              "text": "Broadcast conclusions without assumptions"
+              "text": "Broadcast conclusions without sharing assumptions"
             },
             {
               "id": "b",
@@ -288,7 +281,7 @@ export const RenewableEnergySystems601Module: LearningModule = {
             },
             {
               "id": "c",
-              "text": "Share only final outcomes after completion"
+              "text": "Share only final outcomes after the project is complete"
             },
             {
               "id": "d",
@@ -296,12 +289,12 @@ export const RenewableEnergySystems601Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
+          "explanation": "High-stakes communication must be transparent about assumptions, confidence levels, and governance checkpoints to build trust and enable oversight."
         },
         {
           "id": "renewable-energy-systems-601-l03-q7",
-          "text": "A mature remediation loop in advanced Renewable Energy should prioritize:",
-          "skillId": "renewable-energy-systems-601-skill-advanced-7",
+          "text": "A mature remediation loop in an advanced renewable energy system should prioritize:",
+          "skillId": "res-operations",
           "options": [
             {
               "id": "a",
@@ -313,20 +306,20 @@ export const RenewableEnergySystems601Module: LearningModule = {
             },
             {
               "id": "c",
-              "text": "One-time fixes without retesting"
+              "text": "One-time fixes without retesting under stress"
             },
             {
               "id": "d",
-              "text": "Issue closure based on elapsed time"
+              "text": "Closing an issue based on elapsed time"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
+          "explanation": "Mature remediation focuses on systemic improvement by tying root causes to control redesign and verifying the fix."
         },
         {
           "id": "renewable-energy-systems-601-l03-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Renewable Energy Systems Research and Leadership?",
-          "skillId": "renewable-energy-systems-601-skill-advanced-8",
+          "text": "Which portfolio decision rule best balances performance and resilience in renewable energy leadership?",
+          "skillId": "res-leadership",
           "options": [
             {
               "id": "a",
@@ -334,33 +327,33 @@ export const RenewableEnergySystems601Module: LearningModule = {
             },
             {
               "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
+              "text": "Optimize for expected value while enforcing risk limits and maintaining contingency capacity"
             },
             {
               "id": "c",
-              "text": "Ignore correlated failure modes"
+              "text": "Ignore correlated failure modes across projects"
             },
             {
               "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
+              "text": "Commit all resources to a single, irreversible pathway"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options to ensure long-term resilience."
         }
       ]
     },
     {
       "id": "renewable-energy-systems-601-l04",
-      "title": "Renewable Energy Systems Advanced Case Analysis",
+      "title": "Advanced Case Analysis",
       "type": "video",
       "duration": 14,
       "learningAids": [
         {
           "id": "renewable-energy-systems-601-l04-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Tradeoff Matrix",
+          "content": "A table comparing three different energy solutions across multiple dimensions like Cost, Safety, Reliability, and Equity, with cells color-coded to show performance."
         }
       ],
       "chunks": [
@@ -368,33 +361,33 @@ export const RenewableEnergySystems601Module: LearningModule = {
           "id": "renewable-energy-systems-601-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "In this lesson, we will frame a case that highlights the competing constraints faced in renewable energy systems diagnostics. We will analyze the impacts and trade-offs involved in making decisions about renewable energy projects. Understanding these competing factors is crucial for developing effective strategies that balance various needs and priorities in the field of renewable energy.\nContext recap: In this lesson, we will frame a case that highlights the competing constraints faced in renewable energy systems diagnostics. We will analyze the impacts and trade-offs involved in making decisions about renewable energy projects. Understanding these competing factors is crucial for developing effective strategies that balance various needs and priorities in the field of renewable energy."
+          "content": "In this lesson, we will frame a case study that highlights the competing constraints common in renewable energy systems. We will analyze the impacts and trade-offs of key decisions, which is crucial for developing effective strategies that balance multiple priorities."
         },
         {
           "id": "renewable-energy-systems-601-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "In this practice session, learners will compare different options available to them in renewable energy decision-making. We will evaluate these options based on several important dimensions, including safety, reliability, cost, equity, and governance. This comparative analysis will help you understand the trade-offs involved and guide you in making well-rounded decisions that consider all stakeholders.\nContext recap: In this practice session, learners will compare different options available to them in renewable energy decision-making. We will evaluate these options based on several important dimensions, including safety, reliability, cost, equity, and governance. This comparative analysis will help you understand the trade-offs involved and guide you in making well-rounded decisions that consider all stakeholders."
+          "content": "In this practice, you will compare different options within the case study. We will evaluate these options across critical dimensions, including safety, reliability, cost, equity, and governance. This comparative analysis will help you articulate the trade-offs involved and make a well-rounded decision."
         },
         {
           "id": "renewable-energy-systems-601-l04-c3",
           "kind": "recap",
           "title": "Decision Memo Pattern",
-          "content": "In this recap, we will outline the essential components of a decision memo. Each recommendation you make should include the underlying assumptions, the evidence that supports your claims, the controls for managing risks, and fallback plans in case things do not go as expected. This structured approach will enhance the clarity and effectiveness of your decision-making process.\nContext recap: In this recap, we will outline the essential components of a decision memo. Each recommendation you make should include the underlying assumptions, the evidence that supports your claims, the controls for managing risks, and fallback plans in case things do not go as expected. This structured approach will enhance the clarity and effectiveness of your decision-making process."
+          "content": "This recap outlines the essential components of a professional decision memo. Every recommendation must include the underlying assumptions, supporting evidence, risk controls, and fallback plans. This structured approach enhances the clarity and defensibility of your decisions."
         }
       ]
     },
     {
       "id": "renewable-energy-systems-601-l05",
-      "title": "Renewable Energy Systems Simulation Clinic",
+      "title": "Simulation Clinic",
       "type": "interactive",
       "duration": 18,
       "learningAids": [
         {
           "id": "renewable-energy-systems-601-l05-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "image",
+          "title": "Simulation Dashboard",
+          "content": "A mock-up of a control dashboard for a regional power grid, showing real-time energy supply, demand, storage levels, and price, with controls for adjusting output."
         }
       ],
       "chunks": [
@@ -402,13 +395,13 @@ export const RenewableEnergySystems601Module: LearningModule = {
           "id": "renewable-energy-systems-601-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "In this interactive practice, learners will take on the role of operators managing scenario controls. You will need to balance performance objectives with governance constraints, ensuring that all actions taken are in line with established guidelines. This experience will help you develop the skills necessary to navigate complex situations in renewable energy management effectively.\nContext recap: In this interactive practice, learners will take on the role of operators managing scenario controls. You will need to balance performance objectives with governance constraints, ensuring that all actions taken are in line with established guidelines. This experience will help you develop the skills necessary to navigate complex situations in renewable energy management effectively."
+          "content": "In this interactive simulation, you will act as an operator managing a renewable energy grid. You must balance performance objectives with governance constraints, making real-time decisions under pressure. This will help you develop skills to navigate complex, dynamic situations effectively."
         },
         {
           "id": "renewable-energy-systems-601-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "In this recap, we will discuss the design of effective responses to challenges that may arise during renewable energy operations. It is crucial that these responses can update control gates while maintaining traceability and accountability. This means that every action taken can be tracked and justified, which is vital for ensuring transparency and trust in renewable energy systems.\nContext recap: In this recap, we will discuss the design of effective responses to challenges that may arise during renewable energy operations. It is crucial that these responses can update control gates while maintaining traceability and accountability. This means that every action taken can be tracked and justified, which is vital for ensuring transparency and trust in renewable energy systems."
+          "content": "This recap discusses how to design effective responses to challenges that arise during operations. A key principle is that responses must be able to update control gates while maintaining traceability and accountability. This ensures every action is tracked and justified, which is vital for transparency and trust."
         }
       ],
       "interactiveActivities": [
@@ -416,7 +409,7 @@ export const RenewableEnergySystems601Module: LearningModule = {
           "id": "renewable-energy-systems-601-l05-act1",
           "type": "scenario",
           "title": "Adverse-Condition Decision Run",
-          "description": "Run a high-pressure renewable energy systems scenario and tune controls under uncertainty."
+          "description": "Manage a high-pressure renewable energy grid scenario. Your goal is to maintain stability and meet demand by tuning controls as unexpected events unfold."
         }
       ]
     },
@@ -425,19 +418,12 @@ export const RenewableEnergySystems601Module: LearningModule = {
       "title": "Checkpoint 2: Case and Simulation Mastery",
       "type": "quiz",
       "duration": 11,
-      "learningAids": [
-        {
-          "id": "renewable-energy-systems-601-l06-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
-        }
-      ],
+      "learningAids": [],
       "questions": [
         {
           "id": "renewable-energy-systems-601-l06-q1",
-          "text": "In advanced casework, the first requirement for defensible recommendations is:",
-          "skillId": "renewable-energy-systems-601-skill-case1",
+          "text": "In advanced casework, the first requirement for a defensible recommendation is:",
+          "skillId": "res-diagnostics",
           "options": [
             {
               "id": "a",
@@ -445,7 +431,7 @@ export const RenewableEnergySystems601Module: LearningModule = {
             },
             {
               "id": "b",
-              "text": "A clear baseline, explicit constraints, and success criteria"
+              "text": "A clear baseline, explicit constraints, and pre-defined success criteria"
             },
             {
               "id": "c",
@@ -453,20 +439,20 @@ export const RenewableEnergySystems601Module: LearningModule = {
             },
             {
               "id": "d",
-              "text": "Single-metric optimization only"
+              "text": "Optimization on a single metric only"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible recommendations begin with explicit assumptions, constraints, and measurable targets."
+          "explanation": "Defensible recommendations are built on a foundation of explicit assumptions, constraints, and measurable targets."
         },
         {
           "id": "renewable-energy-systems-601-l06-q2",
-          "text": "A resilient strategy for renewable energy operations and execution design should include:",
-          "skillId": "renewable-energy-systems-601-skill-case2",
+          "text": "A resilient strategy for renewable energy operations should always include:",
+          "skillId": "res-operations",
           "options": [
             {
               "id": "a",
-              "text": "Checkpointed execution with fallback and escalation criteria"
+              "text": "Checkpointed execution with clear fallback and escalation criteria"
             },
             {
               "id": "b",
@@ -482,16 +468,16 @@ export const RenewableEnergySystems601Module: LearningModule = {
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Resilience depends on checkpoints, fallback options, and explicit escalation design."
+          "explanation": "Resilience in complex systems depends on planned checkpoints, fallback options, and explicit escalation design."
         },
         {
           "id": "renewable-energy-systems-601-l06-q3",
-          "text": "When evaluating renewable energy impact and tradeoff analysis, which method is most rigorous?",
-          "skillId": "renewable-energy-systems-601-skill-case3",
+          "text": "When evaluating a renewable energy project's impact, which method is most rigorous?",
+          "skillId": "res-evaluation",
           "options": [
             {
               "id": "a",
-              "text": "Single success story without controls"
+              "text": "A single success story without control groups"
             },
             {
               "id": "b",
@@ -499,20 +485,20 @@ export const RenewableEnergySystems601Module: LearningModule = {
             },
             {
               "id": "c",
-              "text": "Outcome-only narrative without process evidence"
+              "text": "An outcome-only narrative without process evidence"
             },
             {
               "id": "d",
-              "text": "Retrospective scope changes to fit outcomes"
+              "text": "Retrospectively changing the scope to fit the outcomes"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Rigorous evaluation requires comparisons, side-effect analysis, and uncertainty disclosure."
+          "explanation": "Rigorous evaluation requires objective comparisons, a thorough analysis of unintended consequences, and transparent disclosure of uncertainty."
         },
         {
           "id": "renewable-energy-systems-601-l06-q4",
           "text": "Advanced governance is strongest when it:",
-          "skillId": "renewable-energy-systems-601-skill-case4",
+          "skillId": "res-governance",
           "options": [
             {
               "id": "a",
@@ -532,121 +518,121 @@ export const RenewableEnergySystems601Module: LearningModule = {
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Mature governance links authority, measurable controls, and corrective action."
+          "explanation": "Mature governance creates a closed loop that links authority, measurable controls, and the obligation to take corrective action."
         },
         {
           "id": "renewable-energy-systems-601-l06-q5",
-          "text": "What is the best way to compare competing interventions in advanced Renewable Energy?",
-          "skillId": "renewable-energy-systems-601-skill-advanced-5",
+          "text": "In a dynamic simulation, your solar array strategy is underperforming due to unforeseen cloud cover. The most resilient leadership response is to:",
+          "skillId": "res-leadership",
           "options": [
             {
               "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
+              "text": "Stick to the original plan to show consistency"
             },
             {
               "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
+              "text": "Immediately switch to the most expensive backup without analysis"
             },
             {
               "id": "c",
-              "text": "Switch metrics after results arrive"
+              "text": "Activate a pre-planned contingency (e.g., battery storage) and analyze real-time data to adjust the forecast"
             },
             {
               "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
+              "text": "Blame the weather model and wait for conditions to improve"
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
+          "correctOptionId": "c",
+          "explanation": "Resilient leadership involves using pre-planned contingencies and adapting based on new data, not rigid adherence or panicked changes."
         },
         {
           "id": "renewable-energy-systems-601-l06-q6",
-          "text": "In high-stakes Renewable Energy Systems Research and Leadership execution, which communication protocol is strongest?",
-          "skillId": "renewable-energy-systems-601-skill-advanced-6",
+          "text": "When defending a recommendation to site a wind farm near a residential area, the strongest argument addresses tradeoffs by:",
+          "skillId": "res-defense",
           "options": [
             {
               "id": "a",
-              "text": "Broadcast conclusions without assumptions"
+              "text": "Focusing only on the clean energy benefits"
             },
             {
               "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
+              "text": "Presenting a comprehensive analysis of noise impact, energy output, and cost, including mitigation strategies for residents"
             },
             {
               "id": "c",
-              "text": "Share only final outcomes after completion"
+              "text": "Dismissing resident concerns as uninformed"
             },
             {
               "id": "d",
-              "text": "Limit updates to a single informal channel"
+              "text": "Claiming there are no negative impacts"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
+          "explanation": "A defensible position acknowledges and quantifies tradeoffs, presenting a balanced view with mitigation plans."
         },
         {
           "id": "renewable-energy-systems-601-l06-q7",
-          "text": "A mature remediation loop in advanced Renewable Energy should prioritize:",
-          "skillId": "renewable-energy-systems-601-skill-advanced-7",
+          "text": "Your system's control gates trigger an alert: grid demand is spiking beyond the capacity of your renewable sources. An effective adaptive operational response is to:",
+          "skillId": "res-operations",
           "options": [
             {
               "id": "a",
-              "text": "Blame assignment without system updates"
+              "text": "Manually override all safety alerts"
             },
             {
               "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
+              "text": "Follow a pre-defined escalation pathway to bring supplemental power sources online while logging the event for review"
             },
             {
               "id": "c",
-              "text": "One-time fixes without retesting"
+              "text": "Wait for the system to automatically failover, hoping it works"
             },
             {
               "id": "d",
-              "text": "Issue closure based on elapsed time"
+              "text": "Send an email to the engineering team and wait for a response"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
+          "explanation": "Mature operations rely on pre-defined, accountable escalation pathways to manage anomalies safely and efficiently."
         },
         {
           "id": "renewable-energy-systems-601-l06-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Renewable Energy Systems Research and Leadership?",
-          "skillId": "renewable-energy-systems-601-skill-advanced-8",
+          "text": "A case study proposes a new hydroelectric dam. A responsible governance analysis must prioritize:",
+          "skillId": "res-governance",
           "options": [
             {
               "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
+              "text": "Maximizing power output above all other factors"
             },
             {
               "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
+              "text": "The financial returns for investors as the sole metric"
             },
             {
               "id": "c",
-              "text": "Ignore correlated failure modes"
+              "text": "A multi-stakeholder impact assessment, including downstream ecological effects, local community displacement, and long-term water rights"
             },
             {
               "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
+              "text": "The construction speed and timeline"
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "correctOptionId": "c",
+          "explanation": "Responsible governance requires a holistic view of impact across all stakeholders, including environmental and social dimensions."
         }
       ]
     },
     {
       "id": "renewable-energy-systems-601-l07",
-      "title": "Renewable Energy Systems Governance and Public Impact",
+      "title": "Governance and Public Impact",
       "type": "video",
       "duration": 13,
       "learningAids": [
         {
           "id": "renewable-energy-systems-601-l07-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Stakeholder Impact Map",
+          "content": "A map showing a proposed project at the center, with concentric circles of stakeholders (local community, investors, government, environment) and lines indicating the positive and negative impacts on each."
         }
       ],
       "chunks": [
@@ -654,50 +640,50 @@ export const RenewableEnergySystems601Module: LearningModule = {
           "id": "renewable-energy-systems-601-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "In this lesson, learners will explore how to map the distribution of impacts among different stakeholders involved in renewable energy projects. This includes identifying the benefits, burdens, and any delayed effects that may arise. Understanding these dynamics is essential for ensuring that all voices are heard and that the impacts of decisions are fairly distributed.\nContext recap: In this lesson, learners will explore how to map the distribution of impacts among different stakeholders involved in renewable energy projects. This includes identifying the benefits, burdens, and any delayed effects that may arise. Understanding these dynamics is essential for ensuring that all voices are heard and that the impacts of decisions are fairly distributed."
+          "content": "This lesson explores how to map the distribution of impacts—benefits, burdens, and delayed effects—among different stakeholders in a renewable energy project. Understanding these dynamics is essential for ensuring decisions are equitable and socially responsible."
         },
         {
           "id": "renewable-energy-systems-601-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "In this lesson, we will focus on the architecture of accountability within renewable energy governance. This includes ensuring that there is clear traceability of decisions made, rights for review, and obligations for remediation when necessary. By integrating these elements, we can create a more responsible and transparent decision-making process that fosters trust among all stakeholders.\nContext recap: In this lesson, we will focus on the architecture of accountability within renewable energy governance. This includes ensuring that there is clear traceability of decisions made, rights for review, and obligations for remediation when necessary. By integrating these elements, we can create a more responsible and transparent decision-making process that fosters trust among all stakeholders."
+          "content": "Here, we focus on the architecture of accountability in renewable energy governance. This includes ensuring clear decision traceability, rights for stakeholder review, and obligations for remediation. These elements create a transparent process that fosters public trust."
         },
         {
           "id": "renewable-energy-systems-601-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "To ensure responsible leadership in renewable energy, it is important to use a comprehensive checklist. This checklist should connect important outcomes, ethical considerations, compliance with policies, and the ability to adapt and be resilient in changing situations. By following this checklist, leaders can make informed decisions that positively impact the community and environment.\nContext recap: To ensure responsible leadership in renewable energy, it is important to use a comprehensive checklist. This checklist should connect important outcomes, ethical considerations, compliance with policies, and the ability to adapt and be resilient in changing situations. By following this checklist, leaders can make informed decisions that positively impact the community and environment."
+          "content": "This recap provides a checklist for responsible leadership. It connects key outcomes, ethical guardrails, policy compliance, and system resilience. Following this checklist helps leaders make well-informed decisions that positively impact both the community and the environment."
         }
       ],
       "flashcards": [
         {
           "id": "renewable-energy-systems-601-l07-f1",
-          "front": "Impact distribution",
-          "back": "How outcomes are allocated across populations and timescales."
+          "front": "Impact Distribution",
+          "back": "The analysis of how outcomes (positive and negative) are allocated across different populations and over various timescales."
         },
         {
           "id": "renewable-energy-systems-601-l07-f2",
-          "front": "Decision traceability",
-          "back": "An auditable record of evidence, ownership, and rationale."
+          "front": "Decision Traceability",
+          "back": "An auditable record connecting a decision to its evidence, ownership, and underlying rationale."
         },
         {
           "id": "renewable-energy-systems-601-l07-f3",
-          "front": "Responsible leadership",
-          "back": "Decision behavior balancing performance, accountability, and ethics."
+          "front": "Responsible Leadership",
+          "back": "A decision-making approach that balances performance goals with accountability and ethical considerations."
         }
       ]
     },
     {
       "id": "renewable-energy-systems-601-l08",
-      "title": "Renewable Energy Systems Capstone Defense Lab",
+      "title": "Capstone Defense Lab",
       "type": "interactive",
       "duration": 16,
       "learningAids": [
         {
           "id": "renewable-energy-systems-601-l08-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "image",
+          "title": "One-Page Defense Brief",
+          "content": "A template for a one-page summary document, with sections for the core claim, key evidence, uncertainty analysis, and proposed remediation pathways."
         }
       ],
       "chunks": [
@@ -705,13 +691,13 @@ export const RenewableEnergySystems601Module: LearningModule = {
           "id": "renewable-energy-systems-601-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "In this interactive activity, learners will work together to create a detailed brief. This brief will include well-supported claims, evidence that backs up those claims, an understanding of the uncertainties involved, and potential pathways for remediation. This process helps learners develop critical thinking and communication skills that are essential for presenting their ideas effectively.\nContext recap: In this interactive activity, learners will work together to create a detailed brief. This brief will include well-supported claims, evidence that backs up those claims, an understanding of the uncertainties involved, and potential pathways for remediation. This process helps learners develop critical thinking and communication skills that are essential for presenting their ideas effectively."
+          "content": "In this interactive activity, you will assemble a defense brief for your capstone recommendation. This brief must include a core claim, supporting evidence, an analysis of uncertainties, and potential remediation pathways. This process hones the critical thinking and communication skills needed for effective advocacy."
         },
         {
           "id": "renewable-energy-systems-601-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "During the Expert Panel Rehearsal, learners will practice their responses to various critiques. These critiques may come from technical experts, governance representatives, and stakeholders who have an interest in renewable energy systems. This rehearsal is a valuable opportunity for learners to refine their arguments and improve their ability to engage with different perspectives.\nContext recap: During the Expert Panel Rehearsal, learners will practice their responses to various critiques. These critiques may come from technical experts, governance representatives, and stakeholders who have an interest in renewable energy systems. This rehearsal is a valuable opportunity for learners to refine their arguments and improve their ability to engage with different perspectives."
+          "content": "During this rehearsal, you will practice responding to critiques from multiple perspectives, including technical experts, governance representatives, and community stakeholders. This is a valuable opportunity to refine your arguments and improve your ability to engage in a professional defense."
         }
       ],
       "interactiveActivities": [
@@ -719,7 +705,7 @@ export const RenewableEnergySystems601Module: LearningModule = {
           "id": "renewable-energy-systems-601-l08-act1",
           "type": "debate_simulator",
           "title": "Expert Defense Panel",
-          "description": "Defend specialization recommendations under adversarial cross-examination."
+          "description": "Present and defend your capstone recommendation to a simulated expert panel under adversarial cross-examination."
         }
       ]
     }

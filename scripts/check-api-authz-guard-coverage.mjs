@@ -10,6 +10,7 @@ const MUTATING_METHOD_REGEX = /export\s+async\s+function\s+(POST|PUT|PATCH|DELET
 const AUTHZ_GUARD_PATTERNS = [
   { name: "session-auth", pattern: /auth\.getUser\(/ },
   { name: "admin-auth", pattern: /requireAdminForApi\(/ },
+  { name: "support-auth", pattern: /requireSupportOrAdminForApi\(/ },
   { name: "owner-auth", pattern: /requireOwnerForApi\(/ },
   { name: "paid-tier-auth", pattern: /requirePaidTier\(/ },
   { name: "authenticated-user-id", pattern: /requireAuthenticatedUserId\(/ },
@@ -34,6 +35,14 @@ const AUTHZ_GUARD_PATTERNS = [
   { name: "stripe-webhook-signature-check", pattern: /stripe\.webhooks\.constructEvent\(/ },
   { name: "cron-secret-check", pattern: /process\.env\.CRON_SECRET/ },
   { name: "timing-safe-compare-check", pattern: /timingSafeEqualStrings\(/ },
+  { name: "device-login-request-check", pattern: /requireMatchingDeviceLoginRequest\(/ },
+];
+
+const AUTHZ_GUARD_EXCEPTIONS = [
+  {
+    file: "src/app/api/auth/device/init/route.ts",
+    requiredPatterns: [/enforceIpRateLimit\(/, /api:auth:device:init:post/],
+  },
 ];
 
 function collectRouteFiles(dir) {
@@ -89,7 +98,12 @@ function main() {
 
     checked += 1;
     const matchedGuards = findMatchedGuards(content);
-    if (matchedGuards.length === 0) {
+    const exception = AUTHZ_GUARD_EXCEPTIONS.find(
+      ({ file: exceptionFile, requiredPatterns }) =>
+        exceptionFile === toUnixRelative(file) &&
+        requiredPatterns.every((pattern) => pattern.test(content)),
+    );
+    if (matchedGuards.length === 0 && !exception) {
       failures.push({
         file: toUnixRelative(file),
         methods,

@@ -1,9 +1,9 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const FinancialLiteracy601Module: LearningModule = {
+export const financial_literacy_601_Module: LearningModule = {
   "id": "financial-literacy-601",
   "title": "Financial Literacy Research and Leadership",
-  "description": "Post-401 specialization in Financial Literacy, focused on financial literacy systems diagnostics, financial literacy operations and execution design, financial literacy impact and tradeoff analysis, and financial literacy governance and leadership through advanced casework, simulation, and defense-based checkpoints.",
+  "description": "An advanced course on designing, managing, and leading financial literacy programs. This specialization focuses on system diagnostics, operational design, impact analysis, and effective governance using advanced case studies, simulations, and expert-review checkpoints.",
   "subject": "Financial Literacy",
   "tags": [
     "core",
@@ -14,121 +14,121 @@ export const FinancialLiteracy601Module: LearningModule = {
   ],
   "minAge": 17,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en",
     "es"
   ],
   "learningObjectives": [
-    "Apply advanced methods for financial literacy systems diagnostics in high-constraint environments",
-    "Design robust systems for financial literacy operations and execution design with measurable control gates",
-    "Evaluate interventions in financial literacy impact and tradeoff analysis with research-grade rigor",
-    "Operationalize financial literacy governance and leadership with accountable governance and escalation pathways",
-    "Lead cross-functional decision reviews with explicit tradeoff communication",
-    "Defend recommendations under expert critique using evidence and uncertainty bounds"
+    "Apply advanced methods to diagnose financial literacy systems in challenging real-world scenarios.",
+    "Design robust and measurable operations for financial literacy programs.",
+    "Evaluate the impact and tradeoffs of financial literacy interventions with rigorous, evidence-based methods.",
+    "Develop and lead financial literacy initiatives with clear governance and accountability.",
+    "Lead decision-making reviews, clearly communicating tradeoffs to diverse stakeholders.",
+    "Defend program recommendations to expert panels using evidence and clear analysis of uncertainties."
   ],
   "lessons": [
     {
       "id": "financial-literacy-601-l01",
-      "title": "Financial Literacy Advanced Foundations",
+      "title": "Advanced Foundations in Financial Literacy Systems",
       "type": "video",
       "duration": 14,
       "learningAids": [
         {
           "id": "financial-literacy-601-l01-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "System Diagnostics Model",
+          "content": "A diagram showing how to map causes, effects, and uncertainties in a financial literacy program."
         }
       ],
       "chunks": [
         {
           "id": "financial-literacy-601-l01-c1",
           "kind": "concept",
-          "title": "Scope and Boundary Design",
-          "content": "In this lesson, we will delve into the advanced boundaries of financial literacy. Our focus will be on learning how to assess and evaluate financial literacy systems effectively. We will also discuss how to design operations and execution strategies that are impactful and efficient. By understanding these concepts, we will be able to identify the essential components that lead to a successful financial literacy program, ensuring that individuals are well-equipped to manage their finances wisely and confidently.\nContext recap: In this lesson, we will delve into the advanced boundaries of financial literacy. Our focus will be on learning how to assess and evaluate financial literacy systems effectively. We will also discuss how to design operations and execution strategies that are impactful and efficient. By understanding these concepts, we will be able to identify the essential components that lead to a successful financial literacy program, ensuring that individuals are well-equipped to manage their finances wisely and confidently."
+          "title": "Defining the Scope",
+          "content": "In this lesson, we will explore the advanced concepts of financial literacy. We will focus on how to assess financial literacy systems and design effective operational strategies. Understanding these concepts is key to building successful programs that empower individuals to manage their finances confidently."
         },
         {
           "id": "financial-literacy-601-l01-c2",
           "kind": "concept",
-          "title": "Causal and Uncertainty Modeling",
-          "content": "In this section, learners will engage in mapping out the relationships between different factors that influence financial decisions. They will identify pathways of cause and effect, recognize areas of uncertainty, and understand how various systems depend on one another. This foundational knowledge will be crucial for planning effective interventions in financial literacy.\nContext recap: In this section, learners will engage in mapping out the relationships between different factors that influence financial decisions. They will identify pathways of cause and effect, recognize areas of uncertainty, and understand how various systems depend on one another. This foundational knowledge will be crucial for planning effective interventions in financial literacy."
+          "title": "Mapping Cause and Effect",
+          "content": "Learners will map the relationships between different factors influencing financial decisions. You will identify causal pathways, recognize areas of uncertainty, and understand how different systems interact. This knowledge is crucial for planning effective financial literacy interventions."
         },
         {
           "id": "financial-literacy-601-l01-c3",
           "kind": "recap",
-          "title": "Evidence Thresholds",
-          "content": "It is important that all claims made in our financial literacy programs are supported by measurable indicators. This means we will establish confidence bounds and set up review checkpoints to ensure that our findings are reliable and can be verified. This process helps maintain the integrity of our financial literacy initiatives.\nContext recap: It is important that all claims made in our financial literacy programs are supported by measurable indicators. This means we will establish confidence bounds and set up review checkpoints to ensure that our findings are reliable and can be verified. This process helps maintain the integrity of our financial literacy initiatives."
+          "title": "Setting Standards for Evidence",
+          "content": "It is critical that all claims made in our programs are supported by measurable evidence. We will establish clear standards and review checkpoints to ensure our findings are reliable and verifiable. This process maintains the integrity and effectiveness of our initiatives."
         }
       ],
       "flashcards": [
         {
           "id": "financial-literacy-601-l01-f1",
-          "front": "financial literacy systems diagnostics",
-          "back": "A specialization axis requiring explicit assumptions and measurable constraints."
+          "front": "What are financial literacy systems diagnostics?",
+          "back": "The process of analyzing the factors, constraints, and goals of a financial literacy program to identify areas for improvement."
         },
         {
           "id": "financial-literacy-601-l01-f2",
-          "front": "financial literacy operations and execution design",
-          "back": "Execution architecture that determines reliability under stress."
+          "front": "What is operations and execution design?",
+          "back": "The design of a plan that ensures a program works reliably and effectively, even in difficult situations."
         },
         {
           "id": "financial-literacy-601-l01-f3",
-          "front": "financial literacy impact and tradeoff analysis",
-          "back": "Evaluation discipline for identifying true gains and hidden costs."
+          "front": "What is impact and tradeoff analysis?",
+          "back": "A structured way to evaluate a program's true benefits and hidden costs to make informed decisions."
         }
       ]
     },
     {
       "id": "financial-literacy-601-l02",
-      "title": "Financial Literacy Specialist Methods Lab",
+      "title": "Specialist Methods Lab",
       "type": "interactive",
       "duration": 17,
       "learningAids": [
         {
           "id": "financial-literacy-601-l02-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Workflow Design Practice",
+          "content": "Sketch a workflow for a financial literacy initiative, including decision points, quality checks, and escalation paths."
         }
       ],
       "chunks": [
         {
           "id": "financial-literacy-601-l02-c1",
           "kind": "practice",
-          "title": "Method Design and Stress Test",
-          "content": "In this interactive lab, learners will have the opportunity to design specialized workflows that are tailored to financial literacy. They will also conduct stress tests on these workflows by simulating challenging scenarios. This hands-on practice will help learners understand how to adapt their strategies in real-world situations.\nContext recap: In this interactive lab, learners will have the opportunity to design specialized workflows that are tailored to financial literacy. They will also conduct stress tests on these workflows by simulating challenging scenarios. This hands-on practice will help learners understand how to adapt their strategies in real-world situations."
+          "title": "Designing and Testing Workflows",
+          "content": "In this interactive lab, you will design specialized workflows for financial literacy programs. You will also stress-test these workflows by simulating challenging scenarios to learn how to adapt your strategies in real-world situations."
         },
         {
           "id": "financial-literacy-601-l02-c2",
           "kind": "recap",
-          "title": "Control Gate Architecture",
-          "content": "In this recap, we will discuss how workflows can be structured to include important checkpoints, criteria for rolling back decisions, and escalation procedures based on thresholds. This architecture ensures that our processes are robust and can handle unexpected challenges effectively.\nContext recap: In this recap, we will discuss how workflows can be structured to include important checkpoints, criteria for rolling back decisions, and escalation procedures based on thresholds. This architecture ensures that our processes are robust and can handle unexpected challenges effectively."
+          "title": "Building in Checkpoints",
+          "content": "In this recap, we will discuss how to structure workflows with important checkpoints, criteria for reversing decisions, and clear procedures for escalating issues. This structure ensures our processes are robust and can handle unexpected challenges."
         }
       ],
       "interactiveActivities": [
         {
           "id": "financial-literacy-601-l02-act1",
           "type": "matching_pairs",
-          "title": "Control-to-Outcome Mapping",
-          "description": "Match specialist controls with their strongest reliability and governance effects.",
+          "title": "Matching Controls to Goals",
+          "description": "Match each operational control with its primary benefit for program reliability and governance.",
           "pairs": [
             {
-              "left": "Pre-commit gate",
-              "right": "Prevents avoidable downstream failures"
+              "left": "Pre-launch review",
+              "right": "Prevents avoidable problems later on"
             },
             {
-              "left": "Rollback trigger",
-              "right": "Limits blast radius under adverse outcomes"
+              "left": "Rollback plan",
+              "right": "Minimizes negative consequences when things go wrong"
             },
             {
-              "left": "Baseline dashboard",
-              "right": "Supports defensible impact attribution"
+              "left": "Performance dashboard",
+              "right": "Provides evidence to show your program is working"
             },
             {
-              "left": "Retrospective loop",
-              "right": "Improves next-cycle decision quality"
+              "left": "Post-project review",
+              "right": "Improves the quality of future decisions"
             }
           ]
         }
@@ -143,280 +143,180 @@ export const FinancialLiteracy601Module: LearningModule = {
         {
           "id": "financial-literacy-601-l03-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Self-Assessment Prompt",
+          "content": "Before starting, review your notes on system diagnostics and execution design. Identify one concept you feel confident about and one you want to clarify."
         }
       ],
       "questions": [
         {
           "id": "financial-literacy-601-l03-q1",
-          "text": "Which practice most improves financial literacy systems diagnostics decision quality?",
-          "skillId": "financial-literacy-601-skill-core",
+          "text": "Which practice most improves the quality of financial literacy system diagnostics?",
+          "skillId": "systems-diagnostics",
           "options": [
             {
               "id": "a",
-              "text": "Proceed without baseline or assumptions"
+              "text": "Proceeding without a baseline or clear assumptions"
             },
             {
               "id": "b",
-              "text": "Define assumptions, constraints, and measurable indicators"
+              "text": "Defining assumptions, constraints, and measurable indicators upfront"
             },
             {
               "id": "c",
-              "text": "Optimize only for speed in every context"
+              "text": "Optimizing only for speed in every situation"
             },
             {
               "id": "d",
-              "text": "Ignore uncertainty and edge conditions"
+              "text": "Ignoring potential risks and uncertainties"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Advanced decisions improve when assumptions, constraints, and metrics are explicit."
+          "explanation": "High-quality decisions improve when assumptions, constraints, and metrics are made clear from the start."
         },
         {
           "id": "financial-literacy-601-l03-q2",
-          "text": "At level 601, strong execution for financial literacy operations and execution design requires:",
-          "skillId": "financial-literacy-601-skill-execution",
+          "text": "A strong operational design for a financial literacy program requires:",
+          "skillId": "operations-design",
           "options": [
             {
               "id": "a",
-              "text": "Owner mapping, checkpoint cadence, and escalation thresholds"
+              "text": "Clear roles, regular checkpoints, and defined escalation paths"
             },
             {
               "id": "b",
-              "text": "No role clarity and ad-hoc process changes"
+              "text": "Vague roles and frequent, unplanned process changes"
             },
             {
               "id": "c",
-              "text": "No retrospective or post-run review"
+              "text": "Skipping post-project reviews"
             },
             {
               "id": "d",
-              "text": "No rollback or fallback conditions"
+              "text": "No plan for what to do if things go wrong"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Reliable advanced execution needs ownership clarity and threshold-driven governance."
+          "explanation": "Reliable execution requires clear ownership, scheduled reviews, and pre-defined rules for handling issues."
         },
         {
           "id": "financial-literacy-601-l03-q3",
-          "text": "A defensible approach to financial literacy impact and tradeoff analysis includes:",
-          "skillId": "financial-literacy-601-skill-eval",
+          "text": "A defensible approach to analyzing a program's impact includes:",
+          "skillId": "impact-analysis",
           "options": [
             {
               "id": "a",
-              "text": "Anecdotes without comparison"
+              "text": "Using personal stories without any data"
             },
             {
               "id": "b",
-              "text": "Baseline comparisons, side-effect analysis, and uncertainty bounds"
+              "text": "Comparing results to a baseline, analyzing side effects, and acknowledging uncertainty"
             },
             {
               "id": "c",
-              "text": "Changing success criteria after outcomes"
+              "text": "Changing the definition of success after seeing the results"
             },
             {
               "id": "d",
-              "text": "Excluding difficult scenarios from analysis"
+              "text": "Excluding difficult scenarios from the analysis"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible analysis combines comparative baselines, side-effect checks, and uncertainty disclosure."
+          "explanation": "A defensible analysis requires comparing results to a starting point, checking for unintended consequences, and being transparent about uncertainty."
         },
         {
           "id": "financial-literacy-601-l03-q4",
-          "text": "Mature governance systems connect:",
-          "skillId": "financial-literacy-601-skill-governance",
+          "text": "Mature governance systems for financial literacy programs connect:",
+          "skillId": "governance-leadership",
           "options": [
             {
               "id": "a",
-              "text": "Policy intent, measurable controls, and remediation pathways"
+              "text": "The program's goals, measurable controls, and clear steps for fixing problems"
             },
             {
               "id": "b",
-              "text": "Policy language with no measurable enforcement"
+              "text": "A policy statement with no way to measure or enforce it"
             },
             {
               "id": "c",
-              "text": "Targets without ownership or escalation design"
+              "text": "Goals without clear ownership or a plan for escalation"
             },
             {
               "id": "d",
-              "text": "Operations without transparent accountability"
+              "text": "Operations that lack transparent accountability"
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Governance maturity is the operational link between intent, measurement, and corrective action."
-        },
-        {
-          "id": "financial-literacy-601-l03-q5",
-          "text": "What is the best way to compare competing interventions in advanced Financial Literacy?",
-          "skillId": "financial-literacy-601-skill-advanced-5",
-          "options": [
-            {
-              "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
-            },
-            {
-              "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
-            },
-            {
-              "id": "c",
-              "text": "Switch metrics after results arrive"
-            },
-            {
-              "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
-        },
-        {
-          "id": "financial-literacy-601-l03-q6",
-          "text": "In high-stakes Financial Literacy Research and Leadership execution, which communication protocol is strongest?",
-          "skillId": "financial-literacy-601-skill-advanced-6",
-          "options": [
-            {
-              "id": "a",
-              "text": "Broadcast conclusions without assumptions"
-            },
-            {
-              "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
-            },
-            {
-              "id": "c",
-              "text": "Share only final outcomes after completion"
-            },
-            {
-              "id": "d",
-              "text": "Limit updates to a single informal channel"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
-        },
-        {
-          "id": "financial-literacy-601-l03-q7",
-          "text": "A mature remediation loop in advanced Financial Literacy should prioritize:",
-          "skillId": "financial-literacy-601-skill-advanced-7",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blame assignment without system updates"
-            },
-            {
-              "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
-            },
-            {
-              "id": "c",
-              "text": "One-time fixes without retesting"
-            },
-            {
-              "id": "d",
-              "text": "Issue closure based on elapsed time"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
-        },
-        {
-          "id": "financial-literacy-601-l03-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Financial Literacy Research and Leadership?",
-          "skillId": "financial-literacy-601-skill-advanced-8",
-          "options": [
-            {
-              "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
-            },
-            {
-              "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
-            },
-            {
-              "id": "c",
-              "text": "Ignore correlated failure modes"
-            },
-            {
-              "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "explanation": "Mature governance creates an operational link between the program's intent, how it's measured, and how problems are solved."
         }
       ]
     },
     {
       "id": "financial-literacy-601-l04",
-      "title": "Financial Literacy Advanced Case Analysis",
+      "title": "Advanced Case Analysis",
       "type": "video",
       "duration": 14,
       "learningAids": [
         {
           "id": "financial-literacy-601-l04-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Tradeoff Analysis Matrix",
+          "content": "A table comparing different financial literacy strategies across criteria like cost, impact, equity, and risk."
         }
       ],
       "chunks": [
         {
           "id": "financial-literacy-601-l04-c1",
           "kind": "concept",
-          "title": "Scenario Architecture",
-          "content": "This case study will help us understand the competing constraints that exist within financial literacy systems. We will analyze how different factors impact financial literacy diagnostics and evaluate the trade-offs involved in making financial decisions. This will enhance our analytical skills in assessing financial situations.\nContext recap: This case study will help us understand the competing constraints that exist within financial literacy systems. We will analyze how different factors impact financial literacy diagnostics and evaluate the trade-offs involved in making financial decisions. This will enhance our analytical skills in assessing financial situations."
+          "title": "Analyzing Complex Scenarios",
+          "content": "This case study will help you understand the competing priorities within financial literacy systems. We will analyze how different factors impact program success and evaluate the trade-offs involved in making decisions, which will enhance your analytical skills."
         },
         {
           "id": "financial-literacy-601-l04-c2",
           "kind": "practice",
-          "title": "Tradeoff Framing",
-          "content": "In this practice session, learners will compare various options based on key dimensions such as safety, reliability, cost, equity, and governance. This exercise will help them develop critical thinking skills and make informed decisions in financial contexts.\nContext recap: In this practice session, learners will compare various options based on key dimensions such as safety, reliability, cost, equity, and governance. This exercise will help them develop critical thinking skills and make informed decisions in financial contexts.\nWhy this matters: Tradeoff Framing helps learners in Financial Literacy connect ideas from Financial Literacy Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "Weighing the Pros and Cons",
+          "content": "In this practice session, you will compare various options based on key dimensions such as safety, reliability, cost, and equity. This exercise will help you develop critical thinking skills to make well-rounded decisions in financial contexts."
         },
         {
           "id": "financial-literacy-601-l04-c3",
           "kind": "recap",
-          "title": "Decision Memo Pattern",
-          "content": "In our recap, we will emphasize that each recommendation made in financial literacy should include clear assumptions, supporting evidence, risk management strategies, and fallback plans. This structured approach ensures that decisions are well thought out and can be adjusted if necessary.\nContext recap: In our recap, we will emphasize that each recommendation made in financial literacy should include clear assumptions, supporting evidence, risk management strategies, and fallback plans. This structured approach ensures that decisions are well thought out and can be adjusted if necessary."
+          "title": "Structuring Your Recommendations",
+          "content": "In our recap, we will emphasize that every recommendation should include clear assumptions, supporting evidence, risk management strategies, and fallback plans. This structured approach ensures that decisions are well-reasoned and adaptable."
         }
       ]
     },
     {
       "id": "financial-literacy-601-l05",
-      "title": "Financial Literacy Simulation Clinic",
+      "title": "Simulation Clinic",
       "type": "interactive",
       "duration": 18,
       "learningAids": [
         {
           "id": "financial-literacy-601-l05-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Simulation Dashboard",
+          "content": "An interactive dashboard where you can adjust variables (e.g., budget, outreach) and see the simulated impact on a community's financial health."
         }
       ],
       "chunks": [
         {
           "id": "financial-literacy-601-l05-c1",
           "kind": "practice",
-          "title": "Live Scenario Controls",
-          "content": "During this interactive simulation clinic, learners will operate scenario controls while balancing performance goals and governance requirements. This experience will provide them with practical skills in managing financial scenarios effectively.\nContext recap: During this interactive simulation clinic, learners will operate scenario controls while balancing performance goals and governance requirements. This experience will provide them with practical skills in managing financial scenarios effectively.\nWhy this matters: Live Scenario Controls helps learners in Financial Literacy connect ideas from Financial Literacy Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "Managing a Live Scenario",
+          "content": "During this interactive simulation, you will manage a financial literacy program by adjusting controls while balancing performance goals and governance rules. This experience will provide you with practical skills in managing dynamic scenarios."
         },
         {
           "id": "financial-literacy-601-l05-c2",
           "kind": "recap",
-          "title": "Adaptive Response Design",
-          "content": "In this recap, we will discuss how effective responses to financial scenarios can be designed to update control mechanisms without losing track of accountability. This ensures that all actions taken are transparent and can be reviewed later.\nContext recap: In this recap, we will discuss how effective responses to financial scenarios can be designed to update control mechanisms without losing track of accountability. This ensures that all actions taken are transparent and can be reviewed later.\nWhy this matters: Adaptive Response Design helps learners in Financial Literacy connect ideas from Financial Literacy Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "Adapting Your Strategy",
+          "content": "In this recap, we will discuss how to design effective responses that allow you to update your strategy during a project without losing accountability. This ensures that all actions taken are transparent and can be reviewed."
         }
       ],
       "interactiveActivities": [
         {
           "id": "financial-literacy-601-l05-act1",
           "type": "scenario",
-          "title": "Adverse-Condition Decision Run",
-          "description": "Run a high-pressure financial literacy scenario and tune controls under uncertainty."
+          "title": "Crisis Management Simulation",
+          "description": "Manage a high-pressure financial literacy scenario and adjust your strategy in response to unexpected events."
         }
       ]
     },
@@ -429,52 +329,52 @@ export const FinancialLiteracy601Module: LearningModule = {
         {
           "id": "financial-literacy-601-l06-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Pre-Quiz Reflection",
+          "content": "Think back to the case study and simulation. What was the most challenging decision you had to make and why?"
         }
       ],
       "questions": [
         {
           "id": "financial-literacy-601-l06-q1",
-          "text": "In advanced casework, the first requirement for defensible recommendations is:",
-          "skillId": "financial-literacy-601-skill-case1",
+          "text": "In advanced case analysis, what is the first requirement for a defensible recommendation?",
+          "skillId": "systems-diagnostics",
           "options": [
             {
               "id": "a",
-              "text": "A preferred option without explicit assumptions"
+              "text": "A preferred option without explaining your assumptions"
             },
             {
               "id": "b",
-              "text": "A clear baseline, explicit constraints, and success criteria"
+              "text": "A clear baseline, explicit constraints, and defined success criteria"
             },
             {
               "id": "c",
-              "text": "High confidence without evidence logs"
+              "text": "High confidence without providing any evidence"
             },
             {
               "id": "d",
-              "text": "Single-metric optimization only"
+              "text": "Focusing on only a single metric for success"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible recommendations begin with explicit assumptions, constraints, and measurable targets."
+          "explanation": "Defensible recommendations must begin with a clear statement of assumptions, constraints, and measurable goals."
         },
         {
           "id": "financial-literacy-601-l06-q2",
-          "text": "A resilient strategy for financial literacy operations and execution design should include:",
-          "skillId": "financial-literacy-601-skill-case2",
+          "text": "A resilient strategy for a financial literacy program should always include:",
+          "skillId": "operations-design",
           "options": [
             {
               "id": "a",
-              "text": "Checkpointed execution with fallback and escalation criteria"
+              "text": "Execution with checkpoints, fallback plans, and escalation rules"
             },
             {
               "id": "b",
-              "text": "One-way execution with no rollback capability"
+              "text": "A rigid plan that cannot be reversed or changed"
             },
             {
               "id": "c",
-              "text": "No ownership mapping across teams"
+              "text": "No clear assignment of who is responsible for what"
             },
             {
               "id": "d",
@@ -482,244 +382,260 @@ export const FinancialLiteracy601Module: LearningModule = {
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Resilience depends on checkpoints, fallback options, and explicit escalation design."
+          "explanation": "Resilience in program design depends on having checkpoints, fallback options, and clear rules for escalating problems."
         },
         {
           "id": "financial-literacy-601-l06-q3",
-          "text": "When evaluating financial literacy impact and tradeoff analysis, which method is most rigorous?",
-          "skillId": "financial-literacy-601-skill-case3",
+          "text": "When comparing two different program strategies, what is the best way to communicate the tradeoffs?",
+          "skillId": "decision-reviews",
           "options": [
             {
               "id": "a",
-              "text": "Single success story without controls"
+              "text": "Only present the data that supports your preferred option"
             },
             {
               "id": "b",
-              "text": "Comparative baselines plus side-effect and uncertainty analysis"
+              "text": "Use a shared set of metrics to evaluate both options fairly"
             },
             {
               "id": "c",
-              "text": "Outcome-only narrative without process evidence"
+              "text": "Avoid discussing any potential risks or downsides"
             },
             {
               "id": "d",
-              "text": "Retrospective scope changes to fit outcomes"
+              "text": "Focus on opinions rather than evidence"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Rigorous evaluation requires comparisons, side-effect analysis, and uncertainty disclosure."
+          "explanation": "Fair and transparent comparisons require using the same criteria to evaluate all alternatives, making tradeoffs clear."
         },
         {
           "id": "financial-literacy-601-l06-q4",
-          "text": "Advanced governance is strongest when it:",
-          "skillId": "financial-literacy-601-skill-case4",
+          "text": "During a simulation of a program crisis, what is the most critical leadership skill?",
+          "skillId": "governance-leadership",
           "options": [
             {
               "id": "a",
-              "text": "Aligns authority, measurement, and remediation obligations"
+              "text": "Making quick decisions without consulting the team or the data"
             },
             {
               "id": "b",
-              "text": "Separates policy from operational controls"
+              "text": "Adapting the plan based on new information while maintaining accountability"
             },
             {
               "id": "c",
-              "text": "Avoids external review and transparency"
+              "text": "Sticking to the original plan no matter what happens"
             },
             {
               "id": "d",
-              "text": "Treats accountability as optional under pressure"
-            }
-          ],
-          "correctOptionId": "a",
-          "explanation": "Mature governance links authority, measurable controls, and corrective action."
-        },
-        {
-          "id": "financial-literacy-601-l06-q5",
-          "text": "What is the best way to compare competing interventions in advanced Financial Literacy?",
-          "skillId": "financial-literacy-601-skill-advanced-5",
-          "options": [
-            {
-              "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
-            },
-            {
-              "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
-            },
-            {
-              "id": "c",
-              "text": "Switch metrics after results arrive"
-            },
-            {
-              "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
+              "text": "Waiting for the crisis to resolve itself"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
-        },
-        {
-          "id": "financial-literacy-601-l06-q6",
-          "text": "In high-stakes Financial Literacy Research and Leadership execution, which communication protocol is strongest?",
-          "skillId": "financial-literacy-601-skill-advanced-6",
-          "options": [
-            {
-              "id": "a",
-              "text": "Broadcast conclusions without assumptions"
-            },
-            {
-              "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
-            },
-            {
-              "id": "c",
-              "text": "Share only final outcomes after completion"
-            },
-            {
-              "id": "d",
-              "text": "Limit updates to a single informal channel"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
-        },
-        {
-          "id": "financial-literacy-601-l06-q7",
-          "text": "A mature remediation loop in advanced Financial Literacy should prioritize:",
-          "skillId": "financial-literacy-601-skill-advanced-7",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blame assignment without system updates"
-            },
-            {
-              "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
-            },
-            {
-              "id": "c",
-              "text": "One-time fixes without retesting"
-            },
-            {
-              "id": "d",
-              "text": "Issue closure based on elapsed time"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
-        },
-        {
-          "id": "financial-literacy-601-l06-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Financial Literacy Research and Leadership?",
-          "skillId": "financial-literacy-601-skill-advanced-8",
-          "options": [
-            {
-              "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
-            },
-            {
-              "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
-            },
-            {
-              "id": "c",
-              "text": "Ignore correlated failure modes"
-            },
-            {
-              "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "explanation": "Effective leadership during a crisis involves adapting to new information while ensuring all decisions remain transparent and accountable."
         }
       ]
     },
     {
       "id": "financial-literacy-601-l07",
-      "title": "Financial Literacy Governance and Public Impact",
+      "title": "Governance and Public Impact",
       "type": "video",
       "duration": 13,
       "learningAids": [
         {
           "id": "financial-literacy-601-l07-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Stakeholder Impact Map",
+          "content": "A visual map showing how a financial literacy program's outcomes affect different groups, such as students, families, and local businesses."
         }
       ],
       "chunks": [
         {
           "id": "financial-literacy-601-l07-c1",
           "kind": "concept",
-          "title": "Stakeholder Impact Distribution",
-          "content": "In this section, learners will map out how benefits, burdens, and delayed effects are distributed among different stakeholder groups. Understanding these dynamics is crucial for making informed decisions that consider the impact on all parties involved.\nContext recap: In this section, learners will map out how benefits, burdens, and delayed effects are distributed among different stakeholder groups. Understanding these dynamics is crucial for making informed decisions that consider the impact on all parties involved.\nWhy this matters: Stakeholder Impact Distribution helps learners in Financial Literacy connect ideas from Financial Literacy Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "Understanding Stakeholder Impact",
+          "content": "In this section, you will learn to map how a program's benefits and burdens are distributed among different groups. Understanding these dynamics is crucial for making ethical and effective decisions that consider the impact on everyone involved."
         },
         {
           "id": "financial-literacy-601-l07-c2",
           "kind": "concept",
-          "title": "Accountability Architecture",
-          "content": "We will explore the concept of accountability architecture, which includes ensuring that decisions can be traced back, that stakeholders have rights to review decisions, and that there are obligations for remediation if issues arise. This framework is essential for maintaining trust and integrity in financial literacy governance.\nContext recap: We will explore the concept of accountability architecture, which includes ensuring that decisions can be traced back, that stakeholders have rights to review decisions, and that there are obligations for remediation if issues arise. This framework is essential for maintaining trust and integrity in financial literacy governance."
+          "title": "Designing for Accountability",
+          "content": "We will explore how to build accountability into a program. This includes ensuring decisions can be traced, stakeholders have the right to review information, and there is a clear obligation to fix problems. This framework is essential for maintaining trust and integrity."
         },
         {
           "id": "financial-literacy-601-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "To ensure effective leadership in financial literacy, it is important to follow a comprehensive checklist. This checklist connects key outcomes with ethical considerations, adherence to policies, and the ability to adapt to challenges. By using this checklist, leaders can make informed decisions that positively impact their communities.\nContext recap: To ensure effective leadership in financial literacy, it is important to follow a comprehensive checklist. This checklist connects key outcomes with ethical considerations, adherence to policies, and the ability to adapt to challenges. By using this checklist, leaders can make informed decisions that positively impact their communities."
+          "content": "Effective leadership requires a thoughtful approach. We will review a checklist that connects program outcomes with ethical considerations, policy adherence, and the ability to adapt to challenges. This helps leaders make well-informed decisions that benefit their communities."
         }
       ],
       "flashcards": [
         {
           "id": "financial-literacy-601-l07-f1",
-          "front": "Impact distribution",
-          "back": "How outcomes are allocated across populations and timescales."
+          "front": "What is stakeholder impact distribution?",
+          "back": "How the positive and negative outcomes of a program are spread across different groups of people over time."
         },
         {
           "id": "financial-literacy-601-l07-f2",
-          "front": "Decision traceability",
-          "back": "An auditable record of evidence, ownership, and rationale."
+          "front": "What is decision traceability?",
+          "back": "An auditable record showing the evidence, ownership, and reasoning behind a decision."
         },
         {
           "id": "financial-literacy-601-l07-f3",
-          "front": "Responsible leadership",
-          "back": "Decision behavior balancing performance, accountability, and ethics."
+          "front": "What is responsible leadership?",
+          "back": "Making decisions that balance performance goals with accountability and ethical considerations."
         }
       ]
     },
     {
       "id": "financial-literacy-601-l08",
-      "title": "Financial Literacy Capstone Defense Lab",
+      "title": "Capstone Defense Lab",
       "type": "interactive",
       "duration": 16,
       "learningAids": [
         {
           "id": "financial-literacy-601-l08-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Recommendation Brief Template",
+          "content": "A structured template for your final recommendation, with sections for your proposal, supporting evidence, risk analysis, and implementation plan."
         }
       ],
       "chunks": [
         {
           "id": "financial-literacy-601-l08-c1",
           "kind": "practice",
-          "title": "Defense Brief Assembly",
-          "content": "In this interactive activity, learners will work together to create a detailed brief. This brief will include well-supported claims, evidence to back those claims, an understanding of the uncertainties involved, and proposed pathways for addressing any issues that may arise. This exercise helps develop critical thinking and communication skills.\nContext recap: In this interactive activity, learners will work together to create a detailed brief. This brief will include well-supported claims, evidence to back those claims, an understanding of the uncertainties involved, and proposed pathways for addressing any issues that may arise. This exercise helps develop critical thinking and communication skills."
+          "title": "Building Your Final Proposal",
+          "content": "In this activity, you will create a detailed proposal for a financial literacy program. Your proposal will include well-supported claims, evidence, an analysis of uncertainties, and a plan for addressing potential issues. This exercise develops critical thinking and communication skills."
         },
         {
           "id": "financial-literacy-601-l08-c2",
           "kind": "recap",
-          "title": "Expert Panel Rehearsal",
-          "content": "During the Expert Panel Rehearsal, learners will practice their responses to various critiques. These critiques may come from technical experts, governance representatives, and stakeholders. This rehearsal is an important step in preparing for real-world discussions, allowing learners to refine their arguments and improve their confidence.\nContext recap: During the Expert Panel Rehearsal, learners will practice their responses to various critiques. These critiques may come from technical experts, governance representatives, and stakeholders. This rehearsal is an important step in preparing for real-world discussions, allowing learners to refine their arguments and improve their confidence."
+          "title": "Preparing for Expert Review",
+          "content": "You will practice responding to critiques from different perspectives, including technical experts, governance representatives, and community stakeholders. This rehearsal is an important step in preparing for real-world reviews, allowing you to refine your arguments and build confidence."
         }
       ],
       "interactiveActivities": [
         {
           "id": "financial-literacy-601-l08-act1",
           "type": "debate_simulator",
-          "title": "Expert Defense Panel",
-          "description": "Defend specialization recommendations under adversarial cross-examination."
+          "title": "Final Recommendation Defense",
+          "description": "Defend your program recommendation against challenging questions from an expert panel."
+        }
+      ]
+    },
+    {
+      "id": "financial-literacy-601-l09",
+      "title": "Checkpoint 3: Governance and Defense",
+      "type": "quiz",
+      "duration": 12,
+      "learningAids": [
+        {
+          "id": "financial-literacy-601-l09-a1",
+          "type": "practice",
+          "title": "Final Review",
+          "content": "Review the Responsible Leadership Checklist and your defense brief template before starting the final assessment."
+        }
+      ],
+      "questions": [
+        {
+          "id": "financial-literacy-601-l09-q1",
+          "text": "When presenting a recommendation to an expert panel, what is the most effective way to build trust?",
+          "skillId": "recommendation-defense",
+          "options": [
+            {
+              "id": "a",
+              "text": "Presenting only the potential benefits and ignoring all risks"
+            },
+            {
+              "id": "b",
+              "text": "Openly discussing your assumptions, evidence, and areas of uncertainty"
+            },
+            {
+              "id": "c",
+              "text": "Avoiding difficult questions about your data"
+            },
+            {
+              "id": "d",
+              "text": "Claiming your recommendation is perfect and has no downsides"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Building trust requires transparency. Openly sharing your assumptions, evidence, and uncertainties shows rigor and credibility."
+        },
+        {
+          "id": "financial-literacy-601-l09-q2",
+          "text": "A responsible leader of a financial literacy program must prioritize:",
+          "skillId": "governance-leadership",
+          "options": [
+            {
+              "id": "a",
+              "text": "Achieving performance targets at any ethical cost"
+            },
+            {
+              "id": "b",
+              "text": "Balancing program goals with ethical duties and stakeholder well-being"
+            },
+            {
+              "id": "c",
+              "text": "Making decisions in secret to avoid criticism"
+            },
+            {
+              "id": "d",
+              "text": "Focusing only on short-term results"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Responsible leadership involves balancing the achievement of goals with a strong commitment to ethics and the welfare of all stakeholders."
+        },
+        {
+          "id": "financial-literacy-601-l09-q3",
+          "text": "When analyzing stakeholder impact, it is most important to consider:",
+          "skillId": "impact-analysis",
+          "options": [
+            {
+              "id": "a",
+              "text": "Only the impact on the most powerful stakeholders"
+            },
+            {
+              "id": "b",
+              "text": "How benefits and burdens are distributed across all affected groups, including vulnerable ones"
+            },
+            {
+              "id": "c",
+              "text": "Only the immediate, short-term effects of the program"
+            },
+            {
+              "id": "d",
+              "text": "Only the financial costs, ignoring social or ethical impacts"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "A thorough impact analysis must evaluate how outcomes affect all groups, especially those who may be disproportionately burdened."
+        },
+        {
+          "id": "financial-literacy-601-l09-q4",
+          "text": "What is the primary purpose of a 'recommendation defense' in a professional setting?",
+          "skillId": "recommendation-defense",
+          "options": [
+            {
+              "id": "a",
+              "text": "To prove that your idea is flawless and cannot be improved"
+            },
+            {
+              "id": "b",
+              "text": "To win an argument against your critics"
+            },
+            {
+              "id": "c",
+              "text": "To stress-test a proposal, identify weaknesses, and build collective confidence in a decision"
+            },
+            {
+              "id": "d",
+              "text": "To assign blame if the project later fails"
+            }
+          ],
+          "correctOptionId": "c",
+          "explanation": "A defense is a collaborative process designed to strengthen a proposal by subjecting it to expert critique, ultimately leading to a better, more robust decision."
         }
       ]
     }

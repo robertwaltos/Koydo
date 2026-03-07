@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const EthicsOfTechnology601Module: LearningModule = {
+export const ethics_of_technology_601_Module: LearningModule = {
   "id": "ethics-of-technology-601",
   "title": "Ethics of Technology Research and Leadership",
   "description": "Post-401 specialization in Ethics of Technology, focused on ethical risk modeling for sociotechnical systems, value-sensitive design and oversight mechanisms, harm-benefit tradeoff and justice analysis, and governance, rights, and responsible innovation through advanced casework, simulation, and defense-based checkpoints.",
@@ -14,7 +14,7 @@ export const EthicsOfTechnology601Module: LearningModule = {
   ],
   "minAge": 17,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en",
@@ -38,8 +38,9 @@ export const EthicsOfTechnology601Module: LearningModule = {
         {
           "id": "ethics-of-technology-601-l01-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Guided Practice Framework",
+          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence.",
+          "visualPrompt": "A high-contrast flowchart illustrating a structured ethical decision-making process, with glowing nodes representing explicit assumptions, measurable evidence, and validation checkpoints."
         }
       ],
       "chunks": [
@@ -47,19 +48,19 @@ export const EthicsOfTechnology601Module: LearningModule = {
           "id": "ethics-of-technology-601-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "In this lesson, we will explore the advanced concepts of scope and boundaries in the Ethics of Technology. We will focus on how to identify and model ethical risks that can arise in sociotechnical systems, which are systems that involve both social and technical elements. Additionally, we will discuss the importance of value-sensitive design, which ensures that technology aligns with human values, and the mechanisms for oversight that help us monitor and manage these ethical considerations effectively.\nContext recap: In this lesson, we will explore the advanced concepts of scope and boundaries in the Ethics of Technology. We will focus on how to identify and model ethical risks that can arise in sociotechnical systems, which are systems that involve both social and technical elements. Additionally, we will discuss the importance of value-sensitive design, which ensures that technology aligns with human values, and the mechanisms for oversight that help us monitor and manage these ethical considerations effectively."
+          "content": "This lesson establishes the advanced scope and boundaries of Ethics in Technology. We focus on identifying and modeling ethical risks within sociotechnical systems—environments where human social dynamics and technical infrastructure intersect. We will also examine value-sensitive design principles to ensure technological alignment with human values, alongside robust oversight mechanisms."
         },
         {
           "id": "ethics-of-technology-601-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "In this part of the lesson, learners will engage in mapping out causal pathways, which are the connections between different events or actions, as well as identifying ranges of uncertainty and dependencies within systems. This process is crucial for planning interventions, as it helps us understand how different factors interact and what potential outcomes might arise from our actions. By doing this, learners will be better prepared to make informed decisions in complex situations.\nContext recap: In this part of the lesson, learners will engage in mapping out causal pathways, which are the connections between different events or actions, as well as identifying ranges of uncertainty and dependencies within systems. This process is crucial for planning interventions, as it helps us understand how different factors interact and what potential outcomes might arise from our actions. By doing this, learners will be better prepared to make informed decisions in complex situations."
+          "content": "Here, we map causal pathways—the complex chains of cause and effect—while identifying ranges of uncertainty and systemic dependencies. This rigorous modeling is crucial for planning interventions, allowing leaders to anticipate how interacting factors might trigger unintended consequences in high-stakes environments."
         },
         {
           "id": "ethics-of-technology-601-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "In this recap, we emphasize that all claims made during our analysis must be linked to measurable indicators. This means that we should have clear evidence to support our statements. Additionally, we will discuss the importance of establishing confidence bounds, which help us understand the reliability of our claims, and the need for review checkpoints to ensure that our findings are regularly assessed and validated.\nContext recap: In this recap, we emphasize that all claims made during our analysis must be linked to measurable indicators. This means that we should have clear evidence to support our statements. Additionally, we will discuss the importance of establishing confidence bounds, which help us understand the reliability of our claims, and the need for review checkpoints to ensure that our findings are regularly assessed and validated."
+          "content": "All analytical claims must be anchored to measurable indicators. We will establish confidence bounds to quantify the reliability of our claims and design review checkpoints. This ensures that findings are continuously assessed, validated, and adjusted against real-world data."
         }
       ],
       "flashcards": [
@@ -89,8 +90,9 @@ export const EthicsOfTechnology601Module: LearningModule = {
         {
           "id": "ethics-of-technology-601-l02-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Workflow Stress Testing",
+          "content": "Design specialized workflows and subject them to simulated adverse scenarios to build resilience.",
+          "visualPrompt": "An interactive dashboard interface showing a system under stress, with red warning indicators triggering automated ethical fallback protocols."
         }
       ],
       "chunks": [
@@ -98,13 +100,13 @@ export const EthicsOfTechnology601Module: LearningModule = {
           "id": "ethics-of-technology-601-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "In this interactive segment, learners will have the opportunity to design specialized workflows that are tailored to specific ethical challenges. They will also conduct stress tests on these workflows by simulating adverse scenarios. This hands-on practice will help learners understand how to anticipate potential problems and develop solutions that can withstand unexpected challenges in real-world applications.\nContext recap: In this interactive segment, learners will have the opportunity to design specialized workflows that are tailored to specific ethical challenges. They will also conduct stress tests on these workflows by simulating adverse scenarios. This hands-on practice will help learners understand how to anticipate potential problems and develop solutions that can withstand unexpected challenges in real-world applications."
+          "content": "In this interactive lab, you will design specialized workflows tailored to complex ethical challenges. You will then subject these workflows to rigorous stress tests by simulating adverse, edge-case scenarios. This hands-on practice builds the capacity to anticipate systemic failures and engineer resilient solutions."
         },
         {
           "id": "ethics-of-technology-601-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "In this recap, we will discuss the architecture of control gates within our workflows. These control gates are essential as they integrate various checkpoints, criteria for rolling back decisions, and escalation procedures based on thresholds. This structure ensures that we can effectively manage risks and respond appropriately when certain limits are reached, maintaining the integrity of our ethical frameworks.\nContext recap: In this recap, we will discuss the architecture of control gates within our workflows. These control gates are essential as they integrate various checkpoints, criteria for rolling back decisions, and escalation procedures based on thresholds. This structure ensures that we can effectively manage risks and respond appropriately when certain limits are reached, maintaining the integrity of our ethical frameworks."
+          "content": "We will architect control gates within our workflows. These gates serve as critical integration points for checkpoints, rollback criteria, and threshold-based escalation procedures. This structure guarantees that risks are actively managed and that systems fail safely when operational limits are breached."
         }
       ],
       "interactiveActivities": [
@@ -143,8 +145,9 @@ export const EthicsOfTechnology601Module: LearningModule = {
         {
           "id": "ethics-of-technology-601-l03-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Methodology Review",
+          "content": "Review your understanding of assumptions, constraints, and measurable evidence before proceeding.",
+          "visualPrompt": "A stylized digital lock unlocking as a series of correct methodological steps are aligned in a sequence."
         }
       ],
       "questions": [
@@ -359,8 +362,9 @@ export const EthicsOfTechnology601Module: LearningModule = {
         {
           "id": "ethics-of-technology-601-l04-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Tradeoff Framing Matrix",
+          "content": "Evaluate competing interventions across safety, reliability, cost, equity, and governance.",
+          "visualPrompt": "A multi-dimensional radar chart comparing two technological interventions across axes of safety, equity, cost, and reliability."
         }
       ],
       "chunks": [
@@ -368,19 +372,19 @@ export const EthicsOfTechnology601Module: LearningModule = {
           "id": "ethics-of-technology-601-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "In this lesson, we will analyze a case that highlights the competing constraints involved in ethical risk modeling for sociotechnical systems. We will examine the trade-offs between potential harms and benefits, as well as the principles of justice that guide our decisions. Understanding these dynamics is crucial for making ethical choices in technology development and implementation.\nContext recap: In this lesson, we will analyze a case that highlights the competing constraints involved in ethical risk modeling for sociotechnical systems. We will examine the trade-offs between potential harms and benefits, as well as the principles of justice that guide our decisions. Understanding these dynamics is crucial for making ethical choices in technology development and implementation."
+          "content": "We will analyze a complex case study highlighting the competing constraints inherent in ethical risk modeling for sociotechnical systems. By examining the intricate trade-offs between potential harms, projected benefits, and foundational principles of justice, you will learn to navigate the ethical ambiguities of technology deployment."
         },
         {
           "id": "ethics-of-technology-601-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "In this practice session, learners will compare different options available to them by evaluating various dimensions such as safety, reliability, cost, equity, and governance. This comparison will help them understand the complexities involved in making ethical decisions and the importance of considering multiple factors before arriving at a conclusion.\nContext recap: In this practice session, learners will compare different options available to them by evaluating various dimensions such as safety, reliability, cost, equity, and governance. This comparison will help them understand the complexities involved in making ethical decisions and the importance of considering multiple factors before arriving at a conclusion."
+          "content": "In this practice session, you will evaluate competing interventions across multiple dimensions: safety, reliability, cost, equity, and governance. This comparative analysis reveals the multidimensional complexities of ethical decision-making and the necessity of holistic evaluation."
         },
         {
           "id": "ethics-of-technology-601-l04-c3",
           "kind": "recap",
           "title": "Decision Memo Pattern",
-          "content": "In this recap, we will outline the key components that should be included in each recommendation made during our analysis. This includes clearly stating the assumptions that underlie our decisions, presenting the evidence that supports our claims, identifying risk controls that we have put in place, and developing fallback plans in case our initial recommendations do not work out as intended.\nContext recap: In this recap, we will outline the key components that should be included in each recommendation made during our analysis. This includes clearly stating the assumptions that underlie our decisions, presenting the evidence that supports our claims, identifying risk controls that we have put in place, and developing fallback plans in case our initial recommendations do not work out as intended."
+          "content": "We will outline the essential components of a professional decision memo. A defensible recommendation must explicitly state underlying assumptions, present empirical evidence, detail implemented risk controls, and define actionable fallback plans for adverse outcomes."
         }
       ]
     },
@@ -393,8 +397,9 @@ export const EthicsOfTechnology601Module: LearningModule = {
         {
           "id": "ethics-of-technology-601-l05-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Live Scenario Controls",
+          "content": "Balance performance goals with governance constraints in a live simulation.",
+          "visualPrompt": "A split-screen interface showing a live data feed on one side and a set of adjustable governance sliders on the other, indicating real-time trade-offs."
         }
       ],
       "chunks": [
@@ -402,13 +407,13 @@ export const EthicsOfTechnology601Module: LearningModule = {
           "id": "ethics-of-technology-601-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "In this interactive practice, learners will take on the role of operators managing scenario controls. They will need to balance performance goals with governance constraints, ensuring that their actions align with ethical standards while also achieving desired outcomes. This exercise will provide valuable insights into the complexities of decision-making in technology governance.\nContext recap: In this interactive practice, learners will take on the role of operators managing scenario controls. They will need to balance performance goals with governance constraints, ensuring that their actions align with ethical standards while also achieving desired outcomes. This exercise will provide valuable insights into the complexities of decision-making in technology governance."
+          "content": "Taking on the role of a governance operator, you will manage live scenario controls under pressure. You must balance aggressive performance targets with strict governance constraints, ensuring that operational actions align with ethical standards without compromising mission-critical outcomes."
         },
         {
           "id": "ethics-of-technology-601-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "In this recap, we will discuss the importance of designing effective responses that can adapt to changing circumstances. These responses should be able to update control gates without losing traceability or accountability. This means that as situations evolve, we must ensure that our decisions remain transparent and that we can track the rationale behind our actions.\nContext recap: In this recap, we will discuss the importance of designing effective responses that can adapt to changing circumstances. These responses should be able to update control gates without losing traceability or accountability. This means that as situations evolve, we must ensure that our decisions remain transparent and that we can track the rationale behind our actions."
+          "content": "Effective crisis response requires adaptive design. We will explore how to dynamically update control gates in response to evolving circumstances without sacrificing decision traceability or accountability. Transparency must be maintained even when rapid pivots are necessary."
         }
       ],
       "interactiveActivities": [
@@ -429,8 +434,9 @@ export const EthicsOfTechnology601Module: LearningModule = {
         {
           "id": "ethics-of-technology-601-l06-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Simulation Review",
+          "content": "Reflect on the adaptive responses and control gate updates utilized during the simulation.",
+          "visualPrompt": "An icon of a magnifying glass hovering over a timeline of decisions, highlighting key pivot points in a simulation."
         }
       ],
       "questions": [
@@ -536,103 +542,103 @@ export const EthicsOfTechnology601Module: LearningModule = {
         },
         {
           "id": "ethics-of-technology-601-l06-q5",
-          "text": "What is the best way to compare competing interventions in advanced Philosophy?",
-          "skillId": "ethics-of-technology-601-skill-advanced-5",
+          "text": "When mapping stakeholder impact distribution, which factor is most critical to evaluate?",
+          "skillId": "ethics-of-technology-601-skill-case5",
           "options": [
             {
               "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
+              "text": "Only the immediate financial benefits to the primary users"
             },
             {
               "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
+              "text": "Delayed effects and disproportionate burdens on marginalized groups"
             },
             {
               "id": "c",
-              "text": "Switch metrics after results arrive"
+              "text": "The marketing narrative presented to the public"
             },
             {
               "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
+              "text": "The speed of technological deployment"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
+          "explanation": "Rigorous impact distribution analysis must account for delayed systemic effects and burdens placed on vulnerable populations."
         },
         {
           "id": "ethics-of-technology-601-l06-q6",
-          "text": "In high-stakes Ethics of Technology Research and Leadership execution, which communication protocol is strongest?",
-          "skillId": "ethics-of-technology-601-skill-advanced-6",
+          "text": "A robust accountability architecture must include:",
+          "skillId": "ethics-of-technology-601-skill-case6",
           "options": [
             {
               "id": "a",
-              "text": "Broadcast conclusions without assumptions"
+              "text": "Decision traceability, review rights, and remediation obligations"
             },
             {
               "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
+              "text": "Anonymous decision-making to protect leadership"
             },
             {
               "id": "c",
-              "text": "Share only final outcomes after completion"
+              "text": "Strict non-disclosure agreements for all stakeholders"
             },
             {
               "id": "d",
-              "text": "Limit updates to a single informal channel"
+              "text": "Automated systems that cannot be overridden"
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
+          "correctOptionId": "a",
+          "explanation": "Accountability requires tracking who made decisions, allowing stakeholders to review them, and mandating corrective actions when necessary."
         },
         {
           "id": "ethics-of-technology-601-l06-q7",
-          "text": "A mature remediation loop in advanced Philosophy should prioritize:",
-          "skillId": "ethics-of-technology-601-skill-advanced-7",
+          "text": "The primary purpose of a responsible leadership checklist in technology governance is to:",
+          "skillId": "ethics-of-technology-601-skill-case7",
           "options": [
             {
               "id": "a",
-              "text": "Blame assignment without system updates"
+              "text": "Bypass legal compliance reviews"
             },
             {
               "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
+              "text": "Ensure decisions balance performance metrics with ethical constraints and accountability"
             },
             {
               "id": "c",
-              "text": "One-time fixes without retesting"
+              "text": "Shift blame to external vendors"
             },
             {
               "id": "d",
-              "text": "Issue closure based on elapsed time"
+              "text": "Guarantee that all projects launch on time regardless of risk"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
+          "explanation": "A leadership checklist operationalizes ethics by forcing leaders to verify that performance goals do not violate ethical constraints."
         },
         {
           "id": "ethics-of-technology-601-l06-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Ethics of Technology Research and Leadership?",
-          "skillId": "ethics-of-technology-601-skill-advanced-8",
+          "text": "During an expert defense panel, the most effective way to address uncertainty in your ethical risk model is to:",
+          "skillId": "ethics-of-technology-601-skill-case8",
           "options": [
             {
               "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
+              "text": "Deny that any uncertainty exists to project confidence"
             },
             {
               "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
+              "text": "Acknowledge the uncertainty bounds explicitly and present adaptive fallback plans"
             },
             {
               "id": "c",
-              "text": "Ignore correlated failure modes"
+              "text": "Change the subject to focus only on the positive outcomes"
             },
             {
               "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
+              "text": "Refuse to answer questions about edge cases"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "explanation": "Defensible leadership requires transparency about what is unknown, coupled with concrete plans for managing that uncertainty."
         }
       ]
     },
@@ -645,8 +651,9 @@ export const EthicsOfTechnology601Module: LearningModule = {
         {
           "id": "ethics-of-technology-601-l07-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Accountability Architecture",
+          "content": "Integrate decision traceability, review rights, and remediation obligations.",
+          "visualPrompt": "A structural diagram showing a building supported by three pillars labeled 'Traceability', 'Review Rights', and 'Remediation'."
         }
       ],
       "chunks": [
@@ -654,19 +661,19 @@ export const EthicsOfTechnology601Module: LearningModule = {
           "id": "ethics-of-technology-601-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "In this lesson, learners will engage in mapping out how benefits, burdens, and delayed effects are distributed among different stakeholder groups. This activity is essential for understanding the broader impact of technology on society and ensuring that all voices are considered in the decision-making process.\nContext recap: In this lesson, learners will engage in mapping out how benefits, burdens, and delayed effects are distributed among different stakeholder groups. This activity is essential for understanding the broader impact of technology on society and ensuring that all voices are considered in the decision-making process."
+          "content": "We will map the distribution of benefits, burdens, and delayed systemic effects across diverse stakeholder groups. This demographic and temporal analysis is essential for understanding the macro-level societal impacts of technology and ensuring equitable representation in governance."
         },
         {
           "id": "ethics-of-technology-601-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "In this lesson, we will explore the concept of accountability architecture. This involves integrating elements such as decision traceability, which allows us to track the origins of decisions, review rights that give stakeholders the ability to question decisions, and remediation obligations that ensure we take responsibility for our actions. Understanding these components is crucial for fostering trust and transparency in technology governance.\nContext recap: In this lesson, we will explore the concept of accountability architecture. This involves integrating elements such as decision traceability, which allows us to track the origins of decisions, review rights that give stakeholders the ability to question decisions, and remediation obligations that ensure we take responsibility for our actions. Understanding these components is crucial for fostering trust and transparency in technology governance."
+          "content": "Accountability architecture integrates decision traceability (tracking the provenance of choices), review rights (empowering stakeholders to challenge decisions), and remediation obligations (mandating corrective actions). These components are the bedrock of institutional trust and transparency."
         },
         {
           "id": "ethics-of-technology-601-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "At the end of our lesson, we have a helpful checklist that connects important outcomes with ethical considerations, ensures we follow the right policies, and promotes resilience in our leadership practices. This checklist serves as a guide to help us make responsible decisions in technology governance.\nContext recap: At the end of our lesson, we have a helpful checklist that connects important outcomes with ethical considerations, ensures we follow the right policies, and promotes resilience in our leadership practices. This checklist serves as a guide to help us make responsible decisions in technology governance."
+          "content": "We conclude with a responsible leadership checklist. This operational tool connects strategic outcomes with ethical constraints, verifies policy compliance, and promotes resilient leadership behaviors when navigating sociotechnical controversies."
         }
       ],
       "flashcards": [
@@ -696,8 +703,9 @@ export const EthicsOfTechnology601Module: LearningModule = {
         {
           "id": "ethics-of-technology-601-l08-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Defense Brief Assembly",
+          "content": "Create a comprehensive brief with well-supported claims, relevant evidence, and clear boundaries of uncertainty.",
+          "visualPrompt": "A digital document template with highlighted sections for 'Empirical Evidence', 'Uncertainty Bounds', and 'Remediation Pathways'."
         }
       ],
       "chunks": [
@@ -705,13 +713,13 @@ export const EthicsOfTechnology601Module: LearningModule = {
           "id": "ethics-of-technology-601-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "In this interactive activity, students will work together to create a comprehensive brief. This brief will include well-supported claims, relevant evidence, clear boundaries of uncertainty, and suggested pathways for addressing any issues that may arise. This practice helps students develop critical thinking and communication skills.\nContext recap: In this interactive activity, students will work together to create a comprehensive brief. This brief will include well-supported claims, relevant evidence, clear boundaries of uncertainty, and suggested pathways for addressing any issues that may arise. This practice helps students develop critical thinking and communication skills."
+          "content": "Collaborate to assemble a comprehensive defense brief. Your brief must articulate well-supported claims, cite empirical evidence, define clear boundaries of uncertainty, and propose concrete remediation pathways for potential systemic failures."
         },
         {
           "id": "ethics-of-technology-601-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "During this session, learners will practice their responses to various critiques that may come from experts in technology, governance, and stakeholders. This rehearsal is crucial for building confidence and ensuring that students can effectively communicate their ideas and defend their positions in a professional setting.\nContext recap: During this session, learners will practice their responses to various critiques that may come from experts in technology, governance, and stakeholders. This rehearsal is crucial for building confidence and ensuring that students can effectively communicate their ideas and defend their positions in a professional setting."
+          "content": "You will defend your specialization recommendations against rigorous critiques from a simulated panel of technology, governance, and ethics experts. This rehearsal builds the rhetorical resilience needed to justify complex ethical trade-offs in professional, high-stakes environments."
         }
       ],
       "interactiveActivities": [

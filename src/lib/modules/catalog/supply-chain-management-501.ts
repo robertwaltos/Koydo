@@ -1,9 +1,9 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const SupplyChainManagement501Module: LearningModule = {
+export const supply_chain_management_501_Module: LearningModule = {
   "id": "supply-chain-management-501",
   "title": "Supply Chain Management Specialization Studio",
-  "description": "Post-401 specialization in Supply Chain Management, focused on business systems diagnostics, business operations and execution design, business impact and tradeoff analysis, and business governance and leadership through advanced casework, simulation, and defense-based checkpoints.",
+  "description": "A post-401 specialization in Supply Chain Management focusing on business systems diagnostics, operations design, tradeoff analysis, and governance. This module uses advanced casework, simulation, and defense-based checkpoints to build expert-level skills.",
   "subject": "Business",
   "tags": [
     "core",
@@ -14,7 +14,7 @@ export const SupplyChainManagement501Module: LearningModule = {
   ],
   "minAge": 17,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en",
@@ -38,8 +38,8 @@ export const SupplyChainManagement501Module: LearningModule = {
         {
           "id": "supply-chain-management-501-l01-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "System Boundary Diagram",
+          "content": "A visual representation of a supply chain system, highlighting internal components, external dependencies, and key interfaces to define the scope of analysis."
         }
       ],
       "chunks": [
@@ -47,35 +47,35 @@ export const SupplyChainManagement501Module: LearningModule = {
           "id": "supply-chain-management-501-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "In this lesson, we will dive into the important idea of advanced scope boundaries within Supply Chain Management. We will learn how to effectively diagnose business systems, which means figuring out what works well and what needs improvement. Additionally, we will discuss how to design operations that make execution smoother and more efficient. Understanding these concepts is essential for making sure that every part of a supply chain collaborates effectively, leading to better overall performance and success.\nContext recap: In this lesson, we will dive into the important idea of advanced scope boundaries within Supply Chain Management. We will learn how to effectively diagnose business systems, which means figuring out what works well and what needs improvement. Additionally, we will discuss how to design operations that make execution smoother and more efficient. Understanding these concepts is essential for making sure that every part of a supply chain collaborates effectively, leading to better overall performance and success.\nContext recap: In this lesson, we will dive into the important idea of advanced scope boundaries within Supply Chain Management. We will learn how to effectively diagnose business systems, which means figuring out what works well and what needs improvement. Additionally, we will discuss how to design operations that make execution smoother and more efficient. Understanding these concepts is essential for making sure that every part of a supply chain collaborates effectively, leading to better overall performance and success.\nWhy this matters: Scope and Boundary Design helps learners in Business connect ideas from Supply Chain Management Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "Defining clear scope and boundaries is the first step in diagnosing any complex business system. This process involves identifying what is inside your system of analysis versus what is external, which is crucial for focusing your efforts. We'll learn a step-by-step approach to map these boundaries, making your assumptions explicit and ensuring your analysis is built on a solid foundation."
         },
         {
           "id": "supply-chain-management-501-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different events or actions. They will also identify ranges of uncertainty and understand how various systems depend on each other. This preparation is essential before planning any interventions, as it helps to visualize potential outcomes and impacts.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different events or actions. They will also identify ranges of uncertainty and understand how various systems depend on each other. This preparation is essential before planning any interventions, as it helps to visualize potential outcomes and impacts."
+          "content": "Before intervening in a system, we must understand its dynamics. This involves mapping causal pathways—how one action leads to another—and identifying the inherent uncertainties. By modeling these relationships and their potential variability, we can better predict the outcomes of our decisions and prepare for a range of possibilities."
         },
         {
           "id": "supply-chain-management-501-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "In our recap, we emphasize that every claim made in our analysis should be linked to measurable indicators. This means we will establish confidence bounds and set up review checkpoints to ensure that our findings are reliable and can be verified. This practice helps maintain the integrity of our conclusions.\nContext recap: In our recap, we emphasize that every claim made in our analysis should be linked to measurable indicators. This means we will establish confidence bounds and set up review checkpoints to ensure that our findings are reliable and can be verified. This practice helps maintain the integrity of our conclusions."
+          "content": "A key principle in advanced analysis is that every claim must be backed by measurable evidence. In this recap, we'll solidify the concept of setting 'evidence thresholds' and confidence bounds. This practice ensures our conclusions are robust, verifiable, and can withstand critical review."
         }
       ],
       "flashcards": [
         {
           "id": "supply-chain-management-501-l01-f1",
-          "front": "business systems diagnostics",
+          "front": "Business systems diagnostics",
           "back": "A specialization axis requiring explicit assumptions and measurable constraints."
         },
         {
           "id": "supply-chain-management-501-l01-f2",
-          "front": "business operations and execution design",
+          "front": "Business operations and execution design",
           "back": "Execution architecture that determines reliability under stress."
         },
         {
           "id": "supply-chain-management-501-l01-f3",
-          "front": "business impact and tradeoff analysis",
+          "front": "Business impact and tradeoff analysis",
           "back": "Evaluation discipline for identifying true gains and hidden costs."
         }
       ]
@@ -89,8 +89,8 @@ export const SupplyChainManagement501Module: LearningModule = {
         {
           "id": "supply-chain-management-501-l02-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Workflow Design Canvas",
+          "content": "An interactive canvas to drag-and-drop components, design a custom workflow, and define control gates for a given supply chain challenge."
         }
       ],
       "chunks": [
@@ -98,13 +98,13 @@ export const SupplyChainManagement501Module: LearningModule = {
           "id": "supply-chain-management-501-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "In this interactive segment, learners will have the opportunity to design specialized workflows tailored to specific tasks. They will also conduct stress tests on these workflows by simulating adverse scenarios. This hands-on practice is vital for understanding how workflows can perform under pressure and identifying areas for improvement.\nContext recap: In this interactive segment, learners will have the opportunity to design specialized workflows tailored to specific tasks. They will also conduct stress tests on these workflows by simulating adverse scenarios. This hands-on practice is vital for understanding how workflows can perform under pressure and identifying areas for improvement."
+          "content": "Theory meets practice in this interactive lab. You will design a specialized workflow for a specific supply chain task, such as inventory management. Then, you'll put it to the test by running simulations of adverse scenarios, like a supplier delay or a demand spike, to identify weak points and improve its resilience."
         },
         {
           "id": "supply-chain-management-501-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "In our recap, we will discuss the importance of integrating control gates within workflows. These control gates serve as checkpoints that help monitor progress, establish rollback criteria, and define threshold-based escalation procedures. This structure ensures that workflows remain efficient and responsive to changes.\nContext recap: In our recap, we will discuss the importance of integrating control gates within workflows. These control gates serve as checkpoints that help monitor progress, establish rollback criteria, and define threshold-based escalation procedures. This structure ensures that workflows remain efficient and responsive to changes."
+          "content": "We'll recap the critical role of 'control gates' in any robust workflow. These are predefined checkpoints designed to monitor progress, trigger rollbacks if things go wrong, and escalate issues based on set thresholds. A well-designed control gate architecture is the difference between a fragile process and a resilient one."
         }
       ],
       "interactiveActivities": [
@@ -143,8 +143,8 @@ export const SupplyChainManagement501Module: LearningModule = {
         {
           "id": "supply-chain-management-501-l03-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Key Concepts Review",
+          "content": "Review the definitions of business systems diagnostics, execution design, and tradeoff analysis before you begin."
         }
       ],
       "questions": [
@@ -247,106 +247,6 @@ export const SupplyChainManagement501Module: LearningModule = {
           ],
           "correctOptionId": "a",
           "explanation": "Governance maturity is the operational link between intent, measurement, and corrective action."
-        },
-        {
-          "id": "supply-chain-management-501-l03-q5",
-          "text": "What is the best way to compare competing interventions in advanced Business?",
-          "skillId": "supply-chain-management-501-skill-advanced-5",
-          "options": [
-            {
-              "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
-            },
-            {
-              "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
-            },
-            {
-              "id": "c",
-              "text": "Switch metrics after results arrive"
-            },
-            {
-              "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
-        },
-        {
-          "id": "supply-chain-management-501-l03-q6",
-          "text": "In high-stakes Supply Chain Management Specialization Studio execution, which communication protocol is strongest?",
-          "skillId": "supply-chain-management-501-skill-advanced-6",
-          "options": [
-            {
-              "id": "a",
-              "text": "Broadcast conclusions without assumptions"
-            },
-            {
-              "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
-            },
-            {
-              "id": "c",
-              "text": "Share only final outcomes after completion"
-            },
-            {
-              "id": "d",
-              "text": "Limit updates to a single informal channel"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
-        },
-        {
-          "id": "supply-chain-management-501-l03-q7",
-          "text": "A mature remediation loop in advanced Business should prioritize:",
-          "skillId": "supply-chain-management-501-skill-advanced-7",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blame assignment without system updates"
-            },
-            {
-              "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
-            },
-            {
-              "id": "c",
-              "text": "One-time fixes without retesting"
-            },
-            {
-              "id": "d",
-              "text": "Issue closure based on elapsed time"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
-        },
-        {
-          "id": "supply-chain-management-501-l03-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Supply Chain Management Specialization Studio?",
-          "skillId": "supply-chain-management-501-skill-advanced-8",
-          "options": [
-            {
-              "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
-            },
-            {
-              "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
-            },
-            {
-              "id": "c",
-              "text": "Ignore correlated failure modes"
-            },
-            {
-              "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
         }
       ]
     },
@@ -359,8 +259,8 @@ export const SupplyChainManagement501Module: LearningModule = {
         {
           "id": "supply-chain-management-501-l04-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Tradeoff Matrix Example",
+          "content": "A visual matrix comparing three strategic options across dimensions like cost, speed, reliability, and environmental impact, with scores and justifications."
         }
       ],
       "chunks": [
@@ -368,19 +268,19 @@ export const SupplyChainManagement501Module: LearningModule = {
           "id": "supply-chain-management-501-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "In this lesson, we will frame a case that highlights the competing constraints found in business systems diagnostics. We will analyze the impacts of various business decisions and the trade-offs that must be considered. Understanding these dynamics is crucial for making informed decisions that balance multiple factors.\nContext recap: In this lesson, we will frame a case that highlights the competing constraints found in business systems diagnostics. We will analyze the impacts of various business decisions and the trade-offs that must be considered. Understanding these dynamics is crucial for making informed decisions that balance multiple factors."
+          "content": "We will now apply our foundational knowledge to a complex case study. This scenario is designed to mirror real-world challenges, featuring competing constraints such as cost pressures versus sustainability goals. We'll dissect the case to understand the intricate dynamics at play."
         },
         {
           "id": "supply-chain-management-501-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "In this practice session, learners will compare different options available to them, focusing on key dimensions such as safety, reliability, cost, equity, and governance. This comparative analysis will help them understand how to weigh the pros and cons of each option effectively.\nContext recap: In this practice session, learners will compare different options available to them, focusing on key dimensions such as safety, reliability, cost, equity, and governance. This comparative analysis will help them understand how to weigh the pros and cons of each option effectively.\nContext recap: In this practice session, learners will compare different options available to them, focusing on key dimensions such as safety, reliability, cost, equity, and governance. This comparative analysis will help them understand how to weigh the pros and cons of each option effectively. Context recap: In this practice session, learners will compare different options available to them, focusing on key dimensions such as safety, reliability, cost, equity, and governance. This comparative analysis will help them understand how to weigh the pros and cons of each option effectively."
+          "content": "In this practice segment, you will frame the central tradeoffs presented in the case. This involves systematically comparing the available strategic options across key dimensions like safety, reliability, cost, and governance. The goal is to learn how to articulate and weigh the pros and cons of each potential decision."
         },
         {
           "id": "supply-chain-management-501-l04-c3",
           "kind": "recap",
           "title": "Decision Memo Pattern",
-          "content": "In our recap, we will outline the essential components of a decision memo. Each recommendation made should include clear assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that decisions are well-informed and prepared for potential challenges.\nContext recap: In our recap, we will outline the essential components of a decision memo. Each recommendation made should include clear assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that decisions are well-informed and prepared for potential challenges.\nContext recap: In our recap, we will outline the essential components of a decision memo. Each recommendation made should include clear assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that decisions are well-informed and prepared for potential challenges. Context recap: In our recap, we will outline the essential components of a decision memo.\nWhy this matters: Decision Memo Pattern helps learners in Business connect ideas from Supply Chain Management Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "A powerful tool for communicating complex decisions is the 'Decision Memo'. We'll recap a structured pattern for writing one, ensuring every recommendation is presented with its underlying assumptions, supporting evidence, identified risks, and contingency plans. This structure promotes clarity and defensibility."
         }
       ]
     },
@@ -393,8 +293,8 @@ export const SupplyChainManagement501Module: LearningModule = {
         {
           "id": "supply-chain-management-501-l05-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Simulation Control Dashboard",
+          "content": "An interactive dashboard mockup showing key performance indicators (KPIs) and control levers (e.g., inventory levels, logistics budget) for the upcoming simulation."
         }
       ],
       "chunks": [
@@ -402,13 +302,13 @@ export const SupplyChainManagement501Module: LearningModule = {
           "id": "supply-chain-management-501-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "In this interactive clinic, learners will take charge of scenario controls, balancing performance metrics with governance constraints. This experience will provide them with practical insights into how to manage complex situations while adhering to established guidelines.\nContext recap: In this interactive clinic, learners will take charge of scenario controls, balancing performance metrics with governance constraints. This experience will provide them with practical insights into how to manage complex situations while adhering to established guidelines.\nWhy this matters: Live Scenario Controls helps learners in Business connect ideas from Supply Chain Management Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "This interactive clinic puts you in the driver's seat. You will manage a live supply chain simulation, making real-time decisions to balance performance metrics like delivery speed with governance constraints like budget limits. This hands-on experience is designed to build your intuition for managing dynamic, high-pressure situations."
         },
         {
           "id": "supply-chain-management-501-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "In our recap, we will discuss the importance of effective responses that update control gates. It is crucial that these updates maintain traceability and accountability throughout the process. This ensures that all changes are documented and can be reviewed if necessary.\nContext recap: In our recap, we will discuss the importance of effective responses that update control gates. It is crucial that these updates maintain traceability and accountability throughout the process. This ensures that all changes are documented and can be reviewed if necessary.\nContext recap: In our recap, we will discuss the importance of effective responses that update control gates. It is crucial that these updates maintain traceability and accountability throughout the process. This ensures that all changes are documented and can be reviewed if necessary. Context recap: In our recap, we will discuss the importance of effective responses that update control gates.\nWhy this matters: Adaptive Response Design helps learners in Business connect ideas from Supply Chain Management Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "We'll recap the principles of 'Adaptive Response Design'. Effective leadership in a crisis involves more than just reacting; it means updating your operational rules and control gates based on new information. We'll emphasize how to make these adjustments while maintaining full traceability and accountability for every decision."
         }
       ],
       "interactiveActivities": [
@@ -429,110 +329,110 @@ export const SupplyChainManagement501Module: LearningModule = {
         {
           "id": "supply-chain-management-501-l06-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Case Study Synopsis",
+          "content": "A one-page summary of the case study from Lesson 4 to refresh your memory on the key constraints and tradeoffs."
         }
       ],
       "questions": [
         {
           "id": "supply-chain-management-501-l06-q1",
-          "text": "In advanced casework, the first requirement for defensible recommendations is:",
+          "text": "When analyzing a complex supply chain case study, what is the most effective first step?",
           "skillId": "supply-chain-management-501-skill-case1",
           "options": [
             {
               "id": "a",
-              "text": "A preferred option without explicit assumptions"
+              "text": "Immediately choose a solution"
             },
             {
               "id": "b",
-              "text": "A clear baseline, explicit constraints, and success criteria"
+              "text": "Identify the core problem and map the competing constraints and stakeholders"
             },
             {
               "id": "c",
-              "text": "High confidence without evidence logs"
+              "text": "Focus only on the financial data"
             },
             {
               "id": "d",
-              "text": "Single-metric optimization only"
+              "text": "Wait for a perfect dataset"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible recommendations begin with explicit assumptions, constraints, and measurable targets."
+          "explanation": "Effective case analysis starts with a thorough diagnosis of the problem, constraints, and stakeholder interests before jumping to solutions."
         },
         {
           "id": "supply-chain-management-501-l06-q2",
-          "text": "A resilient strategy for business operations and execution design should include:",
+          "text": "A strong decision memo, as covered in the case analysis, must contain which set of elements to be defensible?",
           "skillId": "supply-chain-management-501-skill-case2",
           "options": [
             {
               "id": "a",
-              "text": "Checkpointed execution with fallback and escalation criteria"
+              "text": "Only the final recommendation"
             },
             {
               "id": "b",
-              "text": "One-way execution with no rollback capability"
+              "text": "A compelling story without data"
             },
             {
               "id": "c",
-              "text": "No ownership mapping across teams"
+              "text": "The recommendation, key assumptions, supporting evidence, and risk mitigation plans"
             },
             {
               "id": "d",
-              "text": "Hidden assumptions and undocumented decisions"
+              "text": "A list of people who agree with the decision"
             }
           ],
-          "correctOptionId": "a",
-          "explanation": "Resilience depends on checkpoints, fallback options, and explicit escalation design."
+          "correctOptionId": "c",
+          "explanation": "A defensible decision memo provides a complete, transparent rationale, including assumptions, evidence, and contingency planning."
         },
         {
           "id": "supply-chain-management-501-l06-q3",
-          "text": "When evaluating business impact and tradeoff analysis, which method is most rigorous?",
+          "text": "In the simulation clinic, what is the primary challenge when managing live scenario controls?",
           "skillId": "supply-chain-management-501-skill-case3",
           "options": [
             {
               "id": "a",
-              "text": "Single success story without controls"
+              "text": "Following a single, predefined plan without deviation"
             },
             {
               "id": "b",
-              "text": "Comparative baselines plus side-effect and uncertainty analysis"
+              "text": "Making real-time tradeoffs between conflicting goals like speed and cost under uncertainty"
             },
             {
               "id": "c",
-              "text": "Outcome-only narrative without process evidence"
+              "text": "Optimizing for one metric at the expense of all others"
             },
             {
               "id": "d",
-              "text": "Retrospective scope changes to fit outcomes"
+              "text": "Pausing the simulation to wait for more information"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Rigorous evaluation requires comparisons, side-effect analysis, and uncertainty disclosure."
+          "explanation": "Simulations test a leader's ability to dynamically balance competing objectives as conditions change."
         },
         {
           "id": "supply-chain-management-501-l06-q4",
-          "text": "Advanced governance is strongest when it:",
+          "text": "What does 'Adaptive Response Design' mean in the context of a supply chain simulation?",
           "skillId": "supply-chain-management-501-skill-case4",
           "options": [
             {
               "id": "a",
-              "text": "Aligns authority, measurement, and remediation obligations"
+              "text": "Sticking to the original plan no matter what"
             },
             {
               "id": "b",
-              "text": "Separates policy from operational controls"
+              "text": "Making random changes to see what happens"
             },
             {
               "id": "c",
-              "text": "Avoids external review and transparency"
+              "text": "Updating operational controls and decision rules based on real-time feedback, while maintaining accountability"
             },
             {
               "id": "d",
-              "text": "Treats accountability as optional under pressure"
+              "text": "Blaming external factors for poor outcomes"
             }
           ],
-          "correctOptionId": "a",
-          "explanation": "Mature governance links authority, measurable controls, and corrective action."
+          "correctOptionId": "c",
+          "explanation": "Adaptive response is about learning and adjusting systematically based on performance data, with clear traceability."
         },
         {
           "id": "supply-chain-management-501-l06-q5",
@@ -583,56 +483,6 @@ export const SupplyChainManagement501Module: LearningModule = {
           ],
           "correctOptionId": "b",
           "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
-        },
-        {
-          "id": "supply-chain-management-501-l06-q7",
-          "text": "A mature remediation loop in advanced Business should prioritize:",
-          "skillId": "supply-chain-management-501-skill-advanced-7",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blame assignment without system updates"
-            },
-            {
-              "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
-            },
-            {
-              "id": "c",
-              "text": "One-time fixes without retesting"
-            },
-            {
-              "id": "d",
-              "text": "Issue closure based on elapsed time"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
-        },
-        {
-          "id": "supply-chain-management-501-l06-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Supply Chain Management Specialization Studio?",
-          "skillId": "supply-chain-management-501-skill-advanced-8",
-          "options": [
-            {
-              "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
-            },
-            {
-              "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
-            },
-            {
-              "id": "c",
-              "text": "Ignore correlated failure modes"
-            },
-            {
-              "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
         }
       ]
     },
@@ -645,8 +495,8 @@ export const SupplyChainManagement501Module: LearningModule = {
         {
           "id": "supply-chain-management-501-l07-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Stakeholder Impact Map",
+          "content": "A diagram illustrating how a major logistics decision (e.g., moving a warehouse) affects various stakeholders, including employees, customers, local communities, and the environment."
         }
       ],
       "chunks": [
@@ -654,19 +504,19 @@ export const SupplyChainManagement501Module: LearningModule = {
           "id": "supply-chain-management-501-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "In this lesson, learners will map out the distribution of impacts among various stakeholders. They will analyze the benefits, burdens, and any delayed effects that may arise from decisions made within the supply chain. This understanding is essential for recognizing how different groups are affected by business actions.\nContext recap: In this lesson, learners will map out the distribution of impacts among various stakeholders. They will analyze the benefits, burdens, and any delayed effects that may arise from decisions made within the supply chain. This understanding is essential for recognizing how different groups are affected by business actions."
+          "content": "Decisions in a supply chain don't happen in a vacuum. In this lesson, we will learn to map the distribution of impacts—both positive and negative—across all stakeholders. This includes analyzing the immediate benefits and burdens, as well as delayed or second-order effects, to foster a more equitable and responsible decision-making process."
         },
         {
           "id": "supply-chain-management-501-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "In this section, we will explore the architecture of accountability in decision-making processes. This includes ensuring that there is traceability for decisions made, rights for reviews, and obligations for remediation. Integrating these elements helps create a transparent and responsible governance structure.\nContext recap: In this section, we will explore the architecture of accountability in decision-making processes. This includes ensuring that there is traceability for decisions made, rights for reviews, and obligations for remediation. Integrating these elements helps create a transparent and responsible governance structure.\nContext recap: In this section, we will explore the architecture of accountability in decision-making processes. This includes ensuring that there is traceability for decisions made, rights for reviews, and obligations for remediation. Integrating these elements helps create a transparent and responsible governance structure. Context recap: In this section, we will explore the architecture of accountability in decision-making processes.\nWhy this matters: Accountability Architecture helps learners in Business connect ideas from Supply Chain Management Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "True accountability requires a deliberate structure. We will explore the components of an 'Accountability Architecture,' which includes systems for decision traceability, stakeholder rights for review, and clear obligations for remediation when things go wrong. This framework builds trust and ensures that power is exercised responsibly."
         },
         {
           "id": "supply-chain-management-501-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "To ensure responsible leadership in supply chain management, it is important to have a final checklist. This checklist should connect important outcomes, ethical considerations, compliance with policies, and the ability to adapt and recover from challenges. By using this checklist, leaders can make informed decisions that positively impact their organizations and communities.\nContext recap: To ensure responsible leadership in supply chain management, it is important to have a final checklist. This checklist should connect important outcomes, ethical considerations, compliance with policies, and the ability to adapt and recover from challenges. By using this checklist, leaders can make informed decisions that positively impact their organizations and communities."
+          "content": "We conclude by consolidating our learnings into a 'Responsible Leadership Checklist'. This practical tool helps leaders integrate key considerations—performance outcomes, ethical duties, policy compliance, and system resilience—into their final decision-making process, ensuring a holistic and conscientious approach."
         }
       ],
       "flashcards": [
@@ -696,8 +546,8 @@ export const SupplyChainManagement501Module: LearningModule = {
         {
           "id": "supply-chain-management-501-l08-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Defense Brief Template",
+          "content": "A structured document template for assembling the capstone defense, with sections for the core claim, evidence summary, uncertainty analysis, and remediation plan."
         }
       ],
       "chunks": [
@@ -705,13 +555,13 @@ export const SupplyChainManagement501Module: LearningModule = {
           "id": "supply-chain-management-501-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "In this interactive activity, learners will work together to create a comprehensive brief. This brief will include well-supported claims, relevant evidence, boundaries of uncertainty, and suggested pathways for remediation. By assembling this brief, learners will practice critical thinking and problem-solving skills that are essential in supply chain management.\nContext recap: In this interactive activity, learners will work together to create a comprehensive brief. This brief will include well-supported claims, relevant evidence, boundaries of uncertainty, and suggested pathways for remediation. By assembling this brief, learners will practice critical thinking and problem-solving skills that are essential in supply chain management."
+          "content": "In this final lab, you will synthesize everything you've learned by assembling a capstone defense brief. This involves formulating a clear, evidence-backed recommendation for a complex supply chain problem, explicitly stating your uncertainty bounds, and proposing a robust remediation pathway. This is the core artifact you will defend."
         },
         {
           "id": "supply-chain-management-501-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "During the expert panel rehearsal, learners will practice their responses to various critiques. These critiques may come from technical experts, governance representatives, and stakeholders. This rehearsal is a valuable opportunity for learners to refine their communication skills and prepare for real-world discussions in supply chain management.\nContext recap: During the expert panel rehearsal, learners will practice their responses to various critiques. These critiques may come from technical experts, governance representatives, and stakeholders. This rehearsal is a valuable opportunity for learners to refine their communication skills and prepare for real-world discussions in supply chain management."
+          "content": "Preparation is key to a successful defense. You will participate in a rehearsal where you present your brief and field critiques from a simulated expert panel, representing technical, governance, and stakeholder perspectives. This exercise is designed to sharpen your arguments and build your confidence for the final defense."
         }
       ],
       "interactiveActivities": [

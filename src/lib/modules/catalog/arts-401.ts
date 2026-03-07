@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const Arts401Module: LearningModule = {
+export const arts_401_Module: LearningModule = {
   "id": "arts-401",
   "title": "Arts Leadership, Curation, and Professional Practice",
   "description": "Expert-level arts curriculum focused on artistic direction, critical frameworks, exhibition curation, audience strategy, and sustainable professional practice across visual and interdisciplinary arts.",
@@ -15,7 +15,7 @@ export const Arts401Module: LearningModule = {
   ],
   "minAge": 12,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en"
@@ -35,24 +35,26 @@ export const Arts401Module: LearningModule = {
       "title": "Artistic Direction and Visual Language Systems",
       "type": "video",
       "duration": 13,
+      "lessonImagePrompt": "A diverse group of artists in a bright, modern studio, looking at a wall covered in sketches, color palettes, and material samples, connecting them with red string. Cinematic lighting, highly detailed, Imagen 4.",
+      "conceptVideoPrompt": "Time-lapse of an artist's workspace evolving, showing different artworks being created that all share a distinct color palette and thematic motif, demonstrating the emergence of an artistic voice. Veo 3.1, 4k resolution.",
       "chunks": [
         {
           "id": "arts-401-l01-c1",
           "kind": "concept",
           "title": "From Style to Voice",
-          "content": "Style is like a favorite outfit that many people can wear, but voice is like your own special way of expressing yourself that grows as you create more art. It comes from the choices you make and the meanings behind them. When artists become more experienced, they start to think deeply about how their choices in things like colors, shapes, and ideas connect with each other. Having a consistent voice doesn’t mean making the same artwork repeatedly; it means that no matter what medium or style they use, their unique identity and message are clear and recognizable in all their creations.\nContext recap: Style is like a favorite outfit that many people can wear, but voice is like your own special way of expressing yourself that grows as you create more art. It comes from the choices you make and the meanings behind them. When artists become more experienced, they start to think deeply about how their choices in things like colors, shapes, and ideas connect with each other. Having a consistent voice doesn’t mean making the same artwork repeatedly; it means that no matter what medium or style they use, their unique identity and message are clear and recognizable in all their creations.\nContext recap: Style is like a favorite outfit that many people can wear, but voice is like your own special way of expressing yourself that grows as you create more art. It comes from the choices you make and the meanings behind them. When artists become more experienced, they start to think deeply about how their choices in things like colors, shapes, and ideas connect with each other. Having a consistent voice doesn’t mean making the same artwork repeatedly; it means that no matter what medium or style they use, their unique identity and message are clear and recognizable in all their creations.\nWhy this matters: From Style to Voice helps learners in Arts connect ideas from Arts Leadership, Curation, and Professional Practice to decisions they make during practice and assessment. Connect ideas to real decisions and evidence."
+          "content": "Style is like a favorite outfit that many people can wear, but voice is your own special way of expressing yourself that grows as you create more art. It comes from the choices you make and the meanings behind them. When artists become more experienced, they start to think deeply about how their choices in things like colors, shapes, and ideas connect with each other. Having a consistent voice doesn’t mean making the exact same artwork repeatedly; it means that no matter what medium or style you use, your unique identity and message are clear and recognizable in all your creations."
         },
         {
           "id": "arts-401-l01-c2",
           "kind": "concept",
           "title": "Visual Language Components",
-          "content": "Visual language is a fascinating concept that includes several key elements that artists use to communicate their ideas. These elements are: compositional rhythm, which is how we arrange different parts of an artwork; color systems, which refer to the colors we select and how they work together; material decisions, which involve choosing the right materials for our projects; mark logic, which is about the way we create lines and shapes; pacing, which is the speed at which we present information; and narrative framing, which is how we tell stories through our art. Artists and professionals in the field take careful notes on these choices to help keep their projects and collaborations clear and connected over time. This documentation is essential for maintaining a consistent vision and ensuring that everyone involved understands the artistic direction.\nContext recap: Visual language is a fascinating concept that includes several key elements that artists use to communicate their ideas. These elements are: compositional rhythm, which is how we arrange different parts of an artwork; color systems, which refer to the colors we select and how they work together; material decisions, which involve choosing the right materials for our projects; mark logic, which is about the way we create lines and shapes; pacing, which is the speed at which we present information; and narrative framing, which is how we tell stories through our art. Artists and professionals in the field take careful notes on these choices to help keep their projects and collaborations clear and connected over time. This documentation is essential for maintaining a consistent vision and ensuring that everyone involved understands the artistic direction.\nContext recap: Visual language is a fascinating concept that includes several key elements that artists use to communicate their ideas. These elements are: compositional rhythm, which is how we arrange different parts of an artwork; color systems, which refer to the colors we select and how they work together; material decisions, which involve choosing the right materials for our projects; mark logic, which is about the way we create lines and shapes; pacing, which is the speed at which we present information; and narrative framing, which is how we tell stories through our art. Artists and professionals in the field take careful notes on these choices to help keep their projects and collaborations clear and connected over time. This documentation is essential for maintaining a consistent vision and ensuring that everyone involved understands the artistic direction."
+          "content": "Visual language is a fascinating concept that includes several key elements artists use to communicate their ideas. These elements are: compositional rhythm (how we arrange different parts of an artwork), color systems (the colors we select and how they interact), material decisions (choosing the right physical mediums), mark logic (the way we create lines and textures), pacing (the speed at which we present visual information), and narrative framing (how we tell stories through our art). Professionals take careful notes on these choices to keep their projects clear and connected over time."
         },
         {
           "id": "arts-401-l01-c3",
           "kind": "recap",
           "title": "Direction Statements",
-          "content": "A strong direction statement acts like a roadmap for an artist, helping them navigate their creative journey. It clearly explains what the artist is exploring in their work, why that exploration is significant, and how the choices they make—like colors, shapes, and materials—support their investigation. This statement is crucial because it not only guides the artist in creating their artwork but also helps them effectively present and share their ideas with others. By having a clear direction statement, artists can ensure that their work communicates their vision and engages the audience in meaningful ways.\nContext recap: A strong direction statement acts like a roadmap for an artist, helping them navigate their creative journey. It clearly explains what the artist is exploring in their work, why that exploration is significant, and how the choices they make—like colors, shapes, and materials—support their investigation. This statement is crucial because it not only guides the artist in creating their artwork but also helps them effectively present and share their ideas with others. By having a clear direction statement, artists can ensure that their work communicates their vision and engages the audience in meaningful ways.\nContext recap: A strong direction statement acts like a roadmap for an artist, helping them navigate their creative journey. It clearly explains what the artist is exploring in their work, why that exploration is significant, and how the choices they make—like colors, shapes, and materials—support their investigation. This statement is crucial because it not only guides the artist in creating their artwork but also helps them effectively present and share their ideas with others. By having a clear direction statement, artists can ensure that their work communicates their vision and engages the audience in meaningful ways.\nWhy this matters: Direction Statements helps learners in Arts connect ideas from Arts Leadership, Curation, and Professional Practice to decisions they make during practice and assessment. Connect ideas to real decisions and evidence."
+          "content": "A strong direction statement acts like a roadmap for an artist, helping them navigate their creative journey. It clearly explains what the artist is exploring in their work, why that exploration is significant, and how the choices they make—like colors, shapes, and materials—support their investigation. This statement is crucial because it not only guides the artist in creating their artwork but also helps them effectively present and share their ideas with others, ensuring the audience engages with the work in meaningful ways."
         }
       ],
       "flashcards": [
@@ -79,25 +81,28 @@ export const Arts401Module: LearningModule = {
           "title": "Voice Mapping Canvas",
           "content": "Framework connecting themes, materials, recurring motifs, and audience effect goals."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/arts-401-l01.png"
     },
     {
       "id": "arts-401-l02",
       "title": "Advanced Critique and Interpretation Lab",
       "type": "interactive",
       "duration": 15,
+      "lessonImagePrompt": "A gallery setting where a diverse group of people of varying ages are closely examining a large abstract painting, pointing at specific details and having a thoughtful discussion. Warm gallery lighting, Imagen 4.",
+      "conceptVideoPrompt": "A split-screen showing a close-up of a painting's brushstrokes on one side, and a person writing notes on a clipboard on the other, symbolizing the transition from observation to interpretation. Veo 3.1, smooth motion.",
       "chunks": [
         {
           "id": "arts-401-l02-c1",
           "kind": "concept",
           "title": "Critique as Inquiry",
-          "content": "Advanced critique is an important skill that helps us appreciate art more fully. Instead of just expressing whether we like or dislike something, we learn to carefully analyze what we see. This means we look closely at our observations, share our interpretations, and evaluate the artwork based on clear evidence and its context. By doing this, we can engage in meaningful discussions and gain a deeper understanding of the art around us.\nContext recap: Advanced critique is an important skill that helps us appreciate art more fully. Instead of just expressing whether we like or dislike something, we learn to carefully analyze what we see. This means we look closely at our observations, share our interpretations, and evaluate the artwork based on clear evidence and its context. By doing this, we can engage in meaningful discussions and gain a deeper understanding of the art around us.\nContext recap: Advanced critique is an important skill that helps us appreciate art more fully. Instead of just expressing whether we like or dislike something, we learn to carefully analyze what we see. This means we look closely at our observations, share our interpretations, and evaluate the artwork based on clear evidence and its context. By doing this, we can engage in meaningful discussions and gain a deeper understanding of the art around us.\nWhy this matters: Critique as Inquiry helps learners in Arts connect ideas from Arts Leadership, Curation, and Professional Practice to decisions they make during practice and assessment. Connect ideas to real decisions and evidence.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "Advanced critique is an important skill that helps us appreciate art more fully. Instead of just expressing whether we like or dislike something, we learn to carefully analyze what we see. This means we look closely at our observations, share our interpretations, and evaluate the artwork based on clear evidence and its context. By doing this, we can engage in meaningful discussions and gain a deeper understanding of the art around us. A good step-by-step approach is to: (1) define the artist's goal, (2) identify visual evidence, (3) explain how the evidence shapes the meaning, and (4) evaluate the final impact."
         },
         {
           "id": "arts-401-l02-c2",
           "kind": "practice",
           "title": "Framework Integration",
-          "content": "When we explore a piece of art, it's important to look at it from various perspectives, often called lenses. These lenses help us understand the artwork in deeper ways. For example, we can examine the formal aspects, such as how the elements are arranged and the colors used. We can also consider the historical context, which looks at the time and place the artwork was created. Additionally, we can think about the social implications, which involve how the artwork relates to society and its issues. The materials used in the artwork can also tell us a lot about its meaning. Finally, we should consider how different audiences might interpret the piece based on their own experiences and backgrounds. Strong critics take the time to compare these different perspectives and clearly explain why they prefer one interpretation over another. This process not only enhances their understanding but also helps everyone appreciate the artwork more fully and encourages open discussions about its meaning.\nContext recap: When we explore a piece of art, it's important to look at it from various perspectives, often called lenses. These lenses help us understand the artwork in deeper ways. For example, we can examine the formal aspects, such as how the elements are arranged and the colors used. We can also consider the historical context, which looks at the time and place the artwork was created.\nWhy this matters: Framework Integration helps learners in Arts connect ideas from Arts Leadership, Curation, and Professional Practice to decisions they make during practice and assessment. Connect ideas to real decisions and evidence."
+          "content": "When we explore a piece of art, it's important to look at it from various perspectives, often called lenses. We can examine the formal aspects (arrangement and colors), the historical context (time and place of creation), the social implications (how it relates to society), and the material choices. Finally, we should consider how different audiences might interpret the piece based on their own backgrounds. Strong critics take the time to compare these different perspectives and clearly explain why they prefer one interpretation over another, encouraging open discussions."
         }
       ],
       "interactiveActivities": [
@@ -141,17 +146,11 @@ export const Arts401Module: LearningModule = {
           "description": "Prepare a concise critique for a mixed-experience audience panel.",
           "instructions": [
             "State one evidence-based strength.",
-            "State one revision suggestion tied to artist intent."
+            "State one revision suggestion tied to artist intent.",
+            "Ensure your language is accessible to non-experts."
           ]
         }
       ],
-      "metadata": {
-        "prompts": [
-          "How do you avoid confusing interpretation with objective observation?",
-          "Which critique lens best fits socially engaged artwork, and why?",
-          "Write one revision recommendation that respects the artist's stated goal."
-        ]
-      },
       "learningAids": [
         {
           "id": "arts-401-l02-a1",
@@ -159,13 +158,16 @@ export const Arts401Module: LearningModule = {
           "title": "Critique Protocol Card",
           "content": "Observe, Interpret, Evaluate, Recommend - with evidence for each step."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/arts-401-l02.png"
     },
     {
       "id": "arts-401-l03",
       "title": "Checkpoint 1: Voice and Critique",
       "type": "quiz",
       "duration": 10,
+      "lessonImagePrompt": "A stylized glowing checkpoint gate in an art museum, with floating holographic icons representing voice, critique, and visual language. High-tech yet artistic aesthetic, Imagen 4.",
+      "conceptVideoPrompt": "A dynamic 3D animation of puzzle pieces coming together to form a complete artwork, symbolizing the integration of artistic voice and critique skills. Veo 3.1, vibrant colors.",
       "questions": [
         {
           "id": "arts-401-l03-q1",
@@ -266,6 +268,31 @@ export const Arts401Module: LearningModule = {
           ],
           "correctOptionId": "c",
           "explanation": "Strong critique ties interpretation to observable formal evidence."
+        },
+        {
+          "id": "arts-401-l03-q5",
+          "text": "Why is it important to view art through multiple lenses (formal, historical, social)?",
+          "skillId": "arts-401-skill-critique",
+          "options": [
+            {
+              "id": "a",
+              "text": "To make the critique process longer"
+            },
+            {
+              "id": "b",
+              "text": "To build a well-rounded understanding and avoid bias"
+            },
+            {
+              "id": "c",
+              "text": "To prove the artist made a mistake"
+            },
+            {
+              "id": "d",
+              "text": "To focus only on the materials used"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Using multiple lenses helps critics see the full context and meaning of an artwork."
         }
       ],
       "learningAids": [
@@ -275,31 +302,34 @@ export const Arts401Module: LearningModule = {
           "title": "OIER",
           "content": "Observe, Interpret, Evaluate, Recommend."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/arts-401-l03.png"
     },
     {
       "id": "arts-401-l04",
       "title": "Curation, Sequencing, and Exhibition Design",
       "type": "video",
       "duration": 13,
+      "lessonImagePrompt": "A curator carefully arranging miniature paintings and sculptures inside a glowing 3D architectural model of a gallery space, planning the exhibition flow. Soft, focused lighting, Imagen 4.",
+      "conceptVideoPrompt": "A smooth tracking shot moving through a beautifully curated art exhibition, showing how the placement of artworks creates a visual rhythm and narrative journey for the viewer. Veo 3.1, cinematic lighting.",
       "chunks": [
         {
           "id": "arts-401-l04-c1",
           "kind": "concept",
           "title": "Curatorial Narrative",
-          "content": "Curation is a fascinating process that involves making thoughtful decisions about which artworks to include in an exhibition and how to arrange them. By choosing the right pieces and placing them next to each other, curators can create a unique story or message. For example, the same artwork can look and feel very different depending on its surroundings, the lighting used, and the information shared about it. This shows how important curators are in helping us understand and appreciate art in new ways.\nContext recap: Curation is a fascinating process that involves making thoughtful decisions about which artworks to include in an exhibition and how to arrange them. By choosing the right pieces and placing them next to each other, curators can create a unique story or message. For example, the same artwork can look and feel very different depending on its surroundings, the lighting used, and the information shared about it. This shows how important curators are in helping us understand and appreciate art in new ways.\nContext recap: Curation is a fascinating process that involves making thoughtful decisions about which artworks to include in an exhibition and how to arrange them. By choosing the right pieces and placing them next to each other, curators can create a unique story or message. For example, the same artwork can look and feel very different depending on its surroundings, the lighting used, and the information shared about it. This shows how important curators are in helping us understand and appreciate art in new ways.\nWhy this matters: Curatorial Narrative helps learners in Arts connect ideas from Arts Leadership, Curation, and Professional Practice to decisions they make during practice and assessment. Connect ideas to real decisions and evidence."
+          "content": "Curation is a fascinating process that involves making thoughtful decisions about which artworks to include in an exhibition and how to arrange them. By choosing the right pieces and placing them next to each other, curators can create a unique story or message. For example, the same artwork can look and feel very different depending on its surroundings, the lighting used, and the information shared about it. This shows how important curators are in helping us understand and appreciate art in new ways."
         },
         {
           "id": "arts-401-l04-c2",
           "kind": "concept",
           "title": "Spatial and Digital Experience",
-          "content": "When we visit a physical exhibition, there are many things that shape our experience. For example, the paths we walk along, the things we can see from different angles, and even the sounds we hear all help us understand and enjoy the artwork better. In digital exhibitions, which we might explore online, how the information is organized is very important. This includes the quality of the images we see and how the artwork is revealed to us over time. In both physical and digital settings, the design choices made by curators can have a big impact on how much we connect with the art and how well we remember it later. Good design helps us appreciate the artwork more deeply and keeps us engaged throughout our visit.\nContext recap: When we visit a physical exhibition, there are many things that shape our experience. For example, the paths we walk along, the things we can see from different angles, and even the sounds we hear all help us understand and enjoy the artwork better. In digital exhibitions, which we might explore online, how the information is organized is very important. This includes the quality of the images we see and how the artwork is revealed to us over time.\nWhy this matters: Spatial and Digital Experience helps learners in Arts connect ideas from Arts Leadership, Curation, and Professional Practice to decisions they make during practice and assessment. Connect ideas to real decisions and evidence."
+          "content": "When we visit a physical exhibition, many things shape our experience. The paths we walk along, the sightlines from different angles, and even the sounds we hear all help us understand the artwork better. In digital exhibitions, how the information is organized is equally important. This includes the quality of the images and how the artwork is revealed to us over time (pacing). In both physical and digital settings, design choices have a massive impact on how much we connect with the art and how well we remember it later."
         },
         {
           "id": "arts-401-l04-c3",
           "kind": "recap",
           "title": "Ethical Curation",
-          "content": "Responsible curation means being aware of the context in which art is presented, ensuring that all voices are represented fairly, designing for accessibility, and being sensitive to cultural differences in how art is framed and discussed. This ethical approach helps create a more inclusive and respectful environment for all audiences.\nContext recap: Responsible curation means being aware of the context in which art is presented, ensuring that all voices are represented fairly, designing for accessibility, and being sensitive to cultural differences in how art is framed and discussed. This ethical approach helps create a more inclusive and respectful environment for all audiences."
+          "content": "Responsible curation means being aware of the context in which art is presented, ensuring that all voices are represented fairly, designing for accessibility, and being sensitive to cultural differences in how art is framed and discussed. This ethical approach helps create a more inclusive and respectful environment for all audiences, ensuring that art spaces are welcoming to everyone."
         }
       ],
       "flashcards": [
@@ -333,18 +363,20 @@ export const Arts401Module: LearningModule = {
       "title": "Professional Practice and Audience Strategy Lab",
       "type": "interactive",
       "duration": 16,
+      "lessonImagePrompt": "An artist sitting at a sleek desk, organizing a digital portfolio on a large monitor, with physical prints and a notebook neatly arranged beside them. Professional, inspiring atmosphere, Imagen 4.",
+      "conceptVideoPrompt": "Over-the-shoulder view of an artist dragging and dropping images into different portfolio folders labeled 'Curator', 'Collector', and 'Collaborator', showing audience adaptation. Veo 3.1, clear interface.",
       "chunks": [
         {
           "id": "arts-401-l05-c1",
           "kind": "concept",
           "title": "Portfolio as Argument",
-          "content": "A professional portfolio is not simply a scrapbook filled with random pieces of art; instead, it serves as a carefully organized showcase that makes a strong case for the artist's abilities, the consistency in their work, and their development as an artist over time. When creating a portfolio, it is important to thoughtfully choose which artworks to include, how to arrange them, and how to describe each piece. This careful selection and presentation should work together to clearly express the artist's individual style and talents, making it easy for viewers to understand their artistic journey and vision.\nContext recap: A professional portfolio is not simply a scrapbook filled with random pieces of art; instead, it serves as a carefully organized showcase that makes a strong case for the artist's abilities, the consistency in their work, and their development as an artist over time. When creating a portfolio, it is important to thoughtfully choose which artworks to include, how to arrange them, and how to describe each piece. This careful selection and presentation should work together to clearly express the artist's individual style and talents, making it easy for viewers to understand their artistic journey and vision."
+          "content": "A professional portfolio is not simply a scrapbook filled with random pieces of art; instead, it serves as a carefully organized showcase that makes a strong case for the artist's abilities, the consistency in their work, and their development over time. When creating a portfolio, it is important to thoughtfully choose which artworks to include, how to arrange them, and how to describe each piece. This careful selection should work together to clearly express the artist's individual style and talents."
         },
         {
           "id": "arts-401-l05-c2",
           "kind": "practice",
           "title": "Audience and Platform Fit",
-          "content": "When artists share their work, they encounter various audiences, including collectors, curators, educators, and collaborators. Each of these groups has unique interests and needs, which means that artists must tailor their communication to effectively engage with them. For instance, an artist might create different versions of their artist statement or adjust how they document their work to resonate with each audience. This careful adaptation helps ensure that the artist's true message shines through, allowing everyone to appreciate their creativity in a way that makes sense to them. By being strategic in their communication, artists can connect more deeply with each audience while staying true to their artistic voice.\nContext recap: When artists share their work, they encounter various audiences, including collectors, curators, educators, and collaborators. Each of these groups has unique interests and needs, which means that artists must tailor their communication to effectively engage with them. For instance, an artist might create different versions of their artist statement or adjust how they document their work to resonate with each audience. This careful adaptation helps ensure that the artist's true message shines through, allowing everyone to appreciate their creativity in a way that makes sense to them."
+          "content": "When artists share their work, they encounter various audiences, including collectors, curators, educators, and collaborators. Each of these groups has unique interests and needs, which means that artists must tailor their communication to effectively engage with them. For instance, an artist might create different versions of their artist statement or adjust how they document their work to resonate with each audience. By being strategic in their communication, artists can connect more deeply with each audience while staying true to their artistic voice."
         }
       ],
       "interactiveActivities": [
@@ -378,18 +410,12 @@ export const Arts401Module: LearningModule = {
           "title": "Portfolio Revision Sprint",
           "description": "Prioritize edits before a major submission deadline.",
           "instructions": [
-            "Select two high-impact improvements.",
-            "Explain what to defer and why."
+            "Select two high-impact improvements for your portfolio.",
+            "Explain what tasks to defer until after the deadline and why.",
+            "Ensure your choices align with the specific audience reviewing the submission."
           ]
         }
       ],
-      "metadata": {
-        "prompts": [
-          "What makes a portfolio sequence feel intentional rather than random?",
-          "How would you adapt one project description for curator vs collaborator audiences?",
-          "Name one documentation standard that improves professionalism immediately."
-        ]
-      },
       "learningAids": [
         {
           "id": "arts-401-l05-a1",
@@ -397,13 +423,16 @@ export const Arts401Module: LearningModule = {
           "title": "Professional Readiness Checklist",
           "content": "Checklist for documentation quality, statement clarity, sequencing logic, and submission packaging."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/arts-401-l05.png"
     },
     {
       "id": "arts-401-l06",
       "title": "Checkpoint 2: Curation and Practice",
       "type": "quiz",
       "duration": 11,
+      "lessonImagePrompt": "A glowing digital quiz interface floating in a modern art gallery, with abstract sculptures in the background. Clean, modern design, Imagen 4.",
+      "conceptVideoPrompt": "A fast-paced montage of artworks being rearranged on a gallery wall, followed by a checkmark appearing, symbolizing successful curation and practice. Veo 3.1, upbeat rhythm.",
       "questions": [
         {
           "id": "arts-401-l06-q1",
@@ -538,34 +567,71 @@ export const Arts401Module: LearningModule = {
           "title": "VOICE",
           "content": "Vision, Observation, Intent, Context, Evidence."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/arts-401-l06.png"
     },
     {
       "id": "arts-401-l07",
       "title": "Capstone: Curated Body-of-Work Proposal",
       "type": "interactive",
       "duration": 18,
+      "lessonImagePrompt": "A comprehensive exhibition proposal laid out on a large wooden table, featuring architectural blueprints, artwork thumbnails, and a typed curatorial statement, illuminated by a warm desk lamp. Imagen 4.",
+      "conceptVideoPrompt": "A cinematic zoom-out from a single written thesis statement on a paper, revealing a fully realized 3D gallery exhibition bustling with engaged visitors. Veo 3.1, inspiring tone.",
       "chunks": [
         {
           "id": "arts-401-l07-c1",
           "kind": "practice",
           "title": "Capstone Brief",
-          "content": "As part of your capstone project, you will develop a detailed proposal for a curated body of work that showcases your artistic vision. This proposal must include several key components: first, a clear thematic thesis that explains the central idea or message of your exhibition. Next, you should outline the reasoning behind your selection of artworks, detailing why each piece is important to your theme. Additionally, think about how you will arrange the artworks in the exhibition; this is known as the exhibition sequence, and it should create a meaningful flow for your audience. You will also need to devise a strategy for engaging your audience, ensuring they connect with your work on a deeper level. Furthermore, include a plan for documenting the exhibition, which could involve photography, video, or written reflections. Finally, create a framework for reflecting on the entire process, allowing you to evaluate what you learned and how you can grow as an artist. This comprehensive approach will help you articulate your artistic intentions and present your work effectively to others.\nContext recap: As part of your capstone project, you will develop a detailed proposal for a curated body of work that showcases your artistic vision. This proposal must include several key components: first, a clear thematic thesis that explains the central idea or message of your exhibition. Next, you should outline the reasoning behind your selection of artworks, detailing why each piece is important to your theme. Additionally, think about how you will arrange the artworks in the exhibition; this is known as the exhibition sequence, and it should create a meaningful flow for your audience."
+          "content": "As part of your capstone project, you will develop a detailed proposal for a curated body of work that showcases your artistic vision. This proposal must include several key components: first, a clear thematic thesis that explains the central idea or message of your exhibition. Next, you should outline the reasoning behind your selection of artworks, detailing why each piece is important to your theme. Additionally, think about how you will arrange the artworks in the exhibition; this is known as the exhibition sequence, and it should create a meaningful flow for your audience. You will also need to devise a strategy for engaging your audience, ensuring they connect with your work on a deeper level. Finally, include a plan for documenting the exhibition and a framework for reflecting on the entire process."
         },
         {
           "id": "arts-401-l07-c2",
           "kind": "recap",
           "title": "Assessment Criteria",
-          "content": "To achieve a strong submission for your capstone project, it is important to demonstrate a clear conceptual coherence, show your curatorial intentions, frame your work ethically, and exhibit practical readiness for professional opportunities. These criteria will help ensure that your proposal is well-received and impactful.\nContext recap: To achieve a strong submission for your capstone project, it is important to demonstrate a clear conceptual coherence, show your curatorial intentions, frame your work ethically, and exhibit practical readiness for professional opportunities. These criteria will help ensure that your proposal is well-received and impactful."
+          "content": "To achieve a strong submission for your capstone project, it is important to demonstrate clear conceptual coherence, show your curatorial intentions, frame your work ethically, and exhibit practical readiness for professional opportunities. Practical readiness means your proposal includes realistic timelines, clear documentation strategies, and an understanding of the physical or digital space required. These criteria will help ensure that your proposal is well-received, impactful, and ready for real-world application."
         }
       ],
-      "metadata": {
-        "prompts": [
-          "State the thesis of your curated body of work in two sentences.",
-          "Explain one key sequencing decision and intended audience effect.",
-          "List three professional deliverables needed before public presentation."
-        ]
-      },
+      "interactiveActivities": [
+        {
+          "id": "arts-401-l07-act1",
+          "type": "scenario_practice",
+          "title": "Drafting the Thesis",
+          "description": "Write a compelling two-sentence thesis for your proposed exhibition.",
+          "instructions": [
+            "Identify the core theme or message.",
+            "Explain how the selected artworks will communicate this theme to the audience."
+          ]
+        },
+        {
+          "id": "arts-401-l07-act2",
+          "type": "sorting_buckets",
+          "title": "Organizing the Exhibition Flow",
+          "description": "Categorize the steps of planning your exhibition sequence.",
+          "buckets": [
+            "Entry/Introduction",
+            "Main Narrative",
+            "Conclusion/Reflection"
+          ],
+          "items": [
+            {
+              "text": "Placing the most visually striking piece to grab attention",
+              "bucket": "Entry/Introduction"
+            },
+            {
+              "text": "Grouping artworks by sub-themes to build the story",
+              "bucket": "Main Narrative"
+            },
+            {
+              "text": "Providing a space for audience feedback and thoughts",
+              "bucket": "Conclusion/Reflection"
+            },
+            {
+              "text": "Displaying the artist's overarching statement",
+              "bucket": "Entry/Introduction"
+            }
+          ]
+        }
+      ],
       "learningAids": [
         {
           "id": "arts-401-l07-a1",
@@ -573,7 +639,8 @@ export const Arts401Module: LearningModule = {
           "title": "Curatorial Proposal Template",
           "content": "Template covering thesis, section plan, audience goals, production timeline, and review criteria."
         }
-      ]
+      ],
+      "imageUrl": "/generated-images/refinery/arts-401-l07.png"
     }
   ]
 };

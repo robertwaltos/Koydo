@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const MicroCircuits401Module: LearningModule = {
+export const micro_circuits_401_Module: LearningModule = {
   "id": "micro-circuits-401",
   "title": "Micro-Circuit Architecture, Verification, and Silicon Readiness",
   "description": "Expert-level micro-circuit engineering curriculum covering architectural trade-offs, mixed-signal integrity, DFT strategy, reliability engineering, and tape-out decision governance.",
@@ -15,7 +15,7 @@ export const MicroCircuits401Module: LearningModule = {
   ],
   "minAge": 16,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en"
@@ -40,19 +40,19 @@ export const MicroCircuits401Module: LearningModule = {
           "id": "micro-circuits-401-l01-c1",
           "kind": "concept",
           "title": "PPA as a System Problem",
-          "content": "When designing complex micro-circuits, we need to think about three important factors: performance, power consumption, and the physical area the circuit occupies. These factors are interconnected, meaning that if we try to improve one, it might negatively impact another. To achieve the best results, we must make sure our design choices match the specific tasks the circuit will perform, the timing requirements we aim to meet, and the limitations of how the circuit will be packaged. This careful alignment helps us create efficient and effective micro-circuits.\nContext recap: When designing complex micro-circuits, we need to think about three important factors: performance, power consumption, and the physical area the circuit occupies. These factors are interconnected, meaning that if we try to improve one, it might negatively impact another. To achieve the best results, we must make sure our design choices match the specific tasks the circuit will perform, the timing requirements we aim to meet, and the limitations of how the circuit will be packaged. This careful alignment helps us create efficient and effective micro-circuits."
+          "content": "The design of complex micro-circuits is governed by the trade-offs between three primary factors: performance, power, and area (PPA). These factors are interdependent; optimizing one often compromises another. Achieving an optimal balance requires aligning architectural choices with the target workload, timing constraints, and physical packaging limitations."
         },
         {
           "id": "micro-circuits-401-l01-c2",
           "kind": "concept",
           "title": "Partitioning and Interface Boundaries",
-          "content": "The way we divide our circuit into different parts, known as partitioning, plays a crucial role in how easily we can verify and debug the circuit later on. It affects how signals cross from one clock domain to another and how well we can observe and troubleshoot issues. By creating clear and well-defined interfaces between these parts, we can minimize unexpected problems during integration and enhance the ability to reuse components in different product versions. This thoughtful approach helps streamline the design process and improves overall efficiency.\nContext recap: The way we divide our circuit into different parts, known as partitioning, plays a crucial role in how easily we can verify and debug the circuit later on. It affects how signals cross from one clock domain to another and how well we can observe and troubleshoot issues. By creating clear and well-defined interfaces between these parts, we can minimize unexpected problems during integration and enhance the ability to reuse components in different product versions. This thoughtful approach helps streamline the design process and improves overall efficiency."
+          "content": "System partitioning—dividing the design into functional blocks—critically impacts verification, debug, and reuse. Well-defined interface boundaries between partitions simplify clock-domain crossing (CDC) validation, improve observability for debug, and minimize integration risks. A thoughtful partitioning strategy is fundamental to managing complexity and enabling component reuse across product generations."
         },
         {
           "id": "micro-circuits-401-l01-c3",
           "kind": "recap",
           "title": "Architecture Review Quality",
-          "content": "To ensure that our micro-circuit designs are of high quality, we need to conduct thorough reviews. These reviews should include important aspects such as the assumptions we make about how the circuit will be used, an analysis of the margins for error, potential failure modes, and a clear explanation of the trade-offs we considered. Instead of just telling a story about our design choices, we should provide solid data and reasoning to support our decisions. This approach helps us build more reliable and effective micro-circuits.\nContext recap: To ensure that our micro-circuit designs are of high quality, we need to conduct thorough reviews. These reviews should include important aspects such as the assumptions we make about how the circuit will be used, an analysis of the margins for error, potential failure modes, and a clear explanation of the trade-offs we considered. Instead of just telling a story about our design choices, we should provide solid data and reasoning to support our decisions. This approach helps us build more reliable and effective micro-circuits."
+          "content": "High-quality architecture reviews move beyond narrative and rely on data-driven justification. A robust review process scrutinizes use-case assumptions, quantifies design margins, analyzes potential failure modes, and explicitly documents the rationale behind key trade-offs. This evidence-based approach is essential for building reliable and effective micro-circuits."
         }
       ],
       "flashcards": [
@@ -77,7 +77,13 @@ export const MicroCircuits401Module: LearningModule = {
           "id": "micro-circuits-401-l01-a1",
           "type": "image",
           "title": "PPA Trade-off Matrix",
-          "content": "Matrix linking architecture options to power, latency, throughput, and area impact."
+          "content": "A 2x2 matrix visualizing how architectural choices (e.g., pipeline depth, cache size) impact PPA metrics. Rows represent choices, columns represent PPA impact (e.g., +Power, -Latency, +Area)."
+        },
+        {
+          "id": "micro-circuits-401-l01-a2",
+          "type": "image",
+          "title": "System Partitioning Diagram",
+          "content": "A block diagram showing a system-on-chip (SoC) partitioned into a CPU core, GPU, memory controller, and peripherals, with clearly defined interface buses (e.g., AXI, APB) between them."
         }
       ]
     },
@@ -91,13 +97,13 @@ export const MicroCircuits401Module: LearningModule = {
           "id": "micro-circuits-401-l02-c1",
           "kind": "concept",
           "title": "SI/PI Coupling",
-          "content": "The behavior of high-speed micro-circuits is significantly influenced by several factors, including the paths that signals take back to their source, any changes in impedance, noise that occurs when multiple signals switch at the same time, and how effectively we can decouple signals across different frequency ranges. Understanding these elements is essential for ensuring that our circuits operate correctly and efficiently. By addressing these factors, we can improve the overall performance and reliability of our designs.\nContext recap: The behavior of high-speed micro-circuits is significantly influenced by several factors, including the paths that signals take back to their source, any changes in impedance, noise that occurs when multiple signals switch at the same time, and how effectively we can decouple signals across different frequency ranges. Understanding these elements is essential for ensuring that our circuits operate correctly and efficiently. By addressing these factors, we can improve the overall performance and reliability of our designs."
+          "content": "The integrity of high-speed signals and power delivery networks (SI/PI) is fundamental to circuit operation. Key factors include signal return path management, impedance discontinuities, simultaneous switching output (SSO) noise, and the frequency response of the power decoupling network. A comprehensive understanding of these coupled effects is essential for ensuring robust performance."
         },
         {
           "id": "micro-circuits-401-l02-c2",
           "kind": "practice",
           "title": "Failure Signature Interpretation",
-          "content": "When design teams encounter unexpected waveform artifacts, it's important to systematically trace these issues back to their root causes. This process involves using simulations, taking measurements, and conducting controlled tests to identify what might be causing the problem. By mapping these artifacts to potential causes, teams can develop effective solutions before implementing any fixes. This proactive approach helps ensure that the final design is robust and minimizes the risk of future issues.\nContext recap: When design teams encounter unexpected waveform artifacts, it's important to systematically trace these issues back to their root causes. This process involves using simulations, taking measurements, and conducting controlled tests to identify what might be causing the problem. By mapping these artifacts to potential causes, teams can develop effective solutions before implementing any fixes. This proactive approach helps ensure that the final design is robust and minimizes the risk of future issues."
+          "content": "Diagnosing waveform artifacts requires a systematic approach to root-cause analysis. Design teams must correlate unexpected behavior observed in simulation or lab measurements with underlying physical causes. This process involves mapping failure signatures to specific hypotheses and designing targeted experiments to validate them before implementing corrective actions (ECOs)."
         }
       ],
       "interactiveActivities": [
@@ -131,8 +137,8 @@ export const MicroCircuits401Module: LearningModule = {
           "title": "Debug Priority Drill",
           "description": "Prioritize your first three validation tests for a failing high-speed channel.",
           "instructions": [
-            "Choose one measurement that narrows root causes fastest.",
-            "Define one rollback-safe mitigation to test first."
+            "Given a scenario of a failing SerDes channel, select the most effective first measurement (e.g., TDR, VNA, eye diagram).",
+            "Based on the measurement result, propose a single, reversible board or register modification to test a mitigation hypothesis."
           ]
         }
       ],
@@ -149,6 +155,12 @@ export const MicroCircuits401Module: LearningModule = {
           "type": "practice",
           "title": "SI/PI Debug Worksheet",
           "content": "Template for symptom capture, hypothesis ranking, test sequence, and acceptance criteria."
+        },
+        {
+          "id": "micro-circuits-401-l02-a2",
+          "type": "image",
+          "title": "Eye Diagram Analysis",
+          "content": "An illustration of an eye diagram for a high-speed signal, with annotations pointing out key metrics like eye height, eye width, jitter, and noise margin. Shows a 'closed' eye vs. an 'open' eye."
         }
       ]
     },
@@ -278,19 +290,19 @@ export const MicroCircuits401Module: LearningModule = {
           "id": "micro-circuits-401-l04-c1",
           "kind": "concept",
           "title": "Design for Test",
-          "content": "The architecture of Design for Test (DFT) is crucial because it influences how quickly we can debug our circuits after they are manufactured and how confident we can be in their production quality. To achieve this, we need to ensure that aspects like scan coverage, points where we can observe the circuit's behavior, and plans for built-in self-tests are all aligned with the goals of the product and the limitations of the testing equipment. This careful planning is essential for successful circuit design and manufacturing.\nContext recap: The architecture of Design for Test (DFT) is crucial because it influences how quickly we can debug our circuits after they are manufactured and how confident we can be in their production quality. To achieve this, we need to ensure that aspects like scan coverage, points where we can observe the circuit's behavior, and plans for built-in self-tests are all aligned with the goals of the product and the limitations of the testing equipment. This careful planning is essential for successful circuit design and manufacturing."
+          "content": "Design for Test (DFT) is an architectural discipline, not a post-design task. The DFT strategy directly impacts post-silicon debug velocity and production quality confidence. Key architectural decisions, including scan chain design, memory BIST (Built-In Self-Test), and observability points, must align with product test cost goals and Automatic Test Equipment (ATE) capabilities."
         },
         {
           "id": "micro-circuits-401-l04-c2",
           "kind": "concept",
           "title": "Reliability Mechanisms",
-          "content": "There are several reliability mechanisms that we need to consider during the design process, including electromigration, time-dependent dielectric breakdown, thermal cycling, and exposure to soft errors. To ensure the longevity and reliability of our circuits, we should implement strategies to address these issues early on, rather than waiting until problems arise. By planning ahead, we can avoid costly fixes and ensure that our designs remain functional over time.\nContext recap: There are several reliability mechanisms that we need to consider during the design process, including electromigration, time-dependent dielectric breakdown, thermal cycling, and exposure to soft errors. To ensure the longevity and reliability of our circuits, we should implement strategies to address these issues early on, rather than waiting until problems arise. By planning ahead, we can avoid costly fixes and ensure that our designs remain functional over time."
+          "content": "Long-term circuit reliability depends on mitigating key physical failure mechanisms. These include electromigration (conductor wear-out), time-dependent dielectric breakdown (TDDB) in gate oxides, thermal cycling stress, and soft errors from particle strikes. Proactive design mitigation, such as enforcing current density rules and using error-correcting codes (ECC), is critical to achieving the target product lifetime."
         },
         {
           "id": "micro-circuits-401-l04-c3",
           "kind": "recap",
           "title": "Manufacturing Readiness",
-          "content": "Designs that are ready for silicon production must include thorough validation of the manufacturing process, careful budgeting of test times, hypotheses regarding yield risks, and clear criteria for evaluating the results of the initial production lots. By ensuring that these elements are in place, we can increase the likelihood of successful manufacturing and reduce the chances of encountering significant issues after production begins.\nContext recap: Designs that are ready for silicon production must include thorough validation of the manufacturing process, careful budgeting of test times, hypotheses regarding yield risks, and clear criteria for evaluating the results of the initial production lots. By ensuring that these elements are in place, we can increase the likelihood of successful manufacturing and reduce the chances of encountering significant issues after production begins."
+          "content": "Silicon readiness requires more than a logically correct design. It demands a comprehensive manufacturing plan that includes process design kit (PDK) validation, ATE test time budgets, a data-driven yield risk assessment, and pre-defined success criteria for the first engineering validation test (EVT) lots. This ensures a smooth transition from design to high-volume manufacturing."
         }
       ],
       "flashcards": [
@@ -315,7 +327,13 @@ export const MicroCircuits401Module: LearningModule = {
           "id": "micro-circuits-401-l04-a1",
           "type": "image",
           "title": "Silicon Readiness Checklist",
-          "content": "Checklist spanning DFT metrics, reliability limits, corner closure, and manufacturing gates."
+          "content": "A comprehensive checklist template for a silicon readiness review, with sections for DFT (coverage, pattern count), Reliability (EM/IR, thermal), Physical Verification (DRC/LVS), and Manufacturing (yield plan, test plan)."
+        },
+        {
+          "id": "micro-circuits-401-l04-a2",
+          "type": "image",
+          "title": "Scan Chain Illustration",
+          "content": "A simplified diagram showing several flip-flops connected in a series to form a scan chain. Illustrates the scan-in, scan-out, and mode select signals used for testing."
         }
       ]
     },
@@ -329,13 +347,13 @@ export const MicroCircuits401Module: LearningModule = {
           "id": "micro-circuits-401-l05-c1",
           "kind": "practice",
           "title": "Case: Tape-Out in Six Weeks",
-          "content": "As your team approaches the critical stage of tape-out, there are still some open timing exceptions, partial coverage for mixed-signal components, and limited resources available in the lab. It is essential to create a closure plan that carefully balances the risks involved with the project timeline. This plan should outline the steps needed to address any outstanding issues while ensuring that the project stays on schedule for a successful tape-out.\nContext recap: As your team approaches the critical stage of tape-out, there are still some open timing exceptions, partial coverage for mixed-signal components, and limited resources available in the lab. It is essential to create a closure plan that carefully balances the risks involved with the project timeline. This plan should outline the steps needed to address any outstanding issues while ensuring that the project stays on schedule for a successful tape-out."
+          "content": "Scenario: Your team is six weeks from tape-out. Several timing path exceptions remain un-waived, mixed-signal block coverage is below target, and lab bring-up hardware is resource-constrained. Your task is to develop a verification closure plan that rigorously prioritizes remaining work, balances risk against the schedule, and defines clear go/no-go criteria."
         },
         {
           "id": "micro-circuits-401-l05-c2",
           "kind": "recap",
           "title": "Closure Quality Signals",
-          "content": "Making high-quality closure decisions requires being clear about any risks that have not yet been addressed, who is responsible for mitigating those risks, and what the strategy will be for verifying the circuit after it has been manufactured. By being explicit about these factors, teams can ensure that they are prepared for any challenges that may arise and can take appropriate actions if the behavior of the first silicon does not match expectations.\nContext recap: Making high-quality closure decisions requires being clear about any risks that have not yet been addressed, who is responsible for mitigating those risks, and what the strategy will be for verifying the circuit after it has been manufactured. By being explicit about these factors, teams can ensure that they are prepared for any challenges that may arise and can take appropriate actions if the behavior of the first silicon does not match expectations."
+          "content": "High-quality closure decisions are characterized by transparency and accountability. This requires explicit documentation of all residual risks, clear assignment of mitigation ownership, and a well-defined post-silicon validation strategy. This ensures the team is prepared to react effectively if first silicon behavior deviates from pre-silicon predictions."
         }
       ],
       "interactiveActivities": [
@@ -551,13 +569,27 @@ export const MicroCircuits401Module: LearningModule = {
           "id": "micro-circuits-401-l07-c1",
           "kind": "practice",
           "title": "Capstone Brief",
-          "content": "As you prepare for the important go/no-go recommendation for a mixed-signal micro-circuit that is nearing tape-out, it is essential to include several key elements in your report. You should provide a rationale for the architecture chosen, present evidence related to signal integrity and power integrity, assess the quality of the Design for Test (DFT) aspects, identify any residual risks, and outline a plan for validating the circuit after it has been manufactured. This comprehensive approach will help ensure that all critical factors are considered before making a final decision."
+          "content": "For your capstone project, you will act as the lead engineer presenting a go/no-go recommendation for a mixed-signal SoC nearing its tape-out deadline. Your presentation must synthesize evidence from the entire design cycle: justify the final architecture, present key SI/PI validation data, assess DFT and verification coverage quality, enumerate all residual risks, and detail the post-silicon bring-up and validation plan."
         },
         {
           "id": "micro-circuits-401-l07-c2",
           "kind": "recap",
           "title": "Assessment Criteria",
-          "content": "To ensure that your recommendations are of high quality, it is important to be clear about the assumptions you are making, the measurable thresholds you are using to evaluate success, who is responsible for managing any identified risks, and what actions will be taken if the behavior of the first silicon does not align with your predictions. By addressing these criteria, you can provide a well-rounded recommendation that takes into account potential challenges and prepares the team for the next steps.\nContext recap: To ensure that your recommendations are of high quality, it is important to be clear about the assumptions you are making, the measurable thresholds you are using to evaluate success, who is responsible for managing any identified risks, and what actions will be taken if the behavior of the first silicon does not align with your predictions. By addressing these criteria, you can provide a well-rounded recommendation that takes into account potential challenges and prepares the team for the next steps."
+          "content": "Your recommendation will be assessed on its clarity, evidence-based reasoning, and risk management rigor. A strong assessment explicitly states all underlying assumptions, defines measurable success thresholds for bring-up, assigns clear ownership for each residual risk, and outlines contingency plans should first silicon fail to meet key performance indicators."
+        }
+      ],
+      "interactiveActivities": [
+        {
+          "id": "micro-circuits-401-l07-act1",
+          "type": "scenario_practice",
+          "title": "Go/No-Go Decision Brief",
+          "description": "Review the final project data and formulate your official tape-out recommendation.",
+          "instructions": [
+            "Review the provided summary of the project's status: verification coverage is at 98% (target 99%), one critical timing path has a 5ps setup violation under worst-case corners, and the power grid simulation shows a 3% voltage drop over spec during peak load.",
+            "State your decision: 'Go' or 'No-Go'.",
+            "Write a 1-2 sentence justification for your decision, referencing the provided data.",
+            "List the top two residual risks and propose a post-silicon validation test to monitor each one."
+          ]
         }
       ],
       "metadata": {
